@@ -1,0 +1,38 @@
+﻿namespace Assets.Model
+{
+    public enum CultureEnum
+    {
+        None,
+        Aborigine,
+        African,
+        Apache,
+        Aztec,
+        Bretonnian,
+        Byzantine,
+        Chinese,
+        Dwarvish,
+        Egyptian,
+        Elvish,
+        French,
+        German,
+        Greek,
+        Hawaiian,
+        Indian,
+        Irish,
+        Italian,
+        Japanese,
+        Mayan,
+        Mongolian,
+        Norse,
+        Orcish,
+        Persian,
+        Roman,
+        Scottish,
+        Sioux,
+        Spanish,
+        Thai,
+        Turkish,
+        Uruk,
+        Zwahili,
+    }
+}

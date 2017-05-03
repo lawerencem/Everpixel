@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Classes>
+  <Class name="Assassin">
+    <PrimaryStatsEnum>Agility,4</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Might,3</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Perception,1</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Critical_Chance,6</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Critical_Multiplier,6</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Initiative,4</SecondaryStatsEnum>
+  </Class>
+  <Class name="Berserker">
+    <PrimaryStatsEnum>Might,8</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Critical_Chance,8</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Critical_Multiplier,8</SecondaryStatsEnum>
+  </Class>
+  <Class name="Fighter">
+    <PrimaryStatsEnum>Agility,1</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Constitution,2</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Might,2</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Perception,1</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Resolve,1</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Block,3</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Critical_Chance,2</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Critical_Multiplier,3</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Melee,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Parry,1</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Ranged,3</SecondaryStatsEnum>
+  </Class>
+  <Class name="Mage">
+    <PrimaryStatsEnum>Intelligence,5</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Perception,2</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Concentration,5</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Critical_Chance,1</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,2</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Spell_Duration,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Spell_Penetration,4</SecondaryStatsEnum>
+  </Class>
+  <Class name="Ninja">
+    <PrimaryStatsEnum>Agility,3</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Intelligence,2</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Might,1</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Perception,1</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Critical_Multiplier,5</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Melee,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Initiative,3</SecondaryStatsEnum>
+  </Class>
+  <Class name="Slime_Lord">
+    <PrimaryStatsEnum>Intelligence,4</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Might,1</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Perception,2</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Concentration,8</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Spell_Duration,4</SecondaryStatsEnum>
+  </Class>
+  <Class name="Warrior">
+    <PrimaryStatsEnum>Agility,1</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Constitution,3</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Might,3</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Critical_Chance,3</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Critical_Multiplier,5</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Melee,3</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Parry,2</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Ranged,3</SecondaryStatsEnum>
+  </Class>
+</Classes>

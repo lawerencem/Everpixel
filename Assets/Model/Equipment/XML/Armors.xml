@@ -1,0 +1,753 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Armors>
+  <Armor name="Galea">
+    <Tier>Four</Tier>
+    <AP_Reduce>16</AP_Reduce>
+    <ArmorSkillEnum>Breasplate</ArmorSkillEnum>
+    <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
+    <Block_Reduce>6</Block_Reduce>
+    <Damage_Ignore>5</Damage_Ignore>
+    <Damage_Reduction>14</Damage_Reduction>
+    <Description>
+      This helm is of the type favored by legionnaires.  It provides solid defense without weighing much.
+    </Description>
+    <Dodge_Reduce>6</Dodge_Reduce>
+    <Durability>55</Durability>
+    <Fatigue_Reduce>16</Fatigue_Reduce>
+    <Initiative_Reduce>11</Initiative_Reduce>
+    <Parry_Reduce>6</Parry_Reduce>
+    <Sprites>17</Sprites>
+    <Stamina_Reduce>16</Stamina_Reduce>
+    <Value>350</Value>
+  </Armor>
+  <Armor name="Galea">
+    <Tier>Three</Tier>
+    <AP_Reduce>15</AP_Reduce>
+    <ArmorSkillEnum>Breasplate</ArmorSkillEnum>
+    <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
+    <Block_Reduce>5</Block_Reduce>
+    <Damage_Ignore>6</Damage_Ignore>
+    <Damage_Reduction>15</Damage_Reduction>
+    <Description>
+      This helm is of the type favored by legionnaires.  It provides solid defense without weighing much.
+    </Description>
+    <Dodge_Reduce>5</Dodge_Reduce>
+    <Durability>70</Durability>
+    <Fatigue_Reduce>15</Fatigue_Reduce>
+    <Initiative_Reduce>10</Initiative_Reduce>
+    <Parry_Reduce>5</Parry_Reduce>
+    <Sprites>32</Sprites>
+    <Stamina_Reduce>15</Stamina_Reduce>
+    <Value>550</Value>
+  </Armor>
+  <Armor name="Goblin Cap">
+    <Tier>Five</Tier>
+    <AP_Reduce>7</AP_Reduce>
+    <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
+    <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
+    <Block_Reduce>2</Block_Reduce>
+    <Damage_Ignore>1</Damage_Ignore>
+    <Damage_Reduction>3</Damage_Reduction>
+    <Description>
+      Just a goblin cap. 
+    </Description>
+    <Dodge_Reduce>7</Dodge_Reduce>
+    <Durability>5</Durability>
+    <Fatigue_Reduce>3</Fatigue_Reduce>
+    <Initiative_Reduce>3</Initiative_Reduce>
+    <Parry_Reduce>3</Parry_Reduce>
+    <Sprites>4</Sprites>
+    <Stamina_Reduce>3</Stamina_Reduce>
+    <Value>30</Value>
+  </Armor>
+  <Armor name="Goblin Cap">
+    <Tier>Four</Tier>
+    <AP_Reduce>6</AP_Reduce>
+    <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
+    <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
+    <Block_Reduce>1</Block_Reduce>
+    <Damage_Ignore>1</Damage_Ignore>
+    <Damage_Reduction>3</Damage_Reduction>
+    <Description>
+      Just a goblin cap.
+    </Description>
+    <Dodge_Reduce>6</Dodge_Reduce>
+    <Durability>10</Durability>
+    <Fatigue_Reduce>2</Fatigue_Reduce>
+    <Initiative_Reduce>2</Initiative_Reduce>
+    <Parry_Reduce>2</Parry_Reduce>
+    <Sprites>19</Sprites>
+    <Stamina_Reduce>2</Stamina_Reduce>
+    <Value>70</Value>
+  </Armor>
+  <Armor name="Goblin Cap">
+    <Tier>Three</Tier>
+    <AP_Reduce>5</AP_Reduce>
+    <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
+    <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
+    <Block_Reduce>1</Block_Reduce>
+    <Damage_Ignore>1</Damage_Ignore>
+    <Damage_Reduction>3</Damage_Reduction>
+    <Description>
+      Just a goblin cap.
+    </Description>
+    <Dodge_Reduce>5</Dodge_Reduce>
+    <Durability>20</Durability>
+    <Fatigue_Reduce>1</Fatigue_Reduce>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Parry_Reduce>1</Parry_Reduce>
+    <Sprites>34</Sprites>
+    <Stamina_Reduce>1</Stamina_Reduce>
+    <Value>150</Value>
+  </Armor>
+  <Armor name="Goblin Cap">
+    <Tier>Two</Tier>
+    <AP_Reduce>5</AP_Reduce>
+    <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
+    <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
+    <Block_Reduce>0</Block_Reduce>
+    <Damage_Ignore>2</Damage_Ignore>
+    <Damage_Reduction>5</Damage_Reduction>
+    <Description>
+      Just a goblin cap.
+    </Description>
+    <Dodge_Reduce>5</Dodge_Reduce>
+    <Durability>35</Durability>
+    <Fatigue_Reduce>0</Fatigue_Reduce>
+    <Initiative_Reduce>0</Initiative_Reduce>
+    <Parry_Reduce>0</Parry_Reduce>
+    <Sprites>49</Sprites>
+    <Stamina_Reduce>0</Stamina_Reduce>
+    <Value>250</Value>
+  </Armor>
+  <Armor name="Goblin Pads">
+    <Tier>Five</Tier>
+    <AP_Reduce>7</AP_Reduce>
+    <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
+    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
+    <Block_Reduce>13</Block_Reduce>
+    <Damage_Ignore>2</Damage_Ignore>
+    <Damage_Reduction>14</Damage_Reduction>
+    <Description>
+      While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection. 
+    </Description>
+    <Dodge_Reduce>2</Dodge_Reduce>
+    <Durability>20</Durability>
+    <Fatigue_Reduce>8</Fatigue_Reduce>
+    <Initiative_Reduce>3</Initiative_Reduce>
+    <Parry_Reduce>8</Parry_Reduce>
+    <Sprites>2</Sprites>
+    <Stamina_Reduce>18</Stamina_Reduce>
+    <Value>250</Value>
+  </Armor>
+  <Armor name="Goblin Pads">
+    <Tier>Four</Tier>
+    <AP_Reduce>6</AP_Reduce>
+    <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
+    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
+    <Block_Reduce>12</Block_Reduce>
+    <Damage_Ignore>2</Damage_Ignore>
+    <Damage_Reduction>15</Damage_Reduction>
+    <Description>
+      While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection.
+    </Description>
+    <Dodge_Reduce>1</Dodge_Reduce>
+    <Durability>35</Durability>
+    <Fatigue_Reduce>7</Fatigue_Reduce>
+    <Initiative_Reduce>2</Initiative_Reduce>
+    <Parry_Reduce>7</Parry_Reduce>
+    <Sprites>17</Sprites>
+    <Stamina_Reduce>17</Stamina_Reduce>
+    <Value>350</Value>
+  </Armor>
+  <Armor name="Goblin Pads">
+    <Tier>Three</Tier>
+    <AP_Reduce>5</AP_Reduce>
+    <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
+    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
+    <Block_Reduce>10</Block_Reduce>
+    <Damage_Ignore>2</Damage_Ignore>
+    <Damage_Reduction>16</Damage_Reduction>
+    <Description>
+      While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection.
+    </Description>
+    <Dodge_Reduce>0</Dodge_Reduce>
+    <Durability>50</Durability>
+    <Fatigue_Reduce>5</Fatigue_Reduce>
+    <Initiative_Reduce>0</Initiative_Reduce>
+    <Parry_Reduce>5</Parry_Reduce>
+    <Sprites>32</Sprites>
+    <Stamina_Reduce>15</Stamina_Reduce>
+    <Value>500</Value>
+  </Armor>
+  <Armor name="Goblin Pads">
+    <Tier>Two</Tier>
+    <AP_Reduce>5</AP_Reduce>
+    <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
+    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
+    <Block_Reduce>10</Block_Reduce>
+    <Damage_Ignore>3</Damage_Ignore>
+    <Damage_Reduction>18</Damage_Reduction>
+    <Description>
+      While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection.
+    </Description>
+    <Dodge_Reduce>0</Dodge_Reduce>
+    <Durability>70</Durability>
+    <Fatigue_Reduce>5</Fatigue_Reduce>
+    <Initiative_Reduce>0</Initiative_Reduce>
+    <Parry_Reduce>5</Parry_Reduce>
+    <Sprites>47</Sprites>
+    <Stamina_Reduce>15</Stamina_Reduce>
+    <Value>750</Value>
+  </Armor>
+  <Armor name="Great Helm">
+    <Tier>Five</Tier>
+    <AP_Reduce>28</AP_Reduce>
+    <ArmorSkillEnum>Plate</ArmorSkillEnum>
+    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
+    <Block_Reduce>38</Block_Reduce>
+    <Damage_Ignore>7</Damage_Ignore>
+    <Damage_Reduction>48</Damage_Reduction>
+    <Description>
+      Even rusty and decaying, this helm still provides good defense. Conveniently, parts of the eye holes have rusted out.
+    </Description>
+    <Dodge_Reduce>38</Dodge_Reduce>
+    <Durability>50</Durability>
+    <Fatigue_Reduce>28</Fatigue_Reduce>
+    <Initiative_Reduce>28</Initiative_Reduce>
+    <Parry_Reduce>28</Parry_Reduce>
+    <Sprites>0</Sprites>
+    <Stamina_Reduce>28</Stamina_Reduce>
+    <Value>800</Value>
+  </Armor>
+  <Armor name="Great Helm">
+    <Tier>Four</Tier>
+    <AP_Reduce>26</AP_Reduce>
+    <ArmorSkillEnum>Plate</ArmorSkillEnum>
+    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
+    <Block_Reduce>36</Block_Reduce>
+    <Damage_Ignore>8</Damage_Ignore>
+    <Damage_Reduction>50</Damage_Reduction>
+    <Description>
+      This helm looks like someone took a bucket and nailed holes through it, and then called it a helm.  Whatever - it
+      still provides solid protection.
+    </Description>
+    <Dodge_Reduce>36</Dodge_Reduce>
+    <Durability>150</Durability>
+    <Fatigue_Reduce>26</Fatigue_Reduce>
+    <Initiative_Reduce>26</Initiative_Reduce>
+    <Parry_Reduce>26</Parry_Reduce>
+    <Sprites>15</Sprites>
+    <Stamina_Reduce>26</Stamina_Reduce>
+    <Value>1500</Value>
+  </Armor>
+  <Armor name="Great Helm">
+    <Tier>Three</Tier>
+    <AP_Reduce>25</AP_Reduce>
+    <ArmorSkillEnum>Plate</ArmorSkillEnum>
+    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
+    <Block_Reduce>35</Block_Reduce>
+    <Damage_Ignore>9</Damage_Ignore>
+    <Damage_Reduction>54</Damage_Reduction>
+    <Description>
+      This is a quality-made helm.  It offers incredible protection, but the lack of curvature can be susceptible to
+      piercing attacks.
+    </Description>
+    <Dodge_Reduce>35</Dodge_Reduce>
+    <Durability>220</Durability>
+    <Fatigue_Reduce>25</Fatigue_Reduce>
+    <Initiative_Reduce>25</Initiative_Reduce>
+    <Parry_Reduce>25</Parry_Reduce>
+    <Sprites>30,31</Sprites>
+    <Stamina_Reduce>25</Stamina_Reduce>
+    <Value>3500</Value>
+  </Armor>
+  <Armor name="Jousting Helm">
+    <Tier>Four</Tier>
+    <AP_Reduce>20</AP_Reduce>
+    <ArmorSkillEnum>Plate</ArmorSkillEnum>
+    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
+    <Block_Reduce>40</Block_Reduce>
+    <Damage_Ignore>18</Damage_Ignore>
+    <Damage_Reduction>20</Damage_Reduction>
+    <Description>
+      This jousting helm was made with tournaments in mind.  It isn't flexible, but it is light.  Since it was made with
+      jousting in mind, the curved nature of it provides superior piercing protection than other similar helmets.
+    </Description>
+    <Dodge_Reduce>40</Dodge_Reduce>
+    <Durability>100</Durability>
+    <Fatigue_Reduce>20</Fatigue_Reduce>
+    <Initiative_Reduce>20</Initiative_Reduce>
+    <Parry_Reduce>40</Parry_Reduce>
+    <Sprites>18</Sprites>
+    <Stamina_Reduce>20</Stamina_Reduce>
+    <Value>1800</Value>
+  </Armor>
+  <Armor name="Mail Coif">
+    <Tier>Four</Tier>
+    <AP_Reduce>5</AP_Reduce>
+    <ArmorSkillEnum>Mail</ArmorSkillEnum>
+    <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
+    <Block_Reduce>5</Block_Reduce>
+    <Damage_Ignore>2</Damage_Ignore>
+    <Damage_Reduction>8</Damage_Reduction>
+    <Description>
+      A simple mail coif.  It doesn't protect the face much, but it's sure better than nothing.
+    </Description>
+    <Dodge_Reduce>2</Dodge_Reduce>
+    <Durability>30</Durability>
+    <Fatigue_Reduce>11</Fatigue_Reduce>
+    <Initiative_Reduce>11</Initiative_Reduce>
+    <Parry_Reduce>11</Parry_Reduce>
+    <Sprites>15</Sprites>
+    <Stamina_Reduce>11</Stamina_Reduce>
+    <Value>100</Value>
+  </Armor>
+  <Armor name="Mail Coif">
+    <Tier>Three</Tier>
+    <AP_Reduce>5</AP_Reduce>
+    <ArmorSkillEnum>Mail</ArmorSkillEnum>
+    <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
+    <Block_Reduce>5</Block_Reduce>
+    <Damage_Ignore>2</Damage_Ignore>
+    <Damage_Reduction>10</Damage_Reduction>
+    <Description>
+      A simple mail coif.  It offers decent protection for its weight.
+    </Description>
+    <Dodge_Reduce>2</Dodge_Reduce>
+    <Durability>40</Durability>
+    <Fatigue_Reduce>10</Fatigue_Reduce>
+    <Initiative_Reduce>10</Initiative_Reduce>
+    <Parry_Reduce>10</Parry_Reduce>
+    <Sprites>30</Sprites>
+    <Stamina_Reduce>10</Stamina_Reduce>
+    <Value>150</Value>
+  </Armor>
+  <Armor name="Mail Shirt">
+    <Tier>Five</Tier>
+    <AP_Reduce>8</AP_Reduce>
+    <ArmorSkillEnum>Mail</ArmorSkillEnum>
+    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
+    <Block_Reduce>8</Block_Reduce>
+    <Damage_Ignore>4</Damage_Ignore>
+    <Damage_Reduction>12</Damage_Reduction>
+    <Description>
+      This mail has seen better days, but it still offers decent protection.
+    </Description>
+    <Dodge_Reduce>3</Dodge_Reduce>
+    <Durability>30</Durability>
+    <Fatigue_Reduce>15</Fatigue_Reduce>
+    <Initiative_Reduce>15</Initiative_Reduce>
+    <Parry_Reduce>10</Parry_Reduce>
+    <Sprites>0,1</Sprites>
+    <Stamina_Reduce>15</Stamina_Reduce>
+    <Value>200</Value>
+  </Armor>
+  <Armor name="Mail Shirt">
+    <Tier>Four</Tier>
+    <AP_Reduce>7</AP_Reduce>
+    <ArmorSkillEnum>Mail</ArmorSkillEnum>
+    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
+    <Block_Reduce>7</Block_Reduce>
+    <Damage_Ignore>4</Damage_Ignore>
+    <Damage_Reduction>13</Damage_Reduction>
+    <Description>
+      This mail has seen better days, but it still offers decent protection.
+    </Description>
+    <Dodge_Reduce>2</Dodge_Reduce>
+    <Durability>35</Durability>
+    <Fatigue_Reduce>13</Fatigue_Reduce>
+    <Initiative_Reduce>13</Initiative_Reduce>
+    <Parry_Reduce>8</Parry_Reduce>
+    <Sprites>15,16</Sprites>
+    <Stamina_Reduce>13</Stamina_Reduce>
+    <Value>350</Value>
+  </Armor>
+  <Armor name="Mail Shirt">
+    <Tier>Three</Tier>
+    <AP_Reduce>5</AP_Reduce>
+    <ArmorSkillEnum>Mail</ArmorSkillEnum>
+    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
+    <Block_Reduce>7</Block_Reduce>
+    <Damage_Ignore>4</Damage_Ignore>
+    <Damage_Reduction>15</Damage_Reduction>
+    <Description>
+      This solid mail offers great protection for the weight.  
+    </Description>
+    <Dodge_Reduce>2</Dodge_Reduce>
+    <Durability>45</Durability>
+    <Fatigue_Reduce>12</Fatigue_Reduce>
+    <Initiative_Reduce>12</Initiative_Reduce>
+    <Parry_Reduce>7</Parry_Reduce>
+    <Sprites>30,31</Sprites>
+    <Stamina_Reduce>12</Stamina_Reduce>
+    <Value>600</Value>
+  </Armor>
+  <Armor name="Orc Mask">
+    <Tier>Five</Tier>
+    <AP_Reduce>24</AP_Reduce>
+    <ArmorSkillEnum>Plate</ArmorSkillEnum>
+    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
+    <Block_Reduce>24</Block_Reduce>
+    <Damage_Ignore>6</Damage_Ignore>
+    <Damage_Reduction>20</Damage_Reduction>
+    <Description>
+      Broken and well-used, this mask is still offers effective protection.  For the parts of the head it covers, anyways.
+    </Description>
+    <Dodge_Reduce>24</Dodge_Reduce>
+    <Durability>50</Durability>
+    <Fatigue_Reduce>24</Fatigue_Reduce>
+    <Initiative_Reduce>24</Initiative_Reduce>
+    <Parry_Reduce>24</Parry_Reduce>
+    <Sprites>5,6,7</Sprites>
+    <Stamina_Reduce>24</Stamina_Reduce>
+    <Value>300</Value>
+  </Armor>
+  <Armor name="Orc Mask">
+    <Tier>Four</Tier>
+    <AP_Reduce>22</AP_Reduce>
+    <ArmorSkillEnum>Plate</ArmorSkillEnum>
+    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
+    <Block_Reduce>22</Block_Reduce>
+    <Damage_Ignore>7</Damage_Ignore>
+    <Damage_Reduction>22</Damage_Reduction>
+    <Description>
+      Not pretty, but this mask coves the top-half of the head quite well.  Effective protection against wild overhead swings.
+    </Description>
+    <Dodge_Reduce>22</Dodge_Reduce>
+    <Durability>80</Durability>
+    <Fatigue_Reduce>22</Fatigue_Reduce>
+    <Initiative_Reduce>22</Initiative_Reduce>
+    <Parry_Reduce>22</Parry_Reduce>
+    <Sprites>20,21,22</Sprites>
+    <Stamina_Reduce>22</Stamina_Reduce>
+    <Value>600</Value>
+  </Armor>
+  <Armor name="Orc Mask">
+    <Tier>Three</Tier>
+    <AP_Reduce>34</AP_Reduce>
+    <ArmorSkillEnum>Plate</ArmorSkillEnum>
+    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
+    <Block_Reduce>34</Block_Reduce>
+    <Damage_Ignore>12</Damage_Ignore>
+    <Damage_Reduction>34</Damage_Reduction>
+    <Description>
+      This helmet is extremely heavy.  For those with the stamina to wear it, it offers exceptional protection.
+    </Description>
+    <Dodge_Reduce>34</Dodge_Reduce>
+    <Durability>140</Durability>
+    <Fatigue_Reduce>34</Fatigue_Reduce>
+    <Initiative_Reduce>34</Initiative_Reduce>
+    <Parry_Reduce>34</Parry_Reduce>
+    <Sprites>35,36,37</Sprites>
+    <Stamina_Reduce>34</Stamina_Reduce>
+    <Value>2200</Value>
+  </Armor>
+  <Armor name="Orc Mask">
+    <Tier>Two</Tier>
+    <AP_Reduce>40</AP_Reduce>
+    <ArmorSkillEnum>Plate</ArmorSkillEnum>
+    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
+    <Block_Reduce>32</Block_Reduce>
+    <Damage_Ignore>15</Damage_Ignore>
+    <Damage_Reduction>38</Damage_Reduction>
+    <Description>
+      This helmet is ludicrously-heavy.  For anyone strong enough to wear it, it offers peerless protection.
+    </Description>
+    <Dodge_Reduce>40</Dodge_Reduce>
+    <Durability>220</Durability>
+    <Fatigue_Reduce>40</Fatigue_Reduce>
+    <Initiative_Reduce>40</Initiative_Reduce>
+    <Parry_Reduce>32</Parry_Reduce>
+    <Sprites>50,51,52</Sprites>
+    <Stamina_Reduce>40</Stamina_Reduce>
+    <Value>3500</Value>
+  </Armor>
+    <Armor name="Orcish Plate Mail">
+    <Tier>Three</Tier>
+    <AP_Reduce>45</AP_Reduce>
+    <ArmorSkillEnum>Plate</ArmorSkillEnum>
+    <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
+    <Block_Reduce>45</Block_Reduce>
+    <Damage_Ignore>25</Damage_Ignore>
+    <Damage_Reduction>55</Damage_Reduction>
+    <Description>
+      This orcish plate consists of a few pieces of heavy metal slabs melted over some chain mail.  It's heavy, and doesn't allow
+      for much movement...but offers incredible protection.
+    </Description>
+    <Dodge_Reduce>70</Dodge_Reduce>
+    <Durability>500</Durability>
+    <Fatigue_Reduce>60</Fatigue_Reduce>
+    <Initiative_Reduce>60</Initiative_Reduce>
+    <Parry_Reduce>60</Parry_Reduce>
+    <Sprites>32,33</Sprites>
+    <Stamina_Reduce>60</Stamina_Reduce>
+    <Value>5000</Value>
+  </Armor>
+    <Armor name="Orcish Plate Mail">
+    <Tier>Two</Tier>
+    <AP_Reduce>45</AP_Reduce>
+    <ArmorSkillEnum>Plate</ArmorSkillEnum>
+    <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
+    <Block_Reduce>45</Block_Reduce>
+    <Damage_Ignore>28</Damage_Ignore>
+    <Damage_Reduction>60</Damage_Reduction>
+    <Description>
+      This is orcish plate mail favored by the best orcish troops.  It is quality-made, consisting of heavy slabs of metal 
+      essentially melted together.  It affords excellent protection for those strong enough to wear it.
+    </Description>
+    <Dodge_Reduce>70</Dodge_Reduce>
+    <Durability>650</Durability>
+    <Fatigue_Reduce>60</Fatigue_Reduce>
+    <Initiative_Reduce>60</Initiative_Reduce>
+    <Parry_Reduce>60</Parry_Reduce>
+    <Sprites>47,48</Sprites>
+    <Stamina_Reduce>60</Stamina_Reduce>
+    <Value>6500</Value>
+  </Armor>
+  <Armor name="Plate Mail">
+    <Tier>Five</Tier>
+    <AP_Reduce>45</AP_Reduce>
+    <ArmorSkillEnum>Plate</ArmorSkillEnum>
+    <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
+    <Block_Reduce>38</Block_Reduce>
+    <Damage_Ignore>18</Damage_Ignore>
+    <Damage_Reduction>48</Damage_Reduction>
+    <Description>
+      Even rusty and decaying, this armor still provides good defense. Unfortunately, it's not as durable
+      as it once was...
+    </Description>
+    <Dodge_Reduce>55</Dodge_Reduce>
+    <Durability>150</Durability>
+    <Fatigue_Reduce>45</Fatigue_Reduce>
+    <Initiative_Reduce>45</Initiative_Reduce>
+    <Parry_Reduce>45</Parry_Reduce>
+    <Sprites>0,1</Sprites>
+    <Stamina_Reduce>45</Stamina_Reduce>
+    <Value>1200</Value>
+  </Armor>
+  <Armor name="Plate Mail">
+    <Tier>Four</Tier>
+    <AP_Reduce>42</AP_Reduce>
+    <ArmorSkillEnum>Plate</ArmorSkillEnum>
+    <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
+    <Block_Reduce>36</Block_Reduce>
+    <Damage_Ignore>20</Damage_Ignore>
+    <Damage_Reduction>50</Damage_Reduction>
+    <Description>
+      This armor doesn't represent the finest craftsmanship, but it still offers excellent protection.
+    </Description>
+    <Dodge_Reduce>52</Dodge_Reduce>
+    <Durability>250</Durability>
+    <Fatigue_Reduce>42</Fatigue_Reduce>
+    <Initiative_Reduce>42</Initiative_Reduce>
+    <Parry_Reduce>42</Parry_Reduce>
+    <Sprites>15,16</Sprites>
+    <Stamina_Reduce>42</Stamina_Reduce>
+    <Value>2000</Value>
+  </Armor>
+  <Armor name="Plate Mail">
+    <Tier>Three</Tier>
+    <AP_Reduce>40</AP_Reduce>
+    <ArmorSkillEnum>Plate</ArmorSkillEnum>
+    <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
+    <Block_Reduce>35</Block_Reduce>
+    <Damage_Ignore>22</Damage_Ignore>
+    <Damage_Reduction>52</Damage_Reduction>
+    <Description>
+      This is a fine example of plate mail.  It does restrict movement, but it offers excellent protection.
+    </Description>
+    <Dodge_Reduce>50</Dodge_Reduce>
+    <Durability>300</Durability>
+    <Fatigue_Reduce>40</Fatigue_Reduce>
+    <Initiative_Reduce>40</Initiative_Reduce>
+    <Parry_Reduce>40</Parry_Reduce>
+    <Sprites>30</Sprites>
+    <Stamina_Reduce>40</Stamina_Reduce>
+    <Value>5000</Value>
+  </Armor>
+  <Armor name="Sallet">
+    <Tier>Three</Tier>
+    <AP_Reduce>28</AP_Reduce>
+    <ArmorSkillEnum>Plate</ArmorSkillEnum>
+    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
+    <Block_Reduce>30</Block_Reduce>
+    <Damage_Ignore>13</Damage_Ignore>
+    <Damage_Reduction>40</Damage_Reduction>
+    <Description>
+      This sturdy helm provides excellent protection and doesn't restrict too much movement.  The curved nature of it
+      provides better-than-usual protection against piercing attacks.
+    </Description>
+    <Dodge_Reduce>30</Dodge_Reduce>
+    <Durability>250</Durability>
+    <Fatigue_Reduce>25</Fatigue_Reduce>
+    <Initiative_Reduce>25</Initiative_Reduce>
+    <Parry_Reduce>25</Parry_Reduce>
+    <Sprites>34</Sprites>
+    <Stamina_Reduce>25</Stamina_Reduce>
+    <Value>3200</Value>
+  </Armor>
+  <Armor name="Slime Handler Cap">
+    <Tier>Five</Tier>
+    <AP_Reduce>2</AP_Reduce>
+    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
+    <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
+    <Block_Reduce>1</Block_Reduce>
+    <Damage_Ignore>0</Damage_Ignore>
+    <Damage_Reduction>1</Damage_Reduction>
+    <Description>
+      This cap is all style and no practicality...except that it does offer slight protection against poison.
+    </Description>
+    <Dodge_Reduce>2</Dodge_Reduce>
+    <Durability>3</Durability>
+    <Fatigue_Reduce>1</Fatigue_Reduce>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Parry_Reduce>0</Parry_Reduce>
+    <Sprites>0</Sprites>
+    <Stamina_Reduce>1</Stamina_Reduce>
+    <Value>50</Value>
+  </Armor>
+  <Armor name="Slime Handler Cap">
+    <Tier>Four</Tier>
+    <AP_Reduce>1</AP_Reduce>
+    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
+    <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
+    <Block_Reduce>1</Block_Reduce>
+    <Damage_Ignore>0</Damage_Ignore>
+    <Damage_Reduction>2</Damage_Reduction>
+    <Description>
+      This cap is all style and no practicality...except that it does offer slight protection against poison.
+    </Description>
+    <Dodge_Reduce>2</Dodge_Reduce>
+    <Durability>10</Durability>
+    <Fatigue_Reduce>1</Fatigue_Reduce>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Parry_Reduce>0</Parry_Reduce>
+    <Sprites>15</Sprites>
+    <Stamina_Reduce>1</Stamina_Reduce>
+    <Value>100</Value>
+  </Armor>
+  <Armor name="Slime Handler Cap">
+    <Tier>Three</Tier>
+    <AP_Reduce>0</AP_Reduce>
+    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
+    <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
+    <Block_Reduce>0</Block_Reduce>
+    <Damage_Ignore>0</Damage_Ignore>
+    <Damage_Reduction>2</Damage_Reduction>
+    <Description>
+      This cap is all style and no practicality...except that it does offer slight protection against poison.
+    </Description>
+    <Dodge_Reduce>1</Dodge_Reduce>
+    <Durability>15</Durability>
+    <Fatigue_Reduce>0</Fatigue_Reduce>
+    <Initiative_Reduce>0</Initiative_Reduce>
+    <Parry_Reduce>0</Parry_Reduce>
+    <Sprites>30</Sprites>
+    <Stamina_Reduce>0</Stamina_Reduce>
+    <Value>200</Value>
+  </Armor>
+  <Armor name="Slime Handler Robes">
+    <Tier>Five</Tier>
+    <AP_Reduce>3</AP_Reduce>
+    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
+    <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
+    <Block_Reduce>3</Block_Reduce>
+    <Damage_Ignore>0</Damage_Ignore>
+    <Damage_Reduction>1</Damage_Reduction>
+    <Description>
+      These robes don't offer much protection against attacks.  However, they are imbued with a slight magical property
+      that makes the user resistant to poision.
+    </Description>
+    <Dodge_Reduce>3</Dodge_Reduce>
+    <Durability>5</Durability>
+    <Fatigue_Reduce>3</Fatigue_Reduce>
+    <Initiative_Reduce>3</Initiative_Reduce>
+    <Parry_Reduce>0</Parry_Reduce>
+    <Sprites>1,2</Sprites>
+    <Stamina_Reduce>3</Stamina_Reduce>
+    <Value>30</Value>
+  </Armor>
+  <Armor name="Slime Handler Robes">
+    <Tier>Four</Tier>
+    <AP_Reduce>2</AP_Reduce>
+    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
+    <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
+    <Block_Reduce>2</Block_Reduce>
+    <Damage_Ignore>0</Damage_Ignore>
+    <Damage_Reduction>2</Damage_Reduction>
+    <Description>
+      These robes don't offer much protection against attacks.  However, they are imbued with a slight magical property
+      that makes the user resistant to poision.
+    </Description>
+    <Dodge_Reduce>2</Dodge_Reduce>
+    <Durability>10</Durability>
+    <Fatigue_Reduce>2</Fatigue_Reduce>
+    <Initiative_Reduce>2</Initiative_Reduce>
+    <Parry_Reduce>0</Parry_Reduce>
+    <Sprites>16,17</Sprites>
+    <Stamina_Reduce>2</Stamina_Reduce>
+    <Value>200</Value>
+  </Armor>
+  <Armor name="Slime Handler Robes">
+    <Tier>Three</Tier>
+    <AP_Reduce>1</AP_Reduce>
+    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
+    <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
+    <Block_Reduce>1</Block_Reduce>
+    <Damage_Ignore>1</Damage_Ignore>
+    <Damage_Reduction>2</Damage_Reduction>
+    <Description>
+      These robes don't offer much protection against attacks.  However, they are imbued with a slight magical property
+      that makes the user resistant to poision.
+    </Description>
+    <Dodge_Reduce>3</Dodge_Reduce>
+    <Durability>20</Durability>
+    <Fatigue_Reduce>1</Fatigue_Reduce>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Parry_Reduce>0</Parry_Reduce>
+    <Sprites>31,32</Sprites>
+    <Stamina_Reduce>1</Stamina_Reduce>
+    <Value>450</Value>
+  </Armor>
+  <Armor name="Tunic">
+    <Tier>Five</Tier>
+    <AP_Reduce>0</AP_Reduce>
+    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
+    <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
+    <Block_Reduce>0</Block_Reduce>
+    <Damage_Ignore>0</Damage_Ignore>
+    <Damage_Reduction>3</Damage_Reduction>
+    <Description>
+      This "tunic" is basically a shirt made of patchy cloth.  It probably doesn't even offer protection against a bee sting.
+    </Description>
+    <Dodge_Reduce>0</Dodge_Reduce>
+    <Durability>15</Durability>
+    <Fatigue_Reduce>0</Fatigue_Reduce>
+    <Initiative_Reduce>0</Initiative_Reduce>
+    <Parry_Reduce>0</Parry_Reduce>
+    <Sprites>0</Sprites>
+    <Stamina_Reduce>0</Stamina_Reduce>
+    <Value>5</Value>
+  </Armor>
+  <Armor name="Tunic">
+    <Tier>Four</Tier>
+    <AP_Reduce>0</AP_Reduce>
+    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
+    <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
+    <Block_Reduce>0</Block_Reduce>
+    <Damage_Ignore>1</Damage_Ignore>
+    <Damage_Reduction>4</Damage_Reduction>
+    <Description>
+      This tunic offers minimal protection - but it's better than nothing.
+    </Description>
+    <Dodge_Reduce>0</Dodge_Reduce>
+    <Durability>25</Durability>
+    <Fatigue_Reduce>0</Fatigue_Reduce>
+    <Initiative_Reduce>0</Initiative_Reduce>
+    <Parry_Reduce>0</Parry_Reduce>
+    <Sprites>0</Sprites>
+    <Stamina_Reduce>0</Stamina_Reduce>
+    <Value>25</Value>
+  </Armor>
+</Armors>

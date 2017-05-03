@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Characters>
+  <Character name ="Fledgling Slime Lord">
+    <Class>Wizard,3</Class>
+    <Class>Slime_Lord,2</Class>
+    <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+    <RaceEnum>Goblin</RaceEnum>
+    <CultureEnum>Goblin</CultureEnum>
+    <PotentialArmors>
+      <Armors name="One">
+        <Armor>0.75,Slime Handler Robes,Five</Armor>
+        <Armor>0.25,Slime Handler Robes,Four</Armor>
+      </Armors>
+      <Helms name="One">
+        <Helm>0.75,Slime Handler Cap,Five</Helm>
+        <Helm>0.25,Slime Handler Cap,Four</Helm>
+      </Helms>
+    </PotentialArmors>
+    <PotentialWeapons>
+      <RWeapons name="One">
+        <RWeapon>0.75,Slime Staff,Five</RWeapon>
+        <RWeapon>0.25,Slime Staff,Four</RWeapon>
+      </RWeapons>
+    </PotentialWeapons>
+    <Stats>
+      <Agility>520</Agility>
+      <Constitution>400</Constitution>
+      <Intelligence>540</Intelligence>
+      <Might>480</Might>
+      <Perception>530</Perception>
+      <Resolve>450</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Goblin Fodder">
+    <Class>Fighter,3</Class>
+    <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+    <RaceEnum>Goblin</RaceEnum>
+    <CultureEnum>Goblin</CultureEnum>
+    <PotentialArmors>
+      <Armors name="One">
+        <Armor>0.75,Goblin Pads,Five</Armor>
+        <Armor>0.25,Goblin Pads,Four</Armor>
+      </Armors>
+      <Helms name="One">
+        <Helm>0.75,Goblin Cap,Five</Helm>
+        <Helm>0.25,Goblin Cap,Four</Helm>
+      </Helms>
+    </PotentialArmors>
+    <PotentialWeapons>
+      <LWeapons name="One">
+        <LWeapon>0.75,Goblin Buckler,Five</LWeapon>
+        <LWeapon>0.25,Goblin Buckler,Four</LWeapon>
+      </LWeapons>
+      <RWeapons name="One">
+        <RWeapon>0.75,Skewer,Five</RWeapon>
+        <RWeapon>0.25,Skewer,Four</RWeapon>
+      </RWeapons>
+    </PotentialWeapons>
+    <Stats>
+      <Agility>550</Agility>
+      <Constitution>380</Constitution>
+      <Intelligence>520</Intelligence>
+      <Might>400</Might>
+      <Perception>480</Perception>
+      <Resolve>350</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Medium Greatsword Footman">
+    <Class>Fighter,3</Class>
+    <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+    <RaceEnum>Human</RaceEnum>
+    <CultureEnum>Bretonnian</CultureEnum>
+    <PotentialArmors>
+      <Armors name="One">
+        <Armor>1.0,Mail Shirt,Three</Armor>
+      </Armors>
+      <Helms name="One">
+        <Helm>1.0,Mail Coif,Three</Helm>
+      </Helms>
+    </PotentialArmors>
+    <PotentialWeapons>
+      <RWeapons name="One">
+        <RWeapon>0.75,Claymore,Three</RWeapon>
+        <RWeapon>0.25,Zweihander,Three</RWeapon>
+      </RWeapons>
+    </PotentialWeapons>
+    <Stats>
+      <Agility>400</Agility>
+      <Constitution>550</Constitution>
+      <Intelligence>420</Intelligence>
+      <Might>550</Might>
+      <Perception>520</Perception>
+      <Resolve>400</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Orc Scavenger">
+    <Class>Warrior,1</Class>
+    <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+    <RaceEnum>Orc</RaceEnum>
+    <CultureEnum>Orcish</CultureEnum>
+    <PotentialArmors>
+      <Armors name="One">
+        <Armor>0.15,Mail Shirt,Five</Armor>
+        <Armor>0.05,Mail Shirt,Four</Armor>
+        <Armor>0.05,Plate Mail,Five</Armor>
+        <Armor>0.01,Plate Mail,Four</Armor>
+        <Armor>0.30,Tunic,Five</Armor>
+        <Armor>0.10,Tunic,Four</Armor>
+      </Armors>
+      <Helms name="One">
+        <Helm>0.2,Great Helm,Five</Helm>
+        <Helm>0.05,Great Helm,Four</Helm>
+      </Helms>
+    </PotentialArmors>
+    <PotentialWeapons>
+      <LWeapons name="One">
+        <LWeapon>0.35,Buckler,Five</LWeapon>
+        <LWeapon>0.25,Buckler,Four</LWeapon>
+        <LWeapon>0.15,Choppa,Five</LWeapon>
+        <LWeapon>0.05,Choppa,Four</LWeapon>
+      </LWeapons>
+      <RWeapons name="One">
+        <RWeapon>0.35,Choppa,Five</RWeapon>
+        <RWeapon>0.15,Choppa,Four</RWeapon>
+        <RWeapon>0.05,Choppa,Three</RWeapon>
+        <RWeapon>0.25,Spear,Five</RWeapon>
+        <RWeapon>0.15,Spear,Four</RWeapon>
+      </RWeapons>
+    </PotentialWeapons>
+    <Stats>
+      <Agility>500</Agility>
+      <Constitution>680</Constitution>
+      <Intelligence>300</Intelligence>
+      <Might>620</Might>
+      <Perception>500</Perception>
+      <Resolve>300</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Praetorian">
+    <Class>Fighter,5</Class>
+    <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+    <RaceEnum>Human</RaceEnum>
+    <CultureEnum>Roman</CultureEnum>
+    <PotentialArmors>
+      <Helms name="One">
+        <Helm>1.0,Galea,Three</Helm>
+      </Helms>
+    </PotentialArmors>
+    <PotentialWeapons>
+      <LWeapons name="One">
+        <LWeapon>1.00,Scutum,Three</LWeapon>
+      </LWeapons>
+      <RWeapons name="One">
+        <RWeapon>1.00,Gladius,Three</RWeapon>
+      </RWeapons>
+    </PotentialWeapons>
+    <Stats>
+      <Agility>450</Agility>
+      <Constitution>520</Constitution>
+      <Intelligence>450</Intelligence>
+      <Might>520</Might>
+      <Perception>500</Perception>
+      <Resolve>470</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Shock Troopa">
+    <Class>Warrior,3</Class>
+    <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+    <RaceEnum>Orc</RaceEnum>
+    <CultureEnum>Orcish</CultureEnum>
+    <PotentialArmors>
+      <Armors name="One">
+        <Armor>1.0,Orcish Plate Mail,Three</Armor>
+      </Armors>
+      <Helms name="One">
+        <Helm>0.80,Orc Mask,Four</Helm>
+        <Helm>0.20,Orc Mask,Three</Helm>
+      </Helms>
+    </PotentialArmors>
+    <PotentialWeapons>
+      <RWeapons name="One">
+        <RWeapon>0.80,Great Axe Choppa,Four</RWeapon>
+        <RWeapon>0.20,Choppa,Three</RWeapon>
+      </RWeapons>
+    </PotentialWeapons>
+    <Stats>
+      <Agility>400</Agility>
+      <Constitution>750</Constitution>
+      <Intelligence>200</Intelligence>
+      <Might>700</Might>
+      <Perception>400</Perception>
+      <Resolve>320</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Rookie Slimer">
+    <Class>Ninja,3</Class>
+    <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+    <RaceEnum>Goblin</RaceEnum>
+    <CultureEnum>Goblin</CultureEnum>
+    <PotentialArmors>
+      <Armors name="One">
+        <Armor>0.75,Goblin Pads,Five</Armor>
+        <Armor>0.25,Goblin Pads,Four</Armor>
+      </Armors>
+      <Helms name="One">
+        <Helm>0.75,Goblin Cap,Five</Helm>
+        <Helm>0.25,Goblin Cap,Four</Helm>
+      </Helms>
+    </PotentialArmors>
+    <PotentialWeapons>
+      <LWeapons name="One">
+        <LWeapon>0.75,Notched Blade,Five</LWeapon>
+        <LWeapon>0.25,Notched Blade,Four</LWeapon>
+      </LWeapons>
+      <RWeapons name="One">
+        <RWeapon>0.75,Slime Blade,Five</RWeapon>
+        <RWeapon>0.25,Slime Blade,Four</RWeapon>
+      </RWeapons>
+    </PotentialWeapons>
+    <Stats>
+      <Agility>550</Agility>
+      <Constitution>350</Constitution>
+      <Intelligence>480</Intelligence>
+      <Might>380</Might>
+      <Perception>480</Perception>
+      <Resolve>350</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Slime Lord">
+    <Class>Wizard,5</Class>
+    <Class>Slime Lord,3</Class>
+    <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+    <RaceEnum>Goblin</RaceEnum>
+    <CultureEnum>Goblin</CultureEnum>
+    <PotentialArmors>
+      <Armors name="One">
+        <Armor>0.75,Slime Handler Robes,Four</Armor>
+        <Armor>0.25,Slime Handler Robes,Three</Armor>
+      </Armors>
+      <Helms name="One">
+        <Helm>0.75,Slime Handler Cap,Four</Helm>
+        <Helm>0.25,Slime Handler Cap,Three</Helm>
+      </Helms>
+    </PotentialArmors>
+    <PotentialWeapons>
+      <RWeapons name="One">
+        <RWeapon>0.75,Slime Staff,Four</RWeapon>
+        <RWeapon>0.25,Slime Staff,Three</RWeapon>
+      </RWeapons>
+    </PotentialWeapons>
+    <Stats>
+      <Agility>550</Agility>
+      <Constitution>420</Constitution>
+      <Intelligence>550</Intelligence>
+      <Might>510</Might>
+      <Perception>550</Perception>
+      <Resolve>480</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Sluggish">
+    <Class>Warrior,1</Class>
+    <CharacterTypeEnum>Critter</CharacterTypeEnum>
+    <Stats>
+      <Agility>250</Agility>
+      <Constitution>250</Constitution>
+      <Intelligence>300</Intelligence>
+      <Might>350</Might>
+      <Perception>400</Perception>
+      <Resolve>550</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Slimer">
+    <Class>Ninja,5</Class>
+    <Class>Assassin,3</Class>
+    <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+    <RaceEnum>Goblin</RaceEnum>
+    <CultureEnum>Goblin</CultureEnum>
+    <PotentialArmors>
+      <Armors name="One">
+        <Armor>0.75,Goblin Pads,Four</Armor>
+        <Armor>0.25,Goblin Pads,Three</Armor>
+      </Armors>
+      <Helms name="One">
+        <Helm>0.75,Goblin Cap,Four</Helm>
+        <Helm>0.25,Goblin Cap,Three</Helm>
+      </Helms>
+    </PotentialArmors>
+    <PotentialWeapons>
+      <LWeapons name="One">
+        <LWeapon>0.75,Notched Blade,Four</LWeapon>
+        <LWeapon>0.25,Notched Blade,Three</LWeapon>
+      </LWeapons>
+      <RWeapons name="One">
+        <RWeapon>0.75,Slime Blade,Four</RWeapon>
+        <RWeapon>0.25,Slime Blade,Three</RWeapon>
+      </RWeapons>
+    </PotentialWeapons>
+    <Stats>
+      <Agility>550</Agility>
+      <Constitution>350</Constitution>
+      <Intelligence>480</Intelligence>
+      <Might>380</Might>
+      <Perception>480</Perception>
+      <Resolve>350</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Spider Rider">
+    <Class>Fighter,3</Class>
+    <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+    <RaceEnum>Goblin</RaceEnum>
+    <CultureEnum>Goblin</CultureEnum>
+    <Mount>Octolegs</Mount>
+    <PotentialArmors>
+      <Armors name="One">
+        <Armor>0.75,Goblin Pads,Four</Armor>
+        <Armor>0.25,Goblin Pads,Three</Armor>
+      </Armors>
+      <Helms name="One">
+        <Helm>0.75,Goblin Cap,Four</Helm>
+        <Helm>0.25,Goblin Cap,Three</Helm>
+      </Helms>
+    </PotentialArmors>
+    <PotentialWeapons>
+      <LWeapons name="One">
+        <LWeapon>0.75,Goblin Buckler,Five</LWeapon>
+        <LWeapon>0.25,Goblin Buckler,Four</LWeapon>
+      </LWeapons>
+      <RWeapons name="One">
+        <RWeapon>0.75,Notched Blade,Four</RWeapon>
+        <RWeapon>0.25,Notched Blade,Three</RWeapon>
+      </RWeapons>
+    </PotentialWeapons>
+    <Stats>
+      <Agility>600</Agility>
+      <Constitution>350</Constitution>
+      <Intelligence>520</Intelligence>
+      <Might>520</Might>
+      <Perception>500</Perception>
+      <Resolve>450</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Veteran Shock Troopa">
+    <Class>Warrior,5</Class>
+    <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+    <RaceEnum>Orc</RaceEnum>
+    <CultureEnum>Orcish</CultureEnum>
+    <PotentialArmors>
+      <Armors name="One">
+        <Armor>0.50,Orcish Plate Mail,Three</Armor>
+        <Armor>0.50,Orcish Plate Mail,Two</Armor>
+      </Armors>
+      <Helms name="One">
+        <Helm>0.80,Orc Mask,Three</Helm>
+        <Helm>0.20,Orc Mask,Two</Helm>
+      </Helms>
+    </PotentialArmors>
+    <PotentialWeapons>
+      <RWeapons name="One">
+        <RWeapon>0.80,Great Axe Choppa,Three</RWeapon>
+        <RWeapon>0.20,Choppa,Two</RWeapon>
+      </RWeapons>
+    </PotentialWeapons>
+    <Stats>
+      <Agility>420</Agility>
+      <Constitution>800</Constitution>
+      <Intelligence>200</Intelligence>
+      <Might>740</Might>
+      <Perception>410</Perception>
+      <Resolve>350</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Veteran Spider Rider">
+    <Class>Fighter,7</Class>
+    <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+    <RaceEnum>Goblin</RaceEnum>
+    <CultureEnum>Goblin</CultureEnum>
+    <Mount>Octolegs</Mount>
+    <PotentialArmors>
+      <Armors name="One">
+        <Armor>0.75,Goblin Pads,Three</Armor>
+        <Armor>0.25,Goblin Pads,Two</Armor>
+      </Armors>
+      <Helms name="One">
+        <Helm>0.75,Goblin Cap,Three</Helm>
+        <Helm>0.25,Goblin Cap,Two</Helm>
+      </Helms>
+    </PotentialArmors>
+    <PotentialWeapons>
+      <LWeapons name="One">
+        <LWeapon>0.75,Goblin Buckler,Three</LWeapon>
+        <LWeapon>0.25,Goblin Buckler,Two</LWeapon>
+      </LWeapons>
+      <RWeapons name="One">
+        <RWeapon>0.75,Notched Blade,Three</RWeapon>
+        <RWeapon>0.25,Notched Blade,Two</RWeapon>
+      </RWeapons>
+    </PotentialWeapons>
+    <Stats>
+      <Agility>610</Agility>
+      <Constitution>350</Constitution>
+      <Intelligence>520</Intelligence>
+      <Might>530</Might>
+      <Perception>500</Perception>
+      <Resolve>450</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="War Ween Rider">
+    <Class>Warrior,5</Class>
+    <Class>Berserker,3</Class>
+    <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+    <RaceEnum>Orc</RaceEnum>
+    <CultureEnum>Orcish</CultureEnum>
+    <Mount>War_Ween</Mount>
+    <PotentialArmors>
+      <Armors name="One">
+        <Armor>0.50,Orcish Plate Mail,Three</Armor>
+        <Armor>0.50,Orcish Plate Mail,Two</Armor>
+      </Armors>
+      <Helms name="One">
+        <Helm>0.80,Orc Mask,Three</Helm>
+        <Helm>0.20,Orc Mask,Two</Helm>
+      </Helms>
+    </PotentialArmors>
+    <PotentialWeapons>
+      <LWeapons name="One">
+        <LWeapon>0.75,Orc Slab,Four</LWeapon>
+        <LWeapon>0.25,Orc Slab,Three</LWeapon>
+      </LWeapons>
+      <RWeapons name="One">
+        <RWeapon>0.75,Choppa,Four</RWeapon>
+        <RWeapon>0.25,Choppa,Three</RWeapon>
+      </RWeapons>
+    </PotentialWeapons>
+    <Stats>
+      <Agility>510</Agility>
+      <Constitution>520</Constitution>
+      <Intelligence>380</Intelligence>
+      <Might>600</Might>
+      <Perception>580</Perception>
+      <Resolve>420</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Ween Rider">
+    <Class>Warrior,3</Class>
+    <Class>Berserker,2</Class>
+    <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+    <RaceEnum>Orc</RaceEnum>
+    <CultureEnum>Orcish</CultureEnum>
+    <Mount>Ween</Mount>
+    <PotentialWeapons>
+      <LWeapons name="One">
+        <LWeapon>0.75,Orc Slab,Four</LWeapon>
+        <LWeapon>0.25,Orc Slab,Three</LWeapon>
+      </LWeapons>
+      <RWeapons name="One">
+        <RWeapon>0.75,Choppa,Four</RWeapon>
+        <RWeapon>0.25,Choppa,Three</RWeapon>
+      </RWeapons>
+    </PotentialWeapons>
+    <Stats>
+      <Agility>510</Agility>
+      <Constitution>520</Constitution>
+      <Intelligence>380</Intelligence>
+      <Might>600</Might>
+      <Perception>580</Perception>
+      <Resolve>420</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Wimpy Orc Berserker">
+    <Class>Warrior,3</Class>
+    <Class>Berserker,1</Class>
+    <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+    <RaceEnum>Orc</RaceEnum>
+    <CultureEnum>Orcish</CultureEnum>
+    <PotentialWeapons>
+      <RWeapons name="One">
+        <RWeapon>0.50,Great Axe Choppa,Four</RWeapon>
+        <RWeapon>0.50,Megaflail,Four</RWeapon>
+      </RWeapons>
+    </PotentialWeapons>
+    <Stats>
+      <Agility>350</Agility>
+      <Constitution>400</Constitution>
+      <Intelligence>220</Intelligence>
+      <Might>680</Might>
+      <Perception>350</Perception>
+      <Resolve>350</Resolve>
+    </Stats>
+  </Character>
+</Characters>
