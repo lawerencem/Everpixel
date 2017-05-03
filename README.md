@@ -1,6 +1,6 @@
 # Everpixel
 
-# Synopsis
+# Overview
    This is a game that I have been making during my free time.  Please feel free to peruse the code/images/resources - but please do not use or redistribute the code without my explicit permission.
    
    I intend for this game to be free and available for download when I finish it.
