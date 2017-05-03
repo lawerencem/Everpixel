@@ -11,4 +11,5 @@
 # Contributors
   - Jeremy Case: JeremyACase@gmail.com
   
+Copyright © 2017 Jeremy Case
   
