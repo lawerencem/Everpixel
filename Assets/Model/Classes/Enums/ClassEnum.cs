@@ -36,6 +36,7 @@
         Commander,
         Cryomancer,
         Death_Knight,
+        Dino_Knight,
         Divine_Mind,
         Duelist,
         Erudite,

@@ -13,7 +13,7 @@ namespace Model.Equipment
         public string Description { get; set; }
         public double DodgeReduce { get; set; }
         public int Durability { get; set; }
-        public double FatigueReduce { get; set; }
+        public double FatigueCost { get; set; }
         public double InitiativeReduce { get; set; }
         public string Name { get; set; }
         public double ParryReduce { get; set; }

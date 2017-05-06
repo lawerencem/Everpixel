@@ -103,9 +103,17 @@ namespace Model.Characters
             if (csv != null && csv.Count >= 3)
             {
                 var key = csv[PredefinedEquipmentXMLIndexes.NAME] + "_" + csv[PredefinedEquipmentXMLIndexes.TIER];
-                var weapon = WeaponParamTable.Instance.Table[key];
-                weapon.Sprites = EquipmentSpritesTable.Instance.Table[key];
-                return weapon;
+                if (WeaponParamTable.Instance.Table.ContainsKey(key))
+                {
+                    var weapon = WeaponParamTable.Instance.Table[key];
+                    weapon.Sprites = EquipmentSpritesTable.Instance.Table[key];
+                    return weapon;
+                }
+                else
+                {
+                    return null;
+                }
+
             }
             else
                 return null;

@@ -45,7 +45,7 @@ namespace Controller.Managers.Map
 
         public void InitEnemyParty()
         {
-            var enemies = EnemyPartyLoader.Instance.GetParty("Orc Shock Troopas");
+            var enemies = EnemyPartyLoader.Instance.GetParty("Lizardman War Party");
             var builder = new CharacterViewBuilder();
             var controllers = new List<GenericCharacterController>();
 
@@ -134,7 +134,7 @@ namespace Controller.Managers.Map
                 if (c.View.Armor != null) { TryAttachEquipment(c, c.View.Armor, "CharArmor", index); }
                 if (c.View.Helm != null) { TryAttachEquipment(c, c.View.Helm, "CharHelm", index, 0f, 0.15f); }
                 if (c.View.LWeapon != null) { TryAttachEquipment(c, c.View.LWeapon, "CharLWeapon", index, 0.09f); }
-                if (c.View.Mount != null) { AttachMount(c, "Mount", index); }
+                if (c.View.Mount != null) { AttachMount(c, "CharMount", index); }
                 if (c.View.RWeapon != null) { TryAttachEquipment(c, c.View.RWeapon, "CharRWeapon", index, -0.09f); }
                 this._map.TileControllers[index].Model.Current = c;
                 c.CurrentTile = this._map.TileControllers[index];

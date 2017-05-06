@@ -10,23 +10,22 @@ namespace Model.Equipment
 
         public List<WeaponAbilitiesEnum> Abilities { get; set;}
         public double Accuracy { get; set; }
-        public int APReduce { get; set; }
+        public double APReduce { get; set; }
         public double ArmorIgnore { get; set; }
         public double ArmorPierce { get; set; }
         public double BlockIgnore { get; set; }
         public int Damage { get; set; }
-        public int DodgeReduce { get; set; }
+        public double DodgeReduce { get; set; }
         public string Description { get; set; }
         public int Durability { get; set; }
-        public int FatigueCost { get; set; }
-        public int FatigueReduce { get; set; }
+        public double FatigueCost { get; set; }
         public double InitiativeReduce { get; set; }
-        public int MeleeBlockChance { get; set; }
+        public double MeleeBlockChance { get; set; }
         public string Name { get; set; }
         public double ParryChance { get; set; }
         public double ParryReduce { get; set; }
         public int Range { get; set; }
-        public int RangeBlockChance { get; set; }
+        public double RangeBlockChance { get; set; }
         public double ShieldDamage { get; set; }
         public WeaponSkillEnum Skill { get; set; }
         public List<int> Sprites { get; set; }

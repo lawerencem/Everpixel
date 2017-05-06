@@ -11,32 +11,37 @@
     <Character>1,Medium Great Sword Footman,One</Character>
     <Character>0.85,Medium Great Sword Footman,One</Character>
   </SubParty>
-  <SubParty Name ="Goblin Calvary">
+  <SubParty Name ="Dino Knights">
+    <Difficulty>2</Difficulty>
+    <Character>1,Dino Squire,One</Character>
+    <Character>0.85,Dino Squire,One</Character>
+  </SubParty>
+  <SubParty Name ="Gobbo Spider Riders">
     <Difficulty>1</Difficulty>
     <Character>1,Spider Rider,One</Character>
     <Character>0.85,Spider Rider,One</Character>
   </SubParty>
-  <SubParty Name ="Goblin Calvary">
+  <SubParty Name ="Gobbo Spider Riders">
     <Difficulty>2</Difficulty>
     <Character>1,Spider Rider,One</Character>
     <Character>1,Spider Rider,One</Character>
     <Character>0.85,Spider Rider,One</Character>
   </SubParty>
-  <SubParty Name ="Goblin Calvary">
+  <SubParty Name ="Gobbo Spider Riders">
     <Difficulty>3</Difficulty>
     <Character>1,Spider Rider,One</Character>
     <Character>1,Spider Rider,One</Character>
     <Character>0.85,Spider Rider,One</Character>
     <Character>0.85,Spider Rider,One</Character>
   </SubParty>
-  <SubParty Name ="Goblin Calvary">
+  <SubParty Name ="Gobbo Spider Riders">
     <Difficulty>4</Difficulty>
     <Character>1,Veteran Spider Rider,One</Character>
     <Character>1,Spider Rider,One</Character>
     <Character>0.85,Spider Rider,One</Character>
     <Character>0.85,Spider Rider,One</Character>
   </SubParty>
-  <SubParty Name ="Goblin Calvary">
+  <SubParty Name ="Gobbo Spider Riders">
     <Difficulty>5</Difficulty>
     <Character>1,Veteran Spider Rider,One</Character>
     <Character>1,Veteran Spider Rider,One</Character>
@@ -63,11 +68,26 @@
     <Character>0.85,Goblin Fodder,One</Character>
     <Character>0.85,Goblin Fodder,One</Character>
   </SubParty>
+  <SubParty Name ="Gromp Hoppers">
+    <Difficulty>4</Difficulty>
+    <Character>1,Gromp Hopper,One</Character>
+    <Character>0.50,Gromp Hopper,One</Character>
+  </SubParty>
+  <SubParty Name ="Gromp Hoppers">
+    <Difficulty>5</Difficulty>
+    <Character>1,Gromp Hopper,One</Character>
+    <Character>1,Gromp Hopper,One</Character>
+  </SubParty>
   <SubParty Name ="Legionnaires">
     <Difficulty>3</Difficulty>
     <Character>1,Praetorian,One</Character>
     <Character>1,Praetorian,One</Character>
     <Character>0.85,Praetorian,One</Character>
+  </SubParty>
+  <SubParty Name ="Lizardman Fodder">
+    <Difficulty>1</Difficulty>
+    <Character>1,Lizardman Militia,One</Character>
+    <Character>0.85,Lizardman Militia,One</Character>
   </SubParty>
   <SubParty Name ="Orc Scavengers">
     <Difficulty>1</Difficulty>

@@ -1,5 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Characters>
+  <Character name ="Dino Squire">
+    <Class>Knight,3</Class>
+    <Class>Dino_Knight,1</Class>
+    <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+    <RaceEnum>Lizardman</RaceEnum>
+    <CultureEnum>Amazonian</CultureEnum>
+    <PotentialArmors>
+      <Armors name="One">
+        <Armor>0.75,Dino Scale Armor,Five</Armor>
+        <Armor>0.25,Dino Scale Armor,Four</Armor>
+      </Armors>
+    </PotentialArmors>
+    <PotentialWeapons>
+      <RWeapons name="One">
+        <RWeapon>0.375,Dino Greataxe,Five</RWeapon>
+        <RWeapon>0.125,Dino Greataxe,Four</RWeapon>
+        <RWeapon>0.375,Dino Warhammer,Five</RWeapon>
+        <RWeapon>0.125,Dino Warhammer,Four</RWeapon>
+      </RWeapons>
+    </PotentialWeapons>
+    <Stats>
+      <Agility>520</Agility>
+      <Constitution>400</Constitution>
+      <Intelligence>540</Intelligence>
+      <Might>480</Might>
+      <Perception>530</Perception>
+      <Resolve>450</Resolve>
+    </Stats>
+  </Character>
   <Character name ="Fledgling Slime Lord">
     <Class>Wizard,3</Class>
     <Class>Slime_Lord,2</Class>
@@ -63,6 +92,69 @@
       <Might>400</Might>
       <Perception>480</Perception>
       <Resolve>350</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Gromp Hopper">
+    <Class>Warrior,3</Class>
+    <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+    <RaceEnum>Goblin</RaceEnum>
+    <CultureEnum>Goblin</CultureEnum>
+    <Mount>Gromp</Mount>
+    <PotentialArmors>
+      <Armors name="One">
+        <Armor>0.25,Goblin Pads,Five</Armor>
+        <Armor>0.15,Goblin Pads,Four</Armor>
+      </Armors>
+      <Helms name="One">
+        <Helm>0.25,Goblin Cap,Five</Helm>
+        <Helm>0.15,Goblin Cap,Four</Helm>
+      </Helms>
+    </PotentialArmors>
+    <PotentialWeapons>
+      <LWeapons name="One">
+        <LWeapon>0.35,Goblin Buckler,Five</LWeapon>
+        <LWeapon>0.15,Goblin Buckler,Four</LWeapon>
+      </LWeapons>
+      <RWeapons name="One">
+        <RWeapon>0.25,Skewer,Five</RWeapon>
+        <RWeapon>0.15,Skewer,Four</RWeapon>
+        <RWeapon>0.20,Notched Blade,Five</RWeapon>
+        <RWeapon>0.05,Notched Blade,Four</RWeapon>
+      </RWeapons>
+    </PotentialWeapons>
+    <Stats>
+      <Agility>510</Agility>
+      <Constitution>520</Constitution>
+      <Intelligence>380</Intelligence>
+      <Might>600</Might>
+      <Perception>580</Perception>
+      <Resolve>420</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Lizardman Militia">
+    <Class>Warrior,1</Class>
+    <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+    <RaceEnum>Lizardman</RaceEnum>
+    <CultureEnum>Amazonian</CultureEnum>
+    <PotentialArmors>
+    </PotentialArmors>
+    <PotentialWeapons>
+      <LWeapons name="One">
+        <LWeapon>0.25,Dino Shield,Five</LWeapon>
+        <LWeapon>0.10,Dino Shield,Four</LWeapon>
+      </LWeapons>
+      <RWeapons name="One">
+        <RWeapon>0.75,Dino Fang Club,Five</RWeapon>
+        <RWeapon>0.25,Dino Fang Club,Four</RWeapon>
+      </RWeapons>
+    </PotentialWeapons>
+    <Stats>
+      <Agility>450</Agility>
+      <Constitution>550</Constitution>
+      <Intelligence>350</Intelligence>
+      <Might>570</Might>
+      <Perception>420</Perception>
+      <Resolve>380</Resolve>
     </Stats>
   </Character>
   <Character name ="Medium Greatsword Footman">

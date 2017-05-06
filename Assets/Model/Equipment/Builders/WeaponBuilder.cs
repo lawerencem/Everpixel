@@ -22,7 +22,6 @@ namespace Model.Equipment
             weapon.Description = wStats.Description;
             weapon.Durability = wStats.Durability;
             weapon.FatigueCost = wStats.FatigueCost;
-            weapon.FatigueReduce = wStats.FatigueReduce;
             weapon.InitiativeReduce = wStats.InitiativeReduce;
             weapon.MaxDurability = wStats.Durability;
             weapon.Name = wStats.Name;

@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DD9A3AE4-8A36-FD0E-1CEB-E7FBBF555F9B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityVersion>5.5.0f3</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_0;UNITY_5_5;UNITY_5;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VIDEO;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_0;UNITY_5_5;UNITY_5;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VIDEO;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PlaymodeTestsRunner">
+      <HintPath>Library\UnityAssemblies\UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VR">
+      <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Config\Config.cs" />
+    <Compile Include="Assets\Controller\Characters\GenericCharacterController.cs" />
+    <Compile Include="Assets\Controller\Managers\CombatEventManager.cs" />
+    <Compile Include="Assets\Controller\Managers\CombatManager.cs" />
+    <Compile Include="Assets\Controller\Managers\GameManager.cs" />
+    <Compile Include="Assets\Controller\Managers\LoaderManager.cs" />
+    <Compile Include="Assets\Controller\Map\CombatMapGUIController.cs" />
+    <Compile Include="Assets\Controller\Map\CombatMapLoader.cs" />
+    <Compile Include="Assets\Controller\Map\EnemyPartyLoader.cs" />
+    <Compile Include="Assets\Controller\Map\TileController.cs" />
+    <Compile Include="Assets\Generics\AbstractSingleton.cs" />
+    <Compile Include="Assets\Generics\Builders\AbstractBuilder.cs" />
+    <Compile Include="Assets\Generics\Builders\GenericBuilder.cs" />
+    <Compile Include="Assets\Generics\Builders\GenericHexMap.cs" />
+    <Compile Include="Assets\Generics\Factories\GenericFactory.cs" />
+    <Compile Include="Assets\Generics\Hex\HexMapMaker.cs" />
+    <Compile Include="Assets\Generics\Pair.cs" />
+    <Compile Include="Assets\Generics\Scripts\BobbingScript.cs" />
+    <Compile Include="Assets\Generics\Scripts\DestroyByLifetime.cs" />
+    <Compile Include="Assets\Generics\Scripts\TileMoveScript.cs" />
+    <Compile Include="Assets\Generics\Utilities\Count.cs" />
+    <Compile Include="Assets\Generics\Utilities\DeepClone.cs" />
+    <Compile Include="Assets\Generics\Utilities\EnumUtil.cs" />
+    <Compile Include="Assets\Generics\Utilities\RNG.cs" />
+    <Compile Include="Assets\Generics\Utilities\StringUtil.cs" />
+    <Compile Include="Assets\Generics\XML\GenericXMLReader.cs" />
+    <Compile Include="Assets\Model\Abilities\Enum\WeaponAbilitiesEnum.cs" />
+    <Compile Include="Assets\Model\Biomes\Enums\BiomeEnum.cs" />
+    <Compile Include="Assets\Model\Characters\Builders\CharacterParamBuilder.cs" />
+    <Compile Include="Assets\Model\Characters\Builders\CritterBuilder.cs" />
+    <Compile Include="Assets\Model\Characters\Builders\HumanoidBuilder.cs" />
+    <Compile Include="Assets\Model\Characters\Builders\SecondaryStatReferee.cs" />
+    <Compile Include="Assets\Model\Characters\Enums\CharacterTypeEnum.cs" />
+    <Compile Include="Assets\Model\Characters\Enums\PrimaryStatsEnum.cs" />
+    <Compile Include="Assets\Model\Characters\Enums\RaceEnum.cs" />
+    <Compile Include="Assets\Model\Characters\Enums\SecondaryStatsEnum.cs" />
+    <Compile Include="Assets\Model\Characters\Factories\CharacterFactory.cs" />
+    <Compile Include="Assets\Model\Characters\Params\CharacterParams.cs" />
+    <Compile Include="Assets\Model\Characters\Params\PredefinedCharacterParams.cs" />
+    <Compile Include="Assets\Model\Characters\Params\PrimaryStats.cs" />
+    <Compile Include="Assets\Model\Characters\Params\SecondaryStats.cs" />
+    <Compile Include="Assets\Model\Characters\Params\SlotCollection.cs" />
+    <Compile Include="Assets\Model\Characters\Tables\DefaultRaceStatsTable.cs" />
+    <Compile Include="Assets\Model\Characters\Tables\PredefinedCharacterTable.cs" />
+    <Compile Include="Assets\Model\Characters\Types\AbstractCharacter.cs" />
+    <Compile Include="Assets\Model\Characters\Types\GenericCharacter.cs" />
+    <Compile Include="Assets\Model\Characters\XML\PredefinedCharacterReader.cs" />
+    <Compile Include="Assets\Model\Characters\XML\PredefinedEquipmentXMLIndexes.cs" />
+    <Compile Include="Assets\Model\Characters\XML\PrimaryStatsParser.cs" />
+    <Compile Include="Assets\Model\Characters\XML\RaceDefaultStatsReader.cs" />
+    <Compile Include="Assets\Model\Classes\Builders\ClassBuilder.cs" />
+    <Compile Include="Assets\Model\Classes\ClassParams.cs" />
+    <Compile Include="Assets\Model\Classes\Critters\Sluggish.cs" />
+    <Compile Include="Assets\Model\Classes\Enums\ClassEnum.cs" />
+    <Compile Include="Assets\Model\Classes\GenericClass.cs" />
+    <Compile Include="Assets\Model\Classes\GenericPerk.cs" />
+    <Compile Include="Assets\Model\Classes\Tables\ClassParamTable.cs" />
+    <Compile Include="Assets\Model\Classes\XML\ClassReader.cs" />
+    <Compile Include="Assets\Model\Cultures\CultureEnum.cs" />
+    <Compile Include="Assets\Model\Equipment\Builders\WeaponBuilder.cs" />
+    <Compile Include="Assets\Model\Equipment\Enums\ArmorSkillEnum.cs" />
+    <Compile Include="Assets\Model\Equipment\Enums\ArmorStatsEnum.cs" />
+    <Compile Include="Assets\Model\Equipment\Enums\ArmorTypeEnum.cs" />
+    <Compile Include="Assets\Model\Equipment\Enums\EquipmentTierEnum.cs" />
+    <Compile Include="Assets\Model\Equipment\Enums\EquipmentTypeEnum.cs" />
+    <Compile Include="Assets\Model\Equipment\Enums\WeaponSkillEnum.cs" />
+    <Compile Include="Assets\Model\Equipment\Enums\WeaponStatsEnum.cs" />
+    <Compile Include="Assets\Model\Equipment\Enums\WeaponTypeEnum.cs" />
+    <Compile Include="Assets\Model\Equipment\Enums\WeaponUseEnum.cs" />
+    <Compile Include="Assets\Model\Equipment\Factories\WeaponFactory.cs" />
+    <Compile Include="Assets\Model\Equipment\Params\ArmorParams.cs" />
+    <Compile Include="Assets\Model\Equipment\Params\ConcreteWeaponStats.cs" />
+    <Compile Include="Assets\Model\Equipment\Params\WeaponParams.cs" />
+    <Compile Include="Assets\Model\Equipment\Tables\ArmorParamTable.cs" />
+    <Compile Include="Assets\Model\Equipment\Tables\EquipmentSpritesTable.cs" />
+    <Compile Include="Assets\Model\Equipment\Tables\WeaponParamTable.cs" />
+    <Compile Include="Assets\Model\Equipment\Types\AbstractEquipment.cs" />
+    <Compile Include="Assets\Model\Equipment\Types\GenericEquipment.cs" />
+    <Compile Include="Assets\Model\Equipment\Types\GenericWeapon.cs" />
+    <Compile Include="Assets\Model\Equipment\XML\ArmorReader.cs" />
+    <Compile Include="Assets\Model\Equipment\XML\GenericEquipmentReader.cs" />
+    <Compile Include="Assets\Model\Equipment\XML\WeaponReader.cs" />
+    <Compile Include="Assets\Model\Events\Combat\CombatEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\HexSelectedForMoveEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\MapDoneLoadingEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\PathTraversedEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\ShowPotentialPathEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\TakingActionEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\TileDoubleClickEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\TraversePathEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\TraverseTileEvent.cs" />
+    <Compile Include="Assets\Model\Events\Enums\CombatEventEnum.cs" />
+    <Compile Include="Assets\Model\Events\Enums\EventArchetypeEnum.cs" />
+    <Compile Include="Assets\Model\Map\CombatMap.cs" />
+    <Compile Include="Assets\Model\Map\HexTile.cs" />
+    <Compile Include="Assets\Model\Map\Path.cs" />
+    <Compile Include="Assets\Model\Material\AbstractMaterial.cs" />
+    <Compile Include="Assets\Model\Material\GenericMaterial.cs" />
+    <Compile Include="Assets\Model\Material\MaterialEnum.cs" />
+    <Compile Include="Assets\Model\Material\MaterialModifierEnum.cs" />
+    <Compile Include="Assets\Model\Mounts\GenericMount.cs" />
+    <Compile Include="Assets\Model\Mounts\MountEnum.cs" />
+    <Compile Include="Assets\Model\Mounts\MountParams.cs" />
+    <Compile Include="Assets\Model\Mounts\MountTable.cs" />
+    <Compile Include="Assets\Model\Mounts\XML\MountsReader.cs" />
+    <Compile Include="Assets\Model\Parties\Builders\PartyBuilder.cs" />
+    <Compile Include="Assets\Model\Parties\Builders\SubPartyBuilder.cs" />
+    <Compile Include="Assets\Model\Parties\Enum\StartingRowEnum.cs" />
+    <Compile Include="Assets\Model\Parties\Params\PartyParams.cs" />
+    <Compile Include="Assets\Model\Parties\Params\SubPartyParams.cs" />
+    <Compile Include="Assets\Model\Parties\Tables\PartiesTable.cs" />
+    <Compile Include="Assets\Model\Parties\Tables\SubPartiesTable.cs" />
+    <Compile Include="Assets\Model\Parties\XML\PartiesReader.cs" />
+    <Compile Include="Assets\Model\Parties\XML\SubPartiesReader.cs" />
+    <Compile Include="Assets\Model\Parties\XML\SubPartiesXMLIndexes.cs" />
+    <Compile Include="Assets\Model\Slot\AbstractSlot.cs" />
+    <Compile Include="Assets\Model\Slot\GenericSlot.cs" />
+    <Compile Include="Assets\Model\Slot\SlotEnum.cs" />
+    <Compile Include="Assets\View\Biomes\BiomeSpriteLoader.cs" />
+    <Compile Include="Assets\View\Builders\CharacterViewBuilder.cs" />
+    <Compile Include="Assets\View\Characters\CharacterBridge.cs" />
+    <Compile Include="Assets\View\Characters\CharacterSpriteLoader.cs" />
+    <Compile Include="Assets\View\Characters\CharacterView.cs" />
+    <Compile Include="Assets\View\Equipment\ArmorView.cs" />
+    <Compile Include="Assets\View\Equipment\EquipmentBridge.cs" />
+    <Compile Include="Assets\View\Equipment\EquipmentView.cs" />
+    <Compile Include="Assets\View\Equipment\WeaponView.cs" />
+    <Compile Include="Assets\View\GUI\GUIController.cs" />
+    <Compile Include="Assets\View\Map\HexTileView.cs" />
+    <Compile Include="Assets\View\Map\MapBridge.cs" />
+    <Compile Include="Assets\View\Mounts\MountBridge.cs" />
+    <Compile Include="Assets\View\Mounts\MountView.cs" />
+    <Compile Include="Assets\View\SpriteLoader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Model\Characters\XML\PredefinedCharacters.xml" />
+    <None Include="Assets\Model\Characters\XML\RaceDefaultStats.xml" />
+    <None Include="Assets\Model\Classes\XML\Classes.xml" />
+    <None Include="Assets\Model\Equipment\XML\Armors.xml" />
+    <None Include="Assets\Model\Equipment\XML\Weapons.xml" />
+    <None Include="Assets\Model\Mounts\XML\Mounts.xml" />
+    <None Include="Assets\Model\Parties\XML\Parties.xml" />
+    <None Include="Assets\Model\Parties\XML\SubParties.xml" />
+    <None Include="Assets\TODO.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>

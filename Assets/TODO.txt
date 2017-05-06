@@ -1,5 +1,6 @@
 ﻿TODO
 
+- Finish Lizardman imports
 1) - Add Attacks/Actions Menu
 2) - Calculate "height diff" when going from one height to another in hexes
 - Add Methods to get current values of a model given buffs and such

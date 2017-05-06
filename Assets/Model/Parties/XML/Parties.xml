@@ -1,21 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Parties>
-  <Party Name ="Orc Shock Troopas">
-    <Difficulty>7</Difficulty>
-    <SubParty>Orc Scavengers,1</SubParty>
-    <SubParty>Orc Scavengers,2</SubParty>
-    <SubParty>Shock Troopas,2</SubParty>
-    <SubParty>Shock Troopas,3</SubParty>
-    <SubParty>Shock Troopa Calvary,2</SubParty>
-    <SubParty>Shock Troopa Calvary,3</SubParty>
-  </Party>
   <Party Name ="Goblin Raiders">
     <Difficulty>7</Difficulty>
-    <SubParty>Goblin Calvary,1</SubParty>
-    <SubParty>Goblin Calvary,2</SubParty>
-    <SubParty>Goblin Calvary,3</SubParty>
-    <SubParty>Goblin Calvary,4</SubParty>
-    <SubParty>Goblin Calvary,5</SubParty>
+    <SubParty>Gobbo Spider Riders,1</SubParty>
+    <SubParty>Gobbo Spider Riders,2</SubParty>
+    <SubParty>Gobbo Spider Riders,3</SubParty>
+    <SubParty>Gobbo Spider Riders,4</SubParty>
+    <SubParty>Gobbo Spider Riders,5</SubParty>
+    <SubParty>Gromp Hoppers,4</SubParty>
+    <SubParty>Gromp Hoppers,5</SubParty>
     <SubParty>Goblin Fodder,1</SubParty>
     <SubParty>Goblin Fodder,2</SubParty>
     <SubParty>Slimers,2</SubParty>
@@ -27,5 +20,23 @@
     <SubParty>Goblin Fodder,2</SubParty>
     <SubParty>Slime Lords,3</SubParty>
     <SubParty>Slime Lords,4</SubParty>
+  </Party>
+  <Party Name ="Lizardman Militia">
+    <Difficulty>3</Difficulty>
+    <SubParty>Lizardman Fodder,1</SubParty>
+  </Party>
+  <Party Name ="Lizardman War Party">
+    <Difficulty>9</Difficulty>
+    <SubParty>Dino Knights,2</SubParty>
+    <SubParty>Lizardman Fodder,1</SubParty>
+  </Party>
+  <Party Name ="Orc Shock Troopas">
+    <Difficulty>7</Difficulty>
+    <SubParty>Orc Scavengers,1</SubParty>
+    <SubParty>Orc Scavengers,2</SubParty>
+    <SubParty>Shock Troopas,2</SubParty>
+    <SubParty>Shock Troopas,3</SubParty>
+    <SubParty>Shock Troopa Calvary,2</SubParty>
+    <SubParty>Shock Troopa Calvary,3</SubParty>
   </Party>
 </Parties>

@@ -24,15 +24,7 @@
     <Perception>550</Perception>
     <Resolve>500</Resolve>
   </Race>
-  <Race name="Klackus">
-    <Agility>400</Agility>
-    <Constitution>600</Constitution>
-    <Intelligence>500</Intelligence>
-    <Might>500</Might>
-    <Perception>500</Perception>
-    <Resolve>650</Resolve>
-  </Race>
-  <Race name="Lizard">
+  <Race name="Lizardman">
     <Agility>550</Agility>
     <Constitution>700</Constitution>
     <Intelligence>400</Intelligence>

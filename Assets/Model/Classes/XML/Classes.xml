@@ -13,6 +13,14 @@
     <SecondaryStatsEnum>Critical_Chance,8</SecondaryStatsEnum>
     <SecondaryStatsEnum>Critical_Multiplier,8</SecondaryStatsEnum>
   </Class>
+  <Class name="Dino_Knight">
+    <PrimaryStatsEnum>Constitution,3</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Might,4</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Resolve,1</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Block,3</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Parry,3</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,10</SecondaryStatsEnum>
+  </Class>
   <Class name="Fighter">
     <PrimaryStatsEnum>Agility,1</PrimaryStatsEnum>
     <PrimaryStatsEnum>Constitution,2</PrimaryStatsEnum>
@@ -34,6 +42,14 @@
     <SecondaryStatsEnum>Power,2</SecondaryStatsEnum>
     <SecondaryStatsEnum>Spell_Duration,4</SecondaryStatsEnum>
     <SecondaryStatsEnum>Spell_Penetration,4</SecondaryStatsEnum>
+  </Class>
+  <Class name="Knight">
+    <PrimaryStatsEnum>Constitution,3</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Might,3</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Resolve,2</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Block,8</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Parry,8</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,2</SecondaryStatsEnum>
   </Class>
   <Class name="Ninja">
     <PrimaryStatsEnum>Agility,3</PrimaryStatsEnum>

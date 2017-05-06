@@ -41,7 +41,6 @@ namespace Model.Equipment.XML
                 case ("Description"): { } break;
                 case ("Dodge_Reduce"): { HandleStatsFromFile(name, WeaponStatsEnum.Dodge_Reduce, v, tier); } break;
                 case ("Fatigue_Cost"): { HandleStatsFromFile(name, WeaponStatsEnum.Fatigue_Cost, v, tier); } break;
-                case ("Fatigue_Reduce"): { HandleStatsFromFile(name, WeaponStatsEnum.Fatigue_Reduce, v, tier); } break;
                 case ("Initiative_Reduce"): { HandleStatsFromFile(name, WeaponStatsEnum.Initiative_Reduce, v, tier); } break;
                 case ("Max_Durability"): { HandleStatsFromFile(name, WeaponStatsEnum.Max_Durability, v, tier); } break;
                 case ("Melee_Block_Chance"): { HandleStatsFromFile(name, WeaponStatsEnum.Melee_Block_Chance, v, tier); } break;
@@ -76,7 +75,6 @@ namespace Model.Equipment.XML
                 case (WeaponStatsEnum.Dodge_Reduce): { stats.Table[key].DodgeReduce = v; } break;
                 case (WeaponStatsEnum.Max_Durability): { stats.Table[key].Durability = v; } break;
                 case (WeaponStatsEnum.Fatigue_Cost): { stats.Table[key].FatigueCost = v; } break;
-                case (WeaponStatsEnum.Fatigue_Reduce): { stats.Table[key].FatigueReduce = v; } break;
                 case (WeaponStatsEnum.Initiative_Reduce): { stats.Table[key].InitiativeReduce = v; } break;
                 case (WeaponStatsEnum.Melee_Block_Chance): { stats.Table[key].MeleeBlockChance = v; } break;
                 case (WeaponStatsEnum.Parry_Chance): { stats.Table[key].ParryChance = v; } break;
