@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WeaponAbilities>
+  <WeaponAbility name="Attack">
+  </WeaponAbility>
+  <WeaponAbility name="Break_Armor">
+    <AccMod>0.85</AccMod>
+    <APMod>1.15</APMod>
+    <AmorIgnoreMod>1.2</AmorIgnoreMod>
+    <DamageMod>0.35</DamageMod>
+    <FatigueCostMod>1.35</FatigueCostMod>
+  </WeaponAbility>
+  <WeaponAbility name="Break_Shield">
+  </WeaponAbility>
+  <WeaponAbility name="Double_Strike">
+  </WeaponAbility>
+  <WeaponAbility name="Fire">
+  </WeaponAbility>
+  <WeaponAbility name="Gash">
+  </WeaponAbility>
+  <WeaponAbility name="Great_Strike">
+  </WeaponAbility>
+  <WeaponAbility name="Maim">
+  </WeaponAbility>
+  <WeaponAbility name="Pierce">
+  </WeaponAbility>
+  <WeaponAbility name="Pull">
+  </WeaponAbility>
+  <WeaponAbility name="Riposte">
+  </WeaponAbility>
+  <WeaponAbility name="Scatter">
+  </WeaponAbility>
+  <WeaponAbility name="Shield_Wall">
+  </WeaponAbility>
+  <WeaponAbility name="Shove">
+  </WeaponAbility>
+  <WeaponAbility name="Spear_Wall">
+  </WeaponAbility>
+  <WeaponAbility name="Stun">
+  </WeaponAbility>
+  <WeaponAbility name="Triple_Strike">
+  </WeaponAbility>
+  <WeaponAbility name="Wide_Slash">
+  </WeaponAbility>
+  <WeaponAbility name="Wrap">
+  </WeaponAbility>
+</WeaponAbilities>
