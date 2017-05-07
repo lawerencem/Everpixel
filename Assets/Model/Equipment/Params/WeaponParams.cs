@@ -22,8 +22,7 @@ namespace Model.Equipment
         public double InitiativeReduce { get; set; }
         public double MeleeBlockChance { get; set; }
         public string Name { get; set; }
-        public double ParryChance { get; set; }
-        public double ParryReduce { get; set; }
+        public double ParryMod { get; set; }
         public int Range { get; set; }
         public double RangeBlockChance { get; set; }
         public double ShieldDamage { get; set; }

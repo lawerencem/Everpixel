@@ -1,11 +1,11 @@
 ﻿using Generics;
 using Model.Characters.XML;
-using Model.Classes;
+using Model.Classes.XML;
 using Model.Equipment.XML;
 using Model.Mounts.XML;
 using Model.Parties.XML;
+using Models.Equipment.XML;
 using System.Collections.Generic;
-using System.Threading;
 
 namespace Assets.Controller.Managers
 {
@@ -22,6 +22,7 @@ namespace Assets.Controller.Managers
             this._readers.Add(MountReader.Instance);
             this._readers.Add(RaceDefaultStatsReader.Instance);
             this._readers.Add(SubPartiesReader.Instance);
+            this._readers.Add(WeaponAbilityReader.Instance);
             this._readers.Add(WeaponReader.Instance);
 
             foreach (var reader in this._readers)

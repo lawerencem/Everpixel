@@ -1,4 +1,5 @@
 ﻿using Generics;
+using Model.Abilities;
 
 namespace Model.Equipment
 {
@@ -13,6 +14,7 @@ namespace Model.Equipment
         {
             var weapon = new GenericWeapon();
             var wStats = WeaponParamTable.Instance.Table[arg];
+            weapon.Abilities = WeaponAbilityFactory.Instance.CreateNewObject(wStats.Abilities);
             weapon.Accuracy = wStats.Accuracy;
             weapon.APReduce = wStats.APReduce;
             weapon.ArmorIgnore = wStats.ArmorIgnore;
@@ -25,7 +27,7 @@ namespace Model.Equipment
             weapon.InitiativeReduce = wStats.InitiativeReduce;
             weapon.MaxDurability = wStats.Durability;
             weapon.Name = wStats.Name;
-            weapon.ParryChance = wStats.ParryChance;
+            weapon.ParryMod = wStats.ParryMod;
             weapon.Range = wStats.Range;
             weapon.ShieldDamage = wStats.ShieldDamage;
             weapon.Tier = wStats.Tier;

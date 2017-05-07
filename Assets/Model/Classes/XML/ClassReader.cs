@@ -3,7 +3,7 @@ using Generics.Utilities;
 using Model.Characters;
 using System.Xml.Linq;
 
-namespace Model.Classes
+namespace Model.Classes.XML
 {
     public class ClassReader : GenericXMLReader
     {
@@ -53,8 +53,6 @@ namespace Model.Classes
                     case ("SecondaryStatsEnum"): { HandleSecondaryStatsFromFile(param, value, ref type); } break;
                 }
             }
-           
-            
         }
 
         private void HandlePrimaryStatsFromFile(string param, string value, ref ClassEnum type)

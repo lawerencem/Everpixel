@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.5.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -52,9 +54,6 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -69,9 +68,6 @@
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VR">
       <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
@@ -108,6 +104,13 @@
     <Compile Include="Assets\Generics\Utilities\StringUtil.cs" />
     <Compile Include="Assets\Generics\XML\GenericXMLReader.cs" />
     <Compile Include="Assets\Model\Abilities\Enum\WeaponAbilitiesEnum.cs" />
+    <Compile Include="Assets\Model\Abilities\GenericAbility.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Attack.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\WeaponAbility.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\WeaponAbilityBuilder.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\WeaponAbilityFactory.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\WeaponAbilityTable.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\XML\WeaponAbilityReader.cs" />
     <Compile Include="Assets\Model\Biomes\Enums\BiomeEnum.cs" />
     <Compile Include="Assets\Model\Characters\Builders\CharacterParamBuilder.cs" />
     <Compile Include="Assets\Model\Characters\Builders\CritterBuilder.cs" />
@@ -139,6 +142,7 @@
     <Compile Include="Assets\Model\Classes\GenericPerk.cs" />
     <Compile Include="Assets\Model\Classes\Tables\ClassParamTable.cs" />
     <Compile Include="Assets\Model\Classes\XML\ClassReader.cs" />
+    <Compile Include="Assets\Model\Combat\CombatReferee.cs" />
     <Compile Include="Assets\Model\Cultures\CultureEnum.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\WeaponBuilder.cs" />
     <Compile Include="Assets\Model\Equipment\Enums\ArmorSkillEnum.cs" />
@@ -216,6 +220,9 @@
     <Compile Include="Assets\View\SpriteLoader.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Model\Abilities\Weapon\XML\WeaponAbilities.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Model\Characters\XML\PredefinedCharacters.xml" />
     <None Include="Assets\Model\Characters\XML\RaceDefaultStats.xml" />
     <None Include="Assets\Model\Classes\XML\Classes.xml" />
@@ -226,6 +233,7 @@
     <None Include="Assets\Model\Parties\XML\SubParties.xml" />
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

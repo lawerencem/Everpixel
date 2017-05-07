@@ -18,7 +18,7 @@ namespace Model.Equipment
         Max_Durability,
         Melee_Block_Chance,
         Parry_Chance,
-        Parry_Reduce,
+        Parry_Mod,
         Range,
         Ranged_Block_Chance,
         Shield_Damage,
