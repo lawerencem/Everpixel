@@ -106,7 +106,7 @@
     <Compile Include="Assets\Generics\XML\GenericXMLReader.cs" />
     <Compile Include="Assets\Model\Abilities\Enum\WeaponAbilitiesEnum.cs" />
     <Compile Include="Assets\Model\Abilities\GenericAbility.cs" />
-    <Compile Include="Assets\Model\Abilities\Weapon\Attack.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Attack.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\WeaponAbility.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\WeaponAbilityBuilder.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\WeaponAbilityFactory.cs" />
@@ -142,6 +142,7 @@
     <Compile Include="Assets\Model\Classes\GenericPerk.cs" />
     <Compile Include="Assets\Model\Classes\Tables\ClassParamTable.cs" />
     <Compile Include="Assets\Model\Classes\XML\ClassReader.cs" />
+    <Compile Include="Assets\Model\Combat\AttackEventFlags.cs" />
     <Compile Include="Assets\Model\Combat\CombatReferee.cs" />
     <Compile Include="Assets\Model\Cultures\CultureEnum.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\WeaponBuilder.cs" />
@@ -168,6 +169,7 @@
     <Compile Include="Assets\Model\Equipment\XML\GenericEquipmentReader.cs" />
     <Compile Include="Assets\Model\Equipment\XML\WeaponReader.cs" />
     <Compile Include="Assets\Model\Events\Combat\CombatEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\EndTurnEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\HexSelectedForMoveEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\MapDoneLoadingEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\PathTraversedEvent.cs" />
@@ -177,7 +179,6 @@
     <Compile Include="Assets\Model\Events\Combat\TraversePathEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TraverseTileEvent.cs" />
     <Compile Include="Assets\Model\Events\CombatEventEnum.cs" />
-    <Compile Include="Assets\Model\Events\Combat\EndTurnEvent.cs" />
     <Compile Include="Assets\Model\Map\CombatMap.cs" />
     <Compile Include="Assets\Model\Map\HexTile.cs" />
     <Compile Include="Assets\Model\Map\Path.cs" />
@@ -236,7 +237,6 @@
     <None Include="Assets\Model\Parties\XML\SubParties.xml" />
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

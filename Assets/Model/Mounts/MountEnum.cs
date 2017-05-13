@@ -3,6 +3,7 @@
     public enum MountEnum
     {
         None,
+        Dodo,
         Gromp,
         Octolegs,
         Ween,
