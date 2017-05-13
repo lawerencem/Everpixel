@@ -41,6 +41,48 @@
     <Stamina_Reduce>1.0</Stamina_Reduce>
     <Value>250</Value>
   </Armor>
+  <Armor name="Dino Scale Armor">
+    <Tier>Three</Tier>
+    <AP_Reduce>1</AP_Reduce>
+    <ArmorSkillEnum>Scale</ArmorSkillEnum>
+    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
+    <Block_Reduce>1</Block_Reduce>
+    <Damage_Ignore>7</Damage_Ignore>
+    <Damage_Reduction>1.14</Damage_Reduction>
+    <Description>
+      Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
+      not very durable...
+    </Description>
+    <Dodge_Reduce>1.0</Dodge_Reduce>
+    <Durability>20</Durability>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1.0</Initiative_Reduce>
+    <Parry_Reduce>1.0</Parry_Reduce>
+    <Sprites>34</Sprites>
+    <Stamina_Reduce>1.0</Stamina_Reduce>
+    <Value>500</Value>
+  </Armor>
+  <Armor name="Dino Scale Armor">
+    <Tier>Two</Tier>
+    <AP_Reduce>1</AP_Reduce>
+    <ArmorSkillEnum>Scale</ArmorSkillEnum>
+    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
+    <Block_Reduce>1</Block_Reduce>
+    <Damage_Ignore>8</Damage_Ignore>
+    <Damage_Reduction>1.20</Damage_Reduction>
+    <Description>
+      Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
+      not very durable...
+    </Description>
+    <Dodge_Reduce>1.0</Dodge_Reduce>
+    <Durability>28</Durability>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1.0</Initiative_Reduce>
+    <Parry_Reduce>1.0</Parry_Reduce>
+    <Sprites>49</Sprites>
+    <Stamina_Reduce>1.0</Stamina_Reduce>
+    <Value>800</Value>
+  </Armor>
   <Armor name="Galea">
     <Tier>Four</Tier>
     <AP_Reduce>0.84</AP_Reduce>

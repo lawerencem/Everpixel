@@ -28,7 +28,14 @@
   <Party Name ="Lizardman War Party">
     <Difficulty>9</Difficulty>
     <SubParty>Dino Knights,2</SubParty>
+    <SubParty>Dino Knights,3</SubParty>
+    <SubParty>Dino Knights,4</SubParty>
+    <SubParty>Dino Knights,5</SubParty>
+    <SubParty>Dino Knights,6</SubParty>
     <SubParty>Lizardman Fodder,1</SubParty>
+    <SubParty>Rexes,3</SubParty>
+    <SubParty>Rexes,4</SubParty>
+    <SubParty>Rexes,7</SubParty>
   </Party>
   <Party Name ="Orc Shock Troopas">
     <Difficulty>7</Difficulty>

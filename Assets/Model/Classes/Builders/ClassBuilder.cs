@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Generics;
-using Model.Classes.BaseClasses;
 
 namespace Model.Classes
 {

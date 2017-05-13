@@ -16,6 +16,7 @@ using Model.Map;
 using Controller.Map;
 using View.Map;
 using Generics.Hex;
+using View.GUI;
 
 namespace Controller.Managers.Map
 {
@@ -40,10 +41,11 @@ namespace Controller.Managers.Map
             this.BackgroundTiles.transform.SetParent(this.MapHolder);
             this.InitBackgroundTiles(b);
             this.InitBackgroundDeco(b);
+            this.InitGUI();
             this.InitEnemyParty();
         }
 
-        public void InitEnemyParty()
+        private void InitEnemyParty()
         {
             var enemies = EnemyPartyLoader.Instance.GetParty("Lizardman War Party");
             var builder = new CharacterViewBuilder();
@@ -113,6 +115,17 @@ namespace Controller.Managers.Map
 
             this._map.InitControllerAdjacent();
             foreach (var tile in this._map.TileControllers) { this._emptyTiles.Add(tile); }
+        }
+
+        private void InitGUI()
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                var tag = "WpnBtnTag" + i;
+                var btnContainer = GameObject.FindGameObjectWithTag(tag);
+                var script = btnContainer.AddComponent<WpnBtnClick>();
+                script.Init(tag);
+            }
         }
 
         private void LayoutCharacter(GenericCharacterController c, int index)

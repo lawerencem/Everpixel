@@ -81,6 +81,7 @@
     <Compile Include="Assets\Controller\Characters\GenericCharacterController.cs" />
     <Compile Include="Assets\Controller\Managers\CombatEventManager.cs" />
     <Compile Include="Assets\Controller\Managers\CombatManager.cs" />
+    <Compile Include="Assets\Controller\Managers\GUIEventManager.cs" />
     <Compile Include="Assets\Controller\Managers\GameManager.cs" />
     <Compile Include="Assets\Controller\Managers\LoaderManager.cs" />
     <Compile Include="Assets\Controller\Map\CombatMapGUIController.cs" />
@@ -136,7 +137,6 @@
     <Compile Include="Assets\Model\Characters\XML\RaceDefaultStatsReader.cs" />
     <Compile Include="Assets\Model\Classes\Builders\ClassBuilder.cs" />
     <Compile Include="Assets\Model\Classes\ClassParams.cs" />
-    <Compile Include="Assets\Model\Classes\Critters\Sluggish.cs" />
     <Compile Include="Assets\Model\Classes\Enums\ClassEnum.cs" />
     <Compile Include="Assets\Model\Classes\GenericClass.cs" />
     <Compile Include="Assets\Model\Classes\GenericPerk.cs" />
@@ -176,8 +176,8 @@
     <Compile Include="Assets\Model\Events\Combat\TileDoubleClickEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TraversePathEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TraverseTileEvent.cs" />
-    <Compile Include="Assets\Model\Events\Enums\CombatEventEnum.cs" />
-    <Compile Include="Assets\Model\Events\Enums\EventArchetypeEnum.cs" />
+    <Compile Include="Assets\Model\Events\CombatEventEnum.cs" />
+    <Compile Include="Assets\Model\Events\Combat\EndTurnEvent.cs" />
     <Compile Include="Assets\Model\Map\CombatMap.cs" />
     <Compile Include="Assets\Model\Map\HexTile.cs" />
     <Compile Include="Assets\Model\Map\Path.cs" />
@@ -212,7 +212,12 @@
     <Compile Include="Assets\View\Equipment\EquipmentBridge.cs" />
     <Compile Include="Assets\View\Equipment\EquipmentView.cs" />
     <Compile Include="Assets\View\Equipment\WeaponView.cs" />
-    <Compile Include="Assets\View\GUI\GUIController.cs" />
+    <Compile Include="Assets\View\Events\GUIEndTurnEvent.cs" />
+    <Compile Include="Assets\View\Events\GUIEvent.cs" />
+    <Compile Include="Assets\View\Events\GUIEventEnum.cs" />
+    <Compile Include="Assets\View\Events\PopulateWpnBtnsEvent.cs" />
+    <Compile Include="Assets\View\GUI\EndTurnBtnClick.cs" />
+    <Compile Include="Assets\View\GUI\WpnBtnClick.cs" />
     <Compile Include="Assets\View\Map\HexTileView.cs" />
     <Compile Include="Assets\View\Map\MapBridge.cs" />
     <Compile Include="Assets\View\Mounts\MountBridge.cs" />
@@ -220,9 +225,7 @@
     <Compile Include="Assets\View\SpriteLoader.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Model\Abilities\Weapon\XML\WeaponAbilities.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Model\Abilities\Weapon\XML\WeaponAbilities.xml" />
     <None Include="Assets\Model\Characters\XML\PredefinedCharacters.xml" />
     <None Include="Assets\Model\Characters\XML\RaceDefaultStats.xml" />
     <None Include="Assets\Model\Classes\XML\Classes.xml" />

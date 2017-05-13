@@ -2,11 +2,13 @@
 using Controller.Managers.Map;
 using Generics;
 using Generics.Scripts;
+using Model.Abilities;
 using Model.Events;
 using Model.Events.Combat;
 using Model.Map;
 using System.Collections.Generic;
 using UnityEngine;
+using View.Events;
 
 namespace Controller.Managers
 {
@@ -49,6 +51,7 @@ namespace Controller.Managers
         {
             switch(e.Type)
             {
+                case (CombatEventEnum.EndTurn): { HandleEndTurnEvent(e as EndTurnEvent); } break;
                 case (CombatEventEnum.HexSelectedForMove): { HandleHexSelectedForMoveEvent(e as HexSelectedForMoveEvent); } break;
                 case (CombatEventEnum.MapDoneLoading): { HandleMapDoneLoadingEvent(e as MapDoneLoadingEvent); } break;
                 case (CombatEventEnum.PathTraversed): { HandlePathTraversedEvent(e as PathTraversedEvent); } break;
@@ -58,6 +61,13 @@ namespace Controller.Managers
                 case (CombatEventEnum.TraversePath): { HandleTraversePathEvent(e as TraversePathEvent); } break;
                 case (CombatEventEnum.TraverseTile): { HandleTraverseTileEvent(e as TraverseTileEvent); } break;
             }
+        }
+
+        private void HandleEndTurnEvent(EndTurnEvent e)
+        {
+            this._events.Remove(e);
+            this._combatManager.ProcessNextTurn();
+            this.PopulateBtnsHelper();
         }
 
         private void HandleHexSelectedForMoveEvent(HexSelectedForMoveEvent e)
@@ -81,7 +91,7 @@ namespace Controller.Managers
                 }
                 else
                 {
-                    this._combatManager.ProcessNextTurn();
+                    var end = new EndTurnEvent(this);
                 }
                 this._mapGUIController.ClearPotentialPathView();
                 this._events.RemoveAll(x => x.Type == CombatEventEnum.ShowPotentialPath);
@@ -100,6 +110,7 @@ namespace Controller.Managers
             var mapController = new CombatMapGuiController();
             this._combatManager = new CombatManager(e.Map);
             this._combatManager.InitEnemyParty(e.Controllers);
+            this.PopulateBtnsHelper();
         }
 
         private void HandleTakingActionEvent(TakingActionEvent e)
@@ -138,6 +149,15 @@ namespace Controller.Managers
             this._events.Remove(e);
             var script = e.Character.Handle.AddComponent<TileMoveScript>();
             script.Init(e.Character, e.Path, e.Source, e.Next);
+        }
+
+        private void PopulateBtnsHelper()
+        {
+            var curr = this._combatManager.CurrActing.Model;
+            var abs = new List<WeaponAbility>();
+            if (curr.LWeapon != null) { abs.AddRange(curr.LWeapon.Abilities); }
+            if (curr.RWeapon != null) { abs.AddRange(curr.RWeapon.Abilities); }
+            var populateBtns = new PopulateWpnBtnsEvent(abs, GUIEventManager.Instance);
         }
 
     }

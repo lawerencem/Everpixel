@@ -16,6 +16,26 @@
     <Character>1,Dino Squire,One</Character>
     <Character>0.85,Dino Squire,One</Character>
   </SubParty>
+  <SubParty Name ="Dino Knights">
+    <Difficulty>3</Difficulty>
+    <Character>1,Dino Squire,One</Character>
+    <Character>0.85,Dino Squire,One</Character>
+  </SubParty>
+  <SubParty Name ="Dino Knights">
+    <Difficulty>4</Difficulty>
+    <Character>1,Dino Knight,One</Character>
+    <Character>0.85,Dino Squire,One</Character>
+  </SubParty>
+  <SubParty Name ="Dino Knights">
+    <Difficulty>5</Difficulty>
+    <Character>1,Dino Knight,One</Character>
+    <Character>0.85,Dino Knight,One</Character>
+  </SubParty>
+  <SubParty Name ="Dino Knights">
+    <Difficulty>6</Difficulty>
+    <Character>1,Dino Knight,One</Character>
+    <Character>0.85,Veteran Dino Knight,One</Character>
+  </SubParty>
   <SubParty Name ="Gobbo Spider Riders">
     <Difficulty>1</Difficulty>
     <Character>1,Spider Rider,One</Character>
@@ -40,6 +60,24 @@
     <Character>1,Spider Rider,One</Character>
     <Character>0.85,Spider Rider,One</Character>
     <Character>0.85,Spider Rider,One</Character>
+  </SubParty>
+  <SubParty Name ="Rexes">
+    <Difficulty>3</Difficulty>
+    <Character>1,Tearex,One</Character>
+    <Character>1,Thairex,One</Character>
+  </SubParty>
+  <SubParty Name ="Rexes">
+    <Difficulty>4</Difficulty>
+    <Character>1,Tearex,One</Character>
+    <Character>1,Thairex,One</Character>
+    <Character>0.25,Thairex,One</Character>
+    <Character>0.25,Thairex,One</Character>
+  </SubParty>
+  <SubParty Name ="Rexes">
+    <Difficulty>7</Difficulty>
+    <Character>1,Tyrantaur,One</Character>
+    <Character>1,Tearex,One</Character>
+    <Character>1,Thairex,One</Character>
   </SubParty>
   <SubParty Name ="Gobbo Spider Riders">
     <Difficulty>5</Difficulty>
