@@ -1,8 +1,6 @@
 ﻿TODO
 
 0) - Finish attack referee
-0.5) Finalize Goblin troops
-1) - Add a "Get Current" method for characters.
 2) - Properly place formations into Rows on the map
 3) - Critter classes / abilities during level up on the xml
 5) - Calculate "height diff" when going from one height to another in hexes

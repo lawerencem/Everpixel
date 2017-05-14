@@ -66,6 +66,9 @@ namespace Controller.Managers
         private void HandleEndTurnEvent(EndTurnEvent e)
         {
             this._events.Remove(e);
+            var cur = this._combatManager.CurrActing.Handle;
+            var bob = cur.GetComponent<BobbingScript>();
+            if (bob != null) { GameObject.Destroy(bob); }
             this._combatManager.ProcessNextTurn();
             this.PopulateBtnsHelper();
         }
@@ -85,8 +88,6 @@ namespace Controller.Managers
             {
                 if (e.Character.Model.CurrentAP > 0)
                 {
-                    var bob = e.Character.Handle.AddComponent<BobbingScript>();
-                    bob.Init(0.001f, 0.05f, e.Character.Handle);
                     this._mapGUIController.SetActingBoxToController(e.Character);
                 }
                 else
@@ -140,8 +141,6 @@ namespace Controller.Managers
             this._events.Remove(e);
             var next = e.Path.GetNextTile(e.Character.CurrentTile);
             var traverseTileEvent = new TraverseTileEvent(this, e.Path, e.Character.CurrentTile, next);
-            var bob = e.Character.GetComponent<BobbingScript>();
-            if (bob != null) { GameObject.Destroy(bob); }
         }
 
         private void HandleTraverseTileEvent(TraverseTileEvent e)

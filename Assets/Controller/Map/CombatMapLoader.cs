@@ -22,8 +22,8 @@ namespace Controller.Managers.Map
 {
     public class CombatMapLoader
     {
-        private const int ROWS = 8;
-        private const int COLS = 8;
+        private const int ROWS = 12;
+        private const int COLS = 15;
         private const float OFFSET = 0.63f;
 
         private List<TileController> _emptyTiles = new List<TileController>();

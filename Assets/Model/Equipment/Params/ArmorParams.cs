@@ -11,7 +11,7 @@ namespace Model.Equipment
         public double DamageIgnore { get; set; }
         public double DamageReduction { get; set; }
         public string Description { get; set; }
-        public double DodgeReduce { get; set; }
+        public double DodgeMod { get; set; }
         public int Durability { get; set; }
         public double FatigueCost { get; set; }
         public double InitiativeReduce { get; set; }

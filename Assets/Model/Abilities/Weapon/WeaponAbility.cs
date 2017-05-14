@@ -8,7 +8,7 @@
         public double ArmorPierceMod { get; set; }
         public double BlockIgnoreMod { get; set; }
         public double DamageMod { get; set; }
-        public double DodgeReduceMod { get; set; }
+        public double DodgeMod { get; set; }
         public string Description { get; set; }
         public double FatigueCostMod { get; set; }
         public double MeleeBlockChanceMod { get; set; }
@@ -26,7 +26,7 @@
             this.ArmorPierceMod = 1;
             this.BlockIgnoreMod = 1;
             this.DamageMod = 1;
-            this.DodgeReduceMod = 1;
+            this.DodgeMod = 1;
             this.FatigueCostMod = 1;
             this.MeleeBlockChanceMod = 1;
             this.ParryModMod = 1;
@@ -45,7 +45,7 @@
             ability.BlockIgnoreMod = this.BlockIgnoreMod;
             ability.DamageMod = this.DamageMod;
             ability.Description = this.Description;
-            ability.DodgeReduceMod = this.DodgeReduceMod;
+            ability.DodgeMod = this.DodgeMod;
             ability.FatigueCostMod = this.FatigueCostMod;
             ability.MeleeBlockChanceMod = this.MeleeBlockChanceMod;
             ability.ParryModMod = this.ParryModMod;

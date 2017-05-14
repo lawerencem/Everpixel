@@ -60,7 +60,7 @@ namespace Model.Equipment.XML
                 case (ArmorStatsEnum.Block_Reduce): { stats.Table[key].BlockReduce = v; } break;
                 case (ArmorStatsEnum.Damage_Ignore): { stats.Table[key].DamageIgnore = v; } break;
                 case (ArmorStatsEnum.Damage_Reduction): { stats.Table[key].DamageReduction = v; } break;
-                case (ArmorStatsEnum.Dodge_Reduce): { stats.Table[key].DodgeReduce = v; } break;
+                case (ArmorStatsEnum.Dodge_Reduce): { stats.Table[key].DodgeMod = v; } break;
                 case (ArmorStatsEnum.Durability): { stats.Table[key].Durability = v; } break;
                 case (ArmorStatsEnum.Fatigue_Reduce): { stats.Table[key].FatigueCost = v; } break;
                 case (ArmorStatsEnum.Initiative_Reduce): { stats.Table[key].InitiativeReduce = v; } break;

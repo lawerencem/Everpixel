@@ -15,7 +15,7 @@ namespace Model.Equipment
         public double ArmorPierce { get; set; }
         public double BlockIgnore { get; set; }
         public int Damage { get; set; }
-        public double DodgeReduce { get; set; }
+        public double DodgeMod { get; set; }
         public string Description { get; set; }
         public int Durability { get; set; }
         public double FatigueCost { get; set; }

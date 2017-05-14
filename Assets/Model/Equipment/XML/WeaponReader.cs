@@ -72,7 +72,7 @@ namespace Model.Equipment.XML
                 case (WeaponStatsEnum.AP_Reduce): { stats.Table[key].APReduce = v; } break;
                 case (WeaponStatsEnum.Block_Ignore): { stats.Table[key].BlockIgnore = v; } break;
                 case (WeaponStatsEnum.Damage): { stats.Table[key].Damage = v; } break;
-                case (WeaponStatsEnum.Dodge_Reduce): { stats.Table[key].DodgeReduce = v; } break;
+                case (WeaponStatsEnum.Dodge_Reduce): { stats.Table[key].DodgeMod = v; } break;
                 case (WeaponStatsEnum.Max_Durability): { stats.Table[key].Durability = v; } break;
                 case (WeaponStatsEnum.Fatigue_Cost): { stats.Table[key].FatigueCost = v; } break;
                 case (WeaponStatsEnum.Initiative_Reduce): { stats.Table[key].InitiativeReduce = v; } break;
