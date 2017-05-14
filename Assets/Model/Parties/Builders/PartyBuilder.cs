@@ -2,11 +2,11 @@
 using Model.Characters;
 using System.Collections.Generic;
 using System;
-using Generics.Utilities;
+using Assets.Generics;
 
 namespace Model.Parties
 {
-    public class PartyBuilder : AbstractBuilder<string, List<CharacterParams>>
+    public class PartyBuilder : AbstractBuilder<Pair<string, int>, List<CharacterParams>>
     {
         private SubPartyBuilder _subPartyBuilder = new SubPartyBuilder();
 
@@ -15,18 +15,18 @@ namespace Model.Parties
             throw new NotImplementedException();
         }
 
-        public override List<CharacterParams> Build(List<string> args)
+        public override List<CharacterParams> Build(List<Pair<string, int>> args)
         {
             throw new NotImplementedException();
         }
 
-        public override List<CharacterParams> Build(string arg)
+        public override List<CharacterParams> Build(Pair<string, int> arg)
         {
-            if (PartiesTable.Instance.Table.ContainsKey(arg))
+            if (PartiesTable.Instance.Table.ContainsKey(arg.X))
             {
                 var buildList = new List<CharacterParams>();
-                var partyParams = PartiesTable.Instance.Table[arg];
-                var subs = partyParams.GetRandomSubPartyNames();
+                var partyParams = PartiesTable.Instance.Table[arg.X];
+                var subs = partyParams.GetRandomSubPartyNames(arg.Y);
                 foreach (var sub in subs)
                 {
                     var characters = this._subPartyBuilder.Build(sub);

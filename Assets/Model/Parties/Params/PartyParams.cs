@@ -6,14 +6,13 @@ namespace Model.Parties
 {
     public class PartyParams
     {
-        public int Difficulty { get; set; }
         public string Name { get; set; }
         public List<Pair<string, int>> SubParties = new List<Pair<string, int>>();
 
-        public List<string> GetRandomSubPartyNames()
+        public List<string> GetRandomSubPartyNames(int difficulty)
         {
             var names = new List<string>();
-            int remaining = Difficulty;
+            int remaining = difficulty;
             while (remaining > 0)
             {
                 int index = RNG.Instance.Next(this.SubParties.Count);

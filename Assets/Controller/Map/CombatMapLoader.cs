@@ -17,6 +17,7 @@ using Controller.Map;
 using View.Map;
 using Generics.Hex;
 using View.GUI;
+using Assets.Generics;
 
 namespace Controller.Managers.Map
 {
@@ -47,7 +48,7 @@ namespace Controller.Managers.Map
 
         private void InitEnemyParty()
         {
-            var enemies = EnemyPartyLoader.Instance.GetParty("Goblin War Party");
+            var enemies = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Goblin War Party", 12));
             var builder = new CharacterViewBuilder();
             var controllers = new List<GenericCharacterController>();
 

@@ -1,4 +1,5 @@
-﻿using Controller.Characters;
+﻿using Assets.Generics;
+using Controller.Characters;
 using Generics;
 using Model.Biomes;
 using Model.Characters;
@@ -12,9 +13,9 @@ namespace Controller.Managers.Map
     {
         private PartyBuilder _partyBuilder = new PartyBuilder();
 
-        public List<CharacterParams> GetParty(string party)
+        public List<CharacterParams> GetParty(Pair<string, int> arg)
         {
-            return this._partyBuilder.Build(party);
+            return this._partyBuilder.Build(arg);
         }
     }
 }

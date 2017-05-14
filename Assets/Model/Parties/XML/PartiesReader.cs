@@ -44,11 +44,8 @@ namespace Model.Parties.XML
                 foreach (var att in el.Attributes())
                 {
                     foreach (var ele in el.Elements())
-                    {
-                        if (ele.Name == "Difficulty")
-                            PartiesTable.Instance.Table[name].Difficulty = int.Parse(ele.Value);
-                            
-                        else if (ele.Name == "SubParty")
+                    {       
+                        if (ele.Name == "SubParty")
                         {
                             var csv = ele.Value.Split(',');
                             if (csv.Length > 1)

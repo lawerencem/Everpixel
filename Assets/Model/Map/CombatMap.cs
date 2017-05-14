@@ -90,7 +90,8 @@ namespace Model.Map
             }
             else
                 return initPath;
-            
         }
+
+
     }
 }
