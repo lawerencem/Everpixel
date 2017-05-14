@@ -59,7 +59,7 @@ namespace Controller.Managers.Map
                 controller.Init(handle);
                 var view = builder.Build(enemies[i]);
                 controller.SetView(view, enemies[i]);
-                this.LayoutCharacter(controller, i);
+                this.LayoutCharacter(controller, enemies[i], true);
                 controllers.Add(controller);
             }
 
@@ -110,7 +110,7 @@ namespace Controller.Managers.Map
                 render.sortingLayerName = "BackgroundTile";
                 controller.SetModel(hex);
                 controller.SetView(new HexTileView(hex));
-                this._map.TileControllers.Add(controller);
+                this._map.AddTileController(controller);
                 controller.Init(spriteHandler);
             }
 
@@ -129,38 +129,41 @@ namespace Controller.Managers.Map
             }
         }
 
-        private void LayoutCharacter(GenericCharacterController c, int index)
+        private void LayoutCharacter(GenericCharacterController c, CharacterParams cParams, bool enemyParty)
         {
             if (c.View != null)
             {
                 var sprite = c.View.Sprites[c.View.Torso];
                 var render = c.Handle.AddComponent<SpriteRenderer>();
-                c.Handle.transform.position = this._map.TileControllers[index].View.Center;
+                var tile = this._map.GetTileForRow(enemyParty, cParams.StartRow);
+                c.Handle.transform.position = tile.View.Center;
                 c.Handle.transform.SetParent(this.MapHolder);
                 c.Handle.name = c.View.Type.ToString() + " " + c.View.Race.ToString();
                 render.sprite = sprite;
                 render.sortingLayerName = "CharTorso";
                 c.SpriteHandlers.Add(c.Handle);
-                AttachDeco(c, "CharFace", c.View.Face, index);
-                AttachDeco(c, "CharDeco1", c.View.Deco1, index);
-                AttachDeco(c, "CharDeco2", c.View.Deco2, index);
-                AttachDeco(c, "CharDeco3", c.View.Deco3, index);
-                if (c.View.Armor != null) { TryAttachEquipment(c, c.View.Armor, "CharArmor", index); }
-                if (c.View.Helm != null) { TryAttachEquipment(c, c.View.Helm, "CharHelm", index, 0f, 0.15f); }
-                if (c.View.LWeapon != null) { TryAttachEquipment(c, c.View.LWeapon, "CharLWeapon", index, 0.09f); }
-                if (c.View.Mount != null) { AttachMount(c, "CharMount", index); }
-                if (c.View.RWeapon != null) { TryAttachEquipment(c, c.View.RWeapon, "CharRWeapon", index, -0.09f); }
-                this._map.TileControllers[index].Model.Current = c;
-                c.CurrentTile = this._map.TileControllers[index];
+                AttachDeco(c, "CharFace", c.View.Face, tile);
+                AttachDeco(c, "CharDeco1", c.View.Deco1, tile);
+                AttachDeco(c, "CharDeco2", c.View.Deco2, tile);
+                AttachDeco(c, "CharDeco3", c.View.Deco3, tile);
+                if (c.View.Armor != null) { TryAttachEquipment(c, c.View.Armor, "CharArmor", tile); }
+                if (c.View.Helm != null) { TryAttachEquipment(c, c.View.Helm, "CharHelm", tile, 0f, 0.15f); }
+                if (c.View.LWeapon != null) { TryAttachEquipment(c, c.View.LWeapon, "CharLWeapon", tile, 0.09f); }
+                if (c.View.Mount != null) { AttachMount(c, "CharMount", tile); }
+                if (c.View.RWeapon != null) { TryAttachEquipment(c, c.View.RWeapon, "CharRWeapon", tile, -0.09f); }
+                if (enemyParty)
+                    c.Handle.transform.localRotation = Quaternion.Euler(0, 180, 0);
+                tile.Model.Current = c;
+                c.CurrentTile = tile;
             }
         }
 
-        private void AttachDeco(GenericCharacterController c, string sort, int spriteIndex, int index)
+        private void AttachDeco(GenericCharacterController c, string sort, int spriteIndex, TileController tile)
         {
             var sprite = c.View.Sprites[spriteIndex];
             var spriteHandler = new GameObject();
             var render = spriteHandler.AddComponent<SpriteRenderer>();
-            spriteHandler.transform.position = this._map.TileControllers[index].View.Center;
+            spriteHandler.transform.position = tile.View.Center;
             spriteHandler.transform.SetParent(c.Handle.transform);
             spriteHandler.name = "Character Deco";
             render.sprite = sprite;
@@ -168,12 +171,12 @@ namespace Controller.Managers.Map
             c.SpriteHandlers.Add(spriteHandler);
         }
 
-        private void AttachMount(GenericCharacterController c, string sort, int index)
+        private void AttachMount(GenericCharacterController c, string sort, TileController tile)
         {
             var sprite = c.View.Mount.Sprites[0];
             var spriteHandler = new GameObject();
             var render = spriteHandler.AddComponent<SpriteRenderer>();
-            var position = this._map.TileControllers[index].View.Center;
+            var position = tile.View.Center;
             position.x += 0.05f;
             position.y -= 0.15f;
             spriteHandler.transform.position = position;
@@ -184,14 +187,14 @@ namespace Controller.Managers.Map
             c.SpriteHandlers.Add(spriteHandler);
         }
 
-        private void TryAttachEquipment(GenericCharacterController c, EquipmentView e, string sort, int index, float xOffset = 0, float yOffset = 0)
+        private void TryAttachEquipment(GenericCharacterController c, EquipmentView e, string sort, TileController tile, float xOffset = 0, float yOffset = 0)
         {
             if (e != null)
             {
                 var sprite = e.Sprites[e.Index];
                 var spriteHandler = new GameObject();
                 var render = spriteHandler.AddComponent<SpriteRenderer>();
-                var position = this._map.TileControllers[index].View.Center;
+                var position = tile.View.Center;
                 position.x += xOffset;
                 position.y += yOffset;
                 spriteHandler.transform.position = position;

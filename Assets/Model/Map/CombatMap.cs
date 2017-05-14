@@ -3,6 +3,7 @@ using Controller.Characters;
 using Controller.Map;
 using Generics.Hex;
 using Model.Events.Combat;
+using Model.Parties;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -17,12 +18,15 @@ namespace Model.Map
         public CombatMap(GenericHexMap map)
         {
             this.TileControllers = new List<TileController>();
+            this.TileControllerMap = new Dictionary<Pair<int, int>, TileController>();
             this._map = map;
-            foreach(var tile in this.TileControllers)
-            {
-                var key = new Pair<int, int>(tile.Model.Col, tile.Model.Row);
-                this.TileControllerMap.Add(key, tile);
-            }
+        }
+
+        public void AddTileController(TileController tile)
+        {
+            this.TileControllers.Add(tile);
+            var key = new Pair<int, int>(tile.Model.Col, tile.Model.Row);
+            this.TileControllerMap.Add(key, tile);
         }
 
         public void InitControllerAdjacent()
@@ -92,6 +96,41 @@ namespace Model.Map
                 return initPath;
         }
 
+        public TileController GetTileForRow(bool enemyParty, StartingColEnum col)
+        {
+            int rowInd = -1;
+            int colInd = -1;
+            if (enemyParty)
+            {
+                if (col == StartingColEnum.Three)
+                    colInd = this._map.GetLastCol() - 1;
+                else if (col == StartingColEnum.Two)
+                    colInd = this._map.GetLastCol() - 2;
+                else
+                    colInd = this._map.GetLastCol() - 3;
 
+            }
+            else
+            {
+                if (col == StartingColEnum.Three)
+                    colInd = this._map.GetFirstCol();
+                else if (col == StartingColEnum.Two)
+                    colInd = this._map.GetFirstCol() + 1;
+                else
+                    colInd = this._map.GetFirstCol() + 2;
+            }
+
+            // TODO: Put a check in here that will return random values when indices are greater than map size
+            rowInd = this._map.GetMidRow();
+            var key = new Pair<int, int>(colInd, rowInd);
+            for (int i = 0; this.TileControllerMap[key].Model.Current != null; i++)
+            {
+                int counter = i / 2;
+                if (i % 2 == 1) { counter *= -1; }
+                key = new Pair<int, int>(colInd, rowInd + counter);
+                if (rowInd + counter > this._map.GetLastCol() || rowInd + counter < 0) { return null; }
+            }
+            return this.TileControllerMap[key];
+        }
     }
 }

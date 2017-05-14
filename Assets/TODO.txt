@@ -1,8 +1,8 @@
 ﻿TODO
 
 0.5) Make additional nesting for .xml files (Weapons, armor, predefined)
+1) - Make "player" Party spawn on left side of map 
 0) - Finish attack referee
-2) - Properly place formations into Rows on the map
 3) - Critter classes / abilities during level up on the xml
 5) - Calculate "height diff" when going from one height to another in hexes
 - Add Methods to get current values of a model given buffs and such

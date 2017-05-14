@@ -59,13 +59,13 @@ namespace Model.Parties.XML
                             if (values.Count > 2)
                             {
                                 double chance = 0;
-                                StartingRowEnum row = StartingRowEnum.None;
+                                StartingColEnum row = StartingColEnum.None;
 
                                 var param = new SubPartyParams();
                                 if (double.TryParse(values[SubPartiesXMLIndexes.CHANCE], out chance))
                                     param.Chance = chance;
                                 param.Name = values[SubPartiesXMLIndexes.NAME];
-                                if (EnumUtil<StartingRowEnum>.TryGetEnumValue(values[SubPartiesXMLIndexes.ROW], ref row))
+                                if (EnumUtil<StartingColEnum>.TryGetEnumValue(values[SubPartiesXMLIndexes.ROW], ref row))
                                     param.Row = row;
                                 SubPartiesTable.Instance.Table[name + "_" + difficulty].Add(param);
                             }

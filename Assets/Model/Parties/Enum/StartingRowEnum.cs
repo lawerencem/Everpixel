@@ -1,6 +1,6 @@
 ﻿namespace Model.Parties
 {
-    public enum StartingRowEnum
+    public enum StartingColEnum
     {
         None,
         One,

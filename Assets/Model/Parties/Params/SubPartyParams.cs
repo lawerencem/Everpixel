@@ -7,6 +7,6 @@ namespace Model.Parties
         public double Chance { get; set; }
         public int Difficulty { get; set; }
         public string Name { get; set; }
-        public StartingRowEnum Row { get; set; }
+        public StartingColEnum Row { get; set; }
     }
 }
