@@ -48,7 +48,7 @@ namespace Controller.Managers.Map
 
         private void InitEnemyParty()
         {
-            var enemies = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Goblin War Party", 12));
+            var enemies = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Orc Shock Troopas", 12));
             var builder = new CharacterViewBuilder();
             var controllers = new List<GenericCharacterController>();
 

@@ -119,16 +119,26 @@ namespace Model.Map
                 else
                     colInd = this._map.GetFirstCol() + 2;
             }
-
-            // TODO: Put a check in here that will return random values when indices are greater than map size
+            
             rowInd = this._map.GetMidRow();
             var key = new Pair<int, int>(colInd, rowInd);
-            for (int i = 0; this.TileControllerMap[key].Model.Current != null; i++)
+            for (int i = 0; !this.TileControllerMap.ContainsKey(key) || this.TileControllerMap[key].Model.Current != null; i++)
             {
                 int counter = i / 2;
                 if (i % 2 == 1) { counter *= -1; }
+                if (rowInd + counter > this._map.GetLastCol() - 1)
+                {
+                    i = 0;
+                    if (enemyParty) { colInd--; }
+                    else { colInd++; }
+                }
+                else if (rowInd + counter < 0)
+                {
+                    i = 0;
+                    if (enemyParty) { colInd--; }
+                    else { colInd++; }
+                }
                 key = new Pair<int, int>(colInd, rowInd + counter);
-                if (rowInd + counter > this._map.GetLastCol() || rowInd + counter < 0) { return null; }
             }
             return this.TileControllerMap[key];
         }
