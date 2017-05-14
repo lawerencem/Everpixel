@@ -559,6 +559,110 @@
     <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
     <WeaponUseEnum>Shield</WeaponUseEnum>
   </Weapon>
+  <Weapon name="Goblin Bow">
+    <Tier>Five</Tier>
+    <Accuracy>0.92</Accuracy>
+    <AP_Reduce>1.0</AP_Reduce>
+    <Armor_Ignore>1</Armor_Ignore>
+    <Armor_Pierce>1</Armor_Pierce>
+    <Block_Ignore>1</Block_Ignore>
+    <Damage>22</Damage>
+    <Description>
+      A small bow favored by goblins.
+    </Description>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Max_Durability>15</Max_Durability>
+    <Parry_Mod>1.0</Parry_Mod>
+    <Range>5</Range>
+    <Shield_Damage>1</Shield_Damage>
+    <WeaponSkillEnum>Short_Bow</WeaponSkillEnum>
+    <Sprites>0</Sprites>
+    <Stamina_Reduce>1</Stamina_Reduce>
+    <Value>50</Value>
+    <WeaponAbilitiesEnum>Fire</WeaponAbilitiesEnum>
+    <WeaponAbilitiesEnum>Aim</WeaponAbilitiesEnum>
+    <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+    <WeaponUseEnum>Ranged</WeaponUseEnum>
+  </Weapon>
+  <Weapon name="Goblin Bow">
+    <Tier>Four</Tier>
+    <Accuracy>0.94</Accuracy>
+    <AP_Reduce>1.0</AP_Reduce>
+    <Armor_Ignore>1</Armor_Ignore>
+    <Armor_Pierce>0.98</Armor_Pierce>
+    <Block_Ignore>1</Block_Ignore>
+    <Damage>28</Damage>
+    <Description>
+      A small bow favored by goblins.
+    </Description>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Max_Durability>15</Max_Durability>
+    <Parry_Mod>1.0</Parry_Mod>
+    <Range>5</Range>
+    <Shield_Damage>1</Shield_Damage>
+    <WeaponSkillEnum>Short_Bow</WeaponSkillEnum>
+    <Sprites>15</Sprites>
+    <Stamina_Reduce>1</Stamina_Reduce>
+    <Value>50</Value>
+    <WeaponAbilitiesEnum>Fire</WeaponAbilitiesEnum>
+    <WeaponAbilitiesEnum>Aim</WeaponAbilitiesEnum>
+    <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+    <WeaponUseEnum>Ranged</WeaponUseEnum>
+  </Weapon>
+  <Weapon name="Goblin Bow">
+    <Tier>Three</Tier>
+    <Accuracy>0.96</Accuracy>
+    <AP_Reduce>1.0</AP_Reduce>
+    <Armor_Ignore>1</Armor_Ignore>
+    <Armor_Pierce>0.96</Armor_Pierce>
+    <Block_Ignore>1</Block_Ignore>
+    <Damage>35</Damage>
+    <Description>
+      A small bow favored by goblins.
+    </Description>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Max_Durability>15</Max_Durability>
+    <Parry_Mod>1.0</Parry_Mod>
+    <Range>5</Range>
+    <Shield_Damage>1</Shield_Damage>
+    <WeaponSkillEnum>Short_Bow</WeaponSkillEnum>
+    <Sprites>30</Sprites>
+    <Stamina_Reduce>1</Stamina_Reduce>
+    <Value>50</Value>
+    <WeaponAbilitiesEnum>Fire</WeaponAbilitiesEnum>
+    <WeaponAbilitiesEnum>Aim</WeaponAbilitiesEnum>
+    <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+    <WeaponUseEnum>Ranged</WeaponUseEnum>
+  </Weapon>
+  <Weapon name="Goblin Bow">
+    <Tier>Two</Tier>
+    <Accuracy>0.98</Accuracy>
+    <AP_Reduce>1.0</AP_Reduce>
+    <Armor_Ignore>1</Armor_Ignore>
+    <Armor_Pierce>0.94</Armor_Pierce>
+    <Block_Ignore>1</Block_Ignore>
+    <Damage>40</Damage>
+    <Description>
+      A small bow favored by goblins.
+    </Description>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Max_Durability>15</Max_Durability>
+    <Parry_Mod>1.0</Parry_Mod>
+    <Range>5</Range>
+    <Shield_Damage>1</Shield_Damage>
+    <WeaponSkillEnum>Short_Bow</WeaponSkillEnum>
+    <Sprites>45</Sprites>
+    <Stamina_Reduce>1</Stamina_Reduce>
+    <Value>50</Value>
+    <WeaponAbilitiesEnum>Fire</WeaponAbilitiesEnum>
+    <WeaponAbilitiesEnum>Aim</WeaponAbilitiesEnum>
+    <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+    <WeaponUseEnum>Ranged</WeaponUseEnum>
+  </Weapon>
   <Weapon name="Great Axe Choppa">
     <Tier>Five</Tier>
     <Accuracy>0.75</Accuracy>
@@ -875,6 +979,33 @@
     <Sprites>79</Sprites>
     <Stamina_Reduce>0.95</Stamina_Reduce>
     <Value>200</Value>
+    <WeaponAbilitiesEnum>Attack</WeaponAbilitiesEnum>
+    <WeaponAbilitiesEnum>Gash</WeaponAbilitiesEnum>
+    <WeaponAbilitiesEnum>Maim</WeaponAbilitiesEnum>
+    <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+    <WeaponUseEnum>Melee</WeaponUseEnum>
+  </Weapon>
+  <Weapon name="Notched Blade">
+    <Tier>Two</Tier>
+    <Accuracy>0.98</Accuracy>
+    <AP_Reduce>1</AP_Reduce>
+    <Armor_Ignore>1</Armor_Ignore>
+    <Armor_Pierce>0.92</Armor_Pierce>
+    <Block_Ignore>1</Block_Ignore>
+    <Damage>45</Damage>
+    <Description>
+      A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
+    </Description>
+    <Fatigue_Cost>1.10</Fatigue_Cost>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Max_Durability>65</Max_Durability>
+    <Parry_Mod>0.97</Parry_Mod>
+    <Range>1</Range>
+    <Shield_Damage>1</Shield_Damage>
+    <WeaponSkillEnum>Sword</WeaponSkillEnum>
+    <Sprites>109</Sprites>
+    <Stamina_Reduce>0.95</Stamina_Reduce>
+    <Value>450</Value>
     <WeaponAbilitiesEnum>Attack</WeaponAbilitiesEnum>
     <WeaponAbilitiesEnum>Gash</WeaponAbilitiesEnum>
     <WeaponAbilitiesEnum>Maim</WeaponAbilitiesEnum>
@@ -1274,6 +1405,114 @@
     <WeaponAbilitiesEnum>Pierce</WeaponAbilitiesEnum>
     <WeaponAbilitiesEnum>Spear Wall</WeaponAbilitiesEnum>
     <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+    <WeaponUseEnum>Melee</WeaponUseEnum>
+  </Weapon>
+  <Weapon name="Void Staff">
+    <Tier>Five</Tier>
+    <Accuracy>0.80</Accuracy>
+    <AP_Reduce>0.85</AP_Reduce>
+    <Armor_Ignore>1</Armor_Ignore>
+    <Armor_Pierce>1</Armor_Pierce>
+    <Block_Ignore>1</Block_Ignore>
+    <Damage>20</Damage>
+    <Description>
+      An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things 
+      that are best avoided...
+    </Description>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Max_Durability>20</Max_Durability>
+    <Parry_Mod>1</Parry_Mod>
+    <Range>1</Range>
+    <Shield_Damage>1</Shield_Damage>
+    <WeaponSkillEnum>Staff</WeaponSkillEnum>
+    <Sprites>2</Sprites>
+    <Stamina_Reduce>1</Stamina_Reduce>
+    <Value>100</Value>
+    <WeaponAbilitiesEnum>Attack</WeaponAbilitiesEnum>
+    <WeaponAbilitiesEnum>Fire</WeaponAbilitiesEnum>
+    <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+    <WeaponUseEnum>Melee</WeaponUseEnum>
+  </Weapon>
+  <Weapon name="Void Staff">
+    <Tier>Four</Tier>
+    <Accuracy>0.82</Accuracy>
+    <AP_Reduce>0.87</AP_Reduce>
+    <Armor_Ignore>1</Armor_Ignore>
+    <Armor_Pierce>1</Armor_Pierce>
+    <Block_Ignore>1</Block_Ignore>
+    <Damage>25</Damage>
+    <Description>
+      An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
+      that are best avoided...
+    </Description>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Max_Durability>30</Max_Durability>
+    <Parry_Mod>1</Parry_Mod>
+    <Range>1</Range>
+    <Shield_Damage>1</Shield_Damage>
+    <WeaponSkillEnum>Staff</WeaponSkillEnum>
+    <Sprites>17</Sprites>
+    <Stamina_Reduce>1</Stamina_Reduce>
+    <Value>200</Value>
+    <WeaponAbilitiesEnum>Attack</WeaponAbilitiesEnum>
+    <WeaponAbilitiesEnum>Fire</WeaponAbilitiesEnum>
+    <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+    <WeaponUseEnum>Melee</WeaponUseEnum>
+  </Weapon>
+  <Weapon name="Void Staff">
+    <Tier>Three</Tier>
+    <Accuracy>0.85</Accuracy>
+    <AP_Reduce>0.90</AP_Reduce>
+    <Armor_Ignore>1</Armor_Ignore>
+    <Armor_Pierce>1</Armor_Pierce>
+    <Block_Ignore>1</Block_Ignore>
+    <Damage>40</Damage>
+    <Description>
+      An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
+      that are best avoided...
+    </Description>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Max_Durability>20</Max_Durability>
+    <Parry_Mod>1</Parry_Mod>
+    <Range>1</Range>
+    <Shield_Damage>1</Shield_Damage>
+    <WeaponSkillEnum>Staff</WeaponSkillEnum>
+    <Sprites>32</Sprites>
+    <Stamina_Reduce>1</Stamina_Reduce>
+    <Value>400</Value>
+    <WeaponAbilitiesEnum>Attack</WeaponAbilitiesEnum>
+    <WeaponAbilitiesEnum>Fire</WeaponAbilitiesEnum>
+    <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+    <WeaponUseEnum>Melee</WeaponUseEnum>
+  </Weapon>
+  <Weapon name="Void Staff">
+    <Tier>Two</Tier>
+    <Accuracy>0.92</Accuracy>
+    <AP_Reduce>0.95</AP_Reduce>
+    <Armor_Ignore>1</Armor_Ignore>
+    <Armor_Pierce>1</Armor_Pierce>
+    <Block_Ignore>1</Block_Ignore>
+    <Damage>50</Damage>
+    <Description>
+      An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
+      that are best avoided...
+    </Description>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Max_Durability>50</Max_Durability>
+    <Parry_Mod>1</Parry_Mod>
+    <Range>1</Range>
+    <Shield_Damage>1</Shield_Damage>
+    <WeaponSkillEnum>Staff</WeaponSkillEnum>
+    <Sprites>47</Sprites>
+    <Stamina_Reduce>1</Stamina_Reduce>
+    <Value>1000</Value>
+    <WeaponAbilitiesEnum>Attack</WeaponAbilitiesEnum>
+    <WeaponAbilitiesEnum>Fire</WeaponAbilitiesEnum>
+    <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
     <WeaponUseEnum>Melee</WeaponUseEnum>
   </Weapon>
   <Weapon name="Zweihander">

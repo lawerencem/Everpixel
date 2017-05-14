@@ -833,4 +833,172 @@
     <Stamina_Reduce>0</Stamina_Reduce>
     <Value>25</Value>
   </Armor>
+  <Armor name="Void Handler Robes">
+    <Tier>Five</Tier>
+    <AP_Reduce>1</AP_Reduce>
+    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
+    <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
+    <Block_Reduce>1</Block_Reduce>
+    <Damage_Ignore>1</Damage_Ignore>
+    <Damage_Reduction>1.01</Damage_Reduction>
+    <Description>
+      This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
+      beings that are best left alone.
+    </Description>
+    <Dodge_Reduce>1</Dodge_Reduce>
+    <Durability>15</Durability>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Parry_Reduce>1</Parry_Reduce>
+    <Sprites>3</Sprites>
+    <Stamina_Reduce>0</Stamina_Reduce>
+    <Value>100</Value>
+  </Armor>
+  <Armor name="Void Handler Robes">
+    <Tier>Four</Tier>
+    <AP_Reduce>1</AP_Reduce>
+    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
+    <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
+    <Block_Reduce>1</Block_Reduce>
+    <Damage_Ignore>1</Damage_Ignore>
+    <Damage_Reduction>1.02</Damage_Reduction>
+    <Description>
+      This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
+      beings that are best left alone.
+    </Description>
+    <Dodge_Reduce>1</Dodge_Reduce>
+    <Durability>20</Durability>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Parry_Reduce>1</Parry_Reduce>
+    <Sprites>18</Sprites>
+    <Stamina_Reduce>15</Stamina_Reduce>
+    <Value>250</Value>
+  </Armor>
+  <Armor name="Void Handler Robes">
+    <Tier>Three</Tier>
+    <AP_Reduce>1</AP_Reduce>
+    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
+    <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
+    <Block_Reduce>1</Block_Reduce>
+    <Damage_Ignore>1</Damage_Ignore>
+    <Damage_Reduction>1.01</Damage_Reduction>
+    <Description>
+      This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
+      beings that are best left alone.
+    </Description>
+    <Dodge_Reduce>1</Dodge_Reduce>
+    <Durability>35</Durability>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Parry_Reduce>1</Parry_Reduce>
+    <Sprites>33</Sprites>
+    <Stamina_Reduce>30</Stamina_Reduce>
+    <Value>400</Value>
+  </Armor>
+  <Armor name="Void Handler Robes">
+    <Tier>Two</Tier>
+    <AP_Reduce>1</AP_Reduce>
+    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
+    <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
+    <Block_Reduce>1</Block_Reduce>
+    <Damage_Ignore>1</Damage_Ignore>
+    <Damage_Reduction>1.01</Damage_Reduction>
+    <Description>
+      This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
+      beings that are best left alone.
+    </Description>
+    <Dodge_Reduce>1</Dodge_Reduce>
+    <Durability>50</Durability>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Parry_Reduce>1</Parry_Reduce>
+    <Sprites>48</Sprites>
+    <Stamina_Reduce>45</Stamina_Reduce>
+    <Value>1000</Value>
+  </Armor>
+  <Armor name="Void Handler Hood">
+    <Tier>Five</Tier>
+    <AP_Reduce>1</AP_Reduce>
+    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
+    <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
+    <Block_Reduce>1</Block_Reduce>
+    <Damage_Ignore>1</Damage_Ignore>
+    <Damage_Reduction>1.01</Damage_Reduction>
+    <Description>
+      This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
+      from the nightmares that lurk in the void.
+    </Description>
+    <Dodge_Reduce>1</Dodge_Reduce>
+    <Durability>5</Durability>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Parry_Reduce>1</Parry_Reduce>
+    <Sprites>1</Sprites>
+    <Stamina_Reduce>0</Stamina_Reduce>
+    <Value>100</Value>
+  </Armor>
+  <Armor name="Void Handler Hood">
+    <Tier>Four</Tier>
+    <AP_Reduce>1</AP_Reduce>
+    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
+    <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
+    <Block_Reduce>1</Block_Reduce>
+    <Damage_Ignore>1</Damage_Ignore>
+    <Damage_Reduction>1.01</Damage_Reduction>
+    <Description>
+      This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
+      from the nightmares that lurk in the void.
+    </Description>
+    <Dodge_Reduce>1</Dodge_Reduce>
+    <Durability>10</Durability>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Parry_Reduce>1</Parry_Reduce>
+    <Sprites>16</Sprites>
+    <Stamina_Reduce>0</Stamina_Reduce>
+    <Value>250</Value>
+  </Armor>
+  <Armor name="Void Handler Hood">
+    <Tier>Three</Tier>
+    <AP_Reduce>1</AP_Reduce>
+    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
+    <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
+    <Block_Reduce>1</Block_Reduce>
+    <Damage_Ignore>1</Damage_Ignore>
+    <Damage_Reduction>1.01</Damage_Reduction>
+    <Description>
+      This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
+      from the nightmares that lurk in the void.
+    </Description>
+    <Dodge_Reduce>1</Dodge_Reduce>
+    <Durability>10</Durability>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Parry_Reduce>1</Parry_Reduce>
+    <Sprites>31</Sprites>
+    <Stamina_Reduce>0</Stamina_Reduce>
+    <Value>550</Value>
+  </Armor>
+  <Armor name="Void Handler Hood">
+    <Tier>Two</Tier>
+    <AP_Reduce>1</AP_Reduce>
+    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
+    <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
+    <Block_Reduce>1</Block_Reduce>
+    <Damage_Ignore>1</Damage_Ignore>
+    <Damage_Reduction>1.01</Damage_Reduction>
+    <Description>
+      This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
+      from the nightmares that lurk in the void.
+    </Description>
+    <Dodge_Reduce>1</Dodge_Reduce>
+    <Durability>10</Durability>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1</Initiative_Reduce>
+    <Parry_Reduce>1</Parry_Reduce>
+    <Sprites>46</Sprites>
+    <Stamina_Reduce>0</Stamina_Reduce>
+    <Value>1200</Value>
+  </Armor>
 </Armors>

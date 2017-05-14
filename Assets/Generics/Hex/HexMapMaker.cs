@@ -40,7 +40,7 @@ namespace Generics.Hex
                 }
             }
 
-            var map = new GenericHexMap(tiles);
+            var map = new GenericHexMap(tiles, rows, cols);
             PopulateAdjacentTiles(map);
             return map;
         }

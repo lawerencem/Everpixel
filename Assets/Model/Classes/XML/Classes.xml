@@ -21,6 +21,13 @@
     <SecondaryStatsEnum>Parry,3</SecondaryStatsEnum>
     <SecondaryStatsEnum>Power,10</SecondaryStatsEnum>
   </Class>
+  <Class name="Eldritch_Weaver">
+    <PrimaryStatsEnum>Intelligence,1</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Might,2</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Perception,5</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Morale,16</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Will,16</SecondaryStatsEnum>
+  </Class>
   <Class name="Fighter">
     <PrimaryStatsEnum>Agility,1</PrimaryStatsEnum>
     <PrimaryStatsEnum>Constitution,2</PrimaryStatsEnum>
@@ -68,6 +75,13 @@
     <SecondaryStatsEnum>Concentration,8</SecondaryStatsEnum>
     <SecondaryStatsEnum>Power,4</SecondaryStatsEnum>
     <SecondaryStatsEnum>Spell_Duration,4</SecondaryStatsEnum>
+  </Class>
+  <Class name="Sorcerer">
+    <PrimaryStatsEnum>Intelligence,3</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Might,5</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Concentration,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,8</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Spell_Penetration,4</SecondaryStatsEnum>
   </Class>
   <Class name="Warrior">
     <PrimaryStatsEnum>Agility,1</PrimaryStatsEnum>

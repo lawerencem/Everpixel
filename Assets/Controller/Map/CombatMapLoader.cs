@@ -47,7 +47,7 @@ namespace Controller.Managers.Map
 
         private void InitEnemyParty()
         {
-            var enemies = EnemyPartyLoader.Instance.GetParty("Lizardman War Party");
+            var enemies = EnemyPartyLoader.Instance.GetParty("Goblin War Party");
             var builder = new CharacterViewBuilder();
             var controllers = new List<GenericCharacterController>();
 

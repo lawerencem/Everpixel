@@ -5,10 +5,13 @@ namespace Generics.Hex
 {
     public class GenericHexMap
     {
-        public List<HexTile> Tiles { get; set; }
         protected Dictionary<int, Dictionary<int, HexTile>> _colRowDictionary;
+        protected int _cols;
+        protected int _rows;
 
-        public GenericHexMap(List<HexTile> tiles)
+        public List<HexTile> Tiles { get; set; }
+
+        public GenericHexMap(List<HexTile> tiles, int rows, int cols)
         {
             this.Tiles = new List<HexTile>();
             this._colRowDictionary = new Dictionary<int, Dictionary<int, HexTile>>();
@@ -21,6 +24,9 @@ namespace Generics.Hex
 
                 this.Tiles.Add(t);
             }
+
+            this._cols = cols;
+            this._rows = rows;
         }
 
         public HexTile GetNE(HexTile t)
@@ -115,5 +121,14 @@ namespace Generics.Hex
             else
                 return null;
         }
+
+        public int GetFirstCol() { return 0; }
+        public int GetFirstRow() { return 0; }
+        public int GetMidCol() { return this._cols / 2; }
+        public int GetMidRow() { return this._rows / 2; }
+        public int GetLastCol() { return this._cols; }
+        public int GetLastRow() { return this._rows; }
+
+        
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Model.Classes;
 using Model.Equipment;
 using Model.Mounts;
+using Model.Parties;
 using System.Collections.Generic;
 
 namespace Model.Characters
@@ -20,6 +21,7 @@ namespace Model.Characters
         public string Name { get; set; }
         public WeaponParams RWeapon { get; set; }
         public RaceEnum Race { get; set; }
+        public StartingRowEnum StartRow { get; set; }
         public CharacterTypeEnum Type { get; set; }
     }
 }

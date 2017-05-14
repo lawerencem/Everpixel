@@ -5,8 +5,6 @@
         None,
         One,
         Two,
-        Three,
-        Four,
-        Five
+        Three
     }
 }

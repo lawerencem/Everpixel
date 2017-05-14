@@ -14,6 +14,28 @@
     <SubParty>Slimers,2</SubParty>
     <SubParty>Slimers,3</SubParty>
   </Party>
+  <Party Name ="Goblin War Party">
+    <Difficulty>22</Difficulty>
+    <SubParty>Gobbo Spider Riders,1</SubParty>
+    <SubParty>Gobbo Spider Riders,2</SubParty>
+    <SubParty>Gobbo Spider Riders,3</SubParty>
+    <SubParty>Gobbo Spider Riders,4</SubParty>
+    <SubParty>Gobbo Spider Riders,5</SubParty>
+    <SubParty>Goblin Fodder,1</SubParty>
+    <SubParty>Goblin Warboss Retinue,12</SubParty>
+    <SubParty>Goblin Void Weavers,6</SubParty>
+    <SubParty>Goblin Void Weavers,8</SubParty>
+    <SubParty>Goblin Void Weavers,10</SubParty>
+    <SubParty>Goblin Void Weavers,12</SubParty>
+    <SubParty>Gromp Hoppers,4</SubParty>
+    <SubParty>Gromp Hoppers,5</SubParty>
+    <SubParty>Gromp Hoppers,6</SubParty>
+    <SubParty>Gromp Hoppers,8</SubParty>
+    <SubParty>Gromp Hoppers,10</SubParty>
+    <SubParty>Slimers,3</SubParty>
+    <SubParty>Slime Lords,3</SubParty>
+    <SubParty>Slime Lords,4</SubParty>
+  </Party>
   <Party Name ="Goblin Slime Lords">
     <Difficulty>9</Difficulty>
     <SubParty>Goblin Fodder,1</SubParty>

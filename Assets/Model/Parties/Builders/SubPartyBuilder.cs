@@ -31,7 +31,9 @@ namespace Model.Parties
                     {
                         var pParams = PredefinedCharacterTable.Instance.Table[param.Name];
                         var builder = new CharacterParamBuilder();
-                        buildList.Add(builder.Build(pParams));
+                        var toAdd = builder.Build(pParams);
+                        toAdd.StartRow = param.Row;
+                        buildList.Add(toAdd);
                     }
                 }
                 return buildList;

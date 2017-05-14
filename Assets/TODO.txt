@@ -1,5 +1,6 @@
 ﻿TODO
 
+0.5) Make additional nesting for .xml files (Weapons, armor, predefined)
 0) - Finish attack referee
 2) - Properly place formations into Rows on the map
 3) - Critter classes / abilities during level up on the xml

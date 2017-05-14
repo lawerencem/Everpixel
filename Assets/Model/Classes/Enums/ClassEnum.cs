@@ -41,6 +41,7 @@
         Duelist,
         Erudite,
         Eldritch_Knight,
+        Eldritch_Weaver,
         Elementalist,
         Engineer,
         Geomancer,

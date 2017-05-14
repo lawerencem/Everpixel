@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <WeaponAbilities>
+  <WeaponAbility name="Aim">
+  </WeaponAbility>
   <WeaponAbility name="Attack">
   </WeaponAbility>
   <WeaponAbility name="Break_Armor">
