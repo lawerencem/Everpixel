@@ -176,41 +176,34 @@
   <SubParty Name ="Orc Scavengers">
     <Difficulty>1</Difficulty>
     <Character>1,Orc Scavenger,One</Character>
-    <Character>0.85,Orc Scavenger,One</Character>
+    <Character>0.25,Orc Scavenger,One</Character>
   </SubParty>
   <SubParty Name ="Orc Scavengers">
     <Difficulty>2</Difficulty>
     <Character>1,Orc Scavenger,One</Character>
-    <Character>1,Orc Scavenger,One</Character>
-    <Character>0.85,Orc Scavenger,One</Character>
     <Character>0.5,Orc Scavenger,One</Character>
   </SubParty>
   <SubParty Name ="Orc Scavengers">
     <Difficulty>3</Difficulty>
     <Character>1,Orc Scavenger,One</Character>
-    <Character>1,Orc Scavenger,One</Character>
-    <Character>1,Orc Scavenger,One</Character>
-    <Character>0.85,Orc Scavenger,One</Character>
     <Character>0.85,Orc Scavenger,One</Character>
     <Character>0.5,Orc Scavenger,One</Character>
   </SubParty>
   <SubParty Name ="Shock Troopas">
     <Difficulty>2</Difficulty>
     <Character>1,Shock Troopa,One</Character>
-    <Character>0.75,Shock Troopa,One</Character>
     <Character>0.75,Wimpy Orc Berserker,One</Character>
   </SubParty>
   <SubParty Name ="Shock Troopas">
     <Difficulty>3</Difficulty>
     <Character>1,Shock Troopa,One</Character>
     <Character>1,Wimpy Orc Berserker,One</Character>
-    <Character>0.75,Shock Troopa,One</Character>
-    <Character>0.25,Veteran Shock Troopa,One</Character>
+    <Character>0.25,Shock Troopa,One</Character>
   </SubParty>
   <SubParty Name ="Shock Troopa Calvary">
     <Difficulty>2</Difficulty>
     <Character>1,Ween Rider,One</Character>
-    <Character>0.75,Ween Rider,One</Character>
+    <Character>0.25,Ween Rider,One</Character>
   </SubParty>
   <SubParty Name ="Shock Troopa Calvary">
     <Difficulty>3</Difficulty>
@@ -220,7 +213,7 @@
   <SubParty Name ="Slime Lords">
     <Difficulty>2</Difficulty>
     <Character>1,Fledgling Slime Lord,Three</Character>
-    <Character>0.85,Fledgling Slime Lord,Three</Character>
+    <Character>0.25,Fledgling Slime Lord,Three</Character>
     <Character>1,Sluggish,One</Character>
   </SubParty>
   <SubParty Name ="Slime Lords">
@@ -233,9 +226,22 @@
   <SubParty Name ="Slime Lords">
     <Difficulty>4</Difficulty>
     <Character>1,Slime Lord,Three</Character>
+    <Character>0.85,Fledgling Slime Lord,Three</Character>
+    <Character>1,Sluggish,One</Character>
+  </SubParty>
+  <SubParty Name ="Slime Lords">
+    <Difficulty>5</Difficulty>
     <Character>1,Slime Lord,Three</Character>
-    <Character>0.85,Fledgling Slime Lord,Three</Character>
-    <Character>0.85,Fledgling Slime Lord,Three</Character>
+    <Character>1,Fledgling Slime Lord,Three</Character>
+    <Character>1,Sluggemoth,One</Character>
+    <Character>1,Sluggish,One</Character>
+  </SubParty>
+  <SubParty Name ="Slime Lords">
+    <Difficulty>6</Difficulty>
+    <Character>1,Slime Lord,Three</Character>
+    <Character>0.85,Slime Lord,Three</Character>
+    <Character>1,Sluggemoth,One</Character>
+    <Character>0.85,Sluggemoth,One</Character>
   </SubParty>
   <SubParty Name ="Slimers">
     <Difficulty>2</Difficulty>
@@ -248,5 +254,42 @@
     <Character>1,Rookie Slimer,One</Character>
     <Character>0.85,Slimer,One</Character>
     <Character>0.85,Rookie Slimer,One</Character>
+  </SubParty>
+  <SubParty Name ="Slug Horde">
+    <Difficulty>4</Difficulty>
+    <Character>1,Sluggish,One</Character>
+    <Character>1,Sluggish,One</Character>
+    <Character>1,Sluggish,One</Character>
+    <Character>1,Sluggish,One</Character>
+  </SubParty>
+  <SubParty Name ="Slug Horde">
+    <Difficulty>5</Difficulty>
+    <Character>1,Sluggeemoth,One</Character>
+    <Character>1,Sluggish,One</Character>
+    <Character>1,Sluggish,One</Character>
+    <Character>1,Sluggish,One</Character>
+  </SubParty>
+  <SubParty Name ="Slug Horde">
+    <Difficulty>6</Difficulty>
+    <Character>1,Sluggeemoth,One</Character>
+    <Character>1,Psycargot,One</Character>
+    <Character>1,Sluggish,One</Character>
+    <Character>1,Sluggish,One</Character>
+  </SubParty>
+  <SubParty Name ="Slug Horde">
+    <Difficulty>8</Difficulty>
+    <Character>1,Sluggeemoth,One</Character>
+    <Character>1,Psycargot,One</Character>
+    <Character>1,Psycargot,One</Character>
+    <Character>1,Sluggish,One</Character>
+    <Character>1,Razorback,One</Character>
+  </SubParty>
+  <SubParty Name ="Slug Horde">
+    <Difficulty>10</Difficulty>
+    <Character>1,Sluggeemoth,One</Character>
+    <Character>1,Psycargot,One</Character>
+    <Character>1,Psycargot,One</Character>
+    <Character>1,Psylug,One</Character>
+    <Character>1,Razorback,One</Character>
   </SubParty>
 </SubParties>

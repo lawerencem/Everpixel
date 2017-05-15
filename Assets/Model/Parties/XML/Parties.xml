@@ -39,6 +39,13 @@
     <SubParty>Goblin Fodder,2</SubParty>
     <SubParty>Slime Lords,3</SubParty>
     <SubParty>Slime Lords,4</SubParty>
+    <SubParty>Slime Lords,5</SubParty>
+    <SubParty>Slime Lords,6</SubParty>
+    <SubParty>Slug Horde,4</SubParty>
+    <SubParty>Slug Horde,5</SubParty>
+    <SubParty>Slug Horde,6</SubParty>
+    <SubParty>Slug Horde,8</SubParty>
+    <SubParty>Slug Horde,10</SubParty>
   </Party>
   <Party Name ="Lizardman Militia">
     <SubParty>Lizardman Fodder,1</SubParty>

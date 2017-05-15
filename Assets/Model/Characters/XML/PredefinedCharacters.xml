@@ -607,6 +607,42 @@
       <Resolve>480</Resolve>
     </Stats>
   </Character>
+  <Character name ="Psycargot">
+    <Class>Warrior,1</Class>
+    <CharacterTypeEnum>Critter</CharacterTypeEnum>
+    <Stats>
+      <Agility>280</Agility>
+      <Constitution>320</Constitution>
+      <Intelligence>550</Intelligence>
+      <Might>400</Might>
+      <Perception>400</Perception>
+      <Resolve>480</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Psylug">
+    <Class>Warrior,1</Class>
+    <CharacterTypeEnum>Critter</CharacterTypeEnum>
+    <Stats>
+      <Agility>280</Agility>
+      <Constitution>450</Constitution>
+      <Intelligence>600</Intelligence>
+      <Might>420</Might>
+      <Perception>300</Perception>
+      <Resolve>350</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Sluggemoth">
+    <Class>Warrior,1</Class>
+    <CharacterTypeEnum>Critter</CharacterTypeEnum>
+    <Stats>
+      <Agility>300</Agility>
+      <Constitution>280</Constitution>
+      <Intelligence>320</Intelligence>
+      <Might>520</Might>
+      <Perception>420</Perception>
+      <Resolve>600</Resolve>
+    </Stats>
+  </Character>
   <Character name ="Sluggish">
     <Class>Warrior,1</Class>
     <CharacterTypeEnum>Critter</CharacterTypeEnum>
@@ -617,6 +653,18 @@
       <Might>350</Might>
       <Perception>400</Perception>
       <Resolve>550</Resolve>
+    </Stats>
+  </Character>
+  <Character name ="Razorback">
+    <Class>Warrior,1</Class>
+    <CharacterTypeEnum>Critter</CharacterTypeEnum>
+    <Stats>
+      <Agility>250</Agility>
+      <Constitution>400</Constitution>
+      <Intelligence>350</Intelligence>
+      <Might>420</Might>
+      <Perception>420</Perception>
+      <Resolve>400</Resolve>
     </Stats>
   </Character>
   <Character name ="Slimer">

@@ -43,12 +43,32 @@ namespace Controller.Managers.Map
             this.InitBackgroundTiles(b);
             this.InitBackgroundDeco(b);
             this.InitGUI();
+            this.InitPlayerParty();
             this.InitEnemyParty();
+        }
+
+        // TODO: Clean this up when implementing player stuff.
+        private void InitPlayerParty()
+        {
+            var playerChars = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Orc Shock Troopas", 15));
+            var builder = new CharacterViewBuilder();
+            var controllers = new List<GenericCharacterController>();
+
+            for (int i = 0; i < playerChars.Count; i++)
+            {
+                var handle = new GameObject();
+                var controller = handle.AddComponent<GenericCharacterController>();
+                controller.Init(handle);
+                var view = builder.Build(playerChars[i]);
+                controller.SetView(view, playerChars[i]);
+                this.LayoutCharacter(controller, playerChars[i], false);
+                controllers.Add(controller);
+            }
         }
 
         private void InitEnemyParty()
         {
-            var enemies = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Orc Shock Troopas", 12));
+            var enemies = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Goblin War Party", 15));
             var builder = new CharacterViewBuilder();
             var controllers = new List<GenericCharacterController>();
 

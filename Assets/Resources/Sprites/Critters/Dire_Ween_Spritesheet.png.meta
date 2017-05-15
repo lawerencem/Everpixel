@@ -1,73 +1,52 @@
 fileFormatVersion: 2
-guid: 9fe07e9ac4cbc634c92b31862db42595
-timeCreated: 1494885795
+guid: 832fc10f143c91c449bd8d272616e700
+timeCreated: 1494889398
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Psycargot_Spritesheet_0
-    21300002: Psycargot_Spritesheet_1
-    21300004: Psycargot_Spritesheet_2
-    21300006: Psycargot_Spritesheet_3
-    21300008: Psycargot_Spritesheet_4
-    21300010: Psycargot_Spritesheet_5
-    21300012: Psycargot_Spritesheet_6
-    21300014: Psycargot_Spritesheet_7
-    21300016: Psycargot_Spritesheet_8
-    21300018: Psycargot_Spritesheet_9
-    21300020: Psycargot_Spritesheet_10
-    21300022: Psycargot_Spritesheet_11
-    21300024: Psycargot_Spritesheet_12
-    21300026: Psycargot_Spritesheet_13
-    21300028: Psycargot_Spritesheet_14
-    21300030: Psycargot_Spritesheet_15
-    21300032: Psycargot_Spritesheet_16
-    21300034: Psycargot_Spritesheet_17
-    21300036: Psycargot_Spritesheet_18
-    21300038: Psycargot_Spritesheet_19
-    21300040: Psycargot_Spritesheet_20
-    21300042: Psycargot_Spritesheet_21
-    21300044: Psycargot_Spritesheet_22
-    21300046: Psycargot_Spritesheet_23
-    21300048: Psycargot_Spritesheet_24
-    21300050: Psycargot_Spritesheet_25
-    21300052: Psycargot_Spritesheet_26
-    21300054: Psycargot_Spritesheet_27
-    21300056: Psycargot_Spritesheet_28
-    21300058: Psycargot_Spritesheet_29
-    21300060: Psycargot_Spritesheet_30
-    21300062: Psycargot_Spritesheet_31
-    21300064: Psycargot_Spritesheet_32
-    21300066: Psycargot_Spritesheet_33
-    21300068: Psycargot_Spritesheet_34
-    21300070: Psycargot_Spritesheet_35
-    21300072: Psycargot_Spritesheet_36
-    21300074: Psycargot_Spritesheet_37
-    21300076: Psycargot_Spritesheet_38
-    21300078: Psycargot_Spritesheet_39
-    21300080: Psycargot_Spritesheet_40
-    21300082: Psycargot_Spritesheet_41
-    21300084: Psycargot_Spritesheet_42
-    21300086: Psycargot_Spritesheet_43
-    21300088: Psycargot_Spritesheet_44
-    21300090: Psycargot_Spritesheet_45
-    21300092: Psycargot_Spritesheet_46
-    21300094: Psycargot_Spritesheet_47
-    21300096: Psycargot_Spritesheet_48
-    21300098: Psycargot_Spritesheet_49
-    21300100: Psycargot_Spritesheet_50
-    21300102: Psycargot_Spritesheet_51
-    21300104: Psycargot_Spritesheet_52
-    21300106: Psycargot_Spritesheet_53
-    21300108: Psycargot_Spritesheet_54
-    21300110: Psycargot_Spritesheet_55
-    21300112: Psycargot_Spritesheet_56
-    21300114: Psycargot_Spritesheet_57
-    21300116: Psycargot_Spritesheet_58
-    21300118: Psycargot_Spritesheet_59
-    21300120: Psycargot_Spritesheet_60
-    21300122: Psycargot_Spritesheet_61
-    21300124: Psycargot_Spritesheet_62
-    21300126: Psycargot_Spritesheet_63
+    21300000: Dire_Ween_Spritesheet_0
+    21300002: Dire_Ween_Spritesheet_1
+    21300004: Dire_Ween_Spritesheet_2
+    21300006: Dire_Ween_Spritesheet_3
+    21300008: Dire_Ween_Spritesheet_4
+    21300010: Dire_Ween_Spritesheet_5
+    21300012: Dire_Ween_Spritesheet_6
+    21300014: Dire_Ween_Spritesheet_7
+    21300016: Dire_Ween_Spritesheet_8
+    21300018: Dire_Ween_Spritesheet_9
+    21300020: Dire_Ween_Spritesheet_10
+    21300022: Dire_Ween_Spritesheet_11
+    21300024: Dire_Ween_Spritesheet_12
+    21300026: Dire_Ween_Spritesheet_13
+    21300028: Dire_Ween_Spritesheet_14
+    21300030: Dire_Ween_Spritesheet_15
+    21300032: Dire_Ween_Spritesheet_16
+    21300034: Dire_Ween_Spritesheet_17
+    21300036: Dire_Ween_Spritesheet_18
+    21300038: Dire_Ween_Spritesheet_19
+    21300040: Dire_Ween_Spritesheet_20
+    21300042: Dire_Ween_Spritesheet_21
+    21300044: Dire_Ween_Spritesheet_22
+    21300046: Dire_Ween_Spritesheet_23
+    21300048: Dire_Ween_Spritesheet_24
+    21300050: Dire_Ween_Spritesheet_25
+    21300052: Dire_Ween_Spritesheet_26
+    21300054: Dire_Ween_Spritesheet_27
+    21300056: Dire_Ween_Spritesheet_28
+    21300058: Dire_Ween_Spritesheet_29
+    21300060: Dire_Ween_Spritesheet_30
+    21300062: Dire_Ween_Spritesheet_31
+    21300064: Dire_Ween_Spritesheet_32
+    21300066: Dire_Ween_Spritesheet_33
+    21300068: Dire_Ween_Spritesheet_34
+    21300070: Dire_Ween_Spritesheet_35
+    21300072: Dire_Ween_Spritesheet_36
+    21300074: Dire_Ween_Spritesheet_37
+    21300076: Dire_Ween_Spritesheet_38
+    21300078: Dire_Ween_Spritesheet_39
+    21300080: Dire_Ween_Spritesheet_40
+    21300082: Dire_Ween_Spritesheet_41
+    21300084: Dire_Ween_Spritesheet_42
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -134,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_0
+      name: Dire_Ween_Spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -147,98 +126,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_8
+      name: Dire_Ween_Spritesheet_1
       rect:
         serializedVersion: 2
         x: 0
@@ -251,98 +139,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_9
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_10
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_11
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_12
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_13
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_14
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_15
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_16
+      name: Dire_Ween_Spritesheet_2
       rect:
         serializedVersion: 2
         x: 0
@@ -355,98 +152,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_17
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_18
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_19
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_20
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_21
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_22
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_23
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Psycargot_Spritesheet_24
+      name: Dire_Ween_Spritesheet_3
       rect:
         serializedVersion: 2
         x: 0
@@ -459,7 +165,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_25
+      name: Dire_Ween_Spritesheet_4
       rect:
         serializedVersion: 2
         x: 64
@@ -472,7 +178,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_26
+      name: Dire_Ween_Spritesheet_5
       rect:
         serializedVersion: 2
         x: 128
@@ -485,7 +191,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_27
+      name: Dire_Ween_Spritesheet_6
       rect:
         serializedVersion: 2
         x: 192
@@ -498,7 +204,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_28
+      name: Dire_Ween_Spritesheet_7
       rect:
         serializedVersion: 2
         x: 256
@@ -511,7 +217,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_29
+      name: Dire_Ween_Spritesheet_8
       rect:
         serializedVersion: 2
         x: 320
@@ -524,7 +230,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_30
+      name: Dire_Ween_Spritesheet_9
       rect:
         serializedVersion: 2
         x: 384
@@ -537,7 +243,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_31
+      name: Dire_Ween_Spritesheet_10
       rect:
         serializedVersion: 2
         x: 448
@@ -550,7 +256,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_32
+      name: Dire_Ween_Spritesheet_11
       rect:
         serializedVersion: 2
         x: 0
@@ -563,7 +269,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_33
+      name: Dire_Ween_Spritesheet_12
       rect:
         serializedVersion: 2
         x: 64
@@ -576,7 +282,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_34
+      name: Dire_Ween_Spritesheet_13
       rect:
         serializedVersion: 2
         x: 128
@@ -589,7 +295,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_35
+      name: Dire_Ween_Spritesheet_14
       rect:
         serializedVersion: 2
         x: 192
@@ -602,7 +308,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_36
+      name: Dire_Ween_Spritesheet_15
       rect:
         serializedVersion: 2
         x: 256
@@ -615,7 +321,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_37
+      name: Dire_Ween_Spritesheet_16
       rect:
         serializedVersion: 2
         x: 320
@@ -628,7 +334,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_38
+      name: Dire_Ween_Spritesheet_17
       rect:
         serializedVersion: 2
         x: 384
@@ -641,7 +347,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_39
+      name: Dire_Ween_Spritesheet_18
       rect:
         serializedVersion: 2
         x: 448
@@ -654,7 +360,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_40
+      name: Dire_Ween_Spritesheet_19
       rect:
         serializedVersion: 2
         x: 0
@@ -667,7 +373,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_41
+      name: Dire_Ween_Spritesheet_20
       rect:
         serializedVersion: 2
         x: 64
@@ -680,7 +386,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_42
+      name: Dire_Ween_Spritesheet_21
       rect:
         serializedVersion: 2
         x: 128
@@ -693,7 +399,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_43
+      name: Dire_Ween_Spritesheet_22
       rect:
         serializedVersion: 2
         x: 192
@@ -706,7 +412,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_44
+      name: Dire_Ween_Spritesheet_23
       rect:
         serializedVersion: 2
         x: 256
@@ -719,7 +425,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_45
+      name: Dire_Ween_Spritesheet_24
       rect:
         serializedVersion: 2
         x: 320
@@ -732,7 +438,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_46
+      name: Dire_Ween_Spritesheet_25
       rect:
         serializedVersion: 2
         x: 384
@@ -745,7 +451,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_47
+      name: Dire_Ween_Spritesheet_26
       rect:
         serializedVersion: 2
         x: 448
@@ -758,7 +464,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_48
+      name: Dire_Ween_Spritesheet_27
       rect:
         serializedVersion: 2
         x: 0
@@ -771,7 +477,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_49
+      name: Dire_Ween_Spritesheet_28
       rect:
         serializedVersion: 2
         x: 64
@@ -784,7 +490,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_50
+      name: Dire_Ween_Spritesheet_29
       rect:
         serializedVersion: 2
         x: 128
@@ -797,7 +503,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_51
+      name: Dire_Ween_Spritesheet_30
       rect:
         serializedVersion: 2
         x: 192
@@ -810,7 +516,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_52
+      name: Dire_Ween_Spritesheet_31
       rect:
         serializedVersion: 2
         x: 256
@@ -823,7 +529,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_53
+      name: Dire_Ween_Spritesheet_32
       rect:
         serializedVersion: 2
         x: 320
@@ -836,7 +542,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_54
+      name: Dire_Ween_Spritesheet_33
       rect:
         serializedVersion: 2
         x: 384
@@ -849,7 +555,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_55
+      name: Dire_Ween_Spritesheet_34
       rect:
         serializedVersion: 2
         x: 448
@@ -862,7 +568,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_56
+      name: Dire_Ween_Spritesheet_35
       rect:
         serializedVersion: 2
         x: 0
@@ -875,7 +581,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_57
+      name: Dire_Ween_Spritesheet_36
       rect:
         serializedVersion: 2
         x: 64
@@ -888,7 +594,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_58
+      name: Dire_Ween_Spritesheet_37
       rect:
         serializedVersion: 2
         x: 128
@@ -901,7 +607,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_59
+      name: Dire_Ween_Spritesheet_38
       rect:
         serializedVersion: 2
         x: 192
@@ -914,7 +620,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_60
+      name: Dire_Ween_Spritesheet_39
       rect:
         serializedVersion: 2
         x: 256
@@ -927,7 +633,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_61
+      name: Dire_Ween_Spritesheet_40
       rect:
         serializedVersion: 2
         x: 320
@@ -940,7 +646,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_62
+      name: Dire_Ween_Spritesheet_41
       rect:
         serializedVersion: 2
         x: 384
@@ -953,7 +659,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Psycargot_Spritesheet_63
+      name: Dire_Ween_Spritesheet_42
       rect:
         serializedVersion: 2
         x: 448

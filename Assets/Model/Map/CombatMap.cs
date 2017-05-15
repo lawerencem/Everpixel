@@ -49,7 +49,7 @@ namespace Model.Map
             pathDict.Add(key, new List<Path> { initPath });
             initPath.Tiles.Add(s);
 
-            while (openSet.Count > 0 && !found && itr < 20)
+            while (openSet.Count > 0 && !found && itr < 24)
             {
                 var tile = openSet.ElementAt(0);
                 foreach (var neighbor in tile.Adjacent)
@@ -113,11 +113,11 @@ namespace Model.Map
             else
             {
                 if (col == StartingColEnum.Three)
-                    colInd = this._map.GetFirstCol();
+                    colInd = this._map.GetFirstCol() - 2;
                 else if (col == StartingColEnum.Two)
-                    colInd = this._map.GetFirstCol() + 1;
+                    colInd = this._map.GetFirstCol() - 1;
                 else
-                    colInd = this._map.GetFirstCol() + 2;
+                    colInd = this._map.GetFirstCol();
             }
             
             rowInd = this._map.GetMidRow();
