@@ -55,24 +55,36 @@ namespace Model.Characters.XML
             {
                 foreach(var att in el.Attributes())
                 {
-                    if (!table.Table.ContainsKey(att.Value.ToString()))
+                    if (EnumUtil<CultureEnum>.TryGetEnumValue(att.Value, ref culture))
                     {
-                        table.Table.Add(att.Value.ToString(), new PredefinedCharacterParams());
-                        table.Table[att.Value.ToString()].Name = att.Value.ToString();
-                    }
-
-                    foreach(var ele in el.Elements())
-                    {
-                        switch (ele.Name.ToString())
+                        foreach(var ele in el.Elements())
                         {
-                            case (CLASS): { HandleClassType(att.Value.ToString(), ele.Value.ToString(), ref baseClass); } break;
-                            case (MOUNT): { HandleMount(att.Value.ToString(), ele.Value); } break;
-                            case (POTENTIAL_ARMORS): { HandleEquipment(ele, att.Value.ToString()); } break;
-                            case (POTENTIAL_WEAPONS): { HandleEquipment(ele, att.Value.ToString()); } break;
-                            case (CULTURE): { HandleCulture(att.Value.ToString(), att.Name.ToString(), ref culture); } break;
-                            case (RACE): { HandleRace(att.Value.ToString(), ele.Value.ToString(), ref race); } break;
-                            case (STATS): { HandleStats(ele, att.Value.ToString()); } break;
-                            case (TYPE): { HandleCharacterType(att.Value.ToString(), ele.Value.ToString(), ref type); } break;
+                            foreach(var attr in ele.Attributes())
+                            {
+                                string key = "";
+
+                                if (!table.Table.ContainsKey(attr.Value.ToString()))
+                                {
+                                    key = attr.Value.ToString();
+
+                                    table.Table.Add(key, new PredefinedCharacterParams());
+                                    table.Table[key].Name = key;
+                                    table.Table[key].Culture = culture;
+                                }
+                                foreach (var elem in ele.Elements())
+                                {
+                                    switch (elem.Name.ToString())
+                                    {
+                                        case (CLASS): { HandleClassType(key, elem.Value.ToString(), ref baseClass); } break;
+                                        case (MOUNT): { HandleMount(key, elem.Value); } break;
+                                        case (POTENTIAL_ARMORS): { HandleEquipment(elem, key); } break;
+                                        case (POTENTIAL_WEAPONS): { HandleEquipment(elem, key); } break;
+                                        case (RACE): { HandleRace(key, elem.Value.ToString(), ref race); } break;
+                                        case (STATS): { HandleStats(elem, key); } break;
+                                        case (TYPE): { HandleCharacterType(key, elem.Value.ToString(), ref type); } break;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -93,14 +105,7 @@ namespace Model.Characters.XML
             if (EnumUtil<CharacterTypeEnum>.TryGetEnumValue(value, ref type))
                 table.Table[rootKey].Type = type;
         }
-
-        private void HandleCulture(string rootKey, string value, ref CultureEnum culture)
-        {
-            if (EnumUtil<CultureEnum>.TryGetEnumValue(value, ref culture))
-                table.Table[rootKey].Culture = culture;
-        }
-
-
+        
         private void HandleEquipment(XElement el, string rootKey)
         {
             foreach (var att in el.Elements())

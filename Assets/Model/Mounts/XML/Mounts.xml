@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Mounts>
+  <Mount name="Dire_Ween">
+  </Mount>
   <Mount name="Dodo">
   </Mount>
   <Mount name="Gromp">

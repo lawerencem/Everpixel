@@ -6,6 +6,7 @@ using Model.Events.Combat;
 using Model.Parties;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 namespace Model.Map
 {
@@ -38,7 +39,7 @@ namespace Model.Map
 
         public Path GetPath(HexTile s, HexTile g)
         {
-            var itr = 0;
+            var nodeCtr = 0;
             var validPaths = new List<Path>();
             bool found = false;
             var pathDict = new Dictionary<Pair<int, int>, List<Path>>();
@@ -49,8 +50,10 @@ namespace Model.Map
             pathDict.Add(key, new List<Path> { initPath });
             initPath.Tiles.Add(s);
 
-            while (openSet.Count > 0 && !found && itr < 24)
+            while (openSet.Count > 0 && !found && nodeCtr < 24)
             {
+                nodeCtr++;
+                Debug.Log(nodeCtr);
                 var tile = openSet.ElementAt(0);
                 foreach (var neighbor in tile.Adjacent)
                 {
@@ -84,7 +87,6 @@ namespace Model.Map
 
                 closedSet.Add(tile);
                 openSet.Remove(tile);
-                itr++;
             }
 
             if (validPaths.Count > 0)
