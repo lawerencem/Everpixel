@@ -39,63 +39,65 @@ namespace Model.Map
 
         public Path GetPath(HexTile s, HexTile g)
         {
-            var nodeCtr = 0;
-            var validPaths = new List<Path>();
+            int nodeCtr = 0;
+            var validIntPaths = new List<ColRowPairPath>();
             bool found = false;
-            var pathDict = new Dictionary<Pair<int, int>, List<Path>>();
+            var pathDict = new Dictionary<Pair<int, int>, List<ColRowPairPath>>();
             var key = new Pair<int, int>(s.Col, s.Row);
-            var openSet = new List<HexTile>() { s };
-            var closedSet = new List<HexTile>();
-            var initPath = new Path();
-            pathDict.Add(key, new List<Path> { initPath });
-            initPath.Tiles.Add(s);
+            var openSet = new List<Pair<int, int>>() { new Pair<int, int>(s.Col, s.Row) };
+            var closedSet = new List<Pair<int, int>>();
+            var initPath = new ColRowPairPath();
+            initPath.Path.Add(key);
+            pathDict.Add(key, new List<ColRowPairPath> { initPath });
 
-            while (openSet.Count > 0 && !found && nodeCtr < 24)
+            while (openSet.Count > 0 && !found && nodeCtr < 36)
             {
-                nodeCtr++;
-                Debug.Log(nodeCtr);
-                var tile = openSet.ElementAt(0);
+                key = openSet.ElementAt(0);
+                var tile = this._map.GetTileViaColRowPair(key.X, key.Y);
                 foreach (var neighbor in tile.Adjacent)
                 {
+                    var neighborKey = new Pair<int, int>(neighbor.Col, neighbor.Row);
                     if (neighbor.Current == null)
                     {
-                        var exists = closedSet.Find(x => (x.Col == neighbor.Col && x.Row == neighbor.Row));
-                        if (exists == null)
-                            openSet.Add(neighbor);
+                        if (!closedSet.Contains(neighborKey))
+                            openSet.Add(neighborKey);
                         var innerKey = new Pair<int, int>(tile.Col, tile.Row);
                         var paths = pathDict[innerKey];
-                        foreach(var path in paths)
+                        foreach (var path in paths)
                         {
                             var newPath = path.DeepCopy();
-                            newPath.AddTile(neighbor);
+                            newPath.Path.Add(neighborKey);
                             var newKey = new Pair<int, int>(neighbor.Col, neighbor.Row);
                             if (!pathDict.ContainsKey(newKey))
-                                pathDict.Add(newKey, new List<Path> { newPath });
+                                pathDict.Add(newKey, new List<ColRowPairPath> { newPath });
                             else
                                 pathDict[newKey].Add(newPath);
 
                             if (neighbor == g)
                             {
-                                validPaths.Add(newPath);
+                                validIntPaths.Add(newPath);
                                 found = true;
                             }
                         }
                     }
                     else
-                        closedSet.Add(neighbor);
+                        closedSet.Add(neighborKey);
                 }
 
-                closedSet.Add(tile);
-                openSet.Remove(tile);
+                closedSet.Add(key);
+                openSet.Remove(key);
             }
 
-            if (validPaths.Count > 0)
+            if (validIntPaths.Count > 0)
             {
+                var validPaths = new List<Path>();
+                foreach (var path in validIntPaths) { validPaths.Add(new Path(path, this._map)); }
+
                 var bestPath = validPaths.OrderBy(x => x.Score).ToList()[0];
                 return bestPath;
             }
             else
-                return initPath;
+                return new Path(initPath, this._map);
         }
 
         public TileController GetTileForRow(bool enemyParty, StartingColEnum col)

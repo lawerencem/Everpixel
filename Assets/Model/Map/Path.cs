@@ -1,4 +1,5 @@
-﻿using Controller.Map;
+﻿using Assets.Generics;
+using Controller.Map;
 using Generics.Hex;
 using Generics.Utilities;
 using Model.Map;
@@ -8,24 +9,20 @@ namespace Model.Map
 {
     public class Path
     {
-        public Path()
-        {
-            this.Score = 0;
-            this.Tiles = new List<HexTile>();
-        }
-
-        public int Score { get; set; }
+        private int _score;
+        public int Score { get { return this._score; } }
         public List<HexTile> Tiles { get; set; }
 
-        public void AddTile(HexTile t)
+        public Path(ColRowPairPath intPath, GenericHexMap map)
         {
-            this.Tiles.Add(t);
-            this.Score += t.Cost;
-        }
-
-        public TileController GetFinal()
-        {
-            return this.Tiles[this.Tiles.Count - 1].Parent;
+            this._score = 0;
+            this.Tiles = new List<HexTile>();
+            foreach(var colRowPair in intPath.Path)
+            {
+                var tile = map.GetTileViaColRowPair(colRowPair.X, colRowPair.Y);
+                this._score += tile.Cost;
+                this.Tiles.Add(tile);
+            }
         }
 
         public TileController GetNextTile(TileController t)
@@ -37,17 +34,6 @@ namespace Model.Map
                     return this.Tiles[index].Parent;
             }
             return null;
-        }
-
-        public Path DeepCopy()
-        {
-            var path = new Path();
-            path.Score = this.Score;
-            var newTiles = new List<HexTile>();
-            foreach (var tile in this.Tiles)
-                newTiles.Add(tile);
-            path.Tiles = newTiles;
-            return path;
         }
     }
 }

@@ -29,6 +29,14 @@ namespace Generics.Hex
             this._rows = rows;
         }
 
+        public HexTile GetTileViaColRowPair(int col, int row)
+        {
+            if (this._colRowDictionary.ContainsKey(col))
+                if (this._colRowDictionary[col].ContainsKey(row))
+                    return this._colRowDictionary[col][row];
+            return null;
+        }
+
         public HexTile GetNE(HexTile t)
         {
             int col = -1;

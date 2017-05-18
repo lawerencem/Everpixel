@@ -89,6 +89,8 @@ namespace Controller.Managers
                 if (e.Character.Model.CurrentAP > 0)
                 {
                     this._mapGUIController.SetActingBoxToController(e.Character);
+                    var bob = e.Character.Handle.AddComponent<BobbingScript>();
+                    bob.Init(0.001f, 0.05f, e.Character.Handle);
                 }
                 else
                 {
@@ -101,6 +103,7 @@ namespace Controller.Managers
 
         private void HandleShowPotentialPathEvent(ShowPotentialPathEvent e)
         {
+            this._events.Remove(e);
             var path = this._combatManager.GetPathTileControllers(e);
             this._mapGUIController.DecoratePath(path);
         }
@@ -139,6 +142,8 @@ namespace Controller.Managers
         private void HandleTraversePathEvent(TraversePathEvent e)
         {
             this._events.Remove(e);
+            var bob = e.Character.GetComponent<BobbingScript>();
+            if (bob != null) { GameObject.Destroy(bob); }
             var next = e.Path.GetNextTile(e.Character.CurrentTile);
             var traverseTileEvent = new TraverseTileEvent(this, e.Path, e.Character.CurrentTile, next);
         }

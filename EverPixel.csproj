@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.5.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -54,6 +52,9 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -68,6 +69,9 @@
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VR">
       <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
@@ -182,6 +186,7 @@
     <Compile Include="Assets\Model\Events\Combat\TraversePathEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TraverseTileEvent.cs" />
     <Compile Include="Assets\Model\Events\CombatEventEnum.cs" />
+    <Compile Include="Assets\Model\Map\ColRowPairPath.cs" />
     <Compile Include="Assets\Model\Map\CombatMap.cs" />
     <Compile Include="Assets\Model\Map\HexTile.cs" />
     <Compile Include="Assets\Model\Map\Path.cs" />
@@ -235,9 +240,7 @@
     <None Include="Assets\Model\Characters\XML\RaceDefaultStats.xml" />
     <None Include="Assets\Model\Classes\XML\Classes.xml" />
     <None Include="Assets\Model\Equipment\XML\Armors.xml" />
-    <None Include="Assets\Model\Equipment\XML\Weapons.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Model\Equipment\XML\Weapons.xml" />
     <None Include="Assets\Model\Mounts\XML\Mounts.xml" />
     <None Include="Assets\Model\Parties\XML\Parties.xml" />
     <None Include="Assets\Model\Parties\XML\SubParties.xml" />

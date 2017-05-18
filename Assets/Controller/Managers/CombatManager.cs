@@ -7,6 +7,7 @@ using Generics.Hex;
 using Model.Events.Combat;
 using Model.Map;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Assets.Controller.Managers
 {
