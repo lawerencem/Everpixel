@@ -9,20 +9,13 @@ namespace Model.Map
 {
     public class Path
     {
-        private int _score;
-        public int Score { get { return this._score; } }
+        public int Score { get; set; }
         public List<HexTile> Tiles { get; set; }
 
-        public Path(ColRowPairPath intPath, GenericHexMap map)
+        public Path()
         {
-            this._score = 0;
+            this.Score = 0;
             this.Tiles = new List<HexTile>();
-            foreach(var colRowPair in intPath.Path)
-            {
-                var tile = map.GetTileViaColRowPair(colRowPair.X, colRowPair.Y);
-                this._score += tile.Cost;
-                this.Tiles.Add(tile);
-            }
         }
 
         public TileController GetNextTile(TileController t)
@@ -34,6 +27,23 @@ namespace Model.Map
                     return this.Tiles[index].Parent;
             }
             return null;
+        }
+
+        public void AddTile(HexTile t)
+        {
+            this.Tiles.Add(t);
+            this.Score += t.Cost;
+        }
+
+        public Path DeepCopy()
+        {
+            var path = new Path();
+            path.Score = this.Score;
+            var newTiles = new List<HexTile>();
+            foreach (var tile in this.Tiles)
+                newTiles.Add(tile);
+            path.Tiles = newTiles;
+            return path;
         }
     }
 }

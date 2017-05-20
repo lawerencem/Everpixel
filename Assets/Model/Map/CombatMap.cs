@@ -39,65 +39,76 @@ namespace Model.Map
 
         public Path GetPath(HexTile s, HexTile g)
         {
-            int nodeCtr = 0;
-            var validIntPaths = new List<ColRowPairPath>();
+            var validPaths = new List<Path>();
             bool found = false;
-            var pathDict = new Dictionary<Pair<int, int>, List<ColRowPairPath>>();
-            var key = new Pair<int, int>(s.Col, s.Row);
-            var openSet = new List<Pair<int, int>>() { new Pair<int, int>(s.Col, s.Row) };
+            var pathDict = new Dictionary<Pair<int, int>, Path>();
+            var openSet = new List<HexTile>() { s };
             var closedSet = new List<Pair<int, int>>();
-            var initPath = new ColRowPairPath();
-            initPath.Path.Add(key);
-            pathDict.Add(key, new List<ColRowPairPath> { initPath });
+            var initPath = new Path();
+            initPath.AddTile(s);
+            pathDict.Add(new Pair<int, int>(s.Col, s.Row), initPath);
 
-            while (openSet.Count > 0 && !found && nodeCtr < 36)
+            while (openSet.Count > 0 && !found)
             {
-                key = openSet.ElementAt(0);
-                var tile = this._map.GetTileViaColRowPair(key.X, key.Y);
+                var tile = openSet.ElementAt(0);
                 foreach (var neighbor in tile.Adjacent)
                 {
                     var neighborKey = new Pair<int, int>(neighbor.Col, neighbor.Row);
                     if (neighbor.Current == null)
                     {
                         if (!closedSet.Contains(neighborKey))
-                            openSet.Add(neighborKey);
+                            openSet.Add(neighbor);
                         var innerKey = new Pair<int, int>(tile.Col, tile.Row);
-                        var paths = pathDict[innerKey];
-                        foreach (var path in paths)
+                        var previousPath = pathDict[innerKey];
+                        var newPath = previousPath.DeepCopy();
+                        newPath.AddTile(neighbor);
+                        var newKey = new Pair<int, int>(neighbor.Col, neighbor.Row);
+                        if (!pathDict.ContainsKey(newKey))
+                            pathDict.Add(newKey, newPath);
+                        else
                         {
-                            var newPath = path.DeepCopy();
-                            newPath.Path.Add(neighborKey);
-                            var newKey = new Pair<int, int>(neighbor.Col, neighbor.Row);
-                            if (!pathDict.ContainsKey(newKey))
-                                pathDict.Add(newKey, new List<ColRowPairPath> { newPath });
-                            else
-                                pathDict[newKey].Add(newPath);
-
-                            if (neighbor == g)
-                            {
-                                validIntPaths.Add(newPath);
-                                found = true;
-                            }
+                            if (newPath.Score < pathDict[newKey].Score)
+                                pathDict[newKey] = newPath;
                         }
+                           
+                        if (neighbor == g)
+                        {
+                            validPaths.Add(newPath);
+                            found = true;
+                        }
+
+                        //foreach (var path in previousPath)
+                        //{
+                        //    var newPath = path.DeepCopy();
+                        //    newPath.Path.Add(neighborKey);
+                        //    var newKey = new Pair<int, int>(neighbor.Col, neighbor.Row);
+                        //    if (!pathDict.ContainsKey(newKey))
+                        //        pathDict.Add(newKey, new List<ColRowPairPath> { newPath });
+                        //    else
+                        //        pathDict[newKey].Add(newPath);
+
+                        //    if (neighbor == g)
+                        //    {
+                        //        validIntPaths.Add(newPath);
+                        //        found = true;
+                        //    }
+                        //}
                     }
                     else
                         closedSet.Add(neighborKey);
                 }
 
-                closedSet.Add(key);
-                openSet.Remove(key);
+                closedSet.Add(new Pair<int, int>(tile.Col, tile.Row));
+                openSet.Remove(tile);
             }
 
-            if (validIntPaths.Count > 0)
+            if (validPaths.Count > 0)
             {
-                var validPaths = new List<Path>();
-                foreach (var path in validIntPaths) { validPaths.Add(new Path(path, this._map)); }
-
                 var bestPath = validPaths.OrderBy(x => x.Score).ToList()[0];
                 return bestPath;
             }
             else
-                return new Path(initPath, this._map);
+                return initPath;
         }
 
         public TileController GetTileForRow(bool enemyParty, StartingColEnum col)
