@@ -1,8 +1,6 @@
 ﻿TODO
 
-0.25) After get path his so many nodes, begin predictively guessing next nodes via direction
 0.5) Make additional nesting for .xml files (Weapons, armor, predefined)
-1) - Make "player" Party spawn on left side of map 
 1.5) Make click listerners smaller on tiles and characters
 2) Generate obstacles on map
 2) - Finish attack referee
