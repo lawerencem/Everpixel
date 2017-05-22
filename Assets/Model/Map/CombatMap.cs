@@ -39,6 +39,7 @@ namespace Model.Map
 
         public Path GetPath(HexTile s, HexTile g)
         {
+            int nodeCtr = 0;
             var validPaths = new List<Path>();
             bool found = false;
             var pathDict = new Dictionary<Pair<int, int>, Path>();
@@ -48,6 +49,7 @@ namespace Model.Map
             initPath.AddTile(s);
             pathDict.Add(new Pair<int, int>(s.Col, s.Row), initPath);
 
+            // TODO: Update this with directional search after so many nodes....
             while (openSet.Count > 0 && !found)
             {
                 var tile = openSet.ElementAt(0);
@@ -56,6 +58,7 @@ namespace Model.Map
                     var neighborKey = new Pair<int, int>(neighbor.Col, neighbor.Row);
                     if (neighbor.Current == null)
                     {
+                        nodeCtr++;
                         if (!closedSet.Contains(neighborKey))
                             openSet.Add(neighbor);
                         var innerKey = new Pair<int, int>(tile.Col, tile.Row);
@@ -77,22 +80,6 @@ namespace Model.Map
                             found = true;
                         }
 
-                        //foreach (var path in previousPath)
-                        //{
-                        //    var newPath = path.DeepCopy();
-                        //    newPath.Path.Add(neighborKey);
-                        //    var newKey = new Pair<int, int>(neighbor.Col, neighbor.Row);
-                        //    if (!pathDict.ContainsKey(newKey))
-                        //        pathDict.Add(newKey, new List<ColRowPairPath> { newPath });
-                        //    else
-                        //        pathDict[newKey].Add(newPath);
-
-                        //    if (neighbor == g)
-                        //    {
-                        //        validIntPaths.Add(newPath);
-                        //        found = true;
-                        //    }
-                        //}
                     }
                     else
                         closedSet.Add(neighborKey);

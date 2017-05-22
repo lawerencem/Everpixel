@@ -43,16 +43,22 @@ namespace Controller.Managers.Map
             this.InitBackgroundTiles(b);
             this.InitBackgroundDeco(b);
             this.InitGUI();
-            this.InitPlayerParty();
-            this.InitEnemyParty();
+            this.InitParties();
+        }
+
+        private void InitParties()
+        {
+            var controllers = new List<GenericCharacterController>();
+            this.InitPlayerParty(ref controllers);
+            this.InitEnemyParty(ref controllers);
+            var e = new MapDoneLoadingEvent(CombatEventManager.Instance, controllers, this._map);
         }
 
         // TODO: Clean this up when implementing player stuff.
-        private void InitPlayerParty()
+        private void InitPlayerParty(ref List<GenericCharacterController> controllers)
         {
             var playerChars = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Orc Shock Troopas", 15));
             var builder = new CharacterViewBuilder();
-            var controllers = new List<GenericCharacterController>();
 
             for (int i = 0; i < playerChars.Count; i++)
             {
@@ -66,11 +72,10 @@ namespace Controller.Managers.Map
             }
         }
 
-        private void InitEnemyParty()
+        private void InitEnemyParty(ref List<GenericCharacterController> controllers)
         {
             var enemies = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Goblin War Party", 15));
             var builder = new CharacterViewBuilder();
-            var controllers = new List<GenericCharacterController>();
 
             for(int i = 0; i < enemies.Count; i++)
             {
@@ -82,8 +87,6 @@ namespace Controller.Managers.Map
                 this.LayoutCharacter(controller, enemies[i], true);
                 controllers.Add(controller);
             }
-
-            var e = new MapDoneLoadingEvent(CombatEventManager.Instance, controllers, this._map);
         }
 
         private void InitBackgroundTiles(BiomeEnum b)
@@ -96,7 +99,7 @@ namespace Controller.Managers.Map
         {
             // TODO: Clean this up
             var sprites = MapBridge.Instance.GetBackgroundDecoSprites(b);
-            for (int itr = 0; itr < 5; itr++)
+            for (int itr = 0; itr < 15; itr++)
             {
                 var random = this._emptyTiles[Random.Range(0, this._emptyTiles.Count)];
                 var sprite = sprites[Random.Range(0, sprites.Length)];

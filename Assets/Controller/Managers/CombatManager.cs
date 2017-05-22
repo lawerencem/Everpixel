@@ -13,7 +13,7 @@ namespace Assets.Controller.Managers
 {
     public class CombatManager
     {
-        private List<GenericCharacterController> _enemies;
+        private List<GenericCharacterController> _characters;
         private CombatMap _map;
         private List<GenericCharacterController> _order;
 
@@ -27,9 +27,9 @@ namespace Assets.Controller.Managers
             this._order = new List<GenericCharacterController>();
         }
 
-        public void InitEnemyParty(List<GenericCharacterController> c)
+        public void InitParties(List<GenericCharacterController> c)
         {
-            this._enemies = c;
+            this._characters = c;
             this.InitCharacterTurns();
         }
 
@@ -61,12 +61,12 @@ namespace Assets.Controller.Managers
 
         private void InitCharacterTurns()
         {
-            foreach (var enemy in this._enemies)
+            foreach (var character in this._characters)
             {
-                this._order.Add(enemy);
-                enemy.Model.CurrentAP = enemy.Model.SecondaryStats.MaxAP;
+                this._order.Add(character);
+                character.Model.CurrentAP = character.Model.SecondaryStats.MaxAP;
             }
-            this._order.Sort((x, y) => x.Model.SecondaryStats.Initiative.CompareTo(y.Model.SecondaryStats.Initiative));
+            this._order.Sort((x, y) => y.Model.SecondaryStats.Initiative.CompareTo(x.Model.SecondaryStats.Initiative));
             if (this._order != null && this._order.Count > 0)
             {
                 var e = new TakingActionEvent(CombatEventManager.Instance, this._order[0]);
