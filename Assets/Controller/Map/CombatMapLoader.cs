@@ -101,13 +101,13 @@ namespace Controller.Managers.Map
                 var random = this._emptyTiles[Random.Range(0, this._emptyTiles.Count)];
                 var sprite = sprites[Random.Range(0, sprites.Length)];
                 this._emptyTiles.Remove(random);
-                var deco = new GenericCharacterController();
                 var spriteHandler = new GameObject();
                 var render = spriteHandler.AddComponent<SpriteRenderer>();
                 spriteHandler.transform.position = random.transform.position;
                 spriteHandler.name = "Background Tile Deco";
                 render.sprite = sprite;
                 render.sortingLayerName = "BackgroundTileDeco";
+                random.Model.Current = random;
             }
         }
 

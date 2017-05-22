@@ -19,11 +19,14 @@ namespace Model.Events.Combat
             TileController n) :
             base(CombatEventEnum.TraverseTile, parent)
         {
-            this.Character = s.Model.Current;
-            this.Path = p;
-            this.Source = s;
-            this.Next = n;
-            this.RegisterEvent();
+            if (s.Model.Current.GetType() == typeof(GenericCharacterController))
+            {
+                this.Character = s.Model.Current as GenericCharacterController;
+                this.Path = p;
+                this.Source = s;
+                this.Next = n;
+                this.RegisterEvent();
+            }
         }
     }
 }
