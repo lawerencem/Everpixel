@@ -210,6 +210,21 @@
     <Character>1,War Ween Rider,One</Character>
     <Character>1,Ween Rider,One</Character>
   </SubParty>
+  <SubParty Name ="Shock Troopa Calvary">
+    <Difficulty>4</Difficulty>
+    <Character>1,War Ween Rider,One</Character>
+    <Character>1,War Ween Rider,One</Character>
+  </SubParty>
+  <SubParty Name ="Shock Troopa Calvary">
+    <Difficulty>5</Difficulty>
+    <Character>1,Dire Ween Rider,One</Character>
+    <Character>1,Ween Rider,One</Character>
+  </SubParty>
+  <SubParty Name ="Shock Troopa Calvary">
+    <Difficulty>6</Difficulty>
+    <Character>1,Dire Ween Rider,One</Character>
+    <Character>1,War Ween Rider,One</Character>
+  </SubParty>
   <SubParty Name ="Slime Lords">
     <Difficulty>2</Difficulty>
     <Character>1,Fledgling Slime Lord,Three</Character>
