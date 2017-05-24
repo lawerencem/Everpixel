@@ -24,7 +24,32 @@ namespace Model.Equipment.XML
             }
         }
 
-        protected override void HandleIndex(string name, string param, string value, ref EquipmentTierEnum tier)
+        public override void ReadFromFile()
+        {
+            var doc = XDocument.Load(this._path);
+            var tier = EquipmentTierEnum.None;
+            foreach (var el in doc.Root.Elements())
+            {
+                foreach (var att in el.Attributes())
+                {
+                    var skill = att.Value;
+                    foreach (var ele in el.Elements())
+                    {
+                        foreach (var attr in ele.Attributes())
+                        {
+                            var name = attr.Value;
+                            foreach (var elem in ele.Elements())
+                            {
+                                this.HandleIndex(name, skill, elem.Name.ToString(), elem.Value, ref tier);
+                            }
+                            this.HandleWeaponSkillFromFile(name, skill, tier);
+                        }
+                    }
+                }
+            }
+        }
+
+        protected override void HandleIndex(string name, string skill, string param, string value, ref EquipmentTierEnum tier)
         {
             int v = 0;
             int.TryParse(value, out v);
@@ -53,7 +78,6 @@ namespace Model.Equipment.XML
                 case ("Stamina_Reduce"): { HandleStatsFromFile(name, WeaponStatsEnum.Stamina_Reduce, v, tier); } break;
                 case ("Value"): { HandleStatsFromFile(name, WeaponStatsEnum.Value, v, tier); } break;
                 case ("WeaponAbilitiesEnum"): { HandleWeaponAbilitiesFromFile(name, value, tier); } break;
-                case ("WeaponSkillEnum"): { HandleWeaponSkillFromFile(name, value, tier); } break;
                 case ("WeaponTypeEnum"): { HandleWeaponTypeFromFile(name, value, tier); } break;
                 case ("WeaponUseEnum"): { HandleWeaponUseFromFile(name, value, tier); } break;
             }

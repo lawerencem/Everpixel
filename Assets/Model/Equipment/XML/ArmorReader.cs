@@ -23,31 +23,36 @@ namespace Model.Equipment.XML
             }
         }
 
-        protected override void HandleIndex(string name, string param, string value, ref EquipmentTierEnum tier)
+        public override void ReadFromFile()
         {
-            int v = 0;
-            int.TryParse(value, out v);
 
-            switch (param)
-            {
-                case ("Tier"): { HandleTierFromFile(name, value, ref tier); } break;
-                case ("AP_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.AP_Reduce, v, tier); } break;
-                case ("ArmorSkillEnum"): { HandleArmorSkillFromFile(name, value, tier); } break;
-                case ("ArmorTypeEnum"): { HandleArmorTypeFromFile(name, value, tier); } break;
-                case ("Block_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Block_Reduce, v, tier); } break;
-                case ("Damage_Ignore"): { HandleStatsFromFile(name, ArmorStatsEnum.Damage_Ignore, v, tier); } break;
-                case ("Damage_Reduction"): { HandleStatsFromFile(name, ArmorStatsEnum.Damage_Reduction, v, tier); } break;
-                case ("Description"): { } break;
-                case ("Dodge_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Dodge_Reduce, v, tier); } break;
-                case ("Durability"): { HandleStatsFromFile(name, ArmorStatsEnum.Durability, v, tier); } break;
-                case ("Fatigue_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Fatigue_Reduce, v, tier); } break;
-                case ("Initiative_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Initiative_Reduce, v, tier); } break;
-                case ("Parry_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Parry_Reduce, v, tier); } break;
-                case ("Sprites"): { HandleSpritesFromFile(name, value, tier); } break;
-                case ("Stamina_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Stamina_Reduce, v, tier); } break;
-                case ("Value"): { HandleStatsFromFile(name, ArmorStatsEnum.Value, v, tier); } break;
-            }
         }
+
+        //protected override void HandleIndex(string name, string param, string value, ref EquipmentTierEnum tier)
+        //{
+        //    int v = 0;
+        //    int.TryParse(value, out v);
+
+        //    switch (param)
+        //    {
+        //        case ("Tier"): { HandleTierFromFile(name, value, ref tier); } break;
+        //        case ("AP_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.AP_Reduce, v, tier); } break;
+        //        case ("ArmorSkillEnum"): { HandleArmorSkillFromFile(name, value, tier); } break;
+        //        case ("ArmorTypeEnum"): { HandleArmorTypeFromFile(name, value, tier); } break;
+        //        case ("Block_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Block_Reduce, v, tier); } break;
+        //        case ("Damage_Ignore"): { HandleStatsFromFile(name, ArmorStatsEnum.Damage_Ignore, v, tier); } break;
+        //        case ("Damage_Reduction"): { HandleStatsFromFile(name, ArmorStatsEnum.Damage_Reduction, v, tier); } break;
+        //        case ("Description"): { } break;
+        //        case ("Dodge_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Dodge_Reduce, v, tier); } break;
+        //        case ("Durability"): { HandleStatsFromFile(name, ArmorStatsEnum.Durability, v, tier); } break;
+        //        case ("Fatigue_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Fatigue_Reduce, v, tier); } break;
+        //        case ("Initiative_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Initiative_Reduce, v, tier); } break;
+        //        case ("Parry_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Parry_Reduce, v, tier); } break;
+        //        case ("Sprites"): { HandleSpritesFromFile(name, value, tier); } break;
+        //        case ("Stamina_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Stamina_Reduce, v, tier); } break;
+        //        case ("Value"): { HandleStatsFromFile(name, ArmorStatsEnum.Value, v, tier); } break;
+        //    }
+        //}
 
         private void HandleStatsFromFile(string name, ArmorStatsEnum x, int v, EquipmentTierEnum tier)
         {

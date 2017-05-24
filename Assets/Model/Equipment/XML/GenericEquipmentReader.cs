@@ -12,22 +12,21 @@ namespace Model.Equipment.XML
     {
         public GenericEquipmentReader() { }
 
-        public override void ReadFromFile()
-        {
-            var table = WeaponParamTable.Instance;
-            var doc = XDocument.Load(this._path);
-            var tier = EquipmentTierEnum.None;
+        //public override void ReadFromFile()
+        //{
+            //var doc = XDocument.Load(this._path);
+            //var tier = EquipmentTierEnum.None;
 
-            foreach (var el in doc.Root.Elements())
-                foreach (var att in el.Attributes())
-                    foreach (var ele in el.Elements())
-                        HandleIndex(att.Value, ele.Name.ToString(), ele.Value, ref tier);
-
-        }
+            //foreach (var el in doc.Root.Elements())
+            //    foreach (var att in el.Attributes())
+            //        foreach (var ele in el.Elements())
+            //            HandleIndex(att.Value, ele.Name.ToString(), ele.Value, ref tier);
+        //}
 
         protected virtual void SetName(string name) { }
 
-        protected virtual void HandleIndex(string name, string param, string value, ref EquipmentTierEnum tier) { }
+        //protected virtual void HandleIndex(string name, string param, string value, ref EquipmentTierEnum tier) { }
+        protected virtual void HandleIndex(string name, string skill, string param, string value, ref EquipmentTierEnum tier) { }
         protected virtual void HandleSpritesFromFile(string name, string s, EquipmentTierEnum tier)
         {
             var key = name + "_" + tier.ToString();
