@@ -1,89 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Armors>
-  <Armor name="Dino Scale Armor">
-    <Tier>Five</Tier>
-    <AP_Reduce>1</AP_Reduce>
-    <ArmorSkillEnum>Scale</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>3</Damage_Ignore>
-    <Damage_Reduction>1.05</Damage_Reduction>
-    <Description>
-      These shoulder pads have been cobbled together using a handful of dinosaur scales.  
-    </Description>
-    <Dodge_Reduce>1.0</Dodge_Reduce>
-    <Durability>5</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1.0</Initiative_Reduce>
-    <Parry_Reduce>1.0</Parry_Reduce>
-    <Sprites>4</Sprites>
-    <Stamina_Reduce>1.0</Stamina_Reduce>
-    <Value>50</Value>
-  </Armor>
-  <Armor name="Dino Scale Armor">
-    <Tier>Four</Tier>
-    <AP_Reduce>1</AP_Reduce>
-    <ArmorSkillEnum>Scale</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>5</Damage_Ignore>
-    <Damage_Reduction>1.10</Damage_Reduction>
-    <Description>
-      Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
-      not very durable...
-    </Description>
-    <Dodge_Reduce>1.0</Dodge_Reduce>
-    <Durability>10</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1.0</Initiative_Reduce>
-    <Parry_Reduce>1.0</Parry_Reduce>
-    <Sprites>11</Sprites>
-    <Stamina_Reduce>1.0</Stamina_Reduce>
-    <Value>250</Value>
-  </Armor>
-  <Armor name="Dino Scale Armor">
-    <Tier>Three</Tier>
-    <AP_Reduce>1</AP_Reduce>
-    <ArmorSkillEnum>Scale</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>7</Damage_Ignore>
-    <Damage_Reduction>1.14</Damage_Reduction>
-    <Description>
-      Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
-      not very durable...
-    </Description>
-    <Dodge_Reduce>1.0</Dodge_Reduce>
-    <Durability>20</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1.0</Initiative_Reduce>
-    <Parry_Reduce>1.0</Parry_Reduce>
-    <Sprites>34</Sprites>
-    <Stamina_Reduce>1.0</Stamina_Reduce>
-    <Value>500</Value>
-  </Armor>
-  <Armor name="Dino Scale Armor">
-    <Tier>Two</Tier>
-    <AP_Reduce>1</AP_Reduce>
-    <ArmorSkillEnum>Scale</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>8</Damage_Ignore>
-    <Damage_Reduction>1.20</Damage_Reduction>
-    <Description>
-      Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
-      not very durable...
-    </Description>
-    <Dodge_Reduce>1.0</Dodge_Reduce>
-    <Durability>28</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1.0</Initiative_Reduce>
-    <Parry_Reduce>1.0</Parry_Reduce>
-    <Sprites>49</Sprites>
-    <Stamina_Reduce>1.0</Stamina_Reduce>
-    <Value>800</Value>
-  </Armor>
-  <Armor name="Galea">
+  <ArmorSkillEnum name="Breastplate">
+    <Armor name="Galea">
     <Tier>Four</Tier>
     <AP_Reduce>0.84</AP_Reduce>
     <ArmorSkillEnum>Breasplate</ArmorSkillEnum>
@@ -123,7 +41,9 @@
     <Stamina_Reduce>0.85</Stamina_Reduce>
     <Value>550</Value>
   </Armor>
-  <Armor name="Goblin Cap">
+  </ArmorSkillEnum>
+  <ArmorSkillEnum name ="Light_Lamellar">
+    <Armor name="Goblin Cap">
     <Tier>Five</Tier>
     <AP_Reduce>0.93</AP_Reduce>
     <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
@@ -283,90 +203,9 @@
     <Stamina_Reduce>0.85</Stamina_Reduce>
     <Value>750</Value>
   </Armor>
-  <Armor name="Great Helm">
-    <Tier>Five</Tier>
-    <AP_Reduce>0.76</AP_Reduce>
-    <ArmorSkillEnum>Plate</ArmorSkillEnum>
-    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.72</Block_Reduce>
-    <Damage_Ignore>7</Damage_Ignore>
-    <Damage_Reduction>1.48</Damage_Reduction>
-    <Description>
-      Even rusty and decaying, this helm still provides good defense. Conveniently, parts of the eye holes have rusted out.
-    </Description>
-    <Dodge_Reduce>0.62</Dodge_Reduce>
-    <Durability>50</Durability>
-    <Fatigue_Cost>1.28</Fatigue_Cost>
-    <Initiative_Reduce>0.72</Initiative_Reduce>
-    <Parry_Reduce>0.72</Parry_Reduce>
-    <Sprites>0</Sprites>
-    <Stamina_Reduce>0.72</Stamina_Reduce>
-    <Value>800</Value>
-  </Armor>
-  <Armor name="Great Helm">
-    <Tier>Four</Tier>
-    <AP_Reduce>0.78</AP_Reduce>
-    <ArmorSkillEnum>Plate</ArmorSkillEnum>
-    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.74</Block_Reduce>
-    <Damage_Ignore>8</Damage_Ignore>
-    <Damage_Reduction>1.50</Damage_Reduction>
-    <Description>
-      This helm looks like someone took a bucket and nailed holes through it, and then called it a helm.  Whatever - it
-      still provides solid protection.
-    </Description>
-    <Dodge_Reduce>0.64</Dodge_Reduce>
-    <Durability>150</Durability>
-    <Fatigue_Cost>0.74</Fatigue_Cost>
-    <Initiative_Reduce>0.74</Initiative_Reduce>
-    <Parry_Reduce>0.74</Parry_Reduce>
-    <Sprites>15</Sprites>
-    <Stamina_Reduce>0.74</Stamina_Reduce>
-    <Value>1500</Value>
-  </Armor>
-  <Armor name="Great Helm">
-    <Tier>Three</Tier>
-    <AP_Reduce>0.75</AP_Reduce>
-    <ArmorSkillEnum>Plate</ArmorSkillEnum>
-    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.75</Block_Reduce>
-    <Damage_Ignore>9</Damage_Ignore>
-    <Damage_Reduction>1.54</Damage_Reduction>
-    <Description>
-      This is a quality-made helm.  It offers incredible protection, but the lack of curvature can be susceptible to
-      piercing attacks.
-    </Description>
-    <Dodge_Reduce>0.65</Dodge_Reduce>
-    <Durability>220</Durability>
-    <Fatigue_Cost>0.75</Fatigue_Cost>
-    <Initiative_Reduce>0.75</Initiative_Reduce>
-    <Parry_Reduce>0.75</Parry_Reduce>
-    <Sprites>30,31</Sprites>
-    <Stamina_Reduce>0.75</Stamina_Reduce>
-    <Value>3500</Value>
-  </Armor>
-  <Armor name="Jousting Helm">
-    <Tier>Four</Tier>
-    <AP_Reduce>20</AP_Reduce>
-    <ArmorSkillEnum>Plate</ArmorSkillEnum>
-    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.60</Block_Reduce>
-    <Damage_Ignore>18</Damage_Ignore>
-    <Damage_Reduction>1.20</Damage_Reduction>
-    <Description>
-      This jousting helm was made with tournaments in mind.  It isn't flexible, but it is light.  Since it was made with
-      jousting in mind, the curved nature of it provides superior piercing protection.
-    </Description>
-    <Dodge_Reduce>0.60</Dodge_Reduce>
-    <Durability>100</Durability>
-    <Fatigue_Cost>0.80</Fatigue_Cost>
-    <Initiative_Reduce>0.80</Initiative_Reduce>
-    <Parry_Reduce>0.60</Parry_Reduce>
-    <Sprites>18</Sprites>
-    <Stamina_Reduce>0.80</Stamina_Reduce>
-    <Value>1800</Value>
-  </Armor>
-  <Armor name="Mail Coif">
+  </ArmorSkillEnum>
+  <ArmorSkillEnum name="Mail">
+    <Armor name="Mail Coif">
     <Tier>Four</Tier>
     <AP_Reduce>0.95</AP_Reduce>
     <ArmorSkillEnum>Mail</ArmorSkillEnum>
@@ -465,6 +304,91 @@
     <Sprites>30,31</Sprites>
     <Stamina_Reduce>0.88</Stamina_Reduce>
     <Value>600</Value>
+  </Armor>
+  </ArmorSkillEnum>
+  <ArmorSkillEnum name ="Plate">
+    <Armor name="Great Helm">
+    <Tier>Five</Tier>
+    <AP_Reduce>0.76</AP_Reduce>
+    <ArmorSkillEnum>Plate</ArmorSkillEnum>
+    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
+    <Block_Reduce>0.72</Block_Reduce>
+    <Damage_Ignore>7</Damage_Ignore>
+    <Damage_Reduction>1.48</Damage_Reduction>
+    <Description>
+      Even rusty and decaying, this helm still provides good defense. Conveniently, parts of the eye holes have rusted out.
+    </Description>
+    <Dodge_Reduce>0.62</Dodge_Reduce>
+    <Durability>50</Durability>
+    <Fatigue_Cost>1.28</Fatigue_Cost>
+    <Initiative_Reduce>0.72</Initiative_Reduce>
+    <Parry_Reduce>0.72</Parry_Reduce>
+    <Sprites>0</Sprites>
+    <Stamina_Reduce>0.72</Stamina_Reduce>
+    <Value>800</Value>
+  </Armor>
+  <Armor name="Great Helm">
+    <Tier>Four</Tier>
+    <AP_Reduce>0.78</AP_Reduce>
+    <ArmorSkillEnum>Plate</ArmorSkillEnum>
+    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
+    <Block_Reduce>0.74</Block_Reduce>
+    <Damage_Ignore>8</Damage_Ignore>
+    <Damage_Reduction>1.50</Damage_Reduction>
+    <Description>
+      This helm looks like someone took a bucket and nailed holes through it, and then called it a helm.  Whatever - it
+      still provides solid protection.
+    </Description>
+    <Dodge_Reduce>0.64</Dodge_Reduce>
+    <Durability>150</Durability>
+    <Fatigue_Cost>0.74</Fatigue_Cost>
+    <Initiative_Reduce>0.74</Initiative_Reduce>
+    <Parry_Reduce>0.74</Parry_Reduce>
+    <Sprites>15</Sprites>
+    <Stamina_Reduce>0.74</Stamina_Reduce>
+    <Value>1500</Value>
+  </Armor>
+  <Armor name="Great Helm">
+    <Tier>Three</Tier>
+    <AP_Reduce>0.75</AP_Reduce>
+    <ArmorSkillEnum>Plate</ArmorSkillEnum>
+    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
+    <Block_Reduce>0.75</Block_Reduce>
+    <Damage_Ignore>9</Damage_Ignore>
+    <Damage_Reduction>1.54</Damage_Reduction>
+    <Description>
+      This is a quality-made helm.  It offers incredible protection, but the lack of curvature can be susceptible to
+      piercing attacks.
+    </Description>
+    <Dodge_Reduce>0.65</Dodge_Reduce>
+    <Durability>220</Durability>
+    <Fatigue_Cost>0.75</Fatigue_Cost>
+    <Initiative_Reduce>0.75</Initiative_Reduce>
+    <Parry_Reduce>0.75</Parry_Reduce>
+    <Sprites>30,31</Sprites>
+    <Stamina_Reduce>0.75</Stamina_Reduce>
+    <Value>3500</Value>
+  </Armor>
+  <Armor name="Jousting Helm">
+    <Tier>Four</Tier>
+    <AP_Reduce>20</AP_Reduce>
+    <ArmorSkillEnum>Plate</ArmorSkillEnum>
+    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
+    <Block_Reduce>0.60</Block_Reduce>
+    <Damage_Ignore>18</Damage_Ignore>
+    <Damage_Reduction>1.20</Damage_Reduction>
+    <Description>
+      This jousting helm was made with tournaments in mind.  It isn't flexible, but it is light.  Since it was made with
+      jousting in mind, the curved nature of it provides superior piercing protection.
+    </Description>
+    <Dodge_Reduce>0.60</Dodge_Reduce>
+    <Durability>100</Durability>
+    <Fatigue_Cost>0.80</Fatigue_Cost>
+    <Initiative_Reduce>0.80</Initiative_Reduce>
+    <Parry_Reduce>0.60</Parry_Reduce>
+    <Sprites>18</Sprites>
+    <Stamina_Reduce>0.80</Stamina_Reduce>
+    <Value>1800</Value>
   </Armor>
   <Armor name="Orc Mask">
     <Tier>Five</Tier>
@@ -670,7 +594,94 @@
     <Stamina_Reduce>0.75</Stamina_Reduce>
     <Value>3200</Value>
   </Armor>
-  <Armor name="Slime Handler Cap">
+  </ArmorSkillEnum>
+  <ArmorSkillEnum name="Scale">
+    <Armor name="Dino Scale Armor">
+    <Tier>Five</Tier>
+    <AP_Reduce>1</AP_Reduce>
+    <ArmorSkillEnum>Scale</ArmorSkillEnum>
+    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
+    <Block_Reduce>1</Block_Reduce>
+    <Damage_Ignore>3</Damage_Ignore>
+    <Damage_Reduction>1.05</Damage_Reduction>
+    <Description>
+      These shoulder pads have been cobbled together using a handful of dinosaur scales.  
+    </Description>
+    <Dodge_Reduce>1.0</Dodge_Reduce>
+    <Durability>5</Durability>
+    <Fatigue_Cost>1</Fatigue_Cost>
+    <Initiative_Reduce>1.0</Initiative_Reduce>
+    <Parry_Reduce>1.0</Parry_Reduce>
+    <Sprites>4</Sprites>
+    <Stamina_Reduce>1.0</Stamina_Reduce>
+    <Value>50</Value>
+    </Armor>
+    <Armor name="Dino Scale Armor">
+      <Tier>Four</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <ArmorSkillEnum>Scale</ArmorSkillEnum>
+      <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>5</Damage_Ignore>
+      <Damage_Reduction>1.10</Damage_Reduction>
+      <Description>
+        Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
+        not very durable...
+      </Description>
+      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Durability>10</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1.0</Initiative_Reduce>
+      <Parry_Reduce>1.0</Parry_Reduce>
+      <Sprites>11</Sprites>
+      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Value>250</Value>
+    </Armor>
+    <Armor name="Dino Scale Armor">
+      <Tier>Three</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <ArmorSkillEnum>Scale</ArmorSkillEnum>
+      <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>7</Damage_Ignore>
+      <Damage_Reduction>1.14</Damage_Reduction>
+      <Description>
+        Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
+        not very durable...
+      </Description>
+      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Durability>20</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1.0</Initiative_Reduce>
+      <Parry_Reduce>1.0</Parry_Reduce>
+      <Sprites>34</Sprites>
+      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Value>500</Value>
+    </Armor>
+    <Armor name="Dino Scale Armor">
+      <Tier>Two</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <ArmorSkillEnum>Scale</ArmorSkillEnum>
+      <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>8</Damage_Ignore>
+      <Damage_Reduction>1.20</Damage_Reduction>
+      <Description>
+        Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
+        not very durable...
+      </Description>
+      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Durability>28</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1.0</Initiative_Reduce>
+      <Parry_Reduce>1.0</Parry_Reduce>
+      <Sprites>49</Sprites>
+      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Value>800</Value>
+    </Armor>
+  </ArmorSkillEnum>
+  <ArmorSkillEnum name="Tunic">
+    <Armor name="Slime Handler Cap">
     <Tier>Five</Tier>
     <AP_Reduce>0.98</AP_Reduce>
     <ArmorSkillEnum>Tunic</ArmorSkillEnum>
@@ -1001,4 +1012,5 @@
     <Stamina_Reduce>0</Stamina_Reduce>
     <Value>1200</Value>
   </Armor>
+  </ArmorSkillEnum>
 </Armors>
