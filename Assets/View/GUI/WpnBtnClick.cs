@@ -28,7 +28,7 @@ namespace View.GUI
 
         private void OnClick()
         {
-            var e = new GUIEndTurnEvent(GUIEventManager.Instance);
+            var e = new WpnBtnClickEvent(GUIEventManager.Instance, this._ability);
         }
     }
 }

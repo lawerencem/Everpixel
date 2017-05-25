@@ -51,6 +51,7 @@ namespace Controller.Managers
         {
             switch(e.Type)
             {
+                case (CombatEventEnum.AttackSelected): { HandleAttackSelectedEvent(e as AttackSelectedEvent); } break;
                 case (CombatEventEnum.EndTurn): { HandleEndTurnEvent(e as EndTurnEvent); } break;
                 case (CombatEventEnum.HexSelectedForMove): { HandleHexSelectedForMoveEvent(e as HexSelectedForMoveEvent); } break;
                 case (CombatEventEnum.MapDoneLoading): { HandleMapDoneLoadingEvent(e as MapDoneLoadingEvent); } break;
@@ -61,6 +62,12 @@ namespace Controller.Managers
                 case (CombatEventEnum.TraversePath): { HandleTraversePathEvent(e as TraversePathEvent); } break;
                 case (CombatEventEnum.TraverseTile): { HandleTraverseTileEvent(e as TraverseTileEvent); } break;
             }
+        }
+
+        private void HandleAttackSelectedEvent(AttackSelectedEvent e)
+        {
+            this._events.Remove(e);
+            // TODO: Calculate AoE, decorate tiles accordingly
         }
 
         private void HandleEndTurnEvent(EndTurnEvent e)

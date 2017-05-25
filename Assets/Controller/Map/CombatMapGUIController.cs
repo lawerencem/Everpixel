@@ -27,13 +27,13 @@ namespace Controller.Managers.Map
         private const string STAM = "StaminaTextTag";
 
         private List<GameObject> _boxImages = new List<GameObject>();
-        private List<GameObject> _tilePath = new List<GameObject>();
+        private List<GameObject> _decoratedTiles = new List<GameObject>();
 
         public void ClearPotentialPathView()
         {
-            foreach (var old in this._tilePath)
+            foreach (var old in this._decoratedTiles)
                 GameObject.Destroy(old);
-            this._tilePath.Clear();
+            this._decoratedTiles.Clear();
         }
 
         public void SetActingBoxToController(GenericCharacterController c)
@@ -60,24 +60,42 @@ namespace Controller.Managers.Map
 
         public void DecoratePath(List<TileController> p)
         {
-            foreach (var old in this._tilePath) { GameObject.Destroy(old); }
+            foreach (var old in this._decoratedTiles) { GameObject.Destroy(old); }
 
             if (p != null)
             {
                 foreach (var tile in p)
                 {
-                    var tView = new GameObject();
-                    var renderer = tView.AddComponent<SpriteRenderer>();
-                    renderer.sprite = MapBridge.Instance.GetMovePathSprite();
-                    renderer.transform.position = tile.Model.Center;
-                    renderer.sortingLayerName = MAP_GUI_LAYER;
-                    tView.name = "Path Tile";
-                    var color = renderer.color;
-                    color.a = 0.50f;
-                    renderer.color = color;
-                    this._tilePath.Add(tView);
+                    DecorateTile(tile);
                 }
             }
+        }
+
+        public void DecoratePotentialAttackTiles(List<TileController> tiles)
+        {
+            foreach (var old in this._decoratedTiles) { GameObject.Destroy(old); }
+
+            if (tiles != null)
+            {
+                foreach(var t in tiles)
+                {
+                    DecorateTile(t);
+                }
+            }
+        }
+
+        private void DecorateTile(TileController tile)
+        {
+            var tView = new GameObject();
+            var renderer = tView.AddComponent<SpriteRenderer>();
+            renderer.sprite = MapBridge.Instance.GetPotentialAttackLocSprite();
+            renderer.transform.position = t.Model.Center;
+            renderer.sortingLayerName = MAP_GUI_LAYER;
+            tView.name = "Path Tile";
+            var color = renderer.color;
+            color.a = 0.50f;
+            renderer.color = color;
+            this._decoratedTiles.Add(tView);
         }
 
         private void SetBoxImg(string boxTag, GenericCharacterController c)

@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.5.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -169,6 +171,7 @@
     <Compile Include="Assets\Model\Equipment\XML\ArmorReader.cs" />
     <Compile Include="Assets\Model\Equipment\XML\GenericEquipmentReader.cs" />
     <Compile Include="Assets\Model\Equipment\XML\WeaponReader.cs" />
+    <Compile Include="Assets\Model\Events\Combat\AttackSelectedEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\CombatEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\EndTurnEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\HexSelectedForMoveEvent.cs" />
@@ -219,6 +222,7 @@
     <Compile Include="Assets\View\Events\GUIEvent.cs" />
     <Compile Include="Assets\View\Events\GUIEventEnum.cs" />
     <Compile Include="Assets\View\Events\PopulateWpnBtnsEvent.cs" />
+    <Compile Include="Assets\View\Events\WpnBtnClickEvent.cs" />
     <Compile Include="Assets\View\GUI\EndTurnBtnClick.cs" />
     <Compile Include="Assets\View\GUI\WpnBtnClick.cs" />
     <Compile Include="Assets\View\Map\HexTileView.cs" />

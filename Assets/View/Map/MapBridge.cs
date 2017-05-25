@@ -21,5 +21,10 @@ namespace View.Biomes
         {
             return BiomeSpriteLoader.Instance.GetMoveTileSprite();
         }
+
+        public Sprite GetPotentialAttackLocSprite()
+        {
+            return BiomeSpriteLoader.Instance.GetPotentialAttackLocSprite();
+        }
     }
 }

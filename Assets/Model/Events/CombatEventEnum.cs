@@ -2,6 +2,8 @@
 {
     public enum CombatEventEnum
     {
+        None,
+        AttackSelected,
         EndTurn,
         HexSelectedForMove,
         MapDoneLoading,

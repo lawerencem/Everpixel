@@ -4,5 +4,6 @@
     {
         EndTurn,
         PopulateWpnBtns,
+        WpnBtnClick,
     }
 }

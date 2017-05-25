@@ -44,6 +44,7 @@ namespace Controller.Managers
             {
                 case (GUIEventEnum.EndTurn): { this.HandleEndTurnEvent(e as GUIEndTurnEvent); } break;
                 case (GUIEventEnum.PopulateWpnBtns): { this.HandlePopulateWpnBtnsEvent(e as PopulateWpnBtnsEvent); } break;
+                case (GUIEventEnum.WpnBtnClick): { this.HandleWpnBtnClickEvent(e as WpnBtnClickEvent); } break;
             }
         }
 
@@ -66,6 +67,12 @@ namespace Controller.Managers
                     script.SetAbility(e.Abilities[i].Type);
                 }
             }
+        }
+        
+        private void HandleWpnBtnClickEvent(WpnBtnClickEvent e)
+        {
+            this._events.Remove(e);
+            var attackSelEvent = new AttackSelectedEvent(CombatEventManager.Instance, e.Type);
         }
     }
 }
