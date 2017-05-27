@@ -21,6 +21,7 @@ namespace Assets.Controller.Managers
 
         public bool PlayersTurn = true;
 
+        public GenericAbility CurAbility { get; set; }
         public GenericCharacterController CurrActing { get; set; }
 
         public CombatManager(CombatMap m)

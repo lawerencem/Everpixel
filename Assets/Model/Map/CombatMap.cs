@@ -146,11 +146,11 @@ namespace Model.Map
             else
             {
                 if (col == StartingColEnum.Three)
-                    colInd = this._map.GetFirstCol() - 2;
-                else if (col == StartingColEnum.Two)
-                    colInd = this._map.GetFirstCol() - 1;
-                else
                     colInd = this._map.GetFirstCol();
+                else if (col == StartingColEnum.Two)
+                    colInd = this._map.GetFirstCol() + 1;
+                else
+                    colInd = this._map.GetFirstCol() + 2;
             }
             
             rowInd = this._map.GetMidRow();

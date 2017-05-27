@@ -52,11 +52,13 @@ namespace Controller.Managers
         {
             switch(e.Type)
             {
+                case (CombatEventEnum.ActionCofirmed): { HandleAttackConfirmedEvent(e as ActionConfirmedEvent); } break;
                 case (CombatEventEnum.AttackSelected): { HandleAttackSelectedEvent(e as AttackSelectedEvent); } break;
                 case (CombatEventEnum.EndTurn): { HandleEndTurnEvent(e as EndTurnEvent); } break;
                 case (CombatEventEnum.HexSelectedForMove): { HandleHexSelectedForMoveEvent(e as HexSelectedForMoveEvent); } break;
                 case (CombatEventEnum.MapDoneLoading): { HandleMapDoneLoadingEvent(e as MapDoneLoadingEvent); } break;
                 case (CombatEventEnum.PathTraversed): { HandlePathTraversedEvent(e as PathTraversedEvent); } break;
+                case (CombatEventEnum.PerformActionEvent): { HandlePerformActionEvent(e as PerformActionEvent); } break;
                 case (CombatEventEnum.ShowPotentialPath): { HandleShowPotentialPathEvent(e as ShowPotentialPathEvent); } break;
                 case (CombatEventEnum.TakingAction): { HandleTakingActionEvent(e as TakingActionEvent); } break;
                 case (CombatEventEnum.TileDoubleClick): { HandleTileDoubleClickEvent(e as TileDoubleClickEvent); } break;
@@ -66,11 +68,19 @@ namespace Controller.Managers
             }
         }
 
+        private void HandleAttackConfirmedEvent(ActionConfirmedEvent e)
+        {
+            this._events.Remove(e);
+            var action = new PerformActionEvent(this, this._combatManager.CurrActing.CurrentTile, e.Target, this._combatManager.CurAbility);
+        }
+
         private void HandleAttackSelectedEvent(AttackSelectedEvent e)
         {
             this._events.Remove(e);
             var potentialTiles = this._combatManager.GetAttackTiles(e);
             this._mapGUIController.DecoratePotentialAttackTiles(potentialTiles);
+            var ability = WeaponAbilityTable.Instance.Table[e.Type];
+            this._combatManager.CurAbility = ability;
         }
 
         private void HandleEndTurnEvent(EndTurnEvent e)
@@ -110,6 +120,11 @@ namespace Controller.Managers
                 this._mapGUIController.ClearDecoratedTiles();
                 this._events.RemoveAll(x => x.Type == CombatEventEnum.ShowPotentialPath);
             }
+        }
+
+        private void HandlePerformActionEvent(PerformActionEvent e)
+        {
+            this._events.Remove(e);
         }
 
         private void HandleShowPotentialPathEvent(ShowPotentialPathEvent e)

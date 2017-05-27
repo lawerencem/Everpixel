@@ -67,6 +67,14 @@ namespace Controller.Map
                     this._doubleClick = true;
                 }
             }
+
+            else
+            {
+                if (TileControllerFlags.HasFlag(this.Flags.CurFlags, TileControllerFlags.Flags.PotentialAttack))
+                {
+                    var confirmed = new ActionConfirmedEvent(CombatEventManager.Instance, this);
+                }
+            }
         }
 
         public void OnMouseOver()
