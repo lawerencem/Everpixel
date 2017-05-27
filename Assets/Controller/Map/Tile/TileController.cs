@@ -71,7 +71,7 @@ namespace Controller.Map
 
         public void OnMouseOver()
         {
-            var hover = new TileHoverEvent(GUIEventManager.Instance, this);
+            var hover = new TileHoverDecoEvent(CombatEventManager.Instance, this);
         }
 
         public void SetModel(HexTile t)

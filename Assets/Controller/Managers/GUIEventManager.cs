@@ -44,7 +44,6 @@ namespace Controller.Managers
             {
                 case (GUIEventEnum.EndTurn): { this.HandleEndTurnEvent(e as GUIEndTurnEvent); } break;
                 case (GUIEventEnum.PopulateWpnBtns): { this.HandlePopulateWpnBtnsEvent(e as PopulateWpnBtnsEvent); } break;
-                case (GUIEventEnum.TileHover): { this.HandleTileHoverEvent(e as TileHoverEvent); } break;
                 case (GUIEventEnum.WpnBtnClick): { this.HandleWpnBtnClickEvent(e as WpnBtnClickEvent); } break;
             }
         }
@@ -68,12 +67,6 @@ namespace Controller.Managers
                     script.SetAbility(e.Abilities[i].X.Type, e.Abilities[i].Y);
                 }
             }
-        }
-
-        private void HandleTileHoverEvent(TileHoverEvent e)
-        {
-            this._events.Remove(e);
-            var hover = new TileHoverDecoEvent(CombatEventManager.Instance, e.Tile);
         }
         
         private void HandleWpnBtnClickEvent(WpnBtnClickEvent e)
