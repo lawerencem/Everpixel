@@ -1,4 +1,5 @@
 ﻿using Assets.Controller.Managers;
+using Assets.Generics;
 using Controller.Managers.Map;
 using Generics;
 using Generics.Scripts;
@@ -67,12 +68,14 @@ namespace Controller.Managers
         private void HandleAttackSelectedEvent(AttackSelectedEvent e)
         {
             this._events.Remove(e);
-            // TODO: Calculate AoE, decorate tiles accordingly
+            var potentialTiles = this._combatManager.GetAttackTiles(e);
+            this._mapGUIController.DecoratePotentialAttackTiles(potentialTiles);
         }
 
         private void HandleEndTurnEvent(EndTurnEvent e)
         {
             this._events.Remove(e);
+            this._mapGUIController.ClearDecoratedTiles();
             var cur = this._combatManager.CurrActing.Handle;
             var bob = cur.GetComponent<BobbingScript>();
             if (bob != null) { GameObject.Destroy(bob); }
@@ -103,7 +106,7 @@ namespace Controller.Managers
                 {
                     var end = new EndTurnEvent(this);
                 }
-                this._mapGUIController.ClearPotentialPathView();
+                this._mapGUIController.ClearDecoratedTiles();
                 this._events.RemoveAll(x => x.Type == CombatEventEnum.ShowPotentialPath);
             }
         }
@@ -165,9 +168,14 @@ namespace Controller.Managers
         private void PopulateBtnsHelper()
         {
             var curr = this._combatManager.CurrActing.Model;
-            var abs = new List<WeaponAbility>();
-            if (curr.LWeapon != null) { abs.AddRange(curr.LWeapon.Abilities); }
-            if (curr.RWeapon != null) { abs.AddRange(curr.RWeapon.Abilities); }
+            var abs = new List<Pair<WeaponAbility, bool>>();
+            if (curr.LWeapon != null)
+                foreach(var ab in curr.LWeapon.Abilities)
+                    abs.Add(new Pair<WeaponAbility, bool>(ab, false));
+            if (curr.RWeapon != null)
+                foreach (var ab in curr.RWeapon.Abilities)
+                    abs.Add(new Pair<WeaponAbility, bool>(ab, true));
+
             var populateBtns = new PopulateWpnBtnsEvent(abs, GUIEventManager.Instance);
         }
 

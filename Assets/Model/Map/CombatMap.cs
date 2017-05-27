@@ -37,6 +37,37 @@ namespace Model.Map
                     genericTile.Adjacent.Add(neighbor.Parent);
         }
 
+        public List<HexTile> GetAoETiles(HexTile t, int dist)
+        {
+            var tiles = new List<HexTile>();
+
+            var closedSet = new List<HexTile>();
+            var probeSet = new List<HexTile>() { t };
+            var waitingSet = new List<HexTile>() { };
+
+            for (int i = dist; i > 0; i--)
+            {
+                foreach (var tile in probeSet)
+                {
+                    foreach (var neighbor in tile.Adjacent)
+                    {
+                        var found = closedSet.Find(x => x.Col == neighbor.Col && x.Row == neighbor.Row);
+                        if (found == null)
+                        {
+                            waitingSet.Add(neighbor);
+                            tiles.Add(neighbor);
+                            closedSet.Add(neighbor);
+                        }
+                    }
+                }
+                probeSet.Clear();
+                foreach (var tile in waitingSet) { probeSet.Add(tile); }
+                waitingSet.Clear();
+            }
+
+            return tiles;
+        }
+
         public Path GetPath(HexTile s, HexTile g)
         {
             int nodeCtr = 0;

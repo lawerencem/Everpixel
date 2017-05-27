@@ -29,6 +29,13 @@ namespace Generics.Hex
             this._rows = rows;
         }
 
+        public int GetFirstCol() { return 0; }
+        public int GetFirstRow() { return 0; }
+        public int GetMidCol() { return this._cols / 2; }
+        public int GetMidRow() { return this._rows / 2; }
+        public int GetLastCol() { return this._cols; }
+        public int GetLastRow() { return this._rows; }
+
         public HexTile GetTileViaColRowPair(int col, int row)
         {
             if (this._colRowDictionary.ContainsKey(col))
@@ -129,14 +136,5 @@ namespace Generics.Hex
             else
                 return null;
         }
-
-        public int GetFirstCol() { return 0; }
-        public int GetFirstRow() { return 0; }
-        public int GetMidCol() { return this._cols / 2; }
-        public int GetMidRow() { return this._rows / 2; }
-        public int GetLastCol() { return this._cols; }
-        public int GetLastRow() { return this._rows; }
-
-        
     }
 }

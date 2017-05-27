@@ -19,7 +19,7 @@ namespace Model.Equipment
         Melee_Block_Chance,
         Parry_Chance,
         Parry_Mod,
-        Range,
+        Range_Mod,
         Ranged_Block_Chance,
         Shield_Damage,
         Stamina_Reduce,

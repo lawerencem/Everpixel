@@ -71,7 +71,7 @@ namespace Model.Equipment.XML
                 case ("Melee_Block_Chance"): { HandleStatsFromFile(name, WeaponStatsEnum.Melee_Block_Chance, v, tier); } break;
                 case ("Parry_Chance"): { HandleStatsFromFile(name, WeaponStatsEnum.Parry_Chance, v, tier); } break;
                 case ("Parry_Reduce"): { HandleStatsFromFile(name, WeaponStatsEnum.Parry_Mod, v, tier); } break;
-                case ("Range"): { HandleStatsFromFile(name, WeaponStatsEnum.Range, v, tier); } break;
+                case ("Range_Mod"): { HandleStatsFromFile(name, WeaponStatsEnum.Range_Mod, v, tier); } break;
                 case ("Ranged_Block_Chance"): { HandleStatsFromFile(name, WeaponStatsEnum.Ranged_Block_Chance, v, tier); } break;
                 case ("Sprites"): { HandleSpritesFromFile(name, value, tier); } break;
                 case ("Shield_Damage"): { HandleStatsFromFile(name, WeaponStatsEnum.Shield_Damage, v, tier); } break;
@@ -102,7 +102,7 @@ namespace Model.Equipment.XML
                 case (WeaponStatsEnum.Initiative_Reduce): { stats.Table[key].InitiativeReduce = v; } break;
                 case (WeaponStatsEnum.Melee_Block_Chance): { stats.Table[key].MeleeBlockChance = v; } break;
                 case (WeaponStatsEnum.Parry_Mod): { stats.Table[key].ParryMod = v; } break;
-                case (WeaponStatsEnum.Range): { stats.Table[key].Range = v; } break;
+                case (WeaponStatsEnum.Range_Mod): { stats.Table[key].RangeMod = v; } break;
                 case (WeaponStatsEnum.Ranged_Block_Chance): { stats.Table[key].RangeBlockChance = v; } break;
                 case (WeaponStatsEnum.Shield_Damage): { stats.Table[key].ShieldDamage = v; } break;
                 case (WeaponStatsEnum.Stamina_Reduce): { stats.Table[key].StaminaReduce = v; } break;

@@ -9,6 +9,7 @@ namespace View.GUI
 {
     public class WpnBtnClick : MonoBehaviour
     {
+        private bool _rWeapon;
         private WeaponAbilitiesEnum _ability;
 
         public void Init(string tag)
@@ -18,8 +19,9 @@ namespace View.GUI
             btn.onClick.AddListener(this.OnClick);
         }
 
-        public void SetAbility(WeaponAbilitiesEnum a)
+        public void SetAbility(WeaponAbilitiesEnum a, bool rWeapon)
         {
+            this._rWeapon = rWeapon;
             this._ability = a;
             var btn = GameObject.FindGameObjectWithTag(this.tag);
             var text = btn.GetComponentInChildren<Text>();
@@ -28,7 +30,7 @@ namespace View.GUI
 
         private void OnClick()
         {
-            var e = new WpnBtnClickEvent(GUIEventManager.Instance, this._ability);
+            var e = new WpnBtnClickEvent(GUIEventManager.Instance, this._ability, this._rWeapon);
         }
     }
 }

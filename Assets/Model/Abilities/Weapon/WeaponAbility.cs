@@ -13,6 +13,7 @@
         public double FatigueCostMod { get; set; }
         public double MeleeBlockChanceMod { get; set; }
         public double ParryModMod { get; set; }
+        public int Range { get; set; }
         public double RangeBlockMod { get; set; }
         public double ShieldDamageMod { get; set; }
         private new WeaponAbilitiesEnum _type;

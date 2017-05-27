@@ -1,8 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <WeaponAbilities>
   <WeaponAbility name="Aim">
+    <AccMod>1.20</AccMod>
+    <APMod>1.20</APMod>
+    <DamageMod>1.30</DamageMod>
+    <FatigueCostMod>1.25</FatigueCostMod>
+    <Range>6</Range>
   </WeaponAbility>
   <WeaponAbility name="Attack">
+    <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Break_Armor">
     <AccMod>0.85</AccMod>
@@ -10,39 +16,57 @@
     <AmorIgnoreMod>1.2</AmorIgnoreMod>
     <DamageMod>0.35</DamageMod>
     <FatigueCostMod>1.35</FatigueCostMod>
+    <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Break_Shield">
+    <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Double_Strike">
+    <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Fire">
+    <Range>5</Range>
   </WeaponAbility>
   <WeaponAbility name="Gash">
+    <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Great_Strike">
+    <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Maim">
+    <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Pierce">
+    <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Pull">
+    <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Riposte">
+    <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Scatter">
+    <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Shield_Wall">
+    <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Shove">
+    <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Spear_Wall">
+    <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Stun">
+    <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Triple_Strike">
+    <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Wide_Slash">
+    <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Wrap">
+    <Range>1</Range>
   </WeaponAbility>
 </WeaponAbilities>

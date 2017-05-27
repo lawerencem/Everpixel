@@ -23,7 +23,7 @@ namespace Model.Equipment
         public double MeleeBlockChance { get; set; }
         public string Name { get; set; }
         public double ParryMod { get; set; }
-        public int Range { get; set; }
+        public int RangeMod { get; set; }
         public double RangeBlockChance { get; set; }
         public double ShieldDamage { get; set; }
         public WeaponSkillEnum Skill { get; set; }

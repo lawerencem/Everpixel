@@ -28,7 +28,7 @@ namespace Model.Equipment
             weapon.MaxDurability = wStats.Durability;
             weapon.Name = wStats.Name;
             weapon.ParryMod = wStats.ParryMod;
-            weapon.Range = wStats.Range;
+            weapon.RangeMod = wStats.RangeMod;
             weapon.ShieldDamage = wStats.ShieldDamage;
             weapon.Tier = wStats.Tier;
             return weapon;

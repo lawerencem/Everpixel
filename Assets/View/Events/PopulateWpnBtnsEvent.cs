@@ -1,4 +1,5 @@
-﻿using Controller.Managers;
+﻿using Assets.Generics;
+using Controller.Managers;
 using Model.Abilities;
 using System.Collections.Generic;
 
@@ -6,9 +7,9 @@ namespace View.Events
 {
     public class PopulateWpnBtnsEvent : GUIEvent
     {
-        public List<WeaponAbility> Abilities;
+        public List<Pair<WeaponAbility, bool>> Abilities;
 
-        public PopulateWpnBtnsEvent(List<WeaponAbility> abs, GUIEventManager parent) : 
+        public PopulateWpnBtnsEvent(List<Pair<WeaponAbility, bool>> abs, GUIEventManager parent) : 
             base(GUIEventEnum.PopulateWpnBtns, parent)
         {
             this.Abilities = abs;

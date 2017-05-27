@@ -20,7 +20,7 @@ namespace Model.Equipment
         public double FatigueReduce { get; set; }
         public double InitiativeReduce { get; set; }
         public double ParryMod { get; set; }
-        public double Range { get; set; }
+        public double RangeMod { get; set; }
         public double ShieldDamage { get; set; }
 
 

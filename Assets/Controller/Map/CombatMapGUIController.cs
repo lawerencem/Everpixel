@@ -29,7 +29,7 @@ namespace Controller.Managers.Map
         private List<GameObject> _boxImages = new List<GameObject>();
         private List<GameObject> _decoratedTiles = new List<GameObject>();
 
-        public void ClearPotentialPathView()
+        public void ClearDecoratedTiles()
         {
             foreach (var old in this._decoratedTiles)
                 GameObject.Destroy(old);
@@ -64,9 +64,10 @@ namespace Controller.Managers.Map
 
             if (p != null)
             {
+                var sprite = MapBridge.Instance.GetMovePathSprite();
                 foreach (var tile in p)
                 {
-                    DecorateTile(tile);
+                    DecorateTile(tile, sprite);
                 }
             }
         }
@@ -77,19 +78,20 @@ namespace Controller.Managers.Map
 
             if (tiles != null)
             {
+                var sprite = MapBridge.Instance.GetPotentialAttackLocSprite();
                 foreach(var t in tiles)
                 {
-                    DecorateTile(t);
+                    DecorateTile(t, sprite);
                 }
             }
         }
 
-        private void DecorateTile(TileController tile)
+        private void DecorateTile(TileController tile, Sprite deco)
         {
             var tView = new GameObject();
             var renderer = tView.AddComponent<SpriteRenderer>();
-            renderer.sprite = MapBridge.Instance.GetPotentialAttackLocSprite();
-            renderer.transform.position = t.Model.Center;
+            renderer.sprite = deco;
+            renderer.transform.position = tile.Model.Center;
             renderer.sortingLayerName = MAP_GUI_LAYER;
             tView.name = "Path Tile";
             var color = renderer.color;

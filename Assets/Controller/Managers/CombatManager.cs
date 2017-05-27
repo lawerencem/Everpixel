@@ -4,6 +4,7 @@ using Controller.Managers.Map;
 using Controller.Map;
 using Generics;
 using Generics.Hex;
+using Model.Abilities;
 using Model.Events.Combat;
 using Model.Map;
 using System.Collections.Generic;
@@ -31,6 +32,26 @@ namespace Assets.Controller.Managers
         {
             this._characters = c;
             this.InitCharacterTurns();
+        }
+
+        public List<TileController> GetAttackTiles(AttackSelectedEvent e)
+        {
+            var proto = WeaponAbilityTable.Instance.Table[e.Type];
+            int distMod = 0;
+            if (e.RWeapon)
+            {
+                if (CurrActing.Model.RWeapon != null)
+                    distMod += (int)CurrActing.Model.RWeapon.RangeMod;
+            }
+            else
+            {
+                if (CurrActing.Model.LWeapon != null)
+                    distMod += (int)CurrActing.Model.LWeapon.RangeMod;
+            }
+            var hexTiles = this._map.GetAoETiles(this.CurrActing.CurrentTile.Model, proto.Range + distMod);
+            var tileControllers = new List<TileController>();
+            foreach (var hex in hexTiles) { tileControllers.Add(hex.Parent); }
+            return tileControllers;
         }
 
         public List<TileController> GetPathTileControllers(ShowPotentialPathEvent e)

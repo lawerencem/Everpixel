@@ -64,7 +64,7 @@ namespace Controller.Managers
                     var tag = "WpnBtnTag" + i;
                     var btnContainer = GameObject.FindGameObjectWithTag(tag);
                     var script = btnContainer.GetComponent<WpnBtnClick>();
-                    script.SetAbility(e.Abilities[i].Type);
+                    script.SetAbility(e.Abilities[i].X.Type, e.Abilities[i].Y);
                 }
             }
         }
@@ -72,7 +72,7 @@ namespace Controller.Managers
         private void HandleWpnBtnClickEvent(WpnBtnClickEvent e)
         {
             this._events.Remove(e);
-            var attackSelEvent = new AttackSelectedEvent(CombatEventManager.Instance, e.Type);
+            var attackSelEvent = new AttackSelectedEvent(CombatEventManager.Instance, e.Type, e.RWeapon);
         }
     }
 }
