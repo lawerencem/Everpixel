@@ -53,16 +53,19 @@ namespace Controller.Map
 
         public void OnMouseDown()
         {
-            var e = new HexSelectedForMoveEvent(this, CombatEventManager.Instance);
+            if (this.Model.Current == null)
+            {
+                var e = new HexSelectedForMoveEvent(this, CombatEventManager.Instance);
 
-            if (this._doubleClick)
-            {
-                var doubleClick = new TileDoubleClickEvent(CombatEventManager.Instance, this);
-            }
-            else
-            {
-                this._clickTime = System.DateTime.Now;
-                this._doubleClick = true;
+                if (this._doubleClick)
+                {
+                    var doubleClick = new TileDoubleClickEvent(CombatEventManager.Instance, this);
+                }
+                else
+                {
+                    this._clickTime = System.DateTime.Now;
+                    this._doubleClick = true;
+                }
             }
         }
 
