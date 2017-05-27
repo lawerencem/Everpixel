@@ -60,6 +60,7 @@ namespace Controller.Managers
                 case (CombatEventEnum.ShowPotentialPath): { HandleShowPotentialPathEvent(e as ShowPotentialPathEvent); } break;
                 case (CombatEventEnum.TakingAction): { HandleTakingActionEvent(e as TakingActionEvent); } break;
                 case (CombatEventEnum.TileDoubleClick): { HandleTileDoubleClickEvent(e as TileDoubleClickEvent); } break;
+                case (CombatEventEnum.TileHoverDeco): { HandleTileHoverDecoEvent(e as TileHoverDecoEvent); } break;
                 case (CombatEventEnum.TraversePath): { HandleTraversePathEvent(e as TraversePathEvent); } break;
                 case (CombatEventEnum.TraverseTile): { HandleTraverseTileEvent(e as TraverseTileEvent); } break;
             }
@@ -147,6 +148,12 @@ namespace Controller.Managers
                 var path = this._combatManager.GetPath(this._combatManager.CurrActing.CurrentTile, e.Tile);
                 var traversePathEvent = new TraversePathEvent(this, this._combatManager.CurrActing, path);
             }
+        }
+
+        private void HandleTileHoverDecoEvent(TileHoverDecoEvent e)
+        {
+            this._events.Remove(e);
+            this._mapGUIController.DecorateHover(e.Tile);
         }
 
         private void HandleTraversePathEvent(TraversePathEvent e)

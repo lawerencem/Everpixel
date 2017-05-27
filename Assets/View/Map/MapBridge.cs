@@ -17,6 +17,11 @@ namespace View.Biomes
             return BiomeSpriteLoader.Instance.GetBiomeBackground(b);
         }
 
+        public Sprite GetHostileHoverSprite()
+        {
+            return BiomeSpriteLoader.Instance.GetHostileHoverSprite();
+        }
+
         public Sprite GetMovePathSprite()
         {
             return BiomeSpriteLoader.Instance.GetMoveTileSprite();

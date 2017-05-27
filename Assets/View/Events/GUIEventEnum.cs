@@ -4,6 +4,7 @@
     {
         EndTurn,
         PopulateWpnBtns,
+        TileHover,
         WpnBtnClick,
     }
 }

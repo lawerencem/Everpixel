@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using View.Events;
 using View.Map;
 
 namespace Controller.Map
@@ -17,8 +18,10 @@ namespace Controller.Map
         private bool _doubleClick = false;
         private double _clickDelta = 0.5;
         private DateTime _clickTime;
+        
 
         public List<TileController> Adjacent { get; set; }
+        public TileControllerFlags Flags { get; set; }
         public GameObject Handle { get; set; }
         public HexTile Model { get; set; }
         public HexTileView View { get; set; }
@@ -26,6 +29,7 @@ namespace Controller.Map
         public TileController()
         {
             this.Adjacent = new List<TileController>();
+            this.Flags = new TileControllerFlags();
             this.Model = new HexTile();
         }
 
@@ -64,7 +68,7 @@ namespace Controller.Map
 
         public void OnMouseOver()
         {
-
+            var hover = new TileHoverEvent(GUIEventManager.Instance, this);
         }
 
         public void SetModel(HexTile t)

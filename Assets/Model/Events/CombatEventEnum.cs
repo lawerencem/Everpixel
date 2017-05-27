@@ -12,6 +12,7 @@
         ShowPotentialPath,
         TakingAction,
         TileDoubleClick,
+        TileHoverDeco,
         TraversePath,
         TraverseTile,
     }

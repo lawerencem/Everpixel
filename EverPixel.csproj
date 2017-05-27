@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.5.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -52,9 +54,6 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -69,9 +68,6 @@
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VR">
       <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
@@ -91,7 +87,8 @@
     <Compile Include="Assets\Controller\Map\CombatMapGUIController.cs" />
     <Compile Include="Assets\Controller\Map\CombatMapLoader.cs" />
     <Compile Include="Assets\Controller\Map\EnemyPartyLoader.cs" />
-    <Compile Include="Assets\Controller\Map\TileController.cs" />
+    <Compile Include="Assets\Controller\Map\Tile\TileController.cs" />
+    <Compile Include="Assets\Controller\Map\Tile\TileControllerFlag.cs" />
     <Compile Include="Assets\Generics\AbstractSingleton.cs" />
     <Compile Include="Assets\Generics\Builders\AbstractBuilder.cs" />
     <Compile Include="Assets\Generics\Builders\GenericBuilder.cs" />
@@ -184,6 +181,7 @@
     <Compile Include="Assets\Model\Events\Combat\ShowPotentialPathEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TakingActionEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TileDoubleClickEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\TileHoverDecoEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TraversePathEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TraverseTileEvent.cs" />
     <Compile Include="Assets\Model\Events\CombatEventEnum.cs" />
@@ -226,6 +224,7 @@
     <Compile Include="Assets\View\Events\GUIEvent.cs" />
     <Compile Include="Assets\View\Events\GUIEventEnum.cs" />
     <Compile Include="Assets\View\Events\PopulateWpnBtnsEvent.cs" />
+    <Compile Include="Assets\View\Events\TileHoverEvent.cs" />
     <Compile Include="Assets\View\Events\WpnBtnClickEvent.cs" />
     <Compile Include="Assets\View\GUI\EndTurnBtnClick.cs" />
     <Compile Include="Assets\View\GUI\WpnBtnClick.cs" />

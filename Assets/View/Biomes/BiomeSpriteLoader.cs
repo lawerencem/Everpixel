@@ -8,6 +8,7 @@ namespace View.Biomes
     public class BiomeSpriteLoader : AbstractSingleton<BiomeSpriteLoader>
     {
         private const int POTENTIAL_ATTACK_SPRITE_INDEX = 1;
+        private const int HOSTILE_HOVER_SPRITE_INDEX = 2;
         private const int PATH_SPRITE_INDEX = 3;
         private const string PATH = "Sprites/CombatMap/";
 
@@ -26,6 +27,13 @@ namespace View.Biomes
         {
             var path = StringUtil.PathBuilder(PATH, b.ToString(), DECO_EXTENSION);
             return GetBackgroundSprites(path);
+        }
+
+        public Sprite GetHostileHoverSprite()
+        {
+            var path = StringUtil.PathBuilder(PATH, "Base", TILE_EXTENSION);
+            var stuff = Resources.LoadAll(path);
+            return stuff[HOSTILE_HOVER_SPRITE_INDEX] as Sprite;
         }
 
         public Sprite GetPotentialAttackLocSprite()

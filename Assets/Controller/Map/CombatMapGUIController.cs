@@ -27,13 +27,14 @@ namespace Controller.Managers.Map
         private const string STAM = "StaminaTextTag";
 
         private List<GameObject> _boxImages = new List<GameObject>();
-        private List<GameObject> _decoratedTiles = new List<GameObject>();
+        private List<GameObject> _decorateTileFamily = new List<GameObject>();
+        private GameObject _singleTile;
 
         public void ClearDecoratedTiles()
         {
-            foreach (var old in this._decoratedTiles)
+            foreach (var old in this._decorateTileFamily)
                 GameObject.Destroy(old);
-            this._decoratedTiles.Clear();
+            this._decorateTileFamily.Clear();
         }
 
         public void SetActingBoxToController(GenericCharacterController c)
@@ -58,35 +59,47 @@ namespace Controller.Managers.Map
             this.SetBoxImg(IMG, c);
         }
 
+        public void DecorateHover(TileController t)
+        {
+            if (this._singleTile != null && this._singleTile != t)
+                GameObject.Destroy(this._singleTile);
+
+            if (TileControllerFlags.HasFlag(t.Flags.CurFlags, TileControllerFlags.Flags.PotentialAttack))
+            {
+                var sprite = MapBridge.Instance.GetHostileHoverSprite();
+                DecorateSingleTile(t, sprite);
+            }
+        }
+
         public void DecoratePath(List<TileController> p)
         {
-            foreach (var old in this._decoratedTiles) { GameObject.Destroy(old); }
+            foreach (var old in this._decorateTileFamily) { GameObject.Destroy(old); }
 
             if (p != null)
             {
                 var sprite = MapBridge.Instance.GetMovePathSprite();
                 foreach (var tile in p)
                 {
-                    DecorateTile(tile, sprite);
+                    DecorateFamilyOfTiles(tile, sprite);
                 }
             }
         }
 
         public void DecoratePotentialAttackTiles(List<TileController> tiles)
         {
-            foreach (var old in this._decoratedTiles) { GameObject.Destroy(old); }
+            foreach (var old in this._decorateTileFamily) { GameObject.Destroy(old); }
 
             if (tiles != null)
             {
                 var sprite = MapBridge.Instance.GetPotentialAttackLocSprite();
                 foreach(var t in tiles)
                 {
-                    DecorateTile(t, sprite);
+                    DecorateFamilyOfTiles(t, sprite);
                 }
             }
         }
 
-        private void DecorateTile(TileController tile, Sprite deco)
+        private void DecorateFamilyOfTiles(TileController tile, Sprite deco)
         {
             var tView = new GameObject();
             var renderer = tView.AddComponent<SpriteRenderer>();
@@ -97,7 +110,21 @@ namespace Controller.Managers.Map
             var color = renderer.color;
             color.a = 0.50f;
             renderer.color = color;
-            this._decoratedTiles.Add(tView);
+            this._decorateTileFamily.Add(tView);
+        }
+
+        private void DecorateSingleTile(TileController t, Sprite deco)
+        {
+            var tView = new GameObject();
+            var renderer = tView.AddComponent<SpriteRenderer>();
+            renderer.sprite = deco;
+            renderer.transform.position = t.Model.Center;
+            renderer.sortingLayerName = MAP_GUI_LAYER;
+            tView.name = "Path Tile";
+            var color = renderer.color;
+            color.a = 0.50f;
+            renderer.color = color;
+            this._singleTile = tView;
         }
 
         private void SetBoxImg(string boxTag, GenericCharacterController c)

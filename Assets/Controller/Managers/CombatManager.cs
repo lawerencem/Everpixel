@@ -14,6 +14,7 @@ namespace Assets.Controller.Managers
 {
     public class CombatManager
     {
+        private List<TileController> _curTiles;
         private List<GenericCharacterController> _characters;
         private CombatMap _map;
         private List<GenericCharacterController> _order;
@@ -24,6 +25,7 @@ namespace Assets.Controller.Managers
 
         public CombatManager(CombatMap m)
         {
+            this._curTiles = new List<TileController>();
             this._map = m;
             this._order = new List<GenericCharacterController>();
         }
@@ -36,6 +38,7 @@ namespace Assets.Controller.Managers
 
         public List<TileController> GetAttackTiles(AttackSelectedEvent e)
         {
+            this.ResetTileControllerFlags();
             var proto = WeaponAbilityTable.Instance.Table[e.Type];
             int distMod = 0;
             if (e.RWeapon)
@@ -50,15 +53,25 @@ namespace Assets.Controller.Managers
             }
             var hexTiles = this._map.GetAoETiles(this.CurrActing.CurrentTile.Model, proto.Range + distMod);
             var tileControllers = new List<TileController>();
-            foreach (var hex in hexTiles) { tileControllers.Add(hex.Parent); }
+            foreach (var hex in hexTiles)
+            {
+                tileControllers.Add(hex.Parent);
+                TileControllerFlags.SetPotentialAttackFlagTrue(hex.Parent.Flags);
+            }
+            this._curTiles = tileControllers;
             return tileControllers;
         }
 
         public List<TileController> GetPathTileControllers(ShowPotentialPathEvent e)
         {
+            this.ResetTileControllerFlags();
             var hexPath = this._map.GetPath(e.Character.CurrentTile.Model, e.Target.Model);
             var tileControllers = new List<TileController>();
-            foreach (var hex in hexPath.Tiles) { tileControllers.Add(hex.Parent); }
+            foreach (var hex in hexPath.Tiles)
+            {
+                tileControllers.Add(hex.Parent);
+            }
+            this._curTiles.Clear();
             return tileControllers;
         }
 
@@ -92,6 +105,11 @@ namespace Assets.Controller.Managers
             {
                 var e = new TakingActionEvent(CombatEventManager.Instance, this._order[0]);
             }
+        }
+
+        private void ResetTileControllerFlags()
+        {
+            foreach (var tile in this._curTiles) { TileControllerFlags.SetAllFlagsFalse(tile.Flags); }
         }
     }
 }

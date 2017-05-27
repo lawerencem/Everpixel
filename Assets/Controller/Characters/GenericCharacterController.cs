@@ -10,7 +10,6 @@ namespace Controller.Characters
 {
     public class GenericCharacterController : MonoBehaviour
     {
-        private BoxCollider2D _collider;
         private GenericCharacter _model;
         private CharacterView _view;
 
@@ -29,12 +28,6 @@ namespace Controller.Characters
         public void Init(GameObject o)
         {
             this.Handle = o;
-            this._collider = Handle.AddComponent<BoxCollider2D>(); 
-        }
-
-        public void OnMouseOver()
-        {
-            int temp = 0;
         }
     }
 }
