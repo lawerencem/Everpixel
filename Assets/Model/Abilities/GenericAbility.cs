@@ -7,9 +7,6 @@ namespace Model.Abilities
         protected object _type;
         public object Type { get { return this._type; } }
 
-        public virtual void ProcessAbility(GenericCharacter s, GenericCharacter t)
-        {
-
-        }
+        public virtual void ProcessAbility(GenericCharacter s, GenericCharacter t) { }
     }
 }

@@ -14,7 +14,7 @@ namespace Model.Combat
         private const double BASE_CRIT_CHANCE = 0.05;
         private const double BASE_SCALAR = 1000;
 
-        public void ProcesMeleeAttack(AttackEventFlags f, WeaponAbility a, GenericCharacter s, GenericCharacter t)
+        public void ProcessAttack(AttackEventFlags f, WeaponAbility a, GenericCharacter s, GenericCharacter t)
         {
             this.ProcessDodge(f, a, s, t);
             this.ProcessParry(f, a, s, t);

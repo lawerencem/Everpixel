@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.5.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -105,7 +107,30 @@
     <Compile Include="Assets\Generics\XML\GenericXMLReader.cs" />
     <Compile Include="Assets\Model\Abilities\Enum\WeaponAbilitiesEnum.cs" />
     <Compile Include="Assets\Model\Abilities\GenericAbility.cs" />
-    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Attack.cs" />
+    <Compile Include="Assets\Model\Abilities\GenericAbilityTable.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Aim.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\BreakArmor.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\BreakShield.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Chop.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Crush.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\DoubleStrike.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Fire.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Gash.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\GreatStrike.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Maim.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Pierce.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Pull.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Riposte.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Scatter.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\ShieldWall.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Shove.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Slash.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\SpearWall.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Stab.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Stun.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\TripleStrike.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\WideSlash.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Wrap.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\WeaponAbility.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\WeaponAbilityBuilder.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\WeaponAbilityFactory.cs" />

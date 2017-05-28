@@ -14,10 +14,6 @@ namespace Model.Abilities
 
         public override WeaponAbility Build(WeaponAbilitiesEnum arg)
         {
-            if (!WeaponAbilityTable.Instance.Table.ContainsKey(arg))
-            {
-                int temp = 0;
-            }
             var proto = WeaponAbilityTable.Instance.Table[arg];
             return proto.Copy();
         }

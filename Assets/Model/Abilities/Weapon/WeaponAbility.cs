@@ -1,4 +1,7 @@
-﻿namespace Model.Abilities
+﻿using Model.Characters;
+using Model.Combat;
+
+namespace Model.Abilities
 {
     public class WeaponAbility : GenericAbility
     {
@@ -53,6 +56,12 @@
             ability.RangeBlockMod = this.RangeBlockMod;
             ability.ShieldDamageMod = this.ShieldDamageMod;
             return ability;
+        }
+
+        public override void ProcessAbility(GenericCharacter s, GenericCharacter t)
+        {
+            var attackFlags = new AttackEventFlags();
+            CombatReferee.Instance.ProcessAttack(attackFlags, this, s, t);
         }
     }
 }

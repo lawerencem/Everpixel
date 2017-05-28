@@ -7,9 +7,6 @@
     <FatigueCostMod>1.25</FatigueCostMod>
     <Range>6</Range>
   </WeaponAbility>
-  <WeaponAbility name="Attack">
-    <Range>1</Range>
-  </WeaponAbility>
   <WeaponAbility name="Break_Armor">
     <AccMod>0.85</AccMod>
     <APMod>1.15</APMod>
@@ -19,6 +16,12 @@
     <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Break_Shield">
+    <Range>1</Range>
+  </WeaponAbility>
+  <WeaponAbility name="Chop">
+    <Range>1</Range>
+  </WeaponAbility>
+  <WeaponAbility name="Crush">
     <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Double_Strike">
@@ -52,6 +55,12 @@
     <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Shove">
+    <Range>1</Range>
+  </WeaponAbility>
+  <WeaponAbility name="Slash">
+    <Range>1</Range>
+  </WeaponAbility>
+  <WeaponAbility name="Stab">
     <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Spear_Wall">

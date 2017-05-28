@@ -1,5 +1,7 @@
 ﻿using Assets.Controller.Managers;
 using Assets.Generics;
+using Model.Abilities;
+using Controller.Characters;
 using Controller.Managers.Map;
 using Generics;
 using Generics.Scripts;
@@ -79,7 +81,7 @@ namespace Controller.Managers
             this._events.Remove(e);
             var potentialTiles = this._combatManager.GetAttackTiles(e);
             this._mapGUIController.DecoratePotentialAttackTiles(potentialTiles);
-            var ability = WeaponAbilityTable.Instance.Table[e.Type];
+            var ability = GenericAbilityTable.Instance.Table[e.Type];
             this._combatManager.CurAbility = ability;
         }
 
@@ -125,6 +127,14 @@ namespace Controller.Managers
         private void HandlePerformActionEvent(PerformActionEvent e)
         {
             this._events.Remove(e);
+            if (e.Source.Model.Current.GetType() == typeof(GenericCharacterController) &&
+                e.Target.Model.Current.GetType() == typeof(GenericCharacterController))
+            {
+                var source = e.Source.Model.Current as GenericCharacterController;
+                var target = e.Target.Model.Current as GenericCharacterController;
+                e.Action.ProcessAbility(source.Model, target.Model);
+            }
+            
         }
 
         private void HandleShowPotentialPathEvent(ShowPotentialPathEvent e)
