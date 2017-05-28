@@ -2,24 +2,24 @@
 <Armors>
   <ArmorSkillEnum name="Breastplate">
     <Armor name="Galea">
-    <Tier>Four</Tier>
-    <AP_Reduce>0.84</AP_Reduce>
-    <ArmorSkillEnum>Breasplate</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.94</Block_Reduce>
-    <Damage_Ignore>5</Damage_Ignore>
-    <Damage_Reduction>1.14</Damage_Reduction>
-    <Description>
-      This helm is of the type favored by legionnaires.  It provides solid defense without weighing much.
-    </Description>
-    <Dodge_Reduce>0.94</Dodge_Reduce>
-    <Durability>55</Durability>
-    <Fatigue_Cost>1.08</Fatigue_Cost>
-    <Initiative_Reduce>0.89</Initiative_Reduce>
-    <Parry_Reduce>0.94</Parry_Reduce>
-    <Sprites>17</Sprites>
-    <Stamina_Reduce>0.84</Stamina_Reduce>
-    <Value>350</Value>
+      <Tier>Four</Tier>
+      <AP_Reduce>0.84</AP_Reduce>
+      <ArmorSkillEnum>Breasplate</ArmorSkillEnum>
+      <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
+      <Block_Reduce>0.94</Block_Reduce>
+      <Damage_Ignore>5</Damage_Ignore>
+      <Damage_Reduction>1.14</Damage_Reduction>
+      <Description>
+        This helm is of the type favored by legionnaires.  It provides solid defense without weighing much.
+      </Description>
+      <Dodge_Reduce>0.94</Dodge_Reduce>
+      <Durability>55</Durability>
+      <Fatigue_Cost>1.08</Fatigue_Cost>
+      <Initiative_Reduce>0.89</Initiative_Reduce>
+      <Parry_Reduce>0.94</Parry_Reduce>
+      <Sprites>17</Sprites>
+      <Stamina_Reduce>0.84</Stamina_Reduce>
+      <Value>350</Value>
   </Armor>
   <Armor name="Galea">
     <Tier>Three</Tier>
@@ -44,24 +44,24 @@
   </ArmorSkillEnum>
   <ArmorSkillEnum name ="Light_Lamellar">
     <Armor name="Goblin Cap">
-    <Tier>Five</Tier>
-    <AP_Reduce>0.93</AP_Reduce>
-    <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.98</Block_Reduce>
-    <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>1.03</Damage_Reduction>
-    <Description>
-      Just a goblin cap. 
-    </Description>
-    <Dodge_Reduce>0.98</Dodge_Reduce>
-    <Durability>5</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>0.98</Initiative_Reduce>
-    <Parry_Reduce>0.98</Parry_Reduce>
-    <Sprites>4</Sprites>
-    <Stamina_Reduce>0.98</Stamina_Reduce>
-    <Value>30</Value>
+      <Tier>Five</Tier>
+      <AP_Reduce>0.93</AP_Reduce>
+      <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
+      <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
+      <Block_Reduce>0.98</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>1.03</Damage_Reduction>
+      <Description>
+        Just a goblin cap. 
+      </Description>
+      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Durability>5</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.98</Initiative_Reduce>
+      <Parry_Reduce>0.98</Parry_Reduce>
+      <Sprites>4</Sprites>
+      <Stamina_Reduce>0.98</Stamina_Reduce>
+      <Value>30</Value>
   </Armor>
   <Armor name="Goblin Cap">
     <Tier>Four</Tier>

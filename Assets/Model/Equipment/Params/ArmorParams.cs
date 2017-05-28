@@ -22,6 +22,6 @@ namespace Model.Equipment
         public double StaminaReduce { get; set; }
         public EquipmentTierEnum Tier { get; set; }
         public ArmorTypeEnum Type { get; set; }
-        public int Value { get; set; }
+        public double Value { get; set; }
     }
 }

@@ -134,7 +134,6 @@ namespace Controller.Managers
                 var target = e.Target.Model.Current as GenericCharacterController;
                 e.Action.ProcessAbility(source.Model, target.Model);
             }
-            
         }
 
         private void HandleShowPotentialPathEvent(ShowPotentialPathEvent e)

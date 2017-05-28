@@ -32,6 +32,6 @@ namespace Model.Equipment
         public EquipmentTierEnum Tier { get; set; }
         public WeaponTypeEnum Type { get; set; }
         public WeaponUseEnum Use { get; set; }
-        public int Value { get; set; }
+        public double Value { get; set; }
     }
 }

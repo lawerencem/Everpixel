@@ -7,11 +7,13 @@ namespace Model.Characters
 {
     public class GenericCharacter : AbstractCharacter<CharacterTypeEnum>
     {
+        public GenericArmor Armor { get; set; }
         public Dictionary<ClassEnum, GenericClass> BaseClasses { get; set; }
         public int CurrentAP { get; set; }
         public int CurrentHP { get; set; }
         public int CurrentMorale { get; set; }
         public int CurrentStamina { get; set; }
+        public GenericHelm Helm { get; set; }
         public GenericWeapon LWeapon { get; set; }
         public GenericWeapon RWeapon { get; set; }
         public List<PrimaryStatModifier> PStatMods { get; set; }

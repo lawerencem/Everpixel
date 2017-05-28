@@ -19,14 +19,26 @@ namespace Model.Equipment
         public double FatigueCost { get; set; }
         public double FatigueReduce { get; set; }
         public double InitiativeReduce { get; set; }
+        public double MeleeBlockChance { get; set; }
         public double ParryMod { get; set; }
         public double RangeMod { get; set; }
         public double ShieldDamage { get; set; }
+        public WeaponSkillEnum Skill { get; set; }
 
 
         public GenericWeapon() : base(SlotEnum.Weapon, EquipmentTypeEnum.Held)
         {
             this.Abilities = new List<WeaponAbility>();
+        }
+
+        public bool IsTypeOfShield()
+        {
+            if (this.Skill == WeaponSkillEnum.Small_Shield ||
+                this.Skill == WeaponSkillEnum.Medium_Shield ||
+                this.Skill == WeaponSkillEnum.Large_Shield)
+                return true;
+            else
+                return false;
         }
     }
 }

@@ -52,8 +52,6 @@ namespace Model.Characters
             var secondary = GetSecondaryStats(character.PrimaryStats);
             character.SecondaryStats = secondary;
             BuildClassSecondaryStats(character);
-            var slots = GetSlotCollection();
-            character.Slots = slots;
             character.Type = c.Type;
             character.CurrentAP = character.SecondaryStats.MaxAP;
             character.CurrentHP = character.SecondaryStats.MaxHP;

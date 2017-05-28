@@ -50,8 +50,8 @@ namespace Model.Equipment.XML
 
         protected override void HandleIndex(string name, string skill, string param, string value, ref EquipmentTierEnum tier)
         {
-            int v = 0;
-            int.TryParse(value, out v);
+            double v = 0;
+            double.TryParse(value, out v);
 
             switch (param)
             {
@@ -64,7 +64,7 @@ namespace Model.Equipment.XML
                 case ("Description"): { } break;
                 case ("Dodge_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Dodge_Reduce, v, tier); } break;
                 case ("Durability"): { HandleStatsFromFile(name, ArmorStatsEnum.Durability, v, tier); } break;
-                case ("Fatigue_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Fatigue_Reduce, v, tier); } break;
+                case ("Fatigue_Cost"): { HandleStatsFromFile(name, ArmorStatsEnum.Fatigue_Cost, v, tier); } break;
                 case ("Initiative_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Initiative_Reduce, v, tier); } break;
                 case ("Parry_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Parry_Reduce, v, tier); } break;
                 case ("Sprites"): { HandleSpritesFromFile(name, value, tier); } break;
@@ -73,7 +73,7 @@ namespace Model.Equipment.XML
             }
         }
 
-        private void HandleStatsFromFile(string name, ArmorStatsEnum x, int v, EquipmentTierEnum tier)
+        private void HandleStatsFromFile(string name, ArmorStatsEnum x, double v, EquipmentTierEnum tier)
         {
             var stats = ArmorParamTable.Instance;
             var key = name + "_" + tier.ToString();
@@ -85,8 +85,8 @@ namespace Model.Equipment.XML
                 case (ArmorStatsEnum.Damage_Ignore): { stats.Table[key].DamageIgnore = v; } break;
                 case (ArmorStatsEnum.Damage_Reduction): { stats.Table[key].DamageReduction = v; } break;
                 case (ArmorStatsEnum.Dodge_Reduce): { stats.Table[key].DodgeMod = v; } break;
-                case (ArmorStatsEnum.Durability): { stats.Table[key].Durability = v; } break;
-                case (ArmorStatsEnum.Fatigue_Reduce): { stats.Table[key].FatigueCost = v; } break;
+                case (ArmorStatsEnum.Durability): { stats.Table[key].Durability = (int)v; } break;
+                case (ArmorStatsEnum.Fatigue_Cost): { stats.Table[key].FatigueCost = v; } break;
                 case (ArmorStatsEnum.Initiative_Reduce): { stats.Table[key].InitiativeReduce = v; } break;
                 case (ArmorStatsEnum.Parry_Reduce): { stats.Table[key].ParryReduce = v; } break;
                 case (ArmorStatsEnum.Stamina_Reduce): { stats.Table[key].StaminaReduce = v; } break;

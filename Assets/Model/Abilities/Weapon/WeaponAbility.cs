@@ -60,8 +60,14 @@ namespace Model.Abilities
 
         public override void ProcessAbility(GenericCharacter s, GenericCharacter t)
         {
-            var attackFlags = new AttackEventFlags();
-            CombatReferee.Instance.ProcessAttack(attackFlags, this, s, t);
+            
+        }
+
+        public virtual void ProcessMelee(GenericCharacter s, GenericCharacter t, AttackEventFlags f)
+        {
+            CombatReferee.Instance.ProcessMeleeFlags(f, this, s, t);
+            int dmg = CombatReferee.Instance.ProcessDamage(f, this, s, t);
+            CombatReferee.Instance.ApplyDamage(dmg, f, this, s, t);
         }
     }
 }

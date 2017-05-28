@@ -14,7 +14,8 @@ namespace Model.Abilities
 
         public override void ProcessAbility(GenericCharacter s, GenericCharacter t)
         {
-            base.ProcessAbility(s, t);
+            var attackEventFlags = new AttackEventFlags();
+            base.ProcessMelee(s, t, attackEventFlags);
         }
     }
 }

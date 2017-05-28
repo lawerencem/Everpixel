@@ -11,7 +11,7 @@ namespace Model.Equipment
         Damage_Reduction,
         Dodge_Reduce,
         Durability,
-        Fatigue_Reduce,
+        Fatigue_Cost,
         Initiative_Reduce,
         Parry_Reduce,
         Stamina_Reduce,

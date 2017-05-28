@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.5.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -172,6 +170,8 @@
     <Compile Include="Assets\Model\Combat\AttackEventFlags.cs" />
     <Compile Include="Assets\Model\Combat\CombatReferee.cs" />
     <Compile Include="Assets\Model\Cultures\CultureEnum.cs" />
+    <Compile Include="Assets\Model\Equipment\Builders\ArmorBuilder.cs" />
+    <Compile Include="Assets\Model\Equipment\Builders\HelmBuilder.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\WeaponBuilder.cs" />
     <Compile Include="Assets\Model\Equipment\Enums\ArmorSkillEnum.cs" />
     <Compile Include="Assets\Model\Equipment\Enums\ArmorStatsEnum.cs" />
@@ -182,15 +182,18 @@
     <Compile Include="Assets\Model\Equipment\Enums\WeaponStatsEnum.cs" />
     <Compile Include="Assets\Model\Equipment\Enums\WeaponTypeEnum.cs" />
     <Compile Include="Assets\Model\Equipment\Enums\WeaponUseEnum.cs" />
+    <Compile Include="Assets\Model\Equipment\Factories\ArmorFactory.cs" />
+    <Compile Include="Assets\Model\Equipment\Factories\HelmFactory.cs" />
     <Compile Include="Assets\Model\Equipment\Factories\WeaponFactory.cs" />
     <Compile Include="Assets\Model\Equipment\Params\ArmorParams.cs" />
-    <Compile Include="Assets\Model\Equipment\Params\ConcreteWeaponStats.cs" />
     <Compile Include="Assets\Model\Equipment\Params\WeaponParams.cs" />
     <Compile Include="Assets\Model\Equipment\Tables\ArmorParamTable.cs" />
     <Compile Include="Assets\Model\Equipment\Tables\EquipmentSpritesTable.cs" />
     <Compile Include="Assets\Model\Equipment\Tables\WeaponParamTable.cs" />
     <Compile Include="Assets\Model\Equipment\Types\AbstractEquipment.cs" />
+    <Compile Include="Assets\Model\Equipment\Types\GenericArmor.cs" />
     <Compile Include="Assets\Model\Equipment\Types\GenericEquipment.cs" />
+    <Compile Include="Assets\Model\Equipment\Types\GenericHelm.cs" />
     <Compile Include="Assets\Model\Equipment\Types\GenericWeapon.cs" />
     <Compile Include="Assets\Model\Equipment\XML\ArmorReader.cs" />
     <Compile Include="Assets\Model\Equipment\XML\GenericEquipmentReader.cs" />

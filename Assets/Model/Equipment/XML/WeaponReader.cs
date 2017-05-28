@@ -51,8 +51,8 @@ namespace Model.Equipment.XML
 
         protected override void HandleIndex(string name, string skill, string param, string value, ref EquipmentTierEnum tier)
         {
-            int v = 0;
-            int.TryParse(value, out v);
+            double v = 0;
+            double.TryParse(value, out v);
 
             switch (param)
             {
@@ -70,7 +70,7 @@ namespace Model.Equipment.XML
                 case ("Max_Durability"): { HandleStatsFromFile(name, WeaponStatsEnum.Max_Durability, v, tier); } break;
                 case ("Melee_Block_Chance"): { HandleStatsFromFile(name, WeaponStatsEnum.Melee_Block_Chance, v, tier); } break;
                 case ("Parry_Chance"): { HandleStatsFromFile(name, WeaponStatsEnum.Parry_Chance, v, tier); } break;
-                case ("Parry_Reduce"): { HandleStatsFromFile(name, WeaponStatsEnum.Parry_Mod, v, tier); } break;
+                case ("Parry_Mod"): { HandleStatsFromFile(name, WeaponStatsEnum.Parry_Mod, v, tier); } break;
                 case ("Range_Mod"): { HandleStatsFromFile(name, WeaponStatsEnum.Range_Mod, v, tier); } break;
                 case ("Ranged_Block_Chance"): { HandleStatsFromFile(name, WeaponStatsEnum.Ranged_Block_Chance, v, tier); } break;
                 case ("Sprites"): { HandleSpritesFromFile(name, value, tier); } break;
@@ -83,7 +83,7 @@ namespace Model.Equipment.XML
             }
         }
 
-        private void HandleStatsFromFile(string name, WeaponStatsEnum x, int v, EquipmentTierEnum tier)
+        private void HandleStatsFromFile(string name, WeaponStatsEnum x, double v, EquipmentTierEnum tier)
         {
             var stats = WeaponParamTable.Instance;
             var key = name + "_" + tier.ToString();
@@ -95,14 +95,14 @@ namespace Model.Equipment.XML
                 case (WeaponStatsEnum.Armor_Pierce): { stats.Table[key].ArmorPierce = v; } break;
                 case (WeaponStatsEnum.AP_Reduce): { stats.Table[key].APReduce = v; } break;
                 case (WeaponStatsEnum.Block_Ignore): { stats.Table[key].BlockIgnore = v; } break;
-                case (WeaponStatsEnum.Damage): { stats.Table[key].Damage = v; } break;
+                case (WeaponStatsEnum.Damage): { stats.Table[key].Damage = (int)v; } break;
                 case (WeaponStatsEnum.Dodge_Reduce): { stats.Table[key].DodgeMod = v; } break;
-                case (WeaponStatsEnum.Max_Durability): { stats.Table[key].Durability = v; } break;
+                case (WeaponStatsEnum.Max_Durability): { stats.Table[key].Durability = (int)v; } break;
                 case (WeaponStatsEnum.Fatigue_Cost): { stats.Table[key].FatigueCost = v; } break;
                 case (WeaponStatsEnum.Initiative_Reduce): { stats.Table[key].InitiativeReduce = v; } break;
                 case (WeaponStatsEnum.Melee_Block_Chance): { stats.Table[key].MeleeBlockChance = v; } break;
                 case (WeaponStatsEnum.Parry_Mod): { stats.Table[key].ParryMod = v; } break;
-                case (WeaponStatsEnum.Range_Mod): { stats.Table[key].RangeMod = v; } break;
+                case (WeaponStatsEnum.Range_Mod): { stats.Table[key].RangeMod = (int)v; } break;
                 case (WeaponStatsEnum.Ranged_Block_Chance): { stats.Table[key].RangeBlockChance = v; } break;
                 case (WeaponStatsEnum.Shield_Damage): { stats.Table[key].ShieldDamage = v; } break;
                 case (WeaponStatsEnum.Stamina_Reduce): { stats.Table[key].StaminaReduce = v; } break;

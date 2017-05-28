@@ -37,24 +37,6 @@ namespace Model.Characters
             return new SecondaryStats(p);
         }
 
-        private SlotCollection GetSlotCollection()
-        {
-            var collection = new SlotCollection();
-            collection.Add(new GenericSlot(SlotEnum.Ammo));
-            collection.Add(new GenericSlot(SlotEnum.Belt));
-            collection.Add(new GenericSlot(SlotEnum.Feet));
-            collection.Add(new GenericSlot(SlotEnum.Hands));
-            collection.Add(new GenericSlot(SlotEnum.Head));
-            collection.Add(new GenericSlot(SlotEnum.Mantle));
-            collection.Add(new GenericSlot(SlotEnum.Necklace));
-            collection.Add(new GenericSlot(SlotEnum.Ring));
-            collection.Add(new GenericSlot(SlotEnum.Ring));
-            collection.Add(new GenericSlot(SlotEnum.Torso));
-            collection.Add(new GenericSlot(SlotEnum.Weapon));
-            collection.Add(new GenericSlot(SlotEnum.Weapon));
-            return collection;
-        }
-
         private GenericCharacter BuildHelper(CharacterParams c)
         {
             var character = new GenericCharacter();
@@ -67,13 +49,12 @@ namespace Model.Characters
                 var secondary = GetSecondaryStats(primary);
                 character.SecondaryStats = secondary;
                 BuildClassSecondaryStats(character);
-                var slots = GetSlotCollection();
-                character.Slots = slots;
                 character.Type = c.Type;
                 character.CurrentAP = character.SecondaryStats.MaxAP;
                 character.CurrentHP = character.SecondaryStats.MaxHP;
                 character.CurrentMorale = character.SecondaryStats.Morale;
                 character.CurrentStamina = character.SecondaryStats.Stamina;
+                this.BuildArmorHelper(character, c);
                 this.BuildWeaponHelper(character, c);
                 return character;
             }
@@ -171,6 +152,20 @@ namespace Model.Characters
             {
                 var weapon = WeaponFactory.Instance.CreateNewObject(p.RWeapon.Name, p.RWeapon.Tier);
                 c.RWeapon = weapon;
+            }
+        }
+
+        private void BuildArmorHelper(GenericCharacter c, CharacterParams p)
+        {
+            if (p.Armor != null)
+            {
+                var armor = ArmorFactory.Instance.CreateNewObject(p.Armor.Name, p.Armor.Tier);
+                c.Armor = armor;
+            }
+            if (p.Helm != null)
+            {
+                var helm = HelmFactory.Instance.CreateNewObject(p.Helm.Name, p.Helm.Tier);
+                c.Helm = helm;
             }
         }
     }

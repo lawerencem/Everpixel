@@ -26,10 +26,12 @@ namespace Model.Equipment
             weapon.FatigueCost = wStats.FatigueCost;
             weapon.InitiativeReduce = wStats.InitiativeReduce;
             weapon.MaxDurability = wStats.Durability;
+            weapon.MeleeBlockChance = wStats.MeleeBlockChance;
             weapon.Name = wStats.Name;
             weapon.ParryMod = wStats.ParryMod;
             weapon.RangeMod = wStats.RangeMod;
             weapon.ShieldDamage = wStats.ShieldDamage;
+            weapon.Skill = wStats.Skill;
             weapon.Tier = wStats.Tier;
             return weapon;
         }
