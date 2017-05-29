@@ -1,7 +1,10 @@
-﻿using Controller.Characters;
+﻿using Assets.Scripts;
+using Controller.Characters;
 using Controller.Map;
 using Generics.Hex;
 using Generics.Scripts;
+using Model.Combat;
+using Model.Events.Combat;
 using Model.Map;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +28,9 @@ namespace Controller.Managers.Map
         private const string MORALE = "MoraleTextTag";
         private const string R_WEAP = "RWeaponTextTag";
         private const string STAM = "StaminaTextTag";
+
+        private readonly Color RED = new Color(255, 0, 0, 150);
+        private readonly Color WHITE = new Color(255, 255, 255, 255);
 
         private List<GameObject> _boxImages = new List<GameObject>();
         private List<GameObject> _decorateTileFamily = new List<GameObject>();
@@ -99,6 +105,35 @@ namespace Controller.Managers.Map
             }
         }
 
+        public void DisplayHitStatsEvent(DisplayHitStatsEvent e)
+        {
+            this.ProcessTextToDisplay(e);   
+            // TODO: Any effects that go with it...
+        }
+
+        private void DisplayText(string toDisplay, DisplayHitStatsEvent e, Color color, float yOffset = 0)
+        {
+            var canvas = GameObject.FindGameObjectWithTag("MainCanvas");
+            var display = new GameObject();
+            var text = display.AddComponent<Text>();
+            var position = e.Hit.Target.transform.position;
+            position.y += yOffset;
+            text.alignment = TextAnchor.MiddleCenter;
+            text.color = color;
+            text.fontSize = 20;
+            text.rectTransform.position = position;
+            text.rectTransform.SetParent(canvas.transform);
+            text.rectTransform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+            text.name = "Hit Text";
+            text.text = toDisplay;
+            Font fontToUse = Resources.Load("Fonts/8bitOperatorPlus8-Bold") as Font;
+            text.font = fontToUse;
+            var script = display.AddComponent<DestroyByLifetime>();
+            script.lifetime = 3;
+            var floating = display.AddComponent<FloatingText>();
+            floating.Init(display);
+        }
+
         private void DecorateFamilyOfTiles(TileController tile, Sprite deco)
         {
             var tView = new GameObject();
@@ -125,6 +160,22 @@ namespace Controller.Managers.Map
             color.a = 0.50f;
             renderer.color = color;
             this._singleTile = tView;
+        }
+
+        private void ProcessTextToDisplay(DisplayHitStatsEvent e)
+        {
+            if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge))
+                this.DisplayText("Dodge", e, WHITE, 0.35f);
+            else if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Parry))
+                this.DisplayText("Parry", e, WHITE, 0.35f);
+            else
+            {
+                if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Block))
+                    this.DisplayText("Block", e, WHITE, 0.45f);
+                if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
+                    this.DisplayText("Critical!", e, RED, 0.35f);
+                this.DisplayText(e.Hit.Dmg.ToString(), e, RED, 0.025f);
+            }
         }
 
         private void SetBoxImg(string boxTag, GenericCharacterController c)

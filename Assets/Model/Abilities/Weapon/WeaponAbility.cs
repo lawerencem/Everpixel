@@ -58,16 +58,14 @@ namespace Model.Abilities
             return ability;
         }
 
-        public override void ProcessAbility(GenericCharacter s, GenericCharacter t)
+        public override void ProcessAbility(HitInfo hit)
         {
             
         }
 
-        public virtual void ProcessMelee(GenericCharacter s, GenericCharacter t, AttackEventFlags f)
+        public virtual void ProcessMelee(HitInfo hit)
         {
-            CombatReferee.Instance.ProcessMeleeFlags(f, this, s, t);
-            int dmg = CombatReferee.Instance.ProcessDamage(f, this, s, t);
-            CombatReferee.Instance.ApplyDamage(dmg, f, this, s, t);
+            CombatReferee.Instance.ProcessMelee(hit);
         }
     }
 }

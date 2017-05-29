@@ -29,6 +29,20 @@ namespace Model.Equipment
         public GenericWeapon() : base(SlotEnum.Weapon, EquipmentTypeEnum.Held)
         {
             this.Abilities = new List<WeaponAbility>();
+            this.Accuracy = 1;
+            this.APReduce = 1;
+            this.ArmorIgnore = 1;
+            this.ArmorPierce = 1;
+            this.BlockIgnore = 1;
+            this.Damage = 0;
+            this.Durability = 0;
+            this.FatigueCost = 1;
+            this.FatigueReduce = 0;
+            this.InitiativeReduce = 1;
+            this.MaxDurability = 0;
+            this.ParryMod = 1;
+            this.RangeMod = 0;
+            this.ShieldDamage = 1;
         }
 
         public bool IsTypeOfShield()

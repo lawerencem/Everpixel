@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.5.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -96,6 +98,7 @@
     <Compile Include="Assets\Generics\Pair.cs" />
     <Compile Include="Assets\Generics\Scripts\BobbingScript.cs" />
     <Compile Include="Assets\Generics\Scripts\DestroyByLifetime.cs" />
+    <Compile Include="Assets\Generics\Scripts\FloatingText.cs" />
     <Compile Include="Assets\Generics\Scripts\TileMoveScript.cs" />
     <Compile Include="Assets\Generics\Utilities\Count.cs" />
     <Compile Include="Assets\Generics\Utilities\DeepClone.cs" />
@@ -169,6 +172,7 @@
     <Compile Include="Assets\Model\Classes\XML\ClassReader.cs" />
     <Compile Include="Assets\Model\Combat\AttackEventFlags.cs" />
     <Compile Include="Assets\Model\Combat\CombatReferee.cs" />
+    <Compile Include="Assets\Model\Combat\HitInfo.cs" />
     <Compile Include="Assets\Model\Cultures\CultureEnum.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\ArmorBuilder.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\HelmBuilder.cs" />
@@ -248,6 +252,7 @@
     <Compile Include="Assets\View\Equipment\EquipmentBridge.cs" />
     <Compile Include="Assets\View\Equipment\EquipmentView.cs" />
     <Compile Include="Assets\View\Equipment\WeaponView.cs" />
+    <Compile Include="Assets\Model\Events\Combat\DisplayHitStatsEvent.cs" />
     <Compile Include="Assets\View\Events\GUIEndTurnEvent.cs" />
     <Compile Include="Assets\View\Events\GUIEvent.cs" />
     <Compile Include="Assets\View\Events\GUIEventEnum.cs" />

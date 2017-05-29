@@ -12,9 +12,9 @@ namespace Model.Abilities
     {
         public Aim() : base(WeaponAbilitiesEnum.Aim) { }
 
-        public override void ProcessAbility(GenericCharacter s, GenericCharacter t)
+        public override void ProcessAbility(HitInfo hit)
         {
-            base.ProcessAbility(s, t);
+            
         }
     }
 }

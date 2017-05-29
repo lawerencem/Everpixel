@@ -8,7 +8,7 @@
       <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
       <Block_Reduce>0.94</Block_Reduce>
       <Damage_Ignore>5</Damage_Ignore>
-      <Damage_Reduction>1.14</Damage_Reduction>
+      <Damage_Reduction>0.86</Damage_Reduction>
       <Description>
         This helm is of the type favored by legionnaires.  It provides solid defense without weighing much.
       </Description>
@@ -28,7 +28,7 @@
     <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
     <Block_Reduce>0.95</Block_Reduce>
     <Damage_Ignore>6</Damage_Ignore>
-    <Damage_Reduction>1.15</Damage_Reduction>
+    <Damage_Reduction>0.85</Damage_Reduction>
     <Description>
       This helm is of the type favored by legionnaires.  It provides solid defense without weighing much.
     </Description>
@@ -50,7 +50,7 @@
       <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
       <Block_Reduce>0.98</Block_Reduce>
       <Damage_Ignore>1</Damage_Ignore>
-      <Damage_Reduction>1.03</Damage_Reduction>
+      <Damage_Reduction>0.97</Damage_Reduction>
       <Description>
         Just a goblin cap. 
       </Description>
@@ -70,7 +70,7 @@
     <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
     <Block_Reduce>0.99</Block_Reduce>
     <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>1.04</Damage_Reduction>
+    <Damage_Reduction>0.96</Damage_Reduction>
     <Description>
       Just a goblin cap.
     </Description>
@@ -90,7 +90,7 @@
     <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
     <Block_Reduce>1</Block_Reduce>
     <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>1.05</Damage_Reduction>
+    <Damage_Reduction>0.95</Damage_Reduction>
     <Description>
       Just a goblin cap.
     </Description>
@@ -110,7 +110,7 @@
     <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
     <Block_Reduce>1</Block_Reduce>
     <Damage_Ignore>2</Damage_Ignore>
-    <Damage_Reduction>1.05</Damage_Reduction>
+    <Damage_Reduction>0.95</Damage_Reduction>
     <Description>
       Just a goblin cap.
     </Description>
@@ -130,7 +130,7 @@
     <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
     <Block_Reduce>0.87</Block_Reduce>
     <Damage_Ignore>2</Damage_Ignore>
-    <Damage_Reduction>1.14</Damage_Reduction>
+    <Damage_Reduction>0.86</Damage_Reduction>
     <Description>
       While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection. 
     </Description>
@@ -150,7 +150,7 @@
     <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
     <Block_Reduce>0.88</Block_Reduce>
     <Damage_Ignore>2</Damage_Ignore>
-    <Damage_Reduction>1.15</Damage_Reduction>
+    <Damage_Reduction>0.85</Damage_Reduction>
     <Description>
       While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection.
     </Description>
@@ -170,7 +170,7 @@
     <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
     <Block_Reduce>0.90</Block_Reduce>
     <Damage_Ignore>2</Damage_Ignore>
-    <Damage_Reduction>1.16</Damage_Reduction>
+    <Damage_Reduction>0.84</Damage_Reduction>
     <Description>
       While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection.
     </Description>
@@ -190,7 +190,7 @@
     <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
     <Block_Reduce>0.90</Block_Reduce>
     <Damage_Ignore>3</Damage_Ignore>
-    <Damage_Reduction>1.18</Damage_Reduction>
+    <Damage_Reduction>0.82</Damage_Reduction>
     <Description>
       While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection.
     </Description>
@@ -212,7 +212,7 @@
     <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
     <Block_Reduce>0.95</Block_Reduce>
     <Damage_Ignore>2</Damage_Ignore>
-    <Damage_Reduction>1.08</Damage_Reduction>
+    <Damage_Reduction>0.92</Damage_Reduction>
     <Description>
       A simple mail coif.  It doesn't protect the face much, but it's sure better than nothing.
     </Description>
@@ -232,7 +232,7 @@
     <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
     <Block_Reduce>0.95</Block_Reduce>
     <Damage_Ignore>2</Damage_Ignore>
-    <Damage_Reduction>1.10</Damage_Reduction>
+    <Damage_Reduction>0.90</Damage_Reduction>
     <Description>
       A simple mail coif.  It offers decent protection for its weight.
     </Description>
@@ -252,7 +252,7 @@
     <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
     <Block_Reduce>0.92</Block_Reduce>
     <Damage_Ignore>4</Damage_Ignore>
-    <Damage_Reduction>1.12</Damage_Reduction>
+    <Damage_Reduction>0.88</Damage_Reduction>
     <Description>
       This mail has seen better days, but it still offers decent protection.
     </Description>
@@ -272,7 +272,7 @@
     <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
     <Block_Reduce>0.93</Block_Reduce>
     <Damage_Ignore>4</Damage_Ignore>
-    <Damage_Reduction>1.13</Damage_Reduction>
+    <Damage_Reduction>0.87</Damage_Reduction>
     <Description>
       This mail has seen better days, but it still offers decent protection.
     </Description>
@@ -292,7 +292,7 @@
     <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
     <Block_Reduce>0.93</Block_Reduce>
     <Damage_Ignore>4</Damage_Ignore>
-    <Damage_Reduction>1.15</Damage_Reduction>
+    <Damage_Reduction>0.85</Damage_Reduction>
     <Description>
       This solid mail offers great protection for the weight.  
     </Description>
@@ -314,7 +314,7 @@
     <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
     <Block_Reduce>0.72</Block_Reduce>
     <Damage_Ignore>7</Damage_Ignore>
-    <Damage_Reduction>1.48</Damage_Reduction>
+    <Damage_Reduction>0.52</Damage_Reduction>
     <Description>
       Even rusty and decaying, this helm still provides good defense. Conveniently, parts of the eye holes have rusted out.
     </Description>
@@ -334,7 +334,7 @@
     <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
     <Block_Reduce>0.74</Block_Reduce>
     <Damage_Ignore>8</Damage_Ignore>
-    <Damage_Reduction>1.50</Damage_Reduction>
+    <Damage_Reduction>0.50</Damage_Reduction>
     <Description>
       This helm looks like someone took a bucket and nailed holes through it, and then called it a helm.  Whatever - it
       still provides solid protection.
@@ -355,7 +355,7 @@
     <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
     <Block_Reduce>0.75</Block_Reduce>
     <Damage_Ignore>9</Damage_Ignore>
-    <Damage_Reduction>1.54</Damage_Reduction>
+    <Damage_Reduction>0.46</Damage_Reduction>
     <Description>
       This is a quality-made helm.  It offers incredible protection, but the lack of curvature can be susceptible to
       piercing attacks.
@@ -376,7 +376,7 @@
     <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
     <Block_Reduce>0.60</Block_Reduce>
     <Damage_Ignore>18</Damage_Ignore>
-    <Damage_Reduction>1.20</Damage_Reduction>
+    <Damage_Reduction>0.80</Damage_Reduction>
     <Description>
       This jousting helm was made with tournaments in mind.  It isn't flexible, but it is light.  Since it was made with
       jousting in mind, the curved nature of it provides superior piercing protection.
@@ -397,11 +397,11 @@
     <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
     <Block_Reduce>0.76</Block_Reduce>
     <Damage_Ignore>6</Damage_Ignore>
-    <Damage_Reduction>1.20</Damage_Reduction>
+    <Damage_Reduction>0.80</Damage_Reduction>
     <Description>
       Broken and well-used, this mask is still offers effective protection.  For the parts of the head it covers, anyways.
     </Description>
-    <Dodge_Reduce>076</Dodge_Reduce>
+    <Dodge_Reduce>0.76</Dodge_Reduce>
     <Durability>50</Durability>
     <Fatigue_Cost>1.20</Fatigue_Cost>
     <Initiative_Reduce>0.76</Initiative_Reduce>
@@ -417,7 +417,7 @@
     <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
     <Block_Reduce>0.78</Block_Reduce>
     <Damage_Ignore>7</Damage_Ignore>
-    <Damage_Reduction>1.22</Damage_Reduction>
+    <Damage_Reduction>0.78</Damage_Reduction>
     <Description>
       Not pretty, but this mask coves the top-half of the head quite well.  Effective protection against wild overhead swings.
     </Description>
@@ -437,7 +437,7 @@
     <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
     <Block_Reduce>0.75</Block_Reduce>
     <Damage_Ignore>12</Damage_Ignore>
-    <Damage_Reduction>1.34</Damage_Reduction>
+    <Damage_Reduction>0.74</Damage_Reduction>
     <Description>
       This helmet is extremely heavy.  For those with the stamina to wear it, it offers exceptional protection.
     </Description>
@@ -457,7 +457,7 @@
     <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
     <Block_Reduce>0.70</Block_Reduce>
     <Damage_Ignore>15</Damage_Ignore>
-    <Damage_Reduction>1.38</Damage_Reduction>
+    <Damage_Reduction>0.62</Damage_Reduction>
     <Description>
       This helmet is ludicrously-heavy.  For anyone strong enough to wear it, it offers peerless protection.
     </Description>
@@ -477,7 +477,7 @@
     <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
     <Block_Reduce>0.55</Block_Reduce>
     <Damage_Ignore>25</Damage_Ignore>
-    <Damage_Reduction>1.55</Damage_Reduction>
+    <Damage_Reduction>0.45</Damage_Reduction>
     <Description>
       This orcish plate consists of a few pieces of heavy metal slabs melted over some chain mail.  It's heavy, and doesn't allow
       for much movement...but offers incredible protection.
@@ -498,7 +498,7 @@
     <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
     <Block_Reduce>0.55</Block_Reduce>
     <Damage_Ignore>28</Damage_Ignore>
-    <Damage_Reduction>1.60</Damage_Reduction>
+    <Damage_Reduction>0.40</Damage_Reduction>
     <Description>
       This is orcish plate mail favored by the best orcish troops.  It is quality-made, consisting of heavy slabs of metal 
       essentially melted together.  It affords excellent protection for those strong enough to wear it.
@@ -519,7 +519,7 @@
     <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
     <Block_Reduce>0.62</Block_Reduce>
     <Damage_Ignore>18</Damage_Ignore>
-    <Damage_Reduction>1.48</Damage_Reduction>
+    <Damage_Reduction>0.42</Damage_Reduction>
     <Description>
       Even rusty and decaying, this armor still provides good defense. Unfortunately, it's not as durable
       as it once was...
@@ -540,7 +540,7 @@
     <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
     <Block_Reduce>0.63</Block_Reduce>
     <Damage_Ignore>20</Damage_Ignore>
-    <Damage_Reduction>1.50</Damage_Reduction>
+    <Damage_Reduction>0.50</Damage_Reduction>
     <Description>
       This armor doesn't represent the finest craftsmanship, but it still offers excellent protection.
     </Description>
@@ -560,7 +560,7 @@
     <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
     <Block_Reduce>0.65</Block_Reduce>
     <Damage_Ignore>22</Damage_Ignore>
-    <Damage_Reduction>1.52</Damage_Reduction>
+    <Damage_Reduction>0.48</Damage_Reduction>
     <Description>
       This is a fine example of plate mail.  It does restrict movement, but it offers excellent protection.
     </Description>
@@ -580,7 +580,7 @@
     <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
     <Block_Reduce>0.70</Block_Reduce>
     <Damage_Ignore>13</Damage_Ignore>
-    <Damage_Reduction>1.40</Damage_Reduction>
+    <Damage_Reduction>0.60</Damage_Reduction>
     <Description>
       This sturdy helm provides excellent protection and doesn't restrict too much movement.  The curved nature of it
       provides better-than-usual protection against piercing attacks.
@@ -603,7 +603,7 @@
     <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
     <Block_Reduce>1</Block_Reduce>
     <Damage_Ignore>3</Damage_Ignore>
-    <Damage_Reduction>1.05</Damage_Reduction>
+    <Damage_Reduction>0.95</Damage_Reduction>
     <Description>
       These shoulder pads have been cobbled together using a handful of dinosaur scales.  
     </Description>
@@ -623,7 +623,7 @@
       <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
       <Block_Reduce>1</Block_Reduce>
       <Damage_Ignore>5</Damage_Ignore>
-      <Damage_Reduction>1.10</Damage_Reduction>
+      <Damage_Reduction>0.90</Damage_Reduction>
       <Description>
         Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
         not very durable...
@@ -644,7 +644,7 @@
       <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
       <Block_Reduce>1</Block_Reduce>
       <Damage_Ignore>7</Damage_Ignore>
-      <Damage_Reduction>1.14</Damage_Reduction>
+      <Damage_Reduction>0.86</Damage_Reduction>
       <Description>
         Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
         not very durable...
@@ -665,7 +665,7 @@
       <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
       <Block_Reduce>1</Block_Reduce>
       <Damage_Ignore>8</Damage_Ignore>
-      <Damage_Reduction>1.20</Damage_Reduction>
+      <Damage_Reduction>0.80</Damage_Reduction>
       <Description>
         Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
         not very durable...
@@ -688,7 +688,7 @@
     <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
     <Block_Reduce>0.99</Block_Reduce>
     <Damage_Ignore>0</Damage_Ignore>
-    <Damage_Reduction>1.01</Damage_Reduction>
+    <Damage_Reduction>0.99</Damage_Reduction>
     <Description>
       This cap is all style and no practicality...except that it does offer slight protection against poison.
     </Description>
@@ -708,7 +708,7 @@
     <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
     <Block_Reduce>1</Block_Reduce>
     <Damage_Ignore>0</Damage_Ignore>
-    <Damage_Reduction>1.02</Damage_Reduction>
+    <Damage_Reduction>0.98</Damage_Reduction>
     <Description>
       This cap is all style and no practicality...except that it does offer slight protection against poison.
     </Description>
@@ -728,7 +728,7 @@
     <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
     <Block_Reduce>1</Block_Reduce>
     <Damage_Ignore>0</Damage_Ignore>
-    <Damage_Reduction>2</Damage_Reduction>
+    <Damage_Reduction>0.98</Damage_Reduction>
     <Description>
       This cap is all style and no practicality...except that it does offer slight protection against poison.
     </Description>
@@ -748,7 +748,7 @@
     <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
     <Block_Reduce>0.97</Block_Reduce>
     <Damage_Ignore>0</Damage_Ignore>
-    <Damage_Reduction>1.01</Damage_Reduction>
+    <Damage_Reduction>0.99</Damage_Reduction>
     <Description>
       These robes don't offer much protection against attacks.  However, they are imbued with a slight magical property
       that makes the user resistant to poison.
@@ -769,7 +769,7 @@
     <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
     <Block_Reduce>0.98</Block_Reduce>
     <Damage_Ignore>0</Damage_Ignore>
-    <Damage_Reduction>1.02</Damage_Reduction>
+    <Damage_Reduction>0.98</Damage_Reduction>
     <Description>
       These robes don't offer much protection against attacks.  However, they are imbued with a slight magical property
       that makes the user resistant to poision.
@@ -790,7 +790,7 @@
     <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
     <Block_Reduce>1</Block_Reduce>
     <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>1.02</Damage_Reduction>
+    <Damage_Reduction>0.98</Damage_Reduction>
     <Description>
       These robes don't offer much protection against attacks.  However, they are imbued with a slight magical property
       that makes the user resistant to poision.
@@ -811,7 +811,7 @@
     <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
     <Block_Reduce>1</Block_Reduce>
     <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>1.03</Damage_Reduction>
+    <Damage_Reduction>0.97</Damage_Reduction>
     <Description>
       This "tunic" is basically a shirt made of patchy cloth.  It probably doesn't even offer protection against a bee sting.
     </Description>
@@ -831,7 +831,7 @@
     <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
     <Block_Reduce>1</Block_Reduce>
     <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>1.04</Damage_Reduction>
+    <Damage_Reduction>0.96</Damage_Reduction>
     <Description>
       This tunic offers minimal protection - but it's better than nothing.
     </Description>
@@ -851,7 +851,7 @@
     <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
     <Block_Reduce>1</Block_Reduce>
     <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>1.01</Damage_Reduction>
+    <Damage_Reduction>0.99</Damage_Reduction>
     <Description>
       This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
       beings that are best left alone.
@@ -872,7 +872,7 @@
     <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
     <Block_Reduce>1</Block_Reduce>
     <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>1.02</Damage_Reduction>
+    <Damage_Reduction>0.98</Damage_Reduction>
     <Description>
       This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
       beings that are best left alone.
@@ -893,7 +893,7 @@
     <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
     <Block_Reduce>1</Block_Reduce>
     <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>1.01</Damage_Reduction>
+    <Damage_Reduction>0.99</Damage_Reduction>
     <Description>
       This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
       beings that are best left alone.
@@ -914,7 +914,7 @@
     <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
     <Block_Reduce>1</Block_Reduce>
     <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>1.01</Damage_Reduction>
+    <Damage_Reduction>0.99</Damage_Reduction>
     <Description>
       This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
       beings that are best left alone.
@@ -935,7 +935,7 @@
     <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
     <Block_Reduce>1</Block_Reduce>
     <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>1.01</Damage_Reduction>
+    <Damage_Reduction>0.99</Damage_Reduction>
     <Description>
       This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
       from the nightmares that lurk in the void.
@@ -956,7 +956,7 @@
     <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
     <Block_Reduce>1</Block_Reduce>
     <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>1.01</Damage_Reduction>
+    <Damage_Reduction>0.99</Damage_Reduction>
     <Description>
       This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
       from the nightmares that lurk in the void.
@@ -977,7 +977,7 @@
     <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
     <Block_Reduce>1</Block_Reduce>
     <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>1.01</Damage_Reduction>
+    <Damage_Reduction>0.99</Damage_Reduction>
     <Description>
       This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
       from the nightmares that lurk in the void.
@@ -998,7 +998,7 @@
     <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
     <Block_Reduce>1</Block_Reduce>
     <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>1.01</Damage_Reduction>
+    <Damage_Reduction>0.99</Damage_Reduction>
     <Description>
       This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
       from the nightmares that lurk in the void.

@@ -12,6 +12,7 @@ using Model.Map;
 using System.Collections.Generic;
 using UnityEngine;
 using View.Events;
+using Model.Combat;
 
 namespace Controller.Managers
 {
@@ -56,6 +57,7 @@ namespace Controller.Managers
             {
                 case (CombatEventEnum.ActionCofirmed): { HandleAttackConfirmedEvent(e as ActionConfirmedEvent); } break;
                 case (CombatEventEnum.AttackSelected): { HandleAttackSelectedEvent(e as AttackSelectedEvent); } break;
+                case (CombatEventEnum.DisplayHitStats): { HandleDisplayHitStatsEvent(e as DisplayHitStatsEvent); } break;
                 case (CombatEventEnum.EndTurn): { HandleEndTurnEvent(e as EndTurnEvent); } break;
                 case (CombatEventEnum.HexSelectedForMove): { HandleHexSelectedForMoveEvent(e as HexSelectedForMoveEvent); } break;
                 case (CombatEventEnum.MapDoneLoading): { HandleMapDoneLoadingEvent(e as MapDoneLoadingEvent); } break;
@@ -83,6 +85,12 @@ namespace Controller.Managers
             this._mapGUIController.DecoratePotentialAttackTiles(potentialTiles);
             var ability = GenericAbilityTable.Instance.Table[e.Type];
             this._combatManager.CurAbility = ability;
+        }
+
+        private void HandleDisplayHitStatsEvent(DisplayHitStatsEvent e)
+        {
+            this._events.Remove(e);
+            this._mapGUIController.DisplayHitStatsEvent(e);
         }
 
         private void HandleEndTurnEvent(EndTurnEvent e)
@@ -132,7 +140,8 @@ namespace Controller.Managers
             {
                 var source = e.Source.Model.Current as GenericCharacterController;
                 var target = e.Target.Model.Current as GenericCharacterController;
-                e.Action.ProcessAbility(source.Model, target.Model);
+                var hit = new HitInfo(source, target, e.Action);
+                e.Action.ProcessAbility(hit);
             }
         }
 

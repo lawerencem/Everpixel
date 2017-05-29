@@ -12,10 +12,8 @@ namespace Model.Abilities
     {
         public Shove() : base(WeaponAbilitiesEnum.Shove) { }
 
-        public override void ProcessAbility(GenericCharacter s, GenericCharacter t)
+        public override void ProcessAbility(HitInfo hit)
         {
-            var attackEventFlags = new AttackEventFlags();
-            base.ProcessMelee(s, t, attackEventFlags);
         }
     }
 }

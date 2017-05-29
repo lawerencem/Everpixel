@@ -12,10 +12,9 @@ namespace Model.Abilities
     {
         public Riposte() : base(WeaponAbilitiesEnum.Riposte) { }
 
-        public override void ProcessAbility(GenericCharacter s, GenericCharacter t)
+        public override void ProcessAbility(HitInfo hit)
         {
-            var attackEventFlags = new AttackEventFlags();
-            base.ProcessMelee(s, t, attackEventFlags);
+
         }
     }
 }

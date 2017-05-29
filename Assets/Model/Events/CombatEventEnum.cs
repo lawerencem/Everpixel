@@ -5,6 +5,7 @@
         None,
         ActionCofirmed,
         AttackSelected,
+        DisplayHitStats,
         EndTurn,
         HexSelectedForMove,
         MapDoneLoading,

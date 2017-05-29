@@ -12,10 +12,9 @@ namespace Model.Abilities
     {
         public Maim() : base(WeaponAbilitiesEnum.Maim) { }
 
-        public override void ProcessAbility(GenericCharacter s, GenericCharacter t)
+        public override void ProcessAbility(HitInfo hit)
         {
-            var attackEventFlags = new AttackEventFlags();
-            base.ProcessMelee(s, t, attackEventFlags);
+
         }
     }
 }
