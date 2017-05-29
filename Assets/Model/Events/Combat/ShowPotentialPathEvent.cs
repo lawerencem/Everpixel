@@ -15,9 +15,12 @@ namespace Model.Events.Combat
             CombatEventManager parent) : 
             base(CombatEventEnum.ShowPotentialPath, parent)
         {
-            this.Character = c;
-            this.Target = t;
-            this.RegisterEvent();
+            if (!this._parent.GetLock())
+            {
+                this.Character = c;
+                this.Target = t;
+                this.RegisterEvent();
+            }
         }
     }
 }

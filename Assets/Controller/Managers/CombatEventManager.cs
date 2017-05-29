@@ -15,6 +15,7 @@ namespace Controller.Managers
 {
     public class CombatEventManager
     {
+        private bool _interactionLock = false;
         private const float PER_FRAME = 0.0025f;
         private const float PER_FRAME_DIST = 0.075f;
 
@@ -50,6 +51,10 @@ namespace Controller.Managers
             this._events.Add(e);
             this.TryProcessEvent(e);
         }
+
+        public bool GetLock() { return this._interactionLock; }
+        public void Lock() { this._interactionLock = true;}
+        public void Unlock() { this._interactionLock = false; }
 
         private void TryProcessEvent(CombatEvent e)
         {
@@ -142,6 +147,7 @@ namespace Controller.Managers
                 var target = e.Target.Model.Current as GenericCharacterController;
                 var hit = new HitInfo(source, target, e.Action);
                 e.Action.ProcessAbility(hit);
+                this.Unlock();
             }
         }
 
@@ -173,14 +179,11 @@ namespace Controller.Managers
         private void HandleTileDoubleClickEvent(TileDoubleClickEvent e)
         {
             this._events.Remove(e);
-            if (this._combatManager.PlayersTurn)
-            {
-                var pathEvent = new ShowPotentialPathEvent(this._combatManager.CurrActing, e.Tile, this);
-                var pathTileControllers = this._combatManager.GetPathTileControllers(pathEvent);
-                this._mapGUIController.DecoratePath(pathTileControllers);
-                var path = this._combatManager.GetPath(this._combatManager.CurrActing.CurrentTile, e.Tile);
-                var traversePathEvent = new TraversePathEvent(this, this._combatManager.CurrActing, path);
-            }
+            var pathEvent = new ShowPotentialPathEvent(this._combatManager.CurrActing, e.Tile, this);
+            var pathTileControllers = this._combatManager.GetPathTileControllers(pathEvent);
+            this._mapGUIController.DecoratePath(pathTileControllers);
+            var path = this._combatManager.GetPath(this._combatManager.CurrActing.CurrentTile, e.Tile);
+            var traversePathEvent = new TraversePathEvent(this, this._combatManager.CurrActing, path);
         }
 
         private void HandleTileHoverDecoEvent(TileHoverDecoEvent e)

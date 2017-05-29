@@ -9,8 +9,11 @@ namespace Model.Events.Combat
 
         public TileDoubleClickEvent(CombatEventManager parent, TileController t) : base(CombatEventEnum.TileDoubleClick, parent)
         {
-            this.Tile = t;
-            this.RegisterEvent();
+            if (!this._parent.GetLock())
+            {
+                this.Tile = t;
+                this.RegisterEvent();
+            }
         }
     }
 }

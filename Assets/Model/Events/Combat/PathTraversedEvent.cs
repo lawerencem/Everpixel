@@ -13,6 +13,7 @@ namespace Model.Events.Combat
         {
             this.Character = c;
             this.RegisterEvent();
+            this._parent.Unlock();
         }
     }
 }

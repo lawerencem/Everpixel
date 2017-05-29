@@ -20,10 +20,14 @@ namespace Model.Events.Combat
             GenericAbility action) :
             base(CombatEventEnum.PerformActionEvent, parent)
         {
-            this.Action = action;
-            this.Source = source;
-            this.Target = target;
-            this.RegisterEvent();
+            if (!this._parent.GetLock())
+            {
+                this.Action = action;
+                this.Source = source;
+                this.Target = target;
+                this._parent.Lock();
+                this.RegisterEvent();
+            }
         }
     }
 }

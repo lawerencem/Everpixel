@@ -154,9 +154,11 @@ namespace Model.Combat
 
         private void ProcessDodge(HitInfo hit)
         {
+            var ability = hit.Ability as WeaponAbility;
+
             var melee = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Melee);
             var dodge = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Dodge);
-            var dodgeChance = BASE_DODGE_CHANCE;
+            var dodgeChance = BASE_DODGE_CHANCE / ability.AccMod;
 
             if (hit.Target.Model.Armor != null)
                 dodgeChance *= hit.Target.Model.Armor.DodgeMod;
@@ -164,7 +166,7 @@ namespace Model.Combat
                 dodgeChance *= hit.Target.Model.Helm.DodgeMod;
 
             var chance = this.GetAttackVSDefenseSkillChance(melee, dodge, dodgeChance);
-            var ability = hit.Ability as WeaponAbility;
+            
             chance *= ability.DodgeMod;
             var roll = RNG.Instance.NextDouble();
             if (chance < roll)
@@ -173,9 +175,11 @@ namespace Model.Combat
 
         private void ProcessParry(HitInfo hit)
         {
+            var ability = hit.Ability as WeaponAbility;
+
             var melee = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Melee);
             var parry = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Parry);
-            var parryChance = BASE_PARRY_CHANCE;
+            var parryChance = BASE_PARRY_CHANCE / ability.AccMod;
 
             if (hit.Target.Model.Armor != null)
                 parryChance *= hit.Target.Model.Armor.ParryReduce;
@@ -187,7 +191,7 @@ namespace Model.Combat
                 parryChance *= hit.Target.Model.RWeapon.ParryMod;
 
             var chance = this.GetAttackVSDefenseSkillChance(melee, parry, parryChance);
-            var ability = hit.Ability as WeaponAbility;
+            
             chance *= ability.ParryModMod;
             var roll = RNG.Instance.NextDouble();
             if (chance < roll)
@@ -196,9 +200,11 @@ namespace Model.Combat
 
         private void ProcessBlock(HitInfo hit)
         {
+            var ability = hit.Ability as WeaponAbility;
+
             var melee = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Melee);
             var block = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Block);
-            var blockChance = BASE_BLOCK_CHANCE;
+            var blockChance = BASE_BLOCK_CHANCE / ability.AccMod;
 
             bool hasShield = false;
 

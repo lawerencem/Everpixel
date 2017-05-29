@@ -25,7 +25,15 @@ namespace Model.Events.Combat
                 this.Path = p;
                 this.Source = s;
                 this.Next = n;
-                this.RegisterEvent();
+
+                if (this.Character.Model.CurrentAP > this.Next.Model.Cost)
+                {
+                    this.RegisterEvent();
+                }
+                else
+                {
+                    var traversed = new PathTraversedEvent(CombatEventManager.Instance, this.Character);
+                }
             }
         }
     }

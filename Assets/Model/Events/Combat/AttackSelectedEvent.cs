@@ -15,9 +15,12 @@ namespace Model.Events.Combat
         public AttackSelectedEvent(CombatEventManager parent, WeaponAbilitiesEnum type, bool rWeapon) :
             base(CombatEventEnum.AttackSelected, parent)
         {
-            this.RWeapon = rWeapon;
-            this.Type = type;
-            this.RegisterEvent();
+            if (!this._parent.GetLock())
+            {
+                this.RWeapon = rWeapon;
+                this.Type = type;
+                this.RegisterEvent();
+            }
         }
     }
 }
