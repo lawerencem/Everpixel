@@ -12,9 +12,9 @@ namespace View
         private const int HOSTILE_HOVER_SPRITE_INDEX = 2;
         private const int PATH_SPRITE_INDEX = 3;
 
-        private readonly List<int> LEVEL_ONE_BLOOD_SPATTER = new List<int>() { 1, 2 };
-        private readonly List<int> LEVEL_FOUR_BLOOD_SPATTER = new List<int>() { 16, 17 };
-        private readonly List<int> LEVEL_FIVE_BLOOD_SPATTER = new List<int>() { 21, 22 };
+        private readonly List<int> LEVEL_ONE_BLOOD_SPATTER = new List<int>() { 1, 2, 3, 4, 5, 6, 7 };
+        private readonly List<int> LEVEL_FOUR_BLOOD_SPATTER = new List<int>() { 25, 26 };
+        private readonly List<int> LEVEL_FIVE_BLOOD_SPATTER = new List<int>() { 33, 34 };
 
         private const string PATH = "Sprites/CombatMap/";
         private const string DECO_EXTENSION = "_Deco";

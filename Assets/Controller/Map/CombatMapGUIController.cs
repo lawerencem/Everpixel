@@ -194,7 +194,7 @@ namespace Controller.Managers.Map
         private void ProcessSplatter(DisplayHitStatsEvent e)
         {
             var dmgPercentage = e.Hit.Dmg / e.Hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.HP);
-            if (dmgPercentage > 0.75 && !e.Hit.IsHeal)
+            if (dmgPercentage < 0.25 && !e.Hit.IsHeal)
                 this.ProcessSplatterLevelOne(e);
         }
 

@@ -1,13 +1,18 @@
 ﻿TODO
 
+0) Mouse Wheel Zoom
 0.5) - Character jolts during attacks
 0) - Replace eyes with dead eyes when killed
 1) - Dual-Wield
+1.75) - Injuries and effects
 1.5) - Dead characters on tiles shouldn't prevent movement
 2) - Zone of control
 3) - Critter classes / abilities during level up on the xml
 5) - Calculate "height diff" when going from one height to another in hexes
 6) - Force A* to directional search after so many nodes
+7) - Restore stamina and AP each turn
+8) Highlight shields on block
+9) Highlight weaposn on parry
 - Add Methods to get current values of a model given buffs and such
 
 Bugs:
