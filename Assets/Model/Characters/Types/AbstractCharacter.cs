@@ -1,5 +1,6 @@
 ﻿using Assets.Generics;
 using Characters.Params;
+using Model.Classes;
 using Model.Equipment;
 using System.Collections.Generic;
 
@@ -8,6 +9,8 @@ namespace Model.Characters
     abstract public class AbstractCharacter<T>
     {
         public T Type { get; set; }
+
+        public Dictionary<ClassEnum, GenericClass> BaseClasses { get; set; }
 
         public PrimaryStats PrimaryStats { get; set; }
         public SecondaryStats SecondaryStats { get; set; }
@@ -20,6 +23,11 @@ namespace Model.Characters
         public GenericHelm Helm { get; set; }
         public GenericWeapon LWeapon { get; set; }
         public GenericWeapon RWeapon { get; set; }
+
+        public int CurrentAP { get; set; }
+        public int CurrentHP { get; set; }
+        public int CurrentMorale { get; set; }
+        public int CurrentStamina { get; set; }
 
         public void AddArmor(GenericArmor armor)
         {
@@ -47,6 +55,24 @@ namespace Model.Characters
             {
                 this.RWeapon = weapon;
                 this.IndefSStatMods.Add(new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.GetStatModifiers()));
+            }
+        }
+
+        public void ModifyHP(int value, bool isHeal)
+        {
+            if (isHeal)
+            {
+                this.CurrentHP += value;
+                if (this.CurrentHP > this.GetCurrentStatValue(SecondaryStatsEnum.HP))
+                    this.CurrentHP = this.GetCurrentStatValue(SecondaryStatsEnum.HP);
+            }
+            else
+            {
+                this.CurrentHP -= value;
+                if (this.CurrentHP <= 0)
+                {
+                    // TODO: fire event
+                }
             }
         }
 

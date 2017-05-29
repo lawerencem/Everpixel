@@ -8,6 +8,7 @@ namespace Model.Combat
     {
         public GenericAbility Ability { get; set; }
         public AttackEventFlags Flags { get; set; }
+        public bool IsHeal { get; set; }
         public int Dmg { get; set; }
         public GenericCharacterController Source { get; set; }
         public GenericCharacterController Target { get; set; }

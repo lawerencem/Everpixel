@@ -5,6 +5,7 @@
         None,
         ActionCofirmed,
         AttackSelected,
+        DamageCharacter,
         DisplayHitStats,
         EndTurn,
         HexSelectedForMove,

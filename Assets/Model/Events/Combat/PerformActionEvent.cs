@@ -22,10 +22,10 @@ namespace Model.Events.Combat
         {
             if (!this._parent.GetLock())
             {
+                this._parent.Lock();
                 this.Action = action;
                 this.Source = source;
                 this.Target = target;
-                this._parent.Lock();
                 this.RegisterEvent();
             }
         }

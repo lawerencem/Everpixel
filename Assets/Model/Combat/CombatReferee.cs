@@ -24,7 +24,7 @@ namespace Model.Combat
             ProcessMeleeFlags(hit);
             CalculateDamage(hit);
             ApplyDamage(hit);
-            CreateHitEvent(hit);
+            ProcessHitEvent(hit);
         }
 
         private void ApplyDamage(HitInfo hit)
@@ -39,10 +39,10 @@ namespace Model.Combat
             }
         }
 
-        private void CreateHitEvent(HitInfo hit)
+        private void ProcessHitEvent(HitInfo hit)
         {
             var guiEvent = new DisplayHitStatsEvent(CombatEventManager.Instance, hit);
-            // TODO: Spawn model dmg event
+            var dmgEvent = new DamageCharacterEvent(CombatEventManager.Instance, hit);
         }
 
         private void ProcessMeleeFlags(HitInfo hit)

@@ -62,6 +62,7 @@ namespace Controller.Managers
             {
                 case (CombatEventEnum.ActionCofirmed): { HandleAttackConfirmedEvent(e as ActionConfirmedEvent); } break;
                 case (CombatEventEnum.AttackSelected): { HandleAttackSelectedEvent(e as AttackSelectedEvent); } break;
+                case (CombatEventEnum.DamageCharacter): { HandleDamageCharacterEvent(e as DamageCharacterEvent); } break;
                 case (CombatEventEnum.DisplayHitStats): { HandleDisplayHitStatsEvent(e as DisplayHitStatsEvent); } break;
                 case (CombatEventEnum.EndTurn): { HandleEndTurnEvent(e as EndTurnEvent); } break;
                 case (CombatEventEnum.HexSelectedForMove): { HandleHexSelectedForMoveEvent(e as HexSelectedForMoveEvent); } break;
@@ -90,6 +91,11 @@ namespace Controller.Managers
             this._mapGUIController.DecoratePotentialAttackTiles(potentialTiles);
             var ability = GenericAbilityTable.Instance.Table[e.Type];
             this._combatManager.CurAbility = ability;
+        }
+
+        private void HandleDamageCharacterEvent(DamageCharacterEvent e)
+        {
+            this._events.Remove(e);
         }
 
         private void HandleDisplayHitStatsEvent(DisplayHitStatsEvent e)
