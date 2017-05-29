@@ -6,13 +6,13 @@ using UnityEngine;
 
 namespace View
 {
-    public class SpriteLoader : AbstractSingleton<SpriteLoader>
+    public class CharacterSpriteLoader : AbstractSingleton<CharacterSpriteLoader>
     {
         private const string CRITTER_PATH = "Sprites/Critters/";
         private const string EQUIPMENT_PATH = "Sprites/Equipment/";
         private const string EXTENSION = "_Spritesheet";
 
-        public SpriteLoader() { }
+        public CharacterSpriteLoader() { }
 
         public Sprite[] GetArmorSprites(ArmorParams a)
         {

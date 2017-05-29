@@ -1,7 +1,10 @@
 ﻿using Assets.Generics;
 using Characters.Params;
+using Controller.Managers;
 using Model.Classes;
 using Model.Equipment;
+using Model.Events.Combat;
+using Model.Map;
 using System.Collections.Generic;
 
 namespace Model.Characters
@@ -58,22 +61,15 @@ namespace Model.Characters
             }
         }
 
-        public void ModifyHP(int value, bool isHeal)
+        public int GetTileTraversalAPCost(HexTile tile)
         {
-            if (isHeal)
-            {
-                this.CurrentHP += value;
-                if (this.CurrentHP > this.GetCurrentStatValue(SecondaryStatsEnum.HP))
-                    this.CurrentHP = this.GetCurrentStatValue(SecondaryStatsEnum.HP);
-            }
-            else
-            {
-                this.CurrentHP -= value;
-                if (this.CurrentHP <= 0)
-                {
-                    // TODO: fire event
-                }
-            }
+            // TODO: Work on this for height and various talents
+            return tile.Cost * tile.Height;
+        }
+
+        public int GetTileTraversalStaminaCost(HexTile tile)
+        {
+            return tile.Cost * tile.Height;
         }
 
         public void RemoveArmor()

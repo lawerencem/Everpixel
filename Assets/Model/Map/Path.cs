@@ -32,7 +32,7 @@ namespace Model.Map
         public void AddTile(HexTile t)
         {
             this.Tiles.Add(t);
-            this.Score += t.Cost;
+            this.Score += (t.Cost * t.Height);
         }
 
         public Path DeepCopy()

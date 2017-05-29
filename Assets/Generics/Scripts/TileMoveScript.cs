@@ -28,18 +28,18 @@ namespace Generics.Scripts
                 this.Character.CurrentTile = Target;
                 this.Character.CurrentTile.Model.Current = this.Character;
                 this.Character.transform.position = Target.transform.position;
-                this.Character.Model.CurrentAP -= this.Target.Model.Cost;
                 // TODO: Get cost via interface 
                 var next = this.Path.GetNextTile(this.Target);
                 if (next != null)
                 {
-                    if (this.Character.Model.CurrentAP >= next.Model.Cost)
+                    if (this.Character.Model.CurrentAP >= this.Character.Model.GetTileTraversalAPCost(next.Model))
                     {
                         var nextTilEvent = new TraverseTileEvent(CombatEventManager.Instance, this.Path, this.Character.CurrentTile, next);
                     }
                     else
                     {
                         var traversed = new PathTraversedEvent(CombatEventManager.Instance, this.Character);
+                        Destroy(this);
                     }
                 }
                 else
@@ -52,14 +52,12 @@ namespace Generics.Scripts
 
         public void Init(GenericCharacterController c, Path p, TileController s, TileController t)
         {
-            if (c.Model.CurrentAP >= t.Model.Cost)
-            {
-                this.Character = c;
-                this.Path = p;
-                this.Source = s;
-                this.Target = t;
-            }
-            else
+            this.Character = c;
+            this.Path = p;
+            this.Source = s;
+            this.Target = t;
+
+            if (c.Model.CurrentAP < c.Model.GetTileTraversalAPCost(t.Model))
             {
                 var traversed = new PathTraversedEvent(CombatEventManager.Instance, this.Character);
                 Destroy(this);

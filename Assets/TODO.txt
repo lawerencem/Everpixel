@@ -1,7 +1,14 @@
 ﻿TODO
 
+0.5) - Character jolts during attacks
+0) - Replace eyes with dead eyes when killed
 1) - Dual-Wield
+1.5) - Dead characters on tiles shouldn't prevent movement
+2) - Zone of control
 3) - Critter classes / abilities during level up on the xml
 5) - Calculate "height diff" when going from one height to another in hexes
 6) - Force A* to directional search after so many nodes
 - Add Methods to get current values of a model given buffs and such
+
+Bugs:
+Update boximg on move

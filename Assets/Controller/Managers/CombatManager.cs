@@ -82,6 +82,12 @@ namespace Assets.Controller.Managers
             return this._map.GetPath(s.Model, t.Model);
         }
 
+        public void ProcessCharacterKilled(GenericCharacterController c)
+        {
+            this._characters.Remove(c);
+            this._order.Remove(c);
+        }
+
         public void ProcessNextTurn()
         {
             this._order.RemoveAt(0);

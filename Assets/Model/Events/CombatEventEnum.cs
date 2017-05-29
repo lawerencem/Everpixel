@@ -5,6 +5,7 @@
         None,
         ActionCofirmed,
         AttackSelected,
+        CharacterKilled,
         DamageCharacter,
         DisplayHitStats,
         EndTurn,

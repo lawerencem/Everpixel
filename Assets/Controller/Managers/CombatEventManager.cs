@@ -63,6 +63,7 @@ namespace Controller.Managers
                 case (CombatEventEnum.ActionCofirmed): { HandleAttackConfirmedEvent(e as ActionConfirmedEvent); } break;
                 case (CombatEventEnum.AttackSelected): { HandleAttackSelectedEvent(e as AttackSelectedEvent); } break;
                 case (CombatEventEnum.DamageCharacter): { HandleDamageCharacterEvent(e as DamageCharacterEvent); } break;
+                case (CombatEventEnum.CharacterKilled): { HandleCharacterKilledEvent(e as CharacterKilledEvent); } break; 
                 case (CombatEventEnum.DisplayHitStats): { HandleDisplayHitStatsEvent(e as DisplayHitStatsEvent); } break;
                 case (CombatEventEnum.EndTurn): { HandleEndTurnEvent(e as EndTurnEvent); } break;
                 case (CombatEventEnum.HexSelectedForMove): { HandleHexSelectedForMoveEvent(e as HexSelectedForMoveEvent); } break;
@@ -91,6 +92,13 @@ namespace Controller.Managers
             this._mapGUIController.DecoratePotentialAttackTiles(potentialTiles);
             var ability = GenericAbilityTable.Instance.Table[e.Type];
             this._combatManager.CurAbility = ability;
+        }
+
+        private void HandleCharacterKilledEvent(CharacterKilledEvent e)
+        {
+            this._events.Remove(e);
+            this._mapGUIController.ProcessCharacterKilled(e);
+            this._combatManager.ProcessCharacterKilled(e.Killed);
         }
 
         private void HandleDamageCharacterEvent(DamageCharacterEvent e)
@@ -146,15 +154,10 @@ namespace Controller.Managers
         private void HandlePerformActionEvent(PerformActionEvent e)
         {
             this._events.Remove(e);
-            if (e.Source.Model.Current.GetType() == typeof(GenericCharacterController) &&
-                e.Target.Model.Current.GetType() == typeof(GenericCharacterController))
-            {
-                var source = e.Source.Model.Current as GenericCharacterController;
-                var target = e.Target.Model.Current as GenericCharacterController;
-                var hit = new HitInfo(source, target, e.Action);
-                e.Action.ProcessAbility(hit);
-                this.Unlock();
-            }
+            var hit = new HitInfo(e.Source, e.Target, e.Action);
+            e.Action.ProcessAbility(hit);
+            this._mapGUIController.SetActingBoxToController(e.Source);
+            this.Unlock();
         }
 
         private void HandleShowPotentialPathEvent(ShowPotentialPathEvent e)
@@ -167,7 +170,6 @@ namespace Controller.Managers
         private void HandleMapDoneLoadingEvent(MapDoneLoadingEvent e)
         {
             this._events.Remove(e);
-            var mapController = new CombatMapGuiController();
             this._combatManager = new CombatManager(e.Map);
             this._combatManager.InitParties(e.Controllers);
             this.PopulateBtnsHelper();
@@ -212,6 +214,7 @@ namespace Controller.Managers
             this._events.Remove(e);
             var script = e.Character.Handle.AddComponent<TileMoveScript>();
             script.Init(e.Character, e.Path, e.Source, e.Next);
+            this._mapGUIController.SetActingBoxToController(e.Character);
         }
 
         private void PopulateBtnsHelper()

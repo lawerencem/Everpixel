@@ -12,5 +12,7 @@ namespace Model.Abilities
         public int StaminaCost { get; set; }
 
         public virtual void ProcessAbility(HitInfo hit) { }
+
+        public double GetAPCost() { return this.APCost; }
     }
 }

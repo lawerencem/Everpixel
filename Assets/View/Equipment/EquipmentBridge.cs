@@ -11,7 +11,7 @@ namespace View.Equipment
         public ArmorView GetRandomArmorSprite(ArmorParams a)
         {
             var random = new ArmorView();
-            var sprites = SpriteLoader.Instance.GetArmorSprites(a);
+            var sprites = CharacterSpriteLoader.Instance.GetArmorSprites(a);
             random.Name = a.Name;
             random.Index = a.Sprites[RNG.Instance.Next(0, a.Sprites.Count)];
             random.Skill = a.Skill;
@@ -24,7 +24,7 @@ namespace View.Equipment
         {
             var random = new WeaponView();
 
-            var sprites = SpriteLoader.Instance.GetWeaponSprites(w);
+            var sprites = CharacterSpriteLoader.Instance.GetWeaponSprites(w);
             random.Name = w.Name;
             random.Index = w.Sprites[RNG.Instance.Next(0, w.Sprites.Count)];
             random.Skill = w.Skill;

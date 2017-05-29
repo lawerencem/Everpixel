@@ -3,6 +3,7 @@ using Controller.Characters;
 using Controller.Map;
 using Generics.Hex;
 using Generics.Scripts;
+using Generics.Utilities;
 using Model.Characters;
 using Model.Combat;
 using Model.Events.Combat;
@@ -115,8 +116,8 @@ namespace Controller.Managers.Map
 
         public void DisplayHitStatsEvent(DisplayHitStatsEvent e)
         {
-            this.ProcessTextToDisplay(e);   
-            // TODO: Any effects that go with it...
+            this.ProcessTextToDisplay(e);
+            this.ProcessSplatter(e);
         }
 
         private void DisplayText(string toDisplay, DisplayHitStatsEvent e, Color color, float yOffset = 0)
@@ -156,7 +157,7 @@ namespace Controller.Managers.Map
             this._decorateTileFamily.Add(tView);
         }
 
-        private void DecorateSingleTile(TileController t, Sprite deco)
+        private void DecorateSingleTile(TileController t, Sprite deco, float alpha = 0.50f)
         {
             var tView = new GameObject();
             var renderer = tView.AddComponent<SpriteRenderer>();
@@ -165,23 +166,68 @@ namespace Controller.Managers.Map
             renderer.sortingLayerName = MAP_GUI_LAYER;
             tView.name = "Path Tile";
             var color = renderer.color;
-            color.a = 0.50f;
+            color.a = alpha;
             renderer.color = color;
             this._singleTile = tView;
+        }
+
+        private void PaintSingleTile(TileController t, Sprite deco, float alpha = 1.0f)
+        {
+            var tView = new GameObject();
+            var renderer = tView.AddComponent<SpriteRenderer>();
+            renderer.sprite = deco;
+            renderer.transform.position = t.Model.Center;
+            renderer.sortingLayerName = MAP_GUI_LAYER;
+            tView.name = "Tile Deco";
+            var color = renderer.color;
+            color.a = alpha;
+            renderer.color = color;
+        }
+
+        public void ProcessCharacterKilled(CharacterKilledEvent e)
+        {
+            var roll = RNG.Instance.NextDouble();
+            e.Killed.transform.Rotate(new Vector3(0, 0, (float)(roll * 360)));
+            this.ProcessSplatterLevelFive(e);
+        }
+
+        private void ProcessSplatter(DisplayHitStatsEvent e)
+        {
+            var dmgPercentage = e.Hit.Dmg / e.Hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.HP);
+            if (dmgPercentage > 0.75 && !e.Hit.IsHeal)
+                this.ProcessSplatterLevelOne(e);
+        }
+
+        private void ProcessSplatterLevelOne(DisplayHitStatsEvent e)
+        {
+            var sprite = MapBridge.Instance.GetSplatterLevelOneSprite();
+            this.PaintSingleTile(e.Hit.Target.CurrentTile, sprite);
+        }
+
+        private void ProcessSplatterLevelFour(DisplayHitStatsEvent e)
+        {
+            var sprite = MapBridge.Instance.GetSplatterLevelFourSprite();
+            this.PaintSingleTile(e.Hit.Target.CurrentTile, sprite);
+        }
+
+        private void ProcessSplatterLevelFive(CharacterKilledEvent e)
+        {
+            var sprite = MapBridge.Instance.GetSplatterLevelFiveSprite();
+            this.PaintSingleTile(e.Killed.CurrentTile, sprite);
         }
 
         private void ProcessTextToDisplay(DisplayHitStatsEvent e)
         {
             if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge))
-                this.DisplayText("Dodge", e, WHITE, 0.35f);
+                this.DisplayText("Dodge", e, WHITE, 0.30f);
             else if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Parry))
-                this.DisplayText("Parry", e, WHITE, 0.35f);
+                this.DisplayText("Parry", e, WHITE, 0.30f);
             else
             {
                 if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Block))
-                    this.DisplayText("Block", e, WHITE, 0.45f);
+                    this.DisplayText("Block", e, WHITE, 0.35f);
                 if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
-                    this.DisplayText("Critical!", e, RED, 0.35f);
+                    this.DisplayText("Critical!", e, RED, 0.40f);
                 this.DisplayText(e.Hit.Dmg.ToString(), e, RED, 0.025f);
             }
         }

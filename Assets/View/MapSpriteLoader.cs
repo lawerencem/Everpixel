@@ -1,21 +1,26 @@
 ﻿using Generics;
 using Generics.Utilities;
 using Model.Biomes;
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace View.Biomes
+namespace View
 {
-    public class BiomeSpriteLoader : AbstractSingleton<BiomeSpriteLoader>
+    public class MapSpriteLoader : AbstractSingleton<MapSpriteLoader>
     {
         private const int POTENTIAL_ATTACK_SPRITE_INDEX = 1;
         private const int HOSTILE_HOVER_SPRITE_INDEX = 2;
         private const int PATH_SPRITE_INDEX = 3;
-        private const string PATH = "Sprites/CombatMap/";
 
+        private readonly List<int> LEVEL_ONE_BLOOD_SPATTER = new List<int>() { 1, 2 };
+        private readonly List<int> LEVEL_FOUR_BLOOD_SPATTER = new List<int>() { 16, 17 };
+        private readonly List<int> LEVEL_FIVE_BLOOD_SPATTER = new List<int>() { 21, 22 };
+
+        private const string PATH = "Sprites/CombatMap/";
         private const string DECO_EXTENSION = "_Deco";
         private const string TILE_EXTENSION = "_Tiles";
 
-        public BiomeSpriteLoader() { }
+        public MapSpriteLoader() { }
 
         public Sprite[] GetBiomeBackground(BiomeEnum b)
         {
@@ -48,6 +53,30 @@ namespace View.Biomes
             var path = StringUtil.PathBuilder(PATH, "Base", TILE_EXTENSION);
             var stuff = Resources.LoadAll(path);
             return stuff[PATH_SPRITE_INDEX] as Sprite;
+        }
+
+        public Sprite GetBloodSpatterLevelOne()
+        {
+            var path = StringUtil.PathBuilder(PATH, "Tileblood", TILE_EXTENSION);
+            var stuff = Resources.LoadAll(path);
+            var index = ListUtil<int>.GetRandomListElement(this.LEVEL_ONE_BLOOD_SPATTER);
+            return stuff[index] as Sprite;
+        }
+
+        public Sprite GetBloodSpatterLevelFour()
+        {
+            var path = StringUtil.PathBuilder(PATH, "Tileblood", TILE_EXTENSION);
+            var stuff = Resources.LoadAll(path);
+            var index = ListUtil<int>.GetRandomListElement(this.LEVEL_FOUR_BLOOD_SPATTER);
+            return stuff[index] as Sprite;
+        }
+
+        public Sprite GetBloodSpatterLevelFive()
+        {
+            var path = StringUtil.PathBuilder(PATH, "Tileblood", TILE_EXTENSION);
+            var stuff = Resources.LoadAll(path);
+            var index = ListUtil<int>.GetRandomListElement(this.LEVEL_FIVE_BLOOD_SPATTER);
+            return stuff[index] as Sprite;
         }
 
         private Sprite[] GetBackgroundDecoSprites(string path)

@@ -11,8 +11,8 @@ namespace Model.Events.Combat
             : base(CombatEventEnum.DamageCharacter, parent)
         {
             this.Hit = hit;
-            this.RegisterEvent();
             this.Hit.Target.Model.ModifyHP(hit.Dmg, hit.IsHeal);
+            this.RegisterEvent();
         }
     }
 }

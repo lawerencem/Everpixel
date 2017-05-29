@@ -14,7 +14,7 @@ namespace View.Mounts
         {
             var view = new MountView();
             view.Name = m.Type.ToString().Replace("_", " ");
-            view.Sprites = SpriteLoader.Instance.GetMountSprites(m);
+            view.Sprites = CharacterSpriteLoader.Instance.GetMountSprites(m);
             return view;
         }
     }

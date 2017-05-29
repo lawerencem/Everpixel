@@ -36,6 +36,24 @@ namespace Generics.Hex
         public int GetLastCol() { return this._cols; }
         public int GetLastRow() { return this._rows; }
 
+        public HexTile GetOppositeTile(HexTile source, HexTile target)
+        {
+            if (this.GetN(source) == target)
+                return this.GetN(target);
+            else if (this.GetNE(source) == target)
+                return this.GetNE(target);
+            else if (this.GetSE(source) == target)
+                return this.GetSE(target);
+            else if (this.GetS(source) == target)
+                return this.GetS(target);
+            else if (this.GetSW(source) == target)
+                return this.GetSW(target);
+            else if (this.GetNW(source) == target)
+                return this.GetNW(target);
+            else
+                return null;
+        }
+
         public HexTile GetTileViaColRowPair(int col, int row)
         {
             if (this._colRowDictionary.ContainsKey(col))

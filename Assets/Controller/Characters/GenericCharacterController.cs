@@ -19,7 +19,12 @@ namespace Controller.Characters
         public List<GameObject> SpriteHandlers = new List<GameObject>();
         public CharacterView View { get { return this._view; } }
 
-        private void BuildModel(CharacterParams p) { this._model = CharacterFactory.Instance.CreateNewObject(p); }
+        private void BuildModel(CharacterParams p)
+        {
+            this._model = CharacterFactory.Instance.CreateNewObject(p);
+            this._model.ParentController = this;
+        }
+
         private void BuildView(CharacterParams p) { var b = new CharacterViewBuilder(); this._view = b.Build(p); }
 
         public void SetModel(CharacterParams p) { this.BuildModel(p); this.BuildView(p); }

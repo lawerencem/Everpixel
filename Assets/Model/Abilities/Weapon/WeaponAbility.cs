@@ -6,7 +6,6 @@ namespace Model.Abilities
     public class WeaponAbility : GenericAbility
     {
         public double AccMod { get; set; }
-        public double APCost { get; set; }
         public double ArmorIgnoreMod { get; set; }
         public double ArmorPierceMod { get; set; }
         public double BlockIgnoreMod { get; set; }

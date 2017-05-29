@@ -1,25 +1,34 @@
 fileFormatVersion: 2
-guid: 35bbc543dc1e6e041850058fdacc32cf
-timeCreated: 1494690728
+guid: 79b17d1aa2d77894f955eb5087240caf
+timeCreated: 1496092196
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: TileBlood_Spritesheet_0
-    21300002: TileBlood_Spritesheet_1
-    21300004: TileBlood_Spritesheet_2
-    21300006: TileBlood_Spritesheet_3
-    21300008: TileBlood_Spritesheet_4
-    21300010: TileBlood_Spritesheet_5
-    21300012: TileBlood_Spritesheet_6
-    21300014: TileBlood_Spritesheet_7
-    21300016: TileBlood_Spritesheet_8
-    21300018: TileBlood_Spritesheet_9
-    21300020: TileBlood_Spritesheet_10
-    21300022: TileBlood_Spritesheet_11
-    21300024: TileBlood_Spritesheet_12
-    21300026: TileBlood_Spritesheet_13
-    21300028: TileBlood_Spritesheet_14
-    21300030: TileBlood_Spritesheet_15
+    21300000: Tileblood_tiles_0
+    21300002: Tileblood_tiles_1
+    21300004: Tileblood_tiles_2
+    21300006: Tileblood_tiles_3
+    21300008: Tileblood_tiles_4
+    21300010: Tileblood_tiles_5
+    21300012: Tileblood_tiles_6
+    21300014: Tileblood_tiles_7
+    21300016: Tileblood_tiles_8
+    21300018: Tileblood_tiles_9
+    21300020: Tileblood_tiles_10
+    21300022: Tileblood_tiles_11
+    21300024: Tileblood_tiles_12
+    21300026: Tileblood_tiles_13
+    21300028: Tileblood_tiles_14
+    21300030: Tileblood_tiles_15
+    21300032: Tileblood_tiles_16
+    21300034: Tileblood_tiles_17
+    21300036: Tileblood_tiles_18
+    21300038: Tileblood_tiles_19
+    21300040: Tileblood_tiles_20
+    21300042: Tileblood_tiles_21
+    21300044: Tileblood_tiles_22
+    21300046: Tileblood_tiles_23
+    21300048: Tileblood_tiles_24
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -43,7 +52,7 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -86,7 +95,72 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TileBlood_Spritesheet_0
+      name: Tileblood_tiles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Tileblood_tiles_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Tileblood_tiles_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Tileblood_tiles_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Tileblood_tiles_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Tileblood_tiles_5
       rect:
         serializedVersion: 2
         x: 0
@@ -99,7 +173,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: TileBlood_Spritesheet_1
+      name: Tileblood_tiles_6
       rect:
         serializedVersion: 2
         x: 64
@@ -112,7 +186,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: TileBlood_Spritesheet_2
+      name: Tileblood_tiles_7
       rect:
         serializedVersion: 2
         x: 128
@@ -125,7 +199,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: TileBlood_Spritesheet_3
+      name: Tileblood_tiles_8
       rect:
         serializedVersion: 2
         x: 192
@@ -138,7 +212,20 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: TileBlood_Spritesheet_4
+      name: Tileblood_tiles_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Tileblood_tiles_10
       rect:
         serializedVersion: 2
         x: 0
@@ -151,7 +238,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: TileBlood_Spritesheet_5
+      name: Tileblood_tiles_11
       rect:
         serializedVersion: 2
         x: 64
@@ -164,7 +251,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: TileBlood_Spritesheet_6
+      name: Tileblood_tiles_12
       rect:
         serializedVersion: 2
         x: 128
@@ -177,7 +264,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: TileBlood_Spritesheet_7
+      name: Tileblood_tiles_13
       rect:
         serializedVersion: 2
         x: 192
@@ -190,7 +277,20 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: TileBlood_Spritesheet_8
+      name: Tileblood_tiles_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Tileblood_tiles_15
       rect:
         serializedVersion: 2
         x: 0
@@ -203,7 +303,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: TileBlood_Spritesheet_9
+      name: Tileblood_tiles_16
       rect:
         serializedVersion: 2
         x: 64
@@ -216,7 +316,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: TileBlood_Spritesheet_10
+      name: Tileblood_tiles_17
       rect:
         serializedVersion: 2
         x: 128
@@ -229,7 +329,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: TileBlood_Spritesheet_11
+      name: Tileblood_tiles_18
       rect:
         serializedVersion: 2
         x: 192
@@ -242,7 +342,20 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: TileBlood_Spritesheet_12
+      name: Tileblood_tiles_19
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Tileblood_tiles_20
       rect:
         serializedVersion: 2
         x: 0
@@ -255,7 +368,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: TileBlood_Spritesheet_13
+      name: Tileblood_tiles_21
       rect:
         serializedVersion: 2
         x: 64
@@ -268,7 +381,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: TileBlood_Spritesheet_14
+      name: Tileblood_tiles_22
       rect:
         serializedVersion: 2
         x: 128
@@ -281,10 +394,23 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: TileBlood_Spritesheet_15
+      name: Tileblood_tiles_23
       rect:
         serializedVersion: 2
         x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Tileblood_tiles_24
+      rect:
+        serializedVersion: 2
+        x: 256
         y: 0
         width: 64
         height: 64
