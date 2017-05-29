@@ -18,7 +18,7 @@ namespace Model.Equipment
         public double DodgeMod { get; set; }
         public string Description { get; set; }
         public int Durability { get; set; }
-        public double FatigueCost { get; set; }
+        public double FatigueCostMod { get; set; }
         public double InitiativeReduce { get; set; }
         public double MeleeBlockChance { get; set; }
         public string Name { get; set; }

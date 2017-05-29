@@ -1,7 +1,6 @@
 ﻿TODO
 
-1) Make click listerners smaller on tiles and characters
-2) - Finish attack referee
+1) - Dual-Wield
 3) - Critter classes / abilities during level up on the xml
 5) - Calculate "height diff" when going from one height to another in hexes
 6) - Force A* to directional search after so many nodes

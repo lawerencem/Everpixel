@@ -50,12 +50,12 @@ namespace Model.Characters
                 character.SecondaryStats = secondary;
                 BuildClassSecondaryStats(character);
                 character.Type = c.Type;
-                character.CurrentAP = character.SecondaryStats.MaxAP;
-                character.CurrentHP = character.SecondaryStats.MaxHP;
-                character.CurrentMorale = character.SecondaryStats.Morale;
-                character.CurrentStamina = character.SecondaryStats.Stamina;
                 this.BuildArmorHelper(character, c);
                 this.BuildWeaponHelper(character, c);
+                character.CurrentAP = character.GetCurrentStatValue(SecondaryStatsEnum.AP);
+                character.CurrentHP = character.GetCurrentStatValue(SecondaryStatsEnum.HP);
+                character.CurrentMorale = character.GetCurrentStatValue(SecondaryStatsEnum.Morale);
+                character.CurrentStamina = character.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
                 return character;
             }
             else
@@ -146,12 +146,12 @@ namespace Model.Characters
             if (p.LWeapon != null)
             {
                 var weapon = WeaponFactory.Instance.CreateNewObject(p.LWeapon.Name, p.LWeapon.Tier);
-                c.LWeapon = weapon;
+                c.AddWeapon(weapon, true);
             }
             if (p.RWeapon != null)
             {
                 var weapon = WeaponFactory.Instance.CreateNewObject(p.RWeapon.Name, p.RWeapon.Tier);
-                c.RWeapon = weapon;
+                c.AddWeapon(weapon, false);
             }
         }
 
@@ -160,12 +160,12 @@ namespace Model.Characters
             if (p.Armor != null)
             {
                 var armor = ArmorFactory.Instance.CreateNewObject(p.Armor.Name, p.Armor.Tier);
-                c.Armor = armor;
+                c.AddArmor(armor);
             }
             if (p.Helm != null)
             {
                 var helm = HelmFactory.Instance.CreateNewObject(p.Helm.Name, p.Helm.Tier);
-                c.Helm = helm;
+                c.AddHelm(helm);
             }
         }
     }

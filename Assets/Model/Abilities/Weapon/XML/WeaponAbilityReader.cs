@@ -49,19 +49,19 @@ namespace Models.Equipment.XML
             switch(mod)
             {
                 case ("AccMod"): { WeaponAbilityTable.Instance.Table[type].AccMod = v; } break;
-                case ("APMod"): { WeaponAbilityTable.Instance.Table[type].APMod = v; } break;
+                case ("APCost"): { WeaponAbilityTable.Instance.Table[type].APCost = v; } break;
                 case ("ArmorIgnoreMod"): { WeaponAbilityTable.Instance.Table[type].ArmorIgnoreMod = v; } break;
                 case ("ArmorPierceMod"): { WeaponAbilityTable.Instance.Table[type].ArmorPierceMod = v; } break;
                 case ("BlockIgnoreMod"): { WeaponAbilityTable.Instance.Table[type].BlockIgnoreMod = v; } break;
                 case ("DamageMod"): { WeaponAbilityTable.Instance.Table[type].DamageMod = v; } break;
                 case ("Description"): { WeaponAbilityTable.Instance.Table[type].Description = value; } break;
                 case ("DodgeReduceMod"): { WeaponAbilityTable.Instance.Table[type].DodgeMod = v; } break;
-                case ("FatigueCostMod"): { WeaponAbilityTable.Instance.Table[type].FatigueCostMod = v; } break;
                 case ("MeleeBlockChanceMod"): { WeaponAbilityTable.Instance.Table[type].MeleeBlockChanceMod = v; } break;
                 case ("ParryModMod"): { WeaponAbilityTable.Instance.Table[type].ParryModMod = v; } break;
                 case ("Range"): { WeaponAbilityTable.Instance.Table[type].Range = v; } break;
                 case ("RangeBlockMod"): { WeaponAbilityTable.Instance.Table[type].RangeBlockMod = v; } break;
                 case ("ShieldDamageMod"): { WeaponAbilityTable.Instance.Table[type].ShieldDamageMod = v; } break;
+                case ("StaminaCost"): { WeaponAbilityTable.Instance.Table[type].StaminaCost = v; } break;
             }
         }
 

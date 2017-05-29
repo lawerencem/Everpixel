@@ -1,4 +1,5 @@
-﻿using Model.Abilities;
+﻿using Characters.Params;
+using Model.Abilities;
 using Model.Events;
 using Model.Slot;
 using System.Collections.Generic;
@@ -16,14 +17,14 @@ namespace Model.Equipment
         public double BlockIgnore { get; set; }
         public double Damage { get; set; }
         public string Description { get; set; }
-        public double FatigueCost { get; set; }
-        public double FatigueReduce { get; set; }
+        public double FatigueCostMod { get; set; }
         public double InitiativeReduce { get; set; }
         public double MeleeBlockChance { get; set; }
         public double ParryMod { get; set; }
         public double RangeMod { get; set; }
         public double ShieldDamage { get; set; }
         public WeaponSkillEnum Skill { get; set; }
+        public double StaminaReduce { get; set; }
 
 
         public GenericWeapon() : base(SlotEnum.Weapon, EquipmentTypeEnum.Held)
@@ -36,13 +37,13 @@ namespace Model.Equipment
             this.BlockIgnore = 1;
             this.Damage = 0;
             this.Durability = 0;
-            this.FatigueCost = 1;
-            this.FatigueReduce = 0;
+            this.FatigueCostMod = 1;
             this.InitiativeReduce = 1;
             this.MaxDurability = 0;
             this.ParryMod = 1;
             this.RangeMod = 0;
             this.ShieldDamage = 1;
+            this.StaminaReduce = 1;
         }
 
         public bool IsTypeOfShield()
@@ -53,6 +54,16 @@ namespace Model.Equipment
                 return true;
             else
                 return false;
+        }
+
+        public List<IndefSecondaryStatModifier> GetStatModifiers()
+        {
+            var toReturn = new List<IndefSecondaryStatModifier>();
+
+            toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.AP, this.APReduce));
+            toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.Stamina, this.StaminaReduce));
+
+            return toReturn;
         }
     }
 }

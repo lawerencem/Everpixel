@@ -10,7 +10,7 @@ namespace Generics.Scripts
 {
     public class TileMoveScript : MonoBehaviour
     {
-        private const float SPEED = 5f;
+        private const float SPEED = 8f;
 
         public GenericCharacterController Character { get; set; }
         public Path Path { get; set; }
@@ -29,6 +29,7 @@ namespace Generics.Scripts
                 this.Character.CurrentTile.Model.Current = this.Character;
                 this.Character.transform.position = Target.transform.position;
                 this.Character.Model.CurrentAP -= this.Target.Model.Cost;
+                // TODO: Get cost via interface 
                 var next = this.Path.GetNextTile(this.Target);
                 if (next != null)
                 {

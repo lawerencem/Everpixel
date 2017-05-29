@@ -5,6 +5,7 @@ using Controller.Map;
 using Generics;
 using Generics.Hex;
 using Model.Abilities;
+using Model.Characters;
 using Model.Events.Combat;
 using Model.Map;
 using System.Collections.Generic;
@@ -99,7 +100,7 @@ namespace Assets.Controller.Managers
             foreach (var character in this._characters)
             {
                 this._order.Add(character);
-                character.Model.CurrentAP = character.Model.SecondaryStats.MaxAP;
+                character.Model.CurrentAP = character.Model.GetCurrentStatValue(SecondaryStatsEnum.AP);
             }
             this._order.Sort((x, y) => y.Model.SecondaryStats.Initiative.CompareTo(x.Model.SecondaryStats.Initiative));
             if (this._order != null && this._order.Count > 0)

@@ -12,7 +12,7 @@
       <Description>
         This gigantic log has a few razor-sharp teeth protruding from it.  Lizardman warriors use it like an axe.
       </Description>
-      <Fatigue_Cost>1.24</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.24</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.82</Initiative_Reduce>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>0.72</Parry_Mod>
@@ -39,7 +39,7 @@
       <Description>
         This log has a very large and very sharp tooth protruding from the end.  What kind of creature has teeth like that?
       </Description>
-      <Fatigue_Cost>1.22</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.22</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.83</Initiative_Reduce>
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>0.74</Parry_Mod>
@@ -66,7 +66,7 @@
       <Description>
         Basically a giant slab of metal tied to a big stick.  It's sharp though - and it can assuredly do some damage when swung.
       </Description>
-      <Fatigue_Cost>1.40</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.40</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.70</Initiative_Reduce>
       <Max_Durability>80</Max_Durability>
       <Parry_Mod>1.04</Parry_Mod>
@@ -93,7 +93,7 @@
       <Description>
         A giant slab of sharpened metal tied to a stick.  Tiresome to wield, but deadly when swung.
       </Description>
-      <Fatigue_Cost>1.38</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.38</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.72</Initiative_Reduce>
       <Max_Durability>110</Max_Durability>
       <Parry_Mod>1.04</Parry_Mod>
@@ -120,7 +120,7 @@
       <Description>
         This savagely-heavy "axe" is favored by orc shock troops to decimate enemy front-lines.
       </Description>
-      <Fatigue_Cost>1.35</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.35</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.75</Initiative_Reduce>
       <Max_Durability>300</Max_Durability>
       <Parry_Mod>1.05</Parry_Mod>
@@ -147,7 +147,7 @@
       <Description>
         This savagely-heavy "axe" is also very, very sharp...
       </Description>
-      <Fatigue_Cost>1.35</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.35</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.75</Initiative_Reduce>
       <Max_Durability>350</Max_Durability>
       <Parry_Mod>1.06</Parry_Mod>
@@ -177,7 +177,7 @@
         This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
         it will certainly cause utter devastation on the battlefield.
       </Description>
-      <Fatigue_Cost>1.22</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.22</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.73</Initiative_Reduce>
       <Max_Durability>100</Max_Durability>
       <Parry_Mod>0</Parry_Mod>
@@ -203,7 +203,7 @@
       <Description>
         This log has some strangely-heavy bones protruding from the end.
       </Description>
-      <Fatigue_Cost>1.24</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.24</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.85</Initiative_Reduce>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>0.55</Parry_Mod>
@@ -230,7 +230,7 @@
       <Description>
         This log has some strangely-heavy bones protruding from the end.
       </Description>
-      <Fatigue_Cost>1.22</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.22</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.83</Initiative_Reduce>
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>0.58</Parry_Mod>
@@ -255,7 +255,7 @@
         A relatively light shield given its size.  Commonly wielded by legionnaires.
         It's large size leaves few openings for attackers to exploit.
       </Description>
-      <Fatigue_Cost>1.21</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.21</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.79</Initiative_Reduce>
       <Max_Durability>80</Max_Durability>
       <Melee_Block_Chance>1.34</Melee_Block_Chance>
@@ -274,7 +274,7 @@
       <Description>
         A relatively light shield commonly wielded by legionnaires.  It's large size leaves few openings for attackers to exploit.
       </Description>
-      <Fatigue_Cost>1.20</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.20</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.80</Initiative_Reduce>
       <Max_Durability>100</Max_Durability>
       <Melee_Block_Chance>1.35</Melee_Block_Chance>
@@ -295,7 +295,7 @@
       <Description>
         A suprisingly-effective shield made of dino scales.
       </Description>
-      <Fatigue_Cost>1.07</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.07</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.98</Initiative_Reduce>
       <Max_Durability>35</Max_Durability>
       <Melee_Block_Chance>1.07</Melee_Block_Chance>
@@ -314,7 +314,7 @@
       <Description>
         A suprisingly-effective shield made of dino scales.
       </Description>
-      <Fatigue_Cost>1.06</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.06</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.98</Initiative_Reduce>
       <Max_Durability>55</Max_Durability>
       <Melee_Block_Chance>1.08</Melee_Block_Chance>
@@ -333,7 +333,7 @@
       <Description>
         A suprisingly-effective shield made of dino scales.
       </Description>
-      <Fatigue_Cost>1.05</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.05</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.99</Initiative_Reduce>
       <Max_Durability>85</Max_Durability>
       <Melee_Block_Chance>1.1</Melee_Block_Chance>
@@ -352,7 +352,7 @@
       <Description>
         A suprisingly-effective shield made of dino scales.
       </Description>
-      <Fatigue_Cost>1.03</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.03</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.99</Initiative_Reduce>
       <Max_Durability>120</Max_Durability>
       <Melee_Block_Chance>1.12</Melee_Block_Chance>
@@ -372,7 +372,7 @@
         This is a solidly-made shield.  The heaviness of it restricts some movement, but it will easily block
         melee attacks.
       </Description>
-      <Fatigue_Cost>1.10</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.90</Initiative_Reduce>
       <Max_Durability>60</Max_Durability>
       <Melee_Block_Chance>1.15</Melee_Block_Chance>
@@ -391,7 +391,7 @@
       <Description>
         A big, heavy chunk of metal.  Unsurprsingly, its weight make it a favorite amongst orcish heavy infantry.
       </Description>
-      <Fatigue_Cost>1.21</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.21</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.67</Initiative_Reduce>
       <Max_Durability>110</Max_Durability>
       <Melee_Block_Chance>1.22</Melee_Block_Chance>
@@ -410,7 +410,7 @@
       <Description>
         A big, heavy chunk of metal.  Unsurprsingly, its weight make it a favorite amongst orcish heavy infantry.
       </Description>
-      <Fatigue_Cost>1.20</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.20</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.70</Initiative_Reduce>
       <Max_Durability>150</Max_Durability>
       <Melee_Block_Chance>1.24</Melee_Block_Chance>
@@ -436,7 +436,7 @@
       <Description>
         A small bow favored by goblins.
       </Description>
-      <Fatigue_Cost>1</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1.0</Parry_Mod>
@@ -462,7 +462,7 @@
       <Description>
         A small bow favored by goblins.
       </Description>
-      <Fatigue_Cost>1</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1.0</Parry_Mod>
@@ -488,7 +488,7 @@
       <Description>
         A small bow favored by goblins.
       </Description>
-      <Fatigue_Cost>1</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1.0</Parry_Mod>
@@ -514,7 +514,7 @@
       <Description>
         A small bow favored by goblins.
       </Description>
-      <Fatigue_Cost>1</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1.0</Parry_Mod>
@@ -537,7 +537,7 @@
       <Description>
         This flimsy thing could probably deflect a few blows before completely disintegrating...hopefully...
       </Description>
-      <Fatigue_Cost>1</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>20</Max_Durability>
       <Melee_Block_Chance>1.01</Melee_Block_Chance>
@@ -555,7 +555,7 @@
       <Description>
         A rather small shield meant for deflecting blows rather than blocking.  It's not exactly the finest quality...
       </Description>
-      <Fatigue_Cost>1</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>35</Max_Durability>
       <Melee_Block_Chance>1.03</Melee_Block_Chance>
@@ -573,7 +573,7 @@
       <Description>
         A small, light shield favored by goblins.
       </Description>
-      <Fatigue_Cost>1.02</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.02</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.98</Initiative_Reduce>
       <Max_Durability>25</Max_Durability>
       <Melee_Block_Chance>1.02</Melee_Block_Chance>
@@ -592,7 +592,7 @@
       <Description>
         A small, light shield favored by goblins.
       </Description>
-      <Fatigue_Cost>1.01</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.01</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.99</Initiative_Reduce>
       <Max_Durability>35</Max_Durability>
       <Melee_Block_Chance>1.03</Melee_Block_Chance>
@@ -611,7 +611,7 @@
       <Description>
         A small, light shield favored by goblins.
       </Description>
-      <Fatigue_Cost>1</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>50</Max_Durability>
       <Melee_Block_Chance>1.04</Melee_Block_Chance>
@@ -638,7 +638,7 @@
       <Description>
         Kali: The Demon Barb
       </Description>
-      <Fatigue_Cost>1</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>150</Max_Durability>
       <Parry_Mod>1.05</Parry_Mod>
@@ -664,7 +664,7 @@
       <Description>
         This spear has a wide blade.  Goblins love using these as they can inflict bleeding wounds.
       </Description>
-      <Fatigue_Cost>1.10</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
@@ -691,7 +691,7 @@
       <Description>
         This spear has a wide blade.  Goblins love using these as they can inflict bleeding wounds.
       </Description>
-      <Fatigue_Cost>1.09</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.09</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>55</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
@@ -718,7 +718,7 @@
       <Description>
         This spear has a wide blade.  Goblins love using these as they can inflict bleeding wounds.
       </Description>
-      <Fatigue_Cost>1.08</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.08</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>75</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
@@ -745,7 +745,7 @@
       <Description>
         This spear is simply a sharp rock tied to the end of a stick.  It looks like it could still do some damage, though.
       </Description>
-      <Fatigue_Cost>1.10</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>30</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
@@ -771,7 +771,7 @@
       <Description>
         Simple, yet effective.
       </Description>
-      <Fatigue_Cost>1.08</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.08</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
@@ -797,7 +797,7 @@
       <Description>
         Simple, yet effective.
       </Description>
-      <Fatigue_Cost>1</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>65</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
@@ -825,7 +825,7 @@
       <Description>
         This odd staff has a slimy tip...
       </Description>
-      <Fatigue_Cost>1.12</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.12</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.78</Initiative_Reduce>
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
@@ -850,7 +850,7 @@
       <Description>
         This odd staff has a prodigious amount of slime coming from the tip...
       </Description>
-      <Fatigue_Cost>1.11</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.11</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.79</Initiative_Reduce>
       <Max_Durability>25</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
@@ -875,7 +875,7 @@
       <Description>
         This staff is covered in slime...and it looks like its *gazing* at you...
       </Description>
-      <Fatigue_Cost>1.10</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.80</Initiative_Reduce>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
@@ -901,7 +901,7 @@
         An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
         that are best avoided...
       </Description>
-      <Fatigue_Cost>1</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>20</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
@@ -927,7 +927,7 @@
         An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
         that are best avoided...
       </Description>
-      <Fatigue_Cost>1</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>30</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
@@ -953,7 +953,7 @@
         An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
         that are best avoided...
       </Description>
-      <Fatigue_Cost>1</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>20</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
@@ -979,7 +979,7 @@
         An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
         that are best avoided...
       </Description>
-      <Fatigue_Cost>1</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
@@ -1007,7 +1007,7 @@
         Supposedly, this is some fashion of sword... but it looks as if someone simply tied a sharp rock to a stick.
         Nonetheless, the jagged and heavy nature of the rock could probably cause some grisly injuries.
       </Description>
-      <Fatigue_Cost>1.20</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.20</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.94</Initiative_Reduce>
       <Max_Durability>100</Max_Durability>
       <Parry_Mod>1.02</Parry_Mod>
@@ -1032,7 +1032,7 @@
       <Description>
         Exemplifying typical orcish technology, someone has tied a jagged piece of metal to a stick and now calls it a "choppa".
       </Description>
-      <Fatigue_Cost>1.18</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.18</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.95</Initiative_Reduce>
       <Max_Durability>100</Max_Durability>
       <Parry_Mod>1.03</Parry_Mod>
@@ -1057,7 +1057,7 @@
       <Description>
         Someone has taken the time to sharpen this metal-on-a-stick.  Rather impressive by Orc standards.
       </Description>
-      <Fatigue_Cost>1.15</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.15</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.95</Initiative_Reduce>
       <Max_Durability>120</Max_Durability>
       <Parry_Mod>1.03</Parry_Mod>
@@ -1082,7 +1082,7 @@
       <Description>
         Simple yet sturdy, this sword represents the finest Orcish craftmanship.
       </Description>
-      <Fatigue_Cost>1.14</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.14</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.95</Initiative_Reduce>
       <Max_Durability>200</Max_Durability>
       <Parry_Mod>1.03</Parry_Mod>
@@ -1108,7 +1108,7 @@
         This sword represents a good balance beteween size and strength.  It is a potent defensive weapon, capable of parrying
         savage blows.  However, its size still makes it a fearsome offensive weapon.
       </Description>
-      <Fatigue_Cost>1.25</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.25</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.75</Initiative_Reduce>
       <Max_Durability>180</Max_Durability>
       <Parry_Mod>1.15</Parry_Mod>
@@ -1135,7 +1135,7 @@
       <Description>
         This is basically just some heavy bones attached to a wooden club.
       </Description>
-      <Fatigue_Cost>1.12</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.12</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.92</Initiative_Reduce>
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1.02</Parry_Mod>
@@ -1161,7 +1161,7 @@
         Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
         can easily pierce armor.
       </Description>
-      <Fatigue_Cost>1.11</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.11</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.93</Initiative_Reduce>
       <Max_Durability>25</Max_Durability>
       <Parry_Mod>1.03</Parry_Mod>
@@ -1187,7 +1187,7 @@
         Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
         can easily pierce armor.
       </Description>
-      <Fatigue_Cost>1.10</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.95</Initiative_Reduce>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>1.04</Parry_Mod>
@@ -1213,7 +1213,7 @@
         Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
         can easily pierce armor.
       </Description>
-      <Fatigue_Cost>1.10</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.95</Initiative_Reduce>
       <Max_Durability>60</Max_Durability>
       <Parry_Mod>1.05</Parry_Mod>
@@ -1238,7 +1238,7 @@
       <Description>
         A short blade meant more for thrusting motions than swinging.  Nonetheless, it can still do damage when swung.
       </Description>
-      <Fatigue_Cost>1.07</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.07</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>70</Max_Durability>
       <Parry_Mod>1.15</Parry_Mod>
@@ -1263,7 +1263,7 @@
       <Description>
         A well-rounded, versatile weapon.  Not the finest quality, but a deadly weapon nonetheless.
       </Description>
-      <Fatigue_Cost>1.16</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.16</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.96</Initiative_Reduce>
       <Max_Durability>80</Max_Durability>
       <Parry_Mod>1.12</Parry_Mod>
@@ -1290,7 +1290,7 @@
         A well-rounded, versatile weapon.  It isn't fancy, but it is quality-made.  In the right hands, this weapon
         could be deadly.
       </Description>
-      <Fatigue_Cost>1.15</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.15</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.97</Initiative_Reduce>
       <Max_Durability>100</Max_Durability>
       <Parry_Mod>1.15</Parry_Mod>
@@ -1316,7 +1316,7 @@
       <Description>
         A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
       </Description>
-      <Fatigue_Cost>1.12</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.12</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>20</Max_Durability>
       <Parry_Mod>1.02</Parry_Mod>
@@ -1341,7 +1341,7 @@
       <Description>
         A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
       </Description>
-      <Fatigue_Cost>1.11</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.11</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>30</Max_Durability>
       <Parry_Mod>1.03</Parry_Mod>
@@ -1366,7 +1366,7 @@
       <Description>
         A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
       </Description>
-      <Fatigue_Cost>1.10</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>0.95</Parry_Mod>
@@ -1391,7 +1391,7 @@
       <Description>
         A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
       </Description>
-      <Fatigue_Cost>1.10</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>65</Max_Durability>
       <Parry_Mod>0.97</Parry_Mod>
@@ -1416,7 +1416,7 @@
       <Description>
         A blade covered in disgusting slime.  It's fairly obvious the pointy nature of the blade is meant to poison enemies with the slime.
       </Description>
-      <Fatigue_Cost>1.08</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.08</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>20</Max_Durability>
       <Parry_Mod>1.03</Parry_Mod>
@@ -1442,7 +1442,7 @@
       <Description>
         A blade covered in disgusting slime.  It's fairly obvious the pointy nature of the blade is meant to poison enemies with the slime.
       </Description>
-      <Fatigue_Cost>1.07</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.07</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>25</Max_Durability>
       <Parry_Mod>1.08</Parry_Mod>
@@ -1468,7 +1468,7 @@
       <Description>
         This blade is covered in living, breathing slime...
       </Description>
-      <Fatigue_Cost>1.05</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.05</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>40</Max_Durability>
       <Parry_Mod>1.12</Parry_Mod>
@@ -1495,7 +1495,7 @@
         This massive sword is too heavy to utilize for any defensive purposes.  It is; however, quite capable of
         decimating enemies on the battlefield.
       </Description>
-      <Fatigue_Cost>1.30</Fatigue_Cost>
+      <Fatigue_Cost_Mod>1.30</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.75</Initiative_Reduce>
       <Max_Durability>220</Max_Durability>
       <Parry_Mod>1</Parry_Mod>

@@ -42,6 +42,7 @@ namespace Model.Combat
         private void CreateHitEvent(HitInfo hit)
         {
             var guiEvent = new DisplayHitStatsEvent(CombatEventManager.Instance, hit);
+            // TODO: Spawn model dmg event
         }
 
         private void ProcessMeleeFlags(HitInfo hit)

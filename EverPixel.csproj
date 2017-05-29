@@ -149,6 +149,8 @@
     <Compile Include="Assets\Model\Characters\Factories\CharacterFactory.cs" />
     <Compile Include="Assets\Model\Characters\Params\CharacterParams.cs" />
     <Compile Include="Assets\Model\Characters\Params\GenericStatModifier.cs" />
+    <Compile Include="Assets\Model\Characters\Params\IndefGenericStatModifier.cs" />
+    <Compile Include="Assets\Model\Characters\Params\IndefSecondaryStatsModifier.cs" />
     <Compile Include="Assets\Model\Characters\Params\PredefinedCharacterParams.cs" />
     <Compile Include="Assets\Model\Characters\Params\PrimaryStats.cs" />
     <Compile Include="Assets\Model\Characters\Params\PrimarystatModifier.cs" />
@@ -205,6 +207,7 @@
     <Compile Include="Assets\Model\Events\Combat\ActionCofirmedEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\AttackSelectedEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\CombatEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\DisplayHitStatsEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\EndTurnEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\HexSelectedForMoveEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\MapDoneLoadingEvent.cs" />
@@ -252,7 +255,6 @@
     <Compile Include="Assets\View\Equipment\EquipmentBridge.cs" />
     <Compile Include="Assets\View\Equipment\EquipmentView.cs" />
     <Compile Include="Assets\View\Equipment\WeaponView.cs" />
-    <Compile Include="Assets\Model\Events\Combat\DisplayHitStatsEvent.cs" />
     <Compile Include="Assets\View\Events\GUIEndTurnEvent.cs" />
     <Compile Include="Assets\View\Events\GUIEvent.cs" />
     <Compile Include="Assets\View\Events\GUIEventEnum.cs" />

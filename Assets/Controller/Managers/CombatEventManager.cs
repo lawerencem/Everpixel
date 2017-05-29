@@ -3,12 +3,9 @@ using Assets.Generics;
 using Model.Abilities;
 using Controller.Characters;
 using Controller.Managers.Map;
-using Generics;
 using Generics.Scripts;
-using Model.Abilities;
 using Model.Events;
 using Model.Events.Combat;
-using Model.Map;
 using System.Collections.Generic;
 using UnityEngine;
 using View.Events;
@@ -18,6 +15,9 @@ namespace Controller.Managers
 {
     public class CombatEventManager
     {
+        private const float PER_FRAME = 0.0025f;
+        private const float PER_FRAME_DIST = 0.075f;
+
         private CombatManager _combatManager;
         private CombatMapGuiController _mapGUIController;
 
@@ -121,7 +121,7 @@ namespace Controller.Managers
                 {
                     this._mapGUIController.SetActingBoxToController(e.Character);
                     var bob = e.Character.Handle.AddComponent<BobbingScript>();
-                    bob.Init(0.001f, 0.05f, e.Character.Handle);
+                    bob.Init(PER_FRAME, PER_FRAME_DIST, e.Character.Handle);
                 }
                 else
                 {
@@ -167,7 +167,7 @@ namespace Controller.Managers
             this._combatManager.CurrActing = e.Controller;
             this._mapGUIController.SetActingBoxToController(e.Controller);
             var bob = e.Controller.Handle.AddComponent<BobbingScript>();
-            bob.Init(0.001f, 0.05f, e.Controller.Handle);
+            bob.Init(PER_FRAME, PER_FRAME_DIST, e.Controller.Handle);
         }
 
         private void HandleTileDoubleClickEvent(TileDoubleClickEvent e)
@@ -218,6 +218,5 @@ namespace Controller.Managers
 
             var populateBtns = new PopulateWpnBtnsEvent(abs, GUIEventManager.Instance);
         }
-
     }
 }

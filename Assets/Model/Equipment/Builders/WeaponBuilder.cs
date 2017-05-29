@@ -23,7 +23,7 @@ namespace Model.Equipment
             weapon.Damage = wStats.Damage;
             weapon.Description = wStats.Description;
             weapon.Durability = wStats.Durability;
-            weapon.FatigueCost = wStats.FatigueCost;
+            weapon.FatigueCostMod = wStats.FatigueCostMod;
             weapon.InitiativeReduce = wStats.InitiativeReduce;
             weapon.MaxDurability = wStats.Durability;
             weapon.MeleeBlockChance = wStats.MeleeBlockChance;

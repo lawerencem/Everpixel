@@ -3,6 +3,7 @@ using Controller.Characters;
 using Controller.Map;
 using Generics.Hex;
 using Generics.Scripts;
+using Model.Characters;
 using Model.Combat;
 using Model.Events.Combat;
 using Model.Map;
@@ -46,11 +47,11 @@ namespace Controller.Managers.Map
         public void SetActingBoxToController(GenericCharacterController c)
         {
             this.SetTagText(NAME, c.View.Name);
-            this.SetTagText(AP, c.Model.CurrentAP.ToString() + " / " + c.Model.SecondaryStats.MaxAP);
-            this.SetTagText(HP, c.Model.CurrentHP.ToString() + " / " + c.Model.SecondaryStats.MaxHP);
-            this.SetTagText(STAM, c.Model.CurrentStamina.ToString() + " / " + c.Model.SecondaryStats.Stamina);
-            this.SetTagText(MORALE, c.Model.CurrentMorale.ToString() + " / " + c.Model.SecondaryStats.Morale);
-            this.SetTagText(STAM, c.Model.CurrentStamina.ToString() + " / " + c.Model.SecondaryStats.Stamina);
+            this.SetTagText(AP, c.Model.CurrentAP + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.AP).ToString());
+            this.SetTagText(HP, c.Model.CurrentHP + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.HP).ToString());
+            this.SetTagText(STAM, c.Model.CurrentStamina + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Stamina).ToString());
+            this.SetTagText(MORALE, c.Model.CurrentMorale + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Morale).ToString());
+            this.SetTagText(STAM, c.Model.CurrentStamina + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Stamina).ToString());
 
             if (c.Model.LWeapon != null)
                 this.SetTagText(L_WEAP, c.Model.LWeapon.Name);

@@ -53,10 +53,10 @@ namespace Model.Characters
             character.SecondaryStats = secondary;
             BuildClassSecondaryStats(character);
             character.Type = c.Type;
-            character.CurrentAP = character.SecondaryStats.MaxAP;
-            character.CurrentHP = character.SecondaryStats.MaxHP;
-            character.CurrentMorale = character.SecondaryStats.Morale;
-            character.CurrentStamina = character.SecondaryStats.Stamina;
+            character.CurrentAP = character.GetCurrentStatValue(SecondaryStatsEnum.AP);
+            character.CurrentHP = character.GetCurrentStatValue(SecondaryStatsEnum.HP);
+            character.CurrentMorale = character.GetCurrentStatValue(SecondaryStatsEnum.Morale);
+            character.CurrentStamina = character.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
             return character;
         }
 

@@ -2,9 +2,9 @@
 <WeaponAbilities>
   <WeaponAbility name="Aim">
     <AccMod>1.20</AccMod>
-    <APMod>1.20</APMod>
+    <APCost>5</APCost>
     <DamageMod>1.30</DamageMod>
-    <FatigueCostMod>1.25</FatigueCostMod>
+    <StaminaCost>20</StaminaCost>
     <Range>6</Range>
   </WeaponAbility>
   <WeaponAbility name="Break_Armor">

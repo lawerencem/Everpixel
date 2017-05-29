@@ -165,7 +165,7 @@
   </Armor>
   <Armor name="Goblin Pads">
     <Tier>Three</Tier>
-    <AP_Reduce>5</AP_Reduce>
+    <AP_Reduce>0.95</AP_Reduce>
     <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
     <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
     <Block_Reduce>0.90</Block_Reduce>
@@ -371,7 +371,7 @@
   </Armor>
   <Armor name="Jousting Helm">
     <Tier>Four</Tier>
-    <AP_Reduce>20</AP_Reduce>
+    <AP_Reduce>0.80</AP_Reduce>
     <ArmorSkillEnum>Plate</ArmorSkillEnum>
     <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
     <Block_Reduce>0.60</Block_Reduce>

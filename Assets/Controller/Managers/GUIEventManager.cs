@@ -72,7 +72,7 @@ namespace Controller.Managers
         private void HandleWpnBtnClickEvent(WpnBtnClickEvent e)
         {
             this._events.Remove(e);
-            var attackSelEvent = new AttackSelectedEvent(CombatEventManager.Instance, e.Type, e.RWeapon);
+            var attackSelEvent = new AttackSelectedEvent(CombatEventManager.Instance, e.AbilityType, e.RWeapon);
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Model.Equipment
         Block_Ignore,
         Damage,
         Dodge_Reduce,
-        Fatigue_Cost,
+        Fatigue_Cost_Mod,
         Fatigue_Reduce,
         Initiative_Reduce,
         Max_Durability,

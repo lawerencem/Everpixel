@@ -1,4 +1,5 @@
-﻿using Model.Abilities;
+﻿using Characters.Params;
+using Model.Abilities;
 using Model.Events;
 using Model.Slot;
 using System.Collections.Generic;
@@ -22,6 +23,21 @@ namespace Model.Equipment
         public GenericHelm() : base(SlotEnum.Head, EquipmentTypeEnum.Worn)
         {
 
+        }
+
+        public List<IndefSecondaryStatModifier> GetStatModifiers()
+        {
+            var toReturn = new List<IndefSecondaryStatModifier>();
+
+            toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.AP, this.APReduce));
+            toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.Block, this.BlockReduce));
+            toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.Dodge, this.DodgeMod));
+            //toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.fatigue, this.APReduce)); TODO
+            toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.Initiative, this.InitativeReduce));
+            toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.Parry, this.ParryReduce));
+            toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.Stamina, this.StaminaReduce));
+
+            return toReturn;
         }
     }
 }
