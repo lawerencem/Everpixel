@@ -199,7 +199,14 @@ namespace Controller.Managers.Map
                     var position = box.transform.position;
                     position.x += xOffset;
                     position.y += yOffset;
-                    if (r.sortingLayerName != "UICharTorso")
+                    if (r.sortingLayerName == "UICharMount")
+                    {
+                        var mountPos = position;
+                        mountPos.x += 0.05f;
+                        mountPos.y -= 0.15f;
+                        r.transform.position = mountPos;
+                    }
+                    else if (r.sortingLayerName != "UICharTorso")
                         r.transform.position = position;
                     else
                         r.transform.position = box.transform.position;
