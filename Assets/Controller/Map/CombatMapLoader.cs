@@ -97,7 +97,6 @@ namespace Controller.Managers.Map
 
         private void InitBackgroundDeco(BiomeEnum b)
         {
-            // TODO: Clean this up
             var sprites = MapBridge.Instance.GetBackgroundDecoSprites(b);
             for (int itr = 0; itr < 15; itr++)
             {

@@ -53,11 +53,18 @@ namespace Controller.Managers.Map
             this.SetTagText(MORALE, c.Model.CurrentMorale + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Morale).ToString());
             this.SetTagText(STAM, c.Model.CurrentStamina + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Stamina).ToString());
 
+            if (c.Model.Armor != null)
+                this.SetTagText(ARMOR, c.Model.Armor.Name);
+            else
+                this.SetTagText(ARMOR, "");
+            if (c.Model.Helm != null)
+                this.SetTagText(HELM, c.Model.Helm.Name);
+            else
+                this.SetTagText(HELM, "");
             if (c.Model.LWeapon != null)
                 this.SetTagText(L_WEAP, c.Model.LWeapon.Name);
             else
                 this.SetTagText(L_WEAP, "");    
-            
             if (c.Model.RWeapon != null)
                 this.SetTagText(R_WEAP, c.Model.RWeapon.Name);
             else

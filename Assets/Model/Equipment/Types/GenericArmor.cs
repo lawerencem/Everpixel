@@ -32,7 +32,6 @@ namespace Model.Equipment
             toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.AP, this.APReduce));
             toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.Block, this.BlockReduce));
             toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.Dodge, this.DodgeMod));
-            //toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.fatigue, this.APReduce)); TODO
             toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.Initiative, this.InitativeReduce));
             toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.Parry, this.ParryReduce));
             toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.Stamina, this.StaminaReduce));

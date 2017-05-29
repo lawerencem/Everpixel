@@ -41,13 +41,13 @@ namespace Model.Characters
             if (lWeapon)
             {
                 this.LWeapon = weapon;
+                this.IndefSStatMods.Add(new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.GetStatModifiers()));
             }
-                
             else
             {
                 this.RWeapon = weapon;
+                this.IndefSStatMods.Add(new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.GetStatModifiers()));
             }
-                
         }
 
         public void RemoveArmor()

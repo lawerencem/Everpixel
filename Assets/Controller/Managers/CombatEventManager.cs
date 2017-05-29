@@ -112,7 +112,7 @@ namespace Controller.Managers
         private void HandleHexSelectedForMoveEvent(HexSelectedForMoveEvent e)
         {
             this._events.Remove(e);
-            if (this._combatManager != null && this._combatManager.PlayersTurn)
+            if (this._combatManager != null)
             {
                 var pathEvent = new ShowPotentialPathEvent(this._combatManager.CurrActing, e.Selected, this);
             }
