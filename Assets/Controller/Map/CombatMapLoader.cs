@@ -163,7 +163,7 @@ namespace Controller.Managers.Map
                 c.Handle.name = c.View.Type.ToString() + " " + c.View.Race.ToString();
                 render.sprite = sprite;
                 render.sortingLayerName = "CharTorso";
-                c.SpriteHandlers.Add(c.Handle);
+                c.SpriteHandlerDict.Add("Character Main", c.Handle);
                 AttachDeco(c, "CharFace", c.View.Face, tile);
                 AttachDeco(c, "CharDeco1", c.View.Deco1, tile);
                 AttachDeco(c, "CharDeco2", c.View.Deco2, tile);
@@ -190,7 +190,7 @@ namespace Controller.Managers.Map
             spriteHandler.name = "Character Deco";
             render.sprite = sprite;
             render.sortingLayerName = sort;
-            c.SpriteHandlers.Add(spriteHandler);
+            c.SpriteHandlerDict.Add(sort, spriteHandler);
         }
 
         private void AttachMount(GenericCharacterController c, string sort, TileController tile)
@@ -206,7 +206,7 @@ namespace Controller.Managers.Map
             spriteHandler.name = c.View.Name + " " + c.View.Mount.Name + " Mount";
             render.sprite = sprite;
             render.sortingLayerName = sort;
-            c.SpriteHandlers.Add(spriteHandler);
+            c.SpriteHandlerDict.Add(sort, spriteHandler);
         }
 
         private void TryAttachEquipment(GenericCharacterController c, EquipmentView e, string sort, TileController tile, float xOffset = 0, float yOffset = 0)
@@ -224,7 +224,7 @@ namespace Controller.Managers.Map
                 spriteHandler.name = e.Name;
                 render.sprite = sprite;
                 render.sortingLayerName = sort;
-                c.SpriteHandlers.Add(spriteHandler);
+                c.SpriteHandlerDict.Add(sort, spriteHandler);
             }
         }
     }

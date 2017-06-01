@@ -4,6 +4,7 @@
 0.5) - Character jolts during attacks
 0) - Replace eyes with dead eyes when killed
 1) - Dual-Wield
+1.25) - Restore Stamina each turn
 1.75) - Injuries and effects
 1.5) - Dead characters on tiles shouldn't prevent movement
 2) - Zone of control

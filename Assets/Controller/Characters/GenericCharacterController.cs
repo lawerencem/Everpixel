@@ -1,10 +1,12 @@
-﻿using Controller.Map;
+﻿using Assets.Generics;
+using Controller.Map;
 using Model.Characters;
 using Model.Map;
 using System.Collections.Generic;
 using UnityEngine;
 using View.Builders;
 using View.Characters;
+using View.Equipment;
 
 namespace Controller.Characters
 {
@@ -16,7 +18,7 @@ namespace Controller.Characters
         public TileController CurrentTile { get; set; }
         public GameObject Handle { get; set; }
         public GenericCharacter Model { get { return this._model; } }
-        public List<GameObject> SpriteHandlers = new List<GameObject>();
+        public Dictionary<string, GameObject> SpriteHandlerDict = new Dictionary<string, GameObject>();
         public CharacterView View { get { return this._view; } }
 
         private void BuildModel(CharacterParams p)

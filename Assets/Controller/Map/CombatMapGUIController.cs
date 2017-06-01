@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using View.Biomes;
+using View.Scripts;
 
 namespace Controller.Managers.Map
 {
@@ -116,7 +117,7 @@ namespace Controller.Managers.Map
 
         public void DisplayHitStatsEvent(DisplayHitStatsEvent e)
         {
-            this.ProcessTextToDisplay(e);
+            this.ProcessHitGraphics(e);
             this.ProcessSplatter(e);
         }
 
@@ -216,10 +217,13 @@ namespace Controller.Managers.Map
             this.PaintSingleTile(e.Killed.CurrentTile, sprite);
         }
 
-        private void ProcessTextToDisplay(DisplayHitStatsEvent e)
+        private void ProcessHitGraphics(DisplayHitStatsEvent e)
         {
             if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge))
-                this.DisplayText("Dodge", e, WHITE, 0.30f);
+            {
+                var script = e.Hit.Target.Handle.AddComponent<BoomerangScript>();
+                script.Init(e.Hit.Target.Handle, this.GetRandomDodgePosition(e));
+            }
             else if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Parry))
                 this.DisplayText("Parry", e, WHITE, 0.30f);
             else
@@ -239,12 +243,12 @@ namespace Controller.Managers.Map
             {
                 foreach (var img in this._boxImages) { GameObject.Destroy(img); }
                 this._boxImages.Clear();
-                foreach(var h in c.SpriteHandlers)
+                foreach(var spriteHandler in c.SpriteHandlerDict.Values)
                 {
-                    var parentPosition = h.transform.parent.position;
-                    var xOffset = (h.transform.position.x - parentPosition.x) * 2.5f;
-                    var yOffset = (h.transform.position.y - parentPosition.y) * 2.5f;
-                    var renderer = h.GetComponent<SpriteRenderer>();
+                    var parentPosition = spriteHandler.transform.parent.position;
+                    var xOffset = (spriteHandler.transform.position.x - parentPosition.x) * 2.5f;
+                    var yOffset = (spriteHandler.transform.position.y - parentPosition.y) * 2.5f;
+                    var renderer = spriteHandler.GetComponent<SpriteRenderer>();
                     var tempImage = new GameObject();
                     var r = tempImage.AddComponent<SpriteRenderer>();
                     r.sprite = renderer.sprite;                    
@@ -279,6 +283,13 @@ namespace Controller.Managers.Map
                 var text = tagged.GetComponent<Text>();
                 text.text = toSet;
             }
+        }
+
+        private Vector3 GetRandomDodgePosition(DisplayHitStatsEvent e)
+        {
+            var random = ListUtil<TileController>.GetRandomListElement(e.Hit.Target.CurrentTile.Adjacent);
+            var position = Vector3.Lerp(e.Hit.Target.CurrentTile.Model.Center, random.Model.Center, 0.35f);
+            return position;
         }
     }
 }

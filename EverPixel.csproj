@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.5.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -97,6 +99,7 @@
     <Compile Include="Assets\Generics\Scripts\BobbingScript.cs" />
     <Compile Include="Assets\Generics\Scripts\DestroyByLifetime.cs" />
     <Compile Include="Assets\Generics\Scripts\FloatingText.cs" />
+    <Compile Include="Assets\Generics\Scripts\JoltScript.cs" />
     <Compile Include="Assets\Generics\Scripts\TileMoveScript.cs" />
     <Compile Include="Assets\Generics\Utilities\Count.cs" />
     <Compile Include="Assets\Generics\Utilities\DeepClone.cs" />
@@ -268,6 +271,7 @@
     <Compile Include="Assets\View\MapSpriteLoader.cs" />
     <Compile Include="Assets\View\Mounts\MountBridge.cs" />
     <Compile Include="Assets\View\Mounts\MountView.cs" />
+    <Compile Include="Assets\View\Scripts\BoomerangScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Model\Abilities\Weapon\XML\WeaponAbilities.xml" />
