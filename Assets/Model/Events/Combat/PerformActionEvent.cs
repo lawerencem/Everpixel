@@ -20,7 +20,7 @@ namespace Model.Events.Combat
             GenericAbility action) :
             base(CombatEventEnum.PerformActionEvent, parent)
         {
-            if (!this._parent.GetLock())
+            if (!this._parent.GetInteractionLock())
             {
                 if (source.Model.Current.GetType() == typeof(GenericCharacterController) &&
                     target.Model.Current.GetType() == typeof(GenericCharacterController))
@@ -43,7 +43,7 @@ namespace Model.Events.Combat
                     if (this.Action.APCost < this.Source.Model.CurrentAP  &&
                         fatigueCost < this.Source.Model.CurrentStamina)
                     {
-                        this._parent.Lock();
+                        this._parent.LockInteraction();
                         this.Source.Model.CurrentAP -= this.Action.APCost;
                         this.Source.Model.CurrentStamina -= (int)fatigueCost;
                         this.RegisterEvent();

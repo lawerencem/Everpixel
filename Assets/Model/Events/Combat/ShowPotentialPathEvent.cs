@@ -15,7 +15,7 @@ namespace Model.Events.Combat
             CombatEventManager parent) : 
             base(CombatEventEnum.ShowPotentialPath, parent)
         {
-            if (!this._parent.GetLock())
+            if (!this._parent.GetInteractionLock())
             {
                 this.Character = c;
                 this.Target = t;

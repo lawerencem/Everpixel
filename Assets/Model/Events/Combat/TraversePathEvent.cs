@@ -12,9 +12,9 @@ namespace Model.Events.Combat
         public TraversePathEvent(CombatEventManager parent, GenericCharacterController c, Path p) : 
             base(CombatEventEnum.TraversePath, parent)
         {
-            if (!this._parent.GetLock())
+            if (!this._parent.GetInteractionLock())
             {
-                this._parent.Lock();
+                this._parent.LockInteraction();
                 this.Character = c;
                 this.Path = p;
                 this.RegisterEvent();

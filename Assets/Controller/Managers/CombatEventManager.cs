@@ -52,9 +52,9 @@ namespace Controller.Managers
             this.TryProcessEvent(e);
         }
 
-        public bool GetLock() { return this._interactionLock; }
-        public void Lock() { this._interactionLock = true;}
-        public void Unlock() { this._interactionLock = false; }
+        public bool GetInteractionLock() { return this._interactionLock; }
+        public void LockInteraction() { this._interactionLock = true;}
+        public void UnlockInteraction() { this._interactionLock = false; }
 
         private void TryProcessEvent(CombatEvent e)
         {
@@ -157,7 +157,7 @@ namespace Controller.Managers
             var hit = new HitInfo(e.Source, e.Target, e.Action);
             e.Action.ProcessAbility(hit);
             this._mapGUIController.SetActingBoxToController(e.Source);
-            this.Unlock();
+            this.UnlockInteraction();
         }
 
         private void HandleShowPotentialPathEvent(ShowPotentialPathEvent e)
