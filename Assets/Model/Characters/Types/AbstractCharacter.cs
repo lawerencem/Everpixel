@@ -4,6 +4,7 @@ using Controller.Managers;
 using Model.Classes;
 using Model.Equipment;
 using Model.Events.Combat;
+using Model.Injuries;
 using Model.Map;
 using System.Collections.Generic;
 
@@ -22,7 +23,9 @@ namespace Model.Characters
         
         public List<PrimaryStatModifier> PStatMods { get; set; }
         public List<SecondaryStatModifier> SStatMods { get; set; }
+        public List<Pair<object, List<IndefPrimaryStatModifier>>> IndefPStatMods { get; set; }
         public List<Pair<object, List<IndefSecondaryStatModifier>>> IndefSStatMods { get; set; }
+        public List<GenericInjury> Injuries { get; set; }
 
         public GenericArmor Armor { get; set; }
         public GenericHelm Helm { get; set; }
@@ -46,6 +49,11 @@ namespace Model.Characters
             this.RemoveHelm();
             this.Helm = helm;
             this.IndefSStatMods.Add(new Pair<object, List<IndefSecondaryStatModifier>>(helm, helm.GetStatModifiers()));
+        }
+
+        public void AddInjury(GenericInjury injury)
+        {
+            this.Injuries.Add(injury);
         }
 
         public void AddWeapon(GenericWeapon weapon, bool lWeapon)
@@ -121,6 +129,11 @@ namespace Model.Characters
                 case (PrimaryStatsEnum.Resolve): { v = (double)this.PrimaryStats.Resolve; } break;
             }
             foreach (var mod in this.PStatMods) { mod.TryScaleValue(stat, ref v); }
+            foreach (var kvp in this.IndefPStatMods)
+                foreach (var mod in kvp.Y)
+                    mod.TryScaleValue(stat, ref v);
+            foreach (var injury in this.Injuries)
+                injury.TryScaleStat(stat, ref v);
             return (int)v;
         }
 
@@ -153,6 +166,8 @@ namespace Model.Characters
             foreach (var kvp in this.IndefSStatMods)
                 foreach (var mod in kvp.Y)
                     mod.TryScaleValue(stat, ref v);
+            foreach (var injury in this.Injuries)
+                injury.TryScaleStat(stat, ref v);
             return (int)v;
         }
     }

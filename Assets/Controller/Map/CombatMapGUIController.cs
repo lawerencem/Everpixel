@@ -34,6 +34,12 @@ namespace Controller.Managers.Map
         private GameObject _singleTile;
 
         private CombatMapGUIControllerHit _hitHelper = new CombatMapGUIControllerHit();
+        private CombatMapGUIControllerParticle _particleHelper = new CombatMapGUIControllerParticle();
+
+        public void AttachInjuryParticle(ApplyInjuryEvent e)
+        {
+            this._particleHelper.ApplyInjuryParticle(e);
+        }
 
         public void ClearDecoratedTiles()
         {

@@ -61,7 +61,8 @@ namespace Controller.Managers
         {
             switch(e.Type)
             {
-                case (CombatEventEnum.ActionCofirmed): { HandleAttackConfirmedEvent(e as ActionConfirmedEvent); } break;
+                case (CombatEventEnum.ActionCofirmed): { HandleActionConfirmed(e as ActionConfirmedEvent); } break;
+                case (CombatEventEnum.ApplyInjury): { HandleApplyInjuryEvent(e as ApplyInjuryEvent); } break;
                 case (CombatEventEnum.AttackSelected): { HandleAttackSelectedEvent(e as AttackSelectedEvent); } break;
                 case (CombatEventEnum.DamageCharacter): { HandleDamageCharacterEvent(e as DamageCharacterEvent); } break;
                 case (CombatEventEnum.CharacterKilled): { HandleCharacterKilledEvent(e as CharacterKilledEvent); } break; 
@@ -80,10 +81,16 @@ namespace Controller.Managers
             }
         }
 
-        private void HandleAttackConfirmedEvent(ActionConfirmedEvent e)
+        private void HandleActionConfirmed(ActionConfirmedEvent e)
         {
             this._events.Remove(e);
             var action = new PerformActionEvent(this, this._combatManager.CurrActing.CurrentTile, e.Target, this._combatManager.CurAbility);
+        }
+
+        private void HandleApplyInjuryEvent(ApplyInjuryEvent e)
+        {
+            this._events.Remove(e);
+            this._mapGUIController.AttachInjuryParticle(e);
         }
 
         private void HandleAttackSelectedEvent(AttackSelectedEvent e)

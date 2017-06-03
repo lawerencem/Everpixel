@@ -19,6 +19,7 @@ namespace Controller.Characters
         public GameObject Handle { get; set; }
         public bool LParty { get; set; }
         public GenericCharacter Model { get { return this._model; } }
+        public List<GameObject> Particles { get; set; }
         public Dictionary<string, GameObject> SpriteHandlerDict = new Dictionary<string, GameObject>();
         public CharacterView View { get { return this._view; } }
 

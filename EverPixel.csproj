@@ -52,6 +52,9 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -66,6 +69,9 @@
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VR">
       <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
@@ -84,6 +90,7 @@
     <Compile Include="Assets\Controller\Managers\LoaderManager.cs" />
     <Compile Include="Assets\Controller\Map\CombatMapGUIController.cs" />
     <Compile Include="Assets\Controller\Map\CombatMapGUIControllerHit.cs" />
+    <Compile Include="Assets\Controller\Map\CombatMapGuiControllerParticle.cs" />
     <Compile Include="Assets\Controller\Map\CombatMapLoader.cs" />
     <Compile Include="Assets\Controller\Map\EnemyPartyLoader.cs" />
     <Compile Include="Assets\Controller\Map\Tile\TileController.cs" />
@@ -210,6 +217,7 @@
     <Compile Include="Assets\Model\Equipment\XML\GenericEquipmentReader.cs" />
     <Compile Include="Assets\Model\Equipment\XML\WeaponReader.cs" />
     <Compile Include="Assets\Model\Events\Combat\ActionCofirmedEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\ApplyInjuryEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\AttackSelectedEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\CharacterKilledEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\CombatEvent.cs" />
@@ -227,6 +235,7 @@
     <Compile Include="Assets\Model\Events\Combat\TraversePathEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TraverseTileEvent.cs" />
     <Compile Include="Assets\Model\Events\CombatEventEnum.cs" />
+    <Compile Include="Assets\Model\Injuries\GenericInjury.cs" />
     <Compile Include="Assets\Model\Injuries\GenericInjuryParam.cs" />
     <Compile Include="Assets\Model\Injuries\InjuryEnum.cs" />
     <Compile Include="Assets\Model\Injuries\InjuryReader.cs" />

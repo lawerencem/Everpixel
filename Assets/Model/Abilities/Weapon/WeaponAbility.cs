@@ -1,4 +1,8 @@
-﻿using Model.Combat;
+﻿using Controller.Managers;
+using Generics.Utilities;
+using Model.Characters;
+using Model.Combat;
+using Model.Events.Combat;
 using Model.Injuries;
 using System.Collections.Generic;
 
@@ -65,6 +69,25 @@ namespace Model.Abilities
         public virtual void ProcessMelee(HitInfo hit)
         {
             CombatReferee.Instance.ProcessMelee(hit);
+            this.TryApplyInjury(hit);
+        }
+
+        protected virtual void TryApplyInjury(HitInfo hit)
+        {
+            var roll = RNG.Instance.NextDouble();
+            var hp = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.HP);
+            var currentHP = hit.Target.Model.CurrentHP;
+            var chance = ((double)hit.Dmg / (double)hp) * (hp / currentHP);
+            if (roll < chance)
+            {
+                if (this.Injuries.Count > 0)
+                {
+                    var injuryType = ListUtil<InjuryEnum>.GetRandomListElement(this.Injuries);
+                    var injuryParams = InjuryTable.Instance.Table[injuryType];
+                    var injury = injuryParams.GetGenericInjury();
+                    var apply = new ApplyInjuryEvent(CombatEventManager.Instance, hit, injury);
+                }
+            }
         }
     }
 }

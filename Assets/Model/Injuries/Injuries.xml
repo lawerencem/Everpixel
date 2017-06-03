@@ -5,9 +5,18 @@
     <PrimaryStatsEnum>Constitution, 0.85</PrimaryStatsEnum>
   </Injury>
   <Injury Name ="Major_Bleeding">
-    <DoT>Bleed, 10</DoT>
+    <DoT>Bleed, 25</DoT>
+  </Injury>
+  <Injury Name ="Massive_Bleeding">
+    <DoT>Bleed, 40</DoT>
   </Injury>
   <Injury Name ="Minor_Bleeding">
     <DoT>Bleed, 5</DoT>
+  </Injury>
+  <Injury Name ="Profuse_Bleeding">
+    <DoT>Bleed, 15</DoT>
+  </Injury>
+  <Injury Name ="Torrential_Bleeding">
+    <DoT>Bleed, 60</DoT>
   </Injury>
 </Injuries>

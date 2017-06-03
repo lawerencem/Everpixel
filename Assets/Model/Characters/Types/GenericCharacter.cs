@@ -18,6 +18,7 @@ namespace Model.Characters
             this.PStatMods = new List<PrimaryStatModifier>();
             this.SStatMods = new List<SecondaryStatModifier>();
             this.IndefSStatMods = new List<Pair<object, List<IndefSecondaryStatModifier>>>();
+            this.Injuries = new List<Model.Injuries.GenericInjury>();
         }
 
         public void AddStamina(double toAdd)

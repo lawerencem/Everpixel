@@ -41,6 +41,8 @@ namespace Controller.Managers.Map
             var roll = RNG.Instance.NextDouble();
             e.Killed.transform.Rotate(new Vector3(0, 0, (float)(roll * 360)));
             this.ProcessSplatterLevelFive(e);
+            foreach (var particle in e.Killed.Particles)
+                GameObject.Destroy(particle);
         }
 
         public void ProcessMeleeHitGraphics(DisplayHitStatsEvent e)
@@ -148,13 +150,16 @@ namespace Controller.Managers.Map
 
         private void ProcessNormalHit(DisplayHitStatsEvent e)
         {
+            if (e.Hit.Target.Model.CurrentHP - e.Hit.Dmg > 0)
+            {
+                var position = e.Hit.Target.transform.position;
+                position.y -= 0.08f;
+                var defenderJolt = e.Hit.Target.Handle.AddComponent<BoomerangScript>();
+                defenderJolt.Init(e.Hit.Target.Handle, position, 10f, this.UnlockUserInteraction);
+            }
             if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
                 this.DisplayText("Crit!", e, RED, 0.40f);
             this.DisplayText(e.Hit.Dmg.ToString(), e, RED, 0.025f);
-            var position = e.Hit.Target.transform.position;
-            position.y -= 0.08f;
-            var defenderJolt = e.Hit.Target.Handle.AddComponent<BoomerangScript>();
-            defenderJolt.Init(e.Hit.Target.Handle, position, 10f, this.UnlockUserInteraction);
         }
 
         private void ProcessParry(DisplayHitStatsEvent e)

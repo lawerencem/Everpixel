@@ -4,6 +4,7 @@
     {
         None,
         ActionCofirmed,
+        ApplyInjury,
         AttackSelected,
         CharacterKilled,
         DamageCharacter,
