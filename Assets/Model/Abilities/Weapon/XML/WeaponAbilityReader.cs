@@ -5,6 +5,7 @@ using Model.Abilities;
 using Generics.Utilities;
 using System.Collections.Generic;
 using Model.Events;
+using Model.Injuries;
 
 namespace Models.Equipment.XML
 {
@@ -45,23 +46,31 @@ namespace Models.Equipment.XML
         {
             int v = 1;
             if (int.TryParse(value, out v))
-
-            switch(mod)
             {
-                case ("AccMod"): { WeaponAbilityTable.Instance.Table[type].AccMod = v; } break;
-                case ("APCost"): { WeaponAbilityTable.Instance.Table[type].APCost = v; } break;
-                case ("ArmorIgnoreMod"): { WeaponAbilityTable.Instance.Table[type].ArmorIgnoreMod = v; } break;
-                case ("ArmorPierceMod"): { WeaponAbilityTable.Instance.Table[type].ArmorPierceMod = v; } break;
-                case ("BlockIgnoreMod"): { WeaponAbilityTable.Instance.Table[type].BlockIgnoreMod = v; } break;
-                case ("DamageMod"): { WeaponAbilityTable.Instance.Table[type].DamageMod = v; } break;
-                case ("Description"): { WeaponAbilityTable.Instance.Table[type].Description = value; } break;
-                case ("DodgeReduceMod"): { WeaponAbilityTable.Instance.Table[type].DodgeMod = v; } break;
-                case ("MeleeBlockChanceMod"): { WeaponAbilityTable.Instance.Table[type].MeleeBlockChanceMod = v; } break;
-                case ("ParryModMod"): { WeaponAbilityTable.Instance.Table[type].ParryModMod = v; } break;
-                case ("Range"): { WeaponAbilityTable.Instance.Table[type].Range = v; } break;
-                case ("RangeBlockMod"): { WeaponAbilityTable.Instance.Table[type].RangeBlockMod = v; } break;
-                case ("ShieldDamageMod"): { WeaponAbilityTable.Instance.Table[type].ShieldDamageMod = v; } break;
-                case ("StaminaCost"): { WeaponAbilityTable.Instance.Table[type].StaminaCost = v; } break;
+                switch (mod)
+                {
+                    case ("AccMod"): { WeaponAbilityTable.Instance.Table[type].AccMod = v; } break;
+                    case ("APCost"): { WeaponAbilityTable.Instance.Table[type].APCost = v; } break;
+                    case ("ArmorIgnoreMod"): { WeaponAbilityTable.Instance.Table[type].ArmorIgnoreMod = v; } break;
+                    case ("ArmorPierceMod"): { WeaponAbilityTable.Instance.Table[type].ArmorPierceMod = v; } break;
+                    case ("BlockIgnoreMod"): { WeaponAbilityTable.Instance.Table[type].BlockIgnoreMod = v; } break;
+                    case ("DamageMod"): { WeaponAbilityTable.Instance.Table[type].DamageMod = v; } break;
+                    case ("Description"): { WeaponAbilityTable.Instance.Table[type].Description = value; } break;
+                    case ("DodgeReduceMod"): { WeaponAbilityTable.Instance.Table[type].DodgeMod = v; } break;
+                    case ("MeleeBlockChanceMod"): { WeaponAbilityTable.Instance.Table[type].MeleeBlockChanceMod = v; } break;
+                    case ("ParryModMod"): { WeaponAbilityTable.Instance.Table[type].ParryModMod = v; } break;
+                    case ("Range"): { WeaponAbilityTable.Instance.Table[type].Range = v; } break;
+                    case ("RangeBlockMod"): { WeaponAbilityTable.Instance.Table[type].RangeBlockMod = v; } break;
+                    case ("ShieldDamageMod"): { WeaponAbilityTable.Instance.Table[type].ShieldDamageMod = v; } break;
+                    case ("StaminaCost"): { WeaponAbilityTable.Instance.Table[type].StaminaCost = v; } break;
+                }
+            }
+            else
+            {
+                switch (mod)
+                {
+                    case ("Injury"): { this.HandleInjury(type, value); } break;
+                }
             }
         }
 
@@ -92,6 +101,15 @@ namespace Models.Equipment.XML
                 case (WeaponAbilitiesEnum.Triple_Strike): { WeaponAbilityTable.Instance.Table[type] = new TripleStrike(); } break;
                 case (WeaponAbilitiesEnum.Wide_Slash): { WeaponAbilityTable.Instance.Table[type] = new WideSlash(); } break;
                 case (WeaponAbilitiesEnum.Wrap): { WeaponAbilityTable.Instance.Table[type] = new Wrap(); } break;
+            }
+        }
+
+        private void HandleInjury(WeaponAbilitiesEnum type, string s)
+        {
+            var injury = InjuryEnum.None;
+            if (EnumUtil<InjuryEnum>.TryGetEnumValue(s, ref injury))
+            {
+                WeaponAbilityTable.Instance.Table[type].Injuries.Add(injury);
             }
         }
     }

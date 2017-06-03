@@ -86,6 +86,7 @@ namespace Model.Combat
 
                 if (hit.Target.Model.Helm != null)
                     dmgToApply *= hit.Target.Model.Helm.DamageReduction;
+                hit.Dmg = (int)dmgToApply;
             }
             else
             {
@@ -101,6 +102,7 @@ namespace Model.Combat
 
                 if (hit.Target.Model.Armor != null)
                     dmgToApply *= hit.Target.Model.Armor.DamageReduction;
+                hit.Dmg = (int)dmgToApply;
             }
         }
 
@@ -110,15 +112,18 @@ namespace Model.Combat
             bool hasShield = false;
             var ability = hit.Ability as WeaponAbility;
             var shieldDmg = (hit.Dmg * ability.ShieldDamageMod);
-            if (hit.Source.Model.LWeapon != null)
+            if (hit.Source.Model.LWeapon != null && !hit.Source.Model.LWeapon.IsTypeOfShield())
             {
                 shieldDmg *= hit.Source.Model.LWeapon.ShieldDamage;
                 ignoreDamageScalar *= hit.Source.Model.LWeapon.BlockIgnore;
             }
-            if (hit.Source.Model.RWeapon != null)
+            if (hit.Source.Model.RWeapon != null && !hit.Source.Model.RWeapon.IsTypeOfShield())
             {
                 shieldDmg *= hit.Source.Model.RWeapon.ShieldDamage;
-                ignoreDamageScalar *= hit.Source.Model.RWeapon.BlockIgnore;
+                if (ignoreDamageScalar == 0)
+                    ignoreDamageScalar += hit.Source.Model.RWeapon.BlockIgnore;
+                else
+                    ignoreDamageScalar *= hit.Source.Model.RWeapon.BlockIgnore;
             }
             if (hit.Target.Model.LWeapon != null && hit.Target.Model.LWeapon.IsTypeOfShield())
             {

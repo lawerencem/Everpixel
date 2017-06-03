@@ -1,5 +1,6 @@
-﻿using Model.Characters;
-using Model.Combat;
+﻿using Model.Combat;
+using Model.Injuries;
+using System.Collections.Generic;
 
 namespace Model.Abilities
 {

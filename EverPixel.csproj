@@ -152,6 +152,7 @@
     <Compile Include="Assets\Model\Characters\Params\CharacterParams.cs" />
     <Compile Include="Assets\Model\Characters\Params\GenericStatModifier.cs" />
     <Compile Include="Assets\Model\Characters\Params\IndefGenericStatModifier.cs" />
+    <Compile Include="Assets\Model\Characters\Params\IndefPrimaryStatsModifier.cs" />
     <Compile Include="Assets\Model\Characters\Params\IndefSecondaryStatsModifier.cs" />
     <Compile Include="Assets\Model\Characters\Params\PredefinedCharacterParams.cs" />
     <Compile Include="Assets\Model\Characters\Params\PrimaryStats.cs" />
@@ -178,6 +179,8 @@
     <Compile Include="Assets\Model\Combat\CombatReferee.cs" />
     <Compile Include="Assets\Model\Combat\HitInfo.cs" />
     <Compile Include="Assets\Model\Cultures\CultureEnum.cs" />
+    <Compile Include="Assets\Model\DoT\DoTEnum.cs" />
+    <Compile Include="Assets\Model\DoT\GenericDoT.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\ArmorBuilder.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\HelmBuilder.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\WeaponBuilder.cs" />
@@ -224,6 +227,10 @@
     <Compile Include="Assets\Model\Events\Combat\TraversePathEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TraverseTileEvent.cs" />
     <Compile Include="Assets\Model\Events\CombatEventEnum.cs" />
+    <Compile Include="Assets\Model\Injuries\GenericInjuryParam.cs" />
+    <Compile Include="Assets\Model\Injuries\InjuryEnum.cs" />
+    <Compile Include="Assets\Model\Injuries\InjuryReader.cs" />
+    <Compile Include="Assets\Model\Injuries\InjuryTable.cs" />
     <Compile Include="Assets\Model\Map\ColRowPairPath.cs" />
     <Compile Include="Assets\Model\Map\CombatMap.cs" />
     <Compile Include="Assets\Model\Map\HexTile.cs" />
@@ -280,6 +287,7 @@
     <None Include="Assets\Model\Classes\XML\Classes.xml" />
     <None Include="Assets\Model\Equipment\XML\Armors.xml" />
     <None Include="Assets\Model\Equipment\XML\Weapons.xml" />
+    <None Include="Assets\Model\Injuries\Injuries.xml" />
     <None Include="Assets\Model\Mounts\XML\Mounts.xml" />
     <None Include="Assets\Model\Parties\XML\Parties.xml" />
     <None Include="Assets\Model\Parties\XML\SubParties.xml" />

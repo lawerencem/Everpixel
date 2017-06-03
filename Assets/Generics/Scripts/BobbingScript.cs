@@ -9,11 +9,13 @@ namespace Generics.Scripts
         public GameObject Target;
 
         private bool _down = false;
+        private Vector3 _origin;
         private float _max;
         private float _min;
 
         public void Init(float perFrame, float distance, GameObject t)
         {
+            this._origin = t.transform.position;
             this.DistancePerFrame = perFrame;
             this.Distance = distance;
             this.Target = t;
@@ -38,6 +40,12 @@ namespace Generics.Scripts
 
                 this.Target.transform.position = position;
             }
+        }
+
+        public void Reset()
+        {
+            this.Target.transform.position = this._origin;
+            GameObject.Destroy(this);
         }
     }
 }

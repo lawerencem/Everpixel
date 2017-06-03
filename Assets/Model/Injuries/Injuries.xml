@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Injuries>
+  <Injury Name ="Broken_Ribs">
+    <PrimaryStatsEnum>Might, 0.85</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Constitution, 0.85</PrimaryStatsEnum>
+  </Injury>
+  <Injury Name ="Major_Bleeding">
+    <DoT>Bleed, 10</DoT>
+  </Injury>
+  <Injury Name ="Minor_Bleeding">
+    <DoT>Bleed, 5</DoT>
+  </Injury>
+</Injuries>

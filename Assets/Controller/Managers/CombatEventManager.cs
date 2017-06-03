@@ -119,7 +119,7 @@ namespace Controller.Managers
             this._mapGUIController.ClearDecoratedTiles();
             var cur = this._combatManager.CurrActing.Handle;
             var bob = cur.GetComponent<BobbingScript>();
-            if (bob != null) { GameObject.Destroy(bob); }
+            if (bob != null) { bob.Reset(); }
             this._combatManager.ProcessNextTurn();
             this.PopulateBtnsHelper();
         }
@@ -211,7 +211,7 @@ namespace Controller.Managers
         {
             this._events.Remove(e);
             var bob = e.Character.GetComponent<BobbingScript>();
-            if (bob != null) { GameObject.Destroy(bob); }
+            if (bob != null) { bob.Reset(); }
             var next = e.Path.GetNextTile(e.Character.CurrentTile);
             var traverseTileEvent = new TraverseTileEvent(this, e.Path, e.Character.CurrentTile, next);
         }

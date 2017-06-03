@@ -23,6 +23,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>0.25</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <Injury>Broken_Ribs</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
     <ParryModMod>1.0</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>
@@ -248,6 +249,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>1</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <Injury>Minor_Bleeding</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
     <ParryModMod>1.0</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>

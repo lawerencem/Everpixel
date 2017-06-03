@@ -7,7 +7,7 @@
       <AP_Reduce>0.80</AP_Reduce>
       <Armor_Ignore>0.84</Armor_Ignore>
       <Armor_Pierce>0.88</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0.22</Block_Ignore>
       <Damage>52</Damage>
       <Description>
         This gigantic log has a few razor-sharp teeth protruding from it.  Lizardman warriors use it like an axe.
@@ -34,7 +34,7 @@
       <AP_Reduce>0.81</AP_Reduce>
       <Armor_Ignore>0.82</Armor_Ignore>
       <Armor_Pierce>0.86</Armor_Pierce>
-      <Block_Ignore>0.98</Block_Ignore>
+      <Block_Ignore>0.25</Block_Ignore>
       <Damage>60</Damage>
       <Description>
         This log has a very large and very sharp tooth protruding from the end.  What kind of creature has teeth like that?
@@ -88,7 +88,7 @@
       <AP_Reduce>0.78</AP_Reduce>
       <Armor_Ignore>0.37</Armor_Ignore>
       <Armor_Pierce>0.91</Armor_Pierce>
-      <Block_Ignore>0.52</Block_Ignore>
+      <Block_Ignore>0.60</Block_Ignore>
       <Damage>110</Damage>
       <Description>
         A giant slab of sharpened metal tied to a stick.  Tiresome to wield, but deadly when swung.
@@ -115,7 +115,7 @@
       <AP_Reduce>0.80</AP_Reduce>
       <Armor_Ignore>0.35</Armor_Ignore>
       <Armor_Pierce>0.90</Armor_Pierce>
-      <Block_Ignore>0.50</Block_Ignore>
+      <Block_Ignore>0.65</Block_Ignore>
       <Damage>120</Damage>
       <Description>
         This savagely-heavy "axe" is favored by orc shock troops to decimate enemy front-lines.
@@ -142,7 +142,7 @@
       <AP_Reduce>0.80</AP_Reduce>
       <Armor_Ignore>0.30</Armor_Ignore>
       <Armor_Pierce>0.85</Armor_Pierce>
-      <Block_Ignore>0.48</Block_Ignore>
+      <Block_Ignore>0.68</Block_Ignore>
       <Damage>140</Damage>
       <Description>
         This savagely-heavy "axe" is also very, very sharp...
@@ -171,7 +171,7 @@
       <AP_Reduce>0.53</AP_Reduce>
       <Armor_Ignore>0.32</Armor_Ignore>
       <Armor_Pierce>0.86</Armor_Pierce>
-      <Block_Ignore>0.18</Block_Ignore>
+      <Block_Ignore>0.88</Block_Ignore>
       <Damage>140</Damage>
       <Description>
         This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
@@ -198,7 +198,7 @@
       <AP_Reduce>0.73</AP_Reduce>
       <Armor_Ignore>0.75</Armor_Ignore>
       <Armor_Pierce>0.92</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0.30</Block_Ignore>
       <Damage>45</Damage>
       <Description>
         This log has some strangely-heavy bones protruding from the end.
@@ -225,7 +225,7 @@
       <AP_Reduce>0.75</AP_Reduce>
       <Armor_Ignore>0.73</Armor_Ignore>
       <Armor_Pierce>0.91</Armor_Pierce>
-      <Block_Ignore>0.98</Block_Ignore>
+      <Block_Ignore>0.34</Block_Ignore>
       <Damage>52</Damage>
       <Description>
         This log has some strangely-heavy bones protruding from the end.
@@ -431,7 +431,7 @@
       <AP_Reduce>0.92</AP_Reduce>
       <Armor_Ignore>3</Armor_Ignore>
       <Armor_Pierce>0.92</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0.05</Block_Ignore>
       <Damage>62</Damage>
       <Description>
         This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
@@ -460,7 +460,7 @@
       <AP_Reduce>0.94</AP_Reduce>
       <Armor_Ignore>5</Armor_Ignore>
       <Armor_Pierce>0.91</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0.06</Block_Ignore>
       <Damage>75</Damage>
       <Description>
         This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
@@ -489,7 +489,7 @@
       <AP_Reduce>0.96</AP_Reduce>
       <Armor_Ignore>6</Armor_Ignore>
       <Armor_Pierce>0.89</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0.07</Block_Ignore>
       <Damage>88</Damage>
       <Description>
         This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
@@ -518,7 +518,7 @@
       <AP_Reduce>0.98</AP_Reduce>
       <Armor_Ignore>7</Armor_Ignore>
       <Armor_Pierce>0.87</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0.08</Block_Ignore>
       <Damage>102</Damage>
       <Description>
         This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
@@ -549,7 +549,7 @@
       <AP_Reduce>1.0</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>22</Damage>
       <Description>
         A small bow favored by goblins.
@@ -575,7 +575,7 @@
       <AP_Reduce>1.0</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.98</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>28</Damage>
       <Description>
         A small bow favored by goblins.
@@ -601,7 +601,7 @@
       <AP_Reduce>1.0</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.96</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>35</Damage>
       <Description>
         A small bow favored by goblins.
@@ -627,7 +627,7 @@
       <AP_Reduce>1.0</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.94</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>40</Damage>
       <Description>
         A small bow favored by goblins.
@@ -777,7 +777,7 @@
       <AP_Reduce>0.96</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.97</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>38</Damage>
       <Description>
         This spear has a wide blade.  Goblins love using these as they can inflict bleeding wounds.
@@ -804,7 +804,7 @@
       <AP_Reduce>0.96</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.93</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>42</Damage>
       <Description>
         This spear has a wide blade.  Goblins love using these as they can inflict bleeding wounds.
@@ -831,7 +831,7 @@
       <AP_Reduce>0.96</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.90</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>50</Damage>
       <Description>
         This spear has a wide blade.  Goblins love using these as they can inflict bleeding wounds.
@@ -858,7 +858,7 @@
       <AP_Reduce>0.97</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.95</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>33</Damage>
       <Description>
         This spear is simply a sharp rock tied to the end of a stick.  It looks like it could still do some damage, though.
@@ -884,7 +884,7 @@
       <AP_Reduce>0.97</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.88</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>34</Damage>
       <Description>
         Simple, yet effective.
@@ -910,7 +910,7 @@
       <AP_Reduce>0.97</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.85</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>35</Damage>
       <Description>
         Simple, yet effective.
@@ -936,7 +936,7 @@
       <AP_Reduce>0.97</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.88</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>28</Damage>
       <Description>
         A low-quality Jomonese spear.
@@ -962,7 +962,7 @@
       <AP_Reduce>0.98</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.86</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>32</Damage>
       <Description>
         A Jomonese spear.
@@ -988,7 +988,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.84</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>38</Damage>
       <Description>
         A Jomonese spear.
@@ -1014,7 +1014,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.82</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>44</Damage>
       <Description>
         A Jomonese spear.
@@ -1042,7 +1042,7 @@
       <AP_Reduce>0.88</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>8</Damage>
       <Description>
         This odd staff has a slimy tip...
@@ -1067,7 +1067,7 @@
       <AP_Reduce>0.89</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>10</Damage>
       <Description>
         This odd staff has a prodigious amount of slime coming from the tip...
@@ -1092,7 +1092,7 @@
       <AP_Reduce>0.90</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>12</Damage>
       <Description>
         This staff is covered in slime...and it looks like its *gazing* at you...
@@ -1117,7 +1117,7 @@
       <AP_Reduce>0.85</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>20</Damage>
       <Description>
         An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
@@ -1143,7 +1143,7 @@
       <AP_Reduce>0.87</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>25</Damage>
       <Description>
         An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
@@ -1169,7 +1169,7 @@
       <AP_Reduce>0.90</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>40</Damage>
       <Description>
         An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
@@ -1195,7 +1195,7 @@
       <AP_Reduce>0.95</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>50</Damage>
       <Description>
         An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
@@ -1223,7 +1223,7 @@
       <AP_Reduce>0.86</AP_Reduce>
       <Armor_Ignore>0.82</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0.12</Block_Ignore>
       <Damage>58</Damage>
       <Description>
         Supposedly, this is some fashion of sword... but it looks as if someone simply tied a sharp rock to a stick.
@@ -1249,7 +1249,7 @@
       <AP_Reduce>0.89</AP_Reduce>
       <Armor_Ignore>0.78</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0.15</Block_Ignore>
       <Damage>59</Damage>
       <Description>
         Exemplifying typical orcish technology, someone has tied a jagged piece of metal to a stick and now calls it a "choppa".
@@ -1274,7 +1274,7 @@
       <AP_Reduce>0.90</AP_Reduce>
       <Armor_Ignore>0.77</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0.18</Block_Ignore>
       <Damage>60</Damage>
       <Description>
         Someone has taken the time to sharpen this metal-on-a-stick.  Rather impressive by Orc standards.
@@ -1299,7 +1299,7 @@
       <AP_Reduce>0.90</AP_Reduce>
       <Armor_Ignore>0.75</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>0.97</Block_Ignore>
+      <Block_Ignore>0.20</Block_Ignore>
       <Damage>65</Damage>
       <Description>
         Simple yet sturdy, this sword represents the finest Orcish craftmanship.
@@ -1324,7 +1324,7 @@
       <AP_Reduce>0.90</AP_Reduce>
       <Armor_Ignore>0.75</Armor_Ignore>
       <Armor_Pierce>0.90</Armor_Pierce>
-      <Block_Ignore>0.85</Block_Ignore>
+      <Block_Ignore>0.40</Block_Ignore>
       <Damage>100</Damage>
       <Description>
         This sword represents a good balance beteween size and strength.  It is a potent defensive weapon, capable of parrying
@@ -1352,7 +1352,7 @@
       <AP_Reduce>0.92</AP_Reduce>
       <Armor_Ignore>0.87</Armor_Ignore>
       <Armor_Pierce>0.82</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0.02</Block_Ignore>
       <Damage>28</Damage>
       <Description>
         This is basically just some heavy bones attached to a wooden club.
@@ -1377,7 +1377,7 @@
       <AP_Reduce>0.93</AP_Reduce>
       <Armor_Ignore>0.86</Armor_Ignore>
       <Armor_Pierce>0.80</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0.04</Block_Ignore>
       <Damage>32</Damage>
       <Description>
         Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
@@ -1403,7 +1403,7 @@
       <AP_Reduce>0.94</AP_Reduce>
       <Armor_Ignore>0.85</Armor_Ignore>
       <Armor_Pierce>0.78</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0.06</Block_Ignore>
       <Damage>35</Damage>
       <Description>
         Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
@@ -1429,7 +1429,7 @@
       <AP_Reduce>0.95</AP_Reduce>
       <Armor_Ignore>0.84</Armor_Ignore>
       <Armor_Pierce>0.75</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0.08</Block_Ignore>
       <Damage>42</Damage>
       <Description>
         Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
@@ -1455,7 +1455,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.80</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>39</Damage>
       <Description>
         A short blade meant more for thrusting motions than swinging.  Nonetheless, it can still do damage when swung.
@@ -1480,7 +1480,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.97</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>52</Damage>
       <Description>
         Normally, katanas are exemplary works of craftmanship.  Normally.
@@ -1506,7 +1506,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>2</Armor_Ignore>
       <Armor_Pierce>0.95</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>60</Damage>
       <Description>
         This katana is slightly less majestic than most...
@@ -1532,7 +1532,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>3</Armor_Ignore>
       <Armor_Pierce>0.92</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>65</Damage>
       <Description>
         This katana is well-rounded weapon of fine craftmanship.
@@ -1558,7 +1558,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>4</Armor_Ignore>
       <Armor_Pierce>0.90</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>75</Damage>
       <Description>
         TODO
@@ -1584,7 +1584,7 @@
       <AP_Reduce>0.96</AP_Reduce>
       <Armor_Ignore>0.97</Armor_Ignore>
       <Armor_Pierce>0.93</Armor_Pierce>
-      <Block_Ignore>0.98</Block_Ignore>
+      <Block_Ignore>0.05</Block_Ignore>
       <Damage>49</Damage>
       <Description>
         A well-rounded, versatile weapon.  Not the finest quality, but a deadly weapon nonetheless.
@@ -1610,7 +1610,7 @@
       <AP_Reduce>0.97</AP_Reduce>
       <Armor_Ignore>0.95</Armor_Ignore>
       <Armor_Pierce>0.92</Armor_Pierce>
-      <Block_Ignore>0.97</Block_Ignore>
+      <Block_Ignore>0.06</Block_Ignore>
       <Damage>50</Damage>
       <Description>
         A well-rounded, versatile weapon.  It isn't fancy, but it is quality-made.  In the right hands, this weapon
@@ -1637,7 +1637,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>5</Armor_Ignore>
       <Armor_Pierce>0.99</Armor_Pierce>
-      <Block_Ignore>0.97</Block_Ignore>
+      <Block_Ignore>0.15</Block_Ignore>
       <Damage>95</Damage>
       <Description>
         A heavier version of the traditional katana meant to easily penetrate even the heaviest armor.  This one
@@ -1665,7 +1665,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>6</Armor_Ignore>
       <Armor_Pierce>0.98</Armor_Pierce>
-      <Block_Ignore>0.96</Block_Ignore>
+      <Block_Ignore>0.17</Block_Ignore>
       <Damage>125</Damage>
       <Description>
         A heavier version of the traditional katana meant to easily penetrate even the heaviest armor.
@@ -1692,7 +1692,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>7</Armor_Ignore>
       <Armor_Pierce>0.97</Armor_Pierce>
-      <Block_Ignore>0.95</Block_Ignore>
+      <Block_Ignore>0.20</Block_Ignore>
       <Damage>165</Damage>
       <Description>
         A heavier version of the traditional katana meant to easily penetrate even the heaviest armor.
@@ -1719,7 +1719,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>8</Armor_Ignore>
       <Armor_Pierce>0.96</Armor_Pierce>
-      <Block_Ignore>0.94</Block_Ignore>
+      <Block_Ignore>0.22</Block_Ignore>
       <Damage>185</Damage>
       <Description>
         A heavier version of the traditional katana meant to easily penetrate even the heaviest armor. It is absolutely lethal in the right hands.
@@ -1746,7 +1746,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.97</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>22</Damage>
       <Description>
         A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
@@ -1771,7 +1771,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.96</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>25</Damage>
       <Description>
         A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
@@ -1796,7 +1796,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.96</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>32</Damage>
       <Description>
         A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
@@ -1821,7 +1821,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.92</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>45</Damage>
       <Description>
         A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
@@ -1846,7 +1846,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.88</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>25</Damage>
       <Description>
         A blade covered in disgusting slime.  It's fairly obvious the pointy nature of the blade is meant to poison enemies with the slime.
@@ -1872,7 +1872,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.85</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>28</Damage>
       <Description>
         A blade covered in disgusting slime.  It's fairly obvious the pointy nature of the blade is meant to poison enemies with the slime.
@@ -1898,7 +1898,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.80</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0</Block_Ignore>
       <Damage>32</Damage>
       <Description>
         This blade is covered in living, breathing slime...
