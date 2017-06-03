@@ -57,7 +57,7 @@ namespace Controller.Managers.Map
         // TODO: Clean this up when implementing player stuff.
         private void InitPlayerParty(ref List<GenericCharacterController> controllers)
         {
-            var playerChars = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Orc Shock Troopas", 15));
+            var playerChars = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Jomonese Infantry", 15));
             var builder = new CharacterViewBuilder();
 
             for (int i = 0; i < playerChars.Count; i++)

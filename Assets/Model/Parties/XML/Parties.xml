@@ -72,4 +72,8 @@
     <SubParty>Shock Troopa Calvary,5</SubParty>
     <SubParty>Shock Troopa Calvary,6</SubParty>
   </Party>
+  <Party Name ="Jomonese Infantry">
+    <SubParty>Katana Samurais,5</SubParty>
+    <SubParty>Nodachi Samurais,5</SubParty>
+  </Party>
 </Parties>

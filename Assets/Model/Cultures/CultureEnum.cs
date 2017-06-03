@@ -21,10 +21,10 @@
         German,
         Goblin,
         Greek,
+        Jomonese,
         Hawaiian,
         Indian,
         Italian,
-        Japanese,
         Mayan,
         Mongolian,
         Norse,
@@ -37,6 +37,7 @@
         Thai,
         Turkish,
         Uruk,
+        Yomi,
         Zwahili,
     }
 }

@@ -42,6 +42,168 @@
     <Value>550</Value>
   </Armor>
   </ArmorSkillEnum>
+  <ArmorSkillEnum name ="Heavy_Lamellar">
+    <Armor name="Dou">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.94</AP_Reduce>
+      <ArmorSkillEnum>Heavy_Lamellar</ArmorSkillEnum>
+      <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>11</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        The armor preferred by samurai.  This one isn't particularly well-crafted...
+      </Description>
+      <Dodge_Reduce>0.82</Dodge_Reduce>
+      <Durability>30</Durability>
+      <Fatigue_Cost>1.08</Fatigue_Cost>
+      <Initiative_Reduce>0.92</Initiative_Reduce>
+      <Parry_Reduce>0.97</Parry_Reduce>
+      <Sprites>4,5</Sprites>
+      <Stamina_Reduce>0.78</Stamina_Reduce>
+      <Value>350</Value>
+    </Armor>
+    <Armor name="Dou">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.94</AP_Reduce>
+      <ArmorSkillEnum>Heavy_Lamellar</ArmorSkillEnum>
+      <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>13</Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        The armor preferred by samurai.  The interlocking plates offer great protection while still being quite light.
+      </Description>
+      <Dodge_Reduce>0.84</Dodge_Reduce>
+      <Durability>50</Durability>
+      <Fatigue_Cost>1.06</Fatigue_Cost>
+      <Initiative_Reduce>0.94</Initiative_Reduce>
+      <Parry_Reduce>0.98</Parry_Reduce>
+      <Sprites>19,20</Sprites>
+      <Stamina_Reduce>0.80</Stamina_Reduce>
+      <Value>550</Value>
+    </Armor>
+    <Armor name="Dou">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.96</AP_Reduce>
+      <ArmorSkillEnum>Heavy_Lamellar</ArmorSkillEnum>
+      <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>18</Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        The armor preferred by samurai.  The interlocking plates offer great protection while still being quite light.
+      </Description>
+      <Dodge_Reduce>0.84</Dodge_Reduce>
+      <Durability>70</Durability>
+      <Fatigue_Cost>1.06</Fatigue_Cost>
+      <Initiative_Reduce>0.94</Initiative_Reduce>
+      <Parry_Reduce>0.99</Parry_Reduce>
+      <Sprites>34,35</Sprites>
+      <Stamina_Reduce>0.82</Stamina_Reduce>
+      <Value>800</Value>
+    </Armor>
+    <Armor name="Dou">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.97</AP_Reduce>
+      <ArmorSkillEnum>Heavy_Lamellar</ArmorSkillEnum>
+      <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>20</Damage_Ignore>
+      <Damage_Reduction>0.80</Damage_Reduction>
+      <Description>
+        The armor preferred by samurai.  This armor has a cuirass rather than interlocking plates, but is still very light.
+      </Description>
+      <Dodge_Reduce>0.80</Dodge_Reduce>
+      <Durability>110</Durability>
+      <Fatigue_Cost>1.10</Fatigue_Cost>
+      <Initiative_Reduce>0.90</Initiative_Reduce>
+      <Parry_Reduce>0.95</Parry_Reduce>
+      <Sprites>49,50</Sprites>
+      <Stamina_Reduce>0.80</Stamina_Reduce>
+      <Value>2000</Value>
+    </Armor>
+    <Armor name="Kabuto">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.94</AP_Reduce>
+      <ArmorSkillEnum>Heavy_Lamellar</ArmorSkillEnum>
+      <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>8</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        The helmet preferred by samurai (well, maybe not this one...)
+      </Description>
+      <Dodge_Reduce>0.84</Dodge_Reduce>
+      <Durability>15</Durability>
+      <Fatigue_Cost>1.05</Fatigue_Cost>
+      <Initiative_Reduce>0.94</Initiative_Reduce>
+      <Parry_Reduce>0.97</Parry_Reduce>
+      <Sprites>12,13,14</Sprites>
+      <Stamina_Reduce>0.82</Stamina_Reduce>
+      <Value>200</Value>
+    </Armor>
+    <Armor name="Kabuto">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.96</AP_Reduce>
+      <ArmorSkillEnum>Heavy_Lamellar</ArmorSkillEnum>
+      <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>9</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        The helmet preferred by samurai.
+      </Description>
+      <Dodge_Reduce>0.86</Dodge_Reduce>
+      <Durability>25</Durability>
+      <Fatigue_Cost>1.04</Fatigue_Cost>
+      <Initiative_Reduce>0.95</Initiative_Reduce>
+      <Parry_Reduce>0.97</Parry_Reduce>
+      <Sprites>27,28,29</Sprites>
+      <Stamina_Reduce>0.84</Stamina_Reduce>
+      <Value>350</Value>
+    </Armor>
+    <Armor name="Kabuto">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.97</AP_Reduce>
+      <ArmorSkillEnum>Heavy_Lamellar</ArmorSkillEnum>
+      <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>10</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        The helmet preferred by samurai.
+      </Description>
+      <Dodge_Reduce>0.88</Dodge_Reduce>
+      <Durability>40</Durability>
+      <Fatigue_Cost>1.03</Fatigue_Cost>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Parry_Reduce>0.98</Parry_Reduce>
+      <Sprites>42,43,44</Sprites>
+      <Stamina_Reduce>0.86</Stamina_Reduce>
+      <Value>550</Value>
+    </Armor>
+    <Armor name="Kabuto">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.97</AP_Reduce>
+      <ArmorSkillEnum>Heavy_Lamellar</ArmorSkillEnum>
+      <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>12</Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        The helmet preferred by samurai.
+      </Description>
+      <Dodge_Reduce>0.90</Dodge_Reduce>
+      <Durability>55</Durability>
+      <Fatigue_Cost>1.02</Fatigue_Cost>
+      <Initiative_Reduce>0.98</Initiative_Reduce>
+      <Parry_Reduce>0.99</Parry_Reduce>
+      <Sprites>57,58,59</Sprites>
+      <Stamina_Reduce>0.89</Stamina_Reduce>
+      <Value>850</Value>
+    </Armor>
+  </ArmorSkillEnum>
   <ArmorSkillEnum name ="Light_Lamellar">
     <Armor name="Goblin Cap">
       <Tier>Five</Tier>

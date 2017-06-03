@@ -424,6 +424,124 @@
       <WeaponUseEnum>Shield</WeaponUseEnum>
     </Weapon>
   </WeaponSkillEnum>
+  <WeaponSkillEnum name ="Polearm">
+    <Weapon name="Naginata">
+      <Tier>Five</Tier>
+      <Accuracy>0.88</Accuracy>
+      <AP_Reduce>0.92</AP_Reduce>
+      <Armor_Ignore>3</Armor_Ignore>
+      <Armor_Pierce>0.92</Armor_Pierce>
+      <Block_Ignore>1</Block_Ignore>
+      <Damage>62</Damage>
+      <Description>
+        This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
+      </Description>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.92</Initiative_Reduce>
+      <Max_Durability>58</Max_Durability>
+      <Parry_Mod>0.92</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <WeaponSkillEnum>Polearm</WeaponSkillEnum>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>0.97</Stamina_Reduce>
+      <Range_Mod>1</Range_Mod>
+      <Value>150</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Pierce</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Riposte</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Spear Wall</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Naginata">
+      <Tier>Four</Tier>
+      <Accuracy>0.90</Accuracy>
+      <AP_Reduce>0.94</AP_Reduce>
+      <Armor_Ignore>5</Armor_Ignore>
+      <Armor_Pierce>0.91</Armor_Pierce>
+      <Block_Ignore>1</Block_Ignore>
+      <Damage>75</Damage>
+      <Description>
+        This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
+      </Description>
+      <Fatigue_Cost_Mod>1.08</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.94</Initiative_Reduce>
+      <Max_Durability>70</Max_Durability>
+      <Parry_Mod>0.94</Parry_Mod>
+      <Shield_Damage>0.02</Shield_Damage>
+      <WeaponSkillEnum>Polearm</WeaponSkillEnum>
+      <Sprites>15</Sprites>
+      <Stamina_Reduce>0.98</Stamina_Reduce>
+      <Range_Mod>1</Range_Mod>
+      <Value>300</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Pierce</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Riposte</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Spear Wall</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Naginata">
+      <Tier>Three</Tier>
+      <Accuracy>0.92</Accuracy>
+      <AP_Reduce>0.96</AP_Reduce>
+      <Armor_Ignore>6</Armor_Ignore>
+      <Armor_Pierce>0.89</Armor_Pierce>
+      <Block_Ignore>1</Block_Ignore>
+      <Damage>88</Damage>
+      <Description>
+        This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
+      </Description>
+      <Fatigue_Cost_Mod>1.05</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.96</Initiative_Reduce>
+      <Max_Durability>85</Max_Durability>
+      <Parry_Mod>0.96</Parry_Mod>
+      <Shield_Damage>0.03</Shield_Damage>
+      <WeaponSkillEnum>Polearm</WeaponSkillEnum>
+      <Sprites>30</Sprites>
+      <Stamina_Reduce>0.99</Stamina_Reduce>
+      <Range_Mod>1</Range_Mod>
+      <Value>550</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Pierce</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Riposte</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Spear Wall</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Naginata">
+      <Tier>Two</Tier>
+      <Accuracy>0.94</Accuracy>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Armor_Ignore>7</Armor_Ignore>
+      <Armor_Pierce>0.87</Armor_Pierce>
+      <Block_Ignore>1</Block_Ignore>
+      <Damage>102</Damage>
+      <Description>
+        This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
+      </Description>
+      <Fatigue_Cost_Mod>1.03</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.98</Initiative_Reduce>
+      <Max_Durability>100</Max_Durability>
+      <Parry_Mod>0.98</Parry_Mod>
+      <Shield_Damage>0.04</Shield_Damage>
+      <WeaponSkillEnum>Polearm</WeaponSkillEnum>
+      <Sprites>45</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Range_Mod>1</Range_Mod>
+      <Value>550</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Pierce</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Riposte</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Spear Wall</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+  </WeaponSkillEnum>
   <WeaponSkillEnum name ="Short_Bow">
     <Weapon name="Goblin Bow">
       <Tier>Five</Tier>
@@ -441,7 +559,7 @@
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1.0</Parry_Mod>
       <Range_Mod>0</Range_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0</Shield_Damage>
       <WeaponSkillEnum>Short_Bow</WeaponSkillEnum>
       <Sprites>0</Sprites>
       <Stamina_Reduce>1</Stamina_Reduce>
@@ -467,7 +585,7 @@
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1.0</Parry_Mod>
       <Range_Mod>0</Range_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0</Shield_Damage>
       <WeaponSkillEnum>Short_Bow</WeaponSkillEnum>
       <Sprites>15</Sprites>
       <Stamina_Reduce>1</Stamina_Reduce>
@@ -493,7 +611,7 @@
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1.0</Parry_Mod>
       <Range_Mod>0</Range_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0</Shield_Damage>
       <WeaponSkillEnum>Short_Bow</WeaponSkillEnum>
       <Sprites>30</Sprites>
       <Stamina_Reduce>1</Stamina_Reduce>
@@ -519,7 +637,7 @@
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1.0</Parry_Mod>
       <Range_Mod>0</Range_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0</Shield_Damage>
       <WeaponSkillEnum>Short_Bow</WeaponSkillEnum>
       <Sprites>45</Sprites>
       <Stamina_Reduce>1</Stamina_Reduce>
@@ -642,7 +760,7 @@
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>150</Max_Durability>
       <Parry_Mod>1.05</Parry_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.05</Shield_Damage>
       <Sprites>60</Sprites>
       <WeaponSkillEnum>Spear</WeaponSkillEnum>
       <Stamina_Reduce>1</Stamina_Reduce>
@@ -668,7 +786,7 @@
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <WeaponSkillEnum>Spear</WeaponSkillEnum>
       <Sprites>5</Sprites>
       <Stamina_Reduce>1</Stamina_Reduce>
@@ -695,7 +813,7 @@
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>55</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <WeaponSkillEnum>Spear</WeaponSkillEnum>
       <Sprites>5</Sprites>
       <Stamina_Reduce>1</Stamina_Reduce>
@@ -722,7 +840,7 @@
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>75</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <WeaponSkillEnum>Spear</WeaponSkillEnum>
       <Sprites>5</Sprites>
       <Stamina_Reduce>1</Stamina_Reduce>
@@ -749,7 +867,7 @@
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>30</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <WeaponSkillEnum>Spear</WeaponSkillEnum>
       <Sprites>0,1,2</Sprites>
       <Stamina_Reduce>1</Stamina_Reduce>
@@ -775,7 +893,7 @@
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <WeaponSkillEnum>Spear</WeaponSkillEnum>
       <Sprites>15,16,17</Sprites>
       <Stamina_Reduce>1</Stamina_Reduce>
@@ -801,7 +919,7 @@
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>65</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <WeaponSkillEnum>Spear</WeaponSkillEnum>
       <Sprites>30,31,32</Sprites>
       <Stamina_Reduce>1</Stamina_Reduce>
@@ -812,6 +930,110 @@
       <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
       <WeaponUseEnum>Melee</WeaponUseEnum>
     </Weapon>
+    <Weapon name="Yari">
+      <Tier>Five</Tier>
+      <Accuracy>0.95</Accuracy>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.88</Armor_Pierce>
+      <Block_Ignore>1</Block_Ignore>
+      <Damage>28</Damage>
+      <Description>
+        A low-quality Jomonese spear.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>0.98</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <WeaponSkillEnum>Spear</WeaponSkillEnum>
+      <Sprites>3,4</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>200</Value>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Pierce</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Spear Wall</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Yari">
+      <Tier>Four</Tier>
+      <Accuracy>0.96</Accuracy>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.86</Armor_Pierce>
+      <Block_Ignore>1</Block_Ignore>
+      <Damage>32</Damage>
+      <Description>
+        A Jomonese spear.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>42</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <WeaponSkillEnum>Spear</WeaponSkillEnum>
+      <Sprites>18,19</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>300</Value>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Pierce</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Spear Wall</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Yari">
+      <Tier>Three</Tier>
+      <Accuracy>0.97</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.84</Armor_Pierce>
+      <Block_Ignore>1</Block_Ignore>
+      <Damage>38</Damage>
+      <Description>
+        A Jomonese spear.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>42</Max_Durability>
+      <Parry_Mod>1.03</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <WeaponSkillEnum>Spear</WeaponSkillEnum>
+      <Sprites>33,34</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>550</Value>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Pierce</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Spear Wall</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>  
+    <Weapon name="Yari">
+      <Tier>Two</Tier>
+      <Accuracy>0.98</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.82</Armor_Pierce>
+      <Block_Ignore>1</Block_Ignore>
+      <Damage>44</Damage>
+      <Description>
+        A Jomonese spear.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>55</Max_Durability>
+      <Parry_Mod>1.05</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <WeaponSkillEnum>Spear</WeaponSkillEnum>
+      <Sprites>48,49</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>700</Value>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Pierce</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Spear Wall</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>  
   </WeaponSkillEnum>
   <WeaponSkillEnum name ="Staff">
     <Weapon name="Slime Staff">
@@ -830,7 +1052,7 @@
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
       <Range_Mod>0</Range_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <WeaponSkillEnum>Staff</WeaponSkillEnum>
       <Sprites>0,1</Sprites>
       <Stamina_Reduce>0.88</Stamina_Reduce>
@@ -855,7 +1077,7 @@
       <Max_Durability>25</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
       <Range_Mod>0</Range_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <WeaponSkillEnum>Staff</WeaponSkillEnum>
       <Sprites>15,16</Sprites>
       <Stamina_Reduce>0.89</Stamina_Reduce>
@@ -880,7 +1102,7 @@
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
       <Range_Mod>0</Range_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <WeaponSkillEnum>Staff</WeaponSkillEnum>
       <Sprites>30,31</Sprites>
       <Stamina_Reduce>0.90</Stamina_Reduce>
@@ -906,7 +1128,7 @@
       <Max_Durability>20</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
       <Range_Mod>0</Range_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <WeaponSkillEnum>Staff</WeaponSkillEnum>
       <Sprites>2</Sprites>
       <Stamina_Reduce>1</Stamina_Reduce>
@@ -932,7 +1154,7 @@
       <Max_Durability>30</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
       <Range_Mod>0</Range_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <WeaponSkillEnum>Staff</WeaponSkillEnum>
       <Sprites>17</Sprites>
       <Stamina_Reduce>1</Stamina_Reduce>
@@ -958,7 +1180,7 @@
       <Max_Durability>20</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
       <Range_Mod>0</Range_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <WeaponSkillEnum>Staff</WeaponSkillEnum>
       <Sprites>32</Sprites>
       <Stamina_Reduce>1</Stamina_Reduce>
@@ -984,7 +1206,7 @@
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
       <Range_Mod>0</Range_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <WeaponSkillEnum>Staff</WeaponSkillEnum>
       <Sprites>47</Sprites>
       <Stamina_Reduce>1</Stamina_Reduce>
@@ -1112,7 +1334,7 @@
       <Initiative_Reduce>0.75</Initiative_Reduce>
       <Max_Durability>180</Max_Durability>
       <Parry_Mod>1.15</Parry_Mod>
-      <Shield_Damage>1.25</Shield_Damage>
+      <Shield_Damage>0.52</Shield_Damage>
       <Sprites>30,31,32</Sprites>
       <Stamina_Reduce>0.75</Stamina_Reduce>
       <Value>1800</Value>
@@ -1139,7 +1361,7 @@
       <Initiative_Reduce>0.92</Initiative_Reduce>
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1.02</Parry_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.24</Shield_Damage>
       <Sprites>22</Sprites>
       <Stamina_Reduce>0.93</Stamina_Reduce>
       <Value>50</Value>
@@ -1165,7 +1387,7 @@
       <Initiative_Reduce>0.93</Initiative_Reduce>
       <Max_Durability>25</Max_Durability>
       <Parry_Mod>1.03</Parry_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.25</Shield_Damage>
       <Sprites>52</Sprites>
       <Stamina_Reduce>0.94</Stamina_Reduce>
       <Value>150</Value>
@@ -1191,7 +1413,7 @@
       <Initiative_Reduce>0.95</Initiative_Reduce>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>1.04</Parry_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.27</Shield_Damage>
       <Sprites>82</Sprites>
       <Stamina_Reduce>0.95</Stamina_Reduce>
       <Value>350</Value>
@@ -1217,7 +1439,7 @@
       <Initiative_Reduce>0.95</Initiative_Reduce>
       <Max_Durability>60</Max_Durability>
       <Parry_Mod>1.05</Parry_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.28</Shield_Damage>
       <Sprites>112</Sprites>
       <Stamina_Reduce>0.95</Stamina_Reduce>
       <Value>700</Value>
@@ -1242,12 +1464,116 @@
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>70</Max_Durability>
       <Parry_Mod>1.15</Parry_Mod>
-      <Shield_Damage>0</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <Sprites>36</Sprites>
       <Stamina_Reduce>0.95</Stamina_Reduce>
       <Value>800</Value>
       <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
       <WeaponAbilitiesEnum>Pierce</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Riposte</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Katana">
+      <Tier>Five</Tier>
+      <Accuracy>1</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.97</Armor_Pierce>
+      <Block_Ignore>1</Block_Ignore>
+      <Damage>52</Damage>
+      <Description>
+        Normally, katanas are exemplary works of craftmanship.  Normally.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>5</Max_Durability>
+      <Parry_Mod>1.19</Parry_Mod>
+      <Shield_Damage>0.02</Shield_Damage>
+      <Sprites>10,11</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>70</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Double_Strike</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Riposte</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Katana">
+      <Tier>Four</Tier>
+      <Accuracy>1</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>2</Armor_Ignore>
+      <Armor_Pierce>0.95</Armor_Pierce>
+      <Block_Ignore>1</Block_Ignore>
+      <Damage>60</Damage>
+      <Description>
+        This katana is slightly less majestic than most...
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>15</Max_Durability>
+      <Parry_Mod>1.22</Parry_Mod>
+      <Shield_Damage>0.02</Shield_Damage>
+      <Sprites>40,41</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>500</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Double_Strike</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Riposte</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Katana">
+      <Tier>Three</Tier>
+      <Accuracy>1</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>3</Armor_Ignore>
+      <Armor_Pierce>0.92</Armor_Pierce>
+      <Block_Ignore>1</Block_Ignore>
+      <Damage>65</Damage>
+      <Description>
+        This katana is well-rounded weapon of fine craftmanship.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>1.25</Parry_Mod>
+      <Shield_Damage>0.02</Shield_Damage>
+      <Sprites>70,71</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>800</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Double_Strike</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Riposte</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Katana">
+      <Tier>Two</Tier>
+      <Accuracy>1</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>4</Armor_Ignore>
+      <Armor_Pierce>0.90</Armor_Pierce>
+      <Block_Ignore>1</Block_Ignore>
+      <Damage>75</Damage>
+      <Description>
+        TODO
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>50</Max_Durability>
+      <Parry_Mod>1.26</Parry_Mod>
+      <Shield_Damage>0.02</Shield_Damage>
+      <Sprites>100,101</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>1400</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Double_Strike</WeaponAbilitiesEnum>
       <WeaponAbilitiesEnum>Riposte</WeaponAbilitiesEnum>
       <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
       <WeaponUseEnum>Melee</WeaponUseEnum>
@@ -1267,7 +1593,7 @@
       <Initiative_Reduce>0.96</Initiative_Reduce>
       <Max_Durability>80</Max_Durability>
       <Parry_Mod>1.12</Parry_Mod>
-      <Shield_Damage>0.02</Shield_Damage>
+      <Shield_Damage>0.04</Shield_Damage>
       <Sprites>15</Sprites>
       <Stamina_Reduce>0.88</Stamina_Reduce>
       <Value>800</Value>
@@ -1294,7 +1620,7 @@
       <Initiative_Reduce>0.97</Initiative_Reduce>
       <Max_Durability>100</Max_Durability>
       <Parry_Mod>1.15</Parry_Mod>
-      <Shield_Damage>0.97</Shield_Damage>
+      <Shield_Damage>0.04</Shield_Damage>
       <Sprites>15</Sprites>
       <Stamina_Reduce>0.90</Stamina_Reduce>
       <Value>1500</Value>
@@ -1303,6 +1629,115 @@
       <WeaponAbilitiesEnum>Pierce</WeaponAbilitiesEnum>
       <WeaponAbilitiesEnum>Riposte</WeaponAbilitiesEnum>
       <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Nodachi">
+      <Tier>Five</Tier>
+      <Accuracy>0.92</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>5</Armor_Ignore>
+      <Armor_Pierce>0.99</Armor_Pierce>
+      <Block_Ignore>0.97</Block_Ignore>
+      <Damage>95</Damage>
+      <Description>
+        A heavier version of the traditional katana meant to easily penetrate even the heaviest armor.  This one
+        has seen some wear, though...
+      </Description>
+      <Fatigue_Cost_Mod>1.12</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.94</Initiative_Reduce>
+      <Max_Durability>8</Max_Durability>
+      <Parry_Mod>1.01</Parry_Mod>
+      <Shield_Damage>0.18</Shield_Damage>
+      <Sprites>9,10</Sprites>
+      <Stamina_Reduce>0.92</Stamina_Reduce>
+      <Value>70</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Double_Strike</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Great_Strike</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Riposte</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Wide_Slash</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Nodachi">
+      <Tier>Four</Tier>
+      <Accuracy>0.93</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>6</Armor_Ignore>
+      <Armor_Pierce>0.98</Armor_Pierce>
+      <Block_Ignore>0.96</Block_Ignore>
+      <Damage>125</Damage>
+      <Description>
+        A heavier version of the traditional katana meant to easily penetrate even the heaviest armor.
+      </Description>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.96</Initiative_Reduce>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>1.02</Parry_Mod>
+      <Shield_Damage>0.20</Shield_Damage>
+      <Sprites>24,25</Sprites>
+      <Stamina_Reduce>0.94</Stamina_Reduce>
+      <Value>300</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Double_Strike</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Great_Strike</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Riposte</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Wide_Slash</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Nodachi">
+      <Tier>Three</Tier>
+      <Accuracy>0.95</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>7</Armor_Ignore>
+      <Armor_Pierce>0.97</Armor_Pierce>
+      <Block_Ignore>0.95</Block_Ignore>
+      <Damage>165</Damage>
+      <Description>
+        A heavier version of the traditional katana meant to easily penetrate even the heaviest armor.
+      </Description>
+      <Fatigue_Cost_Mod>1.08</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.98</Initiative_Reduce>
+      <Max_Durability>40</Max_Durability>
+      <Parry_Mod>1.04</Parry_Mod>
+      <Shield_Damage>0.22</Shield_Damage>
+      <Sprites>39,40</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>800</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Double_Strike</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Great_Strike</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Riposte</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Wide_Slash</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Nodachi">
+      <Tier>Two</Tier>
+      <Accuracy>0.95</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>8</Armor_Ignore>
+      <Armor_Pierce>0.96</Armor_Pierce>
+      <Block_Ignore>0.94</Block_Ignore>
+      <Damage>185</Damage>
+      <Description>
+        A heavier version of the traditional katana meant to easily penetrate even the heaviest armor. It is absolutely lethal in the right hands.
+      </Description>
+      <Fatigue_Cost_Mod>1.06</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.99</Initiative_Reduce>
+      <Max_Durability>60</Max_Durability>
+      <Parry_Mod>1.05</Parry_Mod>
+      <Shield_Damage>0.24</Shield_Damage>
+      <Sprites>54,55</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>2200</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Double_Strike</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Great_Strike</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Riposte</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Wide_Slash</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
       <WeaponUseEnum>Melee</WeaponUseEnum>
     </Weapon>
     <Weapon name="Notched Blade">
@@ -1320,7 +1755,7 @@
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>20</Max_Durability>
       <Parry_Mod>1.02</Parry_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <Sprites>19</Sprites>
       <Stamina_Reduce>0.95</Stamina_Reduce>
       <Value>50</Value>
@@ -1345,7 +1780,7 @@
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>30</Max_Durability>
       <Parry_Mod>1.03</Parry_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <Sprites>49</Sprites>
       <Stamina_Reduce>0.95</Stamina_Reduce>
       <Value>80</Value>
@@ -1370,7 +1805,7 @@
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>0.95</Parry_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <Sprites>79</Sprites>
       <Stamina_Reduce>0.95</Stamina_Reduce>
       <Value>200</Value>
@@ -1395,7 +1830,7 @@
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>65</Max_Durability>
       <Parry_Mod>0.97</Parry_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <Sprites>109</Sprites>
       <Stamina_Reduce>0.95</Stamina_Reduce>
       <Value>450</Value>
@@ -1420,7 +1855,7 @@
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>20</Max_Durability>
       <Parry_Mod>1.03</Parry_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <Sprites>20</Sprites>
       <Stamina_Reduce>0.95</Stamina_Reduce>
       <Value>80</Value>
@@ -1446,7 +1881,7 @@
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>25</Max_Durability>
       <Parry_Mod>1.08</Parry_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <Sprites>50</Sprites>
       <Stamina_Reduce>0.95</Stamina_Reduce>
       <Value>200</Value>
@@ -1472,7 +1907,7 @@
       <Initiative_Reduce>1</Initiative_Reduce>
       <Max_Durability>40</Max_Durability>
       <Parry_Mod>1.12</Parry_Mod>
-      <Shield_Damage>1</Shield_Damage>
+      <Shield_Damage>0.01</Shield_Damage>
       <Sprites>80</Sprites>
       <Stamina_Reduce>0.95</Stamina_Reduce>
       <Value>500</Value>
@@ -1499,7 +1934,7 @@
       <Initiative_Reduce>0.75</Initiative_Reduce>
       <Max_Durability>220</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
-      <Shield_Damage>0.50</Shield_Damage>
+      <Shield_Damage>0.88</Shield_Damage>
       <Sprites>33</Sprites>
       <Stamina_Reduce>0.65</Stamina_Reduce>
       <Value>2000</Value>

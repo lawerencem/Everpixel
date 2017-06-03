@@ -68,6 +68,15 @@
     <SecondaryStatsEnum>Melee,4</SecondaryStatsEnum>
     <SecondaryStatsEnum>Initiative,3</SecondaryStatsEnum>
   </Class>
+  <Class name="Samurai">
+    <PrimaryStatsEnum>Agility,4</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Constitution,2</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Might,2</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Dodge,2</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Melee,8</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Parry,3</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,3</SecondaryStatsEnum>
+  </Class>
   <Class name="Slime_Lord">
     <PrimaryStatsEnum>Intelligence,4</PrimaryStatsEnum>
     <PrimaryStatsEnum>Might,1</PrimaryStatsEnum>

@@ -63,24 +63,6 @@
     <Character>0.85,Spider Rider,One</Character>
     <Character>0.85,Spider Rider Archer,Two</Character>
   </SubParty>
-  <SubParty Name ="Rexes">
-    <Difficulty>3</Difficulty>
-    <Character>1,Tearex,Two</Character>
-    <Character>1,Thairex,One</Character>
-  </SubParty>
-  <SubParty Name ="Rexes">
-    <Difficulty>4</Difficulty>
-    <Character>1,Tearex,Two</Character>
-    <Character>1,Thairex,One</Character>
-    <Character>0.25,Tearex,One</Character>
-    <Character>0.25,Thairex,One</Character>
-  </SubParty>
-  <SubParty Name ="Rexes">
-    <Difficulty>7</Difficulty>
-    <Character>1,Tyrantaur,One</Character>
-    <Character>1,Tearex,Two</Character>
-    <Character>1,Thairex,One</Character>
-  </SubParty>
   <SubParty Name ="Gobbo Spider Riders">
     <Difficulty>5</Difficulty>
     <Character>1,Veteran Spider Rider,One</Character>
@@ -162,6 +144,11 @@
     <Character>1,Lunatic Gromp Hopper,One</Character>
     <Character>1,Crazed Gromp Hopper,One</Character>
   </SubParty>
+  <SubParty Name ="Katana Samurais">
+    <Difficulty>5</Difficulty>
+    <Character>0.85,Ronin Katana Samurai,One</Character>
+    <Character>0.85,Katana Samurai,One</Character>
+  </SubParty>
   <SubParty Name ="Legionnaires">
     <Difficulty>3</Difficulty>
     <Character>1,Praetorian,One</Character>
@@ -172,6 +159,11 @@
     <Difficulty>1</Difficulty>
     <Character>1,Lizardman Militia,One</Character>
     <Character>0.85,Lizardman Militia,One</Character>
+  </SubParty>
+  <SubParty Name ="Nodachi Samurais">
+    <Difficulty>5</Difficulty>
+    <Character>0.85,Ronin Nodachi Samurai,One</Character>
+    <Character>0.85,Nodachi Samurai,One</Character>
   </SubParty>
   <SubParty Name ="Orc Scavengers">
     <Difficulty>1</Difficulty>
@@ -188,6 +180,24 @@
     <Character>1,Orc Scavenger,One</Character>
     <Character>0.85,Orc Scavenger,One</Character>
     <Character>0.5,Orc Scavenger,One</Character>
+  </SubParty>
+  <SubParty Name ="Rexes">
+    <Difficulty>3</Difficulty>
+    <Character>1,Tearex,Two</Character>
+    <Character>1,Thairex,One</Character>
+  </SubParty>
+  <SubParty Name ="Rexes">
+    <Difficulty>4</Difficulty>
+    <Character>1,Tearex,Two</Character>
+    <Character>1,Thairex,One</Character>
+    <Character>0.25,Tearex,One</Character>
+    <Character>0.25,Thairex,One</Character>
+  </SubParty>
+  <SubParty Name ="Rexes">
+    <Difficulty>7</Difficulty>
+    <Character>1,Tyrantaur,One</Character>
+    <Character>1,Tearex,Two</Character>
+    <Character>1,Thairex,One</Character>
   </SubParty>
   <SubParty Name ="Shock Troopas">
     <Difficulty>2</Difficulty>

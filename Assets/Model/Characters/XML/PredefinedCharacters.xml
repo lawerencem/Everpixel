@@ -793,6 +793,182 @@
       </Stats>
     </Character>
   </Culture>
+  <Culture name ="Jomonese">
+    <Character name ="Katana Samurai">
+      <Class>Samurai,9</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Human</RaceEnum>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Dou,Four</Armor>
+          <Armor>0.20,Dou,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Kabuto,Four</Helm>
+          <Helm>0.20,Kabuto,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Katana,Four</RWeapon>
+          <RWeapon>0.25,Katana,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>500</Constitution>
+        <Intelligence>410</Intelligence>
+        <Might>530</Might>
+        <Perception>520</Perception>
+        <Resolve>580</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Ronin Nodachi Samurai">
+      <Class>Samurai,5</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Human</RaceEnum>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Dou,Five</Armor>
+          <Armor>0.20,Dou,Four</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Kabuto,Five</Helm>
+          <Helm>0.20,Kabuto,Four</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Nodachi,Five</RWeapon>
+          <RWeapon>0.25,Nodachi,Four</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>500</Constitution>
+        <Intelligence>410</Intelligence>
+        <Might>530</Might>
+        <Perception>520</Perception>
+        <Resolve>580</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Ronin Katana Samurai">
+      <Class>Samurai,5</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Human</RaceEnum>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Dou,Five</Armor>
+          <Armor>0.20,Dou,Four</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Kabuto,Five</Helm>
+          <Helm>0.20,Kabuto,Four</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Katana,Five</RWeapon>
+          <RWeapon>0.25,Katana,Four</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>500</Constitution>
+        <Intelligence>410</Intelligence>
+        <Might>530</Might>
+        <Perception>520</Perception>
+        <Resolve>580</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Nodachi Samurai">
+      <Class>Samurai,9</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Human</RaceEnum>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Dou,Four</Armor>
+          <Armor>0.20,Dou,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Kabuto,Four</Helm>
+          <Helm>0.20,Kabuto,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Nodachi,Four</RWeapon>
+          <RWeapon>0.25,Nodachi,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>500</Constitution>
+        <Intelligence>410</Intelligence>
+        <Might>530</Might>
+        <Perception>520</Perception>
+        <Resolve>580</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Veteran Katana Samurai">
+      <Class>Samurai,13</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Human</RaceEnum>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Dou,Three</Armor>
+          <Armor>0.20,Dou,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Kabuto,Three</Helm>
+          <Helm>0.20,Kabuto,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Katana,Three</RWeapon>
+          <RWeapon>0.25,Katana,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>500</Constitution>
+        <Intelligence>410</Intelligence>
+        <Might>530</Might>
+        <Perception>520</Perception>
+        <Resolve>580</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Veteran Nodachi Samurai">
+      <Class>Samurai,13</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Human</RaceEnum>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Dou,Three</Armor>
+          <Armor>0.20,Dou,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Kabuto,Three</Helm>
+          <Helm>0.20,Kabuto,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Nodachi,Three</RWeapon>
+          <RWeapon>0.25,Nodachi,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>500</Constitution>
+        <Intelligence>410</Intelligence>
+        <Might>530</Might>
+        <Perception>520</Perception>
+        <Resolve>580</Resolve>
+      </Stats>
+    </Character>
+  </Culture>
   <Culture name ="Orcish">
     <Character name ="Dire Ween Rider">
       <Class>Warrior,5</Class>
