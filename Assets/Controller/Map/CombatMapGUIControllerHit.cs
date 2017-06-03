@@ -30,6 +30,9 @@ namespace Controller.Managers.Map
         private const string R_WEAP = "RWeaponTextTag";
         private const string STAM = "StaminaTextTag";
 
+        private const float WEAPON_PARRY = 6f;
+        private const float WEAPON_OFFSET = 0.075f;
+
         private readonly Color RED = new Color(255, 0, 0, 150);
         private readonly Color WHITE = new Color(255, 255, 255, 255);
 
@@ -113,27 +116,25 @@ namespace Controller.Managers.Map
                 this.DisplayText("Critical!", e, RED, 0.40f);
             if (e.Hit.Target.Model.LWeapon != null && e.Hit.Target.Model.LWeapon.IsTypeOfShield())
             {
-                // TODO: Make this x axis when "teams" are done
                 var weapon = e.Hit.Target.SpriteHandlerDict["CharLWeapon"];
                 var boomerang = weapon.AddComponent<BoomerangScript>();
                 var position = weapon.transform.position;
                 if (e.Hit.Target.LParty)
-                    position.x -= 0.075f;
+                    position.x -= WEAPON_OFFSET;
                 else
-                    position.x += 0.075f;
-                boomerang.Init(weapon, position, 6f, this.UnlockUserInteraction);
+                    position.x += WEAPON_OFFSET;
+                boomerang.Init(weapon, position, WEAPON_PARRY, this.UnlockUserInteraction);
             }
             if (e.Hit.Target.Model.RWeapon != null && e.Hit.Target.Model.RWeapon.IsTypeOfShield())
             {
-                // TODO: Make this x axis when "teams" are done
                 var weapon = e.Hit.Target.SpriteHandlerDict["CharRWeapon"];
                 var boomerang = weapon.AddComponent<BoomerangScript>();
                 var position = weapon.transform.position;
                 if (e.Hit.Target.LParty)
-                    position.x -= 0.075f;
+                    position.x -= WEAPON_OFFSET;
                 else
-                    position.x += 0.075f;
-                boomerang.Init(weapon, position, 6f, this.UnlockUserInteraction);
+                    position.x += WEAPON_OFFSET;
+                boomerang.Init(weapon, position, WEAPON_PARRY, this.UnlockUserInteraction);
             }
             this.DisplayText(e.Hit.Dmg.ToString(), e, RED, 0.025f);
         }
@@ -161,13 +162,25 @@ namespace Controller.Managers.Map
             this.DisplayText("Parry", e, WHITE, 0.30f);
             if (e.Hit.Target.Model.LWeapon != null && !e.Hit.Target.Model.LWeapon.IsTypeOfShield())
             {
-                // TODO: Make weapons rotate in proper direction when teams are introduced
                 var weapon = e.Hit.Target.SpriteHandlerDict["CharLWeapon"];
+                var position = weapon.transform.position;
+                var boomerang = weapon.AddComponent<BoomerangScript>();
+                if (e.Hit.Target.LParty)
+                    position.x -= WEAPON_OFFSET;
+                else
+                    position.x += WEAPON_OFFSET;
+                boomerang.Init(weapon, position, WEAPON_PARRY, this.UnlockUserInteraction);
             }
             if (e.Hit.Target.Model.RWeapon != null && !e.Hit.Target.Model.RWeapon.IsTypeOfShield())
             {
-                // TODO: Make weapons rotate in proper direction when teams are introduced
                 var weapon = e.Hit.Target.SpriteHandlerDict["CharRWeapon"];
+                var position = weapon.transform.position;
+                var boomerang = weapon.AddComponent<BoomerangScript>();
+                if (e.Hit.Target.LParty)
+                    position.x -= WEAPON_OFFSET;
+                else
+                    position.x += WEAPON_OFFSET;
+                boomerang.Init(weapon, position, WEAPON_PARRY, this.UnlockUserInteraction);
             }
 
             this.UnlockUserInteraction();
