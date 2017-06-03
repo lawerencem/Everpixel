@@ -17,10 +17,10 @@ namespace Assets.Controller.Managers
     {
         private List<TileController> _curTiles;
         private List<GenericCharacterController> _characters;
+        private List<GenericCharacterController> _lParty;
         private CombatMap _map;
         private List<GenericCharacterController> _order;
-
-        public bool PlayersTurn = true;
+        private List<GenericCharacterController> _rParty;
 
         public GenericAbility CurAbility { get; set; }
         public GenericCharacterController CurrActing { get; set; }
@@ -32,9 +32,12 @@ namespace Assets.Controller.Managers
             this._order = new List<GenericCharacterController>();
         }
 
-        public void InitParties(List<GenericCharacterController> c)
+        public void InitParties(List<GenericCharacterController> l, List<GenericCharacterController> r)
         {
-            this._characters = c;
+            this._characters = l;
+            this._characters.AddRange(r);
+            this._lParty = l;
+            this._rParty = r;
             this.InitCharacterTurns();
         }
 
@@ -85,6 +88,10 @@ namespace Assets.Controller.Managers
         public void ProcessCharacterKilled(GenericCharacterController c)
         {
             this._characters.Remove(c);
+            if (this._lParty.Contains(c))
+                this._lParty.Remove(c);
+            else
+                this._rParty.Remove(c);
             this._order.Remove(c);
         }
 

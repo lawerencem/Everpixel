@@ -178,7 +178,7 @@ namespace Controller.Managers
         {
             this._events.Remove(e);
             this._combatManager = new CombatManager(e.Map);
-            this._combatManager.InitParties(e.Controllers);
+            this._combatManager.InitParties(e.LParty, e.RParty);
             this.PopulateBtnsHelper();
         }
 

@@ -117,8 +117,11 @@ namespace Controller.Managers.Map
                 var weapon = e.Hit.Target.SpriteHandlerDict["CharLWeapon"];
                 var boomerang = weapon.AddComponent<BoomerangScript>();
                 var position = weapon.transform.position;
-                position.y -= 0.1f;
-                boomerang.Init(weapon, position, 4f, this.UnlockUserInteraction);
+                if (e.Hit.Target.LParty)
+                    position.x -= 0.075f;
+                else
+                    position.x += 0.075f;
+                boomerang.Init(weapon, position, 6f, this.UnlockUserInteraction);
             }
             if (e.Hit.Target.Model.RWeapon != null && e.Hit.Target.Model.RWeapon.IsTypeOfShield())
             {
@@ -126,8 +129,11 @@ namespace Controller.Managers.Map
                 var weapon = e.Hit.Target.SpriteHandlerDict["CharRWeapon"];
                 var boomerang = weapon.AddComponent<BoomerangScript>();
                 var position = weapon.transform.position;
-                position.y -= 0.1f;
-                boomerang.Init(weapon, position, 4f, this.UnlockUserInteraction);
+                if (e.Hit.Target.LParty)
+                    position.x -= 0.075f;
+                else
+                    position.x += 0.075f;
+                boomerang.Init(weapon, position, 6f, this.UnlockUserInteraction);
             }
             this.DisplayText(e.Hit.Dmg.ToString(), e, RED, 0.025f);
         }

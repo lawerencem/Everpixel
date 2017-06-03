@@ -48,16 +48,16 @@ namespace Controller.Managers.Map
 
         private void InitParties()
         {
-            var controllers = new List<GenericCharacterController>();
-            this.InitPlayerParty(ref controllers);
-            this.InitEnemyParty(ref controllers);
-            var e = new MapDoneLoadingEvent(CombatEventManager.Instance, controllers, this._map);
+            var lParty = new List<GenericCharacterController>();
+            var rParty = new List<GenericCharacterController>();
+            this.InitPlayerParty(ref lParty);
+            this.InitEnemyParty(ref rParty);
+            var e = new MapDoneLoadingEvent(CombatEventManager.Instance, lParty, rParty, this._map);
         }
 
-        // TODO: Clean this up when implementing player stuff.
         private void InitPlayerParty(ref List<GenericCharacterController> controllers)
         {
-            var playerChars = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Jomonese Infantry", 15));
+            var playerChars = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Orc Shock Troopas", 15));
             var builder = new CharacterViewBuilder();
 
             for (int i = 0; i < playerChars.Count; i++)
@@ -69,6 +69,7 @@ namespace Controller.Managers.Map
                 controller.SetView(view, playerChars[i]);
                 this.LayoutCharacter(controller, playerChars[i], false);
                 controllers.Add(controller);
+                controller.LParty = true;
             }
         }
 

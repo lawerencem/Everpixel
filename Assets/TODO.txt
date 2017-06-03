@@ -1,7 +1,6 @@
 ﻿TODO
 
 Tomorrow
-	Team Directions
 	Dual-wield as separate attacks
 
 0) Mouse Wheel Zoom
