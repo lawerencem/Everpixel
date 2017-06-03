@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using View.Events;
 using Model.Combat;
+using Controller.Map;
 
 namespace Controller.Managers
 {
@@ -154,10 +155,16 @@ namespace Controller.Managers
         private void HandlePerformActionEvent(PerformActionEvent e)
         {
             this._events.Remove(e);
-            var hit = new HitInfo(e.Source, e.Target, e.Action);
-            e.Action.ProcessAbility(hit);
-            this._mapGUIController.SetActingBoxToController(e.Source);
-            this.UnlockInteraction();
+            if (!this._interactionLock)
+            {
+                var hit = new HitInfo(e.Source, e.Target, e.Action);
+                e.Action.ProcessAbility(hit);
+                this._combatManager.CurAbility = null;
+                TileControllerFlags.SetPotentialAttackFlagFalse(e.Target.CurrentTile.Flags);
+                this._mapGUIController.ClearDecoratedTiles();
+                this._mapGUIController.SetActingBoxToController(e.Source);
+                this.UnlockInteraction();
+            }
         }
 
         private void HandleShowPotentialPathEvent(ShowPotentialPathEvent e)

@@ -118,7 +118,7 @@ namespace Controller.Managers.Map
                 var boomerang = weapon.AddComponent<BoomerangScript>();
                 var position = weapon.transform.position;
                 position.y -= 0.1f;
-                boomerang.Init(weapon, position, 4f);
+                boomerang.Init(weapon, position, 4f, this.UnlockUserInteraction);
             }
             if (e.Hit.Target.Model.RWeapon != null && e.Hit.Target.Model.RWeapon.IsTypeOfShield())
             {
@@ -127,7 +127,7 @@ namespace Controller.Managers.Map
                 var boomerang = weapon.AddComponent<BoomerangScript>();
                 var position = weapon.transform.position;
                 position.y -= 0.1f;
-                boomerang.Init(weapon, position, 4f);
+                boomerang.Init(weapon, position, 4f, this.UnlockUserInteraction);
             }
             this.DisplayText(e.Hit.Dmg.ToString(), e, RED, 0.025f);
         }
@@ -135,19 +135,19 @@ namespace Controller.Managers.Map
         private void ProcessDodge(DisplayHitStatsEvent e)
         {
             var defenderJolt = e.Hit.Target.Handle.AddComponent<BoomerangScript>();
-            defenderJolt.Init(e.Hit.Target.Handle, this.GetRandomDodgePosition(e), 6f);
+            defenderJolt.Init(e.Hit.Target.Handle, this.GetRandomDodgePosition(e), 6f, this.UnlockUserInteraction);
             this.DisplayText("Dodge", e, WHITE, 0.30f);
         }
 
         private void ProcessNormalHit(DisplayHitStatsEvent e)
         {
             if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
-                this.DisplayText("Critical!", e, RED, 0.40f);
+                this.DisplayText("Crit!", e, RED, 0.40f);
             this.DisplayText(e.Hit.Dmg.ToString(), e, RED, 0.025f);
             var position = e.Hit.Target.transform.position;
             position.y -= 0.08f;
             var defenderJolt = e.Hit.Target.Handle.AddComponent<BoomerangScript>();
-            defenderJolt.Init(e.Hit.Target.Handle, position, 10f);
+            defenderJolt.Init(e.Hit.Target.Handle, position, 10f, this.UnlockUserInteraction);
         }
 
         private void ProcessParry(DisplayHitStatsEvent e)
@@ -157,16 +157,14 @@ namespace Controller.Managers.Map
             {
                 // TODO: Make weapons rotate in proper direction when teams are introduced
                 var weapon = e.Hit.Target.SpriteHandlerDict["CharLWeapon"];
-                var boomerang = weapon.AddComponent<ZRotateBoomerangScript>();
-                boomerang.Init(weapon, 2f, 30f);
             }
             if (e.Hit.Target.Model.RWeapon != null && !e.Hit.Target.Model.RWeapon.IsTypeOfShield())
             {
                 // TODO: Make weapons rotate in proper direction when teams are introduced
                 var weapon = e.Hit.Target.SpriteHandlerDict["CharRWeapon"];
-                var boomerang = weapon.AddComponent<ZRotateBoomerangScript>();
-                boomerang.Init(weapon, 2f, 30f);
             }
+
+            this.UnlockUserInteraction();
         }
 
         private void ProcessSplatterLevelOne(DisplayHitStatsEvent e)
@@ -185,6 +183,11 @@ namespace Controller.Managers.Map
         {
             var sprite = MapBridge.Instance.GetSplatterLevelFiveSprite();
             this.PaintSingleTile(e.Killed.CurrentTile, sprite);
+        }
+
+        private void UnlockUserInteraction()
+        {
+            CombatEventManager.Instance.UnlockInteraction();
         }
     }
 }

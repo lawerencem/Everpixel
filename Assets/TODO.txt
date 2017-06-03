@@ -1,9 +1,7 @@
 ﻿TODO
 
 Tomorrow
-	ZRotateScript
 	Team Directions
-	Callback on Attacks for animations...
 	Dual-wield as separate attacks
 
 0) Mouse Wheel Zoom
@@ -22,4 +20,4 @@ Tomorrow
 - Add Methods to get current values of a model given buffs and such
 
 Bugs:
-can target killed characetters?
+can target killed characters?

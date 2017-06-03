@@ -101,8 +101,6 @@
     <Compile Include="Assets\Generics\Scripts\FloatingText.cs" />
     <Compile Include="Assets\Generics\Scripts\JoltScript.cs" />
     <Compile Include="Assets\Generics\Scripts\TileMoveScript.cs" />
-    <Compile Include="Assets\Generics\Scripts\ZRotateBoomerangScript.cs" />
-    <Compile Include="Assets\Generics\Scripts\ZRotateScript.cs" />
     <Compile Include="Assets\Generics\Utilities\Count.cs" />
     <Compile Include="Assets\Generics\Utilities\DeepClone.cs" />
     <Compile Include="Assets\Generics\Utilities\EnumUtil.cs" />
