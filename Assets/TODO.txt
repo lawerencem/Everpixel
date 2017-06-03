@@ -4,7 +4,7 @@ Tomorrow
 	Dual-wield as separate attacks
 
 0) Mouse Wheel Zoom
-0) - Replace eyes with dead eyes when killed
+
 1) - Dual-Wield
 1.25) - Restore Stamina each turn
 1.75) - Injuries and effects
@@ -14,9 +14,11 @@ Tomorrow
 5) - Calculate "height diff" when going from one height to another in hexes
 6) - Force A* to directional search after so many nodes
 7) - Restore stamina and AP each turn
-8) Highlight shields on block
-9) Highlight weaposn on parry
-- Add Methods to get current values of a model given buffs and such
+
+Long Term: 
+	Replace eyes with dead eyes when killed
+	Zone of Control
+
 
 Bugs:
 can target killed characters?

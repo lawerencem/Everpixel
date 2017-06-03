@@ -30,7 +30,7 @@ namespace Controller.Managers.Map
         private const string R_WEAP = "RWeaponTextTag";
         private const string STAM = "StaminaTextTag";
 
-        private const float WEAPON_PARRY = 6f;
+        private const float WEAPON_PARRY = 4f;
         private const float WEAPON_OFFSET = 0.075f;
 
         private readonly Color RED = new Color(255, 0, 0, 150);

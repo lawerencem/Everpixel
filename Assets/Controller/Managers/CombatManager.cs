@@ -105,6 +105,7 @@ namespace Assets.Controller.Managers
             else
             {
                 this.InitCharacterTurns();
+                this.ProcessEndOfTurn();
             }
         }
 
@@ -119,6 +120,14 @@ namespace Assets.Controller.Managers
             if (this._order != null && this._order.Count > 0)
             {
                 var e = new TakingActionEvent(CombatEventManager.Instance, this._order[0]);
+            }
+        }
+
+        private void ProcessEndOfTurn()
+        {
+            foreach(var c in this._characters)
+            {
+                c.Model.RestoreStamina();
             }
         }
 

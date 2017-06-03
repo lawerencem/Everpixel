@@ -20,6 +20,13 @@ namespace Model.Characters
             this.IndefSStatMods = new List<Pair<object, List<IndefSecondaryStatModifier>>>();
         }
 
+        public void AddStamina(double toAdd)
+        {
+            this.CurrentStamina += (int)toAdd;
+            if (this.CurrentStamina > this.GetCurrentStatValue(SecondaryStatsEnum.Stamina))
+                this.CurrentStamina = this.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
+        }
+
         public void ModifyHP(int value, bool isHeal)
         {
             if (isHeal)
@@ -36,6 +43,11 @@ namespace Model.Characters
                     var killed = new CharacterKilledEvent(CombatEventManager.Instance, this.ParentController);
                 }
             }
+        }
+
+        public void RestoreStamina()
+        {
+            this.AddStamina(BASE_STAM_RESTORE);
         }
     }
 }

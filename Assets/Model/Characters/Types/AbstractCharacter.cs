@@ -11,6 +11,8 @@ namespace Model.Characters
 {
     abstract public class AbstractCharacter<T>
     {
+        protected const double BASE_STAM_RESTORE = 50;
+
         public T Type { get; set; }
 
         public Dictionary<ClassEnum, GenericClass> BaseClasses { get; set; }
