@@ -1,10 +1,6 @@
-﻿using Assets.Scripts;
-using Controller.Characters;
+﻿using Controller.Characters;
 using Controller.Map;
-using Generics.Scripts;
-using Generics.Utilities;
 using Model.Characters;
-using Model.Combat;
 using Model.Events.Combat;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,28 +9,14 @@ using View.Biomes;
 
 namespace Controller.Managers.Map
 {
-    public class CombatMapGuiController
+    public class CMapGUIController
     {
-        private const string MAP_GUI_LAYER = "BackgroundTileGUI";
-        private const string IMG = "ActingBoxImgTag";
-        private const string NAME = "ActingBoxNameTag";
-        private const string UI_LAYER = "UI";
-
-        private const string ARMOR = "ArmorTextTag";
-        private const string AP = "APTextTag";
-        private const string HELM = "HelmTextTag";
-        private const string HP = "HPTextTag";
-        private const string L_WEAP = "LWeaponTextTag";
-        private const string MORALE = "MoraleTextTag";
-        private const string R_WEAP = "RWeaponTextTag";
-        private const string STAM = "StaminaTextTag";
-
         private List<GameObject> _boxImages = new List<GameObject>();
         private List<GameObject> _decorateTileFamily = new List<GameObject>();
         private GameObject _singleTile;
 
-        private CombatMapGUIControllerHit _hitHelper = new CombatMapGUIControllerHit();
-        private CombatMapGUIControllerParticle _particleHelper = new CombatMapGUIControllerParticle();
+        private CMapGUIControllerHit _hitHelper = new CMapGUIControllerHit();
+        private CMapGUIControllerParticle _particleHelper = new CMapGUIControllerParticle();
 
         public void AttachInjuryParticle(ApplyInjuryEvent e)
         {
@@ -50,31 +32,31 @@ namespace Controller.Managers.Map
 
         public void SetActingBoxToController(GenericCharacterController c)
         {
-            this.SetTagText(NAME, c.View.Name);
-            this.SetTagText(AP, c.Model.CurrentAP + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.AP).ToString());
-            this.SetTagText(HP, c.Model.CurrentHP + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.HP).ToString());
-            this.SetTagText(STAM, c.Model.CurrentStamina + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Stamina).ToString());
-            this.SetTagText(MORALE, c.Model.CurrentMorale + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Morale).ToString());
-            this.SetTagText(STAM, c.Model.CurrentStamina + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Stamina).ToString());
+            this.SetTagText(CMapGUIControllerParams.NAME, c.View.Name);
+            this.SetTagText(CMapGUIControllerParams.AP, c.Model.CurrentAP + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.AP).ToString());
+            this.SetTagText(CMapGUIControllerParams.HP, c.Model.CurrentHP + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.HP).ToString());
+            this.SetTagText(CMapGUIControllerParams.STAM, c.Model.CurrentStamina + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Stamina).ToString());
+            this.SetTagText(CMapGUIControllerParams.MORALE, c.Model.CurrentMorale + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Morale).ToString());
+            this.SetTagText(CMapGUIControllerParams.STAM, c.Model.CurrentStamina + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Stamina).ToString());
 
             if (c.Model.Armor != null)
-                this.SetTagText(ARMOR, c.Model.Armor.Name);
+                this.SetTagText(CMapGUIControllerParams.ARMOR, c.Model.Armor.Name);
             else
-                this.SetTagText(ARMOR, "");
+                this.SetTagText(CMapGUIControllerParams.ARMOR, "");
             if (c.Model.Helm != null)
-                this.SetTagText(HELM, c.Model.Helm.Name);
+                this.SetTagText(CMapGUIControllerParams.HELM, c.Model.Helm.Name);
             else
-                this.SetTagText(HELM, "");
+                this.SetTagText(CMapGUIControllerParams.HELM, "");
             if (c.Model.LWeapon != null)
-                this.SetTagText(L_WEAP, c.Model.LWeapon.Name);
+                this.SetTagText(CMapGUIControllerParams.L_WEAP, c.Model.LWeapon.Name);
             else
-                this.SetTagText(L_WEAP, "");    
+                this.SetTagText(CMapGUIControllerParams.L_WEAP, "");    
             if (c.Model.RWeapon != null)
-                this.SetTagText(R_WEAP, c.Model.RWeapon.Name);
+                this.SetTagText(CMapGUIControllerParams.R_WEAP, c.Model.RWeapon.Name);
             else
-                this.SetTagText(R_WEAP, "");
+                this.SetTagText(CMapGUIControllerParams.R_WEAP, "");
 
-            this.SetBoxImg(IMG, c);
+            this.SetBoxImg(CMapGUIControllerParams.IMG, c);
         }
 
         public void DecorateHover(TileController t)
@@ -134,7 +116,7 @@ namespace Controller.Managers.Map
             var renderer = tView.AddComponent<SpriteRenderer>();
             renderer.sprite = deco;
             renderer.transform.position = tile.Model.Center;
-            renderer.sortingLayerName = MAP_GUI_LAYER;
+            renderer.sortingLayerName = CMapGUIControllerParams.MAP_GUI_LAYER;
             tView.name = "Path Tile";
             var color = renderer.color;
             color.a = 0.50f;
@@ -148,7 +130,7 @@ namespace Controller.Managers.Map
             var renderer = tView.AddComponent<SpriteRenderer>();
             renderer.sprite = deco;
             renderer.transform.position = t.Model.Center;
-            renderer.sortingLayerName = MAP_GUI_LAYER;
+            renderer.sortingLayerName = CMapGUIControllerParams.MAP_GUI_LAYER;
             tView.name = "Path Tile";
             var color = renderer.color;
             color.a = alpha;
@@ -158,7 +140,7 @@ namespace Controller.Managers.Map
 
         private void SetBoxImg(string boxTag, GenericCharacterController c)
         {
-            var box = GameObject.FindGameObjectWithTag(IMG);
+            var box = GameObject.FindGameObjectWithTag(CMapGUIControllerParams.IMG);
             if (box != null)
             {
                 foreach (var img in this._boxImages) { GameObject.Destroy(img); }
@@ -172,7 +154,7 @@ namespace Controller.Managers.Map
                     var tempImage = new GameObject();
                     var r = tempImage.AddComponent<SpriteRenderer>();
                     r.sprite = renderer.sprite;                    
-                    r.sortingLayerName = (UI_LAYER + renderer.sortingLayerName);
+                    r.sortingLayerName = (CMapGUIControllerParams.UI_LAYER + renderer.sortingLayerName);
                     var position = box.transform.position;
                     position.x += xOffset;
                     position.y += yOffset;

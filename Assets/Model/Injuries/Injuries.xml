@@ -1,8 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Injuries>
+  <Injury name ="Abdominal_Cut">
+    <Dot>Bleed, 20</Dot>
+    <PrimaryStatsEnum>Constitution, 0.85</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Stamina, 0.75</SecondaryStatsEnum>
+  </Injury>
+  <Injury name ="Broken_Arm">
+    <SecondaryStatsEnum>Block, 0.85</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Parry, 0.85</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power, 0.75</SecondaryStatsEnum>
+  </Injury>
+  <Injury name ="Broken_Jaw">
+    <SecondaryStatsEnum>Concentration, 0.85</SecondaryStatsEnum>
+  </Injury>
   <Injury Name ="Broken_Ribs">
     <PrimaryStatsEnum>Might, 0.85</PrimaryStatsEnum>
     <PrimaryStatsEnum>Constitution, 0.85</PrimaryStatsEnum>
+  </Injury>
+  <Injury Name ="Cut_Arm">
+    <SecondaryStatsEnum>Melee, 0.95</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Block, 0.95</SecondaryStatsEnum>
+    <DoT>Bleed, 5</DoT>
+  </Injury>
+  <Injury Name ="Cut_Ear">
+    <SecondaryStatsEnum>Initiative, 0.85</SecondaryStatsEnum>
+  </Injury>
+  <Injury Name ="Cut_Hand">
+    <SecondaryStatsEnum>Melee, 0.85</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Ranged, 0.85</SecondaryStatsEnum>
+    <DoT>Bleed, 5</DoT>
+  </Injury>
+  <Injury Name ="Cut_Leg">
+    <SecondaryStatsEnum>AP, 0.85</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Stamina, 0.85</SecondaryStatsEnum>
+    <DoT>Bleed, 10</DoT>
   </Injury>
   <Injury Name ="Major_Bleeding">
     <DoT>Bleed, 25</DoT>

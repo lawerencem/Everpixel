@@ -13,29 +13,8 @@ using View.Biomes;
 
 namespace Controller.Managers.Map
 {
-    public class CombatMapGUIControllerHit
+    public class CMapGUIControllerHit
     {
-        // TODO: Make this a static config item
-        private const string MAP_GUI_LAYER = "BackgroundTileGUI";
-        private const string IMG = "ActingBoxImgTag";
-        private const string NAME = "ActingBoxNameTag";
-        private const string UI_LAYER = "UI";
-
-        private const string ARMOR = "ArmorTextTag";
-        private const string AP = "APTextTag";
-        private const string HELM = "HelmTextTag";
-        private const string HP = "HPTextTag";
-        private const string L_WEAP = "LWeaponTextTag";
-        private const string MORALE = "MoraleTextTag";
-        private const string R_WEAP = "RWeaponTextTag";
-        private const string STAM = "StaminaTextTag";
-
-        private const float WEAPON_PARRY = 4f;
-        private const float WEAPON_OFFSET = 0.075f;
-
-        private readonly Color RED = new Color(255, 0, 0, 150);
-        private readonly Color WHITE = new Color(255, 255, 255, 255);
-
         public void ProcessCharacterKilled(CharacterKilledEvent e)
         {
             foreach (var particle in e.Killed.Particles)
@@ -104,7 +83,7 @@ namespace Controller.Managers.Map
             var renderer = tView.AddComponent<SpriteRenderer>();
             renderer.sprite = deco;
             renderer.transform.position = t.Model.Center;
-            renderer.sortingLayerName = MAP_GUI_LAYER;
+            renderer.sortingLayerName = CMapGUIControllerParams.MAP_GUI_LAYER;
             tView.name = "Tile Deco";
             var color = renderer.color;
             color.a = alpha;
@@ -113,19 +92,19 @@ namespace Controller.Managers.Map
 
         private void ProcessBlock(DisplayHitStatsEvent e)
         {
-            this.DisplayText("Block", e, WHITE, 0.35f);
+            this.DisplayText("Block", e, CMapGUIControllerParams.WHITE, 0.35f);
             if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
-                this.DisplayText("Critical!", e, RED, 0.40f);
+                this.DisplayText("Critical!", e, CMapGUIControllerParams.RED, 0.40f);
             if (e.Hit.Target.Model.LWeapon != null && e.Hit.Target.Model.LWeapon.IsTypeOfShield())
             {
                 var weapon = e.Hit.Target.SpriteHandlerDict["CharLWeapon"];
                 var boomerang = weapon.AddComponent<BoomerangScript>();
                 var position = weapon.transform.position;
                 if (e.Hit.Target.LParty)
-                    position.x -= WEAPON_OFFSET;
+                    position.x -= CMapGUIControllerParams.WEAPON_OFFSET;
                 else
-                    position.x += WEAPON_OFFSET;
-                boomerang.Init(weapon, position, WEAPON_PARRY, this.UnlockUserInteraction);
+                    position.x += CMapGUIControllerParams.WEAPON_OFFSET;
+                boomerang.Init(weapon, position, CMapGUIControllerParams.WEAPON_PARRY, this.UnlockUserInteraction);
             }
             if (e.Hit.Target.Model.RWeapon != null && e.Hit.Target.Model.RWeapon.IsTypeOfShield())
             {
@@ -133,19 +112,19 @@ namespace Controller.Managers.Map
                 var boomerang = weapon.AddComponent<BoomerangScript>();
                 var position = weapon.transform.position;
                 if (e.Hit.Target.LParty)
-                    position.x -= WEAPON_OFFSET;
+                    position.x -= CMapGUIControllerParams.WEAPON_OFFSET;
                 else
-                    position.x += WEAPON_OFFSET;
-                boomerang.Init(weapon, position, WEAPON_PARRY, this.UnlockUserInteraction);
+                    position.x += CMapGUIControllerParams.WEAPON_OFFSET;
+                boomerang.Init(weapon, position, CMapGUIControllerParams.WEAPON_PARRY, this.UnlockUserInteraction);
             }
-            this.DisplayText(e.Hit.Dmg.ToString(), e, RED, 0.025f);
+            this.DisplayText(e.Hit.Dmg.ToString(), e, CMapGUIControllerParams.RED, 0.025f);
         }
 
         private void ProcessDodge(DisplayHitStatsEvent e)
         {
             var defenderJolt = e.Hit.Target.Handle.AddComponent<BoomerangScript>();
             defenderJolt.Init(e.Hit.Target.Handle, this.GetRandomDodgePosition(e), 6f, this.UnlockUserInteraction);
-            this.DisplayText("Dodge", e, WHITE, 0.30f);
+            this.DisplayText("Dodge", e, CMapGUIControllerParams.WHITE, 0.30f);
         }
 
         private void ProcessNormalHit(DisplayHitStatsEvent e)
@@ -158,23 +137,23 @@ namespace Controller.Managers.Map
                 defenderJolt.Init(e.Hit.Target.Handle, position, 10f, this.UnlockUserInteraction);
             }
             if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
-                this.DisplayText("Crit!", e, RED, 0.40f);
-            this.DisplayText(e.Hit.Dmg.ToString(), e, RED, 0.025f);
+                this.DisplayText("Crit!", e, CMapGUIControllerParams.RED, 0.40f);
+            this.DisplayText(e.Hit.Dmg.ToString(), e, CMapGUIControllerParams.RED, 0.025f);
         }
 
         private void ProcessParry(DisplayHitStatsEvent e)
         {
-            this.DisplayText("Parry", e, WHITE, 0.30f);
+            this.DisplayText("Parry", e, CMapGUIControllerParams.WHITE, 0.30f);
             if (e.Hit.Target.Model.LWeapon != null && !e.Hit.Target.Model.LWeapon.IsTypeOfShield())
             {
                 var weapon = e.Hit.Target.SpriteHandlerDict["CharLWeapon"];
                 var position = weapon.transform.position;
                 var boomerang = weapon.AddComponent<BoomerangScript>();
                 if (e.Hit.Target.LParty)
-                    position.x -= WEAPON_OFFSET;
+                    position.x -= CMapGUIControllerParams.WEAPON_OFFSET;
                 else
-                    position.x += WEAPON_OFFSET;
-                boomerang.Init(weapon, position, WEAPON_PARRY, this.UnlockUserInteraction);
+                    position.x += CMapGUIControllerParams.WEAPON_OFFSET;
+                boomerang.Init(weapon, position, CMapGUIControllerParams.WEAPON_PARRY, this.UnlockUserInteraction);
             }
             if (e.Hit.Target.Model.RWeapon != null && !e.Hit.Target.Model.RWeapon.IsTypeOfShield())
             {
@@ -182,10 +161,10 @@ namespace Controller.Managers.Map
                 var position = weapon.transform.position;
                 var boomerang = weapon.AddComponent<BoomerangScript>();
                 if (e.Hit.Target.LParty)
-                    position.x -= WEAPON_OFFSET;
+                    position.x -= CMapGUIControllerParams.WEAPON_OFFSET;
                 else
-                    position.x += WEAPON_OFFSET;
-                boomerang.Init(weapon, position, WEAPON_PARRY, this.UnlockUserInteraction);
+                    position.x += CMapGUIControllerParams.WEAPON_OFFSET;
+                boomerang.Init(weapon, position, CMapGUIControllerParams.WEAPON_PARRY, this.UnlockUserInteraction);
             }
 
             this.UnlockUserInteraction();

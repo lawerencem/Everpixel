@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 103
+  controlID: 45
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 70
+  controlID: 46
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -254,13 +254,13 @@ MonoBehaviour:
     height: 490
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
-  m_ActualView: {fileID: 17}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -324,19 +324,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/View
+    - Assets/Resources/Sprites/Icons
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/View
+  - Assets/Resources/Sprites/Icons
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Projects\EverPixel
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 85}
-    m_SelectedIDs: 7c3c0000
-    m_LastClickedID: 15484
-    m_ExpandedIDs: 000000004c26000004270000783600000e3d0000283f000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 177}
+    m_SelectedIDs: 083f0000
+    m_LastClickedID: 16136
+    m_ExpandedIDs: 0000000050260000082700007c3600009a3c0000163d0000303f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -364,7 +364,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004c26000004270000783600000e3d0000283f0000
+    m_ExpandedIDs: 0000000050260000082700007c360000163d0000303f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -392,7 +392,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: ce240000c02d000000000000dc240000382500008e370000
+    m_ExpandedInstanceIDs: ce240000c02d0000dc240000382500008e3700000000000056300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -480,9 +480,9 @@ MonoBehaviour:
     height: 469
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c4060000
+    m_SelectedIDs: 58300000
     m_LastClickedID: 0
-    m_ExpandedIDs: e4fbffff00000000
+    m_ExpandedIDs: d0fbffff000000005c41000026420000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -537,9 +537,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5.605025, y: 1.4212117, z: 0}
+    m_Target: {x: 1.0495362, y: -1.8700688, z: 0}
     speed: 2
-    m_Value: {x: -5.605025, y: 1.4212117, z: 0}
+    m_Value: {x: 1.0495362, y: -1.8700688, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -566,9 +566,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.6175365
+    m_Target: 7.4740863
     speed: 2
-    m_Value: 4.6175365
+    m_Value: 7.4740863
   m_Ortho:
     m_Target: 1
     speed: 2

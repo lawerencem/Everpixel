@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.1f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -85,11 +87,12 @@
     <Compile Include="Assets\Controller\Managers\GUIEventManager.cs" />
     <Compile Include="Assets\Controller\Managers\GameManager.cs" />
     <Compile Include="Assets\Controller\Managers\LoaderManager.cs" />
-    <Compile Include="Assets\Controller\Map\CombatMapGUIController.cs" />
-    <Compile Include="Assets\Controller\Map\CombatMapGUIControllerHit.cs" />
-    <Compile Include="Assets\Controller\Map\CombatMapGuiControllerParticle.cs" />
-    <Compile Include="Assets\Controller\Map\CombatMapLoader.cs" />
-    <Compile Include="Assets\Controller\Map\EnemyPartyLoader.cs" />
+    <Compile Include="Assets\Controller\Map\CombatMap\CMapGUIController.cs" />
+    <Compile Include="Assets\Controller\Map\CombatMap\CMapGUIControllerHit.cs" />
+    <Compile Include="Assets\Controller\Map\CombatMap\CMapGUIControllerParticle.cs" />
+    <Compile Include="Assets\Controller\Map\CombatMap\CMapGUIControllerParams.cs" />
+    <Compile Include="Assets\Controller\Map\CombatMap\CombatMapLoader.cs" />
+    <Compile Include="Assets\Controller\Map\CombatMap\EnemyPartyLoader.cs" />
     <Compile Include="Assets\Controller\Map\Tile\TileController.cs" />
     <Compile Include="Assets\Controller\Map\Tile\TileControllerFlag.cs" />
     <Compile Include="Assets\Generics\AbstractSingleton.cs" />

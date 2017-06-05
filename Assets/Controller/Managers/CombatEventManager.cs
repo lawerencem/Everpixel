@@ -21,12 +21,12 @@ namespace Controller.Managers
         private const float PER_FRAME_DIST = 0.075f;
 
         private CombatManager _combatManager;
-        private CombatMapGuiController _mapGUIController;
+        private CMapGUIController _mapGUIController;
 
         public CombatEventManager()
         {
             this._events = new List<CombatEvent>();
-            this._mapGUIController = new CombatMapGuiController();
+            this._mapGUIController = new CMapGUIController();
         }
 
         private List<CombatEvent> _events;
