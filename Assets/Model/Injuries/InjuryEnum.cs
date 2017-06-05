@@ -25,8 +25,10 @@
         Pierced_Lung,
         Pierced_Shoulder,
         Profuse_Bleeding,
+        Rip,
         Severe_Concussion,
         Split_Hand,
+        Tear,
         Torrential_Bleeding,
     }
 }

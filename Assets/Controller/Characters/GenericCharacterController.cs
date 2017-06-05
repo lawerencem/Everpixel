@@ -27,6 +27,7 @@ namespace Controller.Characters
         {
             this._model = CharacterFactory.Instance.CreateNewObject(p);
             this._model.ParentController = this;
+            this.Particles = new List<GameObject>();
         }
 
         private void BuildView(CharacterParams p) { var b = new CharacterViewBuilder(); this._view = b.Build(p); }

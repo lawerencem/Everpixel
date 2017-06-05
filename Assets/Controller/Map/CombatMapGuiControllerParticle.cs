@@ -47,6 +47,7 @@ namespace Controller.Managers.Map
             particles.transform.position = position;
             particles.transform.SetParent(e.Target.Handle.transform);
             particles.name = effect + " Particles";
+            e.Target.Particles.Add(particles);
         }
     }
 }

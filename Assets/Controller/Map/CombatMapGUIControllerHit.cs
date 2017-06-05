@@ -38,11 +38,11 @@ namespace Controller.Managers.Map
 
         public void ProcessCharacterKilled(CharacterKilledEvent e)
         {
+            foreach (var particle in e.Killed.Particles)
+                GameObject.Destroy(particle);
             var roll = RNG.Instance.NextDouble();
             e.Killed.transform.Rotate(new Vector3(0, 0, (float)(roll * 360)));
             this.ProcessSplatterLevelFive(e);
-            foreach (var particle in e.Killed.Particles)
-                GameObject.Destroy(particle);
         }
 
         public void ProcessMeleeHitGraphics(DisplayHitStatsEvent e)
