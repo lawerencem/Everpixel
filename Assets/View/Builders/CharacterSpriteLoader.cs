@@ -6,6 +6,7 @@ using UnityEngine;
 
 namespace View
 {
+    // TODO: duplicate class
     public class CharacterSpriteLoader : AbstractSingleton<CharacterSpriteLoader>
     {
         private const string CRITTER_PATH = "Sprites/Critters/";

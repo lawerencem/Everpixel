@@ -267,7 +267,7 @@
     <Compile Include="Assets\Model\Slot\GenericSlot.cs" />
     <Compile Include="Assets\Model\Slot\SlotEnum.cs" />
     <Compile Include="Assets\View\Builders\CharacterViewBuilder.cs" />
-    <Compile Include="Assets\View\CharacterSpriteLoader.cs" />
+    <Compile Include="Assets\View\Builders\CharacterSpriteLoader.cs" />
     <Compile Include="Assets\View\Characters\CharacterBridge.cs" />
     <Compile Include="Assets\View\Characters\CharacterSpriteLoader.cs" />
     <Compile Include="Assets\View\Characters\CharacterView.cs" />
@@ -281,10 +281,11 @@
     <Compile Include="Assets\View\Events\PopulateWpnBtnsEvent.cs" />
     <Compile Include="Assets\View\Events\WpnBtnClickEvent.cs" />
     <Compile Include="Assets\View\GUI\EndTurnBtnClick.cs" />
+    <Compile Include="Assets\View\GUI\GUISpriteLoader.cs" />
     <Compile Include="Assets\View\GUI\WpnBtnClick.cs" />
     <Compile Include="Assets\View\Map\HexTileView.cs" />
     <Compile Include="Assets\View\Map\MapBridge.cs" />
-    <Compile Include="Assets\View\MapSpriteLoader.cs" />
+    <Compile Include="Assets\View\Map\MapSpriteLoader.cs" />
     <Compile Include="Assets\View\Mounts\MountBridge.cs" />
     <Compile Include="Assets\View\Mounts\MountView.cs" />
   </ItemGroup>

@@ -16,3 +16,5 @@ Long Term:
 Bugs:
 can target killed characters?
 Can target own team?
+Still take damage on dodge?
+Blocked damage shows -10?

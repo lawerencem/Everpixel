@@ -1,11 +1,13 @@
 ﻿using Generics;
 using Generics.Utilities;
+using Model.Abilities;
 using Model.Biomes;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace View
 {
+    // TODO: Clean up
     public class MapSpriteLoader : AbstractSingleton<MapSpriteLoader>
     {
         private const int POTENTIAL_ATTACK_SPRITE_INDEX = 1;
