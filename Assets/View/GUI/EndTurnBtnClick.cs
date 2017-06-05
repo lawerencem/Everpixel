@@ -14,6 +14,16 @@ namespace View.GUI
             btn.onClick.AddListener(this.OnClick);
         }
 
+        public void OnMouseOver()
+        {
+            CombatEventManager.Instance.LockGUI();
+        }
+
+        public void OnMouseExit()
+        {
+            CombatEventManager.Instance.UnlockGUI();
+        }
+
         private void OnClick()
         {
             var e = new GUIEndTurnEvent(GUIEventManager.Instance);

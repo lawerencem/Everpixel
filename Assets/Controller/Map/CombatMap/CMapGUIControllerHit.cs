@@ -43,8 +43,12 @@ namespace Controller.Managers.Map
         public void ProcessSplatter(DisplayHitStatsEvent e)
         {
             var dmgPercentage = e.Hit.Dmg / e.Hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.HP);
-            if (dmgPercentage < 0.25 && !e.Hit.IsHeal)
-                this.ProcessSplatterLevelOne(e);
+            if (dmgPercentage > 0.75 && !e.Hit.IsHeal)
+                this.ProcessSplatterHelper(4, e);
+            else if (dmgPercentage > 0.35 && !e.Hit.IsHeal)
+                this.ProcessSplatterHelper(2, e);
+            else if (dmgPercentage > 0.15 && !e.Hit.IsHeal)
+                this.ProcessSplatterHelper(1, e);
         }
 
         private void DisplayText(string toDisplay, DisplayHitStatsEvent e, Color color, float yOffset = 0)
@@ -65,7 +69,7 @@ namespace Controller.Managers.Map
             Font fontToUse = Resources.Load("Fonts/8bitOperatorPlus8-Bold") as Font;
             text.font = fontToUse;
             var zoom = Camera.main.fieldOfView;
-            var scalar = 0.02f * zoom;
+            var scalar = 30f / zoom;
             text.transform.localScale = new Vector3(scalar, scalar);
             var script = display.AddComponent<DestroyByLifetime>();
             script.lifetime = 3;
@@ -173,21 +177,15 @@ namespace Controller.Managers.Map
             this.UnlockUserInteraction();
         }
 
-        private void ProcessSplatterLevelOne(DisplayHitStatsEvent e)
+        private void ProcessSplatterHelper(int lvl, DisplayHitStatsEvent e)
         {
-            var sprite = MapBridge.Instance.GetSplatterLevelOneSprite();
-            this.PaintSingleTile(e.Hit.Target.CurrentTile, sprite);
-        }
-
-        private void ProcessSplatterLevelFour(DisplayHitStatsEvent e)
-        {
-            var sprite = MapBridge.Instance.GetSplatterLevelFourSprite();
+            var sprite = MapBridge.Instance.GetSplatterSprites(lvl);
             this.PaintSingleTile(e.Hit.Target.CurrentTile, sprite);
         }
 
         private void ProcessSplatterLevelFive(CharacterKilledEvent e)
         {
-            var sprite = MapBridge.Instance.GetSplatterLevelFiveSprite();
+            var sprite = MapBridge.Instance.GetSplatterSprites(5);
             this.PaintSingleTile(e.Killed.CurrentTile, sprite);
         }
 

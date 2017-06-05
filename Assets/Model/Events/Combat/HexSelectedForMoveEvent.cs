@@ -10,8 +10,11 @@ namespace Model.Events.Combat
         public HexSelectedForMoveEvent(TileController t, CombatEventManager parent) : 
             base(CombatEventEnum.HexSelectedForMove, parent)
         {
-            this.Selected = t;
-            this.RegisterEvent();
+            if (!this._parent.GetInteractionLock() && !this._parent.GetGUILock())
+            {
+                this.Selected = t;
+                this.RegisterEvent();
+            }
         }
     }
 }

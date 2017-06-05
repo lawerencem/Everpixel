@@ -11,11 +11,13 @@ namespace Model.Events.Combat
             : base(CombatEventEnum.DamageCharacter, parent)
         {
             this.Hit = hit;
-            if (!AttackEventFlags.HasFlag(AttackEventFlags.Flags.Dodge, hit.Flags.CurFlags) &&
-                !AttackEventFlags.HasFlag(AttackEventFlags.Flags.Parry, hit.Flags.CurFlags))
+            if (AttackEventFlags.HasFlag(AttackEventFlags.Flags.Dodge, hit.Flags.CurFlags) ||
+                AttackEventFlags.HasFlag(AttackEventFlags.Flags.Parry, hit.Flags.CurFlags))
             {
-                this.Hit.Target.Model.ModifyHP(hit.Dmg, hit.IsHeal);
+                // Do nothing
             }
+            else
+                this.Hit.Target.Model.ModifyHP(hit.Dmg, hit.IsHeal);
             this.RegisterEvent();
         }
     }

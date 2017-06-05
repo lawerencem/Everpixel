@@ -16,9 +16,11 @@ namespace Controller.Managers
 {
     public class CombatEventManager
     {
-        private bool _interactionLock = false;
         private const float PER_FRAME = 0.0025f;
         private const float PER_FRAME_DIST = 0.075f;
+
+        private bool _guiLock = false;
+        private bool _interactionLock = false;
 
         private CombatManager _combatManager;
         private CMapGUIController _mapGUIController;
@@ -53,8 +55,14 @@ namespace Controller.Managers
             this.TryProcessEvent(e);
         }
 
+
+        public bool GetGUILock() { return this._guiLock; }
         public bool GetInteractionLock() { return this._interactionLock; }
-        public void LockInteraction() { this._interactionLock = true;}
+
+        public void LockGUI() { this._guiLock = true; }
+        public void LockInteraction() { this._interactionLock = true; }
+
+        public void UnlockGUI() { this._guiLock = false; }
         public void UnlockInteraction() { this._interactionLock = false; }
 
         private void TryProcessEvent(CombatEvent e)

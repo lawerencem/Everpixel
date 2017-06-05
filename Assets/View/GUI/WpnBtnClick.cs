@@ -21,6 +21,16 @@ namespace View.GUI
             var img = this._imgHandler.AddComponent<Image>();
         }
 
+        public void OnMouseOver()
+        {
+            CombatEventManager.Instance.LockGUI();
+        }
+
+        public void OnMouseExit()
+        {
+            CombatEventManager.Instance.UnlockGUI();
+        }
+
         public void SetAbility(WeaponAbilitiesEnum a, bool rWeapon)
         {
             this._rWeapon = rWeapon;
@@ -39,5 +49,7 @@ namespace View.GUI
         {
             var e = new WpnBtnClickEvent(GUIEventManager.Instance, this._ability, this._rWeapon);
         }
+
+
     }
 }

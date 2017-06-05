@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
 
     void InitGame()
     {
-        Debug.Log("Initializing");
         this.InitManagers();
     }
 

@@ -24,7 +24,7 @@ namespace Controller.Managers.Map
     public class CombatMapLoader
     {
         private const int ROWS = 12;
-        private const int COLS = 12;
+        private const int COLS = 8;
         private const float OFFSET = 0.63f;
 
         private List<TileController> _emptyTiles = new List<TileController>();
@@ -75,7 +75,7 @@ namespace Controller.Managers.Map
 
         private void InitEnemyParty(ref List<GenericCharacterController> controllers)
         {
-            var enemies = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Jomonese Infantry", 15));
+            var enemies = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Goblin War Party", 15));
             var builder = new CharacterViewBuilder();
 
             for(int i = 0; i < enemies.Count; i++)

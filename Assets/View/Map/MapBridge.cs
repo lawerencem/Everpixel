@@ -32,19 +32,16 @@ namespace View.Biomes
             return MapSpriteLoader.Instance.GetPotentialAttackLocSprite();
         }
 
-        public Sprite GetSplatterLevelOneSprite()
+        public Sprite GetSplatterSprites(int lvl)
         {
-            return MapSpriteLoader.Instance.GetBloodSpatterLevelOne();
-        }
-
-        public Sprite GetSplatterLevelFourSprite()
-        {
-            return MapSpriteLoader.Instance.GetBloodSpatterLevelFour();
-        }
-
-        public Sprite GetSplatterLevelFiveSprite()
-        {
-            return MapSpriteLoader.Instance.GetBloodSpatterLevelFive();
+            switch(lvl)
+            {
+                case (1): return MapSpriteLoader.Instance.GetBloodSpatterLevelOne();
+                case (2): return MapSpriteLoader.Instance.GetBloodSpatterLevelTwo();
+                case (4): return MapSpriteLoader.Instance.GetBloodSpatterLevelFour();
+                case (5): return MapSpriteLoader.Instance.GetBloodSpatterLevelFive() ;
+                default: return MapSpriteLoader.Instance.GetBloodSpatterLevelOne();
+            }
         }
     }
 }

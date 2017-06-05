@@ -9,7 +9,7 @@ namespace Model.Events.Combat
 
         public TileDoubleClickEvent(CombatEventManager parent, TileController t) : base(CombatEventEnum.TileDoubleClick, parent)
         {
-            if (!this._parent.GetInteractionLock())
+            if (!this._parent.GetInteractionLock() && !this._parent.GetGUILock())
             {
                 this.Tile = t;
                 this.RegisterEvent();

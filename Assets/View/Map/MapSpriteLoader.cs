@@ -15,8 +15,9 @@ namespace View
         private const int PATH_SPRITE_INDEX = 3;
 
         private readonly List<int> LEVEL_ONE_BLOOD_SPATTER = new List<int>() { 1, 2, 3, 4, 5, 6, 7 };
-        private readonly List<int> LEVEL_FOUR_BLOOD_SPATTER = new List<int>() { 25, 26 };
-        private readonly List<int> LEVEL_FIVE_BLOOD_SPATTER = new List<int>() { 33, 34 };
+        private readonly List<int> LEVEL_TWO_BLOOD_SPATTER = new List<int>() { 8, 9, 10};
+        private readonly List<int> LEVEL_FOUR_BLOOD_SPATTER = new List<int>() { 11, 12 };
+        private readonly List<int> LEVEL_FIVE_BLOOD_SPATTER = new List<int>() { 13, 14 };
 
         private const string PATH = "Sprites/CombatMap/";
         private const string DECO_EXTENSION = "_Deco";
@@ -62,6 +63,14 @@ namespace View
             var path = StringUtil.PathBuilder(PATH, "Tileblood", TILE_EXTENSION);
             var stuff = Resources.LoadAll(path);
             var index = ListUtil<int>.GetRandomListElement(this.LEVEL_ONE_BLOOD_SPATTER);
+            return stuff[index] as Sprite;
+        }
+
+        public Sprite GetBloodSpatterLevelTwo()
+        {
+            var path = StringUtil.PathBuilder(PATH, "Tileblood", TILE_EXTENSION);
+            var stuff = Resources.LoadAll(path);
+            var index = ListUtil<int>.GetRandomListElement(this.LEVEL_TWO_BLOOD_SPATTER);
             return stuff[index] as Sprite;
         }
 
