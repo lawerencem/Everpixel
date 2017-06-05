@@ -18,3 +18,4 @@ can target killed characters?
 Can target own team?
 Still take damage on dodge?
 Blocked damage shows -10?
+Traversal still sometimes takes too much?

@@ -81,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Config\Config.cs" />
+    <Compile Include="Assets\Controller\Managers\CameraManager.cs" />
     <Compile Include="Assets\Controller\Characters\GenericCharacterController.cs" />
     <Compile Include="Assets\Controller\Managers\CombatEventManager.cs" />
     <Compile Include="Assets\Controller\Managers\CombatManager.cs" />

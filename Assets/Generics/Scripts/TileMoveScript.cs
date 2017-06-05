@@ -62,6 +62,10 @@ namespace Generics.Scripts
                 var traversed = new PathTraversedEvent(CombatEventManager.Instance, this.Character);
                 Destroy(this);
             }
+            else
+            {
+                this.Character.Model.CurrentAP -= this.Character.Model.GetTileTraversalAPCost(this.Target.Model);
+            }
         }
     }
 }

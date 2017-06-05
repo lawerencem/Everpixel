@@ -64,6 +64,9 @@ namespace Controller.Managers.Map
             text.text = toDisplay;
             Font fontToUse = Resources.Load("Fonts/8bitOperatorPlus8-Bold") as Font;
             text.font = fontToUse;
+            var zoom = Camera.main.fieldOfView;
+            var scalar = 0.02f * zoom;
+            text.transform.localScale = new Vector3(scalar, scalar);
             var script = display.AddComponent<DestroyByLifetime>();
             script.lifetime = 3;
             var floating = display.AddComponent<FloatingText>();

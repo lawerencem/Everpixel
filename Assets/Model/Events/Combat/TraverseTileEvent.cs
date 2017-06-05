@@ -28,7 +28,6 @@ namespace Model.Events.Combat
 
                 if (this.Character.Model.CurrentAP > this.Character.Model.GetTileTraversalAPCost(this.Next.Model))
                 {
-                    this.Character.Model.CurrentAP -= this.Character.Model.GetTileTraversalAPCost(this.Next.Model);
                     this.RegisterEvent();
                 }
                 else

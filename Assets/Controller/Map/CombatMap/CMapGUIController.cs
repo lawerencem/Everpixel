@@ -147,32 +147,37 @@ namespace Controller.Managers.Map
                 this._boxImages.Clear();
                 foreach(var spriteHandler in c.SpriteHandlerDict.Values)
                 {
-                    var parentPosition = spriteHandler.transform.parent.position;
-                    var xOffset = (spriteHandler.transform.position.x - parentPosition.x) * 2.5f;
-                    var yOffset = (spriteHandler.transform.position.y - parentPosition.y) * 2.5f;
-                    var renderer = spriteHandler.GetComponent<SpriteRenderer>();
-                    var tempImage = new GameObject();
-                    var r = tempImage.AddComponent<SpriteRenderer>();
-                    r.sprite = renderer.sprite;                    
-                    r.sortingLayerName = (CMapGUIControllerParams.UI_LAYER + renderer.sortingLayerName);
-                    var position = box.transform.position;
-                    position.x += xOffset;
-                    position.y += yOffset;
-                    if (r.sortingLayerName == "UICharMount")
-                    {
-                        var mountPos = position;
-                        mountPos.x += 0.05f;
-                        mountPos.y -= 0.15f;
-                        r.transform.position = mountPos;
-                    }
-                    else if (r.sortingLayerName != "UICharTorso")
-                        r.transform.position = position;
-                    else
-                        r.transform.position = box.transform.position;
-                    r.transform.localScale = new Vector3(2.5f, 2.5f);
-                    r.name = "ActingImg";
-                    r.transform.SetParent(box.transform);
-                    this._boxImages.Add(tempImage);
+                    // TODO: 
+                    //var parentPosition = spriteHandler.transform.parent.position;
+                    //var xOffset = (spriteHandler.transform.position.x - parentPosition.x) * 2.5f;
+                    //var yOffset = (spriteHandler.transform.position.y - parentPosition.y) * 2.5f;
+                    //var renderer = spriteHandler.GetComponent<SpriteRenderer>();
+                    //var tempImage = new GameObject();
+                    //var r = tempImage.AddComponent<SpriteRenderer>();
+                    //r.sprite = renderer.sprite;                    
+                    //r.sortingLayerName = (CMapGUIControllerParams.UI_LAYER + renderer.sortingLayerName);
+                    //var position = box.transform.position;
+                    //position.x += xOffset;
+                    //position.y += yOffset;
+
+                    //if (r.sortingLayerName == "UICharMount")
+                    //{
+                    //    var mountPos = position;
+                    //    mountPos.x += 0.05f;
+                    //    mountPos.y -= 0.15f;
+                    //    r.transform.position = mountPos;
+                    //}
+                    //else if (r.sortingLayerName != "UICharTorso")
+                    //    r.transform.position = position;
+                    //else
+                    //    r.transform.position = box.transform.position;
+                    //var zoom = Camera.main.fieldOfView;
+                    //var scalar = 0.042f * zoom; 
+                    //r.transform.localScale = new Vector3(scalar, scalar);
+                    
+                    //r.name = "ActingImg";
+                    //r.transform.SetParent(box.transform);
+                    //this._boxImages.Add(tempImage);
                 }
             }
         }
