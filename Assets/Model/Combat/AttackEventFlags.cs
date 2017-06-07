@@ -34,6 +34,9 @@ namespace Model.Combat
         public static void SetCritTrue(AttackEventFlags f) { f.CurFlags |= Flags.Critical; }
         public static void SetHeadTrue(AttackEventFlags f) { f.CurFlags |= Flags.Head; }
 
-        public static bool HasFlag(Flags a, Flags b) { return (a & b) == b; }
+        public static bool HasFlag(Flags a, Flags b)
+        {
+            return (a & b) == b;
+        }
     }    
 }

@@ -18,9 +18,10 @@ namespace Controller.Managers.Map
         private CMapGUIControllerHit _hitHelper = new CMapGUIControllerHit();
         private CMapGUIControllerParticle _particleHelper = new CMapGUIControllerParticle();
 
-        public void AttachInjuryParticle(ApplyInjuryEvent e)
+        public void ApplyInjuryGraphics(ApplyInjuryEvent e)
         {
             this._particleHelper.ApplyInjuryParticle(e);
+            this._hitHelper.ProcessInjury(e);
         }
 
         public void ClearDecoratedTiles()
@@ -55,8 +56,6 @@ namespace Controller.Managers.Map
                 this.SetTagText(CMapGUIControllerParams.R_WEAP, c.Model.RWeapon.Name);
             else
                 this.SetTagText(CMapGUIControllerParams.R_WEAP, "");
-
-            this.SetBoxImg(CMapGUIControllerParams.IMG, c);
         }
 
         public void DecorateHover(TileController t)
@@ -136,50 +135,6 @@ namespace Controller.Managers.Map
             color.a = alpha;
             renderer.color = color;
             this._singleTile = tView;
-        }
-
-        private void SetBoxImg(string boxTag, GenericCharacterController c)
-        {
-            var box = GameObject.FindGameObjectWithTag(CMapGUIControllerParams.IMG);
-            if (box != null)
-            {
-                foreach (var img in this._boxImages) { GameObject.Destroy(img); }
-                this._boxImages.Clear();
-                foreach(var spriteHandler in c.SpriteHandlerDict.Values)
-                {
-                    // TODO: 
-                    //var parentPosition = spriteHandler.transform.parent.position;
-                    //var xOffset = (spriteHandler.transform.position.x - parentPosition.x) * 2.5f;
-                    //var yOffset = (spriteHandler.transform.position.y - parentPosition.y) * 2.5f;
-                    //var renderer = spriteHandler.GetComponent<SpriteRenderer>();
-                    //var tempImage = new GameObject();
-                    //var r = tempImage.AddComponent<SpriteRenderer>();
-                    //r.sprite = renderer.sprite;                    
-                    //r.sortingLayerName = (CMapGUIControllerParams.UI_LAYER + renderer.sortingLayerName);
-                    //var position = box.transform.position;
-                    //position.x += xOffset;
-                    //position.y += yOffset;
-
-                    //if (r.sortingLayerName == "UICharMount")
-                    //{
-                    //    var mountPos = position;
-                    //    mountPos.x += 0.05f;
-                    //    mountPos.y -= 0.15f;
-                    //    r.transform.position = mountPos;
-                    //}
-                    //else if (r.sortingLayerName != "UICharTorso")
-                    //    r.transform.position = position;
-                    //else
-                    //    r.transform.position = box.transform.position;
-                    //var zoom = Camera.main.fieldOfView;
-                    //var scalar = 0.042f * zoom; 
-                    //r.transform.localScale = new Vector3(scalar, scalar);
-                    
-                    //r.name = "ActingImg";
-                    //r.transform.SetParent(box.transform);
-                    //this._boxImages.Add(tempImage);
-                }
-            }
         }
         
         private void SetTagText(string tag, string toSet)

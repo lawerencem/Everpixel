@@ -24,6 +24,12 @@ namespace Controller.Managers.Map
             this.ProcessSplatterLevelFive(e);
         }
 
+        public void ProcessInjury(ApplyInjuryEvent e)
+        {
+            var text = e.Injury.Type.ToString().Replace("_", " ");
+            this.DisplayText(text, e.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, 0.50f);
+        }
+
         public void ProcessMeleeHitGraphics(DisplayHitStatsEvent e)
         {
             var attackerJolt = e.Hit.Source.Handle.AddComponent<BoomerangScript>();
@@ -51,12 +57,12 @@ namespace Controller.Managers.Map
                 this.ProcessSplatterHelper(1, e);
         }
 
-        private void DisplayText(string toDisplay, DisplayHitStatsEvent e, Color color, float yOffset = 0)
+        private void DisplayText(string toDisplay, Vector3 pos, Color color, float yOffset = 0)
         {
             var canvas = GameObject.FindGameObjectWithTag("MainCanvas");
             var display = new GameObject();
             var text = display.AddComponent<Text>();
-            var position = e.Hit.Target.transform.position;
+            var position = pos;
             position.y += yOffset;
             text.alignment = TextAnchor.MiddleCenter;
             text.color = color;
@@ -64,6 +70,7 @@ namespace Controller.Managers.Map
             text.rectTransform.position = position;
             text.rectTransform.SetParent(canvas.transform);
             text.rectTransform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+            text.rectTransform.sizeDelta = new Vector2(150f, 150f);
             text.name = "Hit Text";
             text.text = toDisplay;
             Font fontToUse = Resources.Load("Fonts/8bitOperatorPlus8-Bold") as Font;
@@ -99,9 +106,9 @@ namespace Controller.Managers.Map
 
         private void ProcessBlock(DisplayHitStatsEvent e)
         {
-            this.DisplayText("Block", e, CMapGUIControllerParams.WHITE, 0.35f);
+            this.DisplayText("Block", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.WHITE, 0.35f);
             if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
-                this.DisplayText("Critical!", e, CMapGUIControllerParams.RED, 0.40f);
+                this.DisplayText("Critical!", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, 0.40f);
             if (e.Hit.Target.Model.LWeapon != null && e.Hit.Target.Model.LWeapon.IsTypeOfShield())
             {
                 var weapon = e.Hit.Target.SpriteHandlerDict["CharLWeapon"];
@@ -124,14 +131,14 @@ namespace Controller.Managers.Map
                     position.x += CMapGUIControllerParams.WEAPON_OFFSET;
                 boomerang.Init(weapon, position, CMapGUIControllerParams.WEAPON_PARRY, this.UnlockUserInteraction);
             }
-            this.DisplayText(e.Hit.Dmg.ToString(), e, CMapGUIControllerParams.RED, 0.025f);
+            this.DisplayText(e.Hit.Dmg.ToString(), e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, 0.025f);
         }
 
         private void ProcessDodge(DisplayHitStatsEvent e)
         {
             var defenderJolt = e.Hit.Target.Handle.AddComponent<BoomerangScript>();
             defenderJolt.Init(e.Hit.Target.Handle, this.GetRandomDodgePosition(e), 6f, this.UnlockUserInteraction);
-            this.DisplayText("Dodge", e, CMapGUIControllerParams.WHITE, 0.30f);
+            this.DisplayText("Dodge", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.WHITE, 0.30f);
         }
 
         private void ProcessNormalHit(DisplayHitStatsEvent e)
@@ -144,13 +151,13 @@ namespace Controller.Managers.Map
                 defenderJolt.Init(e.Hit.Target.Handle, position, 10f, this.UnlockUserInteraction);
             }
             if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
-                this.DisplayText("Crit!", e, CMapGUIControllerParams.RED, 0.40f);
-            this.DisplayText(e.Hit.Dmg.ToString(), e, CMapGUIControllerParams.RED, 0.025f);
+                this.DisplayText("Crit!", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, 0.40f);
+            this.DisplayText(e.Hit.Dmg.ToString(), e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, 0.025f);
         }
 
         private void ProcessParry(DisplayHitStatsEvent e)
         {
-            this.DisplayText("Parry", e, CMapGUIControllerParams.WHITE, 0.30f);
+            this.DisplayText("Parry", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.WHITE, 0.30f);
             if (e.Hit.Target.Model.LWeapon != null && !e.Hit.Target.Model.LWeapon.IsTypeOfShield())
             {
                 var weapon = e.Hit.Target.SpriteHandlerDict["CharLWeapon"];

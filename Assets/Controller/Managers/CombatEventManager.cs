@@ -98,7 +98,7 @@ namespace Controller.Managers
         private void HandleApplyInjuryEvent(ApplyInjuryEvent e)
         {
             this._events.Remove(e);
-            this._mapGUIController.AttachInjuryParticle(e);
+            this._mapGUIController.ApplyInjuryGraphics(e);
         }
 
         private void HandleAttackSelectedEvent(AttackSelectedEvent e)
