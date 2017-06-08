@@ -40,6 +40,7 @@ namespace Model.Abilities
             this.ShieldDamageMod = 1;
             this.StaminaCost = 0;
             this._type = type;
+            this._typeStr = this._type.ToString().Replace("_", " ");
         }
 
         public WeaponAbility Copy()

@@ -92,7 +92,12 @@ namespace Controller.Managers
         private void HandleActionConfirmed(ActionConfirmedEvent e)
         {
             this._events.Remove(e);
-            var action = new PerformActionEvent(this, this._combatManager.CurrActing.CurrentTile, e.Target, this._combatManager.CurAbility);
+            var action = new PerformActionEvent(
+                this, 
+                this._combatManager.CurrActing.CurrentTile, 
+                e.Target, 
+                this._combatManager.CurAbility,
+                this._combatManager);
         }
 
         private void HandleApplyInjuryEvent(ApplyInjuryEvent e)

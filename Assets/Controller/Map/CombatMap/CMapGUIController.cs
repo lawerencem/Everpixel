@@ -31,33 +31,6 @@ namespace Controller.Managers.Map
             this._decorateTileFamily.Clear();
         }
 
-        public void SetActingBoxToController(GenericCharacterController c)
-        {
-            this.SetTagText(CMapGUIControllerParams.NAME, c.View.Name);
-            this.SetTagText(CMapGUIControllerParams.AP, c.Model.CurrentAP + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.AP).ToString());
-            this.SetTagText(CMapGUIControllerParams.HP, c.Model.CurrentHP + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.HP).ToString());
-            this.SetTagText(CMapGUIControllerParams.STAM, c.Model.CurrentStamina + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Stamina).ToString());
-            this.SetTagText(CMapGUIControllerParams.MORALE, c.Model.CurrentMorale + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Morale).ToString());
-            this.SetTagText(CMapGUIControllerParams.STAM, c.Model.CurrentStamina + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Stamina).ToString());
-
-            if (c.Model.Armor != null)
-                this.SetTagText(CMapGUIControllerParams.ARMOR, c.Model.Armor.Name);
-            else
-                this.SetTagText(CMapGUIControllerParams.ARMOR, "");
-            if (c.Model.Helm != null)
-                this.SetTagText(CMapGUIControllerParams.HELM, c.Model.Helm.Name);
-            else
-                this.SetTagText(CMapGUIControllerParams.HELM, "");
-            if (c.Model.LWeapon != null)
-                this.SetTagText(CMapGUIControllerParams.L_WEAP, c.Model.LWeapon.Name);
-            else
-                this.SetTagText(CMapGUIControllerParams.L_WEAP, "");    
-            if (c.Model.RWeapon != null)
-                this.SetTagText(CMapGUIControllerParams.R_WEAP, c.Model.RWeapon.Name);
-            else
-                this.SetTagText(CMapGUIControllerParams.R_WEAP, "");
-        }
-
         public void DecorateHover(TileController t)
         {
             if (this._singleTile != null && this._singleTile != t)
@@ -100,6 +73,8 @@ namespace Controller.Managers.Map
 
         public void DisplayHitStatsEvent(DisplayHitStatsEvent e)
         {
+            this._hitHelper.DisplayHitStatsEvent(e.Hit);
+            //TODO Change this to check for melee...
             this._hitHelper.ProcessMeleeHitGraphics(e);
             this._hitHelper.ProcessSplatter(e);
         } 
@@ -107,6 +82,33 @@ namespace Controller.Managers.Map
         public void ProcessCharacterKilled(CharacterKilledEvent e)
         {
             this._hitHelper.ProcessCharacterKilled(e);
+        }
+
+        public void SetActingBoxToController(GenericCharacterController c)
+        {
+            this.SetTagText(CMapGUIControllerParams.NAME, c.View.Name);
+            this.SetTagText(CMapGUIControllerParams.AP, c.Model.CurrentAP + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.AP).ToString());
+            this.SetTagText(CMapGUIControllerParams.HP, c.Model.CurrentHP + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.HP).ToString());
+            this.SetTagText(CMapGUIControllerParams.STAM, c.Model.CurrentStamina + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Stamina).ToString());
+            this.SetTagText(CMapGUIControllerParams.MORALE, c.Model.CurrentMorale + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Morale).ToString());
+            this.SetTagText(CMapGUIControllerParams.STAM, c.Model.CurrentStamina + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Stamina).ToString());
+
+            if (c.Model.Armor != null)
+                this.SetTagText(CMapGUIControllerParams.ARMOR, c.Model.Armor.Name);
+            else
+                this.SetTagText(CMapGUIControllerParams.ARMOR, "");
+            if (c.Model.Helm != null)
+                this.SetTagText(CMapGUIControllerParams.HELM, c.Model.Helm.Name);
+            else
+                this.SetTagText(CMapGUIControllerParams.HELM, "");
+            if (c.Model.LWeapon != null)
+                this.SetTagText(CMapGUIControllerParams.L_WEAP, c.Model.LWeapon.Name);
+            else
+                this.SetTagText(CMapGUIControllerParams.L_WEAP, "");
+            if (c.Model.RWeapon != null)
+                this.SetTagText(CMapGUIControllerParams.R_WEAP, c.Model.RWeapon.Name);
+            else
+                this.SetTagText(CMapGUIControllerParams.R_WEAP, "");
         }
 
         private void DecorateFamilyOfTiles(TileController tile, Sprite deco)

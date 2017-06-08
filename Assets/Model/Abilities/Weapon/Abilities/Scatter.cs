@@ -14,7 +14,7 @@ namespace Model.Abilities
 
         public override void ProcessAbility(HitInfo hit)
         {
-
+            base.ProcessMelee(hit);
         }
     }
 }

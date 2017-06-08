@@ -3,6 +3,7 @@ using Controller.Characters;
 using Controller.Map;
 using Generics.Scripts;
 using Generics.Utilities;
+using Model.Abilities;
 using Model.Characters;
 using Model.Combat;
 using Model.Events.Combat;
@@ -15,6 +16,14 @@ namespace Controller.Managers.Map
 {
     public class CMapGUIControllerHit
     {
+        public void DisplayHitStatsEvent(HitInfo hit)
+        {
+            this.DisplayText(
+                hit.Ability.TypeStr, 
+                hit.Source.CurrentTile.Model.Center, 
+                CMapGUIControllerParams.WHITE, 0.15f);
+        }
+
         public void ProcessCharacterKilled(CharacterKilledEvent e)
         {
             foreach (var particle in e.Killed.Particles)

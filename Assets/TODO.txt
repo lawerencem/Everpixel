@@ -1,8 +1,5 @@
 ﻿TODO
 
-
-0) Mouse Wheel Zoom
-0.5) Update gui controller params...
 1) - Dual-Wield
 1.5) - Dead characters on tiles shouldn't prevent movement
 3) - Critter classes / abilities during level up on the xml
@@ -15,7 +12,5 @@ Long Term:
 
 Bugs:
 can target killed characters?
-Can target own team?
-Still take damage on dodge?
 Blocked damage shows -10?
 Traversal still sometimes takes too much?

@@ -27,6 +27,7 @@ namespace Assets.Controller.Managers
 
         public CombatManager(CombatMap m)
         {
+            this._characters = new List<GenericCharacterController>();
             this._curTiles = new List<TileController>();
             this._map = m;
             this._order = new List<GenericCharacterController>();
@@ -34,10 +35,10 @@ namespace Assets.Controller.Managers
 
         public void InitParties(List<GenericCharacterController> l, List<GenericCharacterController> r)
         {
-            this._characters = l;
-            this._characters.AddRange(r);
             this._lParty = l;
             this._rParty = r;
+            foreach (var c in this._rParty) { this._characters.Add(c); }
+            foreach (var c in this._lParty) { this._characters.Add(c); }
             this.InitCharacterTurns();
         }
 
@@ -107,6 +108,16 @@ namespace Assets.Controller.Managers
                 this.InitCharacterTurns();
                 this.ProcessEndOfTurn();
             }
+        }
+
+        public bool TargetsOnSameTeam(GenericCharacterController s, GenericCharacterController t)
+        {
+            if (this._lParty.Contains(s) && this._lParty.Contains(t))
+                return true;
+            else if (this._rParty.Contains(s) && this._rParty.Contains(t))
+                return true;
+            else
+                return false;
         }
 
         private void InitCharacterTurns()

@@ -7,8 +7,13 @@ namespace Model.Abilities
 {
     public class GenericAbility
     {
+        protected bool _hostile = true;
         protected object _type;
+        protected string _typeStr = "";
+
+        public bool Hostile { get { return this._hostile; } }
         public object Type { get { return this._type; } }
+        public string TypeStr { get { return this._typeStr; } }
 
         public int APCost { get; set; }
         public List<InjuryEnum> Injuries { get; set; }
