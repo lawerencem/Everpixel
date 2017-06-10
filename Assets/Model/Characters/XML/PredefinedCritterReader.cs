@@ -66,6 +66,7 @@ namespace Model.Characters.XML
                                         case (PredefinedReaderParams.CLASS): { HandleClassType(key, elem.Value.ToString(), ref baseClass); } break;
                                         case (PredefinedReaderParams.DEFAULT_WPN_ABILITES): { HandleDefaultWpnAbility(key, elem.Value.ToString()); } break;
                                         case (PredefinedReaderParams.FLINCH_SPRITE_INDEX): { HandleFlinchSpriteIndex(key, elem.Value.ToString()); } break;
+                                        case (PredefinedReaderParams.PERKS): { HandlePerks(elem, key); } break;
                                         case (PredefinedReaderParams.STATS): { HandleStats(elem, key); } break;
                                     }
                                 }
@@ -92,12 +93,6 @@ namespace Model.Characters.XML
                 table.Table[rootKey].Classes.Add(type, level);
         }
 
-        private void HandleCharacterType(string rootKey, string value, ref CharacterTypeEnum type)
-        {
-            if (EnumUtil<CharacterTypeEnum>.TryGetEnumValue(value, ref type))
-                table.Table[rootKey].Type = type;
-        }
-
         private void HandleDefaultWpnAbility(string rootKey, string value)
         {
             var wpnAbility = WeaponAbilitiesEnum.None;
@@ -112,10 +107,10 @@ namespace Model.Characters.XML
                 CritterFlinchSpriteTable.Instance.Table.Add(rootkey, v);
         }
 
-        private void HandleRace(string rootKey, string value, ref RaceEnum race)
+        private void HandlePerks(XElement el, string rootkey)
         {
-            if (EnumUtil<RaceEnum>.TryGetEnumValue(value, ref race))
-                table.Table[rootKey].Race = race;
+            foreach (var ele in el.Elements())
+                PerkParser.ParsePerk(rootkey, ele.Value);
         }
 
         private void HandleStats(XElement el, string rootKey)

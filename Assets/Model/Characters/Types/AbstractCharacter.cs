@@ -20,6 +20,7 @@ namespace Model.Characters
 
         public Dictionary<ClassEnum, GenericClass> BaseClasses { get; set; }
 
+        public CharacterPerkCollection Perks { get; set; }
         public PrimaryStats PrimaryStats { get; set; }
         public SecondaryStats SecondaryStats { get; set; }
         
@@ -48,14 +49,24 @@ namespace Model.Characters
         {
             this.RemoveArmor();
             this.Armor = armor;
-            this.IndefSStatMods.Add(new Pair<object, List<IndefSecondaryStatModifier>>(armor, armor.GetStatModifiers()));
+            var mods = new Pair<object, List<IndefSecondaryStatModifier>>(armor, armor.GetStatModifiers());
+            foreach (var perk in this.Perks.EquipmentSStatPerks)
+            {
+                perk.TryModEquipmentMod(mods);
+            }
+            this.IndefSStatMods.Add(mods);
         }
 
         public void AddHelm(GenericHelm helm)
         {
             this.RemoveHelm();
             this.Helm = helm;
-            this.IndefSStatMods.Add(new Pair<object, List<IndefSecondaryStatModifier>>(helm, helm.GetStatModifiers()));
+            var mods = new Pair<object, List<IndefSecondaryStatModifier>>(helm, helm.GetStatModifiers());
+            foreach (var perk in this.Perks.EquipmentSStatPerks)
+            {
+                perk.TryModEquipmentMod(mods);
+            }
+            this.IndefSStatMods.Add(mods);
         }
 
         public void AddInjury(GenericInjury injury)
@@ -69,12 +80,22 @@ namespace Model.Characters
             if (lWeapon)
             {
                 this.LWeapon = weapon;
-                this.IndefSStatMods.Add(new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.GetStatModifiers()));
+                var mods = new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.GetStatModifiers());
+                foreach(var perk in this.Perks.EquipmentSStatPerks)
+                {
+                    perk.TryModEquipmentMod(mods);
+                }
+                this.IndefSStatMods.Add(mods);
             }
             else
             {
                 this.RWeapon = weapon;
-                this.IndefSStatMods.Add(new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.GetStatModifiers()));
+                var mods = new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.GetStatModifiers());
+                foreach (var perk in this.Perks.EquipmentSStatPerks)
+                {
+                    perk.TryModEquipmentMod(mods);
+                }
+                this.IndefSStatMods.Add(mods);
             }
         }
 

@@ -17,6 +17,7 @@ namespace Model.Characters
         {
             this.BaseClasses = new Dictionary<ClassEnum, GenericClass>();
             this.DefaultWpnAbilities = new List<WeaponAbility>();
+            this.Perks = new CharacterPerkCollection();
             this.PStatMods = new List<PrimaryStatModifier>();
             this.SStatMods = new List<SecondaryStatModifier>();
             this.IndefSStatMods = new List<Pair<object, List<IndefSecondaryStatModifier>>>();

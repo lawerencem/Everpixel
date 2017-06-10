@@ -2,6 +2,7 @@
 using Model.Abilities;
 using Model.Classes;
 using Model.Mounts;
+using Model.Perks;
 using System.Collections.Generic;
 
 namespace Model.Characters
@@ -15,6 +16,7 @@ namespace Model.Characters
             this.DefaultWpnAbilities = new List<WeaponAbilitiesEnum>();
             this.Helms = new Dictionary<string, List<List<string>>>();
             this.LWeapons = new Dictionary<string, List<List<string>>>();
+            this.Perks = new List<PerkEnum>();
             this.RWeapons = new Dictionary<string, List<List<string>>>();
             this.Stats = new PrimaryStats();
         }
@@ -27,6 +29,7 @@ namespace Model.Characters
         public Dictionary<string, List<List<string>>> LWeapons { get; set; }
         public MountEnum Mount { get; set; }
         public string Name { get; set; }
+        public List<PerkEnum> Perks { get; set; }
         public RaceEnum Race { get; set; }
         public Dictionary<string, List<List<string>>> RWeapons { get; set; }
         public PrimaryStats Stats { get; set; }

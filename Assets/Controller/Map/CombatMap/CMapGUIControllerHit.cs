@@ -58,13 +58,17 @@ namespace Controller.Managers.Map
 
         public void ProcessSplatter(DisplayHitStatsEvent e)
         {
-            var dmgPercentage = e.Hit.Dmg / e.Hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.HP);
-            if (dmgPercentage > 0.75 && !e.Hit.IsHeal)
-                this.ProcessSplatterHelper(4, e);
-            else if (dmgPercentage > 0.35 && !e.Hit.IsHeal)
-                this.ProcessSplatterHelper(2, e);
-            else if (dmgPercentage > 0.15 && !e.Hit.IsHeal)
-                this.ProcessSplatterHelper(1, e);
+            if (!AttackEventFlags.HasFlag(AttackEventFlags.Flags.Dodge, e.Hit.Flags.CurFlags) &&
+                !AttackEventFlags.HasFlag(AttackEventFlags.Flags.Parry, e.Hit.Flags.CurFlags))
+            {
+                var dmgPercentage = e.Hit.Dmg / e.Hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.HP);
+                if (dmgPercentage > 0.75 && !e.Hit.IsHeal)
+                    this.ProcessSplatterHelper(4, e);
+                else if (dmgPercentage > 0.35 && !e.Hit.IsHeal)
+                    this.ProcessSplatterHelper(2, e);
+                else if (dmgPercentage > 0.15 && !e.Hit.IsHeal)
+                    this.ProcessSplatterHelper(1, e);
+            }
         }
 
         private void DisplayText(string toDisplay, Vector3 pos, Color color, float yOffset = 0)

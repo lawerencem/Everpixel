@@ -1,6 +1,7 @@
 ﻿using Assets.Model.Equipment.Factories;
 using Generics;
 using Model.Classes;
+using Model.Perks;
 using Model.Slot;
 using System;
 using System.Collections.Generic;
@@ -44,6 +45,7 @@ namespace Model.Characters
             if (primary != null)
             {
                 BuildBaseClassHelper(c, character);
+                PerkMediator.Instance.SetCharacterPerks(character, c.Perks);
                 character.PrimaryStats = primary;
                 BuildClassPrimaryStats(character);
                 var secondary = GetSecondaryStats(primary);

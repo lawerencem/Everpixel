@@ -11,6 +11,7 @@
         public const string HELMS = "Helms";
         public const string L_WEAPONS = "LWeapons";
         public const string MOUNT = "Mount";
+        public const string PERKS = "Perks";
         public const string POTENTIAL_WEAPONS = "PotentialWeapons";
         public const string POTENTIAL_ARMORS = "PotentialArmors";
         public const string RACE = "RaceEnum";

@@ -1,6 +1,7 @@
 ﻿using Generics;
 using Model.Abilities;
 using Model.Classes;
+using Model.Perks;
 using Model.Slot;
 using System;
 using System.Collections.Generic;
@@ -46,6 +47,7 @@ namespace Model.Characters
         private GenericCharacter BuildHelper(CharacterParams c)
         {
             var character = new GenericCharacter();
+            PerkMediator.Instance.SetCharacterPerks(character, c.Perks);
             BuildBaseClassHelper(c, character);
             BuildDefaultAbilities(c, character);
             var stats = PredefinedCharacterTable.Instance.Table[c.Name];

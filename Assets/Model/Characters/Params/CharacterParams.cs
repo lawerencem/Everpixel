@@ -3,6 +3,7 @@ using Model.Classes;
 using Model.Equipment;
 using Model.Mounts;
 using Model.Parties;
+using Model.Perks;
 using System.Collections.Generic;
 
 namespace Model.Characters
@@ -13,8 +14,9 @@ namespace Model.Characters
         {
             this.BaseClasses = new Dictionary<ClassEnum, int>();
             this.DefaultAbilities = new List<WeaponAbilitiesEnum>();
+            this.Perks = new List<PerkEnum>();
         }
-
+        
         public ArmorParams Armor { get; set; }
         public Dictionary<ClassEnum, int> BaseClasses { get; set; }
         public List<WeaponAbilitiesEnum> DefaultAbilities { get; set; }
@@ -22,6 +24,7 @@ namespace Model.Characters
         public WeaponParams LWeapon { get; set; }
         public MountParams Mount { get; set; }
         public string Name { get; set; }
+        public List<PerkEnum> Perks { get; set; }
         public WeaponParams RWeapon { get; set; }
         public RaceEnum Race { get; set; }
         public StartingColEnum StartRow { get; set; }

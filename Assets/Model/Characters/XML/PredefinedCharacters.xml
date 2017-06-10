@@ -904,6 +904,10 @@
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Orc</RaceEnum>
       <Mount>Dire_Ween</Mount>
+      <Perks>
+        <Perk>Colossus</Perk>
+        <Perk>Weightlifter</Perk>
+      </Perks>
       <PotentialArmors>
         <Armors name="One">
           <Armor>0.50,Orcish Plate Mail,Three</Armor>
@@ -975,6 +979,10 @@
       <Class>Warrior,3</Class>
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Orc</RaceEnum>
+      <Perks>
+        <Perk>Colossus</Perk>
+        <Perk>Weightlifter</Perk>
+      </Perks>
       <PotentialArmors>
         <Armors name="One">
           <Armor>1.0,Orcish Plate Mail,Three</Armor>
@@ -1003,6 +1011,10 @@
       <Class>Warrior,5</Class>
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Orc</RaceEnum>
+      <Perks>
+        <Perk>Colossus</Perk>
+        <Perk>Weightlifter</Perk>
+      </Perks>
       <PotentialArmors>
         <Armors name="One">
           <Armor>0.50,Orcish Plate Mail,Three</Armor>
@@ -1034,6 +1046,10 @@
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Orc</RaceEnum>
       <Mount>War_Ween</Mount>
+      <Perks>
+        <Perk>Colossus</Perk>
+        <Perk>Weightlifter</Perk>
+      </Perks>
       <PotentialArmors>
         <Armors name="One">
           <Armor>0.50,Orcish Plate Mail,Three</Armor>
@@ -1069,6 +1085,10 @@
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Orc</RaceEnum>
       <Mount>Ween</Mount>
+      <Perks>
+        <Perk>Colossus</Perk>
+        <Perk>Weightlifter</Perk>
+      </Perks>
       <PotentialWeapons>
         <LWeapons name="One">
           <LWeapon>0.75,Orc Slab,Four</LWeapon>

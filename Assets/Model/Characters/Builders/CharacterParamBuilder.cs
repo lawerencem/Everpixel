@@ -32,6 +32,7 @@ namespace Model.Characters
             cParams.LWeapon = GetWeapon(arg, arg.LWeapons);
             cParams.Mount = this.GetMount(arg);
             cParams.Name = arg.Name;
+            cParams.Perks = arg.Perks;
             cParams.Race = arg.Race;
             cParams.RWeapon = GetWeapon(arg, arg.RWeapons);
             cParams.Type = arg.Type;

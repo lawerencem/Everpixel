@@ -26,6 +26,7 @@ namespace Model.Equipment
             armor.ParryReduce = aStats.ParryReduce;
             armor.StaminaReduce = aStats.StaminaReduce;
             armor.Tier = aStats.Tier;
+            armor.Type = aStats.Type;
             return armor;
         }
     }

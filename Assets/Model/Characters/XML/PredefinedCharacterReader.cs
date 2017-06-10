@@ -64,6 +64,7 @@ namespace Model.Characters.XML
                                     {
                                         case (PredefinedReaderParams.CLASS): { HandleClassType(key, elem.Value.ToString(), ref baseClass); } break;
                                         case (PredefinedReaderParams.MOUNT): { HandleMount(key, elem.Value); } break;
+                                        case (PredefinedReaderParams.PERKS): { HandlePerks(elem, key); } break;
                                         case (PredefinedReaderParams.POTENTIAL_ARMORS): { HandleEquipment(elem, key); } break;
                                         case (PredefinedReaderParams.POTENTIAL_WEAPONS): { HandleEquipment(elem, key); } break;
                                         case (PredefinedReaderParams.RACE): { HandleRace(key, elem.Value.ToString(), ref race); } break;
@@ -130,6 +131,12 @@ namespace Model.Characters.XML
             var mount = MountEnum.None;
             if (EnumUtil<MountEnum>.TryGetEnumValue(value, ref mount))
                 table.Table[rootKey].Mount = mount;
+        }
+
+        private void HandlePerks(XElement el, string rootkey)
+        {
+            foreach (var ele in el.Elements())
+                PerkParser.ParsePerk(rootkey, ele.Value);
         }
 
         private void HandleRace(string rootKey, string value, ref RaceEnum race)

@@ -26,6 +26,7 @@ namespace Model.Equipment
             helm.ParryReduce = aStats.ParryReduce;
             helm.StaminaReduce = aStats.StaminaReduce;
             helm.Tier = aStats.Tier;
+            helm.Type = aStats.Type;
             return helm;
         }
     }

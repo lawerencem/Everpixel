@@ -4,7 +4,7 @@ namespace Assets.Controller.Managers
 {
     public class CameraManager : MonoBehaviour
     {
-        private const float BOUNDARY = 50f;
+        private const float BOUNDARY = 30f;
         private const float SCROLL_SENSITIVITY = 0.1f;
         private const float ZOOM_MAX = 90f;
         private const float ZOOM_MIN = 10f;

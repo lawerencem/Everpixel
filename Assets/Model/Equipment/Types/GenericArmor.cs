@@ -18,7 +18,7 @@ namespace Model.Equipment
         public string Name { get; set; }
         public double ParryReduce { get; set; }
         public double StaminaReduce { get; set; }
-
+        public ArmorTypeEnum Type { get; set; }
 
         public GenericArmor() : base(SlotEnum.Torso, EquipmentTypeEnum.Worn)
         {
