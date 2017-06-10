@@ -11,6 +11,10 @@
     <Character>1,Medium Great Sword Footman,One</Character>
     <Character>1,Medium Great Sword Footman,One</Character>
   </SubParty>
+  <SubParty Name ="Dino Calvary">
+    <Difficulty>2</Difficulty>
+    <Character>1,Raptard Rider,One</Character>
+  </SubParty>
   <SubParty Name ="Dino Knights">
     <Difficulty>3</Difficulty>
     <Character>1,Dino Squire,One</Character>

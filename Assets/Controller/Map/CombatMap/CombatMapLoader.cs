@@ -23,6 +23,11 @@ namespace Controller.Managers.Map
 {
     public class CombatMapLoader
     {
+        private const float MOUNT_X_OFFSET = 0.05f;
+        private const float MOUNT_Y_OFFSET = 0.15f;
+        private const float HELM_OFFSET = 0.15f;
+        private const float WEAPON_OFFSET = 0.09f;
+
         private const int ROWS = 12;
         private const int COLS = 8;
         private const float OFFSET = 0.63f;
@@ -165,15 +170,15 @@ namespace Controller.Managers.Map
                 render.sprite = sprite;
                 render.sortingLayerName = "CharTorso";
                 c.SpriteHandlerDict.Add("Character Main", c.Handle);
+                if (c.View.Mount != null) { AttachMount(c, "CharMount", tile); }
                 AttachDeco(c, "CharFace", c.View.Face, tile);
                 AttachDeco(c, "CharDeco1", c.View.Deco1, tile);
                 AttachDeco(c, "CharDeco2", c.View.Deco2, tile);
                 AttachDeco(c, "CharDeco3", c.View.Deco3, tile);
                 if (c.View.Armor != null) { TryAttachEquipment(c, c.View.Armor, "CharArmor", tile); }
-                if (c.View.Helm != null) { TryAttachEquipment(c, c.View.Helm, "CharHelm", tile, 0f, 0.15f); }
-                if (c.View.LWeapon != null) { TryAttachEquipment(c, c.View.LWeapon, "CharLWeapon", tile, 0.09f); }
-                if (c.View.Mount != null) { AttachMount(c, "CharMount", tile); }
-                if (c.View.RWeapon != null) { TryAttachEquipment(c, c.View.RWeapon, "CharRWeapon", tile, -0.09f); }
+                if (c.View.Helm != null) { TryAttachEquipment(c, c.View.Helm, "CharHelm", tile, 0f, HELM_OFFSET); }
+                if (c.View.LWeapon != null) { TryAttachEquipment(c, c.View.LWeapon, "CharLWeapon", tile, WEAPON_OFFSET); }
+                if (c.View.RWeapon != null) { TryAttachEquipment(c, c.View.RWeapon, "CharRWeapon", tile, -WEAPON_OFFSET); }
                 if (enemyParty)
                     c.Handle.transform.localRotation = Quaternion.Euler(0, 180, 0);
                 tile.Model.Current = c;
@@ -188,7 +193,7 @@ namespace Controller.Managers.Map
                 var sprite = c.View.Sprites[spriteIndex];
                 var spriteHandler = new GameObject();
                 var render = spriteHandler.AddComponent<SpriteRenderer>();
-                spriteHandler.transform.position = tile.View.Center;
+                spriteHandler.transform.position = c.Handle.transform.position;
                 spriteHandler.transform.SetParent(c.Handle.transform);
                 spriteHandler.name = "Character Deco";
                 render.sprite = sprite;
@@ -203,14 +208,17 @@ namespace Controller.Managers.Map
             var spriteHandler = new GameObject();
             var render = spriteHandler.AddComponent<SpriteRenderer>();
             var position = tile.View.Center;
-            position.x += 0.05f;
-            position.y -= 0.15f;
+            position.x += MOUNT_X_OFFSET;
+            position.y -= MOUNT_Y_OFFSET;
             spriteHandler.transform.position = position;
             spriteHandler.transform.SetParent(c.Handle.transform);
             spriteHandler.name = c.View.Name + " " + c.View.Mount.Name + " Mount";
             render.sprite = sprite;
             render.sortingLayerName = sort;
             c.SpriteHandlerDict.Add(sort, spriteHandler);
+            var mountOffsetPos = c.Handle.transform.position;
+            mountOffsetPos.y += MOUNT_Y_OFFSET;
+            c.transform.position = mountOffsetPos;
         }
 
         private void TryAttachEquipment(GenericCharacterController c, EquipmentView e, string sort, TileController tile, float xOffset = 0, float yOffset = 0)
@@ -220,7 +228,7 @@ namespace Controller.Managers.Map
                 var sprite = e.Sprites[e.Index];
                 var spriteHandler = new GameObject();
                 var render = spriteHandler.AddComponent<SpriteRenderer>();
-                var position = tile.View.Center;
+                var position = c.Handle.transform.position;
                 position.x += xOffset;
                 position.y += yOffset;
                 spriteHandler.transform.position = position;

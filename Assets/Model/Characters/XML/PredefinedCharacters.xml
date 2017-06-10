@@ -82,6 +82,32 @@
         <Resolve>380</Resolve>
       </Stats>
     </Character>
+    <Character name ="Raptard Rider">
+      <Class>Warrior,3</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Lizardman</RaceEnum>
+      <Mount>Raptard</Mount>
+      <PotentialArmors>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <LWeapons name="One">
+          <LWeapon>0.25,Dino Shield,Five</LWeapon>
+          <LWeapon>0.10,Dino Shield,Four</LWeapon>
+        </LWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Dino Spear,Five</RWeapon>
+          <RWeapon>0.25,Dino Spear,Four</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>450</Constitution>
+        <Intelligence>350</Intelligence>
+        <Might>480</Might>
+        <Perception>450</Perception>
+        <Resolve>400</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Veteran Dino Knight">
       <Class>Knight,5</Class>
       <Class>Dino_Knight,7</Class>

@@ -852,6 +852,84 @@
     </Weapon>
   </WeaponSkillEnum>
   <WeaponSkillEnum name ="Spear">
+    <Weapon name="Dino Spear">
+      <Tier>Five</Tier>
+      <Accuracy>0.88</Accuracy>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.83</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>42</Damage>
+      <Description>
+        This spear is used to hunt dinosaurs.  It's not very good at it.
+      </Description>
+      <Fatigue_Cost_Mod>1.12</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Shield_Damage>0.00</Shield_Damage>
+      <WeaponSkillEnum>Spear</WeaponSkillEnum>
+      <Sprites>7</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>100</Value>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Pierce</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Spear Wall</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Dino Spear">
+      <Tier>Four</Tier>
+      <Accuracy>0.90</Accuracy>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.80</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>50</Damage>
+      <Description>
+        This spear is used to hunt dinosaurs.  It's not very effective...
+      </Description>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>55</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Shield_Damage>0.00</Shield_Damage>
+      <WeaponSkillEnum>Spear</WeaponSkillEnum>
+      <Sprites>22</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>250</Value>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Pierce</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Spear Wall</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Dino Spear">
+      <Tier>Three</Tier>
+      <Accuracy>0.92</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.72</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>55</Damage>
+      <Description>
+        This spear is used to hunt dinosaurs.
+      </Description>
+      <Fatigue_Cost_Mod>1.08</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>70</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Shield_Damage>0.00</Shield_Damage>
+      <WeaponSkillEnum>Spear</WeaponSkillEnum>
+      <Sprites>37</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>450</Value>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Pierce</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Spear Wall</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
     <Weapon name="Kali">
       <Tier>One</Tier>
       <Accuracy>1.50</Accuracy>
@@ -965,7 +1043,7 @@
       <Accuracy>0.85</Accuracy>
       <AP_Reduce>0.97</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.95</Armor_Pierce>
+      <Armor_Pierce>0.85</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
       <Damage>33</Damage>
       <Description>
@@ -991,7 +1069,7 @@
       <Accuracy>0.92</Accuracy>
       <AP_Reduce>0.97</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.88</Armor_Pierce>
+      <Armor_Pierce>0.80</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
       <Damage>34</Damage>
       <Description>
@@ -1017,7 +1095,7 @@
       <Accuracy>0.98</Accuracy>
       <AP_Reduce>0.97</AP_Reduce>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.85</Armor_Pierce>
+      <Armor_Pierce>0.72</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
       <Damage>35</Damage>
       <Description>

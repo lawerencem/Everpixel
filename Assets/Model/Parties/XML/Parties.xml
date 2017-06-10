@@ -43,6 +43,7 @@
     <SubParty>Lizardman Fodder,1</SubParty>
   </Party>
   <Party Name ="Lizardman War Party">
+    <SubParty>Dino Calvary,2</SubParty>
     <SubParty>Dino Knights,3</SubParty>
     <SubParty>Dino Knights,5</SubParty>
     <SubParty>Dino Knights,6</SubParty>
