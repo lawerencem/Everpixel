@@ -3,92 +3,49 @@
   <SubParty Name ="Bretonnian Greatswordsmen">
     <Difficulty>2</Difficulty>
     <Character>1,Medium Great Sword Footman,One</Character>
-    <Character>0.85,Medium Great Sword Footman,One</Character>
+    <Character>1,Medium Great Sword Footman,One</Character>
   </SubParty>
   <SubParty Name ="Bretonnian Greatswordsmen">
     <Difficulty>3</Difficulty>
     <Character>1,Medium Great Sword Footman,One</Character>
     <Character>1,Medium Great Sword Footman,One</Character>
-    <Character>0.85,Medium Great Sword Footman,One</Character>
-  </SubParty>
-  <SubParty Name ="Dino Knights">
-    <Difficulty>2</Difficulty>
-    <Character>1,Dino Squire,One</Character>
-    <Character>0.85,Dino Squire,One</Character>
+    <Character>1,Medium Great Sword Footman,One</Character>
   </SubParty>
   <SubParty Name ="Dino Knights">
     <Difficulty>3</Difficulty>
     <Character>1,Dino Squire,One</Character>
-    <Character>0.85,Dino Squire,One</Character>
-  </SubParty>
-  <SubParty Name ="Dino Knights">
-    <Difficulty>4</Difficulty>
-    <Character>1,Dino Knight,One</Character>
-    <Character>0.85,Dino Squire,One</Character>
+    <Character>1,Dino Squire,One</Character>
   </SubParty>
   <SubParty Name ="Dino Knights">
     <Difficulty>5</Difficulty>
     <Character>1,Dino Knight,One</Character>
-    <Character>0.85,Dino Knight,One</Character>
+    <Character>1,Dino Knight,One</Character>
   </SubParty>
   <SubParty Name ="Dino Knights">
     <Difficulty>6</Difficulty>
     <Character>1,Dino Knight,One</Character>
-    <Character>0.85,Veteran Dino Knight,One</Character>
-  </SubParty>
-  <SubParty Name ="Gobbo Spider Riders">
-    <Difficulty>1</Difficulty>
-    <Character>0.5,Spider Rider,One</Character>
-    <Character>0.5,Spider Rider Archer,Two</Character>
-    <Character>0.35,Spider Rider,One</Character>
-    <Character>0.35,Spider Rider Archer,Two</Character>
+    <Character>1,Veteran Dino Knight,One</Character>
   </SubParty>
   <SubParty Name ="Gobbo Spider Riders">
     <Difficulty>2</Difficulty>
     <Character>1,Spider Rider,One</Character>
     <Character>1,Spider Rider Archer,Two</Character>
-    <Character>0.85,Spider Rider,One</Character>
-  </SubParty>
-  <SubParty Name ="Gobbo Spider Riders">
-    <Difficulty>3</Difficulty>
-    <Character>1,Spider Rider,One</Character>
-    <Character>1,Spider Rider Archer,Two</Character>
-    <Character>0.85,Spider Rider,One</Character>
-    <Character>0.85,Spider Rider Archer,Two</Character>
   </SubParty>
   <SubParty Name ="Gobbo Spider Riders">
     <Difficulty>4</Difficulty>
     <Character>1,Veteran Spider Rider,One</Character>
     <Character>1,Veteran Spider Rider Archer,Two</Character>
-    <Character>0.85,Spider Rider,One</Character>
-    <Character>0.85,Spider Rider Archer,Two</Character>
-  </SubParty>
-  <SubParty Name ="Gobbo Spider Riders">
-    <Difficulty>5</Difficulty>
-    <Character>1,Veteran Spider Rider,One</Character>
-    <Character>1,Veteran Spider Rider Archer,Two</Character>
-    <Character>1,Veteran Spider Rider,One</Character>
   </SubParty>
   <SubParty Name ="Goblin Fodder">
     <Difficulty>1</Difficulty>
     <Character>1,Goblin Fodder,One</Character>
     <Character>1,Goblin Fodder,One</Character>
-    <Character>0.85,Goblin Fodder,One</Character>
-  </SubParty>
-  <SubParty Name ="Goblin Fodder">
-    <Difficulty>2</Difficulty>
-    <Character>1,Goblin Fodder,One</Character>
-    <Character>1,Goblin Fodder,One</Character>
-    <Character>0.85,Goblin Fodder,One</Character>
-    <Character>0.85,Goblin Fodder,One</Character>
   </SubParty>
   <SubParty Name ="Goblin Fodder">
     <Difficulty>3</Difficulty>
     <Character>1,Goblin Fodder,One</Character>
     <Character>1,Goblin Fodder,One</Character>
     <Character>1,Goblin Fodder,One</Character>
-    <Character>0.85,Goblin Fodder,One</Character>
-    <Character>0.85,Goblin Fodder,One</Character>
   </SubParty>
   <SubParty Name ="Goblin Warboss Retinue">
     <Difficulty>12</Difficulty>
@@ -96,11 +53,6 @@
   </SubParty>
   <SubParty Name ="Goblin Void Weavers">
     <Difficulty>6</Difficulty>
-    <Character>1,Goblin Void Weaver,Three</Character>
-    <Character>0.75,Goblin Void Weaver,Three</Character>
-  </SubParty>
-  <SubParty Name ="Goblin Void Weavers">
-    <Difficulty>8</Difficulty>
     <Character>1,Goblin Void Weaver,Three</Character>
     <Character>1,Goblin Void Weaver,Three</Character>
   </SubParty>
@@ -122,11 +74,6 @@
   <SubParty Name ="Gromp Hoppers">
     <Difficulty>4</Difficulty>
     <Character>1,Gromp Hopper,One</Character>
-    <Character>0.50,Gromp Hopper,One</Character>
-  </SubParty>
-  <SubParty Name ="Gromp Hoppers">
-    <Difficulty>5</Difficulty>
-    <Character>1,Gromp Hopper,One</Character>
     <Character>1,Gromp Hopper,One</Character>
   </SubParty>
   <SubParty Name ="Gromp Hoppers">
@@ -146,52 +93,39 @@
   </SubParty>
   <SubParty Name ="Katana Samurais">
     <Difficulty>5</Difficulty>
-    <Character>0.85,Ronin Katana Samurai,One</Character>
-    <Character>0.85,Katana Samurai,One</Character>
+    <Character>1,Ronin Katana Samurai,One</Character>
+    <Character>1,Katana Samurai,One</Character>
   </SubParty>
   <SubParty Name ="Legionnaires">
     <Difficulty>3</Difficulty>
     <Character>1,Praetorian,One</Character>
     <Character>1,Praetorian,One</Character>
-    <Character>0.85,Praetorian,One</Character>
   </SubParty>
   <SubParty Name ="Lizardman Fodder">
     <Difficulty>1</Difficulty>
     <Character>1,Lizardman Militia,One</Character>
-    <Character>0.85,Lizardman Militia,One</Character>
+    <Character>1,Lizardman Militia,One</Character>
   </SubParty>
   <SubParty Name ="Nodachi Samurais">
     <Difficulty>5</Difficulty>
-    <Character>0.85,Ronin Nodachi Samurai,One</Character>
-    <Character>0.85,Nodachi Samurai,One</Character>
+    <Character>1,Ronin Nodachi Samurai,One</Character>
+    <Character>1,Nodachi Samurai,One</Character>
   </SubParty>
   <SubParty Name ="Orc Scavengers">
     <Difficulty>1</Difficulty>
     <Character>1,Orc Scavenger,One</Character>
-    <Character>0.25,Orc Scavenger,One</Character>
+    <Character>1,Orc Scavenger,One</Character>
   </SubParty>
   <SubParty Name ="Orc Scavengers">
     <Difficulty>2</Difficulty>
     <Character>1,Orc Scavenger,One</Character>
-    <Character>0.5,Orc Scavenger,One</Character>
-  </SubParty>
-  <SubParty Name ="Orc Scavengers">
-    <Difficulty>3</Difficulty>
     <Character>1,Orc Scavenger,One</Character>
-    <Character>0.85,Orc Scavenger,One</Character>
-    <Character>0.5,Orc Scavenger,One</Character>
+    <Character>1,Orc Scavenger,One</Character>
   </SubParty>
   <SubParty Name ="Rexes">
     <Difficulty>3</Difficulty>
     <Character>1,Tearex,Two</Character>
     <Character>1,Thairex,One</Character>
-  </SubParty>
-  <SubParty Name ="Rexes">
-    <Difficulty>4</Difficulty>
-    <Character>1,Tearex,Two</Character>
-    <Character>1,Thairex,One</Character>
-    <Character>0.25,Tearex,One</Character>
-    <Character>0.25,Thairex,One</Character>
   </SubParty>
   <SubParty Name ="Rexes">
     <Difficulty>7</Difficulty>
@@ -200,20 +134,14 @@
     <Character>1,Thairex,One</Character>
   </SubParty>
   <SubParty Name ="Shock Troopas">
-    <Difficulty>2</Difficulty>
-    <Character>1,Shock Troopa,One</Character>
-    <Character>0.75,Wimpy Orc Berserker,One</Character>
-  </SubParty>
-  <SubParty Name ="Shock Troopas">
     <Difficulty>3</Difficulty>
     <Character>1,Shock Troopa,One</Character>
     <Character>1,Wimpy Orc Berserker,One</Character>
-    <Character>0.25,Shock Troopa,One</Character>
   </SubParty>
   <SubParty Name ="Shock Troopa Calvary">
     <Difficulty>2</Difficulty>
     <Character>1,Ween Rider,One</Character>
-    <Character>0.25,Ween Rider,One</Character>
+    <Character>1,Ween Rider,One</Character>
   </SubParty>
   <SubParty Name ="Shock Troopa Calvary">
     <Difficulty>3</Difficulty>
@@ -238,47 +166,32 @@
   <SubParty Name ="Slime Lords">
     <Difficulty>2</Difficulty>
     <Character>1,Fledgling Slime Lord,Three</Character>
-    <Character>0.25,Fledgling Slime Lord,Three</Character>
-    <Character>1,Sluggish,One</Character>
-  </SubParty>
-  <SubParty Name ="Slime Lords">
-    <Difficulty>3</Difficulty>
-    <Character>1,Slime Lord,Three</Character>
-    <Character>0.85,Fledgling Slime Lord,Three</Character>
-    <Character>1,Sluggish,One</Character>
     <Character>1,Sluggish,One</Character>
   </SubParty>
   <SubParty Name ="Slime Lords">
     <Difficulty>4</Difficulty>
     <Character>1,Slime Lord,Three</Character>
-    <Character>0.85,Fledgling Slime Lord,Three</Character>
     <Character>1,Sluggish,One</Character>
   </SubParty>
   <SubParty Name ="Slime Lords">
     <Difficulty>5</Difficulty>
     <Character>1,Slime Lord,Three</Character>
-    <Character>1,Fledgling Slime Lord,Three</Character>
     <Character>1,Sluggemoth,One</Character>
-    <Character>1,Sluggish,One</Character>
   </SubParty>
   <SubParty Name ="Slime Lords">
     <Difficulty>6</Difficulty>
     <Character>1,Slime Lord,Three</Character>
-    <Character>0.85,Slime Lord,Three</Character>
     <Character>1,Sluggemoth,One</Character>
-    <Character>0.85,Sluggemoth,One</Character>
+    <Character>1,Sluggish,One</Character>
   </SubParty>
   <SubParty Name ="Slimers">
     <Difficulty>2</Difficulty>
     <Character>1,Rookie Slimer,One</Character>
-    <Character>0.85,Rookie Slimer,One</Character>
   </SubParty>
   <SubParty Name ="Slimers">
     <Difficulty>3</Difficulty>
     <Character>1,Slimer,One</Character>
     <Character>1,Rookie Slimer,One</Character>
-    <Character>0.85,Slimer,One</Character>
-    <Character>0.85,Rookie Slimer,One</Character>
   </SubParty>
   <SubParty Name ="Slug Horde">
     <Difficulty>4</Difficulty>

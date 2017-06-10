@@ -21,6 +21,7 @@ namespace Assets.Controller.Managers
             this._readers.Add(InjuryReader.Instance);
             this._readers.Add(PartiesReader.Instance);
             this._readers.Add(PredefinedCharacterReader.Instance);
+            this._readers.Add(PredefinedCritterReader.Instance);
             this._readers.Add(MountReader.Instance);
             this._readers.Add(RaceDefaultStatsReader.Instance);
             this._readers.Add(SubPartiesReader.Instance);

@@ -173,6 +173,7 @@
     <Compile Include="Assets\Model\Characters\Types\AbstractCharacter.cs" />
     <Compile Include="Assets\Model\Characters\Types\GenericCharacter.cs" />
     <Compile Include="Assets\Model\Characters\XML\PredefinedCharacterReader.cs" />
+    <Compile Include="Assets\Model\Characters\XML\PredefinedCritterReader.cs" />
     <Compile Include="Assets\Model\Characters\XML\PredefinedEquipmentXMLIndexes.cs" />
     <Compile Include="Assets\Model\Characters\XML\PrimaryStatsParser.cs" />
     <Compile Include="Assets\Model\Characters\XML\RaceDefaultStatsReader.cs" />

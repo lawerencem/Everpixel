@@ -23,6 +23,7 @@ namespace Controller.Managers
         private bool _interactionLock = false;
 
         private CombatManager _combatManager;
+        private List<CombatEvent> _events;
         private CMapGUIController _mapGUIController;
 
         public CombatEventManager()
@@ -30,8 +31,6 @@ namespace Controller.Managers
             this._events = new List<CombatEvent>();
             this._mapGUIController = new CMapGUIController();
         }
-
-        private List<CombatEvent> _events;
 
         private static CombatEventManager _instance;
         public static CombatEventManager Instance
@@ -54,7 +53,6 @@ namespace Controller.Managers
             this._events.Add(e);
             this.TryProcessEvent(e);
         }
-
 
         public bool GetGUILock() { return this._guiLock; }
         public bool GetInteractionLock() { return this._interactionLock; }

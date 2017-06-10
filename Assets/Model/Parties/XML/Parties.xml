@@ -1,43 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Parties>
   <Party Name ="Goblin Raiders">
-    <SubParty>Gobbo Spider Riders,1</SubParty>
     <SubParty>Gobbo Spider Riders,2</SubParty>
-    <SubParty>Gobbo Spider Riders,3</SubParty>
     <SubParty>Gobbo Spider Riders,4</SubParty>
-    <SubParty>Gobbo Spider Riders,5</SubParty>
     <SubParty>Gromp Hoppers,4</SubParty>
-    <SubParty>Gromp Hoppers,5</SubParty>
     <SubParty>Goblin Fodder,1</SubParty>
     <SubParty>Goblin Fodder,2</SubParty>
     <SubParty>Slimers,2</SubParty>
     <SubParty>Slimers,3</SubParty>
   </Party>
   <Party Name ="Goblin War Party">
-    <SubParty>Gobbo Spider Riders,1</SubParty>
     <SubParty>Gobbo Spider Riders,2</SubParty>
-    <SubParty>Gobbo Spider Riders,3</SubParty>
     <SubParty>Gobbo Spider Riders,4</SubParty>
-    <SubParty>Gobbo Spider Riders,5</SubParty>
     <SubParty>Goblin Fodder,1</SubParty>
     <SubParty>Goblin Warboss Retinue,12</SubParty>
     <SubParty>Goblin Void Weavers,6</SubParty>
-    <SubParty>Goblin Void Weavers,8</SubParty>
     <SubParty>Goblin Void Weavers,10</SubParty>
     <SubParty>Goblin Void Weavers,12</SubParty>
+    <SubParty>Goblin Void Weavers,15</SubParty>
     <SubParty>Gromp Hoppers,4</SubParty>
-    <SubParty>Gromp Hoppers,5</SubParty>
     <SubParty>Gromp Hoppers,6</SubParty>
     <SubParty>Gromp Hoppers,8</SubParty>
     <SubParty>Gromp Hoppers,10</SubParty>
     <SubParty>Slimers,3</SubParty>
-    <SubParty>Slime Lords,3</SubParty>
     <SubParty>Slime Lords,4</SubParty>
+    <SubParty>Slime Lords,5</SubParty>
+    <SubParty>Slime Lords,6</SubParty>
   </Party>
   <Party Name ="Goblin Slime Lords">
     <SubParty>Goblin Fodder,1</SubParty>
     <SubParty>Goblin Fodder,2</SubParty>
-    <SubParty>Slime Lords,3</SubParty>
     <SubParty>Slime Lords,4</SubParty>
     <SubParty>Slime Lords,5</SubParty>
     <SubParty>Slime Lords,6</SubParty>
@@ -51,14 +43,11 @@
     <SubParty>Lizardman Fodder,1</SubParty>
   </Party>
   <Party Name ="Lizardman War Party">
-    <SubParty>Dino Knights,2</SubParty>
     <SubParty>Dino Knights,3</SubParty>
-    <SubParty>Dino Knights,4</SubParty>
     <SubParty>Dino Knights,5</SubParty>
     <SubParty>Dino Knights,6</SubParty>
     <SubParty>Lizardman Fodder,1</SubParty>
     <SubParty>Rexes,3</SubParty>
-    <SubParty>Rexes,4</SubParty>
     <SubParty>Rexes,7</SubParty>
   </Party>
   <Party Name ="Orc Shock Troopas">

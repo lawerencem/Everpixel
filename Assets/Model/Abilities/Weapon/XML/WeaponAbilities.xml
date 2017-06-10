@@ -18,6 +18,26 @@
     <StaminaCost>20</StaminaCost>
     <Range>6</Range>
   </WeaponAbility>
+  <WeaponAbility name="Bite">
+    <AccMod>1</AccMod>
+    <APCost>3</APCost>
+    <ArmorIgnoreMod>1</ArmorIgnoreMod>
+    <ArmorPierceMod>1</ArmorPierceMod>
+    <BlockIgnoreMod>1</BlockIgnoreMod>
+    <DamageMod>1</DamageMod>
+    <DodgeMod>1.0</DodgeMod>
+    <Injury>Major_Bleeding</Injury>
+    <Injury>Massive_Bleeding</Injury>
+    <Injury>Minor_Bleeding</Injury>
+    <Injury>Profuse_Bleeding</Injury>
+    <Injury>Torrential_Bleeding</Injury>
+    <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
+    <ParryModMod>1.0</ParryModMod>
+    <RangeBlockMod>1.0</RangeBlockMod>
+    <ShieldDamageMod>1</ShieldDamageMod>
+    <StaminaCost>35</StaminaCost>
+    <Range>1</Range>
+  </WeaponAbility>
   <WeaponAbility name="Break_Armor">
     <AccMod>0.85</AccMod>
     <APCost>4</APCost>

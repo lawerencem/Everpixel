@@ -1,4 +1,5 @@
-﻿using Model.Events.Combat;
+﻿using Model.Abilities;
+using Model.Events.Combat;
 using System.Collections.Generic;
 using UnityEngine;
 using View.Events;
@@ -59,13 +60,14 @@ namespace Controller.Managers
             this._events.Remove(e);
             for (int i = 0; i < 7; i++)
             {
+                var tag = "WpnBtnTag" + i;
+                var btnContainer = GameObject.FindGameObjectWithTag(tag);
+                var script = btnContainer.GetComponent<WpnBtnClick>();
+
                 if (e.Abilities != null && i < e.Abilities.Count)
-                {
-                    var tag = "WpnBtnTag" + i;
-                    var btnContainer = GameObject.FindGameObjectWithTag(tag);
-                    var script = btnContainer.GetComponent<WpnBtnClick>();
                     script.SetAbility(e.Abilities[i].X.Type, e.Abilities[i].Y);
-                }
+                else
+                    script.SetAbility(WeaponAbilitiesEnum.None, true);
             }
         }
         
