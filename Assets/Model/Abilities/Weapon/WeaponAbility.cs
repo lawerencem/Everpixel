@@ -4,6 +4,7 @@ using Model.Characters;
 using Model.Combat;
 using Model.Events.Combat;
 using Model.Injuries;
+using Model.Perks;
 using System.Collections.Generic;
 
 namespace Model.Abilities
@@ -69,13 +70,9 @@ namespace Model.Abilities
 
         public virtual void ProcessMelee(HitInfo hit)
         {
+            foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
+                perk.TryModAbility(hit.Ability);
             CombatReferee.Instance.ProcessMelee(hit);
-            this.TryApplyInjury(hit);
-        }
-
-        public virtual void ProcessMelee(HitInfo hit, double baseDmg)
-        {
-            CombatReferee.Instance.ProcessMelee(hit, baseDmg);
             this.TryApplyInjury(hit);
         }
 

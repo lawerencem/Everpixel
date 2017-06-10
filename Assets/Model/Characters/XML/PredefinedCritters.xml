@@ -96,6 +96,9 @@
       <AttackSpriteIndex>24</AttackSpriteIndex>
       <Class>Warrior,1</Class>
       <FlinchSpriteIndex>16</FlinchSpriteIndex>
+      <Perks>
+        <Perk>T_Rex_Bite</Perk>
+      </Perks>
       <Stats>
         <Agility>400</Agility>
         <Constitution>680</Constitution>

@@ -27,14 +27,6 @@ namespace Model.Combat
             ProcessHitEvent(hit);
         }
 
-        public void ProcessMelee(HitInfo hit, double baseDmg)
-        {
-            ProcessMeleeFlags(hit);
-            CalculateDamage(hit, baseDmg);
-            ApplyDamage(hit);
-            ProcessHitEvent(hit);
-        }
-
         private void ApplyDamage(HitInfo hit)
         {
             if (!AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge) &&
@@ -62,8 +54,10 @@ namespace Model.Combat
             this.ProcessHeadShot(hit);
         }
 
-        private void CalculateDamage(HitInfo hit, double dmg = 0)
+        private void CalculateDamage(HitInfo hit)
         {
+            var dmg = hit.Ability.ModData.BaseDamage;
+
             if (hit.Source.Model.RWeapon != null)
                 dmg += hit.Source.Model.RWeapon.Damage;
             if (hit.Source.Model.LWeapon != null)

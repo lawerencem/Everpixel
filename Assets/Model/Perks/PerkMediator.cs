@@ -16,6 +16,7 @@ namespace Model.Perks
                 {
                     case (PerkEnum.Colossus): { c.Perks.EquipmentSStatPerks.Add(genericPerk as Colossus); } break;
                     case (PerkEnum.Weightlifter): { c.Perks.EquipmentSStatPerks.Add(genericPerk as Weightlifter);} break;
+                    case (PerkEnum.T_Rex_Bite): { c.Perks.AbilityModPerks.Add(genericPerk as TRexBite); } break;
                 }
             }
         }

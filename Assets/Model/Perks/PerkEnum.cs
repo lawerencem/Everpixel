@@ -5,5 +5,6 @@
         None,
         Colossus,
         Weightlifter,
+        T_Rex_Bite,
     }
 }

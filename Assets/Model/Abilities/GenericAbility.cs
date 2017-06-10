@@ -1,6 +1,7 @@
 ﻿using Model.Characters;
 using Model.Combat;
 using Model.Injuries;
+using Model.Perks;
 using System.Collections.Generic;
 
 namespace Model.Abilities
@@ -16,6 +17,7 @@ namespace Model.Abilities
         public string TypeStr { get { return this._typeStr; } }
 
         public int APCost { get; set; }
+        public GenericAbilityModData ModData { get; set; }
         public List<InjuryEnum> Injuries { get; set; }
         public int StaminaCost { get; set; }
 
@@ -26,6 +28,7 @@ namespace Model.Abilities
         public GenericAbility()
         {
             this.Injuries = new List<InjuryEnum>();
+            this.ModData = new GenericAbilityModData();
         }
     }
 }

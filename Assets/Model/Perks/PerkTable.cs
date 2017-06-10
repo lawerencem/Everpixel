@@ -12,6 +12,7 @@ namespace Model.Perks
             {
                 case (PerkEnum.Colossus): { return new Colossus(); }
                 case (PerkEnum.Weightlifter): { return new Weightlifter(); }
+                case (PerkEnum.T_Rex_Bite): { return new TRexBite(); }
                 default: { return null; }
             }
         } 
