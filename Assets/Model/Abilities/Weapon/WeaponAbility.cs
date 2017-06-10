@@ -87,15 +87,18 @@ namespace Model.Abilities
                 var roll = RNG.Instance.NextDouble();
                 var hp = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.HP);
                 var currentHP = hit.Target.Model.CurrentHP;
-                var chance = ((double)hit.Dmg / (double)hp) * (hp / currentHP);
-                if (roll < chance)
+                if (currentHP > 0)
                 {
-                    if (this.Injuries.Count > 0)
+                    var chance = ((double)hit.Dmg / (double)hp) * (hp / currentHP);
+                    if (roll < chance)
                     {
-                        var injuryType = ListUtil<InjuryEnum>.GetRandomListElement(this.Injuries);
-                        var injuryParams = InjuryTable.Instance.Table[injuryType];
-                        var injury = injuryParams.GetGenericInjury();
-                        var apply = new ApplyInjuryEvent(CombatEventManager.Instance, hit, injury);
+                        if (this.Injuries.Count > 0)
+                        {
+                            var injuryType = ListUtil<InjuryEnum>.GetRandomListElement(this.Injuries);
+                            var injuryParams = InjuryTable.Instance.Table[injuryType];
+                            var injury = injuryParams.GetGenericInjury();
+                            var apply = new ApplyInjuryEvent(CombatEventManager.Instance, hit, injury);
+                        }
                     }
                 }
             }

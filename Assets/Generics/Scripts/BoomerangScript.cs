@@ -15,12 +15,12 @@ namespace Generics.Scripts
         public float Speed { get; set; }
         
 
-        public void Update()
+        public virtual void Update()
         {
 
         }
 
-        public void Init(GameObject source, Vector3 target, float speed)
+        public virtual void Init(GameObject source, Vector3 target, float speed)
         {
             this.Source = source;
             this.Speed = speed;
@@ -29,7 +29,7 @@ namespace Generics.Scripts
             jolt.Init(this.Source, target, speed, this.Retract);
         }
 
-        public void Init(GameObject source, Vector3 target, float speed, Callback callback)
+        public virtual void Init(GameObject source, Vector3 target, float speed, Callback callback)
         {
             this._callBack = callback;
             this.Source = source;
@@ -39,13 +39,13 @@ namespace Generics.Scripts
             jolt.Init(this.Source, target, speed, this.Retract);
         }
 
-        private void Retract()
+        protected virtual void Retract()
         {
             var jolt = this.Source.AddComponent<JoltScript>();
             jolt.Init(this.Source, this._origin, this.Speed, this.Done);
         }
 
-        private void Done()
+        protected virtual void Done()
         {
             if (this._callBack != null)
                 this._callBack();

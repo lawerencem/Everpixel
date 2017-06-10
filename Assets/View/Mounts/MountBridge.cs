@@ -1,7 +1,7 @@
 ﻿using Generics;
 using Generics.Utilities;
 using Model.Mounts;
-using View.Equipment;
+using View.Characters;
 using View.Mount;
 
 namespace View.Mounts

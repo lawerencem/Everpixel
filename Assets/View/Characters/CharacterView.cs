@@ -8,6 +8,7 @@ namespace View.Characters
     public class CharacterView
     {
         public ArmorView Armor {get;set;}
+        public int AttackSpriteIndex { get; set; }
         public int Deco1 { get; set; }
         public int Deco2 { get; set; }
         public int Deco3 { get; set; }

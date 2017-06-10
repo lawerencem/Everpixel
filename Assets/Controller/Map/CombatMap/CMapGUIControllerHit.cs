@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using View.Biomes;
+using View.Scripts;
 
 namespace Controller.Managers.Map
 {
@@ -41,9 +42,9 @@ namespace Controller.Managers.Map
 
         public void ProcessMeleeHitGraphics(DisplayHitStatsEvent e)
         {
-            var attackerJolt = e.Hit.Source.Handle.AddComponent<BoomerangScript>();
+            var attackerScript = e.Hit.Source.Handle.AddComponent<AttackScript>();
             var position = Vector3.Lerp(e.Hit.Target.CurrentTile.Model.Center, e.Hit.Source.CurrentTile.Model.Center, 0.85f);
-            attackerJolt.Init(e.Hit.Source.Handle, position, 10f);
+            attackerScript.Init(e.Hit.Source, position, 10f);
 
             if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge))
                 this.ProcessDodge(e);
@@ -156,8 +157,8 @@ namespace Controller.Managers.Map
             {
                 var position = e.Hit.Target.transform.position;
                 position.y -= 0.08f;
-                var defenderJolt = e.Hit.Target.Handle.AddComponent<BoomerangScript>();
-                defenderJolt.Init(e.Hit.Target.Handle, position, 10f, this.UnlockUserInteraction);
+                var defenderFlinch = e.Hit.Target.Handle.AddComponent<FlinchScript>();
+                defenderFlinch.Init(e.Hit.Target, position, 10f, this.UnlockUserInteraction);
             }
             if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
                 this.DisplayText("Crit!", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, 0.40f);

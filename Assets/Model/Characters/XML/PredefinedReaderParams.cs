@@ -3,9 +3,11 @@
     public class PredefinedReaderParams
     {
         public const string ARMORS = "Armors";
+        public const string ATTACK_SPRITE_INDEX = "AttackSpriteIndex";
         public const string CLASS = "Class";
         public const string CULTURE = "CultureEnum";
         public const string DEFAULT_WPN_ABILITES = "WeaponAbilitiesEnum";
+        public const string FLINCH_SPRITE_INDEX = "FlinchSpriteIndex";
         public const string HELMS = "Helms";
         public const string L_WEAPONS = "LWeapons";
         public const string MOUNT = "Mount";

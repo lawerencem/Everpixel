@@ -183,15 +183,18 @@ namespace Controller.Managers.Map
 
         private void AttachDeco(GenericCharacterController c, string sort, int spriteIndex, TileController tile)
         {
-            var sprite = c.View.Sprites[spriteIndex];
-            var spriteHandler = new GameObject();
-            var render = spriteHandler.AddComponent<SpriteRenderer>();
-            spriteHandler.transform.position = tile.View.Center;
-            spriteHandler.transform.SetParent(c.Handle.transform);
-            spriteHandler.name = "Character Deco";
-            render.sprite = sprite;
-            render.sortingLayerName = sort;
-            c.SpriteHandlerDict.Add(sort, spriteHandler);
+            if (c.Model.Type == CharacterTypeEnum.Humanoid)
+            {
+                var sprite = c.View.Sprites[spriteIndex];
+                var spriteHandler = new GameObject();
+                var render = spriteHandler.AddComponent<SpriteRenderer>();
+                spriteHandler.transform.position = tile.View.Center;
+                spriteHandler.transform.SetParent(c.Handle.transform);
+                spriteHandler.name = "Character Deco";
+                render.sprite = sprite;
+                render.sortingLayerName = sort;
+                c.SpriteHandlerDict.Add(sort, spriteHandler);
+            }
         }
 
         private void AttachMount(GenericCharacterController c, string sort, TileController tile)

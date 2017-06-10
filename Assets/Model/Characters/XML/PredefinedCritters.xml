@@ -2,8 +2,9 @@
 <Cultures>
   <Culture name ="Critter">
     <Character name ="Psycargot">
+      <AttackSpriteIndex>24</AttackSpriteIndex>
       <Class>Warrior,1</Class>
-      <CharacterTypeEnum>Critter</CharacterTypeEnum>
+      <FlinchSpriteIndex>16</FlinchSpriteIndex>
       <Stats>
         <Agility>280</Agility>
         <Constitution>320</Constitution>
@@ -14,8 +15,9 @@
       </Stats>
     </Character>
     <Character name ="Psylug">
+      <AttackSpriteIndex>24</AttackSpriteIndex>
       <Class>Warrior,1</Class>
-      <CharacterTypeEnum>Critter</CharacterTypeEnum>
+      <FlinchSpriteIndex>16</FlinchSpriteIndex>
       <Stats>
         <Agility>280</Agility>
         <Constitution>450</Constitution>
@@ -26,8 +28,9 @@
       </Stats>
     </Character>
     <Character name ="Sluggemoth">
+      <AttackSpriteIndex>24</AttackSpriteIndex>
       <Class>Warrior,1</Class>
-      <CharacterTypeEnum>Critter</CharacterTypeEnum>
+      <FlinchSpriteIndex>16</FlinchSpriteIndex>
       <Stats>
         <Agility>300</Agility>
         <Constitution>280</Constitution>
@@ -38,8 +41,9 @@
       </Stats>
     </Character>
     <Character name ="Sluggish">
+      <AttackSpriteIndex>24</AttackSpriteIndex>
       <Class>Warrior,1</Class>
-      <CharacterTypeEnum>Critter</CharacterTypeEnum>
+      <FlinchSpriteIndex>16</FlinchSpriteIndex>
       <Stats>
         <Agility>250</Agility>
         <Constitution>250</Constitution>
@@ -50,8 +54,9 @@
       </Stats>
     </Character>
     <Character name ="Razorback">
+      <AttackSpriteIndex>24</AttackSpriteIndex>
       <Class>Warrior,1</Class>
-      <CharacterTypeEnum>Critter</CharacterTypeEnum>
+      <FlinchSpriteIndex>16</FlinchSpriteIndex>
       <Stats>
         <Agility>250</Agility>
         <Constitution>400</Constitution>
@@ -62,8 +67,9 @@
       </Stats>
     </Character>
     <Character name ="Tearex">
+      <AttackSpriteIndex>24</AttackSpriteIndex>
       <Class>Warrior,1</Class>
-      <CharacterTypeEnum>Critter</CharacterTypeEnum>
+      <FlinchSpriteIndex>16</FlinchSpriteIndex>
       <Stats>
         <Agility>350</Agility>
         <Constitution>350</Constitution>
@@ -74,8 +80,9 @@
       </Stats>
     </Character>
     <Character name ="Thairex">
+      <AttackSpriteIndex>24</AttackSpriteIndex>
       <Class>Warrior,1</Class>
-      <CharacterTypeEnum>Critter</CharacterTypeEnum>
+      <FlinchSpriteIndex>13</FlinchSpriteIndex>
       <Stats>
         <Agility>420</Agility>
         <Constitution>420</Constitution>
@@ -86,9 +93,9 @@
       </Stats>
     </Character>
     <Character name ="Tyrantaur">
+      <AttackSpriteIndex>24</AttackSpriteIndex>
       <Class>Warrior,1</Class>
-      <CharacterTypeEnum>Critter</CharacterTypeEnum>
-      <WeaponAbilitiesEnum>Bite</WeaponAbilitiesEnum>
+      <FlinchSpriteIndex>16</FlinchSpriteIndex>
       <Stats>
         <Agility>400</Agility>
         <Constitution>680</Constitution>
@@ -97,6 +104,7 @@
         <Perception>350</Perception>
         <Resolve>650</Resolve>
       </Stats>
+      <WeaponAbilitiesEnum>Bite</WeaponAbilitiesEnum>
     </Character>
   </Culture>
 </Cultures>

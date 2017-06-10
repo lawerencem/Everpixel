@@ -36,7 +36,6 @@ namespace Model.Characters.XML
 
             ClassEnum baseClass = ClassEnum.None;
             CultureEnum culture = CultureEnum.None;
-            CharacterTypeEnum type = CharacterTypeEnum.None;
 
             foreach (var el in doc.Root.Elements())
             {
@@ -57,15 +56,17 @@ namespace Model.Characters.XML
                                     table.Table.Add(key, new PredefinedCharacterParams());
                                     table.Table[key].Name = key;
                                     table.Table[key].Culture = culture;
+                                    table.Table[key].Type = CharacterTypeEnum.Critter;
                                 }
                                 foreach (var elem in ele.Elements())
                                 {
                                     switch (elem.Name.ToString())
                                     {
+                                        case (PredefinedReaderParams.ATTACK_SPRITE_INDEX): { HandleAttackSpriteIndex(key, elem.Value.ToString()); } break;
                                         case (PredefinedReaderParams.CLASS): { HandleClassType(key, elem.Value.ToString(), ref baseClass); } break;
                                         case (PredefinedReaderParams.DEFAULT_WPN_ABILITES): { HandleDefaultWpnAbility(key, elem.Value.ToString()); } break;
+                                        case (PredefinedReaderParams.FLINCH_SPRITE_INDEX): { HandleFlinchSpriteIndex(key, elem.Value.ToString()); } break;
                                         case (PredefinedReaderParams.STATS): { HandleStats(elem, key); } break;
-                                        case (PredefinedReaderParams.TYPE): { HandleCharacterType(key, elem.Value.ToString(), ref type); } break;
                                     }
                                 }
                             }
@@ -73,6 +74,13 @@ namespace Model.Characters.XML
                     }
                 }
             }
+        }
+
+        private void HandleAttackSpriteIndex(string rootkey, string value)
+        {
+            int v = 0;
+            if (int.TryParse(value, out v))
+                CritterAttackSpriteTable.Instance.Table.Add(rootkey, v);
         }
 
         private void HandleClassType(string rootKey, string value, ref ClassEnum type)
@@ -95,6 +103,13 @@ namespace Model.Characters.XML
             var wpnAbility = WeaponAbilitiesEnum.None;
             if (EnumUtil<WeaponAbilitiesEnum>.TryGetEnumValue(value, ref wpnAbility))
                 table.Table[rootKey].DefaultWpnAbilities.Add(wpnAbility);
+        }
+
+        private void HandleFlinchSpriteIndex(string rootkey, string value)
+        {
+            int v = 0;
+            if (int.TryParse(value, out v))
+                CritterFlinchSpriteTable.Instance.Table.Add(rootkey, v);
         }
 
         private void HandleRace(string rootKey, string value, ref RaceEnum race)

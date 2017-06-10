@@ -1,6 +1,7 @@
 ﻿using Generics;
 using Generics.Utilities;
 using Model.Equipment;
+using View.Characters;
 
 namespace View.Equipment
 {
