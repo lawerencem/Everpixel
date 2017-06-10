@@ -7,6 +7,7 @@
         Dodo,
         Gromp,
         Octolegs,
+        Raptard,
         Ween,
         War_Ween,
     }
