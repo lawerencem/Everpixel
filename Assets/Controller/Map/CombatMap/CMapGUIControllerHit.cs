@@ -22,7 +22,7 @@ namespace Controller.Managers.Map
             this.DisplayText(
                 hit.Ability.TypeStr, 
                 hit.Source.CurrentTile.Model.Center, 
-                CMapGUIControllerParams.WHITE, 0.15f);
+                CMapGUIControllerParams.WHITE, CMapGUIControllerParams.ATTACK_TEXT_OFFSET);
         }
 
         public void ProcessCharacterKilled(CharacterKilledEvent e)
@@ -89,7 +89,7 @@ namespace Controller.Managers.Map
             var scalar = 30f / zoom;
             text.transform.localScale = new Vector3(scalar, scalar);
             var script = display.AddComponent<DestroyByLifetime>();
-            script.lifetime = 3;
+            script.lifetime = 1;
             var floating = display.AddComponent<FloatingText>();
             floating.Init(display);
         }
@@ -116,9 +116,9 @@ namespace Controller.Managers.Map
 
         private void ProcessBlock(DisplayHitStatsEvent e)
         {
-            this.DisplayText("Block", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.WHITE, 0.35f);
+            this.DisplayText("Block", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.BLOCK_TEXT_OFFSET);
             if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
-                this.DisplayText("Critical!", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, 0.40f);
+                this.DisplayText("Critical!", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, CMapGUIControllerParams.CRIT_TEXT_OFFSET);
             if (e.Hit.Target.Model.LWeapon != null && e.Hit.Target.Model.LWeapon.IsTypeOfShield())
             {
                 var weapon = e.Hit.Target.SpriteHandlerDict["CharLWeapon"];
@@ -141,7 +141,7 @@ namespace Controller.Managers.Map
                     position.x += CMapGUIControllerParams.WEAPON_OFFSET;
                 boomerang.Init(weapon, position, CMapGUIControllerParams.WEAPON_PARRY, this.UnlockUserInteraction);
             }
-            this.DisplayText(e.Hit.Dmg.ToString(), e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, 0.025f);
+            this.DisplayText(e.Hit.Dmg.ToString(), e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, CMapGUIControllerParams.DMG_TEXT_OFFSET);
         }
 
         private void ProcessDodge(DisplayHitStatsEvent e)
@@ -161,13 +161,13 @@ namespace Controller.Managers.Map
                 defenderFlinch.Init(e.Hit.Target, position, 10f, this.UnlockUserInteraction);
             }
             if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
-                this.DisplayText("Crit!", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, 0.40f);
-            this.DisplayText(e.Hit.Dmg.ToString(), e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, 0.025f);
+                this.DisplayText("Crit!", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, CMapGUIControllerParams.DODGE_TEXT_OFFSET);
+            this.DisplayText(e.Hit.Dmg.ToString(), e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, CMapGUIControllerParams.DMG_TEXT_OFFSET);
         }
 
         private void ProcessParry(DisplayHitStatsEvent e)
         {
-            this.DisplayText("Parry", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.WHITE, 0.30f);
+            this.DisplayText("Parry", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.PARRY_TEXT_OFFSET);
             if (e.Hit.Target.Model.LWeapon != null && !e.Hit.Target.Model.LWeapon.IsTypeOfShield())
             {
                 var weapon = e.Hit.Target.SpriteHandlerDict["CharLWeapon"];

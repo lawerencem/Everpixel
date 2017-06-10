@@ -19,6 +19,12 @@ namespace Controller.Map
         public static readonly string STAM = "StaminaTextTag";
         public static readonly string UI_LAYER = "UI";
 
+        public static readonly float ATTACK_TEXT_OFFSET = 0.15f;
+        public static readonly float BLOCK_TEXT_OFFSET = 0.35f;
+        public static readonly float CRIT_TEXT_OFFSET = 0.45f;
+        public static readonly float DODGE_TEXT_OFFSET = 0.40f;
+        public static readonly float DMG_TEXT_OFFSET = 0.025f;
+        public static readonly float PARRY_TEXT_OFFSET = 0.30f;
         public static readonly float WEAPON_OFFSET = 0.075f;
         public static readonly float WEAPON_PARRY = 4f;
 

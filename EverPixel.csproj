@@ -244,14 +244,9 @@
     <Compile Include="Assets\Model\Injuries\InjuryEnum.cs" />
     <Compile Include="Assets\Model\Injuries\InjuryReader.cs" />
     <Compile Include="Assets\Model\Injuries\InjuryTable.cs" />
-    <Compile Include="Assets\Model\Map\ColRowPairPath.cs" />
     <Compile Include="Assets\Model\Map\CombatMap.cs" />
     <Compile Include="Assets\Model\Map\HexTile.cs" />
     <Compile Include="Assets\Model\Map\Path.cs" />
-    <Compile Include="Assets\Model\Material\AbstractMaterial.cs" />
-    <Compile Include="Assets\Model\Material\GenericMaterial.cs" />
-    <Compile Include="Assets\Model\Material\MaterialEnum.cs" />
-    <Compile Include="Assets\Model\Material\MaterialModifierEnum.cs" />
     <Compile Include="Assets\Model\Mounts\GenericMount.cs" />
     <Compile Include="Assets\Model\Mounts\MountEnum.cs" />
     <Compile Include="Assets\Model\Mounts\MountParams.cs" />
@@ -267,6 +262,7 @@
     <Compile Include="Assets\Model\Parties\XML\PartiesReader.cs" />
     <Compile Include="Assets\Model\Parties\XML\SubPartiesReader.cs" />
     <Compile Include="Assets\Model\Parties\XML\SubPartiesXMLIndexes.cs" />
+    <Compile Include="Assets\Model\Perks\AbstractPerk.cs" />
     <Compile Include="Assets\Model\Slot\AbstractSlot.cs" />
     <Compile Include="Assets\Model\Slot\GenericSlot.cs" />
     <Compile Include="Assets\Model\Slot\SlotEnum.cs" />
@@ -310,7 +306,6 @@
     <None Include="Assets\Model\Parties\XML\SubParties.xml" />
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>
