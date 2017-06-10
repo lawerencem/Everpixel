@@ -1,4 +1,5 @@
 ﻿using Generics;
+using Model.Abilities;
 using Model.Classes;
 using Model.Slot;
 using System;
@@ -46,6 +47,7 @@ namespace Model.Characters
         {
             var character = new GenericCharacter();
             BuildBaseClassHelper(c, character);
+            BuildDefaultAbilities(c, character);
             var stats = PredefinedCharacterTable.Instance.Table[c.Name];
             character.PrimaryStats = stats.Stats;
             BuildClassPrimaryStats(character);
@@ -70,6 +72,12 @@ namespace Model.Characters
                 toAdd.Level = kvp.Value;
                 c.BaseClasses.Add(kvp.Key, toAdd);
             }
+        }
+
+        private void BuildDefaultAbilities(CharacterParams p, GenericCharacter c)
+        {
+            var abs = WeaponAbilityFactory.Instance.CreateNewObject(p.DefaultAbilities);
+            foreach (var v in abs) { c.DefaultWpnAbilities.Add(v); }
         }
 
         private void BuildClassPrimaryStats(GenericCharacter c)

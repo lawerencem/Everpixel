@@ -11,19 +11,6 @@ namespace Model.Characters.XML
 {
     public class PredefinedCharacterReader : GenericXMLReader
     {
-        private const string ARMORS = "Armors";
-        private const string CLASS = "Class";
-        private const string CULTURE = "CultureEnum";
-        private const string HELMS = "Helms";
-        private const string L_WEAPONS = "LWeapons";
-        private const string MOUNT = "Mount";
-        private const string POTENTIAL_WEAPONS = "PotentialWeapons";
-        private const string POTENTIAL_ARMORS = "PotentialArmors";
-        private const string RACE = "RaceEnum";
-        private const string R_WEAPONS = "RWeapons";
-        private const string STATS = "Stats";
-        private const string TYPE = "CharacterTypeEnum";
-
         private PredefinedCharacterTable table = PredefinedCharacterTable.Instance;
 
         private static PredefinedCharacterReader _instance;
@@ -75,13 +62,13 @@ namespace Model.Characters.XML
                                 {
                                     switch (elem.Name.ToString())
                                     {
-                                        case (CLASS): { HandleClassType(key, elem.Value.ToString(), ref baseClass); } break;
-                                        case (MOUNT): { HandleMount(key, elem.Value); } break;
-                                        case (POTENTIAL_ARMORS): { HandleEquipment(elem, key); } break;
-                                        case (POTENTIAL_WEAPONS): { HandleEquipment(elem, key); } break;
-                                        case (RACE): { HandleRace(key, elem.Value.ToString(), ref race); } break;
-                                        case (STATS): { HandleStats(elem, key); } break;
-                                        case (TYPE): { HandleCharacterType(key, elem.Value.ToString(), ref type); } break;
+                                        case (PredefinedReaderParams.CLASS): { HandleClassType(key, elem.Value.ToString(), ref baseClass); } break;
+                                        case (PredefinedReaderParams.MOUNT): { HandleMount(key, elem.Value); } break;
+                                        case (PredefinedReaderParams.POTENTIAL_ARMORS): { HandleEquipment(elem, key); } break;
+                                        case (PredefinedReaderParams.POTENTIAL_WEAPONS): { HandleEquipment(elem, key); } break;
+                                        case (PredefinedReaderParams.RACE): { HandleRace(key, elem.Value.ToString(), ref race); } break;
+                                        case (PredefinedReaderParams.STATS): { HandleStats(elem, key); } break;
+                                        case (PredefinedReaderParams.TYPE): { HandleCharacterType(key, elem.Value.ToString(), ref type); } break;
                                     }
                                 }
                             }
@@ -120,10 +107,10 @@ namespace Model.Characters.XML
 
                         switch(att.Name.ToString())
                         {
-                            case (ARMORS): { HandleEquipmentHelper(table.Table[rootKey].Armors, subAtt.Value, values); } break;
-                            case (HELMS): { HandleEquipmentHelper(table.Table[rootKey].Helms, subAtt.Value, values); } break;
-                            case (L_WEAPONS): { HandleEquipmentHelper(table.Table[rootKey].LWeapons, subAtt.Value, values); } break;
-                            case (R_WEAPONS): { HandleEquipmentHelper(table.Table[rootKey].RWeapons, subAtt.Value, values); } break;
+                            case (PredefinedReaderParams.ARMORS): { HandleEquipmentHelper(table.Table[rootKey].Armors, subAtt.Value, values); } break;
+                            case (PredefinedReaderParams.HELMS): { HandleEquipmentHelper(table.Table[rootKey].Helms, subAtt.Value, values); } break;
+                            case (PredefinedReaderParams.L_WEAPONS): { HandleEquipmentHelper(table.Table[rootKey].LWeapons, subAtt.Value, values); } break;
+                            case (PredefinedReaderParams.R_WEAPONS): { HandleEquipmentHelper(table.Table[rootKey].RWeapons, subAtt.Value, values); } break;
                         }
                     }
                 }

@@ -88,6 +88,7 @@
     <Character name ="Tyrantaur">
       <Class>Warrior,1</Class>
       <CharacterTypeEnum>Critter</CharacterTypeEnum>
+      <WeaponAbilitiesEnum>Bite</WeaponAbilitiesEnum>
       <Stats>
         <Agility>400</Agility>
         <Constitution>680</Constitution>

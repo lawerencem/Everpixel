@@ -1,6 +1,7 @@
 ﻿using Assets.Generics;
 using Characters.Params;
 using Controller.Managers;
+using Model.Abilities;
 using Model.Classes;
 using Model.Equipment;
 using Model.Events.Combat;
@@ -12,6 +13,7 @@ namespace Model.Characters
 {
     abstract public class AbstractCharacter<T>
     {
+        // TODO: Let's put this somewhere else...
         protected const double BASE_STAM_RESTORE = 50;
 
         public T Type { get; set; }
@@ -21,21 +23,28 @@ namespace Model.Characters
         public PrimaryStats PrimaryStats { get; set; }
         public SecondaryStats SecondaryStats { get; set; }
         
+        // TODO: Put these in a stats Mods container class
         public List<PrimaryStatModifier> PStatMods { get; set; }
         public List<SecondaryStatModifier> SStatMods { get; set; }
         public List<Pair<object, List<IndefPrimaryStatModifier>>> IndefPStatMods { get; set; }
         public List<Pair<object, List<IndefSecondaryStatModifier>>> IndefSStatMods { get; set; }
+
+        // TODO: Put these in a current stats container class
+        public int CurrentAP { get; set; }
+        public int CurrentHP { get; set; }
+        public int CurrentMorale { get; set; }
+        public int CurrentStamina { get; set; }
+
+        public List<WeaponAbility> DefaultWpnAbilities { get; set; }
         public List<GenericInjury> Injuries { get; set; }
 
+        // TODO: Put these in an equipment container class
         public GenericArmor Armor { get; set; }
         public GenericHelm Helm { get; set; }
         public GenericWeapon LWeapon { get; set; }
         public GenericWeapon RWeapon { get; set; }
 
-        public int CurrentAP { get; set; }
-        public int CurrentHP { get; set; }
-        public int CurrentMorale { get; set; }
-        public int CurrentStamina { get; set; }
+        
 
         public void AddArmor(GenericArmor armor)
         {
@@ -69,6 +78,13 @@ namespace Model.Characters
                 this.RWeapon = weapon;
                 this.IndefSStatMods.Add(new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.GetStatModifiers()));
             }
+        }
+
+        public void AddStamina(double toAdd)
+        {
+            this.CurrentStamina += (int)toAdd;
+            if (this.CurrentStamina > this.GetCurrentStatValue(SecondaryStatsEnum.Stamina))
+                this.CurrentStamina = this.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
         }
 
         public int GetTileTraversalAPCost(HexTile tile)
@@ -169,6 +185,11 @@ namespace Model.Characters
             foreach (var injury in this.Injuries)
                 injury.TryScaleStat(stat, ref v);
             return (int)v;
+        }
+
+        public void RestoreStamina()
+        {
+            this.AddStamina(BASE_STAM_RESTORE);
         }
     }
 }

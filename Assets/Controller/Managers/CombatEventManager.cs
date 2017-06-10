@@ -11,6 +11,7 @@ using UnityEngine;
 using View.Events;
 using Model.Combat;
 using Controller.Map;
+using Model.Characters;
 
 namespace Controller.Managers
 {
@@ -246,12 +247,21 @@ namespace Controller.Managers
         {
             var curr = this._combatManager.CurrActing.Model;
             var abs = new List<Pair<WeaponAbility, bool>>();
-            if (curr.LWeapon != null)
-                foreach(var ab in curr.LWeapon.Abilities)
-                    abs.Add(new Pair<WeaponAbility, bool>(ab, false));
-            if (curr.RWeapon != null)
-                foreach (var ab in curr.RWeapon.Abilities)
+
+            if (curr.Type == CharacterTypeEnum.Humanoid)
+            {
+                if (curr.LWeapon != null)
+                    foreach (var ab in curr.LWeapon.Abilities)
+                        abs.Add(new Pair<WeaponAbility, bool>(ab, false));
+                if (curr.RWeapon != null)
+                    foreach (var ab in curr.RWeapon.Abilities)
+                        abs.Add(new Pair<WeaponAbility, bool>(ab, true));
+            }
+            else
+            {
+                foreach (var ab in curr.DefaultWpnAbilities)
                     abs.Add(new Pair<WeaponAbility, bool>(ab, true));
+            }
 
             var populateBtns = new PopulateWpnBtnsEvent(abs, GUIEventManager.Instance);
         }

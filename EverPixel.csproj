@@ -81,8 +81,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Config\Config.cs" />
-    <Compile Include="Assets\Controller\Managers\CameraManager.cs" />
     <Compile Include="Assets\Controller\Characters\GenericCharacterController.cs" />
+    <Compile Include="Assets\Controller\Managers\CameraManager.cs" />
     <Compile Include="Assets\Controller\Managers\CombatEventManager.cs" />
     <Compile Include="Assets\Controller\Managers\CombatManager.cs" />
     <Compile Include="Assets\Controller\Managers\GUIEventManager.cs" />
@@ -90,8 +90,8 @@
     <Compile Include="Assets\Controller\Managers\LoaderManager.cs" />
     <Compile Include="Assets\Controller\Map\CombatMap\CMapGUIController.cs" />
     <Compile Include="Assets\Controller\Map\CombatMap\CMapGUIControllerHit.cs" />
-    <Compile Include="Assets\Controller\Map\CombatMap\CMapGUIControllerParticle.cs" />
     <Compile Include="Assets\Controller\Map\CombatMap\CMapGUIControllerParams.cs" />
+    <Compile Include="Assets\Controller\Map\CombatMap\CMapGUIControllerParticle.cs" />
     <Compile Include="Assets\Controller\Map\CombatMap\CombatMapLoader.cs" />
     <Compile Include="Assets\Controller\Map\CombatMap\EnemyPartyLoader.cs" />
     <Compile Include="Assets\Controller\Map\Tile\TileController.cs" />
@@ -120,6 +120,7 @@
     <Compile Include="Assets\Model\Abilities\GenericAbility.cs" />
     <Compile Include="Assets\Model\Abilities\GenericAbilityTable.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Aim.cs" />
+    <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Bite.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\BreakArmor.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\BreakShield.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Chop.cs" />
@@ -175,6 +176,7 @@
     <Compile Include="Assets\Model\Characters\XML\PredefinedCharacterReader.cs" />
     <Compile Include="Assets\Model\Characters\XML\PredefinedCritterReader.cs" />
     <Compile Include="Assets\Model\Characters\XML\PredefinedEquipmentXMLIndexes.cs" />
+    <Compile Include="Assets\Model\Characters\XML\PredefinedReaderParams.cs" />
     <Compile Include="Assets\Model\Characters\XML\PrimaryStatsParser.cs" />
     <Compile Include="Assets\Model\Characters\XML\RaceDefaultStatsReader.cs" />
     <Compile Include="Assets\Model\Classes\Builders\ClassBuilder.cs" />
@@ -268,8 +270,8 @@
     <Compile Include="Assets\Model\Slot\AbstractSlot.cs" />
     <Compile Include="Assets\Model\Slot\GenericSlot.cs" />
     <Compile Include="Assets\Model\Slot\SlotEnum.cs" />
-    <Compile Include="Assets\View\Builders\CharacterViewBuilder.cs" />
     <Compile Include="Assets\View\Builders\CharacterSpriteLoader.cs" />
+    <Compile Include="Assets\View\Builders\CharacterViewBuilder.cs" />
     <Compile Include="Assets\View\Characters\CharacterBridge.cs" />
     <Compile Include="Assets\View\Characters\CharacterSpriteLoader.cs" />
     <Compile Include="Assets\View\Characters\CharacterView.cs" />

@@ -55,6 +55,60 @@
       <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
       <WeaponUseEnum>Melee</WeaponUseEnum>
     </Weapon>
+    <Weapon name="Dino Greataxe">
+      <Tier>Three</Tier>
+      <Accuracy>0.71</Accuracy>
+      <AP_Reduce>0.82</AP_Reduce>
+      <Armor_Ignore>0.80</Armor_Ignore>
+      <Armor_Pierce>0.84</Armor_Pierce>
+      <Block_Ignore>0.26</Block_Ignore>
+      <Damage>78</Damage>
+      <Description>
+        This log has a very large and very sharp tooth protruding from the end.  What kind of creature has teeth like that?
+      </Description>
+      <Fatigue_Cost_Mod>1.20</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.85</Initiative_Reduce>
+      <Max_Durability>85</Max_Durability>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Shield_Damage>0.07</Shield_Damage>
+      <WeaponSkillEnum>Axe</WeaponSkillEnum>
+      <Sprites>37</Sprites>
+      <Stamina_Reduce>0.85</Stamina_Reduce>
+      <Value>350</Value>
+      <WeaponAbilitiesEnum>Chop</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Break_Shield</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Stun</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Scatter</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Dino Greataxe">
+      <Tier>Two</Tier>
+      <Accuracy>0.72</Accuracy>
+      <AP_Reduce>0.84</AP_Reduce>
+      <Armor_Ignore>0.78</Armor_Ignore>
+      <Armor_Pierce>0.83</Armor_Pierce>
+      <Block_Ignore>0.27</Block_Ignore>
+      <Damage>90</Damage>
+      <Description>
+        This log has a very large and very sharp tooth protruding from the end.  What kind of creature has teeth like that?
+      </Description>
+      <Fatigue_Cost_Mod>1.20</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.85</Initiative_Reduce>
+      <Max_Durability>120</Max_Durability>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Shield_Damage>0.08</Shield_Damage>
+      <WeaponSkillEnum>Axe</WeaponSkillEnum>
+      <Sprites>52</Sprites>
+      <Stamina_Reduce>0.85</Stamina_Reduce>
+      <Value>700</Value>
+      <WeaponAbilitiesEnum>Chop</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Break_Shield</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Stun</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Scatter</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
     <Weapon name="Great Axe Choppa">
       <Tier>Five</Tier>
       <Accuracy>0.75</Accuracy>
@@ -239,6 +293,60 @@
       <Sprites>15</Sprites>
       <Stamina_Reduce>0.85</Stamina_Reduce>
       <Value>200</Value>
+      <WeaponAbilitiesEnum>Crush</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Break_Armor</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Break_Shield</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Stun</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Dino Warhammer">
+      <Tier>Three</Tier>
+      <Accuracy>0.68</Accuracy>
+      <AP_Reduce>0.78</AP_Reduce>
+      <Armor_Ignore>0.70</Armor_Ignore>
+      <Armor_Pierce>0.90</Armor_Pierce>
+      <Block_Ignore>0.35</Block_Ignore>
+      <Damage>60</Damage>
+      <Description>
+        This log has some strangely-heavy bones protruding from the end.
+      </Description>
+      <Fatigue_Cost_Mod>1.20</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.85</Initiative_Reduce>
+      <Max_Durability>85</Max_Durability>
+      <Parry_Mod>0.60</Parry_Mod>
+      <Shield_Damage>0.26</Shield_Damage>
+      <WeaponSkillEnum>Hammer</WeaponSkillEnum>
+      <Sprites>30</Sprites>
+      <Stamina_Reduce>0.85</Stamina_Reduce>
+      <Value>350</Value>
+      <WeaponAbilitiesEnum>Crush</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Break_Armor</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Break_Shield</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Stun</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Dino Warhammer">
+      <Tier>Two</Tier>
+      <Accuracy>0.70</Accuracy>
+      <AP_Reduce>0.80</AP_Reduce>
+      <Armor_Ignore>0.68</Armor_Ignore>
+      <Armor_Pierce>0.89</Armor_Pierce>
+      <Block_Ignore>0.37</Block_Ignore>
+      <Damage>72</Damage>
+      <Description>
+        This log has some strangely-heavy bones protruding from the end.
+      </Description>
+      <Fatigue_Cost_Mod>1.20</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.85</Initiative_Reduce>
+      <Max_Durability>115</Max_Durability>
+      <Parry_Mod>0.60</Parry_Mod>
+      <Shield_Damage>0.27</Shield_Damage>
+      <WeaponSkillEnum>Hammer</WeaponSkillEnum>
+      <Sprites>45</Sprites>
+      <Stamina_Reduce>0.85</Stamina_Reduce>
+      <Value>700</Value>
       <WeaponAbilitiesEnum>Crush</WeaponAbilitiesEnum>
       <WeaponAbilitiesEnum>Break_Armor</WeaponAbilitiesEnum>
       <WeaponAbilitiesEnum>Break_Shield</WeaponAbilitiesEnum>

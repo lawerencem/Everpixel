@@ -79,6 +79,7 @@ namespace Models.Equipment.XML
             switch(type)
             {
                 case (WeaponAbilitiesEnum.Aim): { WeaponAbilityTable.Instance.Table[type] = new Aim(); } break;
+                case (WeaponAbilitiesEnum.Bite): { WeaponAbilityTable.Instance.Table[type] = new Bite(); } break;
                 case (WeaponAbilitiesEnum.Break_Armor): { WeaponAbilityTable.Instance.Table[type] = new BreakArmor(); } break;
                 case (WeaponAbilitiesEnum.Break_Shield): { WeaponAbilityTable.Instance.Table[type] = new BreakShield(); } break;
                 case (WeaponAbilitiesEnum.Chop): { WeaponAbilityTable.Instance.Table[type] = new Chop(); } break;

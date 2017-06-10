@@ -48,8 +48,8 @@ namespace Model.Events.Combat
                         if (this.Source.Model.RWeapon != null)
                             fatigueCost *= this.Source.Model.RWeapon.FatigueCostMod;
 
-                        if (this.Action.APCost < this.Source.Model.CurrentAP &&
-                            fatigueCost < this.Source.Model.CurrentStamina)
+                        if (this.Action.APCost <= this.Source.Model.CurrentAP &&
+                            fatigueCost <= this.Source.Model.CurrentStamina)
                         {
                             this.Source.Model.CurrentAP -= this.Action.APCost;
                             this.Source.Model.CurrentStamina -= (int)fatigueCost;

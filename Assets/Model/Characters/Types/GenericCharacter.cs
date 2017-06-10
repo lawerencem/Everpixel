@@ -2,6 +2,7 @@
 using Characters.Params;
 using Controller.Characters;
 using Controller.Managers;
+using Model.Abilities;
 using Model.Classes;
 using Model.Events.Combat;
 using System.Collections.Generic;
@@ -15,17 +16,11 @@ namespace Model.Characters
         public GenericCharacter()
         {
             this.BaseClasses = new Dictionary<ClassEnum, GenericClass>();
+            this.DefaultWpnAbilities = new List<WeaponAbility>();
             this.PStatMods = new List<PrimaryStatModifier>();
             this.SStatMods = new List<SecondaryStatModifier>();
             this.IndefSStatMods = new List<Pair<object, List<IndefSecondaryStatModifier>>>();
             this.Injuries = new List<Model.Injuries.GenericInjury>();
-        }
-
-        public void AddStamina(double toAdd)
-        {
-            this.CurrentStamina += (int)toAdd;
-            if (this.CurrentStamina > this.GetCurrentStatValue(SecondaryStatsEnum.Stamina))
-                this.CurrentStamina = this.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
         }
 
         public void ModifyHP(int value, bool isHeal)
@@ -44,11 +39,6 @@ namespace Model.Characters
                     var killed = new CharacterKilledEvent(CombatEventManager.Instance, this.ParentController);
                 }
             }
-        }
-
-        public void RestoreStamina()
-        {
-            this.AddStamina(BASE_STAM_RESTORE);
         }
     }
 }

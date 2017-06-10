@@ -4,6 +4,7 @@
     {
         None,
         Aim,
+        Bite,
         Break_Armor,
         Break_Shield,
         Chop,

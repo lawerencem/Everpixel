@@ -73,6 +73,12 @@ namespace Model.Abilities
             this.TryApplyInjury(hit);
         }
 
+        public virtual void ProcessMelee(HitInfo hit, double baseDmg)
+        {
+            CombatReferee.Instance.ProcessMelee(hit, baseDmg);
+            this.TryApplyInjury(hit);
+        }
+
         protected virtual void TryApplyInjury(HitInfo hit)
         {
             if (!AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge) &&

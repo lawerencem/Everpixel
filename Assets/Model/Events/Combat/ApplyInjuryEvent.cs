@@ -13,10 +13,14 @@ namespace Model.Events.Combat
         public ApplyInjuryEvent(CombatEventManager parent, HitInfo hit, GenericInjury injury) :
             base(CombatEventEnum.ApplyInjury, parent)
         {
-            this.Injury = injury;
-            this.Target = hit.Target;
-            this.Target.Model.AddInjury(injury);
-            this.RegisterEvent();
+            var exists = hit.Target.Model.Injuries.Find(x => x.Type == injury.Type);
+            if (exists == null)
+            {
+                this.Injury = injury;
+                this.Target = hit.Target;
+                this.Target.Model.AddInjury(injury);
+                this.RegisterEvent();
+            }
         }
     }
 }
