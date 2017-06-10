@@ -72,9 +72,11 @@ namespace Model.Combat
 
         private void ProcessDamage(HitInfo hit)
         {
+            var dmgReduction = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Damage_Reduction);
+
             if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Head))
             {
-                double flatDmgNegate = 0;
+                double flatDmgNegate = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Damage_Ignore);
                 if (hit.Target.Model.Helm != null)
                     flatDmgNegate = hit.Target.Model.Helm.DamageIgnore;
                 if (hit.Source.Model.LWeapon != null)
@@ -87,7 +89,7 @@ namespace Model.Combat
                     dmgToApply = 0;
 
                 if (hit.Target.Model.Helm != null)
-                    dmgToApply *= hit.Target.Model.Helm.DamageReduction;
+                    dmgToApply *= (hit.Target.Model.Helm.DamageReduction * dmgReduction);
                 hit.Dmg = (int)dmgToApply;
             }
             else
@@ -103,7 +105,7 @@ namespace Model.Combat
                 double dmgToApply = (hit.Dmg - flatDmgNegate);
 
                 if (hit.Target.Model.Armor != null)
-                    dmgToApply *= hit.Target.Model.Armor.DamageReduction;
+                    dmgToApply *= (hit.Target.Model.Helm.DamageReduction * dmgReduction);
                 hit.Dmg = (int)dmgToApply;
             }
         }

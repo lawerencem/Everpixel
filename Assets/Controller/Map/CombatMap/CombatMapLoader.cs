@@ -29,7 +29,7 @@ namespace Controller.Managers.Map
         private const float WEAPON_OFFSET = 0.09f;
 
         private const int ROWS = 12;
-        private const int COLS = 8;
+        private const int COLS = 12;
         private const float OFFSET = 0.63f;
 
         private List<TileController> _emptyTiles = new List<TileController>();

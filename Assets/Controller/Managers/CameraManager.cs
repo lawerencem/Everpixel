@@ -4,25 +4,54 @@ namespace Assets.Controller.Managers
 {
     public class CameraManager : MonoBehaviour
     {
+        private const float AUTO_SCROLL_SENSITIVITY = 0.012f;
         private const float BOUNDARY = 30f;
         private const float SCROLL_SENSITIVITY = 0.1f;
+        private const float LERP_SPEED = 5.0f;
         private const float ZOOM_MAX = 90f;
         private const float ZOOM_MIN = 10f;
         private const float ZOOM_SENSITIVITY = 10f;
 
         private float _screenHeight;
         private float _screenWidth;
+        private bool _scroll = false;
+        private Vector3 _target;
 
-        private void Start()
+        public void InitScrollTo(Vector3 position)
+        {
+            this._scroll = true;
+            this._target = position;
+            this._target.z = Camera.main.transform.position.z;
+            var fov = Camera.main.fieldOfView;
+            this._target.y -= (fov * AUTO_SCROLL_SENSITIVITY);
+        }
+
+        public void Start()
         {
             this._screenHeight = Screen.height;
             this._screenWidth = Screen.width;
         }
 
-        void Update()
+        public void Update()
         {
-            this.HandleScroll();
+            if (!this._scroll)
+                this.HandleScroll();
+            else
+                this.ScrollToTarget();
             this.HandleZoom();
+        }
+
+        private void ScrollToTarget()
+        {
+            var fov = Camera.main.fieldOfView;
+            float move = LERP_SPEED * Time.deltaTime;
+            var newPosition = Vector3.Lerp(Camera.main.transform.position, this._target, move);
+            Camera.main.transform.position = newPosition;
+            if (Vector3.Distance(Camera.main.transform.position, this._target) <= (fov * AUTO_SCROLL_SENSITIVITY * 0.075))
+            {
+                Camera.main.transform.position = this._target;
+                this._scroll = false;
+            }
         }
 
         private void HandleScroll()

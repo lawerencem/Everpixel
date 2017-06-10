@@ -97,6 +97,7 @@
       <Class>Warrior,1</Class>
       <FlinchSpriteIndex>16</FlinchSpriteIndex>
       <Perks>
+        <Perk>Scaly</Perk>
         <Perk>T_Rex_Bite</Perk>
       </Perks>
       <Stats>

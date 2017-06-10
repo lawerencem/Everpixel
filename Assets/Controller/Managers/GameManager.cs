@@ -7,7 +7,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private GameObject _cameraManager;
     private CombatMapLoader _combatMapManager;
     private LoaderManager _loader;
 
@@ -35,9 +34,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void InitManagers()
-    {
-        this._cameraManager = new GameObject();
-        this._cameraManager.AddComponent<CameraManager>();
+    {   
         this._combatMapManager = new CombatMapLoader();
         this._loader = LoaderManager.Instance;
 

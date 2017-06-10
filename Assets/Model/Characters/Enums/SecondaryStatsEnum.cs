@@ -8,6 +8,8 @@
         Concentration,
         Critical_Chance,
         Critical_Multiplier,
+        Damage_Ignore,
+        Damage_Reduction,
         Dodge,
         Fortitude,
         HP,

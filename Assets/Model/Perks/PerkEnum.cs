@@ -4,6 +4,9 @@
     {
         None,
         Colossus,
+        Hulk,
+        Iron_Hide,
+        Scaly,
         Weightlifter,
         T_Rex_Bite,
     }

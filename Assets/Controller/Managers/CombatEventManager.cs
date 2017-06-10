@@ -23,6 +23,7 @@ namespace Controller.Managers
         private bool _guiLock = false;
         private bool _interactionLock = false;
 
+        private GameObject _cameraManager;
         private CombatManager _combatManager;
         private List<CombatEvent> _events;
         private CMapGUIController _mapGUIController;
@@ -31,6 +32,8 @@ namespace Controller.Managers
         {
             this._events = new List<CombatEvent>();
             this._mapGUIController = new CMapGUIController();
+            this._cameraManager = new GameObject();
+            this._cameraManager.AddComponent<CameraManager>();
         }
 
         private static CombatEventManager _instance;
@@ -208,6 +211,8 @@ namespace Controller.Managers
             this._mapGUIController.SetActingBoxToController(e.Controller);
             var bob = e.Controller.Handle.AddComponent<BobbingScript>();
             bob.Init(PER_FRAME, PER_FRAME_DIST, e.Controller.Handle);
+            var script = this._cameraManager.GetComponent<CameraManager>();
+            script.InitScrollTo(e.Controller.Handle.transform.position);
         }
 
         private void HandleTileDoubleClickEvent(TileDoubleClickEvent e)

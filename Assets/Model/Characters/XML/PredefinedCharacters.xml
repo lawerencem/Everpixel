@@ -6,6 +6,11 @@
       <Class>Dino_Knight,4</Class>
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Lizardman</RaceEnum>
+      <Perks>
+        <Perk>Hulk</Perk>
+        <Perk>Iron_Hide</Perk>
+        <Perk>Scaly</Perk>
+      </Perks>
       <PotentialArmors>
         <Armors name="One">
           <Armor>0.75,Dino Scale Armor,Four</Armor>
@@ -34,6 +39,11 @@
       <Class>Dino_Knight,1</Class>
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Lizardman</RaceEnum>
+      <Perks>
+        <Perk>Hulk</Perk>
+        <Perk>Iron_Hide</Perk>
+        <Perk>Scaly</Perk>
+      </Perks>
       <PotentialArmors>
         <Armors name="One">
           <Armor>0.75,Dino Scale Armor,Five</Armor>
@@ -61,6 +71,9 @@
       <Class>Warrior,1</Class>
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Lizardman</RaceEnum>
+      <Perks>
+        <Perk>Scaly</Perk>
+      </Perks>
       <PotentialArmors>
       </PotentialArmors>
       <PotentialWeapons>
@@ -87,6 +100,9 @@
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Lizardman</RaceEnum>
       <Mount>Raptard</Mount>
+      <Perks>
+        <Perk>Scaly</Perk>
+      </Perks>
       <PotentialArmors>
       </PotentialArmors>
       <PotentialWeapons>
@@ -113,6 +129,11 @@
       <Class>Dino_Knight,7</Class>
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Lizardman</RaceEnum>
+      <Perks>
+        <Perk>Hulk</Perk>
+        <Perk>Iron_Hide</Perk>
+        <Perk>Scaly</Perk>
+      </Perks>
       <PotentialArmors>
         <Armors name="One">
           <Armor>0.75,Dino Scale Armor,Three</Armor>
@@ -905,6 +926,7 @@
       <RaceEnum>Orc</RaceEnum>
       <Mount>Dire_Ween</Mount>
       <Perks>
+        <Perk>Hulk</Perk>
         <Perk>Colossus</Perk>
         <Perk>Weightlifter</Perk>
       </Perks>
@@ -1012,6 +1034,7 @@
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Orc</RaceEnum>
       <Perks>
+        <Perk>Hulk</Perk>
         <Perk>Colossus</Perk>
         <Perk>Weightlifter</Perk>
       </Perks>
@@ -1047,6 +1070,7 @@
       <RaceEnum>Orc</RaceEnum>
       <Mount>War_Ween</Mount>
       <Perks>
+        <Perk>Hulk</Perk>
         <Perk>Colossus</Perk>
         <Perk>Weightlifter</Perk>
       </Perks>
@@ -1086,6 +1110,7 @@
       <RaceEnum>Orc</RaceEnum>
       <Mount>Ween</Mount>
       <Perks>
+        <Perk>Hulk</Perk>
         <Perk>Colossus</Perk>
         <Perk>Weightlifter</Perk>
       </Perks>
@@ -1113,6 +1138,9 @@
       <Class>Berserker,1</Class>
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Orc</RaceEnum>
+      <Perks>
+          <Perk>Hulk</Perk>
+      </Perks>
       <PotentialWeapons>
         <RWeapons name="One">
           <RWeapon>0.50,Great Axe Choppa,Four</RWeapon>

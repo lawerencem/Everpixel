@@ -7,6 +7,8 @@
         public double Concentration { get; set; }
         public double CriticalChance { get; set; }
         public double CriticalMultiplier { get; set; }
+        public double DamageIgnore { get; set; }
+        public double DamageReduce { get; set; }
         public double DodgeSkill { get; set; }
         public double Fortitude { get; set; }
         public double Initiative { get; set; }
@@ -30,6 +32,8 @@
             this.Concentration = SecondaryStatReferee.DetermineConcentration(p);
             this.CriticalChance = SecondaryStatReferee.DetermineCriticalChance(p);
             this.CriticalMultiplier = SecondaryStatReferee.DetermineCriticalMultiplier(p);
+            this.DamageIgnore = 0;
+            this.DamageReduce = 0;
             this.DodgeSkill = SecondaryStatReferee.DetermineDodge(p);
             this.Fortitude = SecondaryStatReferee.DetermineFortitude(p);
             this.Initiative = SecondaryStatReferee.DetermineInitiative(p);

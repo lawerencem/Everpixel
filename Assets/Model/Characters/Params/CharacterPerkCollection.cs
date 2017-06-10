@@ -12,11 +12,13 @@ namespace Model.Characters
     {
         public List<GenericAbilityModPerk> AbilityModPerks;
         public List<GenericEquipmentSStatPerk> EquipmentSStatPerks;
+        public List<GenericSStadModPerk> SStatModPerks;
 
         public CharacterPerkCollection()
         {
             this.AbilityModPerks = new List<GenericAbilityModPerk>();
             this.EquipmentSStatPerks = new List<GenericEquipmentSStatPerk>();
+            this.SStatModPerks = new List<GenericSStadModPerk>();
         }
     }
 }

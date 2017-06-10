@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.1f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -268,11 +270,15 @@
     <Compile Include="Assets\Model\Perks\AbstractPerk.cs" />
     <Compile Include="Assets\Model\Perks\EquipmentPerks\Colossus.cs" />
     <Compile Include="Assets\Model\Perks\EquipmentPerks\GenericEquipmentSStatPerk.cs" />
+    <Compile Include="Assets\Model\Perks\EquipmentPerks\Hulk.cs" />
     <Compile Include="Assets\Model\Perks\EquipmentPerks\Weightlifter.cs" />
     <Compile Include="Assets\Model\Perks\GenericPerk.cs" />
     <Compile Include="Assets\Model\Perks\PerkEnum.cs" />
     <Compile Include="Assets\Model\Perks\PerkMediator.cs" />
-    <Compile Include="Assets\Model\Perks\PerkTable.cs" />
+    <Compile Include="Assets\Model\Perks\PerkFactory.cs" />
+    <Compile Include="Assets\Model\Perks\SStatModPerks\GenericSStatModPerk.cs" />
+    <Compile Include="Assets\Model\Perks\SStatModPerks\IronHide.cs" />
+    <Compile Include="Assets\Model\Perks\SStatModPerks\Scaly.cs" />
     <Compile Include="Assets\Model\Slot\AbstractSlot.cs" />
     <Compile Include="Assets\Model\Slot\GenericSlot.cs" />
     <Compile Include="Assets\Model\Slot\SlotEnum.cs" />

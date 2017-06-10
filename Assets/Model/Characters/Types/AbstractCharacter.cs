@@ -182,6 +182,8 @@ namespace Model.Characters
                 case (SecondaryStatsEnum.Concentration): { v = (double)this.SecondaryStats.Concentration; } break;
                 case (SecondaryStatsEnum.Critical_Chance): { v = (double)this.SecondaryStats.CriticalChance; } break;
                 case (SecondaryStatsEnum.Critical_Multiplier): { v = (double)this.SecondaryStats.CriticalMultiplier; } break;
+                case (SecondaryStatsEnum.Damage_Ignore): { v = (double)this.SecondaryStats.DamageIgnore; } break;
+                case (SecondaryStatsEnum.Damage_Reduction): { v = (double)this.SecondaryStats.DamageReduce; } break;
                 case (SecondaryStatsEnum.Dodge): { v = (double)this.SecondaryStats.DodgeSkill; } break;
                 case (SecondaryStatsEnum.Fortitude): { v = (double)this.SecondaryStats.Fortitude; } break;
                 case (SecondaryStatsEnum.HP): { v = (double)this.SecondaryStats.MaxHP; } break;
@@ -203,6 +205,8 @@ namespace Model.Characters
                     mod.TryScaleValue(stat, ref v);
             foreach (var injury in this.Injuries)
                 injury.TryScaleStat(stat, ref v);
+            foreach (var perk in this.Perks.SStatModPerks)
+                perk.TryModSStat(stat, ref v);
             return (int)v;
         }
 
