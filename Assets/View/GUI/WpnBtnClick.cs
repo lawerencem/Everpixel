@@ -1,16 +1,23 @@
-﻿using Controller.Managers;
+﻿using System;
+using Controller.Managers;
 using Model.Abilities;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using View.Events;
 
 namespace View.GUI
 {
-    public class WpnBtnClick : MonoBehaviour
+    public class WpnBtnClick : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         private WeaponAbilitiesEnum _ability;
         private bool _rWeapon;
         private GameObject _imgHandler;
+
+        private void OnClick()
+        {
+            var e = new WpnBtnClickEvent(GUIEventManager.Instance, this._ability, this._rWeapon);
+        }
 
         public void Init(string tag)
         {
@@ -21,12 +28,12 @@ namespace View.GUI
             var img = this._imgHandler.AddComponent<Image>();
         }
 
-        public void OnMouseOver()
+        public void OnPointerEnter(PointerEventData eventData)
         {
             CombatEventManager.Instance.LockGUI();
         }
 
-        public void OnMouseExit()
+        public void OnPointerExit(PointerEventData eventData)
         {
             CombatEventManager.Instance.UnlockGUI();
         }
@@ -44,12 +51,5 @@ namespace View.GUI
             img.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
             img.transform.position = btn.transform.position;
         }
-
-        private void OnClick()
-        {
-            var e = new WpnBtnClickEvent(GUIEventManager.Instance, this._ability, this._rWeapon);
-        }
-
-
     }
 }

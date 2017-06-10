@@ -75,7 +75,7 @@ namespace Controller.Managers.Map
             position.y += yOffset;
             text.alignment = TextAnchor.MiddleCenter;
             text.color = color;
-            text.fontSize = 20;
+            text.fontSize = 16;
             text.rectTransform.position = position;
             text.rectTransform.SetParent(canvas.transform);
             text.rectTransform.localScale = new Vector3(0.3f, 0.3f, 0.3f);

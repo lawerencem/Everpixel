@@ -77,7 +77,7 @@ namespace Controller.Map
             }
         }
 
-        public void OnMouseOver()
+        public void OnMouseEnter()
         {
             var hover = new TileHoverDecoEvent(CombatEventManager.Instance, this);
         }

@@ -83,6 +83,8 @@ namespace Model.Combat
                     flatDmgNegate *= hit.Source.Model.RWeapon.ArmorPierce;
 
                 double dmgToApply = (hit.Dmg - flatDmgNegate);
+                if (dmgToApply < 0)
+                    dmgToApply = 0;
 
                 if (hit.Target.Model.Helm != null)
                     dmgToApply *= hit.Target.Model.Helm.DamageReduction;

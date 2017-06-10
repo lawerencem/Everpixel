@@ -1,12 +1,18 @@
 ﻿using Controller.Managers;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using View.Events;
 
 namespace View.GUI
 {
-    public class EndTurnBtnClick : MonoBehaviour
+    public class EndTurnBtnClick : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
+        private void OnClick()
+        {
+            var e = new GUIEndTurnEvent(GUIEventManager.Instance);
+        }
+
         public void Start()
         {
             var btnContainer = GameObject.FindGameObjectWithTag("EndTurnBtnTag");
@@ -14,19 +20,14 @@ namespace View.GUI
             btn.onClick.AddListener(this.OnClick);
         }
 
-        public void OnMouseOver()
+        public void OnPointerEnter(PointerEventData eventData)
         {
             CombatEventManager.Instance.LockGUI();
         }
 
-        public void OnMouseExit()
+        public void OnPointerExit(PointerEventData eventData)
         {
             CombatEventManager.Instance.UnlockGUI();
-        }
-
-        private void OnClick()
-        {
-            var e = new GUIEndTurnEvent(GUIEventManager.Instance);
         }
     }
 }
