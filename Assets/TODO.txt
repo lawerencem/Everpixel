@@ -9,8 +9,8 @@
 Long Term: 
 	Replace eyes with dead eyes when killed
 	Zone of Control
+	Ranged attacks
+	GUI for prediction
 
 Bugs:
 can target killed characters?
-Blocked damage shows -10?
-Traversal still sometimes takes too much?

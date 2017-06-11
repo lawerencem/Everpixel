@@ -15,6 +15,15 @@
     <Difficulty>2</Difficulty>
     <Character>1,Raptard Rider,One</Character>
   </SubParty>
+  <SubParty Name ="Dino Healers">
+    <Difficulty>2</Difficulty>
+    <Character>1,Curizard,Three</Character>
+  </SubParty>
+  <SubParty Name ="Dino Healers">
+    <Difficulty>3</Difficulty>
+    <Character>1,Curizard,Three</Character>
+    <Character>1,Beardedino,Three</Character>
+  </SubParty>
   <SubParty Name ="Dino Knights">
     <Difficulty>3</Difficulty>
     <Character>1,Dino Squire,One</Character>
@@ -29,6 +38,11 @@
     <Difficulty>6</Difficulty>
     <Character>1,Dino Knight,One</Character>
     <Character>1,Veteran Dino Knight,One</Character>
+  </SubParty>
+  <SubParty Name ="Dino Mages">
+    <Difficulty>4</Difficulty>
+    <Character>1,Solizard,Two</Character>
+    <Character>1,Rawrasaur,Two</Character>
   </SubParty>
   <SubParty Name ="Gobbo Spider Riders">
     <Difficulty>2</Difficulty>
@@ -126,13 +140,36 @@
     <Character>1,Orc Scavenger,One</Character>
     <Character>1,Orc Scavenger,One</Character>
   </SubParty>
+  <SubParty Name ="Raptors">
+    <Difficulty>3</Difficulty>
+    <Character>1,Raptard,One</Character>
+    <Character>1,Raptard,One</Character>
+  </SubParty>
+  <SubParty Name ="Raptors">
+    <Difficulty>5</Difficulty>
+    <Character>1,Raptard,One</Character>
+    <Character>1,Raptard,One</Character>
+    <Character>1,Denture,One</Character>
+  </SubParty>
   <SubParty Name ="Rexes">
     <Difficulty>3</Difficulty>
     <Character>1,Tearex,Two</Character>
     <Character>1,Thairex,One</Character>
   </SubParty>
   <SubParty Name ="Rexes">
+    <Difficulty>4</Difficulty>
+    <Character>1,Arms,Two</Character>
+    <Character>1,Arms,One</Character>
+  </SubParty>
+  <SubParty Name ="Rexes">
     <Difficulty>7</Difficulty>
+    <Character>1,Tyrantaur,One</Character>
+    <Character>1,Tearex,Two</Character>
+    <Character>1,Thairex,One</Character>
+  </SubParty>
+  <SubParty Name ="Rexes">
+    <Difficulty>9</Difficulty>
+    <Character>1,Arms,One</Character>
     <Character>1,Tyrantaur,One</Character>
     <Character>1,Tearex,Two</Character>
     <Character>1,Thairex,One</Character>

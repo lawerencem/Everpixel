@@ -18,7 +18,7 @@ namespace Model.Map
         public Vector3 Center { get; set; }
         public int Col { get; set; }
         public int Cost { get; set; }
-        public Object Current { get; set; }
+        public object Current { get; set; }
         public int Height { get; set; }
         public TileController Parent { get; set; }
         public int Row { get; set; }

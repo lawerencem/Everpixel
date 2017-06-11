@@ -6,14 +6,14 @@ using Model.Equipment;
 
 namespace Model.Perks
 {
-    public class TRexBite : GenericAbilityModPerk
+    public class DinoBite : GenericAbilityModPerk
     {
-        public TRexBite() : base(PerkEnum.T_Rex_Bite) { }
+        public DinoBite() : base(PerkEnum.Dino_Bite) { }
 
         public override void TryModAbility(GenericAbility ability)
         {
             base.TryModAbility(ability);
-            ability.ModData.BaseDamage += 100;
+            ability.ModData.BaseDamage += 50;
         }
     }
 }

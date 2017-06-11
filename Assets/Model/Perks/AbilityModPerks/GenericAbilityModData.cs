@@ -8,5 +8,10 @@
         {
             this.BaseDamage = 0;
         }
+
+        public void Reset()
+        {
+            this.BaseDamage = 0;
+        }
     }
 }

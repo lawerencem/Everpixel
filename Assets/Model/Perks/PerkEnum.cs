@@ -4,6 +4,7 @@
     {
         None,
         Colossus,
+        Dino_Bite,
         Hulk,
         Iron_Hide,
         Scaly,

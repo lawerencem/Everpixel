@@ -186,6 +186,7 @@ namespace Controller.Managers
                 this._mapGUIController.ClearDecoratedTiles();
                 this._mapGUIController.SetActingBoxToController(e.Source);
                 this.UnlockInteraction();
+                e.Action.ModData.Reset();
             }
         }
 

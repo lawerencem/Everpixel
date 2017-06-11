@@ -264,6 +264,7 @@
     <Compile Include="Assets\Model\Parties\XML\PartiesReader.cs" />
     <Compile Include="Assets\Model\Parties\XML\SubPartiesReader.cs" />
     <Compile Include="Assets\Model\Parties\XML\SubPartiesXMLIndexes.cs" />
+    <Compile Include="Assets\Model\Perks\AbilityModPerks\DinoBite.cs" />
     <Compile Include="Assets\Model\Perks\AbilityModPerks\GenericAbilityModData.cs" />
     <Compile Include="Assets\Model\Perks\AbilityModPerks\GenericAbilityModPerk.cs" />
     <Compile Include="Assets\Model\Perks\AbilityModPerks\TRexBite.cs" />

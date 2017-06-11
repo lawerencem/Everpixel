@@ -33,7 +33,7 @@
             this.CriticalChance = SecondaryStatReferee.DetermineCriticalChance(p);
             this.CriticalMultiplier = SecondaryStatReferee.DetermineCriticalMultiplier(p);
             this.DamageIgnore = 0;
-            this.DamageReduce = 0;
+            this.DamageReduce = 1;
             this.DodgeSkill = SecondaryStatReferee.DetermineDodge(p);
             this.Fortitude = SecondaryStatReferee.DetermineFortitude(p);
             this.Initiative = SecondaryStatReferee.DetermineInitiative(p);

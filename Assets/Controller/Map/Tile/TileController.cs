@@ -1,5 +1,7 @@
-﻿using Controller.Managers;
+﻿using Controller.Characters;
+using Controller.Managers;
 using Generics.Hex;
+using Model.Characters;
 using Model.Events.Combat;
 using Model.Map;
 using System;
@@ -7,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using UnityEngine.UI;
 using View.Events;
 using View.Map;
 
@@ -14,11 +17,15 @@ namespace Controller.Map
 {
     public class TileController : MonoBehaviour
     {
+        private const string MODAL = "ModalTag";
+        private const string MODAL_HEADER = "ModalHeaderTag";
+
+        private const float OFF_SCREEN = -50f;
+
         private BoxCollider2D _collider;
         private bool _doubleClick = false;
         private double _clickDelta = 0.5;
         private DateTime _clickTime;
-        
 
         public List<TileController> Adjacent { get; set; }
         public TileControllerFlags Flags { get; set; }
@@ -80,6 +87,25 @@ namespace Controller.Map
         public void OnMouseEnter()
         {
             var hover = new TileHoverDecoEvent(CombatEventManager.Instance, this);
+            if (this.Model.Current != null && this.Model.Current.GetType() == typeof(GenericCharacterController))
+            {
+                var modal = GameObject.FindGameObjectWithTag(MODAL);
+                var modalText = GameObject.FindGameObjectWithTag(MODAL_HEADER);
+                var text = modalText.GetComponent<Text>();
+                var character = this.Model.Current as GenericCharacterController;
+                text.text = character.View.Name;
+                var position = character.Handle.transform.position;
+                position.x += 0.5f;
+                position.y += 0.5f;
+                modal.transform.position = position;
+            }
+        }
+
+        public void OnMouseExit()
+        {
+            var modal = GameObject.FindGameObjectWithTag(MODAL);
+            var position = new Vector3(OFF_SCREEN, OFF_SCREEN, 0);
+            modal.transform.position = position;
         }
 
         public void SetModel(HexTile t)

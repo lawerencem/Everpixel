@@ -11,6 +11,7 @@ namespace Model.Perks
             switch(toCreate)
             {
                 case (PerkEnum.Colossus): { return new Colossus(); }
+                case (PerkEnum.Dino_Bite): { return new DinoBite(); }
                 case (PerkEnum.Hulk): { return new Hulk(); }
                 case (PerkEnum.Iron_Hide): { return new IronHide(); }
                 case (PerkEnum.Scaly): { return new Scaly(); }
