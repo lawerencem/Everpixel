@@ -7,7 +7,7 @@ namespace Model.Perks
 {
     public class Weightlifter : GenericEquipmentSStatPerk
     {
-        protected const double VALUE = 1.25;
+        protected const double VALUE = 1.15;
 
         public Weightlifter() : base(PerkEnum.Weightlifter) { }
 

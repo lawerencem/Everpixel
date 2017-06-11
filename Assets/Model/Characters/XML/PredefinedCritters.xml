@@ -204,7 +204,7 @@
       </Stats>
     </Character>
     <Character name ="Thairex">
-      <AttackSpriteIndex>24</AttackSpriteIndex>
+      <AttackSpriteIndex>1</AttackSpriteIndex>
       <Class>Warrior,1</Class>
       <FlinchSpriteIndex>13</FlinchSpriteIndex>
       <Perks>
@@ -232,9 +232,9 @@
       </Perks>
       <Stats>
         <Agility>400</Agility>
-        <Constitution>680</Constitution>
+        <Constitution>820</Constitution>
         <Intelligence>320</Intelligence>
-        <Might>800</Might>
+        <Might>850</Might>
         <Perception>350</Perception>
         <Resolve>650</Resolve>
       </Stats>

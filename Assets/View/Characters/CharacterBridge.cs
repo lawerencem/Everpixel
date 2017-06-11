@@ -8,10 +8,10 @@ namespace View.Characters
 {
     public class CharacterBridge : AbstractSingleton<CharacterBridge>
     {
-        public readonly List<int> HumanoidFaceIndexes = new List<int>() { 8 };
-        public readonly List<int> HumanoidDeco1Indexes = new List<int>() { 16, 17, 18, 19 };
-        public readonly List<int> HumanoidDeco2Indexes = new List<int>() { 24, 25, 26, 27 };
-        public readonly List<int> HumanoidDeco3Indexes = new List<int>() { 32, 33, 34, 35 };
+        public readonly List<int> HumanoidFaceIndexes = new List<int>() { 3 };
+        public readonly List<int> HumanoidDeco1Indexes = new List<int>() { 5, 6, 7, 14 };
+        public readonly List<int> HumanoidDeco2Indexes = new List<int>() { 8, 9, 10, 14 };
+        public readonly List<int> HumanoidDeco3Indexes = new List<int>() { 11, 12, 13, 14};
         public readonly List<int> HumanoidTorsoIndexes = new List<int>() { 0, 1, 2 };
 
         public CharacterBridge() { }

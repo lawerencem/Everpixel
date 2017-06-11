@@ -1,5 +1,6 @@
 ﻿using Controller.Characters;
 using Controller.Managers;
+using Controller.Managers.Map;
 using Generics.Hex;
 using Model.Characters;
 using Model.Events.Combat;
@@ -11,17 +12,13 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 using View.Events;
+using View.GUI;
 using View.Map;
 
 namespace Controller.Map
 {
     public class TileController : MonoBehaviour
     {
-        private const string MODAL = "ModalTag";
-        private const string MODAL_HEADER = "ModalHeaderTag";
-
-        private const float OFF_SCREEN = -50f;
-
         private BoxCollider2D _collider;
         private bool _doubleClick = false;
         private double _clickDelta = 0.5;
@@ -38,11 +35,6 @@ namespace Controller.Map
             this.Adjacent = new List<TileController>();
             this.Flags = new TileControllerFlags();
             this.Model = new HexTile();
-        }
-
-        public void Start()
-        {
-
         }
 
         public void Update()
@@ -89,23 +81,21 @@ namespace Controller.Map
             var hover = new TileHoverDecoEvent(CombatEventManager.Instance, this);
             if (this.Model.Current != null && this.Model.Current.GetType() == typeof(GenericCharacterController))
             {
-                var modal = GameObject.FindGameObjectWithTag(MODAL);
-                var modalText = GameObject.FindGameObjectWithTag(MODAL_HEADER);
-                var text = modalText.GetComponent<Text>();
+                var fov = Camera.main.fieldOfView;
                 var character = this.Model.Current as GenericCharacterController;
-                text.text = character.View.Name;
                 var position = character.Handle.transform.position;
-                position.x += 0.5f;
-                position.y += 0.5f;
-                modal.transform.position = position;
+                position.x += (float)(fov * 0.025);
+                position.y += (float)(fov * 0.025);
+                CMapGUIController.Instance.SetModalHeaderText(character.View.Name);
+                CMapGUIController.Instance.SetModalLocation(position);
+                var controller = this.Model.Current as GenericCharacterController;
+                CMapGUIController.Instance.SetModalStatValues(controller.Model);
             }
         }
 
         public void OnMouseExit()
         {
-            var modal = GameObject.FindGameObjectWithTag(MODAL);
-            var position = new Vector3(OFF_SCREEN, OFF_SCREEN, 0);
-            modal.transform.position = position;
+            CMapGUIController.Instance.SetModalInactive();
         }
 
         public void SetModel(HexTile t)

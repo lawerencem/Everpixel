@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using View.Biomes;
+using View.GUI;
 
 namespace Controller.Managers.Map
 {
@@ -16,7 +17,25 @@ namespace Controller.Managers.Map
         private GameObject _singleTile;
 
         private CMapGUIControllerHit _hitHelper = new CMapGUIControllerHit();
+        private HoverModal _modal;
         private CMapGUIControllerParticle _particleHelper = new CMapGUIControllerParticle();
+
+        private static CMapGUIController _instance;
+        public static CMapGUIController Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new CMapGUIController();
+                return _instance;
+            }
+        }
+
+        public CMapGUIController()
+        {
+            this._modal = new HoverModal();
+            this._modal.Init();
+        }
 
         public void ApplyInjuryGraphics(ApplyInjuryEvent e)
         {
@@ -109,6 +128,31 @@ namespace Controller.Managers.Map
                 this.SetTagText(CMapGUIControllerParams.R_WEAP, c.Model.RWeapon.Name);
             else
                 this.SetTagText(CMapGUIControllerParams.R_WEAP, "");
+        }
+
+        public void SetModalActive()
+        {
+            this._modal.SetModalActive();
+        }
+
+        public void SetModalInactive()
+        {
+            this._modal.SetModalInactive();
+        }
+
+        public void SetModalHeaderText(string toSet)
+        {
+            this._modal.SetModalHeaderText(toSet);
+        }
+
+        public void SetModalLocation(Vector3 pos)
+        {
+            this._modal.SetModalLocation(pos);
+        }
+
+        public void SetModalStatValues(GenericCharacter c)
+        {
+            this._modal.SetModalStatValues(c);
         }
 
         private void DecorateFamilyOfTiles(TileController tile, Sprite deco)

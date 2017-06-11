@@ -26,12 +26,10 @@ namespace Controller.Managers
         private GameObject _cameraManager;
         private CombatManager _combatManager;
         private List<CombatEvent> _events;
-        private CMapGUIController _mapGUIController;
 
         public CombatEventManager()
         {
             this._events = new List<CombatEvent>();
-            this._mapGUIController = new CMapGUIController();
             this._cameraManager = new GameObject();
             this._cameraManager.AddComponent<CameraManager>();
         }
@@ -105,14 +103,14 @@ namespace Controller.Managers
         private void HandleApplyInjuryEvent(ApplyInjuryEvent e)
         {
             this._events.Remove(e);
-            this._mapGUIController.ApplyInjuryGraphics(e);
+            CMapGUIController.Instance.ApplyInjuryGraphics(e);
         }
 
         private void HandleAttackSelectedEvent(AttackSelectedEvent e)
         {
             this._events.Remove(e);
             var potentialTiles = this._combatManager.GetAttackTiles(e);
-            this._mapGUIController.DecoratePotentialAttackTiles(potentialTiles);
+            CMapGUIController.Instance.DecoratePotentialAttackTiles(potentialTiles);
             var ability = GenericAbilityTable.Instance.Table[e.Type];
             this._combatManager.CurAbility = ability;
         }
@@ -120,7 +118,7 @@ namespace Controller.Managers
         private void HandleCharacterKilledEvent(CharacterKilledEvent e)
         {
             this._events.Remove(e);
-            this._mapGUIController.ProcessCharacterKilled(e);
+            CMapGUIController.Instance.ProcessCharacterKilled(e);
             this._combatManager.ProcessCharacterKilled(e.Killed);
         }
 
@@ -132,13 +130,13 @@ namespace Controller.Managers
         private void HandleDisplayHitStatsEvent(DisplayHitStatsEvent e)
         {
             this._events.Remove(e);
-            this._mapGUIController.DisplayHitStatsEvent(e);
+            CMapGUIController.Instance.DisplayHitStatsEvent(e);
         }
 
         private void HandleEndTurnEvent(EndTurnEvent e)
         {
             this._events.Remove(e);
-            this._mapGUIController.ClearDecoratedTiles();
+            CMapGUIController.Instance.ClearDecoratedTiles();
             var cur = this._combatManager.CurrActing.Handle;
             var bob = cur.GetComponent<BobbingScript>();
             if (bob != null) { bob.Reset(); }
@@ -161,7 +159,7 @@ namespace Controller.Managers
             {
                 if (e.Character.Model.CurrentAP > 0)
                 {
-                    this._mapGUIController.SetActingBoxToController(e.Character);
+                    CMapGUIController.Instance.SetActingBoxToController(e.Character);
                     var bob = e.Character.Handle.AddComponent<BobbingScript>();
                     bob.Init(PER_FRAME, PER_FRAME_DIST, e.Character.Handle);
                 }
@@ -169,7 +167,7 @@ namespace Controller.Managers
                 {
                     var end = new EndTurnEvent(this);
                 }
-                this._mapGUIController.ClearDecoratedTiles();
+                CMapGUIController.Instance.ClearDecoratedTiles();
                 this._events.RemoveAll(x => x.Type == CombatEventEnum.ShowPotentialPath);
             }
         }
@@ -183,8 +181,8 @@ namespace Controller.Managers
                 e.Action.ProcessAbility(hit);
                 this._combatManager.CurAbility = null;
                 TileControllerFlags.SetPotentialAttackFlagFalse(e.Target.CurrentTile.Flags);
-                this._mapGUIController.ClearDecoratedTiles();
-                this._mapGUIController.SetActingBoxToController(e.Source);
+                CMapGUIController.Instance.ClearDecoratedTiles();
+                CMapGUIController.Instance.SetActingBoxToController(e.Source);
                 this.UnlockInteraction();
                 e.Action.ModData.Reset();
             }
@@ -194,7 +192,7 @@ namespace Controller.Managers
         {
             this._events.Remove(e);
             var path = this._combatManager.GetPathTileControllers(e);
-            this._mapGUIController.DecoratePath(path);
+            CMapGUIController.Instance.DecoratePath(path);
         }
 
         private void HandleMapDoneLoadingEvent(MapDoneLoadingEvent e)
@@ -209,7 +207,7 @@ namespace Controller.Managers
         {
             this._events.Remove(e);
             this._combatManager.CurrActing = e.Controller;
-            this._mapGUIController.SetActingBoxToController(e.Controller);
+            CMapGUIController.Instance.SetActingBoxToController(e.Controller);
             var bob = e.Controller.Handle.AddComponent<BobbingScript>();
             bob.Init(PER_FRAME, PER_FRAME_DIST, e.Controller.Handle);
             var script = this._cameraManager.GetComponent<CameraManager>();
@@ -221,7 +219,7 @@ namespace Controller.Managers
             this._events.Remove(e);
             var pathEvent = new ShowPotentialPathEvent(this._combatManager.CurrActing, e.Tile, this);
             var pathTileControllers = this._combatManager.GetPathTileControllers(pathEvent);
-            this._mapGUIController.DecoratePath(pathTileControllers);
+            CMapGUIController.Instance.DecoratePath(pathTileControllers);
             var path = this._combatManager.GetPath(this._combatManager.CurrActing.CurrentTile, e.Tile);
             var traversePathEvent = new TraversePathEvent(this, this._combatManager.CurrActing, path);
         }
@@ -229,7 +227,7 @@ namespace Controller.Managers
         private void HandleTileHoverDecoEvent(TileHoverDecoEvent e)
         {
             this._events.Remove(e);
-            this._mapGUIController.DecorateHover(e.Tile);
+            CMapGUIController.Instance.DecorateHover(e.Tile);
         }
 
         private void HandleTraversePathEvent(TraversePathEvent e)
@@ -246,7 +244,7 @@ namespace Controller.Managers
             this._events.Remove(e);
             var script = e.Character.Handle.AddComponent<TileMoveScript>();
             script.Init(e.Character, e.Path, e.Source, e.Next);
-            this._mapGUIController.SetActingBoxToController(e.Character);
+            CMapGUIController.Instance.SetActingBoxToController(e.Character);
         }
 
         private void PopulateBtnsHelper()

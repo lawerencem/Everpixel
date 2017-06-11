@@ -7,7 +7,7 @@ namespace Model.Perks
 {
     public class Colossus : GenericEquipmentSStatPerk
     {
-        protected const double VALUE = 1.25;
+        protected const double VALUE = 1.15;
 
         public Colossus() : base(PerkEnum.Colossus) { }
 

@@ -841,6 +841,86 @@
       <Stamina_Reduce>1.0</Stamina_Reduce>
       <Value>800</Value>
     </Armor>
+    <Armor name="Dino Scale Helm">
+      <Tier>Five</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <ArmorSkillEnum>Scale</ArmorSkillEnum>
+      <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>2</Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        This cap is missing some scales and doesn't look to offer much protection...
+      </Description>
+      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Durability>5</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1.0</Initiative_Reduce>
+      <Parry_Reduce>1.0</Parry_Reduce>
+      <Sprites>20</Sprites>
+      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Value>50</Value>
+    </Armor>
+    <Armor name="Dino Scale Helm">
+      <Tier>Four</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <ArmorSkillEnum>Scale</ArmorSkillEnum>
+      <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>3</Damage_Ignore>
+      <Damage_Reduction>0.95</Damage_Reduction>
+      <Description>
+        At least the cap looks cool?
+      </Description>
+      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Durability>15</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1.0</Initiative_Reduce>
+      <Parry_Reduce>1.0</Parry_Reduce>
+      <Sprites>35</Sprites>
+      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Value>120</Value>
+    </Armor>
+    <Armor name="Dino Scale Helm">
+      <Tier>Three</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <ArmorSkillEnum>Scale</ArmorSkillEnum>
+      <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>4</Damage_Ignore>
+      <Damage_Reduction>0.92</Damage_Reduction>
+      <Description>
+        At least the cap looks cool?
+      </Description>
+      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Durability>25</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1.0</Initiative_Reduce>
+      <Parry_Reduce>1.0</Parry_Reduce>
+      <Sprites>35</Sprites>
+      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Value>120</Value>
+    </Armor>
+    <Armor name="Dino Scale Helm">
+      <Tier>Two</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <ArmorSkillEnum>Scale</ArmorSkillEnum>
+      <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>5</Damage_Ignore>
+      <Damage_Reduction>0.86</Damage_Reduction>
+      <Description>
+        At least the cap looks cool?
+      </Description>
+      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Durability>35</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1.0</Initiative_Reduce>
+      <Parry_Reduce>1.0</Parry_Reduce>
+      <Sprites>50</Sprites>
+      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Value>250</Value>
+    </Armor>
   </ArmorSkillEnum>
   <ArmorSkillEnum name="Tunic">
     <Armor name="Slime Handler Cap">

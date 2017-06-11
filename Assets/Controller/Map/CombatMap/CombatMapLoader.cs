@@ -38,8 +38,6 @@ namespace Controller.Managers.Map
         public Transform MapHolder;
         public Transform BackgroundTiles;
 
-        public CombatMapLoader() { }
-
         public void InitMap(BiomeEnum b)
         {
             this.MapHolder = new GameObject("Map").transform;

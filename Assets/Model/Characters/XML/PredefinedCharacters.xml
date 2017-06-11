@@ -16,6 +16,10 @@
           <Armor>0.75,Dino Scale Armor,Four</Armor>
           <Armor>0.25,Dino Scale Armor,Three</Armor>
         </Armors>
+        <Helms name="One">
+          <Helm>0.35,Dino Scale Helm,Four</Helm>
+          <Helm>0.25,Dino Scale Helm,Three</Helm>
+        </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
@@ -49,6 +53,10 @@
           <Armor>0.75,Dino Scale Armor,Five</Armor>
           <Armor>0.25,Dino Scale Armor,Four</Armor>
         </Armors>
+        <Helms name="One">
+          <Helm>0.35,Dino Scale Helm,Five</Helm>
+          <Helm>0.25,Dino Scale Helm,Four</Helm>
+        </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
@@ -139,6 +147,10 @@
           <Armor>0.75,Dino Scale Armor,Three</Armor>
           <Armor>0.25,Dino Scale Armor,Two</Armor>
         </Armors>
+        <Helms name="One">
+          <Helm>0.55,Dino Scale Helm,Three</Helm>
+          <Helm>0.25,Dino Scale Helm,Two</Helm>
+        </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">

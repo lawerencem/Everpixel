@@ -7,7 +7,7 @@ namespace Model.Perks
 {
     public class Hulk : GenericEquipmentSStatPerk
     {
-        protected const double VALUE = 1.15;
+        protected const double VALUE = 1.10;
 
         public Hulk() : base(PerkEnum.Hulk) { }
 

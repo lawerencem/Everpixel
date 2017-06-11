@@ -300,6 +300,7 @@
     <Compile Include="Assets\View\Events\WpnBtnClickEvent.cs" />
     <Compile Include="Assets\View\GUI\EndTurnBtnClick.cs" />
     <Compile Include="Assets\View\GUI\GUISpriteLoader.cs" />
+    <Compile Include="Assets\View\GUI\HoverModal.cs" />
     <Compile Include="Assets\View\GUI\WpnBtnClick.cs" />
     <Compile Include="Assets\View\Map\HexTileView.cs" />
     <Compile Include="Assets\View\Map\MapBridge.cs" />
