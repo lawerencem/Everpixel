@@ -36,6 +36,7 @@ namespace Model.Characters
         public int CurrentMorale { get; set; }
         public int CurrentStamina { get; set; }
 
+        public List<GenericActiveAbility> ActiveAbilities { get; set; }
         public List<WeaponAbility> DefaultWpnAbilities { get; set; }
         public List<GenericInjury> Injuries { get; set; }
 

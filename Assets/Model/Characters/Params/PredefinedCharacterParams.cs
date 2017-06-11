@@ -11,6 +11,7 @@ namespace Model.Characters
     {
         public PredefinedCharacterParams()
         {
+            this.ActiveAbilities = new List<ActiveAbilitiesEnum>();
             this.Armors = new Dictionary<string, List<List<string>>>();
             this.Classes = new Dictionary<ClassEnum, int>();
             this.DefaultWpnAbilities = new List<WeaponAbilitiesEnum>();
@@ -22,6 +23,7 @@ namespace Model.Characters
         }
 
         public Dictionary<string, List<List<string>>> Armors { get; set; }
+        public List<ActiveAbilitiesEnum> ActiveAbilities { get; set; }
         public Dictionary<ClassEnum, int> Classes { get; set; }
         public CultureEnum Culture { get; set; }
         public List<WeaponAbilitiesEnum>  DefaultWpnAbilities { get; set; }

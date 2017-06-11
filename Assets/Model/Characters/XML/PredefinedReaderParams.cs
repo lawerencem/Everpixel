@@ -2,6 +2,7 @@
 {
     public class PredefinedReaderParams
     {
+        public const string ACTIVE_ABILITY = "ActiveAbilitiesEnum";
         public const string ARMORS = "Armors";
         public const string ATTACK_SPRITE_INDEX = "AttackSpriteIndex";
         public const string CLASS = "Class";

@@ -116,6 +116,13 @@
     <Compile Include="Assets\Generics\Utilities\RNG.cs" />
     <Compile Include="Assets\Generics\Utilities\StringUtil.cs" />
     <Compile Include="Assets\Generics\XML\GenericXMLReader.cs" />
+    <Compile Include="Assets\Model\Abilities\Active\ActiveAbilityFactory.cs" />
+    <Compile Include="Assets\Model\Abilities\Active\GenericActiveAbility.cs" />
+    <Compile Include="Assets\Model\Abilities\Active\Missiles\Hadoken.cs" />
+    <Compile Include="Assets\Model\Abilities\Active\XML\ActiveAbilityReader.cs" />
+    <Compile Include="Assets\Model\Abilities\Active\ActiveAbilityTable.cs" />
+    <Compile Include="Assets\Model\Abilities\Enum\AbilityCastTypeEnum.cs" />
+    <Compile Include="Assets\Model\Abilities\Enum\ActiveAbilitiesEnum.cs" />
     <Compile Include="Assets\Model\Abilities\Enum\WeaponAbilitiesEnum.cs" />
     <Compile Include="Assets\Model\Abilities\GenericAbility.cs" />
     <Compile Include="Assets\Model\Abilities\GenericAbilityTable.cs" />
@@ -275,8 +282,8 @@
     <Compile Include="Assets\Model\Perks\EquipmentPerks\Weightlifter.cs" />
     <Compile Include="Assets\Model\Perks\GenericPerk.cs" />
     <Compile Include="Assets\Model\Perks\PerkEnum.cs" />
-    <Compile Include="Assets\Model\Perks\PerkMediator.cs" />
     <Compile Include="Assets\Model\Perks\PerkFactory.cs" />
+    <Compile Include="Assets\Model\Perks\PerkMediator.cs" />
     <Compile Include="Assets\Model\Perks\SStatModPerks\GenericSStatModPerk.cs" />
     <Compile Include="Assets\Model\Perks\SStatModPerks\IronHide.cs" />
     <Compile Include="Assets\Model\Perks\SStatModPerks\Scaly.cs" />
@@ -311,6 +318,9 @@
     <Compile Include="Assets\View\Scripts\FlinchScript.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Model\Abilities\Active\XML\ActiveAbilities.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Model\Abilities\Weapon\XML\WeaponAbilities.xml" />
     <None Include="Assets\Model\Characters\XML\PredefinedCharacters.xml" />
     <None Include="Assets\Model\Characters\XML\PredefinedCritters.xml" />

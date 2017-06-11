@@ -16,6 +16,7 @@ namespace Assets.Controller.Managers
 
         public LoaderManager()
         {
+            this._readers.Add(ActiveAbilityReader.Instance);
             this._readers.Add(ArmorReader.Instance);
             this._readers.Add(ClassReader.Instance);
             this._readers.Add(InjuryReader.Instance);

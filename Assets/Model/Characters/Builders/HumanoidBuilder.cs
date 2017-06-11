@@ -1,5 +1,6 @@
 ﻿using Assets.Model.Equipment.Factories;
 using Generics;
+using Model.Abilities;
 using Model.Classes;
 using Model.Perks;
 using Model.Slot;
@@ -45,6 +46,7 @@ namespace Model.Characters
             if (primary != null)
             {
                 BuildBaseClassHelper(c, character);
+                BuildDefaultAbilities(c, character);
                 PerkMediator.Instance.SetCharacterPerks(character, c.Perks);
                 character.PrimaryStats = primary;
                 BuildClassPrimaryStats(character);
@@ -141,6 +143,15 @@ namespace Model.Characters
                 if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.Will))
                     c.SecondaryStats.Will += stats.SecondaryStats[SecondaryStatsEnum.Will];
             }
+        }
+
+        private void BuildDefaultAbilities(CharacterParams p, GenericCharacter c)
+        {
+            var activeAbs = ActiveAbilityFactory.Instance.CreateNewObject(p.ActiveAbilities);
+            foreach (var v in activeAbs) { c.ActiveAbilities.Add(v); }
+
+            var wpnAbs = WeaponAbilityFactory.Instance.CreateNewObject(p.DefaultWpnAbilities);
+            foreach (var v in wpnAbs) { c.DefaultWpnAbilities.Add(v); }
         }
 
         private void BuildWeaponHelper(GenericCharacter c, CharacterParams p)

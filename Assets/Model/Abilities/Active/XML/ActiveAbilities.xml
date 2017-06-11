@@ -1,0 +1,18 @@
+﻿<ActiveAbilities>
+  <ActiveAbility name="Hadoken">
+    <AbilityCastTypeEnum>Bullet</AbilityCastTypeEnum>
+    <AccMod>1</AccMod>
+    <APCost>4</APCost>
+    <ArmorIgnoreMod>1</ArmorIgnoreMod>
+    <ArmorPierceMod>1</ArmorPierceMod>
+    <BlockIgnoreMod>1</BlockIgnoreMod>
+    <DamageMod>0.75</DamageMod>
+    <DodgeMod>1.0</DodgeMod>
+    <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
+    <ParryModMod>0.25</ParryModMod>
+    <RangeBlockMod>1.25</RangeBlockMod>
+    <ShieldDamageMod>1.5</ShieldDamageMod>
+    <StaminaCost>25</StaminaCost>
+    <Range>4</Range>
+  </ActiveAbility>
+</ActiveAbilities>

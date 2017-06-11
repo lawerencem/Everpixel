@@ -112,6 +112,7 @@ namespace Controller.Managers
             var potentialTiles = this._combatManager.GetAttackTiles(e);
             CMapGUIController.Instance.DecoratePotentialAttackTiles(potentialTiles);
             var ability = GenericAbilityTable.Instance.Table[e.Type];
+            // TODO: WTF
             this._combatManager.CurAbility = ability;
         }
 
@@ -267,7 +268,7 @@ namespace Controller.Managers
                     abs.Add(new Pair<WeaponAbility, bool>(ab, true));
             }
 
-            var populateBtns = new PopulateWpnBtnsEvent(abs, GUIEventManager.Instance);
+            var populateWpnBtns = new PopulateWpnBtnsEvent(abs, GUIEventManager.Instance);
         }
     }
 }

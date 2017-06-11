@@ -78,8 +78,11 @@ namespace Model.Characters
 
         private void BuildDefaultAbilities(CharacterParams p, GenericCharacter c)
         {
-            var abs = WeaponAbilityFactory.Instance.CreateNewObject(p.DefaultAbilities);
-            foreach (var v in abs) { c.DefaultWpnAbilities.Add(v); }
+            var activeAbs = ActiveAbilityFactory.Instance.CreateNewObject(p.ActiveAbilities);
+            foreach (var v in activeAbs) { c.ActiveAbilities.Add(v); }
+
+            var wpnAbs = WeaponAbilityFactory.Instance.CreateNewObject(p.DefaultWpnAbilities);
+            foreach (var v in wpnAbs) { c.DefaultWpnAbilities.Add(v); }
         }
 
         private void BuildClassPrimaryStats(GenericCharacter c)

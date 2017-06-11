@@ -1,6 +1,7 @@
 ﻿using Assets.Model;
 using Generics;
 using Generics.Utilities;
+using Model.Abilities;
 using Model.Classes;
 using Model.Mounts;
 using System;
@@ -62,6 +63,7 @@ namespace Model.Characters.XML
                                 {
                                     switch (elem.Name.ToString())
                                     {
+                                        case (PredefinedReaderParams.ACTIVE_ABILITY): { HandleActiveAbility(key, elem.Value.ToString()); } break;
                                         case (PredefinedReaderParams.CLASS): { HandleClassType(key, elem.Value.ToString(), ref baseClass); } break;
                                         case (PredefinedReaderParams.MOUNT): { HandleMount(key, elem.Value); } break;
                                         case (PredefinedReaderParams.PERKS): { HandlePerks(elem, key); } break;
@@ -77,6 +79,13 @@ namespace Model.Characters.XML
                     }
                 }
             }
+        }
+
+        private void HandleActiveAbility(string rootKey, string value)
+        {
+            var ab = ActiveAbilitiesEnum.None;
+            if (EnumUtil<ActiveAbilitiesEnum>.TryGetEnumValue(value, ref ab))
+                table.Table[rootKey].ActiveAbilities.Add(ab);
         }
 
         private void HandleClassType(string rootKey, string value, ref ClassEnum type)

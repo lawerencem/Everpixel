@@ -26,8 +26,9 @@ namespace Model.Characters
         {
             var cParams = new CharacterParams();
             cParams.Armor = GetArmor(arg);
+            foreach (var v in arg.ActiveAbilities) { cParams.ActiveAbilities.Add(v); }
             foreach (var kvp in arg.Classes) { cParams.BaseClasses.Add(kvp.Key, kvp.Value); }
-            foreach (var v in arg.DefaultWpnAbilities) { cParams.DefaultAbilities.Add(v); }
+            foreach (var v in arg.DefaultWpnAbilities) { cParams.DefaultWpnAbilities.Add(v); }
             cParams.Helm = GetHelm(arg);
             cParams.LWeapon = GetWeapon(arg, arg.LWeapons);
             cParams.Mount = this.GetMount(arg);

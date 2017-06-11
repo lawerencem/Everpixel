@@ -15,6 +15,7 @@ namespace Model.Characters
 
         public GenericCharacter()
         {
+            this.ActiveAbilities = new List<GenericActiveAbility>();
             this.BaseClasses = new Dictionary<ClassEnum, GenericClass>();
             this.DefaultWpnAbilities = new List<WeaponAbility>();
             this.Perks = new CharacterPerkCollection();

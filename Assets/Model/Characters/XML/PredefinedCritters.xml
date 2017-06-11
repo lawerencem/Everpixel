@@ -204,6 +204,7 @@
       </Stats>
     </Character>
     <Character name ="Thairex">
+      <ActiveAbilitiesEnum>Hadoken</ActiveAbilitiesEnum>
       <AttackSpriteIndex>1</AttackSpriteIndex>
       <Class>Warrior,1</Class>
       <FlinchSpriteIndex>13</FlinchSpriteIndex>
