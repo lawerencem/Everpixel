@@ -15,4 +15,4 @@ Long Term:
 Bugs:
 can target killed characters?
 
-Reimport all character sprites given the new slicing....
+TODO: Clean up active abilities modals and such

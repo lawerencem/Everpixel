@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using View.Events;
 
-namespace View.GUI
+namespace View.Scripts
 {
     public class EndTurnBtnClick : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {

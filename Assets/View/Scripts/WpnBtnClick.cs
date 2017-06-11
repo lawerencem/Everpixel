@@ -5,8 +5,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using View.Events;
+using View.GUI;
 
-namespace View.GUI
+namespace View.Scripts
 {
     public class WpnBtnClick : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {

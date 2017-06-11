@@ -68,6 +68,21 @@ namespace Assets.Controller.Managers
             return tileControllers;
         }
 
+        public List<TileController> GetAttackTiles(ActiveAbilitySelectedEvent e)
+        {
+            this.ResetTileControllerFlags();
+            var proto = ActiveAbilityTable.Instance.Table[e.AbilityType];
+            var hexTiles = this._map.GetAoETiles(this.CurrActing.CurrentTile.Model, proto.Range);
+            var tileControllers = new List<TileController>();
+            foreach (var hex in hexTiles)
+            {
+                tileControllers.Add(hex.Parent);
+                TileControllerFlags.SetPotentialAttackFlagTrue(hex.Parent.Flags);
+            }
+            this._curTiles = tileControllers;
+            return tileControllers;
+        }
+
         public List<TileController> GetPathTileControllers(ShowPotentialPathEvent e)
         {
             this.ResetTileControllerFlags();

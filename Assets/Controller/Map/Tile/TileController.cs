@@ -86,16 +86,16 @@ namespace Controller.Map
                 var position = character.Handle.transform.position;
                 position.x += (float)(fov * 0.025);
                 position.y += (float)(fov * 0.025);
-                CMapGUIController.Instance.SetModalHeaderText(character.View.Name);
-                CMapGUIController.Instance.SetModalLocation(position);
+                CMapGUIController.Instance.SetHoverModalHeaderText(character.View.Name);
+                CMapGUIController.Instance.SetHoverModalLocation(position);
                 var controller = this.Model.Current as GenericCharacterController;
-                CMapGUIController.Instance.SetModalStatValues(controller.Model);
+                CMapGUIController.Instance.SetHoverModalStatValues(controller.Model);
             }
         }
 
         public void OnMouseExit()
         {
-            CMapGUIController.Instance.SetModalInactive();
+            CMapGUIController.Instance.SetHoverModalInactive();
         }
 
         public void SetModel(HexTile t)

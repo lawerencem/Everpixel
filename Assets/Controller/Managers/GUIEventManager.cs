@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using View.Events;
 using View.GUI;
+using View.Scripts;
 
 namespace Controller.Managers
 {

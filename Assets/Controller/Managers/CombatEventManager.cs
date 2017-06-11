@@ -56,6 +56,11 @@ namespace Controller.Managers
             this.TryProcessEvent(e);
         }
 
+        public GenericCharacterController GetCurrentCharacter()
+        {
+            return this._combatManager.CurrActing;
+        }
+
         public bool GetGUILock() { return this._guiLock; }
         public bool GetInteractionLock() { return this._interactionLock; }
 
@@ -70,6 +75,7 @@ namespace Controller.Managers
             switch(e.Type)
             {
                 case (CombatEventEnum.ActionCofirmed): { HandleActionConfirmed(e as ActionConfirmedEvent); } break;
+                case (CombatEventEnum.ActiveAbilitySelected): { HandleActiveAbilitySelected(e as ActiveAbilitySelectedEvent); } break;
                 case (CombatEventEnum.ApplyInjury): { HandleApplyInjuryEvent(e as ApplyInjuryEvent); } break;
                 case (CombatEventEnum.AttackSelected): { HandleAttackSelectedEvent(e as AttackSelectedEvent); } break;
                 case (CombatEventEnum.DamageCharacter): { HandleDamageCharacterEvent(e as DamageCharacterEvent); } break;
@@ -98,6 +104,15 @@ namespace Controller.Managers
                 e.Target, 
                 this._combatManager.CurAbility,
                 this._combatManager);
+        }
+
+        private void HandleActiveAbilitySelected(ActiveAbilitySelectedEvent e)
+        {
+            this._events.Remove(e);
+            var ability = new GenericActiveAbility(e.AbilityType);
+            this._combatManager.CurAbility = ability;
+            var potentialTiles = this._combatManager.GetAttackTiles(e);
+            CMapGUIController.Instance.DecoratePotentialAttackTiles(potentialTiles);
         }
 
         private void HandleApplyInjuryEvent(ApplyInjuryEvent e)

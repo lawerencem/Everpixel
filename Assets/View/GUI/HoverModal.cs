@@ -89,21 +89,21 @@ namespace View.GUI
                 this._helmSlider.value = c.Helm.Durability;
             }
             else
-                this._armorSlider.maxValue = 0;
+                this._helmSlider.maxValue = 0;
             if (c.LWeapon != null)
             {
                 this._lWeaponSlider.maxValue = c.LWeapon.MaxDurability;
                 this._lWeaponSlider.value = c.LWeapon.Durability;
             }
             else
-                this._armorSlider.maxValue = 0;
+                this._lWeaponSlider.maxValue = 0;
             if (c.RWeapon != null)
             {
                 this._rWeaponSlider.maxValue = c.RWeapon.MaxDurability;
                 this._rWeaponSlider.value = c.RWeapon.Durability;
             }
             else
-                this._armorSlider.maxValue = 0;
+                this._rWeaponSlider.maxValue = 0;
 
             this._hpSlider.maxValue = c.GetCurrentStatValue(SecondaryStatsEnum.HP);
             this._hpSlider.value = c.CurrentHP;

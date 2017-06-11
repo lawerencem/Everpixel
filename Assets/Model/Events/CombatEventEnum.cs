@@ -3,6 +3,7 @@
     public enum CombatEventEnum
     {
         None,
+        ActiveAbilitySelected,
         ActionCofirmed,
         ApplyInjury,
         AttackSelected,

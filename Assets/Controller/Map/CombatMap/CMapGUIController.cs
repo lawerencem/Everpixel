@@ -16,8 +16,9 @@ namespace Controller.Managers.Map
         private List<GameObject> _decorateTileFamily = new List<GameObject>();
         private GameObject _singleTile;
 
+        private AbilitiesModal _abilityModal;
         private CMapGUIControllerHit _hitHelper = new CMapGUIControllerHit();
-        private HoverModal _modal;
+        private HoverModal _hoverModal;
         private CMapGUIControllerParticle _particleHelper = new CMapGUIControllerParticle();
 
         private static CMapGUIController _instance;
@@ -33,8 +34,11 @@ namespace Controller.Managers.Map
 
         public CMapGUIController()
         {
-            this._modal = new HoverModal();
-            this._modal.Init();
+            this._abilityModal = new AbilitiesModal();
+            this._hoverModal = new HoverModal();
+
+            this._abilityModal.Init();
+            this._hoverModal.Init();
         }
 
         public void ApplyInjuryGraphics(ApplyInjuryEvent e)
@@ -103,6 +107,16 @@ namespace Controller.Managers.Map
             this._hitHelper.ProcessCharacterKilled(e);
         }
 
+        public void SetAbilityModalActive()
+        {
+            this._abilityModal.SetModalActive();
+        }
+
+        public void SetAbilityModalInactive()
+        {
+            this._abilityModal.SetModalInactive();
+        }
+
         public void SetActingBoxToController(GenericCharacterController c)
         {
             this.SetTagText(CMapGUIControllerParams.NAME, c.View.Name);
@@ -130,29 +144,29 @@ namespace Controller.Managers.Map
                 this.SetTagText(CMapGUIControllerParams.R_WEAP, "");
         }
 
-        public void SetModalActive()
+        public void SetHoverModalActive()
         {
-            this._modal.SetModalActive();
+            this._hoverModal.SetModalActive();
         }
 
-        public void SetModalInactive()
+        public void SetHoverModalInactive()
         {
-            this._modal.SetModalInactive();
+            this._hoverModal.SetModalInactive();
         }
 
-        public void SetModalHeaderText(string toSet)
+        public void SetHoverModalHeaderText(string toSet)
         {
-            this._modal.SetModalHeaderText(toSet);
+            this._hoverModal.SetModalHeaderText(toSet);
         }
 
-        public void SetModalLocation(Vector3 pos)
+        public void SetHoverModalLocation(Vector3 pos)
         {
-            this._modal.SetModalLocation(pos);
+            this._hoverModal.SetModalLocation(pos);
         }
 
-        public void SetModalStatValues(GenericCharacter c)
+        public void SetHoverModalStatValues(GenericCharacter c)
         {
-            this._modal.SetModalStatValues(c);
+            this._hoverModal.SetModalStatValues(c);
         }
 
         private void DecorateFamilyOfTiles(TileController tile, Sprite deco)

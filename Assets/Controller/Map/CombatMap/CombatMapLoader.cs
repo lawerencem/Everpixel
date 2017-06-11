@@ -18,6 +18,7 @@ using View.Map;
 using Generics.Hex;
 using View.GUI;
 using Assets.Generics;
+using View.Scripts;
 
 namespace Controller.Managers.Map
 {
@@ -153,6 +154,9 @@ namespace Controller.Managers.Map
                 var script = btnContainer.AddComponent<WpnBtnClick>();
                 script.Init(tag);
             }
+            var abilitiesBtn = GameObject.FindGameObjectWithTag("AbilitiesBtnTag");
+            var clickScript = abilitiesBtn.AddComponent<AbilityModalBtnClick>();
+            clickScript.Init("AbilitiesBtnTag");
         }
 
         private void LayoutCharacter(GenericCharacterController c, CharacterParams cParams, bool enemyParty)

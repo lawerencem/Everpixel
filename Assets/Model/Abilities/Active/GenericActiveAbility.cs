@@ -71,6 +71,13 @@ namespace Model.Abilities
 
         }
 
+        public virtual void ProcessBullet(HitInfo hit)
+        {
+            foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
+                perk.TryModAbility(hit.Ability);
+            // TODO:
+        }
+
         public virtual void ProcessMelee(HitInfo hit)
         {
             foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
