@@ -16,7 +16,8 @@ namespace View.Scripts
 
         private void OnClick()
         {
-            var e = new ActiveAbilitySelectedEvent(CombatEventManager.Instance, this._ability);
+            //var e = new ActiveAbilitySelectedEvent(CombatEventManager.Instance, this._ability);
+            var e = new AttackSelectedEvent(CombatEventManager.Instance, this._ability);
         }
 
         public void Init(GameObject toAdd, ActiveAbilitiesEnum ability)

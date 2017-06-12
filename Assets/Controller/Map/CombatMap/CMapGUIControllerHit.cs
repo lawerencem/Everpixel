@@ -1,5 +1,4 @@
 ﻿using Assets.Scripts;
-using Controller.Characters;
 using Controller.Map;
 using Generics.Scripts;
 using Generics.Utilities;
@@ -7,10 +6,10 @@ using Model.Abilities;
 using Model.Characters;
 using Model.Combat;
 using Model.Events.Combat;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using View.Biomes;
+using View.Characters;
 using View.Scripts;
 
 namespace Controller.Managers.Map
@@ -23,6 +22,11 @@ namespace Controller.Managers.Map
                 hit.Ability.TypeStr, 
                 hit.Source.CurrentTile.Model.Center, 
                 CMapGUIControllerParams.WHITE, CMapGUIControllerParams.ATTACK_TEXT_OFFSET);
+        }
+
+        public void ProcessBulletAttack(DisplayHitStatsEvent e)
+        {
+            this.ProcessBulletGraphics(e);
         }
 
         public void ProcessCharacterKilled(CharacterKilledEvent e)
@@ -44,7 +48,7 @@ namespace Controller.Managers.Map
         {
             var attackerScript = e.Hit.Source.Handle.AddComponent<AttackScript>();
             var position = Vector3.Lerp(e.Hit.Target.CurrentTile.Model.Center, e.Hit.Source.CurrentTile.Model.Center, 0.85f);
-            attackerScript.Init(e.Hit.Source, position, 10f);
+            attackerScript.Init(e.Hit.Source, position, 8f);
 
             if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge))
                 this.ProcessDodge(e);
@@ -148,6 +152,18 @@ namespace Controller.Managers.Map
             this.DisplayText(e.Hit.Dmg.ToString(), e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, CMapGUIControllerParams.DMG_TEXT_OFFSET);
         }
 
+        private void ProcessBulletGraphics(DisplayHitStatsEvent e)
+        {
+            var sprite = AttackSpriteLoader.Instance.GetAttackSprite(e.Hit.Ability as GenericActiveAbility);
+            var bullet = new GameObject();
+            var script = bullet.AddComponent<RayCastScript>();
+            bullet.transform.position = e.Hit.Source.transform.position;
+            script.Init(bullet, e.Hit.Target.transform.position, 5f);
+            var renderer = bullet.AddComponent<SpriteRenderer>();
+            renderer.sprite = sprite;
+            renderer.sortingLayerName = CMapGUIControllerParams.PARTICLES_LAYER;
+        }
+
         private void ProcessDodge(DisplayHitStatsEvent e)
         {
             var defenderJolt = e.Hit.Target.Handle.AddComponent<BoomerangScript>();
@@ -162,7 +178,7 @@ namespace Controller.Managers.Map
                 var position = e.Hit.Target.transform.position;
                 position.y -= 0.08f;
                 var defenderFlinch = e.Hit.Target.Handle.AddComponent<FlinchScript>();
-                defenderFlinch.Init(e.Hit.Target, position, 10f, this.UnlockUserInteraction);
+                defenderFlinch.Init(e.Hit.Target, position, 8f, this.UnlockUserInteraction);
             }
             if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
                 this.DisplayText("Crit!", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, CMapGUIControllerParams.DODGE_TEXT_OFFSET);

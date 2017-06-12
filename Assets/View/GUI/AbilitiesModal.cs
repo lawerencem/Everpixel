@@ -1,5 +1,6 @@
 ﻿using Controller.Managers;
 using Generics;
+using Model.Abilities;
 using Model.Characters;
 using System.Collections.Generic;
 using UnityEngine;
@@ -71,10 +72,9 @@ namespace View.GUI
                 txt.transform.SetParent(clone.transform);
                 txt.text = character.Model.ActiveAbilities[i].TypeStr;
                 clone.transform.localPosition = new Vector3(-40, -45);
-                var collider = clone.AddComponent<Collider2D>();
                 this._btns.Add(clone);
                 var btnScript = clone.AddComponent<AbilityBtnClick>();
-                btnScript.Init(clone, character.Model.ActiveAbilities[i].Type);
+                btnScript.Init(clone, (ActiveAbilitiesEnum)character.Model.ActiveAbilities[i].Type);
             }
             this._proto.SetActive(false);
         }

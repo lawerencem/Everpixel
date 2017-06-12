@@ -15,6 +15,7 @@ namespace Controller.Map
         public static readonly string MORALE = "MoraleTextTag";
         public static readonly string NAME = "ActingBoxNameTag";
         public static readonly string PARTICLES_EXTENSION = "Particles";
+        public static readonly string PARTICLES_LAYER = "Particles";
         public static readonly string R_WEAP = "RWeaponTextTag";
         public static readonly string STAM = "StaminaTextTag";
         public static readonly string UI_LAYER = "UI";

@@ -1,5 +1,6 @@
 ﻿using Controller.Characters;
 using Controller.Map;
+using Model.Abilities;
 using Model.Characters;
 using Model.Events.Combat;
 using System.Collections.Generic;
@@ -96,10 +97,20 @@ namespace Controller.Managers.Map
 
         public void DisplayHitStatsEvent(DisplayHitStatsEvent e)
         {
-            this._hitHelper.DisplayHitStatsEvent(e.Hit);
-            //TODO Change this to check for melee...
-            this._hitHelper.ProcessMeleeHitGraphics(e);
-            this._hitHelper.ProcessSplatter(e);
+            if (e.Hit.Ability.Type.GetType() == (typeof(WeaponAbilitiesEnum)))
+            {
+                this._hitHelper.DisplayHitStatsEvent(e.Hit);
+                this._hitHelper.ProcessMeleeHitGraphics(e);
+                this._hitHelper.ProcessSplatter(e);
+            }
+            else if (e.Hit.Ability.Type.GetType() == (typeof(ActiveAbilitiesEnum)))
+            {
+                var ability = e.Hit.Ability as GenericActiveAbility;
+                switch(ability.CastType)
+                {
+                    case (AbilityCastTypeEnum.Bullet): { this.ProcessBulletAttack(e); } break;
+                }
+            }
         } 
 
         public void ProcessCharacterKilled(CharacterKilledEvent e)
@@ -195,6 +206,11 @@ namespace Controller.Managers.Map
             color.a = alpha;
             renderer.color = color;
             this._singleTile = tView;
+        }
+
+        private void ProcessBulletAttack(DisplayHitStatsEvent e)
+        {
+            this._hitHelper.ProcessBulletAttack(e);
         }
         
         private void SetTagText(string tag, string toSet)

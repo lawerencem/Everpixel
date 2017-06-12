@@ -19,6 +19,14 @@ namespace Model.Combat
         private const double BASE_SKILL_SCALAR = 0.75;
         private const double BASE_SCALAR = 1000;
 
+        public void ProcessBullet(HitInfo hit)
+        {
+            ProcessBulletFlags(hit);
+            CalculateDamage(hit);
+            ApplyDamage(hit);
+            ProcessHitEvent(hit);
+        }
+
         public void ProcessMelee(HitInfo hit)
         {
             ProcessMeleeFlags(hit);
@@ -43,6 +51,14 @@ namespace Model.Combat
         {
             var guiEvent = new DisplayHitStatsEvent(CombatEventManager.Instance, hit);
             var dmgEvent = new DamageCharacterEvent(CombatEventManager.Instance, hit);
+        }
+
+        private void ProcessBulletFlags(HitInfo hit)
+        {
+            this.ProcessDodge(hit);
+            this.ProcessBlock(hit);
+            this.ProcessCrit(hit);
+            this.ProcessHeadShot(hit);
         }
 
         private void ProcessMeleeFlags(HitInfo hit)
@@ -114,8 +130,7 @@ namespace Model.Combat
         {
             double ignoreDamageScalar = 1;
             bool hasShield = false;
-            var ability = hit.Ability as WeaponAbility;
-            var shieldDmg = (hit.Dmg * ability.ShieldDamageMod);
+            var shieldDmg = (hit.Dmg * hit.Ability.ShieldDamageMod);
             if (hit.Source.Model.LWeapon != null && !hit.Source.Model.LWeapon.IsTypeOfShield())
             {
                 shieldDmg *= hit.Source.Model.LWeapon.ShieldDamage;
@@ -163,11 +178,9 @@ namespace Model.Combat
 
         private void ProcessDodge(HitInfo hit)
         {
-            var ability = hit.Ability as WeaponAbility;
-
             var melee = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Melee);
             var dodge = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Dodge);
-            var dodgeChance = BASE_DODGE_CHANCE / ability.AccMod;
+            var dodgeChance = BASE_DODGE_CHANCE / hit.Ability.AccMod;
 
             if (hit.Target.Model.Armor != null)
                 dodgeChance *= hit.Target.Model.Armor.DodgeMod;
@@ -176,7 +189,7 @@ namespace Model.Combat
 
             var chance = this.GetAttackVSDefenseSkillChance(melee, dodge, dodgeChance);
             
-            chance *= ability.DodgeMod;
+            chance *= hit.Ability.DodgeMod;
             var roll = RNG.Instance.NextDouble();
             if (chance < roll)
                 AttackEventFlags.SetDodgeTrue(hit.Flags);
@@ -184,11 +197,9 @@ namespace Model.Combat
 
         private void ProcessParry(HitInfo hit)
         {
-            var ability = hit.Ability as WeaponAbility;
-
             var melee = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Melee);
             var parry = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Parry);
-            var parryChance = BASE_PARRY_CHANCE / ability.AccMod;
+            var parryChance = BASE_PARRY_CHANCE / hit.Ability.AccMod;
 
             if (hit.Target.Model.Armor != null)
                 parryChance *= hit.Target.Model.Armor.ParryReduce;
@@ -201,7 +212,7 @@ namespace Model.Combat
 
             var chance = this.GetAttackVSDefenseSkillChance(melee, parry, parryChance);
             
-            chance *= ability.ParryModMod;
+            chance *= hit.Ability.ParryModMod;
             var roll = RNG.Instance.NextDouble();
             if (chance < roll)
                 AttackEventFlags.SetParryTrue(hit.Flags);
@@ -209,11 +220,9 @@ namespace Model.Combat
 
         private void ProcessBlock(HitInfo hit)
         {
-            var ability = hit.Ability as WeaponAbility;
-
             var melee = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Melee);
             var block = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Block);
-            var blockChance = BASE_BLOCK_CHANCE / ability.AccMod;
+            var blockChance = BASE_BLOCK_CHANCE / hit.Ability.AccMod;
 
             bool hasShield = false;
 
@@ -250,6 +259,30 @@ namespace Model.Combat
             var roll = RNG.Instance.NextDouble();
             if (roll > BASE_HEAD_CHANCE)
                 AttackEventFlags.SetHeadTrue(hit.Flags);
+        }
+
+        private void ProcessRangedBlock(HitInfo hit)
+        {
+            var ranged = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Ranged);
+            var block = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Block);
+            var blockChance = BASE_BLOCK_CHANCE / hit.Ability.AccMod;
+
+            bool hasShield = false;
+
+            if (hit.Target.Model.Armor != null)
+                blockChance *= hit.Target.Model.Armor.BlockReduce;
+            if (hit.Target.Model.Helm != null)
+                blockChance *= hit.Target.Model.Helm.BlockReduce;
+            if (hit.Target.Model.LWeapon != null && hit.Target.Model.LWeapon.IsTypeOfShield())
+                blockChance *= (BASE_SKILL_SCALAR + (hit.Target.Model.LWeapon.MeleeBlockChance / BASE_SCALAR));
+            if (hit.Target.Model.RWeapon != null && hit.Target.Model.RWeapon.IsTypeOfShield())
+                blockChance *= (BASE_SKILL_SCALAR + (hit.Target.Model.RWeapon.MeleeBlockChance / BASE_SCALAR));
+
+            if (!hasShield) { blockChance = 0; }
+            var chance = this.GetAttackVSDefenseSkillChance(ranged, block, BASE_BLOCK_CHANCE);
+            var roll = RNG.Instance.NextDouble();
+            if (chance < roll)
+                AttackEventFlags.SetBlockTrue(hit.Flags);
         }
     }
 }

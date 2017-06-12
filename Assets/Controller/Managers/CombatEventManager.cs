@@ -75,7 +75,6 @@ namespace Controller.Managers
             switch(e.Type)
             {
                 case (CombatEventEnum.ActionCofirmed): { HandleActionConfirmed(e as ActionConfirmedEvent); } break;
-                case (CombatEventEnum.ActiveAbilitySelected): { HandleActiveAbilitySelected(e as ActiveAbilitySelectedEvent); } break;
                 case (CombatEventEnum.ApplyInjury): { HandleApplyInjuryEvent(e as ApplyInjuryEvent); } break;
                 case (CombatEventEnum.AttackSelected): { HandleAttackSelectedEvent(e as AttackSelectedEvent); } break;
                 case (CombatEventEnum.DamageCharacter): { HandleDamageCharacterEvent(e as DamageCharacterEvent); } break;
@@ -106,15 +105,6 @@ namespace Controller.Managers
                 this._combatManager);
         }
 
-        private void HandleActiveAbilitySelected(ActiveAbilitySelectedEvent e)
-        {
-            this._events.Remove(e);
-            var ability = new GenericActiveAbility(e.AbilityType);
-            this._combatManager.CurAbility = ability;
-            var potentialTiles = this._combatManager.GetAttackTiles(e);
-            CMapGUIController.Instance.DecoratePotentialAttackTiles(potentialTiles);
-        }
-
         private void HandleApplyInjuryEvent(ApplyInjuryEvent e)
         {
             this._events.Remove(e);
@@ -126,8 +116,14 @@ namespace Controller.Managers
             this._events.Remove(e);
             var potentialTiles = this._combatManager.GetAttackTiles(e);
             CMapGUIController.Instance.DecoratePotentialAttackTiles(potentialTiles);
-            var ability = GenericAbilityTable.Instance.Table[e.Type];
-            // TODO: WTF
+
+            var ability = new GenericAbility();
+
+            if (e.AttackType.GetType().Equals(typeof(WeaponAbilitiesEnum)))
+                ability = GenericAbilityTable.Instance.Table[e.AttackType];
+            else if (e.AttackType.GetType().Equals(typeof(ActiveAbilitiesEnum)))
+                ability = ActiveAbilityTable.Instance.Table[e.AttackType];
+
             this._combatManager.CurAbility = ability;
         }
 

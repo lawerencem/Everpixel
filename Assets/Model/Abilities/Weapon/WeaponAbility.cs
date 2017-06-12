@@ -1,31 +1,9 @@
-﻿using Controller.Managers;
-using Generics.Utilities;
-using Model.Characters;
-using Model.Combat;
-using Model.Events.Combat;
-using Model.Injuries;
-using Model.Perks;
-using System.Collections.Generic;
+﻿using Model.Combat;
 
 namespace Model.Abilities
 {
     public class WeaponAbility : GenericAbility
     {
-        public double AccMod { get; set; }
-        public double ArmorIgnoreMod { get; set; }
-        public double ArmorPierceMod { get; set; }
-        public double BlockIgnoreMod { get; set; }
-        public double DamageMod { get; set; }
-        public double DodgeMod { get; set; }
-        public string Description { get; set; }
-        public double MeleeBlockChanceMod { get; set; }
-        public double ParryModMod { get; set; }
-        public int Range { get; set; }
-        public double RangeBlockMod { get; set; }
-        public double ShieldDamageMod { get; set; }
-        private new WeaponAbilitiesEnum _type;
-        public new WeaponAbilitiesEnum Type { get { return this._type; } }
-
         public WeaponAbility(WeaponAbilitiesEnum type)
         {
             this.AccMod = 1;
@@ -46,7 +24,7 @@ namespace Model.Abilities
 
         public WeaponAbility Copy()
         {
-            var ability = new WeaponAbility(this._type);
+            var ability = new WeaponAbility((WeaponAbilitiesEnum)this._type);
             ability.AccMod = this.AccMod;
             ability.APCost = this.APCost;
             ability.ArmorIgnoreMod = this.ArmorIgnoreMod;
@@ -66,39 +44,6 @@ namespace Model.Abilities
         public override void ProcessAbility(HitInfo hit)
         {
             
-        }
-
-        public virtual void ProcessMelee(HitInfo hit)
-        {
-            foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                perk.TryModAbility(hit.Ability);
-            CombatReferee.Instance.ProcessMelee(hit);
-            this.TryApplyInjury(hit);
-        }
-
-        protected virtual void TryApplyInjury(HitInfo hit)
-        {
-            if (!AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge) &&
-                !AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Parry))
-            {
-                var roll = RNG.Instance.NextDouble();
-                var hp = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.HP);
-                var currentHP = hit.Target.Model.CurrentHP;
-                if (currentHP > 0)
-                {
-                    var chance = ((double)hit.Dmg / (double)hp) * (hp / currentHP);
-                    if (roll < chance)
-                    {
-                        if (this.Injuries.Count > 0)
-                        {
-                            var injuryType = ListUtil<InjuryEnum>.GetRandomListElement(this.Injuries);
-                            var injuryParams = InjuryTable.Instance.Table[injuryType];
-                            var injury = injuryParams.GetGenericInjury();
-                            var apply = new ApplyInjuryEvent(CombatEventManager.Instance, hit, injury);
-                        }
-                    }
-                }
-            }
         }
     }
 }

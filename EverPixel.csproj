@@ -108,6 +108,7 @@
     <Compile Include="Assets\Generics\Scripts\DestroyByLifetime.cs" />
     <Compile Include="Assets\Generics\Scripts\FloatingText.cs" />
     <Compile Include="Assets\Generics\Scripts\JoltScript.cs" />
+    <Compile Include="Assets\Generics\Scripts\RayCastScript.cs" />
     <Compile Include="Assets\Generics\Scripts\TileMoveScript.cs" />
     <Compile Include="Assets\Generics\Utilities\Count.cs" />
     <Compile Include="Assets\Generics\Utilities\DeepClone.cs" />
@@ -291,6 +292,7 @@
     <Compile Include="Assets\Model\Slot\AbstractSlot.cs" />
     <Compile Include="Assets\Model\Slot\GenericSlot.cs" />
     <Compile Include="Assets\Model\Slot\SlotEnum.cs" />
+    <Compile Include="Assets\View\Attacks\AttackSpriteLoader.cs" />
     <Compile Include="Assets\View\Builders\CharacterViewBuilder.cs" />
     <Compile Include="Assets\View\Characters\CharacterBridge.cs" />
     <Compile Include="Assets\View\Characters\CharacterSpriteLoader.cs" />
