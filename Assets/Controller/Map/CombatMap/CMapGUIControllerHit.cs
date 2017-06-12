@@ -48,7 +48,7 @@ namespace Controller.Managers.Map
         {
             var attackerScript = e.Hit.Source.Handle.AddComponent<AttackScript>();
             var position = Vector3.Lerp(e.Hit.Target.CurrentTile.Model.Center, e.Hit.Source.CurrentTile.Model.Center, 0.85f);
-            attackerScript.Init(e.Hit.Source, position, 8f);
+            attackerScript.Init(e.Hit.Source, position, 8f, e.Done);
 
             if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge))
                 this.ProcessDodge(e);
@@ -158,7 +158,7 @@ namespace Controller.Managers.Map
             var bullet = new GameObject();
             var script = bullet.AddComponent<RayCastScript>();
             bullet.transform.position = e.Hit.Source.transform.position;
-            script.Init(bullet, e.Hit.Target.transform.position, 5f);
+            script.Init(bullet, e.Hit.Target.transform.position, 5f, e.Done);
             var renderer = bullet.AddComponent<SpriteRenderer>();
             renderer.sprite = sprite;
             renderer.sortingLayerName = CMapGUIControllerParams.PARTICLES_LAYER;

@@ -19,23 +19,42 @@ namespace Model.Combat
         private const double BASE_SKILL_SCALAR = 0.75;
         private const double BASE_SCALAR = 1000;
 
+        private Callback _callBack;
+        public delegate void Callback();
+
+        private HitInfo _hit;
+
         public void ProcessBullet(HitInfo hit)
         {
             ProcessBulletFlags(hit);
             CalculateDamage(hit);
-            ApplyDamage(hit);
-            ProcessHitEvent(hit);
+            ProcessHitEventView(hit);
         }
 
         public void ProcessMelee(HitInfo hit)
         {
             ProcessMeleeFlags(hit);
             CalculateDamage(hit);
-            ApplyDamage(hit);
-            ProcessHitEvent(hit);
+            ProcessHitEventView(hit);
         }
 
-        private void ApplyDamage(HitInfo hit)
+        private void CalculateDamage(HitInfo hit)
+        {
+            var dmg = hit.Ability.ModData.BaseDamage;
+
+            if (hit.Source.Model.RWeapon != null)
+                dmg += hit.Source.Model.RWeapon.Damage;
+            if (hit.Source.Model.LWeapon != null)
+                dmg += hit.Source.Model.LWeapon.Damage;
+            if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
+                dmg *= (BASE_CRIT_SCALAR + (hit.Source.Model.SecondaryStats.CriticalMultiplier / BASE_SCALAR));
+
+            dmg *= (BASE_SKILL_SCALAR + (hit.Source.Model.SecondaryStats.Power / BASE_SCALAR));
+
+            hit.Dmg = (int)dmg;
+        }
+
+        private void ModifyDmgViaDefender(HitInfo hit)
         {
             if (!AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge) &&
                 !AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Parry))
@@ -47,10 +66,15 @@ namespace Model.Combat
             }
         }
 
-        private void ProcessHitEvent(HitInfo hit)
+        private void ProcessHitEventModel()
         {
-            var guiEvent = new DisplayHitStatsEvent(CombatEventManager.Instance, hit);
-            var dmgEvent = new DamageCharacterEvent(CombatEventManager.Instance, hit);
+            var dmgEvent = new DamageCharacterEvent(CombatEventManager.Instance, this._hit);
+        }
+
+        private void ProcessHitEventView(HitInfo hit)
+        {
+            this._hit = hit;
+            var guiEvent = new DisplayHitStatsEvent(CombatEventManager.Instance, hit, this.ProcessHitEventModel);
         }
 
         private void ProcessBulletFlags(HitInfo hit)
@@ -68,22 +92,6 @@ namespace Model.Combat
             this.ProcessBlock(hit);
             this.ProcessCrit(hit);
             this.ProcessHeadShot(hit);
-        }
-
-        private void CalculateDamage(HitInfo hit)
-        {
-            var dmg = hit.Ability.ModData.BaseDamage;
-
-            if (hit.Source.Model.RWeapon != null)
-                dmg += hit.Source.Model.RWeapon.Damage;
-            if (hit.Source.Model.LWeapon != null)
-                dmg += hit.Source.Model.LWeapon.Damage;
-            if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
-                dmg *= (BASE_CRIT_SCALAR + (hit.Source.Model.SecondaryStats.CriticalMultiplier / BASE_SCALAR));
-
-            dmg *= (BASE_SKILL_SCALAR + (hit.Source.Model.SecondaryStats.Power / BASE_SCALAR));
-
-            hit.Dmg = (int)dmg;
         }
 
         private void ProcessDamage(HitInfo hit)

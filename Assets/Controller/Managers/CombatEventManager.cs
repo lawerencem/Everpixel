@@ -195,6 +195,8 @@ namespace Controller.Managers
                 TileControllerFlags.SetPotentialAttackFlagFalse(e.Target.CurrentTile.Flags);
                 CMapGUIController.Instance.ClearDecoratedTiles();
                 CMapGUIController.Instance.SetActingBoxToController(e.Source);
+
+                // TODO: Move this elsewhere
                 this.UnlockInteraction();
                 e.Action.ModData.Reset();
             }

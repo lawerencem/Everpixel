@@ -21,7 +21,15 @@ namespace Generics.Scripts
             this.Source = s;
             this.Speed = speed;
             this.Target = t;
-            
+        }
+
+        public void Init(GameObject s, Vector3 t, float speed, Callback callback)
+        {
+            this._origin = s.transform.position;
+            this.Source = s;
+            this.Speed = speed;
+            this.Target = t;
+            this._callBack = callback;
         }
 
         public void Update()
