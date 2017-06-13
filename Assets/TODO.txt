@@ -5,6 +5,7 @@
 3) - Critter classes / abilities during level up on the xml
 5) - Calculate "height diff" when going from one height to another in hexes
 6) - Force A* to directional search after so many nodes
+7) Make characters make attack face on all attacks
 
 Long Term: 
 	Replace eyes with dead eyes when killed

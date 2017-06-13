@@ -1,5 +1,5 @@
-﻿using Controller.Characters;
-using Controller.Map;
+﻿using Controller.Map;
+using Generics.Utilities;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,5 +22,16 @@ namespace Model.Map
         public int Height { get; set; }
         public TileController Parent { get; set; }
         public int Row { get; set; }
+
+        public HexTile GetRandomNearbyTile(int probes)
+        {
+            var currNeighbors = this.Adjacent;
+            for(int i = 0; i < probes; i++)
+            {
+                var tile = ListUtil<HexTile>.GetRandomListElement(currNeighbors);
+                currNeighbors = tile.Adjacent;
+            }
+            return ListUtil<HexTile>.GetRandomListElement(currNeighbors); 
+        }
     }
 }

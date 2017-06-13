@@ -15,11 +15,14 @@ namespace Model.Perks
         {
             if (mods.X.GetType() == typeof(GenericWeapon))
             {
-                var armor = mods.X as GenericWeapon;
-                foreach (var kvp in mods.Y)
+                var wpn = mods.X as GenericWeapon;
+                if (!wpn.IsTypeOfShield())
                 {
-                    if (kvp.Type == Characters.SecondaryStatsEnum.AP)
-                        kvp.Scalar *= VALUE;
+                    foreach (var kvp in mods.Y)
+                    {
+                        if (kvp.Type == Characters.SecondaryStatsEnum.AP)
+                            kvp.Scalar *= VALUE;
+                    }
                 }
             }
         }

@@ -171,6 +171,7 @@ namespace Controller.Managers.Map
                 c.Handle.name = c.View.Type.ToString() + " " + c.View.Race.ToString();
                 render.sprite = sprite;
                 render.sortingLayerName = "CharTorso";
+                c.SpriteHandlerDict.Add("CharTorso", c.Handle);
                 c.SpriteHandlerDict.Add("Character Main", c.Handle);
                 if (c.View.Mount != null) { AttachMount(c, "CharMount", tile); }
                 AttachDeco(c, "CharFace", c.View.Face, tile);

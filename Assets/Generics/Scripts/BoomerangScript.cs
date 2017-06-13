@@ -1,7 +1,4 @@
-﻿using Controller.Characters;
-using Generics.Scripts;
-using Generics.Utilities;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Generics.Scripts
 {

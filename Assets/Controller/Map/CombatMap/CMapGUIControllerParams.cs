@@ -7,6 +7,7 @@ namespace Controller.Map
         public static readonly string ARMOR = "ArmorTextTag";
         public static readonly string AP = "APTextTag";
         public static readonly string EFFECTS_PATH = "Effects/";
+        public static readonly string FIGHTING_FATALITY = "FightingFatality";
         public static readonly string HELM = "HelmTextTag";
         public static readonly string HP = "HPTextTag";
         public static readonly string IMG = "ActingBoxImgTag";

@@ -106,9 +106,11 @@
     <Compile Include="Assets\Generics\Scripts\BobbingScript.cs" />
     <Compile Include="Assets\Generics\Scripts\BoomerangScript.cs" />
     <Compile Include="Assets\Generics\Scripts\DestroyByLifetime.cs" />
+    <Compile Include="Assets\Generics\Scripts\DramaticZoom.cs" />
     <Compile Include="Assets\Generics\Scripts\FloatingText.cs" />
     <Compile Include="Assets\Generics\Scripts\JoltScript.cs" />
-    <Compile Include="Assets\Generics\Scripts\RayCastScript.cs" />
+    <Compile Include="Assets\Generics\Scripts\RaycastMove.cs" />
+    <Compile Include="Assets\Generics\Scripts\RaycastMoveWithDelete.cs" />
     <Compile Include="Assets\Generics\Scripts\TileMoveScript.cs" />
     <Compile Include="Assets\Generics\Utilities\Count.cs" />
     <Compile Include="Assets\Generics\Utilities\DeepClone.cs" />
@@ -118,15 +120,16 @@
     <Compile Include="Assets\Generics\Utilities\StringUtil.cs" />
     <Compile Include="Assets\Generics\XML\GenericXMLReader.cs" />
     <Compile Include="Assets\Model\Abilities\Active\ActiveAbilityFactory.cs" />
+    <Compile Include="Assets\Model\Abilities\Active\ActiveAbilityTable.cs" />
     <Compile Include="Assets\Model\Abilities\Active\GenericActiveAbility.cs" />
     <Compile Include="Assets\Model\Abilities\Active\Missiles\Hadoken.cs" />
     <Compile Include="Assets\Model\Abilities\Active\XML\ActiveAbilityReader.cs" />
-    <Compile Include="Assets\Model\Abilities\Active\ActiveAbilityTable.cs" />
     <Compile Include="Assets\Model\Abilities\Enum\AbilityCastTypeEnum.cs" />
     <Compile Include="Assets\Model\Abilities\Enum\ActiveAbilitiesEnum.cs" />
     <Compile Include="Assets\Model\Abilities\Enum\WeaponAbilitiesEnum.cs" />
     <Compile Include="Assets\Model\Abilities\GenericAbility.cs" />
     <Compile Include="Assets\Model\Abilities\GenericAbilityTable.cs" />
+    <Compile Include="Assets\Model\Abilities\Magic\MagicTypeEnum.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Aim.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Bite.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\BreakArmor.cs" />
@@ -309,24 +312,23 @@
     <Compile Include="Assets\View\Events\PopulateWpnBtnsEvent.cs" />
     <Compile Include="Assets\View\Events\WpnBtnClickEvent.cs" />
     <Compile Include="Assets\View\GUI\AbilitiesModal.cs" />
-    <Compile Include="Assets\View\Scripts\AbilityBtnClick.cs" />
-    <Compile Include="Assets\View\Scripts\AbilityModalBtnClick.cs" />
-    <Compile Include="Assets\View\Scripts\EndTurnBtnClick.cs" />
     <Compile Include="Assets\View\GUI\GUISpriteLoader.cs" />
     <Compile Include="Assets\View\GUI\HoverModal.cs" />
-    <Compile Include="Assets\View\Scripts\WpnBtnClick.cs" />
     <Compile Include="Assets\View\Map\HexTileView.cs" />
     <Compile Include="Assets\View\Map\MapBridge.cs" />
     <Compile Include="Assets\View\Map\MapSpriteLoader.cs" />
     <Compile Include="Assets\View\Mounts\MountBridge.cs" />
     <Compile Include="Assets\View\Mounts\MountView.cs" />
-    <Compile Include="Assets\View\Scripts\AttackScript.cs" />
-    <Compile Include="Assets\View\Scripts\FlinchScript.cs" />
+    <Compile Include="Assets\View\Scripts\FXScripts\GearExplosionScript.cs" />
+    <Compile Include="Assets\View\Scripts\GUIScripts\AbilityBtnClick.cs" />
+    <Compile Include="Assets\View\Scripts\GUIScripts\AbilityModalBtnClick.cs" />
+    <Compile Include="Assets\View\Scripts\GUIScripts\AttackScript.cs" />
+    <Compile Include="Assets\View\Scripts\GUIScripts\EndTurnBtnClick.cs" />
+    <Compile Include="Assets\View\Scripts\FXScripts\FlinchScript.cs" />
+    <Compile Include="Assets\View\Scripts\GUIScripts\WpnBtnClick.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Model\Abilities\Active\XML\ActiveAbilities.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Model\Abilities\Active\XML\ActiveAbilities.xml" />
     <None Include="Assets\Model\Abilities\Weapon\XML\WeaponAbilities.xml" />
     <None Include="Assets\Model\Characters\XML\PredefinedCharacters.xml" />
     <None Include="Assets\Model\Characters\XML\PredefinedCritters.xml" />
@@ -340,6 +342,7 @@
     <None Include="Assets\Model\Parties\XML\SubParties.xml" />
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

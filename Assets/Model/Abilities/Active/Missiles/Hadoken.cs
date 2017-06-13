@@ -7,6 +7,7 @@ namespace Model.Abilities
         public Hadoken() : base(ActiveAbilitiesEnum.Hadoken)
         {
             this.CastType = AbilityCastTypeEnum.Bullet;
+            this.MagicType = Magic.MagicTypeEnum.Fighting;
         }
 
         public override void ProcessAbility(HitInfo hit)

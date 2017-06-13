@@ -7,8 +7,7 @@ namespace Generics.Utilities
     {
         public static T GetRandomListElement(List<T> toGet)
         {
-            var random = new Random();
-            int index = random.Next(toGet.Count);
+            int index = RNG.Instance.Next(toGet.Count);
             return toGet[index];
         }
     }

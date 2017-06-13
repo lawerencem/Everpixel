@@ -1,10 +1,12 @@
-﻿using Model.Combat;
+﻿using Model.Abilities.Magic;
+using Model.Combat;
 
 namespace Model.Abilities
 {
     public class GenericActiveAbility : GenericAbility
     {
         public AbilityCastTypeEnum CastType { get; set; }
+        public MagicTypeEnum MagicType { get; set; }
 
         public GenericActiveAbility(ActiveAbilitiesEnum type)
         {
@@ -16,6 +18,7 @@ namespace Model.Abilities
             this.CastType = AbilityCastTypeEnum.None;
             this.DamageMod = 1;
             this.DodgeMod = 1;
+            this.MagicType = MagicTypeEnum.Fighting;
             this.MeleeBlockChanceMod = 1;
             this.ParryModMod = 1;
             this.RangeBlockMod = 1;

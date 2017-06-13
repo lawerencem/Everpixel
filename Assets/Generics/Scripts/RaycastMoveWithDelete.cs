@@ -2,9 +2,9 @@
 
 namespace Generics.Scripts
 {
-    public class RayCastScript : MonoBehaviour
+    public class RayCastWithDeleteScript : MonoBehaviour
     {
-        private const float EPSILON = 0.15f;
+        private const float EPSILON = 0.05f;
 
         private Callback _callBack;
         private Vector3 _origin;
@@ -15,15 +15,7 @@ namespace Generics.Scripts
         public GameObject Source;
         public Vector3 Target;
 
-        public void Init(GameObject s, Vector3 t, float speed)
-        {
-            this._origin = s.transform.position;
-            this.Source = s;
-            this.Speed = speed;
-            this.Target = t;
-        }
-
-        public void Init(GameObject s, Vector3 t, float speed, Callback callback)
+        public void Init(GameObject s, Vector3 t, float speed, Callback callback = null)
         {
             this._origin = s.transform.position;
             this.Source = s;
@@ -37,9 +29,10 @@ namespace Generics.Scripts
             float move = this.Speed * Time.deltaTime;
             var newPosition = Vector3.Lerp(Source.transform.position, Target, move);
             this.Source.transform.position = newPosition;
-            if (Vector3.Distance(this._origin, Target) <= EPSILON)
+            if (Vector3.Distance(this.Source.transform.position, Target) <= EPSILON)
             {
                 this.Source.transform.position = Target;
+                GameObject.Destroy(this.Source);
                 if (this._callBack != null)
                     this._callBack();
                 Destroy(this);
