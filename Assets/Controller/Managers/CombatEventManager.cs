@@ -113,7 +113,7 @@ namespace Controller.Managers
             info.Parent = this;
             info.Source = this._combatManager.CurrActing.CurrentTile;
             info.Target = e.Target;
-            var action = new PerformActionEvent(info);
+            var action = new PerformActionEvent(info, this.ActionPerformedCallback);
         }
 
         private void HandleApplyInjuryEvent(ApplyInjuryEvent e)
@@ -201,7 +201,10 @@ namespace Controller.Managers
             if (!this.GetInteractionLock())
             {
                 this._combatManager.CurAbility = null;
-                var hit = new HitInfo(e.SourceCharController, e.TargetCharController, e.Info.Action, this.ActionPerformedCallback);
+
+                // TODO: Generate multiple hits as necessaryy
+                var hit = new HitInfo(e.SourceCharController, e.TargetCharController, e.Info.Action, e.ChildHitDone);
+                e.Info.Hits.Add(hit);
                 this._currentAction = e;
                 e.Info.Action.ProcessAbility(hit);
             }

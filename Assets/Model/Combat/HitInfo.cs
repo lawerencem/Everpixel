@@ -11,6 +11,7 @@ namespace Model.Combat
 
         public GenericAbility Ability { get; set; }
         public AttackEventFlags Flags { get; set; }
+        public bool IsFinished { get; set; }
         public bool IsHeal { get; set; }
         public int Dmg { get; set; }
         public GenericCharacterController Source { get; set; }
@@ -18,6 +19,7 @@ namespace Model.Combat
 
         public HitInfo(GenericCharacterController s, GenericCharacterController t, GenericAbility a, Callback callback = null)
         {
+            this.IsFinished = false;
             this.Source = s;
             this.Target = t;
             this.Ability = a;
@@ -28,7 +30,10 @@ namespace Model.Combat
         public void Done()
         {
             if (this._callBack != null)
+            {
+                this.IsFinished = true;
                 this._callBack();
+            }
         }
     }
 }

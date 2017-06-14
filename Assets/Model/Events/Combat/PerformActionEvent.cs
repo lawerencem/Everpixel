@@ -3,18 +3,21 @@ using Controller.Characters;
 using Controller.Managers;
 using Controller.Map;
 using Model.Abilities;
+using Model.Combat;
+using System.Collections.Generic;
 
 namespace Model.Events.Combat
 {
     public class PerformActionEventInfo
     {
-        public PerformActionEventInfo(Callback callback = null) { this._callBack = callback; }
-
-        private Callback _callBack;
-        public delegate void Callback();
+        public PerformActionEventInfo()
+        {
+            this.Hits = new List<HitInfo>();
+        }
 
         public CombatEventManager Parent { get; set; }
         public GenericAbility Action { get; set; }
+        public List<HitInfo> Hits { get; set; }
         public TileController Source { get; set; }
         public TileController Target { get; set; }
         public CombatManager CombatManager { get; set; }
@@ -22,19 +25,23 @@ namespace Model.Events.Combat
 
     public class PerformActionEvent : CombatEvent
     {
+        private Callback _callBack;
+        public delegate void Callback();
+
         public GenericCharacterController SourceCharController;
         public GenericCharacterController TargetCharController;
 
         public PerformActionEventInfo Info {get;set;}
 
-        public PerformActionEvent(PerformActionEventInfo info) :
+        public PerformActionEvent(PerformActionEventInfo info, Callback callback) :
             base(CombatEventEnum.PerformActionEvent, info.Parent)
         {
+            this._callBack = callback;
             this.Info = info;
 
             if (!this._parent.GetInteractionLock())
             {
-                if (this.Info.Source.Model.Current.GetType() == typeof(GenericCharacterController) &&
+                if (this.Info.Source .Model.Current.GetType() == typeof(GenericCharacterController) &&
                     this.Info.Target.Model.Current.GetType() == typeof(GenericCharacterController))
                 {
                     this.SourceCharController = Info.Source.Model.Current as GenericCharacterController;
@@ -64,10 +71,21 @@ namespace Model.Events.Combat
                             this.SourceCharController.Model.CurrentStamina -= (int)fatigueCost;
                             this.RegisterEvent();
                         }
-                    }  
+                    }
                 }
             }
-            this.Info.Action.ModData.Reset();
+        }
+
+        public void ChildHitDone()
+        {
+            this.Info.Hits.RemoveAll(x => x.IsFinished == true);
+            if (this.Info.Hits.Count == 0)
+            {
+                this.Info.Action.ModData.Reset();
+
+                if (this._callBack != null)
+                    this._callBack();
+            }
         }
     }
 }
