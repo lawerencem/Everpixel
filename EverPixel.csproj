@@ -322,7 +322,7 @@
     <Compile Include="Assets\View\Scripts\FXScripts\GearExplosionScript.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\AbilityBtnClick.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\AbilityModalBtnClick.cs" />
-    <Compile Include="Assets\View\Scripts\GUIScripts\AttackScript.cs" />
+    <Compile Include="Assets\View\Scripts\GUIScripts\AttackerJoltScript.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\EndTurnBtnClick.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\FlinchScript.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\WpnBtnClick.cs" />

@@ -25,6 +25,7 @@ namespace Controller.Managers
 
         private GameObject _cameraManager;
         private CombatManager _combatManager;
+        private PerformActionEvent _currentAction;
         private List<CombatEvent> _events;
 
         public CombatEventManager()
@@ -70,6 +71,15 @@ namespace Controller.Managers
         public void UnlockGUI() { this._guiLock = false; }
         public void UnlockInteraction() { this._interactionLock = false; }
 
+        private void ActionPerformedCallback()
+        {
+            this.UnlockInteraction();
+            TileControllerFlags.SetPotentialAttackFlagFalse(this._currentAction.Info.Target.Flags);
+            CMapGUIController.Instance.ClearDecoratedTiles();
+            CMapGUIController.Instance.SetActingBoxToController(this._currentAction.SourceCharController);
+            this._currentAction = null;
+        }
+
         private void TryProcessEvent(CombatEvent e)
         {
             switch(e.Type)
@@ -97,12 +107,13 @@ namespace Controller.Managers
         private void HandleActionConfirmed(ActionConfirmedEvent e)
         {
             this._events.Remove(e);
-            var action = new PerformActionEvent(
-                this, 
-                this._combatManager.CurrActing.CurrentTile, 
-                e.Target, 
-                this._combatManager.CurAbility,
-                this._combatManager);
+            var info = new PerformActionEventInfo();
+            info.Action = this._combatManager.CurAbility;
+            info.CombatManager = this._combatManager;
+            info.Parent = this;
+            info.Source = this._combatManager.CurrActing.CurrentTile;
+            info.Target = e.Target;
+            var action = new PerformActionEvent(info);
         }
 
         private void HandleApplyInjuryEvent(ApplyInjuryEvent e)
@@ -187,18 +198,12 @@ namespace Controller.Managers
         private void HandlePerformActionEvent(PerformActionEvent e)
         {
             this._events.Remove(e);
-            if (!this._interactionLock)
+            if (!this.GetInteractionLock())
             {
-                var hit = new HitInfo(e.Source, e.Target, e.Action);
-                e.Action.ProcessAbility(hit);
                 this._combatManager.CurAbility = null;
-                TileControllerFlags.SetPotentialAttackFlagFalse(e.Target.CurrentTile.Flags);
-                CMapGUIController.Instance.ClearDecoratedTiles();
-                CMapGUIController.Instance.SetActingBoxToController(e.Source);
-
-                // TODO: Move this elsewhere
-                this.UnlockInteraction();
-                e.Action.ModData.Reset();
+                var hit = new HitInfo(e.SourceCharController, e.TargetCharController, e.Info.Action, this.ActionPerformedCallback);
+                this._currentAction = e;
+                e.Info.Action.ProcessAbility(hit);
             }
         }
 

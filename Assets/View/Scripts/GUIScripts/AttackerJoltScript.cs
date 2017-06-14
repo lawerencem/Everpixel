@@ -6,7 +6,7 @@ using View.Characters;
 
 namespace View.Scripts
 {
-    public class AttackScript : BoomerangScript
+    public class AttackerJoltScript : BoomerangScript
     {
         private CallbackTwo _callBack;
         public delegate void CallbackTwo();

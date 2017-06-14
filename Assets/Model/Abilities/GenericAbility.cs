@@ -47,7 +47,7 @@ namespace Model.Abilities
             this.ModData = new GenericAbilityModData();
         }
 
-        public virtual void ProcessBullet(HitInfo hit)
+        public void ProcessBullet(HitInfo hit)
         {
             foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
                 perk.TryModAbility(hit.Ability);
@@ -55,7 +55,7 @@ namespace Model.Abilities
             this.TryApplyInjury(hit);
         }
 
-        public virtual void ProcessMelee(HitInfo hit)
+        public void ProcessMelee(HitInfo hit)
         {
             foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
                 perk.TryModAbility(hit.Ability);

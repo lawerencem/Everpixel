@@ -16,7 +16,7 @@ namespace Controller.Managers.Map
 {
     public class CMapGUIControllerHit
     {
-        private DisplayHitStatsEvent _e;
+        private DisplayHitStatsEvent _currentEvent;
 
         public void DisplayHitStatsEvent(HitInfo hit)
         {
@@ -28,7 +28,11 @@ namespace Controller.Managers.Map
 
         public void ProcessBulletAttack(DisplayHitStatsEvent e)
         {
-            this.ProcessBulletGraphics(e);
+            this._currentEvent = e;
+            var zoom = e.Hit.Source.Handle.AddComponent<DramaticZoom>();
+            var position = e.Hit.Source.Handle.transform.position;
+            position.y -= 0.35f;
+            zoom.Init(position, 140f, 5f, 0.5f, this.ProcessFatality);
         }
 
         public void ProcessCharacterKilled(CharacterKilledEvent e)
@@ -48,7 +52,7 @@ namespace Controller.Managers.Map
 
         public void ProcessMeleeHitGraphics(DisplayHitStatsEvent e)
         {
-            var attackerScript = e.Hit.Source.Handle.AddComponent<AttackScript>();
+            var attackerScript = e.Hit.Source.Handle.AddComponent<AttackerJoltScript>();
             var position = Vector3.Lerp(e.Hit.Target.CurrentTile.Model.Center, e.Hit.Source.CurrentTile.Model.Center, 0.85f);
             attackerScript.Init(e.Hit.Source, position, 8f, e.Done);
 
@@ -154,22 +158,13 @@ namespace Controller.Managers.Map
             this.DisplayText(e.Hit.Dmg.ToString(), e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, CMapGUIControllerParams.DMG_TEXT_OFFSET);
         }
 
-        private void ProcessBulletGraphics(DisplayHitStatsEvent e)
-        {
-            this._e = e;   
-            var zoom = e.Hit.Source.Handle.AddComponent<DramaticZoom>();
-            var position = e.Hit.Source.Handle.transform.position;
-            position.y -= 0.35f;
-            zoom.Init(position, 140f, 5f, 0.5f, this.ProcessFatality);
-        }
-
         private void ProcessFatality()
         {
-            var sprite = AttackSpriteLoader.Instance.GetAttackSprite(this._e.Hit.Ability as GenericActiveAbility);
+            var sprite = AttackSpriteLoader.Instance.GetAttackSprite(this._currentEvent.Hit.Ability as GenericActiveAbility);
             var bullet = new GameObject();
             var script = bullet.AddComponent<RayCastWithDeleteScript>();
-            bullet.transform.position = this._e.Hit.Source.transform.position;
-            script.Init(bullet, this._e.Hit.Target.transform.position, 5f, this.ProcessExplosion);
+            bullet.transform.position = this._currentEvent.Hit.Source.transform.position;
+            script.Init(bullet, this._currentEvent.Hit.Target.transform.position, 5f, this.ProcessExplosion);
             var renderer = bullet.AddComponent<SpriteRenderer>();
             renderer.sprite = sprite;
             renderer.sortingLayerName = CMapGUIControllerParams.PARTICLES_LAYER;
@@ -181,11 +176,11 @@ namespace Controller.Managers.Map
                 CMapGUIControllerParams.EFFECTS_PATH,
                 CMapGUIControllerParams.FIGHTING_FATALITY,
                 CMapGUIControllerParams.PARTICLES_EXTENSION);
-            var position = this._e.Hit.Target.transform.position;
+            var position = this._currentEvent.Hit.Target.transform.position;
             var boom = Resources.Load(path);
             var particles = GameObject.Instantiate(boom) as GameObject;
             particles.transform.position = position;
-            particles.transform.SetParent(this._e.Hit.Target.Handle.transform);
+            particles.transform.SetParent(this._currentEvent.Hit.Target.Handle.transform);
             particles.name = CMapGUIControllerParams.FIGHTING_FATALITY + " Particles";
             var explosionPath = StringUtil.PathBuilder(
                 CMapGUIControllerParams.EFFECTS_PATH,
@@ -194,16 +189,16 @@ namespace Controller.Managers.Map
             var explosion = GameObject.Instantiate(Resources.Load(explosionPath)) as GameObject;
             explosion.transform.position = position;
             explosion.name = "BOOM";
-            this._e.Hit.Target.Particles.Add(particles);
-            this._e.Hit.Target.Particles.Add(explosion);
+            this._currentEvent.Hit.Target.Particles.Add(particles);
+            this._currentEvent.Hit.Target.Particles.Add(explosion);
             this.ProcessGear();
         }
 
         private void ProcessGear()
         {
-            var c = this._e.Hit.Target.Model;
+            var c = this._currentEvent.Hit.Target.Model;
             var sprite = MapBridge.Instance.GetSplatterSprites(5);
-            foreach(var neighbor in this._e.Hit.Target.CurrentTile.Adjacent)
+            foreach(var neighbor in this._currentEvent.Hit.Target.CurrentTile.Adjacent)
             {
                 foreach(var outerNeighbor in neighbor.Adjacent)
                 {
@@ -213,7 +208,7 @@ namespace Controller.Managers.Map
                 var blood = MapBridge.Instance.GetSplatterSprites(2);
                 this.PaintSingleTile(neighbor, blood);
             }
-            this.PaintSingleTile(this._e.Hit.Target.CurrentTile, sprite);
+            this.PaintSingleTile(this._currentEvent.Hit.Target.CurrentTile, sprite);
             if (c.Type == CharacterTypeEnum.Humanoid)
             {
                 var renderer = c.ParentController.SpriteHandlerDict["CharTorso"].GetComponent<SpriteRenderer>();
@@ -247,7 +242,6 @@ namespace Controller.Managers.Map
                     var script = c.ParentController.SpriteHandlerDict["CharRWeapon"].AddComponent<GearExplosionScript>();
                     script.Init(c.ParentController.SpriteHandlerDict["CharRWeapon"], c.ParentController);
                 }
-                
             }
         }
 

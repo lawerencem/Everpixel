@@ -22,7 +22,7 @@ namespace View.Scripts
             this._toMove = source;
             this._callback = callback;
             var tile = character.CurrentTile;
-            var toGo = character.CurrentTile.Model.GetRandomNearbyTile(3);
+            var toGo = character.CurrentTile.Model.GetRandomNearbyTile(5);
             var move = source.AddComponent<RaycastMove>();
             var roll = RNG.Instance.NextDouble();
             move.transform.Rotate(new Vector3(0, 0, (float)(roll * 360)));

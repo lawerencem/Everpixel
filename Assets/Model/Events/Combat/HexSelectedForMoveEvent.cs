@@ -7,7 +7,7 @@ namespace Model.Events.Combat
     {
         public TileController Selected { get; set; }
 
-        public HexSelectedForMoveEvent(TileController t, CombatEventManager parent) : 
+        public HexSelectedForMoveEvent(TileController t, CombatEventManager parent) :
             base(CombatEventEnum.HexSelectedForMove, parent)
         {
             if (!this._parent.GetInteractionLock() && !this._parent.GetGUILock())

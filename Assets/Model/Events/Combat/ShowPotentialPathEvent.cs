@@ -10,9 +10,9 @@ namespace Model.Events.Combat
         public TileController Target;
 
         public ShowPotentialPathEvent(
-            GenericCharacterController c, 
+            GenericCharacterController c,
             TileController t,
-            CombatEventManager parent) : 
+            CombatEventManager parent) :
             base(CombatEventEnum.ShowPotentialPath, parent)
         {
             if (!this._parent.GetInteractionLock() && !this._parent.GetGUILock())
