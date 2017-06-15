@@ -66,15 +66,9 @@ namespace Model.Combat
             }
         }
 
-        private void ProcessHitEventModel()
-        {
-            var dmgEvent = new DamageCharacterEvent(CombatEventManager.Instance, this._hit);
-        }
-
         private void ProcessHitEventView(HitInfo hit)
         {
-            this._hit = hit;
-            var guiEvent = new DisplayHitStatsEvent(CombatEventManager.Instance, hit, this.ProcessHitEventModel);
+            var guiEvent = new DisplayHitStatsEvent(CombatEventManager.Instance, hit, hit.Done);
         }
 
         private void ProcessBulletFlags(HitInfo hit)

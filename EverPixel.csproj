@@ -105,6 +105,7 @@
     <Compile Include="Assets\Generics\Pair.cs" />
     <Compile Include="Assets\Generics\Scripts\BobbingScript.cs" />
     <Compile Include="Assets\Generics\Scripts\BoomerangScript.cs" />
+    <Compile Include="Assets\Generics\Scripts\DeactivateByLifetime.cs" />
     <Compile Include="Assets\Generics\Scripts\DestroyByLifetime.cs" />
     <Compile Include="Assets\Generics\Scripts\DramaticZoom.cs" />
     <Compile Include="Assets\Generics\Scripts\FloatingText.cs" />
@@ -234,7 +235,6 @@
     <Compile Include="Assets\Model\Equipment\XML\GenericEquipmentReader.cs" />
     <Compile Include="Assets\Model\Equipment\XML\WeaponReader.cs" />
     <Compile Include="Assets\Model\Events\Combat\ActionCofirmedEvent.cs" />
-    <Compile Include="Assets\Model\Events\Combat\ActiveAbilitySelectedEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\ApplyInjuryEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\AttackSelectedEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\CharacterKilledEvent.cs" />
@@ -311,6 +311,10 @@
     <Compile Include="Assets\View\Events\GUIEventEnum.cs" />
     <Compile Include="Assets\View\Events\PopulateWpnBtnsEvent.cs" />
     <Compile Include="Assets\View\Events\WpnBtnClickEvent.cs" />
+    <Compile Include="Assets\View\Fatalities\FatalityEnum.cs" />
+    <Compile Include="Assets\View\Fatalities\FatalityFactory.cs" />
+    <Compile Include="Assets\View\Fatalities\FightingFatality.cs" />
+    <Compile Include="Assets\View\Fatalities\GenericFatality.cs" />
     <Compile Include="Assets\View\GUI\AbilitiesModal.cs" />
     <Compile Include="Assets\View\GUI\GUISpriteLoader.cs" />
     <Compile Include="Assets\View\GUI\HoverModal.cs" />

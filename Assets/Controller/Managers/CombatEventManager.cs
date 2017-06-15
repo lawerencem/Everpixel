@@ -77,6 +77,10 @@ namespace Controller.Managers
             TileControllerFlags.SetPotentialAttackFlagFalse(this._currentAction.Info.Target.Flags);
             CMapGUIController.Instance.ClearDecoratedTiles();
             CMapGUIController.Instance.SetActingBoxToController(this._currentAction.SourceCharController);
+            foreach(var hit in this._currentAction.Info.Hits)
+            {
+                var dmg = new DamageCharacterEvent(this, hit);
+            }
             this._currentAction = null;
         }
 

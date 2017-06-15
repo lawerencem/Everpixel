@@ -73,7 +73,7 @@ namespace Generics.Scripts
         private void HandleZoomOut()
         {
             var fov = Camera.main.fieldOfView;
-            fov += (this._speed * Time.deltaTime);
+            fov += (this._speed * Time.deltaTime / 13);
             if (fov > this._originalFoV)
             {
                 Destroy(this);

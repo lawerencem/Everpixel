@@ -78,8 +78,8 @@ namespace Model.Events.Combat
 
         public void ChildHitDone()
         {
-            this.Info.Hits.RemoveAll(x => x.IsFinished == true);
-            if (this.Info.Hits.Count == 0)
+            var done = this.Info.Hits.FindAll(x => x.IsFinished == true);
+            if (this.Info.Hits.Count == done.Count)
             {
                 this.Info.Action.ModData.Reset();
 

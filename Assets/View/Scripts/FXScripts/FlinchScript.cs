@@ -12,7 +12,7 @@ namespace View.Scripts
         private SpriteRenderer _renderer;
         private Sprite[] _sprites;
 
-        public void Init(GenericCharacterController source, Vector3 target, float speed, Callback callback)
+        public void Init(GenericCharacterController source, Vector3 target, float speed, Callback callback = null)
         {
             base.Init(source.Handle, target, speed, callback);
             this._renderer = source.Handle.GetComponent<SpriteRenderer>();
@@ -28,8 +28,8 @@ namespace View.Scripts
 
         protected override void Done()
         {
-            base.Done();
             this._renderer.sprite = this._oldSprite;
+            base.Done();
         }
     }
 }

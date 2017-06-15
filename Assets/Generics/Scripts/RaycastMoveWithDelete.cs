@@ -2,7 +2,7 @@
 
 namespace Generics.Scripts
 {
-    public class RayCastWithDeleteScript : MonoBehaviour
+    public class RaycastWithDeleteScript : MonoBehaviour
     {
         private const float EPSILON = 0.05f;
 

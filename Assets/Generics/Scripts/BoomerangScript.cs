@@ -12,21 +12,7 @@ namespace Generics.Scripts
         public float Speed { get; set; }
         
 
-        public virtual void Update()
-        {
-
-        }
-
-        public virtual void Init(GameObject source, Vector3 target, float speed)
-        {
-            this.Source = source;
-            this.Speed = speed;
-            this._origin = this.Source.transform.position;
-            var jolt = this.Source.AddComponent<JoltScript>();
-            jolt.Init(this.Source, target, speed, this.Retract);
-        }
-
-        public virtual void Init(GameObject source, Vector3 target, float speed, Callback callback)
+        public virtual void Init(GameObject source, Vector3 target, float speed, Callback callback = null)
         {
             this._callBack = callback;
             this.Source = source;

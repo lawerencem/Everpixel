@@ -1,5 +1,6 @@
 ﻿using Controller.Characters;
 using Controller.Map;
+using Generics.Scripts;
 using Model.Abilities;
 using Model.Characters;
 using Model.Events.Combat;
@@ -18,6 +19,7 @@ namespace Controller.Managers.Map
         private GameObject _singleTile;
 
         private AbilitiesModal _abilityModal;
+        private GameObject _banner;
         private CMapGUIControllerHit _hitHelper = new CMapGUIControllerHit();
         private HoverModal _hoverModal;
         private CMapGUIControllerParticle _particleHelper = new CMapGUIControllerParticle();
@@ -33,6 +35,13 @@ namespace Controller.Managers.Map
             }
         }
 
+        public void ActivateBanner()
+        {
+            this._banner.SetActive(true);
+            var script = this._banner.AddComponent<DeactivateByLifetime>();
+            script.Init(this._banner, 4);
+        }
+
         public CMapGUIController()
         {
             this._abilityModal = new AbilitiesModal();
@@ -40,6 +49,10 @@ namespace Controller.Managers.Map
 
             this._abilityModal.Init();
             this._hoverModal.Init();
+
+            var banner = GameObject.FindGameObjectWithTag("BannerTag");
+            this._banner = banner;
+            this._banner.SetActive(false);
         }
 
         public void ApplyInjuryGraphics(ApplyInjuryEvent e)
@@ -99,16 +112,14 @@ namespace Controller.Managers.Map
         {
             if (e.Hit.Ability.Type.GetType() == (typeof(WeaponAbilitiesEnum)))
             {
-                this._hitHelper.DisplayHitStatsEvent(e.Hit);
                 this._hitHelper.ProcessMeleeHitGraphics(e);
-                this._hitHelper.ProcessSplatter(e);
             }
             else if (e.Hit.Ability.Type.GetType() == (typeof(ActiveAbilitiesEnum)))
             {
                 var ability = e.Hit.Ability as GenericActiveAbility;
                 switch(ability.CastType)
                 {
-                    case (AbilityCastTypeEnum.Bullet): { this.ProcessBulletAttack(e); } break;
+                    case (AbilityCastTypeEnum.Bullet): { this._hitHelper.ProcessBulletGraphics(e); } break;
                 }
             }
         } 
@@ -206,11 +217,6 @@ namespace Controller.Managers.Map
             color.a = alpha;
             renderer.color = color;
             this._singleTile = tView;
-        }
-
-        private void ProcessBulletAttack(DisplayHitStatsEvent e)
-        {
-            this._hitHelper.ProcessBulletAttack(e);
         }
         
         private void SetTagText(string tag, string toSet)

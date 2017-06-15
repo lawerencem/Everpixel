@@ -32,5 +32,7 @@ namespace Controller.Map
 
         public static readonly Color RED = new Color(255, 0, 0, 150);
         public static readonly Color WHITE = new Color(255, 255, 255, 255);
+
+        public static readonly double FATALITY_CHANCE = 1.0;
     }
 }

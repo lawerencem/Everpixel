@@ -15,7 +15,7 @@ namespace View.Scripts
         private SpriteRenderer _renderer;
         private Sprite[] _sprites;
 
-        public void Init(GenericCharacterController source, Vector3 target, float speed, CallbackTwo callback)
+        public void Init(GenericCharacterController source, Vector3 target, float speed, CallbackTwo callback = null)
         {
             base.Init(source.Handle, target, speed);
             this._renderer = source.Handle.GetComponent<SpriteRenderer>();
