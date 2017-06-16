@@ -172,12 +172,14 @@ namespace Controller.Managers.Map
                 render.sprite = sprite;
                 render.sortingLayerName = "CharTorso";
                 c.SpriteHandlerDict.Add("CharTorso", c.Handle);
+                AttachHead(c, "CharHead", c.View.Head, tile);
                 c.SpriteHandlerDict.Add("Character Main", c.Handle);
                 if (c.View.Mount != null) { AttachMount(c, "CharMount", tile); }
                 AttachDeco(c, "CharFace", c.View.Face, tile);
                 AttachDeco(c, "CharDeco1", c.View.Deco1, tile);
                 AttachDeco(c, "CharDeco2", c.View.Deco2, tile);
                 AttachDeco(c, "CharDeco3", c.View.Deco3, tile);
+                AttachDeco(c, "CharDeco4", c.View.Deco4, tile);
                 if (c.View.Armor != null) { TryAttachEquipment(c, c.View.Armor, "CharArmor", tile); }
                 if (c.View.Helm != null) { TryAttachEquipment(c, c.View.Helm, "CharHelm", tile, 0f, HELM_OFFSET); }
                 if (c.View.LWeapon != null) { TryAttachEquipment(c, c.View.LWeapon, "CharLWeapon", tile, WEAPON_OFFSET); }
@@ -189,7 +191,7 @@ namespace Controller.Managers.Map
             }
         }
 
-        private void AttachDeco(GenericCharacterController c, string sort, int spriteIndex, TileController tile)
+        private void AttachHead(GenericCharacterController c, string sort, int spriteIndex, TileController tile)
         {
             if (c.Model.Type == CharacterTypeEnum.Humanoid)
             {
@@ -198,6 +200,25 @@ namespace Controller.Managers.Map
                 var render = spriteHandler.AddComponent<SpriteRenderer>();
                 spriteHandler.transform.position = c.Handle.transform.position;
                 spriteHandler.transform.SetParent(c.Handle.transform);
+                spriteHandler.name = "Character Head";
+                render.sprite = sprite;
+                render.sortingLayerName = sort;
+                c.SpriteHandlerDict.Add(sort, spriteHandler);
+            }
+        }
+
+        private void AttachDeco(GenericCharacterController c, string sort, int spriteIndex, TileController tile)
+        {
+            if (c.Model.Type == CharacterTypeEnum.Humanoid)
+            {
+                var sprite = c.View.Sprites[spriteIndex];
+                var spriteHandler = new GameObject();
+                var render = spriteHandler.AddComponent<SpriteRenderer>();
+                spriteHandler.transform.position = c.Handle.transform.position;
+                if (sort == "CharFace" || sort == "CharDeco1" || sort == "CharDeco2")
+                    spriteHandler.transform.SetParent(c.SpriteHandlerDict["CharHead"].transform);
+                else
+                    spriteHandler.transform.SetParent(c.Handle.transform);
                 spriteHandler.name = "Character Deco";
                 render.sprite = sprite;
                 render.sortingLayerName = sort;

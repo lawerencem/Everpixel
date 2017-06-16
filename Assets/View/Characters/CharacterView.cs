@@ -12,7 +12,9 @@ namespace View.Characters
         public int Deco1 { get; set; }
         public int Deco2 { get; set; }
         public int Deco3 { get; set; }
+        public int Deco4 { get; set; }
         public int Face { get; set; }
+        public int Head { get; set; }
         public ArmorView Helm { get; set; }
         public WeaponView LWeapon { get; set; }
         public string Name { get; set; }

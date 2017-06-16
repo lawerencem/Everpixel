@@ -1,5 +1,13 @@
 ﻿TODO
 
+This weekend
+   - Dead Eyes
+   - Make weapons move slightly on normal kills
+   - Decaptiation
+   - Weapon Fatalities
+   - Why are blocks happening all the time
+   - Troll culture
+
 1) - Dual-Wield
 1.5) - Dead characters on tiles shouldn't prevent movement
 3) - Critter classes / abilities during level up on the xml
@@ -18,4 +26,3 @@ can target killed characters?
 
 REFACTOR
    - 1:1 for weapon abilities to sprites...
-   - Attack event system getting out of hand with callbacks...

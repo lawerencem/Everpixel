@@ -8,11 +8,13 @@ namespace View.Characters
 {
     public class CharacterBridge : AbstractSingleton<CharacterBridge>
     {
-        public readonly List<int> HumanoidFaceIndexes = new List<int>() { 3 };
-        public readonly List<int> HumanoidDeco1Indexes = new List<int>() { 5, 6, 7, 14 };
-        public readonly List<int> HumanoidDeco2Indexes = new List<int>() { 8, 9, 10, 14 };
-        public readonly List<int> HumanoidDeco3Indexes = new List<int>() { 11, 12, 13, 14};
-        public readonly List<int> HumanoidTorsoIndexes = new List<int>() { 0, 1, 2 };
+        private readonly List<int> HumanoidFaceIndexes = new List<int>() { 6 };
+        private readonly List<int> HumanoidDeco1Indexes = new List<int>() { 9, 10, 11, 21 };
+        private readonly List<int> HumanoidDeco2Indexes = new List<int>() { 12, 13, 14, 21 };
+        private readonly List<int> HumanoidDeco3Indexes = new List<int>() { 15, 16, 17, 21 };
+        private readonly List<int> HumanoidDeco4Indexes = new List<int>() { 18, 19, 20, 21 };
+        private const int HEAD_OFFSET = -3;
+        private readonly List<int> HumanoidTorsoIndexes = new List<int>() { 3,4,5 };
 
         public CharacterBridge() { }
 
@@ -52,7 +54,9 @@ namespace View.Characters
             p.Deco1 = HumanoidDeco1Indexes[RNG.Instance.Next(0, HumanoidDeco1Indexes.Count)];
             p.Deco2 = HumanoidDeco2Indexes[RNG.Instance.Next(0, HumanoidDeco2Indexes.Count)];
             p.Deco3 = HumanoidDeco3Indexes[RNG.Instance.Next(0, HumanoidDeco3Indexes.Count)];
+            p.Deco4 = HumanoidDeco3Indexes[RNG.Instance.Next(0, HumanoidDeco4Indexes.Count)];
             p.Torso = HumanoidTorsoIndexes[RNG.Instance.Next(0, HumanoidTorsoIndexes.Count)];
+            p.Head = p.Torso + HEAD_OFFSET;
             p.Sprites = CharacterSpriteLoader.Instance.GetCharacterSprites(c);
 
             return p;
@@ -66,7 +70,9 @@ namespace View.Characters
             p.Deco1 = HumanoidDeco1Indexes[RNG.Instance.Next(0, HumanoidDeco1Indexes.Count)];
             p.Deco2 = HumanoidDeco2Indexes[RNG.Instance.Next(0, HumanoidDeco2Indexes.Count)];
             p.Deco3 = HumanoidDeco3Indexes[RNG.Instance.Next(0, HumanoidDeco3Indexes.Count)];
+            p.Deco4 = HumanoidDeco3Indexes[RNG.Instance.Next(0, HumanoidDeco4Indexes.Count)];
             p.Torso = HumanoidTorsoIndexes[RNG.Instance.Next(0, HumanoidTorsoIndexes.Count)];
+            p.Head = p.Torso + HEAD_OFFSET;
             p.Sprites = CharacterSpriteLoader.Instance.GetCharacterSprites(c);
 
             return p;
