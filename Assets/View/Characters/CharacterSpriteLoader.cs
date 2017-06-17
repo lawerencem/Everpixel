@@ -13,10 +13,18 @@ namespace View.Characters
         private const string CHARACTER_PATH = "Sprites/Characters/";
         private const string CRITTER_PATH = "Sprites/Critters/";
         private const int CRITTER_INDEX = 0;
+        private const int DEAD_EYES = 8;
+        private const int FLINCH_EYES = 7;
         private const string EQUIPMENT_PATH = "Sprites/Equipment/";
         private const string EXTENSION = "_Spritesheet";
         
         public CharacterSpriteLoader() { }
+
+        public Sprite[] GetArmorSprites(ArmorParams a)
+        {
+            var path = StringUtil.PathBuilder(EQUIPMENT_PATH, a.Type.ToString(), EXTENSION);
+            return GetSprites(path);
+        }
 
         public Sprite[] GetCritterSprites(CharacterParams c)
         {
@@ -42,23 +50,18 @@ namespace View.Characters
             return GetSprites(path);
         }
 
-        //private Sprite[] GetCritterSprites(string path)
-        //{
-        //    var stuff = Resources.LoadAll(path);
-        //    if (stuff.Length > 1)
-        //    {
-        //        var sprites = new Sprite[1];
-        //        sprites[0] = stuff[CRITTER_INDEX] as Sprite;
-        //        return sprites;
-        //    }
-        //    else
-        //        return null;
-        //}
-
-        public Sprite[] GetArmorSprites(ArmorParams a)
+        public Sprite GetHumanoidDeadEyes(RaceEnum race)
         {
-            var path = StringUtil.PathBuilder(EQUIPMENT_PATH, a.Type.ToString(), EXTENSION);
-            return GetSprites(path);
+            var path = StringUtil.PathBuilder(CHARACTER_PATH, race.ToString(), EXTENSION);
+            var sprites = GetSprites(path);
+            return sprites[DEAD_EYES];
+        }
+
+        public Sprite GetHumanoidFlinchEyes(RaceEnum race)
+        {
+            var path = StringUtil.PathBuilder(CHARACTER_PATH, race.ToString(), EXTENSION);
+            var sprites = GetSprites(path);
+            return sprites[FLINCH_EYES];
         }
 
         public Sprite[] GetMountSprites(MountParams m)
@@ -72,22 +75,6 @@ namespace View.Characters
             var path = StringUtil.PathBuilder(EQUIPMENT_PATH, w.Type.ToString() + "_", w.Skill.ToString(), EXTENSION);
             return GetSprites(path);
         }
-
-        //private Sprite[] GetSprites(string path)
-        //{
-        //    var stuff = Resources.LoadAll(path);
-        //    if (stuff.Length > 1)
-        //    {
-        //        var sprites = new Sprite[stuff.Length - 1];
-        //        for (int itr = 1; itr < stuff.Length; itr++)
-        //        {
-        //            sprites[itr - 1] = stuff.GetValue(itr) as Sprite;
-        //        }
-        //        return sprites;
-        //    }
-        //    else
-        //        return null;
-        //}
 
         private Sprite[] GetSprites(string path)
         {

@@ -41,7 +41,7 @@ namespace Model.Characters
 
         private GenericCharacter BuildHelper(CharacterParams c)
         {
-            var character = new GenericCharacter();
+            var character = new GenericCharacter(c.Race);
             var primary = GetRaceStats(c);
             if (primary != null)
             {

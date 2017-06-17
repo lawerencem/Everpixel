@@ -42,7 +42,7 @@ namespace View.Fatalities
             var bob = this._event.Hit.Source.Handle.GetComponent<BobbingScript>();
             if (bob != null)
                 GameObject.Destroy(bob);
-            zoom.Init(position, 140f, 5f, 0.5f, this.ProcessFatality); // TODO: attack fx
+            zoom.Init(position, 140f, 5f, 0.5f, this.ProcessFatality); // TODO: attack Flicnh fx
         }
 
         private void InitBulletFatality()
@@ -134,6 +134,8 @@ namespace View.Fatalities
             if (c.Type == CharacterTypeEnum.Humanoid)
             {
                 var renderer = c.ParentController.SpriteHandlerDict["CharTorso"].GetComponent<SpriteRenderer>();
+                renderer.sprite = null;
+                renderer = c.ParentController.SpriteHandlerDict["CharHead"].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;
                 renderer = c.ParentController.SpriteHandlerDict["CharDeco1"].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;

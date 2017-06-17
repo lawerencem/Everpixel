@@ -11,10 +11,14 @@ namespace Model.Characters
 {
     public class GenericCharacter : AbstractCharacter<CharacterTypeEnum>
     {
+        private RaceEnum _race;
+        public RaceEnum Race { get { return this._race; } }
+
         public GenericCharacterController ParentController { get; set; }
 
-        public GenericCharacter()
+        public GenericCharacter(RaceEnum race)
         {
+            this._race = race;
             this.ActiveAbilities = new List<GenericActiveAbility>();
             this.BaseClasses = new Dictionary<ClassEnum, GenericClass>();
             this.DefaultWpnAbilities = new List<WeaponAbility>();

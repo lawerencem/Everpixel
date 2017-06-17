@@ -82,8 +82,16 @@ namespace Controller.Managers.Map
         {
             foreach (var particle in e.Killed.Particles)
                 GameObject.Destroy(particle);
-            var roll = RNG.Instance.NextDouble();
-            e.Killed.transform.Rotate(new Vector3(0, 0, (float)(roll * 360)));
+            if (e.Killed.Model.Type == CharacterTypeEnum.Humanoid)
+            {
+                if (e.Killed.Model.LWeapon != null)
+                    this.RandomMoveKill(e.Killed.SpriteHandlerDict["CharLWeapon"]);
+                if (e.Killed.Model.RWeapon != null)
+                    this.RandomMoveKill(e.Killed.SpriteHandlerDict["CharRWeapon"]);
+                var eyes = e.Killed.SpriteHandlerDict["CharFace"].GetComponent<SpriteRenderer>();
+                eyes.sprite = CharacterSpriteLoader.Instance.GetHumanoidDeadEyes(e.Killed.Model.Race);
+            }
+            this.RandomRotate(e.Killed.Handle);
             this.ProcessSplatterLevelFive(e);
         }
 
@@ -183,7 +191,12 @@ namespace Controller.Managers.Map
             }
 
             if (success)
+            {
                 fatality.Init();
+                foreach (var particle in e.Hit.Target.Particles)
+                    GameObject.Destroy(particle);
+            }
+                
 
             return success;
         }
@@ -193,6 +206,28 @@ namespace Controller.Managers.Map
             var random = ListUtil<TileController>.GetRandomListElement(e.Hit.Target.CurrentTile.Adjacent);
             var position = Vector3.Lerp(e.Hit.Target.CurrentTile.Model.Center, random.Model.Center, 0.35f);
             return position;
+        }
+
+        private void RandomMoveKill(GameObject o)
+        {
+            this.RandomRotate(o);
+            this.RandomTranslate(o);
+        }
+        
+        private void RandomRotate(GameObject o)
+        {
+            var roll = RNG.Instance.NextDouble();
+            o.transform.Rotate(new Vector3(0, 0, (float)(roll * 360)));
+        }
+
+        private void RandomTranslate(GameObject o)
+        {
+            var x = RNG.Instance.Next(-15, 15) / 100;
+            var y = RNG.Instance.Next(-15, 15) / 100;
+            var position = o.transform.position;
+            position.x += x;
+            position.y += y;
+            o.transform.position = position;
         }
 
         private bool IsFatality(DisplayHitStatsEvent e)

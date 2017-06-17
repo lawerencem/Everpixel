@@ -46,7 +46,7 @@ namespace Model.Characters
 
         private GenericCharacter BuildHelper(CharacterParams c)
         {
-            var character = new GenericCharacter();
+            var character = new GenericCharacter(c.Race);
             PerkMediator.Instance.SetCharacterPerks(character, c.Perks);
             BuildBaseClassHelper(c, character);
             BuildDefaultAbilities(c, character);

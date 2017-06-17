@@ -3,6 +3,7 @@
     public enum RaceEnum
     {
         None,
+        Critter,
         Elf,
         Goblin,
         Human,
