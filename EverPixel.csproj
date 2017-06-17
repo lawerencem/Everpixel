@@ -166,6 +166,7 @@
     <Compile Include="Assets\Model\Characters\Builders\CritterBuilder.cs" />
     <Compile Include="Assets\Model\Characters\Builders\HumanoidBuilder.cs" />
     <Compile Include="Assets\Model\Characters\Builders\SecondaryStatReferee.cs" />
+    <Compile Include="Assets\Model\Characters\Enums\CharacterStatusFlags.cs" />
     <Compile Include="Assets\Model\Characters\Enums\CharacterTypeEnum.cs" />
     <Compile Include="Assets\Model\Characters\Enums\PrimaryStatsEnum.cs" />
     <Compile Include="Assets\Model\Characters\Enums\RaceEnum.cs" />

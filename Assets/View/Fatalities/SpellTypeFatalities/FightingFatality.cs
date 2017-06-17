@@ -128,7 +128,11 @@ namespace View.Fatalities
                 renderer.sprite = null;
                 renderer = c.ParentController.SpriteHandlerDict["CharDeco3"].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;
+                renderer = c.ParentController.SpriteHandlerDict["CharDeco4"].GetComponent<SpriteRenderer>();
+                renderer.sprite = null;
                 renderer = c.ParentController.SpriteHandlerDict["CharFace"].GetComponent<SpriteRenderer>();
+                renderer.sprite = null;
+                renderer = c.ParentController.SpriteHandlerDict["CharHead"].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;
 
                 if (c.Armor != null)
@@ -151,6 +155,11 @@ namespace View.Fatalities
                     var script = c.ParentController.SpriteHandlerDict["CharRWeapon"].AddComponent<GearExplosionScript>();
                     script.Init(c.ParentController.SpriteHandlerDict["CharRWeapon"], c.ParentController);
                 }
+            }
+            else
+            {
+                var renderer = c.ParentController.SpriteHandlerDict["CharTorso"].GetComponent<SpriteRenderer>();
+                renderer.sprite = null;
             }
         }
     }

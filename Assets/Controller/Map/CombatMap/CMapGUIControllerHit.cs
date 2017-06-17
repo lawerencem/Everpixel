@@ -230,7 +230,8 @@ namespace Controller.Managers.Map
                     this.AssignDeadLayer(c.SpriteHandlerDict["CharRWeapon"], "DeadRWeapon");
                 }       
                 var eyes = c.SpriteHandlerDict["CharFace"].GetComponent<SpriteRenderer>();
-                eyes.sprite = CharacterSpriteLoader.Instance.GetHumanoidDeadEyes(c.Model.Race);
+                if (eyes.sprite != null)
+                    eyes.sprite = CharacterSpriteLoader.Instance.GetHumanoidDeadEyes(c.Model.Race);
 
                 this.AssignDeadLayer(c.SpriteHandlerDict["CharFace"], "DeadFace");
                 this.AssignDeadLayer(c.SpriteHandlerDict["CharDeco1"], "DeadDeco1");

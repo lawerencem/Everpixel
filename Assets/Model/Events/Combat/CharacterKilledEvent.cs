@@ -1,8 +1,6 @@
 ﻿using Controller.Characters;
 using Controller.Managers;
-using Controller.Map;
-using Generics.Scripts;
-using UnityEngine;
+using Model.Characters;
 
 namespace Model.Events.Combat
 {
@@ -15,6 +13,10 @@ namespace Model.Events.Combat
         {
             this.Killed = killed;
             this.RegisterEvent();
+            CharacterStatusFlags.SetDeadTrue(this.Killed.Model.StatusFlags);
+            var tgtTile = this.Killed.CurrentTile;
+            tgtTile.DeadCharacters.Add(this.Killed);
+            tgtTile.Model.Current = null;
         }
     }
 }

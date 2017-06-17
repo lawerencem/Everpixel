@@ -40,21 +40,25 @@ namespace View.Fatalities
 
         private void ProcessHeadFatality()
         {
-            var head = this._event.Hit.Target.SpriteHandlerDict["CharHead"];
-            var tgtTile = ListUtil<TileController>.GetRandomListElement(this._event.Hit.Target.CurrentTile.Adjacent);
-            head.transform.SetParent(tgtTile.transform);
+            if (this._event.Hit.Target.Model.Type == CharacterTypeEnum.Humanoid)
+            {
+                var head = this._event.Hit.Target.SpriteHandlerDict["CharHead"];
+                var tgtTile = ListUtil<TileController>.GetRandomListElement(this._event.Hit.Target.CurrentTile.Adjacent);
+                head.transform.SetParent(tgtTile.transform);
 
-            var spin = head.AddComponent<HeadRotationScript>();
-            bool spinRight = true;
-            var roll = RNG.Instance.Next(1);
-            if (roll == 1)
-                spinRight = false;
-            var percent = RNG.Instance.NextDouble();
-            spin.Init(head, (float)(5f * percent), spinRight, base.Done);
-            spin.InitHeadRotation(tgtTile, this._parent);
-            var translate = head.AddComponent<RaycastMove>();
-            translate.Init(head, tgtTile.Model.Center, 1f, spin.Done);
-            this.HandleParticles();
+                var spin = head.AddComponent<HeadRotationScript>();
+                bool spinRight = true;
+                var roll = RNG.Instance.Next(1);
+                if (roll == 1)
+                    spinRight = false;
+                var percent = RNG.Instance.NextDouble();
+                spin.Init(head, (float)(5f * percent), spinRight, base.Done);
+                spin.InitHeadRotation(tgtTile, this._parent);
+                var translate = head.AddComponent<RaycastMove>();
+                translate.Init(head, tgtTile.Model.Center, 1f, spin.Done);
+                this.HandleParticles();
+            }
+
             this._parent.ProcessCharacterKilled(this._event.Hit.Target);
             base.ProcessFatalityBanner();
         }

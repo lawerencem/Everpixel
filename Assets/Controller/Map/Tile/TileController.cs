@@ -25,6 +25,7 @@ namespace Controller.Map
         private DateTime _clickTime;
 
         public List<TileController> Adjacent { get; set; }
+        public List<GenericCharacterController> DeadCharacters { get; set; }
         public TileControllerFlags Flags { get; set; }
         public GameObject Handle { get; set; }
         public HexTile Model { get; set; }
@@ -33,6 +34,7 @@ namespace Controller.Map
         public TileController()
         {
             this.Adjacent = new List<TileController>();
+            this.DeadCharacters = new List<GenericCharacterController>();
             this.Flags = new TileControllerFlags();
             this.Model = new HexTile();
         }
@@ -40,8 +42,7 @@ namespace Controller.Map
         public void Update()
         {
             if (_doubleClick && (DateTime.Now > (this._clickTime.AddSeconds(this._clickDelta))))
-                this._doubleClick = false;
-                
+                this._doubleClick = false;       
         }
 
         public void Init(GameObject o)

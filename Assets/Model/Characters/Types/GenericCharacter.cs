@@ -22,11 +22,12 @@ namespace Model.Characters
             this.ActiveAbilities = new List<GenericActiveAbility>();
             this.BaseClasses = new Dictionary<ClassEnum, GenericClass>();
             this.DefaultWpnAbilities = new List<WeaponAbility>();
-            this.Perks = new CharacterPerkCollection();
-            this.PStatMods = new List<PrimaryStatModifier>();
-            this.SStatMods = new List<SecondaryStatModifier>();
             this.IndefSStatMods = new List<Pair<object, List<IndefSecondaryStatModifier>>>();
             this.Injuries = new List<Model.Injuries.GenericInjury>();
+            this.Perks = new CharacterPerkCollection();
+            this.PStatMods = new List<PrimaryStatModifier>();
+            this.StatusFlags = new CharacterStatusFlags();
+            this.SStatMods = new List<SecondaryStatModifier>();
         }
 
         public void ModifyHP(int value, bool isHeal)

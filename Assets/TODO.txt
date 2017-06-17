@@ -1,7 +1,6 @@
 ﻿TODO
 
 This weekend
-   - Figure out kills 
    - Troll culture
    - Active Ability Buttons toBuild.
 
@@ -24,4 +23,3 @@ Long Term:
 	GUI for prediction
 
 Bugs:
-can target killed characters?

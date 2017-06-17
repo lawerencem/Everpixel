@@ -46,6 +46,8 @@ namespace Model.Characters
         public GenericWeapon LWeapon { get; set; }
         public GenericWeapon RWeapon { get; set; }
 
+        public CharacterStatusFlags StatusFlags { get; set; }
+
         public void AddArmor(GenericArmor armor)
         {
             this.RemoveArmor();
