@@ -8,6 +8,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>1.30</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>1</IconSprite>
     <Injury>Major_Bleeding</Injury>
     <Injury>Minor_Bleeding</Injury>
     <Injury>Profuse_Bleeding</Injury>
@@ -26,6 +27,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>1</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>0</IconSprite>
     <Injury>Major_Bleeding</Injury>
     <Injury>Massive_Bleeding</Injury>
     <Injury>Minor_Bleeding</Injury>
@@ -46,6 +48,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>0.25</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>2</IconSprite>
     <Injury>Broken_Ribs</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
     <ParryModMod>1.0</ParryModMod>
@@ -62,6 +65,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>0.25</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>3</IconSprite>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
     <ParryModMod>1.0</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>
@@ -77,6 +81,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>1</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>4</IconSprite>
     <Injury>Major_Bleeding</Injury>
     <Injury>Massive_Bleeding</Injury>
     <Injury>Minor_Bleeding</Injury>
@@ -97,6 +102,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>1</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>0</IconSprite>
     <Injury>Broken_Ribs</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
     <ParryModMod>1.0</ParryModMod>
@@ -113,6 +119,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>1</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>5</IconSprite>
     <Injury>Major_Bleeding</Injury>
     <Injury>Massive_Bleeding</Injury>
     <Injury>Minor_Bleeding</Injury>
@@ -133,6 +140,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>1</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>6</IconSprite>
     <Injury>Major_Bleeding</Injury>
     <Injury>Minor_Bleeding</Injury>
     <Injury>Profuse_Bleeding</Injury>
@@ -151,6 +159,7 @@
     <BlockIgnoreMod>0.55</BlockIgnoreMod>
     <DamageMod>0.25</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>7</IconSprite>
     <Injury>Major_Bleeding</Injury>
     <Injury>Massive_Bleeding</Injury>
     <Injury>Minor_Bleeding</Injury>
@@ -171,6 +180,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>0.85</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>7</IconSprite>
     <Injury>Broken_Ribs</Injury>
     <Injury>Major_Bleeding</Injury>
     <Injury>Minor_Bleeding</Injury>
@@ -190,6 +200,7 @@
     <BlockIgnoreMod>0.75</BlockIgnoreMod>
     <DamageMod>1.20</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>9</IconSprite>
     <Injury>Major_Bleeding</Injury>
     <Injury>Massive_Bleeding</Injury>
     <Injury>Minor_Bleeding</Injury>
@@ -210,6 +221,7 @@
     <BlockIgnoreMod>0.55</BlockIgnoreMod>
     <DamageMod>0.75</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>9</IconSprite>
     <Injury>Major_Bleeding</Injury>
     <Injury>Massive_Bleeding</Injury>
     <Injury>Minor_Bleeding</Injury>
@@ -229,6 +241,7 @@
     <BlockIgnoreMod>0.75</BlockIgnoreMod>
     <DamageMod>0.75</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>0</IconSprite>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
     <ParryModMod>1.0</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>
@@ -244,6 +257,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>1</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>10</IconSprite>
     <MeleeBlockChanceMod>0.85</MeleeBlockChanceMod>
     <ParryModMod>2.5</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>
@@ -259,6 +273,7 @@
     <BlockIgnoreMod>1.50</BlockIgnoreMod>
     <DamageMod>1.50</DamageMod>
     <DodgeMod>0.75</DodgeMod>
+    <IconSprite>0</IconSprite>
     <Injury>Broken_Ribs</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
     <ParryModMod>1.0</ParryModMod>
@@ -275,6 +290,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>1</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>11</IconSprite>
     <MeleeBlockChanceMod>2.0</MeleeBlockChanceMod>
     <ParryModMod>1.0</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>
@@ -290,6 +306,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>0.15</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>0</IconSprite>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
     <ParryModMod>1.0</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>
@@ -305,6 +322,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>1</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>11</IconSprite>
     <Injury>Major_Bleeding</Injury>
     <Injury>Massive_Bleeding</Injury>
     <Injury>Minor_Bleeding</Injury>
@@ -325,6 +343,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>0.85</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>14</IconSprite>
     <Injury>Major_Bleeding</Injury>
     <Injury>Minor_Bleeding</Injury>
     <Injury>Profuse_Bleeding</Injury>
@@ -343,6 +362,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>0.75</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>13</IconSprite>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
     <ParryModMod>1.0</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>
@@ -358,6 +378,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>0.35</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>0</IconSprite>
     <Injury>Broken_Ribs</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
     <ParryModMod>1.0</ParryModMod>
@@ -374,6 +395,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>1</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>15</IconSprite>
     <Injury>Major_Bleeding</Injury>
     <Injury>Massive_Bleeding</Injury>
     <Injury>Minor_Bleeding</Injury>
@@ -394,6 +416,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DamageMod>1</DamageMod>
     <DodgeMod>0.75</DodgeMod>
+    <IconSprite>0</IconSprite>
     <Injury>Major_Bleeding</Injury>
     <Injury>Massive_Bleeding</Injury>
     <Injury>Minor_Bleeding</Injury>
@@ -413,6 +436,7 @@
     <BlockIgnoreMod>3.5</BlockIgnoreMod>
     <DamageMod>1</DamageMod>
     <DodgeMod>1.0</DodgeMod>
+    <IconSprite>0</IconSprite>
     <Injury>Broken_Ribs</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
     <ParryModMod>0.25</ParryModMod>

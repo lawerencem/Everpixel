@@ -57,6 +57,7 @@ namespace Models.Equipment.XML
                     case ("DamageMod"): { WeaponAbilityTable.Instance.Table[type].DamageMod = v; } break;
                     case ("Description"): { WeaponAbilityTable.Instance.Table[type].Description = value; } break;
                     case ("DodgeReduceMod"): { WeaponAbilityTable.Instance.Table[type].DodgeMod = v; } break;
+                    case ("IconSprite"): { WeaponAbilityTable.Instance.Table[type].Sprite = v; } break;
                     case ("MeleeBlockChanceMod"): { WeaponAbilityTable.Instance.Table[type].MeleeBlockChanceMod = v; } break;
                     case ("ParryModMod"): { WeaponAbilityTable.Instance.Table[type].ParryModMod = v; } break;
                     case ("Range"): { WeaponAbilityTable.Instance.Table[type].Range = v; } break;

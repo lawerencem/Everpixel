@@ -167,6 +167,7 @@ namespace Controller.Managers
             var cur = this._combatManager.CurrActing.Handle;
             var bob = cur.GetComponent<BobbingScript>();
             if (bob != null) { bob.Reset(); }
+            this._combatManager.CurAbility = null;
             this._combatManager.ProcessNextTurn();
             this.PopulateBtnsHelper();
         }

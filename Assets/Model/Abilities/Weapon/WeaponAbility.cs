@@ -4,6 +4,8 @@ namespace Model.Abilities
 {
     public class WeaponAbility : GenericAbility
     {
+        public int Sprite { get; set; }
+
         public WeaponAbility(WeaponAbilitiesEnum type)
         {
             this.AccMod = 1;
@@ -17,6 +19,7 @@ namespace Model.Abilities
             this.ParryModMod = 1;
             this.RangeBlockMod = 1;
             this.ShieldDamageMod = 1;
+            this.Sprite = 0;
             this.StaminaCost = 0;
             this._type = type;
             this._typeStr = this._type.ToString().Replace("_", " ");

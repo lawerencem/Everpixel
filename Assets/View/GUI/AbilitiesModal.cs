@@ -60,10 +60,12 @@ namespace View.GUI
                 var btn = clone.AddComponent<Button>();
                 btn.colors = protoBtn.colors;
                 var txtContainer = new GameObject();
+                txtContainer.transform.SetParent(this._modal.transform);
                 var txt = txtContainer.AddComponent<Text>();
                 clone.transform.localScale = this._proto.transform.localScale;
-                txt.rectTransform.sizeDelta = protoTxt.rectTransform.sizeDelta;
-                txt.transform.localScale = new Vector3(0.005f, 0.005f);
+                txt.transform.SetParent(txtContainer.transform);
+                var rect = txt.rectTransform;
+                rect.localScale = new Vector3(0.5f, 0.5f);
                 txt.font = protoTxt.font;
                 txt.fontSize = protoTxt.fontSize;
                 txt.alignment = protoTxt.alignment;
