@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.1f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -313,8 +311,8 @@
     <Compile Include="Assets\View\Events\WpnBtnClickEvent.cs" />
     <Compile Include="Assets\View\Fatalities\FatalityEnum.cs" />
     <Compile Include="Assets\View\Fatalities\FatalityFactory.cs" />
-    <Compile Include="Assets\View\Fatalities\SpellTypeFatalities\FightingFatality.cs" />
     <Compile Include="Assets\View\Fatalities\GenericFatality.cs" />
+    <Compile Include="Assets\View\Fatalities\SpellTypeFatalities\FightingFatality.cs" />
     <Compile Include="Assets\View\GUI\AbilitiesModal.cs" />
     <Compile Include="Assets\View\GUI\GUISpriteLoader.cs" />
     <Compile Include="Assets\View\GUI\HoverModal.cs" />
@@ -323,12 +321,12 @@
     <Compile Include="Assets\View\Map\MapSpriteLoader.cs" />
     <Compile Include="Assets\View\Mounts\MountBridge.cs" />
     <Compile Include="Assets\View\Mounts\MountView.cs" />
+    <Compile Include="Assets\View\Scripts\FXScripts\FlinchScript.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\GearExplosionScript.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\AbilityBtnClick.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\AbilityModalBtnClick.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\AttackerJoltScript.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\EndTurnBtnClick.cs" />
-    <Compile Include="Assets\View\Scripts\FXScripts\FlinchScript.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\WpnBtnClick.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -345,9 +343,6 @@
     <None Include="Assets\Model\Parties\XML\Parties.xml" />
     <None Include="Assets\Model\Parties\XML\SubParties.xml" />
     <None Include="Assets\TODO.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\View\Fatalities\WeaponFatalities\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

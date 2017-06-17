@@ -256,7 +256,10 @@ namespace Controller.Managers.Map
                 position.x += xOffset;
                 position.y += yOffset;
                 spriteHandler.transform.position = position;
-                spriteHandler.transform.SetParent(c.Handle.transform);
+                if (sort == "CharHelm")
+                    spriteHandler.transform.SetParent(c.SpriteHandlerDict["CharHead"].transform);
+                else
+                    spriteHandler.transform.SetParent(c.Handle.transform);
                 spriteHandler.name = e.Name;
                 render.sprite = sprite;
                 render.sortingLayerName = sort;

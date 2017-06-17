@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts;
+using Controller.Characters;
 using Controller.Map;
 using Generics.Scripts;
 using Generics.Utilities;
@@ -39,7 +40,7 @@ namespace Controller.Managers.Map
                 else
                     this._parent.ProcessNormalHit(this._event);
 
-                this._parent.ProcessSplatter(this._event);
+                this._parent.ProcessSplatterOnHitEvent(this._event);
                 this._event.Done();
             }
         }
@@ -52,18 +53,18 @@ namespace Controller.Managers.Map
                 CMapGUIControllerParams.WHITE, CMapGUIControllerParams.ATTACK_TEXT_OFFSET);
         }
 
-        public void PaintSingleTile(TileController t, Sprite deco, float alpha = 1.0f)
-        {
-            var tView = new GameObject();
-            var renderer = tView.AddComponent<SpriteRenderer>();
-            renderer.sprite = deco;
-            renderer.transform.position = t.Model.Center;
-            renderer.sortingLayerName = CMapGUIControllerParams.MAP_GUI_LAYER;
-            tView.name = "Tile Deco";
-            var color = renderer.color;
-            color.a = alpha;
-            renderer.color = color;
-        }
+        //public void PaintSingleTile(TileController t, Sprite deco, float alpha = 1.0f)
+        //{
+        //    var tView = new GameObject();
+        //    var renderer = tView.AddComponent<SpriteRenderer>();
+        //    renderer.sprite = deco;
+        //    renderer.transform.position = t.Model.Center;
+        //    renderer.sortingLayerName = CMapGUIControllerParams.MAP_GUI_LAYER;
+        //    tView.name = "Tile Deco";
+        //    var color = renderer.color;
+        //    color.a = alpha;
+        //    renderer.color = color;
+        //}
 
         public void ProcessBulletGraphics(DisplayHitStatsEvent e)
         {
@@ -84,15 +85,22 @@ namespace Controller.Managers.Map
                 GameObject.Destroy(particle);
             if (e.Killed.Model.Type == CharacterTypeEnum.Humanoid)
             {
+                // TODO: Assign "Dead" layers to character stuff
                 if (e.Killed.Model.LWeapon != null)
                     this.RandomMoveKill(e.Killed.SpriteHandlerDict["CharLWeapon"]);
                 if (e.Killed.Model.RWeapon != null)
                     this.RandomMoveKill(e.Killed.SpriteHandlerDict["CharRWeapon"]);
                 var eyes = e.Killed.SpriteHandlerDict["CharFace"].GetComponent<SpriteRenderer>();
                 eyes.sprite = CharacterSpriteLoader.Instance.GetHumanoidDeadEyes(e.Killed.Model.Race);
+                if (e.Killed.SpriteHandlerDict["CharMount"] != null)
+                {
+                    // TODO: Mounts spawning on kill
+                    e.Killed.SpriteHandlerDict["CharMount"].transform.SetParent(null);
+                    e.Killed.SpriteHandlerDict["CharMount"].transform.position = e.Killed.CurrentTile.Model.Center;
+                }
             }
             this.RandomRotate(e.Killed.Handle);
-            this.ProcessSplatterLevelFive(e);
+            this.ProcessSplatter(5, e.Killed.CurrentTile, 1);
         }
 
         public void ProcessInjury(ApplyInjuryEvent e)
@@ -114,22 +122,39 @@ namespace Controller.Managers.Map
                 this.ProcessMeleeHitGraphicsNonFatality(e);
         }
 
-        public void ProcessSplatter(DisplayHitStatsEvent e)
+        public void ProcessSplatterOnHitEvent(DisplayHitStatsEvent e)
         {
             if (!AttackEventFlags.HasFlag(AttackEventFlags.Flags.Dodge, e.Hit.Flags.CurFlags) &&
                 !AttackEventFlags.HasFlag(AttackEventFlags.Flags.Parry, e.Hit.Flags.CurFlags))
             {
                 if (e.Hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.HP) > 0)
                 {
-                    var dmgPercentage = e.Hit.Dmg / e.Hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.HP);
+                    double dmg = (double)e.Hit.Dmg;
+                    double hp = (double)e.Hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.HP);
+                    double dmgPercentage = dmg / hp;
                     if (dmgPercentage > 0.75 && !e.Hit.IsHeal)
-                        this.ProcessSplatterHelper(4, e);
+                        this.ProcessSplatter(4, e.Hit.Target.CurrentTile);
                     else if (dmgPercentage > 0.35 && !e.Hit.IsHeal)
-                        this.ProcessSplatterHelper(2, e);
+                        this.ProcessSplatter(2, e.Hit.Target.CurrentTile);
                     else if (dmgPercentage > 0.15 && !e.Hit.IsHeal)
-                        this.ProcessSplatterHelper(1, e);
+                        this.ProcessSplatter(1, e.Hit.Target.CurrentTile);
                 }   
             }
+        }
+
+        public void ProcessSplatter(int lvl, TileController t, float alpha = 1.0f)
+        {
+            var sprite = MapBridge.Instance.GetSplatterSprites(lvl);
+            var splatter = new GameObject("Splatter");
+            splatter.transform.SetParent(t.Handle.transform);
+            var renderer = splatter.AddComponent<SpriteRenderer>();
+            renderer.transform.position = t.Model.Center;
+            renderer.sprite = sprite;
+            this.RandomRotate(splatter);
+            renderer.sortingLayerName = CMapGUIControllerParams.MAP_GUI_LAYER;
+            var color = renderer.color;
+            color.a = alpha;
+            //this.PaintSingleTile(c.CurrentTile, sprite);
         }
 
         private void ProcessBulletAttackNonFatality(DisplayHitStatsEvent e)
@@ -222,8 +247,8 @@ namespace Controller.Managers.Map
 
         private void RandomTranslate(GameObject o)
         {
-            var x = RNG.Instance.Next(-15, 15) / 100;
-            var y = RNG.Instance.Next(-15, 15) / 100;
+            var x = RNG.Instance.Next(-45, 45) / 100;
+            var y = RNG.Instance.Next(-45, 45) / 100;
             var position = o.transform.position;
             position.x += x;
             position.y += y;
@@ -328,16 +353,10 @@ namespace Controller.Managers.Map
             }
         }
 
-        private void ProcessSplatterHelper(int lvl, DisplayHitStatsEvent e)
-        {
-            var sprite = MapBridge.Instance.GetSplatterSprites(lvl);
-            this.PaintSingleTile(e.Hit.Target.CurrentTile, sprite);
-        }
-
-        private void ProcessSplatterLevelFive(CharacterKilledEvent e)
-        {
-            var sprite = MapBridge.Instance.GetSplatterSprites(5);
-            this.PaintSingleTile(e.Killed.CurrentTile, sprite);
-        }
+        //private void ProcessSplatterLevelFive(CharacterKilledEvent e)
+        //{
+        //    var sprite = MapBridge.Instance.GetSplatterSprites(5);
+        //    this.PaintSingleTile(e.Killed.CurrentTile, sprite);
+        //}
     }
 }

@@ -92,13 +92,15 @@ namespace View.Fatalities
             {
                 foreach (var outerNeighbor in neighbor.Adjacent)
                 {
-                    var spray = MapBridge.Instance.GetSplatterSprites(1);
-                    this._parent.PaintSingleTile(outerNeighbor, spray);
+                    this._parent.ProcessSplatter(1, outerNeighbor);
+                    //this._parent.ProcessSplatter( outerNeighbor, spray);
                 }
-                var blood = MapBridge.Instance.GetSplatterSprites(2);
-                this._parent.PaintSingleTile(neighbor, blood);
+                //var blood = MapBridge.Instance.GetSplatterSprites(2);
+                //this._parent.PaintSingleTile(neighbor, blood);
+                this._parent.ProcessSplatter(2, neighbor);
             }
-            this._parent.PaintSingleTile(this._event.Hit.Target.CurrentTile, sprite);
+            this._parent.ProcessSplatter(5, this._event.Hit.Target.CurrentTile);
+            //this._parent.PaintSingleTile(this._event.Hit.Target.CurrentTile, sprite);
         }
 
         private void ProcessExplosion()
