@@ -28,6 +28,7 @@ namespace View.Fatalities
             CMapGUIController.Instance.ClearDecoratedTiles();
             foreach (var particle in this._event.Hit.Target.Particles)
                 GameObject.Destroy(particle);
+
         }
 
         public void ProcessFatalityBanner()
@@ -49,10 +50,11 @@ namespace View.Fatalities
                 GameObject.Destroy(bob);
         }
 
-        protected virtual void Done()
+        protected void Done()
         {
             var bob = this._event.Hit.Source.Handle.AddComponent<BobbingScript>();
             bob.Init(PER_FRAME, PER_FRAME_DIST, this._event.Hit.Source.Handle);
+            this._event.Done();
         }
 
         protected virtual void ProcessFatality()

@@ -50,7 +50,7 @@ namespace View.Fatalities
             if (roll == 1)
                 spinRight = false;
             var percent = RNG.Instance.NextDouble();
-            spin.Init(head, (float)(5f * percent), spinRight);
+            spin.Init(head, (float)(5f * percent), spinRight, base.Done);
             spin.InitHeadRotation(tgtTile, this._parent);
             var translate = head.AddComponent<RaycastMove>();
             translate.Init(head, tgtTile.Model.Center, 1f, spin.Done);

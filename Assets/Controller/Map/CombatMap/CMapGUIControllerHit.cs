@@ -70,22 +70,7 @@ namespace Controller.Managers.Map
         {
             foreach (var particle in c.Particles)
                 GameObject.Destroy(particle);
-            if (c.Model.Type == CharacterTypeEnum.Humanoid)
-            {
-                // TODO: Assign "Dead" layers to character stuff
-                if (c.Model.LWeapon != null)
-                    this.RandomMoveKill(c.SpriteHandlerDict["CharLWeapon"]);
-                if (c.Model.RWeapon != null)
-                    this.RandomMoveKill(c.SpriteHandlerDict["CharRWeapon"]);
-                var eyes = c.SpriteHandlerDict["CharFace"].GetComponent<SpriteRenderer>();
-                eyes.sprite = CharacterSpriteLoader.Instance.GetHumanoidDeadEyes(c.Model.Race);
-                if (c.SpriteHandlerDict.ContainsKey("CharMount"))
-                {
-                    // TODO: Mounts spawning on kill
-                    c.SpriteHandlerDict["CharMount"].transform.SetParent(null);
-                    c.SpriteHandlerDict["CharMount"].transform.position = c.CurrentTile.Model.Center;
-                }
-            }
+            this.ProcessCharacterKilledHelper(c);
             this.RandomRotate(c.Handle);
             this.ProcessSplatter(5, c.CurrentTile, 1);
         }
@@ -141,23 +126,6 @@ namespace Controller.Managers.Map
             renderer.sortingLayerName = CMapGUIControllerParams.MAP_GUI_LAYER;
             var color = renderer.color;
             color.a = alpha;
-        }
-
-        private void ProcessBulletAttackNonFatality(DisplayHitStatsEvent e)
-        {
-            var attackerScript = e.Hit.Source.Handle.AddComponent<AttackerJoltScript>();
-            var position = Vector3.Lerp(e.Hit.Target.CurrentTile.Model.Center, e.Hit.Source.CurrentTile.Model.Center, 0.85f);
-            attackerScript.Init(e.Hit.Source, position, 8f);
-
-            var sprite = AttackSpriteLoader.Instance.GetAttackSprite(e.Hit.Ability as GenericActiveAbility);
-            var bullet = new GameObject();
-            var script = bullet.AddComponent<RaycastWithDeleteScript>();
-            bullet.transform.position = e.Hit.Source.transform.position;
-            var renderer = bullet.AddComponent<SpriteRenderer>();
-            renderer.sprite = sprite;
-            renderer.sortingLayerName = CMapGUIControllerParams.PARTICLES_LAYER;
-            var listener = new DefenderFXListener(this, e);
-            script.Init(bullet, e.Hit.Target.transform.position, 5f, listener.ProcessDefenderGraphics);
         }
 
         private void DisplayText(string toDisplay, Vector3 pos, Color color, float yOffset = 0)
@@ -217,6 +185,68 @@ namespace Controller.Managers.Map
             var random = ListUtil<TileController>.GetRandomListElement(e.Hit.Target.CurrentTile.Adjacent);
             var position = Vector3.Lerp(e.Hit.Target.CurrentTile.Model.Center, random.Model.Center, 0.35f);
             return position;
+        }
+
+        private void ProcessBulletAttackNonFatality(DisplayHitStatsEvent e)
+        {
+            var attackerScript = e.Hit.Source.Handle.AddComponent<AttackerJoltScript>();
+            var position = Vector3.Lerp(e.Hit.Target.CurrentTile.Model.Center, e.Hit.Source.CurrentTile.Model.Center, 0.85f);
+            attackerScript.Init(e.Hit.Source, position, 8f);
+
+            var sprite = AttackSpriteLoader.Instance.GetAttackSprite(e.Hit.Ability as GenericActiveAbility);
+            var bullet = new GameObject();
+            var script = bullet.AddComponent<RaycastWithDeleteScript>();
+            bullet.transform.position = e.Hit.Source.transform.position;
+            var renderer = bullet.AddComponent<SpriteRenderer>();
+            renderer.sprite = sprite;
+            renderer.sortingLayerName = CMapGUIControllerParams.PARTICLES_LAYER;
+            var listener = new DefenderFXListener(this, e);
+            script.Init(bullet, e.Hit.Target.transform.position, 5f, listener.ProcessDefenderGraphics);
+        }
+
+        private void AssignDeadLayer(GameObject o, string layer)
+        {
+            var renderer = o.GetComponent<SpriteRenderer>();
+            if (renderer != null)
+                renderer.sortingLayerName = layer;
+        }
+
+        private void ProcessCharacterKilledHelper(GenericCharacterController c)
+        {
+            if (c.Model.Type == CharacterTypeEnum.Humanoid)
+            {
+                if (c.Model.Armor != null)
+                    this.AssignDeadLayer(c.SpriteHandlerDict["CharArmor"], "DeadArmor");
+                if (c.Model.Helm != null)
+                    this.AssignDeadLayer(c.SpriteHandlerDict["CharHelm"], "DeadHelm");
+                if (c.Model.LWeapon != null)
+                {
+                    this.RandomMoveKill(c.SpriteHandlerDict["CharLWeapon"]);
+                    this.AssignDeadLayer(c.SpriteHandlerDict["CharLWeapon"], "DeadLWeapon");
+                }
+                if (c.Model.RWeapon != null)
+                {
+                    this.RandomMoveKill(c.SpriteHandlerDict["CharRWeapon"]);
+                    this.AssignDeadLayer(c.SpriteHandlerDict["CharRWeapon"], "DeadRWeapon");
+                }       
+                var eyes = c.SpriteHandlerDict["CharFace"].GetComponent<SpriteRenderer>();
+                eyes.sprite = CharacterSpriteLoader.Instance.GetHumanoidDeadEyes(c.Model.Race);
+
+                this.AssignDeadLayer(c.SpriteHandlerDict["CharFace"], "DeadFace");
+                this.AssignDeadLayer(c.SpriteHandlerDict["CharDeco1"], "DeadDeco1");
+                this.AssignDeadLayer(c.SpriteHandlerDict["CharDeco2"], "DeadDeco2");
+                this.AssignDeadLayer(c.SpriteHandlerDict["CharDeco3"], "DeadDeco3");
+                this.AssignDeadLayer(c.SpriteHandlerDict["CharDeco4"], "DeadDeco4");
+                this.AssignDeadLayer(c.SpriteHandlerDict["CharHead"], "DeadHead");
+                this.AssignDeadLayer(c.SpriteHandlerDict["CharTorso"], "DeadTorso");
+
+                if (c.SpriteHandlerDict.ContainsKey("CharMount"))
+                {
+                    // TODO: Mounts spawning on kill
+                    c.SpriteHandlerDict["CharMount"].transform.SetParent(null);
+                    c.SpriteHandlerDict["CharMount"].transform.position = c.CurrentTile.Model.Center;
+                }
+            }
         }
 
         private void RandomMoveKill(GameObject o)
@@ -338,11 +368,5 @@ namespace Controller.Managers.Map
                 boomerang.Init(weapon, position, CMapGUIControllerParams.WEAPON_PARRY);
             }
         }
-
-        //private void ProcessSplatterLevelFive(CharacterKilledEvent e)
-        //{
-        //    var sprite = MapBridge.Instance.GetSplatterSprites(5);
-        //    this.PaintSingleTile(e.Killed.CurrentTile, sprite);
-        //}
     }
 }
