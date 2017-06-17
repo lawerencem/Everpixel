@@ -13,7 +13,9 @@ namespace View.Fatalities
             var active = this.TryProcessActiveAbility(parent, e);
             if (active != null)
                 return active;
-
+            active = this.TryProcessWeaponAbility(parent, e);
+            if (active != null)
+                return active;
             return new GenericFatality(FatalityEnum.None, parent, e);
         }
 
@@ -27,7 +29,20 @@ namespace View.Fatalities
                     case (MagicTypeEnum.Fighting): { return new FightingFatality(parent, e); }
                 }
             }
+            return null;
+        }
 
+        private GenericFatality TryProcessWeaponAbility(CMapGUIControllerHit parent, DisplayHitStatsEvent e)
+        {
+            if (e.Hit.Ability.Type.GetType() == (typeof(WeaponAbilitiesEnum)))
+            {
+                var active = e.Hit.Ability as WeaponAbility;
+                var type = (WeaponAbilitiesEnum)e.Hit.Ability.Type;
+                switch (type)
+                {
+                    case (WeaponAbilitiesEnum.Slash): { return new SlashFatality(parent, e); }
+                }
+            }
             return null;
         }
     }

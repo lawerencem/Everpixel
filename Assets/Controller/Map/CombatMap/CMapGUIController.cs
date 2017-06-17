@@ -126,7 +126,7 @@ namespace Controller.Managers.Map
 
         public void ProcessCharacterKilled(CharacterKilledEvent e)
         {
-            this._hitHelper.ProcessCharacterKilled(e);
+            this._hitHelper.ProcessCharacterKilled(e.Killed);
         }
 
         public void SetAbilityModalActive()

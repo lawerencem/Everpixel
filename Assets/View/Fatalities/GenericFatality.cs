@@ -1,4 +1,5 @@
 ﻿using Controller.Managers.Map;
+using Generics.Scripts;
 using Model.Events.Combat;
 using UnityEngine;
 
@@ -21,12 +22,33 @@ namespace View.Fatalities
 
         public virtual void Init()
         {
-
+            CMapGUIController.Instance.ClearDecoratedTiles();
+            foreach (var particle in this._event.Hit.Target.Particles)
+                GameObject.Destroy(particle);
         }
 
         public void ProcessFatalityBanner()
         {
             CMapGUIController.Instance.ActivateBanner();
+        }
+
+        protected virtual void InitMeleeFatality()
+        {
+            var bob = this._event.Hit.Source.Handle.GetComponent<BobbingScript>();
+            if (bob != null)
+                GameObject.Destroy(bob);
+        }
+
+        protected virtual void InitBulletFatality()
+        {
+            var bob = this._event.Hit.Source.Handle.GetComponent<BobbingScript>();
+            if (bob != null)
+                GameObject.Destroy(bob);
+        }
+
+        protected virtual void ProcessFatality()
+        {
+            
         }
     }
 }

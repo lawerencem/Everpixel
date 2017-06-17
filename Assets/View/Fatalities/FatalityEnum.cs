@@ -4,5 +4,6 @@
     {
         None,
         Fighting,
+        Slash,
     }
 }

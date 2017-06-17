@@ -53,19 +53,6 @@ namespace Controller.Managers.Map
                 CMapGUIControllerParams.WHITE, CMapGUIControllerParams.ATTACK_TEXT_OFFSET);
         }
 
-        //public void PaintSingleTile(TileController t, Sprite deco, float alpha = 1.0f)
-        //{
-        //    var tView = new GameObject();
-        //    var renderer = tView.AddComponent<SpriteRenderer>();
-        //    renderer.sprite = deco;
-        //    renderer.transform.position = t.Model.Center;
-        //    renderer.sortingLayerName = CMapGUIControllerParams.MAP_GUI_LAYER;
-        //    tView.name = "Tile Deco";
-        //    var color = renderer.color;
-        //    color.a = alpha;
-        //    renderer.color = color;
-        //}
-
         public void ProcessBulletGraphics(DisplayHitStatsEvent e)
         {
             this.DisplayHitStatsEvent(e.Hit);
@@ -79,28 +66,28 @@ namespace Controller.Managers.Map
                 this.ProcessBulletAttackNonFatality(e);
         }
 
-        public void ProcessCharacterKilled(CharacterKilledEvent e)
+        public void ProcessCharacterKilled(GenericCharacterController c)
         {
-            foreach (var particle in e.Killed.Particles)
+            foreach (var particle in c.Particles)
                 GameObject.Destroy(particle);
-            if (e.Killed.Model.Type == CharacterTypeEnum.Humanoid)
+            if (c.Model.Type == CharacterTypeEnum.Humanoid)
             {
                 // TODO: Assign "Dead" layers to character stuff
-                if (e.Killed.Model.LWeapon != null)
-                    this.RandomMoveKill(e.Killed.SpriteHandlerDict["CharLWeapon"]);
-                if (e.Killed.Model.RWeapon != null)
-                    this.RandomMoveKill(e.Killed.SpriteHandlerDict["CharRWeapon"]);
-                var eyes = e.Killed.SpriteHandlerDict["CharFace"].GetComponent<SpriteRenderer>();
-                eyes.sprite = CharacterSpriteLoader.Instance.GetHumanoidDeadEyes(e.Killed.Model.Race);
-                if (e.Killed.SpriteHandlerDict["CharMount"] != null)
+                if (c.Model.LWeapon != null)
+                    this.RandomMoveKill(c.SpriteHandlerDict["CharLWeapon"]);
+                if (c.Model.RWeapon != null)
+                    this.RandomMoveKill(c.SpriteHandlerDict["CharRWeapon"]);
+                var eyes = c.SpriteHandlerDict["CharFace"].GetComponent<SpriteRenderer>();
+                eyes.sprite = CharacterSpriteLoader.Instance.GetHumanoidDeadEyes(c.Model.Race);
+                if (c.SpriteHandlerDict.ContainsKey("CharMount"))
                 {
                     // TODO: Mounts spawning on kill
-                    e.Killed.SpriteHandlerDict["CharMount"].transform.SetParent(null);
-                    e.Killed.SpriteHandlerDict["CharMount"].transform.position = e.Killed.CurrentTile.Model.Center;
+                    c.SpriteHandlerDict["CharMount"].transform.SetParent(null);
+                    c.SpriteHandlerDict["CharMount"].transform.position = c.CurrentTile.Model.Center;
                 }
             }
-            this.RandomRotate(e.Killed.Handle);
-            this.ProcessSplatter(5, e.Killed.CurrentTile, 1);
+            this.RandomRotate(c.Handle);
+            this.ProcessSplatter(5, c.CurrentTile, 1);
         }
 
         public void ProcessInjury(ApplyInjuryEvent e)
@@ -154,7 +141,6 @@ namespace Controller.Managers.Map
             renderer.sortingLayerName = CMapGUIControllerParams.MAP_GUI_LAYER;
             var color = renderer.color;
             color.a = alpha;
-            //this.PaintSingleTile(c.CurrentTile, sprite);
         }
 
         private void ProcessBulletAttackNonFatality(DisplayHitStatsEvent e)
@@ -212,17 +198,17 @@ namespace Controller.Managers.Map
                 switch (fatality.Type)
                 {
                     case (FatalityEnum.Fighting): { cast = fatality as FightingFatality; success = true; } break;
+                    case (FatalityEnum.Slash): { cast = fatality as SlashFatality; success = true; } break;
                 }
             }
 
             if (success)
             {
+                
                 fatality.Init();
-                foreach (var particle in e.Hit.Target.Particles)
-                    GameObject.Destroy(particle);
+                
             }
                 
-
             return success;
         }
 

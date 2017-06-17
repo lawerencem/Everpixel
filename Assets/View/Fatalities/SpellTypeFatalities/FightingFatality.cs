@@ -22,8 +22,7 @@ namespace View.Fatalities
 
         public override void Init()
         {
-            CMapGUIController.Instance.ClearDecoratedTiles();
-
+            base.Init();
             if (this._event.Hit.Ability.Type.GetType() == (typeof(ActiveAbilitiesEnum)))
             {
                 var active = this._event.Hit.Ability as GenericActiveAbility;
@@ -34,26 +33,13 @@ namespace View.Fatalities
                 this.InitMeleeFatality();
         }
 
-        private void InitMeleeFatality()
+        protected override void InitBulletFatality()
         {
+            base.InitBulletFatality();
             var zoom = this._event.Hit.Source.Handle.AddComponent<DramaticZoom>();
             var position = this._event.Hit.Source.Handle.transform.position;
             position.y -= 0.35f;
-            var bob = this._event.Hit.Source.Handle.GetComponent<BobbingScript>();
-            if (bob != null)
-                GameObject.Destroy(bob);
-            zoom.Init(position, 140f, 5f, 0.5f, this.ProcessFatality); // TODO: attack Flicnh fx
-        }
-
-        private void InitBulletFatality()
-        {
-            var zoom = this._event.Hit.Source.Handle.AddComponent<DramaticZoom>();
-            var position = this._event.Hit.Source.Handle.transform.position;
-            position.y -= 0.35f;
-            var bob = this._event.Hit.Source.Handle.GetComponent<BobbingScript>();
-            if (bob != null)
-                GameObject.Destroy(bob);
-            zoom.Init(position, 140f, 5f, 0.2f, this.InitAttackSpriteWithBullet);
+            zoom.Init(position, FatalityParams.ZOOM_SPEED, FatalityParams.ZOOM_FOV, FatalityParams.ZOOM_BULLET_HANG, this.InitAttackSpriteWithBullet);
         }
 
         private void InitAttackSpriteWithBullet()
@@ -76,14 +62,6 @@ namespace View.Fatalities
             script.Init(bullet, this._event.Hit.Target.transform.position, 2f, this.ProcessFatality);
         }
 
-        private void ProcessFatality()
-        {
-            this.ProcessBlood();
-            this.ProcessExplosion();
-            this.ProcessGear();
-            this.ProcessFatalityBanner();
-        }
-
         private void ProcessBlood()
         {
             var c = this._event.Hit.Target.Model;
@@ -93,14 +71,10 @@ namespace View.Fatalities
                 foreach (var outerNeighbor in neighbor.Adjacent)
                 {
                     this._parent.ProcessSplatter(1, outerNeighbor);
-                    //this._parent.ProcessSplatter( outerNeighbor, spray);
                 }
-                //var blood = MapBridge.Instance.GetSplatterSprites(2);
-                //this._parent.PaintSingleTile(neighbor, blood);
                 this._parent.ProcessSplatter(2, neighbor);
             }
             this._parent.ProcessSplatter(5, this._event.Hit.Target.CurrentTile);
-            //this._parent.PaintSingleTile(this._event.Hit.Target.CurrentTile, sprite);
         }
 
         private void ProcessExplosion()
@@ -128,6 +102,15 @@ namespace View.Fatalities
             scriptTwo.lifetime = 8f;
             this._event.Hit.Target.Particles.Add(particles);
             this._event.Hit.Target.Particles.Add(explosion);
+        }
+
+        protected override void ProcessFatality()
+        {
+            base.ProcessFatality();
+            this.ProcessBlood();
+            this.ProcessExplosion();
+            this.ProcessGear();
+            this.ProcessFatalityBanner();
         }
 
         private void ProcessGear()

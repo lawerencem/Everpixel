@@ -1,12 +1,12 @@
 ﻿TODO
 
 This weekend
-   - Mounts should be separate
+   - Figure out kills 
    - Weapon Fatalities
-   - Why are blocks happening all the time
    - Troll culture
 
 Next Weekend
+   
    - Critters / Leveling
    - Troll Culture
    - Spells
