@@ -46,7 +46,7 @@ namespace View.Fatalities
         {
             var attackerScript = this._event.Hit.Source.Handle.AddComponent<AttackerJoltScript>();
             var position = Vector3.Lerp(this._event.Hit.Target.CurrentTile.Model.Center, this._event.Hit.Source.CurrentTile.Model.Center, 0.85f);
-            attackerScript.Init(this._event.Hit.Source, position, 0.8f);
+            attackerScript.Init(this._event.Hit.Source, position, 0.8f, base.Done);
             this.HandleBulletGraphics();
         }
 

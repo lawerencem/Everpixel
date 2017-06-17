@@ -7,6 +7,9 @@ namespace View.Fatalities
 {
     public class GenericFatality
     {
+        private const float PER_FRAME = 0.0025f;
+        private const float PER_FRAME_DIST = 0.075f;
+
         protected CMapGUIControllerHit _parent;
         protected DisplayHitStatsEvent _event;
         protected FatalityEnum _type;
@@ -44,6 +47,12 @@ namespace View.Fatalities
             var bob = this._event.Hit.Source.Handle.GetComponent<BobbingScript>();
             if (bob != null)
                 GameObject.Destroy(bob);
+        }
+
+        protected virtual void Done()
+        {
+            var bob = this._event.Hit.Source.Handle.AddComponent<BobbingScript>();
+            bob.Init(PER_FRAME, PER_FRAME_DIST, this._event.Hit.Source.Handle);
         }
 
         protected virtual void ProcessFatality()

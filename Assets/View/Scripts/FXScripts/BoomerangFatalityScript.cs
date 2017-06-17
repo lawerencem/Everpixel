@@ -2,23 +2,21 @@
 
 namespace Generics.Scripts
 {
-    public class BoomerangScript : MonoBehaviour
+    public class BoomerangFatalityScript : MonoBehaviour
     {
-        protected Callback _callBack;
         protected Vector3 _origin;
 
-        public delegate void Callback();
         public GameObject Source { get; set; }
         public float Speed { get; set; }
 
-        public virtual void Init(GameObject source, Vector3 target, float speed, Callback callback = null)
+        public virtual void Init(GameObject source, Vector3 target, float speed, FatalityJoltScript.Callback callback = null)
         {
-            this._callBack = callback;
             this.Source = source;
             this.Speed = speed;
             this._origin = this.Source.transform.position;
-            var jolt = this.Source.AddComponent<JoltScript>();
-            jolt.Init(this.Source, target, speed, this.Retract);
+            var jolt = this.Source.AddComponent<FatalityJoltScript>();
+            jolt.InitCallbackTwo(this.Retract);
+            jolt.Init(this.Source, target, speed, callback);
         }
 
         protected virtual void Retract()
@@ -29,8 +27,6 @@ namespace Generics.Scripts
 
         protected virtual void Done()
         {
-            if (this._callBack != null)
-                this._callBack();
             GameObject.Destroy(this);
         }
     }

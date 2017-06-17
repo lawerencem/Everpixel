@@ -8,7 +8,7 @@ namespace View.Scripts
 {
     public class AttackerJoltScript : BoomerangScript
     {
-        private CallbackTwo _callBack;
+        private CallbackTwo _callbackTwo;
         public delegate void CallbackTwo();
 
         private Sprite _oldSprite;
@@ -20,7 +20,7 @@ namespace View.Scripts
             base.Init(source.Handle, target, speed);
             this._renderer = source.Handle.GetComponent<SpriteRenderer>();
             this._oldSprite = this._renderer.sprite;
-            this._callBack = callback;
+            this._callbackTwo = callback;
 
             if (source.Model.Type == CharacterTypeEnum.Critter)
             {
@@ -33,8 +33,8 @@ namespace View.Scripts
         protected override void Done()
         {
             base.Done();
-            if (this._callBack != null)
-                this._callBack();
+            if (this._callbackTwo != null)
+                this._callbackTwo();
             this._renderer.sprite = this._oldSprite;
         }
     }

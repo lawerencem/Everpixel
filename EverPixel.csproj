@@ -326,12 +326,14 @@
     <Compile Include="Assets\View\Map\MapSpriteLoader.cs" />
     <Compile Include="Assets\View\Mounts\MountBridge.cs" />
     <Compile Include="Assets\View\Mounts\MountView.cs" />
+    <Compile Include="Assets\View\Scripts\FXScripts\AttackerJoltScript.cs" />
+    <Compile Include="Assets\View\Scripts\FXScripts\BoomerangFatalityScript.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\FlinchScript.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\GearExplosionScript.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\HeadRotationScript.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\AbilityBtnClick.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\AbilityModalBtnClick.cs" />
-    <Compile Include="Assets\View\Scripts\GUIScripts\AttackerJoltScript.cs" />
+    <Compile Include="Assets\View\Scripts\FXScripts\FatalityJoltScript.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\EndTurnBtnClick.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\WpnBtnClick.cs" />
   </ItemGroup>

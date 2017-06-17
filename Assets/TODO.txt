@@ -2,11 +2,10 @@
 
 This weekend
    - Figure out kills 
-   - Weapon Fatalities
    - Troll culture
+   - Active Ability Buttons toBuild.
 
 Next Weekend
-   
    - Critters / Leveling
    - Troll Culture
    - Spells
@@ -19,7 +18,7 @@ Next Weekend
 7) Make characters make attack face on all attacks
 
 Long Term: 
-	Replace eyes with dead eyes when killed
+	Replace eyes with dead eyes when killed for Critter
 	Zone of Control
 	Ranged attacks
 	GUI for prediction
