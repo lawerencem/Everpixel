@@ -313,7 +313,7 @@
     <Compile Include="Assets\View\Events\WpnBtnClickEvent.cs" />
     <Compile Include="Assets\View\Fatalities\FatalityEnum.cs" />
     <Compile Include="Assets\View\Fatalities\FatalityFactory.cs" />
-    <Compile Include="Assets\View\Fatalities\FightingFatality.cs" />
+    <Compile Include="Assets\View\Fatalities\SpellTypeFatalities\FightingFatality.cs" />
     <Compile Include="Assets\View\Fatalities\GenericFatality.cs" />
     <Compile Include="Assets\View\GUI\AbilitiesModal.cs" />
     <Compile Include="Assets\View\GUI\GUISpriteLoader.cs" />
@@ -346,7 +346,9 @@
     <None Include="Assets\Model\Parties\XML\SubParties.xml" />
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Assets\View\Fatalities\WeaponFatalities\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

@@ -2,10 +2,14 @@
 
 This weekend
    - Mounts should be separate
-   - Decaptiation
    - Weapon Fatalities
    - Why are blocks happening all the time
    - Troll culture
+
+Next Weekend
+   - Critters / Leveling
+   - Troll Culture
+   - Spells
 
 1) - Dual-Wield
 1.5) - Dead characters on tiles shouldn't prevent movement
@@ -22,6 +26,3 @@ Long Term:
 
 Bugs:
 can target killed characters?
-
-REFACTOR
-   - 1:1 for weapon abilities to sprites...

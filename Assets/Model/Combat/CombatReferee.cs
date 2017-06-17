@@ -189,6 +189,9 @@ namespace Model.Combat
             if (hit.Target.Model.Helm != null)
                 dodgeChance *= hit.Target.Model.Helm.DodgeMod;
 
+            if (hit.Target.Model.Type == CharacterTypeEnum.Critter)
+                dodgeChance *= 1.75;
+
             var chance = this.GetAttackVSDefenseSkillChance(melee, dodge, dodgeChance);
             
             chance *= hit.Ability.DodgeMod;
@@ -211,6 +214,9 @@ namespace Model.Combat
                 parryChance *= hit.Target.Model.LWeapon.ParryMod;
             if (hit.Target.Model.RWeapon != null)
                 parryChance *= hit.Target.Model.RWeapon.ParryMod;
+
+            if (hit.Target.Model.Type == CharacterTypeEnum.Critter)
+                parryChance = 0;
 
             var chance = this.GetAttackVSDefenseSkillChance(melee, parry, parryChance);
             
@@ -238,7 +244,7 @@ namespace Model.Combat
                 blockChance *= (BASE_SKILL_SCALAR + (hit.Target.Model.RWeapon.MeleeBlockChance / BASE_SCALAR));
 
             if (!hasShield) { blockChance = 0; }
-            var chance = this.GetAttackVSDefenseSkillChance(melee, block, BASE_BLOCK_CHANCE);
+            var chance = this.GetAttackVSDefenseSkillChance(melee, block, blockChance);
             var roll = RNG.Instance.NextDouble();
             if (chance < roll)
                 AttackEventFlags.SetBlockTrue(hit.Flags);
