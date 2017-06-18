@@ -58,6 +58,12 @@ namespace View.Fatalities
                 translate.Init(head, tgtTile.Model.Center, 1f, spin.Done);
                 this.HandleParticles();
             }
+            else
+            {
+                // TODO:
+                this._event.Hit.Source.Handle.transform.position = this._event.Hit.Source.CurrentTile.Model.Center;
+                base.Done();
+            }
 
             this._parent.ProcessCharacterKilled(this._event.Hit.Target);
             base.ProcessFatalityBanner();

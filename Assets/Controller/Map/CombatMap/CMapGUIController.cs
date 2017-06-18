@@ -129,6 +129,11 @@ namespace Controller.Managers.Map
             this._hitHelper.ProcessCharacterKilled(e.Killed);
         }
 
+        public void ProcessNewTurn()
+        {
+            this._abilityModal.ResetModal();
+        }
+
         public void SetAbilityModalActive()
         {
             this._abilityModal.SetModalActive();

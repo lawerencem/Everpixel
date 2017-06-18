@@ -100,8 +100,6 @@ namespace View.Fatalities
             scriptOne.lifetime = 5f;
             var scriptTwo = explosion.AddComponent<DestroyByLifetime>();
             scriptTwo.lifetime = 8f;
-            this._event.Hit.Target.Particles.Add(particles);
-            this._event.Hit.Target.Particles.Add(explosion);
         }
 
         protected override void ProcessFatality()

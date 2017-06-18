@@ -25,6 +25,14 @@ namespace View.GUI
             this.SetModalInactive();
         }
 
+        public void ResetModal()
+        {
+            foreach (var btn in this._btns)
+                GameObject.Destroy(btn);
+            if (this._modal.activeSelf)
+                this.SetModalValues();
+        }
+
         public void SetModalActive()
         {
             if (!this._modal.activeSelf)
@@ -43,37 +51,42 @@ namespace View.GUI
             var character = CombatEventManager.Instance.GetCurrentCharacter();
             this._proto.SetActive(true);
             var protoBtn = this._proto.GetComponent<Button>();
-            var protoCollider = this._proto.GetComponent<Collider2D>();
             var protoImg = this._proto.GetComponent<Image>();
             var protoTxtContainer = GameObject.FindGameObjectWithTag("ProtoAbilityBtnTextTag");
             var protoTxt = protoTxtContainer.GetComponent<Text>();
+            var protoRect = protoTxtContainer.GetComponent<RectTransform>();
+            var content = GameObject.FindGameObjectWithTag("ActiveModalContent");
             for (int i = 0; i < character.Model.ActiveAbilities.Count; i++)
             {
                 var clone = new GameObject();
-                clone.transform.SetParent(this._modal.transform);
+                clone.transform.SetParent(content.transform);
+                clone.transform.localScale = protoBtn.transform.localScale;
+
+                var rect = clone.AddComponent<RectTransform>();
+                rect.sizeDelta = protoImg.rectTransform.sizeDelta;
+
                 var img = clone.AddComponent<Image>();
                 img.sprite = protoImg.sprite;
-                img.transform.localScale = protoImg.transform.localScale;
                 img.color = protoImg.color;
-                img.type = Image.Type.Sliced;
-                img.rectTransform.sizeDelta = new Vector2(45, 20);
-                var btn = clone.AddComponent<Button>();
-                btn.colors = protoBtn.colors;
-                var txtContainer = new GameObject();
-                txtContainer.transform.SetParent(this._modal.transform);
-                var txt = txtContainer.AddComponent<Text>();
-                clone.transform.localScale = this._proto.transform.localScale;
-                txt.transform.SetParent(txtContainer.transform);
-                var rect = txt.rectTransform;
-                rect.localScale = new Vector3(0.5f, 0.5f);
+
+                var cloneBtn = clone.AddComponent<Button>();
+                cloneBtn.colors = protoBtn.colors;
+
+                var cloneTxtContainer = new GameObject();
+                cloneTxtContainer.transform.SetParent(clone.transform);
+
+                var txt = cloneTxtContainer.AddComponent<Text>();
+                txt.text = character.Model.ActiveAbilities[i].TypeStr;
                 txt.font = protoTxt.font;
                 txt.fontSize = protoTxt.fontSize;
+                txt.color = protoTxt.color;
+                txt.transform.localScale = protoTxt.transform.localScale;
                 txt.alignment = protoTxt.alignment;
-                txt.horizontalOverflow = protoTxt.horizontalOverflow;
-                txt.verticalOverflow = protoTxt.verticalOverflow;
-                txt.transform.SetParent(clone.transform);
-                txt.text = character.Model.ActiveAbilities[i].TypeStr;
-                clone.transform.localPosition = new Vector3(-40, -45);
+                txt.transform.SetParent(cloneTxtContainer.transform);
+
+                var txtRect = cloneTxtContainer.GetComponent<RectTransform>();
+                txtRect.localPosition = new Vector2(0, 0);
+
                 this._btns.Add(clone);
                 var btnScript = clone.AddComponent<AbilityBtnClick>();
                 btnScript.Init(clone, (ActiveAbilitiesEnum)character.Model.ActiveAbilities[i].Type);

@@ -293,7 +293,7 @@ namespace Controller.Managers
                 foreach (var ab in curr.DefaultWpnAbilities)
                     abs.Add(new Pair<WeaponAbility, bool>(ab, true));
             }
-
+            CMapGUIController.Instance.ProcessNewTurn();
             var populateWpnBtns = new PopulateWpnBtnsEvent(abs, GUIEventManager.Instance);
         }
     }
