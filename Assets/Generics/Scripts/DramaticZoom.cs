@@ -60,7 +60,7 @@ namespace Generics.Scripts
         {
             var fov = Camera.main.fieldOfView;
             fov -= (this._speed * Time.deltaTime);
-            if (fov < MIN_ZOOM + EPSILON)
+            if (fov < this._toFoV + EPSILON || fov < MIN_ZOOM + EPSILON)
             {
                 this._zoomDone = true;
             }

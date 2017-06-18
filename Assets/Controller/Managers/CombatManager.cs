@@ -34,6 +34,7 @@ namespace Assets.Controller.Managers
 
         public void AddCasting(CastingEvent e)
         {
+            this.ResetTileControllerFlags();
             this._castingOrder.Add(new Pair<int, CastingEvent>(e.CastTime, e));
             this._castingOrder.Sort((x, y) => x.X.CompareTo(y.X));
             var remove = this._order.Find(x => x.Model == e.Caster.Model);

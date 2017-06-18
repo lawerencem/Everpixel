@@ -10,7 +10,7 @@ namespace Model.Events.Combat
 {
     public class PerformActionEventInfo
     {
-        public bool CastCallback = false;
+        public bool CastFinished = false;
 
         public PerformActionEventInfo()
         {
@@ -75,7 +75,7 @@ namespace Model.Events.Combat
 
         public void CastDoneReRegister()
         {
-            this.Info.CastCallback = true;
+            this.Info.CastFinished = true;
             this.RegisterEvent();
         }
 

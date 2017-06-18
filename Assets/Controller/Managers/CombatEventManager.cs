@@ -75,6 +75,7 @@ namespace Controller.Managers
         private void ActionPerformedCallback()
         {
             this.UnlockInteraction();
+            this.UnlockGUI();
             TileControllerFlags.SetPotentialAttackFlagFalse(this._currentAction.Info.Target.Flags);
             CMapGUIController.Instance.ClearDecoratedTiles();
             CMapGUIController.Instance.SetActingBoxToController(this._currentAction.SourceCharController);
@@ -82,7 +83,7 @@ namespace Controller.Managers
             {
                 var dmg = new DamageCharacterEvent(this, hit);
             }
-            if (this._currentAction.Info.CastCallback)
+            if (this._currentAction.Info.CastFinished)
                 this._combatManager.ProcessNextTurn();
             this._currentAction = null;
         }
@@ -227,7 +228,7 @@ namespace Controller.Managers
             this._combatManager.CurAbility = null;
 
             // TODO: Generate multiple hits as necessaryy
-            if (e.Info.Action.CastTime > 0)
+            if (e.Info.Action.CastTime > 0  && !e.Info.CastFinished)
             {
                 var cast = new CastingEvent(this, e);
             }

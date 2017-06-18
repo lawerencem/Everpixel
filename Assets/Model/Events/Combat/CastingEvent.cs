@@ -20,7 +20,6 @@ namespace Model.Events.Combat
         public CastingEvent(CombatEventManager parent, PerformActionEvent e) :
             base(CombatEventEnum.Casting, parent)
         {
-            TileControllerFlags.SetPotentialAttackFlagFalse(e.TargetCharController.CurrentTile.Flags);
             this.CastTime = (int)e.Info.Action.CastTime;
             this.Caster = e.SourceCharController;
             this._event = e;
@@ -34,7 +33,7 @@ namespace Model.Events.Combat
         public void DoneCasting()
         {
             this._parent.LockInteraction();
-            this._event.Info.Action.CastTime = 0;
+            this._parent.LockGUI();
             var jolt = this._event.SourceCharController.Handle.GetComponent<IntervalJoltScript>();
             if (jolt != null)
                 jolt.Done();
@@ -45,7 +44,7 @@ namespace Model.Events.Combat
         private void InitZoom()
         {
             var zoom = this._event.SourceCharController.Handle.AddComponent<DramaticZoom>();
-            zoom.Init(this._event.SourceCharController.Handle.transform.position, 140f, 15f, 0.2f, this.Zoomcallback);
+            zoom.Init(this._event.SourceCharController.Handle.transform.position, 120f, 25f, 0.2f, this.Zoomcallback);
         }
 
         private void Zoomcallback()

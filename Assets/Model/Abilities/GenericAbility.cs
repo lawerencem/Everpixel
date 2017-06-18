@@ -51,18 +51,24 @@ namespace Model.Abilities
 
         public void ProcessBullet(HitInfo hit)
         {
-            foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                perk.TryModAbility(hit.Ability);
-            CombatReferee.Instance.ProcessBullet(hit);
-            this.TryApplyInjury(hit);
+            if (!CharacterStatusFlags.HasFlag(hit.Target.Model.StatusFlags.CurFlags, CharacterStatusFlags.Flags.Dead))
+            {
+                foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
+                    perk.TryModAbility(hit.Ability);
+                CombatReferee.Instance.ProcessBullet(hit);
+                this.TryApplyInjury(hit);
+            }
         }
 
         public void ProcessMelee(HitInfo hit)
         {
-            foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                perk.TryModAbility(hit.Ability);
-            CombatReferee.Instance.ProcessMelee(hit);
-            this.TryApplyInjury(hit);
+            if (!CharacterStatusFlags.HasFlag(hit.Target.Model.StatusFlags.CurFlags, CharacterStatusFlags.Flags.Dead))
+            {
+                foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
+                    perk.TryModAbility(hit.Ability);
+                CombatReferee.Instance.ProcessMelee(hit);
+                this.TryApplyInjury(hit);
+            }
         }
 
         protected virtual void TryApplyInjury(HitInfo hit)
