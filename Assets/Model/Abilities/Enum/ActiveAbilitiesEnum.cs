@@ -3,6 +3,7 @@
     public enum ActiveAbilitiesEnum
     {
         None,
+        Eldritch_Chomp,
         Hadoken,
     }
 }

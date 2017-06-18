@@ -36,6 +36,7 @@ namespace Model.Characters
             cParams.Perks = arg.Perks;
             cParams.Race = arg.Race;
             cParams.RWeapon = GetWeapon(arg, arg.RWeapons);
+            cParams.Spells = arg.Spells;
             cParams.Type = arg.Type;
             return cParams;
         }

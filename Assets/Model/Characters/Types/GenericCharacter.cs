@@ -1,10 +1,12 @@
 ﻿using Assets.Generics;
+using Model.Spells;
 using Characters.Params;
 using Controller.Characters;
 using Controller.Managers;
 using Model.Abilities;
 using Model.Classes;
 using Model.Events.Combat;
+using Model.Injuries;
 using System.Collections.Generic;
 
 namespace Model.Characters
@@ -20,10 +22,11 @@ namespace Model.Characters
         {
             this._race = race;
             this.ActiveAbilities = new List<GenericActiveAbility>();
+            this.ActiveSpells = new SpellsByLevel();
             this.BaseClasses = new Dictionary<ClassEnum, GenericClass>();
             this.DefaultWpnAbilities = new List<WeaponAbility>();
             this.IndefSStatMods = new List<Pair<object, List<IndefSecondaryStatModifier>>>();
-            this.Injuries = new List<Model.Injuries.GenericInjury>();
+            this.Injuries = new List<GenericInjury>();
             this.Perks = new CharacterPerkCollection();
             this.PStatMods = new List<PrimaryStatModifier>();
             this.StatusFlags = new CharacterStatusFlags();

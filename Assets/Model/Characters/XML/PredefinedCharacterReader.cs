@@ -70,6 +70,7 @@ namespace Model.Characters.XML
                                         case (PredefinedReaderParams.POTENTIAL_ARMORS): { HandleEquipment(elem, key); } break;
                                         case (PredefinedReaderParams.POTENTIAL_WEAPONS): { HandleEquipment(elem, key); } break;
                                         case (PredefinedReaderParams.RACE): { HandleRace(key, elem.Value.ToString(), ref race); } break;
+                                        case (PredefinedReaderParams.SPELLS): { HandleSpells(elem, key); } break;
                                         case (PredefinedReaderParams.STATS): { HandleStats(elem, key); } break;
                                         case (PredefinedReaderParams.TYPE): { HandleCharacterType(key, elem.Value.ToString(), ref type); } break;
                                     }
@@ -152,6 +153,12 @@ namespace Model.Characters.XML
         {
             if (EnumUtil<RaceEnum>.TryGetEnumValue(value, ref race))
                 table.Table[rootKey].Race = race;
+        }
+
+        private void HandleSpells(XElement el, string rootKey)
+        {
+            foreach (var ele in el.Elements())
+                SpellParser.ParseSpell(ele, table.Table[rootKey]);
         }
 
         private void HandleStats(XElement el, string rootKey)

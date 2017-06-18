@@ -17,6 +17,7 @@
         public const string POTENTIAL_ARMORS = "PotentialArmors";
         public const string RACE = "RaceEnum";
         public const string R_WEAPONS = "RWeapons";
+        public const string SPELLS = "Spells";
         public const string STATS = "Stats";
         public const string TYPE = "CharacterTypeEnum";
     }

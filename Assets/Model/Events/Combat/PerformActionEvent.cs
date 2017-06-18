@@ -10,6 +10,8 @@ namespace Model.Events.Combat
 {
     public class PerformActionEventInfo
     {
+        public bool CastCallback = false;
+
         public PerformActionEventInfo()
         {
             this.Hits = new List<HitInfo>();
@@ -53,24 +55,7 @@ namespace Model.Events.Combat
                     }
                     else
                     {
-                        double fatigueCost = this.Info.Action.StaminaCost;
-
-                        if (this.SourceCharController.Model.Armor != null)
-                            fatigueCost *= this.SourceCharController.Model.Armor.FatigueCost;
-                        if (this.SourceCharController.Model.Helm != null)
-                            fatigueCost *= this.SourceCharController.Model.Helm.FatigueCost;
-                        if (this.SourceCharController.Model.LWeapon != null)
-                            fatigueCost *= this.SourceCharController.Model.LWeapon.FatigueCostMod;
-                        if (this.SourceCharController.Model.RWeapon != null)
-                            fatigueCost *= this.SourceCharController.Model.RWeapon.FatigueCostMod;
-
-                        if (this.Info.Action.APCost <= this.SourceCharController.Model.CurrentAP &&
-                            fatigueCost <= this.SourceCharController.Model.CurrentStamina)
-                        {
-                            this.SourceCharController.Model.CurrentAP -= this.Info.Action.APCost;
-                            this.SourceCharController.Model.CurrentStamina -= (int)fatigueCost;
-                            this.RegisterEvent();
-                        }
+                        this.ProcessEventStats();
                     }
                 }
             }
@@ -85,6 +70,34 @@ namespace Model.Events.Combat
 
                 if (this._callBack != null)
                     this._callBack();
+            }
+        }
+
+        public void CastDoneReRegister()
+        {
+            this.Info.CastCallback = true;
+            this.RegisterEvent();
+        }
+
+        private void ProcessEventStats()
+        {
+            double fatigueCost = this.Info.Action.StaminaCost;
+
+            if (this.SourceCharController.Model.Armor != null)
+                fatigueCost *= this.SourceCharController.Model.Armor.FatigueCost;
+            if (this.SourceCharController.Model.Helm != null)
+                fatigueCost *= this.SourceCharController.Model.Helm.FatigueCost;
+            if (this.SourceCharController.Model.LWeapon != null)
+                fatigueCost *= this.SourceCharController.Model.LWeapon.FatigueCostMod;
+            if (this.SourceCharController.Model.RWeapon != null)
+                fatigueCost *= this.SourceCharController.Model.RWeapon.FatigueCostMod;
+
+            if (this.Info.Action.APCost <= this.SourceCharController.Model.CurrentAP &&
+                fatigueCost <= this.SourceCharController.Model.CurrentStamina)
+            {
+                this.SourceCharController.Model.CurrentAP -= this.Info.Action.APCost;
+                this.SourceCharController.Model.CurrentStamina -= (int)fatigueCost;
+                this.RegisterEvent();
             }
         }
     }

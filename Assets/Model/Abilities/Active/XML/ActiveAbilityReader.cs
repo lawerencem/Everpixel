@@ -1,10 +1,7 @@
-﻿using System;
-using Generics;
+﻿using Generics;
 using System.Xml.Linq;
 using Model.Abilities;
 using Generics.Utilities;
-using System.Collections.Generic;
-using Model.Events;
 using Model.Injuries;
 
 namespace Models.Equipment.XML
@@ -49,21 +46,24 @@ namespace Models.Equipment.XML
             {
                 switch (mod)
                 {
-                    case ("AccMod"): { ActiveAbilityTable.Instance.Table[type].AccMod = v; } break;
                     case ("AbilityCastTypeEnum"): { HandleCastType(type, value); } break;
+                    case ("AccMod"): { ActiveAbilityTable.Instance.Table[type].AccMod = v; } break;
+                    case ("AoE"): { ActiveAbilityTable.Instance.Table[type].AoE = v; } break;
                     case ("APCost"): { ActiveAbilityTable.Instance.Table[type].APCost = v; } break;
                     case ("ArmorIgnoreMod"): { ActiveAbilityTable.Instance.Table[type].ArmorIgnoreMod = v; } break;
                     case ("ArmorPierceMod"): { ActiveAbilityTable.Instance.Table[type].ArmorPierceMod = v; } break;
                     case ("BlockIgnoreMod"): { ActiveAbilityTable.Instance.Table[type].BlockIgnoreMod = v; } break;
+                    case ("CastTime"): { ActiveAbilityTable.Instance.Table[type].CastTime = v; } break;
                     case ("Description"): { ActiveAbilityTable.Instance.Table[type].Description = value; } break;
-                    case ("DmgPerPower"): { ActiveAbilityTable.Instance.Table[type].DmgPerPower = v; } break;
                     case ("DodgeReduceMod"): { ActiveAbilityTable.Instance.Table[type].DodgeMod = v; } break;
                     case ("FlatDamage"): { ActiveAbilityTable.Instance.Table[type].FlatDamage = v; } break;
                     case ("MeleeBlockChanceMod"): { ActiveAbilityTable.Instance.Table[type].MeleeBlockChanceMod = v; } break;
                     case ("ParryModMod"): { ActiveAbilityTable.Instance.Table[type].ParryModMod = v; } break;
                     case ("Range"): { ActiveAbilityTable.Instance.Table[type].Range = v; } break;
                     case ("RangeBlockMod"): { ActiveAbilityTable.Instance.Table[type].RangeBlockMod = v; } break;
+                    case ("RechargeTime"): { ActiveAbilityTable.Instance.Table[type].RechargeTime = v; } break;
                     case ("ShieldDamageMod"): { ActiveAbilityTable.Instance.Table[type].ShieldDamageMod = v; } break;
+                    case ("SpellLevel"): { ActiveAbilityTable.Instance.Table[type].SpellLevel = v; } break;
                     case ("StaminaCost"): { ActiveAbilityTable.Instance.Table[type].StaminaCost = v; } break;
                 }
             }
@@ -72,6 +72,7 @@ namespace Models.Equipment.XML
                 switch (mod)
                 {
                     case ("Injury"): { this.HandleInjury(type, value); } break;
+                    case ("DmgPerPower"): { ActiveAbilityTable.Instance.Table[type].DmgPerPower = double.Parse(value); } break;
                 }
             }
         }
@@ -80,6 +81,7 @@ namespace Models.Equipment.XML
         {
             switch (type)
             {
+                case (ActiveAbilitiesEnum.Eldritch_Chomp): { ActiveAbilityTable.Instance.Table[type] = new EldrtichChomp(); } break;
                 case (ActiveAbilitiesEnum.Hadoken): { ActiveAbilityTable.Instance.Table[type] = new Hadoken(); } break;
             }
         }

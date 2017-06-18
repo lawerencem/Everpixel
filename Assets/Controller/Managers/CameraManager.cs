@@ -4,6 +4,9 @@ namespace Assets.Controller.Managers
 {
     public class CameraManager : MonoBehaviour
     {
+        protected Callback _callBack;
+        public delegate void Callback();
+
         private const float AUTO_SCROLL_SENSITIVITY = 0.012f;
         private const float BOUNDARY = 30f;
         private const float SCROLL_SENSITIVITY = 0.1f;
@@ -24,6 +27,16 @@ namespace Assets.Controller.Managers
             this._target.z = Camera.main.transform.position.z;
             var fov = Camera.main.fieldOfView;
             this._target.y -= (fov * AUTO_SCROLL_SENSITIVITY);
+        }
+
+        public void InitScrollTo(Vector3 position, Callback callback = null)
+        {
+            this._scroll = true;
+            this._target = position;
+            this._target.z = Camera.main.transform.position.z;
+            var fov = Camera.main.fieldOfView;
+            this._target.y -= (fov * AUTO_SCROLL_SENSITIVITY);
+            this._callBack = callback;
         }
 
         public void Start()
@@ -51,6 +64,11 @@ namespace Assets.Controller.Managers
             {
                 Camera.main.transform.position = this._target;
                 this._scroll = false;
+                if (this._callBack != null)
+                {
+                    this._callBack();
+                    this._callBack = null;
+                }
             }
         }
 

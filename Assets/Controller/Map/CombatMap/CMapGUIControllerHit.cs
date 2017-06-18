@@ -53,6 +53,33 @@ namespace Controller.Managers.Map
                 CMapGUIControllerParams.WHITE, CMapGUIControllerParams.ATTACK_TEXT_OFFSET);
         }
 
+        public void DisplayText(string toDisplay, Vector3 pos, Color color, float yOffset = 0)
+        {
+            var canvas = GameObject.FindGameObjectWithTag("MainCanvas");
+            var display = new GameObject();
+            var text = display.AddComponent<Text>();
+            var position = pos;
+            position.y += yOffset;
+            text.alignment = TextAnchor.MiddleCenter;
+            text.color = color;
+            text.fontSize = 16;
+            text.rectTransform.position = position;
+            text.rectTransform.SetParent(canvas.transform);
+            text.rectTransform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+            text.rectTransform.sizeDelta = new Vector2(150f, 150f);
+            text.name = "Hit Text";
+            text.text = toDisplay;
+            Font fontToUse = Resources.Load("Fonts/8bitOperatorPlus8-Bold") as Font;
+            text.font = fontToUse;
+            var zoom = Camera.main.fieldOfView;
+            var scalar = 30f / zoom;
+            text.transform.localScale = new Vector3(scalar, scalar);
+            var script = display.AddComponent<DestroyByLifetime>();
+            script.lifetime = 1;
+            var floating = display.AddComponent<FloatingText>();
+            floating.Init(display);
+        }
+
         public void ProcessBulletGraphics(DisplayHitStatsEvent e)
         {
             this.DisplayHitStatsEvent(e.Hit);
@@ -128,33 +155,6 @@ namespace Controller.Managers.Map
             color.a = alpha;
         }
 
-        private void DisplayText(string toDisplay, Vector3 pos, Color color, float yOffset = 0)
-        {
-            var canvas = GameObject.FindGameObjectWithTag("MainCanvas");
-            var display = new GameObject();
-            var text = display.AddComponent<Text>();
-            var position = pos;
-            position.y += yOffset;
-            text.alignment = TextAnchor.MiddleCenter;
-            text.color = color;
-            text.fontSize = 16;
-            text.rectTransform.position = position;
-            text.rectTransform.SetParent(canvas.transform);
-            text.rectTransform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
-            text.rectTransform.sizeDelta = new Vector2(150f, 150f);
-            text.name = "Hit Text";
-            text.text = toDisplay;
-            Font fontToUse = Resources.Load("Fonts/8bitOperatorPlus8-Bold") as Font;
-            text.font = fontToUse;
-            var zoom = Camera.main.fieldOfView;
-            var scalar = 30f / zoom;
-            text.transform.localScale = new Vector3(scalar, scalar);
-            var script = display.AddComponent<DestroyByLifetime>();
-            script.lifetime = 1;
-            var floating = display.AddComponent<FloatingText>();
-            floating.Init(display);
-        }
-
         private bool FatalitySuccessful(DisplayHitStatsEvent e)
         {
             var success = false;
@@ -172,9 +172,7 @@ namespace Controller.Managers.Map
 
             if (success)
             {
-                
-                fatality.Init();
-                
+                fatality.Init();   
             }
                 
             return success;
@@ -201,6 +199,8 @@ namespace Controller.Managers.Map
             renderer.sprite = sprite;
             renderer.sortingLayerName = CMapGUIControllerParams.PARTICLES_LAYER;
             var listener = new DefenderFXListener(this, e);
+            if (!e.Hit.Source.LParty)
+                bullet.transform.localRotation = Quaternion.Euler(0, 180, 0);
             script.Init(bullet, e.Hit.Target.transform.position, 5f, listener.ProcessDefenderGraphics);
         }
 
@@ -274,6 +274,8 @@ namespace Controller.Managers.Map
 
         private bool IsFatality(DisplayHitStatsEvent e)
         {
+            
+
             if (e.Hit.Target.Model.CurrentHP - e.Hit.Dmg <= 0)
             {
                 var roll = RNG.Instance.NextDouble();

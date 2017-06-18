@@ -34,11 +34,11 @@ namespace Generics.Scripts
             this._timeCounter += Time.deltaTime;
             if (this._timeCounter >= this._timeInterval)
             {
-                var curJolt = this._toJolt.GetComponent<JoltScript>();
+                var curJolt = this._toJolt.GetComponent<BoomerangScript>();
                 if (curJolt == null)
                 {
-                    var xNeg = RNG.Instance.Next(1);
-                    var yNeg = RNG.Instance.Next(1);
+                    var xNeg = RNG.Instance.Next(2);
+                    var yNeg = RNG.Instance.Next(2);
                     var xRoll = RNG.Instance.NextDouble() * this._x;
                     var yRoll = RNG.Instance.NextDouble() * this._y;
                     if (xNeg == 1)
@@ -48,7 +48,7 @@ namespace Generics.Scripts
                     var position = this._toJolt.transform.position;
                     position.x += (float)xRoll;
                     position.y += (float)yRoll;
-                    var jolt = this._toJolt.AddComponent<JoltScript>();
+                    var jolt = this._toJolt.AddComponent<BoomerangScript>();
                     jolt.Init(this._toJolt, position, this._speed);
                 }
                 this._timeCounter = 0;

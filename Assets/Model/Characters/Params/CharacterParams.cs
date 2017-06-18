@@ -1,4 +1,5 @@
-﻿using Model.Abilities;
+﻿using Assets.Generics;
+using Model.Abilities;
 using Model.Classes;
 using Model.Equipment;
 using Model.Mounts;
@@ -15,6 +16,7 @@ namespace Model.Characters
             this.ActiveAbilities = new List<ActiveAbilitiesEnum>();
             this.BaseClasses = new Dictionary<ClassEnum, int>();
             this.DefaultWpnAbilities = new List<WeaponAbilitiesEnum>();
+            this.Spells = new List<Pair<int, ActiveAbilitiesEnum>>();
             this.Perks = new List<PerkEnum>();
         }
         
@@ -29,6 +31,7 @@ namespace Model.Characters
         public List<PerkEnum> Perks { get; set; }
         public WeaponParams RWeapon { get; set; }
         public RaceEnum Race { get; set; }
+        public List<Pair<int, ActiveAbilitiesEnum>> Spells { get; set; }
         public StartingColEnum StartRow { get; set; }
         public CharacterTypeEnum Type { get; set; }
     }

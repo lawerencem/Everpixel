@@ -3,16 +3,15 @@
 This weekend
 
 Next Weekend
+   - Ability gui popups
    - Critters / Leveling
    - Troll Culture
-   - Spells
+   - Refactor character stuff with structs
 
 1) - Dual-Wield
-1.5) - Dead characters on tiles shouldn't prevent movement
 3) - Critter classes / abilities during level up on the xml
 5) - Calculate "height diff" when going from one height to another in hexes
 6) - Force A* to directional search after so many nodes
-7) Make characters make attack face on all attacks
 
 Long Term: 
 	Replace eyes with dead eyes when killed for Critter
@@ -20,4 +19,8 @@ Long Term:
 	Ranged attacks
 	GUI for prediction
 
+Refactor:
+	Eventing system
+
 Bugs:
+   Cast time shallow copy

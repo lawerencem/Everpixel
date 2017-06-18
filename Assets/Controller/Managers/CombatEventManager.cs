@@ -23,16 +23,17 @@ namespace Controller.Managers
         private bool _guiLock = false;
         private bool _interactionLock = false;
 
-        private GameObject _cameraManager;
         private CombatManager _combatManager;
         private PerformActionEvent _currentAction;
         private List<CombatEvent> _events;
 
+        public GameObject CameraManager;
+
         public CombatEventManager()
         {
             this._events = new List<CombatEvent>();
-            this._cameraManager = new GameObject();
-            this._cameraManager.AddComponent<CameraManager>();
+            this.CameraManager = new GameObject();
+            this.CameraManager.AddComponent<CameraManager>();
         }
 
         private static CombatEventManager _instance;
@@ -81,6 +82,8 @@ namespace Controller.Managers
             {
                 var dmg = new DamageCharacterEvent(this, hit);
             }
+            if (this._currentAction.Info.CastCallback)
+                this._combatManager.ProcessNextTurn();
             this._currentAction = null;
         }
 
@@ -91,6 +94,7 @@ namespace Controller.Managers
                 case (CombatEventEnum.ActionCofirmed): { HandleActionConfirmed(e as ActionConfirmedEvent); } break;
                 case (CombatEventEnum.ApplyInjury): { HandleApplyInjuryEvent(e as ApplyInjuryEvent); } break;
                 case (CombatEventEnum.AttackSelected): { HandleAttackSelectedEvent(e as AttackSelectedEvent); } break;
+                case (CombatEventEnum.Casting): { HandleCastingEvent(e as CastingEvent); } break;
                 case (CombatEventEnum.DamageCharacter): { HandleDamageCharacterEvent(e as DamageCharacterEvent); } break;
                 case (CombatEventEnum.CharacterKilled): { HandleCharacterKilledEvent(e as CharacterKilledEvent); } break; 
                 case (CombatEventEnum.DisplayHitStats): { HandleDisplayHitStatsEvent(e as DisplayHitStatsEvent); } break;
@@ -142,6 +146,20 @@ namespace Controller.Managers
             this._combatManager.CurAbility = ability;
         }
 
+        private void HandleCastingEvent(CastingEvent e)
+        {
+            this._events.Remove(e);
+            this._combatManager.AddCasting(e);
+            CMapGUIController.Instance.DisplayCast(e);
+            CMapGUIController.Instance.ClearDecoratedTiles();
+            var cur = this._combatManager.CurrActing.Handle;
+            var bob = cur.GetComponent<BobbingScript>();
+            if (bob != null) { bob.Reset(); }
+            this._combatManager.CurAbility = null;
+            this._combatManager.ProcessNextTurn();
+            this.PopulateBtnsHelper();
+        }
+
         private void HandleCharacterKilledEvent(CharacterKilledEvent e)
         {
             this._events.Remove(e);
@@ -187,9 +205,12 @@ namespace Controller.Managers
             {
                 if (e.Character.Model.CurrentAP > 0)
                 {
-                    CMapGUIController.Instance.SetActingBoxToController(e.Character);
-                    var bob = e.Character.Handle.AddComponent<BobbingScript>();
-                    bob.Init(PER_FRAME, PER_FRAME_DIST, e.Character.Handle);
+                    if (e.Character == this.GetCurrentCharacter())
+                    {
+                        CMapGUIController.Instance.SetActingBoxToController(e.Character);
+                        var bob = e.Character.Handle.AddComponent<BobbingScript>();
+                        bob.Init(PER_FRAME, PER_FRAME_DIST, e.Character.Handle);
+                    }
                 }
                 else
                 {
@@ -203,11 +224,15 @@ namespace Controller.Managers
         private void HandlePerformActionEvent(PerformActionEvent e)
         {
             this._events.Remove(e);
-            if (!this.GetInteractionLock())
-            {
-                this._combatManager.CurAbility = null;
+            this._combatManager.CurAbility = null;
 
-                // TODO: Generate multiple hits as necessaryy
+            // TODO: Generate multiple hits as necessaryy
+            if (e.Info.Action.CastTime > 0)
+            {
+                var cast = new CastingEvent(this, e);
+            }
+            else
+            {
                 var hit = new HitInfo(e.SourceCharController, e.TargetCharController, e.Info.Action, e.ChildHitDone);
                 e.Info.Hits.Add(hit);
                 this._currentAction = e;
@@ -237,7 +262,7 @@ namespace Controller.Managers
             CMapGUIController.Instance.SetActingBoxToController(e.Controller);
             var bob = e.Controller.Handle.AddComponent<BobbingScript>();
             bob.Init(PER_FRAME, PER_FRAME_DIST, e.Controller.Handle);
-            var script = this._cameraManager.GetComponent<CameraManager>();
+            var script = this.CameraManager.GetComponent<CameraManager>();
             script.InitScrollTo(e.Controller.Handle.transform.position);
         }
 

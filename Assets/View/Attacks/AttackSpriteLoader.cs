@@ -17,7 +17,8 @@ namespace View.Characters
 
         public Sprite GetAttackSprite(GenericActiveAbility a)
         {
-            var path = StringUtil.PathBuilder(ATTACK_PATH, a.TypeStr, EXTENSION);
+            var typeEnum = (ActiveAbilitiesEnum)a.Type;
+            var path = StringUtil.PathBuilder(ATTACK_PATH, typeEnum.ToString());
             return GetSprite(path);
         }
 

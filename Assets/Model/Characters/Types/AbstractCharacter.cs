@@ -1,4 +1,5 @@
 ﻿using Assets.Generics;
+using Model.Spells;
 using Characters.Params;
 using Controller.Managers;
 using Model.Abilities;
@@ -11,12 +12,15 @@ using System.Collections.Generic;
 
 namespace Model.Characters
 {
+    // TODO: Refactor!!!
     abstract public class AbstractCharacter<T>
     {
         // TODO: Let's put this somewhere else...
         protected const double BASE_STAM_RESTORE = 50;
 
         public T Type { get; set; }
+
+        public SpellsByLevel ActiveSpells { get; set; }
 
         public Dictionary<ClassEnum, GenericClass> BaseClasses { get; set; }
 

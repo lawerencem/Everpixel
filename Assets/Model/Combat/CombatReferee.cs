@@ -78,6 +78,10 @@ namespace Model.Combat
                 else
                     ProcessDamage(hit);
             }
+            else
+            {
+                hit.Dmg = 0;
+            }
         }
 
         private void ProcessHitEventView(HitInfo hit)

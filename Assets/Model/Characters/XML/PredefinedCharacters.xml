@@ -259,6 +259,9 @@
           <RWeapon>0.25,Void Staff,Three</RWeapon>
         </RWeapons>
       </PotentialWeapons>
+      <Spells>
+        <Spell>3,Eldritch_Chomp</Spell>
+      </Spells>
       <Stats>
         <Agility>350</Agility>
         <Constitution>280</Constitution>
@@ -352,6 +355,9 @@
           <RWeapon>0.25,Void Staff,Four</RWeapon>
         </RWeapons>
       </PotentialWeapons>
+      <Spells>
+        <Spell>2,Eldritch_Chomp</Spell>
+      </Spells>
       <Stats>
         <Agility>350</Agility>
         <Constitution>280</Constitution>
@@ -456,6 +462,9 @@
         <Perception>620</Perception>
         <Resolve>480</Resolve>
       </Stats>
+      <Spells>
+        <Spell>4,Eldritch_Chomp</Spell>
+      </Spells>
     </Character>
     <Character name ="Lunatic Gromp Hopper">
       <Class>Warrior,5</Class>

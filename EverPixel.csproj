@@ -114,6 +114,7 @@
     <Compile Include="Assets\Generics\Scripts\RaycastMove.cs" />
     <Compile Include="Assets\Generics\Scripts\RaycastMoveWithDelete.cs" />
     <Compile Include="Assets\Generics\Scripts\RotationScript.cs" />
+    <Compile Include="Assets\Generics\Scripts\ScrollCameraToScript.cs" />
     <Compile Include="Assets\Generics\Scripts\TileMoveScript.cs" />
     <Compile Include="Assets\Generics\Utilities\Count.cs" />
     <Compile Include="Assets\Generics\Utilities\DeepClone.cs" />
@@ -125,14 +126,15 @@
     <Compile Include="Assets\Model\Abilities\Active\ActiveAbilityFactory.cs" />
     <Compile Include="Assets\Model\Abilities\Active\ActiveAbilityTable.cs" />
     <Compile Include="Assets\Model\Abilities\Active\GenericActiveAbility.cs" />
-    <Compile Include="Assets\Model\Abilities\Active\Missiles\Hadoken.cs" />
+    <Compile Include="Assets\Model\Abilities\Active\Magic\Astral\EldritchChomp.cs" />
+    <Compile Include="Assets\Model\Abilities\Active\NonMagic\Hadoken.cs" />
     <Compile Include="Assets\Model\Abilities\Active\XML\ActiveAbilityReader.cs" />
     <Compile Include="Assets\Model\Abilities\Enum\AbilityCastTypeEnum.cs" />
     <Compile Include="Assets\Model\Abilities\Enum\ActiveAbilitiesEnum.cs" />
     <Compile Include="Assets\Model\Abilities\Enum\WeaponAbilitiesEnum.cs" />
     <Compile Include="Assets\Model\Abilities\GenericAbility.cs" />
     <Compile Include="Assets\Model\Abilities\GenericAbilityTable.cs" />
-    <Compile Include="Assets\Model\Abilities\Magic\MagicTypeEnum.cs" />
+    <Compile Include="Assets\Model\Abilities\Active\Magic\MagicTypeEnum.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Aim.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Bite.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\BreakArmor.cs" />
@@ -196,6 +198,7 @@
     <Compile Include="Assets\Model\Characters\XML\PredefinedReaderParams.cs" />
     <Compile Include="Assets\Model\Characters\XML\PrimaryStatsParser.cs" />
     <Compile Include="Assets\Model\Characters\XML\RaceDefaultStatsReader.cs" />
+    <Compile Include="Assets\Model\Characters\XML\SpellParser.cs" />
     <Compile Include="Assets\Model\Classes\Builders\ClassBuilder.cs" />
     <Compile Include="Assets\Model\Classes\ClassParams.cs" />
     <Compile Include="Assets\Model\Classes\Enums\ClassEnum.cs" />
@@ -240,6 +243,7 @@
     <Compile Include="Assets\Model\Events\Combat\ActionCofirmedEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\ApplyInjuryEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\AttackSelectedEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\CastingEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\CharacterKilledEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\CombatEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\DamageCharacterEvent.cs" />
@@ -298,6 +302,9 @@
     <Compile Include="Assets\Model\Slot\AbstractSlot.cs" />
     <Compile Include="Assets\Model\Slot\GenericSlot.cs" />
     <Compile Include="Assets\Model\Slot\SlotEnum.cs" />
+    <Compile Include="Assets\Model\Spells\SpellsByLevel.cs" />
+    <Compile Include="Assets\Model\Spells\SpellFactory.cs" />
+    <Compile Include="Assets\Model\Spells\SpellMediator.cs" />
     <Compile Include="Assets\View\Attacks\AttackSpriteLoader.cs" />
     <Compile Include="Assets\View\Builders\CharacterViewBuilder.cs" />
     <Compile Include="Assets\View\Characters\CharacterBridge.cs" />
@@ -355,6 +362,7 @@
     <None Include="Assets\Model\Parties\XML\SubParties.xml" />
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

@@ -48,8 +48,8 @@ namespace View.Fatalities
 
                 var spin = head.AddComponent<HeadRotationScript>();
                 bool spinRight = true;
-                var roll = RNG.Instance.Next(1);
-                if (roll == 1)
+                var roll = RNG.Instance.Next(2);
+                if (roll == 0)
                     spinRight = false;
                 var percent = RNG.Instance.NextDouble();
                 spin.Init(head, (float)(5f * percent), spinRight, base.Done);

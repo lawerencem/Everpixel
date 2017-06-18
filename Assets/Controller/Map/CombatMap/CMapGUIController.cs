@@ -108,6 +108,11 @@ namespace Controller.Managers.Map
             }
         }
 
+        public void DisplayCast(CastingEvent e)
+        {
+            this._hitHelper.DisplayText(e.SpellName, e.Caster.transform.position, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.ATTACK_TEXT_OFFSET);
+        }
+
         public void DisplayHitStatsEvent(DisplayHitStatsEvent e)
         {
             if (e.Hit.Ability.Type.GetType() == (typeof(WeaponAbilitiesEnum)))
@@ -120,6 +125,7 @@ namespace Controller.Managers.Map
                 switch(ability.CastType)
                 {
                     case (AbilityCastTypeEnum.Bullet): { this._hitHelper.ProcessBulletGraphics(e); } break;
+                    case (AbilityCastTypeEnum.No_Collision_Bullet): { this._hitHelper.ProcessBulletGraphics(e); } break;
                 }
             }
         } 
@@ -151,7 +157,6 @@ namespace Controller.Managers.Map
             this.SetTagText(CMapGUIControllerParams.HP, c.Model.CurrentHP + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.HP).ToString());
             this.SetTagText(CMapGUIControllerParams.STAM, c.Model.CurrentStamina + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Stamina).ToString());
             this.SetTagText(CMapGUIControllerParams.MORALE, c.Model.CurrentMorale + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Morale).ToString());
-            this.SetTagText(CMapGUIControllerParams.STAM, c.Model.CurrentStamina + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Stamina).ToString());
 
             if (c.Model.Armor != null)
                 this.SetTagText(CMapGUIControllerParams.ARMOR, c.Model.Armor.Name);

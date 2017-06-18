@@ -75,7 +75,7 @@
     <Character>1,Goblin Void Weaver,Three</Character>
   </SubParty>
   <SubParty Name ="Goblin Void Weavers">
-    <Difficulty>10</Difficulty>
+    <Difficulty>1</Difficulty>
     <Character>1,Expert Goblin Void Weaver,Three</Character>
     <Character>1,Goblin Void Weaver,Three</Character>
   </SubParty>

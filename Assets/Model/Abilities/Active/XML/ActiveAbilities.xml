@@ -1,7 +1,29 @@
 ﻿<ActiveAbilities>
+  <ActiveAbility name="Eldritch_Chomp">
+    <AbilityCastTypeEnum>No_Collision_Bullet</AbilityCastTypeEnum>
+    <AccMod>1</AccMod>
+    <AoE>1</AoE>
+    <APCost>5</APCost>
+    <ArmorIgnoreMod>1</ArmorIgnoreMod>
+    <ArmorPierceMod>1</ArmorPierceMod>
+    <BlockIgnoreMod>1</BlockIgnoreMod>
+    <CastTime>80</CastTime>
+    <DmgPerPower>0.05</DmgPerPower>
+    <DodgeMod>1.0</DodgeMod>
+    <FlatDamage>35</FlatDamage>
+    <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
+    <ParryModMod>0.25</ParryModMod>
+    <Range>6</Range>
+    <RangeBlockMod>0.25</RangeBlockMod>
+    <RechargeTime>0</RechargeTime>
+    <ShieldDamageMod>1</ShieldDamageMod>
+    <SpellLevel>2</SpellLevel>
+    <StaminaCost>55</StaminaCost>
+  </ActiveAbility>
   <ActiveAbility name="Hadoken">
     <AbilityCastTypeEnum>Bullet</AbilityCastTypeEnum>
     <AccMod>1</AccMod>
+    <AoE>1</AoE>
     <APCost>4</APCost>
     <ArmorIgnoreMod>1</ArmorIgnoreMod>
     <ArmorPierceMod>1</ArmorPierceMod>
@@ -11,9 +33,10 @@
     <FlatDamage>0</FlatDamage>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
     <ParryModMod>0.25</ParryModMod>
+    <Range>4</Range>
     <RangeBlockMod>1.25</RangeBlockMod>
+    <RechargeTime>0</RechargeTime>
     <ShieldDamageMod>1.5</ShieldDamageMod>
     <StaminaCost>25</StaminaCost>
-    <Range>4</Range>
   </ActiveAbility>
 </ActiveAbilities>

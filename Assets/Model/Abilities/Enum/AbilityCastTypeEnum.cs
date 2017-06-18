@@ -4,5 +4,6 @@
     {
         None,
         Bullet,
+        No_Collision_Bullet,
     }
 }

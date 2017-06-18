@@ -8,7 +8,8 @@ namespace Model.Characters
         public enum Flags
         {
             None = 0,
-            Dead = 1,
+            Casting = 1,
+            Dead = 2,
         }
 
         public Flags CurFlags { get; set; }
@@ -18,8 +19,10 @@ namespace Model.Characters
             this.CurFlags = new Flags();
         }
 
+        public static void SetCastingFalse(CharacterStatusFlags f) { f.CurFlags &= ~Flags.Casting; }
         public static void SetDeadFalse(CharacterStatusFlags f) { f.CurFlags &= ~Flags.Dead; }
 
+        public static void SetCastingTrue(CharacterStatusFlags f) { f.CurFlags |= Flags.Casting; }
         public static void SetDeadTrue(CharacterStatusFlags f) { f.CurFlags |= Flags.Dead; }
 
         public static bool HasFlag(Flags a, Flags b)

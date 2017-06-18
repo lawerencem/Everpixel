@@ -1,20 +1,18 @@
-﻿using Controller.Characters;
+﻿using Assets.Generics;
+using Controller.Characters;
 using Controller.Managers;
-using Controller.Managers.Map;
 using Controller.Map;
-using Generics;
-using Generics.Hex;
 using Model.Abilities;
 using Model.Characters;
 using Model.Events.Combat;
 using Model.Map;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace Assets.Controller.Managers
 {
     public class CombatManager
     {
+        private List<Pair<int, CastingEvent>> _castingOrder;
         private List<TileController> _curTiles;
         private List<GenericCharacterController> _characters;
         private List<GenericCharacterController> _lParty;
@@ -27,10 +25,20 @@ namespace Assets.Controller.Managers
 
         public CombatManager(CombatMap m)
         {
+            this._castingOrder = new List<Pair<int, CastingEvent>>();
             this._characters = new List<GenericCharacterController>();
             this._curTiles = new List<TileController>();
             this._map = m;
             this._order = new List<GenericCharacterController>();
+        }
+
+        public void AddCasting(CastingEvent e)
+        {
+            this._castingOrder.Add(new Pair<int, CastingEvent>(e.CastTime, e));
+            this._castingOrder.Sort((x, y) => x.X.CompareTo(y.X));
+            var remove = this._order.Find(x => x.Model == e.Caster.Model);
+            if (remove != null)
+                this._order.Remove(remove);
         }
 
         public void InitParties(List<GenericCharacterController> l, List<GenericCharacterController> r)
@@ -102,10 +110,34 @@ namespace Assets.Controller.Managers
 
         public void ProcessNextTurn()
         {
-            this._order.RemoveAt(0);
+            if (this._order.Count > 0)
+                this._order.RemoveAt(0);
             if (this._order.Count > 0)
             {
-                var e = new TakingActionEvent(CombatEventManager.Instance, this._order[0]);
+                if (this._castingOrder.Count > 0)
+                {
+                    if (this._castingOrder[0].X + this._castingOrder[0].Y.Caster.Model.GetCurrentStatValue(SecondaryStatsEnum.Initiative) <
+                        this._order[0].Model.GetCurrentStatValue(SecondaryStatsEnum.Initiative))
+                    {
+                        var cast = this._castingOrder[0];
+                        this._castingOrder.RemoveAt(0);
+                        cast.Y.DoneCasting();
+                    }
+                    else
+                    {
+                        var e = new TakingActionEvent(CombatEventManager.Instance, this._order[0]);
+                    }
+                }
+                else
+                {
+                    var e = new TakingActionEvent(CombatEventManager.Instance, this._order[0]);
+                }
+            }
+            else if (this._castingOrder.Count > 0)
+            {
+                var cast = this._castingOrder[0];
+                this._castingOrder.RemoveAt(0);
+                cast.Y.DoneCasting();
             }
             else
             {

@@ -1,4 +1,5 @@
-﻿using Controller.Managers;
+﻿using Controller.Characters;
+using Controller.Managers;
 using Generics;
 using Model.Abilities;
 using Model.Characters;
@@ -50,48 +51,60 @@ namespace View.GUI
         {
             var character = CombatEventManager.Instance.GetCurrentCharacter();
             this._proto.SetActive(true);
+            for (int i = 0; i < character.Model.ActiveAbilities.Count; i++)
+                this.PopulateModalList(character, character.Model.ActiveAbilities[i]);
+            foreach(var outerKVP in character.Model.ActiveSpells.Spells)
+            {
+                foreach(var innerKVP in outerKVP.Value)
+                {
+                    this.PopulateModalList(character, innerKVP.Value.Y);
+                }
+            }
+            this._proto.SetActive(false);
+        }
+
+        private void PopulateModalList(GenericCharacterController character, GenericActiveAbility ability)
+        {
             var protoBtn = this._proto.GetComponent<Button>();
             var protoImg = this._proto.GetComponent<Image>();
             var protoTxtContainer = GameObject.FindGameObjectWithTag("ProtoAbilityBtnTextTag");
             var protoTxt = protoTxtContainer.GetComponent<Text>();
             var protoRect = protoTxtContainer.GetComponent<RectTransform>();
             var content = GameObject.FindGameObjectWithTag("ActiveModalContent");
-            for (int i = 0; i < character.Model.ActiveAbilities.Count; i++)
-            {
-                var clone = new GameObject();
-                clone.transform.SetParent(content.transform);
-                clone.transform.localScale = protoBtn.transform.localScale;
 
-                var rect = clone.AddComponent<RectTransform>();
-                rect.sizeDelta = protoImg.rectTransform.sizeDelta;
+            var clone = new GameObject();
+            clone.transform.SetParent(content.transform);
+            clone.transform.localScale = protoBtn.transform.localScale;
 
-                var img = clone.AddComponent<Image>();
-                img.sprite = protoImg.sprite;
-                img.color = protoImg.color;
+            var rect = clone.AddComponent<RectTransform>();
+            rect.sizeDelta = protoImg.rectTransform.sizeDelta;
 
-                var cloneBtn = clone.AddComponent<Button>();
-                cloneBtn.colors = protoBtn.colors;
+            var img = clone.AddComponent<Image>();
+            img.sprite = protoImg.sprite;
+            img.color = protoImg.color;
 
-                var cloneTxtContainer = new GameObject();
-                cloneTxtContainer.transform.SetParent(clone.transform);
+            var cloneBtn = clone.AddComponent<Button>();
+            cloneBtn.colors = protoBtn.colors;
 
-                var txt = cloneTxtContainer.AddComponent<Text>();
-                txt.text = character.Model.ActiveAbilities[i].TypeStr;
-                txt.font = protoTxt.font;
-                txt.fontSize = protoTxt.fontSize;
-                txt.color = protoTxt.color;
-                txt.transform.localScale = protoTxt.transform.localScale;
-                txt.alignment = protoTxt.alignment;
-                txt.transform.SetParent(cloneTxtContainer.transform);
+            var cloneTxtContainer = new GameObject();
+            cloneTxtContainer.transform.SetParent(clone.transform);
 
-                var txtRect = cloneTxtContainer.GetComponent<RectTransform>();
-                txtRect.localPosition = new Vector2(0, 0);
+            var txt = cloneTxtContainer.AddComponent<Text>();
+            txt.text = ability.TypeStr;
+            txt.font = protoTxt.font;
+            txt.fontSize = protoTxt.fontSize;
+            txt.color = protoTxt.color;
+            txt.transform.localScale = protoTxt.transform.localScale;
+            txt.alignment = protoTxt.alignment;
+            txt.transform.SetParent(cloneTxtContainer.transform);
 
-                this._btns.Add(clone);
-                var btnScript = clone.AddComponent<AbilityBtnClick>();
-                btnScript.Init(clone, (ActiveAbilitiesEnum)character.Model.ActiveAbilities[i].Type);
-            }
-            this._proto.SetActive(false);
+            var txtRect = cloneTxtContainer.GetComponent<RectTransform>();
+            txtRect.localPosition = new Vector2(0, 0);
+
+            this._btns.Add(clone);
+            var btnScript = clone.AddComponent<AbilityBtnClick>();
+            var typeEnum = (ActiveAbilitiesEnum)ability.Type;
+            btnScript.Init(clone, typeEnum);
         }
     }
 }

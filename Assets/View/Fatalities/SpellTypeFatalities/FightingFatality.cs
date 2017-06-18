@@ -59,6 +59,8 @@ namespace View.Fatalities
             var renderer = bullet.AddComponent<SpriteRenderer>();
             renderer.sprite = sprite;
             renderer.sortingLayerName = CMapGUIControllerParams.PARTICLES_LAYER;
+            if (!this._event.Hit.Source.LParty)
+                bullet.transform.localRotation = Quaternion.Euler(0, 180, 0);
             script.Init(bullet, this._event.Hit.Target.transform.position, 2f, this.ProcessFatality);
         }
 

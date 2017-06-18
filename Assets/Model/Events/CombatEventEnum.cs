@@ -7,6 +7,7 @@
         ActionCofirmed,
         ApplyInjury,
         AttackSelected,
+        Casting,
         CharacterKilled,
         DamageCharacter,
         DisplayHitStats,

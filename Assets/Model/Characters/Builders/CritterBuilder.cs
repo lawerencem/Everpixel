@@ -3,6 +3,7 @@ using Model.Abilities;
 using Model.Classes;
 using Model.Perks;
 using Model.Slot;
+using Model.Spells;
 using System;
 using System.Collections.Generic;
 
@@ -61,6 +62,7 @@ namespace Model.Characters
             character.CurrentHP = character.GetCurrentStatValue(SecondaryStatsEnum.HP);
             character.CurrentMorale = character.GetCurrentStatValue(SecondaryStatsEnum.Morale);
             character.CurrentStamina = character.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
+            SpellMediator.Instance.SetCharacterSpells(character, c);
             return character;
         }
 
