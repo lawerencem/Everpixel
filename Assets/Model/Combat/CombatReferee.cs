@@ -19,29 +19,42 @@ namespace Model.Combat
         private const double BASE_SKILL_SCALAR = 0.75;
         private const double BASE_SCALAR = 1000;
 
-        private Callback _callBack;
-        public delegate void Callback();
-
-        private HitInfo _hit;
-
         public void ProcessBullet(HitInfo hit)
         {
             ProcessBulletFlags(hit);
-            CalculateDamage(hit);
+            if (hit.Ability.Type.GetType() == (typeof(WeaponAbilitiesEnum)))
+                CalculateWpnDmg(hit);
+            else
+                CalculateAbilityDmg(hit);
             ProcessHitEventView(hit);
         }
 
         public void ProcessMelee(HitInfo hit)
         {
             ProcessMeleeFlags(hit);
-            CalculateDamage(hit);
+            if (hit.Ability.Type.GetType() == (typeof(WeaponAbilitiesEnum)))
+                CalculateWpnDmg(hit);
+            else
+                CalculateAbilityDmg(hit);
             ProcessHitEventView(hit);
         }
 
-        private void CalculateDamage(HitInfo hit)
+        private void CalculateAbilityDmg(HitInfo hit)
+        {
+            var ability = hit.Ability as GenericActiveAbility;
+            var dmg = hit.Ability.ModData.BaseDamage;
+            dmg += ability.FlatDamage;
+            dmg += (ability.DmgPerPower * hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Power));
+            if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
+                dmg *= (BASE_CRIT_SCALAR + (hit.Source.Model.SecondaryStats.CriticalMultiplier / BASE_SCALAR));
+            hit.Dmg = (int)dmg;
+        }
+
+        private void CalculateWpnDmg(HitInfo hit)
         {
             var dmg = hit.Ability.ModData.BaseDamage;
 
+            // TODO: Look for dual-wielding penalties
             if (hit.Source.Model.RWeapon != null)
                 dmg += hit.Source.Model.RWeapon.Damage;
             if (hit.Source.Model.LWeapon != null)
@@ -50,6 +63,7 @@ namespace Model.Combat
                 dmg *= (BASE_CRIT_SCALAR + (hit.Source.Model.SecondaryStats.CriticalMultiplier / BASE_SCALAR));
 
             dmg *= (BASE_SKILL_SCALAR + (hit.Source.Model.SecondaryStats.Power / BASE_SCALAR));
+            dmg *= hit.Ability.DamageMod;
 
             hit.Dmg = (int)dmg;
         }

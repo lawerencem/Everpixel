@@ -1,8 +1,6 @@
 ﻿TODO
 
 This weekend
-   - Troll culture
-   - Active Ability Buttons toBuild.
 
 Next Weekend
    - Critters / Leveling

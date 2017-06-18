@@ -6,8 +6,9 @@
     <ArmorIgnoreMod>1</ArmorIgnoreMod>
     <ArmorPierceMod>1</ArmorPierceMod>
     <BlockIgnoreMod>1</BlockIgnoreMod>
-    <DamageMod>0.75</DamageMod>
+    <DmgPerPower>0.018</DmgPerPower>
     <DodgeMod>1.0</DodgeMod>
+    <FlatDamage>0</FlatDamage>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
     <ParryModMod>0.25</ParryModMod>
     <RangeBlockMod>1.25</RangeBlockMod>

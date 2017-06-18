@@ -109,6 +109,7 @@
     <Compile Include="Assets\Generics\Scripts\DestroyByLifetime.cs" />
     <Compile Include="Assets\Generics\Scripts\DramaticZoom.cs" />
     <Compile Include="Assets\Generics\Scripts\FloatingText.cs" />
+    <Compile Include="Assets\Generics\Scripts\IntervalJoltScript.cs" />
     <Compile Include="Assets\Generics\Scripts\JoltScript.cs" />
     <Compile Include="Assets\Generics\Scripts\RaycastMove.cs" />
     <Compile Include="Assets\Generics\Scripts\RaycastMoveWithDelete.cs" />
@@ -329,6 +330,7 @@
     <Compile Include="Assets\View\Mounts\MountView.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\AttackerJoltScript.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\BoomerangFatalityScript.cs" />
+    <Compile Include="Assets\View\Scripts\FXScripts\CasterJoltScript.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\FlinchScript.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\GearExplosionScript.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\HeadRotationScript.cs" />

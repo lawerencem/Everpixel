@@ -6,6 +6,8 @@ namespace Model.Abilities
     public class GenericActiveAbility : GenericAbility
     {
         public AbilityCastTypeEnum CastType { get; set; }
+        public double DmgPerPower { get; set; }
+        public double FlatDamage { get; set; }
         public MagicTypeEnum MagicType { get; set; }
 
         public GenericActiveAbility(ActiveAbilitiesEnum type)
@@ -17,7 +19,9 @@ namespace Model.Abilities
             this.BlockIgnoreMod = 1;
             this.CastType = AbilityCastTypeEnum.None;
             this.DamageMod = 1;
+            this.DmgPerPower = 0;
             this.DodgeMod = 1;
+            this.FlatDamage = 0;
             this.MagicType = MagicTypeEnum.Fighting;
             this.MeleeBlockChanceMod = 1;
             this.ParryModMod = 1;

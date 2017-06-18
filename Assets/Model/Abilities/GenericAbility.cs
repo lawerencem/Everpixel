@@ -24,10 +24,12 @@ namespace Model.Abilities
         public int StaminaCost { get; set; }
 
         public double AccMod { get; set; }
+        public double AoE { get; set; }
         public int APCost { get; set; }
         public double ArmorIgnoreMod { get; set; }
         public double ArmorPierceMod { get; set; }
         public double BlockIgnoreMod { get; set; }
+        public double CastTime { get; set; }
         public double DamageMod { get; set; }
         public double DodgeMod { get; set; }
         public string Description { get; set; }

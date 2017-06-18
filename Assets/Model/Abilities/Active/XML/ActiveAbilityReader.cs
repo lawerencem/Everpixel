@@ -55,9 +55,10 @@ namespace Models.Equipment.XML
                     case ("ArmorIgnoreMod"): { ActiveAbilityTable.Instance.Table[type].ArmorIgnoreMod = v; } break;
                     case ("ArmorPierceMod"): { ActiveAbilityTable.Instance.Table[type].ArmorPierceMod = v; } break;
                     case ("BlockIgnoreMod"): { ActiveAbilityTable.Instance.Table[type].BlockIgnoreMod = v; } break;
-                    case ("DamageMod"): { ActiveAbilityTable.Instance.Table[type].DamageMod = v; } break;
                     case ("Description"): { ActiveAbilityTable.Instance.Table[type].Description = value; } break;
+                    case ("DmgPerPower"): { ActiveAbilityTable.Instance.Table[type].DmgPerPower = v; } break;
                     case ("DodgeReduceMod"): { ActiveAbilityTable.Instance.Table[type].DodgeMod = v; } break;
+                    case ("FlatDamage"): { ActiveAbilityTable.Instance.Table[type].FlatDamage = v; } break;
                     case ("MeleeBlockChanceMod"): { ActiveAbilityTable.Instance.Table[type].MeleeBlockChanceMod = v; } break;
                     case ("ParryModMod"): { ActiveAbilityTable.Instance.Table[type].ParryModMod = v; } break;
                     case ("Range"): { ActiveAbilityTable.Instance.Table[type].Range = v; } break;
