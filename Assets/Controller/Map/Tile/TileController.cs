@@ -1,18 +1,11 @@
 ﻿using Controller.Characters;
 using Controller.Managers;
 using Controller.Managers.Map;
-using Generics.Hex;
-using Model.Characters;
 using Model.Events.Combat;
 using Model.Map;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
-using UnityEngine.UI;
-using View.Events;
-using View.GUI;
 using View.Map;
 
 namespace Controller.Map
@@ -53,7 +46,11 @@ namespace Controller.Map
 
         public void OnMouseDown()
         {
-            if (this.Model.Current == null)
+            if (TileControllerFlags.HasFlag(this.Flags.CurFlags, TileControllerFlags.Flags.PotentialTileSelect))
+            {
+                var confirmed = new ActionConfirmedEvent(CombatEventManager.Instance, this);
+            }
+            else if (this.Model.Current == null)
             {
                 var e = new HexSelectedForMoveEvent(this, CombatEventManager.Instance);
 
@@ -67,7 +64,6 @@ namespace Controller.Map
                     this._doubleClick = true;
                 }
             }
-
             else
             {
                 if (TileControllerFlags.HasFlag(this.Flags.CurFlags, TileControllerFlags.Flags.PotentialAttack))

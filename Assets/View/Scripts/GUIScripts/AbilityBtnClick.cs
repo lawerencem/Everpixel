@@ -16,7 +16,8 @@ namespace View.Scripts
 
         private void OnClick()
         {
-            var e = new AttackSelectedEvent(CombatEventManager.Instance, this._ability);
+            bool tileSelectable = ActiveAbilityFactory.Instance.TileSelectable(this._ability);
+            var e = new AttackSelectedEvent(CombatEventManager.Instance, this._ability, tileSelectable);
         }
 
         public void Init(GameObject toAdd, ActiveAbilitiesEnum ability)

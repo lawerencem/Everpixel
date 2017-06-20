@@ -39,6 +39,12 @@ namespace Model.Combat
             ProcessHitEventView(hit);
         }
 
+        public void ProcessSummon(HitInfo hit)
+        {
+            ProcessHitEventView(hit);
+            var summonEvent = new SummonEvent(CombatEventManager.Instance, hit);
+        }
+
         private void CalculateAbilityDmg(HitInfo hit)
         {
             var ability = hit.Ability as GenericActiveAbility;

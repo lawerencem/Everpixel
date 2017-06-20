@@ -126,6 +126,7 @@ namespace Controller.Managers.Map
                 {
                     case (AbilityCastTypeEnum.Bullet): { this._hitHelper.ProcessBulletGraphics(e); } break;
                     case (AbilityCastTypeEnum.No_Collision_Bullet): { this._hitHelper.ProcessBulletGraphics(e); } break;
+                    case (AbilityCastTypeEnum.Summon): { this.ProcessSummon(e); } break;
                 }
             }
         } 
@@ -138,6 +139,11 @@ namespace Controller.Managers.Map
         public void ProcessNewTurn()
         {
             this._abilityModal.ResetModal();
+        }
+
+        public void ProcessSummon(DisplayHitStatsEvent e)
+        {
+            // TODO: any graphics
         }
 
         public void SetAbilityModalActive()

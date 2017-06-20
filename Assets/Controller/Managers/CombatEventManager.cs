@@ -24,6 +24,7 @@ namespace Controller.Managers
         private bool _interactionLock = false;
 
         private CombatManager _combatManager;
+        private CombatMapLoader _mapLoader;
         private PerformActionEvent _currentAction;
         private List<CombatEvent> _events;
 
@@ -105,6 +106,7 @@ namespace Controller.Managers
                 case (CombatEventEnum.PathTraversed): { HandlePathTraversedEvent(e as PathTraversedEvent); } break;
                 case (CombatEventEnum.PerformActionEvent): { HandlePerformActionEvent(e as PerformActionEvent); } break;
                 case (CombatEventEnum.ShowPotentialPath): { HandleShowPotentialPathEvent(e as ShowPotentialPathEvent); } break;
+                case (CombatEventEnum.Summon): { HandleSummonEvent(e as SummonEvent); } break;
                 case (CombatEventEnum.TakingAction): { HandleTakingActionEvent(e as TakingActionEvent); } break;
                 case (CombatEventEnum.TileDoubleClick): { HandleTileDoubleClickEvent(e as TileDoubleClickEvent); } break;
                 case (CombatEventEnum.TileHoverDeco): { HandleTileHoverDecoEvent(e as TileHoverDecoEvent); } break;
@@ -200,6 +202,15 @@ namespace Controller.Managers
             }
         }
 
+        private void HandleMapDoneLoadingEvent(MapDoneLoadingEvent e)
+        {
+            this._events.Remove(e);
+            this._combatManager = new CombatManager(e.Map);
+            this._combatManager.InitParties(e.LParty, e.RParty);
+            this._mapLoader = e.MapLoader;
+            this.PopulateBtnsHelper();
+        }
+
         private void HandlePathTraversedEvent(PathTraversedEvent e)
         {
             this._events.Remove(e);
@@ -235,6 +246,7 @@ namespace Controller.Managers
             else
             {
                 var hit = new HitInfo(e.SourceCharController, e.TargetCharController, e.Info.Action, e.ChildHitDone);
+                hit.TargetTile = e.Info.Target;
                 e.Info.Hits.Add(hit);
                 this._currentAction = e;
                 e.Info.Action.ProcessAbility(hit);
@@ -248,14 +260,14 @@ namespace Controller.Managers
             CMapGUIController.Instance.DecoratePath(path);
         }
 
-        private void HandleMapDoneLoadingEvent(MapDoneLoadingEvent e)
+        private void HandleSummonEvent(SummonEvent e)
         {
             this._events.Remove(e);
-            this._combatManager = new CombatManager(e.Map);
-            this._combatManager.InitParties(e.LParty, e.RParty);
-            this.PopulateBtnsHelper();
+            var summonParams = SummonFactory.Instance.CreateNewObject(e);
+            var tgtTile = e.Hit.TargetTile;
+            this._mapLoader.BuildAndPlaceCharacter(summonParams, ref this._combatManager.Characters, tgtTile, e.Hit.Source.LParty);
         }
-
+ 
         private void HandleTakingActionEvent(TakingActionEvent e)
         {
             this._events.Remove(e);

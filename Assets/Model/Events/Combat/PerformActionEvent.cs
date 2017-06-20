@@ -43,21 +43,13 @@ namespace Model.Events.Combat
 
             if (!this._parent.GetInteractionLock())
             {
-                if (this.Info.Source .Model.Current.GetType() == typeof(GenericCharacterController) &&
-                    this.Info.Target.Model.Current.GetType() == typeof(GenericCharacterController))
-                {
-                    this.SourceCharController = Info.Source.Model.Current as GenericCharacterController;
-                    this.TargetCharController = Info.Target.Model.Current as GenericCharacterController;
+                this.SourceCharController = Info.Source.Model.Current as GenericCharacterController;
 
-                    if (Info.CombatManager.TargetsOnSameTeam(this.SourceCharController, this.TargetCharController))
-                    {
-                        // TODO
-                    }
-                    else
-                    {
-                        this.ProcessEventStats();
-                    }
-                }
+                // TODO: NEed to clean this up a lot...
+                if (Info.Target.Model.Current == null)
+                    this.ProcessEventStats();
+                else
+                    this.ProcessCharacterSelected();
             }
         }
 
@@ -77,6 +69,24 @@ namespace Model.Events.Combat
         {
             this.Info.CastFinished = true;
             this.RegisterEvent();
+        }
+
+        private void ProcessCharacterSelected()
+        {
+            if (this.Info.Source.Model.Current.GetType() == typeof(GenericCharacterController) &&
+                this.Info.Target.Model.Current.GetType() == typeof(GenericCharacterController))
+            {
+                this.TargetCharController = Info.Target.Model.Current as GenericCharacterController;
+
+                if (Info.CombatManager.TargetsOnSameTeam(this.SourceCharController, this.TargetCharController))
+                {
+                    // TODO
+                }
+                else
+                {
+                    this.ProcessEventStats();
+                }
+            }
         }
 
         private void ProcessEventStats()

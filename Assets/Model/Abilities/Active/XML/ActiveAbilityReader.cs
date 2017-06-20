@@ -81,8 +81,9 @@ namespace Models.Equipment.XML
         {
             switch (type)
             {
-                case (ActiveAbilitiesEnum.Eldritch_Chomp): { ActiveAbilityTable.Instance.Table[type] = new EldrtichChomp(); } break;
+                case (ActiveAbilitiesEnum.Eldritch_Chomp): { ActiveAbilityTable.Instance.Table[type] = new EldritchChomp(); } break;
                 case (ActiveAbilitiesEnum.Hadoken): { ActiveAbilityTable.Instance.Table[type] = new Hadoken(); } break;
+                case (ActiveAbilitiesEnum.Summon_Shoggoth): { ActiveAbilityTable.Instance.Table[type] = new SummonShoggoth(); } break;
             }
         }
 

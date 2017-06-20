@@ -2,9 +2,9 @@
 
 namespace Model.Abilities
 {
-    public class EldrtichChomp : GenericActiveAbility
+    public class EldritchChomp : GenericActiveAbility
     {
-        public EldrtichChomp() : base(ActiveAbilitiesEnum.Eldritch_Chomp)
+        public EldritchChomp() : base(ActiveAbilitiesEnum.Eldritch_Chomp)
         {
             this.CastType = AbilityCastTypeEnum.No_Collision_Bullet;
             this.MagicType = Magic.MagicTypeEnum.Astral;

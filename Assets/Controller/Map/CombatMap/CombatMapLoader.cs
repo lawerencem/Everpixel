@@ -1,22 +1,16 @@
-﻿using View.Characters;
-using Generics;
-using Model.Biomes;
+﻿using Model.Biomes;
 using Model.Characters;
 using System.Collections.Generic;
 using UnityEngine;
 using View.Biomes;
-using Model.Equipment;
 using View.Builders;
 using View.Equipment;
-using Model.Parties;
 using Controller.Characters;
-using Assets.Controller.Managers;
 using Model.Events.Combat;
 using Model.Map;
 using Controller.Map;
 using View.Map;
 using Generics.Hex;
-using View.GUI;
 using Assets.Generics;
 using View.Scripts;
 
@@ -50,48 +44,114 @@ namespace Controller.Managers.Map
             this.InitParties();
         }
 
+        public void BuildAndPlaceCharacter(
+            CharacterParams cParams,
+            ref List<GenericCharacterController> controllers,
+            TileController tile,
+            bool lParty = false)
+        {
+            var builder = new CharacterViewBuilder();
+            var handle = new GameObject();
+            var controller = handle.AddComponent<GenericCharacterController>();
+            controller.Init(handle);
+            var view = builder.Build(cParams);
+            controller.SetView(view, cParams);
+            this.LayoutCharacterAtTile(controller, tile, cParams, lParty);
+            controllers.Add(controller);
+            controller.LParty = lParty;
+        }
+
+        private void AttachDeco(GenericCharacterController c, string sort, int spriteIndex, TileController tile)
+        {
+            if (c.Model.Type == CharacterTypeEnum.Humanoid)
+            {
+                var sprite = c.View.Sprites[spriteIndex];
+                var spriteHandler = new GameObject();
+                var render = spriteHandler.AddComponent<SpriteRenderer>();
+                spriteHandler.transform.position = c.Handle.transform.position;
+                if (sort == "CharFace" || sort == "CharDeco1" || sort == "CharDeco2")
+                    spriteHandler.transform.SetParent(c.SpriteHandlerDict["CharHead"].transform);
+                else
+                    spriteHandler.transform.SetParent(c.Handle.transform);
+                spriteHandler.name = "Character Deco";
+                render.sprite = sprite;
+                render.sortingLayerName = sort;
+                c.SpriteHandlerDict.Add(sort, spriteHandler);
+            }
+        }
+
+        private void AttachHead(GenericCharacterController c, string sort, int spriteIndex, TileController tile)
+        {
+            if (c.Model.Type == CharacterTypeEnum.Humanoid)
+            {
+                var sprite = c.View.Sprites[spriteIndex];
+                var spriteHandler = new GameObject();
+                var render = spriteHandler.AddComponent<SpriteRenderer>();
+                spriteHandler.transform.position = c.Handle.transform.position;
+                spriteHandler.transform.SetParent(c.Handle.transform);
+                spriteHandler.name = "Character Head";
+                render.sprite = sprite;
+                render.sortingLayerName = sort;
+                c.SpriteHandlerDict.Add(sort, spriteHandler);
+            }
+        }
+
+        private void AttachMount(GenericCharacterController c, string sort, TileController tile)
+        {
+            var sprite = c.View.Mount.Sprites[0];
+            var spriteHandler = new GameObject();
+            var render = spriteHandler.AddComponent<SpriteRenderer>();
+            var position = tile.View.Center;
+            position.x += MOUNT_X_OFFSET;
+            position.y -= MOUNT_Y_OFFSET;
+            spriteHandler.transform.position = position;
+            spriteHandler.transform.SetParent(c.Handle.transform);
+            spriteHandler.name = c.View.Name + " " + c.View.Mount.Name + " Mount";
+            render.sprite = sprite;
+            render.sortingLayerName = sort;
+            c.SpriteHandlerDict.Add(sort, spriteHandler);
+            var mountOffsetPos = c.Handle.transform.position;
+            mountOffsetPos.y += MOUNT_Y_OFFSET;
+            c.transform.position = mountOffsetPos;
+        }
+
+        private void BuildAndLayoutCharacter(
+            CharacterParams cParams, 
+            ref List<GenericCharacterController> controllers, 
+            bool lParty = false)
+        {
+            var builder = new CharacterViewBuilder();
+            var handle = new GameObject();
+            var controller = handle.AddComponent<GenericCharacterController>();
+            controller.Init(handle);
+            var view = builder.Build(cParams);
+            controller.SetView(view, cParams);
+            this.LayoutCharacter(controller, cParams, lParty);
+            controllers.Add(controller);
+            controller.LParty = lParty;
+        }
+
         private void InitParties()
         {
             var lParty = new List<GenericCharacterController>();
             var rParty = new List<GenericCharacterController>();
             this.InitPlayerParty(ref lParty);
             this.InitEnemyParty(ref rParty);
-            var e = new MapDoneLoadingEvent(CombatEventManager.Instance, lParty, rParty, this._map);
+            var e = new MapDoneLoadingEvent(CombatEventManager.Instance, lParty, rParty, this._map, this);
         }
 
         private void InitPlayerParty(ref List<GenericCharacterController> controllers)
         {
             var playerChars = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Lizardman War Party", 15));
-            var builder = new CharacterViewBuilder();
-
             for (int i = 0; i < playerChars.Count; i++)
-            {
-                var handle = new GameObject();
-                var controller = handle.AddComponent<GenericCharacterController>();
-                controller.Init(handle);
-                var view = builder.Build(playerChars[i]);
-                controller.SetView(view, playerChars[i]);
-                this.LayoutCharacter(controller, playerChars[i], false);
-                controllers.Add(controller);
-                controller.LParty = true;
-            }
+                this.BuildAndLayoutCharacter(playerChars[i], ref controllers, true);
         }
 
         private void InitEnemyParty(ref List<GenericCharacterController> controllers)
         {
             var enemies = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Goblin War Party", 15));
-            var builder = new CharacterViewBuilder();
-
-            for(int i = 0; i < enemies.Count; i++)
-            {
-                var handle = new GameObject();
-                var controller = handle.AddComponent<GenericCharacterController>();
-                controller.Init(handle);
-                var view = builder.Build(enemies[i]);
-                controller.SetView(view, enemies[i]);
-                this.LayoutCharacter(controller, enemies[i], true);
-                controllers.Add(controller);
-            }
+            for (int i = 0; i < enemies.Count; i++)
+                this.BuildAndLayoutCharacter(enemies[i], ref controllers);
         }
 
         private void InitBackgroundTiles(BiomeEnum b)
@@ -159,13 +219,21 @@ namespace Controller.Managers.Map
             clickScript.Init("AbilitiesBtnTag");
         }
 
-        private void LayoutCharacter(GenericCharacterController c, CharacterParams cParams, bool enemyParty)
+        private void LayoutCharacter(GenericCharacterController c, CharacterParams cParams, bool LParty)
+        {
+            if (c.View != null)
+            {
+                var tile = this._map.GetTileForRow(LParty, cParams.StartRow);
+                this.LayoutCharacterAtTile(c, tile, cParams, LParty);
+            }
+        }
+
+        private void LayoutCharacterAtTile(GenericCharacterController c, TileController tile, CharacterParams cParams, bool lParty)
         {
             if (c.View != null)
             {
                 var sprite = c.View.Sprites[c.View.Torso];
                 var render = c.Handle.AddComponent<SpriteRenderer>();
-                var tile = this._map.GetTileForRow(enemyParty, cParams.StartRow);
                 c.Handle.transform.position = tile.View.Center;
                 c.Handle.transform.SetParent(this.MapHolder);
                 c.Handle.name = c.View.Type.ToString() + " " + c.View.Race.ToString();
@@ -184,65 +252,11 @@ namespace Controller.Managers.Map
                 if (c.View.Helm != null) { TryAttachEquipment(c, c.View.Helm, "CharHelm", tile, 0f, HELM_OFFSET); }
                 if (c.View.LWeapon != null) { TryAttachEquipment(c, c.View.LWeapon, "CharLWeapon", tile, WEAPON_OFFSET); }
                 if (c.View.RWeapon != null) { TryAttachEquipment(c, c.View.RWeapon, "CharRWeapon", tile, -WEAPON_OFFSET); }
-                if (enemyParty)
+                if (!lParty)
                     c.Handle.transform.localRotation = Quaternion.Euler(0, 180, 0);
                 tile.Model.Current = c;
                 c.CurrentTile = tile;
             }
-        }
-
-        private void AttachHead(GenericCharacterController c, string sort, int spriteIndex, TileController tile)
-        {
-            if (c.Model.Type == CharacterTypeEnum.Humanoid)
-            {
-                var sprite = c.View.Sprites[spriteIndex];
-                var spriteHandler = new GameObject();
-                var render = spriteHandler.AddComponent<SpriteRenderer>();
-                spriteHandler.transform.position = c.Handle.transform.position;
-                spriteHandler.transform.SetParent(c.Handle.transform);
-                spriteHandler.name = "Character Head";
-                render.sprite = sprite;
-                render.sortingLayerName = sort;
-                c.SpriteHandlerDict.Add(sort, spriteHandler);
-            }
-        }
-
-        private void AttachDeco(GenericCharacterController c, string sort, int spriteIndex, TileController tile)
-        {
-            if (c.Model.Type == CharacterTypeEnum.Humanoid)
-            {
-                var sprite = c.View.Sprites[spriteIndex];
-                var spriteHandler = new GameObject();
-                var render = spriteHandler.AddComponent<SpriteRenderer>();
-                spriteHandler.transform.position = c.Handle.transform.position;
-                if (sort == "CharFace" || sort == "CharDeco1" || sort == "CharDeco2")
-                    spriteHandler.transform.SetParent(c.SpriteHandlerDict["CharHead"].transform);
-                else
-                    spriteHandler.transform.SetParent(c.Handle.transform);
-                spriteHandler.name = "Character Deco";
-                render.sprite = sprite;
-                render.sortingLayerName = sort;
-                c.SpriteHandlerDict.Add(sort, spriteHandler);
-            }
-        }
-
-        private void AttachMount(GenericCharacterController c, string sort, TileController tile)
-        {
-            var sprite = c.View.Mount.Sprites[0];
-            var spriteHandler = new GameObject();
-            var render = spriteHandler.AddComponent<SpriteRenderer>();
-            var position = tile.View.Center;
-            position.x += MOUNT_X_OFFSET;
-            position.y -= MOUNT_Y_OFFSET;
-            spriteHandler.transform.position = position;
-            spriteHandler.transform.SetParent(c.Handle.transform);
-            spriteHandler.name = c.View.Name + " " + c.View.Mount.Name + " Mount";
-            render.sprite = sprite;
-            render.sortingLayerName = sort;
-            c.SpriteHandlerDict.Add(sort, spriteHandler);
-            var mountOffsetPos = c.Handle.transform.position;
-            mountOffsetPos.y += MOUNT_Y_OFFSET;
-            c.transform.position = mountOffsetPos;
         }
 
         private void TryAttachEquipment(GenericCharacterController c, EquipmentView e, string sort, TileController tile, float xOffset = 0, float yOffset = 0)

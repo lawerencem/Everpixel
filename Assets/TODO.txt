@@ -20,6 +20,11 @@ Long Term:
 	GUI for prediction
 
 Refactor:
-	Eventing system
+	Eventing system???
 
 Bugs:
+	Hadoken still not killing character
+
+ideas: 
+	Shoggoth perk: squishy (reduces damage from heavy weapons)
+	shoggot ability: eat corpse (makes unit grow like mario)

@@ -9,6 +9,7 @@ namespace Controller.Map
         {
             None = 0,
             PotentialAttack = 1,
+            PotentialTileSelect = 2,
         }
 
         public Flags CurFlags { get; set; }
@@ -25,9 +26,10 @@ namespace Controller.Map
         }
 
         public static void SetPotentialAttackFlagFalse(TileControllerFlags f) { f.CurFlags &= ~Flags.PotentialAttack; }
-
+        public static void SetPotentialTileSelectFlagFalse(TileControllerFlags f) { f.CurFlags &= ~Flags.PotentialTileSelect; }
 
         public static void SetPotentialAttackFlagTrue(TileControllerFlags f) { f.CurFlags |= Flags.PotentialAttack; }
+        public static void SetPotentialTileSelectFlagTrue(TileControllerFlags f) { f.CurFlags |= Flags.PotentialTileSelect; }
 
         public static bool HasFlag(Flags a, Flags b) { return (a & b) == b; }
     }

@@ -14,19 +14,19 @@ namespace Assets.Controller.Managers
     {
         private List<Pair<int, CastingEvent>> _castingOrder;
         private List<TileController> _curTiles;
-        private List<GenericCharacterController> _characters;
         private List<GenericCharacterController> _lParty;
         private CombatMap _map;
         private List<GenericCharacterController> _order;
         private List<GenericCharacterController> _rParty;
 
+        public List<GenericCharacterController> Characters;
         public GenericAbility CurAbility { get; set; }
         public GenericCharacterController CurrActing { get; set; }
 
         public CombatManager(CombatMap m)
         {
             this._castingOrder = new List<Pair<int, CastingEvent>>();
-            this._characters = new List<GenericCharacterController>();
+            this.Characters = new List<GenericCharacterController>();
             this._curTiles = new List<TileController>();
             this._map = m;
             this._order = new List<GenericCharacterController>();
@@ -46,8 +46,8 @@ namespace Assets.Controller.Managers
         {
             this._lParty = l;
             this._rParty = r;
-            foreach (var c in this._rParty) { this._characters.Add(c); }
-            foreach (var c in this._lParty) { this._characters.Add(c); }
+            foreach (var c in this._rParty) { this.Characters.Add(c); }
+            foreach (var c in this._lParty) { this.Characters.Add(c); }
             this.InitCharacterTurns();
         }
 
@@ -72,10 +72,21 @@ namespace Assets.Controller.Managers
             }
             var hexTiles = this._map.GetAoETiles(this.CurrActing.CurrentTile.Model, distMod);
             var tileControllers = new List<TileController>();
-            foreach (var hex in hexTiles)
+            if (e.TileSelectable)
             {
-                tileControllers.Add(hex.Parent);
-                TileControllerFlags.SetPotentialAttackFlagTrue(hex.Parent.Flags);
+                foreach (var hex in hexTiles)
+                {
+                    tileControllers.Add(hex.Parent);
+                    TileControllerFlags.SetPotentialTileSelectFlagTrue(hex.Parent.Flags);
+                }
+            }
+            else
+            {
+                foreach (var hex in hexTiles)
+                {
+                    tileControllers.Add(hex.Parent);
+                    TileControllerFlags.SetPotentialAttackFlagTrue(hex.Parent.Flags);
+                }
             }
             this._curTiles = tileControllers;
             return tileControllers;
@@ -101,7 +112,7 @@ namespace Assets.Controller.Managers
 
         public void ProcessCharacterKilled(GenericCharacterController c)
         {
-            this._characters.Remove(c);
+            this.Characters.Remove(c);
             if (this._lParty.Contains(c))
                 this._lParty.Remove(c);
             else
@@ -159,7 +170,7 @@ namespace Assets.Controller.Managers
 
         private void InitCharacterTurns()
         {
-            foreach (var character in this._characters)
+            foreach (var character in this.Characters)
             {
                 this._order.Add(character);
                 character.Model.CurrentAP = character.Model.GetCurrentStatValue(SecondaryStatsEnum.AP);
@@ -173,7 +184,7 @@ namespace Assets.Controller.Managers
 
         private void ProcessEndOfTurn()
         {
-            foreach(var c in this._characters)
+            foreach(var c in this.Characters)
             {
                 c.Model.RestoreStamina();
             }

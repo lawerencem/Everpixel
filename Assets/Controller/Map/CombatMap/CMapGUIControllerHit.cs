@@ -274,8 +274,7 @@ namespace Controller.Managers.Map
 
         private bool IsFatality(DisplayHitStatsEvent e)
         {
-            
-
+            // TODO: seems sometimes characters don't die but suffer fatality...
             if (e.Hit.Target.Model.CurrentHP - e.Hit.Dmg <= 0)
             {
                 var roll = RNG.Instance.NextDouble();

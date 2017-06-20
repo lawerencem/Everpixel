@@ -14,7 +14,6 @@ namespace Model.Abilities
 
         public GenericActiveAbility(ActiveAbilitiesEnum type)
         {
-            
             this.AccMod = 1;
             this.AoE = 1;
             this.APCost = 1;
@@ -59,6 +58,7 @@ namespace Model.Abilities
             ability.RangeBlockMod = this.RangeBlockMod;
             ability.RechargeTime = this.RechargeTime;
             ability.ShieldDamageMod = this.ShieldDamageMod;
+            ability.SpellLevel = this.SpellLevel;
             ability.StaminaCost = this.StaminaCost;
             return ability;
         }
@@ -66,6 +66,14 @@ namespace Model.Abilities
         public override void ProcessAbility(HitInfo hit)
         {
 
+        }
+
+        public bool isTileTargetable()
+        {
+            if (this.CastType == AbilityCastTypeEnum.Summon)
+                return true;
+            else
+                return false;
         }
     }
 }

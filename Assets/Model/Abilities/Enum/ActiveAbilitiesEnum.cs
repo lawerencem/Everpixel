@@ -5,5 +5,6 @@
         None,
         Eldritch_Chomp,
         Hadoken,
+        Summon_Shoggoth,
     }
 }

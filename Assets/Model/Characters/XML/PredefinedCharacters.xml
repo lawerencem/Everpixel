@@ -261,6 +261,7 @@
       </PotentialWeapons>
       <Spells>
         <Spell>3,Eldritch_Chomp</Spell>
+        <Spell>2,Summon_Shoggoth</Spell>
       </Spells>
       <Stats>
         <Agility>350</Agility>
@@ -357,6 +358,7 @@
       </PotentialWeapons>
       <Spells>
         <Spell>2,Eldritch_Chomp</Spell>
+        <Spell>1,Summon_Shoggoth</Spell>
       </Spells>
       <Stats>
         <Agility>350</Agility>
@@ -464,6 +466,7 @@
       </Stats>
       <Spells>
         <Spell>4,Eldritch_Chomp</Spell>
+        <Spell>3,Summon_Shoggoth</Spell>
       </Spells>
     </Character>
     <Character name ="Lunatic Gromp Hopper">
@@ -599,6 +602,7 @@
         <Perception>550</Perception>
         <Resolve>480</Resolve>
       </Stats>
+      <Spell>1,Summon_Shoggoth</Spell>
     </Character>
     <Character name ="Slimer">
       <Class>Ninja,5</Class>

@@ -39,4 +39,23 @@
     <ShieldDamageMod>1.5</ShieldDamageMod>
     <StaminaCost>25</StaminaCost>
   </ActiveAbility>
+  <ActiveAbility name="Summon_Shoggoth">
+    <AbilityCastTypeEnum>Summon</AbilityCastTypeEnum>
+    <AccMod>1</AccMod>
+    <AoE>1</AoE>
+    <APCost>6</APCost>
+    <ArmorIgnoreMod>0</ArmorIgnoreMod>
+    <ArmorPierceMod>0</ArmorPierceMod>
+    <BlockIgnoreMod>0</BlockIgnoreMod>
+    <DmgPerPower>0</DmgPerPower>
+    <DodgeMod>1.0</DodgeMod>
+    <FlatDamage>0</FlatDamage>
+    <MeleeBlockChanceMod>0</MeleeBlockChanceMod>
+    <ParryModMod>0</ParryModMod>
+    <Range>3</Range>
+    <RangeBlockMod>0</RangeBlockMod>
+    <RechargeTime>0</RechargeTime>
+    <ShieldDamageMod>0</ShieldDamageMod>
+    <StaminaCost>70</StaminaCost>
+  </ActiveAbility>
 </ActiveAbilities>

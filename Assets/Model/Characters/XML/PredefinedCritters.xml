@@ -132,6 +132,19 @@
         <Resolve>350</Resolve>
       </Stats>
     </Character>
+    <Character name ="Shoggoth">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <Class>Warrior,1</Class>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Stats>
+        <Agility>300</Agility>
+        <Constitution>280</Constitution>
+        <Intelligence>320</Intelligence>
+        <Might>550</Might>
+        <Perception>600</Perception>
+        <Resolve>620</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Sluggemoth">
       <AttackSpriteIndex>24</AttackSpriteIndex>
       <Class>Warrior,1</Class>

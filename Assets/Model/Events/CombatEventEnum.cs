@@ -18,6 +18,7 @@
         PerformActionEvent,
         WeaponAbilityPerformed,
         ShowPotentialPath,
+        Summon,
         TakingAction,
         TileDoubleClick,
         TileHoverDeco,

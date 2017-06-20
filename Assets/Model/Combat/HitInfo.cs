@@ -1,4 +1,5 @@
 ﻿using Controller.Characters;
+using Controller.Map;
 using Model.Abilities;
 using Model.Characters;
 
@@ -16,12 +17,23 @@ namespace Model.Combat
         public int Dmg { get; set; }
         public GenericCharacterController Source { get; set; }
         public GenericCharacterController Target { get; set; }
+        public TileController TargetTile { get; set; }
 
         public HitInfo(GenericCharacterController s, GenericCharacterController t, GenericAbility a, Callback callback = null)
         {
             this.IsFinished = false;
             this.Source = s;
             this.Target = t;
+            this.Ability = a;
+            this._callBack = callback;
+            this.Flags = new AttackEventFlags();
+        }
+
+        public HitInfo(GenericCharacterController s, TileController t, GenericAbility a, Callback callback = null)
+        {
+            this.IsFinished = false;
+            this.Source = s;
+            this.TargetTile = t;
             this.Ability = a;
             this._callBack = callback;
             this.Flags = new AttackEventFlags();

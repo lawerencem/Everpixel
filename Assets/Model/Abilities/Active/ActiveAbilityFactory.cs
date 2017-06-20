@@ -18,5 +18,11 @@ namespace Model.Abilities
             }
             return abs;
         }
+
+        public bool TileSelectable(ActiveAbilitiesEnum ability)
+        {
+            var proto = ActiveAbilityTable.Instance.Table[ability];
+            return proto.isTileTargetable();
+        }
     }
 }

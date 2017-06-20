@@ -71,6 +71,13 @@ namespace Model.Abilities
             }
         }
 
+        public void ProcessSummon(HitInfo hit)
+        {
+            foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
+                perk.TryModAbility(hit.Ability);
+            CombatReferee.Instance.ProcessSummon(hit);
+        }
+
         protected virtual void TryApplyInjury(HitInfo hit)
         {
             if (!AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge) &&

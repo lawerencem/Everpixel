@@ -127,6 +127,7 @@
     <Compile Include="Assets\Model\Abilities\Active\ActiveAbilityTable.cs" />
     <Compile Include="Assets\Model\Abilities\Active\GenericActiveAbility.cs" />
     <Compile Include="Assets\Model\Abilities\Active\Magic\Astral\EldritchChomp.cs" />
+    <Compile Include="Assets\Model\Abilities\Active\Magic\Astral\SummonShoggoth.cs" />
     <Compile Include="Assets\Model\Abilities\Active\NonMagic\Hadoken.cs" />
     <Compile Include="Assets\Model\Abilities\Active\XML\ActiveAbilityReader.cs" />
     <Compile Include="Assets\Model\Abilities\Enum\AbilityCastTypeEnum.cs" />
@@ -135,6 +136,7 @@
     <Compile Include="Assets\Model\Abilities\GenericAbility.cs" />
     <Compile Include="Assets\Model\Abilities\GenericAbilityTable.cs" />
     <Compile Include="Assets\Model\Abilities\Active\Magic\MagicTypeEnum.cs" />
+    <Compile Include="Assets\Model\Abilities\GenericSummonAbility.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Aim.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Bite.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\BreakArmor.cs" />
@@ -175,6 +177,7 @@
     <Compile Include="Assets\Model\Characters\Enums\RaceEnum.cs" />
     <Compile Include="Assets\Model\Characters\Enums\SecondaryStatsEnum.cs" />
     <Compile Include="Assets\Model\Characters\Factories\CharacterFactory.cs" />
+    <Compile Include="Assets\Model\Characters\Factories\SummonFactory.cs" />
     <Compile Include="Assets\Model\Characters\Params\CharacterParams.cs" />
     <Compile Include="Assets\Model\Characters\Params\CharacterPerkCollection.cs" />
     <Compile Include="Assets\Model\Characters\Params\GenericStatModifier.cs" />
@@ -254,6 +257,7 @@
     <Compile Include="Assets\Model\Events\Combat\PathTraversedEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\PerformActionEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\ShowPotentialPathEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\SummonEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TakingActionEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TileDoubleClickEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TileHoverDecoEvent.cs" />

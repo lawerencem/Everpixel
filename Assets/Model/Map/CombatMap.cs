@@ -129,11 +129,11 @@ namespace Model.Map
                 return initPath;
         }
 
-        public TileController GetTileForRow(bool enemyParty, StartingColEnum col)
+        public TileController GetTileForRow(bool lParty, StartingColEnum col)
         {
             int rowInd = -1;
             int colInd = -1;
-            if (enemyParty)
+            if (!lParty)
             {
                 if (col == StartingColEnum.Three)
                     colInd = this._map.GetLastCol() - 1;
@@ -162,13 +162,13 @@ namespace Model.Map
                 if (rowInd + counter > this._map.GetLastCol() - 1)
                 {
                     i = 0;
-                    if (enemyParty) { colInd--; }
+                    if (lParty) { colInd--; }
                     else { colInd++; }
                 }
                 else if (rowInd + counter < 0)
                 {
                     i = 0;
-                    if (enemyParty) { colInd--; }
+                    if (lParty) { colInd--; }
                     else { colInd++; }
                 }
                 key = new Pair<int, int>(colInd, rowInd + counter);
