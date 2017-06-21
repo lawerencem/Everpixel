@@ -46,9 +46,9 @@ namespace Controller.Map
 
         public void OnMouseDown()
         {
-            if (TileControllerFlags.HasFlag(this.Flags.CurFlags, TileControllerFlags.Flags.PotentialTileSelect))
+            if (TileControllerFlags.HasFlag(this.Flags.CurFlags, TileControllerFlags.Flags.AwaitingAction))
             {
-                var confirmed = new ActionConfirmedEvent(CombatEventManager.Instance, this);
+                var perform = new PerformActionEvent(CombatEventManager.Instance, this, CombatEventManager.Instance.ActionPerformedCallback);
             }
             else if (this.Model.Current == null)
             {
@@ -62,13 +62,6 @@ namespace Controller.Map
                 {
                     this._clickTime = System.DateTime.Now;
                     this._doubleClick = true;
-                }
-            }
-            else
-            {
-                if (TileControllerFlags.HasFlag(this.Flags.CurFlags, TileControllerFlags.Flags.PotentialAttack))
-                {
-                    var confirmed = new ActionConfirmedEvent(CombatEventManager.Instance, this);
                 }
             }
         }

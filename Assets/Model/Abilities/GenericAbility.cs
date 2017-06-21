@@ -78,6 +78,26 @@ namespace Model.Abilities
             CombatReferee.Instance.ProcessSummon(hit);
         }
 
+        public virtual bool IsValidActionEvent(PerformActionEvent e)
+        {
+            return false;
+        }
+        
+        protected bool IsValidEnemyTarget(PerformActionEvent e)
+        {
+            if (e.Info.Source.LParty)
+            {
+                if (e.Info.TargetCharController != null && !e.Info.TargetCharController.LParty)
+                    return true;
+            }
+            else if (!e.Info.Source.LParty)
+            {
+                if (e.Info.TargetCharController != null && e.Info.TargetCharController.LParty)
+                    return true;
+            }
+            return false;
+        }
+
         protected virtual void TryApplyInjury(HitInfo hit)
         {
             if (!AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge) &&

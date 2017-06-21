@@ -15,5 +15,7 @@ namespace Model.Abilities
         {
             base.ProcessSummon(hit);
         }
+
+        // TODO: Find a nearby tile that is empty and return true...
     }
 }

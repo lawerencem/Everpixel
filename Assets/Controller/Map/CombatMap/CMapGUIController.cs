@@ -64,7 +64,10 @@ namespace Controller.Managers.Map
         public void ClearDecoratedTiles()
         {
             foreach (var old in this._decorateTileFamily)
+            {
                 GameObject.Destroy(old);
+            }
+                
             this._decorateTileFamily.Clear();
         }
 
@@ -73,7 +76,7 @@ namespace Controller.Managers.Map
             if (this._singleTile != null && this._singleTile != t)
                 GameObject.Destroy(this._singleTile);
 
-            if (TileControllerFlags.HasFlag(t.Flags.CurFlags, TileControllerFlags.Flags.PotentialAttack))
+            if (TileControllerFlags.HasFlag(t.Flags.CurFlags, TileControllerFlags.Flags.AwaitingAction))
             {
                 var sprite = MapBridge.Instance.GetHostileHoverSprite();
                 DecorateSingleTile(t, sprite);

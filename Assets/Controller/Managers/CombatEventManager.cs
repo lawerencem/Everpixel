@@ -25,8 +25,10 @@ namespace Controller.Managers
 
         private CombatManager _combatManager;
         private CombatMapLoader _mapLoader;
-        private PerformActionEvent _currentAction;
         private List<CombatEvent> _events;
+
+        private PerformActionEvent _currentAction;
+        private List<TileController> _currentActionTiles;
 
         public GameObject CameraManager;
 
@@ -73,13 +75,12 @@ namespace Controller.Managers
         public void UnlockGUI() { this._guiLock = false; }
         public void UnlockInteraction() { this._interactionLock = false; }
 
-        private void ActionPerformedCallback()
+        public void ActionPerformedCallback()
         {
             this.UnlockInteraction();
             this.UnlockGUI();
-            TileControllerFlags.SetPotentialAttackFlagFalse(this._currentAction.Info.Target.Flags);
             CMapGUIController.Instance.ClearDecoratedTiles();
-            CMapGUIController.Instance.SetActingBoxToController(this._currentAction.SourceCharController);
+            CMapGUIController.Instance.SetActingBoxToController(this._currentAction.Info.Source);
             foreach(var hit in this._currentAction.Info.Hits)
             {
                 var dmg = new DamageCharacterEvent(this, hit);
@@ -93,7 +94,6 @@ namespace Controller.Managers
         {
             switch(e.Type)
             {
-                case (CombatEventEnum.ActionCofirmed): { HandleActionConfirmed(e as ActionConfirmedEvent); } break;
                 case (CombatEventEnum.ApplyInjury): { HandleApplyInjuryEvent(e as ApplyInjuryEvent); } break;
                 case (CombatEventEnum.AttackSelected): { HandleAttackSelectedEvent(e as AttackSelectedEvent); } break;
                 case (CombatEventEnum.Casting): { HandleCastingEvent(e as CastingEvent); } break;
@@ -115,18 +115,6 @@ namespace Controller.Managers
             }
         }
 
-        private void HandleActionConfirmed(ActionConfirmedEvent e)
-        {
-            this._events.Remove(e);
-            var info = new PerformActionEventInfo();
-            info.Action = this._combatManager.CurAbility;
-            info.CombatManager = this._combatManager;
-            info.Parent = this;
-            info.Source = this._combatManager.CurrActing.CurrentTile;
-            info.Target = e.Target;
-            var action = new PerformActionEvent(info, this.ActionPerformedCallback);
-        }
-
         private void HandleApplyInjuryEvent(ApplyInjuryEvent e)
         {
             this._events.Remove(e);
@@ -136,8 +124,12 @@ namespace Controller.Managers
         private void HandleAttackSelectedEvent(AttackSelectedEvent e)
         {
             this._events.Remove(e);
-            var potentialTiles = this._combatManager.GetAttackTiles(e);
-            CMapGUIController.Instance.DecoratePotentialAttackTiles(potentialTiles);
+            this._currentActionTiles = this._combatManager.GetAttackTiles(e);
+            CMapGUIController.Instance.DecoratePotentialAttackTiles(this._currentActionTiles);
+            foreach(var tile in this._currentActionTiles)
+            {
+                TileControllerFlags.SetAwaitingActionFlagTrue(tile.Flags);
+            }
 
             var ability = new GenericAbility();
 
@@ -236,20 +228,20 @@ namespace Controller.Managers
         private void HandlePerformActionEvent(PerformActionEvent e)
         {
             this._events.Remove(e);
-            this._combatManager.CurAbility = null;
+            this._combatManager.ResetTileControllerFlags();
+            this.HandlePerformActionEventHelper(e);
+        }
 
-            // TODO: Generate multiple hits as necessaryy
-            if (e.Info.Action.CastTime > 0  && !e.Info.CastFinished)
+        private void HandlePerformActionEventHelper(PerformActionEvent e)
+        {
+            e.Info.Action = this._combatManager.CurAbility;
+            e.Info.Source = this._combatManager.CurrActing;
+            this._combatManager.CurAbility = null;
+            if (e.ValidAction())
             {
-                var cast = new CastingEvent(this, e);
-            }
-            else
-            {
-                var hit = new HitInfo(e.SourceCharController, e.TargetCharController, e.Info.Action, e.ChildHitDone);
-                hit.TargetTile = e.Info.Target;
-                e.Info.Hits.Add(hit);
                 this._currentAction = e;
-                e.Info.Action.ProcessAbility(hit);
+                e.Perform();
+                // TODO: Generate multiple hits as necessaryy
             }
         }
 

@@ -8,8 +8,7 @@ namespace Controller.Map
         public enum Flags
         {
             None = 0,
-            PotentialAttack = 1,
-            PotentialTileSelect = 2,
+            AwaitingAction = 1,
         }
 
         public Flags CurFlags { get; set; }
@@ -25,11 +24,9 @@ namespace Controller.Map
                 f.CurFlags &= ~(Flags)flag;
         }
 
-        public static void SetPotentialAttackFlagFalse(TileControllerFlags f) { f.CurFlags &= ~Flags.PotentialAttack; }
-        public static void SetPotentialTileSelectFlagFalse(TileControllerFlags f) { f.CurFlags &= ~Flags.PotentialTileSelect; }
+        public static void SetAwaitingActionFlagFalse(TileControllerFlags f) { f.CurFlags &= ~Flags.AwaitingAction; }
 
-        public static void SetPotentialAttackFlagTrue(TileControllerFlags f) { f.CurFlags |= Flags.PotentialAttack; }
-        public static void SetPotentialTileSelectFlagTrue(TileControllerFlags f) { f.CurFlags |= Flags.PotentialTileSelect; }
+        public static void SetAwaitingActionFlagTrue(TileControllerFlags f) { f.CurFlags |= Flags.AwaitingAction; }
 
         public static bool HasFlag(Flags a, Flags b) { return (a & b) == b; }
     }

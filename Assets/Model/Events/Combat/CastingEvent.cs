@@ -21,12 +21,12 @@ namespace Model.Events.Combat
             base(CombatEventEnum.Casting, parent)
         {
             this.CastTime = (int)e.Info.Action.CastTime;
-            this.Caster = e.SourceCharController;
+            this.Caster = e.Info.Source;
             this._event = e;
             this.SpellName = e.Info.Action.TypeStr;
-            var script = e.SourceCharController.Handle.AddComponent<IntervalJoltScript>();
-            script.Init(e.SourceCharController.Handle, 1.2f, 12f, 0.08f, 0.08f);
-            CharacterStatusFlags.SetCastingTrue(e.SourceCharController.Model.StatusFlags);
+            var script = e.Info.Source.Handle.AddComponent<IntervalJoltScript>();
+            script.Init(e.Info.Source.Handle, 1.2f, 12f, 0.08f, 0.08f);
+            CharacterStatusFlags.SetCastingTrue(e.Info.Source.Model.StatusFlags);
             this.RegisterEvent();
         }
 
@@ -34,17 +34,17 @@ namespace Model.Events.Combat
         {
             this._parent.LockInteraction();
             this._parent.LockGUI();
-            var jolt = this._event.SourceCharController.Handle.GetComponent<IntervalJoltScript>();
+            var jolt = this._event.Info.Source.Handle.GetComponent<IntervalJoltScript>();
             if (jolt != null)
                 jolt.Done();
             var script = CombatEventManager.Instance.CameraManager.GetComponent<CameraManager>();
-            script.InitScrollTo(this._event.Info.Source.Model.Center, this.InitZoom);
+            script.InitScrollTo(this._event.Info.Source.CurrentTile.Model.Center, this.InitZoom);
         }
 
         private void InitZoom()
         {
-            var zoom = this._event.SourceCharController.Handle.AddComponent<DramaticZoom>();
-            zoom.Init(this._event.SourceCharController.Handle.transform.position, 120f, 25f, 0.2f, this.Zoomcallback);
+            var zoom = this._event.Info.Source.Handle.AddComponent<DramaticZoom>();
+            zoom.Init(this._event.Info.Source.Handle.transform.position, 120f, 25f, 0.2f, this.Zoomcallback);
         }
 
         private void Zoomcallback()

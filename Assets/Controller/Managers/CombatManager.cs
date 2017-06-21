@@ -34,7 +34,6 @@ namespace Assets.Controller.Managers
 
         public void AddCasting(CastingEvent e)
         {
-            this.ResetTileControllerFlags();
             this._castingOrder.Add(new Pair<int, CastingEvent>(e.CastTime, e));
             this._castingOrder.Sort((x, y) => x.X.CompareTo(y.X));
             var remove = this._order.Find(x => x.Model == e.Caster.Model);
@@ -53,7 +52,6 @@ namespace Assets.Controller.Managers
 
         public List<TileController> GetAttackTiles(AttackSelectedEvent e)
         {
-            this.ResetTileControllerFlags();
             int distMod = 0;
             if (e.AttackType.GetType().Equals(typeof(WeaponAbilitiesEnum)))
                 distMod += WeaponAbilityTable.Instance.Table[e.AttackType].Range;
@@ -72,21 +70,10 @@ namespace Assets.Controller.Managers
             }
             var hexTiles = this._map.GetAoETiles(this.CurrActing.CurrentTile.Model, distMod);
             var tileControllers = new List<TileController>();
-            if (e.TileSelectable)
+            foreach (var hex in hexTiles)
             {
-                foreach (var hex in hexTiles)
-                {
-                    tileControllers.Add(hex.Parent);
-                    TileControllerFlags.SetPotentialTileSelectFlagTrue(hex.Parent.Flags);
-                }
-            }
-            else
-            {
-                foreach (var hex in hexTiles)
-                {
-                    tileControllers.Add(hex.Parent);
-                    TileControllerFlags.SetPotentialAttackFlagTrue(hex.Parent.Flags);
-                }
+                tileControllers.Add(hex.Parent);
+                TileControllerFlags.SetAwaitingActionFlagTrue(hex.Parent.Flags);
             }
             this._curTiles = tileControllers;
             return tileControllers;
@@ -94,7 +81,6 @@ namespace Assets.Controller.Managers
 
         public List<TileController> GetPathTileControllers(ShowPotentialPathEvent e)
         {
-            this.ResetTileControllerFlags();
             var hexPath = this._map.GetPath(e.Character.CurrentTile.Model, e.Target.Model);
             var tileControllers = new List<TileController>();
             foreach (var hex in hexPath.Tiles)
@@ -158,6 +144,11 @@ namespace Assets.Controller.Managers
             }
         }
 
+        public void ResetTileControllerFlags()
+        {
+            foreach (var tile in this._curTiles) { TileControllerFlags.SetAllFlagsFalse(tile.Flags); }
+        }
+
         public bool TargetsOnSameTeam(GenericCharacterController s, GenericCharacterController t)
         {
             if (this._lParty.Contains(s) && this._lParty.Contains(t))
@@ -188,11 +179,6 @@ namespace Assets.Controller.Managers
             {
                 c.Model.RestoreStamina();
             }
-        }
-
-        private void ResetTileControllerFlags()
-        {
-            foreach (var tile in this._curTiles) { TileControllerFlags.SetAllFlagsFalse(tile.Flags); }
         }
     }
 }

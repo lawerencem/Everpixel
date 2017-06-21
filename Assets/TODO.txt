@@ -20,7 +20,7 @@ Long Term:
 	GUI for prediction
 
 Refactor:
-	Eventing system???
+	
 
 Bugs:
 	Hadoken still not killing character

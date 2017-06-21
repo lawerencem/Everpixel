@@ -243,7 +243,6 @@
     <Compile Include="Assets\Model\Equipment\XML\ArmorReader.cs" />
     <Compile Include="Assets\Model\Equipment\XML\GenericEquipmentReader.cs" />
     <Compile Include="Assets\Model\Equipment\XML\WeaponReader.cs" />
-    <Compile Include="Assets\Model\Events\Combat\ActionCofirmedEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\ApplyInjuryEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\AttackSelectedEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\CastingEvent.cs" />

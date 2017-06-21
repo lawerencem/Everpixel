@@ -4,7 +4,7 @@
     {
         None,
         ActiveAbilitySelected,
-        ActionCofirmed,
+        //ActionCofirmed,
         ApplyInjury,
         AttackSelected,
         Casting,
