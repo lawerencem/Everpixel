@@ -73,6 +73,7 @@ namespace Model.Abilities
 
         public void ProcessSummon(HitInfo hit)
         {
+            AttackEventFlags.SetSummonTrue(hit.Flags);
             foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
                 perk.TryModAbility(hit.Ability);
             CombatReferee.Instance.ProcessSummon(hit);
@@ -80,6 +81,13 @@ namespace Model.Abilities
 
         public virtual bool IsValidActionEvent(PerformActionEvent e)
         {
+            return false;
+        }
+
+        protected bool isValidEmptyTile(PerformActionEvent e)
+        {
+            if (e.Info.Target.Model.Current == null)
+                return true;
             return false;
         }
         

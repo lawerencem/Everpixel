@@ -5,6 +5,7 @@ using Model.Events.Combat;
 using Model.Map;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using View.Map;
 
@@ -36,6 +37,32 @@ namespace Controller.Map
         {
             if (_doubleClick && (DateTime.Now > (this._clickTime.AddSeconds(this._clickDelta))))
                 this._doubleClick = false;       
+        }
+
+        public TileController GetNearestEmptyTile()
+        {
+            if (this.Model.Current == null)
+                return this;
+            else
+            {
+                var openSet = new List<TileController>() { this };
+                var closed = new List<TileController>();
+                while (openSet.Count > 0)
+                {
+                    var tile = openSet.ElementAt(0);
+                    var probed = closed.Find(x => x == tile);
+                    if (probed)
+                    {
+                        if (tile.Model.Current == null)
+                            return tile;
+                        else
+                            openSet.Add(tile);
+                        closed.Add(tile);
+                    }
+                    openSet.RemoveAt(0);
+                }
+            }
+            return null;
         }
 
         public void Init(GameObject o)

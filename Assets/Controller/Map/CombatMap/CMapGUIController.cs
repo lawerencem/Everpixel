@@ -146,7 +146,7 @@ namespace Controller.Managers.Map
 
         public void ProcessSummon(DisplayHitStatsEvent e)
         {
-            // TODO: any graphics
+            this._hitHelper.ProcessSummon(e);
         }
 
         public void SetAbilityModalActive()

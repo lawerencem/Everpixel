@@ -14,7 +14,11 @@ namespace Model.Events.Combat
             if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Parry) ||
                 AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge))
             {
-                // Do nothing
+                // TODO
+            }
+            else if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Summon))
+            {
+                // TODO
             }
             else
             {

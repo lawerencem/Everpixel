@@ -24,7 +24,7 @@ namespace View.Fatalities
         {
             base.Init();
             base.InitMeleeFatality();
-            var zoom = this._event.Hit.Source.Handle.AddComponent<DramaticZoom>();
+            var zoom = this._event.Hit.Source.Handle.AddComponent<DramaticHangCallbackZoomOut>();
             var position = this._event.Hit.Source.Handle.transform.position;
             position.y -= 0.35f;
             zoom.Init(position, FatalityParams.ZOOM_SPEED, FatalityParams.ZOOM_FOV, FatalityParams.ZOOM_MELEE_HANG, this.ProcessFatality);

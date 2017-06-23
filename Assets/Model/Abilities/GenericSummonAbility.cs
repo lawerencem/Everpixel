@@ -1,4 +1,6 @@
-﻿namespace Model.Abilities
+﻿using Model.Events.Combat;
+
+namespace Model.Abilities
 {
     public class GenericSummonAbility : GenericActiveAbility
     {

@@ -47,6 +47,7 @@
     <ArmorIgnoreMod>0</ArmorIgnoreMod>
     <ArmorPierceMod>0</ArmorPierceMod>
     <BlockIgnoreMod>0</BlockIgnoreMod>
+    <CastTime>50</CastTime>
     <DmgPerPower>0</DmgPerPower>
     <DodgeMod>1.0</DodgeMod>
     <FlatDamage>0</FlatDamage>

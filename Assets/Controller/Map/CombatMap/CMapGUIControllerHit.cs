@@ -141,6 +141,11 @@ namespace Controller.Managers.Map
             }
         }
 
+        public void ProcessSummon(DisplayHitStatsEvent e)
+        {
+            e.Done();
+        }
+
         public void ProcessSplatter(int lvl, TileController t, float alpha = 1.0f)
         {
             var sprite = MapBridge.Instance.GetSplatterSprites(lvl);

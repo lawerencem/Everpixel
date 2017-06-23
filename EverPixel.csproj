@@ -107,7 +107,8 @@
     <Compile Include="Assets\Generics\Scripts\BoomerangScript.cs" />
     <Compile Include="Assets\Generics\Scripts\DeactivateByLifetime.cs" />
     <Compile Include="Assets\Generics\Scripts\DestroyByLifetime.cs" />
-    <Compile Include="Assets\Generics\Scripts\DramaticZoom.cs" />
+    <Compile Include="Assets\Generics\Scripts\DramaticHangCallbackZoomOut.cs" />
+    <Compile Include="Assets\Generics\Scripts\DramaticHangZoomOutCallback.cs" />
     <Compile Include="Assets\Generics\Scripts\FloatingText.cs" />
     <Compile Include="Assets\Generics\Scripts\IntervalJoltScript.cs" />
     <Compile Include="Assets\Generics\Scripts\JoltScript.cs" />

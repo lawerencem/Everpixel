@@ -256,7 +256,8 @@ namespace Controller.Managers
         {
             this._events.Remove(e);
             var summonParams = SummonFactory.Instance.CreateNewObject(e);
-            var tgtTile = e.Hit.TargetTile;
+            var attemptedTile = e.Hit.TargetTile;
+            var tgtTile = attemptedTile.GetNearestEmptyTile();
             this._mapLoader.BuildAndPlaceCharacter(summonParams, ref this._combatManager.Characters, tgtTile, e.Hit.Source.LParty);
         }
  

@@ -2,7 +2,7 @@
 
 namespace Generics.Scripts
 {
-    public class DramaticZoom : MonoBehaviour
+    public class DramaticHangCallbackZoomOut : MonoBehaviour
     {
         private Callback _callBack;
         public delegate void Callback();

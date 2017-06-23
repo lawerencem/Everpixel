@@ -23,7 +23,7 @@ namespace Model.Events.Combat
             this.LParty = l;
             this.RParty = r;
             this.Map = m;
-            this.MapLoader = MapLoader;
+            this.MapLoader = loader;
             this.RegisterEvent();
         }
     }

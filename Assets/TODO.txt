@@ -1,6 +1,13 @@
 ﻿TODO
 
 This weekend
+   - Bard for orcs
+   - were-ween
+   - barks
+   - ween tamer
+   - gui popups for stats
+   - squishy
+
 
 Next Weekend
    - Ability gui popups

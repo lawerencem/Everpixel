@@ -1,4 +1,5 @@
 ﻿using Model.Combat;
+using Model.Events.Combat;
 
 namespace Model.Abilities
 {
@@ -16,6 +17,9 @@ namespace Model.Abilities
             base.ProcessSummon(hit);
         }
 
-        // TODO: Find a nearby tile that is empty and return true...
+        public override bool IsValidActionEvent(PerformActionEvent e)
+        {
+            return base.isValidEmptyTile(e);
+        }
     }
 }

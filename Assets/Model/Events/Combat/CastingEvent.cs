@@ -43,8 +43,8 @@ namespace Model.Events.Combat
 
         private void InitZoom()
         {
-            var zoom = this._event.Info.Source.Handle.AddComponent<DramaticZoom>();
-            zoom.Init(this._event.Info.Source.Handle.transform.position, 120f, 25f, 0.2f, this.Zoomcallback);
+            var zoom = this._event.Info.Source.Handle.AddComponent<DramaticHangZoomOutCallback>();
+            zoom.Init(this._event.Info.Source.Handle.transform.position, 250f, 18f, 0.1f, this.Zoomcallback);
         }
 
         private void Zoomcallback()
