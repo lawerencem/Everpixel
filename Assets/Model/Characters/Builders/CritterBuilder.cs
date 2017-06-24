@@ -58,10 +58,10 @@ namespace Model.Characters
             character.SecondaryStats = secondary;
             BuildClassSecondaryStats(character);
             character.Type = c.Type;
-            character.CurrentAP = character.GetCurrentStatValue(SecondaryStatsEnum.AP);
-            character.CurrentHP = character.GetCurrentStatValue(SecondaryStatsEnum.HP);
-            character.CurrentMorale = character.GetCurrentStatValue(SecondaryStatsEnum.Morale);
-            character.CurrentStamina = character.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
+            character.CurrentAP = (int)character.GetCurrentStatValue(SecondaryStatsEnum.AP);
+            character.CurrentHP = (int)character.GetCurrentStatValue(SecondaryStatsEnum.HP);
+            character.CurrentMorale = (int)character.GetCurrentStatValue(SecondaryStatsEnum.Morale);
+            character.CurrentStamina = (int)character.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
             SpellMediator.Instance.SetCharacterSpells(character, c);
             return character;
         }

@@ -6,8 +6,9 @@ This weekend
    - barks
    - ween tamer
    - gui popups for stats
-   - squishy
    - penguins
+
+   - Lock GUI on summon scroll
 
 
 Next Weekend
@@ -28,11 +29,10 @@ Long Term:
 	GUI for prediction
 
 Refactor:
-	
+	Combat Turn system
 
 Bugs:
 	Hadoken still not killing character
 
 ideas: 
-	Shoggoth perk: squishy (reduces damage from heavy weapons)
 	shoggot ability: eat corpse (makes unit grow like mario)

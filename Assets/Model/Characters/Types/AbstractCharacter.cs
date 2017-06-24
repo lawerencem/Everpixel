@@ -109,8 +109,8 @@ namespace Model.Characters
         public void AddStamina(double toAdd)
         {
             this.CurrentStamina += (int)toAdd;
-            if (this.CurrentStamina > this.GetCurrentStatValue(SecondaryStatsEnum.Stamina))
-                this.CurrentStamina = this.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
+            if (this.CurrentStamina > (int)this.GetCurrentStatValue(SecondaryStatsEnum.Stamina))
+                this.CurrentStamina = (int)this.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
         }
 
         public int GetTileTraversalAPCost(HexTile tile)
@@ -179,7 +179,7 @@ namespace Model.Characters
             return (int)v;
         }
 
-        public int GetCurrentStatValue(SecondaryStatsEnum stat)
+        public double GetCurrentStatValue(SecondaryStatsEnum stat)
         {
             double v = 0;
             switch (stat)
@@ -214,7 +214,7 @@ namespace Model.Characters
                 injury.TryScaleStat(stat, ref v);
             foreach (var perk in this.Perks.SStatModPerks)
                 perk.TryModSStat(stat, ref v);
-            return (int)v;
+            return v;
         }
 
         public void RestoreStamina()

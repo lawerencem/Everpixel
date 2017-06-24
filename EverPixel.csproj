@@ -297,6 +297,8 @@
     <Compile Include="Assets\Model\Perks\EquipmentPerks\Hulk.cs" />
     <Compile Include="Assets\Model\Perks\EquipmentPerks\Weightlifter.cs" />
     <Compile Include="Assets\Model\Perks\GenericPerk.cs" />
+    <Compile Include="Assets\Model\Perks\OnHitPerks\GenericOnHitPerk.cs" />
+    <Compile Include="Assets\Model\Perks\OnHitPerks\Squishy.cs" />
     <Compile Include="Assets\Model\Perks\PerkEnum.cs" />
     <Compile Include="Assets\Model\Perks\PerkFactory.cs" />
     <Compile Include="Assets\Model\Perks\PerkMediator.cs" />

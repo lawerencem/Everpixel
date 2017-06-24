@@ -3,7 +3,6 @@
   <Culture name ="Critter">
     <Character name ="Arms">
       <AttackSpriteIndex>8</AttackSpriteIndex>
-      <Class>Warrior,1</Class>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Perks>
         <Perk>Scaly</Perk>
@@ -21,7 +20,6 @@
     </Character>
     <Character name ="Beardedino">
       <AttackSpriteIndex>9</AttackSpriteIndex>
-      <Class>Warrior,1</Class>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Perks>
         <Perk>Dino_Bite</Perk>
@@ -39,7 +37,6 @@
     </Character>
     <Character name ="Curizard">
       <AttackSpriteIndex>8</AttackSpriteIndex>
-      <Class>Mage,1</Class>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Perks>
         <Perk>Scaly</Perk>
@@ -55,7 +52,6 @@
     </Character>
     <Character name ="Denture">
       <AttackSpriteIndex>8</AttackSpriteIndex>
-      <Class>Warrior,1</Class>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Perk>Dino_Bite</Perk>
       <Perks>
@@ -74,7 +70,6 @@
     </Character>
     <Character name ="Raptard">
       <AttackSpriteIndex>2</AttackSpriteIndex>
-      <Class>Warrior,1</Class>
       <FlinchSpriteIndex>1</FlinchSpriteIndex>
       <Perks>
         <Perk>Dino_Bite</Perk>
@@ -92,7 +87,6 @@
     </Character>
     <Character name ="Rawrasaur">
       <AttackSpriteIndex>8</AttackSpriteIndex>
-      <Class>Mage,1</Class>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Perks>
         <Perk>Scaly</Perk>
@@ -108,7 +102,6 @@
     </Character>
     <Character name ="Psycargot">
       <AttackSpriteIndex>24</AttackSpriteIndex>
-      <Class>Warrior,1</Class>
       <FlinchSpriteIndex>16</FlinchSpriteIndex>
       <Stats>
         <Agility>280</Agility>
@@ -134,8 +127,10 @@
     </Character>
     <Character name ="Shoggoth">
       <AttackSpriteIndex>8</AttackSpriteIndex>
-      <Class>Warrior,1</Class>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+        <Perk>Squishy</Perk>
+      </Perks>
       <Stats>
         <Agility>300</Agility>
         <Constitution>280</Constitution>
@@ -147,7 +142,6 @@
     </Character>
     <Character name ="Sluggemoth">
       <AttackSpriteIndex>24</AttackSpriteIndex>
-      <Class>Warrior,1</Class>
       <FlinchSpriteIndex>16</FlinchSpriteIndex>
       <Stats>
         <Agility>300</Agility>
@@ -160,7 +154,6 @@
     </Character>
     <Character name ="Sluggish">
       <AttackSpriteIndex>24</AttackSpriteIndex>
-      <Class>Warrior,1</Class>
       <FlinchSpriteIndex>16</FlinchSpriteIndex>
       <Stats>
         <Agility>250</Agility>
@@ -173,7 +166,6 @@
     </Character>
     <Character name ="Solizard">
       <AttackSpriteIndex>8</AttackSpriteIndex>
-      <Class>Mage,1</Class>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Perks>
         <Perk>Scaly</Perk>
@@ -189,7 +181,6 @@
     </Character>
     <Character name ="Razorback">
       <AttackSpriteIndex>24</AttackSpriteIndex>
-      <Class>Warrior,1</Class>
       <FlinchSpriteIndex>16</FlinchSpriteIndex>
       <Stats>
         <Agility>250</Agility>
@@ -202,7 +193,6 @@
     </Character>
     <Character name ="Tearex">
       <AttackSpriteIndex>24</AttackSpriteIndex>
-      <Class>Warrior,1</Class>
       <FlinchSpriteIndex>16</FlinchSpriteIndex>
       <Perks>
         <Perk>Scaly</Perk>
@@ -219,7 +209,6 @@
     <Character name ="Thairex">
       <ActiveAbilitiesEnum>Hadoken</ActiveAbilitiesEnum>
       <AttackSpriteIndex>1</AttackSpriteIndex>
-      <Class>Warrior,1</Class>
       <FlinchSpriteIndex>13</FlinchSpriteIndex>
       <Perks>
         <Perk>Dino_Bite</Perk>
@@ -237,7 +226,6 @@
     </Character>
     <Character name ="Tyrantaur">
       <AttackSpriteIndex>24</AttackSpriteIndex>
-      <Class>Warrior,1</Class>
       <FlinchSpriteIndex>16</FlinchSpriteIndex>
       <Perks>
         <Perk>Iron_Hide</Perk>

@@ -177,6 +177,7 @@ namespace Controller.Managers.Map
 
             if (success)
             {
+                AttackEventFlags.SetFatalityTrue(e.Hit.Flags);
                 fatality.Init();   
             }
                 

@@ -80,13 +80,16 @@ namespace Controller.Managers
             this.UnlockInteraction();
             this.UnlockGUI();
             CMapGUIController.Instance.ClearDecoratedTiles();
-            CMapGUIController.Instance.SetActingBoxToController(this._currentAction.Info.Source);
-            foreach(var hit in this._currentAction.Info.Hits)
+            if (this._currentAction != null)
             {
-                var dmg = new DamageCharacterEvent(this, hit);
+                CMapGUIController.Instance.SetActingBoxToController(this._currentAction.Info.Source);
+                foreach (var hit in this._currentAction.Info.Hits)
+                {
+                    var dmg = new DamageCharacterEvent(this, hit);
+                }
+                if (this._currentAction.Info.CastFinished)
+                    this._combatManager.ProcessNextTurn();
             }
-            if (this._currentAction.Info.CastFinished)
-                this._combatManager.ProcessNextTurn();
             this._currentAction = null;
         }
 

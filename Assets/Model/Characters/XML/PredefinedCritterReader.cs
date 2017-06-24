@@ -64,7 +64,6 @@ namespace Model.Characters.XML
                                     {
                                         case (PredefinedReaderParams.ACTIVE_ABILITY): { HandleActiveAbility(key, elem.Value.ToString()); } break;
                                         case (PredefinedReaderParams.ATTACK_SPRITE_INDEX): { HandleAttackSpriteIndex(key, elem.Value.ToString()); } break;
-                                        case (PredefinedReaderParams.CLASS): { HandleClassType(key, elem.Value.ToString(), ref baseClass); } break;
                                         case (PredefinedReaderParams.DEFAULT_WPN_ABILITES): { HandleDefaultWpnAbility(key, elem.Value.ToString()); } break;
                                         case (PredefinedReaderParams.FLINCH_SPRITE_INDEX): { HandleFlinchSpriteIndex(key, elem.Value.ToString()); } break;
                                         case (PredefinedReaderParams.PERKS): { HandlePerks(elem, key); } break;
@@ -90,15 +89,6 @@ namespace Model.Characters.XML
             int v = 0;
             if (int.TryParse(value, out v))
                 CritterAttackSpriteTable.Instance.Table.Add(rootkey, v);
-        }
-
-        private void HandleClassType(string rootKey, string value, ref ClassEnum type)
-        {
-            var classAndLevel = value.Split(',');
-            int level = int.Parse(classAndLevel[1]);
-
-            if (EnumUtil<ClassEnum>.TryGetEnumValue(classAndLevel[0], ref type))
-                table.Table[rootKey].Classes.Add(type, level);
         }
 
         private void HandleDefaultWpnAbility(string rootKey, string value)

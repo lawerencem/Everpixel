@@ -164,7 +164,7 @@ namespace Assets.Controller.Managers
             foreach (var character in this.Characters)
             {
                 this._order.Add(character);
-                character.Model.CurrentAP = character.Model.GetCurrentStatValue(SecondaryStatsEnum.AP);
+                character.Model.CurrentAP = (int)character.Model.GetCurrentStatValue(SecondaryStatsEnum.AP);
             }
             this._order.Sort((x, y) => y.Model.SecondaryStats.Initiative.CompareTo(x.Model.SecondaryStats.Initiative));
             if (this._order != null && this._order.Count > 0)

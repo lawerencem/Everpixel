@@ -38,8 +38,8 @@ namespace Model.Characters
             if (isHeal)
             {
                 this.CurrentHP += value;
-                if (this.CurrentHP > this.GetCurrentStatValue(SecondaryStatsEnum.HP))
-                    this.CurrentHP = this.GetCurrentStatValue(SecondaryStatsEnum.HP);
+                if (this.CurrentHP > (int)this.GetCurrentStatValue(SecondaryStatsEnum.HP))
+                    this.CurrentHP = (int)this.GetCurrentStatValue(SecondaryStatsEnum.HP);
             }
             else
             {

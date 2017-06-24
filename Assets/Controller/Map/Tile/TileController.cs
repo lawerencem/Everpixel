@@ -51,14 +51,16 @@ namespace Controller.Map
                 {
                     var tile = openSet.ElementAt(0);
                     var probed = closed.Find(x => x == tile);
-                    if (probed)
+                    if (probed == null)
                     {
                         if (tile.Model.Current == null)
                             return tile;
                         else
                             openSet.Add(tile);
-                        closed.Add(tile);
                     }
+                    foreach (var neighbor in tile.Adjacent)
+                        openSet.Add(neighbor);
+                    closed.Add(tile);
                     openSet.RemoveAt(0);
                 }
             }

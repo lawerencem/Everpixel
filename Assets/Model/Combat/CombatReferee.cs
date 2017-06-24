@@ -26,6 +26,7 @@ namespace Model.Combat
                 CalculateWpnDmg(hit);
             else
                 CalculateAbilityDmg(hit);
+            this.ModifyDmgViaDefender(hit);
             ProcessHitEventView(hit);
         }
 
@@ -36,6 +37,7 @@ namespace Model.Combat
                 CalculateWpnDmg(hit);
             else
                 CalculateAbilityDmg(hit);
+            this.ModifyDmgViaDefender(hit);
             ProcessHitEventView(hit);
         }
 
@@ -115,41 +117,38 @@ namespace Model.Combat
         private void ProcessDamage(HitInfo hit)
         {
             var dmgReduction = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Damage_Reduction);
-
+            double flatDmgNegate = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Damage_Ignore);
             if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Head))
             {
-                double flatDmgNegate = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Damage_Ignore);
                 if (hit.Target.Model.Helm != null)
-                    flatDmgNegate = hit.Target.Model.Helm.DamageIgnore;
-                if (hit.Source.Model.LWeapon != null)
-                    flatDmgNegate *= hit.Source.Model.LWeapon.ArmorPierce;
-                if (hit.Source.Model.RWeapon != null)
-                    flatDmgNegate *= hit.Source.Model.RWeapon.ArmorPierce;
-
-                double dmgToApply = (hit.Dmg - flatDmgNegate);
-                if (dmgToApply < 0)
-                    dmgToApply = 0;
-
-                if (hit.Target.Model.Helm != null)
-                    dmgToApply *= (hit.Target.Model.Helm.DamageReduction * dmgReduction);
-                hit.Dmg = (int)dmgToApply;
+                    flatDmgNegate += hit.Target.Model.Helm.DamageIgnore;
             }
             else
             {
-                double flatDmgNegate = 0;
                 if (hit.Target.Model.Armor != null)
-                    flatDmgNegate = hit.Target.Model.Armor.DamageIgnore;
-                if (hit.Source.Model.LWeapon != null)
-                    flatDmgNegate *= hit.Source.Model.LWeapon.ArmorPierce;
-                if (hit.Source.Model.RWeapon != null)
-                    flatDmgNegate *= hit.Source.Model.RWeapon.ArmorPierce;
-
-                double dmgToApply = (hit.Dmg - flatDmgNegate);
-
+                    flatDmgNegate += hit.Target.Model.Armor.DamageIgnore;
+            }   
+            if (hit.Source.Model.LWeapon != null && !hit.Source.Model.LWeapon.IsTypeOfShield())
+                flatDmgNegate *= hit.Source.Model.LWeapon.ArmorPierce;
+            if (hit.Source.Model.RWeapon != null && !hit.Source.Model.RWeapon.IsTypeOfShield())
+                flatDmgNegate *= hit.Source.Model.RWeapon.ArmorPierce;
+            double dmgToApply = (hit.Dmg - flatDmgNegate);
+            if (dmgToApply < 0)
+                dmgToApply = 0;
+            if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Head))
+            {
+                if (hit.Target.Model.Helm != null)
+                    dmgToApply *= (hit.Target.Model.Helm.DamageReduction * dmgReduction);   
+            }
+            else
+            {
                 if (hit.Target.Model.Armor != null)
                     dmgToApply *= (hit.Target.Model.Helm.DamageReduction * dmgReduction);
                 hit.Dmg = (int)dmgToApply;
             }
+            foreach (var perk in hit.Target.Model.Perks.OnHitPerks)
+                perk.TryModHit(hit);
+            hit.Dmg = (int)dmgToApply;
         }
 
         private void ProcessShieldBlock(HitInfo hit)
@@ -183,10 +182,10 @@ namespace Model.Combat
             if (hasShield)
             {
                 hit.Dmg = (int)(ignoreDamageScalar * hit.Dmg);
-                this.ProcessDamage(hit);
             }
             else
                 AttackEventFlags.SetBlockFalse(hit.Flags);
+            this.ProcessDamage(hit);
         }
 
         private double GetAttackVSDefenseSkillChance(double attackSkill, double defenseSkill, double baseDefenseChance)

@@ -162,10 +162,10 @@ namespace Controller.Managers.Map
         public void SetActingBoxToController(GenericCharacterController c)
         {
             this.SetTagText(CMapGUIControllerParams.NAME, c.View.Name);
-            this.SetTagText(CMapGUIControllerParams.AP, c.Model.CurrentAP + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.AP).ToString());
-            this.SetTagText(CMapGUIControllerParams.HP, c.Model.CurrentHP + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.HP).ToString());
-            this.SetTagText(CMapGUIControllerParams.STAM, c.Model.CurrentStamina + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Stamina).ToString());
-            this.SetTagText(CMapGUIControllerParams.MORALE, c.Model.CurrentMorale + " / " + c.Model.GetCurrentStatValue(SecondaryStatsEnum.Morale).ToString());
+            this.SetTagText(CMapGUIControllerParams.AP, c.Model.CurrentAP + " / " + ((int)c.Model.GetCurrentStatValue(SecondaryStatsEnum.AP)).ToString());
+            this.SetTagText(CMapGUIControllerParams.HP, c.Model.CurrentHP + " / " + ((int)c.Model.GetCurrentStatValue(SecondaryStatsEnum.HP)).ToString());
+            this.SetTagText(CMapGUIControllerParams.STAM, c.Model.CurrentStamina + " / " + ((int)c.Model.GetCurrentStatValue(SecondaryStatsEnum.Stamina)).ToString());
+            this.SetTagText(CMapGUIControllerParams.MORALE, c.Model.CurrentMorale + " / " + ((int)c.Model.GetCurrentStatValue(SecondaryStatsEnum.Morale)).ToString());
 
             if (c.Model.Armor != null)
                 this.SetTagText(CMapGUIControllerParams.ARMOR, c.Model.Armor.Name);

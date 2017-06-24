@@ -936,7 +936,6 @@
       <AP_Reduce>0.97</AP_Reduce>
       <Armor_Ignore>0</Armor_Ignore>
       <Armor_Pierce>0.35</Armor_Pierce>
-      <Armor_Pierce>0</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
       <Damage>85</Damage>
       <Description>

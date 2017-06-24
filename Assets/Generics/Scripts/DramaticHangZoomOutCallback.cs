@@ -13,19 +13,21 @@ namespace Generics.Scripts
         private float _curHangTime = 0;
         private float _hangTime;
         private float _originalFoV;
-        private float _speed;
+        private float _inSpeed;
+        private float _outSpeed;
         private Vector3 _target;
         private float _toFoV;
 
         private bool _hangDone = false;
         private bool _zoomDone = false;
 
-        public void Init(Vector3 position, float speed, float toFoV, float hangTime, Callback callback = null)
+        public void Init(Vector3 position, float inSpeed, float outSpeed, float toFoV, float hangTime, Callback callback = null)
         {
             this._callBack = callback;
             this._hangTime = hangTime;
             this._originalFoV = Camera.main.fieldOfView;
-            this._speed = speed;
+            this._inSpeed = inSpeed;
+            this._outSpeed = outSpeed;
             this._target.z = Camera.main.transform.position.z;
             this._toFoV = toFoV;
             var z = Camera.main.transform.position.z;
@@ -57,7 +59,7 @@ namespace Generics.Scripts
         private void HandleZoomIn()
         {
             var fov = Camera.main.fieldOfView;
-            fov -= (this._speed * Time.deltaTime);
+            fov -= (this._inSpeed * Time.deltaTime);
             if (fov < this._toFoV + EPSILON || fov < MIN_ZOOM + EPSILON)
             {
                 this._zoomDone = true;
@@ -71,7 +73,7 @@ namespace Generics.Scripts
         private void HandleZoomOut()
         {
             var fov = Camera.main.fieldOfView;
-            fov += (this._speed * Time.deltaTime / 13);
+            fov += (this._outSpeed * Time.deltaTime);
             if (fov > this._originalFoV)
             {
                 if (this._callBack != null)
