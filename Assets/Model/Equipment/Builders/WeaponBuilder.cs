@@ -32,6 +32,7 @@ namespace Model.Equipment
             weapon.RangeMod = wStats.RangeMod;
             weapon.ShieldDamage = wStats.ShieldDamage;
             weapon.Skill = wStats.Skill;
+            weapon.StaminaReduce = wStats.StaminaReduce;
             weapon.Tier = wStats.Tier;
             return weapon;
         }

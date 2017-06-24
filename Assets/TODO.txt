@@ -1,5 +1,11 @@
 ﻿TODO
 
+   - were ween
+   - blade singer spells
+   - orc zerkers
+   - orc khan
+
+
 Tomorrow:
    - GUI popup for stats, predicted dmg
 

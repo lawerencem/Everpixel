@@ -220,27 +220,105 @@
   </WeaponSkillEnum>
   <WeaponSkillEnum name ="Flail">
     <Weapon name="Megaflail">
+      <Tier>Five</Tier>
+      <Accuracy>0.51</Accuracy>
+      <AP_Reduce>0.51</AP_Reduce>
+      <Armor_Ignore>0.18</Armor_Ignore>
+      <Armor_Pierce>0.87</Armor_Pierce>
+      <Block_Ignore>0.18</Block_Ignore>
+      <Damage>92</Damage>
+      <Description>
+        
+      </Description>
+      <Fatigue_Cost_Mod>1.48</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.62</Initiative_Reduce>
+      <Max_Durability>120</Max_Durability>
+      <Parry_Mod>0</Parry_Mod>
+      <Shield_Damage>1.82</Shield_Damage>
+      <WeaponSkillEnum>Flail</WeaponSkillEnum>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>0.32</Stamina_Reduce>
+      <Value>300</Value>
+      <WeaponAbilitiesEnum>Crush</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Scatter</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Megaflail">
       <Tier>Four</Tier>
       <Accuracy>0.53</Accuracy>
       <AP_Reduce>0.53</AP_Reduce>
-      <Armor_Ignore>0.32</Armor_Ignore>
+      <Armor_Ignore>0.16</Armor_Ignore>
       <Armor_Pierce>0.86</Armor_Pierce>
-      <Block_Ignore>0.88</Block_Ignore>
-      <Damage>140</Damage>
+      <Block_Ignore>0.16</Block_Ignore>
+      <Damage>102</Damage>
       <Description>
         This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
         it will certainly cause utter devastation on the battlefield.
       </Description>
-      <Fatigue_Cost_Mod>1.22</Fatigue_Cost_Mod>
-      <Initiative_Reduce>0.73</Initiative_Reduce>
-      <Max_Durability>100</Max_Durability>
+      <Fatigue_Cost_Mod>1.47</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.63</Initiative_Reduce>
+      <Max_Durability>135</Max_Durability>
       <Parry_Mod>0</Parry_Mod>
-      <Shield_Damage>1.22</Shield_Damage>
+      <Shield_Damage>1.84</Shield_Damage>
       <WeaponSkillEnum>Flail</WeaponSkillEnum>
-      <Sprites>15</Sprites>
-      <Stamina_Reduce>0.37</Stamina_Reduce>
+      <Sprites>1</Sprites>
+      <Stamina_Reduce>0.34</Stamina_Reduce>
+      <Value>650</Value>
+      <WeaponAbilitiesEnum>Crush</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Scatter</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Megaflail">
+      <Tier>Three</Tier>
+      <Accuracy>0.54</Accuracy>
+      <AP_Reduce>0.54</AP_Reduce>
+      <Armor_Ignore>0.15</Armor_Ignore>
+      <Armor_Pierce>0.85</Armor_Pierce>
+      <Block_Ignore>0.15</Block_Ignore>
+      <Damage>110</Damage>
+      <Description>
+        This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
+        it will certainly cause utter devastation on the battlefield.
+      </Description>
+      <Fatigue_Cost_Mod>1.45</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.64</Initiative_Reduce>
+      <Max_Durability>155</Max_Durability>
+      <Parry_Mod>0</Parry_Mod>
+      <Shield_Damage>1.88</Shield_Damage>
+      <WeaponSkillEnum>Flail</WeaponSkillEnum>
+      <Sprites>2</Sprites>
+      <Stamina_Reduce>0.35</Stamina_Reduce>
+      <Value>1100</Value>
+      <WeaponAbilitiesEnum>Crush</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Scatter</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Megaflail">
+      <Tier>Two</Tier>
+      <Accuracy>0.55</Accuracy>
+      <AP_Reduce>0.55</AP_Reduce>
+      <Armor_Ignore>0.13</Armor_Ignore>
+      <Armor_Pierce>0.84</Armor_Pierce>
+      <Block_Ignore>0.13</Block_Ignore>
+      <Damage>120</Damage>
+      <Description>
+        This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
+        it will certainly cause utter devastation on the battlefield.
+      </Description>
+      <Fatigue_Cost_Mod>1.45</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.65</Initiative_Reduce>
+      <Max_Durability>180</Max_Durability>
+      <Parry_Mod>0</Parry_Mod>
+      <Shield_Damage>2.00</Shield_Damage>
+      <WeaponSkillEnum>Flail</WeaponSkillEnum>
+      <Sprites>3</Sprites>
+      <Stamina_Reduce>0.35</Stamina_Reduce>
       <Value>1500</Value>
       <WeaponAbilitiesEnum>Crush</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Scatter</WeaponAbilitiesEnum>
       <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
       <WeaponUseEnum>Melee</WeaponUseEnum>
     </Weapon>
@@ -494,6 +572,25 @@
       <WeaponUseEnum>Shield</WeaponUseEnum>
     </Weapon>
     <Weapon name="Orc Slab">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.71</AP_Reduce>
+      <Description>
+        A big, heavy chunk of metal.  Unsurprsingly, its weight make it a favorite amongst orcish heavy infantry.
+      </Description>
+      <Fatigue_Cost_Mod>1.25</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.69</Initiative_Reduce>
+      <Max_Durability>80</Max_Durability>
+      <Melee_Block_Chance>1.18</Melee_Block_Chance>
+      <Parry_Mod>0.81</Parry_Mod>
+      <Ranged_Block_Chance>1.15</Ranged_Block_Chance>
+      <WeaponSkillEnum>Medium_Shield</WeaponSkillEnum>
+      <Sprites>3,4</Sprites>
+      <Stamina_Reduce>0.75</Stamina_Reduce>
+      <Value>180</Value>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Shield</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Orc Slab">
       <Tier>Four</Tier>
       <AP_Reduce>0.73</AP_Reduce>
       <Description>
@@ -528,6 +625,25 @@
       <Sprites>33,34</Sprites>
       <Stamina_Reduce>0.78</Stamina_Reduce>
       <Value>600</Value>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Shield</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Orc Slab">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.78</AP_Reduce>
+      <Description>
+        A big, heavy chunk of metal.  Unsurprsingly, its weight make it a favorite amongst orcish heavy infantry.
+      </Description>
+      <Fatigue_Cost_Mod>1.18</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.72</Initiative_Reduce>
+      <Max_Durability>160</Max_Durability>
+      <Melee_Block_Chance>1.26</Melee_Block_Chance>
+      <Parry_Mod>0.86</Parry_Mod>
+      <Ranged_Block_Chance>1.20</Ranged_Block_Chance>
+      <WeaponSkillEnum>Medium_Shield</WeaponSkillEnum>
+      <Sprites>48,49</Sprites>
+      <Stamina_Reduce>0.80</Stamina_Reduce>
+      <Value>1000</Value>
       <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
       <WeaponUseEnum>Shield</WeaponUseEnum>
     </Weapon>

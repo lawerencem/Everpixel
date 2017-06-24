@@ -945,6 +945,44 @@
       <Value>2000</Value>
     </Armor>
     <Armor name="Orcish Plate Mail">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.51</AP_Reduce>
+      <Block_Reduce>0.51</Block_Reduce>
+      <Damage_Ignore>21</Damage_Ignore>
+      <Damage_Reduction>0.52</Damage_Reduction>
+      <Description>
+        This orcish plate consists of a few pieces of heavy metal slabs melted over some chain mail.  It's heavy, and doesn't allow
+        for much movement...but offers incredible protection.
+      </Description>
+      <Dodge_Reduce>0.22</Dodge_Reduce>
+      <Durability>200</Durability>
+      <Fatigue_Cost>1.72</Fatigue_Cost>
+      <Initiative_Reduce>0.50</Initiative_Reduce>
+      <Parry_Reduce>0.31</Parry_Reduce>
+      <Sprites>2,3</Sprites>
+      <Stamina_Reduce>0.50</Stamina_Reduce>
+      <Value>800</Value>
+    </Armor>
+    <Armor name="Orcish Plate Mail">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.53</AP_Reduce>
+      <Block_Reduce>0.53</Block_Reduce>
+      <Damage_Ignore>23</Damage_Ignore>
+      <Damage_Reduction>0.50</Damage_Reduction>
+      <Description>
+        This orcish plate consists of a few pieces of heavy metal slabs melted over some chain mail.  It's heavy, and doesn't allow
+        for much movement...but offers incredible protection.
+      </Description>
+      <Dodge_Reduce>0.26</Dodge_Reduce>
+      <Durability>220</Durability>
+      <Fatigue_Cost>1.66</Fatigue_Cost>
+      <Initiative_Reduce>0.55</Initiative_Reduce>
+      <Parry_Reduce>0.35</Parry_Reduce>
+      <Sprites>17,18</Sprites>
+      <Stamina_Reduce>0.55</Stamina_Reduce>
+      <Value>2000</Value>
+    </Armor>
+    <Armor name="Orcish Plate Mail">
       <Tier>Three</Tier>
       <AP_Reduce>0.55</AP_Reduce>
       <Block_Reduce>0.55</Block_Reduce>
@@ -961,7 +999,7 @@
       <Parry_Reduce>0.40</Parry_Reduce>
       <Sprites>32,33</Sprites>
       <Stamina_Reduce>0.60</Stamina_Reduce>
-      <Value>5000</Value>
+      <Value>3200</Value>
     </Armor>
     <Armor name="Orcish Plate Mail">
       <Tier>Two</Tier>
@@ -980,7 +1018,7 @@
       <Parry_Reduce>0.40</Parry_Reduce>
       <Sprites>47,48</Sprites>
       <Stamina_Reduce>0.60</Stamina_Reduce>
-      <Value>6500</Value>
+      <Value>4800</Value>
     </Armor>
     <Armor name="Plate Mail">
       <Tier>Five</Tier>

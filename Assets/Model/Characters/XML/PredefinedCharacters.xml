@@ -175,7 +175,6 @@
       <Class>Fighter,3</Class>
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Human</RaceEnum>
-      <CultureEnum>Bretonnian</CultureEnum>
       <PotentialArmors>
         <Armors name="One">
           <Armor>1.0,Mail Shirt,Three</Armor>
@@ -944,40 +943,38 @@
     </Character>
   </Culture>
   <Culture name ="Orcish">
-    <Character name ="Battlesinger">
-      <Class>Bard,3</Class>
-      <Class>Skald,3</Class>
+    <Character name ="Armer Boy">
+      <Class>Fighter,5</Class>
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Orc</RaceEnum>
       <Perks>
+        <Perk>Hulk</Perk>
+        <Perk>Colossus</Perk>
+        <Perk>Weightlifter</Perk>
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.50,Bone Armor,Four</Armor>
-          <Armor>0.50,Bone Armor,Three</Armor>
+          <Armor>1.0,Orcish Plate Mail,Four</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.50,Skull,Four</Helm>
-          <Helm>0.50,Skull,Three</Helm>
+          <Helm>0.80,Orc Mask,Four</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.75,Choppa,Four</RWeapon>
-          <RWeapon>0.25,Choppa,Three</RWeapon>
+          <RWeapon>1,Choppa,Four</RWeapon>
         </RWeapons>
         <LWeapons name="One">
-          <RWeapon>0.75,Choppa,Four</RWeapon>
-          <RWeapon>0.25,Choppa,Three</RWeapon>
+          <LWeapon>1,Orc Slab,Four</LWeapon>
         </LWeapons>
       </PotentialWeapons>
       <Stats>
-        <Agility>620</Agility>
-        <Constitution>480</Constitution>
-        <Intelligence>550</Intelligence>
-        <Might>400</Might>
-        <Perception>480</Perception>
-        <Resolve>550</Resolve>
+        <Agility>300</Agility>
+        <Constitution>720</Constitution>
+        <Intelligence>180</Intelligence>
+        <Might>600</Might>
+        <Perception>350</Perception>
+        <Resolve>350</Resolve>
       </Stats>
     </Character>
     <Character name ="Dire Ween Rider">
@@ -1014,6 +1011,232 @@
         <Might>600</Might>
         <Perception>580</Perception>
         <Resolve>420</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Elite Shock Troopa">
+      <Class>Warrior,12</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Orc</RaceEnum>
+      <Perks>
+        <Perk>Hulk</Perk>
+        <Perk>Colossus</Perk>
+        <Perk>Weightlifter</Perk>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.50,Orcish Plate Mail,Three</Armor>
+          <Armor>0.50,Orcish Plate Mail,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Orc Mask,Three</Helm>
+          <Helm>0.20,Orc Mask,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Great Axe Choppa,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>350</Agility>
+        <Constitution>680</Constitution>
+        <Intelligence>200</Intelligence>
+        <Might>700</Might>
+        <Perception>400</Perception>
+        <Resolve>320</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Orc Battlesinger">
+      <Class>Bard,3</Class>
+      <Class>Skald,1</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Orc</RaceEnum>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.50,Bone Armor,Five</Armor>
+          <Armor>0.50,Bone Armor,Four</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.50,Skull,Five</Helm>
+          <Helm>0.50,Skull,Four</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Choppa,Five</RWeapon>
+          <RWeapon>0.25,Choppa,Four</RWeapon>
+        </RWeapons>
+        <LWeapons name="One">
+          <RWeapon>0.75,Choppa,Five</RWeapon>
+          <RWeapon>0.25,Choppa,Four</RWeapon>
+        </LWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>620</Agility>
+        <Constitution>480</Constitution>
+        <Intelligence>550</Intelligence>
+        <Might>400</Might>
+        <Perception>480</Perception>
+        <Resolve>550</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Orc Berserker">
+      <Class>Warrior,3</Class>
+      <Class>Berserker,5</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Orc</RaceEnum>
+      <Perks>
+        <Perk>Hulk</Perk>
+      </Perks>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.50,Great Axe Choppa,Four</RWeapon>
+          <RWeapon>0.50,Megaflail,Four</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>350</Agility>
+        <Constitution>400</Constitution>
+        <Intelligence>220</Intelligence>
+        <Might>680</Might>
+        <Perception>350</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Orc Fury">
+      <Class>Warrior,3</Class>
+      <Class>Berserker,9</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Orc</RaceEnum>
+      <Perks>
+        <Perk>Hulk</Perk>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.50,Bone Armor,Five</Armor>
+          <Armor>0.50,Bone Armor,Four</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.50,Skull,Five</Helm>
+          <Helm>0.50,Skull,Four</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.50,Great Axe Choppa,Three</RWeapon>
+          <RWeapon>0.50,Megaflail,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>350</Agility>
+        <Constitution>400</Constitution>
+        <Intelligence>220</Intelligence>
+        <Might>680</Might>
+        <Perception>350</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Orc Poet">
+      <Class>Bard,3</Class>
+      <Class>Skald,15</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Orc</RaceEnum>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>1,Bone Armor,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>1,Skull,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Choppa,Two</RWeapon>
+        </RWeapons>
+        <LWeapons name="One">
+          <RWeapon>1,Choppa,Two</RWeapon>
+        </LWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>620</Agility>
+        <Constitution>480</Constitution>
+        <Intelligence>550</Intelligence>
+        <Might>400</Might>
+        <Perception>480</Perception>
+        <Resolve>550</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Orc Rampager">
+      <Class>Warrior,3</Class>
+      <Class>Berserker,13</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Orc</RaceEnum>
+      <Perks>
+        <Perk>Hulk</Perk>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.50,Bone Armor,Four</Armor>
+          <Armor>0.50,Bone Armor,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.50,Skull,Four</Helm>
+          <Helm>0.50,Skull,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.50,Great Axe Choppa,Two</RWeapon>
+          <RWeapon>0.50,Megaflail,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>350</Agility>
+        <Constitution>400</Constitution>
+        <Intelligence>220</Intelligence>
+        <Might>680</Might>
+        <Perception>350</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Orc Rhapsodist">
+      <Class>Bard,3</Class>
+      <Class>Skald,9</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Orc</RaceEnum>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.50,Bone Armor,Three</Armor>
+          <Armor>0.50,Bone Armor,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.50,Skull,Three</Helm>
+          <Helm>0.50,Skull,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Choppa,Three</RWeapon>
+          <RWeapon>0.25,Choppa,Two</RWeapon>
+        </RWeapons>
+        <LWeapons name="One">
+          <RWeapon>0.75,Choppa,Three</RWeapon>
+          <RWeapon>0.25,Choppa,Two</RWeapon>
+        </LWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>620</Agility>
+        <Constitution>480</Constitution>
+        <Intelligence>550</Intelligence>
+        <Might>400</Might>
+        <Perception>480</Perception>
+        <Resolve>550</Resolve>
       </Stats>
     </Character>
     <Character name ="Orc Scavenger">
@@ -1058,6 +1281,42 @@
         <Resolve>300</Resolve>
       </Stats>
     </Character>
+    <Character name ="Orc Warsinger">
+      <Class>Bard,3</Class>
+      <Class>Skald,5</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Orc</RaceEnum>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.50,Bone Armor,Four</Armor>
+          <Armor>0.50,Bone Armor,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.50,Skull,Three</Helm>
+          <Helm>0.50,Skull,Four</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Choppa,Four</RWeapon>
+          <RWeapon>0.25,Choppa,Three</RWeapon>
+        </RWeapons>
+        <LWeapons name="One">
+          <RWeapon>0.75,Choppa,Four</RWeapon>
+          <RWeapon>0.25,Choppa,Three</RWeapon>
+        </LWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>620</Agility>
+        <Constitution>480</Constitution>
+        <Intelligence>550</Intelligence>
+        <Might>400</Might>
+        <Perception>480</Perception>
+        <Resolve>550</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Shock Troopa">
       <Class>Warrior,3</Class>
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
@@ -1068,30 +1327,29 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>1.0,Orcish Plate Mail,Three</Armor>
+          <Armor>1.0,Orcish Plate Mail,Five</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.80,Orc Mask,Four</Helm>
-          <Helm>0.20,Orc Mask,Three</Helm>
+          <Helm>0.80,Orc Mask,Five</Helm>
+          <Helm>0.20,Orc Mask,Four</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.80,Great Axe Choppa,Four</RWeapon>
-          <RWeapon>0.20,Choppa,Three</RWeapon>
+          <RWeapon>1,Great Axe Choppa,Five</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
-        <Agility>400</Agility>
-        <Constitution>750</Constitution>
+        <Agility>350</Agility>
+        <Constitution>680</Constitution>
         <Intelligence>200</Intelligence>
         <Might>700</Might>
         <Perception>400</Perception>
         <Resolve>320</Resolve>
       </Stats>
     </Character>
-    <Character name ="Veteran Shock Troopa">
-      <Class>Warrior,5</Class>
+    <Character name ="Stout Armer Boy">
+      <Class>Fighter,9</Class>
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Orc</RaceEnum>
       <Perks>
@@ -1101,27 +1359,60 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.50,Orcish Plate Mail,Three</Armor>
-          <Armor>0.50,Orcish Plate Mail,Two</Armor>
+          <Armor>1.0,Orcish Plate Mail,Three</Armor>
         </Armors>
         <Helms name="One">
           <Helm>0.80,Orc Mask,Three</Helm>
-          <Helm>0.20,Orc Mask,Two</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.80,Great Axe Choppa,Three</RWeapon>
-          <RWeapon>0.20,Choppa,Two</RWeapon>
+          <RWeapon>1,Choppa,Three</RWeapon>
+        </RWeapons>
+        <LWeapons name="One">
+          <LWeapon>1,Orc Slab,Three</LWeapon>
+        </LWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>300</Agility>
+        <Constitution>720</Constitution>
+        <Intelligence>180</Intelligence>
+        <Might>600</Might>
+        <Perception>350</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Veteran Shock Troopa">
+      <Class>Warrior,7</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Orc</RaceEnum>
+      <Perks>
+        <Perk>Hulk</Perk>
+        <Perk>Colossus</Perk>
+        <Perk>Weightlifter</Perk>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.50,Orcish Plate Mail,Four</Armor>
+          <Armor>0.50,Orcish Plate Mail,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Orc Mask,Four</Helm>
+          <Helm>0.20,Orc Mask,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Great Axe Choppa,Four</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
-        <Agility>420</Agility>
-        <Constitution>800</Constitution>
+        <Agility>350</Agility>
+        <Constitution>680</Constitution>
         <Intelligence>200</Intelligence>
-        <Might>740</Might>
-        <Perception>410</Perception>
-        <Resolve>350</Resolve>
+        <Might>700</Might>
+        <Perception>400</Perception>
+        <Resolve>320</Resolve>
       </Stats>
     </Character>
     <Character name ="War Ween Rider">
@@ -1164,42 +1455,6 @@
         <Resolve>420</Resolve>
       </Stats>
     </Character>
-    <Character name ="Warsinger">
-      <Class>Bard,3</Class>
-      <Class>Skald,7</Class>
-      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
-      <RaceEnum>Orc</RaceEnum>
-      <Perks>
-      </Perks>
-      <PotentialArmors>
-        <Armors name="One">
-          <Armor>0.50,Bone Armor,Three</Armor>
-          <Armor>0.50,Bone Armor,Two</Armor>
-        </Armors>
-        <Helms name="One">
-          <Helm>0.50,Skull,Three</Helm>
-          <Helm>0.50,Skull,Two</Helm>
-        </Helms>
-      </PotentialArmors>
-      <PotentialWeapons>
-        <RWeapons name="One">
-          <RWeapon>0.75,Choppa,Three</RWeapon>
-          <RWeapon>0.25,Choppa,Two</RWeapon>
-        </RWeapons>
-        <LWeapons name="One">
-          <RWeapon>0.75,Choppa,Three</RWeapon>
-          <RWeapon>0.25,Choppa,Two</RWeapon>
-        </LWeapons>
-      </PotentialWeapons>
-      <Stats>
-        <Agility>620</Agility>
-        <Constitution>480</Constitution>
-        <Intelligence>550</Intelligence>
-        <Might>400</Might>
-        <Perception>480</Perception>
-        <Resolve>550</Resolve>
-      </Stats>
-    </Character>
     <Character name ="Ween Rider">
       <Class>Warrior,3</Class>
       <Class>Berserker,2</Class>
@@ -1230,6 +1485,37 @@
         <Resolve>420</Resolve>
       </Stats>
     </Character>
+    <Character name ="Wimpy Armer Boy">
+      <Class>Fighter,2</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Orc</RaceEnum>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>1.0,Orcish Plate Mail,Five</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Orc Mask,Five</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Choppa,Five</RWeapon>
+        </RWeapons>
+        <LWeapons name="One">
+          <LWeapon>1,Orc Slab,Five</LWeapon>
+        </LWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>300</Agility>
+        <Constitution>720</Constitution>
+        <Intelligence>180</Intelligence>
+        <Might>600</Might>
+        <Perception>350</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Wimpy Orc Berserker">
       <Class>Warrior,3</Class>
       <Class>Berserker,1</Class>
@@ -1240,8 +1526,8 @@
       </Perks>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.50,Great Axe Choppa,Four</RWeapon>
-          <RWeapon>0.50,Megaflail,Four</RWeapon>
+          <RWeapon>0.50,Great Axe Choppa,Five</RWeapon>
+          <RWeapon>0.50,Megaflail,Five</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
