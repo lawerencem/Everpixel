@@ -100,6 +100,8 @@ namespace View.GUI
 
             var txtRect = cloneTxtContainer.GetComponent<RectTransform>();
             txtRect.localPosition = new Vector2(0, 0);
+            // TODO: Would really love a better way to do this, but it works for now.
+            txtRect.sizeDelta = new Vector2(300, 60);
 
             this._btns.Add(clone);
             var btnScript = clone.AddComponent<AbilityBtnClick>();

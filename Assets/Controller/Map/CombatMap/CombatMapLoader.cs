@@ -36,6 +36,7 @@ namespace Controller.Managers.Map
         public void InitMap(BiomeEnum b)
         {
             this.MapHolder = new GameObject("Map").transform;
+            this.MapHolder.tag = "BattleMap";
             this.BackgroundTiles = new GameObject("BackgroundTiles").transform;
             this.BackgroundTiles.transform.SetParent(this.MapHolder);
             this.InitBackgroundTiles(b);
@@ -172,6 +173,7 @@ namespace Controller.Managers.Map
                 var render = spriteHandler.AddComponent<SpriteRenderer>();
                 spriteHandler.transform.position = random.transform.position;
                 spriteHandler.name = "Background Tile Deco";
+                spriteHandler.transform.SetParent(random.transform);
                 render.sprite = sprite;
                 render.sortingLayerName = "BackgroundTileDeco";
                 random.Model.Current = random;

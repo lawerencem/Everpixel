@@ -8,6 +8,7 @@
         Hulk,
         Iron_Hide,
         Scaly,
+        Squishy,
         Weightlifter,
         T_Rex_Bite,
     }

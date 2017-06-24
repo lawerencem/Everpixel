@@ -7,6 +7,7 @@ This weekend
    - ween tamer
    - gui popups for stats
    - squishy
+   - penguins
 
 
 Next Weekend
