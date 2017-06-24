@@ -10,7 +10,8 @@ namespace Model.Events.Combat
         public EndTurnEvent(CombatEventManager parent) :
             base(CombatEventEnum.EndTurn, parent)
         {
-            this.RegisterEvent();
+            if (!this._parent.GetInteractionLock())
+                this.RegisterEvent();
         }
     }
 }

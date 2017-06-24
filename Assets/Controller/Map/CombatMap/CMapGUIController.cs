@@ -19,9 +19,10 @@ namespace Controller.Managers.Map
         private GameObject _singleTile;
 
         private AbilitiesModal _abilityModal;
-        private GameObject _banner;
-        private CMapGUIControllerHit _hitHelper = new CMapGUIControllerHit();
+        private GameObject _banner;        
         private HoverModal _hoverModal;
+
+        private CMapGUIControllerHit _hitHelper = new CMapGUIControllerHit();
         private CMapGUIControllerParticle _particleHelper = new CMapGUIControllerParticle();
 
         private static CMapGUIController _instance;
@@ -35,7 +36,7 @@ namespace Controller.Managers.Map
             }
         }
 
-        public void ActivateBanner()
+        public void ActivateFatalityBanner()
         {
             this._banner.SetActive(true);
             var script = this._banner.AddComponent<DeactivateByLifetime>();
@@ -113,7 +114,7 @@ namespace Controller.Managers.Map
 
         public void DisplayCast(CastingEvent e)
         {
-            this._hitHelper.DisplayText(e.SpellName, e.Caster.transform.position, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.ATTACK_TEXT_OFFSET);
+            this._hitHelper.DisplayText(e.SpellName, e.Caster.Handle, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.ATTACK_TEXT_OFFSET);
         }
 
         public void DisplayHitStatsEvent(DisplayHitStatsEvent e)

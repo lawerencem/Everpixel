@@ -31,9 +31,10 @@ namespace View.Fatalities
 
         }
 
-        public void ProcessFatalityBanner()
+        public void ProcessFatalityView(DisplayHitStatsEvent e)
         {
-            CMapGUIController.Instance.ActivateBanner();
+            CMapGUIController.Instance.ActivateFatalityBanner();
+
         }
 
         protected virtual void InitMeleeFatality()

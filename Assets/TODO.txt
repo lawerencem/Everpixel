@@ -33,6 +33,7 @@ Refactor:
 
 Bugs:
 	Hadoken still not killing character
+	Goblin Void Weavers sometimes dont get turns...
 
 ideas: 
 	shoggot ability: eat corpse (makes unit grow like mario)

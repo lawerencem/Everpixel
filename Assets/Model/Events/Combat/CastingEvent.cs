@@ -38,13 +38,17 @@ namespace Model.Events.Combat
             if (jolt != null)
                 jolt.Done();
             var script = CombatEventManager.Instance.CameraManager.GetComponent<CameraManager>();
-            script.InitScrollTo(this._event.Info.Source.CurrentTile.Model.Center, this.InitZoom);
+            var position = this._event.Info.Source.CurrentTile.Model.Center;
+            position.y -= 0.5f;
+            script.InitScrollTo(position, this.InitZoom);
         }
 
         private void InitZoom()
         {
             var zoom = this._event.Info.Source.Handle.AddComponent<DramaticHangZoomOutCallback>();
-            zoom.Init(this._event.Info.Source.Handle.transform.position, 150f, 50f, 18f, 0.5f, this.Zoomcallback);
+            var position = this._event.Info.Source.Handle.transform.position;
+            position.y -= 0.5f;
+            zoom.Init(position, 150f, 50f, 18f, 0.5f, this.Zoomcallback);
         }
 
         private void Zoomcallback()

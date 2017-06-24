@@ -66,7 +66,7 @@ namespace View.Fatalities
             }
 
             this._parent.ProcessCharacterKilled(this._event.Hit.Target);
-            base.ProcessFatalityBanner();
+            base.ProcessFatalityView(this._event);
         }
 
         private void HandleParticles()

@@ -143,7 +143,7 @@ namespace Model.Combat
             else
             {
                 if (hit.Target.Model.Armor != null)
-                    dmgToApply *= (hit.Target.Model.Helm.DamageReduction * dmgReduction);
+                    dmgToApply *= (hit.Target.Model.Armor.DamageReduction * dmgReduction);
                 hit.Dmg = (int)dmgToApply;
             }
             foreach (var perk in hit.Target.Model.Perks.OnHitPerks)

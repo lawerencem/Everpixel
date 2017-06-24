@@ -110,7 +110,7 @@ namespace View.Fatalities
             this.ProcessBlood();
             this.ProcessExplosion();
             this.ProcessGear();
-            this.ProcessFatalityBanner();
+            this.ProcessFatalityView(this._event);
         }
 
         private void ProcessGear()

@@ -49,31 +49,27 @@ namespace Controller.Managers.Map
         {
             this.DisplayText(
                 hit.Ability.TypeStr, 
-                hit.Source.CurrentTile.Model.Center, 
+                hit.Source.Handle, 
                 CMapGUIControllerParams.WHITE, CMapGUIControllerParams.ATTACK_TEXT_OFFSET);
         }
 
-        public void DisplayText(string toDisplay, Vector3 pos, Color color, float yOffset = 0)
+        public void DisplayText(string toDisplay, GameObject toShow, Color color, float yOffset = 0)
         {
-            var canvas = GameObject.FindGameObjectWithTag("MainCanvas");
+            var parent = GameObject.FindGameObjectWithTag("WorldSpaceCanvas");
             var display = new GameObject();
             var text = display.AddComponent<Text>();
-            var position = pos;
+            var position = toShow.transform.position;
             position.y += yOffset;
             text.alignment = TextAnchor.MiddleCenter;
             text.color = color;
             text.fontSize = 16;
+            text.rectTransform.SetParent(parent.transform);
             text.rectTransform.position = position;
-            text.rectTransform.SetParent(canvas.transform);
-            text.rectTransform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
-            text.rectTransform.sizeDelta = new Vector2(150f, 150f);
+            text.rectTransform.localScale = new Vector3(0.010f, 0.010f);
             text.name = "Hit Text";
             text.text = toDisplay;
             Font fontToUse = Resources.Load("Fonts/8bitOperatorPlus8-Bold") as Font;
             text.font = fontToUse;
-            var zoom = Camera.main.fieldOfView;
-            var scalar = 30f / zoom;
-            text.transform.localScale = new Vector3(scalar, scalar);
             var script = display.AddComponent<DestroyByLifetime>();
             script.lifetime = 1;
             var floating = display.AddComponent<FloatingText>();
@@ -105,7 +101,7 @@ namespace Controller.Managers.Map
         public void ProcessInjury(ApplyInjuryEvent e)
         {
             var text = e.Injury.Type.ToString().Replace("_", " ");
-            this.DisplayText(text, e.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, 0.50f);
+            this.DisplayText(text, e.Target.Handle, CMapGUIControllerParams.RED, CMapGUIControllerParams.INJURY_TEXT_OFFSET);
         }
 
         public void ProcessMeleeHitGraphics(DisplayHitStatsEvent e)
@@ -292,9 +288,9 @@ namespace Controller.Managers.Map
 
         private void ProcessBlock(DisplayHitStatsEvent e)
         {
-            this.DisplayText("Block", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.BLOCK_TEXT_OFFSET);
+            this.DisplayText("Block", e.Hit.Target.Handle, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.BLOCK_TEXT_OFFSET);
             if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
-                this.DisplayText("Critical!", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, CMapGUIControllerParams.CRIT_TEXT_OFFSET);
+                this.DisplayText("Critical!", e.Hit.Target.Handle, CMapGUIControllerParams.RED, CMapGUIControllerParams.CRIT_TEXT_OFFSET);
             if (e.Hit.Target.Model.LWeapon != null && e.Hit.Target.Model.LWeapon.IsTypeOfShield())
             {
                 var weapon = e.Hit.Target.SpriteHandlerDict["CharLWeapon"];
@@ -317,14 +313,14 @@ namespace Controller.Managers.Map
                     position.x += CMapGUIControllerParams.WEAPON_OFFSET;
                 boomerang.Init(weapon, position, CMapGUIControllerParams.WEAPON_PARRY);
             }
-            this.DisplayText(e.Hit.Dmg.ToString(), e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, CMapGUIControllerParams.DMG_TEXT_OFFSET);
+            this.DisplayText(e.Hit.Dmg.ToString(), e.Hit.Target.Handle, CMapGUIControllerParams.RED, CMapGUIControllerParams.DMG_TEXT_OFFSET);
         }
 
         private void ProcessDodge(DisplayHitStatsEvent e)
         {
             var defenderJolt = e.Hit.Target.Handle.AddComponent<BoomerangScript>();
             defenderJolt.Init(e.Hit.Target.Handle, this.GetRandomDodgePosition(e), 6f);
-            this.DisplayText("Dodge", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.WHITE, 0.30f);
+            this.DisplayText("Dodge", e.Hit.Target.Handle, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.DODGE_TEXT_OFFSET);
         }
 
         public void ProcessMeleeHitGraphicsNonFatality(DisplayHitStatsEvent e)
@@ -346,13 +342,13 @@ namespace Controller.Managers.Map
                 defenderFlinch.Init(e.Hit.Target, position, 8f);
             }
             if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
-                this.DisplayText("Crit!", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, CMapGUIControllerParams.DODGE_TEXT_OFFSET);
-            this.DisplayText(e.Hit.Dmg.ToString(), e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.RED, CMapGUIControllerParams.DMG_TEXT_OFFSET);
+                this.DisplayText("Crit!", e.Hit.Target.Handle, CMapGUIControllerParams.RED, CMapGUIControllerParams.DODGE_TEXT_OFFSET);
+            this.DisplayText(e.Hit.Dmg.ToString(), e.Hit.Target.Handle, CMapGUIControllerParams.RED, CMapGUIControllerParams.DMG_TEXT_OFFSET);
         }
 
         private void ProcessParry(DisplayHitStatsEvent e)
         {
-            this.DisplayText("Parry", e.Hit.Target.CurrentTile.Model.Center, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.PARRY_TEXT_OFFSET);
+            this.DisplayText("Parry", e.Hit.Target.Handle, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.PARRY_TEXT_OFFSET);
             if (e.Hit.Target.Model.LWeapon != null && !e.Hit.Target.Model.LWeapon.IsTypeOfShield())
             {
                 var weapon = e.Hit.Target.SpriteHandlerDict["CharLWeapon"];

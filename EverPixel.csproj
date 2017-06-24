@@ -312,6 +312,7 @@
     <Compile Include="Assets\Model\Spells\SpellFactory.cs" />
     <Compile Include="Assets\Model\Spells\SpellMediator.cs" />
     <Compile Include="Assets\View\Attacks\AttackSpriteLoader.cs" />
+    <Compile Include="Assets\View\Barks\BarkManager.cs" />
     <Compile Include="Assets\View\Builders\CharacterViewBuilder.cs" />
     <Compile Include="Assets\View\Characters\CharacterBridge.cs" />
     <Compile Include="Assets\View\Characters\CharacterSpriteLoader.cs" />
