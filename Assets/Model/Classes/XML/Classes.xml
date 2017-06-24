@@ -8,6 +8,14 @@
     <SecondaryStatsEnum>Critical_Multiplier,6</SecondaryStatsEnum>
     <SecondaryStatsEnum>Initiative,4</SecondaryStatsEnum>
   </Class>
+  <Class name="Bard">
+    <PrimaryStatsEnum>Agility,2</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Intelligence,2</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Perception,2</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Resolve,1</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Stamina,3</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Initative,10</SecondaryStatsEnum>
+  </Class>
   <Class name="Berserker">
     <PrimaryStatsEnum>Might,8</PrimaryStatsEnum>
     <SecondaryStatsEnum>Critical_Chance,8</SecondaryStatsEnum>
@@ -76,6 +84,14 @@
     <SecondaryStatsEnum>Melee,8</SecondaryStatsEnum>
     <SecondaryStatsEnum>Parry,3</SecondaryStatsEnum>
     <SecondaryStatsEnum>Power,3</SecondaryStatsEnum>
+  </Class>
+  <Class name="Skald">
+    <PrimaryStatsEnum>Agility,3</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Might,5</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Melee,6</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,6</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Morale,2</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Reflex,4</SecondaryStatsEnum>
   </Class>
   <Class name="Slime_Lord">
     <PrimaryStatsEnum>Intelligence,4</PrimaryStatsEnum>

@@ -89,7 +89,7 @@ namespace View.Fatalities
             var boom = Resources.Load(path);
             var particles = GameObject.Instantiate(boom) as GameObject;
             particles.transform.position = position;
-            particles.transform.SetParent(this._event.Hit.Target.Handle.transform);
+            //particles.transform.SetParent(this._event.Hit.Target.Handle.transform);
             particles.name = CMapGUIControllerParams.FIGHTING_FATALITY + " Particles";
             var explosionPath = StringUtil.PathBuilder(
                 CMapGUIControllerParams.EFFECTS_PATH,

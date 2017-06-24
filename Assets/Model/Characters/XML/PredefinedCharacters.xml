@@ -944,6 +944,42 @@
     </Character>
   </Culture>
   <Culture name ="Orcish">
+    <Character name ="Battlesinger">
+      <Class>Bard,3</Class>
+      <Class>Skald,3</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Orc</RaceEnum>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.50,Bone Armor,Four</Armor>
+          <Armor>0.50,Bone Armor,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.50,Skull,Four</Helm>
+          <Helm>0.50,Skull,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Choppa,Four</RWeapon>
+          <RWeapon>0.25,Choppa,Three</RWeapon>
+        </RWeapons>
+        <LWeapons name="One">
+          <RWeapon>0.75,Choppa,Four</RWeapon>
+          <RWeapon>0.25,Choppa,Three</RWeapon>
+        </LWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>620</Agility>
+        <Constitution>480</Constitution>
+        <Intelligence>550</Intelligence>
+        <Might>400</Might>
+        <Perception>480</Perception>
+        <Resolve>550</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Dire Ween Rider">
       <Class>Warrior,5</Class>
       <Class>Berserker,8</Class>
@@ -1126,6 +1162,42 @@
         <Might>600</Might>
         <Perception>580</Perception>
         <Resolve>420</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Warsinger">
+      <Class>Bard,3</Class>
+      <Class>Skald,7</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Orc</RaceEnum>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.50,Bone Armor,Three</Armor>
+          <Armor>0.50,Bone Armor,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.50,Skull,Three</Helm>
+          <Helm>0.50,Skull,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Choppa,Three</RWeapon>
+          <RWeapon>0.25,Choppa,Two</RWeapon>
+        </RWeapons>
+        <LWeapons name="One">
+          <RWeapon>0.75,Choppa,Three</RWeapon>
+          <RWeapon>0.25,Choppa,Two</RWeapon>
+        </LWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>620</Agility>
+        <Constitution>480</Constitution>
+        <Intelligence>550</Intelligence>
+        <Might>400</Might>
+        <Perception>480</Perception>
+        <Resolve>550</Resolve>
       </Stats>
     </Character>
     <Character name ="Ween Rider">

@@ -16,7 +16,7 @@ namespace Model.Perks
             if (mods.X.GetType() == typeof(GenericArmor))
             {
                 var armor = mods.X as GenericArmor;
-                if (armor.Type == ArmorTypeEnum.Heavy_Armor)
+                if (armor.ArmorType == ArmorTypeEnum.Heavy_Armor)
                 {
                     foreach(var kvp in mods.Y)
                     {

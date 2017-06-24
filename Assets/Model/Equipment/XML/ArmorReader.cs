@@ -31,7 +31,8 @@ namespace Model.Equipment.XML
             {
                 foreach (var att in el.Attributes())
                 {
-                    var skill = att.Value;
+                    var type = att.Value;
+                    
                     foreach (var ele in el.Elements())
                     {
                         foreach (var attr in ele.Attributes())
@@ -39,16 +40,16 @@ namespace Model.Equipment.XML
                             var name = attr.Value;
                             foreach (var elem in ele.Elements())
                             {
-                                this.HandleIndex(name, skill, elem.Name.ToString(), elem.Value, ref tier);
+                                this.HandleIndex(name, type, elem.Name.ToString(), elem.Value, ref tier);
                             }
-                            this.HandleArmorSkillFromFile(name, skill, tier);
+                            this.HandleArmorTypeFromFile(name, type, tier);
                         }
                     }
                 }
             }
         }
 
-        protected override void HandleIndex(string name, string skill, string param, string value, ref EquipmentTierEnum tier)
+        protected override void HandleIndex(string name, string type, string param, string value, ref EquipmentTierEnum tier)
         {
             double v = 0;
             double.TryParse(value, out v);
@@ -57,7 +58,6 @@ namespace Model.Equipment.XML
             {
                 case ("Tier"): { HandleTierFromFile(name, value, ref tier); } break;
                 case ("AP_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.AP_Reduce, v, tier); } break;
-                case ("ArmorTypeEnum"): { HandleArmorTypeFromFile(name, value, tier); } break;
                 case ("Block_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Block_Reduce, v, tier); } break;
                 case ("Damage_Ignore"): { HandleStatsFromFile(name, ArmorStatsEnum.Damage_Ignore, v, tier); } break;
                 case ("Damage_Reduction"): { HandleStatsFromFile(name, ArmorStatsEnum.Damage_Reduction, v, tier); } break;
@@ -106,16 +106,6 @@ namespace Model.Equipment.XML
                 stats.Table[key].Tier = x;
                 stats.Table[key].Name = name;
             }
-        }
-
-        private void HandleArmorSkillFromFile(string name, string value, EquipmentTierEnum tier)
-        {
-            var key = name + "_" + tier.ToString();
-
-            var x = ArmorSkillEnum.None;
-            var stats = ArmorParamTable.Instance;
-            if (EnumUtil<ArmorSkillEnum>.TryGetEnumValue(value, ref x))
-                stats.Table[key].Skill = x;
         }
 
         private void HandleArmorTypeFromFile(string name, string value, EquipmentTierEnum tier)

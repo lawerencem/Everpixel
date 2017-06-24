@@ -1,5 +1,8 @@
 ﻿TODO
 
+Tomorrow:
+   - GUI popup for stats, predicted dmg
+
 This weekend
    - Bard for orcs
    - were-ween
@@ -7,8 +10,6 @@ This weekend
    - ween tamer
    - gui popups for stats
    - penguins
-
-   - Lock GUI on summon scroll
 
 
 Next Weekend
@@ -36,4 +37,4 @@ Bugs:
 	Goblin Void Weavers sometimes dont get turns...
 
 ideas: 
-	shoggot ability: eat corpse (makes unit grow like mario)
+	shoggoth ability: eat corpse (makes unit grow like mario)

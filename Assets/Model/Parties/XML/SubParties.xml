@@ -75,7 +75,7 @@
     <Character>1,Goblin Void Weaver,Three</Character>
   </SubParty>
   <SubParty Name ="Goblin Void Weavers">
-    <Difficulty>1</Difficulty>
+    <Difficulty>10</Difficulty>
     <Character>1,Expert Goblin Void Weaver,Three</Character>
     <Character>1,Goblin Void Weaver,Three</Character>
   </SubParty>
@@ -128,6 +128,14 @@
     <Difficulty>5</Difficulty>
     <Character>1,Ronin Nodachi Samurai,One</Character>
     <Character>1,Nodachi Samurai,One</Character>
+  </SubParty>
+  <SubParty Name ="Orc Battlesingers">
+    <Difficulty>3</Difficulty>
+    <Character>1,Battlesinger,Three</Character>
+  </SubParty>
+  <SubParty Name ="Orc Battlesingers">
+    <Difficulty>7</Difficulty>
+    <Character>1,Warsinger,Three</Character>
   </SubParty>
   <SubParty Name ="Orc Scavengers">
     <Difficulty>1</Difficulty>

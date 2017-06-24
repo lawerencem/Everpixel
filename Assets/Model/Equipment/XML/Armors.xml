@@ -1,788 +1,474 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Armors>
-  <ArmorSkillEnum name="Breastplate">
-    <Armor name="Galea">
-      <Tier>Four</Tier>
-      <AP_Reduce>0.84</AP_Reduce>
-      <ArmorSkillEnum>Breasplate</ArmorSkillEnum>
-      <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
-      <Block_Reduce>0.94</Block_Reduce>
-      <Damage_Ignore>5</Damage_Ignore>
-      <Damage_Reduction>0.86</Damage_Reduction>
-      <Description>
-        This helm is of the type favored by legionnaires.  It provides solid defense without weighing much.
-      </Description>
-      <Dodge_Reduce>0.94</Dodge_Reduce>
-      <Durability>55</Durability>
-      <Fatigue_Cost>1.08</Fatigue_Cost>
-      <Initiative_Reduce>0.89</Initiative_Reduce>
-      <Parry_Reduce>0.94</Parry_Reduce>
-      <Sprites>17</Sprites>
-      <Stamina_Reduce>0.84</Stamina_Reduce>
-      <Value>350</Value>
-  </Armor>
-  <Armor name="Galea">
-    <Tier>Three</Tier>
-    <AP_Reduce>0.85</AP_Reduce>
-    <ArmorSkillEnum>Breasplate</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.95</Block_Reduce>
-    <Damage_Ignore>6</Damage_Ignore>
-    <Damage_Reduction>0.85</Damage_Reduction>
-    <Description>
-      This helm is of the type favored by legionnaires.  It provides solid defense without weighing much.
-    </Description>
-    <Dodge_Reduce>0.95</Dodge_Reduce>
-    <Durability>70</Durability>
-    <Fatigue_Cost>1.07</Fatigue_Cost>
-    <Initiative_Reduce>0.90</Initiative_Reduce>
-    <Parry_Reduce>0.95</Parry_Reduce>
-    <Sprites>32</Sprites>
-    <Stamina_Reduce>0.85</Stamina_Reduce>
-    <Value>550</Value>
-  </Armor>
-  </ArmorSkillEnum>
-  <ArmorSkillEnum name ="Heavy_Lamellar">
-    <Armor name="Dou">
+  <ArmorTypeEnum name = "Light_Armor">
+    <Armor name="Bone Armor">
       <Tier>Five</Tier>
-      <AP_Reduce>0.94</AP_Reduce>
-      <ArmorSkillEnum>Heavy_Lamellar</ArmorSkillEnum>
-      <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
-      <Block_Reduce>0.40</Block_Reduce>
-      <Damage_Ignore>11</Damage_Ignore>
-      <Damage_Reduction>0.98</Damage_Reduction>
-      <Description>
-        The armor preferred by samurai.  This one isn't particularly well-crafted...
-      </Description>
-      <Dodge_Reduce>0.82</Dodge_Reduce>
-      <Durability>30</Durability>
-      <Fatigue_Cost>1.08</Fatigue_Cost>
-      <Initiative_Reduce>0.92</Initiative_Reduce>
-      <Parry_Reduce>0.97</Parry_Reduce>
-      <Sprites>4,5</Sprites>
-      <Stamina_Reduce>0.78</Stamina_Reduce>
-      <Value>350</Value>
-    </Armor>
-    <Armor name="Dou">
-      <Tier>Four</Tier>
-      <AP_Reduce>0.94</AP_Reduce>
-      <ArmorSkillEnum>Heavy_Lamellar</ArmorSkillEnum>
-      <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
-      <Block_Reduce>0.40</Block_Reduce>
-      <Damage_Ignore>13</Damage_Ignore>
-      <Damage_Reduction>0.97</Damage_Reduction>
-      <Description>
-        The armor preferred by samurai.  The interlocking plates offer great protection while still being quite light.
-      </Description>
-      <Dodge_Reduce>0.84</Dodge_Reduce>
-      <Durability>50</Durability>
-      <Fatigue_Cost>1.06</Fatigue_Cost>
-      <Initiative_Reduce>0.94</Initiative_Reduce>
-      <Parry_Reduce>0.98</Parry_Reduce>
-      <Sprites>19,20</Sprites>
-      <Stamina_Reduce>0.80</Stamina_Reduce>
-      <Value>550</Value>
-    </Armor>
-    <Armor name="Dou">
-      <Tier>Three</Tier>
-      <AP_Reduce>0.96</AP_Reduce>
-      <ArmorSkillEnum>Heavy_Lamellar</ArmorSkillEnum>
-      <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
-      <Block_Reduce>0.40</Block_Reduce>
-      <Damage_Ignore>18</Damage_Ignore>
-      <Damage_Reduction>0.97</Damage_Reduction>
-      <Description>
-        The armor preferred by samurai.  The interlocking plates offer great protection while still being quite light.
-      </Description>
-      <Dodge_Reduce>0.84</Dodge_Reduce>
-      <Durability>70</Durability>
-      <Fatigue_Cost>1.06</Fatigue_Cost>
-      <Initiative_Reduce>0.94</Initiative_Reduce>
-      <Parry_Reduce>0.99</Parry_Reduce>
-      <Sprites>34,35</Sprites>
-      <Stamina_Reduce>0.82</Stamina_Reduce>
-      <Value>800</Value>
-    </Armor>
-    <Armor name="Dou">
-      <Tier>Two</Tier>
-      <AP_Reduce>0.97</AP_Reduce>
-      <ArmorSkillEnum>Heavy_Lamellar</ArmorSkillEnum>
-      <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
-      <Block_Reduce>0.40</Block_Reduce>
-      <Damage_Ignore>20</Damage_Ignore>
-      <Damage_Reduction>0.80</Damage_Reduction>
-      <Description>
-        The armor preferred by samurai.  This armor has a cuirass rather than interlocking plates, but is still very light.
-      </Description>
-      <Dodge_Reduce>0.80</Dodge_Reduce>
-      <Durability>110</Durability>
-      <Fatigue_Cost>1.10</Fatigue_Cost>
-      <Initiative_Reduce>0.90</Initiative_Reduce>
-      <Parry_Reduce>0.95</Parry_Reduce>
-      <Sprites>49,50</Sprites>
-      <Stamina_Reduce>0.80</Stamina_Reduce>
-      <Value>2000</Value>
-    </Armor>
-    <Armor name="Kabuto">
-      <Tier>Five</Tier>
-      <AP_Reduce>0.94</AP_Reduce>
-      <ArmorSkillEnum>Heavy_Lamellar</ArmorSkillEnum>
-      <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
-      <Block_Reduce>0.40</Block_Reduce>
-      <Damage_Ignore>8</Damage_Ignore>
+      <AP_Reduce>0.99</AP_Reduce>
+      <Block_Reduce>0.92</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
-        The helmet preferred by samurai (well, maybe not this one...)
+        Turns out tying a bunch of bones together doesn't make for effective armor - but it does look frightening.
       </Description>
-      <Dodge_Reduce>0.84</Dodge_Reduce>
-      <Durability>15</Durability>
-      <Fatigue_Cost>1.05</Fatigue_Cost>
-      <Initiative_Reduce>0.94</Initiative_Reduce>
+      <Dodge_Reduce>0.97</Dodge_Reduce>
+      <Durability>10</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
       <Parry_Reduce>0.97</Parry_Reduce>
-      <Sprites>12,13,14</Sprites>
-      <Stamina_Reduce>0.82</Stamina_Reduce>
+      <Sprites>4</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>80</Value>
+    </Armor>
+    <Armor name="Bone Armor">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.99</AP_Reduce>
+      <Block_Reduce>0.93</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        Turns out tying a bunch of bones together doesn't make for effective armor - but it does look frightening.
+      </Description>
+      <Dodge_Reduce>0.97</Dodge_Reduce>
+      <Durability>15</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Parry_Reduce>0.97</Parry_Reduce>
+      <Sprites>19</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
       <Value>200</Value>
     </Armor>
-    <Armor name="Kabuto">
-      <Tier>Four</Tier>
-      <AP_Reduce>0.96</AP_Reduce>
-      <ArmorSkillEnum>Heavy_Lamellar</ArmorSkillEnum>
-      <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
-      <Block_Reduce>0.40</Block_Reduce>
-      <Damage_Ignore>9</Damage_Ignore>
-      <Damage_Reduction>0.99</Damage_Reduction>
-      <Description>
-        The helmet preferred by samurai.
-      </Description>
-      <Dodge_Reduce>0.86</Dodge_Reduce>
-      <Durability>25</Durability>
-      <Fatigue_Cost>1.04</Fatigue_Cost>
-      <Initiative_Reduce>0.95</Initiative_Reduce>
-      <Parry_Reduce>0.97</Parry_Reduce>
-      <Sprites>27,28,29</Sprites>
-      <Stamina_Reduce>0.84</Stamina_Reduce>
-      <Value>350</Value>
-    </Armor>
-    <Armor name="Kabuto">
+    <Armor name="Bone Armor">
       <Tier>Three</Tier>
-      <AP_Reduce>0.97</AP_Reduce>
-      <ArmorSkillEnum>Heavy_Lamellar</ArmorSkillEnum>
-      <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
-      <Block_Reduce>0.40</Block_Reduce>
-      <Damage_Ignore>10</Damage_Ignore>
-      <Damage_Reduction>0.98</Damage_Reduction>
-      <Description>
-        The helmet preferred by samurai.
-      </Description>
-      <Dodge_Reduce>0.88</Dodge_Reduce>
-      <Durability>40</Durability>
-      <Fatigue_Cost>1.03</Fatigue_Cost>
-      <Initiative_Reduce>0.97</Initiative_Reduce>
-      <Parry_Reduce>0.98</Parry_Reduce>
-      <Sprites>42,43,44</Sprites>
-      <Stamina_Reduce>0.86</Stamina_Reduce>
-      <Value>550</Value>
-    </Armor>
-    <Armor name="Kabuto">
-      <Tier>Two</Tier>
-      <AP_Reduce>0.97</AP_Reduce>
-      <ArmorSkillEnum>Heavy_Lamellar</ArmorSkillEnum>
-      <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
-      <Block_Reduce>0.40</Block_Reduce>
-      <Damage_Ignore>12</Damage_Ignore>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>0.95</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0.97</Damage_Reduction>
       <Description>
-        The helmet preferred by samurai.
+        Turns out tying a bunch of bones together doesn't make for effective armor - but it does look frightening.
       </Description>
-      <Dodge_Reduce>0.90</Dodge_Reduce>
-      <Durability>55</Durability>
+      <Dodge_Reduce>0.97</Dodge_Reduce>
+      <Durability>20</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Parry_Reduce>0.97</Parry_Reduce>
+      <Sprites>34</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>450</Value>
+    </Armor>
+    <Armor name="Bone Armor">
+      <Tier>Two</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>0.97</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.96</Damage_Reduction>
+      <Description>
+        Turns out tying a bunch of bones together doesn't make for effective armor - but it does look frightening.
+      </Description>
+      <Dodge_Reduce>0.95</Dodge_Reduce>
+      <Durability>20</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Parry_Reduce>0.97</Parry_Reduce>
+      <Sprites>49</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>1000</Value>
+    </Armor>
+    <Armor name="Slime Handler Robes">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Block_Reduce>0.97</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        These robes don't offer much protection against attacks.  However, they are imbued with a slight magical property
+        that makes the user resistant to poison.
+      </Description>
+      <Dodge_Reduce>0.97</Dodge_Reduce>
+      <Durability>5</Durability>
+      <Fatigue_Cost>1.03</Fatigue_Cost>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>1,2</Sprites>
+      <Stamina_Reduce>0.97</Stamina_Reduce>
+      <Value>30</Value>
+    </Armor>
+    <Armor name="Slime Handler Robes">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Block_Reduce>0.98</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        These robes don't offer much protection against attacks.  However, they are imbued with a slight magical property
+        that makes the user resistant to poision.
+      </Description>
+      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Durability>10</Durability>
       <Fatigue_Cost>1.02</Fatigue_Cost>
       <Initiative_Reduce>0.98</Initiative_Reduce>
-      <Parry_Reduce>0.99</Parry_Reduce>
-      <Sprites>57,58,59</Sprites>
-      <Stamina_Reduce>0.89</Stamina_Reduce>
-      <Value>850</Value>
+      <Parry_Reduce>0.98</Parry_Reduce>
+      <Sprites>16,17</Sprites>
+      <Stamina_Reduce>0.98</Stamina_Reduce>
+      <Value>200</Value>
     </Armor>
-  </ArmorSkillEnum>
-  <ArmorSkillEnum name ="Light_Lamellar">
-    <Armor name="Goblin Cap">
+    <Armor name="Slime Handler Robes">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.99</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        These robes don't offer much protection against attacks.  However, they are imbued with a slight magical property
+        that makes the user resistant to poision.
+      </Description>
+      <Dodge_Reduce>0.97</Dodge_Reduce>
+      <Durability>20</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>31,32</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>450</Value>
+    </Armor>
+    <Armor name="Tunic">
       <Tier>Five</Tier>
-      <AP_Reduce>0.93</AP_Reduce>
-      <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
-      <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
-      <Block_Reduce>0.98</Block_Reduce>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
       <Damage_Ignore>1</Damage_Ignore>
       <Damage_Reduction>0.97</Damage_Reduction>
       <Description>
-        Just a goblin cap. 
+        This "tunic" is basically a shirt made of patchy cloth.  It probably doesn't even offer protection against a bee sting.
       </Description>
-      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>15</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>5</Value>
+    </Armor>
+    <Armor name="Tunic">
+      <Tier>Four</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.96</Damage_Reduction>
+      <Description>
+        This tunic offers minimal protection - but it's better than nothing.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>25</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>0</Stamina_Reduce>
+      <Value>25</Value>
+    </Armor>
+    <Armor name="Void Handler Robes">
+      <Tier>Five</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
+        beings that are best left alone.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>15</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>3</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>100</Value>
+    </Armor>
+    <Armor name="Void Handler Robes">
+      <Tier>Four</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
+        beings that are best left alone.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>20</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>18</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>250</Value>
+    </Armor>
+    <Armor name="Void Handler Robes">
+      <Tier>Three</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
+        beings that are best left alone.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>35</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>33</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>400</Value>
+    </Armor>
+    <Armor name="Void Handler Robes">
+      <Tier>Two</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
+        beings that are best left alone.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>50</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>48</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>1000</Value>
+    </Armor>
+  </ArmorTypeEnum>
+  <ArmorTypeEnum name = "Light_Helm">
+    <Armor name="Skull">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Block_Reduce>0.72</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        Who knew a skull offered such good protection?  It's not very durable - and it's also hard to see with...
+      </Description>
+      <Dodge_Reduce>0.82</Dodge_Reduce>
+      <Durability>3</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.82</Initiative_Reduce>
+      <Parry_Reduce>0.82</Parry_Reduce>
+      <Sprites>2</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>100</Value>
+    </Armor>
+    <Armor name="Skull">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Block_Reduce>0.74</Block_Reduce>
+      <Damage_Ignore>2</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        Who knew a skull offered such good protection?  It's not very durable - and it's also hard to see with...
+      </Description>
+      <Dodge_Reduce>0.85</Dodge_Reduce>
       <Durability>5</Durability>
       <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>0.98</Initiative_Reduce>
-      <Parry_Reduce>0.98</Parry_Reduce>
-      <Sprites>4</Sprites>
-      <Stamina_Reduce>0.98</Stamina_Reduce>
-      <Value>30</Value>
-  </Armor>
-  <Armor name="Goblin Cap">
-    <Tier>Four</Tier>
-    <AP_Reduce>0.95</AP_Reduce>
-    <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.99</Block_Reduce>
-    <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>0.96</Damage_Reduction>
-    <Description>
-      Just a goblin cap.
-    </Description>
-    <Dodge_Reduce>0.99</Dodge_Reduce>
-    <Durability>10</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>0.99</Initiative_Reduce>
-    <Parry_Reduce>0.99</Parry_Reduce>
-    <Sprites>19</Sprites>
-    <Stamina_Reduce>0.99</Stamina_Reduce>
-    <Value>70</Value>
-  </Armor>
-  <Armor name="Goblin Cap">
-    <Tier>Three</Tier>
-    <AP_Reduce>0.95</AP_Reduce>
-    <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>0.95</Damage_Reduction>
-    <Description>
-      Just a goblin cap.
-    </Description>
-    <Dodge_Reduce>1</Dodge_Reduce>
-    <Durability>20</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1</Initiative_Reduce>
-    <Parry_Reduce>1</Parry_Reduce>
-    <Sprites>34</Sprites>
-    <Stamina_Reduce>1</Stamina_Reduce>
-    <Value>150</Value>
-  </Armor>
-  <Armor name="Goblin Cap">
-    <Tier>Two</Tier>
-    <AP_Reduce>0.96</AP_Reduce>
-    <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>2</Damage_Ignore>
-    <Damage_Reduction>0.95</Damage_Reduction>
-    <Description>
-      Just a goblin cap.
-    </Description>
-    <Dodge_Reduce>1</Dodge_Reduce>
-    <Durability>35</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1</Initiative_Reduce>
-    <Parry_Reduce>1</Parry_Reduce>
-    <Sprites>49</Sprites>
-    <Stamina_Reduce>1</Stamina_Reduce>
-    <Value>250</Value>
-  </Armor>
-  <Armor name="Goblin Pads">
-    <Tier>Five</Tier>
-    <AP_Reduce>0.93</AP_Reduce>
-    <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
-    <Block_Reduce>0.87</Block_Reduce>
-    <Damage_Ignore>2</Damage_Ignore>
-    <Damage_Reduction>0.86</Damage_Reduction>
-    <Description>
-      While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection. 
-    </Description>
-    <Dodge_Reduce>0.98</Dodge_Reduce>
-    <Durability>20</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>0.97</Initiative_Reduce>
-    <Parry_Reduce>0.92</Parry_Reduce>
-    <Sprites>2</Sprites>
-    <Stamina_Reduce>0.82</Stamina_Reduce>
-    <Value>250</Value>
-  </Armor>
-  <Armor name="Goblin Pads">
-    <Tier>Four</Tier>
-    <AP_Reduce>0.94</AP_Reduce>
-    <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
-    <Block_Reduce>0.88</Block_Reduce>
-    <Damage_Ignore>2</Damage_Ignore>
-    <Damage_Reduction>0.85</Damage_Reduction>
-    <Description>
-      While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection.
-    </Description>
-    <Dodge_Reduce>1</Dodge_Reduce>
-    <Durability>35</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>0.98</Initiative_Reduce>
-    <Parry_Reduce>0.93</Parry_Reduce>
-    <Sprites>17</Sprites>
-    <Stamina_Reduce>0.83</Stamina_Reduce>
-    <Value>350</Value>
-  </Armor>
-  <Armor name="Goblin Pads">
-    <Tier>Three</Tier>
-    <AP_Reduce>0.95</AP_Reduce>
-    <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
-    <Block_Reduce>0.90</Block_Reduce>
-    <Damage_Ignore>2</Damage_Ignore>
-    <Damage_Reduction>0.84</Damage_Reduction>
-    <Description>
-      While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection.
-    </Description>
-    <Dodge_Reduce>1</Dodge_Reduce>
-    <Durability>50</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>0.98</Initiative_Reduce>
-    <Parry_Reduce>0.95</Parry_Reduce>
-    <Sprites>32</Sprites>
-    <Stamina_Reduce>0.85</Stamina_Reduce>
-    <Value>500</Value>
-  </Armor>
-  <Armor name="Goblin Pads">
-    <Tier>Two</Tier>
-    <AP_Reduce>0.95</AP_Reduce>
-    <ArmorSkillEnum>Light_Lamellar</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
-    <Block_Reduce>0.90</Block_Reduce>
-    <Damage_Ignore>3</Damage_Ignore>
-    <Damage_Reduction>0.82</Damage_Reduction>
-    <Description>
-      While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection.
-    </Description>
-    <Dodge_Reduce>1</Dodge_Reduce>
-    <Durability>70</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1</Initiative_Reduce>
-    <Parry_Reduce>0.95</Parry_Reduce>
-    <Sprites>47</Sprites>
-    <Stamina_Reduce>0.85</Stamina_Reduce>
-    <Value>750</Value>
-  </Armor>
-  </ArmorSkillEnum>
-  <ArmorSkillEnum name="Mail">
-    <Armor name="Mail Coif">
-    <Tier>Four</Tier>
-    <AP_Reduce>0.95</AP_Reduce>
-    <ArmorSkillEnum>Mail</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.95</Block_Reduce>
-    <Damage_Ignore>2</Damage_Ignore>
-    <Damage_Reduction>0.92</Damage_Reduction>
-    <Description>
-      A simple mail coif.  It doesn't protect the face much, but it's sure better than nothing.
-    </Description>
-    <Dodge_Reduce>0.98</Dodge_Reduce>
-    <Durability>30</Durability>
-    <Fatigue_Cost>0.89</Fatigue_Cost>
-    <Initiative_Reduce>0.89</Initiative_Reduce>
-    <Parry_Reduce>0.89</Parry_Reduce>
-    <Sprites>15</Sprites>
-    <Stamina_Reduce>0.89</Stamina_Reduce>
-    <Value>100</Value>
-  </Armor>
-  <Armor name="Mail Coif">
-    <Tier>Three</Tier>
-    <AP_Reduce>0.95</AP_Reduce>
-    <ArmorSkillEnum>Mail</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.95</Block_Reduce>
-    <Damage_Ignore>2</Damage_Ignore>
-    <Damage_Reduction>0.90</Damage_Reduction>
-    <Description>
-      A simple mail coif.  It offers decent protection for its weight.
-    </Description>
-    <Dodge_Reduce>0.98</Dodge_Reduce>
-    <Durability>40</Durability>
-    <Fatigue_Cost>1.10</Fatigue_Cost>
-    <Initiative_Reduce>0.90</Initiative_Reduce>
-    <Parry_Reduce>0.90</Parry_Reduce>
-    <Sprites>30</Sprites>
-    <Stamina_Reduce>0.90</Stamina_Reduce>
-    <Value>150</Value>
-  </Armor>
-  <Armor name="Mail Shirt">
-    <Tier>Five</Tier>
-    <AP_Reduce>0.92</AP_Reduce>
-    <ArmorSkillEnum>Mail</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
-    <Block_Reduce>0.92</Block_Reduce>
-    <Damage_Ignore>4</Damage_Ignore>
-    <Damage_Reduction>0.88</Damage_Reduction>
-    <Description>
-      This mail has seen better days, but it still offers decent protection.
-    </Description>
-    <Dodge_Reduce>0.97</Dodge_Reduce>
-    <Durability>30</Durability>
-    <Fatigue_Cost>1.14</Fatigue_Cost>
-    <Initiative_Reduce>0.85</Initiative_Reduce>
-    <Parry_Reduce>0.90</Parry_Reduce>
-    <Sprites>0,1</Sprites>
-    <Stamina_Reduce>0.85</Stamina_Reduce>
-    <Value>200</Value>
-  </Armor>
-  <Armor name="Mail Shirt">
-    <Tier>Four</Tier>
-    <AP_Reduce>0.93</AP_Reduce>
-    <ArmorSkillEnum>Mail</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
-    <Block_Reduce>0.93</Block_Reduce>
-    <Damage_Ignore>4</Damage_Ignore>
-    <Damage_Reduction>0.87</Damage_Reduction>
-    <Description>
-      This mail has seen better days, but it still offers decent protection.
-    </Description>
-    <Dodge_Reduce>0.98</Dodge_Reduce>
-    <Durability>35</Durability>
-    <Fatigue_Cost>1.13</Fatigue_Cost>
-    <Initiative_Reduce>0.87</Initiative_Reduce>
-    <Parry_Reduce>0.92</Parry_Reduce>
-    <Sprites>15,16</Sprites>
-    <Stamina_Reduce>0.87</Stamina_Reduce>
-    <Value>350</Value>
-  </Armor>
-  <Armor name="Mail Shirt">
-    <Tier>Three</Tier>
-    <AP_Reduce>0.95</AP_Reduce>
-    <ArmorSkillEnum>Mail</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
-    <Block_Reduce>0.93</Block_Reduce>
-    <Damage_Ignore>4</Damage_Ignore>
-    <Damage_Reduction>0.85</Damage_Reduction>
-    <Description>
-      This solid mail offers great protection for the weight.  
-    </Description>
-    <Dodge_Reduce>0.98</Dodge_Reduce>
-    <Durability>45</Durability>
-    <Fatigue_Cost>1.12</Fatigue_Cost>
-    <Initiative_Reduce>0.88</Initiative_Reduce>
-    <Parry_Reduce>0.93</Parry_Reduce>
-    <Sprites>30,31</Sprites>
-    <Stamina_Reduce>0.88</Stamina_Reduce>
-    <Value>600</Value>
-  </Armor>
-  </ArmorSkillEnum>
-  <ArmorSkillEnum name ="Plate">
-    <Armor name="Great Helm">
-    <Tier>Five</Tier>
-    <AP_Reduce>0.76</AP_Reduce>
-    <ArmorSkillEnum>Plate</ArmorSkillEnum>
-    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.72</Block_Reduce>
-    <Damage_Ignore>7</Damage_Ignore>
-    <Damage_Reduction>0.52</Damage_Reduction>
-    <Description>
-      Even rusty and decaying, this helm still provides good defense. Conveniently, parts of the eye holes have rusted out.
-    </Description>
-    <Dodge_Reduce>0.62</Dodge_Reduce>
-    <Durability>50</Durability>
-    <Fatigue_Cost>1.28</Fatigue_Cost>
-    <Initiative_Reduce>0.72</Initiative_Reduce>
-    <Parry_Reduce>0.72</Parry_Reduce>
-    <Sprites>0</Sprites>
-    <Stamina_Reduce>0.72</Stamina_Reduce>
-    <Value>800</Value>
-  </Armor>
-  <Armor name="Great Helm">
-    <Tier>Four</Tier>
-    <AP_Reduce>0.78</AP_Reduce>
-    <ArmorSkillEnum>Plate</ArmorSkillEnum>
-    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.74</Block_Reduce>
-    <Damage_Ignore>8</Damage_Ignore>
-    <Damage_Reduction>0.50</Damage_Reduction>
-    <Description>
-      This helm looks like someone took a bucket and nailed holes through it, and then called it a helm.  Whatever - it
-      still provides solid protection.
-    </Description>
-    <Dodge_Reduce>0.64</Dodge_Reduce>
-    <Durability>150</Durability>
-    <Fatigue_Cost>0.74</Fatigue_Cost>
-    <Initiative_Reduce>0.74</Initiative_Reduce>
-    <Parry_Reduce>0.74</Parry_Reduce>
-    <Sprites>15</Sprites>
-    <Stamina_Reduce>0.74</Stamina_Reduce>
-    <Value>1500</Value>
-  </Armor>
-  <Armor name="Great Helm">
-    <Tier>Three</Tier>
-    <AP_Reduce>0.75</AP_Reduce>
-    <ArmorSkillEnum>Plate</ArmorSkillEnum>
-    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.75</Block_Reduce>
-    <Damage_Ignore>9</Damage_Ignore>
-    <Damage_Reduction>0.46</Damage_Reduction>
-    <Description>
-      This is a quality-made helm.  It offers incredible protection, but the lack of curvature can be susceptible to
-      piercing attacks.
-    </Description>
-    <Dodge_Reduce>0.65</Dodge_Reduce>
-    <Durability>220</Durability>
-    <Fatigue_Cost>0.75</Fatigue_Cost>
-    <Initiative_Reduce>0.75</Initiative_Reduce>
-    <Parry_Reduce>0.75</Parry_Reduce>
-    <Sprites>30,31</Sprites>
-    <Stamina_Reduce>0.75</Stamina_Reduce>
-    <Value>3500</Value>
-  </Armor>
-  <Armor name="Jousting Helm">
-    <Tier>Four</Tier>
-    <AP_Reduce>0.80</AP_Reduce>
-    <ArmorSkillEnum>Plate</ArmorSkillEnum>
-    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.60</Block_Reduce>
-    <Damage_Ignore>18</Damage_Ignore>
-    <Damage_Reduction>0.80</Damage_Reduction>
-    <Description>
-      This jousting helm was made with tournaments in mind.  It isn't flexible, but it is light.  Since it was made with
-      jousting in mind, the curved nature of it provides superior piercing protection.
-    </Description>
-    <Dodge_Reduce>0.60</Dodge_Reduce>
-    <Durability>100</Durability>
-    <Fatigue_Cost>0.80</Fatigue_Cost>
-    <Initiative_Reduce>0.80</Initiative_Reduce>
-    <Parry_Reduce>0.60</Parry_Reduce>
-    <Sprites>18</Sprites>
-    <Stamina_Reduce>0.80</Stamina_Reduce>
-    <Value>1800</Value>
-  </Armor>
-  <Armor name="Orc Mask">
-    <Tier>Five</Tier>
-    <AP_Reduce>0.76</AP_Reduce>
-    <ArmorSkillEnum>Plate</ArmorSkillEnum>
-    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.76</Block_Reduce>
-    <Damage_Ignore>6</Damage_Ignore>
-    <Damage_Reduction>0.80</Damage_Reduction>
-    <Description>
-      Broken and well-used, this mask is still offers effective protection.  For the parts of the head it covers, anyways.
-    </Description>
-    <Dodge_Reduce>0.76</Dodge_Reduce>
-    <Durability>50</Durability>
-    <Fatigue_Cost>1.20</Fatigue_Cost>
-    <Initiative_Reduce>0.76</Initiative_Reduce>
-    <Parry_Reduce>0.76</Parry_Reduce>
-    <Sprites>5,6,7</Sprites>
-    <Stamina_Reduce>0.76</Stamina_Reduce>
-    <Value>300</Value>
-  </Armor>
-  <Armor name="Orc Mask">
-    <Tier>Four</Tier>
-    <AP_Reduce>0.78</AP_Reduce>
-    <ArmorSkillEnum>Plate</ArmorSkillEnum>
-    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.78</Block_Reduce>
-    <Damage_Ignore>7</Damage_Ignore>
-    <Damage_Reduction>0.78</Damage_Reduction>
-    <Description>
-      Not pretty, but this mask coves the top-half of the head quite well.  Effective protection against wild overhead swings.
-    </Description>
-    <Dodge_Reduce>0.78</Dodge_Reduce>
-    <Durability>80</Durability>
-    <Fatigue_Cost>1.25</Fatigue_Cost>
-    <Initiative_Reduce>0.78</Initiative_Reduce>
-    <Parry_Reduce>0.78</Parry_Reduce>
-    <Sprites>20,21,22</Sprites>
-    <Stamina_Reduce>0.78</Stamina_Reduce>
-    <Value>600</Value>
-  </Armor>
-  <Armor name="Orc Mask">
-    <Tier>Three</Tier>
-    <AP_Reduce>0.75</AP_Reduce>
-    <ArmorSkillEnum>Plate</ArmorSkillEnum>
-    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.75</Block_Reduce>
-    <Damage_Ignore>12</Damage_Ignore>
-    <Damage_Reduction>0.74</Damage_Reduction>
-    <Description>
-      This helmet is extremely heavy.  For those with the stamina to wear it, it offers exceptional protection.
-    </Description>
-    <Dodge_Reduce>0.75</Dodge_Reduce>
-    <Durability>140</Durability>
-    <Fatigue_Cost>1.30</Fatigue_Cost>
-    <Initiative_Reduce>0.75</Initiative_Reduce>
-    <Parry_Reduce>0.75</Parry_Reduce>
-    <Sprites>35,36,37</Sprites>
-    <Stamina_Reduce>0.75</Stamina_Reduce>
-    <Value>2200</Value>
-  </Armor>
-  <Armor name="Orc Mask">
-    <Tier>Two</Tier>
-    <AP_Reduce>0.70</AP_Reduce>
-    <ArmorSkillEnum>Plate</ArmorSkillEnum>
-    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.70</Block_Reduce>
-    <Damage_Ignore>15</Damage_Ignore>
-    <Damage_Reduction>0.62</Damage_Reduction>
-    <Description>
-      This helmet is ludicrously-heavy.  For anyone strong enough to wear it, it offers peerless protection.
-    </Description>
-    <Dodge_Reduce>0.70</Dodge_Reduce>
-    <Durability>220</Durability>
-    <Fatigue_Cost>1.40</Fatigue_Cost>
-    <Initiative_Reduce>40</Initiative_Reduce>
-    <Parry_Reduce>0.70</Parry_Reduce>
-    <Sprites>50,51,52</Sprites>
-    <Stamina_Reduce>0.70</Stamina_Reduce>
-    <Value>3500</Value>
-  </Armor>
-    <Armor name="Orcish Plate Mail">
-    <Tier>Three</Tier>
-    <AP_Reduce>0.55</AP_Reduce>
-    <ArmorSkillEnum>Plate</ArmorSkillEnum>
-    <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
-    <Block_Reduce>0.55</Block_Reduce>
-    <Damage_Ignore>25</Damage_Ignore>
-    <Damage_Reduction>0.45</Damage_Reduction>
-    <Description>
-      This orcish plate consists of a few pieces of heavy metal slabs melted over some chain mail.  It's heavy, and doesn't allow
-      for much movement...but offers incredible protection.
-    </Description>
-    <Dodge_Reduce>0.30</Dodge_Reduce>
-    <Durability>500</Durability>
-    <Fatigue_Cost>1.60</Fatigue_Cost>
-    <Initiative_Reduce>0.60</Initiative_Reduce>
-    <Parry_Reduce>0.40</Parry_Reduce>
-    <Sprites>32,33</Sprites>
-    <Stamina_Reduce>0.60</Stamina_Reduce>
-    <Value>5000</Value>
-  </Armor>
-    <Armor name="Orcish Plate Mail">
-    <Tier>Two</Tier>
-    <AP_Reduce>0.55</AP_Reduce>
-    <ArmorSkillEnum>Plate</ArmorSkillEnum>
-    <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
-    <Block_Reduce>0.55</Block_Reduce>
-    <Damage_Ignore>28</Damage_Ignore>
-    <Damage_Reduction>0.40</Damage_Reduction>
-    <Description>
-      This is orcish plate mail favored by the best orcish troops.  It is quality-made, consisting of heavy slabs of metal 
-      essentially melted together.  It affords excellent protection for those strong enough to wear it.
-    </Description>
-    <Dodge_Reduce>0.30</Dodge_Reduce>
-    <Durability>650</Durability>
-    <Fatigue_Cost>1.60</Fatigue_Cost>
-    <Initiative_Reduce>0.60</Initiative_Reduce>
-    <Parry_Reduce>0.40</Parry_Reduce>
-    <Sprites>47,48</Sprites>
-    <Stamina_Reduce>0.60</Stamina_Reduce>
-    <Value>6500</Value>
-  </Armor>
-  <Armor name="Plate Mail">
-    <Tier>Five</Tier>
-    <AP_Reduce>0.55</AP_Reduce>
-    <ArmorSkillEnum>Plate</ArmorSkillEnum>
-    <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
-    <Block_Reduce>0.62</Block_Reduce>
-    <Damage_Ignore>18</Damage_Ignore>
-    <Damage_Reduction>0.42</Damage_Reduction>
-    <Description>
-      Even rusty and decaying, this armor still provides good defense. Unfortunately, it's not as durable
-      as it once was...
-    </Description>
-    <Dodge_Reduce>0.55</Dodge_Reduce>
-    <Durability>150</Durability>
-    <Fatigue_Cost>1.45</Fatigue_Cost>
-    <Initiative_Reduce>0.68</Initiative_Reduce>
-    <Parry_Reduce>0.52</Parry_Reduce>
-    <Sprites>0,1</Sprites>
-    <Stamina_Reduce>0.63</Stamina_Reduce>
-    <Value>1200</Value>
-  </Armor>
-  <Armor name="Plate Mail">
-    <Tier>Four</Tier>
-    <AP_Reduce>0.56</AP_Reduce>
-    <ArmorSkillEnum>Plate</ArmorSkillEnum>
-    <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
-    <Block_Reduce>0.63</Block_Reduce>
-    <Damage_Ignore>20</Damage_Ignore>
-    <Damage_Reduction>0.50</Damage_Reduction>
-    <Description>
-      This armor doesn't represent the finest craftsmanship, but it still offers excellent protection.
-    </Description>
-    <Dodge_Reduce>0.55</Dodge_Reduce>
-    <Durability>250</Durability>
-    <Fatigue_Cost>1.43</Fatigue_Cost>
-    <Initiative_Reduce>0.67</Initiative_Reduce>
-    <Parry_Reduce>0.53</Parry_Reduce>
-    <Sprites>15,16</Sprites>
-    <Stamina_Reduce>0.64</Stamina_Reduce>
-    <Value>2000</Value>
-  </Armor>
-  <Armor name="Plate Mail">
-    <Tier>Three</Tier>
-    <AP_Reduce>0.60</AP_Reduce>
-    <ArmorSkillEnum>Plate</ArmorSkillEnum>
-    <ArmorTypeEnum>Heavy_Armor</ArmorTypeEnum>
-    <Block_Reduce>0.65</Block_Reduce>
-    <Damage_Ignore>22</Damage_Ignore>
-    <Damage_Reduction>0.48</Damage_Reduction>
-    <Description>
-      This is a fine example of plate mail.  It does restrict movement, but it offers excellent protection.
-    </Description>
-    <Dodge_Reduce>0.55</Dodge_Reduce>
-    <Durability>300</Durability>
-    <Fatigue_Cost>1.42</Fatigue_Cost>
-    <Initiative_Reduce>0.68</Initiative_Reduce>
-    <Parry_Reduce>0.55</Parry_Reduce>
-    <Sprites>30</Sprites>
-    <Stamina_Reduce>0.65</Stamina_Reduce>
-    <Value>5000</Value>
-  </Armor>
-  <Armor name="Sallet">
-    <Tier>Three</Tier>
-    <AP_Reduce>0.78</AP_Reduce>
-    <ArmorSkillEnum>Plate</ArmorSkillEnum>
-    <ArmorTypeEnum>Heavy_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.70</Block_Reduce>
-    <Damage_Ignore>13</Damage_Ignore>
-    <Damage_Reduction>0.60</Damage_Reduction>
-    <Description>
-      This sturdy helm provides excellent protection and doesn't restrict too much movement.  The curved nature of it
-      provides better-than-usual protection against piercing attacks.
-    </Description>
-    <Dodge_Reduce>0.70</Dodge_Reduce>
-    <Durability>250</Durability>
-    <Fatigue_Cost>1.25</Fatigue_Cost>
-    <Initiative_Reduce>0.75</Initiative_Reduce>
-    <Parry_Reduce>0.75</Parry_Reduce>
-    <Sprites>34</Sprites>
-    <Stamina_Reduce>0.75</Stamina_Reduce>
-    <Value>3200</Value>
-  </Armor>
-  </ArmorSkillEnum>
-  <ArmorSkillEnum name="Scale">
+      <Initiative_Reduce>0.84</Initiative_Reduce>
+      <Parry_Reduce>0.84</Parry_Reduce>
+      <Sprites>17</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>250</Value>
+    </Armor>
+    <Armor name="Skull">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Block_Reduce>0.76</Block_Reduce>
+      <Damage_Ignore>2</Damage_Ignore>
+      <Damage_Reduction>0.96</Damage_Reduction>
+      <Description>
+        Who knew a skull offered such good protection?  It's not very durable - and it's also hard to see with...
+      </Description>
+      <Dodge_Reduce>0.85</Dodge_Reduce>
+      <Durability>8</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.86</Initiative_Reduce>
+      <Parry_Reduce>0.86</Parry_Reduce>
+      <Sprites>32</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>550</Value>
+    </Armor>
+    <Armor name="Skull">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.99</AP_Reduce>
+      <Block_Reduce>0.78</Block_Reduce>
+      <Damage_Ignore>3</Damage_Ignore>
+      <Damage_Reduction>0.95</Damage_Reduction>
+      <Description>
+        Who knew a skull offered such good protection?  It's not very durable - and it's also hard to see with...
+      </Description>
+      <Dodge_Reduce>0.88</Dodge_Reduce>
+      <Durability>12</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.88</Initiative_Reduce>
+      <Parry_Reduce>0.88</Parry_Reduce>
+      <Sprites>47</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>850</Value>
+    </Armor>
+    <Armor name="Slime Handler Cap">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Block_Reduce>0.99</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        This cap is all style and no practicality...except that it does offer slight protection against poison.
+      </Description>
+      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Durability>3</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>50</Value>
+    </Armor>
+    <Armor name="Slime Handler Cap">
+      <Tier>Four</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        This cap is all style and no practicality...except that it does offer slight protection against poison.
+      </Description>
+      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Durability>10</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>15</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>100</Value>
+    </Armor>
+    <Armor name="Slime Handler Cap">
+      <Tier>Three</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        This cap is all style and no practicality...except that it does offer slight protection against poison.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>15</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>30</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>200</Value>
+    </Armor>
+    <Armor name="Void Handler Hood">
+      <Tier>Five</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
+        from the nightmares that lurk in the void.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>5</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>1</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>100</Value>
+    </Armor>
+    <Armor name="Void Handler Hood">
+      <Tier>Four</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
+        from the nightmares that lurk in the void.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>10</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>16</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>250</Value>
+    </Armor>
+    <Armor name="Void Handler Hood">
+      <Tier>Three</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>1</Damage_Reduction>
+      <Description>
+        This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
+        from the nightmares that lurk in the void.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>10</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>31</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>550</Value>
+    </Armor>
+    <Armor name="Void Handler Hood">
+      <Tier>Two</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>1</Damage_Reduction>
+      <Description>
+        This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
+        from the nightmares that lurk in the void.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>10</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>46</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>1200</Value>
+    </Armor>
+  </ArmorTypeEnum>
+  <ArmorTypeEnum name ="Medium_Armor">
     <Armor name="Dino Scale Armor">
-    <Tier>Five</Tier>
-    <AP_Reduce>1</AP_Reduce>
-    <ArmorSkillEnum>Scale</ArmorSkillEnum>
-    <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>3</Damage_Ignore>
-    <Damage_Reduction>0.95</Damage_Reduction>
-    <Description>
-      These shoulder pads have been cobbled together using a handful of dinosaur scales.  
-    </Description>
-    <Dodge_Reduce>1.0</Dodge_Reduce>
-    <Durability>5</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1.0</Initiative_Reduce>
-    <Parry_Reduce>1.0</Parry_Reduce>
-    <Sprites>4</Sprites>
-    <Stamina_Reduce>1.0</Stamina_Reduce>
-    <Value>50</Value>
+      <Tier>Five</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>3</Damage_Ignore>
+      <Damage_Reduction>0.95</Damage_Reduction>
+      <Description>
+        These shoulder pads have been cobbled together using a handful of dinosaur scales.
+      </Description>
+      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Durability>5</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1.0</Initiative_Reduce>
+      <Parry_Reduce>1.0</Parry_Reduce>
+      <Sprites>4</Sprites>
+      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Value>50</Value>
     </Armor>
     <Armor name="Dino Scale Armor">
       <Tier>Four</Tier>
       <AP_Reduce>1</AP_Reduce>
-      <ArmorSkillEnum>Scale</ArmorSkillEnum>
-      <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
       <Block_Reduce>1</Block_Reduce>
       <Damage_Ignore>5</Damage_Ignore>
       <Damage_Reduction>0.90</Damage_Reduction>
@@ -802,8 +488,6 @@
     <Armor name="Dino Scale Armor">
       <Tier>Three</Tier>
       <AP_Reduce>1</AP_Reduce>
-      <ArmorSkillEnum>Scale</ArmorSkillEnum>
-      <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
       <Block_Reduce>1</Block_Reduce>
       <Damage_Ignore>7</Damage_Ignore>
       <Damage_Reduction>0.86</Damage_Reduction>
@@ -823,8 +507,6 @@
     <Armor name="Dino Scale Armor">
       <Tier>Two</Tier>
       <AP_Reduce>1</AP_Reduce>
-      <ArmorSkillEnum>Scale</ArmorSkillEnum>
-      <ArmorTypeEnum>Medium_Armor</ArmorTypeEnum>
       <Block_Reduce>1</Block_Reduce>
       <Damage_Ignore>8</Damage_Ignore>
       <Damage_Reduction>0.80</Damage_Reduction>
@@ -841,11 +523,138 @@
       <Stamina_Reduce>1.0</Stamina_Reduce>
       <Value>800</Value>
     </Armor>
+    <Armor name="Goblin Pads">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.93</AP_Reduce>
+      <Block_Reduce>0.87</Block_Reduce>
+      <Damage_Ignore>2</Damage_Ignore>
+      <Damage_Reduction>0.86</Damage_Reduction>
+      <Description>
+        While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection.
+      </Description>
+      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Durability>20</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Parry_Reduce>0.92</Parry_Reduce>
+      <Sprites>2</Sprites>
+      <Stamina_Reduce>0.82</Stamina_Reduce>
+      <Value>250</Value>
+    </Armor>
+    <Armor name="Goblin Pads">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.94</AP_Reduce>
+      <Block_Reduce>0.88</Block_Reduce>
+      <Damage_Ignore>2</Damage_Ignore>
+      <Damage_Reduction>0.85</Damage_Reduction>
+      <Description>
+        While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>35</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.98</Initiative_Reduce>
+      <Parry_Reduce>0.93</Parry_Reduce>
+      <Sprites>17</Sprites>
+      <Stamina_Reduce>0.83</Stamina_Reduce>
+      <Value>350</Value>
+    </Armor>
+    <Armor name="Goblin Pads">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.95</AP_Reduce>
+      <Block_Reduce>0.90</Block_Reduce>
+      <Damage_Ignore>2</Damage_Ignore>
+      <Damage_Reduction>0.84</Damage_Reduction>
+      <Description>
+        While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>50</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.98</Initiative_Reduce>
+      <Parry_Reduce>0.95</Parry_Reduce>
+      <Sprites>32</Sprites>
+      <Stamina_Reduce>0.85</Stamina_Reduce>
+      <Value>500</Value>
+    </Armor>
+    <Armor name="Goblin Pads">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.95</AP_Reduce>
+      <Block_Reduce>0.90</Block_Reduce>
+      <Damage_Ignore>3</Damage_Ignore>
+      <Damage_Reduction>0.82</Damage_Reduction>
+      <Description>
+        While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>70</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>0.95</Parry_Reduce>
+      <Sprites>47</Sprites>
+      <Stamina_Reduce>0.85</Stamina_Reduce>
+      <Value>750</Value>
+    </Armor>
+    <Armor name="Mail Shirt">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.92</AP_Reduce>
+      <Block_Reduce>0.92</Block_Reduce>
+      <Damage_Ignore>4</Damage_Ignore>
+      <Damage_Reduction>0.88</Damage_Reduction>
+      <Description>
+        This mail has seen better days, but it still offers decent protection.
+      </Description>
+      <Dodge_Reduce>0.97</Dodge_Reduce>
+      <Durability>30</Durability>
+      <Fatigue_Cost>1.14</Fatigue_Cost>
+      <Initiative_Reduce>0.85</Initiative_Reduce>
+      <Parry_Reduce>0.90</Parry_Reduce>
+      <Sprites>0,1</Sprites>
+      <Stamina_Reduce>0.85</Stamina_Reduce>
+      <Value>200</Value>
+    </Armor>
+    <Armor name="Mail Shirt">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.93</AP_Reduce>
+      <Block_Reduce>0.93</Block_Reduce>
+      <Damage_Ignore>4</Damage_Ignore>
+      <Damage_Reduction>0.87</Damage_Reduction>
+      <Description>
+        This mail has seen better days, but it still offers decent protection.
+      </Description>
+      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Durability>35</Durability>
+      <Fatigue_Cost>1.13</Fatigue_Cost>
+      <Initiative_Reduce>0.87</Initiative_Reduce>
+      <Parry_Reduce>0.92</Parry_Reduce>
+      <Sprites>15,16</Sprites>
+      <Stamina_Reduce>0.87</Stamina_Reduce>
+      <Value>350</Value>
+    </Armor>
+    <Armor name="Mail Shirt">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.95</AP_Reduce>
+      <Block_Reduce>0.93</Block_Reduce>
+      <Damage_Ignore>4</Damage_Ignore>
+      <Damage_Reduction>0.85</Damage_Reduction>
+      <Description>
+        This solid mail offers great protection for the weight.
+      </Description>
+      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Durability>45</Durability>
+      <Fatigue_Cost>1.12</Fatigue_Cost>
+      <Initiative_Reduce>0.88</Initiative_Reduce>
+      <Parry_Reduce>0.93</Parry_Reduce>
+      <Sprites>30,31</Sprites>
+      <Stamina_Reduce>0.88</Stamina_Reduce>
+      <Value>600</Value>
+    </Armor>
+  </ArmorTypeEnum>
+
+  <ArmorTypeEnum name ="Medium_Helm">
     <Armor name="Dino Scale Helm">
       <Tier>Five</Tier>
       <AP_Reduce>1</AP_Reduce>
-      <ArmorSkillEnum>Scale</ArmorSkillEnum>
-      <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
       <Block_Reduce>1</Block_Reduce>
       <Damage_Ignore>2</Damage_Ignore>
       <Damage_Reduction>0.97</Damage_Reduction>
@@ -864,8 +673,6 @@
     <Armor name="Dino Scale Helm">
       <Tier>Four</Tier>
       <AP_Reduce>1</AP_Reduce>
-      <ArmorSkillEnum>Scale</ArmorSkillEnum>
-      <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
       <Block_Reduce>1</Block_Reduce>
       <Damage_Ignore>3</Damage_Ignore>
       <Damage_Reduction>0.95</Damage_Reduction>
@@ -884,8 +691,6 @@
     <Armor name="Dino Scale Helm">
       <Tier>Three</Tier>
       <AP_Reduce>1</AP_Reduce>
-      <ArmorSkillEnum>Scale</ArmorSkillEnum>
-      <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
       <Block_Reduce>1</Block_Reduce>
       <Damage_Ignore>4</Damage_Ignore>
       <Damage_Reduction>0.92</Damage_Reduction>
@@ -904,8 +709,6 @@
     <Armor name="Dino Scale Helm">
       <Tier>Two</Tier>
       <AP_Reduce>1</AP_Reduce>
-      <ArmorSkillEnum>Scale</ArmorSkillEnum>
-      <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
       <Block_Reduce>1</Block_Reduce>
       <Damage_Ignore>5</Damage_Ignore>
       <Damage_Reduction>0.86</Damage_Reduction>
@@ -921,338 +724,558 @@
       <Stamina_Reduce>1.0</Stamina_Reduce>
       <Value>250</Value>
     </Armor>
-  </ArmorSkillEnum>
-  <ArmorSkillEnum name="Tunic">
-    <Armor name="Slime Handler Cap">
-    <Tier>Five</Tier>
-    <AP_Reduce>0.98</AP_Reduce>
-    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
-    <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
-    <Block_Reduce>0.99</Block_Reduce>
-    <Damage_Ignore>0</Damage_Ignore>
-    <Damage_Reduction>0.99</Damage_Reduction>
-    <Description>
-      This cap is all style and no practicality...except that it does offer slight protection against poison.
-    </Description>
-    <Dodge_Reduce>0.98</Dodge_Reduce>
-    <Durability>3</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1</Initiative_Reduce>
-    <Parry_Reduce>1</Parry_Reduce>
-    <Sprites>0</Sprites>
-    <Stamina_Reduce>1</Stamina_Reduce>
-    <Value>50</Value>
-  </Armor>
-  <Armor name="Slime Handler Cap">
-    <Tier>Four</Tier>
-    <AP_Reduce>1</AP_Reduce>
-    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
-    <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>0</Damage_Ignore>
-    <Damage_Reduction>0.98</Damage_Reduction>
-    <Description>
-      This cap is all style and no practicality...except that it does offer slight protection against poison.
-    </Description>
-    <Dodge_Reduce>0.98</Dodge_Reduce>
-    <Durability>10</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1</Initiative_Reduce>
-    <Parry_Reduce>1</Parry_Reduce>
-    <Sprites>15</Sprites>
-    <Stamina_Reduce>1</Stamina_Reduce>
-    <Value>100</Value>
-  </Armor>
-  <Armor name="Slime Handler Cap">
-    <Tier>Three</Tier>
-    <AP_Reduce>1</AP_Reduce>
-    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
-    <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>0</Damage_Ignore>
-    <Damage_Reduction>0.98</Damage_Reduction>
-    <Description>
-      This cap is all style and no practicality...except that it does offer slight protection against poison.
-    </Description>
-    <Dodge_Reduce>1</Dodge_Reduce>
-    <Durability>15</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1</Initiative_Reduce>
-    <Parry_Reduce>1</Parry_Reduce>
-    <Sprites>30</Sprites>
-    <Stamina_Reduce>1</Stamina_Reduce>
-    <Value>200</Value>
-  </Armor>
-  <Armor name="Slime Handler Robes">
-    <Tier>Five</Tier>
-    <AP_Reduce>0.97</AP_Reduce>
-    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
-    <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
-    <Block_Reduce>0.97</Block_Reduce>
-    <Damage_Ignore>0</Damage_Ignore>
-    <Damage_Reduction>0.99</Damage_Reduction>
-    <Description>
-      These robes don't offer much protection against attacks.  However, they are imbued with a slight magical property
-      that makes the user resistant to poison.
-    </Description>
-    <Dodge_Reduce>0.97</Dodge_Reduce>
-    <Durability>5</Durability>
-    <Fatigue_Cost>1.03</Fatigue_Cost>
-    <Initiative_Reduce>0.97</Initiative_Reduce>
-    <Parry_Reduce>1</Parry_Reduce>
-    <Sprites>1,2</Sprites>
-    <Stamina_Reduce>0.97</Stamina_Reduce>
-    <Value>30</Value>
-  </Armor>
-  <Armor name="Slime Handler Robes">
-    <Tier>Four</Tier>
-    <AP_Reduce>0.98</AP_Reduce>
-    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
-    <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
-    <Block_Reduce>0.98</Block_Reduce>
-    <Damage_Ignore>0</Damage_Ignore>
-    <Damage_Reduction>0.98</Damage_Reduction>
-    <Description>
-      These robes don't offer much protection against attacks.  However, they are imbued with a slight magical property
-      that makes the user resistant to poision.
-    </Description>
-    <Dodge_Reduce>0.98</Dodge_Reduce>
-    <Durability>10</Durability>
-    <Fatigue_Cost>1.02</Fatigue_Cost>
-    <Initiative_Reduce>0.98</Initiative_Reduce>
-    <Parry_Reduce>0.98</Parry_Reduce>
-    <Sprites>16,17</Sprites>
-    <Stamina_Reduce>0.98</Stamina_Reduce>
-    <Value>200</Value>
-  </Armor>
-  <Armor name="Slime Handler Robes">
-    <Tier>Three</Tier>
-    <AP_Reduce>0.99</AP_Reduce>
-    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
-    <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>0.98</Damage_Reduction>
-    <Description>
-      These robes don't offer much protection against attacks.  However, they are imbued with a slight magical property
-      that makes the user resistant to poision.
-    </Description>
-    <Dodge_Reduce>0.97</Dodge_Reduce>
-    <Durability>20</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1</Initiative_Reduce>
-    <Parry_Reduce>1</Parry_Reduce>
-    <Sprites>31,32</Sprites>
-    <Stamina_Reduce>1</Stamina_Reduce>
-    <Value>450</Value>
-  </Armor>
-  <Armor name="Tunic">
-    <Tier>Five</Tier>
-    <AP_Reduce>1</AP_Reduce>
-    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
-    <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>0.97</Damage_Reduction>
-    <Description>
-      This "tunic" is basically a shirt made of patchy cloth.  It probably doesn't even offer protection against a bee sting.
-    </Description>
-    <Dodge_Reduce>1</Dodge_Reduce>
-    <Durability>15</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1</Initiative_Reduce>
-    <Parry_Reduce>1</Parry_Reduce>
-    <Sprites>0</Sprites>
-    <Stamina_Reduce>1</Stamina_Reduce>
-    <Value>5</Value>
-  </Armor>
-  <Armor name="Tunic">
-    <Tier>Four</Tier>
-    <AP_Reduce>1</AP_Reduce>
-    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
-    <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>0.96</Damage_Reduction>
-    <Description>
-      This tunic offers minimal protection - but it's better than nothing.
-    </Description>
-    <Dodge_Reduce>1</Dodge_Reduce>
-    <Durability>25</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1</Initiative_Reduce>
-    <Parry_Reduce>1</Parry_Reduce>
-    <Sprites>0</Sprites>
-    <Stamina_Reduce>0</Stamina_Reduce>
-    <Value>25</Value>
-  </Armor>
-  <Armor name="Void Handler Robes">
-    <Tier>Five</Tier>
-    <AP_Reduce>1</AP_Reduce>
-    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
-    <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>0.99</Damage_Reduction>
-    <Description>
-      This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
-      beings that are best left alone.
-    </Description>
-    <Dodge_Reduce>1</Dodge_Reduce>
-    <Durability>15</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1</Initiative_Reduce>
-    <Parry_Reduce>1</Parry_Reduce>
-    <Sprites>3</Sprites>
-    <Stamina_Reduce>1</Stamina_Reduce>
-    <Value>100</Value>
-  </Armor>
-  <Armor name="Void Handler Robes">
-    <Tier>Four</Tier>
-    <AP_Reduce>1</AP_Reduce>
-    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
-    <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>0.98</Damage_Reduction>
-    <Description>
-      This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
-      beings that are best left alone.
-    </Description>
-    <Dodge_Reduce>1</Dodge_Reduce>
-    <Durability>20</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1</Initiative_Reduce>
-    <Parry_Reduce>1</Parry_Reduce>
-    <Sprites>18</Sprites>
-    <Stamina_Reduce>1</Stamina_Reduce>
-    <Value>250</Value>
-  </Armor>
-  <Armor name="Void Handler Robes">
-    <Tier>Three</Tier>
-    <AP_Reduce>1</AP_Reduce>
-    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
-    <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>0.99</Damage_Reduction>
-    <Description>
-      This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
-      beings that are best left alone.
-    </Description>
-    <Dodge_Reduce>1</Dodge_Reduce>
-    <Durability>35</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1</Initiative_Reduce>
-    <Parry_Reduce>1</Parry_Reduce>
-    <Sprites>33</Sprites>
-    <Stamina_Reduce>1</Stamina_Reduce>
-    <Value>400</Value>
-  </Armor>
-  <Armor name="Void Handler Robes">
-    <Tier>Two</Tier>
-    <AP_Reduce>1</AP_Reduce>
-    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
-    <ArmorTypeEnum>Light_Armor</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>0.99</Damage_Reduction>
-    <Description>
-      This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
-      beings that are best left alone.
-    </Description>
-    <Dodge_Reduce>1</Dodge_Reduce>
-    <Durability>50</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1</Initiative_Reduce>
-    <Parry_Reduce>1</Parry_Reduce>
-    <Sprites>48</Sprites>
-    <Stamina_Reduce>1</Stamina_Reduce>
-    <Value>1000</Value>
-  </Armor>
-  <Armor name="Void Handler Hood">
-    <Tier>Five</Tier>
-    <AP_Reduce>1</AP_Reduce>
-    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
-    <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>0.99</Damage_Reduction>
-    <Description>
-      This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
-      from the nightmares that lurk in the void.
-    </Description>
-    <Dodge_Reduce>1</Dodge_Reduce>
-    <Durability>5</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1</Initiative_Reduce>
-    <Parry_Reduce>1</Parry_Reduce>
-    <Sprites>1</Sprites>
-    <Stamina_Reduce>1</Stamina_Reduce>
-    <Value>100</Value>
-  </Armor>
-  <Armor name="Void Handler Hood">
-    <Tier>Four</Tier>
-    <AP_Reduce>1</AP_Reduce>
-    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
-    <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>0.99</Damage_Reduction>
-    <Description>
-      This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
-      from the nightmares that lurk in the void.
-    </Description>
-    <Dodge_Reduce>1</Dodge_Reduce>
-    <Durability>10</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1</Initiative_Reduce>
-    <Parry_Reduce>1</Parry_Reduce>
-    <Sprites>16</Sprites>
-    <Stamina_Reduce>1</Stamina_Reduce>
-    <Value>250</Value>
-  </Armor>
-  <Armor name="Void Handler Hood">
-    <Tier>Three</Tier>
-    <AP_Reduce>1</AP_Reduce>
-    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
-    <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>1</Damage_Reduction>
-    <Description>
-      This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
-      from the nightmares that lurk in the void.
-    </Description>
-    <Dodge_Reduce>1</Dodge_Reduce>
-    <Durability>10</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1</Initiative_Reduce>
-    <Parry_Reduce>1</Parry_Reduce>
-    <Sprites>31</Sprites>
-    <Stamina_Reduce>1</Stamina_Reduce>
-    <Value>550</Value>
-  </Armor>
-  <Armor name="Void Handler Hood">
-    <Tier>Two</Tier>
-    <AP_Reduce>1</AP_Reduce>
-    <ArmorSkillEnum>Tunic</ArmorSkillEnum>
-    <ArmorTypeEnum>Light_Helm</ArmorTypeEnum>
-    <Block_Reduce>1</Block_Reduce>
-    <Damage_Ignore>1</Damage_Ignore>
-    <Damage_Reduction>1</Damage_Reduction>
-    <Description>
-      This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
-      from the nightmares that lurk in the void.
-    </Description>
-    <Dodge_Reduce>1</Dodge_Reduce>
-    <Durability>10</Durability>
-    <Fatigue_Cost>1</Fatigue_Cost>
-    <Initiative_Reduce>1</Initiative_Reduce>
-    <Parry_Reduce>1</Parry_Reduce>
-    <Sprites>46</Sprites>
-    <Stamina_Reduce>1</Stamina_Reduce>
-    <Value>1200</Value>
-  </Armor>
-  </ArmorSkillEnum>
+    <Armor name="Galea">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.84</AP_Reduce>
+      <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
+      <Block_Reduce>0.94</Block_Reduce>
+      <Damage_Ignore>5</Damage_Ignore>
+      <Damage_Reduction>0.86</Damage_Reduction>
+      <Description>
+        This helm is of the type favored by legionnaires.  It provides solid defense without weighing much.
+      </Description>
+      <Dodge_Reduce>0.94</Dodge_Reduce>
+      <Durability>55</Durability>
+      <Fatigue_Cost>1.08</Fatigue_Cost>
+      <Initiative_Reduce>0.89</Initiative_Reduce>
+      <Parry_Reduce>0.94</Parry_Reduce>
+      <Sprites>17</Sprites>
+      <Stamina_Reduce>0.84</Stamina_Reduce>
+      <Value>350</Value>
+    </Armor>
+    <Armor name="Galea">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.85</AP_Reduce>
+      <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
+      <Block_Reduce>0.95</Block_Reduce>
+      <Damage_Ignore>6</Damage_Ignore>
+      <Damage_Reduction>0.85</Damage_Reduction>
+      <Description>
+        This helm is of the type favored by legionnaires.  It provides solid defense without weighing much.
+      </Description>
+      <Dodge_Reduce>0.95</Dodge_Reduce>
+      <Durability>70</Durability>
+      <Fatigue_Cost>1.07</Fatigue_Cost>
+      <Initiative_Reduce>0.90</Initiative_Reduce>
+      <Parry_Reduce>0.95</Parry_Reduce>
+      <Sprites>32</Sprites>
+      <Stamina_Reduce>0.85</Stamina_Reduce>
+      <Value>550</Value>
+    </Armor>
+    <Armor name="Goblin Cap">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.93</AP_Reduce>
+      <Block_Reduce>0.98</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        Just a goblin cap.
+      </Description>
+      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Durability>5</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.98</Initiative_Reduce>
+      <Parry_Reduce>0.98</Parry_Reduce>
+      <Sprites>4</Sprites>
+      <Stamina_Reduce>0.98</Stamina_Reduce>
+      <Value>30</Value>
+    </Armor>
+    <Armor name="Goblin Cap">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.95</AP_Reduce>
+      <Block_Reduce>0.99</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.96</Damage_Reduction>
+      <Description>
+        Just a goblin cap.
+      </Description>
+      <Dodge_Reduce>0.99</Dodge_Reduce>
+      <Durability>10</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.99</Initiative_Reduce>
+      <Parry_Reduce>0.99</Parry_Reduce>
+      <Sprites>19</Sprites>
+      <Stamina_Reduce>0.99</Stamina_Reduce>
+      <Value>70</Value>
+    </Armor>
+    <Armor name="Goblin Cap">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.95</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.95</Damage_Reduction>
+      <Description>
+        Just a goblin cap.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>20</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>34</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>150</Value>
+    </Armor>
+    <Armor name="Goblin Cap">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.96</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>2</Damage_Ignore>
+      <Damage_Reduction>0.95</Damage_Reduction>
+      <Description>
+        Just a goblin cap.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>35</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>49</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>250</Value>
+    </Armor>
+    <Armor name="Mail Coif">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.95</AP_Reduce>
+      <Block_Reduce>0.95</Block_Reduce>
+      <Damage_Ignore>2</Damage_Ignore>
+      <Damage_Reduction>0.92</Damage_Reduction>
+      <Description>
+        A simple mail coif.  It doesn't protect the face much, but it's sure better than nothing.
+      </Description>
+      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Durability>30</Durability>
+      <Fatigue_Cost>0.89</Fatigue_Cost>
+      <Initiative_Reduce>0.89</Initiative_Reduce>
+      <Parry_Reduce>0.89</Parry_Reduce>
+      <Sprites>15</Sprites>
+      <Stamina_Reduce>0.89</Stamina_Reduce>
+      <Value>100</Value>
+    </Armor>
+    <Armor name="Mail Coif">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.95</AP_Reduce>
+      <Block_Reduce>0.95</Block_Reduce>
+      <Damage_Ignore>2</Damage_Ignore>
+      <Damage_Reduction>0.90</Damage_Reduction>
+      <Description>
+        A simple mail coif.  It offers decent protection for its weight.
+      </Description>
+      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Durability>40</Durability>
+      <Fatigue_Cost>1.10</Fatigue_Cost>
+      <Initiative_Reduce>0.90</Initiative_Reduce>
+      <Parry_Reduce>0.90</Parry_Reduce>
+      <Sprites>30</Sprites>
+      <Stamina_Reduce>0.90</Stamina_Reduce>
+      <Value>150</Value>
+    </Armor>
+  </ArmorTypeEnum>
+  <ArmorTypeEnum name ="Heavy_Armor">
+    <Armor name="Dou">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.94</AP_Reduce>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>11</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        The armor preferred by samurai.  This one isn't particularly well-crafted...
+      </Description>
+      <Dodge_Reduce>0.82</Dodge_Reduce>
+      <Durability>30</Durability>
+      <Fatigue_Cost>1.08</Fatigue_Cost>
+      <Initiative_Reduce>0.92</Initiative_Reduce>
+      <Parry_Reduce>0.97</Parry_Reduce>
+      <Sprites>4,5</Sprites>
+      <Stamina_Reduce>0.78</Stamina_Reduce>
+      <Value>350</Value>
+    </Armor>
+    <Armor name="Dou">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.94</AP_Reduce>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>13</Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        The armor preferred by samurai.  The interlocking plates offer great protection while still being quite light.
+      </Description>
+      <Dodge_Reduce>0.84</Dodge_Reduce>
+      <Durability>50</Durability>
+      <Fatigue_Cost>1.06</Fatigue_Cost>
+      <Initiative_Reduce>0.94</Initiative_Reduce>
+      <Parry_Reduce>0.98</Parry_Reduce>
+      <Sprites>19,20</Sprites>
+      <Stamina_Reduce>0.80</Stamina_Reduce>
+      <Value>550</Value>
+    </Armor>
+    <Armor name="Dou">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.96</AP_Reduce>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>18</Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        The armor preferred by samurai.  The interlocking plates offer great protection while still being quite light.
+      </Description>
+      <Dodge_Reduce>0.84</Dodge_Reduce>
+      <Durability>70</Durability>
+      <Fatigue_Cost>1.06</Fatigue_Cost>
+      <Initiative_Reduce>0.94</Initiative_Reduce>
+      <Parry_Reduce>0.99</Parry_Reduce>
+      <Sprites>34,35</Sprites>
+      <Stamina_Reduce>0.82</Stamina_Reduce>
+      <Value>800</Value>
+    </Armor>
+    <Armor name="Dou">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>20</Damage_Ignore>
+      <Damage_Reduction>0.80</Damage_Reduction>
+      <Description>
+        The armor preferred by samurai.  This armor has a cuirass rather than interlocking plates, but is still very light.
+      </Description>
+      <Dodge_Reduce>0.80</Dodge_Reduce>
+      <Durability>110</Durability>
+      <Fatigue_Cost>1.10</Fatigue_Cost>
+      <Initiative_Reduce>0.90</Initiative_Reduce>
+      <Parry_Reduce>0.95</Parry_Reduce>
+      <Sprites>49,50</Sprites>
+      <Stamina_Reduce>0.80</Stamina_Reduce>
+      <Value>2000</Value>
+    </Armor>
+    <Armor name="Orcish Plate Mail">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.55</AP_Reduce>
+      <Block_Reduce>0.55</Block_Reduce>
+      <Damage_Ignore>25</Damage_Ignore>
+      <Damage_Reduction>0.45</Damage_Reduction>
+      <Description>
+        This orcish plate consists of a few pieces of heavy metal slabs melted over some chain mail.  It's heavy, and doesn't allow
+        for much movement...but offers incredible protection.
+      </Description>
+      <Dodge_Reduce>0.30</Dodge_Reduce>
+      <Durability>500</Durability>
+      <Fatigue_Cost>1.60</Fatigue_Cost>
+      <Initiative_Reduce>0.60</Initiative_Reduce>
+      <Parry_Reduce>0.40</Parry_Reduce>
+      <Sprites>32,33</Sprites>
+      <Stamina_Reduce>0.60</Stamina_Reduce>
+      <Value>5000</Value>
+    </Armor>
+    <Armor name="Orcish Plate Mail">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.55</AP_Reduce>
+      <Block_Reduce>0.55</Block_Reduce>
+      <Damage_Ignore>28</Damage_Ignore>
+      <Damage_Reduction>0.40</Damage_Reduction>
+      <Description>
+        This is orcish plate mail favored by the best orcish troops.  It is quality-made, consisting of heavy slabs of metal
+        essentially melted together.  It affords excellent protection for those strong enough to wear it.
+      </Description>
+      <Dodge_Reduce>0.30</Dodge_Reduce>
+      <Durability>650</Durability>
+      <Fatigue_Cost>1.60</Fatigue_Cost>
+      <Initiative_Reduce>0.60</Initiative_Reduce>
+      <Parry_Reduce>0.40</Parry_Reduce>
+      <Sprites>47,48</Sprites>
+      <Stamina_Reduce>0.60</Stamina_Reduce>
+      <Value>6500</Value>
+    </Armor>
+    <Armor name="Plate Mail">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.55</AP_Reduce>
+      <Block_Reduce>0.62</Block_Reduce>
+      <Damage_Ignore>18</Damage_Ignore>
+      <Damage_Reduction>0.42</Damage_Reduction>
+      <Description>
+        Even rusty and decaying, this armor still provides good defense. Unfortunately, it's not as durable
+        as it once was...
+      </Description>
+      <Dodge_Reduce>0.55</Dodge_Reduce>
+      <Durability>150</Durability>
+      <Fatigue_Cost>1.45</Fatigue_Cost>
+      <Initiative_Reduce>0.68</Initiative_Reduce>
+      <Parry_Reduce>0.52</Parry_Reduce>
+      <Sprites>0,1</Sprites>
+      <Stamina_Reduce>0.63</Stamina_Reduce>
+      <Value>1200</Value>
+    </Armor>
+    <Armor name="Plate Mail">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.56</AP_Reduce>
+      <Block_Reduce>0.63</Block_Reduce>
+      <Damage_Ignore>20</Damage_Ignore>
+      <Damage_Reduction>0.50</Damage_Reduction>
+      <Description>
+        This armor doesn't represent the finest craftsmanship, but it still offers excellent protection.
+      </Description>
+      <Dodge_Reduce>0.55</Dodge_Reduce>
+      <Durability>250</Durability>
+      <Fatigue_Cost>1.43</Fatigue_Cost>
+      <Initiative_Reduce>0.67</Initiative_Reduce>
+      <Parry_Reduce>0.53</Parry_Reduce>
+      <Sprites>15,16</Sprites>
+      <Stamina_Reduce>0.64</Stamina_Reduce>
+      <Value>2000</Value>
+    </Armor>
+    <Armor name="Plate Mail">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.60</AP_Reduce>
+      <Block_Reduce>0.65</Block_Reduce>
+      <Damage_Ignore>22</Damage_Ignore>
+      <Damage_Reduction>0.48</Damage_Reduction>
+      <Description>
+        This is a fine example of plate mail.  It does restrict movement, but it offers excellent protection.
+      </Description>
+      <Dodge_Reduce>0.55</Dodge_Reduce>
+      <Durability>300</Durability>
+      <Fatigue_Cost>1.42</Fatigue_Cost>
+      <Initiative_Reduce>0.68</Initiative_Reduce>
+      <Parry_Reduce>0.55</Parry_Reduce>
+      <Sprites>30</Sprites>
+      <Stamina_Reduce>0.65</Stamina_Reduce>
+      <Value>5000</Value>
+    </Armor>
+  </ArmorTypeEnum>
+  <ArmorTypeEnum name ="Heavy_Helm">
+    <Armor name="Great Helm">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.76</AP_Reduce>
+      <Block_Reduce>0.72</Block_Reduce>
+      <Damage_Ignore>7</Damage_Ignore>
+      <Damage_Reduction>0.52</Damage_Reduction>
+      <Description>
+        Even rusty and decaying, this helm still provides good defense. Conveniently, parts of the eye holes have rusted out.
+      </Description>
+      <Dodge_Reduce>0.62</Dodge_Reduce>
+      <Durability>50</Durability>
+      <Fatigue_Cost>1.28</Fatigue_Cost>
+      <Initiative_Reduce>0.72</Initiative_Reduce>
+      <Parry_Reduce>0.72</Parry_Reduce>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>0.72</Stamina_Reduce>
+      <Value>800</Value>
+    </Armor>
+    <Armor name="Great Helm">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.78</AP_Reduce>
+      <Block_Reduce>0.74</Block_Reduce>
+      <Damage_Ignore>8</Damage_Ignore>
+      <Damage_Reduction>0.50</Damage_Reduction>
+      <Description>
+        This helm looks like someone took a bucket and nailed holes through it, and then called it a helm.  Whatever - it
+        still provides solid protection.
+      </Description>
+      <Dodge_Reduce>0.64</Dodge_Reduce>
+      <Durability>150</Durability>
+      <Fatigue_Cost>0.74</Fatigue_Cost>
+      <Initiative_Reduce>0.74</Initiative_Reduce>
+      <Parry_Reduce>0.74</Parry_Reduce>
+      <Sprites>15</Sprites>
+      <Stamina_Reduce>0.74</Stamina_Reduce>
+      <Value>1500</Value>
+    </Armor>
+    <Armor name="Great Helm">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.75</AP_Reduce>
+      <Block_Reduce>0.75</Block_Reduce>
+      <Damage_Ignore>9</Damage_Ignore>
+      <Damage_Reduction>0.46</Damage_Reduction>
+      <Description>
+        This is a quality-made helm.  It offers incredible protection, but the lack of curvature can be susceptible to
+        piercing attacks.
+      </Description>
+      <Dodge_Reduce>0.65</Dodge_Reduce>
+      <Durability>220</Durability>
+      <Fatigue_Cost>0.75</Fatigue_Cost>
+      <Initiative_Reduce>0.75</Initiative_Reduce>
+      <Parry_Reduce>0.75</Parry_Reduce>
+      <Sprites>30,31</Sprites>
+      <Stamina_Reduce>0.75</Stamina_Reduce>
+      <Value>3500</Value>
+    </Armor>
+    <Armor name="Jousting Helm">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.80</AP_Reduce>
+      <Block_Reduce>0.60</Block_Reduce>
+      <Damage_Ignore>18</Damage_Ignore>
+      <Damage_Reduction>0.80</Damage_Reduction>
+      <Description>
+        This jousting helm was made with tournaments in mind.  It isn't flexible, but it is light.  Since it was made with
+        jousting in mind, the curved nature of it provides superior piercing protection.
+      </Description>
+      <Dodge_Reduce>0.60</Dodge_Reduce>
+      <Durability>100</Durability>
+      <Fatigue_Cost>0.80</Fatigue_Cost>
+      <Initiative_Reduce>0.80</Initiative_Reduce>
+      <Parry_Reduce>0.60</Parry_Reduce>
+      <Sprites>18</Sprites>
+      <Stamina_Reduce>0.80</Stamina_Reduce>
+      <Value>1800</Value>
+    </Armor>
+    <Armor name="Kabuto">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.94</AP_Reduce>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>8</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        The helmet preferred by samurai (well, maybe not this one...)
+      </Description>
+      <Dodge_Reduce>0.84</Dodge_Reduce>
+      <Durability>15</Durability>
+      <Fatigue_Cost>1.05</Fatigue_Cost>
+      <Initiative_Reduce>0.94</Initiative_Reduce>
+      <Parry_Reduce>0.97</Parry_Reduce>
+      <Sprites>12,13,14</Sprites>
+      <Stamina_Reduce>0.82</Stamina_Reduce>
+      <Value>200</Value>
+    </Armor>
+    <Armor name="Kabuto">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.96</AP_Reduce>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>9</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        The helmet preferred by samurai.
+      </Description>
+      <Dodge_Reduce>0.86</Dodge_Reduce>
+      <Durability>25</Durability>
+      <Fatigue_Cost>1.04</Fatigue_Cost>
+      <Initiative_Reduce>0.95</Initiative_Reduce>
+      <Parry_Reduce>0.97</Parry_Reduce>
+      <Sprites>27,28,29</Sprites>
+      <Stamina_Reduce>0.84</Stamina_Reduce>
+      <Value>350</Value>
+    </Armor>
+    <Armor name="Kabuto">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>10</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        The helmet preferred by samurai.
+      </Description>
+      <Dodge_Reduce>0.88</Dodge_Reduce>
+      <Durability>40</Durability>
+      <Fatigue_Cost>1.03</Fatigue_Cost>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Parry_Reduce>0.98</Parry_Reduce>
+      <Sprites>42,43,44</Sprites>
+      <Stamina_Reduce>0.86</Stamina_Reduce>
+      <Value>550</Value>
+    </Armor>
+    <Armor name="Kabuto">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>12</Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        The helmet preferred by samurai.
+      </Description>
+      <Dodge_Reduce>0.90</Dodge_Reduce>
+      <Durability>55</Durability>
+      <Fatigue_Cost>1.02</Fatigue_Cost>
+      <Initiative_Reduce>0.98</Initiative_Reduce>
+      <Parry_Reduce>0.99</Parry_Reduce>
+      <Sprites>57,58,59</Sprites>
+      <Stamina_Reduce>0.89</Stamina_Reduce>
+      <Value>850</Value>
+    </Armor>
+    <Armor name="Orc Mask">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.76</AP_Reduce>
+      <Block_Reduce>0.76</Block_Reduce>
+      <Damage_Ignore>6</Damage_Ignore>
+      <Damage_Reduction>0.80</Damage_Reduction>
+      <Description>
+        Broken and well-used, this mask is still offers effective protection.  For the parts of the head it covers, anyways.
+      </Description>
+      <Dodge_Reduce>0.76</Dodge_Reduce>
+      <Durability>50</Durability>
+      <Fatigue_Cost>1.20</Fatigue_Cost>
+      <Initiative_Reduce>0.76</Initiative_Reduce>
+      <Parry_Reduce>0.76</Parry_Reduce>
+      <Sprites>5,6,7</Sprites>
+      <Stamina_Reduce>0.76</Stamina_Reduce>
+      <Value>300</Value>
+    </Armor>
+    <Armor name="Orc Mask">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.78</AP_Reduce>
+      <Block_Reduce>0.78</Block_Reduce>
+      <Damage_Ignore>7</Damage_Ignore>
+      <Damage_Reduction>0.78</Damage_Reduction>
+      <Description>
+        Not pretty, but this mask coves the top-half of the head quite well.  Effective protection against wild overhead swings.
+      </Description>
+      <Dodge_Reduce>0.78</Dodge_Reduce>
+      <Durability>80</Durability>
+      <Fatigue_Cost>1.25</Fatigue_Cost>
+      <Initiative_Reduce>0.78</Initiative_Reduce>
+      <Parry_Reduce>0.78</Parry_Reduce>
+      <Sprites>20,21,22</Sprites>
+      <Stamina_Reduce>0.78</Stamina_Reduce>
+      <Value>600</Value>
+    </Armor>
+    <Armor name="Orc Mask">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.75</AP_Reduce>
+      <Block_Reduce>0.75</Block_Reduce>
+      <Damage_Ignore>12</Damage_Ignore>
+      <Damage_Reduction>0.74</Damage_Reduction>
+      <Description>
+        This helmet is extremely heavy.  For those with the stamina to wear it, it offers exceptional protection.
+      </Description>
+      <Dodge_Reduce>0.75</Dodge_Reduce>
+      <Durability>140</Durability>
+      <Fatigue_Cost>1.30</Fatigue_Cost>
+      <Initiative_Reduce>0.75</Initiative_Reduce>
+      <Parry_Reduce>0.75</Parry_Reduce>
+      <Sprites>35,36,37</Sprites>
+      <Stamina_Reduce>0.75</Stamina_Reduce>
+      <Value>2200</Value>
+    </Armor>
+    <Armor name="Orc Mask">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.70</AP_Reduce>
+      <Block_Reduce>0.70</Block_Reduce>
+      <Damage_Ignore>15</Damage_Ignore>
+      <Damage_Reduction>0.62</Damage_Reduction>
+      <Description>
+        This helmet is ludicrously-heavy.  For anyone strong enough to wear it, it offers peerless protection.
+      </Description>
+      <Dodge_Reduce>0.70</Dodge_Reduce>
+      <Durability>220</Durability>
+      <Fatigue_Cost>1.40</Fatigue_Cost>
+      <Initiative_Reduce>40</Initiative_Reduce>
+      <Parry_Reduce>0.70</Parry_Reduce>
+      <Sprites>50,51,52</Sprites>
+      <Stamina_Reduce>0.70</Stamina_Reduce>
+      <Value>3500</Value>
+    </Armor>
+    <Armor name="Sallet">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.78</AP_Reduce>
+      <Block_Reduce>0.70</Block_Reduce>
+      <Damage_Ignore>13</Damage_Ignore>
+      <Damage_Reduction>0.60</Damage_Reduction>
+      <Description>
+        This sturdy helm provides excellent protection and doesn't restrict too much movement.  The curved nature of it
+        provides better-than-usual protection against piercing attacks.
+      </Description>
+      <Dodge_Reduce>0.70</Dodge_Reduce>
+      <Durability>250</Durability>
+      <Fatigue_Cost>1.25</Fatigue_Cost>
+      <Initiative_Reduce>0.75</Initiative_Reduce>
+      <Parry_Reduce>0.75</Parry_Reduce>
+      <Sprites>34</Sprites>
+      <Stamina_Reduce>0.75</Stamina_Reduce>
+      <Value>3200</Value>
+    </Armor>
+  </ArmorTypeEnum>
 </Armors>

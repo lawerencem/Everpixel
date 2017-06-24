@@ -15,7 +15,6 @@ namespace View.Equipment
             var sprites = CharacterSpriteLoader.Instance.GetArmorSprites(a);
             random.Name = a.Name;
             random.Index = a.Sprites[RNG.Instance.Next(0, a.Sprites.Count)];
-            random.Skill = a.Skill;
             random.Sprites = sprites;
             random.Type = a.Type;
             return random;

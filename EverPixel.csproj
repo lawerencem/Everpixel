@@ -219,7 +219,6 @@
     <Compile Include="Assets\Model\Equipment\Builders\ArmorBuilder.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\HelmBuilder.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\WeaponBuilder.cs" />
-    <Compile Include="Assets\Model\Equipment\Enums\ArmorSkillEnum.cs" />
     <Compile Include="Assets\Model\Equipment\Enums\ArmorStatsEnum.cs" />
     <Compile Include="Assets\Model\Equipment\Enums\ArmorTypeEnum.cs" />
     <Compile Include="Assets\Model\Equipment\Enums\EquipmentTierEnum.cs" />

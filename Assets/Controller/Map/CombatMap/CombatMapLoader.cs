@@ -143,7 +143,7 @@ namespace Controller.Managers.Map
 
         private void InitPlayerParty(ref List<GenericCharacterController> controllers)
         {
-            var playerChars = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Lizardman War Party", 15));
+            var playerChars = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Orc Shock Troopas", 15));
             for (int i = 0; i < playerChars.Count; i++)
                 this.BuildAndLayoutCharacter(playerChars[i], ref controllers, true);
         }

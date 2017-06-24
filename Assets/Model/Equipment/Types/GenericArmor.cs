@@ -9,6 +9,7 @@ namespace Model.Equipment
     public class GenericArmor : GenericEquipment
     {
         public double APReduce { get; set; }
+        public ArmorTypeEnum ArmorType { get; set; }
         public double BlockReduce { get; set; }
         public double DamageIgnore { get; set; }
         public double DamageReduction { get; set; }
@@ -18,7 +19,6 @@ namespace Model.Equipment
         public string Name { get; set; }
         public double ParryReduce { get; set; }
         public double StaminaReduce { get; set; }
-        public ArmorTypeEnum Type { get; set; }
 
         public GenericArmor() : base(SlotEnum.Torso, EquipmentTypeEnum.Worn)
         {

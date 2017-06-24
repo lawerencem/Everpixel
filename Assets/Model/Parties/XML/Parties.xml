@@ -15,7 +15,7 @@
     <SubParty>Goblin Fodder,1</SubParty>
     <SubParty>Goblin Warboss Retinue,12</SubParty>
     <SubParty>Goblin Void Weavers,6</SubParty>
-    <SubParty>Goblin Void Weavers,1</SubParty>
+    <SubParty>Goblin Void Weavers,10</SubParty>
     <SubParty>Goblin Void Weavers,12</SubParty>
     <SubParty>Goblin Void Weavers,15</SubParty>
     <SubParty>Gromp Hoppers,4</SubParty>
@@ -59,6 +59,8 @@
     <SubParty>Rexes,9</SubParty>
   </Party>
   <Party Name ="Orc Shock Troopas">
+    <SubParty>Orc Battlesingers,3</SubParty>
+    <SubParty>Orc Battlesingers,7</SubParty>
     <SubParty>Orc Scavengers,1</SubParty>
     <SubParty>Orc Scavengers,2</SubParty>
     <SubParty>Shock Troopas,3</SubParty>
