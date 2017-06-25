@@ -44,12 +44,9 @@
   </Party>
   <Party Name ="Lizardman War Party">
     <SubParty>Dino Calvary,2</SubParty>
-    <SubParty>Dino Healers,2</SubParty>
-    <SubParty>Dino Healers,3</SubParty>
     <SubParty>Dino Knights,3</SubParty>
     <SubParty>Dino Knights,5</SubParty>
     <SubParty>Dino Knights,6</SubParty>
-    <SubParty>Dino Mages,4</SubParty>
     <SubParty>Lizardman Fodder,1</SubParty>
     <SubParty>Raptors,3</SubParty>
     <SubParty>Raptors,5</SubParty>

@@ -1,8 +1,10 @@
 ﻿TODO
 
-   - character killed being called twice...   
+   - Spear wall
+   - Bonuses to Hit when surrounding
+   - Bonuses to Dmg when surrounding
+   - Shield wall (and nearby allies)
    - Return to original vector3 on cast...
-   - blade singer spells
    - orc khan
    - Ween Tamer
    - Ween
@@ -10,9 +12,9 @@
    - BArks
    - Dire Ween
    - Weenosaurus Rex
-
-Tomorrow:
    - GUI popup for stats, predicted dmg
+   - Hop ability
+   - Were Ween Hop
 
 Next Weekend
    - Penguins
@@ -35,7 +37,6 @@ Refactor:
 	Combat Turn system
 
 Bugs:
-	Fatality banner doesn't show on second fatatliy...
 	Goblin Void Weavers sometimes dont get turns...
 
 ideas: 

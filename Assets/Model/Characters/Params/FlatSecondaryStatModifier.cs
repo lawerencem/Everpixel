@@ -8,7 +8,7 @@ namespace Characters.Params
 
         public FlatSecondaryStatModifier(SecondaryStatsEnum t, int dur, int flat) : base(t, dur, 1)
         {
-
+            this.FlatMod = flat;
         }
 
         public void TryFlatScaleStat(SecondaryStatsEnum t, ref double v)

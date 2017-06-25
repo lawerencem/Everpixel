@@ -1048,6 +1048,7 @@
     </Character>
     <Character name ="Orc Battlesinger">
       <ActiveAbilitiesEnum>Haste_Song</ActiveAbilitiesEnum>
+      <ActiveAbilitiesEnum>Orc_Metal</ActiveAbilitiesEnum>
       <Class>Bard,3</Class>
       <Class>Skald,1</Class>
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
@@ -1141,6 +1142,7 @@
     </Character>
     <Character name ="Orc Poet">
       <ActiveAbilitiesEnum>Haste_Song</ActiveAbilitiesEnum>
+      <ActiveAbilitiesEnum>Orc_Metal</ActiveAbilitiesEnum>
       <Class>Bard,3</Class>
       <Class>Skald,15</Class>
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
@@ -1207,6 +1209,7 @@
     </Character>
     <Character name ="Orc Rhapsodist">
       <ActiveAbilitiesEnum>Haste_Song</ActiveAbilitiesEnum>
+      <ActiveAbilitiesEnum>Orc_Metal</ActiveAbilitiesEnum>
       <Class>Bard,3</Class>
       <Class>Skald,9</Class>
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
@@ -1286,6 +1289,7 @@
     </Character>
     <Character name ="Orc Warsinger">
       <ActiveAbilitiesEnum>Haste_Song</ActiveAbilitiesEnum>
+      <ActiveAbilitiesEnum>Orc_Metal</ActiveAbilitiesEnum>
       <Class>Bard,3</Class>
       <Class>Skald,5</Class>
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>

@@ -28,10 +28,15 @@ namespace View.Scripts
             }
             else if (source.Model.Type == CharacterTypeEnum.Humanoid)
             {
-                var flinchEyes = CharacterSpriteLoader.Instance.GetHumanoidFlinchEyes(source.Model.Race);
-                this._eyeRenderer = source.SpriteHandlerDict["CharFace"].GetComponent<SpriteRenderer>();
-                this._oldEyes = this._eyeRenderer.sprite;
-                this._eyeRenderer.sprite = flinchEyes;
+                if (!CharacterStatusFlags.HasFlag(source.Model.StatusFlags.CurFlags, CharacterStatusFlags.Flags.Shapeshifted))
+                {
+                    var flinchEyes = CharacterSpriteLoader.Instance.GetHumanoidFlinchEyes(source.Model.Race);
+                    this._eyeRenderer = source.SpriteHandlerDict["CharFace"].GetComponent<SpriteRenderer>();
+                    this._oldEyes = this._eyeRenderer.sprite;
+                    this._eyeRenderer.sprite = flinchEyes;
+                }
+                //else
+                    // TODO
             }
         }
 

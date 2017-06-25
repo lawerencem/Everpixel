@@ -194,26 +194,26 @@
   </SubParty>
   <SubParty Name ="Rexes">
     <Difficulty>3</Difficulty>
-    <Character>1,Tearex,Two</Character>
-    <Character>1,Thairex,One</Character>
+    <Character>1,Tearex,Three</Character>
+    <Character>1,Thairex,Two</Character>
   </SubParty>
   <SubParty Name ="Rexes">
     <Difficulty>4</Difficulty>
     <Character>1,Arms,Two</Character>
-    <Character>1,Arms,One</Character>
+    <Character>1,Arms,Two</Character>
   </SubParty>
   <SubParty Name ="Rexes">
     <Difficulty>7</Difficulty>
     <Character>1,Tyrantaur,One</Character>
-    <Character>1,Tearex,Two</Character>
-    <Character>1,Thairex,One</Character>
+    <Character>1,Tearex,Three</Character>
+    <Character>1,Thairex,Two</Character>
   </SubParty>
   <SubParty Name ="Rexes">
     <Difficulty>9</Difficulty>
-    <Character>1,Arms,One</Character>
+    <Character>1,Arms,Two</Character>
     <Character>1,Tyrantaur,One</Character>
-    <Character>1,Tearex,Two</Character>
-    <Character>1,Thairex,One</Character>
+    <Character>1,Tearex,Three</Character>
+    <Character>1,Thairex,Two</Character>
   </SubParty>
   <SubParty Name ="Shock Troopas">
     <Difficulty>5</Difficulty>

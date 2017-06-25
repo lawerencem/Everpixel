@@ -42,7 +42,7 @@
   <ActiveAbility name="Haste_Song">
     <AbilityCastTypeEnum>Song</AbilityCastTypeEnum>
     <AccMod>1</AccMod>
-    <AoE>5</AoE>
+    <AoE>3</AoE>
     <APCost>6</APCost>
     <ArmorIgnoreMod>1</ArmorIgnoreMod>
     <ArmorPierceMod>1</ArmorPierceMod>
@@ -58,6 +58,26 @@
     <RechargeTime>0</RechargeTime>
     <ShieldDamageMod>1.5</ShieldDamageMod>
     <StaminaCost>40</StaminaCost>
+  </ActiveAbility>
+  <ActiveAbility name="Orc_Metal">
+    <AbilityCastTypeEnum>Song</AbilityCastTypeEnum>
+    <AccMod>1</AccMod>
+    <AoE>5</AoE>
+    <APCost>5</APCost>
+    <ArmorIgnoreMod>1</ArmorIgnoreMod>
+    <ArmorPierceMod>1</ArmorPierceMod>
+    <BlockIgnoreMod>1</BlockIgnoreMod>
+    <DmgPerPower>.003</DmgPerPower>
+    <DodgeMod>1.0</DodgeMod>
+    <Duration>1</Duration>
+    <FlatDamage>0</FlatDamage>
+    <MeleeBlockChanceMod>0</MeleeBlockChanceMod>
+    <ParryModMod>0</ParryModMod>
+    <Range>0</Range>
+    <RangeBlockMod>0</RangeBlockMod>
+    <RechargeTime>0</RechargeTime>
+    <ShieldDamageMod>0</ShieldDamageMod>
+    <StaminaCost>50</StaminaCost>
   </ActiveAbility>
   <ActiveAbility name="Summon_Shoggoth">
     <AbilityCastTypeEnum>Summon</AbilityCastTypeEnum>

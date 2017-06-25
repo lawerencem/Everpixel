@@ -1,15 +1,12 @@
 ﻿using Assets.Generics;
 using Model.Spells;
 using Characters.Params;
-using Controller.Managers;
 using Model.Abilities;
 using Model.Classes;
 using Model.Equipment;
-using Model.Events.Combat;
 using Model.Injuries;
 using Model.Map;
 using System.Collections.Generic;
-using Model.Abilities.Music;
 
 namespace Model.Characters
 {
@@ -90,7 +87,7 @@ namespace Model.Characters
             {
                 this.LWeapon = weapon;
                 var mods = new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.GetStatModifiers());
-                foreach(var perk in this.Perks.EquipmentSStatPerks)
+                foreach (var perk in this.Perks.EquipmentSStatPerks)
                 {
                     perk.TryModEquipmentMod(mods);
                 }
@@ -172,12 +169,12 @@ namespace Model.Characters
                 case (PrimaryStatsEnum.Perception): { v = (double)this.PrimaryStats.Perception; } break;
                 case (PrimaryStatsEnum.Resolve): { v = (double)this.PrimaryStats.Resolve; } break;
             }
-            foreach (var mod in this.PStatMods) { mod.TryScaleValue(stat, ref v); }
             foreach (var kvp in this.IndefPStatMods)
                 foreach (var mod in kvp.Y)
                     mod.TryScaleValue(stat, ref v);
             foreach (var injury in this.Injuries)
                 injury.TryScaleStat(stat, ref v);
+            foreach (var mod in this.PStatMods) { mod.TryScaleValue(stat, ref v); }
             return (int)v;
         }
 
@@ -208,15 +205,15 @@ namespace Model.Characters
                 case (SecondaryStatsEnum.Stamina): { v = (double)this.SecondaryStats.Stamina; } break;
                 case (SecondaryStatsEnum.Will): { v = (double)this.SecondaryStats.Will; } break;
             }
-            foreach (var mod in this.SStatMods) { mod.TryScaleValue(stat, ref v); }
-            foreach (var mod in this.FlatSStatMods) { mod.TryFlatScaleStat(stat, ref v); }
             foreach (var kvp in this.IndefSStatMods)
                 foreach (var mod in kvp.Y)
                     mod.TryScaleValue(stat, ref v);
             foreach (var injury in this.Injuries)
                 injury.TryScaleStat(stat, ref v);
+            foreach (var mod in this.SStatMods) { mod.TryScaleValue(stat, ref v); }
             foreach (var perk in this.Perks.SStatModPerks)
                 perk.TryModSStat(stat, ref v);
+            foreach (var mod in this.FlatSStatMods) { mod.TryFlatScaleStat(stat, ref v); }
             return v;
         }
 
@@ -229,11 +226,16 @@ namespace Model.Characters
         public void TryAddMod(FlatSecondaryStatModifier mod)
         {
             this.FlatSStatMods.Add(mod);
+            this.SetCurrValue(mod.Type, mod.FlatMod);
         }
 
         public void TryAddMod(SecondaryStatModifier mod)
         {
+            var oldValue = this.GetCurrentStatValue(mod.Type);
             this.SStatMods.Add(mod);
+            var newValue = this.GetCurrentStatValue(mod.Type);
+            var delta = newValue - oldValue;
+            this.SetCurrValue(mod.Type, delta);
         }
 
         private void ProcessBuffDurations()
@@ -252,6 +254,17 @@ namespace Model.Characters
         private void RestoreStamina()
         {
             this.AddStamina(BASE_STAM_RESTORE);
+        }
+
+        private void SetCurrValue(SecondaryStatsEnum type, double v)
+        {
+            switch(type)
+            {
+                case (SecondaryStatsEnum.AP): { this.CurrentAP += (int)v; } break;
+                case (SecondaryStatsEnum.HP): { this.CurrentHP += (int)v; } break;
+                case (SecondaryStatsEnum.Morale): { this.CurrentMorale += (int)v; } break;
+                case (SecondaryStatsEnum.Stamina): { this.CurrentStamina += (int)v; } break;
+            }
         }
     }
 }

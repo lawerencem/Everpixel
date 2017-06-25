@@ -84,6 +84,7 @@ namespace Model.Abilities
         public void ProcessShapeshift(HitInfo hit)
         {
             AttackEventFlags.SetShapeshiftTrue(hit.Flags);
+            CharacterStatusFlags.SetShapeshiftedTrue(hit.Source.Model.StatusFlags);
             foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
                 perk.TryModAbility(hit.Ability);
             CombatReferee.Instance.ProcessShapeshift(hit);

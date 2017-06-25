@@ -1,7 +1,4 @@
-﻿using Assets.Generics;
-using Characters.Params;
-using Model.Characters;
-using System.Collections.Generic;
+﻿using Model.Characters;
 
 namespace Model.Perks
 {

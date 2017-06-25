@@ -228,7 +228,9 @@
       <AttackSpriteIndex>24</AttackSpriteIndex>
       <FlinchSpriteIndex>16</FlinchSpriteIndex>
       <Perks>
+        <Perk>Gargantuan</Perk>
         <Perk>Iron_Hide</Perk>
+        <Perk>Massive</Perk>
         <Perk>Scaly</Perk>
         <Perk>T_Rex_Bite</Perk>
       </Perks>

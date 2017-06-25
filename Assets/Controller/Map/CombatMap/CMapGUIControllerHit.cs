@@ -65,7 +65,8 @@ namespace Controller.Managers.Map
             text.fontSize = 16;
             text.rectTransform.SetParent(parent.transform);
             text.rectTransform.position = position;
-            text.rectTransform.localScale = new Vector3(0.010f, 0.010f);
+            text.rectTransform.sizeDelta = new Vector2(200f, 200f);
+            text.rectTransform.localScale = new Vector3(0.0075f, 0.0075f);
             text.name = "Hit Text";
             text.text = toDisplay;
             Font fontToUse = Resources.Load("Fonts/8bitOperatorPlus8-Bold") as Font;

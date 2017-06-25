@@ -132,6 +132,7 @@
     <Compile Include="Assets\Model\Abilities\Active\GenericActiveAbility.cs" />
     <Compile Include="Assets\Model\Abilities\Active\Music\GenericSong.cs" />
     <Compile Include="Assets\Model\Abilities\Active\Music\HasteSong.cs" />
+    <Compile Include="Assets\Model\Abilities\Active\Music\OrcMetal.cs" />
     <Compile Include="Assets\Model\Abilities\Active\Shapeshift\GenericShapeshiftAbility.cs" />
     <Compile Include="Assets\Model\Abilities\Active\Shapeshift\ShapeshiftInfo.cs" />
     <Compile Include="Assets\Model\Abilities\Active\Shapeshift\Wereween.cs" />
@@ -312,8 +313,10 @@
     <Compile Include="Assets\Model\Perks\PerkEnum.cs" />
     <Compile Include="Assets\Model\Perks\PerkFactory.cs" />
     <Compile Include="Assets\Model\Perks\PerkMediator.cs" />
+    <Compile Include="Assets\Model\Perks\SStatModPerks\Gargantuan.cs" />
     <Compile Include="Assets\Model\Perks\SStatModPerks\GenericSStatModPerk.cs" />
     <Compile Include="Assets\Model\Perks\SStatModPerks\IronHide.cs" />
+    <Compile Include="Assets\Model\Perks\SStatModPerks\Massive.cs" />
     <Compile Include="Assets\Model\Perks\SStatModPerks\Scaly.cs" />
     <Compile Include="Assets\Model\Slot\AbstractSlot.cs" />
     <Compile Include="Assets\Model\Slot\GenericSlot.cs" />

@@ -103,7 +103,13 @@
     <DamageMod>1</DamageMod>
     <DodgeMod>1.0</DodgeMod>
     <IconSprite>0</IconSprite>
+    <Injury>Broken_Arm</Injury>
+    <Injury>Broken_Jaw</Injury>
     <Injury>Broken_Ribs</Injury>
+    <Injury>Broken_Wrist</Injury>
+    <Injury>Concussion</Injury>
+    <Injury>Severe_Concussion</Injury>
+    <Injury>Shattered_Ribs</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
     <ParryModMod>1.0</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>

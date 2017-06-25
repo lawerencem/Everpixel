@@ -12,6 +12,7 @@ namespace Model.Events.Combat
             base(CombatEventEnum.TakingAction, p)
         {
             this.Controller = c;
+
             this._parent.RegisterEvent(this);
         }
     }
