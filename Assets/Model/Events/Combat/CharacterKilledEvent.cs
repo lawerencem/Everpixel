@@ -8,8 +8,8 @@ namespace Model.Events.Combat
     {
         public GenericCharacterController Killed { get; set; }
 
-        public CharacterKilledEvent(CombatEventManager parent, GenericCharacterController killed) :
-            base(CombatEventEnum.CharacterKilled, parent)
+        public CharacterKilledEvent(CombatEventManager parent,GenericCharacterController killed) :
+            base(CombatEventEnum.Buff, parent)
         {
             this.Killed = killed;
             this.RegisterEvent();

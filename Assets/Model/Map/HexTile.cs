@@ -33,5 +33,36 @@ namespace Model.Map
             }
             return ListUtil<HexTile>.GetRandomListElement(currNeighbors); 
         }
+
+        public List<HexTile> GetAoETiles(int dist)
+        {
+            var tiles = new List<HexTile>();
+
+            var closedSet = new List<HexTile>();
+            var probeSet = new List<HexTile>() { this };
+            var waitingSet = new List<HexTile>() { };
+
+            for (int i = dist; i > 0; i--)
+            {
+                foreach (var tile in probeSet)
+                {
+                    foreach (var neighbor in tile.Adjacent)
+                    {
+                        var found = closedSet.Find(x => x.Col == neighbor.Col && x.Row == neighbor.Row);
+                        if (found == null)
+                        {
+                            waitingSet.Add(neighbor);
+                            tiles.Add(neighbor);
+                            closedSet.Add(neighbor);
+                        }
+                    }
+                }
+                probeSet.Clear();
+                foreach (var tile in waitingSet) { probeSet.Add(tile); }
+                waitingSet.Clear();
+            }
+
+            return tiles;
+        }
     }
 }

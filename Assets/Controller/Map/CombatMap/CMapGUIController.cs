@@ -113,6 +113,11 @@ namespace Controller.Managers.Map
             }
         }
 
+        public void DisplayBuff(BuffEvent e)
+        {
+            this._hitHelper.DisplayText("Buff", e.ToBuff.Handle, CMapGUIControllerParams.BLUE);
+        }
+
         public void DisplayCast(CastingEvent e)
         {
             this._hitHelper.DisplayText(e.SpellName, e.Caster.Handle, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.ATTACK_TEXT_OFFSET);
@@ -132,6 +137,7 @@ namespace Controller.Managers.Map
                     case (AbilityCastTypeEnum.Bullet): { this._hitHelper.ProcessBulletFX(e); } break;
                     case (AbilityCastTypeEnum.No_Collision_Bullet): { this._hitHelper.ProcessBulletFX(e); } break;
                     case (AbilityCastTypeEnum.Shapeshift): { this._shapeshiftHelper.ProcessShapeshiftFX(e); } break;
+                    case (AbilityCastTypeEnum.Song): { this._particleHelper.HandleSongParticle(e); } break;
                     case (AbilityCastTypeEnum.Summon): { this.ProcessSummonFX(e); } break;
                 }
             }

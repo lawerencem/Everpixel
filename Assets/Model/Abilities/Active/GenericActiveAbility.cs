@@ -7,6 +7,7 @@ namespace Model.Abilities
     {
         public AbilityCastTypeEnum CastType { get; set; }
         public double DmgPerPower { get; set; }
+        public double Duration { get; set; }
         public double FlatDamage { get; set; }
         public MagicTypeEnum MagicType { get; set; }
         public double RechargeTime { get; set; }
@@ -24,6 +25,7 @@ namespace Model.Abilities
             this.DamageMod = 1;
             this.DmgPerPower = 0;
             this.DodgeMod = 1;
+            this.Duration = 0;
             this.FlatDamage = 0;
             this.MagicType = MagicTypeEnum.Physical;
             this.MeleeBlockChanceMod = 1;
@@ -51,6 +53,7 @@ namespace Model.Abilities
             ability.DamageMod = this.DamageMod;
             ability.Description = this.Description;
             ability.DodgeMod = this.DodgeMod;
+            ability.Duration = this.Duration;
             ability.StaminaCost = this.StaminaCost;
             ability.MagicType = this.MagicType;
             ability.MeleeBlockChanceMod = this.MeleeBlockChanceMod;

@@ -1,15 +1,9 @@
-﻿using Assets.Scripts;
-using Controller.Characters;
-using Controller.Map;
+﻿using Controller.Map;
 using Generics.Scripts;
 using Generics.Utilities;
-using Model.Characters;
-using Model.Combat;
+using Model.Abilities.Music;
 using Model.Events.Combat;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using View.Biomes;
 
 namespace Controller.Managers.Map
 {
@@ -19,6 +13,19 @@ namespace Controller.Managers.Map
         {
             if (e.Injury.IsTypeOfBleeding())
                 this.HandleParticles("Bleed", e);
+        }
+
+        public void HandleSongParticle(DisplayHitStatsEvent e)
+        {
+            var tgt = e.Hit.Source;
+            var song = e.Hit.Ability as GenericSong;
+            var path = StringUtil.PathBuilder(CMapGUIControllerParams.EFFECTS_PATH, song.SongType.ToString(), CMapGUIControllerParams.PARTICLES_EXTENSION);
+            var particles = GameObject.Instantiate(Resources.Load(path)) as GameObject;
+            particles.transform.SetParent(tgt.Handle.transform);
+            particles.transform.position = tgt.Handle.transform.position;
+            var script = particles.AddComponent<DestroyByLifetime>();
+            script.lifetime = 5f;
+            e.Done();
         }
 
         private void HandleParticles(string effect, ApplyInjuryEvent e)

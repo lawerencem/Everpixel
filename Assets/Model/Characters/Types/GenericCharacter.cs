@@ -25,6 +25,7 @@ namespace Model.Characters
             this.ActiveSpells = new SpellsByLevel();
             this.BaseClasses = new Dictionary<ClassEnum, GenericClass>();
             this.DefaultWpnAbilities = new List<WeaponAbility>();
+            this.FlatSStatMods = new List<FlatSecondaryStatModifier>();
             this.IndefSStatMods = new List<Pair<object, List<IndefSecondaryStatModifier>>>();
             this.Injuries = new List<GenericInjury>();
             this.Perks = new CharacterPerkCollection();

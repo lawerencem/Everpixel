@@ -47,6 +47,11 @@ namespace Model.Combat
             var shapeshiftEvent = new ShapeshiftEvent(CombatEventManager.Instance, hit);
         }
 
+        public void ProcessSong(HitInfo hit)
+        {
+            ProcessHitEventView(hit);
+        }
+
         public void ProcessSummon(HitInfo hit)
         {
             ProcessHitEventView(hit);
@@ -100,7 +105,7 @@ namespace Model.Combat
 
         private void ProcessHitEventView(HitInfo hit)
         {
-            var guiEvent = new DisplayHitStatsEvent(CombatEventManager.Instance, hit, hit.Done);
+            var display = new DisplayHitStatsEvent(CombatEventManager.Instance, hit, hit.Done);
         }
 
         private void ProcessBulletFlags(HitInfo hit)

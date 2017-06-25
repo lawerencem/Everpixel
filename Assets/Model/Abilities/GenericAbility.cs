@@ -89,6 +89,13 @@ namespace Model.Abilities
             CombatReferee.Instance.ProcessShapeshift(hit);
         }
 
+        public void ProcessSong(HitInfo hit)
+        {
+            foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
+                perk.TryModAbility(hit.Ability);
+            CombatReferee.Instance.ProcessSong(hit);
+        }
+
         public virtual bool IsValidActionEvent(PerformActionEvent e)
         {
             return false;

@@ -12,5 +12,10 @@ namespace Characters.Params
             this.Duration = dur;
             this.Scalar = scalar;
         }
+
+        public void ProcessTurn()
+        {
+            this.Duration--;
+        }
     }
 }

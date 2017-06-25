@@ -9,6 +9,7 @@ using Model.Events.Combat;
 using Model.Injuries;
 using Model.Map;
 using System.Collections.Generic;
+using Model.Abilities.Music;
 
 namespace Model.Characters
 {
@@ -27,8 +28,9 @@ namespace Model.Characters
         public CharacterPerkCollection Perks { get; set; }
         public PrimaryStats PrimaryStats { get; set; }
         public SecondaryStats SecondaryStats { get; set; }
-        
+
         // TODO: Put these in a stats Mods container class
+        public List<FlatSecondaryStatModifier> FlatSStatMods { get; set; }
         public List<PrimaryStatModifier> PStatMods { get; set; }
         public List<SecondaryStatModifier> SStatMods { get; set; }
         public List<Pair<object, List<IndefPrimaryStatModifier>>> IndefPStatMods { get; set; }
@@ -207,6 +209,7 @@ namespace Model.Characters
                 case (SecondaryStatsEnum.Will): { v = (double)this.SecondaryStats.Will; } break;
             }
             foreach (var mod in this.SStatMods) { mod.TryScaleValue(stat, ref v); }
+            foreach (var mod in this.FlatSStatMods) { mod.TryFlatScaleStat(stat, ref v); }
             foreach (var kvp in this.IndefSStatMods)
                 foreach (var mod in kvp.Y)
                     mod.TryScaleValue(stat, ref v);
@@ -217,7 +220,36 @@ namespace Model.Characters
             return v;
         }
 
-        public void RestoreStamina()
+        public void ProcessEndOfTurn()
+        {
+            this.RestoreStamina();
+            this.ProcessBuffDurations();
+        }
+
+        public void TryAddMod(FlatSecondaryStatModifier mod)
+        {
+            this.FlatSStatMods.Add(mod);
+        }
+
+        public void TryAddMod(SecondaryStatModifier mod)
+        {
+            this.SStatMods.Add(mod);
+        }
+
+        private void ProcessBuffDurations()
+        {
+            foreach (var buff in this.FlatSStatMods)
+                buff.ProcessTurn();
+            foreach (var buff in this.PStatMods)
+                buff.ProcessTurn();
+            foreach (var buff in this.SStatMods)
+                buff.ProcessTurn();
+            this.FlatSStatMods.RemoveAll(x => x.Duration <= 0);
+            this.PStatMods.RemoveAll(x => x.Duration <= 0);
+            this.SStatMods.RemoveAll(x => x.Duration <= 0);
+        }
+
+        private void RestoreStamina()
         {
             this.AddStamina(BASE_STAM_RESTORE);
         }

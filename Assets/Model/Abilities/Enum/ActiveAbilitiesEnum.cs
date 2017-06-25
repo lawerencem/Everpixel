@@ -5,6 +5,7 @@
         None,
         Eldritch_Chomp,
         Hadoken,
+        Haste_Song,
         Summon_Shoggoth,
         Were_Ween,
     }

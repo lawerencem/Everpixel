@@ -175,10 +175,7 @@ namespace Assets.Controller.Managers
 
         private void ProcessEndOfTurn()
         {
-            foreach(var c in this.Characters)
-            {
-                c.Model.RestoreStamina();
-            }
+            // TODO:
         }
     }
 }

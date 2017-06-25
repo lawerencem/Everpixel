@@ -30,6 +30,7 @@ namespace Controller.Map
         public static readonly float WEAPON_OFFSET = 0.075f;
         public static readonly float WEAPON_PARRY = 4f;
 
+        public static readonly Color BLUE = new Color(0, 0, 255, 150);
         public static readonly Color RED = new Color(255, 0, 0, 150);
         public static readonly Color WHITE = new Color(255, 255, 255, 255);
 

@@ -4,6 +4,7 @@ using Model.Abilities;
 using Generics.Utilities;
 using Model.Injuries;
 using Model.Abilities.Shapeshift;
+using Model.Abilities.Music;
 
 namespace Models.Equipment.XML
 {
@@ -56,6 +57,7 @@ namespace Models.Equipment.XML
                 case ("CastTime"): { ActiveAbilityTable.Instance.Table[type].CastTime = v; } break;
                 case ("Description"): { ActiveAbilityTable.Instance.Table[type].Description = value; } break;
                 case ("DmgPerPower"): { ActiveAbilityTable.Instance.Table[type].DmgPerPower = double.Parse(value); } break;
+                case ("Duration"): { ActiveAbilityTable.Instance.Table[type].Duration = double.Parse(value); } break;
                 case ("DodgeReduceMod"): { ActiveAbilityTable.Instance.Table[type].DodgeMod = v; } break;
                 case ("FlatDamage"): { ActiveAbilityTable.Instance.Table[type].FlatDamage = v; } break;
                 case ("Injury"): { this.HandleInjury(type, value); } break;
@@ -93,6 +95,7 @@ namespace Models.Equipment.XML
             {
                 case (ActiveAbilitiesEnum.Eldritch_Chomp): { ActiveAbilityTable.Instance.Table[type] = new EldritchChomp(); } break;
                 case (ActiveAbilitiesEnum.Hadoken): { ActiveAbilityTable.Instance.Table[type] = new Hadoken(); } break;
+                case (ActiveAbilitiesEnum.Haste_Song): { ActiveAbilityTable.Instance.Table[type] = new HasteSong(); } break;
                 case (ActiveAbilitiesEnum.Summon_Shoggoth): { ActiveAbilityTable.Instance.Table[type] = new SummonShoggoth(); } break;
                 case (ActiveAbilitiesEnum.Were_Ween): { ActiveAbilityTable.Instance.Table[type] = new Wereween(); } break;
             }

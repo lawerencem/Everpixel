@@ -5,6 +5,7 @@
         None,
         ApplyInjury,
         AttackSelected,
+        Buff,
         Casting,
         CharacterKilled,
         DamageCharacter,

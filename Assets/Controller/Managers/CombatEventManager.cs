@@ -99,6 +99,7 @@ namespace Controller.Managers
             {
                 case (CombatEventEnum.ApplyInjury): { HandleApplyInjuryEvent(e as ApplyInjuryEvent); } break;
                 case (CombatEventEnum.AttackSelected): { HandleAttackSelectedEvent(e as AttackSelectedEvent); } break;
+                case (CombatEventEnum.Buff): { HandleBuffEvent(e as BuffEvent); } break;
                 case (CombatEventEnum.Casting): { HandleCastingEvent(e as CastingEvent); } break;
                 case (CombatEventEnum.DamageCharacter): { HandleDamageCharacterEvent(e as DamageCharacterEvent); } break;
                 case (CombatEventEnum.CharacterKilled): { HandleCharacterKilledEvent(e as CharacterKilledEvent); } break; 
@@ -149,6 +150,12 @@ namespace Controller.Managers
             }
         }
 
+        private void HandleBuffEvent(BuffEvent e)
+        {
+            this._events.Remove(e);
+            CMapGUIController.Instance.DisplayBuff(e);
+        }
+
         private void HandleCastingEvent(CastingEvent e)
         {
             this._events.Remove(e);
@@ -186,6 +193,7 @@ namespace Controller.Managers
             this._events.Remove(e);
             CMapGUIController.Instance.ClearDecoratedTiles();
             var cur = this._combatManager.CurrActing.Handle;
+            this._combatManager.CurrActing.Model.ProcessEndOfTurn();
             var bob = cur.GetComponent<BobbingScript>();
             if (bob != null) { bob.Reset(); }
             this._combatManager.CurAbility = null;
