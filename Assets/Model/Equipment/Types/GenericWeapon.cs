@@ -61,6 +61,8 @@ namespace Model.Equipment
             var toReturn = new List<IndefSecondaryStatModifier>();
 
             toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.AP, this.APReduce));
+            toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.Initiative, this.InitiativeReduce));
+            toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.Parry, this.ParryMod));
             toReturn.Add(new IndefSecondaryStatModifier(Characters.SecondaryStatsEnum.Stamina, this.StaminaReduce));
 
             return toReturn;

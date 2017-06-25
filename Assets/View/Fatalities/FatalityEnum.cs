@@ -3,6 +3,7 @@
     public enum FatalityEnum
     {
         None,
+        Crush,
         Fighting,
         Slash,
     }

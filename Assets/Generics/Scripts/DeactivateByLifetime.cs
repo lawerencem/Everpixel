@@ -14,7 +14,10 @@ namespace Generics.Scripts
             {
                 this._curTime += Time.deltaTime;
                 if (this._curTime >= this._lifetime)
+                {
                     this._deactivate.SetActive(false);
+                    GameObject.Destroy(this);
+                }
             }
         }
 

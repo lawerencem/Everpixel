@@ -1,4 +1,5 @@
-﻿using Controller.Managers.Map;
+﻿using Assets.View;
+using Controller.Managers.Map;
 using Controller.Map;
 using Generics.Scripts;
 using Generics.Utilities;
@@ -28,7 +29,6 @@ namespace View.Fatalities
             var position = this._event.Hit.Source.Handle.transform.position;
             position.y -= 0.35f;
             zoom.Init(position, FatalityParams.ZOOM_SPEED, FatalityParams.ZOOM_FOV, FatalityParams.ZOOM_MELEE_HANG, this.ProcessFatality);
-
         }
 
         protected override void ProcessFatality()
@@ -42,9 +42,9 @@ namespace View.Fatalities
         {
             if (this._event.Hit.Target.Model.Type == CharacterTypeEnum.Humanoid)
             {
-                var head = this._event.Hit.Target.SpriteHandlerDict["CharHead"];
-                var tgtTile = ListUtil<TileController>.GetRandomListElement(this._event.Hit.Target.CurrentTile.Adjacent);
-                head.transform.SetParent(tgtTile.transform);
+                var head = this._event.Hit.Target.SpriteHandlerDict[ViewParams.CHAR_HEAD];
+                var tgtTile = this._event.Hit.TargetTile.Model.GetRandomNearbyTile(2);
+                head.transform.SetParent(tgtTile.Parent.transform);
 
                 var spin = head.AddComponent<HeadRotationScript>();
                 bool spinRight = true;
@@ -53,9 +53,9 @@ namespace View.Fatalities
                     spinRight = false;
                 var percent = RNG.Instance.NextDouble();
                 spin.Init(head, (float)(5f * percent), spinRight, base.Done);
-                spin.InitHeadRotation(tgtTile, this._parent);
+                spin.InitHeadRotation(tgtTile.Parent, this._parent);
                 var translate = head.AddComponent<RaycastMove>();
-                translate.Init(head, tgtTile.Model.Center, 1f, spin.Done);
+                translate.Init(head, tgtTile.Parent.Model.Center, 1f, spin.Done);
                 this.HandleParticles();
             }
             else
@@ -64,7 +64,6 @@ namespace View.Fatalities
                 this._event.Hit.Source.Handle.transform.position = this._event.Hit.Source.CurrentTile.Model.Center;
                 base.Done();
             }
-
             this._parent.ProcessCharacterKilled(this._event.Hit.Target);
             base.ProcessFatalityView(this._event);
         }
@@ -94,10 +93,10 @@ namespace View.Fatalities
             var empty = new GameObject();
             headBlood.transform.SetParent(empty.transform);
 
-            headBlood.transform.SetParent(this._event.Hit.Target.SpriteHandlerDict["CharHead"].transform);
+            headBlood.transform.SetParent(this._event.Hit.Target.SpriteHandlerDict[ViewParams.CHAR_HEAD].transform);
             var emptyScript = empty.AddComponent<DestroyByLifetime>();
             emptyScript.lifetime = 5f;
-            headBlood.transform.position = this._event.Hit.Target.SpriteHandlerDict["CharHead"].transform.position;
+            headBlood.transform.position = this._event.Hit.Target.SpriteHandlerDict[ViewParams.CHAR_HEAD].transform.position;
         }
     }
 }

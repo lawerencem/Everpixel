@@ -40,15 +40,22 @@ namespace Model.Events.Combat
             var script = CombatEventManager.Instance.CameraManager.GetComponent<CameraManager>();
             var position = this._event.Info.Source.CurrentTile.Model.Center;
             position.y -= 0.5f;
+
+            
             script.InitScrollTo(position, this.InitZoom);
         }
 
         private void InitZoom()
         {
-            var zoom = this._event.Info.Source.Handle.AddComponent<DramaticHangZoomOutCallback>();
-            var position = this._event.Info.Source.Handle.transform.position;
-            position.y -= 0.5f;
-            zoom.Init(position, 150f, 50f, 18f, 0.5f, this.Zoomcallback);
+            if (!this._event.Info.Action.CustomCastCamera)
+            {
+                var zoom = this._event.Info.Source.Handle.AddComponent<DramaticHangZoomOutCallback>();
+                var position = this._event.Info.Source.Handle.transform.position;
+                position.y -= 0.5f;
+                zoom.Init(position, 150f, 50f, 18f, 0.5f, this.Zoomcallback);
+            }
+            else
+                this.Zoomcallback();
         }
 
         private void Zoomcallback()

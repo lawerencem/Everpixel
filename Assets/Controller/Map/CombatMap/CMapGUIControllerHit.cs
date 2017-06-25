@@ -76,7 +76,7 @@ namespace Controller.Managers.Map
             floating.Init(display);
         }
 
-        public void ProcessBulletGraphics(DisplayHitStatsEvent e)
+        public void ProcessBulletFX(DisplayHitStatsEvent e)
         {
             this.DisplayHitStatsEvent(e.Hit);
 
@@ -91,11 +91,15 @@ namespace Controller.Managers.Map
 
         public void ProcessCharacterKilled(GenericCharacterController c)
         {
-            foreach (var particle in c.Particles)
-                GameObject.Destroy(particle);
-            this.ProcessCharacterKilledHelper(c);
-            this.RandomRotate(c.Handle);
-            this.ProcessSplatter(5, c.CurrentTile, 1);
+            if (!c.KillFXProcessed)
+            {
+                foreach (var particle in c.Particles)
+                    GameObject.Destroy(particle);
+                this.ProcessCharacterKilledHelper(c);
+                this.RandomRotate(c.Handle);
+                this.ProcessSplatter(5, c.CurrentTile, 1);
+            }
+            c.KillFXProcessed = true;
         }
 
         public void ProcessInjury(ApplyInjuryEvent e)
@@ -166,6 +170,7 @@ namespace Controller.Managers.Map
             {
                 switch (fatality.Type)
                 {
+                    case (FatalityEnum.Crush): { cast = fatality as CrushFatality; success = true; } break;
                     case (FatalityEnum.Fighting): { cast = fatality as FightingFatality; success = true; } break;
                     case (FatalityEnum.Slash): { cast = fatality as SlashFatality; success = true; } break;
                 }

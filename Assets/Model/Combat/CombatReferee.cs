@@ -41,6 +41,12 @@ namespace Model.Combat
             ProcessHitEventView(hit);
         }
 
+        public void ProcessShapeshift(HitInfo hit)
+        {
+            ProcessHitEventView(hit);
+            var shapeshiftEvent = new ShapeshiftEvent(CombatEventManager.Instance, hit);
+        }
+
         public void ProcessSummon(HitInfo hit)
         {
             ProcessHitEventView(hit);

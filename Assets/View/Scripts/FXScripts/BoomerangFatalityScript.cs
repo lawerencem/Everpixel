@@ -4,6 +4,9 @@ namespace Generics.Scripts
 {
     public class BoomerangFatalityScript : MonoBehaviour
     {
+        public CallbackThree CallBackThree;
+        public delegate void CallbackThree();
+
         protected Vector3 _origin;
 
         public GameObject Source { get; set; }
@@ -27,6 +30,8 @@ namespace Generics.Scripts
 
         protected virtual void Done()
         {
+            if (this.CallBackThree != null)
+                this.CallBackThree();
             GameObject.Destroy(this);
         }
     }

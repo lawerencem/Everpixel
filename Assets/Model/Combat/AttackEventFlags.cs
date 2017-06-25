@@ -15,6 +15,7 @@ namespace Model.Combat
             Head = 16,
             Summon = 32,
             Fatality = 64,
+            Shapeshift = 128,
         }
 
         public Flags CurFlags { get; set; }
@@ -29,6 +30,7 @@ namespace Model.Combat
         public static void SetBlockFalse(AttackEventFlags f) { f.CurFlags &= ~Flags.Block; }
         public static void SetCritFalse(AttackEventFlags f) { f.CurFlags &= ~Flags.Critical; }
         public static void SetHeadFalse(AttackEventFlags f) { f.CurFlags &= ~Flags.Head; }
+        public static void SetShapeshiftFalse(AttackEventFlags f) { f.CurFlags &= ~Flags.Shapeshift; }
         public static void SetSummonFalse(AttackEventFlags f) { f.CurFlags &= ~Flags.Summon; }
         public static void SetFatalityFalse(AttackEventFlags f) { f.CurFlags &= ~Flags.Fatality; }
 
@@ -37,6 +39,7 @@ namespace Model.Combat
         public static void SetBlockTrue(AttackEventFlags f) { f.CurFlags |= Flags.Block; }
         public static void SetCritTrue(AttackEventFlags f) { f.CurFlags |= Flags.Critical; }
         public static void SetHeadTrue(AttackEventFlags f) { f.CurFlags |= Flags.Head; }
+        public static void SetShapeshiftTrue(AttackEventFlags f) { f.CurFlags |= Flags.Shapeshift; }
         public static void SetSummonTrue(AttackEventFlags f) { f.CurFlags |= Flags.Summon; }
         public static void SetFatalityTrue(AttackEventFlags f) { f.CurFlags |= Flags.Fatality; }
 

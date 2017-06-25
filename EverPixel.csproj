@@ -92,6 +92,7 @@
     <Compile Include="Assets\Controller\Map\CombatMap\CMapGUIControllerHit.cs" />
     <Compile Include="Assets\Controller\Map\CombatMap\CMapGUIControllerParams.cs" />
     <Compile Include="Assets\Controller\Map\CombatMap\CMapGUIControllerParticle.cs" />
+    <Compile Include="Assets\Controller\Map\CombatMap\CMapGUIControllerShapeshift.cs" />
     <Compile Include="Assets\Controller\Map\CombatMap\CombatMapLoader.cs" />
     <Compile Include="Assets\Controller\Map\CombatMap\EnemyPartyLoader.cs" />
     <Compile Include="Assets\Controller\Map\Tile\TileController.cs" />
@@ -111,6 +112,8 @@
     <Compile Include="Assets\Generics\Scripts\DramaticHangZoomOutCallback.cs" />
     <Compile Include="Assets\Generics\Scripts\FloatingText.cs" />
     <Compile Include="Assets\Generics\Scripts\IntervalJoltScript.cs" />
+    <Compile Include="Assets\Generics\Scripts\SpriteFlipCallback.cs" />
+    <Compile Include="Assets\Generics\Scripts\XAxisShake.cs" />
     <Compile Include="Assets\Generics\Scripts\JoltScript.cs" />
     <Compile Include="Assets\Generics\Scripts\RaycastMove.cs" />
     <Compile Include="Assets\Generics\Scripts\RaycastMoveWithDelete.cs" />
@@ -127,6 +130,9 @@
     <Compile Include="Assets\Model\Abilities\Active\ActiveAbilityFactory.cs" />
     <Compile Include="Assets\Model\Abilities\Active\ActiveAbilityTable.cs" />
     <Compile Include="Assets\Model\Abilities\Active\GenericActiveAbility.cs" />
+    <Compile Include="Assets\Model\Abilities\Active\Shapeshift\GenericShapeshiftAbility.cs" />
+    <Compile Include="Assets\Model\Abilities\Active\Shapeshift\ShapeshiftInfo.cs" />
+    <Compile Include="Assets\Model\Abilities\Active\Shapeshift\Wereween.cs" />
     <Compile Include="Assets\Model\Abilities\Active\Magic\Astral\EldritchChomp.cs" />
     <Compile Include="Assets\Model\Abilities\Active\Magic\Astral\SummonShoggoth.cs" />
     <Compile Include="Assets\Model\Abilities\Active\NonMagic\Hadoken.cs" />
@@ -255,6 +261,7 @@
     <Compile Include="Assets\Model\Events\Combat\MapDoneLoadingEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\PathTraversedEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\PerformActionEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\ShapeshiftEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\ShowPotentialPathEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\SummonEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TakingActionEvent.cs" />
@@ -332,6 +339,7 @@
     <Compile Include="Assets\View\Fatalities\FatalityParams.cs" />
     <Compile Include="Assets\View\Fatalities\GenericFatality.cs" />
     <Compile Include="Assets\View\Fatalities\SpellTypeFatalities\FightingFatality.cs" />
+    <Compile Include="Assets\View\Fatalities\WeaponFatalities\CrushFatality.cs" />
     <Compile Include="Assets\View\Fatalities\WeaponFatalities\SlashFatality.cs" />
     <Compile Include="Assets\View\GUI\AbilitiesModal.cs" />
     <Compile Include="Assets\View\GUI\GUISpriteLoader.cs" />
@@ -343,15 +351,16 @@
     <Compile Include="Assets\View\Mounts\MountView.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\AttackerJoltScript.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\BoomerangFatalityScript.cs" />
-    <Compile Include="Assets\View\Scripts\FXScripts\CasterJoltScript.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\FlinchScript.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\GearExplosionScript.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\HeadRotationScript.cs" />
+    <Compile Include="Assets\View\Scripts\FXScripts\LycanthropeScript.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\AbilityBtnClick.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\AbilityModalBtnClick.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\FatalityJoltScript.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\EndTurnBtnClick.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\WpnBtnClick.cs" />
+    <Compile Include="Assets\View\ViewParams.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Model\Abilities\Active\XML\ActiveAbilities.xml" />

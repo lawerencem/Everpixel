@@ -24,6 +24,7 @@ namespace Controller.Managers.Map
 
         private CMapGUIControllerHit _hitHelper = new CMapGUIControllerHit();
         private CMapGUIControllerParticle _particleHelper = new CMapGUIControllerParticle();
+        private CMapGUIControllerShapeshift _shapeshiftHelper = new CMapGUIControllerShapeshift();
 
         private static CMapGUIController _instance;
         public static CMapGUIController Instance
@@ -128,9 +129,10 @@ namespace Controller.Managers.Map
                 var ability = e.Hit.Ability as GenericActiveAbility;
                 switch(ability.CastType)
                 {
-                    case (AbilityCastTypeEnum.Bullet): { this._hitHelper.ProcessBulletGraphics(e); } break;
-                    case (AbilityCastTypeEnum.No_Collision_Bullet): { this._hitHelper.ProcessBulletGraphics(e); } break;
-                    case (AbilityCastTypeEnum.Summon): { this.ProcessSummon(e); } break;
+                    case (AbilityCastTypeEnum.Bullet): { this._hitHelper.ProcessBulletFX(e); } break;
+                    case (AbilityCastTypeEnum.No_Collision_Bullet): { this._hitHelper.ProcessBulletFX(e); } break;
+                    case (AbilityCastTypeEnum.Shapeshift): { this._shapeshiftHelper.ProcessShapeshiftFX(e); } break;
+                    case (AbilityCastTypeEnum.Summon): { this.ProcessSummonFX(e); } break;
                 }
             }
         } 
@@ -145,7 +147,7 @@ namespace Controller.Managers.Map
             this._abilityModal.ResetModal();
         }
 
-        public void ProcessSummon(DisplayHitStatsEvent e)
+        public void ProcessSummonFX(DisplayHitStatsEvent e)
         {
             this._hitHelper.ProcessSummon(e);
         }

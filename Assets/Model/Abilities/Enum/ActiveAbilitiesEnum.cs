@@ -6,5 +6,6 @@
         Eldritch_Chomp,
         Hadoken,
         Summon_Shoggoth,
+        Were_Ween,
     }
 }

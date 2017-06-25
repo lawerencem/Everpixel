@@ -108,6 +108,7 @@ namespace Controller.Managers
                 case (CombatEventEnum.MapDoneLoading): { HandleMapDoneLoadingEvent(e as MapDoneLoadingEvent); } break;
                 case (CombatEventEnum.PathTraversed): { HandlePathTraversedEvent(e as PathTraversedEvent); } break;
                 case (CombatEventEnum.PerformActionEvent): { HandlePerformActionEvent(e as PerformActionEvent); } break;
+                case (CombatEventEnum.Shapeshift): { HandleShapeshiftEvent(e as ShapeshiftEvent); } break;
                 case (CombatEventEnum.ShowPotentialPath): { HandleShowPotentialPathEvent(e as ShowPotentialPathEvent); } break;
                 case (CombatEventEnum.Summon): { HandleSummonEvent(e as SummonEvent); } break;
                 case (CombatEventEnum.TakingAction): { HandleTakingActionEvent(e as TakingActionEvent); } break;
@@ -142,6 +143,10 @@ namespace Controller.Managers
                 ability = ActiveAbilityTable.Instance.Table[e.AttackType];
 
             this._combatManager.CurAbility = ability;
+            if (ability.isSelfCast())
+            {
+                var perform = new PerformActionEvent(this, this.GetCurrentCharacter().CurrentTile, this.ActionPerformedCallback);
+            }
         }
 
         private void HandleCastingEvent(CastingEvent e)
@@ -253,6 +258,12 @@ namespace Controller.Managers
             this._events.Remove(e);
             var path = this._combatManager.GetPathTileControllers(e);
             CMapGUIController.Instance.DecoratePath(path);
+        }
+
+        private void HandleShapeshiftEvent(ShapeshiftEvent e)
+        {
+            this._events.Remove(e);
+
         }
 
         private void HandleSummonEvent(SummonEvent e)

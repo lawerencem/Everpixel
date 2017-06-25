@@ -14,9 +14,10 @@ namespace Controller.Characters
     {
         private GenericCharacter _model;
         private CharacterView _view;
-
+        
         public TileController CurrentTile { get; set; }
         public GameObject Handle { get; set; }
+        public bool KillFXProcessed { get; set; }   // TODO: Don't like this here...
         public bool LParty { get; set; }
         public GenericCharacter Model { get { return this._model; } }
         public List<GameObject> Particles { get; set; }

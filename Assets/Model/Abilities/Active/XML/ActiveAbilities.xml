@@ -2,7 +2,7 @@
   <ActiveAbility name="Eldritch_Chomp">
     <AbilityCastTypeEnum>No_Collision_Bullet</AbilityCastTypeEnum>
     <AccMod>1</AccMod>
-    <AoE>1</AoE>
+    <AoE>0</AoE>
     <APCost>5</APCost>
     <ArmorIgnoreMod>1</ArmorIgnoreMod>
     <ArmorPierceMod>1</ArmorPierceMod>
@@ -23,7 +23,7 @@
   <ActiveAbility name="Hadoken">
     <AbilityCastTypeEnum>Bullet</AbilityCastTypeEnum>
     <AccMod>1</AccMod>
-    <AoE>1</AoE>
+    <AoE>0</AoE>
     <APCost>4</APCost>
     <ArmorIgnoreMod>1</ArmorIgnoreMod>
     <ArmorPierceMod>1</ArmorPierceMod>
@@ -42,7 +42,7 @@
   <ActiveAbility name="Summon_Shoggoth">
     <AbilityCastTypeEnum>Summon</AbilityCastTypeEnum>
     <AccMod>1</AccMod>
-    <AoE>1</AoE>
+    <AoE>0</AoE>
     <APCost>6</APCost>
     <ArmorIgnoreMod>0</ArmorIgnoreMod>
     <ArmorPierceMod>0</ArmorPierceMod>
@@ -58,5 +58,32 @@
     <RechargeTime>0</RechargeTime>
     <ShieldDamageMod>0</ShieldDamageMod>
     <StaminaCost>70</StaminaCost>
+  </ActiveAbility>
+  <ActiveAbility name="Were_Ween">
+    <AbilityCastTypeEnum>Shapeshift</AbilityCastTypeEnum>
+    <AccMod>1</AccMod>
+    <AoE>0</AoE>
+    <APCost>8</APCost>
+    <ArmorIgnoreMod>0</ArmorIgnoreMod>
+    <ArmorPierceMod>0</ArmorPierceMod>
+    <BlockIgnoreMod>0</BlockIgnoreMod>
+    <CastTime>80</CastTime>
+    <DmgPerPower>0</DmgPerPower>
+    <DodgeMod>1.0</DodgeMod>
+    <FlatDamage>0</FlatDamage>
+    <MeleeBlockChanceMod>0</MeleeBlockChanceMod>
+    <ParryModMod>0</ParryModMod>
+    <Range>0</Range>
+    <RangeBlockMod>0</RangeBlockMod>
+    <RechargeTime>0</RechargeTime>
+    <ShapeshiftSprites>
+      <CharAttackHead>3</CharAttackHead>
+      <CharHeadDead>2</CharHeadDead>
+      <CharHeadFlinch>1</CharHeadFlinch>
+      <CharHead>0</CharHead>
+      <CharTorso>4</CharTorso>
+    </ShapeshiftSprites>
+    <ShieldDamageMod>0</ShieldDamageMod>
+    <StaminaCost>20</StaminaCost>
   </ActiveAbility>
 </ActiveAbilities>

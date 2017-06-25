@@ -1317,6 +1317,23 @@
         <Resolve>550</Resolve>
       </Stats>
     </Character>
+    <Character name ="Orc Wereween">
+      <ActiveAbilitiesEnum>Were_Ween</ActiveAbilitiesEnum>
+      <Class>Warrior,3</Class>
+      <Class>Lycanthrope,5</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Orc</RaceEnum>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>750</Agility>
+        <Constitution>750</Constitution>
+        <Intelligence>320</Intelligence>
+        <Might>650</Might>
+        <Perception>650</Perception>
+        <Resolve>320</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Shock Troopa">
       <Class>Warrior,3</Class>
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>

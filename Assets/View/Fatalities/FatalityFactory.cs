@@ -40,6 +40,7 @@ namespace View.Fatalities
                 var type = (WeaponAbilitiesEnum)e.Hit.Ability.Type;
                 switch (type)
                 {
+                    case (WeaponAbilitiesEnum.Crush): { return new CrushFatality(parent, e); }
                     case (WeaponAbilitiesEnum.Slash): { return new SlashFatality(parent, e); }
                 }
             }

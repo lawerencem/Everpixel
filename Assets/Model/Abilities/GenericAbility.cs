@@ -30,6 +30,7 @@ namespace Model.Abilities
         public double ArmorPierceMod { get; set; }
         public double BlockIgnoreMod { get; set; }
         public double CastTime { get; set; }
+        public bool CustomCastCamera { get; set; }
         public double DamageMod { get; set; }
         public double DodgeMod { get; set; }
         public string Description { get; set; }
@@ -45,6 +46,7 @@ namespace Model.Abilities
 
         public GenericAbility()
         {
+            this.CustomCastCamera = false;
             this.Injuries = new List<InjuryEnum>();
             this.ModData = new GenericAbilityModData();
         }
@@ -79,6 +81,14 @@ namespace Model.Abilities
             CombatReferee.Instance.ProcessSummon(hit);
         }
 
+        public void ProcessShapeshift(HitInfo hit)
+        {
+            AttackEventFlags.SetShapeshiftTrue(hit.Flags);
+            foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
+                perk.TryModAbility(hit.Ability);
+            CombatReferee.Instance.ProcessShapeshift(hit);
+        }
+
         public virtual bool IsValidActionEvent(PerformActionEvent e)
         {
             return false;
@@ -104,6 +114,14 @@ namespace Model.Abilities
                     return true;
             }
             return false;
+        }
+
+        public bool isSelfCast()
+        {
+            if (this.Range == 0)
+                return true;
+            else
+                return false;
         }
 
         protected virtual void TryApplyInjury(HitInfo hit)

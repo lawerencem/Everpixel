@@ -1,4 +1,5 @@
-﻿using Controller.Managers.Map;
+﻿using Assets.View;
+using Controller.Managers.Map;
 using Controller.Map;
 using Generics.Scripts;
 using Generics.Utilities;
@@ -31,6 +32,7 @@ namespace View.Fatalities
             }
             else
                 this.InitMeleeFatality();
+            this._event.Hit.Target.KillFXProcessed = true;
         }
 
         protected override void InitBulletFatality()
@@ -89,7 +91,6 @@ namespace View.Fatalities
             var boom = Resources.Load(path);
             var particles = GameObject.Instantiate(boom) as GameObject;
             particles.transform.position = position;
-            //particles.transform.SetParent(this._event.Hit.Target.Handle.transform);
             particles.name = CMapGUIControllerParams.FIGHTING_FATALITY + " Particles";
             var explosionPath = StringUtil.PathBuilder(
                 CMapGUIControllerParams.EFFECTS_PATH,
@@ -118,47 +119,45 @@ namespace View.Fatalities
             var c = this._event.Hit.Target.Model;
             if (c.Type == CharacterTypeEnum.Humanoid)
             {
-                var renderer = c.ParentController.SpriteHandlerDict["CharTorso"].GetComponent<SpriteRenderer>();
+                var renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_TORSO].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;
-                renderer = c.ParentController.SpriteHandlerDict["CharHead"].GetComponent<SpriteRenderer>();
+                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_HEAD].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;
-                renderer = c.ParentController.SpriteHandlerDict["CharDeco1"].GetComponent<SpriteRenderer>();
+                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_DECO_1].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;
-                renderer = c.ParentController.SpriteHandlerDict["CharDeco2"].GetComponent<SpriteRenderer>();
+                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_DECO_2].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;
-                renderer = c.ParentController.SpriteHandlerDict["CharDeco3"].GetComponent<SpriteRenderer>();
+                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_DECO_3].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;
-                renderer = c.ParentController.SpriteHandlerDict["CharDeco4"].GetComponent<SpriteRenderer>();
+                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_DECO_4].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;
-                renderer = c.ParentController.SpriteHandlerDict["CharFace"].GetComponent<SpriteRenderer>();
-                renderer.sprite = null;
-                renderer = c.ParentController.SpriteHandlerDict["CharHead"].GetComponent<SpriteRenderer>();
+                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_FACE].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;
 
                 if (c.Armor != null)
                 {
-                    var script = c.ParentController.SpriteHandlerDict["CharArmor"].AddComponent<GearExplosionScript>();
-                    script.Init(c.ParentController.SpriteHandlerDict["CharArmor"], c.ParentController);
+                    var script = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_ARMOR].AddComponent<GearExplosionScript>();
+                    script.Init(c.ParentController.SpriteHandlerDict[ViewParams.CHAR_ARMOR], c.ParentController);
                 }
                 if (c.Helm != null)
                 {
-                    var script = c.ParentController.SpriteHandlerDict["CharHelm"].AddComponent<GearExplosionScript>();
-                    script.Init(c.ParentController.SpriteHandlerDict["CharHelm"], c.ParentController);
+                    var script = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_HELM].AddComponent<GearExplosionScript>();
+                    script.Init(c.ParentController.SpriteHandlerDict[ViewParams.CHAR_HELM], c.ParentController);
                 }
                 if (c.LWeapon != null)
                 {
-                    var script = c.ParentController.SpriteHandlerDict["CharLWeapon"].AddComponent<GearExplosionScript>();
-                    script.Init(c.ParentController.SpriteHandlerDict["CharLWeapon"], c.ParentController);
+                    var script = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_L_WEAPON].AddComponent<GearExplosionScript>();
+                    script.Init(c.ParentController.SpriteHandlerDict[ViewParams.CHAR_L_WEAPON], c.ParentController);
                 }
                 if (c.RWeapon != null)
                 {
-                    var script = c.ParentController.SpriteHandlerDict["CharRWeapon"].AddComponent<GearExplosionScript>();
-                    script.Init(c.ParentController.SpriteHandlerDict["CharRWeapon"], c.ParentController);
+                    var script = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_R_WEAPON].AddComponent<GearExplosionScript>();
+                    script.Init(c.ParentController.SpriteHandlerDict[ViewParams.CHAR_R_WEAPON], c.ParentController);
                 }
             }
             else
             {
-                var renderer = c.ParentController.SpriteHandlerDict["CharTorso"].GetComponent<SpriteRenderer>();
+                var renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_TORSO].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;
             }
         }

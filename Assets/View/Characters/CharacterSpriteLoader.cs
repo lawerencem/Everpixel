@@ -1,5 +1,6 @@
 ﻿using Generics;
 using Generics.Utilities;
+using Model.Abilities;
 using Model.Characters;
 using Model.Equipment;
 using Model.Mounts;
@@ -17,7 +18,8 @@ namespace View.Characters
         private const int FLINCH_EYES = 7;
         private const string EQUIPMENT_PATH = "Sprites/Equipment/";
         private const string EXTENSION = "_Spritesheet";
-        
+        private const string LYCANTHROPE_PATH = "Sprites/Characters/Lycanthropes/";
+
         public CharacterSpriteLoader() { }
 
         public Sprite[] GetArmorSprites(ArmorParams a)
@@ -67,6 +69,12 @@ namespace View.Characters
         public Sprite[] GetMountSprites(MountParams m)
         {
             var path = StringUtil.PathBuilder(CRITTER_PATH, m.Type.ToString(), EXTENSION);
+            return GetSprites(path);
+        }
+
+        public Sprite[] GetLycanthropeSprites(string typeStr)
+        {
+            var path = StringUtil.PathBuilder(LYCANTHROPE_PATH, typeStr, EXTENSION);
             return GetSprites(path);
         }
 

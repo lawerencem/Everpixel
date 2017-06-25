@@ -3,8 +3,6 @@
     public enum CombatEventEnum
     {
         None,
-        ActiveAbilitySelected,
-        //ActionCofirmed,
         ApplyInjury,
         AttackSelected,
         Casting,
@@ -18,6 +16,7 @@
         PerformActionEvent,
         WeaponAbilityPerformed,
         ShowPotentialPath,
+        Shapeshift,
         Summon,
         TakingAction,
         TileDoubleClick,

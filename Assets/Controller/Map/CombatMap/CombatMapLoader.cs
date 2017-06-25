@@ -13,6 +13,7 @@ using View.Map;
 using Generics.Hex;
 using Assets.Generics;
 using View.Scripts;
+using Assets.View;
 
 namespace Controller.Managers.Map
 {
@@ -70,8 +71,8 @@ namespace Controller.Managers.Map
                 var spriteHandler = new GameObject();
                 var render = spriteHandler.AddComponent<SpriteRenderer>();
                 spriteHandler.transform.position = c.Handle.transform.position;
-                if (sort == "CharFace" || sort == "CharDeco1" || sort == "CharDeco2")
-                    spriteHandler.transform.SetParent(c.SpriteHandlerDict["CharHead"].transform);
+                if (sort == ViewParams.CHAR_FACE || sort == ViewParams.CHAR_DECO_1 || sort == ViewParams.CHAR_DECO_2)
+                    spriteHandler.transform.SetParent(c.SpriteHandlerDict[ViewParams.CHAR_HEAD].transform);
                 else
                     spriteHandler.transform.SetParent(c.Handle.transform);
                 spriteHandler.name = "Character Deco";
@@ -150,7 +151,7 @@ namespace Controller.Managers.Map
 
         private void InitEnemyParty(ref List<GenericCharacterController> controllers)
         {
-            var enemies = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Goblin War Party", 15));
+            var enemies = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Lizardman War Party", 20));
             for (int i = 0; i < enemies.Count; i++)
                 this.BuildAndLayoutCharacter(enemies[i], ref controllers);
         }
@@ -240,20 +241,20 @@ namespace Controller.Managers.Map
                 c.Handle.transform.SetParent(this.MapHolder);
                 c.Handle.name = c.View.Type.ToString() + " " + c.View.Race.ToString();
                 render.sprite = sprite;
-                render.sortingLayerName = "CharTorso";
-                c.SpriteHandlerDict.Add("CharTorso", c.Handle);
-                AttachHead(c, "CharHead", c.View.Head, tile);
-                c.SpriteHandlerDict.Add("Character Main", c.Handle);
-                if (c.View.Mount != null) { AttachMount(c, "CharMount", tile); }
-                AttachDeco(c, "CharFace", c.View.Face, tile);
-                AttachDeco(c, "CharDeco1", c.View.Deco1, tile);
-                AttachDeco(c, "CharDeco2", c.View.Deco2, tile);
-                AttachDeco(c, "CharDeco3", c.View.Deco3, tile);
-                AttachDeco(c, "CharDeco4", c.View.Deco4, tile);
-                if (c.View.Armor != null) { TryAttachEquipment(c, c.View.Armor, "CharArmor", tile); }
-                if (c.View.Helm != null) { TryAttachEquipment(c, c.View.Helm, "CharHelm", tile, 0f, HELM_OFFSET); }
-                if (c.View.LWeapon != null) { TryAttachEquipment(c, c.View.LWeapon, "CharLWeapon", tile, WEAPON_OFFSET); }
-                if (c.View.RWeapon != null) { TryAttachEquipment(c, c.View.RWeapon, "CharRWeapon", tile, -WEAPON_OFFSET); }
+                render.sortingLayerName = ViewParams.CHAR_TORSO;
+                c.SpriteHandlerDict.Add(ViewParams.CHAR_TORSO, c.Handle);
+                AttachHead(c, ViewParams.CHAR_HEAD, c.View.Head, tile);
+                c.SpriteHandlerDict.Add(ViewParams.CHAR_MAIN, c.Handle);
+                if (c.View.Mount != null) { AttachMount(c, ViewParams.CHAR_MOUNT, tile); }
+                AttachDeco(c, ViewParams.CHAR_FACE, c.View.Face, tile);
+                AttachDeco(c, ViewParams.CHAR_DECO_1, c.View.Deco1, tile);
+                AttachDeco(c, ViewParams.CHAR_DECO_2, c.View.Deco2, tile);
+                AttachDeco(c, ViewParams.CHAR_DECO_3, c.View.Deco3, tile);
+                AttachDeco(c, ViewParams.CHAR_DECO_4, c.View.Deco4, tile);
+                if (c.View.Armor != null) { TryAttachEquipment(c, c.View.Armor, ViewParams.CHAR_ARMOR, tile); }
+                if (c.View.Helm != null) { TryAttachEquipment(c, c.View.Helm, ViewParams.CHAR_HELM, tile, 0f, HELM_OFFSET); }
+                if (c.View.LWeapon != null) { TryAttachEquipment(c, c.View.LWeapon, ViewParams.CHAR_L_WEAPON, tile, WEAPON_OFFSET); }
+                if (c.View.RWeapon != null) { TryAttachEquipment(c, c.View.RWeapon, ViewParams.CHAR_R_WEAPON, tile, -WEAPON_OFFSET); }
                 if (!lParty)
                     c.Handle.transform.localRotation = Quaternion.Euler(0, 180, 0);
                 tile.Model.Current = c;
@@ -272,8 +273,8 @@ namespace Controller.Managers.Map
                 position.x += xOffset;
                 position.y += yOffset;
                 spriteHandler.transform.position = position;
-                if (sort == "CharHelm")
-                    spriteHandler.transform.SetParent(c.SpriteHandlerDict["CharHead"].transform);
+                if (sort == ViewParams.CHAR_HELM)
+                    spriteHandler.transform.SetParent(c.SpriteHandlerDict[ViewParams.CHAR_HEAD].transform);
                 else
                     spriteHandler.transform.SetParent(c.Handle.transform);
                 spriteHandler.name = e.Name;

@@ -147,6 +147,11 @@
     <Character>1,Stout Armer Boy,One</Character>
     <Character>1,Orc Rhapsodist,Three</Character>
   </SubParty>
+  <SubParty Name ="Orc Wereweens">
+    <Difficulty>5</Difficulty>
+    <Character>1,Orc Wereween,Three</Character>
+    <Character>1,Orc Wereween,Three</Character>
+  </SubParty>
   <SubParty Name ="Orc Berserkers">
     <Difficulty>4</Difficulty>
     <Character>1,Wimpy Orc Berserker,One</Character>

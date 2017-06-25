@@ -34,6 +34,7 @@ namespace Controller.Map
         public static readonly Color WHITE = new Color(255, 255, 255, 255);
 
 
+        public static readonly string CRUSH_FATALITY = "CrushFatality";
         public static readonly string FIGHTING_FATALITY = "FightingFatality";
         public static readonly string SLASH_FATALITY = "SlashFatality";
 

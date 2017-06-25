@@ -10,7 +10,10 @@ namespace View.Scripts
     {
         private void OnClick()
         {
-            var e = new GUIEndTurnEvent(GUIEventManager.Instance);
+            if (!CombatEventManager.Instance.GetInteractionLock())
+            {
+                var e = new GUIEndTurnEvent(GUIEventManager.Instance);
+            }
         }
 
         public void Start()

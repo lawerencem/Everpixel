@@ -66,6 +66,13 @@
     <SecondaryStatsEnum>Parry,8</SecondaryStatsEnum>
     <SecondaryStatsEnum>Power,2</SecondaryStatsEnum>
   </Class>
+  <Class name="Lycanthrope">
+    <PrimaryStatsEnum>Constitution,4</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Might,2</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Resolve,2</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Iniative,8</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Stamina,4</SecondaryStatsEnum>
+  </Class>
   <Class name="Ninja">
     <PrimaryStatsEnum>Agility,3</PrimaryStatsEnum>
     <PrimaryStatsEnum>Intelligence,2</PrimaryStatsEnum>

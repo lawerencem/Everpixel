@@ -1,26 +1,22 @@
 ﻿TODO
 
-   - were ween
+   - character killed being called twice...   
+   - Return to original vector3 on cast...
    - blade singer spells
-   - orc zerkers
    - orc khan
-
+   - Ween Tamer
+   - Ween
+   - War Ween
+   - BArks
+   - Dire Ween
+   - Weenosaurus Rex
 
 Tomorrow:
    - GUI popup for stats, predicted dmg
 
-This weekend
-   - Bard for orcs
-   - were-ween
-   - barks
-   - ween tamer
-   - gui popups for stats
-   - penguins
-
-
 Next Weekend
+   - Penguins
    - Ability gui popups
-   - Critters / Leveling
    - Troll Culture
    - Refactor character stuff with structs
 
@@ -39,7 +35,7 @@ Refactor:
 	Combat Turn system
 
 Bugs:
-	Hadoken still not killing character
+	Fatality banner doesn't show on second fatatliy...
 	Goblin Void Weavers sometimes dont get turns...
 
 ideas: 
