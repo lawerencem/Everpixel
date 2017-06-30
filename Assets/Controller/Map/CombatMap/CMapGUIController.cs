@@ -14,6 +14,7 @@ namespace Controller.Managers.Map
 {
     public class CMapGUIController
     {
+        private List<GameObject> _aoeTiles = new List<GameObject>();
         private List<GameObject> _boxImages = new List<GameObject>();
         private List<GameObject> _decorateTileFamily = new List<GameObject>();
         private GameObject _singleTile;
@@ -63,14 +64,23 @@ namespace Controller.Managers.Map
             this._hitHelper.ProcessInjury(e);
         }
 
+        public void ClearAoETiles()
+        {
+            foreach (var old in this._aoeTiles) { GameObject.Destroy(old); }
+            this._aoeTiles.Clear();
+        }
+
         public void ClearDecoratedTiles()
         {
-            foreach (var old in this._decorateTileFamily)
-            {
-                GameObject.Destroy(old);
-            }
-                
+            foreach (var old in this._decorateTileFamily) { GameObject.Destroy(old); }     
             this._decorateTileFamily.Clear();
+        }
+
+        public void DecorateAoETiles(List<TileController> t)
+        {
+            var sprite = MapBridge.Instance.GetTileHighlightSprite();
+            foreach (var tile in t)
+                this.DecorateAoETile(tile, sprite);
         }
 
         public void DecorateHover(TileController t)
@@ -91,7 +101,7 @@ namespace Controller.Managers.Map
 
             if (p != null)
             {
-                var sprite = MapBridge.Instance.GetMovePathSprite();
+                var sprite = MapBridge.Instance.GetTileHighlightSprite();
                 foreach (var tile in p)
                 {
                     DecorateFamilyOfTiles(tile, sprite);
@@ -219,32 +229,36 @@ namespace Controller.Managers.Map
             this._hoverModal.SetModalStatValues(c);
         }
 
+        private void DecorateAoETile(TileController tile, Sprite deco)
+        {
+            var tView = this.DecorateTile(tile, deco);
+            this._aoeTiles.Add(tView);
+        }
+
         private void DecorateFamilyOfTiles(TileController tile, Sprite deco)
         {
-            var tView = new GameObject();
-            var renderer = tView.AddComponent<SpriteRenderer>();
-            renderer.sprite = deco;
-            renderer.transform.position = tile.Model.Center;
-            renderer.sortingLayerName = CMapGUIControllerParams.MAP_GUI_LAYER;
-            tView.name = "Path Tile";
-            var color = renderer.color;
-            color.a = 0.50f;
-            renderer.color = color;
+            var tView = this.DecorateTile(tile, deco, 0.75f);
             this._decorateTileFamily.Add(tView);
         }
 
         private void DecorateSingleTile(TileController t, Sprite deco, float alpha = 0.50f)
+        {
+            var tView = this.DecorateTile(t, deco, alpha);
+            this._singleTile = tView;
+        }
+
+        private GameObject DecorateTile(TileController t, Sprite deco, float alpha = 0.50f)
         {
             var tView = new GameObject();
             var renderer = tView.AddComponent<SpriteRenderer>();
             renderer.sprite = deco;
             renderer.transform.position = t.Model.Center;
             renderer.sortingLayerName = CMapGUIControllerParams.MAP_GUI_LAYER;
-            tView.name = "Path Tile";
+            tView.name = "Decorated Tile";
             var color = renderer.color;
             color.a = alpha;
             renderer.color = color;
-            this._singleTile = tView;
+            return tView;
         }
         
         private void SetTagText(string tag, string toSet)

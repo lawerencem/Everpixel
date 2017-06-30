@@ -12,7 +12,7 @@ namespace View
     {
         private const int POTENTIAL_ATTACK_SPRITE_INDEX = 1;
         private const int HOSTILE_HOVER_SPRITE_INDEX = 2;
-        private const int PATH_SPRITE_INDEX = 3;
+        private const int TILE_HIGHLIGHT_SPRITE_INDEX = 3;
 
         private readonly List<int> LEVEL_ONE_BLOOD_SPATTER = new List<int>() { 1, 2, 3, 4, 5, 6, 7 };
         private readonly List<int> LEVEL_TWO_BLOOD_SPATTER = new List<int>() { 8, 9, 10};
@@ -51,13 +51,6 @@ namespace View
             return stuff[POTENTIAL_ATTACK_SPRITE_INDEX] as Sprite;
         }
 
-        public Sprite GetMoveTileSprite()
-        {
-            var path = StringUtil.PathBuilder(PATH, "Base", TILE_EXTENSION);
-            var stuff = Resources.LoadAll(path);
-            return stuff[PATH_SPRITE_INDEX] as Sprite;
-        }
-
         public Sprite GetBloodSpatterLevelOne()
         {
             var path = StringUtil.PathBuilder(PATH, "Tileblood", TILE_EXTENSION);
@@ -88,6 +81,13 @@ namespace View
             var stuff = Resources.LoadAll(path);
             var index = ListUtil<int>.GetRandomListElement(this.LEVEL_FIVE_BLOOD_SPATTER);
             return stuff[index] as Sprite;
+        }
+
+        public Sprite GetTileHighlightSprite()
+        {
+            var path = StringUtil.PathBuilder(PATH, "Base", TILE_EXTENSION);
+            var stuff = Resources.LoadAll(path);
+            return stuff[TILE_HIGHLIGHT_SPRITE_INDEX] as Sprite;
         }
 
         private Sprite[] GetBackgroundDecoSprites(string path)

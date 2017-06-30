@@ -22,9 +22,9 @@ namespace View.Biomes
             return MapSpriteLoader.Instance.GetHostileHoverSprite();
         }
 
-        public Sprite GetMovePathSprite()
+        public Sprite GetTileHighlightSprite()
         {
-            return MapSpriteLoader.Instance.GetMoveTileSprite();
+            return MapSpriteLoader.Instance.GetTileHighlightSprite();
         }
 
         public Sprite GetPotentialAttackLocSprite()

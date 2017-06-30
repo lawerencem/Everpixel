@@ -16,7 +16,6 @@ namespace View.Scripts
 
         private void OnClick()
         {
-            bool tileSelectable = ActiveAbilityFactory.Instance.TileSelectable(this._ability);
             var e = new AttackSelectedEvent(CombatEventManager.Instance, this._ability);
         }
 

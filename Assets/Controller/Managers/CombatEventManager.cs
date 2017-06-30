@@ -9,7 +9,6 @@ using Model.Events.Combat;
 using System.Collections.Generic;
 using UnityEngine;
 using View.Events;
-using Model.Combat;
 using Controller.Map;
 using Model.Characters;
 
@@ -59,6 +58,11 @@ namespace Controller.Managers
         {
             this._events.Add(e);
             this.TryProcessEvent(e);
+        }
+
+        public GenericAbility GetCurrentAbility()
+        {
+            return this._combatManager.CurAbility;
         }
 
         public GenericCharacterController GetCurrentCharacter()
@@ -129,25 +133,23 @@ namespace Controller.Managers
         private void HandleAttackSelectedEvent(AttackSelectedEvent e)
         {
             this._events.Remove(e);
-            this._currentActionTiles = this._combatManager.GetAttackTiles(e);
-            CMapGUIController.Instance.DecoratePotentialAttackTiles(this._currentActionTiles);
-            foreach(var tile in this._currentActionTiles)
-            {
-                TileControllerFlags.SetAwaitingActionFlagTrue(tile.Flags);
-            }
-
+            this._currentActionTiles = new List<TileController>();
             var ability = new GenericAbility();
-
             if (e.AttackType.GetType().Equals(typeof(WeaponAbilitiesEnum)))
                 ability = GenericAbilityTable.Instance.Table[e.AttackType];
             else if (e.AttackType.GetType().Equals(typeof(ActiveAbilitiesEnum)))
                 ability = ActiveAbilityTable.Instance.Table[e.AttackType];
+            if (ability.isSelfCast())
+                this._currentActionTiles.Add(this.GetCurrentCharacter().CurrentTile);
+            else
+                this._currentActionTiles = this._combatManager.GetAttackTiles(e);
+            CMapGUIController.Instance.DecoratePotentialAttackTiles(this._currentActionTiles);
+            foreach (var tile in this._currentActionTiles)
+            {
+                TileControllerFlags.SetAwaitingActionFlagTrue(tile.Flags);
+            }
 
             this._combatManager.CurAbility = ability;
-            if (ability.isSelfCast())
-            {
-                var perform = new PerformActionEvent(this, this.GetCurrentCharacter().CurrentTile, this.ActionPerformedCallback);
-            }
         }
 
         private void HandleBuffEvent(BuffEvent e)
@@ -271,7 +273,7 @@ namespace Controller.Managers
         private void HandleShapeshiftEvent(ShapeshiftEvent e)
         {
             this._events.Remove(e);
-
+            // TODO: Stats
         }
 
         private void HandleSummonEvent(SummonEvent e)
@@ -307,7 +309,9 @@ namespace Controller.Managers
         private void HandleTileHoverDecoEvent(TileHoverDecoEvent e)
         {
             this._events.Remove(e);
+            CMapGUIController.Instance.ClearAoETiles();
             CMapGUIController.Instance.DecorateHover(e.Tile);
+            CMapGUIController.Instance.DecorateAoETiles(e.AoETiles);
         }
 
         private void HandleTraversePathEvent(TraversePathEvent e)

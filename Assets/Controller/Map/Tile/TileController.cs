@@ -97,19 +97,8 @@ namespace Controller.Map
 
         public void OnMouseEnter()
         {
-            var hover = new TileHoverDecoEvent(CombatEventManager.Instance, this);
-            if (this.Model.Current != null && this.Model.Current.GetType() == typeof(GenericCharacterController))
-            {
-                var fov = Camera.main.fieldOfView;
-                var character = this.Model.Current as GenericCharacterController;
-                var position = character.Handle.transform.position;
-                position.x += (float)(fov * 0.025);
-                position.y += (float)(fov * 0.025);
-                CMapGUIController.Instance.SetHoverModalHeaderText(character.View.Name);
-                CMapGUIController.Instance.SetHoverModalLocation(position);
-                var controller = this.Model.Current as GenericCharacterController;
-                CMapGUIController.Instance.SetHoverModalStatValues(controller.Model);
-            }
+            this.HandleHover();
+            this.HandleAoE();
         }
 
         public void OnMouseExit()
@@ -126,6 +115,36 @@ namespace Controller.Map
         public void SetView(HexTileView v)
         {
             this.View = v;
+        }
+
+        private void HandleAoE()
+        {
+            var cur = CombatEventManager.Instance.GetCurrentAbility();
+            var aoe = new List<TileController>();
+            if (cur != null && TileControllerFlags.HasFlag(this.Flags.CurFlags, TileControllerFlags.Flags.AwaitingAction))
+            {
+                var hexes = this.Model.GetAoETiles((int)cur.AoE);
+                foreach (var hex in hexes)
+                    aoe.Add(hex.Parent);
+            }
+            var hover = new TileHoverDecoEvent(CombatEventManager.Instance, this, aoe);
+        }
+
+        private void HandleHover()
+        {
+            
+            if (this.Model.Current != null && this.Model.Current.GetType() == typeof(GenericCharacterController))
+            {
+                var fov = Camera.main.fieldOfView;
+                var character = this.Model.Current as GenericCharacterController;
+                var position = character.Handle.transform.position;
+                position.x += (float)(fov * 0.025);
+                position.y += (float)(fov * 0.025);
+                CMapGUIController.Instance.SetHoverModalHeaderText(character.View.Name);
+                CMapGUIController.Instance.SetHoverModalLocation(position);
+                var controller = this.Model.Current as GenericCharacterController;
+                CMapGUIController.Instance.SetHoverModalStatValues(controller.Model);
+            }
         }
     }
 }
