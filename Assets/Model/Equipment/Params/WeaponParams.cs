@@ -6,9 +6,9 @@ namespace Model.Equipment
 {
     public class WeaponParams
     {
-        public WeaponParams() { this.Abilities = new List<WeaponAbilitiesEnum>(); }
+        public WeaponParams() { this.Abilities = new List<AbilitiesEnum>(); }
 
-        public List<WeaponAbilitiesEnum> Abilities { get; set;}
+        public List<AbilitiesEnum> Abilities { get; set;}
         public double Accuracy { get; set; }
         public double APReduce { get; set; }
         public double ArmorIgnore { get; set; }

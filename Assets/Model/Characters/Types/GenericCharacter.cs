@@ -21,10 +21,10 @@ namespace Model.Characters
         public GenericCharacter(RaceEnum race)
         {
             this._race = race;
-            this.ActiveAbilities = new List<GenericActiveAbility>();
+            this.ActiveAbilities = new List<GenericAbility>();
             this.ActiveSpells = new SpellsByLevel();
             this.BaseClasses = new Dictionary<ClassEnum, GenericClass>();
-            this.DefaultWpnAbilities = new List<WeaponAbility>();
+            this.DefaultWpnAbilities = new List<GenericAbility>();
             this.FlatSStatMods = new List<FlatSecondaryStatModifier>();
             this.IndefSStatMods = new List<Pair<object, List<IndefSecondaryStatModifier>>>();
             this.Injuries = new List<GenericInjury>();

@@ -5,10 +5,10 @@ namespace View.Events
 {
     public class WpnBtnClickEvent : GUIEvent
     {
-        public WeaponAbilitiesEnum AbilityType { get; set; }
+        public AbilitiesEnum AbilityType { get; set; }
         public bool RWeapon { get; set; }
 
-        public WpnBtnClickEvent(GUIEventManager parent, WeaponAbilitiesEnum type, bool rWeapon) 
+        public WpnBtnClickEvent(GUIEventManager parent, AbilitiesEnum type, bool rWeapon) 
             : base(GUIEventEnum.WpnBtnClick, parent)
         {
             this.AbilityType = type;

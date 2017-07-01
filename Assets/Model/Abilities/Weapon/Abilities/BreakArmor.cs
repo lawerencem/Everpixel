@@ -1,20 +1,23 @@
-﻿using Model.Abilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Model.Characters;
-using Model.Combat;
+﻿using Model.Combat;
+using Model.Events.Combat;
 
 namespace Model.Abilities
 {
-    public class BreakArmor : WeaponAbility
+    public class BreakArmor : GenericAbility
     {
-        public BreakArmor() : base(WeaponAbilitiesEnum.Break_Armor) { }
+        public BreakArmor() : base(AbilitiesEnum.Break_Armor)
+        {
+            this.CastType = AbilityCastTypeEnum.Weapon;
+        }
 
         public override void ProcessAbility(HitInfo hit)
         {
             base.ProcessMelee(hit);
+        }
+
+        public override bool IsValidActionEvent(PerformActionEvent e)
+        {
+            return base.IsValidEnemyTarget(e);
         }
     }
 }

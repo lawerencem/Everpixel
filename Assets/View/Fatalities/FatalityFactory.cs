@@ -21,28 +21,19 @@ namespace View.Fatalities
 
         private GenericFatality TryProcessActiveAbility(CMapGUIControllerHit parent, DisplayHitStatsEvent e)
         {
-            if (e.Hit.Ability.Type.GetType() == (typeof(ActiveAbilitiesEnum)))
+            switch (e.Hit.Ability.MagicType)
             {
-                var active = e.Hit.Ability as GenericActiveAbility;
-                switch (active.MagicType)
-                {
-                    case (MagicTypeEnum.Fighting): { return new FightingFatality(parent, e); }
-                }
+                case (MagicTypeEnum.Fighting): { return new FightingFatality(parent, e); }
             }
             return null;
         }
 
         private GenericFatality TryProcessWeaponAbility(CMapGUIControllerHit parent, DisplayHitStatsEvent e)
         {
-            if (e.Hit.Ability.Type.GetType() == (typeof(WeaponAbilitiesEnum)))
+            switch (e.Hit.Ability.Type)
             {
-                var active = e.Hit.Ability as WeaponAbility;
-                var type = (WeaponAbilitiesEnum)e.Hit.Ability.Type;
-                switch (type)
-                {
-                    case (WeaponAbilitiesEnum.Crush): { return new CrushFatality(parent, e); }
-                    case (WeaponAbilitiesEnum.Slash): { return new SlashFatality(parent, e); }
-                }
+                case (AbilitiesEnum.Crush): { return new CrushFatality(parent, e); }
+                case (AbilitiesEnum.Slash): { return new SlashFatality(parent, e); }
             }
             return null;
         }

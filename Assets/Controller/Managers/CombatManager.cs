@@ -53,10 +53,10 @@ namespace Assets.Controller.Managers
         public List<TileController> GetAttackTiles(AttackSelectedEvent e)
         {
             int distMod = 0;
-            if (e.AttackType.GetType().Equals(typeof(WeaponAbilitiesEnum)))
-                distMod += WeaponAbilityTable.Instance.Table[e.AttackType].Range;
-            else if (e.AttackType.GetType().Equals(typeof(ActiveAbilitiesEnum)))
-                distMod += ActiveAbilityTable.Instance.Table[e.AttackType].Range;
+            if (e.AttackType.GetType().Equals(typeof(AbilitiesEnum)))
+                distMod += GenericAbilityTable.Instance.Table[e.AttackType].Range;
+            else if (e.AttackType.GetType().Equals(typeof(AbilitiesEnum)))
+                distMod += GenericAbilityTable.Instance.Table[e.AttackType].Range;
             
             if (e.RWeapon)
             {

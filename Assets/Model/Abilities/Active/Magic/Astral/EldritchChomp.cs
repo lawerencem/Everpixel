@@ -3,9 +3,9 @@ using Model.Events.Combat;
 
 namespace Model.Abilities
 {
-    public class EldritchChomp : GenericActiveAbility
+    public class EldritchChomp : GenericAbility
     {
-        public EldritchChomp() : base(ActiveAbilitiesEnum.Eldritch_Chomp)
+        public EldritchChomp() : base(AbilitiesEnum.Eldritch_Chomp)
         {
             this.CastType = AbilityCastTypeEnum.No_Collision_Bullet;
             this.MagicType = Magic.MagicTypeEnum.Astral;

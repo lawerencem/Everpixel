@@ -1,20 +1,23 @@
-﻿using Model.Abilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Model.Characters;
-using Model.Combat;
+﻿using Model.Combat;
+using Model.Events.Combat;
 
 namespace Model.Abilities
 {
-    public class Stun : WeaponAbility
+    public class Stun : GenericAbility
     {
-        public Stun() : base(WeaponAbilitiesEnum.Stun) { }
+        public Stun() : base(AbilitiesEnum.Stun)
+        {
+            this.CastType = AbilityCastTypeEnum.Weapon;
+        }
 
         public override void ProcessAbility(HitInfo hit)
         {
             base.ProcessMelee(hit);
+        }
+
+        public override bool IsValidActionEvent(PerformActionEvent e)
+        {
+            return base.IsValidEnemyTarget(e);
         }
     }
 }

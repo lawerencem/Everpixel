@@ -15,9 +15,9 @@ namespace Model.Spells
                 var spell = SpellFactory.Instance.CreateNewObject(kvp.Y);
                 int lvl = spell.SpellLevel;
                 if (!c.ActiveSpells.Spells.ContainsKey(lvl))
-                    c.ActiveSpells.Spells.Add(lvl, new Dictionary<ActiveAbilitiesEnum, Pair<int, GenericActiveAbility>>());
+                    c.ActiveSpells.Spells.Add(lvl, new Dictionary<AbilitiesEnum, Pair<int, GenericAbility>>());
                 if (!c.ActiveSpells.Spells[lvl].ContainsKey(kvp.Y))
-                    c.ActiveSpells.Spells[lvl].Add(kvp.Y, new Pair<int, GenericActiveAbility>(kvp.X, spell));
+                    c.ActiveSpells.Spells[lvl].Add(kvp.Y, new Pair<int, GenericAbility>(kvp.X, spell));
             }
         }
     }

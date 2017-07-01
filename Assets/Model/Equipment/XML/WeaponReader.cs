@@ -128,9 +128,9 @@ namespace Model.Equipment.XML
         {
             var key = name + "_" + tier.ToString();
 
-            var ability = WeaponAbilitiesEnum.None;
+            var ability = AbilitiesEnum.None;
             var stats = WeaponParamTable.Instance;
-            if (EnumUtil<WeaponAbilitiesEnum>.TryGetEnumValue(value, ref ability))
+            if (EnumUtil<AbilitiesEnum>.TryGetEnumValue(value, ref ability))
                 stats.Table[key].Abilities.Add(ability);
         }
 

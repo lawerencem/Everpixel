@@ -5,7 +5,7 @@ namespace Model.Abilities
 {
     public class SummonShoggoth : GenericSummonAbility
     {
-        public SummonShoggoth() : base(ActiveAbilitiesEnum.Summon_Shoggoth)
+        public SummonShoggoth() : base(AbilitiesEnum.Summon_Shoggoth)
         {
             this.CastType = AbilityCastTypeEnum.Summon;
             this.MagicType = Magic.MagicTypeEnum.Astral;

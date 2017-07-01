@@ -31,8 +31,8 @@ namespace Models.Equipment.XML
             foreach (var el in doc.Root.Elements())
                 foreach (var att in el.Attributes())
                 {
-                    var type = ActiveAbilitiesEnum.None;
-                    if (EnumUtil<ActiveAbilitiesEnum>.TryGetEnumValue(att.Value, ref type))
+                    var type = AbilitiesEnum.None;
+                    if (EnumUtil<AbilitiesEnum>.TryGetEnumValue(att.Value, ref type))
                     {
                         HandleType(type);
                         foreach (var ele in el.Elements())
@@ -41,70 +41,70 @@ namespace Models.Equipment.XML
                 }
         }
 
-        private void HandleIndex(ActiveAbilitiesEnum type, XElement ele, string mod, string value)
+        private void HandleIndex(AbilitiesEnum type, XElement ele, string mod, string value)
         {
-            int v = 1;
-            int.TryParse(value, out v);
+            double v = 1;
+            double.TryParse(value, out v);
             switch (mod)
             {
                 case ("AbilityCastTypeEnum"): { HandleCastType(type, value); } break;
-                case ("AccMod"): { ActiveAbilityTable.Instance.Table[type].AccMod = v; } break;
-                case ("AoE"): { ActiveAbilityTable.Instance.Table[type].AoE = v; } break;
-                case ("APCost"): { ActiveAbilityTable.Instance.Table[type].APCost = v; } break;
-                case ("ArmorIgnoreMod"): { ActiveAbilityTable.Instance.Table[type].ArmorIgnoreMod = v; } break;
-                case ("ArmorPierceMod"): { ActiveAbilityTable.Instance.Table[type].ArmorPierceMod = v; } break;
-                case ("BlockIgnoreMod"): { ActiveAbilityTable.Instance.Table[type].BlockIgnoreMod = v; } break;
-                case ("CastTime"): { ActiveAbilityTable.Instance.Table[type].CastTime = v; } break;
-                case ("Description"): { ActiveAbilityTable.Instance.Table[type].Description = value; } break;
-                case ("DmgPerPower"): { ActiveAbilityTable.Instance.Table[type].DmgPerPower = double.Parse(value); } break;
-                case ("Duration"): { ActiveAbilityTable.Instance.Table[type].Duration = double.Parse(value); } break;
-                case ("DodgeReduceMod"): { ActiveAbilityTable.Instance.Table[type].DodgeMod = v; } break;
-                case ("FlatDamage"): { ActiveAbilityTable.Instance.Table[type].FlatDamage = v; } break;
+                case ("AccMod"): { GenericAbilityTable.Instance.Table[type].AccMod = v; } break;
+                case ("AoE"): { GenericAbilityTable.Instance.Table[type].AoE = v; } break;
+                case ("APCost"): { GenericAbilityTable.Instance.Table[type].APCost = (int)v; } break;
+                case ("ArmorIgnoreMod"): { GenericAbilityTable.Instance.Table[type].ArmorIgnoreMod = v; } break;
+                case ("ArmorPierceMod"): { GenericAbilityTable.Instance.Table[type].ArmorPierceMod = v; } break;
+                case ("BlockIgnoreMod"): { GenericAbilityTable.Instance.Table[type].BlockIgnoreMod = v; } break;
+                case ("CastTime"): { GenericAbilityTable.Instance.Table[type].CastTime = v; } break;
+                case ("Description"): { GenericAbilityTable.Instance.Table[type].Description = value; } break;
+                case ("DmgPerPower"): { GenericAbilityTable.Instance.Table[type].DmgPerPower = double.Parse(value); } break;
+                case ("Duration"): { GenericAbilityTable.Instance.Table[type].Duration = double.Parse(value); } break;
+                case ("DodgeMod"): { GenericAbilityTable.Instance.Table[type].DodgeMod = v; } break;
+                case ("FlatDamage"): { GenericAbilityTable.Instance.Table[type].FlatDamage = v; } break;
                 case ("Injury"): { this.HandleInjury(type, value); } break;
-                case ("MeleeBlockChanceMod"): { ActiveAbilityTable.Instance.Table[type].MeleeBlockChanceMod = v; } break;
-                case ("ParryModMod"): { ActiveAbilityTable.Instance.Table[type].ParryModMod = v; } break;
-                case ("Range"): { ActiveAbilityTable.Instance.Table[type].Range = v; } break;
-                case ("RangeBlockMod"): { ActiveAbilityTable.Instance.Table[type].RangeBlockMod = v; } break;
-                case ("RechargeTime"): { ActiveAbilityTable.Instance.Table[type].RechargeTime = v; } break;
+                case ("MeleeBlockChanceMod"): { GenericAbilityTable.Instance.Table[type].MeleeBlockChanceMod = v; } break;
+                case ("ParryModMod"): { GenericAbilityTable.Instance.Table[type].ParryModMod = v; } break;
+                case ("Range"): { GenericAbilityTable.Instance.Table[type].Range = (int)v; } break;
+                case ("RangeBlockMod"): { GenericAbilityTable.Instance.Table[type].RangeBlockMod = v; } break;
+                case ("RechargeTime"): { GenericAbilityTable.Instance.Table[type].RechargeTime = v; } break;
                 case ("ShapeshiftSprites"): { this.HandleShapeshiftSprites(ele, type); } break;
-                case ("ShieldDamageMod"): { ActiveAbilityTable.Instance.Table[type].ShieldDamageMod = v; } break;
-                case ("SpellLevel"): { ActiveAbilityTable.Instance.Table[type].SpellLevel = v; } break;
-                case ("StaminaCost"): { ActiveAbilityTable.Instance.Table[type].StaminaCost = v; } break;
+                case ("ShieldDamageMod"): { GenericAbilityTable.Instance.Table[type].ShieldDamageMod = v; } break;
+                case ("SpellLevel"): { GenericAbilityTable.Instance.Table[type].SpellLevel = (int)v; } break;
+                case ("StaminaCost"): { GenericAbilityTable.Instance.Table[type].StaminaCost = (int)v; } break;
             }
         }
 
-        private void HandleCastType(ActiveAbilitiesEnum key, string value)
+        private void HandleCastType(AbilitiesEnum key, string value)
         {
             var type = AbilityCastTypeEnum.None;
             if (EnumUtil<AbilityCastTypeEnum>.TryGetEnumValue(value, ref type))
-                ActiveAbilityTable.Instance.Table[key].CastType = type;
+                GenericAbilityTable.Instance.Table[key].CastType = type;
         }
 
-        private void HandleInjury(ActiveAbilitiesEnum type, string s)
+        private void HandleInjury(AbilitiesEnum type, string s)
         {
             var injury = InjuryEnum.None;
             if (EnumUtil<InjuryEnum>.TryGetEnumValue(s, ref injury))
             {
-                ActiveAbilityTable.Instance.Table[type].Injuries.Add(injury);
+                GenericAbilityTable.Instance.Table[type].Injuries.Add(injury);
             }
         }
 
-        private void HandleType(ActiveAbilitiesEnum type)
+        private void HandleType(AbilitiesEnum type)
         {
             switch (type)
             {
-                case (ActiveAbilitiesEnum.Eldritch_Chomp): { ActiveAbilityTable.Instance.Table[type] = new EldritchChomp(); } break;
-                case (ActiveAbilitiesEnum.Hadoken): { ActiveAbilityTable.Instance.Table[type] = new Hadoken(); } break;
-                case (ActiveAbilitiesEnum.Haste_Song): { ActiveAbilityTable.Instance.Table[type] = new HasteSong(); } break;
-                case (ActiveAbilitiesEnum.Orc_Metal): { ActiveAbilityTable.Instance.Table[type] = new OrcMetal(); } break;
-                case (ActiveAbilitiesEnum.Summon_Shoggoth): { ActiveAbilityTable.Instance.Table[type] = new SummonShoggoth(); } break;
-                case (ActiveAbilitiesEnum.Were_Ween): { ActiveAbilityTable.Instance.Table[type] = new Wereween(); } break;
+                case (AbilitiesEnum.Eldritch_Chomp): { GenericAbilityTable.Instance.Table[type] = new EldritchChomp(); } break;
+                case (AbilitiesEnum.Hadoken): { GenericAbilityTable.Instance.Table[type] = new Hadoken(); } break;
+                case (AbilitiesEnum.Haste_Song): { GenericAbilityTable.Instance.Table[type] = new HasteSong(); } break;
+                case (AbilitiesEnum.Orc_Metal): { GenericAbilityTable.Instance.Table[type] = new OrcMetal(); } break;
+                case (AbilitiesEnum.Summon_Shoggoth): { GenericAbilityTable.Instance.Table[type] = new SummonShoggoth(); } break;
+                case (AbilitiesEnum.Were_Ween): { GenericAbilityTable.Instance.Table[type] = new Wereween(); } break;
             }
         }
 
-        private void HandleShapeshiftSprites(XElement element, ActiveAbilitiesEnum type)
+        private void HandleShapeshiftSprites(XElement element, AbilitiesEnum type)
         {
-            var v = ActiveAbilityTable.Instance.Table[type] as GenericShapeshiftAbility;
+            var v = GenericAbilityTable.Instance.Table[type] as GenericShapeshiftAbility;
             foreach(var ele in element.Elements())
             {
                 switch(ele.Name.ToString())

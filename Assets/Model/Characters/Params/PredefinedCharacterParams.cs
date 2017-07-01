@@ -12,23 +12,23 @@ namespace Model.Characters
     {
         public PredefinedCharacterParams()
         {
-            this.ActiveAbilities = new List<ActiveAbilitiesEnum>();
+            this.ActiveAbilities = new List<AbilitiesEnum>();
             this.Armors = new Dictionary<string, List<List<string>>>();
             this.Classes = new Dictionary<ClassEnum, int>();
-            this.DefaultWpnAbilities = new List<WeaponAbilitiesEnum>();
+            this.DefaultWpnAbilities = new List<AbilitiesEnum>();
             this.Helms = new Dictionary<string, List<List<string>>>();
             this.LWeapons = new Dictionary<string, List<List<string>>>();
             this.Perks = new List<PerkEnum>();
             this.RWeapons = new Dictionary<string, List<List<string>>>();
-            this.Spells = new List<Pair<int, ActiveAbilitiesEnum>>();
+            this.Spells = new List<Pair<int, AbilitiesEnum>>();
             this.Stats = new PrimaryStats();
         }
 
         public Dictionary<string, List<List<string>>> Armors { get; set; }
-        public List<ActiveAbilitiesEnum> ActiveAbilities { get; set; }
+        public List<AbilitiesEnum> ActiveAbilities { get; set; }
         public Dictionary<ClassEnum, int> Classes { get; set; }
         public CultureEnum Culture { get; set; }
-        public List<WeaponAbilitiesEnum>  DefaultWpnAbilities { get; set; }
+        public List<AbilitiesEnum>  DefaultWpnAbilities { get; set; }
         public Dictionary<string, List<List<string>>> Helms { get; set; }
         public Dictionary<string, List<List<string>>> LWeapons { get; set; }
         public MountEnum Mount { get; set; }
@@ -36,7 +36,7 @@ namespace Model.Characters
         public List<PerkEnum> Perks { get; set; }
         public RaceEnum Race { get; set; }
         public Dictionary<string, List<List<string>>> RWeapons { get; set; }
-        public List<Pair<int, ActiveAbilitiesEnum>> Spells { get; set; }
+        public List<Pair<int, AbilitiesEnum>> Spells { get; set; }
         public PrimaryStats Stats { get; set; }
         public CharacterTypeEnum Type { get; set; }
     }

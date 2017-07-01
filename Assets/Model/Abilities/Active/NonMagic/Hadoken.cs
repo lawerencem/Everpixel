@@ -3,9 +3,9 @@ using Model.Events.Combat;
 
 namespace Model.Abilities
 {
-    public class Hadoken : GenericActiveAbility
+    public class Hadoken : GenericAbility
     {
-        public Hadoken() : base(ActiveAbilitiesEnum.Hadoken)
+        public Hadoken() : base(AbilitiesEnum.Hadoken)
         {
             this.CastType = AbilityCastTypeEnum.Bullet;
             this.MagicType = Magic.MagicTypeEnum.Fighting;

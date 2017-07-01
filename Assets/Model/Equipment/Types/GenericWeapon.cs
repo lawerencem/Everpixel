@@ -9,7 +9,7 @@ namespace Model.Equipment
     public class GenericWeapon : GenericEquipment
     {
         public string Name { get; set; }
-        public List<WeaponAbility> Abilities { get; set; }
+        public List<GenericAbility> Abilities { get; set; }
         public double Accuracy { get; set; }
         public double APReduce { get; set; }
         public double ArmorIgnore { get; set; }
@@ -29,7 +29,7 @@ namespace Model.Equipment
 
         public GenericWeapon() : base(SlotEnum.Weapon, EquipmentTypeEnum.Held)
         {
-            this.Abilities = new List<WeaponAbility>();
+            this.Abilities = new List<GenericAbility>();
             this.Accuracy = 1;
             this.APReduce = 1;
             this.ArmorIgnore = 1;

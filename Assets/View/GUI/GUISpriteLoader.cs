@@ -15,13 +15,13 @@ namespace View.GUI
 
         public GUISpriteLoader() { }
 
-        public Sprite GetWpnAbilityBtnImg(WeaponAbilitiesEnum ability)
+        public Sprite GetWpnAbilityBtnImg(AbilitiesEnum ability)
         {
             var path = StringUtil.PathBuilder(ICON_PATH, "Icon", EXTENSION);
             var stuff = Resources.LoadAll(path);
             int index = 0;
-            if (WeaponAbilityTable.Instance.Table.ContainsKey(ability))
-                index = WeaponAbilityTable.Instance.Table[ability].Sprite;
+            if (GenericAbilityTable.Instance.Table.ContainsKey(ability))
+                index = GenericAbilityTable.Instance.Table[ability].Sprite;
             return stuff[index] as Sprite;
         }
     }

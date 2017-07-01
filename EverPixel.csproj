@@ -129,7 +129,6 @@
     <Compile Include="Assets\Generics\XML\GenericXMLReader.cs" />
     <Compile Include="Assets\Model\Abilities\Active\ActiveAbilityFactory.cs" />
     <Compile Include="Assets\Model\Abilities\Active\ActiveAbilityTable.cs" />
-    <Compile Include="Assets\Model\Abilities\Active\GenericActiveAbility.cs" />
     <Compile Include="Assets\Model\Abilities\Active\Music\GenericSong.cs" />
     <Compile Include="Assets\Model\Abilities\Active\Music\HasteSong.cs" />
     <Compile Include="Assets\Model\Abilities\Active\Music\OrcMetal.cs" />
@@ -171,10 +170,8 @@
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\TripleStrike.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\WideSlash.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Wrap.cs" />
-    <Compile Include="Assets\Model\Abilities\Weapon\WeaponAbility.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\WeaponAbilityBuilder.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\WeaponAbilityFactory.cs" />
-    <Compile Include="Assets\Model\Abilities\Weapon\WeaponAbilityTable.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\XML\WeaponAbilityReader.cs" />
     <Compile Include="Assets\Model\Biomes\Enums\BiomeEnum.cs" />
     <Compile Include="Assets\Model\Characters\Builders\CharacterParamBuilder.cs" />
@@ -370,8 +367,12 @@
     <Compile Include="Assets\View\ViewParams.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Model\Abilities\Active\XML\ActiveAbilities.xml" />
-    <None Include="Assets\Model\Abilities\Weapon\XML\WeaponAbilities.xml" />
+    <None Include="Assets\Model\Abilities\Active\XML\ActiveAbilities.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Assets\Model\Abilities\Weapon\XML\WeaponAbilities.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Model\Characters\XML\PredefinedCharacters.xml" />
     <None Include="Assets\Model\Characters\XML\PredefinedCritters.xml" />
     <None Include="Assets\Model\Characters\XML\RaceDefaultStats.xml" />

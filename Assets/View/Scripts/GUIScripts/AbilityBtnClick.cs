@@ -12,14 +12,14 @@ namespace View.Scripts
 {
     public class AbilityBtnClick : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
-        private ActiveAbilitiesEnum _ability;
+        private AbilitiesEnum _ability;
 
         private void OnClick()
         {
             var e = new AttackSelectedEvent(CombatEventManager.Instance, this._ability);
         }
 
-        public void Init(GameObject toAdd, ActiveAbilitiesEnum ability)
+        public void Init(GameObject toAdd, AbilitiesEnum ability)
         {
             this._ability = ability;
             var btnContainer = toAdd.GetComponent<Button>();

@@ -102,9 +102,13 @@ namespace Model.Events.Combat
                     this.Info.Source.Model.CurrentAP -= this.Info.Action.APCost;
                     this.Info.Source.Model.CurrentStamina -= (int)fatigueCost;
 
-                    var hit = new HitInfo(this.Info.Source, this.Info.Target, this.Info.Action, this.ChildHitDone);
-                    this.Info.Hits.Add(hit);
-                    this.Info.Action.ProcessAbility(hit);
+                    var hitTargets = this.Info.Action.GetAoETiles(this.Info.Target);
+                    foreach (var target in hitTargets)
+                    {
+                        var hit = new HitInfo(this.Info.Source, target, this.Info.Action, this.ChildHitDone);
+                        this.Info.Hits.Add(hit);
+                        this.Info.Action.ProcessAbility(hit);
+                    }
                 }
                 else
                 {

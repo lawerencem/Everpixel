@@ -12,7 +12,7 @@ namespace Model.Abilities.Music
         // TODO Shift to .xml file
         public int APMod = 2;
 
-        public HasteSong() : base(ActiveAbilitiesEnum.Haste_Song)
+        public HasteSong() : base(AbilitiesEnum.Haste_Song)
         {
             this.CastType = AbilityCastTypeEnum.Song;
             this._songType = SongTypeEnum.BlueMusic;

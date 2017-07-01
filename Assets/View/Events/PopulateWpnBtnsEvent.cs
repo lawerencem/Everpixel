@@ -7,9 +7,9 @@ namespace View.Events
 {
     public class PopulateWpnBtnsEvent : GUIEvent
     {
-        public List<Pair<WeaponAbility, bool>> Abilities;
+        public List<Pair<GenericAbility, bool>> Abilities;
 
-        public PopulateWpnBtnsEvent(List<Pair<WeaponAbility, bool>> abs, GUIEventManager parent) : 
+        public PopulateWpnBtnsEvent(List<Pair<GenericAbility, bool>> abs, GUIEventManager parent) : 
             base(GUIEventEnum.PopulateWpnBtns, parent)
         {
             this.Abilities = abs;

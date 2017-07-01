@@ -39,8 +39,8 @@ namespace Model.Characters
         public int CurrentMorale { get; set; }
         public int CurrentStamina { get; set; }
 
-        public List<GenericActiveAbility> ActiveAbilities { get; set; }
-        public List<WeaponAbility> DefaultWpnAbilities { get; set; }
+        public List<GenericAbility> ActiveAbilities { get; set; }
+        public List<GenericAbility> DefaultWpnAbilities { get; set; }
         public List<GenericInjury> Injuries { get; set; }
 
         // TODO: Put these in an equipment container class

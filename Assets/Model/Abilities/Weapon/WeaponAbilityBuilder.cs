@@ -5,20 +5,20 @@ using System.Collections.Generic;
 
 namespace Model.Abilities
 {
-    public class WeaponAbilityBuilder : AbstractBuilder<WeaponAbilitiesEnum, WeaponAbility>
+    public class WeaponAbilityBuilder : AbstractBuilder<AbilitiesEnum, GenericAbility>
     {
-        public override WeaponAbility Build()
+        public override GenericAbility Build()
         {
             throw new NotImplementedException();
         }
 
-        public override WeaponAbility Build(WeaponAbilitiesEnum arg)
+        public override GenericAbility Build(AbilitiesEnum arg)
         {
-            var proto = WeaponAbilityTable.Instance.Table[arg];
-            return proto.Copy();
+            var proto = GenericAbilityTable.Instance.Table[arg];
+            return proto.Copy() as GenericAbility;
         }
 
-        public override WeaponAbility Build(List<WeaponAbilitiesEnum> args)
+        public override GenericAbility Build(List<AbilitiesEnum> args)
         {
             throw new NotImplementedException();
         }

@@ -22,7 +22,7 @@ namespace Model.Combat
         public void ProcessBullet(HitInfo hit)
         {
             ProcessBulletFlags(hit);
-            if (hit.Ability.Type.GetType() == (typeof(WeaponAbilitiesEnum)))
+            if (hit.Ability.Type.GetType() == (typeof(AbilitiesEnum)))
                 CalculateWpnDmg(hit);
             else
                 CalculateAbilityDmg(hit);
@@ -33,7 +33,7 @@ namespace Model.Combat
         public void ProcessMelee(HitInfo hit)
         {
             ProcessMeleeFlags(hit);
-            if (hit.Ability.Type.GetType() == (typeof(WeaponAbilitiesEnum)))
+            if (hit.Ability.Type.GetType() == (typeof(AbilitiesEnum)))
                 CalculateWpnDmg(hit);
             else
                 CalculateAbilityDmg(hit);
@@ -59,11 +59,10 @@ namespace Model.Combat
         }
 
         private void CalculateAbilityDmg(HitInfo hit)
-        {
-            var ability = hit.Ability as GenericActiveAbility;
+        {;
             var dmg = hit.Ability.ModData.BaseDamage;
-            dmg += ability.FlatDamage;
-            dmg += (ability.DmgPerPower * hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Power));
+            dmg += hit.Ability.FlatDamage;
+            dmg += hit.Ability.DmgPerPower * hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Power);
             if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
                 dmg *= (BASE_CRIT_SCALAR + (hit.Source.Model.SecondaryStats.CriticalMultiplier / BASE_SCALAR));
             hit.Dmg = (int)dmg;

@@ -5,7 +5,7 @@ namespace Model.Abilities.Shapeshift
 {
     public class Wereween : GenericShapeshiftAbility
     {
-        public Wereween() : base(ActiveAbilitiesEnum.Were_Ween)
+        public Wereween() : base(AbilitiesEnum.Were_Ween)
         {
             this.CastType = AbilityCastTypeEnum.Shapeshift;
             this.CustomCastCamera = true;

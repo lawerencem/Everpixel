@@ -1,6 +1,6 @@
 ﻿namespace Model.Abilities.Music
 {
-    public class GenericSong : GenericActiveAbility
+    public class GenericSong : GenericAbility
     {
         public enum SongTypeEnum
         {
@@ -13,7 +13,7 @@
         protected SongTypeEnum _songType;
         public SongTypeEnum SongType { get { return this._songType; } }
 
-        public GenericSong(ActiveAbilitiesEnum type) : base(type)
+        public GenericSong(AbilitiesEnum type) : base(type)
         {
             
         }

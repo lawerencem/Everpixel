@@ -63,7 +63,7 @@ namespace View.GUI
             this._proto.SetActive(false);
         }
 
-        private void PopulateModalList(GenericCharacterController character, GenericActiveAbility ability)
+        private void PopulateModalList(GenericCharacterController character, GenericAbility ability)
         {
             var protoBtn = this._proto.GetComponent<Button>();
             var protoImg = this._proto.GetComponent<Image>();
@@ -90,7 +90,7 @@ namespace View.GUI
             cloneTxtContainer.transform.SetParent(clone.transform);
 
             var txt = cloneTxtContainer.AddComponent<Text>();
-            txt.text = ability.TypeStr;
+            txt.text = ability.Type.ToString().Replace("_", " ");
             txt.font = protoTxt.font;
             txt.fontSize = protoTxt.fontSize;
             txt.color = protoTxt.color;
@@ -105,7 +105,7 @@ namespace View.GUI
 
             this._btns.Add(clone);
             var btnScript = clone.AddComponent<AbilityBtnClick>();
-            var typeEnum = (ActiveAbilitiesEnum)ability.Type;
+            var typeEnum = ability.Type;
             btnScript.Init(clone, typeEnum);
         }
     }

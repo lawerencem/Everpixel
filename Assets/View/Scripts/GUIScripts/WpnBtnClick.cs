@@ -11,7 +11,7 @@ namespace View.Scripts
 {
     public class WpnBtnClick : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
-        private WeaponAbilitiesEnum _ability;
+        private AbilitiesEnum _ability;
         private bool _rWeapon;
         private GameObject _imgHandler;
 
@@ -39,7 +39,7 @@ namespace View.Scripts
             CombatEventManager.Instance.UnlockGUI();
         }
 
-        public void SetAbility(WeaponAbilitiesEnum a, bool rWeapon)
+        public void SetAbility(AbilitiesEnum a, bool rWeapon)
         {
             this._rWeapon = rWeapon;
             this._ability = a;

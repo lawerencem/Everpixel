@@ -13,17 +13,17 @@ namespace Model.Characters
     {
         public CharacterParams()
         {
-            this.ActiveAbilities = new List<ActiveAbilitiesEnum>();
+            this.ActiveAbilities = new List<AbilitiesEnum>();
             this.BaseClasses = new Dictionary<ClassEnum, int>();
-            this.DefaultWpnAbilities = new List<WeaponAbilitiesEnum>();
-            this.Spells = new List<Pair<int, ActiveAbilitiesEnum>>();
+            this.DefaultWpnAbilities = new List<AbilitiesEnum>();
+            this.Spells = new List<Pair<int, AbilitiesEnum>>();
             this.Perks = new List<PerkEnum>();
         }
         
-        public List<ActiveAbilitiesEnum> ActiveAbilities { get; set; }
+        public List<AbilitiesEnum> ActiveAbilities { get; set; }
         public ArmorParams Armor { get; set; }
         public Dictionary<ClassEnum, int> BaseClasses { get; set; }
-        public List<WeaponAbilitiesEnum> DefaultWpnAbilities { get; set; }
+        public List<AbilitiesEnum> DefaultWpnAbilities { get; set; }
         public ArmorParams Helm { get; set; }
         public WeaponParams LWeapon { get; set; }
         public MountParams Mount { get; set; }
@@ -31,7 +31,7 @@ namespace Model.Characters
         public List<PerkEnum> Perks { get; set; }
         public WeaponParams RWeapon { get; set; }
         public RaceEnum Race { get; set; }
-        public List<Pair<int, ActiveAbilitiesEnum>> Spells { get; set; }
+        public List<Pair<int, AbilitiesEnum>> Spells { get; set; }
         public StartingColEnum StartRow { get; set; }
         public CharacterTypeEnum Type { get; set; }
     }

@@ -2,11 +2,11 @@
 
 namespace Model.Abilities
 {
-    public class GenericSummonAbility : GenericActiveAbility
+    public class GenericSummonAbility : GenericAbility
     {
         public string toSummon = "";
 
-        public GenericSummonAbility(ActiveAbilitiesEnum type) : base(type)
+        public GenericSummonAbility(AbilitiesEnum type) : base(type)
         {
 
         }

@@ -1,20 +1,23 @@
-﻿using Model.Abilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Model.Characters;
-using Model.Combat;
+﻿using Model.Combat;
+using Model.Events.Combat;
 
 namespace Model.Abilities
 {
-    public class Riposte : WeaponAbility
+    public class Riposte : GenericAbility
     {
-        public Riposte() : base(WeaponAbilitiesEnum.Riposte) { }
+        public Riposte() : base(AbilitiesEnum.Riposte)
+        {
+            this.CastType = AbilityCastTypeEnum.Weapon;
+        }
 
         public override void ProcessAbility(HitInfo hit)
         {
 
+        }
+
+        public override bool IsValidActionEvent(PerformActionEvent e)
+        {
+            return true;
         }
     }
 }

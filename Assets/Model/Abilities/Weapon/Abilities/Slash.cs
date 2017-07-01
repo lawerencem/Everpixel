@@ -1,20 +1,23 @@
-﻿using Model.Abilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Model.Characters;
-using Model.Combat;
+﻿using Model.Combat;
+using Model.Events.Combat;
 
 namespace Model.Abilities
 {
-    public class Slash : WeaponAbility
+    public class Slash : GenericAbility
     {
-        public Slash() : base(WeaponAbilitiesEnum.Slash) { }
+        public Slash() : base(AbilitiesEnum.Slash)
+        {
+            this.CastType = AbilityCastTypeEnum.Weapon;
+        }
 
         public override void ProcessAbility(HitInfo hit)
         {
             base.ProcessMelee(hit);
+        }
+
+        public override bool IsValidActionEvent(PerformActionEvent e)
+        {
+            return base.IsValidEnemyTarget(e);
         }
     }
 }

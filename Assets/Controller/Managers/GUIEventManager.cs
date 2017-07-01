@@ -66,9 +66,9 @@ namespace Controller.Managers
                 var script = btnContainer.GetComponent<WpnBtnClick>();
 
                 if (e.Abilities != null && i < e.Abilities.Count)
-                    script.SetAbility((WeaponAbilitiesEnum)e.Abilities[i].X.Type, e.Abilities[i].Y);
+                    script.SetAbility(e.Abilities[i].X.Type, e.Abilities[i].Y);
                 else
-                    script.SetAbility(WeaponAbilitiesEnum.None, true);
+                    script.SetAbility(AbilitiesEnum.None, true);
             }
         }
         

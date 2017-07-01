@@ -8,21 +8,15 @@ namespace Model.Abilities
     {
         public ActiveAbilityFactory() { }
 
-        public List<GenericActiveAbility> CreateNewObject(List<ActiveAbilitiesEnum> abilities)
+        public List<GenericAbility> CreateNewObject(List<AbilitiesEnum> abilities)
         {
-            var abs = new List<GenericActiveAbility>();
+            var abs = new List<GenericAbility>();
             foreach(var ability in abilities)
             {
-                var proto = ActiveAbilityTable.Instance.Table[ability];
+                var proto = GenericAbilityTable.Instance.Table[ability];
                 abs.Add(proto.Copy());
             }
             return abs;
-        }
-
-        public bool TileSelectable(ActiveAbilitiesEnum ability)
-        {
-            var proto = ActiveAbilityTable.Instance.Table[ability];
-            return proto.isTileTargetable();
         }
     }
 }

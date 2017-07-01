@@ -135,21 +135,14 @@ namespace Controller.Managers.Map
 
         public void DisplayHitStatsEvent(DisplayHitStatsEvent e)
         {
-            if (e.Hit.Ability.Type.GetType() == (typeof(WeaponAbilitiesEnum)))
+            switch(e.Hit.Ability.CastType)
             {
-                this._hitHelper.ProcessMeleeHitGraphics(e);
-            }
-            else if (e.Hit.Ability.Type.GetType() == (typeof(ActiveAbilitiesEnum)))
-            {
-                var ability = e.Hit.Ability as GenericActiveAbility;
-                switch(ability.CastType)
-                {
-                    case (AbilityCastTypeEnum.Bullet): { this._hitHelper.ProcessBulletFX(e); } break;
-                    case (AbilityCastTypeEnum.No_Collision_Bullet): { this._hitHelper.ProcessBulletFX(e); } break;
-                    case (AbilityCastTypeEnum.Shapeshift): { this._shapeshiftHelper.ProcessShapeshiftFX(e); } break;
-                    case (AbilityCastTypeEnum.Song): { this._particleHelper.HandleSongParticle(e); } break;
-                    case (AbilityCastTypeEnum.Summon): { this.ProcessSummonFX(e); } break;
-                }
+                case (AbilityCastTypeEnum.Bullet): { this._hitHelper.ProcessBulletFX(e); } break;
+                case (AbilityCastTypeEnum.No_Collision_Bullet): { this._hitHelper.ProcessBulletFX(e); } break;
+                case (AbilityCastTypeEnum.Shapeshift): { this._shapeshiftHelper.ProcessShapeshiftFX(e); } break;
+                case (AbilityCastTypeEnum.Song): { this._particleHelper.HandleSongParticle(e); } break;
+                case (AbilityCastTypeEnum.Summon): { this.ProcessSummonFX(e); } break;
+                case (AbilityCastTypeEnum.Weapon): { this._hitHelper.ProcessMeleeHitGraphics(e); } break;
             }
         } 
 

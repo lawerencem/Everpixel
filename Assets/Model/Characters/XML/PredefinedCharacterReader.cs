@@ -84,8 +84,8 @@ namespace Model.Characters.XML
 
         private void HandleActiveAbility(string rootKey, string value)
         {
-            var ab = ActiveAbilitiesEnum.None;
-            if (EnumUtil<ActiveAbilitiesEnum>.TryGetEnumValue(value, ref ab))
+            var ab = AbilitiesEnum.None;
+            if (EnumUtil<AbilitiesEnum>.TryGetEnumValue(value, ref ab))
                 table.Table[rootKey].ActiveAbilities.Add(ab);
         }
 

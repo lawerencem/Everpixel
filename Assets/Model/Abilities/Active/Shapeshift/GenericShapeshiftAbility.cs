@@ -1,10 +1,10 @@
 ﻿namespace Model.Abilities.Shapeshift
 {
-    public class GenericShapeshiftAbility : GenericActiveAbility
+    public class GenericShapeshiftAbility : GenericAbility
     {
         public ShapeshiftInfo Info { get; set; }
 
-        public GenericShapeshiftAbility(ActiveAbilitiesEnum type) : base(type)
+        public GenericShapeshiftAbility(AbilitiesEnum type) : base(type)
         {
             this.Info = new ShapeshiftInfo();
         }

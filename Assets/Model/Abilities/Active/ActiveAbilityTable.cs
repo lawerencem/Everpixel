@@ -5,7 +5,7 @@ namespace Model.Abilities
 {
     public class ActiveAbilityTable : AbstractSingleton<ActiveAbilityTable>
     {
-        public Dictionary<object, GenericActiveAbility> Table;
-        public ActiveAbilityTable() { Table = new Dictionary<object, GenericActiveAbility>(); }
+        public Dictionary<object, GenericAbility> Table;
+        public ActiveAbilityTable() { Table = new Dictionary<object, GenericAbility>(); }
     }
 }

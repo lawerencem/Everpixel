@@ -48,7 +48,7 @@ namespace Controller.Managers.Map
         public void DisplayHitStatsEvent(HitInfo hit)
         {
             this.DisplayText(
-                hit.Ability.TypeStr, 
+                hit.Ability.Type.ToString().Replace("_", " "), 
                 hit.Source.Handle, 
                 CMapGUIControllerParams.WHITE, CMapGUIControllerParams.ATTACK_TEXT_OFFSET);
         }
@@ -199,7 +199,7 @@ namespace Controller.Managers.Map
             var position = Vector3.Lerp(e.Hit.Target.CurrentTile.Model.Center, e.Hit.Source.CurrentTile.Model.Center, 0.85f);
             attackerScript.Init(e.Hit.Source, position, 8f);
 
-            var sprite = AttackSpriteLoader.Instance.GetAttackSprite(e.Hit.Ability as GenericActiveAbility);
+            var sprite = AttackSpriteLoader.Instance.GetAttackSprite(e.Hit.Ability);
             var bullet = new GameObject();
             var script = bullet.AddComponent<RaycastWithDeleteScript>();
             bullet.transform.position = e.Hit.Source.transform.position;

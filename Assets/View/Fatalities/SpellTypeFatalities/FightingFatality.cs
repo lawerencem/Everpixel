@@ -24,12 +24,8 @@ namespace View.Fatalities
         public override void Init()
         {
             base.Init();
-            if (this._event.Hit.Ability.Type.GetType() == (typeof(ActiveAbilitiesEnum)))
-            {
-                var active = this._event.Hit.Ability as GenericActiveAbility;
-                if (active.CastType == AbilityCastTypeEnum.Bullet)
-                    this.InitBulletFatality();
-            }
+            if (this._event.Hit.Ability.CastType == AbilityCastTypeEnum.Bullet)
+                this.InitBulletFatality();
             else
                 this.InitMeleeFatality();
             this._event.Hit.Target.KillFXProcessed = true;
@@ -54,7 +50,7 @@ namespace View.Fatalities
 
         private void HandleBulletGraphics()
         {
-            var sprite = AttackSpriteLoader.Instance.GetAttackSprite(this._event.Hit.Ability as GenericActiveAbility);
+            var sprite = AttackSpriteLoader.Instance.GetAttackSprite(this._event.Hit.Ability);
             var bullet = new GameObject();
             var script = bullet.AddComponent<RaycastWithDeleteScript>();
             bullet.transform.position = this._event.Hit.Source.transform.position;
@@ -69,7 +65,6 @@ namespace View.Fatalities
         private void ProcessBlood()
         {
             var c = this._event.Hit.Target.Model;
-            var sprite = MapBridge.Instance.GetSplatterSprites(5);
             foreach (var neighbor in this._event.Hit.Target.CurrentTile.Adjacent)
             {
                 foreach (var outerNeighbor in neighbor.Adjacent)

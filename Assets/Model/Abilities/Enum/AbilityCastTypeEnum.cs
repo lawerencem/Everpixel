@@ -8,5 +8,6 @@
         Shapeshift,
         Song,
         Summon,
+        Weapon,
     }
 }

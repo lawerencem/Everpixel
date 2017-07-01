@@ -79,8 +79,8 @@ namespace Model.Characters.XML
 
         private void HandleActiveAbility(string rootKey, string value)
         {
-            var ab = ActiveAbilitiesEnum.None;
-            if (EnumUtil<ActiveAbilitiesEnum>.TryGetEnumValue(value, ref ab))
+            var ab = AbilitiesEnum.None;
+            if (EnumUtil<AbilitiesEnum>.TryGetEnumValue(value, ref ab))
                 table.Table[rootKey].ActiveAbilities.Add(ab);
         }
 
@@ -93,8 +93,8 @@ namespace Model.Characters.XML
 
         private void HandleDefaultWpnAbility(string rootKey, string value)
         {
-            var wpnAbility = WeaponAbilitiesEnum.None;
-            if (EnumUtil<WeaponAbilitiesEnum>.TryGetEnumValue(value, ref wpnAbility))
+            var wpnAbility = AbilitiesEnum.None;
+            if (EnumUtil<AbilitiesEnum>.TryGetEnumValue(value, ref wpnAbility))
                 table.Table[rootKey].DefaultWpnAbilities.Add(wpnAbility);
         }
 

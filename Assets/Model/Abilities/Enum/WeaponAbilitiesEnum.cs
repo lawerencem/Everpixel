@@ -1,8 +1,14 @@
 ﻿namespace Model.Abilities
 {
-    public enum WeaponAbilitiesEnum
+    public enum AbilitiesEnum
     {
         None,
+
+        // Abilities
+        Hadoken,
+        Kamehameha,
+
+        // Weapon Abilities
         Aim,
         Bite,
         Break_Armor,
@@ -27,5 +33,17 @@
         Triple_Strike,
         Wide_Slash,
         Wrap,
+
+        // Shapeshift
+        Were_Ween,
+
+        // Songs
+        Haste_Song,
+        Orc_Metal,
+
+        // Spells
+        Eldritch_Chomp,
+        Summon_Shoggoth,
+        
     }
 }

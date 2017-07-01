@@ -134,11 +134,9 @@ namespace Controller.Managers
         {
             this._events.Remove(e);
             this._currentActionTiles = new List<TileController>();
-            var ability = new GenericAbility();
-            if (e.AttackType.GetType().Equals(typeof(WeaponAbilitiesEnum)))
+            var ability = GenericAbilityTable.Instance.Table[e.AttackType];
+            if (e.AttackType.GetType().Equals(typeof(AbilitiesEnum)))
                 ability = GenericAbilityTable.Instance.Table[e.AttackType];
-            else if (e.AttackType.GetType().Equals(typeof(ActiveAbilitiesEnum)))
-                ability = ActiveAbilityTable.Instance.Table[e.AttackType];
             if (ability.isSelfCast())
                 this._currentActionTiles.Add(this.GetCurrentCharacter().CurrentTile);
             else
@@ -252,14 +250,16 @@ namespace Controller.Managers
 
         private void HandlePerformActionEventHelper(PerformActionEvent e)
         {
-            e.Info.Action = this._combatManager.CurAbility;
-            e.Info.Source = this._combatManager.CurrActing;
-            this._combatManager.CurAbility = null;
-            if (e.ValidAction())
+            if (this._combatManager.CurAbility != null && this._combatManager.CurAbility != null)
             {
-                this._currentAction = e;
-                e.Perform();
-                // TODO: Generate multiple hits as necessaryy
+                e.Info.Action = this._combatManager.CurAbility;
+                e.Info.Source = this._combatManager.CurrActing;
+                this._combatManager.CurAbility = null;
+                if (e.ValidAction())
+                {
+                    this._currentAction = e;
+                    e.Perform();
+                }
             }
         }
 
@@ -334,21 +334,21 @@ namespace Controller.Managers
         private void PopulateBtnsHelper()
         {
             var curr = this._combatManager.CurrActing.Model;
-            var abs = new List<Pair<WeaponAbility, bool>>();
+            var abs = new List<Pair<GenericAbility, bool>>();
 
             if (curr.Type == CharacterTypeEnum.Humanoid)
             {
                 if (curr.LWeapon != null)
                     foreach (var ab in curr.LWeapon.Abilities)
-                        abs.Add(new Pair<WeaponAbility, bool>(ab, false));
+                        abs.Add(new Pair<GenericAbility, bool>(ab, false));
                 if (curr.RWeapon != null)
                     foreach (var ab in curr.RWeapon.Abilities)
-                        abs.Add(new Pair<WeaponAbility, bool>(ab, true));
+                        abs.Add(new Pair<GenericAbility, bool>(ab, true));
             }
             else
             {
                 foreach (var ab in curr.DefaultWpnAbilities)
-                    abs.Add(new Pair<WeaponAbility, bool>(ab, true));
+                    abs.Add(new Pair<GenericAbility, bool>(ab, true));
             }
             CMapGUIController.Instance.ProcessNewTurn();
             var populateWpnBtns = new PopulateWpnBtnsEvent(abs, GUIEventManager.Instance);

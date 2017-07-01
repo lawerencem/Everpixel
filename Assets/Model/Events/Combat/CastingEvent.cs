@@ -23,7 +23,7 @@ namespace Model.Events.Combat
             this.CastTime = (int)e.Info.Action.CastTime;
             this.Caster = e.Info.Source;
             this._event = e;
-            this.SpellName = e.Info.Action.TypeStr;
+            this.SpellName = e.Info.Action.Type.ToString();
             var script = e.Info.Source.Handle.AddComponent<IntervalJoltScript>();
             script.Init(e.Info.Source.Handle, 1.2f, 12f, 0.08f, 0.08f);
             CharacterStatusFlags.SetCastingTrue(e.Info.Source.Model.StatusFlags);

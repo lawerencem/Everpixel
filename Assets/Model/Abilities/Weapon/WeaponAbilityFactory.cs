@@ -10,9 +10,9 @@ namespace Model.Abilities
 
         public WeaponAbilityFactory() { }
 
-        public List<WeaponAbility> CreateNewObject(List<WeaponAbilitiesEnum> abilities)
+        public List<GenericAbility> CreateNewObject(List<AbilitiesEnum> abilities)
         {
-            var wAbilities = new List<WeaponAbility>();
+            var wAbilities = new List<GenericAbility>();
             foreach (var ability in abilities) { wAbilities.Add(this._builder.Build(ability)); }
             return wAbilities;
         }

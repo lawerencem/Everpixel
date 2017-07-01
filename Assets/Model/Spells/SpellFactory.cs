@@ -8,7 +8,7 @@ namespace Model.Spells
     {
         public SpellFactory() { }
 
-        public GenericActiveAbility CreateNewObject(ActiveAbilitiesEnum spell)
+        public GenericAbility CreateNewObject(AbilitiesEnum spell)
         {
             var proto = ActiveAbilityTable.Instance.Table[spell];
             // TODO: Reup times
