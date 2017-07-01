@@ -9,7 +9,7 @@ namespace Model.Abilities
 
         public override void ProcessAbility(HitInfo hit)
         {
-            this.CastType = AbilityCastTypeEnum.Weapon;
+            this.CastType = AbilityCastTypeEnum.Melee;
         }
 
         public override bool IsValidActionEvent(PerformActionEvent e)

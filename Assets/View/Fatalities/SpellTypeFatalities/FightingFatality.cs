@@ -5,9 +5,9 @@ using Generics.Scripts;
 using Generics.Utilities;
 using Model.Abilities;
 using Model.Characters;
+using Model.Combat;
 using Model.Events.Combat;
 using UnityEngine;
-using View.Biomes;
 using View.Characters;
 using View.Scripts;
 
@@ -15,57 +15,57 @@ namespace View.Fatalities
 {
     public class FightingFatality : GenericFatality
     {
-        public FightingFatality(CMapGUIControllerHit parent, DisplayHitStatsEvent e) 
+        public FightingFatality(CMapGUIControllerHit parent, DisplayActionEvent e)
             : base(FatalityEnum.Fighting, parent, e)
         {
-            
+
         }
 
         public override void Init()
         {
             base.Init();
-            if (this._event.Hit.Ability.CastType == AbilityCastTypeEnum.Bullet)
+            if (this._event.EventController.Action.CastType == AbilityCastTypeEnum.Bullet)
                 this.InitBulletFatality();
             else
                 this.InitMeleeFatality();
-            this._event.Hit.Target.KillFXProcessed = true;
+            this._event.EventController.TargetCharController.KillFXProcessed = true;
         }
 
         protected override void InitBulletFatality()
         {
             base.InitBulletFatality();
-            var zoom = this._event.Hit.Source.Handle.AddComponent<DramaticHangCallbackZoomOut>();
-            var position = this._event.Hit.Source.Handle.transform.position;
+            var zoom = this._event.EventController.Source.Handle.AddComponent<DramaticHangCallbackZoomOut>();
+            var position = this._event.EventController.Source.Handle.transform.position;
             position.y -= 0.35f;
             zoom.Init(position, FatalityParams.ZOOM_SPEED, FatalityParams.ZOOM_FOV, FatalityParams.ZOOM_BULLET_HANG, this.InitAttackSpriteWithBullet);
         }
 
         private void InitAttackSpriteWithBullet()
         {
-            var attackerScript = this._event.Hit.Source.Handle.AddComponent<AttackerJoltScript>();
-            var position = Vector3.Lerp(this._event.Hit.Target.CurrentTile.Model.Center, this._event.Hit.Source.CurrentTile.Model.Center, 0.85f);
-            attackerScript.Init(this._event.Hit.Source, position, 0.8f, base.Done);
+            var attackerScript = this._event.EventController.Source.Handle.AddComponent<AttackerJoltScript>();
+            var position = Vector3.Lerp(this._event.EventController.TargetCharController.CurrentTile.Model.Center, this._event.EventController.Source.CurrentTile.Model.Center, 0.85f);
+            attackerScript.Init(this._event.EventController.Source, position, 0.8f, base.Done);
             this.HandleBulletGraphics();
         }
 
         private void HandleBulletGraphics()
         {
-            var sprite = AttackSpriteLoader.Instance.GetAttackSprite(this._event.Hit.Ability);
+            var sprite = AttackSpriteLoader.Instance.GetAttackSprite(this._event.EventController.Action);
             var bullet = new GameObject();
             var script = bullet.AddComponent<RaycastWithDeleteScript>();
-            bullet.transform.position = this._event.Hit.Source.transform.position;
+            bullet.transform.position = this._event.EventController.Source.transform.position;
             var renderer = bullet.AddComponent<SpriteRenderer>();
             renderer.sprite = sprite;
             renderer.sortingLayerName = CMapGUIControllerParams.PARTICLES_LAYER;
-            if (!this._event.Hit.Source.LParty)
+            if (!this._event.EventController.Source.LParty)
                 bullet.transform.localRotation = Quaternion.Euler(0, 180, 0);
-            script.Init(bullet, this._event.Hit.Target.transform.position, 2f, this.ProcessFatality);
+            script.Init(bullet, this._event.EventController.Target.transform.position, 2f, this.ProcessFatality);
         }
 
-        private void ProcessBlood()
+        private void ProcessBlood(HitInfo hit)
         {
-            var c = this._event.Hit.Target.Model;
-            foreach (var neighbor in this._event.Hit.Target.CurrentTile.Adjacent)
+            var c = hit.Target;
+            foreach (var neighbor in this._event.EventController.TargetCharController.CurrentTile.Adjacent)
             {
                 foreach (var outerNeighbor in neighbor.Adjacent)
                 {
@@ -73,16 +73,16 @@ namespace View.Fatalities
                 }
                 this._parent.ProcessSplatter(2, neighbor);
             }
-            this._parent.ProcessSplatter(5, this._event.Hit.Target.CurrentTile);
+            this._parent.ProcessSplatter(5, this._event.EventController.TargetCharController.CurrentTile);
         }
 
-        private void ProcessExplosion()
+        private void ProcessExplosion(HitInfo hit)
         {
             var path = StringUtil.PathBuilder(
                 CMapGUIControllerParams.EFFECTS_PATH,
                 CMapGUIControllerParams.FIGHTING_FATALITY,
                 CMapGUIControllerParams.PARTICLES_EXTENSION);
-            var position = this._event.Hit.Target.transform.position;
+            var position = hit.Target.transform.position;
             var boom = Resources.Load(path);
             var particles = GameObject.Instantiate(boom) as GameObject;
             particles.transform.position = position;
@@ -102,16 +102,19 @@ namespace View.Fatalities
 
         protected override void ProcessFatality()
         {
-            base.ProcessFatality();
-            this.ProcessBlood();
-            this.ProcessExplosion();
-            this.ProcessGear();
-            this.ProcessFatalityView(this._event);
+            foreach(var hit in this._event.FatalityHits)
+            {
+                this.ProcessBlood(hit);
+                this.ProcessExplosion(hit);
+                this.ProcessGear(hit);
+                hit.Done();
+            }
+            this.ProcessFatalityView();
         }
 
-        private void ProcessGear()
+        private void ProcessGear(HitInfo hit)
         {
-            var c = this._event.Hit.Target.Model;
+            var c = hit.Target.Model;
             if (c.Type == CharacterTypeEnum.Humanoid)
             {
                 var renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_TORSO].GetComponent<SpriteRenderer>();

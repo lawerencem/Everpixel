@@ -112,14 +112,14 @@
     <Compile Include="Assets\Generics\Scripts\DramaticHangZoomOutCallback.cs" />
     <Compile Include="Assets\Generics\Scripts\FloatingText.cs" />
     <Compile Include="Assets\Generics\Scripts\IntervalJoltScript.cs" />
-    <Compile Include="Assets\Generics\Scripts\SpriteFlipCallback.cs" />
-    <Compile Include="Assets\Generics\Scripts\XAxisShake.cs" />
     <Compile Include="Assets\Generics\Scripts\JoltScript.cs" />
     <Compile Include="Assets\Generics\Scripts\RaycastMove.cs" />
     <Compile Include="Assets\Generics\Scripts\RaycastMoveWithDelete.cs" />
     <Compile Include="Assets\Generics\Scripts\RotationScript.cs" />
     <Compile Include="Assets\Generics\Scripts\ScrollCameraToScript.cs" />
+    <Compile Include="Assets\Generics\Scripts\SpriteFlipCallback.cs" />
     <Compile Include="Assets\Generics\Scripts\TileMoveScript.cs" />
+    <Compile Include="Assets\Generics\Scripts\XAxisShake.cs" />
     <Compile Include="Assets\Generics\Utilities\Count.cs" />
     <Compile Include="Assets\Generics\Utilities\DeepClone.cs" />
     <Compile Include="Assets\Generics\Utilities\EnumUtil.cs" />
@@ -127,25 +127,24 @@
     <Compile Include="Assets\Generics\Utilities\RNG.cs" />
     <Compile Include="Assets\Generics\Utilities\StringUtil.cs" />
     <Compile Include="Assets\Generics\XML\GenericXMLReader.cs" />
-    <Compile Include="Assets\Model\Abilities\Active\ActiveAbilityFactory.cs" />
-    <Compile Include="Assets\Model\Abilities\Active\ActiveAbilityTable.cs" />
-    <Compile Include="Assets\Model\Abilities\Active\Music\GenericSong.cs" />
-    <Compile Include="Assets\Model\Abilities\Active\Music\HasteSong.cs" />
-    <Compile Include="Assets\Model\Abilities\Active\Music\OrcMetal.cs" />
-    <Compile Include="Assets\Model\Abilities\Active\Shapeshift\GenericShapeshiftAbility.cs" />
-    <Compile Include="Assets\Model\Abilities\Active\Shapeshift\ShapeshiftInfo.cs" />
-    <Compile Include="Assets\Model\Abilities\Active\Shapeshift\Wereween.cs" />
-    <Compile Include="Assets\Model\Abilities\Active\Magic\Astral\EldritchChomp.cs" />
-    <Compile Include="Assets\Model\Abilities\Active\Magic\Astral\SummonShoggoth.cs" />
-    <Compile Include="Assets\Model\Abilities\Active\NonMagic\Hadoken.cs" />
-    <Compile Include="Assets\Model\Abilities\Active\XML\ActiveAbilityReader.cs" />
+    <Compile Include="Assets\Model\Abilities\ActiveAbilityFactory.cs" />
     <Compile Include="Assets\Model\Abilities\Enum\AbilityCastTypeEnum.cs" />
     <Compile Include="Assets\Model\Abilities\Enum\ActiveAbilitiesEnum.cs" />
     <Compile Include="Assets\Model\Abilities\Enum\WeaponAbilitiesEnum.cs" />
     <Compile Include="Assets\Model\Abilities\GenericAbility.cs" />
     <Compile Include="Assets\Model\Abilities\GenericAbilityTable.cs" />
-    <Compile Include="Assets\Model\Abilities\Active\Magic\MagicTypeEnum.cs" />
     <Compile Include="Assets\Model\Abilities\GenericSummonAbility.cs" />
+    <Compile Include="Assets\Model\Abilities\Magic\Astral\EldritchChomp.cs" />
+    <Compile Include="Assets\Model\Abilities\Magic\Astral\SummonShoggoth.cs" />
+    <Compile Include="Assets\Model\Abilities\Magic\MagicTypeEnum.cs" />
+    <Compile Include="Assets\Model\Abilities\Music\GenericSong.cs" />
+    <Compile Include="Assets\Model\Abilities\Music\HasteSong.cs" />
+    <Compile Include="Assets\Model\Abilities\Music\OrcMetal.cs" />
+    <Compile Include="Assets\Model\Abilities\NonMagic\Hadoken.cs" />
+    <Compile Include="Assets\Model\Abilities\NonMagic\Kamehameha.cs" />
+    <Compile Include="Assets\Model\Abilities\Shapeshift\GenericShapeshiftAbility.cs" />
+    <Compile Include="Assets\Model\Abilities\Shapeshift\ShapeshiftInfo.cs" />
+    <Compile Include="Assets\Model\Abilities\Shapeshift\Wereween.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Aim.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Bite.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\BreakArmor.cs" />
@@ -172,7 +171,8 @@
     <Compile Include="Assets\Model\Abilities\Weapon\Abilities\Wrap.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\WeaponAbilityBuilder.cs" />
     <Compile Include="Assets\Model\Abilities\Weapon\WeaponAbilityFactory.cs" />
-    <Compile Include="Assets\Model\Abilities\Weapon\XML\WeaponAbilityReader.cs" />
+    <Compile Include="Assets\Model\Abilities\XML\ActiveAbilityReader.cs" />
+    <Compile Include="Assets\Model\Abilities\XML\WeaponAbilityReader.cs" />
     <Compile Include="Assets\Model\Biomes\Enums\BiomeEnum.cs" />
     <Compile Include="Assets\Model\Characters\Builders\CharacterParamBuilder.cs" />
     <Compile Include="Assets\Model\Characters\Builders\CritterBuilder.cs" />
@@ -251,18 +251,21 @@
     <Compile Include="Assets\Model\Equipment\XML\GenericEquipmentReader.cs" />
     <Compile Include="Assets\Model\Equipment\XML\WeaponReader.cs" />
     <Compile Include="Assets\Model\Events\Combat\ApplyInjuryEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\AttackFXEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\AttackSelectedEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\BuffEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\CastingEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\CharacterKilledEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\CombatEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\DamageCharacterEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\DisplayActionEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\DisplayHitStatsEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\EndTurnEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\HexSelectedForMoveEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\MapDoneLoadingEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\PathTraversedEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\PerformActionEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\ActionEventController.cs" />
     <Compile Include="Assets\Model\Events\Combat\ShapeshiftEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\ShowPotentialPathEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\SummonEvent.cs" />
@@ -318,15 +321,16 @@
     <Compile Include="Assets\Model\Slot\AbstractSlot.cs" />
     <Compile Include="Assets\Model\Slot\GenericSlot.cs" />
     <Compile Include="Assets\Model\Slot\SlotEnum.cs" />
-    <Compile Include="Assets\Model\Spells\SpellsByLevel.cs" />
     <Compile Include="Assets\Model\Spells\SpellFactory.cs" />
     <Compile Include="Assets\Model\Spells\SpellMediator.cs" />
+    <Compile Include="Assets\Model\Spells\SpellsByLevel.cs" />
     <Compile Include="Assets\View\Attacks\AttackSpriteLoader.cs" />
     <Compile Include="Assets\View\Barks\BarkManager.cs" />
     <Compile Include="Assets\View\Builders\CharacterViewBuilder.cs" />
     <Compile Include="Assets\View\Characters\CharacterBridge.cs" />
     <Compile Include="Assets\View\Characters\CharacterSpriteLoader.cs" />
     <Compile Include="Assets\View\Characters\CharacterView.cs" />
+    <Compile Include="Assets\View\Characters\DefenderFXListener.cs" />
     <Compile Include="Assets\View\Characters\Tables\CritterAttackSpriteTable.cs" />
     <Compile Include="Assets\View\Characters\Tables\CritterFlinchSpriteTable.cs" />
     <Compile Include="Assets\View\Equipment\ArmorView.cs" />
@@ -355,24 +359,20 @@
     <Compile Include="Assets\View\Mounts\MountView.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\AttackerJoltScript.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\BoomerangFatalityScript.cs" />
+    <Compile Include="Assets\View\Scripts\FXScripts\FatalityJoltScript.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\FlinchScript.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\GearExplosionScript.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\HeadRotationScript.cs" />
     <Compile Include="Assets\View\Scripts\FXScripts\LycanthropeScript.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\AbilityBtnClick.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\AbilityModalBtnClick.cs" />
-    <Compile Include="Assets\View\Scripts\FXScripts\FatalityJoltScript.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\EndTurnBtnClick.cs" />
     <Compile Include="Assets\View\Scripts\GUIScripts\WpnBtnClick.cs" />
     <Compile Include="Assets\View\ViewParams.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Model\Abilities\Active\XML\ActiveAbilities.xml">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Assets\Model\Abilities\Weapon\XML\WeaponAbilities.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Model\Abilities\XML\ActiveAbilities.xml" />
+    <None Include="Assets\Model\Abilities\XML\WeaponAbilities.xml" />
     <None Include="Assets\Model\Characters\XML\PredefinedCharacters.xml" />
     <None Include="Assets\Model\Characters\XML\PredefinedCritters.xml" />
     <None Include="Assets\Model\Characters\XML\RaceDefaultStats.xml" />
@@ -385,7 +385,6 @@
     <None Include="Assets\Model\Parties\XML\SubParties.xml" />
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

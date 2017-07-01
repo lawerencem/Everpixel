@@ -1,7 +1,6 @@
 ﻿TODO
 
    - Spear wall
-   - Kamaheaeh
    - Bonuses to Hit when surrounding
    - Bonuses to Dmg when surrounding
    - Shield wall (and nearby allies)
@@ -29,6 +28,7 @@ Next Weekend
 6) - Force A* to directional search after so many nodes
 
 Long Term: 
+    Force all data of abilities to be in .xml
     Merge ability readers
 	Replace eyes with dead eyes when killed for Critter
 	Zone of Control
@@ -40,6 +40,7 @@ Refactor:
 
 Bugs:
 	Goblin Void Weavers sometimes dont get turns...
+	no bobbing after slash fatality
 
 ideas: 
 	shoggoth ability: eat corpse (makes unit grow like mario)

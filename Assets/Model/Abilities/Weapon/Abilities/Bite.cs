@@ -7,7 +7,7 @@ namespace Model.Abilities
     {
         public Bite() : base(AbilitiesEnum.Bite)
         {
-            this.CastType = AbilityCastTypeEnum.Weapon;
+            this.CastType = AbilityCastTypeEnum.Melee;
         }
 
         public override void ProcessAbility(HitInfo hit)

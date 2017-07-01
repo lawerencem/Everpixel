@@ -15,18 +15,20 @@ namespace Model.Events.Combat
 
         public int CastTime { get; set; }
         public GenericCharacterController Caster { get; set; }
+        public GenericCharacterController Target { get; set; }
         public string SpellName { get; set; }
 
         public CastingEvent(CombatEventManager parent, PerformActionEvent e) :
             base(CombatEventEnum.Casting, parent)
         {
-            this.CastTime = (int)e.Info.Action.CastTime;
-            this.Caster = e.Info.Source;
+            this.CastTime = (int)e.ActionContainer.Action.CastTime;
+            this.Caster = e.ActionContainer.Source;
             this._event = e;
-            this.SpellName = e.Info.Action.Type.ToString();
-            var script = e.Info.Source.Handle.AddComponent<IntervalJoltScript>();
-            script.Init(e.Info.Source.Handle, 1.2f, 12f, 0.08f, 0.08f);
-            CharacterStatusFlags.SetCastingTrue(e.Info.Source.Model.StatusFlags);
+            this.SpellName = e.ActionContainer.Action.Type.ToString();
+            var script = e.ActionContainer.Source.Handle.AddComponent<IntervalJoltScript>();
+            script.Init(e.ActionContainer.Source.Handle, 1.2f, 12f, 0.08f, 0.08f);
+            CharacterStatusFlags.SetCastingTrue(e.ActionContainer.Source.Model.StatusFlags);
+            this.Target = e.ActionContainer.TargetCharController;
             this.RegisterEvent();
         }
 
@@ -34,23 +36,21 @@ namespace Model.Events.Combat
         {
             this._parent.LockInteraction();
             this._parent.LockGUI();
-            var jolt = this._event.Info.Source.Handle.GetComponent<IntervalJoltScript>();
+            var jolt = this._event.ActionContainer.Source.Handle.GetComponent<IntervalJoltScript>();
             if (jolt != null)
                 jolt.Done();
             var script = CombatEventManager.Instance.CameraManager.GetComponent<CameraManager>();
-            var position = this._event.Info.Source.CurrentTile.Model.Center;
+            var position = this._event.ActionContainer.Source.CurrentTile.Model.Center;
             position.y -= 0.5f;
-
-            
             script.InitScrollTo(position, this.InitZoom);
         }
 
         private void InitZoom()
         {
-            if (!this._event.Info.Action.CustomCastCamera)
+            if (!this._event.ActionContainer.Action.CustomCastCamera)
             {
-                var zoom = this._event.Info.Source.Handle.AddComponent<DramaticHangZoomOutCallback>();
-                var position = this._event.Info.Source.Handle.transform.position;
+                var zoom = this._event.ActionContainer.Source.Handle.AddComponent<DramaticHangZoomOutCallback>();
+                var position = this._event.ActionContainer.Source.Handle.transform.position;
                 position.y -= 0.5f;
                 zoom.Init(position, 150f, 50f, 18f, 0.5f, this.Zoomcallback);
             }
@@ -60,7 +60,7 @@ namespace Model.Events.Combat
 
         private void Zoomcallback()
         {
-            this._event.CastDoneReRegister();
+            this._event.CastDoneReRegister(this.Target);
         }
     }
 }

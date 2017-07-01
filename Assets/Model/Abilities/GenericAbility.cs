@@ -1,4 +1,6 @@
-﻿using Controller.Managers;
+﻿using Assets.Controller.Managers;
+using Controller.Characters;
+using Controller.Managers;
 using Controller.Map;
 using Generics.Utilities;
 using Model.Abilities.Magic;
@@ -6,6 +8,7 @@ using Model.Characters;
 using Model.Combat;
 using Model.Events.Combat;
 using Model.Injuries;
+using Model.Map;
 using Model.Perks;
 using System.Collections.Generic;
 
@@ -51,7 +54,7 @@ namespace Model.Abilities
         public GenericAbility(AbilitiesEnum type)
         {
             this.AccMod = 1;
-            this.AoE = 1;
+            this.AoE = 0;
             this.APCost = 1;
             this.ArmorIgnoreMod = 1;
             this.ArmorPierceMod = 1;
@@ -59,7 +62,7 @@ namespace Model.Abilities
             this.CastTime = 0;
             this.CustomCastCamera = false;
             this.DamageMod = 1;
-            this.DmgPerPower = 0;
+            this.DmgPerPower = 0.15;
             this.DodgeMod = 1;
             this.Duration = 0;
             this.Injuries = new List<InjuryEnum>();
@@ -72,11 +75,6 @@ namespace Model.Abilities
             this.Sprite = 0;
             this.StaminaCost = 0;
             this._type = type;
-        }
-
-        public virtual void ProcessAbility(HitInfo hit)
-        {
-
         }
 
         public GenericAbility Copy()
@@ -109,11 +107,54 @@ namespace Model.Abilities
 
         public double GetAPCost() { return this.APCost; }
 
-        public virtual List<TileController> GetAoETiles(TileController target)
+        public virtual List<TileController> GetAoETiles(PerformActionEvent e)
         {
             var list = new List<TileController>();
-            list.Add(target);
+            list.Add(e.ActionContainer.Target);
             return list;
+        }
+
+        public virtual List<TileController> GetLOSTiles(PerformActionEvent e)
+        {
+            var list = new List<TileController>();
+            var sourceHex = e.ActionContainer.Source.CurrentTile.Model;
+            var hexes = sourceHex.GetLOSTiles(e.ActionContainer.Target.Model, this.Range);
+            foreach (var hex in hexes)
+                list.Add(hex.Parent);
+            return list;
+        }
+
+        public List<TileController> GetTargetTiles(AttackSelectedEvent e, GenericCharacterController c, CombatManager m)
+        {
+            var list = new List<TileController>();
+            if (this.isSelfCast())
+                list.Add(c.CurrentTile);
+            else if (this.isLoSCast())
+                list.AddRange(this.GetAdjacentTiles(c));
+            else
+                list.AddRange(this.GetStandardAttackTiles(e, c, m));
+            return list;
+        }
+
+        public bool isSelfCast()
+        {
+            if (this.Range == 0)
+                return true;
+            else
+                return false;
+        }
+
+        public bool isLoSCast()
+        {
+            if (this.CastType == AbilityCastTypeEnum.LOS_Cast)
+                return true;
+            else
+                return false;
+        }
+
+        public virtual void ProcessAbility(HitInfo hit)
+        {
+
         }
 
         public void ProcessBullet(HitInfo hit)
@@ -123,8 +164,22 @@ namespace Model.Abilities
                 foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
                     perk.TryModAbility(hit.Ability);
                 CombatReferee.Instance.ProcessBullet(hit);
-                this.TryApplyInjury(hit);
             }
+        }
+
+        public void ProcessLoS(HitInfo hit)
+        {
+            if (hit.Target != null)
+            {
+                if (!CharacterStatusFlags.HasFlag(hit.Target.Model.StatusFlags.CurFlags, CharacterStatusFlags.Flags.Dead))
+                {
+                    foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
+                        perk.TryModAbility(hit.Ability);
+                    CombatReferee.Instance.ProcessRay(hit);
+                }
+            }
+            else
+                hit.Done();
         }
 
         public void ProcessMelee(HitInfo hit)
@@ -134,7 +189,6 @@ namespace Model.Abilities
                 foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
                     perk.TryModAbility(hit.Ability);
                 CombatReferee.Instance.ProcessMelee(hit);
-                this.TryApplyInjury(hit);
             }
         }
 
@@ -167,34 +221,70 @@ namespace Model.Abilities
             return false;
         }
 
+        public bool IsSingleFX()
+        {
+            if (this.CastType == AbilityCastTypeEnum.LOS_Cast)
+                return true;
+            else
+                return false;
+        }
+
+        protected List<TileController> GetAdjacentTiles(GenericCharacterController c)
+        {
+            var list = new List<TileController>();
+            foreach (var neighbor in c.CurrentTile.Adjacent)
+                list.Add(neighbor);
+            return list;
+        }
+
+        protected List<TileController> GetStandardAttackTiles(
+            AttackSelectedEvent e, 
+            GenericCharacterController c,
+            CombatManager m)
+        {
+            int distMod = 0;
+                distMod += GenericAbilityTable.Instance.Table[e.AttackType].Range;
+            
+            if (e.RWeapon)
+            {
+                if (c.Model.RWeapon != null)
+                    distMod += (int)c.Model.RWeapon.RangeMod;
+            }
+            else
+            {
+                if (c.Model.LWeapon != null)
+                    distMod += (int)c.Model.LWeapon.RangeMod;
+            }
+            var hexTiles = m.Map.GetAoETiles(c.CurrentTile.Model, distMod);
+            var tileControllers = new List<TileController>();
+            foreach (var hex in hexTiles)
+            {
+                tileControllers.Add(hex.Parent);
+                TileControllerFlags.SetAwaitingActionFlagTrue(hex.Parent.Flags);
+            }
+            return tileControllers;
+        }
+
         protected bool isValidEmptyTile(PerformActionEvent e)
         {
-            if (e.Info.Target.Model.Current == null)
+            if (e.ActionContainer.Target.Model.Current == null)
                 return true;
             return false;
         }
         
         protected bool IsValidEnemyTarget(PerformActionEvent e)
         {
-            if (e.Info.Source.LParty)
+            if (e.ActionContainer.Source.LParty)
             {
-                if (e.Info.TargetCharController != null && !e.Info.TargetCharController.LParty)
+                if (e.ActionContainer.TargetCharController != null && !e.ActionContainer.TargetCharController.LParty)
                     return true;
             }
-            else if (!e.Info.Source.LParty)
+            else if (!e.ActionContainer.Source.LParty)
             {
-                if (e.Info.TargetCharController != null && e.Info.TargetCharController.LParty)
+                if (e.ActionContainer.TargetCharController != null && e.ActionContainer.TargetCharController.LParty)
                     return true;
             }
             return false;
-        }
-
-        public bool isSelfCast()
-        {
-            if (this.Range == 0)
-                return true;
-            else
-                return false;
         }
 
         protected virtual void TryApplyInjury(HitInfo hit)

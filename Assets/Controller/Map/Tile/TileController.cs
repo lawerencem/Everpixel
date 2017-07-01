@@ -119,13 +119,23 @@ namespace Controller.Map
 
         private void HandleAoE()
         {
-            var cur = CombatEventManager.Instance.GetCurrentAbility();
+            var curChar = CombatEventManager.Instance.GetCurrentCharacter();
+            var curAbility = CombatEventManager.Instance.GetCurrentAbility();
             var aoe = new List<TileController>();
-            if (cur != null && TileControllerFlags.HasFlag(this.Flags.CurFlags, TileControllerFlags.Flags.AwaitingAction))
+            if (curAbility != null && TileControllerFlags.HasFlag(this.Flags.CurFlags, TileControllerFlags.Flags.AwaitingAction))
             {
-                var hexes = this.Model.GetAoETiles((int)cur.AoE);
-                foreach (var hex in hexes)
-                    aoe.Add(hex.Parent);
+                if (!curAbility.isLoSCast())
+                {
+                    var hexes = this.Model.GetAoETiles((int)curAbility.AoE);
+                    foreach (var hex in hexes)
+                        aoe.Add(hex.Parent);
+                }
+                else
+                {
+                    var hexes = this.Model.GetLOSTiles(curChar.CurrentTile.Model, curAbility.Range);
+                    foreach (var hex in hexes)
+                        aoe.Add(hex.Parent);
+                }
             }
             var hover = new TileHoverDecoEvent(CombatEventManager.Instance, this, aoe);
         }

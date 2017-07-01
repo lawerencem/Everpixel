@@ -7,7 +7,7 @@ namespace Model.Abilities
     {
         public TripleStrike() : base(AbilitiesEnum.Triple_Strike)
         {
-            this.CastType = AbilityCastTypeEnum.Weapon;
+            this.CastType = AbilityCastTypeEnum.Melee;
         }
 
         public override void ProcessAbility(HitInfo hit)

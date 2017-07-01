@@ -11,7 +11,7 @@ namespace Models.Equipment.XML
     {
         private static WeaponAbilityReader _instance;
 
-        public WeaponAbilityReader() { this._path = "Assets/Model/Abilities/Weapon/XML/WeaponAbilities.xml"; }
+        public WeaponAbilityReader() { this._path = "Assets/Model/Abilities/XML/WeaponAbilities.xml"; }
 
         public static WeaponAbilityReader Instance
         {

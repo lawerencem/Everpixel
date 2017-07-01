@@ -1,4 +1,5 @@
-﻿using Model.Combat;
+﻿using Controller.Managers;
+using Model.Combat;
 using Model.Events.Combat;
 
 namespace Model.Abilities.Shapeshift

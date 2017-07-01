@@ -1,50 +1,30 @@
-﻿using Assets.Controller.Managers;
+﻿using Assets.Model.Events.Combat;
 using Controller.Characters;
 using Controller.Managers;
 using Controller.Map;
-using Model.Abilities;
 using Model.Combat;
-using System.Collections.Generic;
 
 namespace Model.Events.Combat
 {
-    public class PerformActionEventInfo
-    {
-        public bool CastFinished = false;
-
-        public PerformActionEventInfo()
-        {
-            this.Hits = new List<HitInfo>();
-        }
-
-        public CombatEventManager Parent { get; set; }
-        public GenericAbility Action { get; set; }
-        public List<HitInfo> Hits { get; set; }
-        public GenericCharacterController Source { get; set; }
-        public GenericCharacterController TargetCharController { get; set; }
-        public TileController Target { get; set; }
-        public CombatManager CombatManager { get; set; }
-    }
-
     public class PerformActionEvent : CombatEvent
     {
         private Callback _callBack;
         public delegate void Callback();
 
-        public PerformActionEventInfo Info {get;set;}
+        public ActionEventController ActionContainer { get; set; }
 
         public PerformActionEvent(CombatEventManager parent, TileController initiatingTile, Callback callback) :
             base(CombatEventEnum.PerformActionEvent, parent)
         {
-            this.Info = new PerformActionEventInfo();
+            this.ActionContainer = new ActionEventController(this);
 
             if (!this._parent.GetInteractionLock())
             {
-                this.Info.Target = initiatingTile;
+                this.ActionContainer.Target = initiatingTile;
                 if (initiatingTile.Model.Current != null && 
                     initiatingTile.Model.Current.GetType().Equals(typeof(GenericCharacterController)))
                 {
-                    this.Info.TargetCharController = initiatingTile.Model.Current as GenericCharacterController;
+                    this.ActionContainer.TargetCharController = initiatingTile.Model.Current as GenericCharacterController;
                 }
                 this._callBack = callback;
                 this._parent.RegisterEvent(this);
@@ -53,27 +33,26 @@ namespace Model.Events.Combat
 
         public void ChildHitDone()
         {
-            var done = this.Info.Hits.FindAll(x => x.IsFinished == true);
-            if (this.Info.Hits.Count == done.Count)
+            var done = this.ActionContainer.Hits.FindAll(x => x.IsFinished == true);
+            if (this.ActionContainer.Hits.Count == done.Count)
             {
-                this.Info.Action.ModData.Reset();
+                this.ActionContainer.Action.ModData.Reset();
 
                 if (this._callBack != null)
                     this._callBack();
             }
         }
 
-        public void CastDoneReRegister()
+        public void CastDoneReRegister(GenericCharacterController target)
         {
-            this.Info.CastFinished = true;
-            var hit = new HitInfo(this.Info.Source, this.Info.Target, this.Info.Action, this.ChildHitDone);
-            this.Info.Hits.Add(hit);
-            this.Info.Action.ProcessAbility(hit);
+            this.ActionContainer.CastFinished = true;
+            this.ActionContainer.Target = target.CurrentTile;
+            this.ProcessActionHits();
         }
 
         public bool ValidAction()
         {
-            return this.Info.Action.IsValidActionEvent(this);
+            return this.ActionContainer.Action.IsValidActionEvent(this);
         }
 
         public void Perform()
@@ -83,32 +62,26 @@ namespace Model.Events.Combat
 
         private void ProcessEventStats()
         {
-            double fatigueCost = this.Info.Action.StaminaCost;
+            double fatigueCost = this.ActionContainer.Action.StaminaCost;
 
-            if (this.Info.Source.Model.Armor != null)
-                fatigueCost *= this.Info.Source.Model.Armor.FatigueCost;
-            if (this.Info.Source.Model.Helm != null)
-                fatigueCost *= this.Info.Source.Model.Helm.FatigueCost;
-            if (this.Info.Source.Model.LWeapon != null)
-                fatigueCost *= this.Info.Source.Model.LWeapon.FatigueCostMod;
-            if (this.Info.Source.Model.RWeapon != null)
-                fatigueCost *= this.Info.Source.Model.RWeapon.FatigueCostMod;
+            if (this.ActionContainer.Source.Model.Armor != null)
+                fatigueCost *= this.ActionContainer.Source.Model.Armor.FatigueCost;
+            if (this.ActionContainer.Source.Model.Helm != null)
+                fatigueCost *= this.ActionContainer.Source.Model.Helm.FatigueCost;
+            if (this.ActionContainer.Source.Model.LWeapon != null)
+                fatigueCost *= this.ActionContainer.Source.Model.LWeapon.FatigueCostMod;
+            if (this.ActionContainer.Source.Model.RWeapon != null)
+                fatigueCost *= this.ActionContainer.Source.Model.RWeapon.FatigueCostMod;
 
-            if (this.Info.Action.APCost <= this.Info.Source.Model.CurrentAP &&
-                fatigueCost <= this.Info.Source.Model.CurrentStamina)
+            if (this.ActionContainer.Action.APCost <= this.ActionContainer.Source.Model.CurrentAP &&
+                fatigueCost <= this.ActionContainer.Source.Model.CurrentStamina)
             {
-                if (this.Info.CastFinished || this.Info.Action.CastTime <= 0)
-                {
-                    this.Info.Source.Model.CurrentAP -= this.Info.Action.APCost;
-                    this.Info.Source.Model.CurrentStamina -= (int)fatigueCost;
+                this.ActionContainer.Source.Model.CurrentAP -= this.ActionContainer.Action.APCost;
+                this.ActionContainer.Source.Model.CurrentStamina -= (int)fatigueCost;
 
-                    var hitTargets = this.Info.Action.GetAoETiles(this.Info.Target);
-                    foreach (var target in hitTargets)
-                    {
-                        var hit = new HitInfo(this.Info.Source, target, this.Info.Action, this.ChildHitDone);
-                        this.Info.Hits.Add(hit);
-                        this.Info.Action.ProcessAbility(hit);
-                    }
+                if (this.ActionContainer.CastFinished || this.ActionContainer.Action.CastTime <= 0)
+                {
+                    this.ProcessActionHits();
                 }
                 else
                 {
@@ -119,6 +92,17 @@ namespace Model.Events.Combat
             {
                 // TODO
             }
+        }
+
+        private void ProcessActionHits()
+        {   
+            var hitTargets = this.ActionContainer.Action.GetAoETiles(this);
+            foreach (var target in hitTargets)
+            {
+                var hit = new HitInfo(this.ActionContainer.Source, target, this.ActionContainer.Action, this.ChildHitDone);
+                this.ActionContainer.Hits.Add(hit);
+            }
+            this.ActionContainer.PerformAction();
         }
     }
 }

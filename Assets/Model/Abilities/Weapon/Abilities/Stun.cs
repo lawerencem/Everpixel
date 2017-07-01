@@ -7,7 +7,7 @@ namespace Model.Abilities
     {
         public Stun() : base(AbilitiesEnum.Stun)
         {
-            this.CastType = AbilityCastTypeEnum.Weapon;
+            this.CastType = AbilityCastTypeEnum.Melee;
         }
 
         public override void ProcessAbility(HitInfo hit)

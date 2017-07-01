@@ -7,7 +7,7 @@ namespace Model.Abilities
     {
         public Gash() : base(AbilitiesEnum.Gash)
         {
-            this.CastType = AbilityCastTypeEnum.Weapon;
+            this.CastType = AbilityCastTypeEnum.Melee;
         }
 
         public override void ProcessAbility(HitInfo hit)

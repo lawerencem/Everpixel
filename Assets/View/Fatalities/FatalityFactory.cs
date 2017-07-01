@@ -8,7 +8,7 @@ namespace View.Fatalities
 {
     public class FatalityFactory : AbstractSingleton<FatalityFactory>
     {
-        public GenericFatality GetFatality(CMapGUIControllerHit parent, DisplayHitStatsEvent e)
+        public GenericFatality GetFatality(CMapGUIControllerHit parent, DisplayActionEvent e)
         {
             var active = this.TryProcessActiveAbility(parent, e);
             if (active != null)
@@ -19,18 +19,18 @@ namespace View.Fatalities
             return new GenericFatality(FatalityEnum.None, parent, e);
         }
 
-        private GenericFatality TryProcessActiveAbility(CMapGUIControllerHit parent, DisplayHitStatsEvent e)
+        private GenericFatality TryProcessActiveAbility(CMapGUIControllerHit parent, DisplayActionEvent e)
         {
-            switch (e.Hit.Ability.MagicType)
+            switch (e.EventController.Action.MagicType)
             {
                 case (MagicTypeEnum.Fighting): { return new FightingFatality(parent, e); }
             }
             return null;
         }
 
-        private GenericFatality TryProcessWeaponAbility(CMapGUIControllerHit parent, DisplayHitStatsEvent e)
+        private GenericFatality TryProcessWeaponAbility(CMapGUIControllerHit parent, DisplayActionEvent e)
         {
-            switch (e.Hit.Ability.Type)
+            switch (e.EventController.Action.Type)
             {
                 case (AbilitiesEnum.Crush): { return new CrushFatality(parent, e); }
                 case (AbilitiesEnum.Slash): { return new SlashFatality(parent, e); }

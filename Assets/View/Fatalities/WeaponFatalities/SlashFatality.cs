@@ -15,7 +15,7 @@ namespace View.Fatalities
 {
     public class SlashFatality : GenericFatality
     {
-        public SlashFatality(CMapGUIControllerHit parent, DisplayHitStatsEvent e)
+        public SlashFatality(CMapGUIControllerHit parent, DisplayActionEvent e)
             : base(FatalityEnum.Slash, parent, e)
         {
 
@@ -25,78 +25,83 @@ namespace View.Fatalities
         {
             base.Init();
             base.InitMeleeFatality();
-            var zoom = this._event.Hit.Source.Handle.AddComponent<DramaticHangCallbackZoomOut>();
-            var position = this._event.Hit.Source.Handle.transform.position;
+            var zoom = this._event.EventController.Source.Handle.AddComponent<DramaticHangCallbackZoomOut>();
+            var position = this._event.EventController.Source.Handle.transform.position;
             position.y -= 0.35f;
             zoom.Init(position, FatalityParams.ZOOM_SPEED, FatalityParams.ZOOM_FOV, FatalityParams.ZOOM_MELEE_HANG, this.ProcessFatality);
         }
 
         protected override void ProcessFatality()
         {
-            var fatalityScript = this._event.Hit.Source.Handle.AddComponent<BoomerangFatalityScript>();
-            var position = Vector3.Lerp(this._event.Hit.Source.Handle.transform.position, this._event.Hit.Target.transform.position, 0.55f);
-            fatalityScript.Init(this._event.Hit.Source.Handle, position, 0.75f, ProcessHeadFatality);
+            var fatalityScript = this._event.EventController.Source.Handle.AddComponent<BoomerangFatalityScript>();
+            var position = Vector3.Lerp(this._event.EventController.Source.Handle.transform.position, this._event.EventController.TargetCharController.transform.position, 0.55f);
+            fatalityScript.Init(this._event.EventController.Source.Handle, position, 0.75f, ProcessHeadFatality);
         }
 
         private void ProcessHeadFatality()
         {
-            if (this._event.Hit.Target.Model.Type == CharacterTypeEnum.Humanoid)
+            foreach(var hit in this._event.FatalityHits)
             {
-                var head = this._event.Hit.Target.SpriteHandlerDict[ViewParams.CHAR_HEAD];
-                var tgtTile = this._event.Hit.TargetTile.Model.GetRandomNearbyTile(2);
-                head.transform.SetParent(tgtTile.Parent.transform);
+                if (hit.Target.Model.Type == CharacterTypeEnum.Humanoid)
+                {
+                    var head = hit.Target.SpriteHandlerDict[ViewParams.CHAR_HEAD];
+                    var tgtTile = hit.TargetTile.Model.GetRandomNearbyTile(2);
+                    head.transform.SetParent(tgtTile.Parent.transform);
 
-                var spin = head.AddComponent<HeadRotationScript>();
-                bool spinRight = true;
-                var roll = RNG.Instance.Next(2);
-                if (roll == 0)
-                    spinRight = false;
-                var percent = RNG.Instance.NextDouble();
-                spin.Init(head, (float)(5f * percent), spinRight, base.Done);
-                spin.InitHeadRotation(tgtTile.Parent, this._parent);
-                var translate = head.AddComponent<RaycastMove>();
-                translate.Init(head, tgtTile.Parent.Model.Center, 1f, spin.Done);
-                this.HandleParticles();
+                    var spin = head.AddComponent<HeadRotationScript>();
+                    bool spinRight = true;
+                    var roll = RNG.Instance.Next(2);
+                    if (roll == 0)
+                        spinRight = false;
+                    var percent = RNG.Instance.NextDouble();
+                    spin.Init(head, (float)(5f * percent), spinRight, hit.Done);
+                    spin.InitHeadRotation(tgtTile.Parent, this._parent);
+                    var translate = head.AddComponent<RaycastMove>();
+                    translate.Init(head, tgtTile.Parent.Model.Center, 1f, spin.Done);
+                    this.HandleParticles();
+                }
+                else
+                {
+                    // TODO:
+                    hit.Source.Handle.transform.position = hit.Source.CurrentTile.Model.Center;
+                }
+                this._parent.ProcessCharacterKilled(hit.Target);
             }
-            else
-            {
-                // TODO:
-                this._event.Hit.Source.Handle.transform.position = this._event.Hit.Source.CurrentTile.Model.Center;
-                base.Done();
-            }
-            this._parent.ProcessCharacterKilled(this._event.Hit.Target);
-            base.ProcessFatalityView(this._event);
+            base.ProcessFatalityView();
         }
 
         private void HandleParticles()
         {
-            var path = StringUtil.PathBuilder(
+            foreach (var hit in this._event.FatalityHits)
+            {
+                var path = StringUtil.PathBuilder(
                 CMapGUIControllerParams.EFFECTS_PATH,
                 CMapGUIControllerParams.SLASH_FATALITY,
                 CMapGUIControllerParams.PARTICLES_EXTENSION);
-            var position = this._event.Hit.Target.transform.position;
-            var prefab = Resources.Load(path);
-            var headBlood = GameObject.Instantiate(prefab) as GameObject;
-            var bodyBlood = GameObject.Instantiate(prefab) as GameObject;
+                var position = hit.Target.transform.position;
+                var prefab = Resources.Load(path);
+                var headBlood = GameObject.Instantiate(prefab) as GameObject;
+                var bodyBlood = GameObject.Instantiate(prefab) as GameObject;
 
-            bodyBlood.transform.position = position;
-            bodyBlood.transform.SetParent(this._event.Hit.Target.Handle.transform);
+                bodyBlood.transform.position = position;
+                bodyBlood.transform.SetParent(hit.Target.Handle.transform);
 
-            bodyBlood.name = CMapGUIControllerParams.SLASH_FATALITY + " Particles";
-            headBlood.name = CMapGUIControllerParams.SLASH_FATALITY + " Particles";
+                bodyBlood.name = CMapGUIControllerParams.SLASH_FATALITY + " Particles";
+                headBlood.name = CMapGUIControllerParams.SLASH_FATALITY + " Particles";
 
-            var bodyScript = bodyBlood.AddComponent<DestroyByLifetime>();
-            bodyScript.lifetime = 5f;
-            var headScript = headBlood.AddComponent<DestroyByLifetime>();
-            headScript.lifetime = 5f;
+                var bodyScript = bodyBlood.AddComponent<DestroyByLifetime>();
+                bodyScript.lifetime = 5f;
+                var headScript = headBlood.AddComponent<DestroyByLifetime>();
+                headScript.lifetime = 5f;
 
-            var empty = new GameObject();
-            headBlood.transform.SetParent(empty.transform);
+                var empty = new GameObject();
+                headBlood.transform.SetParent(empty.transform);
 
-            headBlood.transform.SetParent(this._event.Hit.Target.SpriteHandlerDict[ViewParams.CHAR_HEAD].transform);
-            var emptyScript = empty.AddComponent<DestroyByLifetime>();
-            emptyScript.lifetime = 5f;
-            headBlood.transform.position = this._event.Hit.Target.SpriteHandlerDict[ViewParams.CHAR_HEAD].transform.position;
+                headBlood.transform.SetParent(hit.Target.SpriteHandlerDict[ViewParams.CHAR_HEAD].transform);
+                var emptyScript = empty.AddComponent<DestroyByLifetime>();
+                emptyScript.lifetime = 5f;
+                headBlood.transform.position = hit.Target.SpriteHandlerDict[ViewParams.CHAR_HEAD].transform.position;
+            }
         }
     }
 }

@@ -16,73 +16,59 @@ namespace Model.Combat
         private const double BASE_DODGE_CHANCE = 0.20;
         private const double BASE_HEAD_CHANCE = 0.25;
         private const double BASE_PARRY_CHANCE = 0.15;
-        private const double BASE_SKILL_SCALAR = 0.75;
         private const double BASE_SCALAR = 1000;
+        private const double BASE_SKILL_SCALAR = 0.75;
 
         public void ProcessBullet(HitInfo hit)
         {
-            ProcessBulletFlags(hit);
-            if (hit.Ability.Type.GetType() == (typeof(AbilitiesEnum)))
-                CalculateWpnDmg(hit);
-            else
-                CalculateAbilityDmg(hit);
+            this.ProcessBulletFlags(hit);
+            this.CalculateAbilityDmg(hit);
             this.ModifyDmgViaDefender(hit);
-            ProcessHitEventView(hit);
         }
 
         public void ProcessMelee(HitInfo hit)
         {
-            ProcessMeleeFlags(hit);
-            if (hit.Ability.Type.GetType() == (typeof(AbilitiesEnum)))
-                CalculateWpnDmg(hit);
-            else
-                CalculateAbilityDmg(hit);
+            this.ProcessMeleeFlags(hit);
+            this.CalculateAbilityDmg(hit);
             this.ModifyDmgViaDefender(hit);
-            ProcessHitEventView(hit);
+        }
+
+        public void ProcessRay(HitInfo hit)
+        {
+            this.ProcessBulletFlags(hit);
+            this.CalculateAbilityDmg(hit);
+            this.ModifyDmgViaDefender(hit);
         }
 
         public void ProcessShapeshift(HitInfo hit)
         {
-            ProcessHitEventView(hit);
             var shapeshiftEvent = new ShapeshiftEvent(CombatEventManager.Instance, hit);
         }
 
         public void ProcessSong(HitInfo hit)
         {
-            ProcessHitEventView(hit);
+
         }
 
         public void ProcessSummon(HitInfo hit)
         {
-            ProcessHitEventView(hit);
             var summonEvent = new SummonEvent(CombatEventManager.Instance, hit);
         }
 
         private void CalculateAbilityDmg(HitInfo hit)
-        {;
-            var dmg = hit.Ability.ModData.BaseDamage;
-            dmg += hit.Ability.FlatDamage;
-            dmg += hit.Ability.DmgPerPower * hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Power);
-            if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
-                dmg *= (BASE_CRIT_SCALAR + (hit.Source.Model.SecondaryStats.CriticalMultiplier / BASE_SCALAR));
-            hit.Dmg = (int)dmg;
-        }
-
-        private void CalculateWpnDmg(HitInfo hit)
         {
             var dmg = hit.Ability.ModData.BaseDamage;
-
-            // TODO: Look for dual-wielding penalties
-            if (hit.Source.Model.RWeapon != null)
-                dmg += hit.Source.Model.RWeapon.Damage;
-            if (hit.Source.Model.LWeapon != null)
-                dmg += hit.Source.Model.LWeapon.Damage;
+            dmg += hit.Ability.FlatDamage;
+            if (hit.Ability.CastType == AbilityCastTypeEnum.Melee)
+            {
+                if (hit.Source.Model.RWeapon != null)
+                    dmg += hit.Source.Model.RWeapon.Damage;
+                if (hit.Source.Model.LWeapon != null)
+                    dmg += hit.Source.Model.LWeapon.Damage;
+            }
+            dmg += (hit.Ability.DmgPerPower * hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Power));
             if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
                 dmg *= (BASE_CRIT_SCALAR + (hit.Source.Model.SecondaryStats.CriticalMultiplier / BASE_SCALAR));
-
-            dmg *= (BASE_SKILL_SCALAR + (hit.Source.Model.SecondaryStats.Power / BASE_SCALAR));
-            dmg *= hit.Ability.DamageMod;
-
             hit.Dmg = (int)dmg;
         }
 
@@ -102,10 +88,10 @@ namespace Model.Combat
             }
         }
 
-        private void ProcessHitEventView(HitInfo hit)
-        {
-            var display = new DisplayHitStatsEvent(CombatEventManager.Instance, hit, hit.Done);
-        }
+        //public void ProcessActionEventView(HitInfo hit)
+        //{
+        //    var display = new DisplayHitStatsEvent(CombatEventManager.Instance, hit, hit.Done);
+        //}
 
         private void ProcessBulletFlags(HitInfo hit)
         {

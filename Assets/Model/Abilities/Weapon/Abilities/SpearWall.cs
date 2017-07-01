@@ -7,7 +7,7 @@ namespace Model.Abilities
     {
         public SpearWall() : base(AbilitiesEnum.Spear_Wall)
         {
-            this.CastType = AbilityCastTypeEnum.Weapon;
+            this.CastType = AbilityCastTypeEnum.Melee;
         }
 
         public override void ProcessAbility(HitInfo hit)

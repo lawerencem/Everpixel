@@ -37,7 +37,7 @@ namespace View.Scripts
             var character = this._event.Hit.Source;
             var info = ability.Info.Copy();
 
-            foreach (var kvp in this._event.Hit.Source.SpriteHandlerDict)
+            foreach (var kvp in character.SpriteHandlerDict)
             {
                 var renderer = kvp.Value.GetComponent<SpriteRenderer>();
                 var clone = renderer.sprite;

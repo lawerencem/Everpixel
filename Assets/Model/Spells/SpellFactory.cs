@@ -10,7 +10,7 @@ namespace Model.Spells
 
         public GenericAbility CreateNewObject(AbilitiesEnum spell)
         {
-            var proto = ActiveAbilityTable.Instance.Table[spell];
+            var proto = GenericAbilityTable.Instance.Table[spell];
             // TODO: Reup times
             proto.RechargeTime = 1;
             var build = proto.Copy();

@@ -7,7 +7,7 @@ namespace Model.Abilities
     {
         public WideSlash() : base(AbilitiesEnum.Wide_Slash)
         {
-            this.CastType = AbilityCastTypeEnum.Weapon;
+            this.CastType = AbilityCastTypeEnum.Melee;
         }
 
         public override void ProcessAbility(HitInfo hit)

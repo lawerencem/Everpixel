@@ -86,12 +86,12 @@ namespace Controller.Managers
             CMapGUIController.Instance.ClearDecoratedTiles();
             if (this._currentAction != null)
             {
-                CMapGUIController.Instance.SetActingBoxToController(this._currentAction.Info.Source);
-                foreach (var hit in this._currentAction.Info.Hits)
+                CMapGUIController.Instance.SetActingBoxToController(this._currentAction.ActionContainer.Source);
+                foreach (var hit in this._currentAction.ActionContainer.Hits)
                 {
                     var dmg = new DamageCharacterEvent(this, hit);
                 }
-                if (this._currentAction.Info.CastFinished)
+                if (this._currentAction.ActionContainer.CastFinished)
                     this._combatManager.ProcessNextTurn();
             }
             this._currentAction = null;
@@ -106,7 +106,8 @@ namespace Controller.Managers
                 case (CombatEventEnum.Buff): { HandleBuffEvent(e as BuffEvent); } break;
                 case (CombatEventEnum.Casting): { HandleCastingEvent(e as CastingEvent); } break;
                 case (CombatEventEnum.DamageCharacter): { HandleDamageCharacterEvent(e as DamageCharacterEvent); } break;
-                case (CombatEventEnum.CharacterKilled): { HandleCharacterKilledEvent(e as CharacterKilledEvent); } break; 
+                case (CombatEventEnum.CharacterKilled): { HandleCharacterKilledEvent(e as CharacterKilledEvent); } break;
+                case (CombatEventEnum.DisplayAction): { HandleDisplayActionEvent(e as DisplayActionEvent); } break;
                 case (CombatEventEnum.DisplayHitStats): { HandleDisplayHitStatsEvent(e as DisplayHitStatsEvent); } break;
                 case (CombatEventEnum.EndTurn): { HandleEndTurnEvent(e as EndTurnEvent); } break;
                 case (CombatEventEnum.HexSelectedForMove): { HandleHexSelectedForMoveEvent(e as HexSelectedForMoveEvent); } break;
@@ -135,12 +136,8 @@ namespace Controller.Managers
             this._events.Remove(e);
             this._currentActionTiles = new List<TileController>();
             var ability = GenericAbilityTable.Instance.Table[e.AttackType];
-            if (e.AttackType.GetType().Equals(typeof(AbilitiesEnum)))
-                ability = GenericAbilityTable.Instance.Table[e.AttackType];
-            if (ability.isSelfCast())
-                this._currentActionTiles.Add(this.GetCurrentCharacter().CurrentTile);
-            else
-                this._currentActionTiles = this._combatManager.GetAttackTiles(e);
+            this._currentActionTiles = ability.GetTargetTiles(e, this._combatManager.CurrActing, this._combatManager);
+            this._combatManager.SetCurrentTargetTiles(this._currentActionTiles);
             CMapGUIController.Instance.DecoratePotentialAttackTiles(this._currentActionTiles);
             foreach (var tile in this._currentActionTiles)
             {
@@ -180,6 +177,12 @@ namespace Controller.Managers
         private void HandleDamageCharacterEvent(DamageCharacterEvent e)
         {
             this._events.Remove(e);
+        }
+
+        private void HandleDisplayActionEvent(DisplayActionEvent e)
+        {
+            this._events.Remove(e);
+            CMapGUIController.Instance.DisplayActionEvent(e);
         }
 
         private void HandleDisplayHitStatsEvent(DisplayHitStatsEvent e)
@@ -252,8 +255,8 @@ namespace Controller.Managers
         {
             if (this._combatManager.CurAbility != null && this._combatManager.CurAbility != null)
             {
-                e.Info.Action = this._combatManager.CurAbility;
-                e.Info.Source = this._combatManager.CurrActing;
+                e.ActionContainer.Action = this._combatManager.CurAbility;
+                e.ActionContainer.Source = this._combatManager.CurrActing;
                 this._combatManager.CurAbility = null;
                 if (e.ValidAction())
                 {
@@ -273,7 +276,7 @@ namespace Controller.Managers
         private void HandleShapeshiftEvent(ShapeshiftEvent e)
         {
             this._events.Remove(e);
-            // TODO: Stats
+            var shift = new DisplayHitStatsEvent(CombatEventManager.Instance, e.Hit, e.Hit.Done);
         }
 
         private void HandleSummonEvent(SummonEvent e)
@@ -283,6 +286,7 @@ namespace Controller.Managers
             var attemptedTile = e.Hit.TargetTile;
             var tgtTile = attemptedTile.GetNearestEmptyTile();
             this._mapLoader.BuildAndPlaceCharacter(summonParams, ref this._combatManager.Characters, tgtTile, e.Hit.Source.LParty);
+            e.Hit.Done();
         }
  
         private void HandleTakingActionEvent(TakingActionEvent e)

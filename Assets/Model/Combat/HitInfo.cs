@@ -12,6 +12,7 @@ namespace Model.Combat
 
         public GenericAbility Ability { get; set; }
         public AttackEventFlags Flags { get; set; }
+        public bool FXProcessed { get; set; }
         public bool IsFinished { get; set; }
         public bool IsHeal { get; set; }
         public int Dmg { get; set; }

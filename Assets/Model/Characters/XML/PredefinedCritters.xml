@@ -208,6 +208,7 @@
     </Character>
     <Character name ="Thairex">
       <ActiveAbilitiesEnum>Hadoken</ActiveAbilitiesEnum>
+      <ActiveAbilitiesEnum>Kamehameha</ActiveAbilitiesEnum>
       <AttackSpriteIndex>1</AttackSpriteIndex>
       <FlinchSpriteIndex>13</FlinchSpriteIndex>
       <Perks>

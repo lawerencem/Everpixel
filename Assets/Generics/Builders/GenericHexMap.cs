@@ -144,6 +144,54 @@ namespace Generics.Hex
             return GetDirectionalTile(t.Col, t.Row - 1);
         }
 
+        public bool IsTileN(HexTile s, HexTile t)
+        {
+            if (this.GetN(s).Equals(t))
+                return true;
+            else
+                return false;
+        }
+
+        public bool IsTileNE(HexTile s, HexTile t)
+        {
+            if (this.GetNE(s).Equals(t))
+                return true;
+            else
+                return false;
+        }
+
+        public bool IsTileSE(HexTile s, HexTile t)
+        {
+            if (this.GetSE(s).Equals(t))
+                return true;
+            else
+                return false;
+        }
+
+        public bool IsTileS(HexTile s, HexTile t)
+        {
+            if (this.GetS(s).Equals(t))
+                return true;
+            else
+                return false;
+        }
+
+        public bool IsTileSW(HexTile s, HexTile t)
+        {
+            if (this.GetSW(s).Equals(t))
+                return true;
+            else
+                return false;
+        }
+
+        public bool IsTileNW(HexTile s, HexTile t)
+        {
+            if (this.GetNW(s).Equals(t))
+                return true;
+            else
+                return false;
+        }
+
         private HexTile GetDirectionalTile(int c, int r)
         {
             if (this._colRowDictionary.ContainsKey(c))

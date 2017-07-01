@@ -3,12 +3,14 @@
     public enum CombatEventEnum
     {
         None,
+        AttackFX,
         ApplyInjury,
         AttackSelected,
         Buff,
         Casting,
         CharacterKilled,
         DamageCharacter,
+        DisplayAction,
         DisplayHitStats,
         EndTurn,
         HexSelectedForMove,

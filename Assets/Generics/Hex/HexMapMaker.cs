@@ -42,6 +42,7 @@ namespace Generics.Hex
 
             var map = new GenericHexMap(tiles, rows, cols);
             PopulateAdjacentTiles(map);
+            SetTilesParentMap(map);
             return map;
         }
 
@@ -63,6 +64,12 @@ namespace Generics.Hex
                 if (SW != null) { tile.Adjacent.Add(SW); }
                 if (NW != null) { tile.Adjacent.Add(NW); }
             }
+        }
+
+        private static void SetTilesParentMap(GenericHexMap map)
+        {
+            foreach(var tile in map.Tiles)
+                tile.SetParentMap(map);
         }
     }
 }
