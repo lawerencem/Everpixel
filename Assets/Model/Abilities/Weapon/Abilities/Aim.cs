@@ -5,11 +5,14 @@ namespace Model.Abilities
 {
     public class Aim : GenericAbility
     {
-        public Aim() : base(AbilitiesEnum.Aim) { }
-
-        public override void ProcessAbility(HitInfo hit)
+        public Aim() : base(AbilitiesEnum.Aim)
         {
-            this.CastType = AbilityCastTypeEnum.Melee;
+            this.CastType = AbilityCastTypeEnum.Bullet;
+        }
+
+        public override void ProcessAbility(PerformActionEvent e, HitInfo hit)
+        {
+            base.ProcessAbility(e, hit);
         }
 
         public override bool IsValidActionEvent(PerformActionEvent e)

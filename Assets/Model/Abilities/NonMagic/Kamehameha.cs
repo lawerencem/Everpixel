@@ -18,7 +18,7 @@ namespace Model.Abilities
             return base.GetLOSTiles(e);
         }
 
-        public override void ProcessAbility(HitInfo hit)
+        public override void ProcessAbility(PerformActionEvent e, HitInfo hit)
         {
             base.ProcessLoS(hit);
         }

@@ -3,6 +3,7 @@
     public enum PerkEnum
     {
         None,
+        Bash_Buddy,
         Colossus,
         Dino_Bite,
         Gargantuan,

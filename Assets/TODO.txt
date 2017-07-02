@@ -1,6 +1,6 @@
 ﻿TODO
 
-   - Tomorrow:
+   - First:
      - Shield perks
 	 - Taunt
 	 - Tea Rex refreshing shields

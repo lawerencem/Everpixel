@@ -115,6 +115,7 @@ namespace Controller.Managers
                 case (CombatEventEnum.PathTraversed): { HandlePathTraversedEvent(e as PathTraversedEvent); } break;
                 case (CombatEventEnum.PerformActionEvent): { HandlePerformActionEvent(e as PerformActionEvent); } break;
                 case (CombatEventEnum.Shapeshift): { HandleShapeshiftEvent(e as ShapeshiftEvent); } break;
+                case (CombatEventEnum.Shield): { HandleShieldEvent(e as ShieldEvent); } break;
                 case (CombatEventEnum.ShowPotentialPath): { HandleShowPotentialPathEvent(e as ShowPotentialPathEvent); } break;
                 case (CombatEventEnum.Summon): { HandleSummonEvent(e as SummonEvent); } break;
                 case (CombatEventEnum.TakingAction): { HandleTakingActionEvent(e as TakingActionEvent); } break;
@@ -264,6 +265,12 @@ namespace Controller.Managers
                     e.Perform();
                 }
             }
+        }
+
+        private void HandleShieldEvent(ShieldEvent e)
+        {
+            this._events.Remove(e);
+            CMapGUIController.Instance.DisplayText("Shield", e.ToShield.Handle, CMapGUIControllerParams.BLUE);
         }
 
         private void HandleShowPotentialPathEvent(ShowPotentialPathEvent e)

@@ -7,6 +7,7 @@ using Model.Abilities;
 using Model.Classes;
 using Model.Events.Combat;
 using Model.Injuries;
+using Model.Shields;
 using System.Collections.Generic;
 
 namespace Model.Characters
@@ -30,6 +31,7 @@ namespace Model.Characters
             this.Injuries = new List<GenericInjury>();
             this.Perks = new CharacterPerkCollection();
             this.PStatMods = new List<PrimaryStatModifier>();
+            this.Shields = new List<Shield>();
             this.StatusFlags = new CharacterStatusFlags();
             this.SStatMods = new List<SecondaryStatModifier>();
         }
@@ -44,7 +46,14 @@ namespace Model.Characters
             }
             else
             {
-                this.CurrentHP -= value;
+                int dmg = value;
+                foreach (var shield in this.Shields)
+                    shield.ProcessShieldDmg(ref dmg);
+                this.Shields.RemoveAll(x => x.CurHP <= 0);
+
+                if (dmg >= 0)
+                    this.CurrentHP -= dmg;
+
                 if (this.CurrentHP <= 0)
                 {
                     var killed = new CharacterKilledEvent(CombatEventManager.Instance, this.ParentController);

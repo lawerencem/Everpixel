@@ -19,6 +19,7 @@ namespace View.Characters
         private const string EQUIPMENT_PATH = "Sprites/Equipment/";
         private const string EXTENSION = "_Spritesheet";
         private const string LYCANTHROPE_PATH = "Sprites/Characters/Lycanthropes/";
+        private const string SHIELD_PATH = "Sprites/Effects/";
 
         public CharacterSpriteLoader() { }
 
@@ -76,6 +77,13 @@ namespace View.Characters
         {
             var path = StringUtil.PathBuilder(LYCANTHROPE_PATH, typeStr, EXTENSION);
             return GetSprites(path);
+        }
+
+        public Sprite GetShieldSprite()
+        {
+            var path = StringUtil.PathBuilder(SHIELD_PATH, "Shield");
+            var sprites = GetSprites(path);
+            return sprites[0];
         }
 
         public Sprite[] GetWeaponSprites(WeaponParams w)

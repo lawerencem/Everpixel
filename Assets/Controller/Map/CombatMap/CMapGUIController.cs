@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using View.Biomes;
+using View.Characters;
 using View.GUI;
 
 namespace Controller.Managers.Map
@@ -174,6 +175,7 @@ namespace Controller.Managers.Map
         {
             if (e.Hit.Target != null)
             {
+                this.TryProcessShieldFX(e);
                 if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge))
                     this._hitHelper.ProcessDodge(e);
                 else if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Parry))
@@ -297,6 +299,39 @@ namespace Controller.Managers.Map
             {
                 var text = tagged.GetComponent<Text>();
                 text.text = toSet;
+            }
+        }
+
+        private void TryProcessShieldFX(DisplayHitStatsEvent e)
+        {
+            if (e.Hit.Target != null)
+            {
+                if (e.Hit.Target.Model.Shields.Count > 0)
+                {
+                    var shield = CharacterSpriteLoader.Instance.GetShieldSprite();
+                    var shieldView = new GameObject();
+                    var renderer = shieldView.AddComponent<SpriteRenderer>();
+                    renderer.sprite = shield;
+                    renderer.transform.position = e.Hit.Target.Handle.transform.position;
+                    renderer.sortingLayerName = CMapGUIControllerParams.PARTICLES_LAYER;
+                    shieldView.name = "Shield Sprite";
+                    var destroy = shieldView.AddComponent<DestroyByLifetime>();
+                    destroy.lifetime = 1f;
+                    if (!e.Hit.Target.LParty)
+                    {
+                        var position = shieldView.transform.position;
+                        position.x -= 0.15f;
+                        shieldView.transform.localRotation = Quaternion.Euler(0, 180, 0);
+                        shieldView.transform.position = position;
+                    }
+                    else
+                    {
+                        var position = shieldView.transform.position;
+                        position.x += 0.15f;
+                        shieldView.transform.position = position;
+                    }
+                    shieldView.transform.SetParent(e.Hit.Target.Handle.transform);
+                }
             }
         }
     }

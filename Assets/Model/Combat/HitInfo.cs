@@ -34,6 +34,8 @@ namespace Model.Combat
 
         public void Done()
         {
+            this.Ability.TryApplyInjury(this);
+
             if (this._callBack != null)
             {
                 this.IsFinished = true;

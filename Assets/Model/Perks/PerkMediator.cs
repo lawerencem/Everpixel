@@ -14,6 +14,7 @@ namespace Model.Perks
 
                 switch(genericPerk.Type)
                 {
+                    case (PerkEnum.Bash_Buddy): { c.Perks.OnActionPerks.Add(genericPerk as BashBuddy); } break;
                     case (PerkEnum.Colossus): { c.Perks.EquipmentSStatPerks.Add(genericPerk as Colossus); } break;
                     case (PerkEnum.Dino_Bite): { c.Perks.AbilityModPerks.Add(genericPerk as DinoBite); } break;
                     case (PerkEnum.Gargantuan): { c.Perks.SStatModPerks.Add(genericPerk as Gargantuan); } break;

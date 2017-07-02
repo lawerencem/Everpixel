@@ -11,7 +11,7 @@ namespace Model.Abilities
             this.MagicType = Magic.MagicTypeEnum.Fighting;
         }
 
-        public override void ProcessAbility(HitInfo hit)
+        public override void ProcessAbility(PerformActionEvent e, HitInfo hit)
         {
             base.ProcessBullet(hit);
         }

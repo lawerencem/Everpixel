@@ -22,7 +22,7 @@ namespace Assets.Model.Events.Combat
 
         public void PerformAction()
         {
-            foreach (var hit in this.Hits) { hit.Ability.ProcessAbility(hit); }
+            foreach (var hit in this.Hits) { hit.Ability.ProcessAbility(this.Event, hit);}
             var display = new DisplayActionEvent(CombatEventManager.Instance, this);
         }
 

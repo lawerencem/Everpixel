@@ -20,6 +20,7 @@
         WeaponAbilityPerformed,
         ShowPotentialPath,
         Shapeshift,
+        Shield,
         Summon,
         TakingAction,
         TileDoubleClick,

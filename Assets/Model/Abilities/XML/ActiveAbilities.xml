@@ -67,7 +67,7 @@
     <ArmorIgnoreMod>0.8</ArmorIgnoreMod>
     <ArmorPierceMod>1</ArmorPierceMod>
     <BlockIgnoreMod>1</BlockIgnoreMod>
-    <DmgPerPower>1</DmgPerPower>
+    <DmgPerPower>0.02</DmgPerPower>
     <DodgeMod>0.8</DodgeMod>
     <FlatDamage>0</FlatDamage>
     <MeleeBlockChanceMod>0.5</MeleeBlockChanceMod>
@@ -76,7 +76,7 @@
     <RangeBlockMod>0.75</RangeBlockMod>
     <RechargeTime>0</RechargeTime>
     <ShieldDamageMod>1</ShieldDamageMod>
-    <StaminaCost>55</StaminaCost>
+    <StaminaCost>70</StaminaCost>
   </ActiveAbility>
   <ActiveAbility name="Orc_Metal">
     <AbilityCastTypeEnum>Song</AbilityCastTypeEnum>

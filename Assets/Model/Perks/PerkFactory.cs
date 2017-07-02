@@ -10,6 +10,7 @@ namespace Model.Perks
         {
             switch(toCreate)
             {
+                case (PerkEnum.Bash_Buddy): { return new BashBuddy(); }
                 case (PerkEnum.Colossus): { return new Colossus(); }
                 case (PerkEnum.Dino_Bite): { return new DinoBite(); }
                 case (PerkEnum.Hulk): { return new Hulk(); }

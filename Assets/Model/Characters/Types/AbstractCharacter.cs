@@ -6,6 +6,7 @@ using Model.Classes;
 using Model.Equipment;
 using Model.Injuries;
 using Model.Map;
+using Model.Shields;
 using System.Collections.Generic;
 
 namespace Model.Characters
@@ -51,6 +52,8 @@ namespace Model.Characters
 
         public CharacterStatusFlags StatusFlags { get; set; }
 
+        public List<Shield> Shields { get; set; }
+
         public void AddArmor(GenericArmor armor)
         {
             this.RemoveArmor();
@@ -80,6 +83,18 @@ namespace Model.Characters
             this.Injuries.Add(injury);
         }
 
+        public void AddShield(Shield toAdd)
+        {
+            this.Shields.Add(toAdd);
+        }
+
+        public void AddStamina(double toAdd)
+        {
+            this.CurrentStamina += (int)toAdd;
+            if (this.CurrentStamina > (int)this.GetCurrentStatValue(SecondaryStatsEnum.Stamina))
+                this.CurrentStamina = (int)this.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
+        }
+
         public void AddWeapon(GenericWeapon weapon, bool lWeapon)
         {
             // TODO: 2handed weapon check
@@ -103,13 +118,6 @@ namespace Model.Characters
                 }
                 this.IndefSStatMods.Add(mods);
             }
-        }
-
-        public void AddStamina(double toAdd)
-        {
-            this.CurrentStamina += (int)toAdd;
-            if (this.CurrentStamina > (int)this.GetCurrentStatValue(SecondaryStatsEnum.Stamina))
-                this.CurrentStamina = (int)this.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
         }
 
         public int GetTileTraversalAPCost(HexTile tile)
@@ -221,6 +229,7 @@ namespace Model.Characters
         {
             this.RestoreStamina();
             this.ProcessBuffDurations();
+            this.ProcessShields();
         }
 
         public void TryAddMod(FlatSecondaryStatModifier mod)
@@ -249,6 +258,13 @@ namespace Model.Characters
             this.FlatSStatMods.RemoveAll(x => x.Duration <= 0);
             this.PStatMods.RemoveAll(x => x.Duration <= 0);
             this.SStatMods.RemoveAll(x => x.Duration <= 0);
+        }
+
+        private void ProcessShields()
+        {
+            foreach (var shield in this.Shields)
+                shield.ProcessTurn();
+            this.Shields.RemoveAll(x => x.Dur <= 0);
         }
 
         private void RestoreStamina()

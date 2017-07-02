@@ -7,6 +7,7 @@
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Lizardman</RaceEnum>
       <Perks>
+        <Perk>Bash_Buddy</Perk>
         <Perk>Hulk</Perk>
         <Perk>Iron_Hide</Perk>
         <Perk>Scaly</Perk>
@@ -138,6 +139,7 @@
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Lizardman</RaceEnum>
       <Perks>
+        <Perk>Bash_Buddy</Perk>
         <Perk>Hulk</Perk>
         <Perk>Iron_Hide</Perk>
         <Perk>Scaly</Perk>
