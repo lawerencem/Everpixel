@@ -11,6 +11,7 @@ using UnityEngine;
 using View.Events;
 using Controller.Map;
 using Model.Characters;
+using Generics.Utilities;
 
 namespace Controller.Managers
 {
@@ -68,6 +69,11 @@ namespace Controller.Managers
         public GenericCharacterController GetCurrentCharacter()
         {
             return this._combatManager.CurrActing;
+        }
+
+        public GenericCharacterController GetRandomCharacter()
+        {
+            return ListUtil<GenericCharacterController>.GetRandomListElement(this._combatManager.Characters);
         }
 
         public bool GetGUILock() { return this._guiLock; }

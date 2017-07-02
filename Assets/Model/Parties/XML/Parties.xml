@@ -71,6 +71,9 @@
     <SubParty>Orc Warriors,8</SubParty>
     <SubParty>Orc Warriors,11</SubParty>
     <SubParty>Orc Wereweens,5</SubParty>
+    <SubParty>Weens,3</SubParty>
+    <SubParty>Weens,7</SubParty>
+    <SubParty>Weens,9</SubParty>
   </Party>
   <Party Name ="Jomonese Infantry">
     <SubParty>Katana Samurais,5</SubParty>

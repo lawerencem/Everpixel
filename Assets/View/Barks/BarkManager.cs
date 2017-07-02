@@ -1,4 +1,5 @@
-﻿using Controller.Managers.Map;
+﻿using Controller.Managers;
+using Controller.Managers.Map;
 using Controller.Map;
 using Generics.Utilities;
 using Model.Events.Combat;
@@ -34,6 +35,30 @@ namespace View.Barks
             this.RandomFatalityBark(e, ownTeam);
         }
 
+        private void EnemyFatalityBark(DisplayActionEvent e)
+        {
+            var barks = BarkTable.Instance.Table[BarkCategoryEnum.EnemyFatality];
+            var bark = ListUtil<string>.GetRandomListElement(barks);
+            CMapGUIController.Instance.DisplayText(bark, e.EventController.Source.Handle, CMapGUIControllerParams.WHITE);
+        }
+
+        private void ProcessEnemyTeamFatalityBark(DisplayActionEvent e)
+        {
+            var roll = RNG.Instance.Next(2);
+            if (roll == 0)
+                this.NeutralFataliyBark(e);
+            else
+                this.EnemyFatalityBark(e);
+        }
+
+        private void NeutralFataliyBark(DisplayActionEvent e)
+        {
+            var barks = BarkTable.Instance.Table[BarkCategoryEnum.NeutralFatality];
+            var bark = ListUtil<string>.GetRandomListElement(barks);
+            var character = CombatEventManager.Instance.GetRandomCharacter();
+            CMapGUIController.Instance.DisplayText(bark, character.Handle, CMapGUIControllerParams.WHITE);
+        }
+
         private void OwnTeamFatalityBark(DisplayActionEvent e)
         {
             var barks = BarkTable.Instance.Table[BarkCategoryEnum.FriendlyFatality];
@@ -45,6 +70,8 @@ namespace View.Barks
         {
             if (ownTeam)
                 this.OwnTeamFatalityBark(e);
+            else
+                this.ProcessEnemyTeamFatalityBark(e);
         }        
     }
 }

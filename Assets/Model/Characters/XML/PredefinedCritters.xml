@@ -68,6 +68,24 @@
       </Stats>
       <WeaponAbilitiesEnum>Bite</WeaponAbilitiesEnum>
     </Character>
+    <Character name ="Dire_Ween">
+      <AttackSpriteIndex>3</AttackSpriteIndex>
+      <Description>
+        Dire weens can often be found in the ocean hunting for sharks.
+      </Description>
+      <FlinchSpriteIndex>2</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>350</Agility>
+        <Constitution>650</Constitution>
+        <Intelligence>220</Intelligence>
+        <Might>820</Might>
+        <Perception>600</Perception>
+        <Resolve>300</Resolve>
+      </Stats>
+      <WeaponAbilitiesEnum>Bite</WeaponAbilitiesEnum>
+    </Character>
     <Character name ="Raptard">
       <AttackSpriteIndex>2</AttackSpriteIndex>
       <FlinchSpriteIndex>1</FlinchSpriteIndex>
@@ -242,6 +260,21 @@
         <Might>850</Might>
         <Perception>350</Perception>
         <Resolve>650</Resolve>
+      </Stats>
+      <WeaponAbilitiesEnum>Bite</WeaponAbilitiesEnum>
+    </Character>
+    <Character name ="Ween">
+      <AttackSpriteIndex>18</AttackSpriteIndex>
+      <FlinchSpriteIndex>13</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>700</Agility>
+        <Constitution>280</Constitution>
+        <Intelligence>300</Intelligence>
+        <Might>380</Might>
+        <Perception>550</Perception>
+        <Resolve>350</Resolve>
       </Stats>
       <WeaponAbilitiesEnum>Bite</WeaponAbilitiesEnum>
     </Character>

@@ -317,4 +317,20 @@
     <Character>1,Psylug,One</Character>
     <Character>1,Razorback,One</Character>
   </SubParty>
+  <SubParty Name ="Weens">
+    <Difficulty>3</Difficulty>
+    <Character>1,Ween,One</Character>
+    <Character>1,Ween,One</Character>
+  </SubParty>
+  <SubParty Name ="Weens">
+    <Difficulty>7</Difficulty>
+    <Character>1,Dire_Ween,One</Character>
+    <Character>1,Ween,One</Character>
+    <Character>1,Ween,One</Character>
+  </SubParty>
+  <SubParty Name ="Weens">
+    <Difficulty>9</Difficulty>
+    <Character>1,Dire_Ween,One</Character>
+    <Character>1,Dire_Ween,One</Character>
+  </SubParty>
 </SubParties>

@@ -248,7 +248,8 @@ namespace Model.Abilities
         public void TryApplyInjury(HitInfo hit)
         {
             if (!AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge) &&
-                !AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Parry))
+                !AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Parry) &&
+                hit.Target != null)
             {
                 var roll = RNG.Instance.NextDouble();
                 var hp = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.HP);
@@ -268,11 +269,6 @@ namespace Model.Abilities
                     }
                 }
             }
-        }
-
-        protected void DetermineRayDirection(HexTile source, HexTile target, int dist)
-        {
-
         }
 
         protected List<TileController> GetAdjacentTiles(GenericCharacterController c)
