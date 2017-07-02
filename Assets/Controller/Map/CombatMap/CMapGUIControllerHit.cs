@@ -57,7 +57,7 @@ namespace Controller.Managers.Map
             this.DisplayText(e.Hit.Dmg.ToString(), e.Hit.Target.Handle, CMapGUIControllerParams.RED, CMapGUIControllerParams.DMG_TEXT_OFFSET);
         }
 
-        public void DisplayText(string toDisplay, GameObject toShow, Color color, float yOffset = 0)
+        public void DisplayText(string toDisplay, GameObject toShow, Color color, float yOffset = 0, float dur = 1)
         {
             var parent = GameObject.FindGameObjectWithTag("WorldSpaceCanvas");
             var display = new GameObject();
@@ -76,7 +76,7 @@ namespace Controller.Managers.Map
             Font fontToUse = Resources.Load("Fonts/8bitOperatorPlus8-Bold") as Font;
             text.font = fontToUse;
             var script = display.AddComponent<DestroyByLifetime>();
-            script.lifetime = 1;
+            script.lifetime = dur;
             var floating = display.AddComponent<FloatingText>();
             floating.Init(display);
         }
@@ -229,14 +229,9 @@ namespace Controller.Managers.Map
             }
 
             if (success)
-                fatality.Init();   
-            foreach(var nonFatality in e.EventController.Hits)
-            {
-                var fatalityHit = e.FatalityHits.Find(x => x == nonFatality);
-                if (fatalityHit == null)
-                    nonFatality.Done();
-            }
-                
+                fatality.Init();
+            foreach (var hit in e.FatalityHits)
+                hit.FXProcessed = true;
             return success;
         }
 

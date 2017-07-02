@@ -7,6 +7,7 @@ using Model.Mounts.XML;
 using Model.Parties.XML;
 using Models.Equipment.XML;
 using System.Collections.Generic;
+using View.Barks;
 
 namespace Assets.Controller.Managers
 {
@@ -18,6 +19,7 @@ namespace Assets.Controller.Managers
         {
             this._readers.Add(ActiveAbilityReader.Instance);
             this._readers.Add(ArmorReader.Instance);
+            this._readers.Add(BarkReader.Instance);
             this._readers.Add(ClassReader.Instance);
             this._readers.Add(InjuryReader.Instance);
             this._readers.Add(PartiesReader.Instance);

@@ -52,6 +52,7 @@ namespace View.Fatalities
                 this._parent.ProcessCharacterKilled(hit.Target);
                 hit.Done();
             }
+            this._event.AttackFXDone();
             base.ProcessFatalityView();
         }
     }

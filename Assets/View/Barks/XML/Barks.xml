@@ -1,0 +1,18 @@
+﻿<Barks>
+  <Category name ="FriendlyFatality">
+    <Bark>Oops...</Bark>
+    <Bark>My bad...</Bark>
+    <Bark>(I hope he's okay...)</Bark>
+    <Bark>Probably won't get Christmas cards from him anymore...</Bark>
+  </Category>
+  <Category name ="EnemyFatality">
+    <Bark>All hail the king, baby.</Bark>
+    <Bark>Welcome to Thunderdome.</Bark>
+    <Bark>Hasta la vista, baby.</Bark>
+    <Bark>Don't act like you're not impressed.</Bark>
+  </Category>
+  <Category name ="NeutralFatality">
+    <Bark>Hey, did anyone else see that!?</Bark>
+    <Bark>(Did I forget to pay the electric bill?)</Bark>
+  </Category>
+</Barks>

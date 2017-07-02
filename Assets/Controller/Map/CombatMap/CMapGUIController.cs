@@ -46,6 +46,12 @@ namespace Controller.Managers.Map
             script.Init(this._banner, 4);
         }
 
+        public void ApplyInjuryGraphics(ApplyInjuryEvent e)
+        {
+            this._particleHelper.ApplyInjuryParticle(e);
+            this._hitHelper.ProcessInjury(e);
+        }
+
         public CMapGUIController()
         {
             this._abilityModal = new AbilitiesModal();
@@ -57,12 +63,6 @@ namespace Controller.Managers.Map
             var banner = GameObject.FindGameObjectWithTag("BannerTag");
             this._banner = banner;
             this._banner.SetActive(false);
-        }
-
-        public void ApplyInjuryGraphics(ApplyInjuryEvent e)
-        {
-            this._particleHelper.ApplyInjuryParticle(e);
-            this._hitHelper.ProcessInjury(e);
         }
 
         public void ClearAoETiles()
@@ -158,6 +158,11 @@ namespace Controller.Managers.Map
                 case (AbilityCastTypeEnum.Song): { this._particleHelper.HandleSongParticle(e); } break;
                 case (AbilityCastTypeEnum.Summon): { this.ProcessSummonFX(e); } break;
             }
+        }
+
+        public void DisplayText(string toDisplay, GameObject toShow, Color color, float yOffset = 0, float dur = 3)
+        {
+            this._hitHelper.DisplayText(toDisplay, toShow, color, yOffset, dur);
         }
 
         public void ProcessCharacterKilled(CharacterKilledEvent e)

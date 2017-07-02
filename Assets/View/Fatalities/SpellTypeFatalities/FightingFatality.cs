@@ -120,6 +120,7 @@ namespace View.Fatalities
                 this.ProcessGear(hit);
                 hit.Done();
             }
+            this._event.AttackFXDone();
             this.ProcessFatalityView();
         }
 

@@ -47,6 +47,8 @@ Refactor:
 Bugs:
 	Goblin Void Weavers sometimes dont get turns...
 	no bobbing after slash fatality
+	Blood is higher layer than equipment on fatalities.
+
 
 ideas: 
 	shoggoth ability: eat corpse (makes unit grow like mario)

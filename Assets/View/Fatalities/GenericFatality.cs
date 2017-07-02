@@ -2,6 +2,7 @@
 using Generics.Scripts;
 using Model.Events.Combat;
 using UnityEngine;
+using View.Barks;
 
 namespace View.Fatalities
 {
@@ -37,6 +38,7 @@ namespace View.Fatalities
         public void ProcessFatalityView()
         {
             CMapGUIController.Instance.ActivateFatalityBanner();
+            BarkManager.Instance.ProcessFatalityBark(this._event);
         }
 
         protected virtual void InitMeleeFatality()

@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.1f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -250,6 +248,7 @@
     <Compile Include="Assets\Model\Equipment\XML\ArmorReader.cs" />
     <Compile Include="Assets\Model\Equipment\XML\GenericEquipmentReader.cs" />
     <Compile Include="Assets\Model\Equipment\XML\WeaponReader.cs" />
+    <Compile Include="Assets\Model\Events\Combat\ActionEventController.cs" />
     <Compile Include="Assets\Model\Events\Combat\ApplyInjuryEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\AttackFXEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\AttackSelectedEvent.cs" />
@@ -257,7 +256,6 @@
     <Compile Include="Assets\Model\Events\Combat\CastingEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\CharacterKilledEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\CombatEvent.cs" />
-    <Compile Include="Assets\Model\Events\Combat\TileHitEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\DisplayActionEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\DisplayHitStatsEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\EndTurnEvent.cs" />
@@ -265,12 +263,12 @@
     <Compile Include="Assets\Model\Events\Combat\MapDoneLoadingEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\PathTraversedEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\PerformActionEvent.cs" />
-    <Compile Include="Assets\Model\Events\Combat\ActionEventController.cs" />
     <Compile Include="Assets\Model\Events\Combat\ShapeshiftEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\ShowPotentialPathEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\SummonEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TakingActionEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TileDoubleClickEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\TileHitEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TileHoverDecoEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TraversePathEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TraverseTileEvent.cs" />
@@ -325,7 +323,10 @@
     <Compile Include="Assets\Model\Spells\SpellMediator.cs" />
     <Compile Include="Assets\Model\Spells\SpellsByLevel.cs" />
     <Compile Include="Assets\View\Attacks\AttackSpriteLoader.cs" />
+    <Compile Include="Assets\View\Barks\BarkCategoryEnum.cs" />
     <Compile Include="Assets\View\Barks\BarkManager.cs" />
+    <Compile Include="Assets\View\Barks\BarkTable.cs" />
+    <Compile Include="Assets\View\Barks\XML\BarkReader.cs" />
     <Compile Include="Assets\View\Builders\CharacterViewBuilder.cs" />
     <Compile Include="Assets\View\Characters\CharacterBridge.cs" />
     <Compile Include="Assets\View\Characters\CharacterSpriteLoader.cs" />
@@ -384,6 +385,7 @@
     <None Include="Assets\Model\Parties\XML\Parties.xml" />
     <None Include="Assets\Model\Parties\XML\SubParties.xml" />
     <None Include="Assets\TODO.txt" />
+    <None Include="Assets\View\Barks\XML\Barks.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
