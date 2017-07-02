@@ -167,16 +167,18 @@ namespace Controller.Managers.Map
 
         private void ProcessDefenderGraphics(DisplayHitStatsEvent e)
         {
-            if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge))
-                this._hitHelper.ProcessDodge(e);
-            else if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Parry))
-                this._hitHelper.ProcessParry(e);
-            else if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Block))
-                this._hitHelper.ProcessBlock(e);
-            else
-                this._hitHelper.ProcessNormalHit(e);
-
-            this._hitHelper.ProcessSplatterOnHitEvent(e);
+            if (e.Hit.Target != null)
+            {
+                if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge))
+                    this._hitHelper.ProcessDodge(e);
+                else if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Parry))
+                    this._hitHelper.ProcessParry(e);
+                else if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Block))
+                    this._hitHelper.ProcessBlock(e);
+                else
+                    this._hitHelper.ProcessNormalHit(e);
+                this._hitHelper.ProcessSplatterOnHitEvent(e);
+            }
             e.Done();
         }
 

@@ -88,11 +88,6 @@ namespace Model.Combat
             }
         }
 
-        //public void ProcessActionEventView(HitInfo hit)
-        //{
-        //    var display = new DisplayHitStatsEvent(CombatEventManager.Instance, hit, hit.Done);
-        //}
-
         private void ProcessBulletFlags(HitInfo hit)
         {
             this.ProcessDodge(hit);

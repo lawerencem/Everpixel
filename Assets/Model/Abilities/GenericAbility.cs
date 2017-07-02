@@ -117,10 +117,25 @@ namespace Model.Abilities
         public virtual List<TileController> GetLOSTiles(PerformActionEvent e)
         {
             var list = new List<TileController>();
-            var sourceHex = e.ActionContainer.Source.CurrentTile.Model;
-            var hexes = sourceHex.GetLOSTiles(e.ActionContainer.Target.Model, this.Range);
+            var source = e.ActionContainer.Source.CurrentTile.Model;
+            var target = e.ActionContainer.Target.Model;
+            HexTile initTile;
+            if (source.IsHexN(target, e.ActionContainer.Action.Range))
+                initTile = source.GetN();
+            else if (source.IsHexNE(target, e.ActionContainer.Action.Range))
+                initTile = source.GetNE();
+            else if (source.IsHexSE(target, e.ActionContainer.Action.Range))
+                initTile = source.GetSE();
+            else if (source.IsHexS(target, e.ActionContainer.Action.Range))
+                initTile = source.GetS();
+            else if (source.IsHexSW(target, e.ActionContainer.Action.Range))
+                initTile = source.GetSW();
+            else 
+                initTile = source.GetNW();
+            var hexes = initTile.GetLOSTiles(source, e.ActionContainer.Action.Range);
             foreach (var hex in hexes)
                 list.Add(hex.Parent);
+            e.ActionContainer.Target = list[list.Count - 1];
             return list;
         }
 
@@ -227,6 +242,11 @@ namespace Model.Abilities
                 return true;
             else
                 return false;
+        }
+
+        protected void DetermineRayDirection(HexTile source, HexTile target, int dist)
+        {
+
         }
 
         protected List<TileController> GetAdjacentTiles(GenericCharacterController c)

@@ -70,25 +70,129 @@ namespace Model.Map
             return tiles;
         }
 
-        public List<HexTile> GetLOSTiles(HexTile s, int dist)
+        public List<HexTile> GetLOSTiles(HexTile t, int dist)
         {
             var list = new List<HexTile>();
 
-            if (this._parentMap.IsTileN(s, this))
-                list = this.GetLOSTilesViaDistN(s, dist);
-            else if (this._parentMap.IsTileNE(s, this))
-                list = this.GetLOSTilesViaDistNE(s, dist);
-            else if (this._parentMap.IsTileSE(s, this))
-                list = this.GetLOSTilesViaDistSE(s, dist);
-            else if (this._parentMap.IsTileS(s, this))
-                list = this.GetLOSTilesViaDistS(s, dist);
-            else if (this._parentMap.IsTileSW(s, this))
-                list = this.GetLOSTilesViaDistSW(s, dist);
+            if (this._parentMap.IsTileN(t, this))
+                list = this.GetLOSTilesViaDistN(t, dist);
+            else if (this._parentMap.IsTileNE(t, this))
+                list = this.GetLOSTilesViaDistNE(t, dist);
+            else if (this._parentMap.IsTileSE(t, this))
+                list = this.GetLOSTilesViaDistSE(t, dist);
+            else if (this._parentMap.IsTileS(t, this))
+                list = this.GetLOSTilesViaDistS(t, dist);
+            else if (this._parentMap.IsTileSW(t, this))
+                list = this.GetLOSTilesViaDistSW(t, dist);
             else
-                list = this.GetLOSTilesViaDistNW(s, dist);
+                list = this.GetLOSTilesViaDistNW(t, dist);
 
             return list;
         }
+
+        public HexTile GetN() { return this._parentMap.GetN(this); }
+        public HexTile GetNE() { return this._parentMap.GetNE(this); }
+        public HexTile GetSE() { return this._parentMap.GetSE(this); }
+        public HexTile GetS() { return this._parentMap.GetS(this); }
+        public HexTile GetSW() { return this._parentMap.GetSW(this); }
+        public HexTile GetNW() { return this._parentMap.GetNW(this); }
+
+        public bool IsHexN(HexTile target, int dist)
+        {
+            var cur = this;
+            for (int i = 0; i < dist; i++)
+            {
+                var next = this._parentMap.GetN(cur);
+                if (next != null)
+                {
+                    cur = next;
+                    if (cur.Equals(target))
+                        return true;
+                }
+            }
+            return false;
+        }
+
+        public bool IsHexNE(HexTile target, int dist)
+        {
+            var cur = this;
+            for (int i = 0; i < dist; i++)
+            {
+                var next = this._parentMap.GetNE(cur);
+                if (next != null)
+                {
+                    cur = next;
+                    if (cur.Equals(target))
+                        return true;
+                }
+            }
+            return false;
+        }
+
+        public bool IsHexSE(HexTile target, int dist)
+        {
+            var cur = this;
+            for (int i = 0; i < dist; i++)
+            {
+                var next = this._parentMap.GetSE(cur);
+                if (next != null)
+                {
+                    cur = next;
+                    if (cur.Equals(target))
+                        return true;
+                }
+            }
+            return false;
+        }
+
+        public bool IsHexS(HexTile target, int dist)
+        {
+            var cur = this;
+            for (int i = 0; i < dist; i++)
+            {
+                var next = this._parentMap.GetS(cur);
+                if (next != null)
+                {
+                    cur = next;
+                    if (cur.Equals(target))
+                        return true;
+                }
+            }
+            return false;
+        }
+
+        public bool IsHexSW(HexTile target, int dist)
+        {
+            var cur = this;
+            for (int i = 0; i < dist; i++)
+            {
+                var next = this._parentMap.GetSW(cur);
+                if (next != null)
+                {
+                    cur = next;
+                    if (cur.Equals(target))
+                        return true;
+                }
+            }
+            return false;
+        }
+
+        public bool IsHexNW(HexTile target, int dist)
+        {
+            var cur = this;
+            for (int i = 0; i < dist; i++)
+            {
+                var next = this._parentMap.GetNW(cur);
+                if (next != null)
+                {
+                    cur = next;
+                    if (cur.Equals(target))
+                        return true;
+                }
+            }
+            return false;
+        }
+
 
         protected List<HexTile> GetLOSTilesViaDistN(HexTile t, int dist)
         {

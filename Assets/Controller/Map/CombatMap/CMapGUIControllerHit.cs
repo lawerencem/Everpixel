@@ -27,6 +27,36 @@ namespace Controller.Managers.Map
                 CMapGUIControllerParams.WHITE, CMapGUIControllerParams.ATTACK_TEXT_OFFSET);
         }
 
+        public void ProcessBlock(DisplayHitStatsEvent e)
+        {
+            this.DisplayText("Block", e.Hit.Target.Handle, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.BLOCK_TEXT_OFFSET);
+            if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
+                this.DisplayText("Critical!", e.Hit.Target.Handle, CMapGUIControllerParams.RED, CMapGUIControllerParams.CRIT_TEXT_OFFSET);
+            if (e.Hit.Target.Model.LWeapon != null && e.Hit.Target.Model.LWeapon.IsTypeOfShield())
+            {
+                var weapon = e.Hit.Target.SpriteHandlerDict["CharLWeapon"];
+                var boomerang = weapon.AddComponent<BoomerangScript>();
+                var position = weapon.transform.position;
+                if (e.Hit.Target.LParty)
+                    position.x -= CMapGUIControllerParams.WEAPON_OFFSET;
+                else
+                    position.x += CMapGUIControllerParams.WEAPON_OFFSET;
+                boomerang.Init(weapon, position, CMapGUIControllerParams.WEAPON_PARRY);
+            }
+            if (e.Hit.Target.Model.RWeapon != null && e.Hit.Target.Model.RWeapon.IsTypeOfShield())
+            {
+                var weapon = e.Hit.Target.SpriteHandlerDict["CharRWeapon"];
+                var boomerang = weapon.AddComponent<BoomerangScript>();
+                var position = weapon.transform.position;
+                if (e.Hit.Target.LParty)
+                    position.x -= CMapGUIControllerParams.WEAPON_OFFSET;
+                else
+                    position.x += CMapGUIControllerParams.WEAPON_OFFSET;
+                boomerang.Init(weapon, position, CMapGUIControllerParams.WEAPON_PARRY);
+            }
+            this.DisplayText(e.Hit.Dmg.ToString(), e.Hit.Target.Handle, CMapGUIControllerParams.RED, CMapGUIControllerParams.DMG_TEXT_OFFSET);
+        }
+
         public void DisplayText(string toDisplay, GameObject toShow, Color color, float yOffset = 0)
         {
             var parent = GameObject.FindGameObjectWithTag("WorldSpaceCanvas");
@@ -63,6 +93,7 @@ namespace Controller.Managers.Map
                 this.ProcessBulletFXNonFatality(e);
         }
 
+
         public void ProcessCharacterKilled(GenericCharacterController c)
         {
             if (!c.KillFXProcessed)
@@ -76,6 +107,13 @@ namespace Controller.Managers.Map
             c.KillFXProcessed = true;
         }
 
+        public void ProcessDodge(DisplayHitStatsEvent e)
+        {
+            var defenderJolt = e.Hit.Target.Handle.AddComponent<BoomerangScript>();
+            defenderJolt.Init(e.Hit.Target.Handle, this.GetRandomDodgePosition(e), 6f);
+            this.DisplayText("Dodge", e.Hit.Target.Handle, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.DODGE_TEXT_OFFSET);
+        }
+
         public void ProcessInjury(ApplyInjuryEvent e)
         {
             var text = e.Injury.Type.ToString().Replace("_", " ");
@@ -85,7 +123,6 @@ namespace Controller.Managers.Map
         public void ProcessMeleeHitFX(DisplayActionEvent e)
         {
             this.DisplayActionEventName(e);
-
             if (this.IsFatality(e))
             {
                 if (!this.FatalitySuccessful(e))
@@ -93,45 +130,6 @@ namespace Controller.Managers.Map
             }
             else
                 this.ProcessMeleeHitFXNonFatality(e);
-        }
-
-        
-
-        public void ProcessBlock(DisplayHitStatsEvent e)
-        {
-            this.DisplayText("Block", e.Hit.Target.Handle, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.BLOCK_TEXT_OFFSET);
-            if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
-                this.DisplayText("Critical!", e.Hit.Target.Handle, CMapGUIControllerParams.RED, CMapGUIControllerParams.CRIT_TEXT_OFFSET);
-            if (e.Hit.Target.Model.LWeapon != null && e.Hit.Target.Model.LWeapon.IsTypeOfShield())
-            {
-                var weapon = e.Hit.Target.SpriteHandlerDict["CharLWeapon"];
-                var boomerang = weapon.AddComponent<BoomerangScript>();
-                var position = weapon.transform.position;
-                if (e.Hit.Target.LParty)
-                    position.x -= CMapGUIControllerParams.WEAPON_OFFSET;
-                else
-                    position.x += CMapGUIControllerParams.WEAPON_OFFSET;
-                boomerang.Init(weapon, position, CMapGUIControllerParams.WEAPON_PARRY);
-            }
-            if (e.Hit.Target.Model.RWeapon != null && e.Hit.Target.Model.RWeapon.IsTypeOfShield())
-            {
-                var weapon = e.Hit.Target.SpriteHandlerDict["CharRWeapon"];
-                var boomerang = weapon.AddComponent<BoomerangScript>();
-                var position = weapon.transform.position;
-                if (e.Hit.Target.LParty)
-                    position.x -= CMapGUIControllerParams.WEAPON_OFFSET;
-                else
-                    position.x += CMapGUIControllerParams.WEAPON_OFFSET;
-                boomerang.Init(weapon, position, CMapGUIControllerParams.WEAPON_PARRY);
-            }
-            this.DisplayText(e.Hit.Dmg.ToString(), e.Hit.Target.Handle, CMapGUIControllerParams.RED, CMapGUIControllerParams.DMG_TEXT_OFFSET);
-        }
-
-        public void ProcessDodge(DisplayHitStatsEvent e)
-        {
-            var defenderJolt = e.Hit.Target.Handle.AddComponent<BoomerangScript>();
-            defenderJolt.Init(e.Hit.Target.Handle, this.GetRandomDodgePosition(e), 6f);
-            this.DisplayText("Dodge", e.Hit.Target.Handle, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.DODGE_TEXT_OFFSET);
         }
 
         public void ProcessNormalHit(DisplayHitStatsEvent e)
@@ -232,6 +230,12 @@ namespace Controller.Managers.Map
 
             if (success)
                 fatality.Init();   
+            foreach(var nonFatality in e.EventController.Hits)
+            {
+                var fatalityHit = e.FatalityHits.Find(x => x == nonFatality);
+                if (fatalityHit == null)
+                    nonFatality.Done();
+            }
                 
             return success;
         }
@@ -294,14 +298,16 @@ namespace Controller.Managers.Map
             bool sucess = false;
             foreach(var hit in e.EventController.Hits)
             {
-                // TODO: seems sometimes characters don't die but suffer fatality...
-                if (hit.Target.Model.CurrentHP - hit.Dmg <= 0)
+                if (hit.Target != null && hit.Target.Model != null)
                 {
-                    var roll = RNG.Instance.NextDouble();
-                    if (roll < CMapGUIControllerParams.FATALITY_CHANCE)
+                    if (hit.Target.Model.CurrentHP - hit.Dmg <= 0)
                     {
-                        sucess = true;
-                        e.FatalityHits.Add(hit);
+                        var roll = RNG.Instance.NextDouble();
+                        if (roll < CMapGUIControllerParams.FATALITY_CHANCE)
+                        {
+                            sucess = true;
+                            e.FatalityHits.Add(hit);
+                        }
                     }
                 }
             }
@@ -311,7 +317,7 @@ namespace Controller.Managers.Map
         private void ProcessBulletFXNonFatality(DisplayActionEvent e)
         {
             var attackerScript = e.EventController.Source.Handle.AddComponent<AttackerJoltScript>();
-            var position = Vector3.Lerp(e.EventController.TargetCharController.CurrentTile.Model.Center, e.EventController.Source.CurrentTile.Model.Center, 0.85f);
+            var position = Vector3.Lerp(e.EventController.Target.Model.Center, e.EventController.Source.CurrentTile.Model.Center, 0.85f);
             attackerScript.Init(e.EventController.Source, position, 8f);
 
             var sprite = AttackSpriteLoader.Instance.GetAttackSprite(e.EventController.Action);
@@ -329,7 +335,7 @@ namespace Controller.Managers.Map
         private void ProcessMeleeHitFXNonFatality(DisplayActionEvent e)
         {
             var attackerScript = e.EventController.Source.Handle.AddComponent<AttackerJoltScript>();
-            var position = Vector3.Lerp(e.EventController.TargetCharController.CurrentTile.Model.Center, e.EventController.Source.CurrentTile.Model.Center, 0.85f);
+            var position = Vector3.Lerp(e.EventController.Target.Model.Center, e.EventController.Source.CurrentTile.Model.Center, 0.85f);
             foreach (var hit in e.EventController.Hits)
             {
                 var listener = new DefenderFXListener(this, hit);

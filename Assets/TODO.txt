@@ -1,5 +1,11 @@
 ﻿TODO
 
+   - Tomorrow:
+     - Shield perks
+	 - Taunt
+	 - Tea Rex refreshing shields
+	 - Healing song
+
    - Spear wall
    - Bonuses to Hit when surrounding
    - Bonuses to Dmg when surrounding

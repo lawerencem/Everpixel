@@ -89,7 +89,7 @@ namespace Controller.Managers
                 CMapGUIController.Instance.SetActingBoxToController(this._currentAction.ActionContainer.Source);
                 foreach (var hit in this._currentAction.ActionContainer.Hits)
                 {
-                    var dmg = new DamageCharacterEvent(this, hit);
+                    var tileHit = new TileHitEvent(this, hit);
                 }
                 if (this._currentAction.ActionContainer.CastFinished)
                     this._combatManager.ProcessNextTurn();
@@ -105,7 +105,7 @@ namespace Controller.Managers
                 case (CombatEventEnum.AttackSelected): { HandleAttackSelectedEvent(e as AttackSelectedEvent); } break;
                 case (CombatEventEnum.Buff): { HandleBuffEvent(e as BuffEvent); } break;
                 case (CombatEventEnum.Casting): { HandleCastingEvent(e as CastingEvent); } break;
-                case (CombatEventEnum.DamageCharacter): { HandleDamageCharacterEvent(e as DamageCharacterEvent); } break;
+                case (CombatEventEnum.DamageCharacter): { HandleDamageCharacterEvent(e as TileHitEvent); } break;
                 case (CombatEventEnum.CharacterKilled): { HandleCharacterKilledEvent(e as CharacterKilledEvent); } break;
                 case (CombatEventEnum.DisplayAction): { HandleDisplayActionEvent(e as DisplayActionEvent); } break;
                 case (CombatEventEnum.DisplayHitStats): { HandleDisplayHitStatsEvent(e as DisplayHitStatsEvent); } break;
@@ -174,7 +174,7 @@ namespace Controller.Managers
             this._combatManager.ProcessCharacterKilled(e.Killed);
         }
 
-        private void HandleDamageCharacterEvent(DamageCharacterEvent e)
+        private void HandleDamageCharacterEvent(TileHitEvent e)
         {
             this._events.Remove(e);
         }

@@ -257,7 +257,7 @@
     <Compile Include="Assets\Model\Events\Combat\CastingEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\CharacterKilledEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\CombatEvent.cs" />
-    <Compile Include="Assets\Model\Events\Combat\DamageCharacterEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\TileHitEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\DisplayActionEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\DisplayHitStatsEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\EndTurnEvent.cs" />

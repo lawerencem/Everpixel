@@ -26,9 +26,12 @@ namespace View.Fatalities
         public virtual void Init()
         {
             CMapGUIController.Instance.ClearDecoratedTiles();
-            foreach (var particle in this._event.EventController.TargetCharController.Particles)
-                GameObject.Destroy(particle);
-
+            foreach(var hit in this._event.FatalityHits)
+            {
+                if (hit.Target != null)
+                    foreach (var particle in hit.Target.Particles)
+                        GameObject.Destroy(particle);
+            }
         }
 
         public void ProcessFatalityView()

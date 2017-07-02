@@ -24,11 +24,16 @@ namespace View.Fatalities
         public override void Init()
         {
             base.Init();
-            if (this._event.EventController.Action.CastType == AbilityCastTypeEnum.Bullet)
+            if (this._event.EventController.Action.CastType == AbilityCastTypeEnum.Bullet ||
+                this._event.EventController.Action.CastType == AbilityCastTypeEnum.LOS_Cast)
                 this.InitBulletFatality();
             else
                 this.InitMeleeFatality();
-            this._event.EventController.TargetCharController.KillFXProcessed = true;
+            foreach(var hit in this._event.FatalityHits)
+            {
+                if (hit.Target != null)
+                    hit.Target.KillFXProcessed = true;
+            }
         }
 
         protected override void InitBulletFatality()
@@ -43,7 +48,7 @@ namespace View.Fatalities
         private void InitAttackSpriteWithBullet()
         {
             var attackerScript = this._event.EventController.Source.Handle.AddComponent<AttackerJoltScript>();
-            var position = Vector3.Lerp(this._event.EventController.TargetCharController.CurrentTile.Model.Center, this._event.EventController.Source.CurrentTile.Model.Center, 0.85f);
+            var position = Vector3.Lerp(this._event.EventController.Target.Model.Center, this._event.EventController.Source.CurrentTile.Model.Center, 0.85f);
             attackerScript.Init(this._event.EventController.Source, position, 0.8f, base.Done);
             this.HandleBulletGraphics();
         }
@@ -65,15 +70,21 @@ namespace View.Fatalities
         private void ProcessBlood(HitInfo hit)
         {
             var c = hit.Target;
-            foreach (var neighbor in this._event.EventController.TargetCharController.CurrentTile.Adjacent)
+            foreach(var fatality in this._event.FatalityHits)
             {
-                foreach (var outerNeighbor in neighbor.Adjacent)
+                if (fatality.Target != null)
                 {
-                    this._parent.ProcessSplatter(1, outerNeighbor);
+                    foreach (var neighbor in fatality.Target.CurrentTile.Adjacent)
+                    {
+                        foreach (var outerNeighbor in neighbor.Adjacent)
+                        {
+                            this._parent.ProcessSplatter(1, outerNeighbor);
+                        }
+                        this._parent.ProcessSplatter(2, neighbor);
+                    }
+                    this._parent.ProcessSplatter(5, fatality.Target.CurrentTile);
                 }
-                this._parent.ProcessSplatter(2, neighbor);
             }
-            this._parent.ProcessSplatter(5, this._event.EventController.TargetCharController.CurrentTile);
         }
 
         private void ProcessExplosion(HitInfo hit)
