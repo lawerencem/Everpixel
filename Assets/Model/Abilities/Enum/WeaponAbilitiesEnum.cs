@@ -41,9 +41,12 @@
         Haste_Song,
         Orc_Metal,
 
-        // Spells
+        // Astral Spells
         Eldritch_Chomp,
         Summon_Shoggoth,
+
+        // Water Spells
+        Soothing_Mist,
         
     }
 }

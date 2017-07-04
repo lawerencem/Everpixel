@@ -5,5 +5,6 @@
         Physical, // Default (none)
         Astral,
         Fighting,
+        Water,
     }
 }

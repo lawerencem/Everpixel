@@ -10,5 +10,6 @@
         Song,
         Summon,
         Melee,
+        Zone,
     }
 }

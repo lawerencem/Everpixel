@@ -1,4 +1,5 @@
 ﻿using Controller.Managers;
+using Model.Abilities;
 using Model.Combat;
 
 namespace Model.Events.Combat
@@ -8,7 +9,7 @@ namespace Model.Events.Combat
         public HitInfo Hit { get; set; }
 
         public TileHitEvent(CombatEventManager parent, HitInfo hit)
-            : base(CombatEventEnum.DamageCharacter, parent)
+            : base(CombatEventEnum.TileHitEvent, parent)
         {
             this.Hit = hit;
             if (this.Hit.Target != null)
@@ -22,9 +23,13 @@ namespace Model.Events.Combat
                 {
                     // TODO
                 }
+                else if (hit.Ability.CastType == AbilityCastTypeEnum.Zone)
+                {
+                    // TODO:                    
+                }
                 else
                 {
-                    this.Hit.Target.Model.ModifyHP(hit.Dmg, hit.IsHeal);
+                    var mod = new ModifyHPEvent(parent, hit.Target.Model, hit.Dmg, hit.IsHeal);
                 }
             }
             this.RegisterEvent();

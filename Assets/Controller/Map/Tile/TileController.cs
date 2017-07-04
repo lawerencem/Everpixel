@@ -1,4 +1,5 @@
-﻿using Controller.Characters;
+﻿using Assets.Model.Zone;
+using Controller.Characters;
 using Controller.Managers;
 using Controller.Managers.Map;
 using Model.Events.Combat;
@@ -24,6 +25,7 @@ namespace Controller.Map
         public GameObject Handle { get; set; }
         public HexTile Model { get; set; }
         public HexTileView View { get; set; }
+        public List<AZone> Zones { get; set; }
 
         public TileController()
         {
@@ -31,6 +33,7 @@ namespace Controller.Map
             this.DeadCharacters = new List<GenericCharacterController>();
             this.Flags = new TileControllerFlags();
             this.Model = new HexTile();
+            this.Zones = new List<AZone>();
         }
 
         public void Update()
@@ -38,6 +41,9 @@ namespace Controller.Map
             if (_doubleClick && (DateTime.Now > (this._clickTime.AddSeconds(this._clickDelta))))
                 this._doubleClick = false;       
         }
+
+        public void AddZone(AZone zone) { this.Zones.Add(zone); }
+        public void RemoveZone(AZone zone) { this.Zones.Remove(zone); }
 
         public TileController GetNearestEmptyTile()
         {

@@ -59,7 +59,7 @@
     <ShieldDamageMod>1.5</ShieldDamageMod>
     <StaminaCost>40</StaminaCost>
   </ActiveAbility>
-  <ActiveAbility name="kamehameha">
+  <ActiveAbility name="Kamehameha">
     <AbilityCastTypeEnum>LOS_Cast</AbilityCastTypeEnum>
     <AccMod>1</AccMod>
     <AoE>0</AoE>
@@ -117,6 +117,17 @@
     <RechargeTime>0</RechargeTime>
     <ShieldDamageMod>0</ShieldDamageMod>
     <StaminaCost>70</StaminaCost>
+  </ActiveAbility>
+  <ActiveAbility name="Soothing_Mist">
+    <AbilityCastTypeEnum>Zone</AbilityCastTypeEnum>
+    <AoE>1</AoE>
+    <APCost>5</APCost>
+    <CastTime>35</CastTime>
+    <DmgPerPower>0.003</DmgPerPower>
+    <Duration>3</Duration>
+    <FlatDamage>2</FlatDamage>
+    <Range>3</Range>
+    <StaminaCost>35</StaminaCost>
   </ActiveAbility>
   <ActiveAbility name="Were_Ween">
     <AbilityCastTypeEnum>Shapeshift</AbilityCastTypeEnum>

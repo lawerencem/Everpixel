@@ -133,6 +133,7 @@ namespace Controller.Managers.Map
                 case (AbilityCastTypeEnum.LOS_Cast): { this._hitHelper.ProcessBulletFX(e); } break;
                 case (AbilityCastTypeEnum.Melee): { this._hitHelper.ProcessMeleeHitFX(e); } break;
                 case (AbilityCastTypeEnum.No_Collision_Bullet): { this._hitHelper.ProcessBulletFX(e); } break;
+                case (AbilityCastTypeEnum.Zone): { this._hitHelper.ProcessZoneFX(e); } break;
                 default: { e.AttackFXDone(); } break;
             }
         }
@@ -158,6 +159,7 @@ namespace Controller.Managers.Map
                 case (AbilityCastTypeEnum.Shapeshift): { this._shapeshiftHelper.ProcessShapeshiftFX(e); } break;
                 case (AbilityCastTypeEnum.Song): { this._particleHelper.HandleSongParticle(e); } break;
                 case (AbilityCastTypeEnum.Summon): { this.ProcessSummonFX(e); } break;
+                case (AbilityCastTypeEnum.Zone): { e.Done(); } break;
             }
         }
 

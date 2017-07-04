@@ -10,7 +10,7 @@ namespace Model.Injuries
     {
         private InjuryEnum _type;
 
-        public GenericDoT DoT { get; set; }
+        public GDot DoT { get; set; }
         public List<IndefPrimaryStatModifier> PStatMods { get; set; }
         public List<IndefSecondaryStatModifier> SStatMods { get; set; }
         public InjuryEnum Type { get { return this._type; } }

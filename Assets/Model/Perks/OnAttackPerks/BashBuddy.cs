@@ -20,9 +20,9 @@ namespace Model.Perks
 
         public override void TryProcessAction(PerformActionEvent e)
         {
-            if (e.ActionContainer.Action.CastType == AbilityCastTypeEnum.Melee)
+            if (e.Container.Action.CastType == AbilityCastTypeEnum.Melee)
             {
-                var source = e.ActionContainer.Source;
+                var source = e.Container.Source;
                 var dur = (int)(source.Model.GetCurrentStatValue(SecondaryStatsEnum.Spell_Duration) * DUR_PER_SPELL_DUR);
                 var hp = (int)(source.Model.GetCurrentStatValue(SecondaryStatsEnum.Power) * SHIELD_PER_POWER);
                 var hexes = source.CurrentTile.Model.GetAoETiles(AOE);
@@ -31,7 +31,7 @@ namespace Model.Perks
                     if (hex.Current != null && hex.Current.GetType().Equals(typeof(GenericCharacterController)))
                     {
                         var character = hex.Current as GenericCharacterController;
-                        if (character.LParty == e.ActionContainer.Source.LParty)
+                        if (character.LParty == e.Container.Source.LParty)
                         {
                             if (hp > 0 && dur > 0)
                             {

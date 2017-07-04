@@ -215,6 +215,9 @@
       <Perks>
         <Perk>Scaly</Perk>
       </Perks>
+      <Spells>
+        <Spell>2,Soothing_Mist</Spell>
+      </Spells>
       <Stats>
         <Agility>350</Agility>
         <Constitution>350</Constitution>

@@ -41,7 +41,7 @@ namespace Model.Map
 
         public List<HexTile> GetAoETiles(int dist)
         {
-            var tiles = new List<HexTile>();
+            var tiles = new List<HexTile>() { this };
 
             var closedSet = new List<HexTile>();
             var probeSet = new List<HexTile>() { this };

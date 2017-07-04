@@ -24,6 +24,10 @@ namespace Generics.Scripts
             this.Character.transform.position = newPosition;
             if (Vector3.Distance(this.Character.transform.position, Target.transform.position) <= 0.02)
             {
+                foreach(var zone in Target.Zones)
+                {
+                    var enter = new ZoneEnterEvent(CombatEventManager.Instance, Character, zone);
+                }
                 this.Character.CurrentTile.Model.Current = null;
                 this.Character.CurrentTile = Target;
                 this.Character.CurrentTile.Model.Current = this.Character;

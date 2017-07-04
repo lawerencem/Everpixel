@@ -92,12 +92,12 @@ namespace Controller.Managers
             CMapGUIController.Instance.ClearDecoratedTiles();
             if (this._currentAction != null)
             {
-                CMapGUIController.Instance.SetActingBoxToController(this._currentAction.ActionContainer.Source);
-                foreach (var hit in this._currentAction.ActionContainer.Hits)
+                CMapGUIController.Instance.SetActingBoxToController(this._currentAction.Container.Source);
+                foreach (var hit in this._currentAction.Container.Hits)
                 {
                     var tileHit = new TileHitEvent(this, hit);
                 }
-                if (this._currentAction.ActionContainer.CastFinished)
+                if (this._currentAction.Container.CastFinished)
                     this._combatManager.ProcessNextTurn();
             }
             this._currentAction = null;
@@ -111,7 +111,6 @@ namespace Controller.Managers
                 case (CombatEventEnum.AttackSelected): { HandleAttackSelectedEvent(e as AttackSelectedEvent); } break;
                 case (CombatEventEnum.Buff): { HandleBuffEvent(e as BuffEvent); } break;
                 case (CombatEventEnum.Casting): { HandleCastingEvent(e as CastingEvent); } break;
-                case (CombatEventEnum.DamageCharacter): { HandleDamageCharacterEvent(e as TileHitEvent); } break;
                 case (CombatEventEnum.CharacterKilled): { HandleCharacterKilledEvent(e as CharacterKilledEvent); } break;
                 case (CombatEventEnum.DisplayAction): { HandleDisplayActionEvent(e as DisplayActionEvent); } break;
                 case (CombatEventEnum.DisplayHitStats): { HandleDisplayHitStatsEvent(e as DisplayHitStatsEvent); } break;
@@ -127,6 +126,7 @@ namespace Controller.Managers
                 case (CombatEventEnum.TakingAction): { HandleTakingActionEvent(e as TakingActionEvent); } break;
                 case (CombatEventEnum.TileDoubleClick): { HandleTileDoubleClickEvent(e as TileDoubleClickEvent); } break;
                 case (CombatEventEnum.TileHoverDeco): { HandleTileHoverDecoEvent(e as TileHoverDecoEvent); } break;
+                case (CombatEventEnum.TileHitEvent): { HandleTileHitEvent(e as TileHitEvent); } break;
                 case (CombatEventEnum.TraversePath): { HandleTraversePathEvent(e as TraversePathEvent); } break;
                 case (CombatEventEnum.TraverseTile): { HandleTraverseTileEvent(e as TraverseTileEvent); } break;
             }
@@ -179,11 +179,6 @@ namespace Controller.Managers
             this._events.Remove(e);
             CMapGUIController.Instance.ProcessCharacterKilled(e);
             this._combatManager.ProcessCharacterKilled(e.Killed);
-        }
-
-        private void HandleDamageCharacterEvent(TileHitEvent e)
-        {
-            this._events.Remove(e);
         }
 
         private void HandleDisplayActionEvent(DisplayActionEvent e)
@@ -262,8 +257,8 @@ namespace Controller.Managers
         {
             if (this._combatManager.CurAbility != null && this._combatManager.CurAbility != null)
             {
-                e.ActionContainer.Action = this._combatManager.CurAbility;
-                e.ActionContainer.Source = this._combatManager.CurrActing;
+                e.Container.Action = this._combatManager.CurAbility;
+                e.Container.Source = this._combatManager.CurrActing;
                 this._combatManager.CurAbility = null;
                 if (e.ValidAction())
                 {
@@ -321,6 +316,11 @@ namespace Controller.Managers
             CMapGUIController.Instance.DecoratePath(pathTileControllers);
             var path = this._combatManager.GetPath(this._combatManager.CurrActing.CurrentTile, e.Tile);
             var traversePathEvent = new TraversePathEvent(this, this._combatManager.CurrActing, path);
+        }
+
+        private void HandleTileHitEvent(TileHitEvent e)
+        {
+            this._events.Remove(e);
         }
 
         private void HandleTileHoverDecoEvent(TileHoverDecoEvent e)

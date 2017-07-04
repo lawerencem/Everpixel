@@ -38,4 +38,3 @@ namespace Model.Events.Combat
         }
     }
 }
-

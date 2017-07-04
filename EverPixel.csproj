@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.1f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -137,6 +135,7 @@
     <Compile Include="Assets\Model\Abilities\Magic\Astral\EldritchChomp.cs" />
     <Compile Include="Assets\Model\Abilities\Magic\Astral\SummonShoggoth.cs" />
     <Compile Include="Assets\Model\Abilities\Magic\MagicTypeEnum.cs" />
+    <Compile Include="Assets\Model\Abilities\Magic\Water\SoothingMist.cs" />
     <Compile Include="Assets\Model\Abilities\Music\GenericSong.cs" />
     <Compile Include="Assets\Model\Abilities\Music\HasteSong.cs" />
     <Compile Include="Assets\Model\Abilities\Music\OrcMetal.cs" />
@@ -221,8 +220,6 @@
     <Compile Include="Assets\Model\Combat\CombatReferee.cs" />
     <Compile Include="Assets\Model\Combat\HitInfo.cs" />
     <Compile Include="Assets\Model\Cultures\CultureEnum.cs" />
-    <Compile Include="Assets\Model\DoT\DoTEnum.cs" />
-    <Compile Include="Assets\Model\DoT\GenericDoT.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\ArmorBuilder.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\HelmBuilder.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\WeaponBuilder.cs" />
@@ -263,6 +260,7 @@
     <Compile Include="Assets\Model\Events\Combat\EndTurnEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\HexSelectedForMoveEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\MapDoneLoadingEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\ModifyHPEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\PathTraversedEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\PerformActionEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\ShapeshiftEvent.cs" />
@@ -275,6 +273,8 @@
     <Compile Include="Assets\Model\Events\Combat\TileHoverDecoEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TraversePathEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\TraverseTileEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\ZoneEnterEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\ZoneExitEvent.cs" />
     <Compile Include="Assets\Model\Events\CombatEventEnum.cs" />
     <Compile Include="Assets\Model\Injuries\GenericInjury.cs" />
     <Compile Include="Assets\Model\Injuries\GenericInjuryParam.cs" />
@@ -289,6 +289,8 @@
     <Compile Include="Assets\Model\Mounts\MountParams.cs" />
     <Compile Include="Assets\Model\Mounts\MountTable.cs" />
     <Compile Include="Assets\Model\Mounts\XML\MountsReader.cs" />
+    <Compile Include="Assets\Model\OverTimeEffects\DoT\DoTEnum.cs" />
+    <Compile Include="Assets\Model\OverTimeEffects\DoT\GDoT.cs" />
     <Compile Include="Assets\Model\Parties\Builders\PartyBuilder.cs" />
     <Compile Include="Assets\Model\Parties\Builders\SubPartyBuilder.cs" />
     <Compile Include="Assets\Model\Parties\Enum\StartingRowEnum.cs" />
@@ -328,6 +330,10 @@
     <Compile Include="Assets\Model\Spells\SpellFactory.cs" />
     <Compile Include="Assets\Model\Spells\SpellMediator.cs" />
     <Compile Include="Assets\Model\Spells\SpellsByLevel.cs" />
+    <Compile Include="Assets\Model\Zone\AZone.cs" />
+    <Compile Include="Assets\Model\Zone\Duration\ADurationZone.cs" />
+    <Compile Include="Assets\Model\Zone\Duration\ASpellZone.cs" />
+    <Compile Include="Assets\Model\Zone\Duration\SoothingMistZone.cs" />
     <Compile Include="Assets\View\Attacks\AttackSpriteLoader.cs" />
     <Compile Include="Assets\View\Barks\BarkCategoryEnum.cs" />
     <Compile Include="Assets\View\Barks\BarkManager.cs" />
@@ -393,7 +399,6 @@
     <None Include="Assets\TODO.txt" />
     <None Include="Assets\View\Barks\XML\Barks.xml" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

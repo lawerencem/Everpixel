@@ -96,6 +96,7 @@ namespace Models.Equipment.XML
                 case (AbilitiesEnum.Eldritch_Chomp): { GenericAbilityTable.Instance.Table[type] = new EldritchChomp(); } break;
                 case (AbilitiesEnum.Hadoken): { GenericAbilityTable.Instance.Table[type] = new Hadoken(); } break;
                 case (AbilitiesEnum.Haste_Song): { GenericAbilityTable.Instance.Table[type] = new HasteSong(); } break;
+                case (AbilitiesEnum.Soothing_Mist): { GenericAbilityTable.Instance.Table[type] = new SoothingMist(); } break;
                 case (AbilitiesEnum.Kamehameha): { GenericAbilityTable.Instance.Table[type] = new Kamehameha(); } break;
                 case (AbilitiesEnum.Orc_Metal): { GenericAbilityTable.Instance.Table[type] = new OrcMetal(); } break;
                 case (AbilitiesEnum.Summon_Shoggoth): { GenericAbilityTable.Instance.Table[type] = new SummonShoggoth(); } break;

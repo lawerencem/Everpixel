@@ -54,7 +54,6 @@ namespace Controller.Managers.Map
                     position.x += CMapGUIControllerParams.WEAPON_OFFSET;
                 boomerang.Init(weapon, position, CMapGUIControllerParams.WEAPON_PARRY);
             }
-            this.DisplayText(e.Hit.Dmg.ToString(), e.Hit.Target.Handle, CMapGUIControllerParams.RED, CMapGUIControllerParams.DMG_TEXT_OFFSET);
         }
 
         public void DisplayText(string toDisplay, GameObject toShow, Color color, float yOffset = 0, float dur = 1)
@@ -143,7 +142,6 @@ namespace Controller.Managers.Map
             }
             if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
                 this.DisplayText("Crit!", e.Hit.Target.Handle, CMapGUIControllerParams.RED, CMapGUIControllerParams.DODGE_TEXT_OFFSET);
-            this.DisplayText(e.Hit.Dmg.ToString(), e.Hit.Target.Handle, CMapGUIControllerParams.RED, CMapGUIControllerParams.DMG_TEXT_OFFSET);
         }
 
         public void ProcessSplatterOnHitEvent(DisplayHitStatsEvent e)
@@ -210,6 +208,18 @@ namespace Controller.Managers.Map
                     position.x += CMapGUIControllerParams.WEAPON_OFFSET;
                 boomerang.Init(weapon, position, CMapGUIControllerParams.WEAPON_PARRY);
             }
+        }
+
+        public void ProcessZoneFX(DisplayActionEvent e)
+        {
+            this.DisplayActionEventName(e);
+            if (this.IsFatality(e))
+            {
+                if (!this.FatalitySuccessful(e))
+                    this.ProcessZoneFXNonFatality(e);
+            }
+            else
+                this.ProcessZoneFXNonFatality(e);
         }
 
         private bool FatalitySuccessful(DisplayActionEvent e)
@@ -339,6 +349,27 @@ namespace Controller.Managers.Map
             attackerScript.Init(e.EventController.Source, position, 8f, e.AttackFXDone);
         }
 
+        private void ProcessZoneFXNonFatality(DisplayActionEvent e)
+        {
+            var attackerScript = e.EventController.Source.Handle.AddComponent<AttackerJoltScript>();
+            var position = Vector3.Lerp(e.EventController.Target.Model.Center, e.EventController.Source.CurrentTile.Model.Center, 0.85f);
+            attackerScript.Init(e.EventController.Source, position, 8f, e.AttackFXDone);
+
+            var sprite = AttackSpriteLoader.Instance.GetAttackSprite(e.EventController.Action);
+            var action = e.EventController.Action;
+            foreach(var tile in e.EventController.Target.Model.GetAoETiles((int)action.AoE))
+            {
+                var tileDeco = new GameObject();
+                var renderer = tileDeco.AddComponent<SpriteRenderer>();
+                renderer.sprite = sprite;
+                this.RandomRotate(tileDeco);
+                tileDeco.transform.position = tile.Center;
+                tileDeco.transform.SetParent(tile.Parent.transform);
+                renderer.sortingLayerName = CMapGUIControllerParams.PARTICLES_LAYER;
+            }
+            e.AttackFXDone();
+        }
+
         private void RandomMoveKill(GameObject o)
         {
             this.RandomRotate(o);
@@ -353,8 +384,8 @@ namespace Controller.Managers.Map
 
         private void RandomTranslate(GameObject o)
         {
-            var x = RNG.Instance.Next(-45, 45) / 100;
-            var y = RNG.Instance.Next(-45, 45) / 100;
+            var x = RNG.Instance.Next(-75, 75) / 100;
+            var y = RNG.Instance.Next(-75, 75) / 100;
             var position = o.transform.position;
             position.x += x;
             position.y += y;

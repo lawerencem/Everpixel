@@ -9,12 +9,13 @@
         Buff,
         Casting,
         CharacterKilled,
-        DamageCharacter,
         DisplayAction,
         DisplayHitStats,
         EndTurn,
         HexSelectedForMove,
         MapDoneLoading,
+        ModifyHP,
+        TileHitEvent,
         PathTraversed,
         PerformActionEvent,
         WeaponAbilityPerformed,
@@ -28,5 +29,7 @@
         TileSelected,
         TraversePath,
         TraverseTile,
+        ZoneEnter,
+        ZoneExit,
     }
 }

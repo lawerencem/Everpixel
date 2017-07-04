@@ -67,6 +67,7 @@ namespace Model.Characters.XML
                                         case (PredefinedReaderParams.DEFAULT_WPN_ABILITES): { HandleDefaultWpnAbility(key, elem.Value.ToString()); } break;
                                         case (PredefinedReaderParams.FLINCH_SPRITE_INDEX): { HandleFlinchSpriteIndex(key, elem.Value.ToString()); } break;
                                         case (PredefinedReaderParams.PERKS): { HandlePerks(elem, key); } break;
+                                        case (PredefinedReaderParams.SPELLS): { HandleSpells(elem, key); } break;
                                         case (PredefinedReaderParams.STATS): { HandleStats(elem, key); } break;
                                     }
                                 }
@@ -109,6 +110,12 @@ namespace Model.Characters.XML
         {
             foreach (var ele in el.Elements())
                 PerkParser.ParsePerk(rootkey, ele.Value);
+        }
+
+        private void HandleSpells(XElement el, string rootKey)
+        {
+            foreach (var ele in el.Elements())
+                SpellParser.ParseSpell(ele, table.Table[rootKey]);
         }
 
         private void HandleStats(XElement el, string rootKey)

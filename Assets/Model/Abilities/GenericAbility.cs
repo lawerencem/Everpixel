@@ -110,32 +110,32 @@ namespace Model.Abilities
         public virtual List<TileController> GetAoETiles(PerformActionEvent e)
         {
             var list = new List<TileController>();
-            list.Add(e.ActionContainer.Target);
+            list.Add(e.Container.Target);
             return list;
         }
 
         public virtual List<TileController> GetLOSTiles(PerformActionEvent e)
         {
             var list = new List<TileController>();
-            var source = e.ActionContainer.Source.CurrentTile.Model;
-            var target = e.ActionContainer.Target.Model;
+            var source = e.Container.Source.CurrentTile.Model;
+            var target = e.Container.Target.Model;
             HexTile initTile;
-            if (source.IsHexN(target, e.ActionContainer.Action.Range))
+            if (source.IsHexN(target, e.Container.Action.Range))
                 initTile = source.GetN();
-            else if (source.IsHexNE(target, e.ActionContainer.Action.Range))
+            else if (source.IsHexNE(target, e.Container.Action.Range))
                 initTile = source.GetNE();
-            else if (source.IsHexSE(target, e.ActionContainer.Action.Range))
+            else if (source.IsHexSE(target, e.Container.Action.Range))
                 initTile = source.GetSE();
-            else if (source.IsHexS(target, e.ActionContainer.Action.Range))
+            else if (source.IsHexS(target, e.Container.Action.Range))
                 initTile = source.GetS();
-            else if (source.IsHexSW(target, e.ActionContainer.Action.Range))
+            else if (source.IsHexSW(target, e.Container.Action.Range))
                 initTile = source.GetSW();
             else 
                 initTile = source.GetNW();
-            var hexes = initTile.GetLOSTiles(source, e.ActionContainer.Action.Range);
+            var hexes = initTile.GetLOSTiles(source, e.Container.Action.Range);
             foreach (var hex in hexes)
                 list.Add(hex.Parent);
-            e.ActionContainer.Target = list[list.Count - 1];
+            e.Container.Target = list[list.Count - 1];
             return list;
         }
 
@@ -232,6 +232,12 @@ namespace Model.Abilities
             CombatReferee.Instance.ProcessSong(hit);
         }
 
+        public void ProcessZone(HitInfo hit)
+        {
+            foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
+                perk.TryModAbility(hit.Ability);
+        }
+
         public virtual bool IsValidActionEvent(PerformActionEvent e)
         {
             return false;
@@ -309,21 +315,21 @@ namespace Model.Abilities
 
         protected bool isValidEmptyTile(PerformActionEvent e)
         {
-            if (e.ActionContainer.Target.Model.Current == null)
+            if (e.Container.Target.Model.Current == null)
                 return true;
             return false;
         }
         
         protected bool IsValidEnemyTarget(PerformActionEvent e)
         {
-            if (e.ActionContainer.Source.LParty)
+            if (e.Container.Source.LParty)
             {
-                if (e.ActionContainer.TargetCharController != null && !e.ActionContainer.TargetCharController.LParty)
+                if (e.Container.TargetCharController != null && !e.Container.TargetCharController.LParty)
                     return true;
             }
-            else if (!e.ActionContainer.Source.LParty)
+            else if (!e.Container.Source.LParty)
             {
-                if (e.ActionContainer.TargetCharController != null && e.ActionContainer.TargetCharController.LParty)
+                if (e.Container.TargetCharController != null && e.Container.TargetCharController.LParty)
                     return true;
             }
             return false;
