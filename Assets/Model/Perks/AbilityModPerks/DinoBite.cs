@@ -1,4 +1,5 @@
 ﻿using Model.Abilities;
+using Model.Combat;
 
 namespace Model.Perks
 {
@@ -8,11 +9,11 @@ namespace Model.Perks
 
         public DinoBite() : base(PerkEnum.Dino_Bite) { }
 
-        public override void TryModAbility(GenericAbility ability)
+        public override void TryModAbility(HitInfo hit)
         {
-            base.TryModAbility(ability);
-            if (ability.Type == AbilitiesEnum.Bite)
-                ability.ModData.BaseDamage += MOD;
+            base.TryModAbility(hit);
+            if (hit.Ability.Type == AbilitiesEnum.Bite)
+                hit.ModData.BaseDamage += MOD;
         }
     }
 }

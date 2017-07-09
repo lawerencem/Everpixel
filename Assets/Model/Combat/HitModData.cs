@@ -1,12 +1,14 @@
-﻿namespace Model.Perks
+﻿namespace Model.Combat
 {
-    public class GenericAbilityModData
+    public class HitModData
     {
         public double BaseDamage { get; set; }
+        public double BlockMod { get; set; }
 
-        public GenericAbilityModData()
+        public HitModData()
         {
             this.BaseDamage = 0;
+            this.BlockMod = 1;
         }
 
         public void Reset()

@@ -9,6 +9,7 @@ namespace Model.Characters
         public List<GenericEquipmentSStatPerk> EquipmentSStatPerks;
         public List<GenericOnActionPerk> OnActionPerks;
         public List<GenericOnHitPerk> OnHitPerks;
+        public List<GenericPreHitPerk> PreHitPerks;
         public List<GenericSStadModPerk> SStatModPerks;
 
         public CharacterPerkCollection()
@@ -17,6 +18,7 @@ namespace Model.Characters
             this.EquipmentSStatPerks = new List<GenericEquipmentSStatPerk>();
             this.OnActionPerks = new List<GenericOnActionPerk>();
             this.OnHitPerks = new List<GenericOnHitPerk>();
+            this.PreHitPerks = new List<GenericPreHitPerk>();
             this.SStatModPerks = new List<GenericSStadModPerk>();
         }
     }

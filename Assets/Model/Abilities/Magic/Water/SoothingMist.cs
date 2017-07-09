@@ -28,6 +28,7 @@ namespace Model.Abilities
 
         public override void ProcessAbility(PerformActionEvent e, HitInfo hit)
         {
+            base.ProcessAbility(e, hit);
             base.ProcessZone(hit);
             var tiles = this.GetAoETiles(e.Container.Source.CurrentTile, e.Container.Target, e.Container.Action.Range);
 

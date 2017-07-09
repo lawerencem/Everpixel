@@ -20,6 +20,7 @@ namespace Model.Abilities.Music
 
         public override void ProcessAbility(PerformActionEvent e, HitInfo hit)
         {
+            base.ProcessAbility(e, hit);
             base.ProcessSong(hit);
             var team = hit.Source.LParty;
             var tiles = hit.TargetTile.Model.GetAoETiles((int)this.AoE);

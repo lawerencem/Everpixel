@@ -1,6 +1,7 @@
 ﻿using Assets.Generics;
 using Characters.Params;
 using Model.Abilities;
+using Model.Combat;
 using System.Collections.Generic;
 
 namespace Model.Perks
@@ -12,7 +13,7 @@ namespace Model.Perks
 
         }
 
-        public virtual void TryModAbility(GenericAbility ability)
+        public virtual void TryModAbility(HitInfo hit)
         {
 
         }

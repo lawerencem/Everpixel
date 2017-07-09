@@ -14,6 +14,7 @@ namespace Model.Abilities.Shapeshift
 
         public override void ProcessAbility(PerformActionEvent e, HitInfo hit)
         {
+            base.ProcessAbility(e, hit);
             base.ProcessShapeshift(hit);
         }
 

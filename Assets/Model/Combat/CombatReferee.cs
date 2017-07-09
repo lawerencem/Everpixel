@@ -84,7 +84,7 @@ namespace Model.Combat
 
         private void CalculateAbilityDmg(HitInfo hit)
         {
-            var dmg = hit.Ability.ModData.BaseDamage;
+            var dmg = hit.ModData.BaseDamage;
             dmg += hit.Ability.FlatDamage;
             if (hit.Ability.CastType == AbilityCastTypeEnum.Melee)
             {
@@ -151,6 +151,7 @@ namespace Model.Combat
                 hasShield = true;
             }
             hit.Chances.Block = this.GetAttackVSDefenseSkillChance(melee, block, hit.Chances.Block);
+            hit.Chances.Block *= hit.ModData.BlockMod;
 
             if (!hasShield) { hit.Chances.Block = 0; }
         }

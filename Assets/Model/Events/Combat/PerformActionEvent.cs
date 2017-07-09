@@ -37,8 +37,6 @@ namespace Model.Events.Combat
             var done = this.Container.Hits.FindAll(x => x.IsFinished == true);
             if (this.Container.Hits.Count == done.Count)
             {
-                this.Container.Action.ModData.Reset();
-
                 if (this._callBack != null)
                     this._callBack();
             }

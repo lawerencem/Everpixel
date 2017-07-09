@@ -3,6 +3,7 @@ using Assets.Generics;
 using Characters.Params;
 using Model.Abilities;
 using Model.Equipment;
+using Model.Combat;
 
 namespace Model.Perks
 {
@@ -10,11 +11,11 @@ namespace Model.Perks
     {
         public TRexBite() : base(PerkEnum.T_Rex_Bite) { }
 
-        public override void TryModAbility(GenericAbility ability)
+        public override void TryModAbility(HitInfo hit)
         {
-            base.TryModAbility(ability);
-            if (ability.Type == AbilitiesEnum.Bite)
-                ability.ModData.BaseDamage += 100;
+            base.TryModAbility(hit);
+            if (hit.Ability.Type == AbilitiesEnum.Bite)
+                hit.ModData.BaseDamage += 100;
         }
     }
 }

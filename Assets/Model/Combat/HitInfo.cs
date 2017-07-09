@@ -1,7 +1,7 @@
 ﻿using Controller.Characters;
 using Controller.Map;
 using Model.Abilities;
-using Model.Characters;
+using Model.Perks;
 
 namespace Model.Combat
 {
@@ -14,6 +14,7 @@ namespace Model.Combat
         public ChancePrediction Chances { get; set; }
         public AttackEventFlags Flags { get; set; }
         public bool FXProcessed { get; set; }
+        public HitModData ModData { get; set; }
         public bool IsFinished { get; set; }
         public bool IsHeal { get; set; }
         public int Dmg { get; set; }
@@ -25,6 +26,7 @@ namespace Model.Combat
         {
             this.Chances = new ChancePrediction();
             this.IsFinished = false;
+            this.ModData = new HitModData();
             this.Source = s;
             if (t.Model.Current != null && t.Model.Current.GetType().Equals(typeof(GenericCharacterController)))
                 this.Target = t.Model.Current as GenericCharacterController;

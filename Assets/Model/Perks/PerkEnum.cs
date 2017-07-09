@@ -11,6 +11,7 @@
         Iron_Hide,
         Massive,
         Scaly,
+        Shield_Happy,
         Squishy,
         Weightlifter,
         T_Rex_Bite,

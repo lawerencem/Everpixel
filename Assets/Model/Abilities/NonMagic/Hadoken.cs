@@ -18,6 +18,7 @@ namespace Model.Abilities
 
         public override void ProcessAbility(PerformActionEvent e, HitInfo hit)
         {
+            base.ProcessAbility(e, hit);
             base.ProcessBullet(hit);
         }
 

@@ -306,7 +306,7 @@
     <Compile Include="Assets\Model\Parties\XML\SubPartiesReader.cs" />
     <Compile Include="Assets\Model\Parties\XML\SubPartiesXMLIndexes.cs" />
     <Compile Include="Assets\Model\Perks\AbilityModPerks\DinoBite.cs" />
-    <Compile Include="Assets\Model\Perks\AbilityModPerks\GenericAbilityModData.cs" />
+    <Compile Include="Assets\Model\Combat\HitModData.cs" />
     <Compile Include="Assets\Model\Perks\AbilityModPerks\GenericAbilityModPerk.cs" />
     <Compile Include="Assets\Model\Perks\AbilityModPerks\TRexBite.cs" />
     <Compile Include="Assets\Model\Perks\AbstractPerk.cs" />
@@ -322,6 +322,8 @@
     <Compile Include="Assets\Model\Perks\PerkEnum.cs" />
     <Compile Include="Assets\Model\Perks\PerkFactory.cs" />
     <Compile Include="Assets\Model\Perks\PerkMediator.cs" />
+    <Compile Include="Assets\Model\Perks\PreHitPerk\GenericPreHitPerk.cs" />
+    <Compile Include="Assets\Model\Perks\PreHitPerk\ShieldHappy.cs" />
     <Compile Include="Assets\Model\Perks\SStatModPerks\Gargantuan.cs" />
     <Compile Include="Assets\Model\Perks\SStatModPerks\GenericSStatModPerk.cs" />
     <Compile Include="Assets\Model\Perks\SStatModPerks\IronHide.cs" />

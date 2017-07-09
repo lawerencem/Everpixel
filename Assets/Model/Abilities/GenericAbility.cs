@@ -22,7 +22,6 @@ namespace Model.Abilities
         public bool Hostile { get { return this._hostile; } }
         public AbilitiesEnum Type { get { return this._type; } }
         
-        public GenericAbilityModData ModData { get; set; }
         public List<InjuryEnum> Injuries { get; set; }
 
         public double AccMod { get; set; }
@@ -67,7 +66,6 @@ namespace Model.Abilities
             this.Duration = 0;
             this.Injuries = new List<InjuryEnum>();
             this.MeleeBlockChanceMod = 1;
-            this.ModData = new GenericAbilityModData();
             this.ParryModMod = 1;
             this.Range = 0;
             this.RangeBlockMod = 1;
@@ -173,7 +171,7 @@ namespace Model.Abilities
 
         public virtual void PredictAbility(HitInfo hit)
         {
-            hit.Ability.ModData.Reset();
+            hit.ModData.Reset();
             foreach (var perk in hit.Source.Model.Perks.OnActionPerks)
                 perk.TryProcessAction(hit);
         }
@@ -181,20 +179,22 @@ namespace Model.Abilities
         public virtual void PredictBullet(HitInfo hit)
         {
             foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                perk.TryModAbility(hit.Ability);
+                perk.TryModAbility(hit);
             CombatReferee.Instance.PredictBullet(hit);
         }
 
         public virtual void PredictMelee(HitInfo hit)
         {
             foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                perk.TryModAbility(hit.Ability);
+                perk.TryModAbility(hit);
             CombatReferee.Instance.PredictMelee(hit);
         }
 
         public virtual void ProcessAbility(PerformActionEvent e, HitInfo hit)
         {
-            hit.Ability.ModData.Reset();
+            hit.ModData.Reset();
+            foreach (var perk in hit.Target.Model.Perks.PreHitPerks)
+                perk.TryModHit(hit);
             foreach (var perk in e.Container.Source.Model.Perks.OnActionPerks)
                 perk.TryProcessAction(hit);
         }
@@ -204,7 +204,7 @@ namespace Model.Abilities
             if (!CharacterStatusFlags.HasFlag(hit.Target.Model.StatusFlags.CurFlags, CharacterStatusFlags.Flags.Dead))
             {
                 foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                    perk.TryModAbility(hit.Ability);
+                    perk.TryModAbility(hit);
                 CombatReferee.Instance.ProcessBullet(hit);
             }
         }
@@ -216,7 +216,7 @@ namespace Model.Abilities
                 if (!CharacterStatusFlags.HasFlag(hit.Target.Model.StatusFlags.CurFlags, CharacterStatusFlags.Flags.Dead))
                 {
                     foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                        perk.TryModAbility(hit.Ability);
+                        perk.TryModAbility(hit);
                     CombatReferee.Instance.ProcessRay(hit);
                 }
             }
@@ -229,7 +229,7 @@ namespace Model.Abilities
             if (!CharacterStatusFlags.HasFlag(hit.Target.Model.StatusFlags.CurFlags, CharacterStatusFlags.Flags.Dead))
             {
                 foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                    perk.TryModAbility(hit.Ability);
+                    perk.TryModAbility(hit);
                 CombatReferee.Instance.ProcessMelee(hit);
             }
         }
@@ -238,7 +238,7 @@ namespace Model.Abilities
         {
             AttackEventFlags.SetSummonTrue(hit.Flags);
             foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                perk.TryModAbility(hit.Ability);
+                perk.TryModAbility(hit);
             CombatReferee.Instance.ProcessSummon(hit);
         }
 
@@ -247,21 +247,21 @@ namespace Model.Abilities
             AttackEventFlags.SetShapeshiftTrue(hit.Flags);
             CharacterStatusFlags.SetShapeshiftedTrue(hit.Source.Model.StatusFlags);
             foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                perk.TryModAbility(hit.Ability);
+                perk.TryModAbility(hit);
             CombatReferee.Instance.ProcessShapeshift(hit);
         }
 
         public void ProcessSong(HitInfo hit)
         {
             foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                perk.TryModAbility(hit.Ability);
+                perk.TryModAbility(hit);
             CombatReferee.Instance.ProcessSong(hit);
         }
 
         public void ProcessZone(HitInfo hit)
         {
             foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                perk.TryModAbility(hit.Ability);
+                perk.TryModAbility(hit);
         }
 
         public void TryApplyInjury(HitInfo hit)

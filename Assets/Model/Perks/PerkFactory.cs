@@ -18,6 +18,7 @@ namespace Model.Perks
                 case (PerkEnum.Iron_Hide): { return new IronHide(); }
                 case (PerkEnum.Massive): { return new Massive(); }
                 case (PerkEnum.Scaly): { return new Scaly(); }
+                case (PerkEnum.Shield_Happy): { return new ShieldHappy(); }
                 case (PerkEnum.Squishy): { return new Squishy(); }
                 case (PerkEnum.Weightlifter): { return new Weightlifter(); }
                 case (PerkEnum.T_Rex_Bite): { return new TRexBite(); }
