@@ -2,7 +2,6 @@
 
    - First:
      - Shield perks
-	 - Shield Happy Perk:+25% block when shielded
 	 - Resists and saves
 	 - Taunt
 	 - Tea Rex refreshing shields
@@ -18,7 +17,6 @@
    - Ween Tamer
    - Ween
    - War Ween
-   - BArks
    - Dire Ween
    - Weenosaurus Rex
    - GUI popup for stats, predicted dmg
