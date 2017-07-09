@@ -11,6 +11,11 @@ namespace Model.Abilities
             this.MagicType = Magic.MagicTypeEnum.Astral;
         }
 
+        public override void PredictAbility(HitInfo hit)
+        {
+            base.PredictBullet(hit);
+        }
+
         public override void ProcessAbility(PerformActionEvent e, HitInfo hit)
         {
             base.ProcessBullet(hit);

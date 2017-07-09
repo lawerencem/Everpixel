@@ -69,7 +69,7 @@
     <BlockIgnoreMod>1</BlockIgnoreMod>
     <DmgPerPower>0.02</DmgPerPower>
     <DodgeMod>0.8</DodgeMod>
-    <FlatDamage>0</FlatDamage>
+    <FlatDamage>30</FlatDamage>
     <MeleeBlockChanceMod>0.5</MeleeBlockChanceMod>
     <ParryModMod>0.15</ParryModMod>
     <Range>4</Range>

@@ -62,7 +62,7 @@ namespace Model.Abilities
             this.CastTime = 0;
             this.CustomCastCamera = false;
             this.DamageMod = 1;
-            this.DmgPerPower = 0.15;
+            this.DmgPerPower = 0.05;
             this.DodgeMod = 1;
             this.Duration = 0;
             this.Injuries = new List<InjuryEnum>();
@@ -132,7 +132,7 @@ namespace Model.Abilities
                 initTile = s.GetSW();
             else 
                 initTile = s.GetNW();
-            var hexes = initTile.GetRaycastTiles(s, range);
+            var hexes = initTile.GetRaycastTiles(t, range);
             foreach (var hex in hexes)
                 list.Add(hex.Parent);
             return list;
@@ -173,6 +173,7 @@ namespace Model.Abilities
 
         public virtual void PredictAbility(HitInfo hit)
         {
+            hit.Ability.ModData.Reset();
             foreach (var perk in hit.Source.Model.Perks.OnActionPerks)
                 perk.TryProcessAction(hit);
         }
@@ -193,6 +194,7 @@ namespace Model.Abilities
 
         public virtual void ProcessAbility(PerformActionEvent e, HitInfo hit)
         {
+            hit.Ability.ModData.Reset();
             foreach (var perk in e.Container.Source.Model.Perks.OnActionPerks)
                 perk.TryProcessAction(hit);
         }

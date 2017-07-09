@@ -18,6 +18,11 @@ namespace Model.Abilities
             return base.GetRaycastTiles(source, target, range);
         }
 
+        public override void PredictAbility(HitInfo hit)
+        {
+            base.PredictBullet(hit);
+        }
+
         public override void ProcessAbility(PerformActionEvent e, HitInfo hit)
         {
             base.ProcessLoS(hit);

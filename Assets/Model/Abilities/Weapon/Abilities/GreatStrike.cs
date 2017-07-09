@@ -10,6 +10,11 @@ namespace Model.Abilities
             this.CastType = AbilityCastTypeEnum.Melee;
         }
 
+        public override void PredictAbility(HitInfo hit)
+        {
+            base.PredictMelee(hit);
+        }
+
         public override void ProcessAbility(PerformActionEvent e, HitInfo hit)
         {
             base.ProcessAbility(e, hit);

@@ -11,7 +11,8 @@ namespace Model.Perks
         public override void TryModAbility(GenericAbility ability)
         {
             base.TryModAbility(ability);
-            ability.ModData.BaseDamage += MOD;
+            if (ability.Type == AbilitiesEnum.Bite)
+                ability.ModData.BaseDamage += MOD;
         }
     }
 }

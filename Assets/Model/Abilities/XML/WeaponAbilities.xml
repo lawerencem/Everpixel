@@ -51,7 +51,7 @@
     <IconSprite>2</IconSprite>
     <Injury>Broken_Ribs</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
-    <ParryModMod>1.0</ParryModMod>
+    <ParryModMod>0.80</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>
     <ShieldDamageMod>0.75</ShieldDamageMod>
     <StaminaCost>35</StaminaCost>
@@ -88,7 +88,7 @@
     <Injury>Profuse_Bleeding</Injury>
     <Injury>Torrential_Bleeding</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
-    <ParryModMod>1.0</ParryModMod>
+    <ParryModMod>1.10</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>
     <ShieldDamageMod>1</ShieldDamageMod>
     <StaminaCost>25</StaminaCost>
@@ -111,7 +111,7 @@
     <Injury>Severe_Concussion</Injury>
     <Injury>Shattered_Ribs</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
-    <ParryModMod>1.0</ParryModMod>
+    <ParryModMod>0.65</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>
     <ShieldDamageMod>1</ShieldDamageMod>
     <StaminaCost>25</StaminaCost>
@@ -132,7 +132,7 @@
     <Injury>Profuse_Bleeding</Injury>
     <Injury>Torrential_Bleeding</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
-    <ParryModMod>1.0</ParryModMod>
+    <ParryModMod>1.20</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>
     <ShieldDamageMod>1</ShieldDamageMod>
     <StaminaCost>55</StaminaCost>
@@ -161,9 +161,9 @@
     <AccMod>0.75</AccMod>
     <APCost>4</APCost>
     <ArmorIgnoreMod>0.55</ArmorIgnoreMod>
-    <ArmorPierceMod>0.55</ArmorPierceMod>
-    <BlockIgnoreMod>0.55</BlockIgnoreMod>
-    <DamageMod>0.25</DamageMod>
+    <ArmorPierceMod>1.20</ArmorPierceMod>
+    <BlockIgnoreMod>0.15</BlockIgnoreMod>
+    <DamageMod>1.75</DamageMod>
     <DodgeMod>1.0</DodgeMod>
     <IconSprite>7</IconSprite>
     <Injury>Major_Bleeding</Injury>
@@ -172,7 +172,7 @@
     <Injury>Profuse_Bleeding</Injury>
     <Injury>Torrential_Bleeding</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
-    <ParryModMod>1.0</ParryModMod>
+    <ParryModMod>1.15</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>
     <ShieldDamageMod>1</ShieldDamageMod>
     <StaminaCost>40</StaminaCost>
@@ -192,19 +192,19 @@
     <Injury>Minor_Bleeding</Injury>
     <Injury>Profuse_Bleeding</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
-    <ParryModMod>1.0</ParryModMod>
+    <ParryModMod>1.25</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>
     <ShieldDamageMod>1</ShieldDamageMod>
     <StaminaCost>40</StaminaCost>
     <Range>1</Range>
   </WeaponAbility>
   <WeaponAbility name="Maim">
-    <AccMod>0.75</AccMod>
+    <AccMod>0.65</AccMod>
     <APCost>5</APCost>
-    <ArmorIgnoreMod>0.75</ArmorIgnoreMod>
-    <ArmorPierceMod>0.75</ArmorPierceMod>
-    <BlockIgnoreMod>0.75</BlockIgnoreMod>
-    <DamageMod>1.20</DamageMod>
+    <ArmorIgnoreMod>0.25</ArmorIgnoreMod>
+    <ArmorPierceMod>0.25</ArmorPierceMod>
+    <BlockIgnoreMod>0.25</BlockIgnoreMod>
+    <DamageMod>2.25</DamageMod>
     <DodgeMod>1.0</DodgeMod>
     <IconSprite>9</IconSprite>
     <Injury>Major_Bleeding</Injury>
@@ -233,7 +233,7 @@
     <Injury>Minor_Bleeding</Injury>
     <Injury>Profuse_Bleeding</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
-    <ParryModMod>1.0</ParryModMod>
+    <ParryModMod>0.75</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>
     <ShieldDamageMod>0.55</ShieldDamageMod>
     <StaminaCost>25</StaminaCost>
@@ -282,7 +282,7 @@
     <IconSprite>0</IconSprite>
     <Injury>Broken_Ribs</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
-    <ParryModMod>1.0</ParryModMod>
+    <ParryModMod>0.25</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>
     <ShieldDamageMod>1.25</ShieldDamageMod>
     <StaminaCost>60</StaminaCost>
@@ -335,7 +335,7 @@
     <Injury>Profuse_Bleeding</Injury>
     <Injury>Torrential_Bleeding</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
-    <ParryModMod>1.0</ParryModMod>
+    <ParryModMod>1.15</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>
     <ShieldDamageMod>1</ShieldDamageMod>
     <StaminaCost>25</StaminaCost>
@@ -354,7 +354,7 @@
     <Injury>Minor_Bleeding</Injury>
     <Injury>Profuse_Bleeding</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
-    <ParryModMod>1.0</ParryModMod>
+    <ParryModMod>0.50</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>
     <ShieldDamageMod>1</ShieldDamageMod>
     <StaminaCost>25</StaminaCost>
@@ -428,7 +428,7 @@
     <Injury>Minor_Bleeding</Injury>
     <Injury>Profuse_Bleeding</Injury>
     <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
-    <ParryModMod>1.0</ParryModMod>
+    <ParryModMod>1.20</ParryModMod>
     <RangeBlockMod>1.0</RangeBlockMod>
     <ShieldDamageMod>1</ShieldDamageMod>
     <StaminaCost>50</StaminaCost>

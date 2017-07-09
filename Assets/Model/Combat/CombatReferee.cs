@@ -94,6 +94,7 @@ namespace Model.Combat
                     dmg += hit.Source.Model.LWeapon.Damage;
             }
             dmg += (hit.Ability.DmgPerPower * hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Power));
+            dmg *= hit.Ability.DamageMod;
             hit.Dmg = (int)dmg;
         }
 
@@ -130,7 +131,8 @@ namespace Model.Combat
         {
             var melee = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Melee);
             var block = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Block);
-            hit.Chances.Block = BASE_BLOCK_CHANCE / hit.Ability.AccMod;
+
+            melee *= hit.Ability.AccMod;
 
             bool hasShield = false;
 
@@ -195,7 +197,7 @@ namespace Model.Combat
 
         private void PredictDodge(HitInfo hit)
         {
-            var melee = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Melee);
+            var acc = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Melee);
             var dodge = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Dodge);
             var dodgeChance = BASE_DODGE_CHANCE / hit.Ability.AccMod;
 
@@ -207,13 +209,15 @@ namespace Model.Combat
             if (hit.Target.Model.Type == CharacterTypeEnum.Critter)
                 dodgeChance *= 1.75;
 
-            hit.Chances.Dodge = this.GetAttackVSDefenseSkillChance(melee, dodge, dodgeChance);
+            acc *= hit.Ability.AccMod;
+
+            hit.Chances.Dodge = this.GetAttackVSDefenseSkillChance(acc, dodge, dodgeChance);
             hit.Chances.Dodge *= hit.Ability.DodgeMod;
         }
 
         private void PredictParry(HitInfo hit)
         {
-            var melee = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Melee);
+            var acc = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Melee);
             var parry = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Parry);
             var parryChance = BASE_PARRY_CHANCE / hit.Ability.AccMod;
 
@@ -229,8 +233,10 @@ namespace Model.Combat
             if (hit.Target.Model.Type == CharacterTypeEnum.Critter)
                 parryChance = 0;
 
-            hit.Chances.Parry = this.GetAttackVSDefenseSkillChance(melee, parry, parryChance);
-            hit.Chances.Parry *= hit.Ability.ParryModMod;
+            acc *= hit.Ability.AccMod;
+            parry *= hit.Ability.ParryModMod;
+
+            hit.Chances.Parry = this.GetAttackVSDefenseSkillChance(acc, parry, parryChance);
         }
 
         private void ProcessBulletFlags(HitInfo hit)
@@ -284,21 +290,22 @@ namespace Model.Combat
                     flatDmgNegate += hit.Target.Model.Armor.DamageIgnore;
             }   
             if (hit.Source.Model.LWeapon != null && !hit.Source.Model.LWeapon.IsTypeOfShield())
-                flatDmgNegate *= hit.Source.Model.LWeapon.ArmorPierce;
+                flatDmgNegate *= (hit.Source.Model.LWeapon.ArmorPierce);
             if (hit.Source.Model.RWeapon != null && !hit.Source.Model.RWeapon.IsTypeOfShield())
-                flatDmgNegate *= hit.Source.Model.RWeapon.ArmorPierce;
+                flatDmgNegate *= (hit.Source.Model.RWeapon.ArmorPierce);
+            flatDmgNegate /= hit.Ability.ArmorPierceMod;
             dmgToApply -= flatDmgNegate;
             if (dmgToApply < 0)
                 dmgToApply = 0;
             if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Head))
             {
                 if (hit.Target.Model.Helm != null)
-                    dmgToApply *= (hit.Target.Model.Helm.DamageReduction * dmgReduction);
+                    dmgToApply *= (hit.Target.Model.Helm.DamageReduction * dmgReduction * hit.Ability.ArmorIgnoreMod);
             }
             else
             {
                 if (hit.Target.Model.Armor != null)
-                    dmgToApply *= (hit.Target.Model.Armor.DamageReduction * dmgReduction);
+                    dmgToApply *= (hit.Target.Model.Armor.DamageReduction * dmgReduction * hit.Ability.ArmorIgnoreMod);
                 hit.Dmg = (int)dmgToApply;
             }
             foreach (var perk in hit.Target.Model.Perks.OnHitPerks)
