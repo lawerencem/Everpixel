@@ -367,7 +367,6 @@ namespace Controller.Managers.Map
                 tileDeco.transform.SetParent(tile.Parent.transform);
                 renderer.sortingLayerName = CMapGUIControllerParams.PARTICLES_LAYER;
             }
-            e.AttackFXDone();
         }
 
         private void RandomMoveKill(GameObject o)

@@ -11,6 +11,8 @@ using Model.Injuries;
 using Model.Map;
 using Model.Perks;
 using System.Collections.Generic;
+using UnityEngine;
+using View.Scripts;
 
 namespace Model.Abilities
 {
@@ -193,10 +195,13 @@ namespace Model.Abilities
         public virtual void ProcessAbility(PerformActionEvent e, HitInfo hit)
         {
             hit.ModData.Reset();
-            foreach (var perk in hit.Target.Model.Perks.PreHitPerks)
-                perk.TryModHit(hit);
-            foreach (var perk in e.Container.Source.Model.Perks.OnActionPerks)
-                perk.TryProcessAction(hit);
+            if (hit.Target != null)
+            {
+                foreach (var perk in hit.Target.Model.Perks.PreHitPerks)
+                    perk.TryModHit(hit);
+                foreach (var perk in e.Container.Source.Model.Perks.OnActionPerks)
+                    perk.TryProcessAction(hit);
+            }
         }
 
         public void ProcessBullet(HitInfo hit)

@@ -30,7 +30,7 @@ namespace Model.Abilities
         {
             base.ProcessAbility(e, hit);
             base.ProcessZone(hit);
-            var tiles = this.GetAoETiles(e.Container.Source.CurrentTile, e.Container.Target, e.Container.Action.Range);
+            var tiles = this.GetAoETiles(e.Container.Source.CurrentTile, e.Container.Target, (int)e.Container.Action.AoE);
 
             var proto = GenericAbilityTable.Instance.Table[AbilitiesEnum.Soothing_Mist];
             var dur = (proto.Duration * e.Container.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Spell_Duration));
