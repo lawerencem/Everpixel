@@ -1,4 +1,5 @@
-﻿using Model.Events.Combat;
+﻿using Model.Combat;
+using Model.Events.Combat;
 
 namespace Model.Perks
 {
@@ -9,7 +10,7 @@ namespace Model.Perks
 
         }
 
-        public virtual void TryProcessAction(PerformActionEvent e)
+        public virtual void TryProcessAction(HitInfo hit)
         {
 
         }

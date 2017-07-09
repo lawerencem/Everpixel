@@ -4,8 +4,8 @@
     {
         None,
         Bullet,
-        LOS_Cast,
         No_Collision_Bullet,
+        Raycast,
         Shapeshift,
         Song,
         Summon,

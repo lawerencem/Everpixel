@@ -17,10 +17,10 @@ namespace Model.Abilities
             this.MagicType = Magic.MagicTypeEnum.Water;
         }
 
-        public override List<TileController> GetAoETiles(PerformActionEvent e)
+        public override List<TileController> GetAoETiles(TileController source, TileController target, int range)
         {
             var list = new List<TileController>();
-            var aoe = e.Container.Target.Model.GetAoETiles((int)e.Container.Action.AoE);
+            var aoe = target.Model.GetAoETiles(range);
             foreach (var tile in aoe)
                 list.Add(tile.Parent);
             return list;
@@ -29,7 +29,7 @@ namespace Model.Abilities
         public override void ProcessAbility(PerformActionEvent e, HitInfo hit)
         {
             base.ProcessZone(hit);
-            var tiles = this.GetAoETiles(e);
+            var tiles = this.GetAoETiles(e.Container.Source.CurrentTile, e.Container.Target, e.Container.Action.Range);
 
             var proto = GenericAbilityTable.Instance.Table[AbilitiesEnum.Soothing_Mist];
             var dur = (proto.Duration * e.Container.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Spell_Duration));

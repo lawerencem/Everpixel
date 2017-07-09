@@ -2,6 +2,7 @@
 using Controller.Characters;
 using Controller.Managers;
 using Controller.Managers.Map;
+using Model.Combat;
 using Model.Events.Combat;
 using Model.Map;
 using System;
@@ -130,7 +131,7 @@ namespace Controller.Map
             var aoe = new List<TileController>();
             if (curAbility != null && TileControllerFlags.HasFlag(this.Flags.CurFlags, TileControllerFlags.Flags.AwaitingAction))
             {
-                if (!curAbility.isLoSCast())
+                if (!curAbility.isRayCast())
                 {
                     var hexes = this.Model.GetAoETiles((int)curAbility.AoE);
                     foreach (var hex in hexes)
@@ -138,7 +139,7 @@ namespace Controller.Map
                 }
                 else
                 {
-                    var hexes = this.Model.GetLOSTiles(curChar.CurrentTile.Model, curAbility.Range);
+                    var hexes = this.Model.GetRaycastTiles(curChar.CurrentTile.Model, curAbility.Range);
                     foreach (var hex in hexes)
                         aoe.Add(hex.Parent);
                 }
@@ -148,7 +149,41 @@ namespace Controller.Map
 
         private void HandleHover()
         {
-            
+            this.HandleHoverTargetStats();
+            this.HandleHoverTargetDamage();
+        }
+
+        private void HandleHoverTargetDamage()
+        {
+            if (this.Model.Current != null &&
+                this.Model.Current.GetType() == typeof(GenericCharacterController) &&
+                CombatEventManager.Instance.GetCurrentAbility() != null)
+            {
+                var predict = new PredictActionEvent(CombatEventManager.Instance);
+                
+                predict.Container.Ability = CombatEventManager.Instance.GetCurrentAbility();
+                predict.Container.Source = CombatEventManager.Instance.GetCurrentCharacter();
+                predict.Container.Target = this;
+                var targets = predict.Container.Ability.GetAoETiles(
+                    predict.Container.Source.CurrentTile, 
+                    predict.Container.Target, 
+                    predict.Container.Ability.Range);
+
+                foreach (var target in targets)
+                {
+                    var hit = new HitInfo(predict.Container.Source, predict.Container.Target, predict.Container.Ability);
+                    predict.Container.Hits.Add(hit);
+                }
+
+                predict.Process();
+                CMapGUIController.Instance.SetHoverModalDamageValues(predict);
+            }
+            else
+                CMapGUIController.Instance.SetDmgModalInactive();
+        }
+
+        private void HandleHoverTargetStats()
+        {
             if (this.Model.Current != null && this.Model.Current.GetType() == typeof(GenericCharacterController))
             {
                 var fov = Camera.main.fieldOfView;

@@ -19,15 +19,10 @@ namespace Model.Events.Combat
                 {
                     // TODO
                 }
-                else if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Summon))
-                {
-                    // TODO
-                }
-                else if (hit.Ability.CastType == AbilityCastTypeEnum.Zone)
-                {
-                    // TODO:                    
-                }
-                else
+                else if (hit.Ability.CastType == AbilityCastTypeEnum.Bullet ||
+                    hit.Ability.CastType == AbilityCastTypeEnum.Raycast ||
+                    hit.Ability.CastType == AbilityCastTypeEnum.Melee ||
+                    hit.Ability.CastType == AbilityCastTypeEnum.No_Collision_Bullet)
                 {
                     var mod = new ModifyHPEvent(parent, hit.Target.Model, hit.Dmg, hit.IsHeal);
                 }

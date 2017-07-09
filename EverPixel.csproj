@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.1f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -219,6 +221,7 @@
     <Compile Include="Assets\Model\Combat\AttackEventFlags.cs" />
     <Compile Include="Assets\Model\Combat\CombatReferee.cs" />
     <Compile Include="Assets\Model\Combat\HitInfo.cs" />
+    <Compile Include="Assets\Model\Combat\ChancePrediction.cs" />
     <Compile Include="Assets\Model\Cultures\CultureEnum.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\ArmorBuilder.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\HelmBuilder.cs" />
@@ -263,6 +266,7 @@
     <Compile Include="Assets\Model\Events\Combat\ModifyHPEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\PathTraversedEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\PerformActionEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\PredictAbilityEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\ShapeshiftEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\ShieldEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\ShowPotentialPathEvent.cs" />
@@ -311,8 +315,8 @@
     <Compile Include="Assets\Model\Perks\EquipmentPerks\Hulk.cs" />
     <Compile Include="Assets\Model\Perks\EquipmentPerks\Weightlifter.cs" />
     <Compile Include="Assets\Model\Perks\GenericPerk.cs" />
-    <Compile Include="Assets\Model\Perks\OnAttackPerks\BashBuddy.cs" />
-    <Compile Include="Assets\Model\Perks\OnAttackPerks\GenericOnActionPerk.cs" />
+    <Compile Include="Assets\Model\Perks\OnActionPerks\BashBuddy.cs" />
+    <Compile Include="Assets\Model\Perks\OnActionPerks\GenericOnActionPerk.cs" />
     <Compile Include="Assets\Model\Perks\OnHitPerks\GenericOnHitPerk.cs" />
     <Compile Include="Assets\Model\Perks\OnHitPerks\Squishy.cs" />
     <Compile Include="Assets\Model\Perks\PerkEnum.cs" />

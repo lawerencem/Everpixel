@@ -118,7 +118,8 @@ namespace Controller.Managers
                 case (CombatEventEnum.HexSelectedForMove): { HandleHexSelectedForMoveEvent(e as HexSelectedForMoveEvent); } break;
                 case (CombatEventEnum.MapDoneLoading): { HandleMapDoneLoadingEvent(e as MapDoneLoadingEvent); } break;
                 case (CombatEventEnum.PathTraversed): { HandlePathTraversedEvent(e as PathTraversedEvent); } break;
-                case (CombatEventEnum.PerformActionEvent): { HandlePerformActionEvent(e as PerformActionEvent); } break;
+                case (CombatEventEnum.PerformAction): { HandlePerformActionEvent(e as PerformActionEvent); } break;
+                case (CombatEventEnum.PredictAction): { HandlePredictActionEvent(e as PredictActionEvent); } break;
                 case (CombatEventEnum.Shapeshift): { HandleShapeshiftEvent(e as ShapeshiftEvent); } break;
                 case (CombatEventEnum.Shield): { HandleShieldEvent(e as ShieldEvent); } break;
                 case (CombatEventEnum.ShowPotentialPath): { HandleShowPotentialPathEvent(e as ShowPotentialPathEvent); } break;
@@ -266,6 +267,11 @@ namespace Controller.Managers
                     e.Perform();
                 }
             }
+        }
+
+        private void HandlePredictActionEvent(PredictActionEvent e)
+        {
+            this._events.Remove(e);
         }
 
         private void HandleShieldEvent(ShieldEvent e)

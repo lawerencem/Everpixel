@@ -2,6 +2,7 @@
 using Controller.Managers;
 using Model.Abilities;
 using Model.Characters;
+using Model.Combat;
 using Model.Events.Combat;
 using Model.Shields;
 
@@ -18,11 +19,11 @@ namespace Model.Perks
 
         }
 
-        public override void TryProcessAction(PerformActionEvent e)
+        public override void TryProcessAction(HitInfo hit)
         {
-            if (e.Container.Action.CastType == AbilityCastTypeEnum.Melee)
+            if (hit.Ability.CastType == AbilityCastTypeEnum.Melee)
             {
-                var source = e.Container.Source;
+                var source = hit.Source;
                 var dur = (int)(source.Model.GetCurrentStatValue(SecondaryStatsEnum.Spell_Duration) * DUR_PER_SPELL_DUR);
                 var hp = (int)(source.Model.GetCurrentStatValue(SecondaryStatsEnum.Power) * SHIELD_PER_POWER);
                 var hexes = source.CurrentTile.Model.GetAoETiles(AOE);
@@ -31,7 +32,7 @@ namespace Model.Perks
                     if (hex.Current != null && hex.Current.GetType().Equals(typeof(GenericCharacterController)))
                     {
                         var character = hex.Current as GenericCharacterController;
-                        if (character.LParty == e.Container.Source.LParty)
+                        if (character.LParty == hit.Source.LParty)
                         {
                             if (hp > 0 && dur > 0)
                             {

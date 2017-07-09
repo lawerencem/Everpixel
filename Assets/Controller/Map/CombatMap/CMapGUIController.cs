@@ -130,7 +130,7 @@ namespace Controller.Managers.Map
             switch(e.EventController.Action.CastType)
             {
                 case (AbilityCastTypeEnum.Bullet): { this._hitHelper.ProcessBulletFX(e); } break;
-                case (AbilityCastTypeEnum.LOS_Cast): { this._hitHelper.ProcessBulletFX(e); } break;
+                case (AbilityCastTypeEnum.Raycast): { this._hitHelper.ProcessBulletFX(e); } break;
                 case (AbilityCastTypeEnum.Melee): { this._hitHelper.ProcessMeleeHitFX(e); } break;
                 case (AbilityCastTypeEnum.No_Collision_Bullet): { this._hitHelper.ProcessBulletFX(e); } break;
                 case (AbilityCastTypeEnum.Zone): { this._hitHelper.ProcessZoneFX(e); } break;
@@ -153,7 +153,7 @@ namespace Controller.Managers.Map
             switch(e.Hit.Ability.CastType)
             {
                 case (AbilityCastTypeEnum.Bullet): { this.ProcessDefenderGraphics(e); } break;
-                case (AbilityCastTypeEnum.LOS_Cast): { this.ProcessDefenderGraphics(e); } break;
+                case (AbilityCastTypeEnum.Raycast): { this.ProcessDefenderGraphics(e); } break;
                 case (AbilityCastTypeEnum.Melee): { this.ProcessDefenderGraphics(e); } break;
                 case (AbilityCastTypeEnum.No_Collision_Bullet): { this.ProcessDefenderGraphics(e); } break;
                 case (AbilityCastTypeEnum.Shapeshift): { this._shapeshiftHelper.ProcessShapeshiftFX(e); } break;
@@ -237,9 +237,19 @@ namespace Controller.Managers.Map
                 this.SetTagText(CMapGUIControllerParams.R_WEAP, "");
         }
 
+        public void SetDmgModalInactive()
+        {
+            this._hoverModal.SetDamageModalInactive();
+        }
+
         public void SetHoverModalActive()
         {
             this._hoverModal.SetModalActive();
+        }
+
+        public void SetHoverModalDamageValues(PredictActionEvent e)
+        {
+            this._hoverModal.SetModalDamageValues(e);
         }
 
         public void SetHoverModalInactive()

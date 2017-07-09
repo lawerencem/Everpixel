@@ -70,22 +70,22 @@ namespace Model.Map
             return tiles;
         }
 
-        public List<HexTile> GetLOSTiles(HexTile t, int dist)
+        public List<HexTile> GetRaycastTiles(HexTile t, int dist)
         {
             var list = new List<HexTile>();
 
             if (this._parentMap.IsTileN(t, this))
-                list = this.GetLOSTilesViaDistN(t, dist);
+                list = this.GetRayTilesViaDistN(t, dist);
             else if (this._parentMap.IsTileNE(t, this))
-                list = this.GetLOSTilesViaDistNE(t, dist);
+                list = this.GetRayTilesViaDistNE(t, dist);
             else if (this._parentMap.IsTileSE(t, this))
-                list = this.GetLOSTilesViaDistSE(t, dist);
+                list = this.GetRayTilesViaDistSE(t, dist);
             else if (this._parentMap.IsTileS(t, this))
-                list = this.GetLOSTilesViaDistS(t, dist);
+                list = this.GetRayTilesViaDistS(t, dist);
             else if (this._parentMap.IsTileSW(t, this))
-                list = this.GetLOSTilesViaDistSW(t, dist);
+                list = this.GetRayTilesViaDistSW(t, dist);
             else
-                list = this.GetLOSTilesViaDistNW(t, dist);
+                list = this.GetRayTilesViaDistNW(t, dist);
 
             return list;
         }
@@ -194,7 +194,7 @@ namespace Model.Map
         }
 
 
-        protected List<HexTile> GetLOSTilesViaDistN(HexTile t, int dist)
+        protected List<HexTile> GetRayTilesViaDistN(HexTile t, int dist)
         {
             var list = new List<HexTile>();
             var cur = t;
@@ -210,7 +210,7 @@ namespace Model.Map
             return list;
         }
 
-        protected List<HexTile> GetLOSTilesViaDistNE(HexTile t, int dist)
+        protected List<HexTile> GetRayTilesViaDistNE(HexTile t, int dist)
         {
             var list = new List<HexTile>();
             var cur = t;
@@ -226,7 +226,7 @@ namespace Model.Map
             return list;
         }
 
-        protected List<HexTile> GetLOSTilesViaDistSE(HexTile t, int dist)
+        protected List<HexTile> GetRayTilesViaDistSE(HexTile t, int dist)
         {
             var list = new List<HexTile>();
             var cur = t;
@@ -242,7 +242,7 @@ namespace Model.Map
             return list;
         }
 
-        protected List<HexTile> GetLOSTilesViaDistS(HexTile t, int dist)
+        protected List<HexTile> GetRayTilesViaDistS(HexTile t, int dist)
         {
             var list = new List<HexTile>();
             var cur = t;
@@ -258,7 +258,7 @@ namespace Model.Map
             return list;
         }
 
-        protected List<HexTile> GetLOSTilesViaDistSW(HexTile t, int dist)
+        protected List<HexTile> GetRayTilesViaDistSW(HexTile t, int dist)
         {
             var list = new List<HexTile>();
             var cur = t;
@@ -274,7 +274,7 @@ namespace Model.Map
             return list;
         }
 
-        protected List<HexTile> GetLOSTilesViaDistNW(HexTile t, int dist)
+        protected List<HexTile> GetRayTilesViaDistNW(HexTile t, int dist)
         {
             var list = new List<HexTile>();
             var cur = t;

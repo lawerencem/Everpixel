@@ -9,13 +9,13 @@ namespace Model.Abilities
     {
         public Kamehameha() : base(AbilitiesEnum.Kamehameha)
         {
-            this.CastType = AbilityCastTypeEnum.LOS_Cast;
+            this.CastType = AbilityCastTypeEnum.Raycast;
             this.MagicType = Magic.MagicTypeEnum.Fighting;
         }
 
-        public override List<TileController> GetAoETiles(PerformActionEvent e)
+        public override List<TileController> GetAoETiles(TileController source, TileController target, int range)
         {
-            return base.GetLOSTiles(e);
+            return base.GetRaycastTiles(source, target, range);
         }
 
         public override void ProcessAbility(PerformActionEvent e, HitInfo hit)

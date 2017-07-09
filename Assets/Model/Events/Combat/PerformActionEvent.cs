@@ -2,6 +2,7 @@
 using Controller.Characters;
 using Controller.Managers;
 using Controller.Map;
+using Model.Abilities;
 using Model.Combat;
 
 namespace Model.Events.Combat
@@ -13,19 +14,19 @@ namespace Model.Events.Combat
 
         public ActionEventController Container { get; set; }
 
-        public PerformActionEvent(CombatEventManager parent, TileController initiatingTile, Callback callback) :
-            base(CombatEventEnum.PerformActionEvent, parent)
+        public PerformActionEvent(CombatEventManager parent,  TileController initiatingTile, Callback callback) :
+            base(CombatEventEnum.PerformAction, parent)
         {
             this.Container = new ActionEventController(this);
 
+            this.Container.Target = initiatingTile;
+            var character = initiatingTile.Model.Current;
+
+            if (character != null && character.GetType().Equals(typeof(GenericCharacterController)))
+                this.Container.TargetCharController = initiatingTile.Model.Current as GenericCharacterController;
+
             if (!this._parent.GetInteractionLock())
             {
-                this.Container.Target = initiatingTile;
-                if (initiatingTile.Model.Current != null && 
-                    initiatingTile.Model.Current.GetType().Equals(typeof(GenericCharacterController)))
-                {
-                    this.Container.TargetCharController = initiatingTile.Model.Current as GenericCharacterController;
-                }
                 this._callBack = callback;
                 this._parent.RegisterEvent(this);
             }
@@ -74,10 +75,10 @@ namespace Model.Events.Combat
             if (this.Container.Source.Model.RWeapon != null)
                 fatigueCost *= this.Container.Source.Model.RWeapon.FatigueCostMod;
 
-            if (this.Container.Action.APCost <= this.Container.Source.Model.CurrentAP &&
+            if (this.Container.Action.GetAPCost() <= this.Container.Source.Model.CurrentAP &&
                 fatigueCost <= this.Container.Source.Model.CurrentStamina)
             {
-                this.Container.Source.Model.CurrentAP -= this.Container.Action.APCost;
+                this.Container.Source.Model.CurrentAP -= (int)this.Container.Action.GetAPCost();
                 this.Container.Source.Model.CurrentStamina -= (int)fatigueCost;
 
                 if (this.Container.CastFinished || this.Container.Action.CastTime <= 0)
@@ -97,7 +98,14 @@ namespace Model.Events.Combat
 
         private void ProcessActionHits()
         {   
-            var hitTargets = this.Container.Action.GetAoETiles(this);
+            var hitTargets = this.Container.Action.GetAoETiles(
+                this.Container.Target, 
+                this.Container.Source.CurrentTile, 
+                this.Container.Action.Range);
+            
+            if (this.Container.Action.CastType == AbilityCastTypeEnum.Raycast)
+                this.Container.Target = hitTargets[hitTargets.Count - 1];
+
             foreach (var target in hitTargets)
             {
                 var hit = new HitInfo(this.Container.Source, target, this.Container.Action, this.ChildHitDone);

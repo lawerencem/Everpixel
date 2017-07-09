@@ -107,35 +107,34 @@ namespace Model.Abilities
 
         public double GetAPCost() { return this.APCost; }
 
-        public virtual List<TileController> GetAoETiles(PerformActionEvent e)
+        public virtual List<TileController> GetAoETiles(TileController source, TileController target, int range)
         {
             var list = new List<TileController>();
-            list.Add(e.Container.Target);
+            list.Add(source);
             return list;
         }
 
-        public virtual List<TileController> GetLOSTiles(PerformActionEvent e)
+        public virtual List<TileController> GetRaycastTiles(TileController source, TileController target, int range)
         {
             var list = new List<TileController>();
-            var source = e.Container.Source.CurrentTile.Model;
-            var target = e.Container.Target.Model;
             HexTile initTile;
-            if (source.IsHexN(target, e.Container.Action.Range))
-                initTile = source.GetN();
-            else if (source.IsHexNE(target, e.Container.Action.Range))
-                initTile = source.GetNE();
-            else if (source.IsHexSE(target, e.Container.Action.Range))
-                initTile = source.GetSE();
-            else if (source.IsHexS(target, e.Container.Action.Range))
-                initTile = source.GetS();
-            else if (source.IsHexSW(target, e.Container.Action.Range))
-                initTile = source.GetSW();
+            var s = source.Model;
+            var t = target.Model;
+            if (s.IsHexN(t, range))
+                initTile = s.GetN();
+            else if (s.IsHexNE(t, range))
+                initTile = s.GetNE();
+            else if (s.IsHexSE(t, range))
+                initTile = s.GetSE();
+            else if (s.IsHexS(t, range))
+                initTile = s.GetS();
+            else if (s.IsHexSW(t, range))
+                initTile = s.GetSW();
             else 
-                initTile = source.GetNW();
-            var hexes = initTile.GetLOSTiles(source, e.Container.Action.Range);
+                initTile = s.GetNW();
+            var hexes = initTile.GetRaycastTiles(s, range);
             foreach (var hex in hexes)
                 list.Add(hex.Parent);
-            e.Container.Target = list[list.Count - 1];
             return list;
         }
 
@@ -144,11 +143,19 @@ namespace Model.Abilities
             var list = new List<TileController>();
             if (this.isSelfCast())
                 list.Add(c.CurrentTile);
-            else if (this.isLoSCast())
+            else if (this.isRayCast())
                 list.AddRange(this.GetAdjacentTiles(c));
             else
                 list.AddRange(this.GetStandardAttackTiles(e, c, m));
             return list;
+        }
+
+        public bool isRayCast()
+        {
+            if (this.CastType == AbilityCastTypeEnum.Raycast)
+                return true;
+            else
+                return false;
         }
 
         public bool isSelfCast()
@@ -159,18 +166,35 @@ namespace Model.Abilities
                 return false;
         }
 
-        public bool isLoSCast()
+        public virtual bool IsValidActionEvent(PerformActionEvent e)
         {
-            if (this.CastType == AbilityCastTypeEnum.LOS_Cast)
-                return true;
-            else
-                return false;
+            return false;
+        }
+
+        public virtual void PredictAbility(HitInfo hit)
+        {
+            foreach (var perk in hit.Source.Model.Perks.OnActionPerks)
+                perk.TryProcessAction(hit);
+        }
+
+        public virtual void PredictBullet(HitInfo hit)
+        {
+            foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
+                perk.TryModAbility(hit.Ability);
+            CombatReferee.Instance.PredictBullet(hit);
+        }
+
+        public virtual void PredictMelee(HitInfo hit)
+        {
+            foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
+                perk.TryModAbility(hit.Ability);
+            CombatReferee.Instance.PredictMelee(hit);
         }
 
         public virtual void ProcessAbility(PerformActionEvent e, HitInfo hit)
         {
-            foreach (var perk in hit.Source.Model.Perks.OnActionPerks)
-                perk.TryProcessAction(e);
+            foreach (var perk in e.Container.Source.Model.Perks.OnActionPerks)
+                perk.TryProcessAction(hit);
         }
 
         public void ProcessBullet(HitInfo hit)
@@ -236,19 +260,6 @@ namespace Model.Abilities
         {
             foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
                 perk.TryModAbility(hit.Ability);
-        }
-
-        public virtual bool IsValidActionEvent(PerformActionEvent e)
-        {
-            return false;
-        }
-
-        public bool IsSingleFX()
-        {
-            if (this.CastType == AbilityCastTypeEnum.LOS_Cast)
-                return true;
-            else
-                return false;
         }
 
         public void TryApplyInjury(HitInfo hit)

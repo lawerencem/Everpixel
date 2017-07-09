@@ -11,6 +11,7 @@ namespace Model.Combat
         public delegate void Callback();
 
         public GenericAbility Ability { get; set; }
+        public ChancePrediction Chances { get; set; }
         public AttackEventFlags Flags { get; set; }
         public bool FXProcessed { get; set; }
         public bool IsFinished { get; set; }
@@ -22,6 +23,7 @@ namespace Model.Combat
 
         public HitInfo(GenericCharacterController s, TileController t, GenericAbility a, Callback callback = null)
         {
+            this.Chances = new ChancePrediction();
             this.IsFinished = false;
             this.Source = s;
             if (t.Model.Current != null && t.Model.Current.GetType().Equals(typeof(GenericCharacterController)))

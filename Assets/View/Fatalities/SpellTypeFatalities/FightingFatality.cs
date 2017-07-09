@@ -25,7 +25,7 @@ namespace View.Fatalities
         {
             base.Init();
             if (this._event.EventController.Action.CastType == AbilityCastTypeEnum.Bullet ||
-                this._event.EventController.Action.CastType == AbilityCastTypeEnum.LOS_Cast)
+                this._event.EventController.Action.CastType == AbilityCastTypeEnum.Raycast)
                 this.InitBulletFatality();
             else
                 this.InitMeleeFatality();

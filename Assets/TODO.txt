@@ -2,8 +2,11 @@
 
    - First:
      - Shield perks
+	 - Shield Happy Perk:+25% block when shielded
+	 - Resists and saves
 	 - Taunt
 	 - Tea Rex refreshing shields
+	 - Thai Rex shield spell
 	 - Healing song
 
    - Spear wall
