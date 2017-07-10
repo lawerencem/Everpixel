@@ -7,7 +7,7 @@ namespace Model.Abilities
     {
         public BreakArmor() : base(AbilitiesEnum.Break_Armor)
         {
-            this.CastType = AbilityCastTypeEnum.Melee;
+            this.CastType = CastTypeEnum.Melee;
         }
 
         public override void PredictAbility(HitInfo hit)

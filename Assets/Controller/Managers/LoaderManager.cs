@@ -17,7 +17,7 @@ namespace Assets.Controller.Managers
 
         public LoaderManager()
         {
-            this._readers.Add(ActiveAbilityReader.Instance);
+            this._readers.Add(AbiltiyReader.Instance);
             this._readers.Add(ArmorReader.Instance);
             this._readers.Add(BarkReader.Instance);
             this._readers.Add(ClassReader.Instance);
@@ -28,7 +28,6 @@ namespace Assets.Controller.Managers
             this._readers.Add(MountReader.Instance);
             this._readers.Add(RaceDefaultStatsReader.Instance);
             this._readers.Add(SubPartiesReader.Instance);
-            this._readers.Add(WeaponAbilityReader.Instance);
             this._readers.Add(WeaponReader.Instance);
 
             foreach (var reader in this._readers)

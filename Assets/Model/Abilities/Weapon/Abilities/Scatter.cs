@@ -7,7 +7,7 @@ namespace Model.Abilities
     {
         public Scatter() : base(AbilitiesEnum.Scatter)
         {
-            this.CastType = AbilityCastTypeEnum.Melee;
+            this.CastType = CastTypeEnum.Melee;
         }
 
         public override void PredictAbility(HitInfo hit)

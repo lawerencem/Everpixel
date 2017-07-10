@@ -24,8 +24,8 @@ namespace View.Fatalities
         public override void Init()
         {
             base.Init();
-            if (this._event.EventController.Action.CastType == AbilityCastTypeEnum.Bullet ||
-                this._event.EventController.Action.CastType == AbilityCastTypeEnum.Raycast)
+            if (this._event.EventController.Action.CastType == CastTypeEnum.Bullet ||
+                this._event.EventController.Action.CastType == CastTypeEnum.Raycast)
                 this.InitBulletFatality();
             else
                 this.InitMeleeFatality();

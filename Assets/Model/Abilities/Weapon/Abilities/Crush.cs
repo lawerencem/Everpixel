@@ -8,7 +8,7 @@ namespace Model.Abilities
     {
         public Crush() : base(AbilitiesEnum.Crush)
         {
-            this.CastType = AbilityCastTypeEnum.Melee;
+            this.CastType = CastTypeEnum.Melee;
         }
 
         public override void PredictAbility(HitInfo hit)

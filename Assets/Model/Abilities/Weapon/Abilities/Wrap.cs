@@ -7,7 +7,7 @@ namespace Model.Abilities
     {
         public Wrap() : base(AbilitiesEnum.Wrap)
         {
-            this.CastType = AbilityCastTypeEnum.Melee;
+            this.CastType = CastTypeEnum.Melee;
         }
 
         public override void PredictAbility(HitInfo hit)

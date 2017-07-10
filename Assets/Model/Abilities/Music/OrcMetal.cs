@@ -13,7 +13,7 @@ namespace Model.Abilities.Music
 
         public OrcMetal() : base(AbilitiesEnum.Orc_Metal)
         {
-            this.CastType = AbilityCastTypeEnum.Song;
+            this.CastType = CastTypeEnum.Song;
             this._songType = SongTypeEnum.BlueMusic;
         }
 

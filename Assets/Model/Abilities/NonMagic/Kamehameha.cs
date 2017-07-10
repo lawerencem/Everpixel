@@ -9,7 +9,7 @@ namespace Model.Abilities
     {
         public Kamehameha() : base(AbilitiesEnum.Kamehameha)
         {
-            this.CastType = AbilityCastTypeEnum.Raycast;
+            this.CastType = CastTypeEnum.Raycast;
             this.MagicType = Magic.MagicTypeEnum.Fighting;
         }
 

@@ -7,7 +7,7 @@ namespace Model.Abilities
     {
         public Aim() : base(AbilitiesEnum.Aim)
         {
-            this.CastType = AbilityCastTypeEnum.Bullet;
+            this.CastType = CastTypeEnum.Bullet;
         }
 
         public override void PredictAbility(HitInfo hit)

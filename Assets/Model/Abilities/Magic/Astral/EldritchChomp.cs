@@ -7,7 +7,7 @@ namespace Model.Abilities
     {
         public EldritchChomp() : base(AbilitiesEnum.Eldritch_Chomp)
         {
-            this.CastType = AbilityCastTypeEnum.No_Collision_Bullet;
+            this.CastType = CastTypeEnum.No_Collision_Bullet;
             this.MagicType = Magic.MagicTypeEnum.Astral;
         }
 

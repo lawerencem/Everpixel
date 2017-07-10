@@ -7,7 +7,7 @@ namespace Model.Abilities
     {
         public GreatStrike() : base(AbilitiesEnum.Great_Strike)
         {
-            this.CastType = AbilityCastTypeEnum.Melee;
+            this.CastType = CastTypeEnum.Melee;
         }
 
         public override void PredictAbility(HitInfo hit)

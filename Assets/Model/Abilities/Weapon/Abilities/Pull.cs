@@ -7,7 +7,7 @@ namespace Model.Abilities
     {
         public Pull() : base(AbilitiesEnum.Pull)
         {
-            this.CastType = AbilityCastTypeEnum.Melee;
+            this.CastType = CastTypeEnum.Melee;
         }
 
         public override void PredictAbility(HitInfo hit)

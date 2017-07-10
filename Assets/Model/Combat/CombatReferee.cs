@@ -86,7 +86,7 @@ namespace Model.Combat
         {
             var dmg = hit.ModData.BaseDamage;
             dmg += hit.Ability.FlatDamage;
-            if (hit.Ability.CastType == AbilityCastTypeEnum.Melee)
+            if (hit.Ability.CastType == CastTypeEnum.Melee)
             {
                 if (hit.Source.Model.RWeapon != null)
                     dmg += hit.Source.Model.RWeapon.Damage;

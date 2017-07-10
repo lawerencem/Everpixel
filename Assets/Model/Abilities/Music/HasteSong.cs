@@ -14,7 +14,7 @@ namespace Model.Abilities.Music
 
         public HasteSong() : base(AbilitiesEnum.Haste_Song)
         {
-            this.CastType = AbilityCastTypeEnum.Song;
+            this.CastType = CastTypeEnum.Song;
             this._songType = SongTypeEnum.BlueMusic;
         }
 

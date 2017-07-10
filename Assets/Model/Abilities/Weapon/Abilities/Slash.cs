@@ -7,7 +7,7 @@ namespace Model.Abilities
     {
         public Slash() : base(AbilitiesEnum.Slash)
         {
-            this.CastType = AbilityCastTypeEnum.Melee;
+            this.CastType = CastTypeEnum.Melee;
         }
 
         public override void PredictAbility(HitInfo hit)

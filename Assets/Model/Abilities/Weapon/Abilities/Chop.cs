@@ -7,7 +7,7 @@ namespace Model.Abilities
     {
         public Chop() : base(AbilitiesEnum.Chop)
         {
-            this.CastType = AbilityCastTypeEnum.Melee;
+            this.CastType = CastTypeEnum.Melee;
         }
 
         public override void PredictAbility(HitInfo hit)

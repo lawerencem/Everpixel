@@ -33,7 +33,7 @@ namespace Model.Abilities
         public double ArmorPierceMod { get; set; }
         public double BlockIgnoreMod { get; set; }
         public double CastTime { get; set; }
-        public AbilityCastTypeEnum CastType { get; set; }
+        public CastTypeEnum CastType { get; set; }
         public bool CustomCastCamera { get; set; }
         public double DamageMod { get; set; }
         public double DmgPerPower { get; set; }
@@ -152,7 +152,7 @@ namespace Model.Abilities
 
         public bool isRayCast()
         {
-            if (this.CastType == AbilityCastTypeEnum.Raycast)
+            if (this.CastType == CastTypeEnum.Raycast)
                 return true;
             else
                 return false;

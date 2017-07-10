@@ -129,11 +129,11 @@ namespace Controller.Managers.Map
         {
             switch(e.EventController.Action.CastType)
             {
-                case (AbilityCastTypeEnum.Bullet): { this._hitHelper.ProcessBulletFX(e); } break;
-                case (AbilityCastTypeEnum.Raycast): { this._hitHelper.ProcessBulletFX(e); } break;
-                case (AbilityCastTypeEnum.Melee): { this._hitHelper.ProcessMeleeHitFX(e); } break;
-                case (AbilityCastTypeEnum.No_Collision_Bullet): { this._hitHelper.ProcessBulletFX(e); } break;
-                case (AbilityCastTypeEnum.Zone): { this._hitHelper.ProcessZoneFX(e); } break;
+                case (CastTypeEnum.Bullet): { this._hitHelper.ProcessBulletFX(e); } break;
+                case (CastTypeEnum.Raycast): { this._hitHelper.ProcessBulletFX(e); } break;
+                case (CastTypeEnum.Melee): { this._hitHelper.ProcessMeleeHitFX(e); } break;
+                case (CastTypeEnum.No_Collision_Bullet): { this._hitHelper.ProcessBulletFX(e); } break;
+                case (CastTypeEnum.Zone): { this._hitHelper.ProcessZoneFX(e); } break;
                 default: { e.AttackFXDone(); } break;
             }
         }
@@ -152,14 +152,14 @@ namespace Controller.Managers.Map
         {
             switch(e.Hit.Ability.CastType)
             {
-                case (AbilityCastTypeEnum.Bullet): { this.ProcessDefenderGraphics(e); } break;
-                case (AbilityCastTypeEnum.Raycast): { this.ProcessDefenderGraphics(e); } break;
-                case (AbilityCastTypeEnum.Melee): { this.ProcessDefenderGraphics(e); } break;
-                case (AbilityCastTypeEnum.No_Collision_Bullet): { this.ProcessDefenderGraphics(e); } break;
-                case (AbilityCastTypeEnum.Shapeshift): { this._shapeshiftHelper.ProcessShapeshiftFX(e); } break;
-                case (AbilityCastTypeEnum.Song): { this._particleHelper.HandleSongParticle(e); } break;
-                case (AbilityCastTypeEnum.Summon): { this.ProcessSummonFX(e); } break;
-                case (AbilityCastTypeEnum.Zone): { e.Done(); } break;
+                case (CastTypeEnum.Bullet): { this.ProcessDefenderGraphics(e); } break;
+                case (CastTypeEnum.Raycast): { this.ProcessDefenderGraphics(e); } break;
+                case (CastTypeEnum.Melee): { this.ProcessDefenderGraphics(e); } break;
+                case (CastTypeEnum.No_Collision_Bullet): { this.ProcessDefenderGraphics(e); } break;
+                case (CastTypeEnum.Shapeshift): { this._shapeshiftHelper.ProcessShapeshiftFX(e); } break;
+                case (CastTypeEnum.Song): { this._particleHelper.HandleSongParticle(e); } break;
+                case (CastTypeEnum.Summon): { this.ProcessSummonFX(e); } break;
+                case (CastTypeEnum.Zone): { e.Done(); } break;
             }
         }
 

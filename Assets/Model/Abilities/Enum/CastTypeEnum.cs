@@ -1,6 +1,6 @@
 ﻿namespace Model.Abilities
 {
-    public enum AbilityCastTypeEnum
+    public enum CastTypeEnum
     {
         None,
         Bullet,

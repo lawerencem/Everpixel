@@ -13,7 +13,7 @@ namespace Model.Abilities
     {
         public SoothingMist() : base(AbilitiesEnum.Soothing_Mist)
         {
-            this.CastType = AbilityCastTypeEnum.Zone;
+            this.CastType = CastTypeEnum.Zone;
             this.MagicType = Magic.MagicTypeEnum.Water;
         }
 

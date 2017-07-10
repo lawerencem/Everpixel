@@ -21,7 +21,7 @@ namespace Model.Perks
 
         public override void TryProcessAction(HitInfo hit)
         {
-            if (hit.Ability.CastType == AbilityCastTypeEnum.Melee)
+            if (hit.Ability.CastType == CastTypeEnum.Melee)
             {
                 var source = hit.Source;
                 var dur = (int)(source.Model.GetCurrentStatValue(SecondaryStatsEnum.Spell_Duration) * DUR_PER_SPELL_DUR);

@@ -101,7 +101,7 @@ namespace Model.Events.Combat
                 this.Container.Source.CurrentTile, 
                 this.Container.Action.Range);
             
-            if (this.Container.Action.CastType == AbilityCastTypeEnum.Raycast)
+            if (this.Container.Action.CastType == CastTypeEnum.Raycast)
                 this.Container.Target = hitTargets[hitTargets.Count - 1];
 
             foreach (var target in hitTargets)
