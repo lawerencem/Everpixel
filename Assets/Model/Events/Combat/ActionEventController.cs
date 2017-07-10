@@ -22,8 +22,8 @@ namespace Assets.Model.Events.Combat
 
         public void PerformAction()
         {
-            var display = new DisplayActionEvent(CombatEventManager.Instance, this);
             foreach (var hit in this.Hits) { hit.Ability.ProcessAbility(this.Event, hit);}
+            var display = new DisplayActionEvent(CombatEventManager.Instance, this);
         }
 
         public CombatEventManager Parent { get; set; }
