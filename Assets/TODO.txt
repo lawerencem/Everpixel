@@ -1,5 +1,6 @@
 ﻿TODO
 
+	- Make a more flexible race and deco loading system
    - First:
      - Shield perks
 	 - Resists and saves
@@ -35,12 +36,8 @@ Next Weekend
 6) - Force A* to directional search after so many nodes
 
 Long Term: 
-    Force all data of abilities to be in .xml
-    Merge ability readers
 	Replace eyes with dead eyes when killed for Critter
 	Zone of Control
-	Ranged attacks
-	GUI for prediction
 
 Refactor:
 	Combat Turn system

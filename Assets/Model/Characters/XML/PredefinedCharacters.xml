@@ -945,6 +945,34 @@
       </Stats>
     </Character>
   </Culture>
+  <Culture name ="Norse">
+    <Character name ="Wimpy Longaxer">
+      <Class>Warrior,3</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Penguin</RaceEnum>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+        </Armors>
+        <Helms name="One">
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Longaxe,Five</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>640</Constitution>
+        <Intelligence>320</Intelligence>
+        <Might>550</Might>
+        <Perception>480</Perception>
+        <Resolve>380</Resolve>
+      </Stats>
+    </Character>
+  </Culture>
   <Culture name ="Orcish">
     <Character name ="Armer Boy">
       <Class>Fighter,5</Class>

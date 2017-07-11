@@ -124,6 +124,11 @@
     <Character>1,Lizardman Militia,One</Character>
     <Character>1,Lizardman Militia,One</Character>
   </SubParty>
+  <SubParty Name ="Longaxers">
+    <Difficulty>1</Difficulty>
+    <Character>1,Wimpy Longaxer,Two</Character>
+    <Character>1,Wimpy Longaxer,Two</Character>
+  </SubParty>
   <SubParty Name ="Nodachi Samurais">
     <Difficulty>5</Difficulty>
     <Character>1,Ronin Nodachi Samurai,One</Character>

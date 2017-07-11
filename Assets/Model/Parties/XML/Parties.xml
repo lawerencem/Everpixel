@@ -79,4 +79,7 @@
     <SubParty>Katana Samurais,5</SubParty>
     <SubParty>Nodachi Samurais,5</SubParty>
   </Party>
+  <Party Name ="Vikings">
+    <SubParty>Longaxers,1</SubParty>
+  </Party>
 </Parties>

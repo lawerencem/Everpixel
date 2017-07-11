@@ -217,6 +217,143 @@
       <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
       <WeaponUseEnum>Melee</WeaponUseEnum>
     </Weapon>
+    <Weapon name="Hammen">
+      <Tier>Five</Tier>
+      <Accuracy>0.97</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>0.99</Armor_Ignore>
+      <Armor_Pierce>0.99</Armor_Pierce>
+      <Block_Ignore>1</Block_Ignore>
+      <Damage>24</Damage>
+      <Description>
+        These small little axes are favored by vikings.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>25</Max_Durability>
+      <Parry_Mod>0.78</Parry_Mod>
+      <Shield_Damage>0.05</Shield_Damage>
+      <WeaponSkillEnum>Axe</WeaponSkillEnum>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>50</Value>
+      <WeaponAbilitiesEnum>Chop</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Break_Shield</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Longaxe">
+      <Tier>Five</Tier>
+      <Accuracy>0.81</Accuracy>
+      <AP_Reduce>0.88</AP_Reduce>
+      <Armor_Ignore>0.90</Armor_Ignore>
+      <Armor_Pierce>0.90</Armor_Pierce>
+      <Block_Ignore>0.99</Block_Ignore>
+      <Damage>35</Damage>
+      <Description>
+        These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
+        is useful, it makes them poor defensive weapons.
+      </Description>
+      <Fatigue_Cost_Mod>1.00</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.78</Initiative_Reduce>
+      <Max_Durability>25</Max_Durability>
+      <Parry_Mod>0.58</Parry_Mod>
+      <Range_Mod>1</Range_Mod>
+      <Shield_Damage>0.52</Shield_Damage>
+      <WeaponSkillEnum>Axe</WeaponSkillEnum>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>0.89</Stamina_Reduce>
+      <Value>100</Value>
+      <WeaponAbilitiesEnum>Chop</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Break_Shield</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Scatter</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Longaxe">
+      <Tier>Four</Tier>
+      <Accuracy>0.82</Accuracy>
+      <AP_Reduce>0.89</AP_Reduce>
+      <Armor_Ignore>0.89</Armor_Ignore>
+      <Armor_Pierce>0.89</Armor_Pierce>
+      <Block_Ignore>0.98</Block_Ignore>
+      <Damage>39</Damage>
+      <Description>
+        These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
+        is useful, it makes them poor defensive weapons.
+      </Description>
+      <Fatigue_Cost_Mod>1.00</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.80</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>0.60</Parry_Mod>
+      <Range_Mod>1</Range_Mod>
+      <Shield_Damage>0.54</Shield_Damage>
+      <WeaponSkillEnum>Axe</WeaponSkillEnum>
+      <Sprites>15</Sprites>
+      <Stamina_Reduce>0.91</Stamina_Reduce>
+      <Value>250</Value>
+      <WeaponAbilitiesEnum>Chop</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Break_Shield</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Scatter</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Longaxe">
+      <Tier>Three</Tier>
+      <Accuracy>0.84</Accuracy>
+      <AP_Reduce>0.90</AP_Reduce>
+      <Armor_Ignore>0.88</Armor_Ignore>
+      <Armor_Pierce>0.88</Armor_Pierce>
+      <Block_Ignore>0.97</Block_Ignore>
+      <Damage>44</Damage>
+      <Description>
+        These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
+        is useful, it makes them poor defensive weapons.
+      </Description>
+      <Fatigue_Cost_Mod>1.00</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.80</Initiative_Reduce>
+      <Max_Durability>45</Max_Durability>
+      <Parry_Mod>0.60</Parry_Mod>
+      <Range_Mod>1</Range_Mod>
+      <Shield_Damage>0.58</Shield_Damage>
+      <WeaponSkillEnum>Axe</WeaponSkillEnum>
+      <Sprites>30</Sprites>
+      <Stamina_Reduce>0.93</Stamina_Reduce>
+      <Value>550</Value>
+      <WeaponAbilitiesEnum>Chop</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Break_Shield</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Scatter</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Longaxe">
+      <Tier>Two</Tier>
+      <Accuracy>0.85</Accuracy>
+      <AP_Reduce>0.90</AP_Reduce>
+      <Armor_Ignore>0.87</Armor_Ignore>
+      <Armor_Pierce>0.87</Armor_Pierce>
+      <Block_Ignore>0.96</Block_Ignore>
+      <Damage>52</Damage>
+      <Description>
+        These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
+        is useful, it makes them poor defensive weapons.
+      </Description>
+      <Fatigue_Cost_Mod>1.00</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.80</Initiative_Reduce>
+      <Max_Durability>45</Max_Durability>
+      <Parry_Mod>0.60</Parry_Mod>
+      <Range_Mod>1</Range_Mod>
+      <Shield_Damage>0.60</Shield_Damage>
+      <WeaponSkillEnum>Axe</WeaponSkillEnum>
+      <Sprites>45</Sprites>
+      <Stamina_Reduce>0.93</Stamina_Reduce>
+      <Value>800</Value>
+      <WeaponAbilitiesEnum>Chop</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Break_Shield</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Scatter</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
   </WeaponSkillEnum>
   <WeaponSkillEnum name ="Flail">
     <Weapon name="Megaflail">
