@@ -2,19 +2,12 @@
 using Generics.Utilities;
 using Model.Characters;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace View.Characters
 {
     public class CharacterBridge : AbstractSingleton<CharacterBridge>
     {
-        private readonly List<int> HumanoidFaceIndexes = new List<int>() { 6 };
-        private readonly List<int> HumanoidDeco1Indexes = new List<int>() { 9, 10, 11, 21 };
-        private readonly List<int> HumanoidDeco2Indexes = new List<int>() { 12, 13, 14, 21 };
-        private readonly List<int> HumanoidDeco3Indexes = new List<int>() { 15, 16, 17, 21 };
-        private readonly List<int> HumanoidDeco4Indexes = new List<int>() { 18, 19, 20, 21 };
-        private const int HEAD_OFFSET = -3;
-        private readonly List<int> HumanoidTorsoIndexes = new List<int>() { 3,4,5 };
+        private const int TORSO_OFFSET = 3;
 
         public CharacterBridge() { }
 
@@ -24,16 +17,6 @@ namespace View.Characters
             switch(c.Type)
             {
                 case (CharacterTypeEnum.Critter): { random = GetRandomCritter(c); } break;
-                case (CharacterTypeEnum.Humanoid): { random = GetRandomHumanoid(c); } break;
-            }
-            return random;
-        }
-
-        public CharacterView GetRandomizedCharacterSprites(PredefinedCharacterParams c)
-        {
-            var random = new CharacterView();
-            switch (c.Type)
-            {
                 case (CharacterTypeEnum.Humanoid): { random = GetRandomHumanoid(c); } break;
             }
             return random;
@@ -49,30 +32,15 @@ namespace View.Characters
         private CharacterView GetRandomHumanoid(CharacterParams c)
         {
             var p = new CharacterView();
+            var table = RaceParamsTable.Instance.Table;
 
-            p.Face = HumanoidFaceIndexes[RNG.Instance.Next(0, HumanoidFaceIndexes.Count)];
-            p.Deco1 = HumanoidDeco1Indexes[RNG.Instance.Next(0, HumanoidDeco1Indexes.Count)];
-            p.Deco2 = HumanoidDeco2Indexes[RNG.Instance.Next(0, HumanoidDeco2Indexes.Count)];
-            p.Deco3 = HumanoidDeco3Indexes[RNG.Instance.Next(0, HumanoidDeco3Indexes.Count)];
-            p.Deco4 = HumanoidDeco3Indexes[RNG.Instance.Next(0, HumanoidDeco4Indexes.Count)];
-            p.Torso = HumanoidTorsoIndexes[RNG.Instance.Next(0, HumanoidTorsoIndexes.Count)];
-            p.Head = p.Torso + HEAD_OFFSET;
-            p.Sprites = CharacterSpriteLoader.Instance.GetCharacterSprites(c);
-
-            return p;
-        }
-
-        private CharacterView GetRandomHumanoid(PredefinedCharacterParams c)
-        {
-            var p = new CharacterView();
-
-            p.Face = HumanoidFaceIndexes[RNG.Instance.Next(0, HumanoidFaceIndexes.Count)];
-            p.Deco1 = HumanoidDeco1Indexes[RNG.Instance.Next(0, HumanoidDeco1Indexes.Count)];
-            p.Deco2 = HumanoidDeco2Indexes[RNG.Instance.Next(0, HumanoidDeco2Indexes.Count)];
-            p.Deco3 = HumanoidDeco3Indexes[RNG.Instance.Next(0, HumanoidDeco3Indexes.Count)];
-            p.Deco4 = HumanoidDeco3Indexes[RNG.Instance.Next(0, HumanoidDeco4Indexes.Count)];
-            p.Torso = HumanoidTorsoIndexes[RNG.Instance.Next(0, HumanoidTorsoIndexes.Count)];
-            p.Head = p.Torso + HEAD_OFFSET;
+            p.Face = ListUtil<int>.GetRandomListElement(table[c.Race].Sprites.Face);
+            p.HeadDeco1 = ListUtil<int>.GetRandomListElement(table[c.Race].Sprites.HeadDeco1);
+            p.HeadDeco2 = ListUtil<int>.GetRandomListElement(table[c.Race].Sprites.HeadDeco2);
+            p.TorsoDeco1 = ListUtil<int>.GetRandomListElement(table[c.Race].Sprites.TorsoDeco1);
+            p.TorsoDeco2 = ListUtil<int>.GetRandomListElement(table[c.Race].Sprites.TorsoDeco2);
+            p.Torso = ListUtil<int>.GetRandomListElement(table[c.Race].Sprites.Torso);
+            p.Head = p.Torso - TORSO_OFFSET;
             p.Sprites = CharacterSpriteLoader.Instance.GetCharacterSprites(c);
 
             return p;

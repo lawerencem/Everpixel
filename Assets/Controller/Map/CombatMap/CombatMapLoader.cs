@@ -71,7 +71,7 @@ namespace Controller.Managers.Map
                 var spriteHandler = new GameObject();
                 var render = spriteHandler.AddComponent<SpriteRenderer>();
                 spriteHandler.transform.position = c.Handle.transform.position;
-                if (sort == ViewParams.CHAR_FACE || sort == ViewParams.CHAR_DECO_1 || sort == ViewParams.CHAR_DECO_2)
+                if (sort == ViewParams.CHAR_FACE || sort == ViewParams.CHAR_HEAD_DECO_1 || sort == ViewParams.CHAR_HEAD_DECO_2)
                     spriteHandler.transform.SetParent(c.SpriteHandlerDict[ViewParams.CHAR_HEAD].transform);
                 else
                     spriteHandler.transform.SetParent(c.Handle.transform);
@@ -144,7 +144,7 @@ namespace Controller.Managers.Map
 
         private void InitPlayerParty(ref List<GenericCharacterController> controllers)
         {
-            var playerChars = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Vikings", 10));
+            var playerChars = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Vikings", 5));
             for (int i = 0; i < playerChars.Count; i++)
                 this.BuildAndLayoutCharacter(playerChars[i], ref controllers, true);
         }
@@ -247,10 +247,10 @@ namespace Controller.Managers.Map
                 c.SpriteHandlerDict.Add(ViewParams.CHAR_MAIN, c.Handle);
                 if (c.View.Mount != null) { AttachMount(c, ViewParams.CHAR_MOUNT, tile); }
                 AttachDeco(c, ViewParams.CHAR_FACE, c.View.Face, tile);
-                AttachDeco(c, ViewParams.CHAR_DECO_1, c.View.Deco1, tile);
-                AttachDeco(c, ViewParams.CHAR_DECO_2, c.View.Deco2, tile);
-                AttachDeco(c, ViewParams.CHAR_DECO_3, c.View.Deco3, tile);
-                AttachDeco(c, ViewParams.CHAR_DECO_4, c.View.Deco4, tile);
+                AttachDeco(c, ViewParams.CHAR_HEAD_DECO_1, c.View.HeadDeco1, tile);
+                AttachDeco(c, ViewParams.CHAR_HEAD_DECO_2, c.View.HeadDeco2, tile);
+                AttachDeco(c, ViewParams.CHAR_TORSO_DECO_1, c.View.TorsoDeco1, tile);
+                AttachDeco(c, ViewParams.CHAR_TORSO_DECO_2, c.View.TorsoDeco2, tile);
                 if (c.View.Armor != null) { TryAttachEquipment(c, c.View.Armor, ViewParams.CHAR_ARMOR, tile); }
                 if (c.View.Helm != null) { TryAttachEquipment(c, c.View.Helm, ViewParams.CHAR_HELM, tile, 0f, HELM_OFFSET); }
                 if (c.View.LWeapon != null) { TryAttachEquipment(c, c.View.LWeapon, ViewParams.CHAR_L_WEAPON, tile, WEAPON_OFFSET); }

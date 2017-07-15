@@ -29,8 +29,8 @@ namespace Model.Characters
 
         private PrimaryStats GetRaceStats(CharacterParams c)
         {
-            if (DefaultRaceStatsTable.Instance.Table.ContainsKey(c.Race))
-                return DefaultRaceStatsTable.Instance.Table[c.Race].Clone();
+            if (RaceParamsTable.Instance.Table.ContainsKey(c.Race))
+                return RaceParamsTable.Instance.Table[c.Race].PrimaryStats.Clone();
             else
                 return null;
         }

@@ -1,6 +1,9 @@
 ﻿TODO
 
-	- Make a more flexible race and deco loading system
+	- Finish race loading system
+
+   - Not every man really lives...
+
    - First:
      - Shield perks
 	 - Resists and saves
@@ -29,6 +32,15 @@ Next Weekend
    - Ability gui popups
    - Troll Culture
    - Refactor character stuff with structs
+
+Before pre-alpha
+   - Orcish culture
+   - Goblin
+   - Irish
+   - Hawaiian
+   - Jomonese
+   - Amazonian
+   - Nordic
 
 1) - Dual-Wield
 3) - Critter classes / abilities during level up on the xml

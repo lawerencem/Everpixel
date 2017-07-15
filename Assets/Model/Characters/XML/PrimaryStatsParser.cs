@@ -1,18 +1,32 @@
 ﻿using Generics.Utilities;
+using System;
 using System.Xml.Linq;
 
 namespace Model.Characters.XML
 {
     public class PrimaryStatsParser
     {
-        public static void ParseStat(XElement root, PrimaryStats p)
+        public static void ParseStats(XElement root, PrimaryStats p)
         {
-            var statSet = PrimaryStatsEnum.None;
-            var stat = root.Name.ToString();
-            int value = int.Parse(root.Value);
+                var statSet = PrimaryStatsEnum.None;
+                var stat = root.Name.ToString();
+                int value = int.Parse(root.Value);
 
-            if (EnumUtil<PrimaryStatsEnum>.TryGetEnumValue(root.Name.ToString(), ref statSet))
-                HandleStats(p, statSet, value);
+                if (EnumUtil<PrimaryStatsEnum>.TryGetEnumValue(root.Name.ToString(), ref statSet))
+                    HandleStats(p, statSet, value);
+        }
+
+        public static void ParseXElementForStats(XElement root, PrimaryStats p)
+        {
+            foreach(var ele in root.Elements())
+            {
+                var statSet = PrimaryStatsEnum.None;
+                var stat = ele.Name.ToString();
+                int value = int.Parse(ele.Value);
+
+                if (EnumUtil<PrimaryStatsEnum>.TryGetEnumValue(ele.Name.ToString(), ref statSet))
+                    HandleStats(p, statSet, value);
+            }
         }
 
         private static void HandleStats(PrimaryStats p, PrimaryStatsEnum s, int v)

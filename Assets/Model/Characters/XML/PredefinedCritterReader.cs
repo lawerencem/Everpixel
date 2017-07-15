@@ -121,7 +121,7 @@ namespace Model.Characters.XML
         private void HandleStats(XElement el, string rootKey)
         {
             foreach (var ele in el.Elements())
-                PrimaryStatsParser.ParseStat(ele, table.Table[rootKey].Stats);
+                PrimaryStatsParser.ParseStats(ele, table.Table[rootKey].Stats);
         }
     }
 }

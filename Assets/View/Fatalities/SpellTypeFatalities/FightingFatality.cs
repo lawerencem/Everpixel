@@ -133,13 +133,13 @@ namespace View.Fatalities
                 renderer.sprite = null;
                 renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_HEAD].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;
-                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_DECO_1].GetComponent<SpriteRenderer>();
+                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_HEAD_DECO_1].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;
-                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_DECO_2].GetComponent<SpriteRenderer>();
+                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_HEAD_DECO_2].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;
-                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_DECO_3].GetComponent<SpriteRenderer>();
+                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_TORSO_DECO_1].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;
-                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_DECO_4].GetComponent<SpriteRenderer>();
+                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_TORSO_DECO_2].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;
                 renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_FACE].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;

@@ -52,8 +52,8 @@ namespace View.Scripts
             }
             if (info.CharHead != SENTINEL)
             {
-                var deco1 = character.SpriteHandlerDict[ViewParams.CHAR_DECO_1].GetComponent<SpriteRenderer>();
-                var deco2 = character.SpriteHandlerDict[ViewParams.CHAR_DECO_2].GetComponent<SpriteRenderer>();
+                var deco1 = character.SpriteHandlerDict[ViewParams.CHAR_HEAD_DECO_1].GetComponent<SpriteRenderer>();
+                var deco2 = character.SpriteHandlerDict[ViewParams.CHAR_HEAD_DECO_2].GetComponent<SpriteRenderer>();
                 var face = character.SpriteHandlerDict[ViewParams.CHAR_FACE].GetComponent<SpriteRenderer>();
                 var head = character.SpriteHandlerDict[ViewParams.CHAR_HEAD].GetComponent<SpriteRenderer>();
                 deco1.sprite = null;

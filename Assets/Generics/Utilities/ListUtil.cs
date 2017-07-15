@@ -7,8 +7,14 @@ namespace Generics.Utilities
     {
         public static T GetRandomListElement(List<T> toGet)
         {
-            int index = RNG.Instance.Next(toGet.Count);
-            return toGet[index];
+            if (toGet.Count > 0)
+            {
+                int index = RNG.Instance.Next(toGet.Count);
+                return toGet[index];
+            }
+            else
+                return default(T);
+            
         }
     }
 }

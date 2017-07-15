@@ -3,10 +3,10 @@
     public class ViewParams
     {
         public static readonly string CHAR_ARMOR = "CharArmor";
-        public static readonly string CHAR_DECO_1 = "CharDeco1";
-        public static readonly string CHAR_DECO_2 = "CharDeco2";
-        public static readonly string CHAR_DECO_3 = "CharDeco3";
-        public static readonly string CHAR_DECO_4 = "CharDeco4";
+        public static readonly string CHAR_HEAD_DECO_1 = "CharHeadDeco1";
+        public static readonly string CHAR_HEAD_DECO_2 = "CharHeadDeco2";
+        public static readonly string CHAR_TORSO_DECO_1 = "CharTorsoDeco1";
+        public static readonly string CHAR_TORSO_DECO_2 = "CharTorsoDeco2";
         public static readonly string CHAR_FACE = "CharFace";
         public static readonly string CHAR_HEAD = "CharHead";
         public static readonly string CHAR_HELM = "CharHelm";

@@ -192,12 +192,14 @@
     <Compile Include="Assets\Model\Characters\Params\IndefPrimaryStatsModifier.cs" />
     <Compile Include="Assets\Model\Characters\Params\IndefSecondaryStatsModifier.cs" />
     <Compile Include="Assets\Model\Characters\Params\PredefinedCharacterParams.cs" />
+    <Compile Include="Assets\Model\Characters\Params\Race\RaceParams.cs" />
+    <Compile Include="Assets\Model\Characters\Params\Race\RaceSprites.cs" />
     <Compile Include="Assets\Model\Characters\Params\PrimaryStats.cs" />
     <Compile Include="Assets\Model\Characters\Params\PrimarystatModifier.cs" />
     <Compile Include="Assets\Model\Characters\Params\SecondaryStatModifier.cs" />
     <Compile Include="Assets\Model\Characters\Params\SecondaryStats.cs" />
     <Compile Include="Assets\Model\Characters\Params\SlotCollection.cs" />
-    <Compile Include="Assets\Model\Characters\Tables\DefaultRaceStatsTable.cs" />
+    <Compile Include="Assets\Model\Characters\Tables\RaceParamsTable.cs" />
     <Compile Include="Assets\Model\Characters\Tables\PredefinedCharacterTable.cs" />
     <Compile Include="Assets\Model\Characters\Types\AbstractCharacter.cs" />
     <Compile Include="Assets\Model\Characters\Types\GenericCharacter.cs" />
@@ -207,7 +209,7 @@
     <Compile Include="Assets\Model\Characters\XML\PredefinedEquipmentXMLIndexes.cs" />
     <Compile Include="Assets\Model\Characters\XML\PredefinedReaderParams.cs" />
     <Compile Include="Assets\Model\Characters\XML\PrimaryStatsParser.cs" />
-    <Compile Include="Assets\Model\Characters\XML\RaceDefaultStatsReader.cs" />
+    <Compile Include="Assets\Model\Characters\XML\RaceParamsReader.cs" />
     <Compile Include="Assets\Model\Characters\XML\SpellParser.cs" />
     <Compile Include="Assets\Model\Classes\Builders\ClassBuilder.cs" />
     <Compile Include="Assets\Model\Classes\ClassParams.cs" />
@@ -392,7 +394,9 @@
     <None Include="Assets\Model\Abilities\XML\WeaponAbilities.xml" />
     <None Include="Assets\Model\Characters\XML\PredefinedCharacters.xml" />
     <None Include="Assets\Model\Characters\XML\PredefinedCritters.xml" />
-    <None Include="Assets\Model\Characters\XML\RaceDefaultStats.xml" />
+    <None Include="Assets\Model\Characters\XML\RaceParams.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Model\Classes\XML\Classes.xml" />
     <None Include="Assets\Model\Equipment\XML\Armors.xml" />
     <None Include="Assets\Model\Equipment\XML\Weapons.xml" />

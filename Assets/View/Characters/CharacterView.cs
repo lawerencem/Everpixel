@@ -9,12 +9,10 @@ namespace View.Characters
     {
         public ArmorView Armor {get;set;}
         public int AttackSpriteIndex { get; set; }
-        public int Deco1 { get; set; }
-        public int Deco2 { get; set; }
-        public int Deco3 { get; set; }
-        public int Deco4 { get; set; }
         public int Face { get; set; }
         public int Head { get; set; }
+        public int HeadDeco1 { get; set; }
+        public int HeadDeco2 { get; set; }
         public ArmorView Helm { get; set; }
         public WeaponView LWeapon { get; set; }
         public string Name { get; set; }
@@ -22,6 +20,8 @@ namespace View.Characters
         public RaceEnum Race { get; set; }
         public WeaponView RWeapon { get; set; }
         public int Torso { get; set; }
+        public int TorsoDeco1 { get; set; }
+        public int TorsoDeco2 { get; set; }
         public CharacterTypeEnum Type { get; set; }
         public Sprite[] Sprites { get; set; }
     }
