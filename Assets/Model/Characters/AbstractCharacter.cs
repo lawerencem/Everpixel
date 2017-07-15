@@ -9,6 +9,7 @@ using Model.Map;
 using Model.Shields;
 using System.Collections.Generic;
 using Model.Effects;
+using Model.OverTimeEffects;
 
 namespace Model.Characters
 {
@@ -28,18 +29,9 @@ namespace Model.Characters
         public PrimaryStats PrimaryStats { get; set; }
         public SecondaryStats SecondaryStats { get; set; }
 
-        // TODO: Put these in a stats Mods container class
-        public List<FlatSecondaryStatModifier> FlatSStatMods { get; set; }
-        public List<PrimaryStatModifier> PStatMods { get; set; }
-        public List<SecondaryStatModifier> SStatMods { get; set; }
-        public List<Pair<object, List<IndefPrimaryStatModifier>>> IndefPStatMods { get; set; }
-        public List<Pair<object, List<IndefSecondaryStatModifier>>> IndefSStatMods { get; set; }
+        public ModContainer Mods;
 
-        // TODO: Put these in a current stats container class
-        public int CurrentAP { get; set; }
-        public int CurrentHP { get; set; }
-        public int CurrentMorale { get; set; }
-        public int CurrentStamina { get; set; }
+        public CurrentPointsContainer Points;
 
         public List<GenericAbility> ActiveAbilities { get; set; }
         public List<GenericAbility> DefaultWpnAbilities { get; set; }
@@ -55,6 +47,8 @@ namespace Model.Characters
 
         public List<GenericEffect> Effects { get; set; }
 
+        public List<GenericDoT> DoTs { get; set; }
+        public List<GenericHoT> HoTs { get; set; }
         public List<Shield> Shields { get; set; }
 
         public void AddArmor(GenericArmor armor)
@@ -63,10 +57,8 @@ namespace Model.Characters
             this.Armor = armor;
             var mods = new Pair<object, List<IndefSecondaryStatModifier>>(armor, armor.GetStatModifiers());
             foreach (var perk in this.Perks.EquipmentSStatPerks)
-            {
                 perk.TryModEquipmentMod(mods);
-            }
-            this.IndefSStatMods.Add(mods);
+            this.Mods.AddMod(mods);
         }
 
         public void AddEffect(GenericEffect effect)
@@ -74,16 +66,17 @@ namespace Model.Characters
             this.Effects.Add(effect);
         }
 
+        public void AddDoT(GenericDoT dot) { this.DoTs.Add(dot); }
+        public void AddHoT(GenericHoT hot) { this.HoTs.Add(hot); }
+
         public void AddHelm(GenericHelm helm)
         {
             this.RemoveHelm();
             this.Helm = helm;
             var mods = new Pair<object, List<IndefSecondaryStatModifier>>(helm, helm.GetStatModifiers());
             foreach (var perk in this.Perks.EquipmentSStatPerks)
-            {
                 perk.TryModEquipmentMod(mods);
-            }
-            this.IndefSStatMods.Add(mods);
+            this.Mods.AddMod(mods);
         }
 
         public void AddInjury(GenericInjury injury)
@@ -98,9 +91,9 @@ namespace Model.Characters
 
         public void AddStamina(double toAdd)
         {
-            this.CurrentStamina += (int)toAdd;
-            if (this.CurrentStamina > (int)this.GetCurrentStatValue(SecondaryStatsEnum.Stamina))
-                this.CurrentStamina = (int)this.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
+            this.Points.CurrentStamina += (int)toAdd;
+            if (this.Points.CurrentStamina > (int)this.GetCurrentStatValue(SecondaryStatsEnum.Stamina))
+                this.Points.CurrentStamina = (int)this.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
         }
 
         public void AddWeapon(GenericWeapon weapon, bool lWeapon)
@@ -111,10 +104,8 @@ namespace Model.Characters
                 this.LWeapon = weapon;
                 var mods = new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.GetStatModifiers());
                 foreach (var perk in this.Perks.EquipmentSStatPerks)
-                {
                     perk.TryModEquipmentMod(mods);
-                }
-                this.IndefSStatMods.Add(mods);
+                this.Mods.AddMod(mods);
             }
             else
             {
@@ -124,7 +115,7 @@ namespace Model.Characters
                 {
                     perk.TryModEquipmentMod(mods);
                 }
-                this.IndefSStatMods.Add(mods);
+                this.Mods.AddMod(mods);
             }
         }
 
@@ -141,17 +132,13 @@ namespace Model.Characters
 
         public void RemoveArmor()
         {
-            var kvp = this.IndefSStatMods.Find(x => x.X == this.Armor);
-            if (!kvp.Equals(null))
-                this.IndefSStatMods.Remove(kvp);
+            this.Mods.RemoveGearMods(this.Armor);
             this.Armor = null;
         }
 
         public void RemoveHelm()
         {
-            var kvp = this.IndefSStatMods.Find(x => x.X == this.Helm);
-            if (!kvp.Equals(null))
-                this.IndefSStatMods.Remove(kvp);
+            this.Mods.RemoveGearMods(this.Helm);
             this.Helm = null;
         }
 
@@ -159,16 +146,12 @@ namespace Model.Characters
         {
             if (lWeapon)
             {
-                var kvp = this.IndefSStatMods.Find(x => x.X == this.LWeapon);
-                if (!kvp.Equals(null))
-                    this.IndefSStatMods.Remove(kvp);
+                this.Mods.RemoveGearMods(this.LWeapon);
                 this.LWeapon = null;
             }
             else
             {
-                var kvp = this.IndefSStatMods.Find(x => x.X == this.RWeapon);
-                if (!kvp.Equals(null))
-                    this.IndefSStatMods.Remove(kvp);
+                this.Mods.RemoveGearMods(this.RWeapon);
                 this.RWeapon = null;
             }
         }
@@ -185,12 +168,12 @@ namespace Model.Characters
                 case (PrimaryStatsEnum.Perception): { v = (double)this.PrimaryStats.Perception; } break;
                 case (PrimaryStatsEnum.Resolve): { v = (double)this.PrimaryStats.Resolve; } break;
             }
-            foreach (var kvp in this.IndefPStatMods)
+            foreach (var kvp in this.Mods.IndefPStatMods)
                 foreach (var mod in kvp.Y)
                     mod.TryScaleValue(stat, ref v);
             foreach (var injury in this.Injuries)
                 injury.TryScaleStat(stat, ref v);
-            foreach (var mod in this.PStatMods) { mod.TryScaleValue(stat, ref v); }
+            foreach (var mod in this.Mods.PStatMods) { mod.TryScaleValue(stat, ref v); }
             return (int)v;
         }
 
@@ -221,15 +204,15 @@ namespace Model.Characters
                 case (SecondaryStatsEnum.Stamina): { v = (double)this.SecondaryStats.Stamina; } break;
                 case (SecondaryStatsEnum.Will): { v = (double)this.SecondaryStats.Will; } break;
             }
-            foreach (var kvp in this.IndefSStatMods)
+            foreach (var kvp in this.Mods.IndefSStatMods)
                 foreach (var mod in kvp.Y)
                     mod.TryScaleValue(stat, ref v);
             foreach (var injury in this.Injuries)
                 injury.TryScaleStat(stat, ref v);
-            foreach (var mod in this.SStatMods) { mod.TryScaleValue(stat, ref v); }
+            foreach (var mod in this.Mods.SStatMods) { mod.TryScaleValue(stat, ref v); }
             foreach (var perk in this.Perks.SStatModPerks)
                 perk.TryModSStat(stat, ref v);
-            foreach (var mod in this.FlatSStatMods) { mod.TryFlatScaleStat(stat, ref v); }
+            foreach (var mod in this.Mods.FlatSStatMods) { mod.TryFlatScaleStat(stat, ref v); }
             return v;
         }
 
@@ -242,14 +225,14 @@ namespace Model.Characters
 
         public void TryAddMod(FlatSecondaryStatModifier mod)
         {
-            this.FlatSStatMods.Add(mod);
+            this.Mods.FlatSStatMods.Add(mod);
             this.SetCurrValue(mod.Type, mod.FlatMod);
         }
 
         public void TryAddMod(SecondaryStatModifier mod)
         {
             var oldValue = this.GetCurrentStatValue(mod.Type);
-            this.SStatMods.Add(mod);
+            this.Mods.SStatMods.Add(mod);
             var newValue = this.GetCurrentStatValue(mod.Type);
             var delta = newValue - oldValue;
             this.SetCurrValue(mod.Type, delta);
@@ -257,15 +240,13 @@ namespace Model.Characters
 
         private void ProcessBuffDurations()
         {
-            foreach (var buff in this.FlatSStatMods)
+            foreach (var buff in this.Mods.FlatSStatMods)
                 buff.ProcessTurn();
-            foreach (var buff in this.PStatMods)
+            foreach (var buff in this.Mods.PStatMods)
                 buff.ProcessTurn();
-            foreach (var buff in this.SStatMods)
+            foreach (var buff in this.Mods.SStatMods)
                 buff.ProcessTurn();
-            this.FlatSStatMods.RemoveAll(x => x.Duration <= 0);
-            this.PStatMods.RemoveAll(x => x.Duration <= 0);
-            this.SStatMods.RemoveAll(x => x.Duration <= 0);
+            this.Mods.RemoveZeroDurations();
         }
 
         private void ProcessShields()
@@ -284,10 +265,10 @@ namespace Model.Characters
         {
             switch(type)
             {
-                case (SecondaryStatsEnum.AP): { this.CurrentAP += (int)v; } break;
-                case (SecondaryStatsEnum.HP): { this.CurrentHP += (int)v; } break;
-                case (SecondaryStatsEnum.Morale): { this.CurrentMorale += (int)v; } break;
-                case (SecondaryStatsEnum.Stamina): { this.CurrentStamina += (int)v; } break;
+                case (SecondaryStatsEnum.AP): { this.Points.CurrentAP += (int)v; } break;
+                case (SecondaryStatsEnum.HP): { this.Points.CurrentHP += (int)v; } break;
+                case (SecondaryStatsEnum.Morale): { this.Points.CurrentMorale += (int)v; } break;
+                case (SecondaryStatsEnum.Stamina): { this.Points.CurrentStamina += (int)v; } break;
             }
         }
     }

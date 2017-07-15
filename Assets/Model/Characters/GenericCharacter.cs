@@ -28,14 +28,12 @@ namespace Model.Characters
             this.BaseClasses = new Dictionary<ClassEnum, GenericClass>();
             this.DefaultWpnAbilities = new List<GenericAbility>();
             this.Effects = new List<GenericEffect>();
-            this.FlatSStatMods = new List<FlatSecondaryStatModifier>();
-            this.IndefSStatMods = new List<Pair<object, List<IndefSecondaryStatModifier>>>();
             this.Injuries = new List<GenericInjury>();
+            this.Mods = new ModContainer();
             this.Perks = new CharacterPerkCollection();
-            this.PStatMods = new List<PrimaryStatModifier>();
+            this.Points = new CurrentPointsContainer();
             this.Shields = new List<Shield>();
             this.StatusFlags = new CharacterStatusFlags();
-            this.SStatMods = new List<SecondaryStatModifier>();
         }
 
         public void ModifyHP(int value, bool isHeal)
