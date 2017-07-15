@@ -7,8 +7,7 @@ namespace Model.Abilities
     {
         public Hadoken() : base(AbilitiesEnum.Hadoken)
         {
-            this.CastType = CastTypeEnum.Bullet;
-            this.MagicType = Magic.MagicTypeEnum.Fighting;
+
         }
 
         public override void PredictAbility(HitInfo hit)

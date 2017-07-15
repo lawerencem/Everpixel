@@ -8,6 +8,7 @@ using Model.Injuries;
 using Model.Map;
 using Model.Shields;
 using System.Collections.Generic;
+using Model.Effects;
 
 namespace Model.Characters
 {
@@ -52,6 +53,8 @@ namespace Model.Characters
 
         public CharacterStatusFlags StatusFlags { get; set; }
 
+        public List<GenericEffect> Effects { get; set; }
+
         public List<Shield> Shields { get; set; }
 
         public void AddArmor(GenericArmor armor)
@@ -64,6 +67,11 @@ namespace Model.Characters
                 perk.TryModEquipmentMod(mods);
             }
             this.IndefSStatMods.Add(mods);
+        }
+
+        public void AddEffect(GenericEffect effect)
+        {
+            this.Effects.Add(effect);
         }
 
         public void AddHelm(GenericHelm helm)

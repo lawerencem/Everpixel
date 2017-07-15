@@ -9,10 +9,7 @@ using Model.Combat;
 using Model.Events.Combat;
 using Model.Injuries;
 using Model.Map;
-using Model.Perks;
 using System.Collections.Generic;
-using UnityEngine;
-using View.Scripts;
 
 namespace Model.Abilities
 {
@@ -40,6 +37,8 @@ namespace Model.Abilities
         public double DodgeMod { get; set; }
         public double Duration { get; set; }
         public string Description { get; set; }
+        public double EffectDur { get; set; }
+        public double EffectValue { get; set; }
         public double FlatDamage { get; set; }
         public MagicTypeEnum MagicType { get; set; }
         public double MeleeBlockChanceMod { get; set; }
@@ -47,6 +46,7 @@ namespace Model.Abilities
         public int Range { get; set; }
         public double RangeBlockMod { get; set; }
         public double RechargeTime { get; set; }
+        public ResistTypeEnum Resist { get; set; }
         public double ShieldDamageMod { get; set; }
         public int SpellLevel { get; set; }
         public int Sprite { get; set; }

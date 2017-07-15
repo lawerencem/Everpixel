@@ -9,6 +9,7 @@ using Model.Events.Combat;
 using Model.Injuries;
 using Model.Shields;
 using System.Collections.Generic;
+using Model.Effects;
 
 namespace Model.Characters
 {
@@ -26,6 +27,7 @@ namespace Model.Characters
             this.ActiveSpells = new SpellsByLevel();
             this.BaseClasses = new Dictionary<ClassEnum, GenericClass>();
             this.DefaultWpnAbilities = new List<GenericAbility>();
+            this.Effects = new List<GenericEffect>();
             this.FlatSStatMods = new List<FlatSecondaryStatModifier>();
             this.IndefSStatMods = new List<Pair<object, List<IndefSecondaryStatModifier>>>();
             this.Injuries = new List<GenericInjury>();

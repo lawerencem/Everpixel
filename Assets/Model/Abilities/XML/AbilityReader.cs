@@ -81,6 +81,8 @@ namespace Models.Equipment.XML
                 case ("DmgPerPower"): { GenericAbilityTable.Instance.Table[type].DmgPerPower = double.Parse(value); } break;
                 case ("Duration"): { GenericAbilityTable.Instance.Table[type].Duration = double.Parse(value); } break;
                 case ("DodgeMod"): { GenericAbilityTable.Instance.Table[type].DodgeMod = v; } break;
+                case ("EffectDur"): { GenericAbilityTable.Instance.Table[type].EffectDur = v; } break;
+                case ("EffectValue"): { GenericAbilityTable.Instance.Table[type].EffectValue = v; } break;
                 case ("FlatDamage"): { GenericAbilityTable.Instance.Table[type].FlatDamage = v; } break;
                 case ("IconSprite"): { GenericAbilityTable.Instance.Table[type].Sprite = (int)v; } break;
                 case ("Injury"): { this.HandleInjury(type, value); } break;
@@ -89,6 +91,7 @@ namespace Models.Equipment.XML
                 case ("Range"): { GenericAbilityTable.Instance.Table[type].Range = (int)v; } break;
                 case ("RangeBlockMod"): { GenericAbilityTable.Instance.Table[type].RangeBlockMod = v; } break;
                 case ("RechargeTime"): { GenericAbilityTable.Instance.Table[type].RechargeTime = v; } break;
+                case ("ResistTypeEnum"): { this.HandleResistType(type, value); } break;
                 case ("ShapeshiftSprites"): { this.HandleShapeshiftSprites(ele, type); } break;
                 case ("ShieldDamageMod"): { GenericAbilityTable.Instance.Table[type].ShieldDamageMod = v; } break;
                 case ("SpellLevel"): { GenericAbilityTable.Instance.Table[type].SpellLevel = (int)v; } break;
@@ -109,6 +112,30 @@ namespace Models.Equipment.XML
             if (EnumUtil<InjuryEnum>.TryGetEnumValue(s, ref injury))
             {
                 GenericAbilityTable.Instance.Table[type].Injuries.Add(injury);
+            }
+        }
+
+        private void HandleResistType(AbilitiesEnum type, string s)
+        {
+            var resist = ResistTypeEnum.None;
+            if (EnumUtil<ResistTypeEnum>.TryGetEnumValue(s, ref resist))
+                GenericAbilityTable.Instance.Table[type].Resist = resist;
+        }
+
+        private void HandleShapeshiftSprites(XElement element, AbilitiesEnum type)
+        {
+            var v = GenericAbilityTable.Instance.Table[type] as GenericShapeshiftAbility;
+            foreach(var ele in element.Elements())
+            {
+                switch(ele.Name.ToString())
+                {
+                    case ("CharAttackHead"): { v.Info.CharAttackHead = int.Parse(ele.Value); } break;
+                    case ("CharAttackTorso"): { v.Info.CharAttackTorso = int.Parse(ele.Value); } break;
+                    case ("CharHeadDead"): { v.Info.CharHeadDead = int.Parse(ele.Value); } break;
+                    case ("CharHeadFlinch"): { v.Info.CharHeadFlinch = int.Parse(ele.Value); } break;
+                    case ("CharHead"): { v.Info.CharHead = int.Parse(ele.Value); } break;
+                    case ("CharTorso"): { v.Info.CharTorso = int.Parse(ele.Value); } break;
+                }
             }
         }
 
@@ -148,23 +175,6 @@ namespace Models.Equipment.XML
                 case (AbilitiesEnum.Were_Ween): { GenericAbilityTable.Instance.Table[type] = new Wereween(); } break;
                 case (AbilitiesEnum.Wide_Slash): { GenericAbilityTable.Instance.Table[type] = new WideSlash(); } break;
                 case (AbilitiesEnum.Wrap): { GenericAbilityTable.Instance.Table[type] = new Wrap(); } break;
-            }
-        }
-
-        private void HandleShapeshiftSprites(XElement element, AbilitiesEnum type)
-        {
-            var v = GenericAbilityTable.Instance.Table[type] as GenericShapeshiftAbility;
-            foreach(var ele in element.Elements())
-            {
-                switch(ele.Name.ToString())
-                {
-                    case ("CharAttackHead"): { v.Info.CharAttackHead = int.Parse(ele.Value); } break;
-                    case ("CharAttackTorso"): { v.Info.CharAttackTorso = int.Parse(ele.Value); } break;
-                    case ("CharHeadDead"): { v.Info.CharHeadDead = int.Parse(ele.Value); } break;
-                    case ("CharHeadFlinch"): { v.Info.CharHeadFlinch = int.Parse(ele.Value); } break;
-                    case ("CharHead"): { v.Info.CharHead = int.Parse(ele.Value); } break;
-                    case ("CharTorso"): { v.Info.CharTorso = int.Parse(ele.Value); } break;
-                }
             }
         }
     }

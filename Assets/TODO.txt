@@ -1,6 +1,9 @@
 ﻿TODO
 
    - First:
+     - Slug horde spell
+	 - Poison Zone perk on slug hit
+
      - Shield perks
 	 - Resists and saves
 	 - Taunt
@@ -8,6 +11,7 @@
 	 - Thai Rex shield spell
 	 - Healing song
 
+   - Casting events dont reset ability modal
    - Spear wall
    - Bonuses to Hit when surrounding
    - Bonuses to Dmg when surrounding

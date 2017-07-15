@@ -144,6 +144,11 @@ namespace Controller.Managers.Map
                 this.DisplayText("Crit!", e.Hit.Target.Handle, CMapGUIControllerParams.RED, CMapGUIControllerParams.DODGE_TEXT_OFFSET);
         }
 
+        public void ProcessResist(DisplayHitStatsEvent e)
+        {
+            this.DisplayText("Resist", e.Hit.Target.Handle, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.CRIT_TEXT_OFFSET);
+        }
+
         public void ProcessSplatterOnHitEvent(DisplayHitStatsEvent e)
         {
             if (!AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge) &&
@@ -269,7 +274,7 @@ namespace Controller.Managers.Map
                     this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_HELM], ViewParams.DEAD_HELM);
                 if (c.Model.LWeapon != null)
                 {
-                    this.RandomMoveKill(c.SpriteHandlerDict[ViewParams.DEAD_L_WEAPON]);
+                    this.RandomMoveKill(c.SpriteHandlerDict[ViewParams.CHAR_L_WEAPON]);
                     this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_L_WEAPON], ViewParams.CHAR_L_WEAPON);
                 }
                 if (c.Model.RWeapon != null)

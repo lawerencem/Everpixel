@@ -12,12 +12,15 @@
       <CastTypeEnum>No_Collision_Bullet</CastTypeEnum>
       <DmgPerPower>0.05</DmgPerPower>
       <DodgeMod>1.0</DodgeMod>
+      <EffectDur>3</EffectDur>
+      <EffectValue>3</EffectValue>
       <FlatDamage>35</FlatDamage>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>0.25</ParryModMod>
       <Range>6</Range>
       <RangeBlockMod>0.25</RangeBlockMod>
       <RechargeTime>0</RechargeTime>
+      <ResistTypeEnum>Will</ResistTypeEnum>
       <ShieldDamageMod>1</ShieldDamageMod>
       <SpellLevel>2</SpellLevel>
       <StaminaCost>55</StaminaCost>

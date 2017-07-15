@@ -186,6 +186,8 @@ namespace Controller.Managers.Map
                     this._hitHelper.ProcessBlock(e);
                 else
                     this._hitHelper.ProcessNormalHit(e);
+                if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Resist))
+                    this._hitHelper.ProcessResist(e);
                 this._hitHelper.ProcessSplatterOnHitEvent(e);
             }
             e.Done();

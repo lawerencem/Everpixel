@@ -13,8 +13,7 @@ namespace Model.Abilities
     {
         public SoothingMist() : base(AbilitiesEnum.Soothing_Mist)
         {
-            this.CastType = CastTypeEnum.Zone;
-            this.MagicType = Magic.MagicTypeEnum.Water;
+
         }
 
         public override List<TileController> GetAoETiles(TileController source, TileController target, int range)

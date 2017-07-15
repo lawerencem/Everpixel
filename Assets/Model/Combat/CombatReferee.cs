@@ -18,6 +18,7 @@ namespace Model.Combat
         private const double BASE_HEAD_CHANCE = 0.25;
         private const double BASE_HIT_RATIO = 1 / BASE_HEAD_CHANCE;
         private const double BASE_PARRY_CHANCE = 0.15;
+        private const double BASE_RESIST = 0.15;
         private const double BASE_SCALAR = 1000;
         private const double BASE_SKILL_SCALAR = 0.75;
 
@@ -27,6 +28,7 @@ namespace Model.Combat
             this.PredictBlock(hit);
             this.PredictCrit(hit);
             this.PredictDmg(hit);
+            this.PredictResist(hit);
         }
 
         public void PredictMelee(HitInfo hit)
@@ -36,6 +38,7 @@ namespace Model.Combat
             this.PredictCrit(hit);
             this.PredictParry(hit);
             this.PredictDmg(hit);
+            this.PredictResist(hit);
         }
 
         public void PredictRay(HitInfo hit)
@@ -44,6 +47,7 @@ namespace Model.Combat
             this.PredictBlock(hit);
             this.PredictCrit(hit);
             this.PredictDmg(hit);
+            this.PredictResist(hit);
         }
 
         public void ProcessBullet(HitInfo hit)
@@ -240,12 +244,42 @@ namespace Model.Combat
             hit.Chances.Parry = this.GetAttackVSDefenseSkillChance(acc, parry, parryChance);
         }
 
+        private void PredictResist(HitInfo hit)
+        {
+            if (hit.Ability.Resist != ResistTypeEnum.None)
+            {
+                var attack = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Spell_Penetration);
+                switch (hit.Ability.Resist)
+                {
+                    case (ResistTypeEnum.Fortitude):
+                        {
+                            var defense = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Fortitude);
+                            hit.Chances.Resist = this.GetAttackVSDefenseSkillChance(attack, defense, BASE_RESIST);
+                        }
+                        break;
+                    case (ResistTypeEnum.Reflex):
+                        {
+                            var defense = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Reflex);
+                            hit.Chances.Resist = this.GetAttackVSDefenseSkillChance(attack, defense, BASE_RESIST);
+                        }
+                        break;
+                    case (ResistTypeEnum.Will):
+                        {
+                            var defense = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Will);
+                            hit.Chances.Resist = this.GetAttackVSDefenseSkillChance(attack, defense, BASE_RESIST);
+                        }
+                        break;
+                }
+            }
+        }
+
         private void ProcessBulletFlags(HitInfo hit)
         {
             this.ProcessDodge(hit);
             this.ProcessBlock(hit);
             this.ProcessCrit(hit);
             this.ProcessHeadShot(hit);
+            this.ProcessResist(hit);
         }
 
         private void ProcessMeleeFlags(HitInfo hit)
@@ -255,6 +289,7 @@ namespace Model.Combat
             this.ProcessBlock(hit);
             this.ProcessCrit(hit);
             this.ProcessHeadShot(hit);
+            this.ProcessResist(hit);
         }
 
         private void ProcessBlock(HitInfo hit)
@@ -372,6 +407,17 @@ namespace Model.Combat
             var roll = RNG.Instance.NextDouble();
             if (roll > BASE_HEAD_CHANCE)
                 AttackEventFlags.SetHeadTrue(hit.Flags);
+        }
+
+        private void ProcessResist(HitInfo hit)
+        {
+            this.PredictResist(hit);
+            if (hit.Ability.Resist != ResistTypeEnum.None)
+            {
+                var roll = RNG.Instance.NextDouble();
+                if (roll < hit.Chances.Resist)
+                    AttackEventFlags.SetResistTrue(hit.Flags);
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Generics;
 using Model.Characters.XML;
 using Model.Classes.XML;
+using Model.Effects;
 using Model.Equipment.XML;
 using Model.Injuries;
 using Model.Mounts.XML;
@@ -21,6 +22,7 @@ namespace Assets.Controller.Managers
             this._readers.Add(ArmorReader.Instance);
             this._readers.Add(BarkReader.Instance);
             this._readers.Add(ClassReader.Instance);
+            this._readers.Add(EffectsReader.Instance);
             this._readers.Add(InjuryReader.Instance);
             this._readers.Add(PartiesReader.Instance);
             this._readers.Add(PredefinedCharacterReader.Instance);

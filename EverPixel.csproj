@@ -130,6 +130,7 @@
     <Compile Include="Assets\Model\Abilities\ActiveAbilityFactory.cs" />
     <Compile Include="Assets\Model\Abilities\Enum\CastTypeEnum.cs" />
     <Compile Include="Assets\Model\Abilities\Enum\AbilitiesEnum.cs" />
+    <Compile Include="Assets\Model\Abilities\Enum\ResistTypEnum.cs" />
     <Compile Include="Assets\Model\Abilities\GenericAbility.cs" />
     <Compile Include="Assets\Model\Abilities\GenericAbilityTable.cs" />
     <Compile Include="Assets\Model\Abilities\GenericSummonAbility.cs" />
@@ -223,6 +224,14 @@
     <Compile Include="Assets\Model\Combat\HitInfo.cs" />
     <Compile Include="Assets\Model\Combat\ChancePrediction.cs" />
     <Compile Include="Assets\Model\Cultures\CultureEnum.cs" />
+    <Compile Include="Assets\Model\Effects\EffectContainer.cs" />
+    <Compile Include="Assets\Model\Effects\EffectsFactory.cs" />
+    <Compile Include="Assets\Model\Effects\EffectsMediator.cs" />
+    <Compile Include="Assets\Model\Effects\GenericEffect.cs" />
+    <Compile Include="Assets\Model\Effects\EffectsEnum.cs" />
+    <Compile Include="Assets\Model\Effects\Will\Horror.cs" />
+    <Compile Include="Assets\Model\Effects\XML\EffectsReader.cs" />
+    <Compile Include="Assets\Model\Effects\EffectsTable.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\ArmorBuilder.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\HelmBuilder.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\WeaponBuilder.cs" />
@@ -407,6 +416,10 @@
     <None Include="Assets\TODO.txt" />
     <None Include="Assets\View\Barks\XML\Barks.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Model\Effects\XML\Effects.xml" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

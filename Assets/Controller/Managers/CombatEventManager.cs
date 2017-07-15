@@ -198,6 +198,7 @@ namespace Controller.Managers
         {
             this._events.Remove(e);
             CMapGUIController.Instance.ClearDecoratedTiles();
+            CMapGUIController.Instance.ProcessNewTurn();
             var cur = this._combatManager.CurrActing.Handle;
             this._combatManager.CurrActing.Model.ProcessEndOfTurn();
             var bob = cur.GetComponent<BobbingScript>();
