@@ -1,9 +1,5 @@
 ﻿TODO
 
-	- Finish race loading system
-
-   - Not every man really lives...
-
    - First:
      - Shield perks
 	 - Resists and saves

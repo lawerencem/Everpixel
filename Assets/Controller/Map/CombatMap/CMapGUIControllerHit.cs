@@ -1,10 +1,10 @@
 ﻿using Assets.Scripts;
+using Assets.View;
 using Assets.View.Characters;
 using Controller.Characters;
 using Controller.Map;
 using Generics.Scripts;
 using Generics.Utilities;
-using Model.Abilities;
 using Model.Characters;
 using Model.Combat;
 using Model.Events.Combat;
@@ -34,7 +34,7 @@ namespace Controller.Managers.Map
                 this.DisplayText("Critical!", e.Hit.Target.Handle, CMapGUIControllerParams.RED, CMapGUIControllerParams.CRIT_TEXT_OFFSET);
             if (e.Hit.Target.Model.LWeapon != null && e.Hit.Target.Model.LWeapon.IsTypeOfShield())
             {
-                var weapon = e.Hit.Target.SpriteHandlerDict["CharLWeapon"];
+                var weapon = e.Hit.Target.SpriteHandlerDict[ViewParams.CHAR_L_WEAPON];
                 var boomerang = weapon.AddComponent<BoomerangScript>();
                 var position = weapon.transform.position;
                 if (e.Hit.Target.LParty)
@@ -45,7 +45,7 @@ namespace Controller.Managers.Map
             }
             if (e.Hit.Target.Model.RWeapon != null && e.Hit.Target.Model.RWeapon.IsTypeOfShield())
             {
-                var weapon = e.Hit.Target.SpriteHandlerDict["CharRWeapon"];
+                var weapon = e.Hit.Target.SpriteHandlerDict[ViewParams.CHAR_R_WEAPON];
                 var boomerang = weapon.AddComponent<BoomerangScript>();
                 var position = weapon.transform.position;
                 if (e.Hit.Target.LParty)
@@ -188,7 +188,7 @@ namespace Controller.Managers.Map
             this.DisplayText("Parry", e.Hit.Target.Handle, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.PARRY_TEXT_OFFSET);
             if (e.Hit.Target.Model.LWeapon != null && !e.Hit.Target.Model.LWeapon.IsTypeOfShield())
             {
-                var weapon = e.Hit.Target.SpriteHandlerDict["CharLWeapon"];
+                var weapon = e.Hit.Target.SpriteHandlerDict[ViewParams.CHAR_L_WEAPON];
                 var position = weapon.transform.position;
                 var boomerang = weapon.AddComponent<BoomerangScript>();
                 if (e.Hit.Target.LParty)
@@ -199,7 +199,7 @@ namespace Controller.Managers.Map
             }
             if (e.Hit.Target.Model.RWeapon != null && !e.Hit.Target.Model.RWeapon.IsTypeOfShield())
             {
-                var weapon = e.Hit.Target.SpriteHandlerDict["CharRWeapon"];
+                var weapon = e.Hit.Target.SpriteHandlerDict[ViewParams.CHAR_R_WEAPON];
                 var position = weapon.transform.position;
                 var boomerang = weapon.AddComponent<BoomerangScript>();
                 if (e.Hit.Target.LParty)
@@ -262,38 +262,38 @@ namespace Controller.Managers.Map
         private void ProcessCharacterKilledHelper(GenericCharacterController c)
         {
             if (c.Model.Type == CharacterTypeEnum.Humanoid)
-            {
+            {   
                 if (c.Model.Armor != null)
-                    this.AssignDeadLayer(c.SpriteHandlerDict["CharArmor"], "DeadArmor");
+                    this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_ARMOR], ViewParams.DEAD_ARMOR);
                 if (c.Model.Helm != null)
-                    this.AssignDeadLayer(c.SpriteHandlerDict["CharHelm"], "DeadHelm");
+                    this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_HELM], ViewParams.DEAD_HELM);
                 if (c.Model.LWeapon != null)
                 {
-                    this.RandomMoveKill(c.SpriteHandlerDict["CharLWeapon"]);
-                    this.AssignDeadLayer(c.SpriteHandlerDict["CharLWeapon"], "DeadLWeapon");
+                    this.RandomMoveKill(c.SpriteHandlerDict[ViewParams.DEAD_L_WEAPON]);
+                    this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_L_WEAPON], ViewParams.CHAR_L_WEAPON);
                 }
                 if (c.Model.RWeapon != null)
                 {
-                    this.RandomMoveKill(c.SpriteHandlerDict["CharRWeapon"]);
-                    this.AssignDeadLayer(c.SpriteHandlerDict["CharRWeapon"], "DeadRWeapon");
+                    this.RandomMoveKill(c.SpriteHandlerDict[ViewParams.CHAR_R_WEAPON]);
+                    this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_R_WEAPON], ViewParams.DEAD_R_WEAPON);
                 }       
-                var eyes = c.SpriteHandlerDict["CharFace"].GetComponent<SpriteRenderer>();
+                var eyes = c.SpriteHandlerDict[ViewParams.CHAR_FACE].GetComponent<SpriteRenderer>();
                 if (eyes.sprite != null)
                     eyes.sprite = CharacterSpriteLoader.Instance.GetHumanoidDeadEyes(c.Model.Race);
 
-                this.AssignDeadLayer(c.SpriteHandlerDict["CharFace"], "DeadFace");
-                this.AssignDeadLayer(c.SpriteHandlerDict["CharDeco1"], "DeadDeco1");
-                this.AssignDeadLayer(c.SpriteHandlerDict["CharDeco2"], "DeadDeco2");
-                this.AssignDeadLayer(c.SpriteHandlerDict["CharDeco3"], "DeadDeco3");
-                this.AssignDeadLayer(c.SpriteHandlerDict["CharDeco4"], "DeadDeco4");
-                this.AssignDeadLayer(c.SpriteHandlerDict["CharHead"], "DeadHead");
-                this.AssignDeadLayer(c.SpriteHandlerDict["CharTorso"], "DeadTorso");
+                this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_FACE], ViewParams.DEAD_FACE);
+                this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_HEAD_DECO_1], ViewParams.DEAD_HEAD_DECO_1);
+                this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_HEAD_DECO_2], ViewParams.DEAD_HEAD_DECO_2);
+                this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_TORSO_DECO_1], ViewParams.DEAD_TORSO_DECO_1);
+                this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_TORSO_DECO_2], ViewParams.DEAD_TORSO_DECO_2);
+                this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_HEAD], ViewParams.DEAD_HEAD);
+                this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_TORSO], ViewParams.DEAD_TORSO);
 
-                if (c.SpriteHandlerDict.ContainsKey("CharMount"))
+                if (c.SpriteHandlerDict.ContainsKey(ViewParams.CHAR_MOUNT))
                 {
                     // TODO: Mounts spawning on kill
-                    c.SpriteHandlerDict["CharMount"].transform.SetParent(null);
-                    c.SpriteHandlerDict["CharMount"].transform.position = c.CurrentTile.Model.Center;
+                    c.SpriteHandlerDict[ViewParams.CHAR_MOUNT].transform.SetParent(null);
+                    c.SpriteHandlerDict[ViewParams.CHAR_MOUNT].transform.position = c.CurrentTile.Model.Center;
                 }
             }
         }

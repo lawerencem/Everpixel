@@ -15,5 +15,19 @@
         public static readonly string CHAR_MOUNT = "CharMount";
         public static readonly string CHAR_R_WEAPON = "CharRWeapon";
         public static readonly string CHAR_TORSO = "CharTorso";
+
+        public static readonly string DEAD_ARMOR = "DeadArmor";
+        public static readonly string DEAD_HEAD_DECO_1 = "DeadHeadDeco1";
+        public static readonly string DEAD_HEAD_DECO_2 = "DeadHeadDeco2";
+        public static readonly string DEAD_TORSO_DECO_1 = "DeadTorsoDeco1";
+        public static readonly string DEAD_TORSO_DECO_2 = "DeadTorsoDeco2";
+        public static readonly string DEAD_FACE = "DeadFace";
+        public static readonly string DEAD_HEAD = "DeadHead";
+        public static readonly string DEAD_HELM = "DeadHelm";
+        public static readonly string DEAD_MAIN = "DeadMain";
+        public static readonly string DEAD_L_WEAPON = "DeadLWeapon";
+        public static readonly string DEAD_MOUNT = "DeadMount";
+        public static readonly string DEAD_R_WEAPON = "DeadRWeapon";
+        public static readonly string DEAD_TORSO = "DeadTorso";
     }
 }

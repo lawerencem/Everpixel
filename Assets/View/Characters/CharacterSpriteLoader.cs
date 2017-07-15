@@ -57,14 +57,16 @@ namespace View.Characters
         {
             var path = StringUtil.PathBuilder(CHARACTER_PATH, race.ToString(), EXTENSION);
             var sprites = GetSprites(path);
-            return sprites[DEAD_EYES];
+            var index = RaceParamsTable.Instance.Table[race].Sprites.Dead;
+            return sprites[index[0]];
         }
 
         public Sprite GetHumanoidFlinchEyes(RaceEnum race)
         {
             var path = StringUtil.PathBuilder(CHARACTER_PATH, race.ToString(), EXTENSION);
             var sprites = GetSprites(path);
-            return sprites[FLINCH_EYES];
+            var index = RaceParamsTable.Instance.Table[race].Sprites.Flinch;
+            return sprites[index[0]];
         }
 
         public Sprite[] GetMountSprites(MountParams m)
