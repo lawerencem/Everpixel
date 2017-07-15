@@ -3,6 +3,11 @@
    - First:
      - Slug horde spell
 	 - Poison Zone perk on slug hit
+	 - Berserker perks
+	    - HoT on hit
+		- Restore Stamin on hit
+		- Howl
+		- 
 
      - Shield perks
 	 - Resists and saves
