@@ -1,4 +1,4 @@
-﻿namespace Model.DoT
+﻿namespace Model.OverTimeEffects
 {
     public enum DoTEnum
     {
