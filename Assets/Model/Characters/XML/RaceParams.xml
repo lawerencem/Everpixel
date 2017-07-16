@@ -75,8 +75,8 @@
       <Face>6</Face>
       <Flinch>7</Flinch>
       <CharHeadDeco1>9,10,11</CharHeadDeco1>
-      <CharHeadDeco2>12,13,14</CharHeadDeco2>
-      <CharTorsoDeco1>15,16</CharTorsoDeco1>
+      <CharHeadDeco2>12,13,14,15,16,17,18,19,24,25,26</CharHeadDeco2>
+      <CharTorsoDeco1>20,21,22,23</CharTorsoDeco1>
       <CharTorsoDeco2></CharTorsoDeco2>
       <Head>0,1,2</Head>
       <Torso>3,4,5</Torso>

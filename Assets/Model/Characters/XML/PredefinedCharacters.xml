@@ -945,6 +945,103 @@
     </Character>
   </Culture>
   <Culture name ="Norse">
+    <Character name ="Gotland Footman">
+      <Class>Fighter,2</Class>
+      <Class>Soldier,4</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Penguin</RaceEnum>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Mail Shirt,Four</Armor>
+          <Armor>0.20,Mail Shirt,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Mail Coif,Four</Helm>
+          <Helm>0.20,Mail Coif,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.80,Zweihander,Four</RWeapon>
+          <RWeapon>0.20,Zweihander,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>640</Constitution>
+        <Intelligence>320</Intelligence>
+        <Might>550</Might>
+        <Perception>480</Perception>
+        <Resolve>380</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Raider">
+      <Class>Warrior,5</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Penguin</RaceEnum>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.40,Broadsword,Five</RWeapon>
+          <RWeapon>0.10,Broadsword,Four</RWeapon>
+          <RWeapon>0.40,Hammen,Four</RWeapon>
+          <RWeapon>0.10,Hammen,Three</RWeapon>
+        </RWeapons>
+        <LWeapons name="One">
+          <LWeapon>0.80,Skjoldr,Five</LWeapon>
+          <LWeapon>0.20,Skjoldr,Four</LWeapon>
+        </LWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>640</Constitution>
+        <Intelligence>320</Intelligence>
+        <Might>550</Might>
+        <Perception>480</Perception>
+        <Resolve>380</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Viking">
+      <Class>Warrior,6</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Penguin</RaceEnum>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Byrnie,Four</Armor>
+          <Armor>0.20,Byrnie,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Viking Casque,Four</Helm>
+          <Helm>0.20,Viking Casque,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.80,Hammen,Four</RWeapon>
+          <RWeapon>0.20,Hammen,Three</RWeapon>
+        </RWeapons>
+        <LWeapons name="One">
+          <LWeapon>0.80,Skjoldr,Four</LWeapon>
+          <LWeapon>0.20,Skjoldr,Three</LWeapon>
+        </LWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>640</Constitution>
+        <Intelligence>320</Intelligence>
+        <Might>550</Might>
+        <Perception>480</Perception>
+        <Resolve>380</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Wimpy Longaxer">
       <Class>Warrior,3</Class>
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>

@@ -80,6 +80,9 @@
     <SubParty>Nodachi Samurais,5</SubParty>
   </Party>
   <Party Name ="Vikings">
+    <SubParty>Nordic Shock Troops,6</SubParty>
     <SubParty>Longaxers,1</SubParty>
+    <SubParty>Raiders,5</SubParty>
+    <SubParty>Vikings,3</SubParty>
   </Party>
 </Parties>

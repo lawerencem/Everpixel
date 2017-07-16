@@ -101,12 +101,21 @@
     <SecondaryStatsEnum>Reflex,4</SecondaryStatsEnum>
   </Class>
   <Class name="Slime_Lord">
-    <PrimaryStatsEnum>Intelligence,4</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Intelligence,5</PrimaryStatsEnum>
     <PrimaryStatsEnum>Might,1</PrimaryStatsEnum>
     <PrimaryStatsEnum>Perception,2</PrimaryStatsEnum>
     <SecondaryStatsEnum>Concentration,8</SecondaryStatsEnum>
     <SecondaryStatsEnum>Power,4</SecondaryStatsEnum>
     <SecondaryStatsEnum>Spell_Duration,4</SecondaryStatsEnum>
+  </Class>
+  <Class name="Soldier">
+    <PrimaryStatsEnum>Agility,2</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Might,2</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Perception,4</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Block,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Melee,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Parry,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Ranged,4</SecondaryStatsEnum>
   </Class>
   <Class name="Sorcerer">
     <PrimaryStatsEnum>Intelligence,3</PrimaryStatsEnum>

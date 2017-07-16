@@ -448,6 +448,78 @@
     </Armor>
   </ArmorTypeEnum>
   <ArmorTypeEnum name ="Medium_Armor">
+    <Armor name="Byrnie">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Block_Reduce>0.97</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        Leather straps don't tend to make the most effective armor.
+      </Description>
+      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Durability>5</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1.0</Initiative_Reduce>
+      <Parry_Reduce>1.0</Parry_Reduce>
+      <Sprites>4</Sprites>
+      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Value>20</Value>
+    </Armor>
+    <Armor name="Byrnie">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Block_Reduce>0.97</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.95</Damage_Reduction>
+      <Description>
+        Leather straps don't tend to make the most effective armor.
+      </Description>
+      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Durability>12</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1.0</Initiative_Reduce>
+      <Parry_Reduce>1.0</Parry_Reduce>
+      <Sprites>19</Sprites>
+      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Value>50</Value>
+    </Armor>
+    <Armor name="Byrnie">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Block_Reduce>0.98</Block_Reduce>
+      <Damage_Ignore>2</Damage_Ignore>
+      <Damage_Reduction>0.92</Damage_Reduction>
+      <Description>
+        These leather straps have several plates attached that are rather effective at protecting the body.
+      </Description>
+      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Durability>25</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1.0</Initiative_Reduce>
+      <Parry_Reduce>1.0</Parry_Reduce>
+      <Sprites>34</Sprites>
+      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Value>180</Value>
+    </Armor>
+    <Armor name="Byrnie">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Block_Reduce>0.98</Block_Reduce>
+      <Damage_Ignore>3</Damage_Ignore>
+      <Damage_Reduction>0.88</Damage_Reduction>
+      <Description>
+        These leather straps have several plates attached that are rather effective at protecting the body.
+      </Description>
+      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Durability>35</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1.0</Initiative_Reduce>
+      <Parry_Reduce>1.0</Parry_Reduce>
+      <Sprites>49</Sprites>
+      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Value>400</Value>
+    </Armor>
     <Armor name="Dino Scale Armor">
       <Tier>Five</Tier>
       <AP_Reduce>1</AP_Reduce>
@@ -462,7 +534,7 @@
       <Fatigue_Cost>1</Fatigue_Cost>
       <Initiative_Reduce>1.0</Initiative_Reduce>
       <Parry_Reduce>1.0</Parry_Reduce>
-      <Sprites>4</Sprites>
+      <Sprites>3</Sprites>
       <Stamina_Reduce>1.0</Stamina_Reduce>
       <Value>50</Value>
     </Armor>
@@ -481,7 +553,7 @@
       <Fatigue_Cost>1</Fatigue_Cost>
       <Initiative_Reduce>1.0</Initiative_Reduce>
       <Parry_Reduce>1.0</Parry_Reduce>
-      <Sprites>11</Sprites>
+      <Sprites>18</Sprites>
       <Stamina_Reduce>1.0</Stamina_Reduce>
       <Value>250</Value>
     </Armor>
@@ -500,7 +572,7 @@
       <Fatigue_Cost>1</Fatigue_Cost>
       <Initiative_Reduce>1.0</Initiative_Reduce>
       <Parry_Reduce>1.0</Parry_Reduce>
-      <Sprites>34</Sprites>
+      <Sprites>33</Sprites>
       <Stamina_Reduce>1.0</Stamina_Reduce>
       <Value>500</Value>
     </Armor>
@@ -519,7 +591,7 @@
       <Fatigue_Cost>1</Fatigue_Cost>
       <Initiative_Reduce>1.0</Initiative_Reduce>
       <Parry_Reduce>1.0</Parry_Reduce>
-      <Sprites>49</Sprites>
+      <Sprites>46</Sprites>
       <Stamina_Reduce>1.0</Stamina_Reduce>
       <Value>800</Value>
     </Armor>
@@ -649,8 +721,25 @@
       <Stamina_Reduce>0.88</Stamina_Reduce>
       <Value>600</Value>
     </Armor>
+    <Armor name="Mail Shirt">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.95</AP_Reduce>
+      <Block_Reduce>0.95</Block_Reduce>
+      <Damage_Ignore>4</Damage_Ignore>
+      <Damage_Reduction>0.82</Damage_Reduction>
+      <Description>
+        This solid mail offers great protection for the weight.
+      </Description>
+      <Dodge_Reduce>0.97</Dodge_Reduce>
+      <Durability>50</Durability>
+      <Fatigue_Cost>1.10</Fatigue_Cost>
+      <Initiative_Reduce>0.89</Initiative_Reduce>
+      <Parry_Reduce>0.94</Parry_Reduce>
+      <Sprites>45,46</Sprites>
+      <Stamina_Reduce>0.89</Stamina_Reduce>
+      <Value>1000</Value>
+    </Armor>
   </ArmorTypeEnum>
-
   <ArmorTypeEnum name ="Medium_Helm">
     <Armor name="Dino Scale Helm">
       <Tier>Five</Tier>
@@ -835,6 +924,24 @@
       <Value>250</Value>
     </Armor>
     <Armor name="Mail Coif">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.94</AP_Reduce>
+      <Block_Reduce>0.94</Block_Reduce>
+      <Damage_Ignore>2</Damage_Ignore>
+      <Damage_Reduction>0.93</Damage_Reduction>
+      <Description>
+        A simple mail coif.  It doesn't protect the face much, but it's sure better than nothing.
+      </Description>
+      <Dodge_Reduce>0.97</Dodge_Reduce>
+      <Durability>15</Durability>
+      <Fatigue_Cost>0.87</Fatigue_Cost>
+      <Initiative_Reduce>0.87</Initiative_Reduce>
+      <Parry_Reduce>0.87</Parry_Reduce>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>0.87</Stamina_Reduce>
+      <Value>50</Value>
+    </Armor>
+    <Armor name="Mail Coif">
       <Tier>Four</Tier>
       <AP_Reduce>0.95</AP_Reduce>
       <Block_Reduce>0.95</Block_Reduce>
@@ -869,6 +976,96 @@
       <Sprites>30</Sprites>
       <Stamina_Reduce>0.90</Stamina_Reduce>
       <Value>150</Value>
+    </Armor>
+    <Armor name="Mail Coif">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.96</AP_Reduce>
+      <Block_Reduce>0.96</Block_Reduce>
+      <Damage_Ignore>2</Damage_Ignore>
+      <Damage_Reduction>0.88</Damage_Reduction>
+      <Description>
+        A simple mail coif.  It offers decent protection for its weight.
+      </Description>
+      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Durability>45</Durability>
+      <Fatigue_Cost>1.10</Fatigue_Cost>
+      <Initiative_Reduce>0.90</Initiative_Reduce>
+      <Parry_Reduce>0.90</Parry_Reduce>
+      <Sprites>45</Sprites>
+      <Stamina_Reduce>0.90</Stamina_Reduce>
+      <Value>250</Value>
+    </Armor>
+    <Armor name="Viking Casque">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.93</AP_Reduce>
+      <Block_Reduce>0.93</Block_Reduce>
+      <Damage_Ignore>2</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        This helmet has seen better days.
+      </Description>
+      <Dodge_Reduce>0.88</Dodge_Reduce>
+      <Durability>5</Durability>
+      <Fatigue_Cost>0.88</Fatigue_Cost>
+      <Initiative_Reduce>0.88</Initiative_Reduce>
+      <Parry_Reduce>0.88</Parry_Reduce>
+      <Sprites>2</Sprites>
+      <Stamina_Reduce>0.93</Stamina_Reduce>
+      <Value>25</Value>
+    </Armor>
+    <Armor name="Viking Casque">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.94</AP_Reduce>
+      <Block_Reduce>0.94</Block_Reduce>
+      <Damage_Ignore>3</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        A rather basic nordic-style helmet.
+      </Description>
+      <Dodge_Reduce>0.89</Dodge_Reduce>
+      <Durability>15</Durability>
+      <Fatigue_Cost>0.89</Fatigue_Cost>
+      <Initiative_Reduce>0.89</Initiative_Reduce>
+      <Parry_Reduce>0.89</Parry_Reduce>
+      <Sprites>17</Sprites>
+      <Stamina_Reduce>0.94</Stamina_Reduce>
+      <Value>80</Value>
+    </Armor>
+    <Armor name="Viking Casque">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.95</AP_Reduce>
+      <Block_Reduce>0.95</Block_Reduce>
+      <Damage_Ignore>4</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        A rather stylish nordic-style helmet.
+      </Description>
+      <Dodge_Reduce>0.90</Dodge_Reduce>
+      <Durability>25</Durability>
+      <Fatigue_Cost>0.90</Fatigue_Cost>
+      <Initiative_Reduce>0.90</Initiative_Reduce>
+      <Parry_Reduce>0.90</Parry_Reduce>
+      <Sprites>32</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>200</Value>
+    </Armor>
+    <Armor name="Viking Casque">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.95</AP_Reduce>
+      <Block_Reduce>0.95</Block_Reduce>
+      <Damage_Ignore>4</Damage_Ignore>
+      <Damage_Reduction>0.95</Damage_Reduction>
+      <Description>
+        A rather stylish nordic-style helmet.  Horns included.
+      </Description>
+      <Dodge_Reduce>0.90</Dodge_Reduce>
+      <Durability>35</Durability>
+      <Fatigue_Cost>0.90</Fatigue_Cost>
+      <Initiative_Reduce>0.90</Initiative_Reduce>
+      <Parry_Reduce>0.90</Parry_Reduce>
+      <Sprites>47</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>200</Value>
     </Armor>
   </ArmorTypeEnum>
   <ArmorTypeEnum name ="Heavy_Armor">

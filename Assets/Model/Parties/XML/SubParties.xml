@@ -134,6 +134,11 @@
     <Character>1,Ronin Nodachi Samurai,One</Character>
     <Character>1,Nodachi Samurai,One</Character>
   </SubParty>
+  <SubParty Name ="Nordic Shock Troops">
+    <Difficulty>6</Difficulty>
+    <Character>1,Gotland Footman,One</Character>
+    <Character>1,Gotland Footman,One</Character>
+  </SubParty>
   <SubParty Name ="Orc Warriors">
     <Difficulty>4</Difficulty>
     <Character>1,Wimpy Armer Boy,One</Character>
@@ -185,6 +190,11 @@
     <Difficulty>1</Difficulty>
     <Character>1,Orc Scavenger,One</Character>
     <Character>1,Orc Scavenger,One</Character>
+  </SubParty>
+  <SubParty Name ="Raiders">
+    <Difficulty>5</Difficulty>
+    <Character>1,Raider,One</Character>
+    <Character>1,Raider,One</Character>
   </SubParty>
   <SubParty Name ="Raptors">
     <Difficulty>3</Difficulty>
@@ -321,6 +331,10 @@
     <Character>1,Psycargot,One</Character>
     <Character>1,Psylug,One</Character>
     <Character>1,Razorback,One</Character>
+  </SubParty>
+  <SubParty Name ="Vikings">
+    <Difficulty>3</Difficulty>
+    <Character>1,Viking,One</Character>
   </SubParty>
   <SubParty Name ="Weens">
     <Difficulty>3</Difficulty>

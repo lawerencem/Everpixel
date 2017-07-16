@@ -226,7 +226,7 @@
       <Block_Ignore>1</Block_Ignore>
       <Damage>24</Damage>
       <Description>
-        These small little axes are favored by vikings.
+        These small axes are favored by vikings.
       </Description>
       <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
       <Initiative_Reduce>1</Initiative_Reduce>
@@ -237,6 +237,81 @@
       <Sprites>0</Sprites>
       <Stamina_Reduce>1</Stamina_Reduce>
       <Value>50</Value>
+      <WeaponAbilitiesEnum>Chop</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Break_Shield</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Hammen">
+      <Tier>Four</Tier>
+      <Accuracy>0.98</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>0.98</Armor_Ignore>
+      <Armor_Pierce>0.98</Armor_Pierce>
+      <Block_Ignore>1</Block_Ignore>
+      <Damage>26</Damage>
+      <Description>
+        These small axes are favored by vikings.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>30</Max_Durability>
+      <Parry_Mod>0.79</Parry_Mod>
+      <Shield_Damage>0.05</Shield_Damage>
+      <WeaponSkillEnum>Axe</WeaponSkillEnum>
+      <Sprites>1</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>125</Value>
+      <WeaponAbilitiesEnum>Chop</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Break_Shield</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Hammen">
+      <Tier>Three</Tier>
+      <Accuracy>0.99</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>0.97</Armor_Ignore>
+      <Armor_Pierce>0.97</Armor_Pierce>
+      <Block_Ignore>1</Block_Ignore>
+      <Damage>29</Damage>
+      <Description>
+        These small axes are favored by vikings.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>40</Max_Durability>
+      <Parry_Mod>0.80</Parry_Mod>
+      <Shield_Damage>0.05</Shield_Damage>
+      <WeaponSkillEnum>Axe</WeaponSkillEnum>
+      <Sprites>2</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>280</Value>
+      <WeaponAbilitiesEnum>Chop</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Break_Shield</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Hammen">
+      <Tier>Two</Tier>
+      <Accuracy>1</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>0.96</Armor_Ignore>
+      <Armor_Pierce>0.96</Armor_Pierce>
+      <Block_Ignore>1</Block_Ignore>
+      <Damage>35</Damage>
+      <Description>
+        These small axes are favored by vikings.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>50</Max_Durability>
+      <Parry_Mod>0.80</Parry_Mod>
+      <Shield_Damage>0.05</Shield_Damage>
+      <WeaponSkillEnum>Axe</WeaponSkillEnum>
+      <Sprites>3</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>600</Value>
       <WeaponAbilitiesEnum>Chop</WeaponAbilitiesEnum>
       <WeaponAbilitiesEnum>Break_Shield</WeaponAbilitiesEnum>
       <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
@@ -781,6 +856,82 @@
       <Sprites>48,49</Sprites>
       <Stamina_Reduce>0.80</Stamina_Reduce>
       <Value>1000</Value>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Shield</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Skjoldr">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.92</AP_Reduce>
+      <Description>
+        A shield favored by vikings.  The soft wood it is made of means it quite effective at absorbing blows.
+      </Description>
+      <Fatigue_Cost_Mod>1.02</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.98</Initiative_Reduce>
+      <Max_Durability>25</Max_Durability>
+      <Melee_Block_Chance>1.03</Melee_Block_Chance>
+      <Parry_Mod>1.03</Parry_Mod>
+      <Ranged_Block_Chance>1.02</Ranged_Block_Chance>
+      <WeaponSkillEnum>Medium_Shield</WeaponSkillEnum>
+      <Sprites>1,2</Sprites>
+      <Stamina_Reduce>1.04</Stamina_Reduce>
+      <Value>100</Value>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Shield</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Skjoldr">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.93</AP_Reduce>
+      <Description>
+        A shield favored by vikings.  The soft wood it is made of means it quite effective at absorbing blows.
+      </Description>
+      <Fatigue_Cost_Mod>1.02</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.98</Initiative_Reduce>
+      <Max_Durability>30</Max_Durability>
+      <Melee_Block_Chance>1.04</Melee_Block_Chance>
+      <Parry_Mod>1.04</Parry_Mod>
+      <Ranged_Block_Chance>1.02</Ranged_Block_Chance>
+      <WeaponSkillEnum>Medium_Shield</WeaponSkillEnum>
+      <Sprites>16,17</Sprites>
+      <Stamina_Reduce>1.03</Stamina_Reduce>
+      <Value>250</Value>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Shield</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Skjoldr">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.94</AP_Reduce>
+      <Description>
+        A shield favored by vikings.  The soft wood it is made of means it quite effective at absorbing blows.
+      </Description>
+      <Fatigue_Cost_Mod>1.01</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.99</Initiative_Reduce>
+      <Max_Durability>40</Max_Durability>
+      <Melee_Block_Chance>1.06</Melee_Block_Chance>
+      <Parry_Mod>1.06</Parry_Mod>
+      <Ranged_Block_Chance>1.03</Ranged_Block_Chance>
+      <WeaponSkillEnum>Medium_Shield</WeaponSkillEnum>
+      <Sprites>31,32</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>550</Value>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Shield</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Skjoldr">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.95</AP_Reduce>
+      <Description>
+        A shield favored by vikings.  The soft wood it is made of means it quite effective at absorbing blows.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>50</Max_Durability>
+      <Melee_Block_Chance>1.07</Melee_Block_Chance>
+      <Parry_Mod>1.08</Parry_Mod>
+      <Ranged_Block_Chance>1.03</Ranged_Block_Chance>
+      <WeaponSkillEnum>Medium_Shield</WeaponSkillEnum>
+      <Sprites>46,47</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>800</Value>
       <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
       <WeaponUseEnum>Shield</WeaponUseEnum>
     </Weapon>
@@ -1655,6 +1806,106 @@
     </Weapon>
   </WeaponSkillEnum>
   <WeaponSkillEnum name ="Sword">
+    <Weapon name="Broadsword">
+      <Tier>Five</Tier>
+      <Accuracy>0.92</Accuracy>
+      <AP_Reduce>0.92</AP_Reduce>
+      <Armor_Ignore>0.94</Armor_Ignore>
+      <Armor_Pierce>2</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>32</Damage>
+      <Description>
+        A well-rounded weapon.  It's heavier than comparative swords, thus less effective as a defensive weapon.
+      </Description>
+      <Fatigue_Cost_Mod>1.06</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>0.88</Parry_Mod>
+      <Shield_Damage>0</Shield_Damage>
+      <Sprites>2</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>80</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Riposte</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Broadsword">
+      <Tier>Four</Tier>
+      <Accuracy>0.93</Accuracy>
+      <AP_Reduce>0.93</AP_Reduce>
+      <Armor_Ignore>0.93</Armor_Ignore>
+      <Armor_Pierce>2</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>36</Damage>
+      <Description>
+        A well-rounded weapon.  It's heavier than comparative swords, thus less effective as a defensive weapon.
+      </Description>
+      <Fatigue_Cost_Mod>1.05</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.96</Initiative_Reduce>
+      <Max_Durability>25</Max_Durability>
+      <Parry_Mod>0.89</Parry_Mod>
+      <Shield_Damage>0</Shield_Damage>
+      <Sprites>17</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>180</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Riposte</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Broadsword">
+      <Tier>Three</Tier>
+      <Accuracy>0.94</Accuracy>
+      <AP_Reduce>0.94</AP_Reduce>
+      <Armor_Ignore>0.94</Armor_Ignore>
+      <Armor_Pierce>2</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>42</Damage>
+      <Description>
+        A well-rounded weapon.  It's heavier than comparative swords, thus less effective as a defensive weapon.
+      </Description>
+      <Fatigue_Cost_Mod>1.05</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Max_Durability>30</Max_Durability>
+      <Parry_Mod>0.90</Parry_Mod>
+      <Shield_Damage>0</Shield_Damage>
+      <Sprites>32</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>300</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Riposte</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Broadsword">
+      <Tier>Two</Tier>
+      <Accuracy>0.95</Accuracy>
+      <AP_Reduce>0.95</AP_Reduce>
+      <Armor_Ignore>0.93</Armor_Ignore>
+      <Armor_Pierce>2</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>45</Damage>
+      <Description>
+        A well-rounded weapon.  It's heavier than comparative swords, thus less effective as a defensive weapon.
+      </Description>
+      <Fatigue_Cost_Mod>1.05</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>0.90</Parry_Mod>
+      <Shield_Damage>0</Shield_Damage>
+      <Sprites>47</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>650</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Riposte</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
     <Weapon name="Choppa">
       <Tier>Five</Tier>
       <Accuracy>0.85</Accuracy>
@@ -2357,25 +2608,106 @@
       <WeaponUseEnum>Melee</WeaponUseEnum>
     </Weapon>
     <Weapon name="Zweihander">
+      <Tier>Five</Tier>
+      <Accuracy>0.75</Accuracy>
+      <AP_Reduce>0.75</AP_Reduce>
+      <Armor_Ignore>0.60</Armor_Ignore>
+      <Armor_Pierce>0.95</Armor_Pierce>
+      <Block_Ignore>0.70</Block_Ignore>
+      <Damage>92</Damage>
+      <Description>
+        This massive sword is too heavy to utilize for any defensive purposes.  It is; however, quite capable of
+        decimating enemies on the battlefield.
+      </Description>
+      <Fatigue_Cost_Mod>1.40</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.65</Initiative_Reduce>
+      <Max_Durability>80</Max_Durability>
+      <Parry_Mod>0.10</Parry_Mod>
+      <Shield_Damage>0.94</Shield_Damage>
+      <Sprites>3</Sprites>
+      <Stamina_Reduce>0.65</Stamina_Reduce>
+      <Value>800</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Break_Shield</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Great_Strike</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Scatter</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Zweihander">
+      <Tier>Four</Tier>
+      <Accuracy>0.80</Accuracy>
+      <AP_Reduce>0.80</AP_Reduce>
+      <Armor_Ignore>0.55</Armor_Ignore>
+      <Armor_Pierce>0.90</Armor_Pierce>
+      <Block_Ignore>0.65</Block_Ignore>
+      <Damage>100</Damage>
+      <Description>
+        This massive sword is too heavy to utilize for any defensive purposes.  It is; however, quite capable of
+        decimating enemies on the battlefield.
+      </Description>
+      <Fatigue_Cost_Mod>1.35</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.70</Initiative_Reduce>
+      <Max_Durability>90</Max_Durability>
+      <Parry_Mod>0.15</Parry_Mod>
+      <Shield_Damage>0.90</Shield_Damage>
+      <Sprites>18</Sprites>
+      <Stamina_Reduce>0.70</Stamina_Reduce>
+      <Value>500</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Break_Shield</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Great_Strike</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Scatter</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Zweihander">
       <Tier>Three</Tier>
       <Accuracy>0.80</Accuracy>
       <AP_Reduce>0.80</AP_Reduce>
       <Armor_Ignore>0.50</Armor_Ignore>
-      <Armor_Pierce>0.80</Armor_Pierce>
+      <Armor_Pierce>0.85</Armor_Pierce>
       <Block_Ignore>0.60</Block_Ignore>
-      <Damage>170</Damage>
+      <Damage>110</Damage>
       <Description>
         This massive sword is too heavy to utilize for any defensive purposes.  It is; however, quite capable of
         decimating enemies on the battlefield.
       </Description>
       <Fatigue_Cost_Mod>1.30</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.75</Initiative_Reduce>
-      <Max_Durability>220</Max_Durability>
-      <Parry_Mod>1</Parry_Mod>
+      <Max_Durability>100</Max_Durability>
+      <Parry_Mod>0.20</Parry_Mod>
       <Shield_Damage>0.88</Shield_Damage>
       <Sprites>33</Sprites>
       <Stamina_Reduce>0.65</Stamina_Reduce>
-      <Value>2000</Value>
+      <Value>800</Value>
+      <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Break_Shield</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Great_Strike</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Scatter</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Zweihander">
+      <Tier>Two</Tier>
+      <Accuracy>0.80</Accuracy>
+      <AP_Reduce>0.80</AP_Reduce>
+      <Armor_Ignore>0.50</Armor_Ignore>
+      <Armor_Pierce>0.85</Armor_Pierce>
+      <Block_Ignore>0.60</Block_Ignore>
+      <Damage>120</Damage>
+      <Description>
+        This massive sword is too heavy to utilize for any defensive purposes.  It is; however, quite capable of
+        decimating enemies on the battlefield.
+      </Description>
+      <Fatigue_Cost_Mod>1.30</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.75</Initiative_Reduce>
+      <Max_Durability>110</Max_Durability>
+      <Parry_Mod>0.20</Parry_Mod>
+      <Shield_Damage>0.88</Shield_Damage>
+      <Sprites>48</Sprites>
+      <Stamina_Reduce>0.65</Stamina_Reduce>
+      <Value>1200</Value>
       <WeaponAbilitiesEnum>Slash</WeaponAbilitiesEnum>
       <WeaponAbilitiesEnum>Break_Shield</WeaponAbilitiesEnum>
       <WeaponAbilitiesEnum>Great_Strike</WeaponAbilitiesEnum>
