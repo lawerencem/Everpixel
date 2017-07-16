@@ -139,6 +139,17 @@
     <Character>1,Gotland Footman,One</Character>
     <Character>1,Gotland Footman,One</Character>
   </SubParty>
+  <SubParty Name ="Nordic Spearmen">
+    <Difficulty>5</Difficulty>
+    <Character>1,Nordic Spearman,One</Character>
+    <Character>1,Nordic Spearman,One</Character>
+  </SubParty>
+  <SubParty Name ="Nordic Spearmen">
+    <Difficulty>9</Difficulty>
+    <Character>1,Nordic Sergeant,One</Character>
+    <Character>1,Nordic Spearman,One</Character>
+    <Character>1,Nordic Spearman,One</Character>
+  </SubParty>
   <SubParty Name ="Orc Warriors">
     <Difficulty>4</Difficulty>
     <Character>1,Wimpy Armer Boy,One</Character>

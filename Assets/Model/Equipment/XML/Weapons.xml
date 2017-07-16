@@ -764,6 +764,46 @@
       <WeaponUseEnum>Shield</WeaponUseEnum>
     </Weapon>
     <Weapon name="Kite Shield">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.82</AP_Reduce>
+      <Description>
+        This is a solidly-made shield.  The heaviness of it restricts some movement, but it will easily block
+        melee attacks.
+      </Description>
+      <Fatigue_Cost_Mod>1.13</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.87</Initiative_Reduce>
+      <Max_Durability>25</Max_Durability>
+      <Melee_Block_Chance>1.12</Melee_Block_Chance>
+      <Parry_Mod>0.72</Parry_Mod>
+      <Ranged_Block_Chance>1.17</Ranged_Block_Chance>
+      <WeaponSkillEnum>Medium_Shield</WeaponSkillEnum>
+      <Sprites>6,7,8</Sprites>
+      <Stamina_Reduce>0.87</Stamina_Reduce>
+      <Value>80</Value>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Shield</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Kite Shield">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.84</AP_Reduce>
+      <Description>
+        This is a solidly-made shield.  The heaviness of it restricts some movement, but it will easily block
+        melee attacks.
+      </Description>
+      <Fatigue_Cost_Mod>1.12</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.89</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Melee_Block_Chance>1.14</Melee_Block_Chance>
+      <Parry_Mod>0.74</Parry_Mod>
+      <Ranged_Block_Chance>1.18</Ranged_Block_Chance>
+      <WeaponSkillEnum>Medium_Shield</WeaponSkillEnum>
+      <Sprites>21,22,23</Sprites>
+      <Stamina_Reduce>0.88</Stamina_Reduce>
+      <Value>200</Value>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Shield</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Kite Shield">
       <Tier>Three</Tier>
       <AP_Reduce>0.85</AP_Reduce>
       <Description>
@@ -772,14 +812,34 @@
       </Description>
       <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
       <Initiative_Reduce>0.90</Initiative_Reduce>
-      <Max_Durability>60</Max_Durability>
+      <Max_Durability>40</Max_Durability>
       <Melee_Block_Chance>1.15</Melee_Block_Chance>
-      <Parry_Mod>1.05</Parry_Mod>
-      <Ranged_Block_Chance>1.10</Ranged_Block_Chance>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Ranged_Block_Chance>1.20</Ranged_Block_Chance>
       <WeaponSkillEnum>Medium_Shield</WeaponSkillEnum>
-      <Sprites>30</Sprites>
+      <Sprites>36,37,38</Sprites>
       <Stamina_Reduce>0.90</Stamina_Reduce>
-      <Value>350</Value>
+      <Value>450</Value>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Shield</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Kite Shield">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.85</AP_Reduce>
+      <Description>
+        This is a solidly-made shield.  The heaviness of it restricts some movement, but it will easily block
+        melee attacks.
+      </Description>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.90</Initiative_Reduce>
+      <Max_Durability>50</Max_Durability>
+      <Melee_Block_Chance>1.18</Melee_Block_Chance>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Ranged_Block_Chance>1.22</Ranged_Block_Chance>
+      <WeaponSkillEnum>Medium_Shield</WeaponSkillEnum>
+      <Sprites>51,52,53</Sprites>
+      <Stamina_Reduce>0.90</Stamina_Reduce>
+      <Value>800</Value>
       <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
       <WeaponUseEnum>Shield</WeaponUseEnum>
     </Weapon>
@@ -1513,6 +1573,32 @@
       <Sprites>30,31,32</Sprites>
       <Stamina_Reduce>1</Stamina_Reduce>
       <Value>1000</Value>
+      <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Pierce</WeaponAbilitiesEnum>
+      <WeaponAbilitiesEnum>Spear Wall</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>One_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Spear">
+      <Tier>Two</Tier>
+      <Accuracy>0.98</Accuracy>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.70</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>40</Damage>
+      <Description>
+        Simple, yet effective.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>70</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Shield_Damage>0.02</Shield_Damage>
+      <WeaponSkillEnum>Spear</WeaponSkillEnum>
+      <Sprites>45,46,47</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>1500</Value>
       <WeaponAbilitiesEnum>Stab</WeaponAbilitiesEnum>
       <WeaponAbilitiesEnum>Pierce</WeaponAbilitiesEnum>
       <WeaponAbilitiesEnum>Spear Wall</WeaponAbilitiesEnum>

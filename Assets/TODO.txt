@@ -5,8 +5,8 @@ restore stam when blocked
 howl (intstant heal of HoT)
 Athletic: improve AP and Stam
 Bully: +15% dmg each consecutive attack on target
-
-
+Bandage: Heal Bleeding (Soldier)
+Hold the Line: AoE Heal morale each turn
 song (shield hotted)
 
    - First:

@@ -995,6 +995,78 @@
       <Stamina_Reduce>0.90</Stamina_Reduce>
       <Value>250</Value>
     </Armor>
+    <Armor name ="Spangenhelm">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.93</AP_Reduce>
+      <Block_Reduce>0.93</Block_Reduce>
+      <Damage_Ignore>3</Damage_Ignore>
+      <Damage_Reduction>1</Damage_Reduction>
+      <Description>
+        A helm that offers deccent protection and doesn't restrict sight too much.
+      </Description>
+      <Dodge_Reduce>0.92</Dodge_Reduce>
+      <Durability>10</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1.0</Initiative_Reduce>
+      <Parry_Reduce>0.92</Parry_Reduce>
+      <Sprites>3</Sprites>
+      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Value>30</Value>
+    </Armor>
+    <Armor name ="Spangenhelm">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.94</AP_Reduce>
+      <Block_Reduce>0.94</Block_Reduce>
+      <Damage_Ignore>3</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        A helm that offers deccent protection and doesn't restrict sight too much.
+      </Description>
+      <Dodge_Reduce>0.93</Dodge_Reduce>
+      <Durability>20</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1.0</Initiative_Reduce>
+      <Parry_Reduce>0.93</Parry_Reduce>
+      <Sprites>18</Sprites>
+      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Value>80</Value>
+    </Armor>
+    <Armor name ="Spangenhelm">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.95</AP_Reduce>
+      <Block_Reduce>0.95</Block_Reduce>
+      <Damage_Ignore>4</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        A helm that offers deccent protection and doesn't restrict sight too much.
+      </Description>
+      <Dodge_Reduce>0.94</Dodge_Reduce>
+      <Durability>25</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1.0</Initiative_Reduce>
+      <Parry_Reduce>0.94</Parry_Reduce>
+      <Sprites>33</Sprites>
+      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Value>200</Value>
+    </Armor>
+    <Armor name ="Spangenhelm">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.95</AP_Reduce>
+      <Block_Reduce>0.95</Block_Reduce>
+      <Damage_Ignore>4</Damage_Ignore>
+      <Damage_Reduction>0.96</Damage_Reduction>
+      <Description>
+        A helm that offers deccent protection and doesn't restrict sight too much.
+      </Description>
+      <Dodge_Reduce>0.95</Dodge_Reduce>
+      <Durability>30</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1.0</Initiative_Reduce>
+      <Parry_Reduce>0.95</Parry_Reduce>
+      <Sprites>48</Sprites>
+      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Value>450</Value>
+    </Armor>
     <Armor name="Viking Casque">
       <Tier>Five</Tier>
       <AP_Reduce>0.93</AP_Reduce>
