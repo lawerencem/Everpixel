@@ -1046,8 +1046,11 @@
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Orc</RaceEnum>
       <Perks>
-        <Perk>Hulk</Perk>
+        <Perk>Barbarism</Perk>
         <Perk>Colossus</Perk>
+        <Perk>Executioner</Perk>
+        <Perk>Hulk</Perk>
+        <Perk>Savage_Soul</Perk>
       </Perks>
       <PotentialArmors>
         <Armors name="One">
@@ -1117,6 +1120,8 @@
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Orc</RaceEnum>
       <Perks>
+        <Perk>Barbarism</Perk>
+        <Perk>Executioner</Perk>
         <Perk>Hulk</Perk>
       </Perks>
       <PotentialWeapons>
@@ -1140,6 +1145,8 @@
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Orc</RaceEnum>
       <Perks>
+        <Perk>Barbarism</Perk>
+        <Perk>Executioner</Perk>
         <Perk>Hulk</Perk>
       </Perks>
       <PotentialArmors>
@@ -1207,6 +1214,8 @@
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Orc</RaceEnum>
       <Perks>
+        <Perk>Barbarism</Perk>
+        <Perk>Executioner</Perk>
         <Perk>Hulk</Perk>
       </Perks>
       <PotentialArmors>
@@ -1375,6 +1384,7 @@
       <RaceEnum>Orc</RaceEnum>
       <Perks>
         <Perk>Colossus</Perk>
+        <Perk>Savage_Soul</Perk>
       </Perks>
       <PotentialArmors>
         <Armors name="One">
@@ -1437,8 +1447,11 @@
       <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
       <RaceEnum>Orc</RaceEnum>
       <Perks>
+        <Perk>Barbarism</Perk>
+        <Perk>Executioner</Perk>
         <Perk>Hulk</Perk>
         <Perk>Colossus</Perk>
+        <Perk>Savage_Soul</Perk>
       </Perks>
       <PotentialArmors>
         <Armors name="One">

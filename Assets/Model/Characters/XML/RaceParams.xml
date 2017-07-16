@@ -74,9 +74,9 @@
       <Dead>8</Dead>
       <Face>6</Face>
       <Flinch>7</Flinch>
-      <CharHeadDeco1>9,10,11,17</CharHeadDeco1>
-      <CharHeadDeco2>12,13,14,17</CharHeadDeco2>
-      <CharTorsoDeco1>15,16,17</CharTorsoDeco1>
+      <CharHeadDeco1>9,10,11</CharHeadDeco1>
+      <CharHeadDeco2>12,13,14</CharHeadDeco2>
+      <CharTorsoDeco1>15,16</CharTorsoDeco1>
       <CharTorsoDeco2></CharTorsoDeco2>
       <Head>0,1,2</Head>
       <Torso>3,4,5</Torso>

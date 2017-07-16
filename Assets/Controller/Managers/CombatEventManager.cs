@@ -95,6 +95,8 @@ namespace Controller.Managers
                 CMapGUIController.Instance.SetActingBoxToController(this._currentAction.Container.Source);
                 foreach (var hit in this._currentAction.Container.Hits)
                 {
+                    foreach (var perk in hit.Source.Model.Perks.PostHitPerks)
+                        perk.TryProcessAction(hit);
                     var tileHit = new TileHitEvent(this, hit);
                 }
                 if (this._currentAction.Container.CastFinished)

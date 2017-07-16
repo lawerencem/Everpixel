@@ -47,12 +47,6 @@ namespace View.Characters
             return GetSprites(path);
         }
 
-        public Sprite[] GetCharacterSprites(PredefinedCharacterParams c)
-        {
-            var path = StringUtil.PathBuilder(CHARACTER_PATH, c.Race.ToString(), EXTENSION);
-            return GetSprites(path);
-        }
-
         public Sprite GetHumanoidDeadEyes(RaceEnum race)
         {
             var path = StringUtil.PathBuilder(CHARACTER_PATH, race.ToString(), EXTENSION);

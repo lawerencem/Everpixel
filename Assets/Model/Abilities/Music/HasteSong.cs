@@ -10,7 +10,7 @@ namespace Model.Abilities.Music
     public class HasteSong : GenericSong
     {
         // TODO Shift to .xml file
-        public int APMod = 2;
+        public int APMod = 1;
 
         public HasteSong() : base(AbilitiesEnum.Haste_Song)
         {

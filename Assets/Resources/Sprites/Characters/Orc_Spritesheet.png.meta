@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5ab0456f5f0562341a073e8f5a44052b
-timeCreated: 1497654444
+timeCreated: 1500207165
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -349,71 +349,6 @@ TextureImporter:
         y: 128
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Orc_Spritesheet_17
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 130
-        width: 51
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Orc_Spritesheet_18
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 69
-        width: 53
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Orc_Spritesheet_19
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 73
-        width: 46
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Orc_Spritesheet_20
-      rect:
-        serializedVersion: 2
-        x: 145
-        y: 75
-        width: 38
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Orc_Spritesheet_21
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 10
-        width: 52
-        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

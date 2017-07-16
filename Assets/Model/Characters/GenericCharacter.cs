@@ -10,6 +10,7 @@ using Model.Injuries;
 using Model.Shields;
 using System.Collections.Generic;
 using Model.Effects;
+using Model.OverTimeEffects;
 
 namespace Model.Characters
 {
@@ -27,7 +28,9 @@ namespace Model.Characters
             this.ActiveSpells = new SpellsByLevel();
             this.BaseClasses = new Dictionary<ClassEnum, GenericClass>();
             this.DefaultWpnAbilities = new List<GenericAbility>();
+            this.DoTs = new List<GenericDoT>();
             this.Effects = new List<GenericEffect>();
+            this.HoTs = new List<GenericHoT>();
             this.Injuries = new List<GenericInjury>();
             this.Mods = new ModContainer();
             this.Perks = new CharacterPerkCollection();

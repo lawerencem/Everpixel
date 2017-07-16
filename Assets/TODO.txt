@@ -1,16 +1,8 @@
 ﻿TODO
 Perks XML
 
-shield on being crit
 restore stam when blocked
-HoT on dmg
 howl (intstant heal of HoT)
-restore full health on kill
-50% dmg to bleeding target
-Executioner: x2 damage to targets under 25% health
-Predator: +10% damage for each debuff and injury
-Savage Visage: AoE horror on hit
-Bonus to power on hit: Enrage
 
 song (shield hotted)
 

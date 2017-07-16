@@ -10,7 +10,7 @@ namespace Model.Events.Combat
         public GenericCharacterController ToDoT { get; set; }
 
         public DoTEvent(CombatEventManager parent, GenericDoT dot, GenericCharacterController toDot) :
-            base(CombatEventEnum.Shield, parent)
+            base(CombatEventEnum.DoT, parent)
         {
             this.DoT = dot;
             this.ToDoT = toDot;

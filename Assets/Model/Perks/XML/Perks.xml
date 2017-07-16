@@ -54,7 +54,7 @@
       <ValPerPower>0</ValPerPower>
     </Perk>
   </PerkClass>
-  <PerkClass name ="GenericWhenHitPerk">
+  <PerkClass name ="PostHitPerk">
     <Perk name ="Barbarism">
       <AoE>0</AoE>
       <Description>
@@ -63,6 +63,26 @@
       <Dur>5</Dur>
       <DurPerSpellDur>0</DurPerSpellDur>
       <Val>0</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Savage_Visage">
+      <AoE>3</AoE>
+      <Description>
+        Applies a horror effect to enemies within range upon dealing damage.
+      </Description>
+      <Dur>3</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>1</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Violence_Fetish">
+      <AoE>0</AoE>
+      <Description>
+        Gain a HoT for 5% of the damage dealt over 5 turns.
+      </Description>
+      <Dur>5</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>0.05</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
   </PerkClass>
@@ -79,6 +99,26 @@
     </Perk>
   </PerkClass>
   <PerkClass name ="PreHitPerk">
+    <Perk name ="Executioner">
+      <AoE>0</AoE>
+      <Description>
+        Triple damage against targets with less than 25% health.
+      </Description>
+      <Dur>0</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>3</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Predator">
+      <AoE>0</AoE>
+      <Description>
+        Do +50% damage to target for each injury on target.
+      </Description>
+      <Dur>0</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>1.10</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
     <Perk name ="Shield_Happy">
       <AoE>0</AoE>
       <Description>
@@ -133,6 +173,16 @@
     </Perk>
   </PerkClass>
   <PerkClass name ="WhenHitPerk">
+    <Perk name ="Enrage">
+      <AoE>0</AoE>
+      <Description>
+        Gain a +15% bonus to power whenever damaged.
+      </Description>
+      <Dur>3</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>1.15</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
     <Perk name ="Savage_Soul">
       <AoE>0</AoE>
       <Description>

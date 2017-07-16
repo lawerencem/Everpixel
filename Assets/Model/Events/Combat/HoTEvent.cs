@@ -10,7 +10,7 @@ namespace Model.Events.Combat
         public GenericCharacterController ToHoT { get; set; }
 
         public HoTEvent(CombatEventManager parent, GenericHoT hot, GenericCharacterController toHot) :
-            base(CombatEventEnum.Shield, parent)
+            base(CombatEventEnum.HoT, parent)
         {
             this.HoT = hot;
             this.ToHoT = toHot;

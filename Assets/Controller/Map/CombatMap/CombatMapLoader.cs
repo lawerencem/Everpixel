@@ -65,7 +65,7 @@ namespace Controller.Managers.Map
 
         private void AttachDeco(GenericCharacterController c, string sort, int spriteIndex, TileController tile)
         {
-            if (c.Model.Type == CharacterTypeEnum.Humanoid)
+            if (c.Model.Type == CharacterTypeEnum.Humanoid && spriteIndex >= 0)
             {
                 var sprite = c.View.Sprites[spriteIndex];
                 var spriteHandler = new GameObject();
@@ -144,7 +144,7 @@ namespace Controller.Managers.Map
 
         private void InitPlayerParty(ref List<GenericCharacterController> controllers)
         {
-            var playerChars = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Goblin War Party", 20));
+            var playerChars = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Orcs", 20));
             for (int i = 0; i < playerChars.Count; i++)
                 this.BuildAndLayoutCharacter(playerChars[i], ref controllers, true);
         }
