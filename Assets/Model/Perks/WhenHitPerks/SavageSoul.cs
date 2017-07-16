@@ -15,7 +15,7 @@ namespace Model.Perks
 
         public override void TryModHit(HitInfo hit)
         {
-            if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
+            if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Critical) && !hit.IsHeal)
             {
                 var shieldQty = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.HP) * this.Val;
                 var shield = new Shield(hit.Source, (int)this.Dur, (int)shieldQty);

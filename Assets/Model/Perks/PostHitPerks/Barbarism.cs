@@ -1,7 +1,8 @@
-﻿using Model.Characters;
+﻿using Controller.Managers;
+using Model.Characters;
 using Model.Combat;
+using Model.Events.Combat;
 using Model.OverTimeEffects;
-using Model.Perks;
 
 namespace Model.Perks
 {
@@ -19,10 +20,10 @@ namespace Model.Perks
             {
                 var totalHeal =  hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.HP);
                 var perHeal = totalHeal / this.Dur;
-                var HoT = new GenericHoT();
-                HoT.SetDmg((int)perHeal);
-                HoT.SetDur((int)this.Dur);
-                // TODO: HoT Event
+                var hot = new GenericHoT();
+                hot.SetDmg((int)perHeal);
+                hot.SetDur((int)this.Dur);
+                var hotEvent = new HoTEvent(CombatEventManager.Instance, hot, hit.Source);
             }
         }
     }

@@ -174,6 +174,7 @@
     <Compile Include="Assets\Model\Abilities\Weapon\WeaponAbilityFactory.cs" />
     <Compile Include="Assets\Model\Abilities\XML\AbilityReader.cs" />
     <Compile Include="Assets\Model\Biomes\Enums\BiomeEnum.cs" />
+    <Compile Include="Assets\Model\Characters\AbstractCharacter.cs" />
     <Compile Include="Assets\Model\Characters\Builders\CharacterParamBuilder.cs" />
     <Compile Include="Assets\Model\Characters\Builders\CritterBuilder.cs" />
     <Compile Include="Assets\Model\Characters\Builders\HumanoidBuilder.cs" />
@@ -186,6 +187,7 @@
     <Compile Include="Assets\Model\Characters\Enums\SecondaryStatsEnum.cs" />
     <Compile Include="Assets\Model\Characters\Factories\CharacterFactory.cs" />
     <Compile Include="Assets\Model\Characters\Factories\SummonFactory.cs" />
+    <Compile Include="Assets\Model\Characters\GenericCharacter.cs" />
     <Compile Include="Assets\Model\Characters\ModContainer.cs" />
     <Compile Include="Assets\Model\Characters\Params\CharacterParams.cs" />
     <Compile Include="Assets\Model\Characters\Params\CharacterPerkCollection.cs" />
@@ -204,8 +206,6 @@
     <Compile Include="Assets\Model\Characters\Params\SlotCollection.cs" />
     <Compile Include="Assets\Model\Characters\Tables\PredefinedCharacterTable.cs" />
     <Compile Include="Assets\Model\Characters\Tables\RaceParamsTable.cs" />
-    <Compile Include="Assets\Model\Characters\AbstractCharacter.cs" />
-    <Compile Include="Assets\Model\Characters\GenericCharacter.cs" />
     <Compile Include="Assets\Model\Characters\XML\PerkParser.cs" />
     <Compile Include="Assets\Model\Characters\XML\PredefinedCharacterReader.cs" />
     <Compile Include="Assets\Model\Characters\XML\PredefinedCritterReader.cs" />
@@ -422,11 +422,12 @@
     <None Include="Assets\Model\Mounts\XML\Mounts.xml" />
     <None Include="Assets\Model\Parties\XML\Parties.xml" />
     <None Include="Assets\Model\Parties\XML\SubParties.xml" />
-    <None Include="Assets\Model\Perks\XML\Perks.xml" />
+    <None Include="Assets\Model\Perks\XML\Perks.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\TODO.txt" />
     <None Include="Assets\View\Barks\XML\Barks.xml" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

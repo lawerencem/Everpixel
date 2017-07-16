@@ -10,6 +10,7 @@ namespace Model.Perks
         {
             switch(toCreate)
             {
+                case (PerkEnum.Barbarism): { return new Barbarism(); }
                 case (PerkEnum.Bash_Buddy): { return new BashBuddy(); }
                 case (PerkEnum.Colossus): { return new Colossus(); }
                 case (PerkEnum.Dino_Bite): { return new DinoBite(); }
@@ -17,6 +18,7 @@ namespace Model.Perks
                 case (PerkEnum.Gargantuan): { return new Gargantuan(); }
                 case (PerkEnum.Iron_Hide): { return new IronHide(); }
                 case (PerkEnum.Massive): { return new Massive(); }
+                case (PerkEnum.Savage_Soul): { return new SavageSoul(); }
                 case (PerkEnum.Scaly): { return new Scaly(); }
                 case (PerkEnum.Shield_Happy): { return new ShieldHappy(); }
                 case (PerkEnum.Squishy): { return new Squishy(); }

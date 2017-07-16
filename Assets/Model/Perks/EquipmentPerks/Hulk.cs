@@ -7,8 +7,6 @@ namespace Model.Perks
 {
     public class Hulk : GenericEquipmentSStatPerk
     {
-        protected const double VALUE = 1.10;
-
         public Hulk() : base(PerkEnum.Hulk) { }
 
         public override void TryModEquipmentMod(Pair<object, List<IndefSecondaryStatModifier>> mods)
@@ -21,7 +19,7 @@ namespace Model.Perks
                     foreach (var kvp in mods.Y)
                     {
                         if (kvp.Type == Characters.SecondaryStatsEnum.AP)
-                            kvp.Scalar *= VALUE;
+                            kvp.Scalar *= this.Val;
                     }
                 }
             }

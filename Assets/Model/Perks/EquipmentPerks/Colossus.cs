@@ -19,7 +19,7 @@ namespace Model.Perks
                     foreach (var kvp in mods.Y)
                     {
                         if (kvp.Type == Characters.SecondaryStatsEnum.AP)
-                            kvp.Scalar *= this.Val; // TODO: 1.15
+                            kvp.Scalar *= this.Val;
                     }
                 }
             }
@@ -31,7 +31,7 @@ namespace Model.Perks
                     foreach (var kvp in mods.Y)
                     {
                         if (kvp.Type == Characters.SecondaryStatsEnum.AP)
-                            kvp.Scalar *= this.Val; // TODO: 1.15
+                            kvp.Scalar *= this.Val;
                     }
                 }
             }

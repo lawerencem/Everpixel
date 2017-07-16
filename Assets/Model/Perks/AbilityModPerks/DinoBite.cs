@@ -11,7 +11,7 @@ namespace Model.Perks
         {
             base.TryModAbility(hit);
             if (hit.Ability.Type == AbilitiesEnum.Bite)
-                hit.ModData.BaseDamage += this.Val; // TODO: 50
+                hit.ModData.BaseDamage += this.Val;
         }
     }
 }

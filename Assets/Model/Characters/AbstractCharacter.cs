@@ -10,6 +10,7 @@ using Model.Shields;
 using System.Collections.Generic;
 using Model.Effects;
 using Model.OverTimeEffects;
+using Model.Perks;
 
 namespace Model.Characters
 {

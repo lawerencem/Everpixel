@@ -60,7 +60,7 @@ namespace Model.Characters
             character.Type = c.Type;
             character.SetCurrentAP((int)character.GetCurrentStatValue(SecondaryStatsEnum.AP));
             character.SetCurrentHP((int)character.GetCurrentStatValue(SecondaryStatsEnum.HP));
-            character.SetCurrentHP((int)character.GetCurrentStatValue(SecondaryStatsEnum.Morale));
+            character.SetCurrentMorale((int)character.GetCurrentStatValue(SecondaryStatsEnum.Morale));
             character.SetCurrentStam((int)character.GetCurrentStatValue(SecondaryStatsEnum.Stamina));
             SpellMediator.Instance.SetCharacterSpells(character, c);
             return character;

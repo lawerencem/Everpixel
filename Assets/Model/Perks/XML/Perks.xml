@@ -1,12 +1,157 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Perks>
+  <PerkClass name ="AbilityModPerk">
+    <Perk name ="Dino_Bite">
+      <AoE>0</AoE>
+      <Description>
+        TODO
+      </Description>
+      <Dur>0</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>25</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="T_Rex_Bite">
+      <AoE>0</AoE>
+      <Description>
+        TODO
+      </Description>
+      <Dur>0</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>50</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+  </PerkClass>
+  <PerkClass name ="EquipmentPerk">
+    <Perk name ="Colossus">
+      <AoE>0</AoE>
+      <Description>
+        Increase AP by 15% for every piece of heavy armor the character is wearing.
+      </Description>
+      <Dur>0</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>1.15</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Hulk">
+      <AoE>0</AoE>
+      <Description>
+        Increase AP by 10% for every weapon the character is currently wielding.
+      </Description>
+      <Dur>0</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>1.10</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Weightlifter">
+      <AoE>0</AoE>
+      <Description>
+        Increase Stamina by 15% for every piece of heavy armor the character is wearing.
+      </Description>
+      <Dur>0</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>1.15</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+  </PerkClass>
   <PerkClass name ="GenericWhenHitPerk">
     <Perk name ="Barbarism">
       <AoE>0</AoE>
+      <Description>
+        Gain a HoT that heals this character's entire HP back in 5 turns upon killing an enemy.
+      </Description>
       <Dur>5</Dur>
       <DurPerSpellDur>0</DurPerSpellDur>
       <Val>0</Val>
       <ValPerPower>0</ValPerPower>
+    </Perk>
+  </PerkClass>
+  <PerkClass name ="OnActionPerk">
+    <Perk name ="Bash_Buddy">
+      <AoE>3</AoE>
+      <Description>
+        Give nearby allies a shield whenever performing an action.
+      </Description>
+      <Dur>3</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>3</Val>
+      <ValPerPower>0.003</ValPerPower>
+    </Perk>
+  </PerkClass>
+  <PerkClass name ="PreHitPerk">
+    <Perk name ="Shield_Happy">
+      <AoE>0</AoE>
+      <Description>
+        Double the character's chance to block with whenever shielded.
+      </Description>
+      <Dur>0</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>2</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+  </PerkClass>
+  <PerkClass name ="SStadModPerk">
+    <Perk name ="Gargantuan">
+      <AoE>0</AoE>
+      <Description>
+        Gives a 25% boost to this character's HP.
+      </Description>
+      <Dur>0</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>1.25</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Iron_Hide">
+      <AoE>0</AoE>
+      <Description>
+        Character gains 25% damage reduction.
+      </Description>
+      <Dur>0</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>0.75</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Massive">
+      <AoE>0</AoE>
+      <Description>
+        Gives a 15% boost to this character's HP.
+      </Description>
+      <Dur>0</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>1.15</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Scaly">
+      <AoE>0</AoE>
+      <Description>
+        Character gains 4 points of flat damage reduction.
+      </Description>
+      <Dur>0</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>4.0</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+  </PerkClass>
+  <PerkClass name ="WhenHitPerk">
+    <Perk name ="Savage_Soul">
+      <AoE>0</AoE>
+      <Description>
+        Gain a shield worth 25% of this character's HP whenever critically hit with a damaging attack.
+      </Description>
+      <Dur>5</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>1.25</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Squishy">
+      <AoE>0</AoE>
+      <Description>
+        Reduces the damage of attacks against this character by 3% for each percentage point of Armor Ignore.
+      </Description>
+      <Dur>0</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>0</Val>
+      <ValPerPower>0.03</ValPerPower>
     </Perk>
   </PerkClass>
 </Perks>

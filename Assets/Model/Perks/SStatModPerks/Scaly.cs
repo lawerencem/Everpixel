@@ -15,7 +15,7 @@ namespace Model.Perks
         public override void TryModSStat(SecondaryStatsEnum stat, ref double value)
         {
             if (stat == SecondaryStatsEnum.Damage_Ignore)
-                value += this.Val; // TODO: 4
+                value += this.Val;
         }
     }
 }

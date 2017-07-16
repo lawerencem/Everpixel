@@ -67,10 +67,8 @@ namespace Model.Perks
 
         private void HandleType(PerkEnum type)
         {
-            switch (type)
-            {
-                case (PerkEnum.Barbarism): { PerkTable.Instance.Table.Add(PerkEnum.Barbarism, new Barbarism()); } break;
-            }
+            var perk = PerkFactory.Instance.CreateNewObject(type);
+            PerkTable.Instance.Table.Add(type, perk);
         }
     }
 }

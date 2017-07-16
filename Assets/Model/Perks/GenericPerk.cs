@@ -11,6 +11,10 @@
         public GenericPerk(PerkEnum type)
         {
             this._type = type;
+        }
+
+        public virtual void Init()
+        {
             var proto = PerkTable.Instance.Table[this.Type];
             this.AoE = proto.AoE;
             this.Dur = proto.Dur;

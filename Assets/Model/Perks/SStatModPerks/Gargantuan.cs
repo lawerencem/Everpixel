@@ -12,7 +12,7 @@ namespace Model.Perks
         public override void TryModSStat(SecondaryStatsEnum stat, ref double value)
         {
             if (stat == SecondaryStatsEnum.HP)
-                value *= this.Val; // TODO: 1.35
+                value *= this.Val;
         }
     }
 }

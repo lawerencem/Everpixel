@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using Assets.Generics;
-using Characters.Params;
-using Model.Abilities;
-using Model.Equipment;
+﻿using Model.Abilities;
 using Model.Combat;
 
 namespace Model.Perks
@@ -15,7 +11,9 @@ namespace Model.Perks
         {
             base.TryModAbility(hit);
             if (hit.Ability.Type == AbilitiesEnum.Bite)
-                hit.ModData.BaseDamage += this.Val; // TODO: 100
+            {
+                hit.ModData.BaseDamage += this.Val;
+            }
         }
     }
 }
