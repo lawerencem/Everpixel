@@ -128,8 +128,8 @@
     <Compile Include="Assets\Generics\Utilities\StringUtil.cs" />
     <Compile Include="Assets\Generics\XML\GenericXMLReader.cs" />
     <Compile Include="Assets\Model\Abilities\ActiveAbilityFactory.cs" />
-    <Compile Include="Assets\Model\Abilities\Enum\CastTypeEnum.cs" />
     <Compile Include="Assets\Model\Abilities\Enum\AbilitiesEnum.cs" />
+    <Compile Include="Assets\Model\Abilities\Enum\CastTypeEnum.cs" />
     <Compile Include="Assets\Model\Abilities\Enum\ResistTypEnum.cs" />
     <Compile Include="Assets\Model\Abilities\GenericAbility.cs" />
     <Compile Include="Assets\Model\Abilities\GenericAbilityTable.cs" />
@@ -178,6 +178,7 @@
     <Compile Include="Assets\Model\Characters\Builders\CritterBuilder.cs" />
     <Compile Include="Assets\Model\Characters\Builders\HumanoidBuilder.cs" />
     <Compile Include="Assets\Model\Characters\Builders\SecondaryStatReferee.cs" />
+    <Compile Include="Assets\Model\Characters\CurrentPointsContainer.cs" />
     <Compile Include="Assets\Model\Characters\Enums\CharacterStatusFlags.cs" />
     <Compile Include="Assets\Model\Characters\Enums\CharacterTypeEnum.cs" />
     <Compile Include="Assets\Model\Characters\Enums\PrimaryStatsEnum.cs" />
@@ -185,6 +186,7 @@
     <Compile Include="Assets\Model\Characters\Enums\SecondaryStatsEnum.cs" />
     <Compile Include="Assets\Model\Characters\Factories\CharacterFactory.cs" />
     <Compile Include="Assets\Model\Characters\Factories\SummonFactory.cs" />
+    <Compile Include="Assets\Model\Characters\ModContainer.cs" />
     <Compile Include="Assets\Model\Characters\Params\CharacterParams.cs" />
     <Compile Include="Assets\Model\Characters\Params\CharacterPerkCollection.cs" />
     <Compile Include="Assets\Model\Characters\Params\FlatSecondaryStatModifier.cs" />
@@ -193,17 +195,17 @@
     <Compile Include="Assets\Model\Characters\Params\IndefPrimaryStatsModifier.cs" />
     <Compile Include="Assets\Model\Characters\Params\IndefSecondaryStatsModifier.cs" />
     <Compile Include="Assets\Model\Characters\Params\PredefinedCharacterParams.cs" />
-    <Compile Include="Assets\Model\Characters\Params\Race\RaceParams.cs" />
-    <Compile Include="Assets\Model\Characters\Params\Race\RaceSprites.cs" />
     <Compile Include="Assets\Model\Characters\Params\PrimaryStats.cs" />
     <Compile Include="Assets\Model\Characters\Params\PrimarystatModifier.cs" />
+    <Compile Include="Assets\Model\Characters\Params\Race\RaceParams.cs" />
+    <Compile Include="Assets\Model\Characters\Params\Race\RaceSprites.cs" />
     <Compile Include="Assets\Model\Characters\Params\SecondaryStatModifier.cs" />
     <Compile Include="Assets\Model\Characters\Params\SecondaryStats.cs" />
     <Compile Include="Assets\Model\Characters\Params\SlotCollection.cs" />
-    <Compile Include="Assets\Model\Characters\Tables\RaceParamsTable.cs" />
     <Compile Include="Assets\Model\Characters\Tables\PredefinedCharacterTable.cs" />
-    <Compile Include="Assets\Model\Characters\Types\AbstractCharacter.cs" />
-    <Compile Include="Assets\Model\Characters\Types\GenericCharacter.cs" />
+    <Compile Include="Assets\Model\Characters\Tables\RaceParamsTable.cs" />
+    <Compile Include="Assets\Model\Characters\AbstractCharacter.cs" />
+    <Compile Include="Assets\Model\Characters\GenericCharacter.cs" />
     <Compile Include="Assets\Model\Characters\XML\PerkParser.cs" />
     <Compile Include="Assets\Model\Characters\XML\PredefinedCharacterReader.cs" />
     <Compile Include="Assets\Model\Characters\XML\PredefinedCritterReader.cs" />
@@ -216,22 +218,22 @@
     <Compile Include="Assets\Model\Classes\ClassParams.cs" />
     <Compile Include="Assets\Model\Classes\Enums\ClassEnum.cs" />
     <Compile Include="Assets\Model\Classes\GenericClass.cs" />
-    <Compile Include="Assets\Model\Classes\GenericPerk.cs" />
     <Compile Include="Assets\Model\Classes\Tables\ClassParamTable.cs" />
     <Compile Include="Assets\Model\Classes\XML\ClassReader.cs" />
     <Compile Include="Assets\Model\Combat\AttackEventFlags.cs" />
+    <Compile Include="Assets\Model\Combat\ChancePrediction.cs" />
     <Compile Include="Assets\Model\Combat\CombatReferee.cs" />
     <Compile Include="Assets\Model\Combat\HitInfo.cs" />
-    <Compile Include="Assets\Model\Combat\ChancePrediction.cs" />
+    <Compile Include="Assets\Model\Combat\HitModData.cs" />
     <Compile Include="Assets\Model\Cultures\CultureEnum.cs" />
     <Compile Include="Assets\Model\Effects\EffectContainer.cs" />
+    <Compile Include="Assets\Model\Effects\EffectsEnum.cs" />
     <Compile Include="Assets\Model\Effects\EffectsFactory.cs" />
     <Compile Include="Assets\Model\Effects\EffectsMediator.cs" />
+    <Compile Include="Assets\Model\Effects\EffectsTable.cs" />
     <Compile Include="Assets\Model\Effects\GenericEffect.cs" />
-    <Compile Include="Assets\Model\Effects\EffectsEnum.cs" />
     <Compile Include="Assets\Model\Effects\Will\Horror.cs" />
     <Compile Include="Assets\Model\Effects\XML\EffectsReader.cs" />
-    <Compile Include="Assets\Model\Effects\EffectsTable.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\ArmorBuilder.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\HelmBuilder.cs" />
     <Compile Include="Assets\Model\Equipment\Builders\WeaponBuilder.cs" />
@@ -269,8 +271,10 @@
     <Compile Include="Assets\Model\Events\Combat\CombatEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\DisplayActionEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\DisplayHitStatsEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\DoTEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\EndTurnEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\HexSelectedForMoveEvent.cs" />
+    <Compile Include="Assets\Model\Events\Combat\HoTEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\MapDoneLoadingEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\ModifyHPEvent.cs" />
     <Compile Include="Assets\Model\Events\Combat\PathTraversedEvent.cs" />
@@ -303,7 +307,9 @@
     <Compile Include="Assets\Model\Mounts\MountTable.cs" />
     <Compile Include="Assets\Model\Mounts\XML\MountsReader.cs" />
     <Compile Include="Assets\Model\OverTimeEffects\DoT\DoTEnum.cs" />
-    <Compile Include="Assets\Model\OverTimeEffects\DoT\GDoT.cs" />
+    <Compile Include="Assets\Model\OverTimeEffects\DoT\GenericDoT.cs" />
+    <Compile Include="Assets\Model\OverTimeEffects\GenericOverTimeEffect.cs" />
+    <Compile Include="Assets\Model\OverTimeEffects\HoT\GenericHoT.cs" />
     <Compile Include="Assets\Model\Parties\Builders\PartyBuilder.cs" />
     <Compile Include="Assets\Model\Parties\Builders\SubPartyBuilder.cs" />
     <Compile Include="Assets\Model\Parties\Enum\StartingRowEnum.cs" />
@@ -315,7 +321,6 @@
     <Compile Include="Assets\Model\Parties\XML\SubPartiesReader.cs" />
     <Compile Include="Assets\Model\Parties\XML\SubPartiesXMLIndexes.cs" />
     <Compile Include="Assets\Model\Perks\AbilityModPerks\DinoBite.cs" />
-    <Compile Include="Assets\Model\Combat\HitModData.cs" />
     <Compile Include="Assets\Model\Perks\AbilityModPerks\GenericAbilityModPerk.cs" />
     <Compile Include="Assets\Model\Perks\AbilityModPerks\TRexBite.cs" />
     <Compile Include="Assets\Model\Perks\AbstractPerk.cs" />
@@ -326,11 +331,12 @@
     <Compile Include="Assets\Model\Perks\GenericPerk.cs" />
     <Compile Include="Assets\Model\Perks\OnActionPerks\BashBuddy.cs" />
     <Compile Include="Assets\Model\Perks\OnActionPerks\GenericOnActionPerk.cs" />
-    <Compile Include="Assets\Model\Perks\OnHitPerks\GenericOnHitPerk.cs" />
-    <Compile Include="Assets\Model\Perks\OnHitPerks\Squishy.cs" />
     <Compile Include="Assets\Model\Perks\PerkEnum.cs" />
     <Compile Include="Assets\Model\Perks\PerkFactory.cs" />
     <Compile Include="Assets\Model\Perks\PerkMediator.cs" />
+    <Compile Include="Assets\Model\Perks\PerkTable.cs" />
+    <Compile Include="Assets\Model\Perks\PostHitPerks\Barbarism.cs" />
+    <Compile Include="Assets\Model\Perks\PostHitPerks\GenericPostHitPerk.cs" />
     <Compile Include="Assets\Model\Perks\PreHitPerk\GenericPreHitPerk.cs" />
     <Compile Include="Assets\Model\Perks\PreHitPerk\ShieldHappy.cs" />
     <Compile Include="Assets\Model\Perks\SStatModPerks\Gargantuan.cs" />
@@ -338,6 +344,10 @@
     <Compile Include="Assets\Model\Perks\SStatModPerks\IronHide.cs" />
     <Compile Include="Assets\Model\Perks\SStatModPerks\Massive.cs" />
     <Compile Include="Assets\Model\Perks\SStatModPerks\Scaly.cs" />
+    <Compile Include="Assets\Model\Perks\WhenHitPerks\GenericWhenHitPerk.cs" />
+    <Compile Include="Assets\Model\Perks\WhenHitPerks\SavageSoul.cs" />
+    <Compile Include="Assets\Model\Perks\WhenHitPerks\Squishy.cs" />
+    <Compile Include="Assets\Model\Perks\XML\PerkReader.cs" />
     <Compile Include="Assets\Model\Shields\Shield.cs" />
     <Compile Include="Assets\Model\Slot\AbstractSlot.cs" />
     <Compile Include="Assets\Model\Slot\GenericSlot.cs" />
@@ -403,21 +413,18 @@
     <None Include="Assets\Model\Abilities\XML\WeaponAbilities.xml" />
     <None Include="Assets\Model\Characters\XML\PredefinedCharacters.xml" />
     <None Include="Assets\Model\Characters\XML\PredefinedCritters.xml" />
-    <None Include="Assets\Model\Characters\XML\RaceParams.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Model\Characters\XML\RaceParams.xml" />
     <None Include="Assets\Model\Classes\XML\Classes.xml" />
+    <None Include="Assets\Model\Effects\XML\Effects.xml" />
     <None Include="Assets\Model\Equipment\XML\Armors.xml" />
     <None Include="Assets\Model\Equipment\XML\Weapons.xml" />
     <None Include="Assets\Model\Injuries\Injuries.xml" />
     <None Include="Assets\Model\Mounts\XML\Mounts.xml" />
     <None Include="Assets\Model\Parties\XML\Parties.xml" />
     <None Include="Assets\Model\Parties\XML\SubParties.xml" />
+    <None Include="Assets\Model\Perks\XML\Perks.xml" />
     <None Include="Assets\TODO.txt" />
     <None Include="Assets\View\Barks\XML\Barks.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Model\Effects\XML\Effects.xml" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

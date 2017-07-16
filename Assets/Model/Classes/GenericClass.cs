@@ -1,4 +1,5 @@
 ﻿using Model.Characters;
+using Model.Perks;
 using System.Collections.Generic;
 
 namespace Model.Classes

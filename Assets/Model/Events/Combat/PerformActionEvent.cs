@@ -73,11 +73,15 @@ namespace Model.Events.Combat
             if (this.Container.Source.Model.RWeapon != null)
                 fatigueCost *= this.Container.Source.Model.RWeapon.FatigueCostMod;
 
-            if (this.Container.Action.GetAPCost() <= this.Container.Source.Model.CurrentAP &&
-                fatigueCost <= this.Container.Source.Model.CurrentStamina)
+            if (this.Container.Action.GetAPCost() <= this.Container.Source.Model.GetCurrentAP() &&
+                fatigueCost <= this.Container.Source.Model.GetCurrentStamina())
             {
-                this.Container.Source.Model.CurrentAP -= (int)this.Container.Action.GetAPCost();
-                this.Container.Source.Model.CurrentStamina -= (int)fatigueCost;
+                var curAP = this.Container.Source.Model.GetCurrentAP();
+                var curStam = this.Container.Source.Model.GetCurrentStamina();
+                curAP -= (int)this.Container.Action.GetAPCost();
+                curStam -= (int)fatigueCost;
+                this.Container.Source.Model.SetCurrentAP(curAP);
+                this.Container.Source.Model.SetCurrentStam(curStam);
 
                 if (this.Container.CastFinished || this.Container.Action.CastTime <= 0)
                 {

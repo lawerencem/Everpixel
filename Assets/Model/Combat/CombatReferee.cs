@@ -192,7 +192,7 @@ namespace Model.Combat
                 flatDmgNegate *= hit.Source.Model.LWeapon.ArmorPierce;
             if (hit.Source.Model.RWeapon != null && !hit.Source.Model.RWeapon.IsTypeOfShield())
                 flatDmgNegate *= hit.Source.Model.RWeapon.ArmorPierce;
-            foreach (var perk in hit.Target.Model.Perks.OnHitPerks)
+            foreach (var perk in hit.Target.Model.Perks.WhenHitPerks)
                 perk.TryModHit(hit);
 
             var bodyWeight = ((hit.Dmg - flatDmgNegate - bodyDmgNegate) * bodyReduction) * BASE_BODY_RATIO;
@@ -344,7 +344,7 @@ namespace Model.Combat
                     dmgToApply *= (hit.Target.Model.Armor.DamageReduction * dmgReduction * hit.Ability.ArmorIgnoreMod);
                 hit.Dmg = (int)dmgToApply;
             }
-            foreach (var perk in hit.Target.Model.Perks.OnHitPerks)
+            foreach (var perk in hit.Target.Model.Perks.WhenHitPerks)
                 perk.TryModHit(hit);
             hit.Dmg = (int)dmgToApply;
         }

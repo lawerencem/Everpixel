@@ -15,7 +15,7 @@ namespace Model.Perks
             base.TryModHit(hit);
             if (hit.Target.Model.Shields.Count > 0)
             {
-                hit.ModData.BlockMod = 2;
+                hit.ModData.BlockMod = this.Val; // TODO: 2
             }
         }
     }

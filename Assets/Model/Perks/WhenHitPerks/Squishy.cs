@@ -3,7 +3,7 @@ using Model.Combat;
 
 namespace Model.Perks
 {
-    public class Squishy : GenericOnHitPerk
+    public class Squishy : GenericWhenHitPerk
     {
         public Squishy() : base(PerkEnum.Squishy)
         {

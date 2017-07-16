@@ -7,8 +7,6 @@ namespace Model.Perks
 {
     public class Colossus : GenericEquipmentSStatPerk
     {
-        protected const double VALUE = 1.15;
-
         public Colossus() : base(PerkEnum.Colossus) { }
 
         public override void TryModEquipmentMod(Pair<object, List<IndefSecondaryStatModifier>> mods)
@@ -21,7 +19,7 @@ namespace Model.Perks
                     foreach (var kvp in mods.Y)
                     {
                         if (kvp.Type == Characters.SecondaryStatsEnum.AP)
-                            kvp.Scalar *= VALUE;
+                            kvp.Scalar *= this.Val; // TODO: 1.15
                     }
                 }
             }
@@ -33,7 +31,7 @@ namespace Model.Perks
                     foreach (var kvp in mods.Y)
                     {
                         if (kvp.Type == Characters.SecondaryStatsEnum.AP)
-                            kvp.Scalar *= VALUE;
+                            kvp.Scalar *= this.Val; // TODO: 1.15
                     }
                 }
             }

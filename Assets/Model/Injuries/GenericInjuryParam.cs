@@ -1,7 +1,7 @@
 ﻿using Assets.Generics;
 using Characters.Params;
 using Model.Characters;
-using Model.DoT;
+using Model.OverTimeEffects;
 using System.Collections.Generic;
 
 namespace Model.Injuries
@@ -27,7 +27,10 @@ namespace Model.Injuries
         {
             var injury = new GenericInjury(this._type);
             if (this.DoT.X != DoTEnum.None)
-                injury.DoT = new GDot(this.DoT.X, this.DoT.Y);
+            {
+                injury.DoT = new GenericDoT(this.DoT.X);
+                injury.DoT.SetDur(this.DoT.Y);
+            }
             foreach (var stat in this.PStatMods)
                 injury.PStatMods.Add(new IndefPrimaryStatModifier(stat.X, stat.Y));
             foreach (var stat in this.SStatMods)

@@ -26,7 +26,7 @@ namespace Model.Events.Combat
                 this.Source = s;
                 this.Next = n;
 
-                if (this.Character.Model.CurrentAP >= this.Character.Model.GetTileTraversalAPCost(this.Next.Model))
+                if (this.Character.Model.GetCurrentAP() >= this.Character.Model.GetTileTraversalAPCost(this.Next.Model))
                 {
                     this.RegisterEvent();
                 }

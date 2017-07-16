@@ -1,7 +1,6 @@
-﻿using Assets.Generics;
-using Characters.Params;
+﻿using Characters.Params;
 using Model.Characters;
-using Model.DoT;
+using Model.OverTimeEffects;
 using System.Collections.Generic;
 
 namespace Model.Injuries
@@ -10,7 +9,7 @@ namespace Model.Injuries
     {
         private InjuryEnum _type;
 
-        public GDot DoT { get; set; }
+        public GenericDoT DoT { get; set; }
         public List<IndefPrimaryStatModifier> PStatMods { get; set; }
         public List<IndefSecondaryStatModifier> SStatMods { get; set; }
         public InjuryEnum Type { get { return this._type; } }

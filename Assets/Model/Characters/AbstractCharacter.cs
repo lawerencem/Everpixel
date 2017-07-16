@@ -119,9 +119,24 @@ namespace Model.Characters
             }
         }
 
+        public int GetCurrentAP()
+        {
+            return this.Points.CurrentAP;
+        }
+
         public int GetCurrentHP()
         {
             return this.Points.CurrentHP;
+        }
+
+        public int GetCurrentMorale()
+        {
+            return this.Points.CurrentMorale;
+        }
+
+        public int GetCurrentStamina()
+        {
+            return this.Points.CurrentStamina;
         }
 
         public int GetTileTraversalAPCost(HexTile tile)
@@ -226,6 +241,26 @@ namespace Model.Characters
             this.RestoreStamina();
             this.ProcessBuffDurations();
             this.ProcessShields();
+        }
+
+        public void SetCurrentAP(int ap)
+        {
+            this.Points.CurrentAP = ap;
+        }
+
+        public void SetCurrentHP(int hp)
+        {
+            this.Points.CurrentHP = hp;
+        }
+
+        public void SetCurrentMorale(int mor)
+        {
+            this.Points.CurrentMorale = mor;
+        }
+
+        public void SetCurrentStam(int stam)
+        {
+            this.Points.CurrentStamina = stam;
         }
 
         public void TryAddMod(FlatSecondaryStatModifier mod)

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Perks>
+  <PerkClass name ="GenericWhenHitPerk">
+    <Perk name ="Barbarism">
+      <AoE>0</AoE>
+      <Dur>5</Dur>
+      <DurPerSpellDur>0</DurPerSpellDur>
+      <Val>0</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+  </PerkClass>
+</Perks>

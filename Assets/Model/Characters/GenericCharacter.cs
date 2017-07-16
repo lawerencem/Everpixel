@@ -40,9 +40,9 @@ namespace Model.Characters
         {
             if (isHeal)
             {
-                this.CurrentHP += value;
-                if (this.CurrentHP > (int)this.GetCurrentStatValue(SecondaryStatsEnum.HP))
-                    this.CurrentHP = (int)this.GetCurrentStatValue(SecondaryStatsEnum.HP);
+                this.Points.CurrentHP += value;
+                if (this.GetCurrentHP() > (int)this.GetCurrentStatValue(SecondaryStatsEnum.HP))
+                    this.Points.CurrentHP = (int)this.GetCurrentStatValue(SecondaryStatsEnum.HP);
             }
             else
             {
@@ -52,9 +52,9 @@ namespace Model.Characters
                 this.Shields.RemoveAll(x => x.CurHP <= 0);
 
                 if (dmg >= 0)
-                    this.CurrentHP -= dmg;
+                    this.Points.CurrentHP -= dmg;
 
-                if (this.CurrentHP <= 0)
+                if (this.GetCurrentHP() <= 0)
                 {
                     var killed = new CharacterKilledEvent(CombatEventManager.Instance, this.ParentController);
                 }

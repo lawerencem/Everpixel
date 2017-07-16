@@ -3,6 +3,7 @@
     public enum PerkEnum
     {
         None,
+        Barbarism,
         Bash_Buddy,
         Colossus,
         Dino_Bite,
@@ -10,6 +11,7 @@
         Hulk,
         Iron_Hide,
         Massive,
+        Savage_Soul,
         Scaly,
         Shield_Happy,
         Squishy,

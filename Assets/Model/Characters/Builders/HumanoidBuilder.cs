@@ -57,10 +57,10 @@ namespace Model.Characters
                 character.Type = c.Type;
                 this.BuildArmorHelper(character, c);
                 this.BuildWeaponHelper(character, c);
-                character.CurrentAP = (int)character.GetCurrentStatValue(SecondaryStatsEnum.AP);
-                character.CurrentHP = (int)character.GetCurrentStatValue(SecondaryStatsEnum.HP);
-                character.CurrentMorale = (int)character.GetCurrentStatValue(SecondaryStatsEnum.Morale);
-                character.CurrentStamina = (int)character.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
+                character.SetCurrentAP((int)character.GetCurrentStatValue(SecondaryStatsEnum.AP));
+                character.SetCurrentAP((int)character.GetCurrentStatValue(SecondaryStatsEnum.HP));
+                character.SetCurrentMorale((int)character.GetCurrentStatValue(SecondaryStatsEnum.Morale));
+                character.SetCurrentStam((int)character.GetCurrentStatValue(SecondaryStatsEnum.Stamina));
                 SpellMediator.Instance.SetCharacterSpells(character, c);
                 return character;
             }

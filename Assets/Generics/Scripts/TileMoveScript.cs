@@ -36,7 +36,7 @@ namespace Generics.Scripts
                 var next = this.Path.GetNextTile(this.Target);
                 if (next != null)
                 {
-                    if (this.Character.Model.CurrentAP >= this.Character.Model.GetTileTraversalAPCost(next.Model))
+                    if (this.Character.Model.GetCurrentAP() >= this.Character.Model.GetTileTraversalAPCost(next.Model))
                     {
                         var nextTilEvent = new TraverseTileEvent(CombatEventManager.Instance, this.Path, this.Character.CurrentTile, next);
                     }
@@ -61,14 +61,16 @@ namespace Generics.Scripts
             this.Source = s;
             this.Target = t;
 
-            if (c.Model.CurrentAP < c.Model.GetTileTraversalAPCost(t.Model))
+            if (c.Model.GetCurrentAP() < c.Model.GetTileTraversalAPCost(t.Model))
             {
                 var traversed = new PathTraversedEvent(CombatEventManager.Instance, this.Character);
                 Destroy(this);
             }
             else
             {
-                this.Character.Model.CurrentAP -= this.Character.Model.GetTileTraversalAPCost(this.Target.Model);
+                var curAP = this.Character.Model.GetCurrentAP();
+                curAP -= this.Character.Model.GetTileTraversalAPCost(this.Target.Model);
+                this.Character.Model.SetCurrentAP(curAP);
             }
         }
     }

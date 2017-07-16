@@ -2,9 +2,9 @@
 
 namespace Model.Perks
 {
-    public class GenericOnHitPerk : GenericPerk
+    public class GenericWhenHitPerk : GenericPerk
     {
-        public GenericOnHitPerk(PerkEnum type) : base(type)
+        public GenericWhenHitPerk(PerkEnum type) : base(type)
         {
 
         }

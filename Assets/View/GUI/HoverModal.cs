@@ -153,11 +153,11 @@ namespace View.GUI
                 this._rWeaponSlider.maxValue = 0;
 
             this._hpSlider.maxValue = (int)c.GetCurrentStatValue(SecondaryStatsEnum.HP);
-            this._hpSlider.value = c.CurrentHP;
+            this._hpSlider.value = c.GetCurrentHP();
             this._moraleSlider.maxValue = (int)c.GetCurrentStatValue(SecondaryStatsEnum.Morale);
-            this._moraleSlider.value = c.CurrentMorale;
+            this._moraleSlider.value = c.GetCurrentMorale();
             this._stamSlider.maxValue = (int)c.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
-            this._stamSlider.value = c.CurrentStamina;
+            this._stamSlider.value = c.GetCurrentStamina();
         }
 
         private void SetModalDamageValuesHelper(HitInfo hit)

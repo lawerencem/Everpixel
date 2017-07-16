@@ -1,9 +1,5 @@
-﻿using Assets.Generics;
-using Generics;
+﻿using Generics;
 using Generics.Utilities;
-using Model.Characters;
-using Model.DoT;
-using System;
 using System.Collections.Generic;
 using System.Xml.Linq;
 

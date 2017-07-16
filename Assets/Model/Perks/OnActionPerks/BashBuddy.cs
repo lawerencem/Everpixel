@@ -10,10 +10,6 @@ namespace Model.Perks
 {
     public class BashBuddy : GenericOnActionPerk
     {
-        private const int AOE = 3;
-        private const double DUR_PER_SPELL_DUR = 0.006;
-        private const double SHIELD_PER_POWER = 0.01;
-
         public BashBuddy() : base(PerkEnum.Bash_Buddy)
         {
 
@@ -24,10 +20,10 @@ namespace Model.Perks
             if (hit.Ability.CastType == CastTypeEnum.Melee)
             {
                 var source = hit.Source;
-                var dur = (int)(source.Model.GetCurrentStatValue(SecondaryStatsEnum.Spell_Duration) * DUR_PER_SPELL_DUR);
-                var hp = (int)(source.Model.GetCurrentStatValue(SecondaryStatsEnum.Power) * SHIELD_PER_POWER);
-                var hexes = source.CurrentTile.Model.GetAoETiles(AOE);
-                foreach(var hex in hexes)
+                var dur = (int)(source.Model.GetCurrentStatValue(SecondaryStatsEnum.Spell_Duration) * this.DurPerSpellDur);
+                var hp = (int)(source.Model.GetCurrentStatValue(SecondaryStatsEnum.Power) * this.ValPerPower);
+                var hexes = source.CurrentTile.Model.GetAoETiles((int)this.AoE);
+                foreach (var hex in hexes)
                 {
                     if (hex.Current != null && hex.Current.GetType().Equals(typeof(GenericCharacterController)))
                     {
@@ -38,7 +34,7 @@ namespace Model.Perks
                             {
                                 var shield = new Shield(character, dur, hp);
                                 var shieldEvent = new ShieldEvent(CombatEventManager.Instance, shield, character);
-                            }   
+                            }
                         }
                     }
                 }

@@ -2,8 +2,7 @@
 using Generics;
 using Generics.Utilities;
 using Model.Characters;
-using Model.DoT;
-using System;
+using Model.OverTimeEffects;
 using System.Xml.Linq;
 
 namespace Model.Injuries

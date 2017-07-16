@@ -277,7 +277,7 @@ namespace Model.Abilities
             {
                 var roll = RNG.Instance.NextDouble();
                 var hp = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.HP);
-                var currentHP = hit.Target.Model.CurrentHP;
+                var currentHP = hit.Target.Model.GetCurrentHP();
                 if (currentHP > 0)
                 {
                     var chance = ((double)hit.Dmg / (double)hp) * (hp / currentHP);

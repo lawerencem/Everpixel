@@ -133,7 +133,7 @@ namespace Controller.Managers.Map
 
         public void ProcessNormalHit(DisplayHitStatsEvent e)
         {
-            if (e.Hit.Target.Model.CurrentHP - e.Hit.Dmg > 0)
+            if (e.Hit.Target.Model.GetCurrentHP() - e.Hit.Dmg > 0)
             {
                 var position = e.Hit.Target.transform.position;
                 position.y -= 0.08f;
@@ -310,7 +310,7 @@ namespace Controller.Managers.Map
             {
                 if (hit.Target != null && hit.Target.Model != null)
                 {
-                    if (hit.Target.Model.CurrentHP - hit.Dmg <= 0)
+                    if (hit.Target.Model.GetCurrentHP() - hit.Dmg <= 0)
                     {
                         var roll = RNG.Instance.NextDouble();
                         if (roll < CMapGUIControllerParams.FATALITY_CHANCE)
