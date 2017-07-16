@@ -114,8 +114,10 @@ namespace Controller.Managers
                 case (CombatEventEnum.CharacterKilled): { HandleCharacterKilledEvent(e as CharacterKilledEvent); } break;
                 case (CombatEventEnum.DisplayAction): { HandleDisplayActionEvent(e as DisplayActionEvent); } break;
                 case (CombatEventEnum.DisplayHitStats): { HandleDisplayHitStatsEvent(e as DisplayHitStatsEvent); } break;
+                case (CombatEventEnum.DoT): { HandleDoTEvent(e as DoTEvent); } break;
                 case (CombatEventEnum.EndTurn): { HandleEndTurnEvent(e as EndTurnEvent); } break;
                 case (CombatEventEnum.HexSelectedForMove): { HandleHexSelectedForMoveEvent(e as HexSelectedForMoveEvent); } break;
+                case (CombatEventEnum.HoT): { HandleHoTEvent(e as HoTEvent); } break;
                 case (CombatEventEnum.MapDoneLoading): { HandleMapDoneLoadingEvent(e as MapDoneLoadingEvent); } break;
                 case (CombatEventEnum.PathTraversed): { HandlePathTraversedEvent(e as PathTraversedEvent); } break;
                 case (CombatEventEnum.PerformAction): { HandlePerformActionEvent(e as PerformActionEvent); } break;
@@ -194,6 +196,13 @@ namespace Controller.Managers
             CMapGUIController.Instance.DisplayHitStatsEvent(e);
         }
 
+        private void HandleDoTEvent(DoTEvent e)
+        {
+            this._events.Remove(e);
+            var dotType = e.DoT.Type.ToString().Replace("_", " ");
+            CMapGUIController.Instance.DisplayText(dotType, e.ToDoT.Handle, CMapGUIControllerParams.RED);
+        }
+
         private void HandleEndTurnEvent(EndTurnEvent e)
         {
             this._events.Remove(e);
@@ -217,6 +226,12 @@ namespace Controller.Managers
             }
         }
 
+        private void HandleHoTEvent(HoTEvent e)
+        {
+            this._events.Remove(e);
+            CMapGUIController.Instance.DisplayText("HoT", e.ToHoT.Handle, CMapGUIControllerParams.GREEN);
+        }
+
         private void HandleMapDoneLoadingEvent(MapDoneLoadingEvent e)
         {
             this._events.Remove(e);
@@ -230,7 +245,7 @@ namespace Controller.Managers
         {
             this._events.Remove(e);
             {
-                if (e.Character.Model.CurrentAP > 0)
+                if (e.Character.Model.GetCurrentHP() > 0)
                 {
                     if (e.Character == this.GetCurrentCharacter())
                     {

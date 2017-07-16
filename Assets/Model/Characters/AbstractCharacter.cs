@@ -119,6 +119,11 @@ namespace Model.Characters
             }
         }
 
+        public int GetCurrentHP()
+        {
+            return this.Points.CurrentHP;
+        }
+
         public int GetTileTraversalAPCost(HexTile tile)
         {
             // TODO: Work on this for height and various talents
