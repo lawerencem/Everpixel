@@ -286,13 +286,20 @@ namespace Controller.Managers.Map
                 if (eyes.sprite != null)
                     eyes.sprite = CharacterSpriteLoader.Instance.GetHumanoidDeadEyes(c.Model.Race);
 
-                this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_FACE], ViewParams.DEAD_FACE);
-                this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_HEAD_DECO_1], ViewParams.DEAD_HEAD_DECO_1);
-                this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_HEAD_DECO_2], ViewParams.DEAD_HEAD_DECO_2);
-                this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_TORSO_DECO_1], ViewParams.DEAD_TORSO_DECO_1);
-                this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_TORSO_DECO_2], ViewParams.DEAD_TORSO_DECO_2);
-                this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_HEAD], ViewParams.DEAD_HEAD);
-                this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_TORSO], ViewParams.DEAD_TORSO);
+                if (c.SpriteHandlerDict.ContainsKey(ViewParams.CHAR_FACE))
+                    this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_FACE], ViewParams.DEAD_FACE);
+                if (c.SpriteHandlerDict.ContainsKey(ViewParams.CHAR_HEAD_DECO_1))
+                    this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_HEAD_DECO_1], ViewParams.DEAD_HEAD_DECO_1);
+                if (c.SpriteHandlerDict.ContainsKey(ViewParams.CHAR_HEAD_DECO_2))
+                    this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_HEAD_DECO_2], ViewParams.DEAD_HEAD_DECO_2);
+                if (c.SpriteHandlerDict.ContainsKey(ViewParams.CHAR_TORSO_DECO_1))
+                    this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_TORSO_DECO_1], ViewParams.DEAD_TORSO_DECO_1);
+                if (c.SpriteHandlerDict.ContainsKey(ViewParams.CHAR_TORSO_DECO_2))
+                    this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_TORSO_DECO_2], ViewParams.DEAD_TORSO_DECO_2);
+                if (c.SpriteHandlerDict.ContainsKey(ViewParams.CHAR_HEAD))
+                    this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_HEAD], ViewParams.DEAD_HEAD);
+                if (c.SpriteHandlerDict.ContainsKey(ViewParams.CHAR_TORSO))
+                    this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_TORSO], ViewParams.DEAD_TORSO);
 
                 if (c.SpriteHandlerDict.ContainsKey(ViewParams.CHAR_MOUNT))
                 {
