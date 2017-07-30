@@ -148,6 +148,17 @@ namespace Controller.Managers.Map
             this._hitHelper.DisplayText(e.SpellName, e.Caster.Handle, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.ATTACK_TEXT_OFFSET);
         }
 
+        public void DisplayDebuff(DebuffEvent e)
+        {
+            this._hitHelper.DisplayText("Debuff", e.ToDebuff.Handle, CMapGUIControllerParams.RED);
+        }
+
+        public void DisplayGenericEffect(GenericEffectEvent e)
+        {
+            var display = e.Effect.Type.ToString().Replace("_", " ");
+            this._hitHelper.DisplayText(display, e.Target.Handle, CMapGUIControllerParams.WHITE);
+        }
+
         public void DisplayHitStatsEvent(DisplayHitStatsEvent e)
         {
             switch(e.Hit.Ability.CastType)

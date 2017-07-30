@@ -114,10 +114,12 @@ namespace Controller.Managers
                 case (CombatEventEnum.Buff): { HandleBuffEvent(e as BuffEvent); } break;
                 case (CombatEventEnum.Casting): { HandleCastingEvent(e as CastingEvent); } break;
                 case (CombatEventEnum.CharacterKilled): { HandleCharacterKilledEvent(e as CharacterKilledEvent); } break;
+                case (CombatEventEnum.Debuff): { HandleDebuffEvent(e as DebuffEvent); } break;
                 case (CombatEventEnum.DisplayAction): { HandleDisplayActionEvent(e as DisplayActionEvent); } break;
                 case (CombatEventEnum.DisplayHitStats): { HandleDisplayHitStatsEvent(e as DisplayHitStatsEvent); } break;
                 case (CombatEventEnum.DoT): { HandleDoTEvent(e as DoTEvent); } break;
                 case (CombatEventEnum.EndTurn): { HandleEndTurnEvent(e as EndTurnEvent); } break;
+                case (CombatEventEnum.GenericEffect): { HandleGenericEffect(e as GenericEffectEvent); } break;
                 case (CombatEventEnum.HexSelectedForMove): { HandleHexSelectedForMoveEvent(e as HexSelectedForMoveEvent); } break;
                 case (CombatEventEnum.HoT): { HandleHoTEvent(e as HoTEvent); } break;
                 case (CombatEventEnum.MapDoneLoading): { HandleMapDoneLoadingEvent(e as MapDoneLoadingEvent); } break;
@@ -179,6 +181,12 @@ namespace Controller.Managers
             this.PopulateBtnsHelper();
         }
 
+        private void HandleDebuffEvent(DebuffEvent e)
+        {
+            this._events.Remove(e);
+            CMapGUIController.Instance.DisplayDebuff(e);
+        }
+
         private void HandleCharacterKilledEvent(CharacterKilledEvent e)
         {
             this._events.Remove(e);
@@ -217,6 +225,12 @@ namespace Controller.Managers
             this._combatManager.CurAbility = null;
             this._combatManager.ProcessNextTurn();
             this.PopulateBtnsHelper();
+        }
+
+        private void HandleGenericEffect(GenericEffectEvent e)
+        {
+            this._events.Remove(e);
+            CMapGUIController.Instance.DisplayGenericEffect(e);
         }
 
         private void HandleHexSelectedForMoveEvent(HexSelectedForMoveEvent e)

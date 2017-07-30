@@ -22,6 +22,12 @@ namespace Model.Combat
         private const double BASE_SCALAR = 1000;
         private const double BASE_SKILL_SCALAR = 0.75;
 
+        public double GetSpellDurMod(GenericCharacter character)
+        {
+            // TODO:
+            return 1.0;
+        }
+
         public void PredictBullet(HitInfo hit)
         {
             this.PredictDodge(hit);
@@ -69,6 +75,12 @@ namespace Model.Combat
             this.ProcessBulletFlags(hit);
             this.CalculateAbilityDmg(hit);
             this.ModifyDmgViaDefender(hit);
+        }
+
+        public bool ProcessResist(GenericCharacter s, GenericCharacter t, ResistTypeEnum resist)
+        {
+            // TODO
+            return false;
         }
 
         public void ProcessShapeshift(HitInfo hit)
