@@ -16,5 +16,13 @@ namespace Model.Events.Combat
             toBuff.Model.TryAddMod(buff);
             this.RegisterEvent();
         }
+
+        public BuffEvent(CombatEventManager parent, SecondaryStatModifier buff, GenericCharacterController toBuff) :
+            base(CombatEventEnum.Buff, parent)
+        {
+            this.ToBuff = toBuff;
+            toBuff.Model.TryAddMod(buff);
+            this.RegisterEvent();
+        }
     }
 }
