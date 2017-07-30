@@ -27,5 +27,8 @@ namespace Model.Effects
             clone.Container.Value = this.Container.Duration;
             return clone;
         }
+
+        public void SetDuration(int v) { this.Container.Duration = v; }
+        public void SetValue(int v) { this.Container.Value = v; }
     }
 }
