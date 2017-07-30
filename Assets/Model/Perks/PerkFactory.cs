@@ -26,6 +26,7 @@ namespace Model.Perks
                 case (PerkEnum.Savage_Soul): { return new SavageSoul(); }
                 case (PerkEnum.Savage_Visage): { return new SavageVisage(); }
                 case (PerkEnum.Scaly): { return new Scaly(); }
+                case (PerkEnum.Shield_Brother): { return new ShieldBrother(); }
                 case (PerkEnum.Shield_Happy): { return new ShieldHappy(); }
                 case (PerkEnum.Shield_Pro): { return new ShieldPro(); }
                 case (PerkEnum.Small_Shield_Expert): { return new SmallShieldExpert(); }

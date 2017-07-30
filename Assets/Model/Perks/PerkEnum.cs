@@ -19,6 +19,7 @@
         Savage_Soul,
         Savage_Visage,
         Scaly,
+        Shield_Brother,
         Shield_Happy,
         Shield_Pro,
         Small_Shield_Expert,

@@ -348,6 +348,7 @@
     <Compile Include="Assets\Model\Perks\PreHitPerk\Executioner.cs" />
     <Compile Include="Assets\Model\Perks\PreHitPerk\GenericPreHitPerk.cs" />
     <Compile Include="Assets\Model\Perks\PreHitPerk\Predator.cs" />
+    <Compile Include="Assets\Model\Perks\PreHitPerk\ShieldBrother.cs" />
     <Compile Include="Assets\Model\Perks\PreHitPerk\ShieldHappy.cs" />
     <Compile Include="Assets\Model\Perks\SStatModPerks\Gargantuan.cs" />
     <Compile Include="Assets\Model\Perks\SStatModPerks\GenericSStatModPerk.cs" />

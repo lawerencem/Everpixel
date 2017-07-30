@@ -180,6 +180,7 @@ namespace Model.Abilities
 
         public virtual void PredictBullet(HitInfo hit)
         {
+            // TODO: Add prehit perk stuff to all prediction
             foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
                 perk.TryModAbility(hit);
             CombatReferee.Instance.PredictBullet(hit);

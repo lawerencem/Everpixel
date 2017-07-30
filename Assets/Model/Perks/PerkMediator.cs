@@ -33,6 +33,7 @@ namespace Model.Perks
                         case (PerkEnum.Savage_Soul): { c.Perks.WhenHitPerks.Add(gPerk as SavageSoul); } break;
                         case (PerkEnum.Savage_Visage): { c.Perks.PostHitPerks.Add(gPerk as SavageVisage); } break;
                         case (PerkEnum.Scaly): { c.Perks.SStatModPerks.Add(gPerk as Scaly); } break;
+                        case (PerkEnum.Shield_Brother): { c.Perks.PreHitPerks.Add(gPerk as ShieldBrother); } break;
                         case (PerkEnum.Shield_Happy): { c.Perks.PreHitPerks.Add(gPerk as ShieldHappy); } break;
                         case (PerkEnum.Shield_Pro): { c.Perks.SStatModPerks.Add(gPerk as ShieldPro); } break;
                         case (PerkEnum.Small_Shield_Expert): { c.Perks.PostHitPerks.Add(gPerk as SmallShieldExpert); } break;
