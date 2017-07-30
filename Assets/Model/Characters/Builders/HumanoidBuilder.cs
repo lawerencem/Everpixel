@@ -3,7 +3,6 @@ using Generics;
 using Model.Abilities;
 using Model.Classes;
 using Model.Perks;
-using Model.Slot;
 using Model.Spells;
 using System;
 using System.Collections.Generic;

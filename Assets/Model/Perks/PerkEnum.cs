@@ -6,6 +6,7 @@
         Barbarism,
         Bash_Buddy,
         Bastion,
+        Bully,
         Colossus,
         Dino_Bite,
         Enrage,
@@ -27,5 +28,6 @@
         Weightlifter,
         Violence_Fetish,
         T_Rex_Bite,
+        Two_Handed_Expert,
     }
 }

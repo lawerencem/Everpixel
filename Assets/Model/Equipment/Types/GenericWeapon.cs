@@ -1,7 +1,5 @@
 ﻿using Characters.Params;
 using Model.Abilities;
-using Model.Events;
-using Model.Slot;
 using System.Collections.Generic;
 
 namespace Model.Equipment
@@ -25,9 +23,9 @@ namespace Model.Equipment
         public double ShieldDamage { get; set; }
         public WeaponSkillEnum Skill { get; set; }
         public double StaminaReduce { get; set; }
+        public WeaponTypeEnum WpnType { get; set; }
 
-
-        public GenericWeapon() : base(SlotEnum.Weapon, EquipmentTypeEnum.Held)
+        public GenericWeapon() : base(EquipmentTypeEnum.Held)
         {
             this.Abilities = new List<GenericAbility>();
             this.Accuracy = 1;

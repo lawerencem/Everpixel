@@ -11,6 +11,7 @@ using Model.Shields;
 using System.Collections.Generic;
 using Model.Effects;
 using Model.OverTimeEffects;
+using Model.Equipment;
 
 namespace Model.Characters
 {
@@ -39,6 +40,35 @@ namespace Model.Characters
             this.StatusFlags = new CharacterStatusFlags();
         }
 
+        public void AddWeapon(GenericWeapon weapon, bool lWeapon)
+        {
+            // TODO: 2handed weapon check
+            if (lWeapon)
+            {
+                this.LWeapon = weapon;
+                var mods = new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.GetStatModifiers());
+
+                foreach (var perk in this.Perks.EquipmentSStatPerks)
+                    perk.TryModEquipmentMod(mods);
+                foreach (var perk in this.Perks.EquipmentPerks)
+                    perk.TryProcessAdd(this, weapon);
+
+                this.Mods.AddMod(mods);
+            }
+            else
+            {
+                this.RWeapon = weapon;
+                var mods = new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.GetStatModifiers());
+
+                foreach (var perk in this.Perks.EquipmentSStatPerks)
+                    perk.TryModEquipmentMod(mods);
+                foreach (var perk in this.Perks.EquipmentPerks)
+                    perk.TryProcessAdd(this, weapon);
+
+                this.Mods.AddMod(mods);
+            }
+        }
+
         public void ModifyHP(int value, bool isHeal)
         {
             if (isHeal)
@@ -61,6 +91,22 @@ namespace Model.Characters
                 {
                     var killed = new CharacterKilledEvent(CombatEventManager.Instance, this.ParentController);
                 }
+            }
+        }
+
+        public void ModifyStamina(int value, bool isHeal)
+        {
+            if (isHeal)
+            {
+                this.Points.CurrentStamina += value;
+                if (this.GetCurrentStamina() > (int)this.GetCurrentStatValue(SecondaryStatsEnum.Stamina))
+                    this.Points.CurrentStamina = (int)this.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
+            }
+            else
+            {
+                this.Points.CurrentStamina -= value;
+                if (this.Points.CurrentStamina < 0)
+                    this.Points.CurrentStamina = 0;
             }
         }
     }

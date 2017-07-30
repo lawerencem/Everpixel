@@ -17,7 +17,6 @@ Wimpiness
 Stamina over time
 shield
 
-
 Abilities
 Taunt
 Group Taunt
@@ -25,6 +24,8 @@ Lockdown (Deal damage to enemy any time enemy does action and is within distance
 Protect (Take dmg for target as long as adjacent)
 Rallying Cry (+ morale)
 Counter (Hit back)
+
+Dino Priest
 
    - First:
      - Slug horde spell

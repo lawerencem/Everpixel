@@ -5,9 +5,9 @@ using Model.Equipment;
 
 namespace Model.Perks
 {
-    public class Weightlifter : GenericEquipmentSStatPerk
+    public class Colossus : GenericEquipmentSStatPerk
     {
-        public Weightlifter() : base(PerkEnum.Weightlifter) { }
+        public Colossus() : base(PerkEnum.Colossus) { }
 
         public override void TryModEquipmentMod(Pair<object, List<IndefSecondaryStatModifier>> mods)
         {
@@ -16,9 +16,9 @@ namespace Model.Perks
                 var armor = mods.X as GenericArmor;
                 if (armor.ArmorType == ArmorTypeEnum.Heavy_Armor)
                 {
-                    foreach(var kvp in mods.Y)
+                    foreach (var kvp in mods.Y)
                     {
-                        if (kvp.Type == Characters.SecondaryStatsEnum.Stamina)
+                        if (kvp.Type == Characters.SecondaryStatsEnum.AP)
                             kvp.Scalar *= this.Val;
                     }
                 }
@@ -26,11 +26,11 @@ namespace Model.Perks
             else if (mods.X.GetType() == typeof(GenericHelm))
             {
                 var helm = mods.X as GenericHelm;
-                if (helm.Type == ArmorTypeEnum.Heavy_Helm)
+                if (helm.ArmorType == ArmorTypeEnum.Heavy_Helm)
                 {
                     foreach (var kvp in mods.Y)
                     {
-                        if (kvp.Type == Characters.SecondaryStatsEnum.Stamina)
+                        if (kvp.Type == Characters.SecondaryStatsEnum.AP)
                             kvp.Scalar *= this.Val;
                     }
                 }

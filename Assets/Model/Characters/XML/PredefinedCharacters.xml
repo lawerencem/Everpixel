@@ -10,6 +10,7 @@
         <Perk>Bash_Buddy</Perk>
         <Perk>Hulk</Perk>
         <Perk>Iron_Hide</Perk>
+        <Perk>Two_Handed_Expert</Perk>
       </Perks>
       <PotentialArmors>
         <Armors name="One">
@@ -184,6 +185,7 @@
         <Perk>Hulk</Perk>
         <Perk>Iron_Hide</Perk>
         <Perk>Scaly</Perk>
+        <Perk>Two_Handed_Expert</Perk>
       </Perks>
       <PotentialArmors>
         <Armors name="One">

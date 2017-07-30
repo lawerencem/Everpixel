@@ -97,29 +97,6 @@ namespace Model.Characters
                 this.Points.CurrentStamina = (int)this.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
         }
 
-        public void AddWeapon(GenericWeapon weapon, bool lWeapon)
-        {
-            // TODO: 2handed weapon check
-            if (lWeapon)
-            {
-                this.LWeapon = weapon;
-                var mods = new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.GetStatModifiers());
-                foreach (var perk in this.Perks.EquipmentSStatPerks)
-                    perk.TryModEquipmentMod(mods);
-                this.Mods.AddMod(mods);
-            }
-            else
-            {
-                this.RWeapon = weapon;
-                var mods = new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.GetStatModifiers());
-                foreach (var perk in this.Perks.EquipmentSStatPerks)
-                {
-                    perk.TryModEquipmentMod(mods);
-                }
-                this.Mods.AddMod(mods);
-            }
-        }
-
         public int GetCurrentAP()
         {
             return this.Points.CurrentAP;
@@ -189,7 +166,7 @@ namespace Model.Characters
                 case (PrimaryStatsEnum.Perception): { v = (double)this.PrimaryStats.Perception; } break;
                 case (PrimaryStatsEnum.Resolve): { v = (double)this.PrimaryStats.Resolve; } break;
             }
-            foreach (var kvp in this.Mods.IndefPStatMods)
+            foreach (var kvp in this.Mods.IndefPStatGearMods)
                 foreach (var mod in kvp.Y)
                     mod.TryScaleValue(stat, ref v);
             foreach (var injury in this.Injuries)
@@ -225,7 +202,7 @@ namespace Model.Characters
                 case (SecondaryStatsEnum.Stamina): { v = (double)this.SecondaryStats.Stamina; } break;
                 case (SecondaryStatsEnum.Will): { v = (double)this.SecondaryStats.Will; } break;
             }
-            foreach (var kvp in this.Mods.IndefSStatMods)
+            foreach (var kvp in this.Mods.IndefSStatGearMods)
                 foreach (var mod in kvp.Y)
                     mod.TryScaleValue(stat, ref v);
             foreach (var injury in this.Injuries)

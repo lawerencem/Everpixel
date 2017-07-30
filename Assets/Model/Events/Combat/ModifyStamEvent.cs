@@ -11,7 +11,7 @@ namespace Model.Events.Combat
             : base(CombatEventEnum.ModifyStam, parent)
         {
             if (target != null)
-                target.ModifyHP(qty, isHeal);
+                target.ModifyStamina(qty, isHeal);
             if (!isHeal)
             {
                 CMapGUIController.Instance.DisplayText(qty.ToString(), target.ParentController.Handle, CMapGUIControllerParams.RED, CMapGUIControllerParams.DMG_TEXT_OFFSET);

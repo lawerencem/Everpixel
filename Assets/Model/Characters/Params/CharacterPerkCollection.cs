@@ -6,6 +6,7 @@ namespace Model.Characters
     public class CharacterPerkCollection
     {
         public List<GenericAbilityModPerk> AbilityModPerks;
+        public List<GenericEquipmentPerk> EquipmentPerks;
         public List<GenericEquipmentSStatPerk> EquipmentSStatPerks;
         public List<GenericOnActionPerk> OnActionPerks;
         public List<GenericPostHitPerk> PostHitPerks;
@@ -16,6 +17,7 @@ namespace Model.Characters
         public CharacterPerkCollection()
         {
             this.AbilityModPerks = new List<GenericAbilityModPerk>();
+            this.EquipmentPerks = new List<GenericEquipmentPerk>();
             this.EquipmentSStatPerks = new List<GenericEquipmentSStatPerk>();
             this.OnActionPerks = new List<GenericOnActionPerk>();
             this.PostHitPerks = new List<GenericPostHitPerk>();

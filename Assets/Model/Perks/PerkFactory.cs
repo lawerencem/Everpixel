@@ -13,6 +13,7 @@ namespace Model.Perks
                 case (PerkEnum.Barbarism): { return new Barbarism(); }
                 case (PerkEnum.Bash_Buddy): { return new BashBuddy(); }
                 case (PerkEnum.Bastion): { return new Bastion(); }
+                case (PerkEnum.Bully): { return new Bully(); }
                 case (PerkEnum.Colossus): { return new Colossus(); }
                 case (PerkEnum.Dino_Bite): { return new DinoBite(); }
                 case (PerkEnum.Enrage): { return new Enrage(); }
@@ -34,6 +35,7 @@ namespace Model.Perks
                 case (PerkEnum.Weightlifter): { return new Weightlifter(); }
                 case (PerkEnum.Violence_Fetish): { return new ViolenceFetish(); }
                 case (PerkEnum.T_Rex_Bite): { return new TRexBite(); }
+                case (PerkEnum.Two_Handed_Expert): { return new TwoHandedExpert(); }
                 default: { return null; }
             }
         } 

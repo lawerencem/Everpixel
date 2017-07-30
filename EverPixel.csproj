@@ -203,7 +203,6 @@
     <Compile Include="Assets\Model\Characters\Params\Race\RaceSprites.cs" />
     <Compile Include="Assets\Model\Characters\Params\SecondaryStatModifier.cs" />
     <Compile Include="Assets\Model\Characters\Params\SecondaryStats.cs" />
-    <Compile Include="Assets\Model\Characters\Params\SlotCollection.cs" />
     <Compile Include="Assets\Model\Characters\Tables\PredefinedCharacterTable.cs" />
     <Compile Include="Assets\Model\Characters\Tables\RaceParamsTable.cs" />
     <Compile Include="Assets\Model\Characters\XML\PerkParser.cs" />
@@ -327,10 +326,12 @@
     <Compile Include="Assets\Model\Perks\AbilityModPerks\GenericAbilityModPerk.cs" />
     <Compile Include="Assets\Model\Perks\AbilityModPerks\TRexBite.cs" />
     <Compile Include="Assets\Model\Perks\AbstractPerk.cs" />
-    <Compile Include="Assets\Model\Perks\EquipmentPerks\Colossus.cs" />
-    <Compile Include="Assets\Model\Perks\EquipmentPerks\GenericEquipmentSStatPerk.cs" />
-    <Compile Include="Assets\Model\Perks\EquipmentPerks\Hulk.cs" />
-    <Compile Include="Assets\Model\Perks\EquipmentPerks\Weightlifter.cs" />
+    <Compile Include="Assets\Model\Perks\EquipmentPerks\GenericEquipmentPerk.cs" />
+    <Compile Include="Assets\Model\Perks\EquipmentSStatPerks\Colossus.cs" />
+    <Compile Include="Assets\Model\Perks\EquipmentSStatPerks\GenericEquipmentSStatPerk.cs" />
+    <Compile Include="Assets\Model\Perks\EquipmentSStatPerks\Hulk.cs" />
+    <Compile Include="Assets\Model\Perks\EquipmentPerks\TwoHandedExpert.cs" />
+    <Compile Include="Assets\Model\Perks\EquipmentSStatPerks\Weightlifter.cs" />
     <Compile Include="Assets\Model\Perks\GenericPerk.cs" />
     <Compile Include="Assets\Model\Perks\OnActionPerks\BashBuddy.cs" />
     <Compile Include="Assets\Model\Perks\OnActionPerks\GenericOnActionPerk.cs" />
@@ -345,6 +346,7 @@
     <Compile Include="Assets\Model\Perks\PostHitPerks\SavageVisage.cs" />
     <Compile Include="Assets\Model\Perks\PostHitPerks\SmallShieldExpert.cs" />
     <Compile Include="Assets\Model\Perks\PostHitPerks\ViolenceFetish.cs" />
+    <Compile Include="Assets\Model\Perks\PreHitPerk\Bully.cs" />
     <Compile Include="Assets\Model\Perks\PreHitPerk\Executioner.cs" />
     <Compile Include="Assets\Model\Perks\PreHitPerk\GenericPreHitPerk.cs" />
     <Compile Include="Assets\Model\Perks\PreHitPerk\Predator.cs" />
@@ -362,9 +364,6 @@
     <Compile Include="Assets\Model\Perks\WhenHitPerks\Squishy.cs" />
     <Compile Include="Assets\Model\Perks\XML\PerkReader.cs" />
     <Compile Include="Assets\Model\Shields\Shield.cs" />
-    <Compile Include="Assets\Model\Slot\AbstractSlot.cs" />
-    <Compile Include="Assets\Model\Slot\GenericSlot.cs" />
-    <Compile Include="Assets\Model\Slot\SlotEnum.cs" />
     <Compile Include="Assets\Model\Spells\SpellFactory.cs" />
     <Compile Include="Assets\Model\Spells\SpellMediator.cs" />
     <Compile Include="Assets\Model\Spells\SpellsByLevel.cs" />
@@ -435,12 +434,11 @@
     <None Include="Assets\Model\Mounts\XML\Mounts.xml" />
     <None Include="Assets\Model\Parties\XML\Parties.xml" />
     <None Include="Assets\Model\Parties\XML\SubParties.xml" />
-    <None Include="Assets\Model\Perks\XML\Perks.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Model\Perks\XML\Perks.xml" />
     <None Include="Assets\TODO.txt" />
     <None Include="Assets\View\Barks\XML\Barks.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

@@ -20,6 +20,7 @@ namespace Model.Perks
                         case (PerkEnum.Barbarism): { c.Perks.PostHitPerks.Add(gPerk as Barbarism); } break;
                         case (PerkEnum.Bash_Buddy): { c.Perks.OnActionPerks.Add(gPerk as BashBuddy); } break;
                         case (PerkEnum.Bastion): { c.Perks.PostHitPerks.Add(gPerk as Bastion); } break;
+                        case (PerkEnum.Bully): { c.Perks.PreHitPerks.Add(gPerk as Bully); } break;
                         case (PerkEnum.Colossus): { c.Perks.EquipmentSStatPerks.Add(gPerk as Colossus); } break;
                         case (PerkEnum.Dino_Bite): { c.Perks.AbilityModPerks.Add(gPerk as DinoBite); } break;
                         case (PerkEnum.Enrage): { c.Perks.WhenHitPerks.Add(gPerk as Enrage); } break;
@@ -41,6 +42,7 @@ namespace Model.Perks
                         case (PerkEnum.Weightlifter): { c.Perks.EquipmentSStatPerks.Add(gPerk as Weightlifter); } break;
                         case (PerkEnum.Violence_Fetish): { c.Perks.PostHitPerks.Add(gPerk as ViolenceFetish); } break;
                         case (PerkEnum.T_Rex_Bite): { c.Perks.AbilityModPerks.Add(gPerk as TRexBite); } break;
+                        case (PerkEnum.Two_Handed_Expert): { c.Perks.EquipmentPerks.Add(gPerk as TwoHandedExpert); } break;
                     }
                 }
                 catch(KeyNotFoundException e)

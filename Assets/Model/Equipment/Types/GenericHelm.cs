@@ -1,7 +1,6 @@
 ﻿using Characters.Params;
 using Model.Abilities;
 using Model.Events;
-using Model.Slot;
 using System.Collections.Generic;
 
 namespace Model.Equipment
@@ -9,6 +8,7 @@ namespace Model.Equipment
     public class GenericHelm : GenericEquipment
     {
         public double APReduce { get; set; }
+        public ArmorTypeEnum ArmorType { get; set; }
         public double BlockReduce { get; set; }
         public double DamageIgnore { get; set; }
         public double DamageReduction { get; set; }
@@ -18,10 +18,8 @@ namespace Model.Equipment
         public string Name { get; set; }
         public double ParryReduce { get; set; }
         public double StaminaReduce { get; set; }
-        public ArmorTypeEnum Type { get; set; }
 
-
-        public GenericHelm() : base(SlotEnum.Head, EquipmentTypeEnum.Worn)
+        public GenericHelm() : base(EquipmentTypeEnum.Worn)
         {
 
         }

@@ -1,7 +1,6 @@
 ﻿using Characters.Params;
 using Model.Abilities;
 using Model.Events;
-using Model.Slot;
 using System.Collections.Generic;
 
 namespace Model.Equipment
@@ -20,7 +19,7 @@ namespace Model.Equipment
         public double ParryReduce { get; set; }
         public double StaminaReduce { get; set; }
 
-        public GenericArmor() : base(SlotEnum.Torso, EquipmentTypeEnum.Worn)
+        public GenericArmor() : base(EquipmentTypeEnum.Worn)
         {
             
         }

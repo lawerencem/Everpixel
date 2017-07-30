@@ -97,8 +97,9 @@ namespace Controller.Managers
                 {
                     foreach (var perk in hit.Source.Model.Perks.PostHitPerks)
                         perk.TryProcessAction(hit);
-                    foreach (var perk in hit.Target.Model.Perks.PostHitPerks)
-                        perk.TryProcessAction(hit);
+                    if (hit.Target != null)
+                        foreach (var perk in hit.Target.Model.Perks.PostHitPerks)
+                            perk.TryProcessAction(hit);
                     var tileHit = new TileHitEvent(this, hit);
                 }
                 if (this._currentAction.Container.CastFinished)

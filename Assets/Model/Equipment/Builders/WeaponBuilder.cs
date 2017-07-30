@@ -34,6 +34,7 @@ namespace Model.Equipment
             weapon.Skill = wStats.Skill;
             weapon.StaminaReduce = wStats.StaminaReduce;
             weapon.Tier = wStats.Tier;
+            weapon.WpnType = wStats.Type;
             return weapon;
         }
     }

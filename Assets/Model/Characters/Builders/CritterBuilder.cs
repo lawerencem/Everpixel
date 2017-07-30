@@ -2,7 +2,6 @@
 using Model.Abilities;
 using Model.Classes;
 using Model.Perks;
-using Model.Slot;
 using Model.Spells;
 using System;
 using System.Collections.Generic;
@@ -37,12 +36,6 @@ namespace Model.Characters
         private SecondaryStats GetSecondaryStats(PrimaryStats p)
         {
             return new SecondaryStats(p);
-        }
-
-        private SlotCollection GetSlotCollection()
-        {
-            var collection = new SlotCollection();
-            return collection;
         }
 
         private GenericCharacter BuildHelper(CharacterParams c)
