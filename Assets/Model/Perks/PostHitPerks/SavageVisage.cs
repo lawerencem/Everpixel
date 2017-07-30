@@ -1,10 +1,8 @@
 ﻿using Controller.Characters;
 using Controller.Managers;
-using Model.Characters;
 using Model.Combat;
 using Model.Effects;
 using Model.Events.Combat;
-using Model.OverTimeEffects;
 
 namespace Model.Perks
 {
@@ -23,10 +21,14 @@ namespace Model.Perks
             {
                 if (tile.Current != null && tile.Current.GetType().Equals(typeof(GenericCharacterController)))
                 {
+                    var target = ((GenericCharacterController)tile.Current).Model;
                     var horror = EffectsFactory.Instance.CreateNewObject(EffectsEnum.Horror);
-                    horror.Container.Duration = (int)this.Dur;
-                    horror.Container.Value = this.Val;
-                    // TODO: Debuff event
+                    horror.SetDuration((int)this.Dur);
+                    horror.SetValue((int)this.Val);
+                    if (!CombatReferee.Instance.ProcessResist(hit.Source.Model, target, this.Resist))
+                    {
+                        var effectEv = new GenericEffectEvent(CombatEventManager.Instance, target.ParentController, horror);
+                    }
                 }
             }
         }
