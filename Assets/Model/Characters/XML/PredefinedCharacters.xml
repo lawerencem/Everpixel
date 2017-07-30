@@ -133,6 +133,46 @@
         <Resolve>400</Resolve>
       </Stats>
     </Character>
+    <Character name ="Dino Scaleman">
+      <Class>Soldier,5</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Lizardman</RaceEnum>
+      <Perks>
+        <Perk>Bastion</Perk>
+        <Perk>Scaly</Perk>
+        <Perk>Medium_Shield_Expert</Perk>
+        <Perk>Shield_Happy</Perk>
+        <Perk>Shield_Pro</Perk>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.75,Dino Scale Armor,Four</Armor>
+          <Armor>0.25,Dino Scale Armor,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.75,Dino Scale Helm,Four</Helm>
+          <Helm>0.25,Dino Scale Helm,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <LWeapons name="One">
+          <LWeapon>0.75,Dino Shield,Four</LWeapon>
+          <LWeapon>0.25,Dino Shield,Three</LWeapon>
+        </LWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Dino Fang Club,Four</RWeapon>
+          <RWeapon>0.25,Dino Fang Club,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>480</Agility>
+        <Constitution>520</Constitution>
+        <Intelligence>450</Intelligence>
+        <Might>480</Might>
+        <Perception>550</Perception>
+        <Resolve>520</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Veteran Dino Knight">
       <Class>Knight,5</Class>
       <Class>Dino_Knight,7</Class>

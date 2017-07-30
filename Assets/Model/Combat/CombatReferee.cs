@@ -22,7 +22,7 @@ namespace Model.Combat
         private const double BASE_SCALAR = 1000;
         private const double BASE_SKILL_SCALAR = 0.75;
 
-        public double GetSpellDurMod(GenericCharacter character)
+        public double GetSpellDurViaMod(GenericCharacter character)
         {
             // TODO:
             return 1.0;
@@ -168,6 +168,10 @@ namespace Model.Combat
             }
             hit.Chances.Block = this.GetAttackVSDefenseSkillChance(melee, block, hit.Chances.Block);
             hit.Chances.Block *= hit.ModData.BlockMod;
+            if (hit.Chances.Block > 1)
+                hit.Chances.Block = 1;
+            if (hit.Chances.Block < 0)
+                hit.Chances.Block = 0;
 
             if (!hasShield) { hit.Chances.Block = 0; }
         }
@@ -177,6 +181,10 @@ namespace Model.Combat
             var melee = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Melee);
             var crit = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Critical_Chance);
             hit.Chances.Crit = this.GetAttackVSDefenseSkillChance(melee, crit, BASE_CRIT_CHANCE);
+            if (hit.Chances.Crit > 1)
+                hit.Chances.Crit = 1;
+            if (hit.Chances.Crit < 0)
+                hit.Chances.Crit = 0;
         }
 
         private void PredictDmg(HitInfo hit)
@@ -253,6 +261,11 @@ namespace Model.Combat
             acc *= hit.Ability.AccMod;
             parry *= hit.Ability.ParryModMod;
 
+            if (hit.Chances.Parry > 1)
+                hit.Chances.Parry = 1;
+            if (hit.Chances.Parry < 0)
+                hit.Chances.Parry = 0;
+
             hit.Chances.Parry = this.GetAttackVSDefenseSkillChance(acc, parry, parryChance);
         }
 
@@ -282,6 +295,10 @@ namespace Model.Combat
                         }
                         break;
                 }
+                if (hit.Chances.Resist > 1)
+                    hit.Chances.Resist = 1;
+                if (hit.Chances.Resist < 0)
+                    hit.Chances.Resist = 0;
             }
         }
 

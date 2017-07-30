@@ -140,7 +140,7 @@ namespace Controller.Managers.Map
 
         public void DisplayBuff(BuffEvent e)
         {
-            this._hitHelper.DisplayText("Buff", e.ToBuff.Handle, CMapGUIControllerParams.BLUE);
+            this._hitHelper.DisplayText("+ " + e.BuffStr, e.ToBuff.Handle, CMapGUIControllerParams.BLUE);
         }
 
         public void DisplayCast(CastingEvent e)

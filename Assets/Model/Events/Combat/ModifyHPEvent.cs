@@ -2,7 +2,6 @@
 using Controller.Managers.Map;
 using Controller.Map;
 using Model.Characters;
-using Model.Combat;
 
 namespace Model.Events.Combat
 {

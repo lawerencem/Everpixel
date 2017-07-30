@@ -1,6 +1,5 @@
 ﻿using Generics;
 using Generics.Utilities;
-using Model.Abilities;
 using Model.Biomes;
 using System.Collections.Generic;
 using UnityEngine;

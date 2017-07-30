@@ -97,6 +97,8 @@ namespace Controller.Managers
                 {
                     foreach (var perk in hit.Source.Model.Perks.PostHitPerks)
                         perk.TryProcessAction(hit);
+                    foreach (var perk in hit.Target.Model.Perks.PostHitPerks)
+                        perk.TryProcessAction(hit);
                     var tileHit = new TileHitEvent(this, hit);
                 }
                 if (this._currentAction.Container.CastFinished)
@@ -123,6 +125,8 @@ namespace Controller.Managers
                 case (CombatEventEnum.HexSelectedForMove): { HandleHexSelectedForMoveEvent(e as HexSelectedForMoveEvent); } break;
                 case (CombatEventEnum.HoT): { HandleHoTEvent(e as HoTEvent); } break;
                 case (CombatEventEnum.MapDoneLoading): { HandleMapDoneLoadingEvent(e as MapDoneLoadingEvent); } break;
+                case (CombatEventEnum.ModifyHP): { HandleModifyHPEvent(e as ModifyHPEvent); } break;
+                case (CombatEventEnum.ModifyStam): { HandleModifyStamEvent(e as ModifyStamEvent); } break;
                 case (CombatEventEnum.PathTraversed): { HandlePathTraversedEvent(e as PathTraversedEvent); } break;
                 case (CombatEventEnum.PerformAction): { HandlePerformActionEvent(e as PerformActionEvent); } break;
                 case (CombatEventEnum.PredictAction): { HandlePredictActionEvent(e as PredictActionEvent); } break;
@@ -255,6 +259,16 @@ namespace Controller.Managers
             this._combatManager.InitParties(e.LParty, e.RParty);
             this._mapLoader = e.MapLoader;
             this.PopulateBtnsHelper();
+        }
+
+        private void HandleModifyHPEvent(ModifyHPEvent e)
+        {
+            this._events.Remove(e);
+        }
+
+        private void HandleModifyStamEvent(ModifyStamEvent e)
+        {
+            this._events.Remove(e);
         }
 
         private void HandlePathTraversedEvent(PathTraversedEvent e)

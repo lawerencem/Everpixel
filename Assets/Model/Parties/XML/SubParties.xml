@@ -24,6 +24,11 @@
     <Character>1,Curizard,Three</Character>
     <Character>1,Beardedino,Three</Character>
   </SubParty>
+  <SubParty Name ="Dino Infantry">
+    <Difficulty>5</Difficulty>
+    <Character>1,Dino Scaleman,One</Character>
+    <Character>1,Dino Scaleman,One</Character>
+  </SubParty>
   <SubParty Name ="Dino Knights">
     <Difficulty>3</Difficulty>
     <Character>1,Dino Squire,One</Character>

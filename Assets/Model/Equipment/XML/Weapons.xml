@@ -7,7 +7,7 @@
       <AP_Reduce>0.80</AP_Reduce>
       <Armor_Ignore>0.84</Armor_Ignore>
       <Armor_Pierce>0.88</Armor_Pierce>
-      <Block_Ignore>0.22</Block_Ignore>
+      <Block_Ignore>0.02</Block_Ignore>
       <Damage>52</Damage>
       <Description>
         This gigantic log has a few razor-sharp teeth protruding from it.  Lizardman warriors use it like an axe.
@@ -34,7 +34,7 @@
       <AP_Reduce>0.81</AP_Reduce>
       <Armor_Ignore>0.82</Armor_Ignore>
       <Armor_Pierce>0.86</Armor_Pierce>
-      <Block_Ignore>0.25</Block_Ignore>
+      <Block_Ignore>0.02</Block_Ignore>
       <Damage>60</Damage>
       <Description>
         This log has a very large and very sharp tooth protruding from the end.  What kind of creature has teeth like that?
@@ -61,7 +61,7 @@
       <AP_Reduce>0.82</AP_Reduce>
       <Armor_Ignore>0.80</Armor_Ignore>
       <Armor_Pierce>0.84</Armor_Pierce>
-      <Block_Ignore>0.26</Block_Ignore>
+      <Block_Ignore>0.02</Block_Ignore>
       <Damage>78</Damage>
       <Description>
         This log has a very large and very sharp tooth protruding from the end.  What kind of creature has teeth like that?
@@ -88,7 +88,7 @@
       <AP_Reduce>0.84</AP_Reduce>
       <Armor_Ignore>0.78</Armor_Ignore>
       <Armor_Pierce>0.83</Armor_Pierce>
-      <Block_Ignore>0.27</Block_Ignore>
+      <Block_Ignore>0.03</Block_Ignore>
       <Damage>90</Damage>
       <Description>
         This log has a very large and very sharp tooth protruding from the end.  What kind of creature has teeth like that?
@@ -115,7 +115,7 @@
       <AP_Reduce>0.76</AP_Reduce>
       <Armor_Ignore>0.40</Armor_Ignore>
       <Armor_Pierce>0.93</Armor_Pierce>
-      <Block_Ignore>0.55</Block_Ignore>
+      <Block_Ignore>0.07</Block_Ignore>
       <Damage>90</Damage>
       <Description>
         Basically a giant slab of metal tied to a big stick.  It's sharp though - and it can assuredly do some damage when swung.
@@ -142,7 +142,7 @@
       <AP_Reduce>0.78</AP_Reduce>
       <Armor_Ignore>0.37</Armor_Ignore>
       <Armor_Pierce>0.91</Armor_Pierce>
-      <Block_Ignore>0.60</Block_Ignore>
+      <Block_Ignore>0.08</Block_Ignore>
       <Damage>110</Damage>
       <Description>
         A giant slab of sharpened metal tied to a stick.  Tiresome to wield, but deadly when swung.
@@ -169,7 +169,7 @@
       <AP_Reduce>0.80</AP_Reduce>
       <Armor_Ignore>0.35</Armor_Ignore>
       <Armor_Pierce>0.90</Armor_Pierce>
-      <Block_Ignore>0.65</Block_Ignore>
+      <Block_Ignore>0.09</Block_Ignore>
       <Damage>120</Damage>
       <Description>
         This savagely-heavy "axe" is favored by orc shock troops to decimate enemy front-lines.
@@ -196,7 +196,7 @@
       <AP_Reduce>0.80</AP_Reduce>
       <Armor_Ignore>0.30</Armor_Ignore>
       <Armor_Pierce>0.85</Armor_Pierce>
-      <Block_Ignore>0.68</Block_Ignore>
+      <Block_Ignore>0.09</Block_Ignore>
       <Damage>140</Damage>
       <Description>
         This savagely-heavy "axe" is also very, very sharp...
@@ -223,7 +223,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>0.99</Armor_Ignore>
       <Armor_Pierce>0.99</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0.00</Block_Ignore>
       <Damage>24</Damage>
       <Description>
         These small axes are favored by vikings.
@@ -248,7 +248,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>0.98</Armor_Ignore>
       <Armor_Pierce>0.98</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0.00</Block_Ignore>
       <Damage>26</Damage>
       <Description>
         These small axes are favored by vikings.
@@ -273,7 +273,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>0.97</Armor_Ignore>
       <Armor_Pierce>0.97</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0.0</Block_Ignore>
       <Damage>29</Damage>
       <Description>
         These small axes are favored by vikings.
@@ -298,7 +298,7 @@
       <AP_Reduce>1</AP_Reduce>
       <Armor_Ignore>0.96</Armor_Ignore>
       <Armor_Pierce>0.96</Armor_Pierce>
-      <Block_Ignore>1</Block_Ignore>
+      <Block_Ignore>0.0</Block_Ignore>
       <Damage>35</Damage>
       <Description>
         These small axes are favored by vikings.
@@ -323,7 +323,7 @@
       <AP_Reduce>0.88</AP_Reduce>
       <Armor_Ignore>0.90</Armor_Ignore>
       <Armor_Pierce>0.90</Armor_Pierce>
-      <Block_Ignore>0.99</Block_Ignore>
+      <Block_Ignore>0.02</Block_Ignore>
       <Damage>35</Damage>
       <Description>
         These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
@@ -351,7 +351,7 @@
       <AP_Reduce>0.89</AP_Reduce>
       <Armor_Ignore>0.89</Armor_Ignore>
       <Armor_Pierce>0.89</Armor_Pierce>
-      <Block_Ignore>0.98</Block_Ignore>
+      <Block_Ignore>0.02</Block_Ignore>
       <Damage>39</Damage>
       <Description>
         These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
@@ -379,7 +379,7 @@
       <AP_Reduce>0.90</AP_Reduce>
       <Armor_Ignore>0.88</Armor_Ignore>
       <Armor_Pierce>0.88</Armor_Pierce>
-      <Block_Ignore>0.97</Block_Ignore>
+      <Block_Ignore>0.03</Block_Ignore>
       <Damage>44</Damage>
       <Description>
         These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
@@ -407,7 +407,7 @@
       <AP_Reduce>0.90</AP_Reduce>
       <Armor_Ignore>0.87</Armor_Ignore>
       <Armor_Pierce>0.87</Armor_Pierce>
-      <Block_Ignore>0.96</Block_Ignore>
+      <Block_Ignore>0.03</Block_Ignore>
       <Damage>52</Damage>
       <Description>
         These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
@@ -437,7 +437,7 @@
       <AP_Reduce>0.51</AP_Reduce>
       <Armor_Ignore>0.18</Armor_Ignore>
       <Armor_Pierce>0.87</Armor_Pierce>
-      <Block_Ignore>0.18</Block_Ignore>
+      <Block_Ignore>0.85</Block_Ignore>
       <Damage>92</Damage>
       <Description>
         
@@ -462,7 +462,7 @@
       <AP_Reduce>0.53</AP_Reduce>
       <Armor_Ignore>0.16</Armor_Ignore>
       <Armor_Pierce>0.86</Armor_Pierce>
-      <Block_Ignore>0.16</Block_Ignore>
+      <Block_Ignore>0.86</Block_Ignore>
       <Damage>102</Damage>
       <Description>
         This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
@@ -488,7 +488,7 @@
       <AP_Reduce>0.54</AP_Reduce>
       <Armor_Ignore>0.15</Armor_Ignore>
       <Armor_Pierce>0.85</Armor_Pierce>
-      <Block_Ignore>0.15</Block_Ignore>
+      <Block_Ignore>0.87</Block_Ignore>
       <Damage>110</Damage>
       <Description>
         This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
@@ -514,7 +514,7 @@
       <AP_Reduce>0.55</AP_Reduce>
       <Armor_Ignore>0.13</Armor_Ignore>
       <Armor_Pierce>0.84</Armor_Pierce>
-      <Block_Ignore>0.13</Block_Ignore>
+      <Block_Ignore>0.88</Block_Ignore>
       <Damage>120</Damage>
       <Description>
         This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
@@ -542,7 +542,7 @@
       <AP_Reduce>0.73</AP_Reduce>
       <Armor_Ignore>0.75</Armor_Ignore>
       <Armor_Pierce>0.92</Armor_Pierce>
-      <Block_Ignore>0.30</Block_Ignore>
+      <Block_Ignore>0.20</Block_Ignore>
       <Damage>45</Damage>
       <Description>
         This log has some strangely-heavy bones protruding from the end.
@@ -569,7 +569,7 @@
       <AP_Reduce>0.75</AP_Reduce>
       <Armor_Ignore>0.73</Armor_Ignore>
       <Armor_Pierce>0.91</Armor_Pierce>
-      <Block_Ignore>0.34</Block_Ignore>
+      <Block_Ignore>0.21</Block_Ignore>
       <Damage>52</Damage>
       <Description>
         This log has some strangely-heavy bones protruding from the end.
@@ -596,7 +596,7 @@
       <AP_Reduce>0.78</AP_Reduce>
       <Armor_Ignore>0.70</Armor_Ignore>
       <Armor_Pierce>0.90</Armor_Pierce>
-      <Block_Ignore>0.35</Block_Ignore>
+      <Block_Ignore>0.22</Block_Ignore>
       <Damage>60</Damage>
       <Description>
         This log has some strangely-heavy bones protruding from the end.
@@ -623,7 +623,7 @@
       <AP_Reduce>0.80</AP_Reduce>
       <Armor_Ignore>0.68</Armor_Ignore>
       <Armor_Pierce>0.89</Armor_Pierce>
-      <Block_Ignore>0.37</Block_Ignore>
+      <Block_Ignore>0.23</Block_Ignore>
       <Damage>72</Damage>
       <Description>
         This log has some strangely-heavy bones protruding from the end.
@@ -1001,9 +1001,9 @@
       <Tier>Five</Tier>
       <Accuracy>0.88</Accuracy>
       <AP_Reduce>0.92</AP_Reduce>
-      <Armor_Ignore>3</Armor_Ignore>
+      <Armor_Ignore>0.99</Armor_Ignore>
       <Armor_Pierce>0.92</Armor_Pierce>
-      <Block_Ignore>0.05</Block_Ignore>
+      <Block_Ignore>0.0</Block_Ignore>
       <Damage>62</Damage>
       <Description>
         This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
@@ -1030,9 +1030,9 @@
       <Tier>Four</Tier>
       <Accuracy>0.90</Accuracy>
       <AP_Reduce>0.94</AP_Reduce>
-      <Armor_Ignore>5</Armor_Ignore>
+      <Armor_Ignore>0.99</Armor_Ignore>
       <Armor_Pierce>0.91</Armor_Pierce>
-      <Block_Ignore>0.06</Block_Ignore>
+      <Block_Ignore>0.00</Block_Ignore>
       <Damage>75</Damage>
       <Description>
         This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
@@ -1059,7 +1059,7 @@
       <Tier>Three</Tier>
       <Accuracy>0.92</Accuracy>
       <AP_Reduce>0.96</AP_Reduce>
-      <Armor_Ignore>6</Armor_Ignore>
+      <Armor_Ignore>0.99</Armor_Ignore>
       <Armor_Pierce>0.89</Armor_Pierce>
       <Block_Ignore>0.07</Block_Ignore>
       <Damage>88</Damage>
@@ -1088,7 +1088,7 @@
       <Tier>Two</Tier>
       <Accuracy>0.94</Accuracy>
       <AP_Reduce>0.98</AP_Reduce>
-      <Armor_Ignore>7</Armor_Ignore>
+      <Armor_Ignore>0.98</Armor_Ignore>
       <Armor_Pierce>0.87</Armor_Pierce>
       <Block_Ignore>0.08</Block_Ignore>
       <Damage>102</Damage>
@@ -1896,8 +1896,8 @@
       <Tier>Five</Tier>
       <Accuracy>0.92</Accuracy>
       <AP_Reduce>0.92</AP_Reduce>
-      <Armor_Ignore>0.94</Armor_Ignore>
-      <Armor_Pierce>2</Armor_Pierce>
+      <Armor_Ignore>0.99</Armor_Ignore>
+      <Armor_Pierce>0.92</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
       <Damage>32</Damage>
       <Description>
@@ -1921,8 +1921,8 @@
       <Tier>Four</Tier>
       <Accuracy>0.93</Accuracy>
       <AP_Reduce>0.93</AP_Reduce>
-      <Armor_Ignore>0.93</Armor_Ignore>
-      <Armor_Pierce>2</Armor_Pierce>
+      <Armor_Ignore>0.99</Armor_Ignore>
+      <Armor_Pierce>0.91</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
       <Damage>36</Damage>
       <Description>
@@ -1946,8 +1946,8 @@
       <Tier>Three</Tier>
       <Accuracy>0.94</Accuracy>
       <AP_Reduce>0.94</AP_Reduce>
-      <Armor_Ignore>0.94</Armor_Ignore>
-      <Armor_Pierce>2</Armor_Pierce>
+      <Armor_Ignore>0.99</Armor_Ignore>
+      <Armor_Pierce>0.91</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
       <Damage>42</Damage>
       <Description>
@@ -1971,8 +1971,8 @@
       <Tier>Two</Tier>
       <Accuracy>0.95</Accuracy>
       <AP_Reduce>0.95</AP_Reduce>
-      <Armor_Ignore>0.93</Armor_Ignore>
-      <Armor_Pierce>2</Armor_Pierce>
+      <Armor_Ignore>0.99</Armor_Ignore>
+      <Armor_Pierce>0.91</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
       <Damage>45</Damage>
       <Description>
@@ -1996,9 +1996,9 @@
       <Tier>Five</Tier>
       <Accuracy>0.85</Accuracy>
       <AP_Reduce>0.86</AP_Reduce>
-      <Armor_Ignore>0.82</Armor_Ignore>
+      <Armor_Ignore>0.91</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>0.12</Block_Ignore>
+      <Block_Ignore>0.03</Block_Ignore>
       <Damage>58</Damage>
       <Description>
         Supposedly, this is some fashion of sword... but it looks as if someone simply tied a sharp rock to a stick.
@@ -2022,9 +2022,9 @@
       <Tier>Four</Tier>
       <Accuracy>0.85</Accuracy>
       <AP_Reduce>0.89</AP_Reduce>
-      <Armor_Ignore>0.78</Armor_Ignore>
+      <Armor_Ignore>0.90</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>0.15</Block_Ignore>
+      <Block_Ignore>0.03</Block_Ignore>
       <Damage>59</Damage>
       <Description>
         Exemplifying typical orcish technology, someone has tied a jagged piece of metal to a stick and now calls it a "choppa".
@@ -2047,9 +2047,9 @@
       <Tier>Three</Tier>
       <Accuracy>0.88</Accuracy>
       <AP_Reduce>0.90</AP_Reduce>
-      <Armor_Ignore>0.77</Armor_Ignore>
+      <Armor_Ignore>0.89</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>0.18</Block_Ignore>
+      <Block_Ignore>0.04</Block_Ignore>
       <Damage>60</Damage>
       <Description>
         Someone has taken the time to sharpen this metal-on-a-stick.  Rather impressive by Orc standards.
@@ -2072,9 +2072,9 @@
       <Tier>Two</Tier>
       <Accuracy>0.90</Accuracy>
       <AP_Reduce>0.90</AP_Reduce>
-      <Armor_Ignore>0.75</Armor_Ignore>
+      <Armor_Ignore>0.88</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>0.20</Block_Ignore>
+      <Block_Ignore>0.05</Block_Ignore>
       <Damage>65</Damage>
       <Description>
         Simple yet sturdy, this sword represents the finest Orcish craftmanship.
@@ -2099,7 +2099,7 @@
       <AP_Reduce>0.90</AP_Reduce>
       <Armor_Ignore>0.75</Armor_Ignore>
       <Armor_Pierce>0.90</Armor_Pierce>
-      <Block_Ignore>0.40</Block_Ignore>
+      <Block_Ignore>0.30</Block_Ignore>
       <Damage>100</Damage>
       <Description>
         This sword represents a good balance beteween size and strength.  It is a potent defensive weapon, capable of parrying
@@ -2125,8 +2125,8 @@
       <Tier>Five</Tier>
       <Accuracy>0.82</Accuracy>
       <AP_Reduce>0.92</AP_Reduce>
-      <Armor_Ignore>0.87</Armor_Ignore>
-      <Armor_Pierce>0.82</Armor_Pierce>
+      <Armor_Ignore>0.91</Armor_Ignore>
+      <Armor_Pierce>0.99</Armor_Pierce>
       <Block_Ignore>0.02</Block_Ignore>
       <Damage>28</Damage>
       <Description>
@@ -2150,9 +2150,9 @@
       <Tier>Four</Tier>
       <Accuracy>0.84</Accuracy>
       <AP_Reduce>0.93</AP_Reduce>
-      <Armor_Ignore>0.86</Armor_Ignore>
-      <Armor_Pierce>0.80</Armor_Pierce>
-      <Block_Ignore>0.04</Block_Ignore>
+      <Armor_Ignore>0.90</Armor_Ignore>
+      <Armor_Pierce>0.97</Armor_Pierce>
+      <Block_Ignore>0.02</Block_Ignore>
       <Damage>32</Damage>
       <Description>
         Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
@@ -2176,9 +2176,9 @@
       <Tier>Three</Tier>
       <Accuracy>0.86</Accuracy>
       <AP_Reduce>0.94</AP_Reduce>
-      <Armor_Ignore>0.85</Armor_Ignore>
-      <Armor_Pierce>0.78</Armor_Pierce>
-      <Block_Ignore>0.06</Block_Ignore>
+      <Armor_Ignore>0.89</Armor_Ignore>
+      <Armor_Pierce>0.96</Armor_Pierce>
+      <Block_Ignore>0.02</Block_Ignore>
       <Damage>35</Damage>
       <Description>
         Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
@@ -2202,9 +2202,9 @@
       <Tier>Two</Tier>
       <Accuracy>0.88</Accuracy>
       <AP_Reduce>0.95</AP_Reduce>
-      <Armor_Ignore>0.84</Armor_Ignore>
-      <Armor_Pierce>0.75</Armor_Pierce>
-      <Block_Ignore>0.08</Block_Ignore>
+      <Armor_Ignore>0.88</Armor_Ignore>
+      <Armor_Pierce>0.95</Armor_Pierce>
+      <Block_Ignore>0.03</Block_Ignore>
       <Damage>42</Damage>
       <Description>
         Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
@@ -2279,7 +2279,7 @@
       <Tier>Four</Tier>
       <Accuracy>1</Accuracy>
       <AP_Reduce>1</AP_Reduce>
-      <Armor_Ignore>2</Armor_Ignore>
+      <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.95</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
       <Damage>60</Damage>
@@ -2305,8 +2305,8 @@
       <Tier>Three</Tier>
       <Accuracy>1</Accuracy>
       <AP_Reduce>1</AP_Reduce>
-      <Armor_Ignore>3</Armor_Ignore>
-      <Armor_Pierce>0.92</Armor_Pierce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.93</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
       <Damage>65</Damage>
       <Description>
@@ -2331,8 +2331,8 @@
       <Tier>Two</Tier>
       <Accuracy>1</Accuracy>
       <AP_Reduce>1</AP_Reduce>
-      <Armor_Ignore>4</Armor_Ignore>
-      <Armor_Pierce>0.90</Armor_Pierce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.92</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
       <Damage>75</Damage>
       <Description>
@@ -2410,7 +2410,7 @@
       <Tier>Five</Tier>
       <Accuracy>0.92</Accuracy>
       <AP_Reduce>1</AP_Reduce>
-      <Armor_Ignore>5</Armor_Ignore>
+      <Armor_Ignore>0.98</Armor_Ignore>
       <Armor_Pierce>0.99</Armor_Pierce>
       <Block_Ignore>0.15</Block_Ignore>
       <Damage>95</Damage>
@@ -2438,9 +2438,9 @@
       <Tier>Four</Tier>
       <Accuracy>0.93</Accuracy>
       <AP_Reduce>1</AP_Reduce>
-      <Armor_Ignore>6</Armor_Ignore>
+      <Armor_Ignore>0.96</Armor_Ignore>
       <Armor_Pierce>0.98</Armor_Pierce>
-      <Block_Ignore>0.17</Block_Ignore>
+      <Block_Ignore>0.15</Block_Ignore>
       <Damage>125</Damage>
       <Description>
         A heavier version of the traditional katana meant to easily penetrate even the heaviest armor.
@@ -2465,9 +2465,9 @@
       <Tier>Three</Tier>
       <Accuracy>0.95</Accuracy>
       <AP_Reduce>1</AP_Reduce>
-      <Armor_Ignore>7</Armor_Ignore>
-      <Armor_Pierce>0.97</Armor_Pierce>
-      <Block_Ignore>0.20</Block_Ignore>
+      <Armor_Ignore>0.94</Armor_Ignore>
+      <Armor_Pierce>0.96</Armor_Pierce>
+      <Block_Ignore>0.15</Block_Ignore>
       <Damage>165</Damage>
       <Description>
         A heavier version of the traditional katana meant to easily penetrate even the heaviest armor.
@@ -2492,9 +2492,9 @@
       <Tier>Two</Tier>
       <Accuracy>0.95</Accuracy>
       <AP_Reduce>1</AP_Reduce>
-      <Armor_Ignore>8</Armor_Ignore>
-      <Armor_Pierce>0.96</Armor_Pierce>
-      <Block_Ignore>0.22</Block_Ignore>
+      <Armor_Ignore>0.93</Armor_Ignore>
+      <Armor_Pierce>0.95</Armor_Pierce>
+      <Block_Ignore>0.15</Block_Ignore>
       <Damage>185</Damage>
       <Description>
         A heavier version of the traditional katana meant to easily penetrate even the heaviest armor. It is absolutely lethal in the right hands.
