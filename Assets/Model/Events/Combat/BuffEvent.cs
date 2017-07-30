@@ -1,7 +1,6 @@
 ﻿using Characters.Params;
 using Controller.Characters;
 using Controller.Managers;
-using Model.Characters;
 
 namespace Model.Events.Combat
 {
