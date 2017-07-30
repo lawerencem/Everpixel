@@ -15,14 +15,17 @@ namespace Model.Perks
 
         public override void TryProcessAction(HitInfo hit)
         {
-            base.TryProcessAction(hit);
-            if (!hit.IsHeal)
+            if (this.Parent.Equals(hit.Source.Model))
             {
-                var heal = (hit.Dmg * this.Val) / this.Dur;
-                var hot = new GenericHoT();
-                hot.SetDmg((int)heal);
-                hot.SetDur((int)this.Dur);
-                var hotEvent = new HoTEvent(CombatEventManager.Instance, hot, hit.Source);
+                base.TryProcessAction(hit);
+                if (!hit.IsHeal)
+                {
+                    var heal = (hit.Dmg * this.Val) / this.Dur;
+                    var hot = new GenericHoT();
+                    hot.SetDmg((int)heal);
+                    hot.SetDur((int)this.Dur);
+                    var hotEvent = new HoTEvent(CombatEventManager.Instance, hot, hit.Source);
+                }
             }
         }
     }

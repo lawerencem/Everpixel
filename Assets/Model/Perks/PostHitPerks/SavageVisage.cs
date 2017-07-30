@@ -15,19 +15,22 @@ namespace Model.Perks
 
         public override void TryProcessAction(HitInfo hit)
         {
-            base.TryProcessAction(hit);
-            var tiles = hit.Source.CurrentTile.Model.GetAoETiles((int)this.AoE);
-            foreach(var tile in tiles)
+            if (this.Parent.Equals(hit.Source.Model))
             {
-                if (tile.Current != null && tile.Current.GetType().Equals(typeof(GenericCharacterController)))
+                base.TryProcessAction(hit);
+                var tiles = hit.Source.CurrentTile.Model.GetAoETiles((int)this.AoE);
+                foreach (var tile in tiles)
                 {
-                    var target = ((GenericCharacterController)tile.Current).Model;
-                    var horror = EffectsFactory.Instance.CreateNewObject(EffectsEnum.Horror);
-                    horror.SetDuration((int)this.Dur);
-                    horror.SetValue((int)this.Val);
-                    if (!CombatReferee.Instance.ProcessResist(hit.Source.Model, target, this.Resist))
+                    if (tile.Current != null && tile.Current.GetType().Equals(typeof(GenericCharacterController)))
                     {
-                        var effectEv = new GenericEffectEvent(CombatEventManager.Instance, target.ParentController, horror);
+                        var target = ((GenericCharacterController)tile.Current).Model;
+                        var horror = EffectsFactory.Instance.CreateNewObject(EffectsEnum.Horror);
+                        horror.SetDuration((int)this.Dur);
+                        horror.SetValue((int)this.Val);
+                        if (!CombatReferee.Instance.ProcessResist(hit.Source.Model, target, this.Resist))
+                        {
+                            var effectEv = new GenericEffectEvent(CombatEventManager.Instance, target.ParentController, horror);
+                        }
                     }
                 }
             }

@@ -1,5 +1,6 @@
 ﻿using Generics;
 using Generics.Utilities;
+using Model.Abilities;
 using System.Xml.Linq;
 
 namespace Model.Perks
@@ -54,15 +55,30 @@ namespace Model.Perks
         private void HandleIndex(PerkEnum type, XElement ele, string mod, string value)
         {
             double v = 1;
-            double.TryParse(value, out v);
-            switch (mod)
+            if (double.TryParse(value, out v))
             {
-                case ("AoE"): { PerkTable.Instance.Table[type].AoE = v; } break;
-                case ("Dur"): { PerkTable.Instance.Table[type].Dur = v; } break;
-                case ("DurPerSpellDur"): { PerkTable.Instance.Table[type].DurPerSpellDur = v; } break;
-                case ("Val"): { PerkTable.Instance.Table[type].Val = v; } break;
-                case ("ValPerPower"): { PerkTable.Instance.Table[type].ValPerPower = v; } break;
+                switch (mod)
+                {
+                    case ("AoE"): { PerkTable.Instance.Table[type].AoE = v; } break;
+                    case ("Dur"): { PerkTable.Instance.Table[type].Dur = v; } break;
+                    case ("Val"): { PerkTable.Instance.Table[type].Val = v; } break;
+                    case ("ValPerPower"): { PerkTable.Instance.Table[type].ValPerPower = v; } break;
+                }
             }
+            else
+            {
+                switch(mod)
+                {
+                    case ("ResistTypeEnum"): { PerkTable.Instance.Table[type].Dur = v; } break;
+                }
+            }
+        }
+
+        private void HandleResist(PerkEnum type, string value)
+        {
+            var resist = ResistTypeEnum.None;
+            if (EnumUtil<ResistTypeEnum>.TryGetEnumValue(value, ref resist))
+                PerkTable.Instance.Table[type].Resist = resist;
         }
 
         private void HandleType(PerkEnum type)

@@ -7,7 +7,6 @@
         TODO
       </Description>
       <Dur>0</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>25</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
@@ -17,7 +16,6 @@
         TODO
       </Description>
       <Dur>0</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>50</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
@@ -29,7 +27,6 @@
         Increase AP by 15% for every piece of heavy armor the character is wearing.
       </Description>
       <Dur>0</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>1.15</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
@@ -39,8 +36,16 @@
         Increase AP by 10% for every weapon the character is currently wielding.
       </Description>
       <Dur>0</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>1.10</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Medium_Shield_Expert">
+      <AoE>0</AoE>
+      <Description>
+        Buffs character with additional block chance after a successful block.
+      </Description>
+      <Dur>3</Dur>
+      <Val>1.25</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
     <Perk name ="Weightlifter">
@@ -49,7 +54,6 @@
         Increase Stamina by 15% for every piece of heavy armor the character is wearing.
       </Description>
       <Dur>0</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>1.15</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
@@ -61,8 +65,16 @@
         Gain a HoT that heals this character's entire HP back in 5 turns upon killing an enemy.
       </Description>
       <Dur>5</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>0</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Bastion">
+      <AoE>0</AoE>
+      <Description>
+        Gain a Stamina after a successful block.
+      </Description>
+      <Dur>0</Dur>
+      <Val>15</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
     <Perk name ="Savage_Visage">
@@ -71,8 +83,16 @@
         Applies a horror effect to enemies within range upon dealing damage.
       </Description>
       <Dur>3</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>1</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Small_Shield_Expert">
+      <AoE>0</AoE>
+      <Description>
+        Buffs character with dodge and parry after a successful block.
+      </Description>
+      <Dur>3</Dur>
+      <Val>1.15</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
     <Perk name ="Violence_Fetish">
@@ -81,7 +101,6 @@
         Gain a HoT for 5% of the damage dealt over 5 turns.
       </Description>
       <Dur>5</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>0.05</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
@@ -93,7 +112,6 @@
         Give nearby allies a shield whenever performing an action.
       </Description>
       <Dur>3</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>3</Val>
       <ValPerPower>0.003</ValPerPower>
     </Perk>
@@ -105,7 +123,6 @@
         Triple damage against targets with less than 25% health.
       </Description>
       <Dur>0</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>3</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
@@ -115,7 +132,6 @@
         Do +50% damage to target for each injury on target.
       </Description>
       <Dur>0</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>1.10</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
@@ -125,7 +141,6 @@
         Double the character's chance to block with whenever shielded.
       </Description>
       <Dur>0</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>2</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
@@ -137,7 +152,6 @@
         Gives a 25% boost to this character's HP.
       </Description>
       <Dur>0</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>1.25</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
@@ -147,7 +161,6 @@
         Character gains 25% damage reduction.
       </Description>
       <Dur>0</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>0.75</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
@@ -157,7 +170,6 @@
         Gives a 15% boost to this character's HP.
       </Description>
       <Dur>0</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>1.15</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
@@ -167,10 +179,18 @@
         Character gains 4 points of flat damage reduction.
       </Description>
       <Dur>0</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>4.0</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
+  <Perk name ="Shield_Pro">
+    <AoE>0</AoE>
+    <Description>
+      Character gains a 15% bonus to their block skill.
+    </Description>
+    <Dur>0</Dur>
+    <Val>1.15</Val>
+    <ValPerPower>0</ValPerPower>
+  </Perk>
   </PerkClass>
   <PerkClass name ="WhenHitPerk">
     <Perk name ="Enrage">
@@ -179,7 +199,6 @@
         Gain a +15% bonus to power whenever damaged.
       </Description>
       <Dur>3</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>1.15</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
@@ -189,7 +208,6 @@
         Gain a shield worth 25% of this character's HP whenever critically hit with a damaging attack.
       </Description>
       <Dur>5</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>1.25</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
@@ -199,7 +217,6 @@
         Reduces the damage of attacks against this character by 3% for each percentage point of Armor Ignore.
       </Description>
       <Dur>0</Dur>
-      <DurPerSpellDur>0</DurPerSpellDur>
       <Val>0</Val>
       <ValPerPower>0.03</ValPerPower>
     </Perk>

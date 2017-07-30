@@ -6,9 +6,9 @@ using Model.Events.Combat;
 
 namespace Model.Perks
 {
-    public class SmallShieldExpert : GenericPostHitPerk
+    public class MediumShieldExpert : GenericPostHitPerk
     {
-        public SmallShieldExpert() : base(PerkEnum.Small_Shield_Expert)
+        public MediumShieldExpert() : base(PerkEnum.Medium_Shield_Expert)
         {
 
         }
@@ -21,10 +21,8 @@ namespace Model.Perks
                 if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Block))
                 {
                     var dur = (int)(CombatReferee.Instance.GetSpellDurViaMod(hit.Target.Model) * this.Val);
-                    var dodge = new SecondaryStatModifier(SecondaryStatsEnum.Dodge, dur, this.Val);
-                    var parry = new SecondaryStatModifier(SecondaryStatsEnum.Parry, dur, this.Val);
-                    var dodgeEv = new BuffEvent(CombatEventManager.Instance, dodge, hit.Target);
-                    var parryEv = new BuffEvent(CombatEventManager.Instance, parry, hit.Target);
+                    var block = new SecondaryStatModifier(SecondaryStatsEnum.Block, dur, this.Val);
+                    var blockEv = new BuffEvent(CombatEventManager.Instance, block, hit.Target);
                 }
             }
         }
