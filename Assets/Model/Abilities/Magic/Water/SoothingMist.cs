@@ -32,7 +32,7 @@ namespace Model.Abilities
             var tiles = this.GetAoETiles(e.Container.Source.CurrentTile, e.Container.Target, (int)e.Container.Action.AoE);
 
             var proto = GenericAbilityTable.Instance.Table[AbilitiesEnum.Soothing_Mist];
-            var dur = (proto.Duration * e.Container.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Spell_Duration));
+            var dur = (proto.Duration * CombatReferee.Instance.GetSpellDurMod(hit.Source.Model));
 
             foreach (var tile in tiles)
             {
