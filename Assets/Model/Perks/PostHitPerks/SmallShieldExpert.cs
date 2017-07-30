@@ -18,8 +18,9 @@ namespace Model.Perks
             base.TryProcessAction(hit);
             if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Block))
             {
-                var dodge = new SecondaryStatModifier(SecondaryStatsEnum.Dodge, (int)this.Dur, this.Val);
-                var parry = new SecondaryStatModifier(SecondaryStatsEnum.Parry, (int)this.Dur, this.Val);
+                var dur = (int)(CombatReferee.Instance.GetSpellDurMod(hit.Target.Model) * this.Val);
+                var dodge = new SecondaryStatModifier(SecondaryStatsEnum.Dodge, dur, this.Val);
+                var parry = new SecondaryStatModifier(SecondaryStatsEnum.Parry, dur, this.Val);
                 var dodgeEv = new BuffEvent(CombatEventManager.Instance, dodge, hit.Target);
                 var parryEv = new BuffEvent(CombatEventManager.Instance, parry, hit.Target);
             }
