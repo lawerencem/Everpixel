@@ -1,5 +1,6 @@
 ﻿using Model.Abilities;
 using Model.Events.Combat;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using View.Events;
@@ -10,12 +11,19 @@ namespace Controller.Managers
 {
     public class GUIEventManager
     {
-
+        private Dictionary<string, GameObject> _btns;
         private List<GUIEvent> _events;
 
         public GUIEventManager()
         {
             this._events = new List<GUIEvent>();
+            this._btns = new Dictionary<string, GameObject>();
+            for (int i = 0; i < 7; i++)
+            {
+                var tag = "WpnBtnTag" + i;
+                var btn = GameObject.FindGameObjectWithTag(tag);
+                this._btns.Add(tag, btn);
+            }
         }
 
         private static GUIEventManager _instance;
@@ -62,13 +70,16 @@ namespace Controller.Managers
             for (int i = 0; i < 7; i++)
             {
                 var tag = "WpnBtnTag" + i;
-                var btnContainer = GameObject.FindGameObjectWithTag(tag);
-                var script = btnContainer.GetComponent<WpnBtnClick>();
-
                 if (e.Abilities != null && i < e.Abilities.Count)
+                {
+                    this._btns[tag].SetActive(true);
+                    var script = this._btns[tag].GetComponent<WpnBtnClick>();
                     script.SetAbility(e.Abilities[i].X.Type, e.Abilities[i].Y);
+                }
                 else
-                    script.SetAbility(AbilitiesEnum.None, true);
+                {
+                    this._btns[tag].SetActive(false);
+                }   
             }
         }
         

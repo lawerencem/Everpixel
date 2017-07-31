@@ -4,8 +4,6 @@ using Model.Abilities;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using View.Events;
-using View.GUI;
 using Model.Events.Combat;
 
 namespace View.Scripts

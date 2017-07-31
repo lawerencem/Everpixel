@@ -17,7 +17,10 @@ namespace View.Scripts
 
         private void OnClick()
         {
-            var e = new WpnBtnClickEvent(GUIEventManager.Instance, this._ability, this._rWeapon);
+            if (this._ability != AbilitiesEnum.None)
+            {
+                var e = new WpnBtnClickEvent(GUIEventManager.Instance, this._ability, this._rWeapon);
+            }
         }
 
         public void Init(string tag)
@@ -44,8 +47,6 @@ namespace View.Scripts
             this._rWeapon = rWeapon;
             this._ability = a;
             var btn = GameObject.FindGameObjectWithTag(this.tag);
-            var text = btn.GetComponentInChildren<Text>();
-            text.text = a.ToString().Replace("_", " ");
             this._imgHandler.transform.SetParent(btn.transform);
             var img = this._imgHandler.GetComponent<Image>();
             img.sprite = GUISpriteLoader.Instance.GetWpnAbilityBtnImg(a);

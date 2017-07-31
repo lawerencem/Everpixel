@@ -12,7 +12,6 @@ namespace View.GUI
         private const string EXTENSION = "_Spritesheet";
         private const string ICON_PATH = "Sprites/Icons/";
 
-
         public GUISpriteLoader() { }
 
         public Sprite GetWpnAbilityBtnImg(AbilitiesEnum ability)
