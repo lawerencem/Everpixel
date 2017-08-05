@@ -49,6 +49,18 @@
     <Character>1,Solizard,Two</Character>
     <Character>1,Rawrasaur,Two</Character>
   </SubParty>
+  <SubParty Name ="Dino Priest">
+    <Difficulty>4</Difficulty>
+    <Character>1,Dino Priest,Three</Character>
+  </SubParty>
+  <SubParty Name ="Dino Priest">
+    <Difficulty>6</Difficulty>
+    <Character>1,Divine Dino Priest,Three</Character>
+  </SubParty>
+  <SubParty Name ="Dino Priest">
+    <Difficulty>8</Difficulty>
+    <Character>1,Dino Seraph,Three</Character>
+  </SubParty>
   <SubParty Name ="Gobbo Spider Riders">
     <Difficulty>2</Difficulty>
     <Character>1,Spider Rider,One</Character>

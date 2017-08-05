@@ -21,6 +21,13 @@
     <SecondaryStatsEnum>Critical_Chance,8</SecondaryStatsEnum>
     <SecondaryStatsEnum>Critical_Multiplier,8</SecondaryStatsEnum>
   </Class>
+  <Class name="Cleric">
+    <PrimaryStatsEnum>Intelligence,2</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Resolve,6</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Morale,1</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Spell_Duration,8</SecondaryStatsEnum>
+  </Class>
   <Class name="Dino_Knight">
     <PrimaryStatsEnum>Constitution,3</PrimaryStatsEnum>
     <PrimaryStatsEnum>Might,4</PrimaryStatsEnum>
@@ -29,11 +36,18 @@
     <SecondaryStatsEnum>Parry,3</SecondaryStatsEnum>
     <SecondaryStatsEnum>Power,10</SecondaryStatsEnum>
   </Class>
+  <Class name="Divine_Mind">
+    <PrimaryStatsEnum>Intelligence,2</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Perception,6</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Concentration,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Inititative,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,8</SecondaryStatsEnum>
+  </Class>
   <Class name="Eldritch_Weaver">
     <PrimaryStatsEnum>Intelligence,1</PrimaryStatsEnum>
     <PrimaryStatsEnum>Might,2</PrimaryStatsEnum>
     <PrimaryStatsEnum>Perception,5</PrimaryStatsEnum>
-    <SecondaryStatsEnum>Morale,16</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Morale,1</SecondaryStatsEnum>
     <SecondaryStatsEnum>Will,16</SecondaryStatsEnum>
   </Class>
   <Class name="Fighter">
@@ -48,15 +62,6 @@
     <SecondaryStatsEnum>Melee,4</SecondaryStatsEnum>
     <SecondaryStatsEnum>Parry,1</SecondaryStatsEnum>
     <SecondaryStatsEnum>Ranged,3</SecondaryStatsEnum>
-  </Class>
-  <Class name="Mage">
-    <PrimaryStatsEnum>Intelligence,5</PrimaryStatsEnum>
-    <PrimaryStatsEnum>Perception,2</PrimaryStatsEnum>
-    <SecondaryStatsEnum>Concentration,5</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Critical_Chance,1</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Power,2</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Spell_Duration,4</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Spell_Penetration,4</SecondaryStatsEnum>
   </Class>
   <Class name="Knight">
     <PrimaryStatsEnum>Constitution,3</PrimaryStatsEnum>
@@ -73,6 +78,15 @@
     <SecondaryStatsEnum>Iniative,8</SecondaryStatsEnum>
     <SecondaryStatsEnum>Stamina,4</SecondaryStatsEnum>
   </Class>
+  <Class name="Mage">
+    <PrimaryStatsEnum>Intelligence,5</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Perception,2</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Concentration,5</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Critical_Chance,1</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,2</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Spell_Duration,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Spell_Penetration,4</SecondaryStatsEnum>
+  </Class>
   <Class name="Ninja">
     <PrimaryStatsEnum>Agility,3</PrimaryStatsEnum>
     <PrimaryStatsEnum>Intelligence,2</PrimaryStatsEnum>
@@ -82,6 +96,13 @@
     <SecondaryStatsEnum>Power,4</SecondaryStatsEnum>
     <SecondaryStatsEnum>Melee,4</SecondaryStatsEnum>
     <SecondaryStatsEnum>Initiative,3</SecondaryStatsEnum>
+  </Class>
+  <Class name="Psion">
+    <PrimaryStatsEnum>Intelligence,6</PrimaryStatsEnum>
+    <PrimaryStatsEnum>Perception,2</PrimaryStatsEnum>
+    <SecondaryStatsEnum>Concentration,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Will,12</SecondaryStatsEnum>
   </Class>
   <Class name="Samurai">
     <PrimaryStatsEnum>Agility,4</PrimaryStatsEnum>

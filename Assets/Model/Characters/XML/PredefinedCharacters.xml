@@ -39,6 +39,72 @@
         <Resolve>450</Resolve>
       </Stats>
     </Character>
+    <Character name ="Dino Priest">
+      <Class>Cleric,2</Class>
+      <Class>Divine_Mind,2</Class>
+      <Class>Psion,2</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Lizardman</RaceEnum>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.75,Dino Regalia,Five</Armor>
+          <Armor>0.25,Dino Regalia,Four</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.75,Dino Headdress,Five</Helm>
+          <Helm>0.25,Dino Headdress,Four</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Dino Staff,Five</RWeapon>
+          <RWeapon>0.25,Dino Staff,Four</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>350</Agility>
+        <Constitution>280</Constitution>
+        <Intelligence>780</Intelligence>
+        <Might>450</Might>
+        <Perception>680</Perception>
+        <Resolve>550</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Dino Seraph">
+      <Class>Cleric,5</Class>
+      <Class>Divine_Mind,6</Class>
+      <Class>Psion,5</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Lizardman</RaceEnum>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.75,Dino Regalia,Three</Armor>
+          <Armor>0.25,Dino Regalia,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.75,Dino Headdress,Three</Helm>
+          <Helm>0.25,Dino Headdress,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Dino Staff,Four</RWeapon>
+          <RWeapon>0.25,Dino Staff,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>350</Agility>
+        <Constitution>280</Constitution>
+        <Intelligence>780</Intelligence>
+        <Might>450</Might>
+        <Perception>680</Perception>
+        <Resolve>550</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Dino Squire">
       <Class>Knight,3</Class>
       <Class>Dino_Knight,1</Class>
@@ -74,6 +140,39 @@
         <Might>480</Might>
         <Perception>530</Perception>
         <Resolve>450</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Divine Dino Priest">
+      <Class>Cleric,3</Class>
+      <Class>Divine_Mind,3</Class>
+      <Class>Psion,3</Class>
+      <CharacterTypeEnum>Humanoid</CharacterTypeEnum>
+      <RaceEnum>Lizardman</RaceEnum>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.75,Dino Regalia,Four</Armor>
+          <Armor>0.25,Dino Regalia,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.75,Dino Headdress,Four</Helm>
+          <Helm>0.25,Dino Headdress,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Dino Staff,Four</RWeapon>
+          <RWeapon>0.25,Dino Staff,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>350</Agility>
+        <Constitution>280</Constitution>
+        <Intelligence>780</Intelligence>
+        <Might>450</Might>
+        <Perception>680</Perception>
+        <Resolve>550</Resolve>
       </Stats>
     </Character>
     <Character name ="Lizardman Militia">

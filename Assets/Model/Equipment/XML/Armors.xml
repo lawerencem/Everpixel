@@ -73,6 +73,78 @@
       <Stamina_Reduce>1</Stamina_Reduce>
       <Value>1000</Value>
     </Armor>
+    <Armor name="Dino Regalia">
+      <Tier>Five</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0</Damage_Reduction>
+      <Description>
+        Golden swag doesn't make for good armor...
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>10</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>5</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>10</Value>
+    </Armor>
+    <Armor name="Dino Regalia">
+      <Tier>Four</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0</Damage_Reduction>
+      <Description>
+        Golden swag doesn't make for good armor...
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>15</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>20</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>50</Value>
+    </Armor>
+    <Armor name="Dino Regalia">
+      <Tier>Three</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0</Damage_Reduction>
+      <Description>
+        Golden swag doesn't make for good armor...
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>35</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>35</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>150</Value>
+    </Armor>
+    <Armor name="Dino Regalia">
+      <Tier>Two</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0</Damage_Reduction>
+      <Description>
+        Golden swag doesn't make for good armor...
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>55</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>35</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>250</Value>
+    </Armor>
     <Armor name="Slime Handler Robes">
       <Tier>Five</Tier>
       <AP_Reduce>0.97</AP_Reduce>
@@ -244,6 +316,78 @@
     </Armor>
   </ArmorTypeEnum>
   <ArmorTypeEnum name = "Light_Helm">
+    <Armor name="Dino Headdress">
+      <Tier>Five</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        Big and bulky, this headdress can magnify the psychic abilities of its wearer.
+      </Description>
+      <Dodge_Reduce>0.88</Dodge_Reduce>
+      <Durability>5</Durability>
+      <Fatigue_Cost>0.88</Fatigue_Cost>
+      <Initiative_Reduce>0.82</Initiative_Reduce>
+      <Parry_Reduce>0.50</Parry_Reduce>
+      <Sprites>3</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>50</Value>
+    </Armor>
+    <Armor name="Dino Headdress">
+      <Tier>Four</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        Big and bulky, this headdress can magnify the psychic abilities of its wearer.
+      </Description>
+      <Dodge_Reduce>0.89</Dodge_Reduce>
+      <Durability>12</Durability>
+      <Fatigue_Cost>0.89</Fatigue_Cost>
+      <Initiative_Reduce>0.83</Initiative_Reduce>
+      <Parry_Reduce>0.52</Parry_Reduce>
+      <Sprites>18</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>150</Value>
+    </Armor>
+    <Armor name="Dino Headdress">
+      <Tier>Three</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        Big and bulky, this headdress can magnify the psychic abilities of its wearer.
+      </Description>
+      <Dodge_Reduce>0.90</Dodge_Reduce>
+      <Durability>20</Durability>
+      <Fatigue_Cost>0.90</Fatigue_Cost>
+      <Initiative_Reduce>0.84</Initiative_Reduce>
+      <Parry_Reduce>0.55</Parry_Reduce>
+      <Sprites>33</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>250</Value>
+    </Armor>
+    <Armor name="Dino Headdress">
+      <Tier>Two</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.96</Damage_Reduction>
+      <Description>
+        Big and bulky, this headdress can magnify the psychic abilities of its wearer.
+      </Description>
+      <Dodge_Reduce>0.90</Dodge_Reduce>
+      <Durability>25</Durability>
+      <Fatigue_Cost>0.91</Fatigue_Cost>
+      <Initiative_Reduce>0.85</Initiative_Reduce>
+      <Parry_Reduce>0.58</Parry_Reduce>
+      <Sprites>48</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>500</Value>
+    </Armor>
     <Armor name="Skull">
       <Tier>Five</Tier>
       <AP_Reduce>0.98</AP_Reduce>

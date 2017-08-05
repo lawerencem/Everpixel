@@ -1711,6 +1711,106 @@
     </Weapon>  
   </WeaponSkillEnum>
   <WeaponSkillEnum name ="Staff">
+    <Weapon name="Dino Staff">
+      <Tier>Five</Tier>
+      <Accuracy>0.78</Accuracy>
+      <AP_Reduce>0.85</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>10</Damage>
+      <Description>
+        Not exactly the most effective weapon, but its presence inspires the troops.
+      </Description>
+      <Fatigue_Cost_Mod>1.08</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.72</Initiative_Reduce>
+      <Max_Durability>10</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0.00</Shield_Damage>
+      <WeaponSkillEnum>Staff</WeaponSkillEnum>
+      <Sprites>3</Sprites>
+      <Stamina_Reduce>0.92</Stamina_Reduce>
+      <Value>100</Value>
+      <WeaponAbilitiesEnum>Crush</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Dino Staff">
+      <Tier>Four</Tier>
+      <Accuracy>0.80</Accuracy>
+      <AP_Reduce>0.87</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>12</Damage>
+      <Description>
+        Not exactly the most effective weapon, but its presence inspires the troops.
+      </Description>
+      <Fatigue_Cost_Mod>1.06</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.74</Initiative_Reduce>
+      <Max_Durability>10</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0.00</Shield_Damage>
+      <WeaponSkillEnum>Staff</WeaponSkillEnum>
+      <Sprites>18</Sprites>
+      <Stamina_Reduce>0.94</Stamina_Reduce>
+      <Value>250</Value>
+      <WeaponAbilitiesEnum>Crush</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Dino Staff">
+      <Tier>Three</Tier>
+      <Accuracy>0.82</Accuracy>
+      <AP_Reduce>0.88</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>15</Damage>
+      <Description>
+        Not exactly the most effective weapon, but its presence inspires the troops.
+      </Description>
+      <Fatigue_Cost_Mod>1.04</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.76</Initiative_Reduce>
+      <Max_Durability>10</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0.00</Shield_Damage>
+      <WeaponSkillEnum>Staff</WeaponSkillEnum>
+      <Sprites>33</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>355</Value>
+      <WeaponAbilitiesEnum>Crush</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
+    <Weapon name="Dino Staff">
+      <Tier>Two</Tier>
+      <Accuracy>0.84</Accuracy>
+      <AP_Reduce>0.90</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>18</Damage>
+      <Description>
+        Not exactly the most effective weapon, but its presence inspires the troops.
+      </Description>
+      <Fatigue_Cost_Mod>1.03</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.78</Initiative_Reduce>
+      <Max_Durability>15</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0.00</Shield_Damage>
+      <WeaponSkillEnum>Staff</WeaponSkillEnum>
+      <Sprites>48</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>550</Value>
+      <WeaponAbilitiesEnum>Crush</WeaponAbilitiesEnum>
+      <WeaponTypeEnum>Two_Handed</WeaponTypeEnum>
+      <WeaponUseEnum>Melee</WeaponUseEnum>
+    </Weapon>
     <Weapon name="Slime Staff">
       <Tier>Five</Tier>
       <Accuracy>0.85</Accuracy>
