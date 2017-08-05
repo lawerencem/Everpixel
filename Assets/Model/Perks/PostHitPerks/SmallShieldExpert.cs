@@ -13,7 +13,7 @@ namespace Model.Perks
 
         }
 
-        public override void TryProcessAction(HitInfo hit)
+        public override void TryProcessAction(Hit hit)
         {
             if (this.Parent.Equals(hit.Target.Model))
             {

@@ -11,16 +11,16 @@ namespace Model.Perks
 
         }
 
-        public override void TryModHit(HitInfo hit)
+        public override void TryModHit(Hit hit)
         {
             base.TryModHit(hit);
             var tiles = hit.TargetTile.Model.GetAoETiles((int)this.AoE);
             int count = 0;
             foreach(var tile in tiles)
             {
-                if (tile.Current != null && tile.Current.Equals(typeof(GenericCharacterController)))
+                if (tile.Current != null && tile.Current.Equals(typeof(CharController)))
                 {
-                    var controller = tile.Current as GenericCharacterController;
+                    var controller = tile.Current as CharController;
                     if (controller.LParty == this.Parent.ParentController.LParty)
                         count++;
                 }

@@ -13,7 +13,7 @@ namespace View.Scripts
         private const int SENTINEL = -1;
 
         private DisplayHitStatsEvent _event;
-        private GenericCharacterController _character;
+        private CharController _character;
 
         public void Init(DisplayHitStatsEvent e)
         {
@@ -33,7 +33,7 @@ namespace View.Scripts
 
         private void ShakeDone()
         {
-            var ability = this._event.Hit.Ability as GenericShapeshiftAbility;
+            var ability = this._event.Hit.Ability as Shapeshift;
             var character = this._event.Hit.Source;
             var info = ability.Info.Copy();
 

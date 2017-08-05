@@ -124,7 +124,7 @@ namespace Models.Equipment.XML
 
         private void HandleShapeshiftSprites(XElement element, AbilitiesEnum type)
         {
-            var v = GenericAbilityTable.Instance.Table[type] as GenericShapeshiftAbility;
+            var v = GenericAbilityTable.Instance.Table[type] as Shapeshift;
             foreach(var ele in element.Elements())
             {
                 switch(ele.Name.ToString())

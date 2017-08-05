@@ -7,9 +7,9 @@ namespace Model.Events.Combat
     public class HoTEvent : CombatEvent
     {
         public GenericHoT HoT { get; set; }
-        public GenericCharacterController ToHoT { get; set; }
+        public CharController ToHoT { get; set; }
 
-        public HoTEvent(CombatEventManager parent, GenericHoT hot, GenericCharacterController toHot) :
+        public HoTEvent(CombatEventManager parent, GenericHoT hot, CharController toHot) :
             base(CombatEventEnum.HoT, parent)
         {
             this.HoT = hot;

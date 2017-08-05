@@ -46,7 +46,7 @@ namespace Model.Characters
 
         public CharacterStatusFlags StatusFlags { get; set; }
 
-        public List<GenericEffect> Effects { get; set; }
+        public List<Effect> Effects { get; set; }
 
         public List<GenericDoT> DoTs { get; set; }
         public List<GenericHoT> HoTs { get; set; }
@@ -62,7 +62,7 @@ namespace Model.Characters
             this.Mods.AddMod(mods);
         }
 
-        public void AddEffect(GenericEffect effect)
+        public void AddEffect(Effect effect)
         {
             this.Effects.Add(effect);
         }

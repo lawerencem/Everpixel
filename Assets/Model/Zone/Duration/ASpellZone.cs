@@ -6,12 +6,8 @@ namespace Assets.Model.Zone.Duration
 {
     public abstract class ASpellZone : ADurationZone
     {
-        protected GenericCharacterController _caster;
+        protected CharController _caster;
 
-        public ASpellZone(int dur, GenericCharacterController caster, GameObject handle, TileController tile) 
-            : base(dur, handle, tile)
-        {
-            this._caster = caster;
-        }
+        public ASpellZone(ZoneArgsContainer arg) : base(arg) { this._caster = arg.Caster; }
     }
 }

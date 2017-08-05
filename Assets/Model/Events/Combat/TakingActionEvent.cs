@@ -6,9 +6,9 @@ namespace Model.Events.Combat
 {
     public class TakingActionEvent : CombatEvent
     {
-        public GenericCharacterController Controller { get; set; }
+        public CharController Controller { get; set; }
 
-        public TakingActionEvent(CombatEventManager p, GenericCharacterController c) : 
+        public TakingActionEvent(CombatEventManager p, CharController c) : 
             base(CombatEventEnum.TakingAction, p)
         {
             this.Controller = c;

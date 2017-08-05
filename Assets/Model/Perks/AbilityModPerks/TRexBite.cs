@@ -7,7 +7,7 @@ namespace Model.Perks
     {
         public TRexBite() : base(PerkEnum.T_Rex_Bite) { }
 
-        public override void TryModAbility(HitInfo hit)
+        public override void TryModAbility(Hit hit)
         {
             base.TryModAbility(hit);
             if (hit.Ability.Type == AbilitiesEnum.Bite)

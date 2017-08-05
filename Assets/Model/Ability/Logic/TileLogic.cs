@@ -1,27 +1,29 @@
-﻿using Model.Events.Combat;
+﻿using Controller.Characters;
+using Model.Events.Combat;
 
 namespace Assets.Model.Ability.Logic
 {
     public class TileLogic
     {
-        public bool IsValidEnemyTarget(PerformActionEvent e)
+        public bool IsValidEnemyTarget(AbilityArgContainer arg)
         {
-            if (e.Container.Source.LParty)
+            if (arg.Target.Model.Current != null)
             {
-                if (e.Container.TargetCharController != null && !e.Container.TargetCharController.LParty)
-                    return true;
-            }
-            else if (!e.Container.Source.LParty)
-            {
-                if (e.Container.TargetCharController != null && e.Container.TargetCharController.LParty)
-                    return true;
+                if (arg.Target.Model.Current.GetType().Equals(typeof(CharController)))
+                {
+                    var controller = arg.Target.Model.Current as CharController;
+                    if (controller.LParty != arg.Source.LParty)
+                        return true;
+                }
             }
             return false;
         }
 
-        public bool IsValidEmptyTile(PerformActionEvent e)
+        public bool IsValidEmptyTile(AbilityArgContainer arg)
         {
-            if (e.Container.Target.Model.Current == null)
+            if (arg.Target.Model.Current == null)
+                return true;
+            else if (!arg.Target.Model.Current.GetType().Equals(typeof(CharController)))
                 return true;
             return false;
         }

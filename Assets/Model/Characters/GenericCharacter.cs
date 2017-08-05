@@ -20,7 +20,7 @@ namespace Model.Characters
         private RaceEnum _race;
         public RaceEnum Race { get { return this._race; } }
 
-        public GenericCharacterController ParentController { get; set; }
+        public CharController ParentController { get; set; }
 
         public GenericCharacter(RaceEnum race)
         {
@@ -30,7 +30,7 @@ namespace Model.Characters
             this.BaseClasses = new Dictionary<ClassEnum, GenericClass>();
             this.DefaultWpnAbilities = new List<GenericAbility>();
             this.DoTs = new List<GenericDoT>();
-            this.Effects = new List<GenericEffect>();
+            this.Effects = new List<Effect>();
             this.HoTs = new List<GenericHoT>();
             this.Injuries = new List<GenericInjury>();
             this.Mods = new ModContainer();

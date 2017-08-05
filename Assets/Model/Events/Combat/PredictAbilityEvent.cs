@@ -10,13 +10,13 @@ namespace Model.Events.Combat
     public class PredictionContainer
     {
         public GenericAbility Ability { get; set; }
-        public List<HitInfo> Hits { get; set; }
-        public GenericCharacterController Source { get; set; }
+        public List<Hit> Hits { get; set; }
+        public CharController Source { get; set; }
         public TileController Target { get; set; }
 
         public PredictionContainer()
         {
-            this.Hits = new List<HitInfo>();
+            this.Hits = new List<Hit>();
         }
     }
 

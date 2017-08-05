@@ -6,11 +6,11 @@ namespace Model.Effects
     {
         public EffectsFactory() { }
 
-        public GenericEffect CreateNewObject(EffectsEnum effect)
+        public Effect CreateNewObject(EnumEffect effect)
         {
             switch(effect)
             {
-                case (EffectsEnum.Horror): { return new Horror(); }
+                case (EnumEffect.Horror): { return new Horror(); }
                 default: { return null; }
             }
         }

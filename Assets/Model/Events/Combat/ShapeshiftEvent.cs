@@ -7,9 +7,9 @@ namespace Model.Events.Combat
 {
     public class ShapeshiftEvent : CombatEvent
     {
-        public HitInfo Hit { get; set; }
+        public Hit Hit { get; set; }
 
-        public ShapeshiftEvent(CombatEventManager parent, HitInfo hit) :
+        public ShapeshiftEvent(CombatEventManager parent, Hit hit) :
             base(CombatEventEnum.Shapeshift, parent)
         {
             this.Hit = hit;

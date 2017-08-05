@@ -7,7 +7,7 @@ namespace Model.Events.Combat
 {
     public class TraverseTileEvent : CombatEvent
     {
-        public GenericCharacterController Character { get; set; }
+        public CharController Character { get; set; }
         public Path Path { get; set; }
         public TileController Source { get; set; }
         public TileController Next { get; set; }      
@@ -19,9 +19,9 @@ namespace Model.Events.Combat
             TileController n) :
             base(CombatEventEnum.TraverseTile, parent)
         {
-            if (s.Model.Current.GetType() == typeof(GenericCharacterController))
+            if (s.Model.Current.GetType() == typeof(CharController))
             {
-                this.Character = s.Model.Current as GenericCharacterController;
+                this.Character = s.Model.Current as CharController;
                 this.Path = p;
                 this.Source = s;
                 this.Next = n;

@@ -1,55 +1,45 @@
-﻿using Assets.Model.Zone.Duration;
+﻿using Assets.Model.Ability.Enum;
+using Assets.Model.Zone;
+using Assets.Model.Zone.Duration;
 using Controller.Characters;
 using Controller.Managers;
 using Controller.Map;
-using Model.Characters;
 using Model.Combat;
 using Model.Events.Combat;
 using System.Collections.Generic;
 
-namespace Model.Abilities
+namespace Assets.Model.Ability.Magic.Water
 {
-    public class SoothingMist : GenericAbility
+    public class SoothingMist : Ability
     {
-        public SoothingMist() : base(AbilitiesEnum.Soothing_Mist)
+        public SoothingMist() : base(EnumAbility.Soothing_Mist) { }
+
+        public override List<Hit> Process(AbilityArgContainer arg)
         {
-
-        }
-
-        public override List<TileController> GetAoETiles(TileController source, TileController target, int range)
-        {
-            var list = new List<TileController>();
-            var aoe = target.Model.GetAoETiles(range);
-            foreach (var tile in aoe)
-                list.Add(tile.Parent);
-            return list;
-        }
-
-        public override void ProcessAbility(PerformActionEvent e, HitInfo hit)
-        {
-            base.ProcessAbility(e, hit);
-            base.ProcessZone(hit);
-            var tiles = this.GetAoETiles(e.Container.Source.CurrentTile, e.Container.Target, (int)e.Container.Action.AoE);
-
-            var proto = GenericAbilityTable.Instance.Table[AbilitiesEnum.Soothing_Mist];
-            var dur = (proto.Duration * AbilityLogic.Instance.GetSpellDurViaMod(hit.Source.Model));
-
-            foreach (var tile in tiles)
+            var hits = base.Process(arg);
+            foreach (var hit in hits)
             {
-                var zone = new SoothingMistZone((int)dur, e.Container.Source, e.Container.Source.Handle, tile);
-                tile.AddZone(zone);
-                if (tile.Model.Current != null)
+                base.ProcessHitZone(hit);
+                var tiles = this.GetAoETiles(arg);
+                foreach (var tile in tiles)
                 {
-                    if (tile.Model.Current.GetType().Equals(typeof(GenericCharacterController)))
+                    var zArgs = this.GetZoneArgs(arg, tile);
+                    var zone = new SoothingMistZone(zArgs);
+                    tile.AddZone(zone);
+                    if (tile.Model.Current != null)
                     {
-                        var character = tile.Model.Current as GenericCharacterController;
-                        var heal = new ZoneEnterEvent(CombatEventManager.Instance, character, zone);
+                        if (tile.Model.Current.GetType().Equals(typeof(CharController)))
+                        {
+                            var character = tile.Model.Current as CharController;
+                            var heal = new ZoneEnterEvent(CombatEventManager.Instance, character, zone);
+                        }
                     }
                 }
             }
+            return hits;
         }
 
-        public override bool IsValidActionEvent(PerformActionEvent e)
+        public override bool IsValidActionEvent(AbilityArgContainer arg)
         {
             return true;
         }

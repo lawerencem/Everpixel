@@ -160,7 +160,7 @@ namespace View.GUI
             this._stamSlider.value = c.GetCurrentStamina();
         }
 
-        private void SetModalDamageValuesHelper(HitInfo hit)
+        private void SetModalDamageValuesHelper(Hit hit)
         {
             this._dmgPredictionModal.SetActive(true);
             this._blockText.text = Math.Truncate(hit.Chances.Block * 100).ToString() + " %";

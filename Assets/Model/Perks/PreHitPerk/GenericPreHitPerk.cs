@@ -9,7 +9,7 @@ namespace Model.Perks
 
         }
 
-        public virtual void TryModHit(HitInfo hit)
+        public virtual void TryModHit(Hit hit)
         {
 
         }

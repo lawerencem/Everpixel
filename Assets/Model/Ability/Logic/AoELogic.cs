@@ -1,7 +1,6 @@
 ﻿using Assets.Controller.Managers;
 using Controller.Characters;
 using Controller.Map;
-using Model.Events.Combat;
 using Model.Map;
 using System.Collections.Generic;
 
@@ -9,7 +8,7 @@ namespace Assets.Model.Ability.Logic
 {
     public class AoELogic
     {
-        public List<TileController> GetAdjacentTiles(GenericCharacterController c)
+        public List<TileController> GetAdjacentTiles(CharController c)
         {
             var list = new List<TileController>();
             foreach (var neighbor in c.CurrentTile.Adjacent)
@@ -17,19 +16,22 @@ namespace Assets.Model.Ability.Logic
             return list;
         }
 
-        public List<TileController> GetAoETiles(TileController source, TileController target, int range)
+        public List<TileController> GetAoETiles(AbilityArgContainer arg, int aoe)
         {
             var list = new List<TileController>();
-            list.Add(source);
+            var t = arg.Target.Model;
+            var hexes = t.GetAoETiles(aoe);
+            foreach(var hex in hexes) { list.Add(hex.Parent); }
             return list;
         }
 
-        public List<TileController> GetRaycastTiles(TileController source, TileController target, int range)
+        public List<TileController> GetRaycastTiles(AbilityArgContainer arg)
         {
             var list = new List<TileController>();
             HexTile initTile;
-            var s = source.Model;
-            var t = target.Model;
+            var s = arg.Source.CurrentTile.Model;
+            var t = arg.Target.Model;
+            var range = arg.Range;
             if (s.IsHexN(t, range))
                 initTile = s.GetN();
             else if (s.IsHexNE(t, range))
@@ -48,28 +50,22 @@ namespace Assets.Model.Ability.Logic
             return list;
         }
 
-        public List<TileController> GetStandardAttackTiles(AttackSelectedEvent e, GenericCharacterController c, CombatManager m)
+        public List<TileController> GetPotentialTargets(AbilityArgContainer arg)
         {
-            int distMod = 0;
-            distMod += AbilityTable.Instance.Table[e.AttackType].Params.Range;
-
-            if (e.RWeapon)
+            int dist = arg.Range;
+            if (arg.RWeapon)
             {
-                if (c.Model.RWeapon != null)
-                    distMod += (int)c.Model.RWeapon.RangeMod;
+                if (arg.Source.Model.RWeapon != null)
+                    dist += (int)arg.Source.Model.RWeapon.RangeMod;
             }
             else
             {
-                if (c.Model.LWeapon != null)
-                    distMod += (int)c.Model.LWeapon.RangeMod;
+                if (arg.Source.Model.LWeapon != null)
+                    dist += (int)arg.Source.Model.LWeapon.RangeMod;
             }
-            var hexTiles = m.Map.GetAoETiles(c.CurrentTile.Model, distMod);
+            var hexTiles = arg.Source.CurrentTile.Model.GetAoETiles(dist);
             var tileControllers = new List<TileController>();
-            foreach (var hex in hexTiles)
-            {
-                tileControllers.Add(hex.Parent);
-                TileControllerFlags.SetAwaitingActionFlagTrue(hex.Parent.Flags);
-            }
+            foreach (var hex in hexTiles) { tileControllers.Add(hex.Parent); }
             return tileControllers;
         }
     }

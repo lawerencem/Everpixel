@@ -7,14 +7,14 @@ namespace Model.Perks
     public class Bully : GenericPreHitPerk
     {
         private int _count;
-        private GenericCharacterController _previous;
+        private CharController _previous;
 
         public Bully() : base(PerkEnum.Bully)
         {
 
         }
 
-        public override void TryModHit(HitInfo hit)
+        public override void TryModHit(Hit hit)
         {
             base.TryModHit(hit);
             if (hit.Target == this._previous)

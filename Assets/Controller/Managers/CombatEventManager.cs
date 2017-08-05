@@ -66,14 +66,14 @@ namespace Controller.Managers
             return this._combatManager.CurAbility;
         }
 
-        public GenericCharacterController GetCurrentCharacter()
+        public CharController GetCurrentCharacter()
         {
             return this._combatManager.CurrActing;
         }
 
-        public GenericCharacterController GetRandomCharacter()
+        public CharController GetRandomCharacter()
         {
-            return ListUtil<GenericCharacterController>.GetRandomListElement(this._combatManager.Characters);
+            return ListUtil<CharController>.GetRandomListElement(this._combatManager.Characters);
         }
 
         public bool GetGUILock() { return this._guiLock; }

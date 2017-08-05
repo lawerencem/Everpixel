@@ -21,7 +21,7 @@ namespace Controller.Map
         private DateTime _clickTime;
 
         public List<TileController> Adjacent { get; set; }
-        public List<GenericCharacterController> DeadCharacters { get; set; }
+        public List<CharController> DeadCharacters { get; set; }
         public TileControllerFlags Flags { get; set; }
         public GameObject Handle { get; set; }
         public HexTile Model { get; set; }
@@ -31,7 +31,7 @@ namespace Controller.Map
         public TileController()
         {
             this.Adjacent = new List<TileController>();
-            this.DeadCharacters = new List<GenericCharacterController>();
+            this.DeadCharacters = new List<CharController>();
             this.Flags = new TileControllerFlags();
             this.Model = new HexTile();
             this.Zones = new List<AZone>();
@@ -156,7 +156,7 @@ namespace Controller.Map
         private void HandleHoverTargetDamage()
         {
             if (this.Model.Current != null &&
-                this.Model.Current.GetType() == typeof(GenericCharacterController) &&
+                this.Model.Current.GetType() == typeof(CharController) &&
                 CombatEventManager.Instance.GetCurrentAbility() != null)
             {
                 var predict = new PredictActionEvent(CombatEventManager.Instance);
@@ -171,7 +171,7 @@ namespace Controller.Map
 
                 foreach (var target in targets)
                 {
-                    var hit = new HitInfo(predict.Container.Source, predict.Container.Target, predict.Container.Ability);
+                    var hit = new Hit(predict.Container.Source, predict.Container.Target, predict.Container.Ability);
                     predict.Container.Hits.Add(hit);
                 }
 
@@ -184,16 +184,16 @@ namespace Controller.Map
 
         private void HandleHoverTargetStats()
         {
-            if (this.Model.Current != null && this.Model.Current.GetType() == typeof(GenericCharacterController))
+            if (this.Model.Current != null && this.Model.Current.GetType() == typeof(CharController))
             {
                 var fov = Camera.main.fieldOfView;
-                var character = this.Model.Current as GenericCharacterController;
+                var character = this.Model.Current as CharController;
                 var position = character.Handle.transform.position;
                 position.x += (float)(fov * 0.025);
                 position.y += (float)(fov * 0.025);
                 CMapGUIController.Instance.SetHoverModalHeaderText(character.View.Name);
                 CMapGUIController.Instance.SetHoverModalLocation(position);
-                var controller = this.Model.Current as GenericCharacterController;
+                var controller = this.Model.Current as CharController;
                 CMapGUIController.Instance.SetHoverModalStatValues(controller.Model);
             }
         }

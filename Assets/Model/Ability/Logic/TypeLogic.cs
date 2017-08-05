@@ -16,7 +16,7 @@ namespace Assets.Model.Ability.Logic
             this._calcContainer = new CalculatorContainer();
         }
 
-        public void PredictBullet(HitInfo hit)
+        public void PredictBullet(Hit hit)
         {
             this._calcContainer.DodgeCalc.Predict(hit);
             this._calcContainer.BlockCalc.Predict(hit);
@@ -24,14 +24,14 @@ namespace Assets.Model.Ability.Logic
             this._calcContainer.ResistCalc.Predict(hit);
         }
 
-        public void PredictInstant(HitInfo hit)
+        public void PredictInstant(Hit hit)
         {
             this._calcContainer.CritCalc.Predict(hit);
             this._calcContainer.DmgCalc.Predict(hit);
             this._calcContainer.ResistCalc.Predict(hit);
         }
 
-        public void PredictMelee(HitInfo hit)
+        public void PredictMelee(Hit hit)
         {
             this._calcContainer.DodgeCalc.Predict(hit);
             this._calcContainer.BlockCalc.Predict(hit);
@@ -41,7 +41,7 @@ namespace Assets.Model.Ability.Logic
             this._calcContainer.ResistCalc.Predict(hit);
         }
 
-        public void PredictRay(HitInfo hit)
+        public void PredictRay(Hit hit)
         {
             this._calcContainer.DodgeCalc.Predict(hit);
             this._calcContainer.CritCalc.Predict(hit);
@@ -49,54 +49,54 @@ namespace Assets.Model.Ability.Logic
             this._calcContainer.ResistCalc.Predict(hit);
         }
 
-        public void ProcessBullet(HitInfo hit)
+        public void ProcessBullet(Hit hit)
         {
             this.ProcessBulletFlags(hit);
             this._calcContainer.DmgCalc.CalculateAbilityDmg(hit);
             this._calcContainer.DmgCalc.ModifyDmgViaDefender(hit);
         }
 
-        public void ProcessInstant(HitInfo hit)
+        public void ProcessInstant(Hit hit)
         {
 
         }
 
-        public void ProcessMelee(HitInfo hit)
+        public void ProcessMelee(Hit hit)
         {
             this.ProcessMeleeFlags(hit);
             this._calcContainer.DmgCalc.CalculateAbilityDmg(hit);
             this._calcContainer.DmgCalc.ModifyDmgViaDefender(hit);
         }
 
-        public void ProcessRay(HitInfo hit)
+        public void ProcessRay(Hit hit)
         {
             this.ProcessBulletFlags(hit);
             this._calcContainer.DmgCalc.CalculateAbilityDmg(hit);
             this._calcContainer.DmgCalc.ModifyDmgViaDefender(hit);
         }
 
-        public bool ProcessResist(HitInfo hit)
+        public bool ProcessResist(Hit hit)
         {
             // TODO
             return false;
         }
 
-        public void ProcessShapeshift(HitInfo hit)
+        public void ProcessShapeshift(Hit hit)
         {
             var shapeshiftEvent = new ShapeshiftEvent(CombatEventManager.Instance, hit);
         }
 
-        public void ProcessSong(HitInfo hit)
+        public void ProcessSong(Hit hit)
         {
 
         }
 
-        public void ProcessSummon(HitInfo hit)
+        public void ProcessSummon(Hit hit)
         {
             var summonEvent = new SummonEvent(CombatEventManager.Instance, hit);
         }
 
-        private void ProcessBulletFlags(HitInfo hit)
+        private void ProcessBulletFlags(Hit hit)
         {
             this._calcContainer.DodgeCalc.Process(hit);
             this._calcContainer.BlockCalc.Process(hit);
@@ -105,7 +105,7 @@ namespace Assets.Model.Ability.Logic
             this._calcContainer.ResistCalc.Process(hit);
         }
 
-        private void ProcessMeleeFlags(HitInfo hit)
+        private void ProcessMeleeFlags(Hit hit)
         {
             this._calcContainer.DodgeCalc.Process(hit);
             this._calcContainer.ParryCalc.Process(hit);

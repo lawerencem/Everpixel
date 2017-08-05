@@ -13,7 +13,7 @@ namespace Model.Perks
 
         }
 
-        public override void TryProcessAction(HitInfo hit)
+        public override void TryProcessAction(Hit hit)
         {
             if (this.Parent.Equals(hit.Source.Model))
             {
@@ -21,10 +21,10 @@ namespace Model.Perks
                 var tiles = hit.Source.CurrentTile.Model.GetAoETiles((int)this.AoE);
                 foreach (var tile in tiles)
                 {
-                    if (tile.Current != null && tile.Current.GetType().Equals(typeof(GenericCharacterController)))
+                    if (tile.Current != null && tile.Current.GetType().Equals(typeof(CharController)))
                     {
-                        var target = ((GenericCharacterController)tile.Current).Model;
-                        var horror = EffectsFactory.Instance.CreateNewObject(EffectsEnum.Horror);
+                        var target = ((CharController)tile.Current).Model;
+                        var horror = EffectsFactory.Instance.CreateNewObject(EnumEffect.Horror);
                         horror.SetDuration((int)this.Dur);
                         horror.SetValue((int)this.Val);
                         if (!AbilityLogic.Instance.ProcessResist(hit.Source.Model, target, this.Resist))

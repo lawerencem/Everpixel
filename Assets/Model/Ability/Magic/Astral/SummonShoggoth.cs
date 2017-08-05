@@ -1,26 +1,26 @@
-﻿using Model.Combat;
-using Model.Events.Combat;
+﻿using Assets.Model.Ability.Enum;
+using Model.Combat;
+using System.Collections.Generic;
 
-namespace Model.Abilities
+namespace Assets.Model.Ability.Magic.Astral
 {
-    public class SummonShoggoth : GenericSummonAbility
+    public class SummonShoggoth : Ability
     {
-        public SummonShoggoth() : base(AbilitiesEnum.Summon_Shoggoth)
+        public SummonShoggoth() : base(EnumAbility.Summon_Shoggoth)
         {
-            this.CastType = CastTypeEnum.Summon;
-            this.MagicType = Magic.MagicTypeEnum.Astral;
-            this.toSummon = "Shoggoth";
+
         }
 
-        public override void ProcessAbility(PerformActionEvent e, HitInfo hit)
+        public override List<Hit> Process(AbilityArgContainer arg)
         {
-            base.ProcessAbility(e, hit);
-            base.ProcessSummon(hit);
+            var hits = base.Process(arg);
+            foreach(var hit in hits) { base.ProcessHitSummon(hit); }
+            return hits;
         }
 
-        public override bool IsValidActionEvent(PerformActionEvent e)
+        public override bool IsValidActionEvent(AbilityArgContainer arg)
         {
-            return base.isValidEmptyTile(e);
+            return base.IsValidEmptyTile(arg);
         }
     }
 }

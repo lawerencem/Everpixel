@@ -6,10 +6,10 @@ namespace Model.Events.Combat
 {
     public class TraversePathEvent : CombatEvent
     {
-        public GenericCharacterController Character { get; set; }
+        public CharController Character { get; set; }
         public Path Path { get; set; }
 
-        public TraversePathEvent(CombatEventManager parent, GenericCharacterController c, Path p) : 
+        public TraversePathEvent(CombatEventManager parent, CharController c, Path p) : 
             base(CombatEventEnum.TraversePath, parent)
         {
             if (!this._parent.GetInteractionLock())

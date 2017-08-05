@@ -1,4 +1,5 @@
-﻿using Generics;
+﻿using Assets.Model.Injuries;
+using Generics;
 using System.Collections.Generic;
 
 namespace Model.Injuries

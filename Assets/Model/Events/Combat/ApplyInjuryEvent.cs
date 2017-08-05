@@ -8,9 +8,9 @@ namespace Model.Events.Combat
     public class ApplyInjuryEvent : CombatEvent
     {
         public GenericInjury Injury { get; set; }
-        public GenericCharacterController Target { get; set; }
+        public CharController Target { get; set; }
 
-        public ApplyInjuryEvent(CombatEventManager parent, HitInfo hit, GenericInjury injury) :
+        public ApplyInjuryEvent(CombatEventManager parent, Hit hit, GenericInjury injury) :
             base(CombatEventEnum.ApplyInjury, parent)
         {
             var exists = hit.Target.Model.Injuries.Find(x => x.Type == injury.Type);

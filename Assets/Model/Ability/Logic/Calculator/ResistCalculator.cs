@@ -9,7 +9,7 @@ namespace Assets.Model.Ability.Logic.Calculator
 {
     public class ResistCalculator : AAbilityCalculator
     {
-        public override void Predict(HitInfo hit)
+        public override void Predict(Hit hit)
         {
             if (hit.Ability.Resist != ResistTypeEnum.None)
             {
@@ -42,7 +42,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             }
         }
 
-        public override void Process(HitInfo hit)
+        public override void Process(Hit hit)
         {
             this.Predict(hit);
             if (hit.Ability.Resist != ResistTypeEnum.None)

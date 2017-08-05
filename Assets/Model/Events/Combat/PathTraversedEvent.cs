@@ -6,9 +6,9 @@ namespace Model.Events.Combat
 {
     public class PathTraversedEvent : CombatEvent
     {
-        public GenericCharacterController Character { get; set; }
+        public CharController Character { get; set; }
 
-        public PathTraversedEvent(CombatEventManager parent, GenericCharacterController c) :
+        public PathTraversedEvent(CombatEventManager parent, CharController c) :
             base(CombatEventEnum.PathTraversed, parent)
         {
             this.Character = c;

@@ -10,17 +10,17 @@ namespace Model.Events.Combat
         private FlatSecondaryStatModifier _flatDebuff;
         private SecondaryStatModifier _debuff;
 
-        public GenericCharacterController ToDebuff { get; set; }
+        public CharController ToDebuff { get; set; }
         public bool Resisted { get; set; }
 
-        public DebuffEvent(CombatEventManager parent, FlatSecondaryStatModifier debuff, GenericCharacterController toDebuff) :
+        public DebuffEvent(CombatEventManager parent, FlatSecondaryStatModifier debuff, CharController toDebuff) :
             base(CombatEventEnum.Debuff, parent)
         {
             this.ToDebuff = toDebuff;
             this.Process();
         }
 
-        public DebuffEvent(CombatEventManager parent, SecondaryStatModifier debuff, GenericCharacterController toDebuff) :
+        public DebuffEvent(CombatEventManager parent, SecondaryStatModifier debuff, CharController toDebuff) :
             base(CombatEventEnum.Debuff, parent)
         {
             this.ToDebuff = toDebuff;

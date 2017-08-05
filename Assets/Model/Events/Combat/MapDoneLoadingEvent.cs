@@ -8,14 +8,14 @@ namespace Model.Events.Combat
 {
     public class MapDoneLoadingEvent : CombatEvent
     {
-        public List<GenericCharacterController> LParty { get; set; }
-        public List<GenericCharacterController> RParty { get; set; }
+        public List<CharController> LParty { get; set; }
+        public List<CharController> RParty { get; set; }
         public CombatMap Map { get; set; }
         public CombatMapLoader MapLoader { get; set; }
 
         public MapDoneLoadingEvent(CombatEventManager p, 
-            List<GenericCharacterController> l, 
-            List<GenericCharacterController> r, 
+            List<CharController> l, 
+            List<CharController> r, 
             CombatMap m,
             CombatMapLoader loader) : 
             base(CombatEventEnum.MapDoneLoading, p)

@@ -14,7 +14,7 @@ namespace View.Scripts
         private SpriteRenderer _torsoRenderer;
         private Sprite[] _sprites;
 
-        public void Init(GenericCharacterController source, Vector3 target, float speed, Callback callback = null)
+        public void Init(CharController source, Vector3 target, float speed, Callback callback = null)
         {
             base.Init(source.Handle, target, speed, callback);
             this._torsoRenderer = source.Handle.GetComponent<SpriteRenderer>();

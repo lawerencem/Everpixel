@@ -93,7 +93,7 @@ namespace Controller.Managers.Map
         }
 
 
-        public void ProcessCharacterKilled(GenericCharacterController c)
+        public void ProcessCharacterKilled(CharController c)
         {
             if (!c.KillFXProcessed)
             {
@@ -264,7 +264,7 @@ namespace Controller.Managers.Map
                 renderer.sortingLayerName = layer;
         }
 
-        private void ProcessCharacterKilledHelper(GenericCharacterController c)
+        private void ProcessCharacterKilledHelper(CharController c)
         {
             if (c.Model.Type == CharacterTypeEnum.Humanoid)
             {   

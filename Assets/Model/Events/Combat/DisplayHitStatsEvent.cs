@@ -8,9 +8,9 @@ namespace Model.Events.Combat
         private Callback _callBack;
         public delegate void Callback();
 
-        public HitInfo Hit { get; set; }
+        public Hit Hit { get; set; }
 
-        public DisplayHitStatsEvent(CombatEventManager parent, HitInfo hit, Callback callback) 
+        public DisplayHitStatsEvent(CombatEventManager parent, Hit hit, Callback callback) 
             : base(CombatEventEnum.DisplayHitStats, parent)
         {
             this._parent.LockInteraction();

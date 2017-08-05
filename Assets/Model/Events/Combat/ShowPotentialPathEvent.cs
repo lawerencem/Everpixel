@@ -6,11 +6,11 @@ namespace Model.Events.Combat
 {
     public class ShowPotentialPathEvent : CombatEvent
     {
-        public GenericCharacterController Character;
+        public CharController Character;
         public TileController Target;
 
         public ShowPotentialPathEvent(
-            GenericCharacterController c,
+            CharController c,
             TileController t,
             CombatEventManager parent) :
             base(CombatEventEnum.ShowPotentialPath, parent)

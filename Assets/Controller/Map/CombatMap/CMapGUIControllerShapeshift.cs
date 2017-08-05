@@ -13,7 +13,7 @@ namespace Controller.Managers.Map
 
         public void ProcessShapeshiftFX(DisplayHitStatsEvent e)
         {
-            var ability = e.Hit.Ability as GenericShapeshiftAbility;
+            var ability = e.Hit.Ability as Shapeshift;
             if (ability.Info.CharHead != SENTINEL)
             {
                 var lycanthropeScript = e.Hit.Source.Handle.AddComponent<LycanthropeScript>();

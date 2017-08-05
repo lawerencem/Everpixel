@@ -14,8 +14,8 @@ namespace Model.Events.Combat
         private PerformActionEvent _event;
 
         public int CastTime { get; set; }
-        public GenericCharacterController Caster { get; set; }
-        public GenericCharacterController Target { get; set; }
+        public CharController Caster { get; set; }
+        public CharController Target { get; set; }
         public string SpellName { get; set; }
 
         public CastingEvent(CombatEventManager parent, PerformActionEvent e) :

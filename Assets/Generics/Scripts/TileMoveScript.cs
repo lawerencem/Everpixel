@@ -12,7 +12,7 @@ namespace Generics.Scripts
     {
         private const float SPEED = 8f;
 
-        public GenericCharacterController Character { get; set; }
+        public CharController Character { get; set; }
         public Path Path { get; set; }
         public TileController Source { get; set; }
         public TileController Target { get; set; }
@@ -54,7 +54,7 @@ namespace Generics.Scripts
             }
         }
 
-        public void Init(GenericCharacterController c, Path p, TileController s, TileController t)
+        public void Init(CharController c, Path p, TileController s, TileController t)
         {
             this.Character = c;
             this.Path = p;

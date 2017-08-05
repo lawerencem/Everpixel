@@ -6,9 +6,9 @@ namespace Model.Events.Combat
 {
     public class ShieldEvent : CombatEvent
     {
-        public GenericCharacterController ToShield { get; set; }
+        public CharController ToShield { get; set; }
 
-        public ShieldEvent(CombatEventManager parent, Shield shield, GenericCharacterController toShield) :
+        public ShieldEvent(CombatEventManager parent, Shield shield, CharController toShield) :
             base(CombatEventEnum.Shield, parent)
         {
             this.ToShield = toShield;

@@ -1,37 +1,41 @@
-﻿using Model.Combat;
+﻿using Assets.Model.Ability.Enum;
+using Assets.Model.Combat;
+using Model.Combat;
 using Model.Effects;
-using Model.Events.Combat;
+using System.Collections.Generic;
 
-namespace Model.Abilities
+namespace Assets.Model.Ability.Magic.Astral
 {
-    public class EldritchChomp : GenericAbility
+    public class EldritchChomp : Ability
     {
-        public EldritchChomp() : base(AbilitiesEnum.Eldritch_Chomp)
-        {
+        public EldritchChomp() : base(EnumAbility.Eldritch_Chomp) { }
 
+        public override List<Hit> Predict(AbilityArgContainer arg)
+        {
+            return base.PredictBullet(arg);
         }
 
-        public override void PredictAbility(HitInfo hit)
+        public override List<Hit> Process(AbilityArgContainer arg)
         {
-            base.PredictBullet(hit);
-        }
-
-        public override void ProcessAbility(PerformActionEvent e, HitInfo hit)
-        {
-            base.ProcessAbility(e, hit);
-            base.ProcessBullet(hit);
-            if (!AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Resist))
+            var hits = base.Process(arg);
+            foreach(var hit in hits)
             {
-                var horror = EffectsFactory.Instance.CreateNewObject(EffectsEnum.Horror);
-                horror.Container.Duration = (int)this.EffectDur;
-                horror.Container.Value = this.EffectValue;
-                hit.Target.Model.AddEffect(horror);
+                base.ProcessHitBullet(hit);
+                if (!AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Resist))
+                {
+                    var horror = EffectsFactory.Instance.CreateNewObject(EnumEffect.Horror);
+                    horror.SetDuration((int)this.Params.EffectDur);
+                    horror.SetValue((int)this.Params.EffectValue);
+                    horror.SetTarget(hit.Target);
+                    hit.AddEffect(horror);
+                }
             }
+            return hits;
         }
 
-        public override bool IsValidActionEvent(PerformActionEvent e)
+        public override bool IsValidActionEvent(AbilityArgContainer arg)
         {
-            return base.IsValidEnemyTarget(e);
+            return base.IsValidEnemyTarget(arg);
         }
     }
 }

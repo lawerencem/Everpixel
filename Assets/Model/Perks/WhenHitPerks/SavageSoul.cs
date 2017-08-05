@@ -13,7 +13,7 @@ namespace Model.Perks
 
         }
 
-        public override void TryModHit(HitInfo hit)
+        public override void TryModHit(Hit hit)
         {
             if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Critical) && !hit.IsHeal)
             {

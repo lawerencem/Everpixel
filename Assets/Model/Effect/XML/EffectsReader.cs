@@ -41,8 +41,8 @@ namespace Model.Effects
                         {
                             foreach (var attr in ele.Attributes())
                             {
-                                var effect = EffectsEnum.None;
-                                if (EnumUtil<EffectsEnum>.TryGetEnumValue(attr.Value, ref effect))
+                                var effect = EnumEffect.None;
+                                if (EnumUtil<EnumEffect>.TryGetEnumValue(attr.Value, ref effect))
                                 {
                                     this.HandleType(effect);
                                     foreach (var elem in ele.Elements())
@@ -57,16 +57,16 @@ namespace Model.Effects
             }
         }
 
-        private void HandleIndex(ResistTypeEnum resist, EffectsEnum effect, XElement ele, string mod, string value)
+        private void HandleIndex(ResistTypeEnum resist, EnumEffect effect, XElement ele, string mod, string value)
         {
 
         }
 
-        private void HandleType(EffectsEnum e)
+        private void HandleType(EnumEffect e)
         {
             switch(e)
             {
-                case (EffectsEnum.Horror): { EffectsTable.Instance.Table[e] = new Horror(); } break;
+                case (EnumEffect.Horror): { EffectsTable.Instance.Table[e] = new Horror(); } break;
             }
         }
     }

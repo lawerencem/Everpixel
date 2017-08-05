@@ -10,12 +10,12 @@ namespace Model.Abilities
             this.CastType = CastTypeEnum.Bullet;
         }
 
-        public override void PredictAbility(HitInfo hit)
+        public override void PredictAbility(Hit hit)
         {
             base.PredictBullet(hit);
         }
 
-        public override void ProcessAbility(PerformActionEvent e, HitInfo hit)
+        public override void ProcessAbility(PerformActionEvent e, Hit hit)
         {
             base.ProcessAbility(e, hit);
         }

@@ -6,9 +6,9 @@ namespace Model.Events.Combat
 {
     public class TileHitEvent : CombatEvent
     {
-        public HitInfo Hit { get; set; }
+        public Hit Hit { get; set; }
 
-        public TileHitEvent(CombatEventManager parent, HitInfo hit)
+        public TileHitEvent(CombatEventManager parent, Hit hit)
             : base(CombatEventEnum.TileHitEvent, parent)
         {
             this.Hit = hit;

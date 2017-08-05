@@ -10,7 +10,7 @@ namespace Model.Perks
 
         }
 
-        public virtual void TryProcessAction(HitInfo hit)
+        public virtual void TryProcessAction(Hit hit)
         {
 
         }

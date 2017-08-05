@@ -11,7 +11,7 @@ namespace Model.Events.Combat
         public delegate void Callback();
 
         public ActionEventController EventController { get; set; }
-        public List<HitInfo> FatalityHits;
+        public List<Hit> FatalityHits;
 
         public DisplayActionEvent(CombatEventManager parent, ActionEventController e, Callback callback = null)
             : base(CombatEventEnum.DisplayAction, parent)
@@ -19,7 +19,7 @@ namespace Model.Events.Combat
             this._parent.LockInteraction();
             this.EventController = e;
             this._callBack = callback;
-            this.FatalityHits = new List<HitInfo>();
+            this.FatalityHits = new List<Hit>();
             this.RegisterEvent();
         }
 

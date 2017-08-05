@@ -1,6 +1,6 @@
 ﻿namespace Model.Effects
 {
-    public enum EffectsEnum
+    public enum EnumEffect
     {
         None,
         Horror,

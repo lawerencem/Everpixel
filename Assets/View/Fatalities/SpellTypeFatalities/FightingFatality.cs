@@ -67,7 +67,7 @@ namespace View.Fatalities
             script.Init(bullet, this._event.EventController.Target.transform.position, 2f, this.ProcessFatality);
         }
 
-        private void ProcessBlood(HitInfo hit)
+        private void ProcessBlood(Hit hit)
         {
             var c = hit.Target;
             foreach(var fatality in this._event.FatalityHits)
@@ -87,7 +87,7 @@ namespace View.Fatalities
             }
         }
 
-        private void ProcessExplosion(HitInfo hit)
+        private void ProcessExplosion(Hit hit)
         {
             var path = StringUtil.PathBuilder(
                 CMapGUIControllerParams.EFFECTS_PATH,
@@ -124,7 +124,7 @@ namespace View.Fatalities
             this.ProcessFatalityView();
         }
 
-        private void ProcessGear(HitInfo hit)
+        private void ProcessGear(Hit hit)
         {
             var c = hit.Target.Model;
             if (c.Type == CharacterTypeEnum.Humanoid)

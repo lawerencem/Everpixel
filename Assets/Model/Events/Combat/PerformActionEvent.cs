@@ -22,8 +22,8 @@ namespace Model.Events.Combat
             this.Container.Target = initiatingTile;
             var character = initiatingTile.Model.Current;
 
-            if (character != null && character.GetType().Equals(typeof(GenericCharacterController)))
-                this.Container.TargetCharController = initiatingTile.Model.Current as GenericCharacterController;
+            if (character != null && character.GetType().Equals(typeof(CharController)))
+                this.Container.TargetCharController = initiatingTile.Model.Current as CharController;
 
             if (!this._parent.GetInteractionLock())
             {
@@ -42,7 +42,7 @@ namespace Model.Events.Combat
             }
         }
 
-        public void CastDoneReRegister(GenericCharacterController target)
+        public void CastDoneReRegister(CharController target)
         {
             this.Container.CastFinished = true;
             if (target != null)
@@ -108,7 +108,7 @@ namespace Model.Events.Combat
 
             foreach (var target in hitTargets)
             {
-                var hit = new HitInfo(this.Container.Source, target, this.Container.Action, this.ChildHitDone);
+                var hit = new Hit(this.Container.Source, target, this.Container.Action, this.ChildHitDone);
                 this.Container.Hits.Add(hit);
             }
             this.Container.PerformAction();

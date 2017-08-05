@@ -48,13 +48,13 @@ namespace Controller.Managers.Map
 
         public void BuildAndPlaceCharacter(
             CharacterParams cParams,
-            ref List<GenericCharacterController> controllers,
+            ref List<CharController> controllers,
             TileController tile,
             bool lParty = false)
         {
             var builder = new CharacterViewBuilder();
             var handle = new GameObject();
-            var controller = handle.AddComponent<GenericCharacterController>();
+            var controller = handle.AddComponent<CharController>();
             controller.Init(handle);
             var view = builder.Build(cParams);
             controller.SetView(view, cParams);
@@ -63,7 +63,7 @@ namespace Controller.Managers.Map
             controller.LParty = lParty;
         }
 
-        private void AttachDeco(GenericCharacterController c, string sort, int spriteIndex, TileController tile)
+        private void AttachDeco(CharController c, string sort, int spriteIndex, TileController tile)
         {
             if (c.Model.Type == CharacterTypeEnum.Humanoid && spriteIndex >= 0)
             {
@@ -82,7 +82,7 @@ namespace Controller.Managers.Map
             }
         }
 
-        private void AttachHead(GenericCharacterController c, string sort, int spriteIndex, TileController tile)
+        private void AttachHead(CharController c, string sort, int spriteIndex, TileController tile)
         {
             if (c.Model.Type == CharacterTypeEnum.Humanoid)
             {
@@ -98,7 +98,7 @@ namespace Controller.Managers.Map
             }
         }
 
-        private void AttachMount(GenericCharacterController c, string sort, TileController tile)
+        private void AttachMount(CharController c, string sort, TileController tile)
         {
             var sprite = c.View.Mount.Sprites[0];
             var spriteHandler = new GameObject();
@@ -119,12 +119,12 @@ namespace Controller.Managers.Map
 
         private void BuildAndLayoutCharacter(
             CharacterParams cParams, 
-            ref List<GenericCharacterController> controllers, 
+            ref List<CharController> controllers, 
             bool lParty = false)
         {
             var builder = new CharacterViewBuilder();
             var handle = new GameObject();
-            var controller = handle.AddComponent<GenericCharacterController>();
+            var controller = handle.AddComponent<CharController>();
             controller.Init(handle);
             var view = builder.Build(cParams);
             controller.SetView(view, cParams);
@@ -135,21 +135,21 @@ namespace Controller.Managers.Map
 
         private void InitParties()
         {
-            var lParty = new List<GenericCharacterController>();
-            var rParty = new List<GenericCharacterController>();
+            var lParty = new List<CharController>();
+            var rParty = new List<CharController>();
             this.InitPlayerParty(ref lParty);
             this.InitEnemyParty(ref rParty);
             var e = new MapDoneLoadingEvent(CombatEventManager.Instance, lParty, rParty, this._map, this);
         }
 
-        private void InitPlayerParty(ref List<GenericCharacterController> controllers)
+        private void InitPlayerParty(ref List<CharController> controllers)
         {
             var playerChars = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Orcs", 20));
             for (int i = 0; i < playerChars.Count; i++)
                 this.BuildAndLayoutCharacter(playerChars[i], ref controllers, true);
         }
 
-        private void InitEnemyParty(ref List<GenericCharacterController> controllers)
+        private void InitEnemyParty(ref List<CharController> controllers)
         {
             var enemies = EnemyPartyLoader.Instance.GetParty(new Pair<string, int>("Lizardman War Party", 20));
             for (int i = 0; i < enemies.Count; i++)
@@ -222,7 +222,7 @@ namespace Controller.Managers.Map
             clickScript.Init("AbilitiesBtnTag");
         }
 
-        private void LayoutCharacter(GenericCharacterController c, CharacterParams cParams, bool LParty)
+        private void LayoutCharacter(CharController c, CharacterParams cParams, bool LParty)
         {
             if (c.View != null)
             {
@@ -231,7 +231,7 @@ namespace Controller.Managers.Map
             }
         }
 
-        private void LayoutCharacterAtTile(GenericCharacterController c, TileController tile, CharacterParams cParams, bool lParty)
+        private void LayoutCharacterAtTile(CharController c, TileController tile, CharacterParams cParams, bool lParty)
         {
             if (c.View != null)
             {
@@ -262,7 +262,7 @@ namespace Controller.Managers.Map
             }
         }
 
-        private void TryAttachEquipment(GenericCharacterController c, EquipmentView e, string sort, TileController tile, float xOffset = 0, float yOffset = 0)
+        private void TryAttachEquipment(CharController c, EquipmentView e, string sort, TileController tile, float xOffset = 0, float yOffset = 0)
         {
             if (e != null)
             {

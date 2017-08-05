@@ -17,7 +17,7 @@ namespace Assets.Model.Events.Combat
         public ActionEventController(PerformActionEvent e)
         {
             this.Event = e;
-            this.Hits = new List<HitInfo>();
+            this.Hits = new List<Hit>();
         }
 
         public void PerformAction()
@@ -33,9 +33,9 @@ namespace Assets.Model.Events.Combat
 
         public CombatEventManager Parent { get; set; }
         public GenericAbility Action { get; set; }
-        public List<HitInfo> Hits { get; set; }
-        public GenericCharacterController Source { get; set; }
-        public GenericCharacterController TargetCharController { get; set; }
+        public List<Hit> Hits { get; set; }
+        public CharController Source { get; set; }
+        public CharController TargetCharController { get; set; }
         public TileController Target { get; set; }
         public CombatManager CombatManager { get; set; }
     }

@@ -7,19 +7,9 @@ namespace Assets.Model.Zone
     {
         public TileController Tile { get; set; }
 
-        public AZone(TileController tile)
-        {
-            this.Tile = tile;
-        }
+        public AZone(ZoneArgsContainer arg) { this.Tile = arg.Tile; }
 
-        public virtual void ProcessEnterZone(ZoneEnterEvent e)
-        {
-
-        }
-
-        public virtual void ProcessExitZone(ZoneExitEvent e)
-        {
-
-        }
+        public virtual void ProcessEnterZone(ZoneEnterEvent e) { }
+        public virtual void ProcessExitZone(ZoneExitEvent e) {  }
     }
 }

@@ -224,7 +224,7 @@ namespace Controller.Managers.Map
             this._abilityModal.SetModalInactive();
         }
 
-        public void SetActingBoxToController(GenericCharacterController c)
+        public void SetActingBoxToController(CharController c)
         {
             this.SetTagText(CMapGUIControllerParams.NAME, c.View.Name);
             this.SetTagText(CMapGUIControllerParams.AP, c.Model.GetCurrentAP() + " / " + ((int)c.Model.GetCurrentStatValue(SecondaryStatsEnum.AP)).ToString());

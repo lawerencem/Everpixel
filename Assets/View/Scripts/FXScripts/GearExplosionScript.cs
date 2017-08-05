@@ -10,7 +10,7 @@ namespace View.Scripts
         private Callback _callback;
         public delegate void Callback();
 
-        public void Init(GameObject source, GenericCharacterController character, Callback callback = null)
+        public void Init(GameObject source, CharController character, Callback callback = null)
         {
             this._callback = callback;
             var tile = character.CurrentTile;

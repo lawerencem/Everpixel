@@ -7,9 +7,9 @@ namespace Model.Events.Combat
 {
     public class SummonEvent : CombatEvent
     {
-        public HitInfo Hit { get; set; }
+        public Hit Hit { get; set; }
 
-        public SummonEvent(CombatEventManager parent, HitInfo hit) :
+        public SummonEvent(CombatEventManager parent, Hit hit) :
             base(CombatEventEnum.Summon, parent)
         {
             this.Hit = hit;

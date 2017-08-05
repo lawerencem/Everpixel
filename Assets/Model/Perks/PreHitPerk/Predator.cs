@@ -10,7 +10,7 @@ namespace Model.Perks
 
         }
 
-        public override void TryModHit(HitInfo hit)
+        public override void TryModHit(Hit hit)
         {
             base.TryModHit(hit);
             var injuries = hit.Target.Model.Injuries.Count;

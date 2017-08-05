@@ -8,7 +8,7 @@ namespace Assets.Model.Ability.Logic.Calculator
 {
     public class BlockCalculator : AAbilityCalculator
     {
-        public override void Predict(HitInfo hit)
+        public override void Predict(Hit hit)
         {
             var melee = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Melee);
             var block = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Block);
@@ -41,7 +41,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             if (!hasShield) { hit.Chances.Block = 0; }
         }
 
-        public override void Process(HitInfo hit)
+        public override void Process(Hit hit)
         {
             this.Predict(hit);
             var roll = RNG.Instance.NextDouble();

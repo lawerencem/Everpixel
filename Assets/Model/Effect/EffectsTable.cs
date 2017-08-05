@@ -5,10 +5,10 @@ namespace Model.Effects
 {
     public class EffectsTable : AbstractSingleton<EffectsTable>
     {
-        public Dictionary<EffectsEnum, GenericEffect> Table;
+        public Dictionary<EnumEffect, Effect> Table;
         public EffectsTable()
         {
-            Table = new Dictionary<EffectsEnum, GenericEffect>();
+            Table = new Dictionary<EnumEffect, Effect>();
         }
     }
 }

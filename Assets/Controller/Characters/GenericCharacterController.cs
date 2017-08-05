@@ -10,7 +10,7 @@ using View.Equipment;
 
 namespace Controller.Characters
 {
-    public class GenericCharacterController : MonoBehaviour
+    public class CharController : MonoBehaviour
     {
         private GenericCharacter _model;
         private CharacterView _view;

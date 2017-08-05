@@ -7,10 +7,10 @@ namespace Model.Events.Combat
 {
     public class GenericEffectEvent : CombatEvent
     {
-        public GenericEffect Effect { get; set; }
-        public GenericCharacterController Target { get; set; }
+        public Effect Effect { get; set; }
+        public CharController Target { get; set; }
 
-        public GenericEffectEvent(CombatEventManager parent, GenericCharacterController target, GenericEffect effect) :
+        public GenericEffectEvent(CombatEventManager parent, CharController target, Effect effect) :
             base(CombatEventEnum.GenericEffect, parent)
         {
             this.Effect = effect;

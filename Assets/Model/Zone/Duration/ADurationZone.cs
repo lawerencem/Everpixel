@@ -1,5 +1,4 @@
-﻿using Controller.Characters;
-using Controller.Map;
+﻿using Controller.Map;
 using UnityEngine;
 
 namespace Assets.Model.Zone.Duration
@@ -11,10 +10,10 @@ namespace Assets.Model.Zone.Duration
         public int Duration { get { return this._duration; } }
         public GameObject Handle { get; set; }
 
-        public ADurationZone(int dur, GameObject handle, TileController tile) : base(tile)
+        public ADurationZone(ZoneArgsContainer arg) : base(arg)
         {
-            this._duration = dur;
-            this.Handle = handle;
+            this._duration = arg.Dur;
+            this.Handle = arg.Handle;
         }
 
         public void ProcessTurn()

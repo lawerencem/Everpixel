@@ -7,13 +7,13 @@ namespace Model.Shields
         private int _curHP;
         private int _dur;
         private int _maxHP;
-        private GenericCharacterController _parent;
+        private CharController _parent;
 
         public int CurHP { get { return this._curHP; } }
         public int Dur { get { return this._dur; } }
         public int MaxHP { get { return this._maxHP; } }
 
-        public Shield(GenericCharacterController parent, int dur, int hp)
+        public Shield(CharController parent, int dur, int hp)
         {
             this._curHP = hp;
             this._dur = dur;

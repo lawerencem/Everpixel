@@ -9,7 +9,7 @@ namespace Assets.Model.Ability.Logic.Calculator
 {
     public class DamageCalculator : AAbilityCalculator
     {
-        public void CalculateAbilityDmg(HitInfo hit)
+        public void CalculateAbilityDmg(Hit hit)
         {
             var dmg = hit.ModData.BaseDamage;
             dmg += hit.Ability.FlatDamage;
@@ -25,7 +25,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             hit.Dmg = (int)dmg;
         }
 
-        public void ModifyDmgViaDefender(HitInfo hit)
+        public void ModifyDmgViaDefender(Hit hit)
         {
             if (!AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge) &&
                 !AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Parry))
@@ -42,7 +42,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             }
         }
 
-        public override void Predict(HitInfo hit)
+        public override void Predict(Hit hit)
         {
             this.CalculateAbilityDmg(hit);
             var dmgReduction = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Damage_Reduction);
@@ -75,7 +75,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             hit.Chances.Damage = (bodyWeight + headWeight) / (LogicParams.BASE_HIT_RATIO + 1);
         }
 
-        public override void Process(HitInfo hit)
+        public override void Process(Hit hit)
         {
             var dmgToApply = (double)hit.Dmg;
             if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))

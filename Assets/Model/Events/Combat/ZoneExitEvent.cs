@@ -6,10 +6,10 @@ namespace Model.Events.Combat
 {
     public class ZoneExitEvent : CombatEvent
     {
-        public GenericCharacterController Character { get; set;}
+        public CharController Character { get; set;}
         public AZone Zone { get; set; }
 
-        public ZoneExitEvent(CombatEventManager parent, GenericCharacterController character, AZone zone)
+        public ZoneExitEvent(CombatEventManager parent, CharController character, AZone zone)
             : base(CombatEventEnum.ZoneExit, parent)
         {
             this.Character = character;

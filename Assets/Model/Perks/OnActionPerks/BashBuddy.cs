@@ -15,7 +15,7 @@ namespace Model.Perks
 
         }
 
-        public override void TryProcessAction(HitInfo hit)
+        public override void TryProcessAction(Hit hit)
         {
             if (hit.Ability.CastType == CastTypeEnum.Melee)
             {
@@ -25,9 +25,9 @@ namespace Model.Perks
                 var hexes = source.CurrentTile.Model.GetAoETiles((int)this.AoE);
                 foreach (var hex in hexes)
                 {
-                    if (hex.Current != null && hex.Current.GetType().Equals(typeof(GenericCharacterController)))
+                    if (hex.Current != null && hex.Current.GetType().Equals(typeof(CharController)))
                     {
-                        var character = hex.Current as GenericCharacterController;
+                        var character = hex.Current as CharController;
                         if (character.LParty == hit.Source.LParty)
                         {
                             if (hp > 0 && dur > 0)

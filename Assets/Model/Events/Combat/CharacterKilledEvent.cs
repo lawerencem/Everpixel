@@ -6,9 +6,9 @@ namespace Model.Events.Combat
 {
     public class CharacterKilledEvent : CombatEvent
     {
-        public GenericCharacterController Killed { get; set; }
+        public CharController Killed { get; set; }
 
-        public CharacterKilledEvent(CombatEventManager parent,GenericCharacterController killed) :
+        public CharacterKilledEvent(CombatEventManager parent,CharController killed) :
             base(CombatEventEnum.CharacterKilled, parent)
         {
             this.Killed = killed;

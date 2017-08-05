@@ -14,22 +14,22 @@ namespace Assets.Controller.Managers
     {
         private List<Pair<int, CastingEvent>> _castingOrder;
         private List<TileController> _curTiles;
-        private List<GenericCharacterController> _lParty;
-        private List<GenericCharacterController> _order;
-        private List<GenericCharacterController> _rParty;
+        private List<CharController> _lParty;
+        private List<CharController> _order;
+        private List<CharController> _rParty;
 
-        public List<GenericCharacterController> Characters;
+        public List<CharController> Characters;
         public GenericAbility CurAbility { get; set; }
-        public GenericCharacterController CurrActing { get; set; }
+        public CharController CurrActing { get; set; }
         public CombatMap Map;
 
         public CombatManager(CombatMap m)
         {
             this._castingOrder = new List<Pair<int, CastingEvent>>();
-            this.Characters = new List<GenericCharacterController>();
+            this.Characters = new List<CharController>();
             this._curTiles = new List<TileController>();
             this.Map = m;
-            this._order = new List<GenericCharacterController>();
+            this._order = new List<CharController>();
         }
 
         public void AddCasting(CastingEvent e)
@@ -41,7 +41,7 @@ namespace Assets.Controller.Managers
                 this._order.Remove(remove);
         }
 
-        public void InitParties(List<GenericCharacterController> l, List<GenericCharacterController> r)
+        public void InitParties(List<CharController> l, List<CharController> r)
         {
             this._lParty = l;
             this._rParty = r;
@@ -67,7 +67,7 @@ namespace Assets.Controller.Managers
             return this.Map.GetPath(s.Model, t.Model);
         }
 
-        public void ProcessCharacterKilled(GenericCharacterController c)
+        public void ProcessCharacterKilled(CharController c)
         {
             this.Characters.Remove(c);
             if (this._lParty.Contains(c))
@@ -125,7 +125,7 @@ namespace Assets.Controller.Managers
             this._curTiles = tiles;
         }
 
-        public bool TargetsOnSameTeam(GenericCharacterController s, GenericCharacterController t)
+        public bool TargetsOnSameTeam(CharController s, CharController t)
         {
             if (this._lParty.Contains(s) && this._lParty.Contains(t))
                 return true;

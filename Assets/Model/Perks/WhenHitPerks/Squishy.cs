@@ -9,7 +9,7 @@ namespace Model.Perks
 
         }
 
-        public override void TryModHit(HitInfo hit)
+        public override void TryModHit(Hit hit)
         {
             double delta = 0;
             if (hit.Ability.ArmorIgnoreMod < 1)

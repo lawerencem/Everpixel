@@ -8,7 +8,7 @@ namespace Assets.Model.Ability.Logic.Calculator
 {
     public class DodgeCalculator : AAbilityCalculator
     {
-        public override  void Predict(HitInfo hit)
+        public override  void Predict(Hit hit)
         {
             var acc = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Melee);
             var dodge = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Dodge);
@@ -28,7 +28,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             hit.Chances.Dodge *= hit.Ability.DodgeMod;
         }
 
-        public override void Process(HitInfo hit)
+        public override void Process(Hit hit)
         {
             this.Predict(hit);
             var roll = RNG.Instance.NextDouble();
