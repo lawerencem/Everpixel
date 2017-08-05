@@ -1,5 +1,8 @@
 ﻿TODO
 
+Incorporate CombatReferee into abilities so they can override.
+
+
 Perks
 howl (intstant heal of HoT)
 Athletic: improve AP and Stam

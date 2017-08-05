@@ -1,4 +1,4 @@
-﻿namespace Model.Injuries
+﻿namespace Assets.Model.Injuries
 {
     public enum InjuryEnum
     {

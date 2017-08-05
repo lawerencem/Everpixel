@@ -20,7 +20,7 @@ namespace Model.Perks
             if (hit.Ability.CastType == CastTypeEnum.Melee)
             {
                 var source = hit.Source;
-                var dur = (int)(this.Dur * CombatReferee.Instance.GetSpellDurViaMod(hit.Source.Model));
+                var dur = (int)(this.Dur * AbilityLogic.Instance.GetSpellDurViaMod(hit.Source.Model));
                 var hp = (int)(source.Model.GetCurrentStatValue(SecondaryStatsEnum.Power) * this.ValPerPower);
                 var hexes = source.CurrentTile.Model.GetAoETiles((int)this.AoE);
                 foreach (var hex in hexes)

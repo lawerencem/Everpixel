@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Model.Combat
+namespace Assets.Model.Combat
 {
     public class AttackEventFlags
     {

@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ActiveAbilities>
+  <MagicType name="Astral">
+    <ActiveAbility name="Eldritch_Chomp">
+      <AccMod>1</AccMod>
+      <AoE>0</AoE>
+      <APCost>5</APCost>
+      <ArmorIgnoreMod>1</ArmorIgnoreMod>
+      <ArmorPierceMod>1</ArmorPierceMod>
+      <BlockIgnoreMod>1</BlockIgnoreMod>
+      <CastTime>80</CastTime>
+      <CastTypeEnum>No_Collision_Bullet</CastTypeEnum>
+      <DmgPerPower>0.05</DmgPerPower>
+      <DodgeMod>1.0</DodgeMod>
+      <EffectDur>3</EffectDur>
+      <EffectValue>3</EffectValue>
+      <FlatDamage>35</FlatDamage>
+      <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
+      <ParryModMod>0.25</ParryModMod>
+      <Range>6</Range>
+      <RangeBlockMod>0.25</RangeBlockMod>
+      <RechargeTime>0</RechargeTime>
+      <ResistTypeEnum>Will</ResistTypeEnum>
+      <ShieldDamageMod>1</ShieldDamageMod>
+      <SpellLevel>2</SpellLevel>
+      <StaminaCost>55</StaminaCost>
+    </ActiveAbility>
+    <ActiveAbility name="Summon_Shoggoth">
+      <AccMod>1</AccMod>
+      <AoE>0</AoE>
+      <APCost>6</APCost>
+      <ArmorIgnoreMod>0</ArmorIgnoreMod>
+      <ArmorPierceMod>0</ArmorPierceMod>
+      <BlockIgnoreMod>0</BlockIgnoreMod>
+      <CastTime>50</CastTime>
+      <CastTypeEnum>Summon</CastTypeEnum>
+      <DmgPerPower>0</DmgPerPower>
+      <DodgeMod>1.0</DodgeMod>
+      <FlatDamage>0</FlatDamage>
+      <MeleeBlockChanceMod>0</MeleeBlockChanceMod>
+      <ParryModMod>0</ParryModMod>
+      <Range>3</Range>
+      <RangeBlockMod>0</RangeBlockMod>
+      <RechargeTime>0</RechargeTime>
+      <ShieldDamageMod>0</ShieldDamageMod>
+      <StaminaCost>70</StaminaCost>
+    </ActiveAbility>
+  </MagicType>
+  <MagicType name="Fighting">
+    <ActiveAbility name="Hadoken">
+      <AccMod>1</AccMod>
+      <AoE>0</AoE>
+      <APCost>4</APCost>
+      <ArmorIgnoreMod>1</ArmorIgnoreMod>
+      <ArmorPierceMod>1</ArmorPierceMod>
+      <BlockIgnoreMod>1</BlockIgnoreMod>
+      <CastTypeEnum>Bullet</CastTypeEnum>
+      <DmgPerPower>0.018</DmgPerPower>
+      <DodgeMod>1.0</DodgeMod>
+      <FlatDamage>0</FlatDamage>
+      <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
+      <ParryModMod>0.25</ParryModMod>
+      <Range>4</Range>
+      <RangeBlockMod>1.25</RangeBlockMod>
+      <RechargeTime>0</RechargeTime>
+      <ShieldDamageMod>1.5</ShieldDamageMod>
+      <StaminaCost>25</StaminaCost>
+    </ActiveAbility>
+    <ActiveAbility name="Kamehameha">
+      <AccMod>1</AccMod>
+      <AoE>0</AoE>
+      <APCost>6</APCost>
+      <ArmorIgnoreMod>0.8</ArmorIgnoreMod>
+      <ArmorPierceMod>1</ArmorPierceMod>
+      <BlockIgnoreMod>1</BlockIgnoreMod>
+      <CastTypeEnum>Raycast</CastTypeEnum>
+      <DmgPerPower>0.02</DmgPerPower>
+      <DodgeMod>0.8</DodgeMod>
+      <FlatDamage>30</FlatDamage>
+      <MeleeBlockChanceMod>0.5</MeleeBlockChanceMod>
+      <ParryModMod>0.15</ParryModMod>
+      <Range>4</Range>
+      <RangeBlockMod>0.75</RangeBlockMod>
+      <RechargeTime>0</RechargeTime>
+      <ShieldDamageMod>1</ShieldDamageMod>
+      <StaminaCost>70</StaminaCost>
+    </ActiveAbility>
+  </MagicType>
+  <MagicType name ="Psychic">
+    <ActiveAbility name="Cerebral_Nova">
+      <AoE>1</AoE>
+      <APCost>6</APCost>
+      <CastTime>250</CastTime>
+      <CastTypeEnum>AoE</CastTypeEnum>
+      <Description>AoE damage dealt is per every point of intelligence caster has above target.</Description>
+      <DmgPerPower>0.125</DmgPerPower>
+      <Duration>0</Duration>
+      <FlatDamage>0</FlatDamage>
+      <Range>3</Range>
+      <StaminaCost>60</StaminaCost>
+    </ActiveAbility>
+    <ActiveAbility name="Feeblemind">
+      <AoE>0</AoE>
+      <APCost>3</APCost>
+      <CastTime>50</CastTime>
+      <CastTypeEnum>Single</CastTypeEnum>
+      <Description>Debuff target's intelligence.</Description>
+      <DmgPerPower>0.01</DmgPerPower>
+      <Duration>0</Duration>
+      <FlatDamage>8</FlatDamage>
+      <Range>5</Range>
+      <StaminaCost>60</StaminaCost>
+    </ActiveAbility>
+    <ActiveAbility name="Hold_Person">
+      <AoE>1</AoE>
+      <APCost>4</APCost>
+      <CastTime>150</CastTime>
+      <CastTypeEnum>Single</CastTypeEnum>
+      <DmgPerPower>0.125</DmgPerPower>
+      <Duration>1</Duration>
+      <FlatDamage>0</FlatDamage>
+      <Range>4</Range>
+      <StaminaCost>40</StaminaCost>
+    </ActiveAbility>
+    <ActiveAbility name="Intellect">
+      <AoE>0</AoE>
+      <APCost>3</APCost>
+      <CastTime>50</CastTime>
+      <CastTypeEnum>Single</CastTypeEnum>
+      <Description>Buff target's intelligence.</Description>
+      <DmgPerPower>0.0125</DmgPerPower>
+      <Duration>1</Duration>
+      <FlatDamage>10</FlatDamage>
+      <Range>3</Range>
+      <StaminaCost>25</StaminaCost>
+    </ActiveAbility>
+    <ActiveAbility name="Mental_Laceration">
+      <AoE>0</AoE>
+      <APCost>4</APCost>
+      <CastTime>150</CastTime>
+      <CastTypeEnum>Single</CastTypeEnum>
+      <Description>Damage dealt is per every point of intelligence that caster has above target.</Description>
+      <DmgPerPower>0.25</DmgPerPower>
+      <Duration>0</Duration>
+      <FlatDamage>0</FlatDamage>
+      <Range>4</Range>
+      <StaminaCost>25</StaminaCost>
+    </ActiveAbility>
+    <ActiveAbility name="Mind_Blast">
+      <AoE>0</AoE>
+      <APCost>7</APCost>
+      <CastTime>150</CastTime>
+      <CastTypeEnum>Single</CastTypeEnum>
+      <DmgPerPower>0.075</DmgPerPower>
+      <Duration>0</Duration>
+      <FlatDamage>15</FlatDamage>
+      <Range>6</Range>
+      <StaminaCost>55</StaminaCost>
+    </ActiveAbility>
+    <ActiveAbility name="Mind_Hunt">
+      <AoE>0</AoE>
+      <APCost>3</APCost>
+      <CastTime>100</CastTime>
+      <CastTypeEnum>Single</CastTypeEnum>
+      <Description>Target takes damage each turn, but caster takes +50% damage while this effect is active.</Description>
+      <DmgPerPower>0.15</DmgPerPower>
+      <Duration>4</Duration>
+      <FlatDamage>0</FlatDamage>
+      <Range>8</Range>
+      <StaminaCost>45</StaminaCost>
+    </ActiveAbility>
+    <ActiveAbility name="Pain_Link">
+      <AoE>0</AoE>
+      <APCost>4</APCost>
+      <CastTime>300</CastTime>
+      <CastTypeEnum>Single</CastTypeEnum>
+      <Description>Caster and target now split all damage taken.</Description>
+      <DmgPerPower>0.0</DmgPerPower>
+      <Duration>3</Duration>
+      <FlatDamage>0</FlatDamage>
+      <Range>7</Range>
+      <StaminaCost>35</StaminaCost>
+    </ActiveAbility>
+    <ActiveAbility name="Psychic_Artillery">
+      <AoE>1</AoE>
+      <APCost>5</APCost>
+      <CastTime>350</CastTime>
+      <CastTypeEnum>AoE</CastTypeEnum>
+      <Description>Divine Mind spell.</Description>
+      <DmgPerPower>0.15</DmgPerPower>
+      <Duration>0</Duration>
+      <FlatDamage>0</FlatDamage>
+      <Range>6</Range>
+      <StaminaCost>55</StaminaCost>
+    </ActiveAbility>
+    <ActiveAbility name="Sever">
+      <AoE>0</AoE>
+      <APCost>3</APCost>
+      <CastTime>50</CastTime>
+      <CastTypeEnum>Single</CastTypeEnum>
+      <Description>Does quadruple damage to stunned targets.</Description>
+      <DmgPerPower>0.15</DmgPerPower>
+      <Duration>0</Duration>
+      <FlatDamage>15</FlatDamage>
+      <Range>5</Range>
+      <StaminaCost>40</StaminaCost>
+    </ActiveAbility>
+  </MagicType>
+  <MagicType name ="Water">
+    <ActiveAbility name="Soothing_Mist">
+      <AoE>1</AoE>
+      <APCost>5</APCost>
+      <CastTime>35</CastTime>
+      <CastTypeEnum>Zone</CastTypeEnum>
+      <DmgPerPower>0.003</DmgPerPower>
+      <Duration>3</Duration>
+      <FlatDamage>2</FlatDamage>
+      <Range>3</Range>
+      <StaminaCost>35</StaminaCost>
+    </ActiveAbility>
+  </MagicType>
+  <MagicType name="Physical">
+    <ActiveAbility name="Haste_Song">
+      <AccMod>1</AccMod>
+      <AoE>3</AoE>
+      <APCost>6</APCost>
+      <ArmorIgnoreMod>1</ArmorIgnoreMod>
+      <ArmorPierceMod>1</ArmorPierceMod>
+      <BlockIgnoreMod>1</BlockIgnoreMod>
+      <CastTypeEnum>Song</CastTypeEnum>
+      <DmgPerPower>0</DmgPerPower>
+      <DodgeMod>1.0</DodgeMod>
+      <Duration>1</Duration>
+      <FlatDamage>0</FlatDamage>
+      <MeleeBlockChanceMod>0</MeleeBlockChanceMod>
+      <ParryModMod>0</ParryModMod>
+      <Range>0</Range>
+      <RangeBlockMod>0</RangeBlockMod>
+      <RechargeTime>0</RechargeTime>
+      <ShieldDamageMod>1.5</ShieldDamageMod>
+      <StaminaCost>40</StaminaCost>
+    </ActiveAbility>
+    <ActiveAbility name="Orc_Metal">
+      <AccMod>1</AccMod>
+      <AoE>5</AoE>
+      <APCost>5</APCost>
+      <ArmorIgnoreMod>1</ArmorIgnoreMod>
+      <ArmorPierceMod>1</ArmorPierceMod>
+      <BlockIgnoreMod>1</BlockIgnoreMod>
+      <CastTypeEnum>Song</CastTypeEnum>
+      <DmgPerPower>.003</DmgPerPower>
+      <DodgeMod>1.0</DodgeMod>
+      <Duration>1</Duration>
+      <FlatDamage>0</FlatDamage>
+      <MeleeBlockChanceMod>0</MeleeBlockChanceMod>
+      <ParryModMod>0</ParryModMod>
+      <Range>0</Range>
+      <RangeBlockMod>0</RangeBlockMod>
+      <RechargeTime>0</RechargeTime>
+      <ShieldDamageMod>0</ShieldDamageMod>
+      <StaminaCost>50</StaminaCost>
+    </ActiveAbility>
+    <ActiveAbility name="Were_Ween">
+      <AccMod>1</AccMod>
+      <AoE>0</AoE>
+      <APCost>8</APCost>
+      <ArmorIgnoreMod>0</ArmorIgnoreMod>
+      <ArmorPierceMod>0</ArmorPierceMod>
+      <BlockIgnoreMod>0</BlockIgnoreMod>
+      <CastTime>80</CastTime>
+      <CastTypeEnum>Shapeshift</CastTypeEnum>
+      <DmgPerPower>0</DmgPerPower>
+      <DodgeMod>1.0</DodgeMod>
+      <FlatDamage>0</FlatDamage>
+      <MeleeBlockChanceMod>0</MeleeBlockChanceMod>
+      <ParryModMod>0</ParryModMod>
+      <Range>0</Range>
+      <RangeBlockMod>0</RangeBlockMod>
+      <RechargeTime>0</RechargeTime>
+      <ShapeshiftSprites>
+        <CharAttackHead>3</CharAttackHead>
+        <CharHeadDead>2</CharHeadDead>
+        <CharHeadFlinch>1</CharHeadFlinch>
+        <CharHead>0</CharHead>
+        <CharTorso>4</CharTorso>
+      </ShapeshiftSprites>
+      <ShieldDamageMod>0</ShieldDamageMod>
+      <StaminaCost>20</StaminaCost>
+    </ActiveAbility>
+  </MagicType>
+</ActiveAbilities>

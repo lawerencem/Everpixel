@@ -20,7 +20,7 @@ namespace Model.Perks
                 base.TryProcessAction(hit);
                 if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Block))
                 {
-                    var dur = (int)(CombatReferee.Instance.GetSpellDurViaMod(hit.Target.Model) * this.Val);
+                    var dur = (int)(AbilityLogic.Instance.GetSpellDurViaMod(hit.Target.Model) * this.Val);
                     var dodge = new SecondaryStatModifier(SecondaryStatsEnum.Dodge, dur, this.Val);
                     var parry = new SecondaryStatModifier(SecondaryStatsEnum.Parry, dur, this.Val);
                     var dodgeEv = new BuffEvent(CombatEventManager.Instance, dodge, hit.Target);

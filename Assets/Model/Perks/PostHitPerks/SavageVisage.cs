@@ -27,7 +27,7 @@ namespace Model.Perks
                         var horror = EffectsFactory.Instance.CreateNewObject(EffectsEnum.Horror);
                         horror.SetDuration((int)this.Dur);
                         horror.SetValue((int)this.Val);
-                        if (!CombatReferee.Instance.ProcessResist(hit.Source.Model, target, this.Resist))
+                        if (!AbilityLogic.Instance.ProcessResist(hit.Source.Model, target, this.Resist))
                         {
                             var effectEv = new GenericEffectEvent(CombatEventManager.Instance, target.ParentController, horror);
                         }

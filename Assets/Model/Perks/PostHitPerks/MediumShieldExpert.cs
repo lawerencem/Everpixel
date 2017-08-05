@@ -20,7 +20,7 @@ namespace Model.Perks
                 base.TryProcessAction(hit);
                 if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Block))
                 {
-                    var dur = (int)(CombatReferee.Instance.GetSpellDurViaMod(hit.Target.Model) * this.Val);
+                    var dur = (int)(AbilityLogic.Instance.GetSpellDurViaMod(hit.Target.Model) * this.Val);
                     var block = new SecondaryStatModifier(SecondaryStatsEnum.Block, dur, this.Val);
                     var blockEv = new BuffEvent(CombatEventManager.Instance, block, hit.Target);
                 }
