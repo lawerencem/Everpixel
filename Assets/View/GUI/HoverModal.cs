@@ -121,7 +121,7 @@ namespace View.GUI
             this._modal.transform.position = pos;
         }
 
-        public void SetModalStatValues(GenericCharacter c)
+        public void SetModalStatValues(MChar c)
         {
             if (c.Armor != null)
             {
@@ -152,11 +152,11 @@ namespace View.GUI
             else
                 this._rWeaponSlider.maxValue = 0;
 
-            this._hpSlider.maxValue = (int)c.GetCurrentStatValue(SecondaryStatsEnum.HP);
+            this._hpSlider.maxValue = (int)c.GetCurrentStatValue(ESecondaryStat.HP);
             this._hpSlider.value = c.GetCurrentHP();
-            this._moraleSlider.maxValue = (int)c.GetCurrentStatValue(SecondaryStatsEnum.Morale);
+            this._moraleSlider.maxValue = (int)c.GetCurrentStatValue(ESecondaryStat.Morale);
             this._moraleSlider.value = c.GetCurrentMorale();
-            this._stamSlider.maxValue = (int)c.GetCurrentStatValue(SecondaryStatsEnum.Stamina);
+            this._stamSlider.maxValue = (int)c.GetCurrentStatValue(ESecondaryStat.Stamina);
             this._stamSlider.value = c.GetCurrentStamina();
         }
 

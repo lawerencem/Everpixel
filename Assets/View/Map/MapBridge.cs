@@ -7,12 +7,12 @@ namespace View.Biomes
 {
     public class MapBridge : AbstractSingleton<MapBridge>
     {
-        public Sprite[] GetBackgroundDecoSprites(BiomeEnum b)
+        public Sprite[] GetBackgroundDecoSprites(EBiome b)
         {
             return MapSpriteLoader.Instance.GetBiomeBackgroundDeco(b);
         }
 
-        public Sprite[] GetBackgroundSprites(BiomeEnum b)
+        public Sprite[] GetBackgroundSprites(EBiome b)
         {
             return MapSpriteLoader.Instance.GetBiomeBackground(b);
         }

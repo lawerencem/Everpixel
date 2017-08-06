@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Magic.Astral
 {
-    public class SummonShoggoth : Ability
+    public class SummonShoggoth : MAbility
     {
-        public SummonShoggoth() : base(EnumAbility.Summon_Shoggoth)
+        public SummonShoggoth() : base(EAbility.Summon_Shoggoth)
         {
 
         }

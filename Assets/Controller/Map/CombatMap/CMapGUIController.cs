@@ -189,15 +189,15 @@ namespace Controller.Managers.Map
             if (e.Hit.Target != null)
             {
                 this.TryProcessShieldFX(e);
-                if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge))
+                if (FHit.HasFlag(e.Hit.Flags.CurFlags, FHit.Flags.Dodge))
                     this._hitHelper.ProcessDodge(e);
-                else if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Parry))
+                else if (FHit.HasFlag(e.Hit.Flags.CurFlags, FHit.Flags.Parry))
                     this._hitHelper.ProcessParry(e);
-                else if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Block))
+                else if (FHit.HasFlag(e.Hit.Flags.CurFlags, FHit.Flags.Block))
                     this._hitHelper.ProcessBlock(e);
                 else
                     this._hitHelper.ProcessNormalHit(e);
-                if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Resist))
+                if (FHit.HasFlag(e.Hit.Flags.CurFlags, FHit.Flags.Resist))
                     this._hitHelper.ProcessResist(e);
                 this._hitHelper.ProcessSplatterOnHitEvent(e);
             }
@@ -227,10 +227,10 @@ namespace Controller.Managers.Map
         public void SetActingBoxToController(CharController c)
         {
             this.SetTagText(CMapGUIControllerParams.NAME, c.View.Name);
-            this.SetTagText(CMapGUIControllerParams.AP, c.Model.GetCurrentAP() + " / " + ((int)c.Model.GetCurrentStatValue(SecondaryStatsEnum.AP)).ToString());
-            this.SetTagText(CMapGUIControllerParams.HP, c.Model.GetCurrentHP() + " / " + ((int)c.Model.GetCurrentStatValue(SecondaryStatsEnum.HP)).ToString());
-            this.SetTagText(CMapGUIControllerParams.STAM, c.Model.GetCurrentStamina() + " / " + ((int)c.Model.GetCurrentStatValue(SecondaryStatsEnum.Stamina)).ToString());
-            this.SetTagText(CMapGUIControllerParams.MORALE, c.Model.GetCurrentMorale() + " / " + ((int)c.Model.GetCurrentStatValue(SecondaryStatsEnum.Morale)).ToString());
+            this.SetTagText(CMapGUIControllerParams.AP, c.Model.GetCurrentAP() + " / " + ((int)c.Model.GetCurrentStatValue(ESecondaryStat.AP)).ToString());
+            this.SetTagText(CMapGUIControllerParams.HP, c.Model.GetCurrentHP() + " / " + ((int)c.Model.GetCurrentStatValue(ESecondaryStat.HP)).ToString());
+            this.SetTagText(CMapGUIControllerParams.STAM, c.Model.GetCurrentStamina() + " / " + ((int)c.Model.GetCurrentStatValue(ESecondaryStat.Stamina)).ToString());
+            this.SetTagText(CMapGUIControllerParams.MORALE, c.Model.GetCurrentMorale() + " / " + ((int)c.Model.GetCurrentStatValue(ESecondaryStat.Morale)).ToString());
 
             if (c.Model.Armor != null)
                 this.SetTagText(CMapGUIControllerParams.ARMOR, c.Model.Armor.Name);
@@ -280,7 +280,7 @@ namespace Controller.Managers.Map
             this._hoverModal.SetModalLocation(pos);
         }
 
-        public void SetHoverModalStatValues(GenericCharacter c)
+        public void SetHoverModalStatValues(MChar c)
         {
             this._hoverModal.SetModalStatValues(c);
         }

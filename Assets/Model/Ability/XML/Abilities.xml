@@ -20,7 +20,7 @@
       <Range>6</Range>
       <RangeBlockMod>0.25</RangeBlockMod>
       <RechargeTime>0</RechargeTime>
-      <ResistTypeEnum>Will</ResistTypeEnum>
+      <EResistType>Will</EResistType>
       <ShieldDamageMod>1</ShieldDamageMod>
       <SpellLevel>2</SpellLevel>
       <StaminaCost>55</StaminaCost>

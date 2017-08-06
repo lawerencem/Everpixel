@@ -1,28 +1,32 @@
-﻿using Model.Combat;
-using Model.Events.Combat;
+﻿using Assets.Model.Ability;
+using Assets.Model.Ability.Enum;
+using Model.Combat;
+using System.Collections.Generic;
 
-namespace Model.Abilities
+namespace Assets.Model.Weapon.Abilities
 {
-    public class Aim : GenericAbility
+    public class Aim : MAbility
     {
-        public Aim() : base(AbilitiesEnum.Aim)
+        public Aim() : base(EAbility.Aim) { }
+
+        public override List<Hit> Predict(AbilityArgContainer arg)
         {
-            this.CastType = CastTypeEnum.Bullet;
+            return base.PredictBullet(arg);
         }
 
-        public override void PredictAbility(Hit hit)
+        public override List<Hit> Process(AbilityArgContainer arg)
         {
-            base.PredictBullet(hit);
+            var hits = base.Process(arg);
+            foreach (var hit in hits)
+            {
+                base.ProcessHitBullet(hit);
+            }
+            return hits;
         }
 
-        public override void ProcessAbility(PerformActionEvent e, Hit hit)
+        public override bool IsValidActionEvent(AbilityArgContainer arg)
         {
-            base.ProcessAbility(e, hit);
-        }
-
-        public override bool IsValidActionEvent(PerformActionEvent e)
-        {
-            return base.IsValidEnemyTarget(e);
+            return base.IsValidEnemyTarget(arg);
         }
     }
 }

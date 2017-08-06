@@ -24,7 +24,7 @@ namespace Controller.Map
         public List<CharController> DeadCharacters { get; set; }
         public TileControllerFlags Flags { get; set; }
         public GameObject Handle { get; set; }
-        public HexTile Model { get; set; }
+        public MTile Model { get; set; }
         public HexTileView View { get; set; }
         public List<AZone> Zones { get; set; }
 
@@ -33,7 +33,7 @@ namespace Controller.Map
             this.Adjacent = new List<TileController>();
             this.DeadCharacters = new List<CharController>();
             this.Flags = new TileControllerFlags();
-            this.Model = new HexTile();
+            this.Model = new MTile();
             this.Zones = new List<AZone>();
         }
 
@@ -113,7 +113,7 @@ namespace Controller.Map
             CMapGUIController.Instance.SetHoverModalInactive();
         }
 
-        public void SetModel(HexTile t)
+        public void SetModel(MTile t)
         {
             this.Model = t;
             this.Model.Parent = this;

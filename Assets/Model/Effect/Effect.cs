@@ -1,19 +1,19 @@
-﻿using Controller.Characters;
-using Model.Combat;
+﻿using Assets.Controller.Character;
+using Assets.Model.Combat;
 
-namespace Model.Effects
+namespace Assets.Model.Effect
 {
-    public class Effect
+    public class MEffect
     {
         private EffectContainer _params;
         private CharController _target;
-        private EnumEffect _type;
+        private EEffect _type;
 
         public EffectContainer Params { get { return this._params; } }
         public CharController Target { get { return this._target; } }
-        public EnumEffect Type { get { return this._type; } }
+        public EEffect Type { get { return this._type; } }
         
-        public Effect(EnumEffect type)
+        public MEffect(EEffect type)
         {
             this._params = new EffectContainer();
             this._type = type;
@@ -21,9 +21,9 @@ namespace Model.Effects
 
         public virtual void TryProcessEffect(Hit hit) { }
 
-        public Effect Copy()
+        public MEffect Copy()
         {
-            var clone = new Effect(this._type);
+            var clone = new MEffect(this._type);
             clone.Params.Duration = this.Params.Duration;
             clone.Params.Value = this.Params.Duration;
             return clone;

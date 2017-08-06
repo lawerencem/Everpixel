@@ -1,29 +1,32 @@
-﻿using Model.Combat;
-using Model.Events.Combat;
+﻿using Assets.Model.Ability;
+using Assets.Model.Ability.Enum;
+using Model.Combat;
+using System.Collections.Generic;
 
-namespace Model.Abilities
+namespace Assets.Model.Weapon.Abilities
 {
-    public class TripleStrike : GenericAbility
+    public class TripleStrike : MAbility
     {
-        public TripleStrike() : base(AbilitiesEnum.Triple_Strike)
+        public TripleStrike() : base(EAbility.Triple_Strike) { }
+
+        public override List<Hit> Predict(AbilityArgContainer arg)
         {
-            this.CastType = CastTypeEnum.Melee;
+            return base.PredictMelee(arg);
         }
 
-        public override void PredictAbility(Hit hit)
+        public override List<Hit> Process(AbilityArgContainer arg)
         {
-            base.PredictMelee(hit);
+            var hits = base.Process(arg);
+            foreach (var hit in hits)
+            {
+                base.ProcessHitMelee(hit);
+            }
+            return hits;
         }
 
-        public override void ProcessAbility(PerformActionEvent e, Hit hit)
+        public override bool IsValidActionEvent(AbilityArgContainer arg)
         {
-            base.ProcessAbility(e, hit);
-            base.ProcessMelee(hit);
-        }
-
-        public override bool IsValidActionEvent(PerformActionEvent e)
-        {
-            return base.IsValidEnemyTarget(e);
+            return base.IsValidEnemyTarget(arg);
         }
     }
 }

@@ -1,10 +1,11 @@
-﻿using Model.Combat;
+﻿using Assets.Model.Combat;
+using Assets.Model.Effect;
 
-namespace Model.Effects
+namespace Assets.Model.Effects.Will
 {
-    public class Horror : Effect
+    public class Horror : MEffect
     {
-        public Horror() : base(EnumEffect.Horror) { }
+        public Horror() : base(EEffect.Horror) { }
 
         public override void TryProcessEffect(Hit hit)
         {

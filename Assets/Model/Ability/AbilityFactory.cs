@@ -1,6 +1,5 @@
 ﻿using Assets.Model.Ability.Enum;
 using Generics;
-using Model.Abilities;
 using System.Collections.Generic;
 
 namespace Assets.Model.Ability
@@ -9,9 +8,9 @@ namespace Assets.Model.Ability
     {
         public AbilityFactory() { }
 
-        public List<Ability> CreateNewObject(List<EnumAbility> abilities)
+        public List<MAbility> CreateNewObject(List<EAbility> abilities)
         {
-            var abs = new List<Ability>();
+            var abs = new List<MAbility>();
             foreach(var ability in abilities)
             {
                 var proto = AbilityTable.Instance.Table[ability];

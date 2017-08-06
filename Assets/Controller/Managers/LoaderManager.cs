@@ -23,7 +23,7 @@ namespace Assets.Controller.Managers
             this._readers.Add(ArmorReader.Instance);
             this._readers.Add(BarkReader.Instance);
             this._readers.Add(ClassReader.Instance);
-            this._readers.Add(EffectsReader.Instance);
+            this._readers.Add(EffectReader.Instance);
             this._readers.Add(InjuryReader.Instance);
             this._readers.Add(PartiesReader.Instance);
             this._readers.Add(PredefinedCharacterReader.Instance);

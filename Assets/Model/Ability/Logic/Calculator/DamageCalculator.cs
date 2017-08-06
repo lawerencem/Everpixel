@@ -13,25 +13,25 @@ namespace Assets.Model.Ability.Logic.Calculator
         {
             var dmg = hit.ModData.BaseDamage;
             dmg += hit.Ability.FlatDamage;
-            if (hit.Ability.CastType == CastTypeEnum.Melee)
+            if (hit.Ability.CastType == ECastType.Melee)
             {
                 if (hit.Source.Model.RWeapon != null)
                     dmg += hit.Source.Model.RWeapon.Damage;
                 if (hit.Source.Model.LWeapon != null)
                     dmg += hit.Source.Model.LWeapon.Damage;
             }
-            dmg += (hit.Ability.DmgPerPower * hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Power));
+            dmg += (hit.Ability.DmgPerPower * hit.Source.Model.GetCurrentStatValue(ESecondaryStat.Power));
             dmg *= hit.Ability.DamageMod;
             hit.Dmg = (int)dmg;
         }
 
         public void ModifyDmgViaDefender(Hit hit)
         {
-            if (!AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge) &&
-                !AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Parry))
+            if (!FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Dodge) &&
+                !FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Parry))
             {
                 // TODO:
-                //if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Block))
+                //if (FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Block))
                     //ProcessShieldBlock(hit);
                 //else
                     //ProcessDamage(hit);
@@ -45,10 +45,10 @@ namespace Assets.Model.Ability.Logic.Calculator
         public override void Predict(Hit hit)
         {
             this.CalculateAbilityDmg(hit);
-            var dmgReduction = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Damage_Reduction);
+            var dmgReduction = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.Damage_Reduction);
             var bodyReduction = dmgReduction;
             var headReduction = dmgReduction;
-            double flatDmgNegate = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Damage_Ignore);
+            double flatDmgNegate = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.Damage_Ignore);
             double bodyDmgNegate = 0;
             double headDmgNegate = 0;
 
@@ -78,11 +78,11 @@ namespace Assets.Model.Ability.Logic.Calculator
         public override void Process(Hit hit)
         {
             var dmgToApply = (double)hit.Dmg;
-            if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
-                dmgToApply *= (LogicParams.BASE_CRIT_SCALAR + (hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Critical_Multiplier) / LogicParams.BASE_SCALAR));
-            var dmgReduction = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Damage_Reduction);
-            double flatDmgNegate = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Damage_Ignore);
-            if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Head))
+            if (FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Critical))
+                dmgToApply *= (LogicParams.BASE_CRIT_SCALAR + (hit.Source.Model.GetCurrentStatValue(ESecondaryStat.Critical_Multiplier) / LogicParams.BASE_SCALAR));
+            var dmgReduction = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.Damage_Reduction);
+            double flatDmgNegate = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.Damage_Ignore);
+            if (FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Head))
             {
                 if (hit.Target.Model.Helm != null)
                     flatDmgNegate += hit.Target.Model.Helm.DamageIgnore;
@@ -100,7 +100,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             dmgToApply -= flatDmgNegate;
             if (dmgToApply < 0)
                 dmgToApply = 0;
-            if (AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Head))
+            if (FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Head))
             {
                 if (hit.Target.Model.Helm != null)
                     dmgToApply *= (hit.Target.Model.Helm.DamageReduction * dmgReduction * hit.Ability.ArmorIgnoreMod);

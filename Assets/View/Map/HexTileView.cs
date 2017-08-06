@@ -11,7 +11,7 @@ namespace View.Map
         public int Col { get; set; }
         public int Row { get; set; }
 
-        public HexTileView(HexTile h)
+        public HexTileView(MTile h)
         {
             this.Center = h.Center;
             this.Col = h.Col;

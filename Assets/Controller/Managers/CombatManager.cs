@@ -19,7 +19,7 @@ namespace Assets.Controller.Managers
         private List<CharController> _rParty;
 
         public List<CharController> Characters;
-        public GenericAbility CurAbility { get; set; }
+        public Ability CurAbility { get; set; }
         public CharController CurrActing { get; set; }
         public CombatMap Map;
 
@@ -85,8 +85,8 @@ namespace Assets.Controller.Managers
             {
                 if (this._castingOrder.Count > 0)
                 {
-                    if (this._castingOrder[0].X + this._castingOrder[0].Y.Caster.Model.GetCurrentStatValue(SecondaryStatsEnum.Initiative) <
-                        this._order[0].Model.GetCurrentStatValue(SecondaryStatsEnum.Initiative))
+                    if (this._castingOrder[0].X + this._castingOrder[0].Y.Caster.Model.GetCurrentStatValue(ESecondaryStat.Initiative) <
+                        this._order[0].Model.GetCurrentStatValue(ESecondaryStat.Initiative))
                     {
                         var cast = this._castingOrder[0];
                         this._castingOrder.RemoveAt(0);
@@ -140,7 +140,7 @@ namespace Assets.Controller.Managers
             foreach (var character in this.Characters)
             {
                 this._order.Add(character);
-                character.Model.SetCurrentAP((int)character.Model.GetCurrentStatValue(SecondaryStatsEnum.AP));
+                character.Model.SetCurrentAP((int)character.Model.GetCurrentStatValue(ESecondaryStat.AP));
             }
             this._order.Sort((x, y) => y.Model.SecondaryStats.Initiative.CompareTo(x.Model.SecondaryStats.Initiative));
             if (this._order != null && this._order.Count > 0)

@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Classes>
+  <Class name="Assassin">
+    <EPrimaryStat>Agility,4</EPrimaryStat>
+    <EPrimaryStat>Might,3</EPrimaryStat>
+    <EPrimaryStat>Perception,1</EPrimaryStat>
+    <SecondaryStatsEnum>Critical_Chance,6</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Critical_Multiplier,6</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Initiative,4</SecondaryStatsEnum>
+  </Class>
+  <Class name="Bard">
+    <EPrimaryStat>Agility,2</EPrimaryStat>
+    <EPrimaryStat>Intelligence,2</EPrimaryStat>
+    <EPrimaryStat>Perception,2</EPrimaryStat>
+    <EPrimaryStat>Resolve,1</EPrimaryStat>
+    <SecondaryStatsEnum>Stamina,3</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Initative,10</SecondaryStatsEnum>
+  </Class>
+  <Class name="Berserker">
+    <EPrimaryStat>Might,8</EPrimaryStat>
+    <SecondaryStatsEnum>Critical_Chance,8</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Critical_Multiplier,8</SecondaryStatsEnum>
+  </Class>
+  <Class name="Cleric">
+    <EPrimaryStat>Intelligence,2</EPrimaryStat>
+    <EPrimaryStat>Resolve,6</EPrimaryStat>
+    <SecondaryStatsEnum>Morale,1</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Spell_Duration,8</SecondaryStatsEnum>
+  </Class>
+  <Class name="Dino_Knight">
+    <EPrimaryStat>Constitution,3</EPrimaryStat>
+    <EPrimaryStat>Might,4</EPrimaryStat>
+    <EPrimaryStat>Resolve,1</EPrimaryStat>
+    <SecondaryStatsEnum>Block,3</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Parry,3</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,10</SecondaryStatsEnum>
+  </Class>
+  <Class name="Divine_Mind">
+    <EPrimaryStat>Intelligence,2</EPrimaryStat>
+    <EPrimaryStat>Perception,6</EPrimaryStat>
+    <SecondaryStatsEnum>Concentration,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Inititative,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,8</SecondaryStatsEnum>
+  </Class>
+  <Class name="Eldritch_Weaver">
+    <EPrimaryStat>Intelligence,1</EPrimaryStat>
+    <EPrimaryStat>Might,2</EPrimaryStat>
+    <EPrimaryStat>Perception,5</EPrimaryStat>
+    <SecondaryStatsEnum>Morale,1</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Will,16</SecondaryStatsEnum>
+  </Class>
+  <Class name="Fighter">
+    <EPrimaryStat>Agility,1</EPrimaryStat>
+    <EPrimaryStat>Constitution,2</EPrimaryStat>
+    <EPrimaryStat>Might,2</EPrimaryStat>
+    <EPrimaryStat>Perception,1</EPrimaryStat>
+    <EPrimaryStat>Resolve,1</EPrimaryStat>
+    <SecondaryStatsEnum>Block,3</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Critical_Chance,2</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Critical_Multiplier,3</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Melee,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Parry,1</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Ranged,3</SecondaryStatsEnum>
+  </Class>
+  <Class name="Knight">
+    <EPrimaryStat>Constitution,3</EPrimaryStat>
+    <EPrimaryStat>Might,3</EPrimaryStat>
+    <EPrimaryStat>Resolve,2</EPrimaryStat>
+    <SecondaryStatsEnum>Block,8</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Parry,8</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,2</SecondaryStatsEnum>
+  </Class>
+  <Class name="Lycanthrope">
+    <EPrimaryStat>Constitution,4</EPrimaryStat>
+    <EPrimaryStat>Might,2</EPrimaryStat>
+    <EPrimaryStat>Resolve,2</EPrimaryStat>
+    <SecondaryStatsEnum>Iniative,8</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Stamina,4</SecondaryStatsEnum>
+  </Class>
+  <Class name="Mage">
+    <EPrimaryStat>Intelligence,5</EPrimaryStat>
+    <EPrimaryStat>Perception,2</EPrimaryStat>
+    <SecondaryStatsEnum>Concentration,5</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Critical_Chance,1</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,2</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Spell_Duration,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Spell_Penetration,4</SecondaryStatsEnum>
+  </Class>
+  <Class name="Ninja">
+    <EPrimaryStat>Agility,3</EPrimaryStat>
+    <EPrimaryStat>Intelligence,2</EPrimaryStat>
+    <EPrimaryStat>Might,1</EPrimaryStat>
+    <EPrimaryStat>Perception,1</EPrimaryStat>
+    <SecondaryStatsEnum>Critical_Multiplier,5</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Melee,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Initiative,3</SecondaryStatsEnum>
+  </Class>
+  <Class name="Psion">
+    <EPrimaryStat>Intelligence,6</EPrimaryStat>
+    <EPrimaryStat>Perception,2</EPrimaryStat>
+    <SecondaryStatsEnum>Concentration,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Will,12</SecondaryStatsEnum>
+  </Class>
+  <Class name="Samurai">
+    <EPrimaryStat>Agility,4</EPrimaryStat>
+    <EPrimaryStat>Constitution,2</EPrimaryStat>
+    <EPrimaryStat>Might,2</EPrimaryStat>
+    <SecondaryStatsEnum>Dodge,2</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Melee,8</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Parry,3</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,3</SecondaryStatsEnum>
+  </Class>
+  <Class name="Skald">
+    <EPrimaryStat>Agility,3</EPrimaryStat>
+    <EPrimaryStat>Might,5</EPrimaryStat>
+    <SecondaryStatsEnum>Melee,6</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,6</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Morale,2</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Reflex,4</SecondaryStatsEnum>
+  </Class>
+  <Class name="Slime_Lord">
+    <EPrimaryStat>Intelligence,5</EPrimaryStat>
+    <EPrimaryStat>Might,1</EPrimaryStat>
+    <EPrimaryStat>Perception,2</EPrimaryStat>
+    <SecondaryStatsEnum>Concentration,8</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Spell_Duration,4</SecondaryStatsEnum>
+  </Class>
+  <Class name="Soldier">
+    <EPrimaryStat>Agility,2</EPrimaryStat>
+    <EPrimaryStat>Might,2</EPrimaryStat>
+    <EPrimaryStat>Perception,4</EPrimaryStat>
+    <SecondaryStatsEnum>Block,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Melee,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Parry,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Ranged,4</SecondaryStatsEnum>
+  </Class>
+  <Class name="Sorcerer">
+    <EPrimaryStat>Intelligence,3</EPrimaryStat>
+    <EPrimaryStat>Might,5</EPrimaryStat>
+    <SecondaryStatsEnum>Concentration,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,8</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Spell_Penetration,4</SecondaryStatsEnum>
+  </Class>
+  <Class name="Warrior">
+    <EPrimaryStat>Agility,1</EPrimaryStat>
+    <EPrimaryStat>Constitution,3</EPrimaryStat>
+    <EPrimaryStat>Might,3</EPrimaryStat>
+    <SecondaryStatsEnum>Critical_Chance,3</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Critical_Multiplier,5</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Melee,3</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Parry,2</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Ranged,3</SecondaryStatsEnum>
+  </Class>
+</Classes>

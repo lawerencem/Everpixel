@@ -12,8 +12,9 @@ using View.Events;
 using Controller.Map;
 using Model.Characters;
 using Generics.Utilities;
+using Assets.Controller.Character;
 
-namespace Controller.Managers
+namespace Assets.Controller.Managers
 {
     public class CombatEventManager
     {
@@ -61,7 +62,7 @@ namespace Controller.Managers
             this.TryProcessEvent(e);
         }
 
-        public GenericAbility GetCurrentAbility()
+        public Ability GetCurrentAbility()
         {
             return this._combatManager.CurAbility;
         }
@@ -112,35 +113,35 @@ namespace Controller.Managers
         {
             switch(e.Type)
             {
-                case (CombatEventEnum.ApplyInjury): { HandleApplyInjuryEvent(e as ApplyInjuryEvent); } break;
-                case (CombatEventEnum.AttackSelected): { HandleAttackSelectedEvent(e as AttackSelectedEvent); } break;
-                case (CombatEventEnum.Buff): { HandleBuffEvent(e as BuffEvent); } break;
-                case (CombatEventEnum.Casting): { HandleCastingEvent(e as CastingEvent); } break;
-                case (CombatEventEnum.CharacterKilled): { HandleCharacterKilledEvent(e as CharacterKilledEvent); } break;
-                case (CombatEventEnum.Debuff): { HandleDebuffEvent(e as DebuffEvent); } break;
-                case (CombatEventEnum.DisplayAction): { HandleDisplayActionEvent(e as DisplayActionEvent); } break;
-                case (CombatEventEnum.DisplayHitStats): { HandleDisplayHitStatsEvent(e as DisplayHitStatsEvent); } break;
-                case (CombatEventEnum.DoT): { HandleDoTEvent(e as DoTEvent); } break;
-                case (CombatEventEnum.EndTurn): { HandleEndTurnEvent(e as EndTurnEvent); } break;
-                case (CombatEventEnum.GenericEffect): { HandleGenericEffect(e as GenericEffectEvent); } break;
-                case (CombatEventEnum.HexSelectedForMove): { HandleHexSelectedForMoveEvent(e as HexSelectedForMoveEvent); } break;
-                case (CombatEventEnum.HoT): { HandleHoTEvent(e as HoTEvent); } break;
-                case (CombatEventEnum.MapDoneLoading): { HandleMapDoneLoadingEvent(e as MapDoneLoadingEvent); } break;
-                case (CombatEventEnum.ModifyHP): { HandleModifyHPEvent(e as ModifyHPEvent); } break;
-                case (CombatEventEnum.ModifyStam): { HandleModifyStamEvent(e as ModifyStamEvent); } break;
-                case (CombatEventEnum.PathTraversed): { HandlePathTraversedEvent(e as PathTraversedEvent); } break;
-                case (CombatEventEnum.PerformAction): { HandlePerformActionEvent(e as PerformActionEvent); } break;
-                case (CombatEventEnum.PredictAction): { HandlePredictActionEvent(e as PredictActionEvent); } break;
-                case (CombatEventEnum.Shapeshift): { HandleShapeshiftEvent(e as ShapeshiftEvent); } break;
-                case (CombatEventEnum.Shield): { HandleShieldEvent(e as ShieldEvent); } break;
-                case (CombatEventEnum.ShowPotentialPath): { HandleShowPotentialPathEvent(e as ShowPotentialPathEvent); } break;
-                case (CombatEventEnum.Summon): { HandleSummonEvent(e as SummonEvent); } break;
-                case (CombatEventEnum.TakingAction): { HandleTakingActionEvent(e as TakingActionEvent); } break;
-                case (CombatEventEnum.TileDoubleClick): { HandleTileDoubleClickEvent(e as TileDoubleClickEvent); } break;
-                case (CombatEventEnum.TileHoverDeco): { HandleTileHoverDecoEvent(e as TileHoverDecoEvent); } break;
-                case (CombatEventEnum.TileHitEvent): { HandleTileHitEvent(e as TileHitEvent); } break;
-                case (CombatEventEnum.TraversePath): { HandleTraversePathEvent(e as TraversePathEvent); } break;
-                case (CombatEventEnum.TraverseTile): { HandleTraverseTileEvent(e as TraverseTileEvent); } break;
+                case (ECombatEv.ApplyInjury): { HandleApplyInjuryEvent(e as ApplyInjuryEvent); } break;
+                case (ECombatEv.AttackSelected): { HandleAttackSelectedEvent(e as AttackSelectedEvent); } break;
+                case (ECombatEv.Buff): { HandleBuffEvent(e as BuffEvent); } break;
+                case (ECombatEv.Casting): { HandleCastingEvent(e as CastingEvent); } break;
+                case (ECombatEv.CharacterKilled): { HandleCharacterKilledEvent(e as CharacterKilledEvent); } break;
+                case (ECombatEv.Debuff): { HandleDebuffEvent(e as DebuffEvent); } break;
+                case (ECombatEv.DisplayAction): { HandleDisplayActionEvent(e as DisplayActionEvent); } break;
+                case (ECombatEv.DisplayHitStats): { HandleDisplayHitStatsEvent(e as DisplayHitStatsEvent); } break;
+                case (ECombatEv.DoT): { HandleDoTEvent(e as DoTEvent); } break;
+                case (ECombatEv.EndTurn): { HandleEndTurnEvent(e as EndTurnEvent); } break;
+                case (ECombatEv.GenericEffect): { HandleGenericEffect(e as GenericEffectEvent); } break;
+                case (ECombatEv.HexSelectedForMove): { HandleHexSelectedForMoveEvent(e as HexSelectedForMoveEvent); } break;
+                case (ECombatEv.HoT): { HandleHoTEvent(e as HoTEvent); } break;
+                case (ECombatEv.MapDoneLoading): { HandleMapDoneLoadingEvent(e as MapDoneLoadingEvent); } break;
+                case (ECombatEv.ModifyHP): { HandleModifyHPEvent(e as ModifyHPEvent); } break;
+                case (ECombatEv.ModifyStam): { HandleModifyStamEvent(e as ModifyStamEvent); } break;
+                case (ECombatEv.PathTraversed): { HandlePathTraversedEvent(e as PathTraversedEvent); } break;
+                case (ECombatEv.PerformAction): { HandlePerformActionEvent(e as PerformActionEvent); } break;
+                case (ECombatEv.PredictAction): { HandlePredictActionEvent(e as PredictActionEvent); } break;
+                case (ECombatEv.Shapeshift): { HandleShapeshiftEvent(e as ShapeshiftEvent); } break;
+                case (ECombatEv.Shield): { HandleShieldEvent(e as ShieldEvent); } break;
+                case (ECombatEv.ShowPotentialPath): { HandleShowPotentialPathEvent(e as ShowPotentialPathEvent); } break;
+                case (ECombatEv.Summon): { HandleSummonEvent(e as SummonEvent); } break;
+                case (ECombatEv.TakingAction): { HandleTakingActionEvent(e as TakingActionEvent); } break;
+                case (ECombatEv.TileDoubleClick): { HandleTileDoubleClickEvent(e as TileDoubleClickEvent); } break;
+                case (ECombatEv.TileHoverDeco): { HandleTileHoverDecoEvent(e as TileHoverDecoEvent); } break;
+                case (ECombatEv.TileHitEvent): { HandleTileHitEvent(e as TileHitEvent); } break;
+                case (ECombatEv.TraversePath): { HandleTraversePathEvent(e as TraversePathEvent); } break;
+                case (ECombatEv.TraverseTile): { HandleTraverseTileEvent(e as TraverseTileEvent); } break;
             }
         }
 
@@ -154,7 +155,7 @@ namespace Controller.Managers
         {
             this._events.Remove(e);
             this._currentActionTiles = new List<TileController>();
-            var ability = GenericAbilityTable.Instance.Table[e.AttackType];
+            var ability = AbilityTable.Instance.Table[e.AttackType];
             this._currentActionTiles = ability.GetTargetTiles(e, this._combatManager.CurrActing, this._combatManager);
             this._combatManager.SetCurrentTargetTiles(this._currentActionTiles);
             CMapGUIController.Instance.DecoratePotentialAttackTiles(this._currentActionTiles);
@@ -290,7 +291,7 @@ namespace Controller.Managers
                     var end = new EndTurnEvent(this);
                 }
                 CMapGUIController.Instance.ClearDecoratedTiles();
-                this._events.RemoveAll(x => x.Type == CombatEventEnum.ShowPotentialPath);
+                this._events.RemoveAll(x => x.Type == ECombatEv.ShowPotentialPath);
             }
         }
 
@@ -404,21 +405,21 @@ namespace Controller.Managers
         private void PopulateBtnsHelper()
         {
             var curr = this._combatManager.CurrActing.Model;
-            var abs = new List<Pair<GenericAbility, bool>>();
+            var abs = new List<Pair<Ability, bool>>();
 
-            if (curr.Type == CharacterTypeEnum.Humanoid)
+            if (curr.Type == ECharacterType.Humanoid)
             {
                 if (curr.LWeapon != null)
                     foreach (var ab in curr.LWeapon.Abilities)
-                        abs.Add(new Pair<GenericAbility, bool>(ab, false));
+                        abs.Add(new Pair<Ability, bool>(ab, false));
                 if (curr.RWeapon != null)
                     foreach (var ab in curr.RWeapon.Abilities)
-                        abs.Add(new Pair<GenericAbility, bool>(ab, true));
+                        abs.Add(new Pair<Ability, bool>(ab, true));
             }
             else
             {
                 foreach (var ab in curr.DefaultWpnAbilities)
-                    abs.Add(new Pair<GenericAbility, bool>(ab, true));
+                    abs.Add(new Pair<Ability, bool>(ab, true));
             }
             CMapGUIController.Instance.ProcessNewTurn();
             var populateWpnBtns = new PopulateWpnBtnsEvent(abs, GUIEventManager.Instance);

@@ -10,8 +10,8 @@ namespace Assets.Model.Ability.Logic.Calculator
     {
         public override void Predict(Hit hit)
         {
-            var melee = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Melee);
-            var crit = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Critical_Chance);
+            var melee = hit.Source.Model.GetCurrentStatValue(ESecondaryStat.Melee);
+            var crit = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.Critical_Chance);
             hit.Chances.Crit = this.GetAttackVSDefenseSkillChance(melee, crit, LogicParams.BASE_CRIT_CHANCE);
             if (hit.Chances.Crit > 1)
                 hit.Chances.Crit = 1;
@@ -24,7 +24,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             this.Predict(hit);
             var roll = RNG.Instance.NextDouble();
             if (hit.Chances.Crit > roll)
-                AttackEventFlags.SetCritTrue(hit.Flags);
+                FHit.SetCritTrue(hit.Flags);
         }
     }
 }

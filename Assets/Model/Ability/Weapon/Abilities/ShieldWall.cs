@@ -1,26 +1,25 @@
-﻿using Model.Combat;
-using Model.Events.Combat;
+﻿using Assets.Model.Ability;
+using Assets.Model.Ability.Enum;
+using Model.Combat;
+using System.Collections.Generic;
 
-namespace Model.Abilities
+namespace Assets.Model.Weapon.Abilities
 {
-    public class ShieldWall : GenericAbility
+    public class ShieldWall : MAbility
     {
-        public ShieldWall() : base(AbilitiesEnum.Shield_Wall)
+        public ShieldWall() : base(EAbility.Shield_Wall) { }
+
+        public override List<Hit> Predict(AbilityArgContainer arg)
         {
-            this.CastType = CastTypeEnum.Melee;
+            return null;
         }
 
-        public override void PredictAbility(Hit hit)
+        public override List<Hit> Process(AbilityArgContainer arg)
         {
-            base.PredictMelee(hit);
+            return null;
         }
 
-        public override void ProcessAbility(PerformActionEvent e, Hit hit)
-        {
-            base.ProcessAbility(e, hit);
-        }
-
-        public override bool IsValidActionEvent(PerformActionEvent e)
+        public override bool IsValidActionEvent(AbilityArgContainer arg)
         {
             return true;
         }

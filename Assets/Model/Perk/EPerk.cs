@@ -1,0 +1,33 @@
+﻿namespace Assets.Model.Perk
+{
+    public enum EPerk
+    {
+        None,
+        Barbarism,
+        Bash_Buddy,
+        Bastion,
+        Bully,
+        Colossus,
+        Dino_Bite,
+        Enrage,
+        Executioner,
+        Gargantuan,
+        Hulk,
+        Iron_Hide,
+        Massive,
+        Medium_Shield_Expert,
+        Predator,
+        Savage_Soul,
+        Savage_Visage,
+        Scaly,
+        Shield_Brother,
+        Shield_Happy,
+        Shield_Pro,
+        Small_Shield_Expert,
+        Squishy,
+        Weightlifter,
+        Violence_Fetish,
+        T_Rex_Bite,
+        Two_Handed_Expert,
+    }
+}

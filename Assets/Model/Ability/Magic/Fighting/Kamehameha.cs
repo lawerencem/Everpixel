@@ -6,9 +6,9 @@ using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Magic.Fighting
 {
-    public class Kamehameha : Ability
+    public class Kamehameha : MAbility
     {
-        public Kamehameha() : base(EnumAbility.Kamehameha) { }
+        public Kamehameha() : base(EAbility.Kamehameha) { }
 
         public override List<TileController> GetAoETiles(AbilityArgContainer arg)
         {

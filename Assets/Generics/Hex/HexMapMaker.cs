@@ -7,7 +7,7 @@ namespace Generics.Hex
 {
     public class HexMapMaker
     {
-        public static GenericHexMap GetMap(int rows, int cols, float e, Vector3 seed)
+        public static HexMap GetMap(int rows, int cols, float e, Vector3 seed)
         {
             var tiles = new List<HexTile>();
 
@@ -40,13 +40,13 @@ namespace Generics.Hex
                 }
             }
 
-            var map = new GenericHexMap(tiles, rows, cols);
+            var map = new HexMap(tiles, rows, cols);
             PopulateAdjacentTiles(map);
             SetTilesParentMap(map);
             return map;
         }
 
-        private static void PopulateAdjacentTiles(GenericHexMap map)
+        private static void PopulateAdjacentTiles(HexMap map)
         {
             foreach(var tile in map.Tiles)
             {
@@ -66,7 +66,7 @@ namespace Generics.Hex
             }
         }
 
-        private static void SetTilesParentMap(GenericHexMap map)
+        private static void SetTilesParentMap(HexMap map)
         {
             foreach(var tile in map.Tiles)
                 tile.SetParentMap(map);

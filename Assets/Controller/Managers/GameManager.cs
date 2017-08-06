@@ -5,39 +5,42 @@ using Controller.Managers.Map;
 using Model.Characters.XML;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+namespace Assets.Controller.Managers
 {
-    private CombatMapLoader _combatMapManager;
-    private LoaderManager _loader;
-
-    public static GameManager Instance = null;
-
-    void Awake()
+    public class GameManager : MonoBehaviour
     {
-        if (Instance == null)
-            Instance = this;
+        private CombatMapLoader _combatMapManager;
+        private LoaderManager _loader;
 
-        else if (Instance != this)
-            Destroy(gameObject);
+        public static GameManager Instance = null;
 
-        InitGame();
-    }
+        void Awake()
+        {
+            if (Instance == null)
+                Instance = this;
 
-    void InitGame()
-    {
-        this.InitManagers();
-    }
+            else if (Instance != this)
+                Destroy(gameObject);
 
-    void Update()
-    {
-        CombatEventManager.Instance.Update();
-    }
+            InitGame();
+        }
 
-    private void InitManagers()
-    {   
-        this._combatMapManager = new CombatMapLoader();
-        this._loader = LoaderManager.Instance;
+        void InitGame()
+        {
+            this.InitManagers();
+        }
 
-        this._combatMapManager.InitMap(Model.Biomes.BiomeEnum.Grassland);
+        void Update()
+        {
+            CombatEventManager.Instance.Update();
+        }
+
+        private void InitManagers()
+        {
+            this._combatMapManager = new CombatMapLoader();
+            this._loader = LoaderManager.Instance;
+
+            this._combatMapManager.InitMap(Model.Biomes.BiomeEnum.Grassland);
+        }
     }
 }

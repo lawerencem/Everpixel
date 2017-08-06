@@ -127,7 +127,7 @@ namespace View.Fatalities
         private void ProcessGear(Hit hit)
         {
             var c = hit.Target.Model;
-            if (c.Type == CharacterTypeEnum.Humanoid)
+            if (c.Type == ECharacterType.Humanoid)
             {
                 var renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_TORSO].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;

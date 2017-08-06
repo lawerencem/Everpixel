@@ -42,7 +42,7 @@ namespace View.Fatalities
         {
             foreach(var hit in this._event.FatalityHits)
             {
-                if (hit.Target.Model.Type == CharacterTypeEnum.Humanoid)
+                if (hit.Target.Model.Type == ECharacterType.Humanoid)
                 {
                     var head = hit.Target.SpriteHandlerDict[ViewParams.CHAR_HEAD];
                     var tgtTile = hit.TargetTile.Model.GetRandomNearbyTile(2);

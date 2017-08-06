@@ -34,7 +34,7 @@ namespace Controller.Managers.Map
         public Transform MapHolder;
         public Transform BackgroundTiles;
 
-        public void InitMap(BiomeEnum b)
+        public void InitMap(EBiome b)
         {
             this.MapHolder = new GameObject("Map").transform;
             this.MapHolder.tag = "BattleMap";
@@ -65,7 +65,7 @@ namespace Controller.Managers.Map
 
         private void AttachDeco(CharController c, string sort, int spriteIndex, TileController tile)
         {
-            if (c.Model.Type == CharacterTypeEnum.Humanoid && spriteIndex >= 0)
+            if (c.Model.Type == ECharacterType.Humanoid && spriteIndex >= 0)
             {
                 var sprite = c.View.Sprites[spriteIndex];
                 var spriteHandler = new GameObject();
@@ -84,7 +84,7 @@ namespace Controller.Managers.Map
 
         private void AttachHead(CharController c, string sort, int spriteIndex, TileController tile)
         {
-            if (c.Model.Type == CharacterTypeEnum.Humanoid)
+            if (c.Model.Type == ECharacterType.Humanoid)
             {
                 var sprite = c.View.Sprites[spriteIndex];
                 var spriteHandler = new GameObject();
@@ -156,13 +156,13 @@ namespace Controller.Managers.Map
                 this.BuildAndLayoutCharacter(enemies[i], ref controllers);
         }
 
-        private void InitBackgroundTiles(BiomeEnum b)
+        private void InitBackgroundTiles(EBiome b)
         {
             var tiles = MapBridge.Instance.GetBackgroundSprites(b);
             this.SetupBackground(tiles);
         }
 
-        private void InitBackgroundDeco(BiomeEnum b)
+        private void InitBackgroundDeco(EBiome b)
         {
             var sprites = MapBridge.Instance.GetBackgroundDecoSprites(b);
             for (int itr = 0; itr < 15; itr++)

@@ -18,16 +18,16 @@ namespace Assets.Model.Ability
     {
         protected AbilityLogic _logic;
         protected bool _hostile = true;
-        protected EnumAbility _type;
+        protected EAbility _type;
 
         public bool Hostile { get { return this._hostile; } }
-        public EnumAbility Type { get { return this._type; } }
+        public EAbility Type { get { return this._type; } }
 
         public AbilityParamContainer Params { get; set; }
 
-        public Ability Copy()
+        public MAbility Copy()
         {
-            var ability = new Ability(this._type);
+            var ability = new MAbility(this._type);
             ability.Params = this.Params.Copy();
             return ability;
         }
@@ -61,7 +61,7 @@ namespace Assets.Model.Ability
 
         public bool isRayCast()
         {
-            if (this.Params.CastType == CastTypeEnum.Raycast)
+            if (this.Params.CastType == ECastType.Raycast)
                 return true;
             else
                 return false;
@@ -96,12 +96,12 @@ namespace Assets.Model.Ability
 
         public void TryApplyInjury(Hit hit)
         {
-            if (!AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge) &&
-                !AttackEventFlags.HasFlag(hit.Flags.CurFlags, AttackEventFlags.Flags.Parry) &&
+            if (!FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Dodge) &&
+                !FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Parry) &&
                 hit.Target != null)
             {
                 var roll = RNG.Instance.NextDouble();
-                var hp = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.HP);
+                var hp = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.HP);
                 var currentHP = hit.Target.Model.GetCurrentHP();
                 if (currentHP > 0)
                 {
@@ -110,9 +110,9 @@ namespace Assets.Model.Ability
                     {
                         if (this.Params.Injuries.Count > 0)
                         {
-                            var injuryType = ListUtil<InjuryEnum>.GetRandomListElement(this.Params.Injuries);
+                            var injuryType = ListUtil<EInjury>.GetRandomListElement(this.Params.Injuries);
                             var injuryParams = InjuryTable.Instance.Table[injuryType];
-                            var injury = injuryParams.GetGenericInjury();
+                            var injury = injuryParams.GetInjury();
                             var apply = new ApplyInjuryEvent(CombatEventManager.Instance, hit, injury);
                         }
                     }
@@ -166,7 +166,7 @@ namespace Assets.Model.Ability
 
         protected void ProcessHitBullet(Hit hit)
         {
-            if (!CharacterStatusFlags.HasFlag(hit.Target.Model.StatusFlags.CurFlags, CharacterStatusFlags.Flags.Dead))
+            if (!FCharacterStatus.HasFlag(hit.Target.Model.StatusFlags.CurFlags, FCharacterStatus.Flags.Dead))
             {
                 foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
                     perk.TryModAbility(hit);
@@ -178,7 +178,7 @@ namespace Assets.Model.Ability
         {
             if (hit.Target != null)
             {
-                if (!CharacterStatusFlags.HasFlag(hit.Target.Model.StatusFlags.CurFlags, CharacterStatusFlags.Flags.Dead))
+                if (!FCharacterStatus.HasFlag(hit.Target.Model.StatusFlags.CurFlags, FCharacterStatus.Flags.Dead))
                 {
                     foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
                         perk.TryModAbility(hit);
@@ -191,7 +191,7 @@ namespace Assets.Model.Ability
 
         protected void ProcessHitMelee(Hit hit)
         {
-            if (!CharacterStatusFlags.HasFlag(hit.Target.Model.StatusFlags.CurFlags, CharacterStatusFlags.Flags.Dead))
+            if (!FCharacterStatus.HasFlag(hit.Target.Model.StatusFlags.CurFlags, FCharacterStatus.Flags.Dead))
             {
                 foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
                     perk.TryModAbility(hit);
@@ -201,7 +201,7 @@ namespace Assets.Model.Ability
 
         protected void ProcessHitSummon(Hit hit)
         {
-            AttackEventFlags.SetSummonTrue(hit.Flags);
+            FHit.SetSummonTrue(hit.Flags);
             foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
                 perk.TryModAbility(hit);
             this._logic.ProcessSummon(hit);
@@ -209,8 +209,8 @@ namespace Assets.Model.Ability
 
         protected void ProcessShapeshift(Hit hit)
         {
-            AttackEventFlags.SetShapeshiftTrue(hit.Flags);
-            CharacterStatusFlags.SetShapeshiftedTrue(hit.Source.Model.StatusFlags);
+            FHit.SetShapeshiftTrue(hit.Flags);
+            FCharacterStatus.SetShapeshiftedTrue(hit.Source.Model.StatusFlags);
             foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
                 perk.TryModAbility(hit);
             this._logic.ProcessShapeshift(hit);

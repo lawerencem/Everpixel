@@ -15,7 +15,7 @@ namespace View.Characters
 
         public AttackSpriteLoader() { }
 
-        public Sprite GetAttackSprite(GenericAbility a)
+        public Sprite GetAttackSprite(Ability a)
         {
             var path = StringUtil.PathBuilder(ATTACK_PATH, a.Type.ToString());
             return GetSprite(path);

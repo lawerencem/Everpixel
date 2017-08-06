@@ -14,7 +14,7 @@ namespace Assets.Model.Ability
         public double ArmorPierceMod { get; set; }
         public double BlockIgnoreMod { get; set; }
         public double CastTime { get; set; }
-        public CastTypeEnum CastType { get; set; }
+        public ECastType CastType { get; set; }
         public bool CustomCastCamera { get; set; }
         public double DamageMod { get; set; }
         public double DmgPerPower { get; set; }
@@ -24,14 +24,14 @@ namespace Assets.Model.Ability
         public double EffectDur { get; set; }
         public double EffectValue { get; set; }
         public double FlatDamage { get; set; }
-        public List<InjuryEnum> Injuries { get; set; }
+        public List<EInjury> Injuries { get; set; }
         public MagicTypeEnum MagicType { get; set; }
         public double MeleeBlockChanceMod { get; set; }
         public double ParryModMod { get; set; }
         public int Range { get; set; }
         public double RangeBlockMod { get; set; }
         public double RechargeTime { get; set; }
-        public ResistTypeEnum Resist { get; set; }
+        public EResistType Resist { get; set; }
         public double ShieldDamageMod { get; set; }
         public int SpellLevel { get; set; }
         public int Sprite { get; set; }
@@ -51,7 +51,7 @@ namespace Assets.Model.Ability
             this.DmgPerPower = 0.05;
             this.DodgeMod = 1;
             this.Duration = 0;
-            this.Injuries = new List<InjuryEnum>();
+            this.Injuries = new List<EInjury>();
             this.MeleeBlockChanceMod = 1;
             this.ParryModMod = 1;
             this.Range = 0;

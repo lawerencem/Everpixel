@@ -32,8 +32,8 @@ namespace View.Fatalities
         {
             switch (e.EventController.Action.Type)
             {
-                case (AbilitiesEnum.Crush): { return new CrushFatality(parent, e); }
-                case (AbilitiesEnum.Slash): { return new SlashFatality(parent, e); }
+                case (EAbility.Crush): { return new CrushFatality(parent, e); }
+                case (EAbility.Slash): { return new SlashFatality(parent, e); }
             }
             return null;
         }

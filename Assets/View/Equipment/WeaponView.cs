@@ -5,7 +5,7 @@ namespace View.Equipment
 {
     public class WeaponView : EquipmentView
     {
-        public WeaponSkillEnum Skill { get; set; }
-        public WeaponUseEnum Use { get; set; }
+        public EWeaponSkill Skill { get; set; }
+        public EWeaponUse Use { get; set; }
     }
 }

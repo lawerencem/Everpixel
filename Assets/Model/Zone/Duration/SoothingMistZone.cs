@@ -12,8 +12,8 @@ namespace Assets.Model.Zone.Duration
 
         public override void ProcessEnterZone(ZoneEnterEvent e)
         {
-            var proto = AbilityTable.Instance.Table[EnumAbility.Soothing_Mist];
-            var heal = ((proto.Params.FlatDamage) + (proto.Params.DmgPerPower * this._caster.Model.GetCurrentStatValue(SecondaryStatsEnum.Power)));
+            var proto = AbilityTable.Instance.Table[EAbility.Soothing_Mist];
+            var heal = ((proto.Params.FlatDamage) + (proto.Params.DmgPerPower * this._caster.Model.GetCurrentStatValue(ESecondaryStat.Power)));
             var modifyHP = new ModifyHPEvent(CombatEventManager.Instance, e.Character.Model, (int)heal, true);
         }
     }

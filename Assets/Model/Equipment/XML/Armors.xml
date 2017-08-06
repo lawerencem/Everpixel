@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Armors>
-  <ArmorTypeEnum name = "Light_Armor">
+  <EArmorType name = "Light_Armor">
     <Armor name="Bone Armor">
       <Tier>Five</Tier>
       <AP_Reduce>0.99</AP_Reduce>
@@ -314,8 +314,8 @@
       <Stamina_Reduce>1</Stamina_Reduce>
       <Value>1000</Value>
     </Armor>
-  </ArmorTypeEnum>
-  <ArmorTypeEnum name = "Light_Helm">
+  </EArmorType>
+  <EArmorType name = "Light_Helm">
     <Armor name="Dino Headdress">
       <Tier>Five</Tier>
       <AP_Reduce>1</AP_Reduce>
@@ -590,8 +590,8 @@
       <Stamina_Reduce>1</Stamina_Reduce>
       <Value>1200</Value>
     </Armor>
-  </ArmorTypeEnum>
-  <ArmorTypeEnum name ="Medium_Armor">
+  </EArmorType>
+  <EArmorType name ="Medium_Armor">
     <Armor name="Byrnie">
       <Tier>Five</Tier>
       <AP_Reduce>0.97</AP_Reduce>
@@ -883,8 +883,8 @@
       <Stamina_Reduce>0.89</Stamina_Reduce>
       <Value>1000</Value>
     </Armor>
-  </ArmorTypeEnum>
-  <ArmorTypeEnum name ="Medium_Helm">
+  </EArmorType>
+  <EArmorType name ="Medium_Helm">
     <Armor name="Dino Scale Helm">
       <Tier>Five</Tier>
       <AP_Reduce>1</AP_Reduce>
@@ -960,7 +960,7 @@
     <Armor name="Galea">
       <Tier>Four</Tier>
       <AP_Reduce>0.84</AP_Reduce>
-      <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
+      <EArmorType>Medium_Helm</EArmorType>
       <Block_Reduce>0.94</Block_Reduce>
       <Damage_Ignore>5</Damage_Ignore>
       <Damage_Reduction>0.86</Damage_Reduction>
@@ -979,7 +979,7 @@
     <Armor name="Galea">
       <Tier>Three</Tier>
       <AP_Reduce>0.85</AP_Reduce>
-      <ArmorTypeEnum>Medium_Helm</ArmorTypeEnum>
+      <EArmorType>Medium_Helm</EArmorType>
       <Block_Reduce>0.95</Block_Reduce>
       <Damage_Ignore>6</Damage_Ignore>
       <Damage_Reduction>0.85</Damage_Reduction>
@@ -1283,8 +1283,8 @@
       <Stamina_Reduce>0.95</Stamina_Reduce>
       <Value>200</Value>
     </Armor>
-  </ArmorTypeEnum>
-  <ArmorTypeEnum name ="Heavy_Armor">
+  </EArmorType>
+  <EArmorType name ="Heavy_Armor">
     <Armor name="Dou">
       <Tier>Five</Tier>
       <AP_Reduce>0.94</AP_Reduce>
@@ -1488,8 +1488,8 @@
       <Stamina_Reduce>0.65</Stamina_Reduce>
       <Value>5000</Value>
     </Armor>
-  </ArmorTypeEnum>
-  <ArmorTypeEnum name ="Heavy_Helm">
+  </EArmorType>
+  <EArmorType name ="Heavy_Helm">
     <Armor name="Great Helm">
       <Tier>Five</Tier>
       <AP_Reduce>0.76</AP_Reduce>
@@ -1728,5 +1728,5 @@
       <Stamina_Reduce>0.75</Stamina_Reduce>
       <Value>3200</Value>
     </Armor>
-  </ArmorTypeEnum>
+  </EArmorType>
 </Armors>

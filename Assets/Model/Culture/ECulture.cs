@@ -1,0 +1,43 @@
+﻿namespace Assets.Model.Culture
+{
+    public enum ECulture
+    {
+        None,
+        Aborigine,
+        African,
+        Amazonian,
+        Apache,
+        Aztec,
+        Bretonnian,
+        Byzantine,
+        Celtic,
+        Chinese,
+        Critter, //TODO:
+        Drowish,
+        Dwarvish,
+        Egyptian,
+        Elvish,
+        French,
+        German,
+        Goblin,
+        Greek,
+        Jomonese,
+        Hawaiian,
+        Indian,
+        Italian,
+        Mayan,
+        Mongolian,
+        Norse,
+        Orcish,
+        Persian,
+        Roman,
+        Scottish,
+        Sioux,
+        Spanish,
+        Thai,
+        Turkish,
+        Uruk,
+        Yomi,
+        Zwahili,
+    }
+}

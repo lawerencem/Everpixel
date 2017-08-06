@@ -8,9 +8,9 @@ namespace Model.Spells
     {
         public SpellFactory() { }
 
-        public GenericAbility CreateNewObject(AbilitiesEnum spell)
+        public Ability CreateNewObject(EAbility spell)
         {
-            var proto = GenericAbilityTable.Instance.Table[spell];
+            var proto = AbilityTable.Instance.Table[spell];
             // TODO: Reup times
             proto.RechargeTime = 1;
             var build = proto.Copy();

@@ -1,4 +1,6 @@
-﻿using Assets.Model.Ability.Enum;
+﻿using Assets.Controller.Character;
+using Assets.Controller.Managers;
+using Assets.Model.Ability.Enum;
 using Assets.Model.Zone;
 using Assets.Model.Zone.Duration;
 using Controller.Characters;
@@ -10,9 +12,9 @@ using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Magic.Water
 {
-    public class SoothingMist : Ability
+    public class SoothingMist : MAbility
     {
-        public SoothingMist() : base(EnumAbility.Soothing_Mist) { }
+        public SoothingMist() : base(EAbility.Soothing_Mist) { }
 
         public override List<Hit> Process(AbilityArgContainer arg)
         {
@@ -31,7 +33,8 @@ namespace Assets.Model.Ability.Magic.Water
                         if (tile.Model.Current.GetType().Equals(typeof(CharController)))
                         {
                             var character = tile.Model.Current as CharController;
-                            var heal = new ZoneEnterEvent(CombatEventManager.Instance, character, zone);
+                            //var heal = new ZoneEnterEvent(CombatEventManager.Instance, character, zone);
+                            // TODO:
                         }
                     }
                 }

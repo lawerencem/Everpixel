@@ -6,11 +6,11 @@ namespace Model.Spells
 {
     public class SpellsByLevel
     {
-        public Dictionary<int, Dictionary<AbilitiesEnum, Pair<int, GenericAbility>>> Spells;
+        public Dictionary<int, Dictionary<EAbility, Pair<int, Ability>>> Spells;
 
         public SpellsByLevel()
         {
-            this.Spells = new Dictionary<int, Dictionary<AbilitiesEnum, Pair<int, GenericAbility>>>();
+            this.Spells = new Dictionary<int, Dictionary<EAbility, Pair<int, Ability>>>();
         }
     }
 }

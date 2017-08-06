@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Magic.Fighting
 {
-    public class Hadoken : Ability
+    public class Hadoken : MAbility
     {
-        public Hadoken() : base(EnumAbility.Hadoken) {  }
+        public Hadoken() : base(EAbility.Hadoken) {  }
 
         public override List<Hit> Predict(AbilityArgContainer arg)
         {

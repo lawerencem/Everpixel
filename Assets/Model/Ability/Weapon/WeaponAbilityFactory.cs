@@ -1,8 +1,10 @@
-﻿using Generics;
+﻿using Assets.Model.Ability;
+using Assets.Model.Ability.Enum;
+using Generics;
 using Model.Abilities;
 using System.Collections.Generic;
 
-namespace Model.Abilities
+namespace Assets.Model.Weapon
 {
     public class WeaponAbilityFactory : AbstractSingleton<WeaponAbilityFactory>
     {
@@ -10,9 +12,9 @@ namespace Model.Abilities
 
         public WeaponAbilityFactory() { }
 
-        public List<GenericAbility> CreateNewObject(List<AbilitiesEnum> abilities)
+        public List<Ability> CreateNewObject(List<EAbility> abilities)
         {
-            var wAbilities = new List<GenericAbility>();
+            var wAbilities = new List<Ability>();
             foreach (var ability in abilities) { wAbilities.Add(this._builder.Build(ability)); }
             return wAbilities;
         }

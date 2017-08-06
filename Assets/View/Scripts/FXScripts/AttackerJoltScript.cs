@@ -22,7 +22,7 @@ namespace View.Scripts
             this._oldSprite = this._renderer.sprite;
             this._callbackTwo = callback;
 
-            if (source.Model.Type == CharacterTypeEnum.Critter)
+            if (source.Model.Type == ECharacterType.Critter)
             {
                 this._sprites = CharacterSpriteLoader.Instance.GetCritterSprites(source.View.Name);
                 int index = CritterAttackSpriteTable.Instance.Table[source.View.Name];

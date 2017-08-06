@@ -6,10 +6,10 @@ namespace Assets.Model.Ability
 {
     public class AbilityTable : AbstractSingleton<AbilityTable>
     {
-        public Dictionary<Object, Ability> Table;
+        public Dictionary<Object, MAbility> Table;
         public AbilityTable()
         {
-            Table = new Dictionary<object, Ability>();
+            Table = new Dictionary<object, MAbility>();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Model.Effects
+﻿namespace Assets.Model.Effect
 {
     public class EffectContainer
     {

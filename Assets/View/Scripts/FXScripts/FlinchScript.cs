@@ -20,15 +20,15 @@ namespace View.Scripts
             this._torsoRenderer = source.Handle.GetComponent<SpriteRenderer>();
             this._oldSprite = this._torsoRenderer.sprite;
 
-            if (source.Model.Type == CharacterTypeEnum.Critter)
+            if (source.Model.Type == ECharacterType.Critter)
             {
                 this._sprites = CharacterSpriteLoader.Instance.GetCritterSprites(source.View.Name);
                 int index = CritterFlinchSpriteTable.Instance.Table[source.View.Name];
                 this._torsoRenderer.sprite = this._sprites[index];
             }
-            else if (source.Model.Type == CharacterTypeEnum.Humanoid)
+            else if (source.Model.Type == ECharacterType.Humanoid)
             {
-                if (!CharacterStatusFlags.HasFlag(source.Model.StatusFlags.CurFlags, CharacterStatusFlags.Flags.Shapeshifted))
+                if (!FCharacterStatus.HasFlag(source.Model.StatusFlags.CurFlags, FCharacterStatus.Flags.Shapeshifted))
                 {
                     var flinchEyes = CharacterSpriteLoader.Instance.GetHumanoidFlinchEyes(source.Model.Race);
                     this._eyeRenderer = source.SpriteHandlerDict["CharFace"].GetComponent<SpriteRenderer>();

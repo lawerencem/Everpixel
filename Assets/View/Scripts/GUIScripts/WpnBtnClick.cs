@@ -11,13 +11,13 @@ namespace View.Scripts
 {
     public class WpnBtnClick : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
-        private AbilitiesEnum _ability;
+        private EAbility _ability;
         private bool _rWeapon;
         private GameObject _imgHandler;
 
         private void OnClick()
         {
-            if (this._ability != AbilitiesEnum.None)
+            if (this._ability != EAbility.None)
             {
                 var e = new WpnBtnClickEvent(GUIEventManager.Instance, this._ability, this._rWeapon);
             }
@@ -42,7 +42,7 @@ namespace View.Scripts
             CombatEventManager.Instance.UnlockGUI();
         }
 
-        public void SetAbility(AbilitiesEnum a, bool rWeapon)
+        public void SetAbility(EAbility a, bool rWeapon)
         {
             this._rWeapon = rWeapon;
             this._ability = a;

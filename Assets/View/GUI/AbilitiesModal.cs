@@ -63,7 +63,7 @@ namespace View.GUI
             this._proto.SetActive(false);
         }
 
-        private void PopulateModalList(CharController character, GenericAbility ability)
+        private void PopulateModalList(CharController character, Ability ability)
         {
             var protoBtn = this._proto.GetComponent<Button>();
             var protoImg = this._proto.GetComponent<Image>();

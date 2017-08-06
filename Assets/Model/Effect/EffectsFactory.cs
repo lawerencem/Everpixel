@@ -1,16 +1,17 @@
-﻿using Generics;
+﻿using Assets.Model.Effects.Will;
+using Generics;
 
-namespace Model.Effects
+namespace Assets.Model.Effect
 {
-    public class EffectsFactory : AbstractSingleton<EffectsFactory>
+    public class EffectFactory : AbstractSingleton<EffectFactory>
     {
-        public EffectsFactory() { }
+        public EffectFactory() { }
 
-        public Effect CreateNewObject(EnumEffect effect)
+        public MEffect CreateNewObject(EEffect effect)
         {
             switch(effect)
             {
-                case (EnumEffect.Horror): { return new Horror(); }
+                case (EEffect.Horror): { return new Horror(); }
                 default: { return null; }
             }
         }

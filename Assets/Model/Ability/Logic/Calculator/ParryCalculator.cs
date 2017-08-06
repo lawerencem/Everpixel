@@ -14,8 +14,8 @@ namespace Assets.Model.Ability.Logic.Calculator
     {
         public override void Predict(Hit hit)
         {
-            var acc = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Melee);
-            var parry = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Parry);
+            var acc = hit.Source.Model.GetCurrentStatValue(ESecondaryStat.Melee);
+            var parry = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.Parry);
             var parryChance = LogicParams.BASE_PARRY_CHANCE / hit.Ability.AccMod;
 
             if (hit.Target.Model.Armor != null)
@@ -27,7 +27,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             if (hit.Target.Model.RWeapon != null)
                 parryChance *= hit.Target.Model.RWeapon.ParryMod;
 
-            if (hit.Target.Model.Type == CharacterTypeEnum.Critter)
+            if (hit.Target.Model.Type == ECharacterType.Critter)
                 parryChance = 0;
 
             acc *= hit.Ability.AccMod;
@@ -46,7 +46,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             this.Predict(hit);
             var roll = RNG.Instance.NextDouble();
             if (hit.Chances.Parry > roll)
-                AttackEventFlags.SetParryTrue(hit.Flags);
+                FHit.SetParryTrue(hit.Flags);
         }
     }
 }

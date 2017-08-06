@@ -1,12 +1,9 @@
 ﻿using Generics;
-using Model.Abilities;
-using Model.Combat;
-using System.Collections.Generic;
 
-namespace Model.Effects
+namespace Assets.Model.Effect
 {
-    public class EffectsMediator : AbstractSingleton<EffectsMediator>
+    public class EffectMediator : AbstractSingleton<EffectMediator>
     {
-        public EffectsMediator() { }
+        public EffectMediator() { }
     }
 }

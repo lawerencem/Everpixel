@@ -5,17 +5,17 @@ using Generics.Utilities;
 using Model.Map;
 using System.Collections.Generic;
 
-namespace Model.Map
+namespace Assets.Model.Map
 {
     public class Path
     {
         public int Score { get; set; }
-        public List<HexTile> Tiles { get; set; }
+        public List<MTile> Tiles { get; set; }
 
         public Path()
         {
             this.Score = 0;
-            this.Tiles = new List<HexTile>();
+            this.Tiles = new List<MTile>();
         }
 
         public TileController GetNextTile(TileController t)
@@ -29,7 +29,7 @@ namespace Model.Map
             return null;
         }
 
-        public void AddTile(HexTile t)
+        public void AddTile(MTile t)
         {
             this.Tiles.Add(t);
             this.Score += (t.Cost * t.Height);
@@ -39,7 +39,7 @@ namespace Model.Map
         {
             var path = new Path();
             path.Score = this.Score;
-            var newTiles = new List<HexTile>();
+            var newTiles = new List<MTile>();
             foreach (var tile in this.Tiles)
                 newTiles.Add(tile);
             path.Tiles = newTiles;

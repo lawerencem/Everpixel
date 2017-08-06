@@ -10,8 +10,8 @@ namespace Assets.Model.Ability.Logic.Calculator
     {
         public override void Predict(Hit hit)
         {
-            var melee = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Melee);
-            var block = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Block);
+            var melee = hit.Source.Model.GetCurrentStatValue(ESecondaryStat.Melee);
+            var block = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.Block);
 
             melee *= hit.Ability.AccMod;
 
@@ -46,7 +46,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             this.Predict(hit);
             var roll = RNG.Instance.NextDouble();
             if (hit.Chances.Block > roll)
-                AttackEventFlags.SetBlockTrue(hit.Flags);
+                FHit.SetBlockTrue(hit.Flags);
         }
     }
 }

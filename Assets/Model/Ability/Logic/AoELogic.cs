@@ -28,7 +28,7 @@ namespace Assets.Model.Ability.Logic
         public List<TileController> GetRaycastTiles(AbilityArgContainer arg)
         {
             var list = new List<TileController>();
-            HexTile initTile;
+            MTile initTile;
             var s = arg.Source.CurrentTile.Model;
             var t = arg.Target.Model;
             var range = arg.Range;

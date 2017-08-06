@@ -7,7 +7,7 @@ using View.Events;
 using View.GUI;
 using View.Scripts;
 
-namespace Controller.Managers
+namespace Assets.Controller.Managers
 {
     public class GUIEventManager
     {

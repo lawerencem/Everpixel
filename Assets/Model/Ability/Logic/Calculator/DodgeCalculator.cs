@@ -10,8 +10,8 @@ namespace Assets.Model.Ability.Logic.Calculator
     {
         public override  void Predict(Hit hit)
         {
-            var acc = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Melee);
-            var dodge = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Dodge);
+            var acc = hit.Source.Model.GetCurrentStatValue(ESecondaryStat.Melee);
+            var dodge = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.Dodge);
             var dodgeChance = LogicParams.BASE_DODGE_CHANCE / hit.Ability.AccMod;
 
             if (hit.Target.Model.Armor != null)
@@ -19,7 +19,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             if (hit.Target.Model.Helm != null)
                 dodgeChance *= hit.Target.Model.Helm.DodgeMod;
 
-            if (hit.Target.Model.Type == CharacterTypeEnum.Critter)
+            if (hit.Target.Model.Type == ECharacterType.Critter)
                 dodgeChance *= 1.75;
 
             acc *= hit.Ability.AccMod;
@@ -33,7 +33,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             this.Predict(hit);
             var roll = RNG.Instance.NextDouble();
             if (hit.Chances.Dodge > roll)
-                AttackEventFlags.SetDodgeTrue(hit.Flags);
+                FHit.SetDodgeTrue(hit.Flags);
         }
     }
 }

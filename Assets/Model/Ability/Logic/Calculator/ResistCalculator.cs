@@ -11,26 +11,26 @@ namespace Assets.Model.Ability.Logic.Calculator
     {
         public override void Predict(Hit hit)
         {
-            if (hit.Ability.Resist != ResistTypeEnum.None)
+            if (hit.Ability.Resist != EResistType.None)
             {
-                var attack = hit.Source.Model.GetCurrentStatValue(SecondaryStatsEnum.Spell_Penetration);
+                var attack = hit.Source.Model.GetCurrentStatValue(ESecondaryStat.Spell_Penetration);
                 switch (hit.Ability.Resist)
                 {
-                    case (ResistTypeEnum.Fortitude):
+                    case (EResistType.Fortitude):
                         {
-                            var defense = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Fortitude);
+                            var defense = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.Fortitude);
                             hit.Chances.Resist = this.GetAttackVSDefenseSkillChance(attack, defense, LogicParams.BASE_RESIST);
                         }
                         break;
-                    case (ResistTypeEnum.Reflex):
+                    case (EResistType.Reflex):
                         {
-                            var defense = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Reflex);
+                            var defense = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.Reflex);
                             hit.Chances.Resist = this.GetAttackVSDefenseSkillChance(attack, defense, LogicParams.BASE_RESIST);
                         }
                         break;
-                    case (ResistTypeEnum.Will):
+                    case (EResistType.Will):
                         {
-                            var defense = hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.Will);
+                            var defense = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.Will);
                             hit.Chances.Resist = this.GetAttackVSDefenseSkillChance(attack, defense, LogicParams.BASE_RESIST);
                         }
                         break;
@@ -45,11 +45,11 @@ namespace Assets.Model.Ability.Logic.Calculator
         public override void Process(Hit hit)
         {
             this.Predict(hit);
-            if (hit.Ability.Resist != ResistTypeEnum.None)
+            if (hit.Ability.Resist != EResistType.None)
             {
                 var roll = RNG.Instance.NextDouble();
                 if (roll < hit.Chances.Resist)
-                    AttackEventFlags.SetResistTrue(hit.Flags);
+                    FHit.SetResistTrue(hit.Flags);
             }
         }
     }

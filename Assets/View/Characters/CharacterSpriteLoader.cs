@@ -47,7 +47,7 @@ namespace View.Characters
             return GetSprites(path);
         }
 
-        public Sprite GetHumanoidDeadEyes(RaceEnum race)
+        public Sprite GetHumanoidDeadEyes(ERace race)
         {
             var path = StringUtil.PathBuilder(CHARACTER_PATH, race.ToString(), EXTENSION);
             var sprites = GetSprites(path);
@@ -55,7 +55,7 @@ namespace View.Characters
             return sprites[index[0]];
         }
 
-        public Sprite GetHumanoidFlinchEyes(RaceEnum race)
+        public Sprite GetHumanoidFlinchEyes(ERace race)
         {
             var path = StringUtil.PathBuilder(CHARACTER_PATH, race.ToString(), EXTENSION);
             var sprites = GetSprites(path);

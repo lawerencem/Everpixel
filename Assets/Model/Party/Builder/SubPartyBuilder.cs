@@ -1,0 +1,47 @@
+﻿using Generics;
+using Model.Characters;
+using System.Collections.Generic;
+using System;
+using Generics.Utilities;
+using Assets.Model.Character.Param;
+using Assets.Model.Character.Builder;
+
+namespace Assets.Model.Party.Builder
+{
+    public class SubPartyBuilder : AbstractBuilder<string, List<CharParams>>
+    {
+        public override List<CharParams> Build()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override List<CharParams> Build(List<string> args)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override List<CharParams> Build(string arg)
+        {
+            if (SubPartiesTable.Instance.Table.ContainsKey(arg))
+            {
+                var buildList = new List<CharParams>();
+                var cParams = SubPartiesTable.Instance.Table[arg];
+                foreach(var param in cParams)
+                {
+                    double chance = RNG.Instance.NextDouble();
+                    if (chance < param.Chance)
+                    {
+                        var pParams = PredefinedCharacterTable.Instance.Table[param.Name];
+                        var builder = new CharacterParamBuilder();
+                        var toAdd = builder.Build(pParams);
+                        toAdd.StartRow = param.Row;
+                        buildList.Add(toAdd);
+                    }
+                }
+                return buildList;
+            }
+            else
+                return null;
+        }
+    }
+}

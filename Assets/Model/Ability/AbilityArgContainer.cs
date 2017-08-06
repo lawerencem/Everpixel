@@ -1,4 +1,4 @@
-﻿using Controller.Characters;
+﻿using Assets.Controller.Character;
 using Controller.Map;
 
 namespace Assets.Model.Ability

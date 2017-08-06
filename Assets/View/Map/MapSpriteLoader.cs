@@ -24,13 +24,13 @@ namespace View
 
         public MapSpriteLoader() { }
 
-        public Sprite[] GetBiomeBackground(BiomeEnum b)
+        public Sprite[] GetBiomeBackground(EBiome b)
         {
             var path = StringUtil.PathBuilder(PATH, b.ToString(), TILE_EXTENSION);
             return GetBackgroundSprites(path);
         }
 
-        public Sprite[] GetBiomeBackgroundDeco(BiomeEnum b)
+        public Sprite[] GetBiomeBackgroundDeco(EBiome b)
         {
             var path = StringUtil.PathBuilder(PATH, b.ToString(), DECO_EXTENSION);
             return GetBackgroundSprites(path);

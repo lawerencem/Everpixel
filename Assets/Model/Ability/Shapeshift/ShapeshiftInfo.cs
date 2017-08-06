@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Model.Abilities.Shapeshift
+namespace Assets.Model.Ability.Shapeshift
 {
     public class ShapeshiftInfo
     {

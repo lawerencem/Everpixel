@@ -5,10 +5,11 @@ using Model.Abilities;
 using Generics.Utilities;
 using System.Collections.Generic;
 using Model.Events;
+using Model.Equipment.XML;
 
-namespace Model.Equipment.XML
+namespace Assets.Model.Equipment.XML
 {
-    public class ArmorReader : GenericEquipmentReader
+    public class ArmorReader : MEquipmentReader
     {
         private static ArmorReader _instance;
         public ArmorReader() { this._path = "Assets/Model/Equipment/XML/Armors.xml"; }
@@ -26,7 +27,7 @@ namespace Model.Equipment.XML
         public override void ReadFromFile()
         {
             var doc = XDocument.Load(this._path);
-            var tier = EquipmentTierEnum.None;
+            var tier = EEquipmentTier.None;
             foreach (var el in doc.Root.Elements())
             {
                 foreach (var att in el.Attributes())
@@ -49,7 +50,7 @@ namespace Model.Equipment.XML
             }
         }
 
-        protected override void HandleIndex(string name, string type, string param, string value, ref EquipmentTierEnum tier)
+        protected override void HandleIndex(string name, string type, string param, string value, ref EEquipmentTier tier)
         {
             double v = 0;
             double.TryParse(value, out v);
@@ -57,48 +58,48 @@ namespace Model.Equipment.XML
             switch (param)
             {
                 case ("Tier"): { HandleTierFromFile(name, value, ref tier); } break;
-                case ("AP_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.AP_Reduce, v, tier); } break;
-                case ("Block_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Block_Reduce, v, tier); } break;
-                case ("Damage_Ignore"): { HandleStatsFromFile(name, ArmorStatsEnum.Damage_Ignore, v, tier); } break;
-                case ("Damage_Reduction"): { HandleStatsFromFile(name, ArmorStatsEnum.Damage_Reduction, v, tier); } break;
+                case ("AP_Reduce"): { HandleStatsFromFile(name, EArmorStat.AP_Reduce, v, tier); } break;
+                case ("Block_Reduce"): { HandleStatsFromFile(name, EArmorStat.Block_Reduce, v, tier); } break;
+                case ("Damage_Ignore"): { HandleStatsFromFile(name, EArmorStat.Damage_Ignore, v, tier); } break;
+                case ("Damage_Reduction"): { HandleStatsFromFile(name, EArmorStat.Damage_Reduction, v, tier); } break;
                 case ("Description"): { } break;
-                case ("Dodge_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Dodge_Reduce, v, tier); } break;
-                case ("Durability"): { HandleStatsFromFile(name, ArmorStatsEnum.Durability, v, tier); } break;
-                case ("Fatigue_Cost"): { HandleStatsFromFile(name, ArmorStatsEnum.Fatigue_Cost, v, tier); } break;
-                case ("Initiative_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Initiative_Reduce, v, tier); } break;
-                case ("Parry_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Parry_Reduce, v, tier); } break;
+                case ("Dodge_Reduce"): { HandleStatsFromFile(name, EArmorStat.Dodge_Reduce, v, tier); } break;
+                case ("Durability"): { HandleStatsFromFile(name, EArmorStat.Durability, v, tier); } break;
+                case ("Fatigue_Cost"): { HandleStatsFromFile(name, EArmorStat.Fatigue_Cost, v, tier); } break;
+                case ("Initiative_Reduce"): { HandleStatsFromFile(name, EArmorStat.Initiative_Reduce, v, tier); } break;
+                case ("Parry_Reduce"): { HandleStatsFromFile(name, EArmorStat.Parry_Reduce, v, tier); } break;
                 case ("Sprites"): { HandleSpritesFromFile(name, value, tier); } break;
-                case ("Stamina_Reduce"): { HandleStatsFromFile(name, ArmorStatsEnum.Stamina_Reduce, v, tier); } break;
-                case ("Value"): { HandleStatsFromFile(name, ArmorStatsEnum.Value, v, tier); } break;
+                case ("Stamina_Reduce"): { HandleStatsFromFile(name, EArmorStat.Stamina_Reduce, v, tier); } break;
+                case ("Value"): { HandleStatsFromFile(name, EArmorStat.Value, v, tier); } break;
             }
         }
 
-        private void HandleStatsFromFile(string name, ArmorStatsEnum x, double v, EquipmentTierEnum tier)
+        private void HandleStatsFromFile(string name, EArmorStat x, double v, EEquipmentTier tier)
         {
             var stats = ArmorParamTable.Instance;
             var key = name + "_" + tier.ToString();
 
             switch (x)
             {
-                case (ArmorStatsEnum.AP_Reduce): { stats.Table[key].APReduce = v; } break;
-                case (ArmorStatsEnum.Block_Reduce): { stats.Table[key].BlockReduce = v; } break;
-                case (ArmorStatsEnum.Damage_Ignore): { stats.Table[key].DamageIgnore = v; } break;
-                case (ArmorStatsEnum.Damage_Reduction): { stats.Table[key].DamageReduction = v; } break;
-                case (ArmorStatsEnum.Dodge_Reduce): { stats.Table[key].DodgeMod = v; } break;
-                case (ArmorStatsEnum.Durability): { stats.Table[key].Durability = (int)v; } break;
-                case (ArmorStatsEnum.Fatigue_Cost): { stats.Table[key].FatigueCost = v; } break;
-                case (ArmorStatsEnum.Initiative_Reduce): { stats.Table[key].InitiativeReduce = v; } break;
-                case (ArmorStatsEnum.Parry_Reduce): { stats.Table[key].ParryReduce = v; } break;
-                case (ArmorStatsEnum.Stamina_Reduce): { stats.Table[key].StaminaReduce = v; } break;
-                case (ArmorStatsEnum.Value): { stats.Table[key].Value = v; } break;
+                case (EArmorStat.AP_Reduce): { stats.Table[key].APReduce = v; } break;
+                case (EArmorStat.Block_Reduce): { stats.Table[key].BlockReduce = v; } break;
+                case (EArmorStat.Damage_Ignore): { stats.Table[key].DamageIgnore = v; } break;
+                case (EArmorStat.Damage_Reduction): { stats.Table[key].DamageReduction = v; } break;
+                case (EArmorStat.Dodge_Reduce): { stats.Table[key].DodgeMod = v; } break;
+                case (EArmorStat.Durability): { stats.Table[key].Durability = (int)v; } break;
+                case (EArmorStat.Fatigue_Cost): { stats.Table[key].FatigueCost = v; } break;
+                case (EArmorStat.Initiative_Reduce): { stats.Table[key].InitiativeReduce = v; } break;
+                case (EArmorStat.Parry_Reduce): { stats.Table[key].ParryReduce = v; } break;
+                case (EArmorStat.Stamina_Reduce): { stats.Table[key].StaminaReduce = v; } break;
+                case (EArmorStat.Value): { stats.Table[key].Value = v; } break;
             }
         }
 
-        protected override void HandleTierFromFile(string name, string value, ref EquipmentTierEnum tier)
+        protected override void HandleTierFromFile(string name, string value, ref EEquipmentTier tier)
         {
-            var x = EquipmentTierEnum.None;
+            var x = EEquipmentTier.None;
             var stats = ArmorParamTable.Instance;
-            if (EnumUtil<EquipmentTierEnum>.TryGetEnumValue(value, ref x))
+            if (EnumUtil<EEquipmentTier>.TryGetEnumValue(value, ref x))
             {
                 tier = x;
                 var key = name + "_" + tier.ToString();
@@ -108,13 +109,13 @@ namespace Model.Equipment.XML
             }
         }
 
-        private void HandleArmorTypeFromFile(string name, string value, EquipmentTierEnum tier)
+        private void HandleArmorTypeFromFile(string name, string value, EEquipmentTier tier)
         {
             var key = name + "_" + tier.ToString();
 
-            var x = ArmorTypeEnum.None;
+            var x = EArmorType.None;
             var stats = ArmorParamTable.Instance;
-            if (EnumUtil<ArmorTypeEnum>.TryGetEnumValue(value, ref x))
+            if (EnumUtil<EArmorType>.TryGetEnumValue(value, ref x))
                 stats.Table[key].Type = x;
         }
     }

@@ -30,7 +30,7 @@ namespace Controller.Managers.Map
         public void ProcessBlock(DisplayHitStatsEvent e)
         {
             this.DisplayText("Block", e.Hit.Target.Handle, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.BLOCK_TEXT_OFFSET);
-            if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
+            if (FHit.HasFlag(e.Hit.Flags.CurFlags, FHit.Flags.Critical))
                 this.DisplayText("Critical!", e.Hit.Target.Handle, CMapGUIControllerParams.RED, CMapGUIControllerParams.CRIT_TEXT_OFFSET);
             if (e.Hit.Target.Model.LWeapon != null && e.Hit.Target.Model.LWeapon.IsTypeOfShield())
             {
@@ -140,7 +140,7 @@ namespace Controller.Managers.Map
                 var defenderFlinch = e.Hit.Target.Handle.AddComponent<FlinchScript>();
                 defenderFlinch.Init(e.Hit.Target, position, 8f);
             }
-            if (AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Critical))
+            if (FHit.HasFlag(e.Hit.Flags.CurFlags, FHit.Flags.Critical))
                 this.DisplayText("Crit!", e.Hit.Target.Handle, CMapGUIControllerParams.RED, CMapGUIControllerParams.DODGE_TEXT_OFFSET);
         }
 
@@ -151,13 +151,13 @@ namespace Controller.Managers.Map
 
         public void ProcessSplatterOnHitEvent(DisplayHitStatsEvent e)
         {
-            if (!AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Dodge) &&
-                !AttackEventFlags.HasFlag(e.Hit.Flags.CurFlags, AttackEventFlags.Flags.Parry))
+            if (!FHit.HasFlag(e.Hit.Flags.CurFlags, FHit.Flags.Dodge) &&
+                !FHit.HasFlag(e.Hit.Flags.CurFlags, FHit.Flags.Parry))
             {
-                if (e.Hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.HP) > 0)
+                if (e.Hit.Target.Model.GetCurrentStatValue(ESecondaryStat.HP) > 0)
                 {
                     double dmg = (double)e.Hit.Dmg;
-                    double hp = (double)e.Hit.Target.Model.GetCurrentStatValue(SecondaryStatsEnum.HP);
+                    double hp = (double)e.Hit.Target.Model.GetCurrentStatValue(ESecondaryStat.HP);
                     double dmgPercentage = dmg / hp;
                     if (dmgPercentage > 0.75 && !e.Hit.IsHeal)
                         this.ProcessSplatter(4, e.Hit.Target.CurrentTile);
@@ -266,7 +266,7 @@ namespace Controller.Managers.Map
 
         private void ProcessCharacterKilledHelper(CharController c)
         {
-            if (c.Model.Type == CharacterTypeEnum.Humanoid)
+            if (c.Model.Type == ECharacterType.Humanoid)
             {   
                 if (c.Model.Armor != null)
                     this.AssignDeadLayer(c.SpriteHandlerDict[ViewParams.CHAR_ARMOR], ViewParams.DEAD_ARMOR);

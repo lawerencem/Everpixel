@@ -16,8 +16,8 @@ namespace View.Characters
             var random = new CharacterView();
             switch(c.Type)
             {
-                case (CharacterTypeEnum.Critter): { random = GetRandomCritter(c); } break;
-                case (CharacterTypeEnum.Humanoid): { random = GetRandomHumanoid(c); } break;
+                case (ECharacterType.Critter): { random = GetRandomCritter(c); } break;
+                case (ECharacterType.Humanoid): { random = GetRandomHumanoid(c); } break;
             }
             return random;
         }

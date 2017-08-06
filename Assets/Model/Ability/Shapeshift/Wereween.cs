@@ -1,22 +1,21 @@
 ﻿using Assets.Model.Ability.Enum;
-using Controller.Managers;
 using Model.Combat;
 using Model.Events.Combat;
 using System.Collections.Generic;
 
-namespace Model.Abilities.Shapeshift
+namespace Assets.Model.Ability.Shapeshift
 {
     public class Wereween : Shapeshift
     {
-        public Wereween() : base(EnumAbility.Were_Ween)
+        public Wereween() : base(EAbility.Were_Ween)
         {
             // TODO:
-            this.CustomCastCamera = true;
+            //this.CustomCastCamera = true;
         }
 
-        public override List<Hit> ProcessAbility()
+        public override List<Hit> Process()
         {
-            base.ProcessAbility(e, hit);
+            var hits = base.ProcessAbility(e, hit);
             base.ProcessShapeshift(hit);
         }
 
