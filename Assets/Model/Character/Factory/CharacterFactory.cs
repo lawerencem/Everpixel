@@ -2,7 +2,6 @@
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
 using Generics;
-using Model.Characters;
 using System;
 using System.Collections.Generic;
 
@@ -23,8 +22,8 @@ namespace Assets.Model.Character.Factory
         {
             switch(arg.Type)
             {
-                case (ECharacterType.Critter): { return this._critterBuilder.Build(arg); }
-                case (ECharacterType.Humanoid): { return this._humanoidBuilder.Build(arg); }
+                case (ECharType.Critter): { return this._critterBuilder.Build(arg); }
+                case (ECharType.Humanoid): { return this._humanoidBuilder.Build(arg); }
                 default: return null;
             }
         }

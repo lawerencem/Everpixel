@@ -1,14 +1,14 @@
 ﻿using Generics;
 using System.Collections.Generic;
 
-namespace View.Barks
+namespace Assets.View.Barks
 {
     public class BarkTable : AbstractSingleton<BarkTable>
     {
-        public Dictionary<BarkCategoryEnum, List<string>> Table;
+        public Dictionary<EBark, List<string>> Table;
         public BarkTable()
         {
-            Table = new Dictionary<BarkCategoryEnum, List<string>>();
+            Table = new Dictionary<EBark, List<string>>();
         }
     }
 }

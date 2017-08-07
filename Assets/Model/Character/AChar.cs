@@ -1,22 +1,16 @@
 ﻿using Assets.Generics;
-using Model.Spells;
-using Characters.Params;
-using Model.Abilities;
-using Model.Classes;
-using Model.Equipment;
-using Model.Injuries;
-using Model.Map;
-using Model.Shields;
-using System.Collections.Generic;
-using Model.Effects;
-using Model.OverTimeEffects;
-using Model.Perks;
 using Assets.Model.Ability;
-using Assets.Model.Character.Param;
 using Assets.Model.Character.Enum;
-using Assets.Model.Equipment.Types;
+using Assets.Model.Character.Param;
+using Assets.Model.Class;
+using Assets.Model.Class.Enum;
+using Assets.Model.Effect;
 using Assets.Model.Equipment.Type;
 using Assets.Model.Injury;
+using Assets.Model.Map;
+using Assets.Model.OTE.DoT;
+using Assets.Model.Shield;
+using System.Collections.Generic;
 
 namespace Assets.Model.Character
 {
@@ -27,8 +21,6 @@ namespace Assets.Model.Character
         protected const double BASE_STAM_RESTORE = 50;
 
         public T Type { get; set; }
-
-        public SpellsByLevel ActiveSpells { get; set; }
 
         public Dictionary<EClass, MClass> BaseClasses { get; set; }
 
@@ -56,7 +48,7 @@ namespace Assets.Model.Character
 
         public List<MDoT> DoTs { get; set; }
         public List<GenericHoT> HoTs { get; set; }
-        public List<Shield> Shields { get; set; }
+        public List<MShield> Shields { get; set; }
 
         public void AddArmor(MArmor armor)
         {
@@ -91,7 +83,7 @@ namespace Assets.Model.Character
             this.Injuries.Add(injury);
         }
 
-        public void AddShield(Shield toAdd)
+        public void AddShield(MShield toAdd)
         {
             this.Shields.Add(toAdd);
         }

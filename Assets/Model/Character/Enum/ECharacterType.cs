@@ -1,6 +1,6 @@
 ﻿namespace Assets.Model.Character.Enum
 {
-    public enum ECharacterType
+    public enum ECharType
     {
         None,
         Critter,

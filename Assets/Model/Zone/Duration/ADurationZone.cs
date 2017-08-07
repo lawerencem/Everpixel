@@ -1,5 +1,4 @@
-﻿using Controller.Map;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Model.Zone.Duration
 {
@@ -10,7 +9,7 @@ namespace Assets.Model.Zone.Duration
         public int Duration { get { return this._duration; } }
         public GameObject Handle { get; set; }
 
-        public ADurationZone(ZoneArgsContainer arg) : base(arg)
+        public ADurationZone(ZoneArgsCont arg) : base(arg)
         {
             this._duration = arg.Dur;
             this.Handle = arg.Handle;

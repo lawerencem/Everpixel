@@ -1,11 +1,8 @@
-﻿using System;
-using Generics;
-using System.Xml.Linq;
-using Model.Abilities;
+﻿using Assets.Model.Equipment.Enum;
+using Assets.Model.Equipment.Param;
+using Assets.Model.Equipment.Table;
 using Generics.Utilities;
-using System.Collections.Generic;
-using Model.Events;
-using Model.Equipment.XML;
+using System.Xml.Linq;
 
 namespace Assets.Model.Equipment.XML
 {

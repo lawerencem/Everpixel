@@ -1,18 +1,18 @@
-﻿using Generics;
+﻿using Assets.Model.Equipment.Param;
+using Assets.View.Character;
+using Generics;
 using Generics.Utilities;
-using Model.Equipment;
-using View.Characters;
 
-namespace View.Equipment
+namespace Assets.View.Equipment
 {
     public class EquipmentBridge : AbstractSingleton<EquipmentBridge>
     {
         public EquipmentBridge() { }
 
-        public ArmorView GetRandomArmorSprite(ArmorParams a)
+        public VArmor GetRandomArmorSprite(ArmorParams a)
         {
-            var random = new ArmorView();
-            var sprites = CharacterSpriteLoader.Instance.GetArmorSprites(a);
+            var random = new VArmor();
+            var sprites = CharSpriteLoader.Instance.GetArmorSprites(a);
             random.Name = a.Name;
             random.Index = a.Sprites[RNG.Instance.Next(0, a.Sprites.Count)];
             random.Sprites = sprites;
@@ -20,11 +20,11 @@ namespace View.Equipment
             return random;
         }
 
-        public WeaponView GetRandomWeaponSprite(WeaponParams w)
+        public VWeapon GetRandomWeaponSprite(WeaponParams w)
         {
-            var random = new WeaponView();
+            var random = new VWeapon();
 
-            var sprites = CharacterSpriteLoader.Instance.GetWeaponSprites(w);
+            var sprites = CharSpriteLoader.Instance.GetWeaponSprites(w);
             random.Name = w.Name;
             random.Index = w.Sprites[RNG.Instance.Next(0, w.Sprites.Count)];
             random.Skill = w.Skill;

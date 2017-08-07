@@ -1,7 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Assets.Model.Class.Enum;
+using Assets.Model.Class.Table;
 using Generics;
-using Model.Classes;
+using System;
+using System.Collections.Generic;
 
 namespace Assets.Model.Class.Builder
 {

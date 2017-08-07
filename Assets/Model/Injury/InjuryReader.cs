@@ -1,8 +1,8 @@
 ﻿using Assets.Generics;
+using Assets.Model.Character.Enum;
+using Assets.Model.OTE.DoT;
 using Generics;
 using Generics.Utilities;
-using Model.Characters;
-using Model.OverTimeEffects;
 using System.Xml.Linq;
 
 namespace Assets.Model.Injury

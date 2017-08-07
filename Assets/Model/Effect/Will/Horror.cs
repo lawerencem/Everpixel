@@ -10,7 +10,7 @@ namespace Assets.Model.Effects.Will
         public override void TryProcessEffect(Hit hit)
         {
             // TODO: Add via an event
-            this.Target.Model.AddEffect(this);
+            //this.Target.Model.AddEffect(this);
         }
     }
 }

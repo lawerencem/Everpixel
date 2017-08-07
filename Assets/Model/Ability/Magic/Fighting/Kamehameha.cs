@@ -1,6 +1,5 @@
-﻿using Model.Combat;
-using Model.Events.Combat;
-using Assets.Model.Ability.Enum;
+﻿using Assets.Model.Ability.Enum;
+using Assets.Model.Combat;
 using Controller.Map;
 using System.Collections.Generic;
 

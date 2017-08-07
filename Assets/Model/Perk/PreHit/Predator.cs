@@ -11,9 +11,9 @@ namespace Assets.Model.Perk.PreHit
 
         public override void TryModHit(Hit hit)
         {
-            base.TryModHit(hit);
-            var injuries = hit.Target.Model.Injuries.Count;
-            hit.Ability.DamageMod += (injuries * this.Val);
+            //base.TryModHit(hit);
+            //var injuries = hit.Target.Model.Injuries.Count;
+            //hit.Ability.DamageMod += (injuries * this.Val);
         }
     }
 }

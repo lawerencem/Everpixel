@@ -1,10 +1,4 @@
-﻿using Assets.Generics;
-using Assets.Model.Combat;
-using Assets.Model.Perks;
-using Characters.Params;
-using Model.Abilities;
-using Model.Combat;
-using System.Collections.Generic;
+﻿using Assets.Model.Combat;
 
 namespace Assets.Model.Perk.AbilityMod
 {

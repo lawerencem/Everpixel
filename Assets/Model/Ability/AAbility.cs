@@ -1,15 +1,9 @@
 ﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Ability.Logic;
 using Assets.Model.Combat;
-using Assets.Model.Injuries;
 using Assets.Model.Zone;
-using Controller.Managers;
 using Controller.Map;
 using Generics.Utilities;
-using Model.Characters;
-using Model.Combat;
-using Model.Events.Combat;
-using Model.Injuries;
 using System.Collections.Generic;
 
 namespace Assets.Model.Ability
@@ -49,14 +43,15 @@ namespace Assets.Model.Ability
 
         public List<TileController> GetTargetTiles(AbilityArgContainer arg)
         {
-            var list = new List<TileController>();
-            if (this.isSelfCast())
-                list.Add(arg.Source.CurrentTile);
-            else if (this.isRayCast())
-                list.AddRange(this._logic.GetRaycastTiles(arg));
-            else
-                list.AddRange(this._logic.GetPotentialTargets(arg));
-            return list;
+            return null;
+            //var list = new List<TileController>();
+            //if (this.isSelfCast())
+            //    list.Add(arg.Source.CurrentTile);
+            //else if (this.isRayCast())
+            //    list.AddRange(this._logic.GetRaycastTiles(arg));
+            //else
+            //    list.AddRange(this._logic.GetPotentialTargets(arg));
+            //return list;
         }
 
         public bool isRayCast()
@@ -96,28 +91,28 @@ namespace Assets.Model.Ability
 
         public void TryApplyInjury(Hit hit)
         {
-            if (!FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Dodge) &&
-                !FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Parry) &&
-                hit.Target != null)
-            {
-                var roll = RNG.Instance.NextDouble();
-                var hp = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.HP);
-                var currentHP = hit.Target.Model.GetCurrentHP();
-                if (currentHP > 0)
-                {
-                    var chance = ((double)hit.Dmg / (double)hp) * (hp / currentHP);
-                    if (roll < chance)
-                    {
-                        if (this.Params.Injuries.Count > 0)
-                        {
-                            var injuryType = ListUtil<EInjury>.GetRandomListElement(this.Params.Injuries);
-                            var injuryParams = InjuryTable.Instance.Table[injuryType];
-                            var injury = injuryParams.GetInjury();
-                            var apply = new ApplyInjuryEvent(CombatEventManager.Instance, hit, injury);
-                        }
-                    }
-                }
-            }
+            //if (!FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Dodge) &&
+            //    !FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Parry) &&
+            //    hit.Target != null)
+            //{
+            //    var roll = RNG.Instance.NextDouble();
+            //    var hp = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.HP);
+            //    var currentHP = hit.Target.Model.GetCurrentHP();
+            //    if (currentHP > 0)
+            //    {
+            //        var chance = ((double)hit.Dmg / (double)hp) * (hp / currentHP);
+            //        if (roll < chance)
+            //        {
+            //            if (this.Params.Injuries.Count > 0)
+            //            {
+            //                var injuryType = ListUtil<EInjury>.GetRandomListElement(this.Params.Injuries);
+            //                var injuryParams = InjuryTable.Instance.Table[injuryType];
+            //                var injury = injuryParams.GetInjury();
+            //                var apply = new ApplyInjuryEvent(CombatEventManager.Instance, hit, injury);
+            //            }
+            //        }
+            //    }
+            //}
         }
 
         protected List<Hit> GetHits(AbilityArgContainer arg)
@@ -133,14 +128,15 @@ namespace Assets.Model.Ability
             return this._logic.GetRaycastTiles(arg);
         }
 
-        protected ZoneArgsContainer GetZoneArgs(AbilityArgContainer arg, TileController tile)
+        protected ZoneArgsCont GetZoneArgs(AbilityArgContainer arg, TileController tile)
         {
-            var zoneArgs = new ZoneArgsContainer();
-            zoneArgs.Caster = arg.Source;
-            zoneArgs.Dur = (int)this.Params.Duration; // TODO;
-            zoneArgs.Handle = arg.Source.Handle;
-            zoneArgs.Tile = tile;
-            return zoneArgs;
+            //var zoneArgs = new ZoneArgsCont();
+            //zoneArgs.Caster = arg.Source;
+            //zoneArgs.Dur = (int)this.Params.Duration; // TODO;
+            //zoneArgs.Handle = arg.Source.Handle;
+            //zoneArgs.Tile = tile;
+            //return zoneArgs;
+            return null;
         }
 
         protected virtual List<Hit> PredictBullet(AbilityArgContainer arg)
@@ -166,67 +162,67 @@ namespace Assets.Model.Ability
 
         protected void ProcessHitBullet(Hit hit)
         {
-            if (!FCharacterStatus.HasFlag(hit.Target.Model.StatusFlags.CurFlags, FCharacterStatus.Flags.Dead))
-            {
-                foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                    perk.TryModAbility(hit);
-                this._logic.ProcessBullet(hit);
-            }
+            //if (!FCharacterStatus.HasFlag(hit.Target.Model.StatusFlags.CurFlags, FCharacterStatus.Flags.Dead))
+            //{
+            //    foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
+            //        perk.TryModAbility(hit);
+            //    this._logic.ProcessBullet(hit);
+            //}
         }
 
         protected void ProcessHitLoS(Hit hit)
         {
-            if (hit.Target != null)
-            {
-                if (!FCharacterStatus.HasFlag(hit.Target.Model.StatusFlags.CurFlags, FCharacterStatus.Flags.Dead))
-                {
-                    foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                        perk.TryModAbility(hit);
-                    this._logic.ProcessRay(hit);
-                }
-            }
-            else
-                hit.Done();
+            //if (hit.Target != null)
+            //{
+            //    if (!FCharacterStatus.HasFlag(hit.Target.Model.StatusFlags.CurFlags, FCharacterStatus.Flags.Dead))
+            //    {
+            //        foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
+            //            perk.TryModAbility(hit);
+            //        this._logic.ProcessRay(hit);
+            //    }
+            //}
+            //else
+            //    hit.Done();
         }
 
         protected void ProcessHitMelee(Hit hit)
         {
-            if (!FCharacterStatus.HasFlag(hit.Target.Model.StatusFlags.CurFlags, FCharacterStatus.Flags.Dead))
-            {
-                foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                    perk.TryModAbility(hit);
-                this._logic.ProcessMelee(hit);
-            }
+            //if (!FCharacterStatus.HasFlag(hit.Target.Model.StatusFlags.CurFlags, FCharacterStatus.Flags.Dead))
+            //{
+            //    foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
+            //        perk.TryModAbility(hit);
+            //    this._logic.ProcessMelee(hit);
+            //}
         }
 
         protected void ProcessHitSummon(Hit hit)
         {
-            FHit.SetSummonTrue(hit.Flags);
-            foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                perk.TryModAbility(hit);
-            this._logic.ProcessSummon(hit);
+            //FHit.SetSummonTrue(hit.Flags);
+            //foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
+            //    perk.TryModAbility(hit);
+            //this._logic.ProcessSummon(hit);
         }
 
         protected void ProcessShapeshift(Hit hit)
         {
-            FHit.SetShapeshiftTrue(hit.Flags);
-            FCharacterStatus.SetShapeshiftedTrue(hit.Source.Model.StatusFlags);
-            foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                perk.TryModAbility(hit);
-            this._logic.ProcessShapeshift(hit);
+            //FHit.SetShapeshiftTrue(hit.Flags);
+            //FCharacterStatus.SetShapeshiftedTrue(hit.Source.Model.StatusFlags);
+            //foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
+            //    perk.TryModAbility(hit);
+            //this._logic.ProcessShapeshift(hit);
         }
 
         protected void ProcessHitSong(Hit hit)
         {
-            foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                perk.TryModAbility(hit);
-            this._logic.ProcessSong(hit);
+            //foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
+            //    perk.TryModAbility(hit);
+            //this._logic.ProcessSong(hit);
         }
 
         protected void ProcessHitZone(Hit hit)
         {
-            foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-                perk.TryModAbility(hit);
+            //foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
+            //    perk.TryModAbility(hit);
         }
     }
 }

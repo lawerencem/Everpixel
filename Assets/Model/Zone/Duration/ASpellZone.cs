@@ -1,6 +1,4 @@
-﻿using Controller.Characters;
-using Controller.Map;
-using UnityEngine;
+﻿using Assets.Controller.Character;
 
 namespace Assets.Model.Zone.Duration
 {
@@ -8,6 +6,6 @@ namespace Assets.Model.Zone.Duration
     {
         protected CharController _caster;
 
-        public ASpellZone(ZoneArgsContainer arg) : base(arg) { this._caster = arg.Caster; }
+        public ASpellZone(ZoneArgsCont arg) : base(arg) { this._caster = arg.Caster; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using Assets.Model.Abiltiy.Logic;
-using Model.Combat;
+using Assets.Model.Combat;
 
 namespace Assets.Model.Ability.Logic.Calculator
 {

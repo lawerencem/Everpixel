@@ -2,11 +2,11 @@
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Table;
 using Assets.Model.Characters.Params;
+using Assets.Model.Class.Enum;
+using Assets.Model.Culture;
+using Assets.Model.Mount;
 using Generics;
 using Generics.Utilities;
-using Model.Characters.XML;
-using Model.Classes;
-using Model.Mounts;
 using System.Collections.Generic;
 using System.Xml.Linq;
 
@@ -14,7 +14,7 @@ namespace Assets.Model.Character.XML
 {
     public class PredefinedCharReader : GenericXMLReader
     {
-        private PredefinedCharacterTable table = PredefinedCharacterTable.Instance;
+        private PredefinedCharTable table = PredefinedCharTable.Instance;
 
         private static PredefinedCharReader _instance;
         public static PredefinedCharReader Instance
@@ -37,7 +37,7 @@ namespace Assets.Model.Character.XML
             var doc = XDocument.Load(this._path);
 
             EClass baseClass = EClass.None;
-            ECharacterType type = ECharacterType.None;
+            ECharType type = ECharType.None;
             ECulture culture = ECulture.None;
             ERace race = ERace.None;
 
@@ -100,9 +100,9 @@ namespace Assets.Model.Character.XML
                 table.Table[rootKey].Classes.Add(type, level);
         }
 
-        private void HandleCharacterType(string rootKey, string value, ref ECharacterType type)
+        private void HandleCharacterType(string rootKey, string value, ref ECharType type)
         {
-            if (EnumUtil<ECharacterType>.TryGetEnumValue(value, ref type))
+            if (EnumUtil<ECharType>.TryGetEnumValue(value, ref type))
                 table.Table[rootKey].Type = type;
         }
         

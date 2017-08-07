@@ -1,7 +1,7 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Ability;
+using Assets.Model.Effect;
 using Controller.Map;
-using Model.Effects;
 using System.Collections.Generic;
 
 namespace Assets.Model.Combat

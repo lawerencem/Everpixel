@@ -1,10 +1,11 @@
-﻿using Generics;
-using Model.Characters;
-using System.Collections.Generic;
-using System;
-using Generics.Utilities;
+﻿using Assets.Model.Character.Builder;
 using Assets.Model.Character.Param;
-using Assets.Model.Character.Builder;
+using Assets.Model.Character.Table;
+using Assets.Model.Party.Table;
+using Generics;
+using Generics.Utilities;
+using System;
+using System.Collections.Generic;
 
 namespace Assets.Model.Party.Builder
 {
@@ -31,7 +32,7 @@ namespace Assets.Model.Party.Builder
                     double chance = RNG.Instance.NextDouble();
                     if (chance < param.Chance)
                     {
-                        var pParams = PredefinedCharacterTable.Instance.Table[param.Name];
+                        var pParams = PredefinedCharTable.Instance.Table[param.Name];
                         var builder = new CharacterParamBuilder();
                         var toAdd = builder.Build(pParams);
                         toAdd.StartRow = param.Row;

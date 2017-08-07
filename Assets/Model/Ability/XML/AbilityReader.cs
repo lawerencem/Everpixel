@@ -1,7 +1,4 @@
-﻿using Generics;
-using System.Xml.Linq;
-using Generics.Utilities;
-using Assets.Model.Ability;
+﻿using Assets.Model.Ability;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Ability.Magic;
 using Assets.Model.Ability.Magic.Astral;
@@ -9,8 +6,11 @@ using Assets.Model.Ability.Magic.Fighting;
 using Assets.Model.Ability.Magic.Water;
 using Assets.Model.Ability.Music;
 using Assets.Model.Ability.Shapeshift;
-using Assets.Model.Injuries;
+using Assets.Model.Injury;
 using Assets.Model.Weapon.Abilities;
+using Generics;
+using Generics.Utilities;
+using System.Xml.Linq;
 
 namespace Assets.Models.Equipment.XML
 {
@@ -155,7 +155,7 @@ namespace Assets.Models.Equipment.XML
                 case (EAbility.Chop): { AbilityTable.Instance.Table[type] = new Chop(); } break;
                 case (EAbility.Crush): { AbilityTable.Instance.Table[type] = new Crush(); } break;
                 case (EAbility.Double_Strike): { AbilityTable.Instance.Table[type] = new DoubleStrike(); } break;
-                case (EAbility.Eldritch_Chomp): { AbilityTable.Instance.Table[type] = new EldritchChomp(); } break;
+                //case (EAbility.Eldritch_Chomp): { AbilityTable.Instance.Table[type] = new EldritchChomp(); } break;
                 case (EAbility.Fire): { AbilityTable.Instance.Table[type] = new Fire(); } break;
                 case (EAbility.Gash): { AbilityTable.Instance.Table[type] = new Gash(); } break;
                 case (EAbility.Great_Strike): { AbilityTable.Instance.Table[type] = new GreatStrike(); } break;
@@ -177,7 +177,7 @@ namespace Assets.Models.Equipment.XML
                 case (EAbility.Stun): { AbilityTable.Instance.Table[type] = new Stun(); } break;
                 case (EAbility.Summon_Shoggoth): { AbilityTable.Instance.Table[type] = new SummonShoggoth(); } break;
                 case (EAbility.Triple_Strike): { AbilityTable.Instance.Table[type] = new TripleStrike(); } break;
-                case (EAbility.Were_Ween): { AbilityTable.Instance.Table[type] = new Wereween(); } break;
+                //case (EAbility.Were_Ween): { AbilityTable.Instance.Table[type] = new Wereween(); } break;
                 case (EAbility.Wide_Slash): { AbilityTable.Instance.Table[type] = new WideSlash(); } break;
                 case (EAbility.Wrap): { AbilityTable.Instance.Table[type] = new Wrap(); } break;
             }

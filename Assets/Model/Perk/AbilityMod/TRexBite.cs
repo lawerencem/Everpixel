@@ -1,7 +1,7 @@
-﻿using Model.Abilities;
-using Model.Combat;
+﻿using Assets.Model.Ability.Enum;
+using Assets.Model.Combat;
 
-namespace Model.Perks
+namespace Assets.Model.Perk.AbilityMod
 {
     public class TRexBite : MAbilityModPerk
     {

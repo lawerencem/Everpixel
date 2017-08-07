@@ -12,9 +12,9 @@ namespace Assets.Model.Weapon
 
         public WeaponAbilityFactory() { }
 
-        public List<Ability> CreateNewObject(List<EAbility> abilities)
+        public List<MAbility> CreateNewObject(List<EAbility> abilities)
         {
-            var wAbilities = new List<Ability>();
+            var wAbilities = new List<MAbility>();
             foreach (var ability in abilities) { wAbilities.Add(this._builder.Build(ability)); }
             return wAbilities;
         }

@@ -1,8 +1,4 @@
-﻿using Assets.Generics;
-using Controller.Map;
-using Generics.Hex;
-using Generics.Utilities;
-using Model.Map;
+﻿using Controller.Map;
 using System.Collections.Generic;
 
 namespace Assets.Model.Map
@@ -20,12 +16,12 @@ namespace Assets.Model.Map
 
         public TileController GetNextTile(TileController t)
         {
-            if (this.Tiles.Contains(t.Model))
-            {
-                int index = this.Tiles.IndexOf(t.Model) + 1;
-                if (this.Tiles.Count > index)
-                    return this.Tiles[index].Parent;
-            }
+            //if (this.Tiles.Contains(t.Model))
+            //{
+            //    int index = this.Tiles.IndexOf(t.Model) + 1;
+            //    if (this.Tiles.Count > index)
+            //        return this.Tiles[index].Parent;
+            //}
             return null;
         }
 

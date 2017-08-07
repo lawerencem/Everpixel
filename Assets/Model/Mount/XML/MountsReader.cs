@@ -31,11 +31,11 @@ namespace Assets.Model.Mount.XML
                 if (el.Name == "Mount")
                 {
                     var mParams = new MountParams();
-                    var type = MountEnum.None;
+                    var type = EMount.None;
 
                     foreach(var att in el.Attributes())
                     {
-                        if (EnumUtil<MountEnum>.TryGetEnumValue(att.Value, ref type))
+                        if (EnumUtil<EMount>.TryGetEnumValue(att.Value, ref type))
                             MountsTable.Instance.Table.Add(type, mParams);
                     }
                 }

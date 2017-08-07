@@ -1,11 +1,10 @@
-﻿using Assets.Generics;
-using Assets.Model.Ability.Enum;
+﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Character.Enum;
-using Model.Classes;
-using Model.Equipment;
-using Model.Mounts;
-using Model.Parties;
-using Model.Perks;
+using Assets.Model.Class.Enum;
+using Assets.Model.Equipment.Param;
+using Assets.Model.Mount;
+using Assets.Model.Party.Enum;
+using Assets.Model.Perk;
 using System.Collections.Generic;
 
 namespace Assets.Model.Character.Param
@@ -32,6 +31,6 @@ namespace Assets.Model.Character.Param
         public WeaponParams RWeapon { get; set; }
         public ERace Race { get; set; }
         public EStartCol StartRow { get; set; }
-        public ECharacterType Type { get; set; }
+        public ECharType Type { get; set; }
     }
 }

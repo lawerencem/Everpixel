@@ -1,23 +1,19 @@
-﻿using Assets.Model;
-using Assets.Model.Ability.Enum;
+﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Table;
-using Assets.Model.Character.XML;
 using Assets.Model.Characters.Params;
+using Assets.Model.Class.Enum;
+using Assets.Model.Culture;
+using Assets.View.Character.Table;
 using Generics;
 using Generics.Utilities;
-using Model.Abilities;
-using Model.Classes;
-using Model.Mounts;
-using System;
-using System.Collections.Generic;
 using System.Xml.Linq;
 
 namespace Assets.Model.Character.XML
 {
     public class PredefinedCritterReader : GenericXMLReader
     {
-        private PredefinedCharacterTable table = PredefinedCharacterTable.Instance;
+        private PredefinedCharTable table = PredefinedCharTable.Instance;
 
         private static PredefinedCritterReader _instance;
         public static PredefinedCritterReader Instance
@@ -61,7 +57,7 @@ namespace Assets.Model.Character.XML
                                     table.Table.Add(key, new PreCharParams());
                                     table.Table[key].Name = key;
                                     table.Table[key].Culture = culture;
-                                    table.Table[key].Type = ECharacterType.Critter;
+                                    table.Table[key].Type = ECharType.Critter;
                                 }
                                 foreach (var elem in ele.Elements())
                                 {
@@ -72,7 +68,6 @@ namespace Assets.Model.Character.XML
                                         case (PredefinedReaderParams.DEFAULT_WPN_ABILITES): { HandleDefaultWpnAbility(key, elem.Value.ToString()); } break;
                                         case (PredefinedReaderParams.FLINCH_SPRITE_INDEX): { HandleFlinchSpriteIndex(key, elem.Value.ToString()); } break;
                                         case (PredefinedReaderParams.PERKS): { HandlePerks(elem, key); } break;
-                                        case (PredefinedReaderParams.SPELLS): { HandleSpells(elem, key); } break;
                                         case (PredefinedReaderParams.STATS): { HandleStats(elem, key); } break;
                                     }
                                 }

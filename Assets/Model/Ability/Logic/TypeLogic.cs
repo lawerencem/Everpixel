@@ -1,9 +1,5 @@
-﻿using Assets.Model.Ability.Enum;
-using Assets.Model.Ability.Logic.Calculator;
-using Controller.Managers;
-using Model.Characters;
-using Model.Combat;
-using Model.Events.Combat;
+﻿using Assets.Model.Ability.Logic.Calculator;
+using Assets.Model.Combat;
 
 namespace Assets.Model.Ability.Logic
 {
@@ -83,7 +79,7 @@ namespace Assets.Model.Ability.Logic
 
         public void ProcessShapeshift(Hit hit)
         {
-            var shapeshiftEvent = new ShapeshiftEvent(CombatEventManager.Instance, hit);
+            //var shapeshiftEvent = new ShapeshiftEvent(CombatEventManager.Instance, hit);
         }
 
         public void ProcessSong(Hit hit)
@@ -93,7 +89,7 @@ namespace Assets.Model.Ability.Logic
 
         public void ProcessSummon(Hit hit)
         {
-            var summonEvent = new SummonEvent(CombatEventManager.Instance, hit);
+            //var summonEvent = new EvSummon(CombatEventManager.Instance, hit);
         }
 
         private void ProcessBulletFlags(Hit hit)

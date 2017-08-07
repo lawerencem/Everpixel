@@ -1,4 +1,5 @@
 ﻿using Assets.Generics;
+using Assets.Model.Party.Param;
 using Assets.Model.Party.Table;
 using Generics;
 using Generics.Utilities;

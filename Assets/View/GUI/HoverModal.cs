@@ -1,13 +1,11 @@
-﻿using Controller.Managers;
-using Generics;
-using Model.Characters;
-using Model.Combat;
-using Model.Events.Combat;
+﻿using Assets.Model.Character;
+using Assets.Model.Character.Enum;
+using Assets.Model.Combat;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace View.GUI
+namespace Assets.View.GUI
 {
     public class HoverModal : MonoBehaviour
     {
@@ -92,15 +90,15 @@ namespace View.GUI
             this._dmgPredictionModal.SetActive(false);
         }
 
-        public void SetModalDamageValues(PredictActionEvent e)
-        {
-            if (CombatEventManager.Instance.GetCurrentAbility() != null)
-            {
-                var hit = e.Container.Hits.Find(x => x.Target.Equals(e.Container.Target.Model.Current));
-                if (hit != null)
-                    this.SetModalDamageValuesHelper(hit);
-            }
-        }
+        //public void SetModalDamageValues(EvPredictAction e)
+        //{
+        //    if (CombatEventManager.Instance.GetCurrentAbility() != null)
+        //    {
+        //        var hit = e.Container.Hits.Find(x => x.Target.Equals(e.Container.Target.Model.Current));
+        //        if (hit != null)
+        //            this.SetModalDamageValuesHelper(hit);
+        //    }
+        //}
 
         public void SetModalInactive()
         {

@@ -1,7 +1,7 @@
 ﻿using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
 using Assets.Model.Class.Enum;
-using Model.Perks;
+using Assets.Model.Perk;
 using System.Collections.Generic;
 
 namespace Assets.Model.Class

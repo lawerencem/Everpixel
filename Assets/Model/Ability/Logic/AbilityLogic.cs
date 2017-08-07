@@ -1,8 +1,6 @@
-﻿using Controller.Characters;
+﻿using Assets.Controller.Character;
+using Assets.Model.Combat;
 using Controller.Map;
-using Model.Characters;
-using Model.Combat;
-using Model.Events.Combat;
 using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Logic

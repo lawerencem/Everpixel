@@ -1,5 +1,4 @@
-﻿using Model.Characters;
-using Model.Perks;
+﻿using Assets.Model.Perk;
 using System.Collections.Generic;
 
 namespace Assets.Model.Character.Param.Race

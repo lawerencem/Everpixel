@@ -1,6 +1,6 @@
 ﻿using Assets.Model.Character.Table;
+using Assets.Model.Perk;
 using Generics.Utilities;
-using Model.Perks;
 
 namespace Assets.Model.Character.XML
 {
@@ -11,7 +11,7 @@ namespace Assets.Model.Character.XML
             var perk = EPerk.None;
 
             if (EnumUtil<EPerk>.TryGetEnumValue(value, ref perk))
-                PredefinedCharacterTable.Instance.Table[key].Perks.Add(perk);
+                PredefinedCharTable.Instance.Table[key].Perks.Add(perk);
         }
     }
 }

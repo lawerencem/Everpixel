@@ -1,8 +1,9 @@
-﻿using Generics;
-using System.Collections.Generic;
-using System;
-using Assets.Generics;
+﻿using Assets.Generics;
 using Assets.Model.Character.Param;
+using Assets.Model.Party.Table;
+using Generics;
+using System;
+using System.Collections.Generic;
 
 namespace Assets.Model.Party.Builder
 {
@@ -22,10 +23,10 @@ namespace Assets.Model.Party.Builder
 
         public override List<CharParams> Build(Pair<string, int> arg)
         {
-            if (PartiesTable.Instance.Table.ContainsKey(arg.X))
+            if (PartyTable.Instance.Table.ContainsKey(arg.X))
             {
                 var buildList = new List<CharParams>();
-                var partyParams = PartiesTable.Instance.Table[arg.X];
+                var partyParams = PartyTable.Instance.Table[arg.X];
                 var subs = partyParams.GetRandomSubPartyNames(arg.Y);
                 foreach (var sub in subs)
                 {

@@ -1,11 +1,12 @@
-﻿using Assets.Model.Character.Enum;
+﻿using Assets.Model.Ability;
+using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
-using Assets.Model.Class;
-using Assets.Model.Equipment.Factories;
+using Assets.Model.Character.Table;
+using Assets.Model.Class.Builder;
+using Assets.Model.Equipment.Factory;
+using Assets.Model.Perk;
+using Assets.Model.Weapon;
 using Generics;
-using Model.Classes;
-using Model.Perks;
-using Model.Spells;
 using System;
 using System.Collections.Generic;
 
@@ -41,9 +42,9 @@ namespace Assets.Model.Character.Builder
             return new SecondaryStats(p);
         }
 
-        private GenericCharacter BuildHelper(CharacterParams c)
+        private MChar BuildHelper(CharParams c)
         {
-            var character = new GenericCharacter(c.Race);
+            var character = new MChar(c.Race);
             var primary = GetRaceStats(c);
             if (primary != null)
             {
@@ -62,7 +63,6 @@ namespace Assets.Model.Character.Builder
                 character.SetCurrentHP((int)character.GetCurrentStatValue(ESecondaryStat.HP));
                 character.SetCurrentMorale((int)character.GetCurrentStatValue(ESecondaryStat.Morale));
                 character.SetCurrentStam((int)character.GetCurrentStatValue(ESecondaryStat.Stamina));
-                SpellMediator.Instance.SetCharacterSpells(character, c);
                 return character;
             }
             else
@@ -81,7 +81,7 @@ namespace Assets.Model.Character.Builder
             }
         }
 
-        private void BuildClassPrimaryStats(GenericCharacter c)
+        private void BuildClassPrimaryStats(MChar c)
         {
             foreach (var kvp in c.BaseClasses)
             {
@@ -101,63 +101,63 @@ namespace Assets.Model.Character.Builder
             }
         }
 
-        private void BuildClassSecondaryStats(GenericCharacter c)
+        private void BuildClassSecondaryStats(MChar c)
         {
             foreach (var kvp in c.BaseClasses)
             {
                 var stats = kvp.Value.GetParams();
 
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.AP))
-                    c.SecondaryStats.MaxAP += stats.SecondaryStats[SecondaryStatsEnum.AP];
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.Block))
-                    c.SecondaryStats.Block += stats.SecondaryStats[SecondaryStatsEnum.Block];
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.Concentration))
-                    c.SecondaryStats.Concentration += stats.SecondaryStats[SecondaryStatsEnum.Concentration];
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.Critical_Chance))
-                    c.SecondaryStats.CriticalChance += stats.SecondaryStats[SecondaryStatsEnum.Critical_Chance];
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.Critical_Multiplier))
-                    c.SecondaryStats.CriticalMultiplier += stats.SecondaryStats[SecondaryStatsEnum.Critical_Multiplier];
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.Dodge))
-                    c.SecondaryStats.DodgeSkill += stats.SecondaryStats[SecondaryStatsEnum.Dodge];
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.Fortitude))
-                    c.SecondaryStats.Fortitude += stats.SecondaryStats[SecondaryStatsEnum.Fortitude];
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.HP))
-                    c.SecondaryStats.MaxHP += stats.SecondaryStats[SecondaryStatsEnum.HP];
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.Initiative))
-                    c.SecondaryStats.Initiative += stats.SecondaryStats[SecondaryStatsEnum.Initiative];
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.Melee))
-                    c.SecondaryStats.MeleeSkill += stats.SecondaryStats[SecondaryStatsEnum.Melee];
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.Morale))
-                    c.SecondaryStats.Morale += stats.SecondaryStats[SecondaryStatsEnum.Morale];
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.Parry))
-                    c.SecondaryStats.ParrySkill += stats.SecondaryStats[SecondaryStatsEnum.Parry];
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.Power))
-                    c.SecondaryStats.Power += stats.SecondaryStats[SecondaryStatsEnum.Power];
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.Ranged))
-                    c.SecondaryStats.RangedSkill += stats.SecondaryStats[SecondaryStatsEnum.Ranged];
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.Reflex))
-                    c.SecondaryStats.Reflex += stats.SecondaryStats[SecondaryStatsEnum.Reflex];
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.Spell_Duration))
-                    c.SecondaryStats.SpellDuration += stats.SecondaryStats[SecondaryStatsEnum.Spell_Duration];
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.Spell_Penetration))
-                    c.SecondaryStats.SpellPenetration += stats.SecondaryStats[SecondaryStatsEnum.Spell_Penetration];
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.Stamina))
-                    c.SecondaryStats.Stamina += stats.SecondaryStats[SecondaryStatsEnum.Stamina];
-                if (stats.SecondaryStats.ContainsKey(SecondaryStatsEnum.Will))
-                    c.SecondaryStats.Will += stats.SecondaryStats[SecondaryStatsEnum.Will];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.AP))
+                    c.SecondaryStats.MaxAP += stats.SecondaryStats[ESecondaryStat.AP];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.Block))
+                    c.SecondaryStats.Block += stats.SecondaryStats[ESecondaryStat.Block];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.Concentration))
+                    c.SecondaryStats.Concentration += stats.SecondaryStats[ESecondaryStat.Concentration];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.Critical_Chance))
+                    c.SecondaryStats.CriticalChance += stats.SecondaryStats[ESecondaryStat.Critical_Chance];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.Critical_Multiplier))
+                    c.SecondaryStats.CriticalMultiplier += stats.SecondaryStats[ESecondaryStat.Critical_Multiplier];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.Dodge))
+                    c.SecondaryStats.DodgeSkill += stats.SecondaryStats[ESecondaryStat.Dodge];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.Fortitude))
+                    c.SecondaryStats.Fortitude += stats.SecondaryStats[ESecondaryStat.Fortitude];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.HP))
+                    c.SecondaryStats.MaxHP += stats.SecondaryStats[ESecondaryStat.HP];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.Initiative))
+                    c.SecondaryStats.Initiative += stats.SecondaryStats[ESecondaryStat.Initiative];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.Melee))
+                    c.SecondaryStats.MeleeSkill += stats.SecondaryStats[ESecondaryStat.Melee];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.Morale))
+                    c.SecondaryStats.Morale += stats.SecondaryStats[ESecondaryStat.Morale];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.Parry))
+                    c.SecondaryStats.ParrySkill += stats.SecondaryStats[ESecondaryStat.Parry];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.Power))
+                    c.SecondaryStats.Power += stats.SecondaryStats[ESecondaryStat.Power];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.Ranged))
+                    c.SecondaryStats.RangedSkill += stats.SecondaryStats[ESecondaryStat.Ranged];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.Reflex))
+                    c.SecondaryStats.Reflex += stats.SecondaryStats[ESecondaryStat.Reflex];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.Spell_Duration))
+                    c.SecondaryStats.SpellDuration += stats.SecondaryStats[ESecondaryStat.Spell_Duration];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.Spell_Penetration))
+                    c.SecondaryStats.SpellPenetration += stats.SecondaryStats[ESecondaryStat.Spell_Penetration];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.Stamina))
+                    c.SecondaryStats.Stamina += stats.SecondaryStats[ESecondaryStat.Stamina];
+                if (stats.SecondaryStats.ContainsKey(ESecondaryStat.Will))
+                    c.SecondaryStats.Will += stats.SecondaryStats[ESecondaryStat.Will];
             }
         }
 
-        private void BuildDefaultAbilities(CharacterParams p, GenericCharacter c)
+        private void BuildDefaultAbilities(CharParams p, MChar c)
         {
-            var activeAbs = ActiveAbilityFactory.Instance.CreateNewObject(p.ActiveAbilities);
+            var activeAbs = AbilityFactory.Instance.CreateNewObject(p.Abilities);
             foreach (var v in activeAbs) { c.ActiveAbilities.Add(v); }
 
             var wpnAbs = WeaponAbilityFactory.Instance.CreateNewObject(p.DefaultWpnAbilities);
             foreach (var v in wpnAbs) { c.DefaultWpnAbilities.Add(v); }
         }
 
-        private void BuildWeaponHelper(GenericCharacter c, CharacterParams p)
+        private void BuildWeaponHelper(MChar c, CharParams p)
         {
             if (p.LWeapon != null)
             {
@@ -171,7 +171,7 @@ namespace Assets.Model.Character.Builder
             }
         }
 
-        private void BuildArmorHelper(GenericCharacter c, CharacterParams p)
+        private void BuildArmorHelper(MChar c, CharParams p)
         {
             if (p.Armor != null)
             {

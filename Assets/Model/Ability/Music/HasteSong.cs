@@ -1,9 +1,6 @@
-﻿using System.Collections.Generic;
-using Assets.Model.Ability.Enum;
-using Characters.Params;
-using Model.Characters;
-using Model.Combat;
-using Model.Events.Combat;
+﻿using Assets.Model.Ability.Enum;
+using Assets.Model.Combat;
+using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Music
 {

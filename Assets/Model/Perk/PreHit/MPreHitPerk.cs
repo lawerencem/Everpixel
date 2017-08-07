@@ -1,5 +1,4 @@
 ﻿using Assets.Model.Combat;
-using Model.Combat;
 
 namespace Assets.Model.Perk.PreHit
 {

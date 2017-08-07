@@ -1,25 +1,20 @@
-﻿using Assets.Generics;
-using Model.Spells;
-using Characters.Params;
-using Model.Classes;
-using Model.Events.Combat;
-using Model.Injuries;
-using Model.Shields;
-using System.Collections.Generic;
-using Model.Effects;
-using Model.OverTimeEffects;
-using Model.Equipment;
-using Assets.Model.Character.Enum;
-using Model.Characters;
-using Assets.Controller.Character;
+﻿using Assets.Controller.Character;
+using Assets.Generics;
 using Assets.Model.Ability;
-using Assets.Model.Characters;
+using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
+using Assets.Model.Class;
+using Assets.Model.Class.Enum;
+using Assets.Model.Effect;
 using Assets.Model.Equipment.Type;
+using Assets.Model.Injury;
+using Assets.Model.OTE.DoT;
+using Assets.Model.Shield;
+using System.Collections.Generic;
 
 namespace Assets.Model.Character
 {
-    public class MChar : AChar<ECharacterType>
+    public class MChar : AChar<ECharType>
     {
         private ERace _race;
         public ERace Race { get { return this._race; } }
@@ -30,7 +25,6 @@ namespace Assets.Model.Character
         {
             this._race = race;
             this.ActiveAbilities = new List<MAbility>();
-            this.ActiveSpells = new SpellsByLevel();
             this.BaseClasses = new Dictionary<EClass, MClass>();
             this.DefaultWpnAbilities = new List<MAbility>();
             this.DoTs = new List<MDoT>();
@@ -40,7 +34,7 @@ namespace Assets.Model.Character
             this.Mods = new ModContainer();
             this.Perks = new CharPerkCollection();
             this.Points = new CurrentPointsContainer();
-            this.Shields = new List<Shield>();
+            this.Shields = new List<MShield>();
             this.StatusFlags = new FCharacterStatus();
         }
 
@@ -93,7 +87,7 @@ namespace Assets.Model.Character
 
                 if (this.GetCurrentHP() <= 0)
                 {
-                    var killed = new CharacterKilledEvent(CombatEventManager.Instance, this.ParentController);
+                    //var killed = new CharacterKilledEvent(CombatEventManager.Instance, this.ParentController);
                 }
             }
         }

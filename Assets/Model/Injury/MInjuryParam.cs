@@ -1,7 +1,7 @@
 ﻿using Assets.Generics;
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
-using Model.OverTimeEffects;
+using Assets.Model.OTE.DoT;
 using System.Collections.Generic;
 
 namespace Assets.Model.Injury

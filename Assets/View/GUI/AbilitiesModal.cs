@@ -1,14 +1,11 @@
-﻿using Controller.Characters;
-using Controller.Managers;
-using Generics;
-using Model.Abilities;
-using Model.Characters;
+﻿using Assets.Controller.Character;
+using Assets.Controller.Manager;
+using Assets.Model.Ability;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using View.Scripts;
 
-namespace View.GUI
+namespace Assets.View.GUI
 {
     public class AbilitiesModal : MonoBehaviour
     {
@@ -30,15 +27,15 @@ namespace View.GUI
         {
             foreach (var btn in this._btns)
                 GameObject.Destroy(btn);
-            if (this._modal.activeSelf)
-                this.SetModalValues();
+            //if (this._modal.activeSelf)
+                //this.SetModalValues();
         }
 
         public void SetModalActive()
         {
             if (!this._modal.activeSelf)
                 this._modal.SetActive(true);
-            this.SetModalValues();
+            //this.SetModalValues();
         }
 
         public void SetModalInactive()
@@ -47,23 +44,23 @@ namespace View.GUI
             foreach (var controller in this._btns) { GameObject.Destroy(controller); }
         }
 
-        public void SetModalValues()
-        {
-            var character = CombatEventManager.Instance.GetCurrentCharacter();
-            this._proto.SetActive(true);
-            for (int i = 0; i < character.Model.ActiveAbilities.Count; i++)
-                this.PopulateModalList(character, character.Model.ActiveAbilities[i]);
-            foreach(var outerKVP in character.Model.ActiveSpells.Spells)
-            {
-                foreach(var innerKVP in outerKVP.Value)
-                {
-                    this.PopulateModalList(character, innerKVP.Value.Y);
-                }
-            }
-            this._proto.SetActive(false);
-        }
+        //public void SetModalValues()
+        //{
+        //    var character = CombatEventManager.Instance.GetCurrentCharacter();
+        //    this._proto.SetActive(true);
+        //    for (int i = 0; i < character.Model.ActiveAbilities.Count; i++)
+        //        this.PopulateModalList(character, character.Model.ActiveAbilities[i]);
+        //    foreach(var outerKVP in character.Model.ActiveSpells.Spells)
+        //    {
+        //        foreach(var innerKVP in outerKVP.Value)
+        //        {
+        //            this.PopulateModalList(character, innerKVP.Value.Y);
+        //        }
+        //    }
+        //    this._proto.SetActive(false);
+        //}
 
-        private void PopulateModalList(CharController character, Ability ability)
+        private void PopulateModalList(CharController character, MAbility ability)
         {
             var protoBtn = this._proto.GetComponent<Button>();
             var protoImg = this._proto.GetComponent<Image>();
@@ -104,9 +101,10 @@ namespace View.GUI
             txtRect.sizeDelta = new Vector2(300, 60);
 
             this._btns.Add(clone);
-            var btnScript = clone.AddComponent<AbilityBtnClick>();
+            //var btnScript = clone.AddComponent<AbilityBtnClick>();
+            // TODO:
             var typeEnum = ability.Type;
-            btnScript.Init(clone, typeEnum);
+            //btnScript.Init(clone, typeEnum);
         }
     }
 }

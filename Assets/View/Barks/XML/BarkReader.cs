@@ -3,7 +3,7 @@ using Generics.Utilities;
 using System.Collections.Generic;
 using System.Xml.Linq;
 
-namespace View.Barks
+namespace Assets.View.Barks
 {
     public class BarkReader : GenericXMLReader
     {
@@ -28,7 +28,7 @@ namespace View.Barks
         public override void ReadFromFile()
         {
             var doc = XDocument.Load(this._path);
-            var type = BarkCategoryEnum.None;
+            var type = EBark.None;
 
             foreach (var el in doc.Root.Elements())
                 foreach (var att in el.Attributes())
@@ -36,9 +36,9 @@ namespace View.Barks
                         HandleIndex(att.Value, ele.Name.ToString(), ele.Value, ref type);
         }
 
-        private void HandleIndex(string name, string param, string value, ref BarkCategoryEnum type)
+        private void HandleIndex(string name, string param, string value, ref EBark type)
         {
-            if (EnumUtil<BarkCategoryEnum>.TryGetEnumValue(name, ref type))
+            if (EnumUtil<EBark>.TryGetEnumValue(name, ref type))
             {
                 if (!this.table.Table.ContainsKey(type))
                     this.table.Table.Add(type, new List<string>());

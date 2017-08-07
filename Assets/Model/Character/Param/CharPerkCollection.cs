@@ -1,4 +1,11 @@
-﻿using Model.Perks;
+﻿using Assets.Model.Perk.AbilityMod;
+using Assets.Model.Perk.Equipment;
+using Assets.Model.Perk.EquipmentSStat;
+using Assets.Model.Perk.OnAction;
+using Assets.Model.Perk.PostHit;
+using Assets.Model.Perk.PreHit;
+using Assets.Model.Perk.SStatMod;
+using Assets.Model.Perk.WhenHit;
 using System.Collections.Generic;
 
 namespace Assets.Model.Character.Param
@@ -8,9 +15,9 @@ namespace Assets.Model.Character.Param
         public List<MAbilityModPerk> AbilityModPerks;
         public List<MEquipmentPerk> EquipmentPerks;
         public List<MEquipmentSStatPerk> EquipmentSStatPerks;
-        public List<GenericOnActionPerk> OnActionPerks;
+        public List<MOnActionPerk> OnActionPerks;
         public List<MPostHitPerk> PostHitPerks;
-        public List<GenericPreHitPerk> PreHitPerks;
+        public List<MPreHitPerk> PreHitPerks;
         public List<MSStatModPerk> SStatModPerks;
         public List<MWhenHitPerk> WhenHitPerks;
 
@@ -19,9 +26,9 @@ namespace Assets.Model.Character.Param
             this.AbilityModPerks = new List<MAbilityModPerk>();
             this.EquipmentPerks = new List<MEquipmentPerk>();
             this.EquipmentSStatPerks = new List<MEquipmentSStatPerk>();
-            this.OnActionPerks = new List<GenericOnActionPerk>();
+            this.OnActionPerks = new List<MOnActionPerk>();
             this.PostHitPerks = new List<MPostHitPerk>();
-            this.PreHitPerks = new List<GenericPreHitPerk>();
+            this.PreHitPerks = new List<MPreHitPerk>();
             this.SStatModPerks = new List<MSStatModPerk>();
             this.WhenHitPerks = new List<MWhenHitPerk>();
         }

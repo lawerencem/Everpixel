@@ -1,6 +1,5 @@
 ﻿using Assets.Model.Ability.Enum;
-using Model.Combat;
-using Model.Events.Combat;
+using Assets.Model.Combat;
 using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Magic.Fighting

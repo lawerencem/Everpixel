@@ -1,6 +1,4 @@
-﻿using Generics.Hex;
-using Model.Map;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Generics.Hex

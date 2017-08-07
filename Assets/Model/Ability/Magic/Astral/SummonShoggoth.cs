@@ -1,5 +1,5 @@
 ﻿using Assets.Model.Ability.Enum;
-using Model.Combat;
+using Assets.Model.Combat;
 using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Magic.Astral

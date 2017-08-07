@@ -1,6 +1,4 @@
 ﻿using Assets.Model.Combat;
-using Model.Combat;
-using Model.Events.Combat;
 
 namespace Assets.Model.Perk.OnAction
 {

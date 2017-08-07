@@ -1,8 +1,9 @@
-﻿using Assets.Model.Perks;
+﻿using Assets.Model.Ability.Enum;
+using Assets.Model.Combat;
 
-namespace Assets.Mode.Perk.AbilityMod
+namespace Assets.Model.Perk.AbilityMod
 {
-    public class DinoBite : AbilityModPerk
+    public class DinoBite : MAbilityModPerk
     {
         public DinoBite() : base(EPerk.Dino_Bite) { }
 

@@ -1,5 +1,4 @@
-﻿using Model.Map;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Generics.Hex
 {

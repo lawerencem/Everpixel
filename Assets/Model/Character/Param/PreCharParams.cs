@@ -2,9 +2,10 @@
 using Assets.Model.Ability.Enum;
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
-using Model.Classes;
-using Model.Mounts;
-using Model.Perks;
+using Assets.Model.Class.Enum;
+using Assets.Model.Culture;
+using Assets.Model.Mount;
+using Assets.Model.Perk;
 using System.Collections.Generic;
 
 namespace Assets.Model.Characters.Params
@@ -39,6 +40,6 @@ namespace Assets.Model.Characters.Params
         public Dictionary<string, List<List<string>>> RWeapons { get; set; }
         public List<Pair<int, EAbility>> Spells { get; set; }
         public PrimaryStats Stats { get; set; }
-        public ECharacterType Type { get; set; }
+        public ECharType Type { get; set; }
     }
 }

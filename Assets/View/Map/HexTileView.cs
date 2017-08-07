@@ -1,9 +1,7 @@
-﻿using Generics;
-using Generics.Hex;
-using Model.Map;
+﻿using Assets.Model.Map;
 using UnityEngine;
 
-namespace View.Map
+namespace Assets.View.Map
 {
     public class HexTileView
     {

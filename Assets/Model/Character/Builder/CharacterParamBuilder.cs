@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using Generics;
-using Model.Equipment;
-using Generics.Utilities;
-using Model.Characters.XML;
-using Model.Mounts;
-using Assets.Model.Characters.Params;
-using Assets.Model.Character.Param;
+﻿using Assets.Model.Character.Param;
 using Assets.Model.Character.XML;
+using Assets.Model.Characters.Params;
+using Assets.Model.Equipment.Param;
+using Assets.Model.Equipment.Table;
+using Assets.Model.Mount;
+using Generics;
+using Generics.Utilities;
+using Model.Equipment;
+using Model.Equipment.Table;
+using System;
+using System.Collections.Generic;
 
 namespace Assets.Model.Character.Builder
 {

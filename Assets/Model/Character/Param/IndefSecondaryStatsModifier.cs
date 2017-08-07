@@ -1,5 +1,4 @@
 ﻿using Assets.Model.Character.Enum;
-using Model.Characters;
 
 namespace Assets.Model.Character.Param
 {

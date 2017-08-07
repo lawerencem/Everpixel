@@ -1,6 +1,5 @@
-﻿using Assets.Model.Abilities.Magic;
-using Assets.Model.Ability.Enum;
-using Assets.Model.Injuries;
+﻿using Assets.Model.Ability.Enum;
+using Assets.Model.Injury;
 using System.Collections.Generic;
 
 namespace Assets.Model.Ability

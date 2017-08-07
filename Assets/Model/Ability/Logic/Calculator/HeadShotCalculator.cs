@@ -1,7 +1,6 @@
-﻿using Model.Combat;
-using Generics.Utilities;
-using Assets.Model.Abiltiy.Logic;
+﻿using Assets.Model.Abiltiy.Logic;
 using Assets.Model.Combat;
+using Generics.Utilities;
 
 namespace Assets.Model.Ability.Logic.Calculator
 {

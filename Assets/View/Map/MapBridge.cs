@@ -1,9 +1,8 @@
-﻿using Generics;
-using Model.Biomes;
-using System.Collections.Generic;
+﻿using Assets.Model.Biome.Enum;
+using Generics;
 using UnityEngine;
 
-namespace View.Biomes
+namespace Assets.View.Map
 {
     public class MapBridge : AbstractSingleton<MapBridge>
     {

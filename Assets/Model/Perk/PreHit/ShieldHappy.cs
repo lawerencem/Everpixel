@@ -1,6 +1,4 @@
 ﻿using Assets.Model.Combat;
-using Model.Abilities;
-using Model.Combat;
 
 namespace Assets.Model.Perk.PreHit
 {
@@ -13,11 +11,11 @@ namespace Assets.Model.Perk.PreHit
 
         public override void TryModHit(Hit hit)
         {
-            base.TryModHit(hit);
-            if (hit.Target.Model.Shields.Count > 0)
-            {
-                hit.ModData.BlockMod = this.Val;
-            }
+            //base.TryModHit(hit);
+            //if (hit.Target.Model.Shields.Count > 0)
+            //{
+            //    hit.ModData.BlockMod = this.Val;
+            //}
         }
     }
 }

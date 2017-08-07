@@ -2,10 +2,10 @@
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
 using Assets.Model.Character.Table;
+using Assets.Model.Class.Builder;
 using Assets.Model.Perk;
 using Assets.Model.Weapon;
 using Generics;
-using Model.Classes;
 using System;
 using System.Collections.Generic;
 
@@ -47,7 +47,7 @@ namespace Assets.Model.Character.Builder
             PerkMediator.Instance.SetCharacterPerks(character, c.Perks);
             BuildBaseClassHelper(c, character);
             BuildDefaultAbilities(c, character);
-            var stats = PredefinedCharacterTable.Instance.Table[c.Name];
+            var stats = PredefinedCharTable.Instance.Table[c.Name];
             character.PrimaryStats = stats.Stats;
             BuildClassPrimaryStats(character);
             var secondary = GetSecondaryStats(character.PrimaryStats);
@@ -75,7 +75,7 @@ namespace Assets.Model.Character.Builder
 
         private void BuildDefaultAbilities(CharParams p, MChar c)
         {
-            var activeAbs = AbilityFactory.Instance.CreateNewObject(p.ActiveAbilities);
+            var activeAbs = AbilityFactory.Instance.CreateNewObject(p.Abilities);
             foreach (var v in activeAbs) { c.ActiveAbilities.Add(v); }
 
             var wpnAbs = WeaponAbilityFactory.Instance.CreateNewObject(p.DefaultWpnAbilities);

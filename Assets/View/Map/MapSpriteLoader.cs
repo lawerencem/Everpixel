@@ -1,10 +1,10 @@
-﻿using Generics;
+﻿using Assets.Model.Biome.Enum;
+using Generics;
 using Generics.Utilities;
-using Model.Biomes;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace View
+namespace Assets.View.Map
 {
     // TODO: Clean up
     public class MapSpriteLoader : AbstractSingleton<MapSpriteLoader>

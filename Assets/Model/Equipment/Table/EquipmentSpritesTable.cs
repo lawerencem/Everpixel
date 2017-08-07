@@ -1,7 +1,7 @@
 ﻿using Generics;
 using System.Collections.Generic;
 
-namespace Model.Equipment
+namespace Model.Equipment.Table
 {
     public class EquipmentSpritesTable : AbstractSingleton<EquipmentSpritesTable>
     {
