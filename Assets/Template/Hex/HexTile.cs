@@ -52,6 +52,7 @@ namespace Template.Hex
         public void SetCenter(Vector3 c) { this._center = c; }
         public void SetCol(int col) { this._col = col; }
         public void SetCost(int cost) { this._cost = cost; }
+        public void SetParentContainer(object o) { this._parentContainer = o; }
         public void SetParentMap(HexMap map) { this._parentMap = map; }
         public void SetRow(int row) { this._row = row; }
 
