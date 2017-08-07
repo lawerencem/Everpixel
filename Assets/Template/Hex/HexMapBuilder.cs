@@ -15,9 +15,9 @@ namespace Template.Hex
                 {
                     var xOffset = e * 0.75f;
                     var tile = new HexTile();
-                    tile.Col = i;
-                    tile.Row = j;
-                    tile.Center = new Vector3((seed.x + (xOffset * i)), (seed.y - (e * j)), seed.z);
+                    tile.SetCol(i);
+                    tile.SetRow(j);
+                    tile.SetCenter(new Vector3((seed.x + (xOffset * i)), (seed.y - (e * j)), seed.z));
                     tiles.Add(tile);
                 }
             }
@@ -31,9 +31,9 @@ namespace Template.Hex
                 {
                     var xOffset = e * 0.75f;
                     var tile = new HexTile();
-                    tile.Col = i;
-                    tile.Row = j;
-                    tile.Center = new Vector3((seed.x + (xOffset * i)), (ySeed.y - (e * j)), seed.z);
+                    tile.SetCol(i);
+                    tile.SetRow(j);
+                    tile.SetCenter(new Vector3((seed.x + (xOffset * i)), (ySeed.y - (e * j)), seed.z));
                     tiles.Add(tile);
                 }
             }
@@ -55,12 +55,12 @@ namespace Template.Hex
                 var SW = map.GetSW(tile);
                 var NW = map.GetNW(tile);
 
-                if (N != null) { tile.Adjacent.Add(N); }
-                if (NE != null) { tile.Adjacent.Add(NE); }
-                if (SE != null) { tile.Adjacent.Add(SE); }
-                if (S != null) { tile.Adjacent.Add(S); }
-                if (SW != null) { tile.Adjacent.Add(SW); }
-                if (NW != null) { tile.Adjacent.Add(NW); }
+                if (N != null) { tile.AddN(N); }
+                if (NE != null) { tile.AddNE(NE); }
+                if (SE != null) { tile.AddSE(SE); }
+                if (S != null) { tile.AddS(S); }
+                if (SW != null) { tile.AddSW(SW); }
+                if (NW != null) { tile.AddNW(NW); }
             }
         }
 

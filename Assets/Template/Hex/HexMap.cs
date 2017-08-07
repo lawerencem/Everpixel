@@ -37,17 +37,17 @@ namespace Template.Hex
 
         public HexTile GetOppositeTile(HexTile source, HexTile target)
         {
-            if (this.GetN(source) == target)
+            if (this.GetN(source).Equals(target))
                 return this.GetN(target);
-            else if (this.GetNE(source) == target)
+            else if (this.GetNE(source).Equals(target))
                 return this.GetNE(target);
-            else if (this.GetSE(source) == target)
+            else if (this.GetSE(source).Equals(target))
                 return this.GetSE(target);
-            else if (this.GetS(source) == target)
+            else if (this.GetS(source).Equals(target))
                 return this.GetS(target);
-            else if (this.GetSW(source) == target)
+            else if (this.GetSW(source).Equals(target))
                 return this.GetSW(target);
-            else if (this.GetNW(source) == target)
+            else if (this.GetNW(source).Equals(target))
                 return this.GetNW(target);
             else
                 return null;
