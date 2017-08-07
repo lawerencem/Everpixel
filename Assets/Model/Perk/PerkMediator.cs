@@ -1,10 +1,10 @@
 ﻿using Assets.Model.Character;
-using Generics;
 using System.Collections.Generic;
+using Template.Other;
 
 namespace Assets.Model.Perk
 {
-    public class PerkMediator: AbstractSingleton<PerkMediator>
+    public class PerkMediator: ASingleton<PerkMediator>
     {
         public void SetCharacterPerks(MChar c, List<EPerk> perks)
         {

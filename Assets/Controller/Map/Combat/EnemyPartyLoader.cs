@@ -9,7 +9,7 @@
 
 //namespace Controller.Managers.Map
 //{
-//    public class EnemyPartyLoader : AbstractSingleton<EnemyPartyLoader>
+//    public class EnemyPartyLoader : ASingleton<EnemyPartyLoader>
 //    {
 //        private PartyBuilder _partyBuilder = new PartyBuilder();
 

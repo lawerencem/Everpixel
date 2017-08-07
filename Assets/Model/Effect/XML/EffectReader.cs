@@ -1,12 +1,12 @@
 ﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Effects.Will;
-using Generics;
-using Generics.Utilities;
 using System.Xml.Linq;
+using Template.Utility;
+using Template.XML;
 
 namespace Assets.Model.Effect
 {
-    public class EffectReader : GenericXMLReader
+    public class EffectReader : XMLReader
     {
         private EffectTable table = EffectTable.Instance;
 

@@ -3,7 +3,6 @@ using Assets.Model.Ability.Logic;
 using Assets.Model.Combat;
 using Assets.Model.Zone;
 using Controller.Map;
-using Generics.Utilities;
 using System.Collections.Generic;
 
 namespace Assets.Model.Ability

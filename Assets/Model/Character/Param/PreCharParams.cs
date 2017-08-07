@@ -1,5 +1,4 @@
-﻿using Assets.Generics;
-using Assets.Model.Ability.Enum;
+﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
 using Assets.Model.Class.Enum;
@@ -7,6 +6,7 @@ using Assets.Model.Culture;
 using Assets.Model.Mount;
 using Assets.Model.Perk;
 using System.Collections.Generic;
+using Template.Other;
 
 namespace Assets.Model.Characters.Params
 {

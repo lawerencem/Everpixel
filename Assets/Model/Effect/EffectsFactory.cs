@@ -1,9 +1,9 @@
 ﻿using Assets.Model.Effects.Will;
-using Generics;
+using Template.Other;
 
 namespace Assets.Model.Effect
 {
-    public class EffectFactory : AbstractSingleton<EffectFactory>
+    public class EffectFactory : ASingleton<EffectFactory>
     {
         public EffectFactory() { }
 

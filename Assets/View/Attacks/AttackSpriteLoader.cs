@@ -1,11 +1,11 @@
 ﻿using Assets.Model.Ability;
-using Generics;
-using Generics.Utilities;
+using Template.Other;
+using Template.Utility;
 using UnityEngine;
 
 namespace Assets.View.Characters
 {
-    public class AttackSpriteLoader : AbstractSingleton<AttackSpriteLoader>
+    public class AttackSpriteLoader : ASingleton<AttackSpriteLoader>
     {
         private const string ATTACK_PATH = "Sprites/Attacks/";
         private const string EXTENSION = "_Spritesheet";

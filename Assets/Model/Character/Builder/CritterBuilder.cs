@@ -5,13 +5,13 @@ using Assets.Model.Character.Table;
 using Assets.Model.Class.Builder;
 using Assets.Model.Perk;
 using Assets.Model.Weapon;
-using Generics;
 using System;
 using System.Collections.Generic;
+using Template.Builder;
 
 namespace Assets.Model.Character.Builder
 {
-    public class CritterBuilder : GenericBuilder<CharParams, MChar>
+    public class CritterBuilder : GBuilder<CharParams, MChar>
     {
         public override MChar Build()
         {

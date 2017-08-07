@@ -1,11 +1,11 @@
-﻿using Generics;
-using Generics.Utilities;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Xml.Linq;
+using Template.Utility;
+using Template.XML;
 
 namespace Assets.View.Barks
 {
-    public class BarkReader : GenericXMLReader
+    public class BarkReader : XMLReader
     {
         private BarkTable table = BarkTable.Instance;
 

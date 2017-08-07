@@ -4,16 +4,15 @@ using Assets.Model.Characters.Params;
 using Assets.Model.Equipment.Param;
 using Assets.Model.Equipment.Table;
 using Assets.Model.Mount;
-using Generics;
-using Generics.Utilities;
-using Model.Equipment;
 using Model.Equipment.Table;
 using System;
 using System.Collections.Generic;
+using Template.Builder;
+using Template.Utility;
 
 namespace Assets.Model.Character.Builder
 {
-    public class CharacterParamBuilder : AbstractBuilder<PreCharParams, CharParams>
+    public class CharacterParamBuilder : ABuilder<PreCharParams, CharParams>
     {
         private const string SINGULAR = "One";
 

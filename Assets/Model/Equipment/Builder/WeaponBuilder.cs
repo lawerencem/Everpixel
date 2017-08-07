@@ -1,11 +1,11 @@
 ﻿using Assets.Model.Equipment.Table;
 using Assets.Model.Equipment.Type;
 using Assets.Model.Weapon;
-using Generics;
+using Template.Builder;
 
 namespace Assets.Model.Equipment.Builder
 {
-    public class WeaponBuilder : GenericBuilder<string, MWeapon>
+    public class WeaponBuilder : GBuilder<string, MWeapon>
     {
         public override MWeapon Build(string arg)
         {

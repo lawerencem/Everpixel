@@ -1,8 +1,8 @@
-﻿using Generics;
+﻿using Template.Other;
 
 namespace Assets.Model.Perk
 {
-    public class PerkFactory : AbstractSingleton<PerkFactory>
+    public class PerkFactory : ASingleton<PerkFactory>
     {
         public PerkFactory() { }
 

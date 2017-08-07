@@ -1,10 +1,10 @@
 ﻿using Assets.Model.Biome.Enum;
-using Generics;
+using Template.Other;
 using UnityEngine;
 
 namespace Assets.View.Map
 {
-    public class MapBridge : AbstractSingleton<MapBridge>
+    public class MapBridge : ASingleton<MapBridge>
     {
         public Sprite[] GetBackgroundDecoSprites(EBiome b)
         {

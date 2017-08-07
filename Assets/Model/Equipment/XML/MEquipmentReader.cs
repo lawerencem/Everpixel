@@ -1,11 +1,11 @@
 ﻿using Assets.Model.Equipment.Enum;
-using Generics;
 using Model.Equipment.Table;
 using System.Collections.Generic;
+using Template.XML;
 
 namespace Assets.Model.Equipment.XML
 {
-    public class MEquipmentReader : GenericXMLReader
+    public class MEquipmentReader : XMLReader
     {
         public MEquipmentReader() { }
 

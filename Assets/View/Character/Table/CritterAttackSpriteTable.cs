@@ -1,9 +1,9 @@
-﻿using Generics;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Template.Other;
 
 namespace Assets.View.Character.Table
 {
-    public class CritterAttackSpriteTable : AbstractSingleton<CritterAttackSpriteTable>
+    public class CritterAttackSpriteTable : ASingleton<CritterAttackSpriteTable>
     {
         public Dictionary<string, int> Table;
         public CritterAttackSpriteTable()

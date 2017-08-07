@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using Assets.Generics;
+﻿using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
 using Assets.Model.Equipment.Type;
-using Assets.Model.Character.Enum;
+using System.Collections.Generic;
+using Template.Other;
 
 namespace Assets.Model.Perk.EquipmentSStat
 {

@@ -1,12 +1,11 @@
-﻿using Assets.Model.Ability;
-using Assets.Model.Ability.Enum;
-using Generics;
-using Generics.Utilities;
+﻿using Assets.Model.Ability.Enum;
+using Template.Other;
+using Template.Utility;
 using UnityEngine;
 
 namespace Assets.View.GUI
 {
-    public class GUISpriteLoader : AbstractSingleton<GUISpriteLoader>
+    public class GUISpriteLoader : ASingleton<GUISpriteLoader>
     {
         private const string EXTENSION = "_Spritesheet";
         private const string ICON_PATH = "Sprites/Icons/";

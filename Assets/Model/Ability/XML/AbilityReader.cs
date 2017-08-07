@@ -8,18 +8,18 @@ using Assets.Model.Ability.Music;
 using Assets.Model.Ability.Shapeshift;
 using Assets.Model.Injury;
 using Assets.Model.Weapon.Abilities;
-using Generics;
-using Generics.Utilities;
 using System.Xml.Linq;
+using Template.Utility;
+using Template.XML;
 
 namespace Assets.Models.Equipment.XML
 {
-    public class AbiltiyReader : GenericXMLReader
+    public class AbiltiyReader : XMLReader
     {
         private static AbiltiyReader _instance;
 
-        private string _weaponPath = "Assets/Model/Abilities/XML/WeaponAbilities.xml";
-        public AbiltiyReader() { this._path = "Assets/Model/Abilities/XML/Abilities.xml"; }
+        private string _weaponPath = "Assets/Model/Ability/XML/WeaponAbilities.xml";
+        public AbiltiyReader() { this._path = "Assets/Model/Ability/XML/Abilities.xml"; }
 
         public static AbiltiyReader Instance
         {

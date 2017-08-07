@@ -1,12 +1,12 @@
 ﻿using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
 using Assets.Model.Character.Table;
-using Generics;
-using Generics.Utilities;
+using Template.Other;
+using Template.Utility;
 
 namespace Assets.View.Character
 {
-    public class CharBridge : AbstractSingleton<CharBridge>
+    public class CharBridge : ASingleton<CharBridge>
     {
         private const int TORSO_OFFSET = 3;
 

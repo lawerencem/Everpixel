@@ -1,12 +1,11 @@
 ﻿using Assets.Model.Equipment.Builder;
 using Assets.Model.Equipment.Enum;
 using Assets.Model.Equipment.Type;
-using Generics;
-using Model.Equipment;
+using Template.Other;
 
 namespace Assets.Model.Equipment.Factory
 {
-    public class WeaponFactory : AbstractSingleton<WeaponFactory>
+    public class WeaponFactory : ASingleton<WeaponFactory>
     {
         private WeaponBuilder _weaponBuilder;
 

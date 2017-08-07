@@ -1,6 +1,4 @@
-﻿using Generics;
-
-namespace Assets.Model.Equipment.Enum
+﻿namespace Assets.Model.Equipment.Enum
 {
     public enum EWeaponStat
     {

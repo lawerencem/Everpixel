@@ -1,10 +1,10 @@
 ﻿using Assets.Model.Mount;
 using Assets.View.Character;
-using Generics;
+using Template.Other;
 
 namespace Assets.View.Mount
 {
-    public class MountBridge : AbstractSingleton<MountBridge>
+    public class MountBridge : ASingleton<MountBridge>
     {
         public MountBridge() { }
 

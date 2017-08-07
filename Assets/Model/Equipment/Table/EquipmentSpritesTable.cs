@@ -1,9 +1,9 @@
-﻿using Generics;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Template.Other;
 
 namespace Model.Equipment.Table
 {
-    public class EquipmentSpritesTable : AbstractSingleton<EquipmentSpritesTable>
+    public class EquipmentSpritesTable : ASingleton<EquipmentSpritesTable>
     {
         public Dictionary<string, List<int>> Table;
 

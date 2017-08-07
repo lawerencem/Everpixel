@@ -1,10 +1,10 @@
 ﻿using Assets.Model.Ability.Enum;
-using Generics;
 using System.Collections.Generic;
+using Template.Other;
 
 namespace Assets.Model.Ability
 {
-    public class AbilityFactory : AbstractSingleton<AbilityFactory>
+    public class AbilityFactory : ASingleton<AbilityFactory>
     {
         public AbilityFactory() { }
 

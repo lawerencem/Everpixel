@@ -1,10 +1,10 @@
 ﻿using Assets.Model.Equipment.Table;
 using Assets.Model.Equipment.Type;
-using Generics;
+using Template.Builder;
 
 namespace Assets.Model.Equipment.Builder
 {
-    public class HelmBuilder : GenericBuilder<string, MHelm>
+    public class HelmBuilder : GBuilder<string, MHelm>
     {
         public override MHelm Build(string arg)
         {

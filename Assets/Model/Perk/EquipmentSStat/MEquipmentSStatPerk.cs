@@ -1,6 +1,6 @@
-﻿using Assets.Generics;
-using Assets.Model.Character.Param;
+﻿using Assets.Model.Character.Param;
 using System.Collections.Generic;
+using Template.Other;
 
 namespace Assets.Model.Perk.EquipmentSStat
 {

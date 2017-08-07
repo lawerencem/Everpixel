@@ -1,13 +1,13 @@
-﻿using Assets.Generics;
-using Assets.Model.Character.Enum;
+﻿using Assets.Model.Character.Enum;
 using Assets.Model.OTE.DoT;
-using Generics;
-using Generics.Utilities;
 using System.Xml.Linq;
+using Template.Other;
+using Template.Utility;
+using Template.XML;
 
 namespace Assets.Model.Injury
 {
-    public class InjuryReader : GenericXMLReader
+    public class InjuryReader : XMLReader
     {
         private const string DOT = "DoT";
         private const string P_STAT = "EPrimaryStat";

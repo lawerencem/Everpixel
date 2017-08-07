@@ -1,6 +1,6 @@
 ﻿using Assets.Model.Abiltiy.Logic;
 using Assets.Model.Combat;
-using Generics.Utilities;
+using Template.Utility;
 
 namespace Assets.Model.Ability.Logic.Calculator
 {

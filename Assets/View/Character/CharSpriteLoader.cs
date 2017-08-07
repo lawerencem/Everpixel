@@ -3,13 +3,13 @@ using Assets.Model.Character.Param;
 using Assets.Model.Character.Table;
 using Assets.Model.Equipment.Param;
 using Assets.Model.Mount;
-using Generics;
-using Generics.Utilities;
+using Template.Other;
+using Template.Utility;
 using UnityEngine;
 
 namespace Assets.View.Character
 {
-    public class CharSpriteLoader : AbstractSingleton<CharSpriteLoader>
+    public class CharSpriteLoader : ASingleton<CharSpriteLoader>
     {
         private const string CHARACTER_PATH = "Sprites/Characters/";
         private const string CRITTER_PATH = "Sprites/Critters/";

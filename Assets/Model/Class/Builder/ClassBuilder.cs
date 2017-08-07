@@ -1,12 +1,12 @@
 ﻿using Assets.Model.Class.Enum;
 using Assets.Model.Class.Table;
-using Generics;
 using System;
 using System.Collections.Generic;
+using Template.Builder;
 
 namespace Assets.Model.Class.Builder
 {
-    public class ClassBuilder : AbstractBuilder<EClass, MClass>
+    public class ClassBuilder : ABuilder<EClass, MClass>
     {
         public override MClass Build()
         {

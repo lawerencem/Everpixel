@@ -1,13 +1,13 @@
 ﻿using Assets.Model.Character.Builder;
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
-using Generics;
 using System;
 using System.Collections.Generic;
+using Template.Other;
 
 namespace Assets.Model.Character.Factory
 {
-    public class CharacterFactory : AbstractSingleton<CharacterFactory>
+    public class CharacterFactory : ASingleton<CharacterFactory>
     {
         private CritterBuilder _critterBuilder;
         private HumanoidBuilder _humanoidBuilder;

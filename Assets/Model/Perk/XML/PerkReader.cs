@@ -1,11 +1,11 @@
 ﻿using Assets.Model.Ability.Enum;
-using Generics;
-using Generics.Utilities;
 using System.Xml.Linq;
+using Template.Utility;
+using Template.XML;
 
 namespace Assets.Model.Perk.XML
 {
-    public class PerkReader : GenericXMLReader
+    public class PerkReader : XMLReader
     {
         private static PerkReader _instance;
 

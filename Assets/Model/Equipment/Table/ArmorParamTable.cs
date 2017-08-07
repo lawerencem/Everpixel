@@ -1,10 +1,10 @@
 ﻿using Assets.Model.Equipment.Param;
-using Generics;
 using System.Collections.Generic;
+using Template.Other;
 
 namespace Assets.Model.Equipment.Table
 {
-    public class ArmorParamTable : AbstractSingleton<ArmorParamTable>
+    public class ArmorParamTable : ASingleton<ArmorParamTable>
     {
         public Dictionary<string, ArmorParams> Table;
 

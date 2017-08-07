@@ -8,14 +8,15 @@ using Assets.Model.Party.XML;
 using Assets.Model.Perk.XML;
 using Assets.Models.Equipment.XML;
 using Assets.View.Barks;
-using Generics;
 using System.Collections.Generic;
+using Template.Other;
+using Template.XML;
 
 namespace Assets.Controller.Manager
 {
-    public class LoaderManager : AbstractSingleton<LoaderManager>
+    public class LoaderManager : ASingleton<LoaderManager>
     {
-        private List<GenericXMLReader> _readers = new List<GenericXMLReader>();
+        private List<XMLReader> _readers = new List<XMLReader>();
 
         public LoaderManager()
         {

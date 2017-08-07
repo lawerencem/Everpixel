@@ -6,7 +6,7 @@
 
 //namespace Assets.View.Fatality
 //{
-//    public class FatalityFactory : AbstractSingleton<FatalityFactory>
+//    public class FatalityFactory : ASingleton<FatalityFactory>
 //    {
 //        public MFatality GetFatality(CMapGUIControllerHit parent, DisplayActionEvent e)
 //        {

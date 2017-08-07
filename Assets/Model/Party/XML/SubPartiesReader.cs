@@ -1,15 +1,15 @@
-﻿using Assets.Generics;
-using Assets.Model.Party.Enum;
+﻿using Assets.Model.Party.Enum;
 using Assets.Model.Party.Param;
 using Assets.Model.Party.Table;
-using Generics;
-using Generics.Utilities;
 using System.Collections.Generic;
 using System.Xml.Linq;
+using Template.Other;
+using Template.Utility;
+using Template.XML;
 
 namespace Assets.Model.Party.XML
 {
-    public class SubPartiesReader : GenericXMLReader
+    public class SubPartiesReader : XMLReader
     {
         private static SubPartiesReader _instance;
         public static SubPartiesReader Instance

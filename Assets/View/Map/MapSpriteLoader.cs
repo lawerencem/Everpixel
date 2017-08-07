@@ -1,13 +1,13 @@
 ﻿using Assets.Model.Biome.Enum;
-using Generics;
-using Generics.Utilities;
 using System.Collections.Generic;
+using Template.Other;
+using Template.Utility;
 using UnityEngine;
 
 namespace Assets.View.Map
 {
     // TODO: Clean up
-    public class MapSpriteLoader : AbstractSingleton<MapSpriteLoader>
+    public class MapSpriteLoader : ASingleton<MapSpriteLoader>
     {
         private const int POTENTIAL_ATTACK_SPRITE_INDEX = 1;
         private const int HOSTILE_HOVER_SPRITE_INDEX = 2;

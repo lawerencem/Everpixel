@@ -1,10 +1,10 @@
-﻿using Generics;
-using Generics.Utilities;
-using System.Xml.Linq;
+﻿using System.Xml.Linq;
+using Template.Utility;
+using Template.XML;
 
 namespace Assets.Model.Mount.XML
 {
-    public class MountReader : GenericXMLReader
+    public class MountReader : XMLReader
     {
         private static MountReader _instance;
         public static MountReader Instance

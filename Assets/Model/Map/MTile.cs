@@ -1,4 +1,4 @@
-﻿using Generics.Hex;
+﻿using Template.Hex;
 
 namespace Assets.Model.Map
 {

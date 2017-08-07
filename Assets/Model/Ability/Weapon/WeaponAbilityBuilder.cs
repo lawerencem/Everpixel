@@ -1,12 +1,12 @@
-﻿using Generics;
+﻿using Assets.Model.Ability;
+using Assets.Model.Ability.Enum;
 using System;
 using System.Collections.Generic;
-using Assets.Model.Ability.Enum;
-using Assets.Model.Ability;
+using Template.Builder;
 
 namespace Model.Abilities
 {
-    public class WeaponAbilityBuilder : AbstractBuilder<EAbility, MAbility>
+    public class WeaponAbilityBuilder : ABuilder<EAbility, MAbility>
     {
         public override MAbility Build()
         {

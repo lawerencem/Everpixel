@@ -1,14 +1,12 @@
-﻿using Assets.Generics;
-using Assets.Model.Party.Param;
+﻿using Assets.Model.Party.Param;
 using Assets.Model.Party.Table;
-using Generics;
-using Generics.Utilities;
-using System.Collections.Generic;
 using System.Xml.Linq;
+using Template.Other;
+using Template.XML;
 
 namespace Assets.Model.Party.XML
 {
-    public class PartiesReader : GenericXMLReader
+    public class PartiesReader : XMLReader
     {
         private static PartiesReader _instance;
         public static PartiesReader Instance

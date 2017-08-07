@@ -1,11 +1,11 @@
 ﻿using Assets.Model.Equipment.Param;
 using Assets.View.Character;
-using Generics;
-using Generics.Utilities;
+using Template.Other;
+using Template.Utility;
 
 namespace Assets.View.Equipment
 {
-    public class EquipmentBridge : AbstractSingleton<EquipmentBridge>
+    public class EquipmentBridge : ASingleton<EquipmentBridge>
     {
         public EquipmentBridge() { }
 

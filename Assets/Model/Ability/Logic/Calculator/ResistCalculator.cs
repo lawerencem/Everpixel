@@ -1,7 +1,4 @@
-﻿using Assets.Model.Ability.Enum;
-using Assets.Model.Abiltiy.Logic;
-using Assets.Model.Combat;
-using Generics.Utilities;
+﻿using Assets.Model.Combat;
 
 namespace Assets.Model.Ability.Logic.Calculator
 {

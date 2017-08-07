@@ -1,10 +1,10 @@
-﻿using Generics;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Template.Other;
 
 namespace Assets.Model.Ability
 {
-    public class AbilityTable : AbstractSingleton<AbilityTable>
+    public class AbilityTable : ASingleton<AbilityTable>
     {
         public Dictionary<Object, MAbility> Table;
         public AbilityTable()

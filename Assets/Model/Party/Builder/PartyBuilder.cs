@@ -1,13 +1,13 @@
-﻿using Assets.Generics;
-using Assets.Model.Character.Param;
+﻿using Assets.Model.Character.Param;
 using Assets.Model.Party.Table;
-using Generics;
 using System;
 using System.Collections.Generic;
+using Template.Builder;
+using Template.Other;
 
 namespace Assets.Model.Party.Builder
 {
-    public class PartyBuilder : AbstractBuilder<Pair<string, int>, List<CharParams>>
+    public class PartyBuilder : ABuilder<Pair<string, int>, List<CharParams>>
     {
         private SubPartyBuilder _subPartyBuilder = new SubPartyBuilder();
 

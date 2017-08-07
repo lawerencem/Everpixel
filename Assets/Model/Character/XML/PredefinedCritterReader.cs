@@ -5,13 +5,13 @@ using Assets.Model.Characters.Params;
 using Assets.Model.Class.Enum;
 using Assets.Model.Culture;
 using Assets.View.Character.Table;
-using Generics;
-using Generics.Utilities;
 using System.Xml.Linq;
+using Template.Utility;
+using Template.XML;
 
 namespace Assets.Model.Character.XML
 {
-    public class PredefinedCritterReader : GenericXMLReader
+    public class PredefinedCritterReader : XMLReader
     {
         private PredefinedCharTable table = PredefinedCharTable.Instance;
 

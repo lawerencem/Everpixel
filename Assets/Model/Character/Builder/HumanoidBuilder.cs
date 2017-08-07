@@ -6,13 +6,13 @@ using Assets.Model.Class.Builder;
 using Assets.Model.Equipment.Factory;
 using Assets.Model.Perk;
 using Assets.Model.Weapon;
-using Generics;
 using System;
 using System.Collections.Generic;
+using Template.Builder;
 
 namespace Assets.Model.Character.Builder
 {
-    public class HumanoidBuilder : GenericBuilder<CharParams, MChar>
+    public class HumanoidBuilder : GBuilder<CharParams, MChar>
     {
         public override MChar Build()
         {

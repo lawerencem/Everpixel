@@ -5,14 +5,14 @@ using Assets.Model.Characters.Params;
 using Assets.Model.Class.Enum;
 using Assets.Model.Culture;
 using Assets.Model.Mount;
-using Generics;
-using Generics.Utilities;
 using System.Collections.Generic;
 using System.Xml.Linq;
+using Template.Utility;
+using Template.XML;
 
 namespace Assets.Model.Character.XML
 {
-    public class PredefinedCharReader : GenericXMLReader
+    public class PredefinedCharReader : XMLReader
     {
         private PredefinedCharTable table = PredefinedCharTable.Instance;
 

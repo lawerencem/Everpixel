@@ -2,13 +2,13 @@
 using Assets.Model.Character.Param;
 using Assets.Model.Class.Enum;
 using Assets.Model.Class.Table;
-using Generics;
-using Generics.Utilities;
 using System.Xml.Linq;
+using Template.Utility;
+using Template.XML;
 
 namespace Assets.Model.Class.XML
 {
-    public class ClassReader : GenericXMLReader
+    public class ClassReader : XMLReader
     {
         private const int STAT_INDEX = 0;
         private const int VALUE_INDEX = 1;

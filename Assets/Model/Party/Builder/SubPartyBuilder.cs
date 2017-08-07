@@ -2,14 +2,14 @@
 using Assets.Model.Character.Param;
 using Assets.Model.Character.Table;
 using Assets.Model.Party.Table;
-using Generics;
-using Generics.Utilities;
 using System;
 using System.Collections.Generic;
+using Template.Builder;
+using Template.Utility;
 
 namespace Assets.Model.Party.Builder
 {
-    public class SubPartyBuilder : AbstractBuilder<string, List<CharParams>>
+    public class SubPartyBuilder : ABuilder<string, List<CharParams>>
     {
         public override List<CharParams> Build()
         {

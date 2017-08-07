@@ -1,10 +1,10 @@
 ﻿using Assets.Model.Party.Param;
-using Generics;
 using System.Collections.Generic;
+using Template.Other;
 
 namespace Assets.Model.Party.Table
 {
-    public class PartyTable : AbstractSingleton<PartyTable>
+    public class PartyTable : ASingleton<PartyTable>
     {
         public Dictionary<string, PartyParams> Table;
 

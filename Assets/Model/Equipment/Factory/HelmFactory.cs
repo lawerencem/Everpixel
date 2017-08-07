@@ -1,11 +1,11 @@
 ﻿using Assets.Model.Equipment.Builder;
 using Assets.Model.Equipment.Enum;
 using Assets.Model.Equipment.Type;
-using Generics;
+using Template.Other;
 
 namespace Assets.Model.Equipment.Factory
 {
-    public class HelmFactory : AbstractSingleton<HelmFactory>
+    public class HelmFactory : ASingleton<HelmFactory>
     {
         private HelmBuilder _helmBuilder;
 

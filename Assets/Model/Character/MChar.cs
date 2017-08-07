@@ -1,5 +1,4 @@
 ﻿using Assets.Controller.Character;
-using Assets.Generics;
 using Assets.Model.Ability;
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
@@ -11,6 +10,7 @@ using Assets.Model.Injury;
 using Assets.Model.OTE.DoT;
 using Assets.Model.Shield;
 using System.Collections.Generic;
+using Template.Other;
 
 namespace Assets.Model.Character
 {

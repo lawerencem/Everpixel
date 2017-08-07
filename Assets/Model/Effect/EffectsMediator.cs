@@ -1,8 +1,8 @@
-﻿using Generics;
+﻿using Template.Other;
 
 namespace Assets.Model.Effect
 {
-    public class EffectMediator : AbstractSingleton<EffectMediator>
+    public class EffectMediator : ASingleton<EffectMediator>
     {
         public EffectMediator() { }
     }

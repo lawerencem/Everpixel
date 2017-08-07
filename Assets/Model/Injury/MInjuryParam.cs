@@ -1,8 +1,8 @@
-﻿using Assets.Generics;
-using Assets.Model.Character.Enum;
+﻿using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
 using Assets.Model.OTE.DoT;
 using System.Collections.Generic;
+using Template.Other;
 
 namespace Assets.Model.Injury
 {

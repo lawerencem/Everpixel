@@ -1,16 +1,13 @@
 ﻿using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param.Race;
 using Assets.Model.Character.Table;
-using Assets.Model.Characters.Params;
-using Generics;
-using Generics.Utilities;
-using System;
-using System.Xml;
 using System.Xml.Linq;
+using Template.Utility;
+using Template.XML;
 
 namespace Assets.Model.Character.XML
 {
-    public class RaceParamsReader : GenericXMLReader
+    public class RaceParamsReader : XMLReader
     {
         private static RaceParamsReader _instance;
         public static RaceParamsReader Instance
