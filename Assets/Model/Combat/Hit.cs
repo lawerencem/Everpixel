@@ -3,15 +3,17 @@ using Assets.Model.Ability;
 using Assets.Model.Effect;
 using Controller.Map;
 using System.Collections.Generic;
+using Template.Callback;
+using System;
+using Assets.Model.Event.Combat;
 
 namespace Assets.Model.Combat
 {
-    public class Hit
+    public class Hit : ICallback
     {
-        private Callback _callBack;
-        public delegate void Callback();
-
+        private List<Callback> _callbacks;
         private List<MEffect> _effects;
+        private List<GCombatEv> _events;
 
         public MAbility Ability { get; set; }
         public ChancePrediction Chances { get; set; }
@@ -27,6 +29,7 @@ namespace Assets.Model.Combat
 
         public Hit(AbilityArgContainer arg)
         {
+            this._callbacks = new List<Callback>();
             //this._effects = new List<Effect>();
 
             //this.Chances = new ChancePrediction();
@@ -41,17 +44,35 @@ namespace Assets.Model.Combat
             //this.Flags = new FHit();
         }
 
-        public void Done()
-        {
-            this.Ability.TryApplyInjury(this);
+        //public void Done()
+        //{
+        //    this.Ability.TryApplyInjury(this);
 
-            if (this._callBack != null)
-            {
-                this.IsFinished = true;
-                this._callBack();
-            }
+        //    if (this._callBack != null)
+        //    {
+        //        this.IsFinished = true;
+        //        this._callBack();
+        //    }
+        //}
+
+        public void AddEffect(MEffect e)
+        {
+            this._effects.Add(e);
         }
 
-        public void AddEffect(MEffect e) { this._effects.Add(e); }
+        public void AddCallback(Callback callback)
+        {
+            this._callbacks.Add(callback);
+        }
+
+        public void Callback()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetCallback(Callback callback)
+        {
+            this._callbacks = new List<Callback>() { callback };
+        }
     }
 }
