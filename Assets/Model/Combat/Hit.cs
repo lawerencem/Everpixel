@@ -14,10 +14,10 @@ namespace Assets.Model.Combat
         private List<Callback> _callbacks;
         private List<MEffect> _effects;
         private List<GCombatEv> _events;
+        private FHit _flags;
 
         public MAbility Ability { get; set; }
         public ChancePrediction Chances { get; set; }
-        public FHit Flags { get; set; }
         public bool FXProcessed { get; set; }
         public HitModData ModData { get; set; }
         public bool IsFinished { get; set; }
@@ -27,9 +27,14 @@ namespace Assets.Model.Combat
         public CharController Target { get; set; }
         public TileController TargetTile { get; set; }
 
+        public FHit GetFlags() { return this._flags; }
+
         public Hit(AbilityArgContainer arg)
         {
             this._callbacks = new List<Callback>();
+            this._effects = new List<MEffect>();
+            this._events = new List<GCombatEv>();
+            this._flags = new FHit();
             //this._effects = new List<Effect>();
 
             //this.Chances = new ChancePrediction();
@@ -44,20 +49,23 @@ namespace Assets.Model.Combat
             //this.Flags = new FHit();
         }
 
-        //public void Done()
-        //{
-        //    this.Ability.TryApplyInjury(this);
-
-        //    if (this._callBack != null)
-        //    {
-        //        this.IsFinished = true;
-        //        this._callBack();
-        //    }
-        //}
+        public void Done()
+        {
+            this.IsFinished = true;
+            foreach (var callback in this._callbacks)
+                callback();
+        }
 
         public void AddEffect(MEffect e)
         {
             this._effects.Add(e);
+        }
+
+        public void AddEvent(GCombatEv e)
+        {
+            e.AddCallback(this.Callback);
+            this._events.Add(e);
+            this._events.Sort((x, y) => x.Priority - y.Priority);
         }
 
         public void AddCallback(Callback callback)
