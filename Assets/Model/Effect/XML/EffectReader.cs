@@ -23,7 +23,7 @@ namespace Assets.Model.Effect
 
         public EffectReader()
         {
-            this._path = "Assets/Model/Effects/XML/Effects.xml";
+            this._path = "Assets/Model/Effect/XML/Effects.xml";
         }
 
         public override void ReadFromFile()

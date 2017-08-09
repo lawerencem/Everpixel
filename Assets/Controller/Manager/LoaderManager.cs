@@ -20,19 +20,19 @@ namespace Assets.Controller.Manager
 
         public LoaderManager()
         {
-            this._readers.Add(AbiltiyReader.Instance);
+            //this._readers.Add(AbilityReader.Instance);
             this._readers.Add(ArmorReader.Instance);
             this._readers.Add(BarkReader.Instance);
             this._readers.Add(ClassReader.Instance);
             this._readers.Add(EffectReader.Instance);
             this._readers.Add(InjuryReader.Instance);
-            this._readers.Add(PartiesReader.Instance);
+            this._readers.Add(PartyReader.Instance);
             this._readers.Add(PredefinedCharReader.Instance);
             this._readers.Add(PredefinedCritterReader.Instance);
             this._readers.Add(MountReader.Instance);
-            this._readers.Add(PerkReader.Instance);
-            this._readers.Add(RaceParamsReader.Instance);
-            this._readers.Add(SubPartiesReader.Instance);
+            //this._readers.Add(PerkReader.Instance);
+            this._readers.Add(RaceReader.Instance);
+            this._readers.Add(SubPartyReader.Instance);
             this._readers.Add(WeaponReader.Instance);
 
             foreach (var reader in this._readers)

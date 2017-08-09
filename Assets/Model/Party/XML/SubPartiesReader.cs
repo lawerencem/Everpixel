@@ -9,22 +9,22 @@ using Template.XML;
 
 namespace Assets.Model.Party.XML
 {
-    public class SubPartiesReader : XMLReader
+    public class SubPartyReader : XMLReader
     {
-        private static SubPartiesReader _instance;
-        public static SubPartiesReader Instance
+        private static SubPartyReader _instance;
+        public static SubPartyReader Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new SubPartiesReader();
+                    _instance = new SubPartyReader();
                 return _instance;
             }
         }
 
-        public SubPartiesReader()
+        public SubPartyReader()
         {
-            this._path = "Assets/Model/Parties/XML/SubParties.xml";
+            this._path = "Assets/Model/Party/XML/SubParties.xml";
         }
 
         public override void ReadFromFile()

@@ -29,7 +29,7 @@ namespace Assets.Model.Character.XML
 
         public PredefinedCharReader()
         {
-            this._path = "Assets/Model/Characters/XML/PredefinedCharacters.xml";
+            this._path = "Assets/Model/Character/XML/PredefinedCharacters.xml";
         }
 
         public override void ReadFromFile()

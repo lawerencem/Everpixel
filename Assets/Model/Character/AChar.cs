@@ -118,12 +118,12 @@ namespace Assets.Model.Character
         public int GetTileTraversalAPCost(MTile tile)
         {
             // TODO: Work on this for height and various talents
-            return tile.Cost * tile.Height;
+            return tile.GetCost();
         }
 
         public int GetTileTraversalStaminaCost(MTile tile)
         {
-            return tile.Cost * tile.Height;
+            return tile.GetCost();
         }
 
         public void RemoveArmor()

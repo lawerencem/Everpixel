@@ -27,8 +27,11 @@ namespace Assets.Model.Map
 
         public void AddTile(MTile t)
         {
+            if (this.Tiles.Count > 0)
+                this.Score += (this.Tiles[this.Tiles.Count - 1].GetTravelCost(t));
+            else
+                this.Score += t.GetCost();
             this.Tiles.Add(t);
-            this.Score += (t.Cost * t.Height);
         }
 
         public Path DeepCopy()

@@ -28,7 +28,7 @@ namespace Assets.Model.Injury
 
         public InjuryReader()
         {
-            this._path = "Assets/Model/Injuries/Injuries.xml";
+            this._path = "Assets/Model/Injury/Injuries.xml";
         }
 
         public override void ReadFromFile()

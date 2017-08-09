@@ -28,7 +28,7 @@ namespace Assets.Model.Character.XML
 
         public PredefinedCritterReader()
         {
-            this._path = "Assets/Model/Characters/XML/PredefinedCritters.xml";
+            this._path = "Assets/Model/Character/XML/PredefinedCritters.xml";
         }
 
         public override void ReadFromFile()

@@ -16,7 +16,7 @@ namespace Assets.Model.Class.XML
         private static ClassReader _instance;
         public ClassReader()
         {
-            this._path = "Assets/Model/Classes/XML/Classes.xml";
+            this._path = "Assets/Model/Class/XML/Classes.xml";
             this._table = ClassParamTable.Instance;
         }
 

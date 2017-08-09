@@ -6,22 +6,22 @@ using Template.XML;
 
 namespace Assets.Model.Party.XML
 {
-    public class PartiesReader : XMLReader
+    public class PartyReader : XMLReader
     {
-        private static PartiesReader _instance;
-        public static PartiesReader Instance
+        private static PartyReader _instance;
+        public static PartyReader Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new PartiesReader();
+                    _instance = new PartyReader();
                 return _instance;
             }
         }
 
-        public PartiesReader()
+        public PartyReader()
         {
-            this._path = "Assets/Model/Parties/XML/Parties.xml";
+            this._path = "Assets/Model/Party/XML/Parties.xml";
         }
 
         public override void ReadFromFile()

@@ -14,19 +14,19 @@ using Template.XML;
 
 namespace Assets.Models.Equipment.XML
 {
-    public class AbiltiyReader : XMLReader
+    public class AbilityReader : XMLReader
     {
-        private static AbiltiyReader _instance;
+        private static AbilityReader _instance;
 
         private string _weaponPath = "Assets/Model/Ability/XML/WeaponAbilities.xml";
-        public AbiltiyReader() { this._path = "Assets/Model/Ability/XML/Abilities.xml"; }
+        public AbilityReader() { this._path = "Assets/Model/Ability/XML/Abilities.xml"; }
 
-        public static AbiltiyReader Instance
+        public static AbilityReader Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new AbiltiyReader();
+                    _instance = new AbilityReader();
                 return _instance;
             }
         }

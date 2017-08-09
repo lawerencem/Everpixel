@@ -7,22 +7,22 @@ using Template.XML;
 
 namespace Assets.Model.Character.XML
 {
-    public class RaceParamsReader : XMLReader
+    public class RaceReader : XMLReader
     {
-        private static RaceParamsReader _instance;
-        public static RaceParamsReader Instance
+        private static RaceReader _instance;
+        public static RaceReader Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new RaceParamsReader();
+                    _instance = new RaceReader();
                 return _instance;
             }
         }
 
-        public RaceParamsReader()
+        public RaceReader()
         {
-            this._path = "Assets/Model/Characters/XML/RaceParams.xml";
+            this._path = "Assets/Model/Character/XML/RaceParams.xml";
         }
 
         public override void ReadFromFile()

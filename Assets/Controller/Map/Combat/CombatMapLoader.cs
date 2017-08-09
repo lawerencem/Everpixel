@@ -1,32 +1,12 @@
-﻿//using Model.Biomes;
-//using Model.Characters;
+﻿//using Controller.Map;
 //using System.Collections.Generic;
-//using UnityEngine;
-//using View.Biomes;
-//using View.Builders;
-//using View.Equipment;
-//using Controller.Characters;
-//using Model.Events.Combat;
-//using Model.Map;
-//using Controller.Map;
-//using View.Map;
-//using Generics.Hex;
-//using Assets.Generics;
-//using View.Scripts;
-//using Assets.View;
 
-//namespace Controller.Managers.Map
+//namespace Assets.Controller.Map.Combat
 //{
 //    public class CombatMapLoader
 //    {
-//        private const float MOUNT_X_OFFSET = 0.05f;
-//        private const float MOUNT_Y_OFFSET = 0.15f;
-//        private const float HELM_OFFSET = 0.15f;
-//        private const float WEAPON_OFFSET = 0.09f;
-
 //        private const int ROWS = 12;
 //        private const int COLS = 12;
-//        private const float OFFSET = 0.63f;
 
 //        private List<TileController> _emptyTiles = new List<TileController>();
 //        private CombatMap _map;
@@ -118,8 +98,8 @@
 //        }
 
 //        private void BuildAndLayoutCharacter(
-//            CharacterParams cParams, 
-//            ref List<CharController> controllers, 
+//            CharacterParams cParams,
+//            ref List<CharController> controllers,
 //            bool lParty = false)
 //        {
 //            var builder = new CharacterViewBuilder();

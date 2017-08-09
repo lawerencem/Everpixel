@@ -19,7 +19,7 @@ namespace Assets.Model.Mount.XML
 
         public MountReader()
         {
-            this._path = "Assets/Model/Mounts/XML/Mounts.xml";
+            this._path = "Assets/Model/Mount/XML/Mounts.xml";
         }
 
         public override void ReadFromFile()
