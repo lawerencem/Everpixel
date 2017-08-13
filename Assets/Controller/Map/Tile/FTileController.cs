@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Controller.Map
+namespace Assets.Controller.Map.Tile
 {
     public class FTileController
     {

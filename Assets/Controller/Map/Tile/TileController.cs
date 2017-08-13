@@ -1,21 +1,17 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Map;
 using Assets.Model.Zone;
+using Assets.View;
 using Assets.View.Map;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Controller.Map
+namespace Assets.Controller.Map.Tile
 {
-    public class TileController : MonoBehaviour
+    public class TileController
     {
         private List<TileController> _adjacent;
-        private BoxCollider2D _collider;
         private object _current;
-        private double _clickDelta = 0.5;
-        private DateTime _clickTime;
-        private bool _doubleClick = false;
         private FTileController _flags;
         private GameObject _handle;
         private MTile _model;
@@ -37,21 +33,17 @@ namespace Controller.Map
 
         public void RemoveZone(AZone zone) { this._zones.Remove(zone); }
 
-        public void SetHandle(GameObject o) { this._handle = o; }
+        public void SetCurrent(object o) { this._current = o; }
 
         public TileController(MTile tile)
         {
             this._adjacent = new List<TileController>();
-            this._nonCurrent = new List<CharController>();
             this._flags = new FTileController();
+            this._handle = new GameObject(ViewParams.TILE);
+            this._handle.transform.position = tile.Center;
+            this._nonCurrent = new List<CharController>();
             this._zones = new List<AZone>();
             this.SetModel(tile);
-        }
-
-        public void Update()
-        {
-            if (_doubleClick && (DateTime.Now > (this._clickTime.AddSeconds(this._clickDelta))))
-                this._doubleClick = false;
         }
 
         public TileController GetNearestEmptyTile()
@@ -80,45 +72,6 @@ namespace Controller.Map
                 }
             }
             return null;
-        }
-
-        public void Init(GameObject o)
-        {
-            this.SetHandle(o);
-            this._collider = this.Handle.AddComponent<BoxCollider2D>();
-        }
-
-        public void OnMouseDown()
-        {
-            if (FTileController.HasFlag(this.Flags.CurFlags, FTileController.Flags.AwaitingAction))
-            {
-                //var perform = new EvPerformAction(CombatEventManager.Instance, this, CombatEventManager.Instance.ActionPerformedCallback);
-            }
-            else if (this.Current == null)
-            {
-                //var e = new HexSelectedForMoveEvent(this, CombatEventManager.Instance);
-
-                if (this._doubleClick)
-                {
-                    //var doubleClick = new EvTileDoubleClick(CombatEventManager.Instance, this);
-                }
-                else
-                {
-                    this._clickTime = System.DateTime.Now;
-                    this._doubleClick = true;
-                }
-            }
-        }
-
-        public void OnMouseEnter()
-        {
-            //this.HandleHover();
-            //this.HandleAoE();
-        }
-
-        public void OnMouseExit()
-        {
-            //CMapGUIController.Instance.SetHoverModalInactive();
         }
 
         public void SetModel(MTile t)
@@ -155,58 +108,5 @@ namespace Controller.Map
         //            }
         //            var hover = new EvTileHover(CombatEventManager.Instance, this, aoe);
         //        }
-
-        //        private void HandleHover()
-        //        {
-        //            this.HandleHoverTargetStats();
-        //            this.HandleHoverTargetDamage();
-        //        }
-
-        //        private void HandleHoverTargetDamage()
-        //        {
-        //            if (this.Model.Current != null &&
-        //                this.Model.Current.GetType() == typeof(CharController) &&
-        //                CombatEventManager.Instance.GetCurrentAbility() != null)
-        //            {
-        //                var predict = new EvPredictAction(CombatEventManager.Instance);
-
-        //                predict.Container.Ability = CombatEventManager.Instance.GetCurrentAbility();
-        //                predict.Container.Source = CombatEventManager.Instance.GetCurrentCharacter();
-        //                predict.Container.Target = this;
-        //                var targets = predict.Container.Ability.GetAoETiles(
-        //                    predict.Container.Source.CurrentTile, 
-        //                    predict.Container.Target, 
-        //                    predict.Container.Ability.Range);
-
-        //                foreach (var target in targets)
-        //                {
-        //                    var hit = new Hit(predict.Container.Source, predict.Container.Target, predict.Container.Ability);
-        //                    predict.Container.Hits.Add(hit);
-        //                }
-
-        //                predict.Process();
-        //                CMapGUIController.Instance.SetHoverModalDamageValues(predict);
-        //            }
-        //            else
-        //                CMapGUIController.Instance.SetDmgModalInactive();
-        //        }
-
-        //        private void HandleHoverTargetStats()
-        //        {
-        //            if (this.Model.Current != null && this.Model.Current.GetType() == typeof(CharController))
-        //            {
-        //                var fov = Camera.main.fieldOfView;
-        //                var character = this.Model.Current as CharController;
-        //                var position = character.Handle.transform.position;
-        //                position.x += (float)(fov * 0.025);
-        //                position.y += (float)(fov * 0.025);
-        //                CMapGUIController.Instance.SetHoverModalHeaderText(character.View.Name);
-        //                CMapGUIController.Instance.SetHoverModalLocation(position);
-        //                var controller = this.Model.Current as CharController;
-        //                CMapGUIController.Instance.SetHoverModalStatValues(controller.Model);
-        //            }
-        //        }
-        //    }
-        //}
     }
 }
