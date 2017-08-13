@@ -1,33 +1,15 @@
-﻿namespace Assets.View
+﻿using UnityEngine;
+
+namespace Assets.View
 {
     public class ViewParams
     {
-        public static readonly string CHAR_ARMOR = "CharArmor";
-        public static readonly string CHAR_HEAD_DECO_1 = "CharHeadDeco1";
-        public static readonly string CHAR_HEAD_DECO_2 = "CharHeadDeco2";
-        public static readonly string CHAR_TORSO_DECO_1 = "CharTorsoDeco1";
-        public static readonly string CHAR_TORSO_DECO_2 = "CharTorsoDeco2";
-        public static readonly string CHAR_FACE = "CharFace";
-        public static readonly string CHAR_HEAD = "CharHead";
-        public static readonly string CHAR_HELM = "CharHelm";
-        public static readonly string CHAR_MAIN = "CharMain";
-        public static readonly string CHAR_L_WEAPON = "CharLWeapon";
-        public static readonly string CHAR_MOUNT = "CharMount";
-        public static readonly string CHAR_R_WEAPON = "CharRWeapon";
-        public static readonly string CHAR_TORSO = "CharTorso";
-
-        public static readonly string DEAD_ARMOR = "DeadArmor";
-        public static readonly string DEAD_HEAD_DECO_1 = "DeadHeadDeco1";
-        public static readonly string DEAD_HEAD_DECO_2 = "DeadHeadDeco2";
-        public static readonly string DEAD_TORSO_DECO_1 = "DeadTorsoDeco1";
-        public static readonly string DEAD_TORSO_DECO_2 = "DeadTorsoDeco2";
-        public static readonly string DEAD_FACE = "DeadFace";
-        public static readonly string DEAD_HEAD = "DeadHead";
-        public static readonly string DEAD_HELM = "DeadHelm";
-        public static readonly string DEAD_MAIN = "DeadMain";
-        public static readonly string DEAD_L_WEAPON = "DeadLWeapon";
-        public static readonly string DEAD_MOUNT = "DeadMount";
-        public static readonly string DEAD_R_WEAPON = "DeadRWeapon";
-        public static readonly string DEAD_TORSO = "DeadTorso";
+        public static readonly Vector3 MAP_CENTER = new Vector3(-8, 5, 0);
+        public static readonly float MOUNT_X_OFFSET = 0.05f;
+        public static readonly float MOUNT_Y_OFFSET = 0.15f;
+        public static readonly float HELM_OFFSET = 0.15f;
+        public static readonly float OFFSET = 0.63f;
+        public static readonly float WEAPON_OFFSET = 0.09f;
+        public static readonly string TILE = "Tile";
     }
 }
