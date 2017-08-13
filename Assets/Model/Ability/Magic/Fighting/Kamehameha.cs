@@ -1,6 +1,6 @@
-﻿using Assets.Model.Ability.Enum;
+﻿using Assets.Controller.Map.Tile;
+using Assets.Model.Ability.Enum;
 using Assets.Model.Combat;
-using Controller.Map;
 using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Magic.Fighting

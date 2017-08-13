@@ -39,7 +39,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             this.Predict(hit);
             var roll = RNG.Instance.NextDouble();
             if (hit.Chances.Parry > roll)
-                FHit.SetParryTrue(hit.Flags);
+                FHit.SetParryTrue(hit.GetFlags());
         }
     }
 }

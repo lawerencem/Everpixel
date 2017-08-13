@@ -1,33 +1,36 @@
-﻿//using Assets.Controller.Managers;
-//using Assets.Generics;
-//using Controller.Managers.Map;
-//using Generics.Scripts;
-//using Model.Events;
-//using Model.Events.Combat;
-//using System.Collections.Generic;
-//using UnityEngine;
-//using View.Events;
-//using Controller.Map;
-//using Model.Characters;
-//using Generics.Utilities;
-//using Assets.Controller.Character;
-//using Assets.Model.Ability;
-//using Assets.Model.Event;
-//using Assets.Model.Character.Enum;
+﻿using Assets.Model.Event.Combat;
+using System;
+using System.Collections.Generic;
+using Template.Event;
 
 namespace Assets.Controller.Manager
 {
-    public class CombatEventManager
+    public class CombatEvManager : AEventManager<GCombatEv>
     {
-        private static CombatEventManager _instance;
-        public static CombatEventManager Instance
+        private static CombatEvManager _instance;
+        public static CombatEvManager Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new CombatEventManager();
+                    _instance = new CombatEvManager();
                 return _instance;
             }
+        }
+
+        public CombatEvManager()
+        {
+            this._events = new List<GCombatEv>();
+        }
+
+        public override void RegisterEvent(GCombatEv t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void TryProcessEvent(GCombatEv t)
+        {
+            throw new NotImplementedException();
         }
     }
 }
@@ -59,12 +62,6 @@ namespace Assets.Controller.Manager
 //        public void Update()
 //        {
 //            foreach (var e in this._events) { this.TryProcessEvent(e); }
-//        }
-
-//        public void RegisterEvent(MCombatEv e)
-//        {
-//            this._events.Add(e);
-//            this.TryProcessEvent(e);
 //        }
 
 //        public MAbility GetCurrentAbility()

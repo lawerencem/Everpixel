@@ -1,8 +1,8 @@
-﻿using Assets.Model.Ability.Enum;
+﻿using Assets.Controller.Map.Tile;
+using Assets.Model.Ability.Enum;
 using Assets.Model.Ability.Logic;
 using Assets.Model.Combat;
 using Assets.Model.Zone;
-using Controller.Map;
 using System.Collections.Generic;
 
 namespace Assets.Model.Ability

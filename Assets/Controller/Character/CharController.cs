@@ -1,50 +1,35 @@
-﻿//using Assets.Generics;
-//using Controller.Map;
-//using Model.Characters;
-//using Model.Map;
-//using System.Collections.Generic;
-//using UnityEngine;
-//using View.Builders;
-//using View.Characters;
-//using View.Equipment;
-
+﻿using Assets.Controller.Map.Tile;
+using Assets.Model.Character;
+using Assets.View.Character;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Controller.Character
 {
-    public class CharController : MonoBehaviour
+    public class CharController
     {
+        private GameObject _handle;
+        private MChar _model;
+        private VChar _view;
+        private TileController _tile;
 
+        public GameObject Handle { get { return this._handle; } }
+        public MChar Model { get { return this._model; } }
+        public VChar View { get { return this._view; } }
+        public TileController Tile { get { return this._tile; } }
+        
+        public bool KillFXProcessed { get; set; }   // TODO: Don't like this here...
+
+        public void SetModel(MChar m) { this._model = m; }
+        public void SetView(VChar v) { this._view = v; }
+
+        public List<GameObject> Particles { get; set; }
+        public Dictionary<string, GameObject> SpriteHandlerDict = new Dictionary<string, GameObject>();
+
+        public CharController()
+        {
+            this._handle = new GameObject("Character");
+        }
     }
 }
-//        private MChar _model;
-//        private CharacterView _view;
-        
-//        public TileController CurrentTile { get; set; }
-//        public GameObject Handle { get; set; }
-//        public bool KillFXProcessed { get; set; }   // TODO: Don't like this here...
-//        public bool LParty { get; set; }
-//        public MChar Model { get { return this._model; } }
-//        public List<GameObject> Particles { get; set; }
-//        public Dictionary<string, GameObject> SpriteHandlerDict = new Dictionary<string, GameObject>();
-//        public CharacterView View { get { return this._view; } }
-
-//        private void BuildModel(CharacterParams p)
-//        {
-//            this._model = CharacterFactory.Instance.CreateNewObject(p);
-//            this._model.ParentController = this;
-//            this.Particles = new List<GameObject>();
-//        }
-
-//        private void BuildView(CharacterParams p) { var b = new CharacterViewBuilder(); this._view = b.Build(p); }
-
-//        public void SetModel(CharacterParams p) { this.BuildModel(p); this.BuildView(p); }
-//        public void SetView(CharacterView v, CharacterParams p) { this._view = v; this.BuildModel(p); }
-
-//        public void Init(GameObject o)
-//        {
-//            this.Handle = o;
-//        }
-//    }
-//}
 

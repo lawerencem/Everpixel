@@ -63,6 +63,7 @@ namespace Assets.Model.Character.Builder
                 character.SetCurrentHP((int)character.GetCurrentStatValue(ESecondaryStat.HP));
                 character.SetCurrentMorale((int)character.GetCurrentStatValue(ESecondaryStat.Morale));
                 character.SetCurrentStam((int)character.GetCurrentStatValue(ESecondaryStat.Stamina));
+                character.SetParams(c);
                 return character;
             }
             else

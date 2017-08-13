@@ -1,6 +1,6 @@
 ﻿using Assets.Controller.Character;
+using Assets.Controller.Map.Tile;
 using Assets.Model.Combat;
-using Controller.Map;
 using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Logic

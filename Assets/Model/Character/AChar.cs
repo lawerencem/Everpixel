@@ -17,16 +17,24 @@ namespace Assets.Model.Character
     // TODO: Refactor!!!
     abstract public class AChar<T>
     {
+        
+
         // TODO: Let's put this somewhere else...
         protected const double BASE_STAM_RESTORE = 50;
+
+        protected bool _lParty;
+
+        protected CharParams _params;
 
         public T Type { get; set; }
 
         public Dictionary<EClass, MClass> BaseClasses { get; set; }
-
+        
         public CharPerkCollection Perks { get; set; }
         public PrimaryStats PrimaryStats { get; set; }
         public SecondaryStats SecondaryStats { get; set; }
+
+        public bool LParty { get { return this._lParty; } }
 
         public ModContainer Mods;
 
@@ -49,6 +57,9 @@ namespace Assets.Model.Character
         public List<MDoT> DoTs { get; set; }
         public List<GenericHoT> HoTs { get; set; }
         public List<MShield> Shields { get; set; }
+
+        public void SetParams(CharParams p) { this._params = p; }
+        public CharParams GetParams() { return this._params; }
 
         public void AddArmor(MArmor armor)
         {
@@ -114,6 +125,8 @@ namespace Assets.Model.Character
         {
             return this.Points.CurrentStamina;
         }
+
+        
 
         public int GetTileTraversalAPCost(MTile tile)
         {
@@ -237,6 +250,11 @@ namespace Assets.Model.Character
         public void SetCurrentStam(int stam)
         {
             this.Points.CurrentStamina = stam;
+        }
+
+        public void SetLParty(bool lParty)
+        {
+            this._lParty = lParty;
         }
 
         public void TryAddMod(FlatSecondaryStatModifier mod)

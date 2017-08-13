@@ -30,7 +30,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             this.Predict(hit);
             var roll = RNG.Instance.NextDouble();
             if (hit.Chances.Dodge > roll)
-                FHit.SetDodgeTrue(hit.Flags);
+                FHit.SetDodgeTrue(hit.GetFlags());
         }
     }
 }

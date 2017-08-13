@@ -1,12 +1,16 @@
 ﻿using Assets.Controller.Manager;
+using Assets.Controller.Map.Combat;
+using Assets.Controller.Map.Combat.Loader;
+using Assets.Model.Biome.Enum;
+using Template.Other;
 using UnityEngine;
 
 namespace Assets.Controller.Managers
 {
     public class GameManager : MonoBehaviour
     {
-        //private CombatMapLoader _combatMapManager;
         private LoaderManager _loader;
+        private MapLoader _mapLoader;
 
         public static GameManager Instance = null;
 
@@ -33,10 +37,15 @@ namespace Assets.Controller.Managers
 
         private void InitManagers()
         {
-            //this._combatMapManager = new CombatMapLoader();
             this._loader = LoaderManager.Instance;
-
-            //this._combatMapManager.InitMap(Model.Biomes.BiomeEnum.Grassland);
+            this._mapLoader = new MapLoader();
+            var initInfo = new MapInitInfo();
+            initInfo.Biome = EBiome.Grassland;
+            initInfo.LParties.Add(new Pair<string, int>("Orcs", 20));
+            initInfo.Cols = 12;
+            initInfo.DecoCount = 5;
+            initInfo.Rows = 12;
+            this._mapLoader.Init(initInfo);
         }
     }
 }

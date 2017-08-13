@@ -1,4 +1,5 @@
-﻿using Assets.Model.Character.Param;
+﻿using Assets.Controller.Character;
+using Assets.Model.Character.Factory;
 using Assets.Model.Party.Table;
 using System;
 using System.Collections.Generic;
@@ -7,36 +8,39 @@ using Template.Other;
 
 namespace Assets.Model.Party.Builder
 {
-    public class PartyBuilder : ABuilder<Pair<string, int>, List<CharParams>>
+    public class PartyBuilder : ABuilder<Pair<string, int>, MParty>
     {
         private SubPartyBuilder _subPartyBuilder = new SubPartyBuilder();
 
-        public override List<CharParams> Build()
+        public override MParty Build()
         {
             throw new NotImplementedException();
         }
 
-        public override List<CharParams> Build(List<Pair<string, int>> args)
+        public override MParty Build(List<Pair<string, int>> args)
         {
             throw new NotImplementedException();
         }
 
-        public override List<CharParams> Build(Pair<string, int> arg)
+        public override MParty Build(Pair<string, int> arg)
         {
             if (PartyTable.Instance.Table.ContainsKey(arg.X))
             {
-                var buildList = new List<CharParams>();
+                var party = new MParty();
                 var partyParams = PartyTable.Instance.Table[arg.X];
                 var subs = partyParams.GetRandomSubPartyNames(arg.Y);
                 foreach (var sub in subs)
                 {
-                    var characters = this._subPartyBuilder.Build(sub);
-                    foreach(var c in characters)
+                    var charParams = this._subPartyBuilder.Build(sub);
+                    foreach(var charParam in charParams)
                     {
-                        buildList.Add(c);
+                        var model = CharacterFactory.Instance.CreateNewObject(charParam);
+                        var controller = new CharController();
+                        controller.SetModel(model);
+                        party.GetChars().Add(controller);
                     }
                 }
-                return buildList;
+                return party;
             }
             else
                 return null;

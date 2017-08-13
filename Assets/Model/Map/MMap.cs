@@ -1,5 +1,5 @@
-﻿using Assets.Model.Party.Enum;
-using Controller.Map;
+﻿using Assets.Controller.Map.Tile;
+using Assets.Model.Party.Enum;
 using System.Collections.Generic;
 using System.Linq;
 using Template.Hex;
@@ -10,13 +10,16 @@ namespace Assets.Model.Map
     public class MMap
     {
         private HexMap _map;
-        public List<TileController> TileControllers { get; set; }
-        private Dictionary<Pair<int, int>, TileController> TileDict { get; set; }
+        private Dictionary<Pair<int, int>, TileController> _tileDict;
+        private List<TileController> _tiles;
+
+        public Dictionary<Pair<int, int>, TileController> GetTileDict() { return this._tileDict; }
+        public List<TileController> GetTiles() { return this._tiles; }
 
         public MMap(HexMap map)
         {
-            this.TileControllers = new List<TileController>();
-            this.TileDict = new Dictionary<Pair<int, int>, TileController>();
+            this._tileDict = new Dictionary<Pair<int, int>, TileController>();
+            this._tiles = new List<TileController>();
             this._map = map;
             var mTiles = new List<MTile>();
             foreach(var tile in this._map.Tiles)
@@ -25,12 +28,14 @@ namespace Assets.Model.Map
             {
                 tile.Init();
                 var controller = new TileController(tile);
+                this._tiles.Add(controller);
+                this._tileDict.Add(new Pair<int, int>(tile.Col, tile.Row), controller);
             }
         }
 
         public void InitControllerAdjacent()
         {
-            foreach (var tile in this.TileControllers)
+            foreach (var tile in this._tiles)
                 foreach (var neighbor in tile.GetAdjacent())
                     tile.GetAdjacent().Add(neighbor);
         }
@@ -122,7 +127,7 @@ namespace Assets.Model.Map
 
             rowInd = this._map.GetMidRow();
             var key = new Pair<int, int>(colInd, rowInd);
-            for (int i = 0; !this.TileDict.ContainsKey(key) || this.TileDict[key].Current != null; i++)
+            for (int i = 0; !this._tileDict.ContainsKey(key) || this._tileDict[key].Current != null; i++)
             {
                 int counter = i / 2;
                 if (i % 2 == 1) { counter *= -1; }
@@ -140,7 +145,7 @@ namespace Assets.Model.Map
                 }
                 key = new Pair<int, int>(colInd, rowInd + counter);
             }
-            return this.TileDict[key];
+            return this._tileDict[key];
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Assets.Model.Ability.Logic.Calculator
         {
             var roll = RNG.Instance.NextDouble();
             if (roll > LogicParams.BASE_HEAD_CHANCE)
-                FHit.SetHeadTrue(hit.Flags);
+                FHit.SetHeadTrue(hit.GetFlags());
         }
     }
 }

@@ -24,8 +24,8 @@ namespace Assets.Model.Ability.Logic.Calculator
 
         public void ModifyDmgViaDefender(Hit hit)
         {
-            if (!FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Dodge) &&
-                !FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Parry))
+            if (!FHit.HasFlag(hit.GetFlags().CurFlags, FHit.Flags.Dodge) &&
+                !FHit.HasFlag(hit.GetFlags().CurFlags, FHit.Flags.Parry))
             {
                 // TODO:
                 //if (FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Block))

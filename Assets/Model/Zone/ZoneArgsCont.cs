@@ -1,5 +1,5 @@
 ﻿using Assets.Controller.Character;
-using Controller.Map;
+using Assets.Controller.Map.Tile;
 using UnityEngine;
 
 namespace Assets.Model.Zone
