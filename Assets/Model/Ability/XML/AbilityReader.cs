@@ -3,11 +3,13 @@ using Assets.Model.Ability.Enum;
 using Assets.Model.Ability.Magic;
 using Assets.Model.Ability.Magic.Astral;
 using Assets.Model.Ability.Magic.Fighting;
+using Assets.Model.Ability.Magic.Psychic;
 using Assets.Model.Ability.Magic.Water;
 using Assets.Model.Ability.Music;
 using Assets.Model.Ability.Shapeshift;
 using Assets.Model.Injury;
 using Assets.Model.Weapon.Abilities;
+using System.Collections.Generic;
 using System.Xml.Linq;
 using Template.Utility;
 using Template.XML;
@@ -70,38 +72,47 @@ namespace Assets.Models.Equipment.XML
 
         private void HandleIndex(EAbility type, XElement ele, string mod, string value)
         {
-            double v = 1;
-            double.TryParse(value, out v);
-            switch (mod)
+            try
             {
-                case ("AccMod"): { AbilityTable.Instance.Table[type].Params.AccMod = v; } break;
-                case ("AoE"): { AbilityTable.Instance.Table[type].Params.AoE = v; } break;
-                case ("APCost"): { AbilityTable.Instance.Table[type].Params.APCost = (int)v; } break;
-                case ("ArmorIgnoreMod"): { AbilityTable.Instance.Table[type].Params.ArmorIgnoreMod = v; } break;
-                case ("ArmorPierceMod"): { AbilityTable.Instance.Table[type].Params.ArmorPierceMod = v; } break;
-                case ("BlockIgnoreMod"): { AbilityTable.Instance.Table[type].Params.BlockIgnoreMod = v; } break;
-                case ("CastTime"): { AbilityTable.Instance.Table[type].Params.CastTime = v; } break;
-                case ("CastTypeEnum"): { this.HandleCastType(type, value); } break;
-                case ("Description"): { AbilityTable.Instance.Table[type].Params.Description = value; } break;
-                case ("DmgPerPower"): { AbilityTable.Instance.Table[type].Params.DmgPerPower = double.Parse(value); } break;
-                case ("Duration"): { AbilityTable.Instance.Table[type].Params.Duration = double.Parse(value); } break;
-                case ("DodgeMod"): { AbilityTable.Instance.Table[type].Params.DodgeMod = v; } break;
-                case ("EffectDur"): { AbilityTable.Instance.Table[type].Params.EffectDur = v; } break;
-                case ("EffectValue"): { AbilityTable.Instance.Table[type].Params.EffectValue = v; } break;
-                case ("FlatDamage"): { AbilityTable.Instance.Table[type].Params.FlatDamage = v; } break;
-                case ("IconSprite"): { AbilityTable.Instance.Table[type].Params.Sprite = (int)v; } break;
-                case ("Injury"): { this.HandlAPerk(type, value); } break;
-                case ("MeleeBlockChanceMod"): { AbilityTable.Instance.Table[type].Params.MeleeBlockChanceMod = v; } break;
-                case ("ParryModMod"): { AbilityTable.Instance.Table[type].Params.ParryModMod = v; } break;
-                case ("Range"): { AbilityTable.Instance.Table[type].Params.Range = (int)v; } break;
-                case ("RangeBlockMod"): { AbilityTable.Instance.Table[type].Params.RangeBlockMod = v; } break;
-                case ("RechargeTime"): { AbilityTable.Instance.Table[type].Params.RechargeTime = v; } break;
-                case ("EResistType"): { this.HandleResistType(type, value); } break;
-                case ("ShapeshiftSprites"): { this.HandleShapeshiftSprites(ele, type); } break;
-                case ("ShieldDamageMod"): { AbilityTable.Instance.Table[type].Params.ShieldDamageMod = v; } break;
-                case ("SpellLevel"): { AbilityTable.Instance.Table[type].Params.SpellLevel = (int)v; } break;
-                case ("StaminaCost"): { AbilityTable.Instance.Table[type].Params.StaminaCost = (int)v; } break;
+                var table = AbilityTable.Instance.Table;
+                double v = 1;
+                double.TryParse(value, out v);
+                switch (mod)
+                {
+                    case ("AccMod"): { table[type].Params.AccMod = v; } break;
+                    case ("AoE"): { table[type].Params.AoE = v; } break;
+                    case ("APCost"): { table[type].Params.APCost = (int)v; } break;
+                    case ("ArmorIgnoreMod"): { table[type].Params.ArmorIgnoreMod = v; } break;
+                    case ("ArmorPierceMod"): { table[type].Params.ArmorPierceMod = v; } break;
+                    case ("BlockIgnoreMod"): { table[type].Params.BlockIgnoreMod = v; } break;
+                    case ("CastTime"): { table[type].Params.CastTime = v; } break;
+                    case ("CastTypeEnum"): { this.HandleCastType(type, value); } break;
+                    case ("Description"): { table[type].Params.Description = value; } break;
+                    case ("DmgPerPower"): { table[type].Params.DmgPerPower = double.Parse(value); } break;
+                    case ("Duration"): { table[type].Params.Duration = double.Parse(value); } break;
+                    case ("DodgeMod"): { table[type].Params.DodgeMod = v; } break;
+                    case ("EffectDur"): { table[type].Params.EffectDur = v; } break;
+                    case ("EffectValue"): { table[type].Params.EffectValue = v; } break;
+                    case ("FlatDamage"): { table[type].Params.FlatDamage = v; } break;
+                    case ("IconSprite"): { table[type].Params.Sprite = (int)v; } break;
+                    case ("Injury"): { this.HandlAPerk(type, value); } break;
+                    case ("MeleeBlockChanceMod"): { table[type].Params.MeleeBlockChanceMod = v; } break;
+                    case ("ParryModMod"): { table[type].Params.ParryModMod = v; } break;
+                    case ("Range"): { table[type].Params.Range = (int)v; } break;
+                    case ("RangeBlockMod"): { table[type].Params.RangeBlockMod = v; } break;
+                    case ("RechargeTime"): { table[type].Params.RechargeTime = v; } break;
+                    case ("EResistType"): { this.HandleResistType(type, value); } break;
+                    case ("ShapeshiftSprites"): { this.HandleShapeshiftSprites(ele, type); } break;
+                    case ("ShieldDamageMod"): { table[type].Params.ShieldDamageMod = v; } break;
+                    case ("SpellLevel"): { table[type].Params.SpellLevel = (int)v; } break;
+                    case ("StaminaCost"): { table[type].Params.StaminaCost = (int)v; } break;
+                }
             }
+            catch(KeyNotFoundException e)
+            {
+                int temp = 0;
+            }
+            
         }
 
         private void HandleCastType(EAbility key, string value)
@@ -146,40 +157,52 @@ namespace Assets.Models.Equipment.XML
 
         private void HandleType(EAbility type)
         {
+            var table = AbilityTable.Instance.Table;
+            
             switch (type)
             {
-                case (EAbility.Aim): { AbilityTable.Instance.Table[type] = new Aim(); } break;
-                case (EAbility.Bite): { AbilityTable.Instance.Table[type] = new Bite(); } break;
-                case (EAbility.Break_Armor): { AbilityTable.Instance.Table[type] = new BreakArmor(); } break;
-                case (EAbility.Break_Shield): { AbilityTable.Instance.Table[type] = new BreakShield(); } break;
-                case (EAbility.Chop): { AbilityTable.Instance.Table[type] = new Chop(); } break;
-                case (EAbility.Crush): { AbilityTable.Instance.Table[type] = new Crush(); } break;
-                case (EAbility.Double_Strike): { AbilityTable.Instance.Table[type] = new DoubleStrike(); } break;
-                //case (EAbility.Eldritch_Chomp): { AbilityTable.Instance.Table[type] = new EldritchChomp(); } break;
-                case (EAbility.Fire): { AbilityTable.Instance.Table[type] = new Fire(); } break;
-                case (EAbility.Gash): { AbilityTable.Instance.Table[type] = new Gash(); } break;
-                case (EAbility.Great_Strike): { AbilityTable.Instance.Table[type] = new GreatStrike(); } break;
-                case (EAbility.Hadoken): { AbilityTable.Instance.Table[type] = new Hadoken(); } break;
-                case (EAbility.Haste_Song): { AbilityTable.Instance.Table[type] = new HasteSong(); } break;
-                case (EAbility.Kamehameha): { AbilityTable.Instance.Table[type] = new Kamehameha(); } break;
-                case (EAbility.Maim): { AbilityTable.Instance.Table[type] = new Maim(); } break;
-                //case (EnumAbility.Orc_Metal): { AbilityTable.Instance.Table[type] = new OrcMetal(); } break;
-                case (EAbility.Pierce): { AbilityTable.Instance.Table[type] = new Pierce(); } break;
-                case (EAbility.Pull): { AbilityTable.Instance.Table[type] = new Pull(); } break;
-                case (EAbility.Riposte): { AbilityTable.Instance.Table[type] = new Riposte(); } break;
-                case (EAbility.Scatter): { AbilityTable.Instance.Table[type] = new Scatter(); } break;
-                case (EAbility.Soothing_Mist): { AbilityTable.Instance.Table[type] = new SoothingMist(); } break;
-                case (EAbility.Shield_Wall): { AbilityTable.Instance.Table[type] = new ShieldWall(); } break;
-                case (EAbility.Shove): { AbilityTable.Instance.Table[type] = new Shove(); } break;
-                case (EAbility.Slash): { AbilityTable.Instance.Table[type] = new Slash(); } break;
-                case (EAbility.Spear_Wall): { AbilityTable.Instance.Table[type] = new SpearWall(); } break;
-                case (EAbility.Stab): { AbilityTable.Instance.Table[type] = new Stab(); } break;
-                case (EAbility.Stun): { AbilityTable.Instance.Table[type] = new Stun(); } break;
-                case (EAbility.Summon_Shoggoth): { AbilityTable.Instance.Table[type] = new SummonShoggoth(); } break;
-                case (EAbility.Triple_Strike): { AbilityTable.Instance.Table[type] = new TripleStrike(); } break;
-                //case (EAbility.Were_Ween): { AbilityTable.Instance.Table[type] = new Wereween(); } break;
-                case (EAbility.Wide_Slash): { AbilityTable.Instance.Table[type] = new WideSlash(); } break;
-                case (EAbility.Wrap): { AbilityTable.Instance.Table[type] = new Wrap(); } break;
+                case (EAbility.Aim): { table.Add(type, new Aim()); } break;
+                case (EAbility.Bite): { table.Add(type, new Bite()); } break;
+                case (EAbility.Break_Armor): { table.Add(type, new BreakArmor()); } break;
+                case (EAbility.Break_Shield): { table.Add(type, new BreakShield()); } break;
+                case (EAbility.Cerebral_Nova): { table.Add(type, new CerebralNova()); } break;
+                case (EAbility.Chop): { table.Add(type, new Chop()); } break;
+                case (EAbility.Crush): { table.Add(type, new Crush()); } break;
+                case (EAbility.Double_Strike): { table.Add(type, new DoubleStrike()); } break;
+                case (EAbility.Eldritch_Chomp): { table.Add(type, new EldrtichChomp()); } break;
+                case (EAbility.Feeblemind): { table.Add(type, new FeebleMind()); } break;
+                case (EAbility.Fire): { table.Add(type, new Fire()); } break;
+                case (EAbility.Gash): { table.Add(type, new Gash()); } break;
+                case (EAbility.Great_Strike): { table.Add(type, new GreatStrike()); } break;
+                case (EAbility.Hadoken): { table.Add(type, new Hadoken()); } break;
+                case (EAbility.Haste_Song): { table.Add(type, new HasteSong()); } break;
+                case (EAbility.Hold_Person): { table.Add(type, new HoldPerson()); } break;
+                case (EAbility.Intellect): { table.Add(type, new Intellect()); } break;
+                case (EAbility.Kamehameha): { table.Add(type, new Kamehameha()); } break;
+                case (EAbility.Maim): { table.Add(type, new Maim()); } break;
+                case (EAbility.Mental_Laceration): { table.Add(type, new MentalLaceration()); } break;
+                case (EAbility.Mind_Blast): { table.Add(type, new MindBlast()); } break;
+                case (EAbility.Mind_Hunt): { table.Add(type, new MindHunt()); } break;
+                case (EAbility.Orc_Metal): { table.Add(type, new OrcMetal()); } break;
+                case (EAbility.Pain_Link): { table.Add(type, new PainLink()); } break;
+                case (EAbility.Pierce): { table.Add(type, new Pierce()); } break;
+                case (EAbility.Psychic_Artillery): { table.Add(type, new PsychicArtillery()); } break;
+                case (EAbility.Pull): { table.Add(type, new Pull()); } break;
+                case (EAbility.Riposte): { table.Add(type, new Riposte()); } break;
+                case (EAbility.Scatter): { table.Add(type, new Scatter()); } break;
+                case (EAbility.Sever): { table.Add(type, new Sever()); } break;
+                case (EAbility.Soothing_Mist): { table.Add(type, new SoothingMist()); } break;
+                case (EAbility.Shield_Wall): { table.Add(type, new ShieldWall()); } break;
+                case (EAbility.Shove): { table.Add(type, new Shove()); } break;
+                case (EAbility.Slash): { table.Add(type, new Slash()); } break;
+                case (EAbility.Spear_Wall): { table.Add(type, new SpearWall()); } break;
+                case (EAbility.Stab): { table.Add(type, new Stab()); } break;
+                case (EAbility.Stun): { table.Add(type, new Stun()); } break;
+                case (EAbility.Summon_Shoggoth): { table.Add(type, new SummonShoggoth()); } break;
+                case (EAbility.Triple_Strike): { table.Add(type, new TripleStrike()); } break;
+                case (EAbility.Were_Ween): { table.Add(type, new Wereween()); } break;
+                case (EAbility.Wide_Slash): { table.Add(type, new WideSlash()); } break;
+                case (EAbility.Wrap): { table.Add(type, new Wrap()); } break;
             }
         }
     }

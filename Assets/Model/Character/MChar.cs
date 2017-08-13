@@ -1,16 +1,10 @@
 ﻿using Assets.Controller.Character;
-using Assets.Model.Ability;
+using Assets.Model.Character.Container;
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
 using Assets.Model.Class;
 using Assets.Model.Class.Enum;
-using Assets.Model.Effect;
-using Assets.Model.Equipment.Type;
-using Assets.Model.Injury;
-using Assets.Model.OTE.DoT;
-using Assets.Model.Shield;
 using System.Collections.Generic;
-using Template.Other;
 
 namespace Assets.Model.Character
 {
@@ -24,66 +18,34 @@ namespace Assets.Model.Character
         public MChar(ERace race)
         {
             this._race = race;
-            this.ActiveAbilities = new List<MAbility>();
-            this.BaseClasses = new Dictionary<EClass, MClass>();
-            this.DefaultWpnAbilities = new List<MAbility>();
-            this.DoTs = new List<MDoT>();
-            this.Effects = new List<MEffect>();
-            this.HoTs = new List<GenericHoT>();
-            this.Injuries = new List<MInjury>();
-            this.Mods = new ModContainer();
-            this.Perks = new CharPerkCollection();
-            this.Points = new CurrentPointsContainer();
-            this.Shields = new List<MShield>();
-            this.StatusFlags = new FCharacterStatus();
-        }
-
-        public void AddWeapon(MWeapon weapon, bool lWeapon)
-        {
-            // TODO: 2handed weapon check
-            if (lWeapon)
-            {
-                this.LWeapon = weapon;
-                var mods = new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.GetStatModifiers());
-
-                foreach (var perk in this.Perks.EquipmentSStatPerks)
-                    perk.TryModEquipmentMod(mods);
-                foreach (var perk in this.Perks.EquipmentPerks)
-                    perk.TryProcessAdd(this, weapon);
-
-                this.Mods.AddMod(mods);
-            }
-            else
-            {
-                this.RWeapon = weapon;
-                var mods = new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.GetStatModifiers());
-
-                foreach (var perk in this.Perks.EquipmentSStatPerks)
-                    perk.TryModEquipmentMod(mods);
-                foreach (var perk in this.Perks.EquipmentPerks)
-                    perk.TryProcessAdd(this, weapon);
-
-                this.Mods.AddMod(mods);
-            }
+            this._abilities = new CharAbilities<ECharType>(this);
+            this._baseClasses = new Dictionary<EClass, MClass>();
+            this._effects = new CharEffects<ECharType>(this);
+            this._equipment = new ACharEquipment<ECharType>(this);
+            this._flags = new FCharacterStatus();
+            this._mods = new Mods();
+            this._perks = new CharPerks();
+            this._points = new CurrentPoints<ECharType>(this);
+            this._stats = new CharStats<ECharType>(this);
         }
 
         public void ModifyHP(int value, bool isHeal)
         {
             if (isHeal)
             {
-                this.Points.CurrentHP += value;
-                if (this.GetCurrentHP() > (int)this.GetCurrentStatValue(ESecondaryStat.HP))
-                    this.Points.CurrentHP = (int)this.GetCurrentStatValue(ESecondaryStat.HP);
+                this.GetCurrentPoints().CurrentHP += value;
+                if (this.GetCurrentHP() > (int)this.GetCurrentStats().GetCurrentStatValue(ESecondaryStat.HP))
+                    this.SetCurrentHP((int)this.GetCurrentStats().GetCurrentStatValue(ESecondaryStat.HP));
             }
             else
             {
                 int dmg = value;
-                foreach (var shield in this.Shields)
+                foreach (var shield in this.GetEffects().GetShields())
                     shield.ProcessShieldDmg(ref dmg);
-                this.Shields.RemoveAll(x => x.CurHP <= 0);
+                //this.Shields.RemoveAll(x => x.CurHP <= 0); // TODO:
 
                 if (dmg >= 0)
-                    this.Points.CurrentHP -= dmg;
+                    this.SetCurrentHP(this.GetCurrentHP() - dmg);
 
                 if (this.GetCurrentHP() <= 0)
                 {
@@ -96,15 +58,18 @@ namespace Assets.Model.Character
         {
             if (isHeal)
             {
-                this.Points.CurrentStamina += value;
-                if (this.GetCurrentStamina() > (int)this.GetCurrentStatValue(ESecondaryStat.Stamina))
-                    this.Points.CurrentStamina = (int)this.GetCurrentStatValue(ESecondaryStat.Stamina);
+                this.GetCurrentPoints().CurrentStamina += value;
+                if (this.GetCurrentHP() > (int)this.GetCurrentStats().GetCurrentStatValue(ESecondaryStat.Stamina))
+                    this.SetCurrentHP((int)this.GetCurrentStats().GetCurrentStatValue(ESecondaryStat.Stamina));
             }
             else
             {
-                this.Points.CurrentStamina -= value;
-                if (this.Points.CurrentStamina < 0)
-                    this.Points.CurrentStamina = 0;
+                int dmg = value;
+
+                if (dmg >= 0)
+                    this.SetCurrentStam(this.GetCurrentStamina() - dmg);
+                if (this.GetCurrentStamina() < 0)
+                    this.SetCurrentStam(0);
             }
         }
     }

@@ -2,11 +2,11 @@
 using Assets.Model.Combat;
 using System.Collections.Generic;
 
-namespace Assets.Model.Ability.Shapeshift
+namespace Assets.Model.Ability.Music
 {
-    public class Wereween : Shapeshift
+    public class OrcMetal : MSong
     {
-        public Wereween() : base(EAbility.Were_Ween)
+        public OrcMetal() : base(EAbility.Orc_Metal)
         {
             // TODO:
             //this.CustomCastCamera = true;

@@ -121,40 +121,40 @@ namespace Assets.View.GUI
 
         public void SetModalStatValues(MChar c)
         {
-            if (c.Armor != null)
+            if (c.GetEquipment().GetArmor() != null)
             {
-                this._armorSlider.maxValue = c.Armor.MaxDurability;
-                this._armorSlider.value = c.Armor.Durability;
+                this._armorSlider.maxValue = c.GetEquipment().GetArmor().MaxDurability;
+                this._armorSlider.value = c.GetEquipment().GetArmor().Durability;
             }
             else
                 this._armorSlider.maxValue = 0;
-            if (c.Helm != null)
+            if (c.GetEquipment().GetHelm() != null)
             {
-                this._helmSlider.maxValue = c.Helm.MaxDurability;
-                this._helmSlider.value = c.Helm.Durability;
+                this._helmSlider.maxValue = c.GetEquipment().GetHelm().MaxDurability;
+                this._helmSlider.value = c.GetEquipment().GetHelm().Durability;
             }
             else
                 this._helmSlider.maxValue = 0;
-            if (c.LWeapon != null)
+            if (c.GetEquipment().GetLWeapon() != null)
             {
-                this._lWeaponSlider.maxValue = c.LWeapon.MaxDurability;
-                this._lWeaponSlider.value = c.LWeapon.Durability;
+                this._lWeaponSlider.maxValue = c.GetEquipment().GetLWeapon().MaxDurability;
+                this._lWeaponSlider.value = c.GetEquipment().GetLWeapon().Durability;
             }
             else
                 this._lWeaponSlider.maxValue = 0;
-            if (c.RWeapon != null)
+            if (c.GetEquipment().GetRWeapon() != null)
             {
-                this._rWeaponSlider.maxValue = c.RWeapon.MaxDurability;
-                this._rWeaponSlider.value = c.RWeapon.Durability;
+                this._rWeaponSlider.maxValue = c.GetEquipment().GetRWeapon().MaxDurability;
+                this._rWeaponSlider.value = c.GetEquipment().GetRWeapon().Durability;
             }
             else
                 this._rWeaponSlider.maxValue = 0;
 
-            this._hpSlider.maxValue = (int)c.GetCurrentStatValue(ESecondaryStat.HP);
+            this._hpSlider.maxValue = (int)c.GetCurrentStats().GetCurrentStatValue(ESecondaryStat.HP);
             this._hpSlider.value = c.GetCurrentHP();
-            this._moraleSlider.maxValue = (int)c.GetCurrentStatValue(ESecondaryStat.Morale);
+            this._moraleSlider.maxValue = (int)c.GetCurrentStats().GetCurrentStatValue(ESecondaryStat.Morale);
             this._moraleSlider.value = c.GetCurrentMorale();
-            this._stamSlider.maxValue = (int)c.GetCurrentStatValue(ESecondaryStat.Stamina);
+            this._stamSlider.maxValue = (int)c.GetCurrentStats().GetCurrentStatValue(ESecondaryStat.Stamina);
             this._stamSlider.value = c.GetCurrentStamina();
         }
 

@@ -2,7 +2,7 @@
 
 namespace Assets.Model.Ability.Music
 {
-    public class Song : MAbility
+    public class MSong : MAbility
     {
         public enum EnumSong
         {
@@ -15,6 +15,6 @@ namespace Assets.Model.Ability.Music
         protected EnumSong _songType;
         public EnumSong SongType { get { return this._songType; } }
 
-        public Song(EAbility type) : base(type) { }
+        public MSong(EAbility type) : base(type) { }
     }
 }

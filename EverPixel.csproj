@@ -82,17 +82,6 @@
   <ItemGroup>
     <Compile Include="Assets\Controller\Character\CharController.cs" />
     <Compile Include="Assets\Controller\Character\CharScript.cs" />
-    <Compile Include="Assets\Controller\Map\Combat\Loader\CharLoader.cs" />
-    <Compile Include="Assets\Controller\Map\Combat\Loader\PartyLoader.cs" />
-    <Compile Include="Assets\Controller\Map\Combat\MapController.cs" />
-    <Compile Include="Assets\Controller\Map\Combat\MapInitInfo.cs" />
-    <Compile Include="Assets\Controller\Map\Combat\Loader\TileLoader.cs" />
-    <Compile Include="Assets\Controller\Map\Tile\TileScript.cs" />
-    <Compile Include="Assets\Model\Event\Combat\CombatEvParams.cs" />
-    <Compile Include="Assets\Model\Map\MTileDeco.cs" />
-    <Compile Include="Assets\Model\Party\MParty.cs" />
-    <Compile Include="Assets\Template\Callback\ICallback.cs" />
-    <Compile Include="Assets\Template\Event\AEventManager.cs" />
     <Compile Include="Assets\Controller\Manager\CameraManager.cs" />
     <Compile Include="Assets\Controller\Manager\CombatEvManager.cs" />
     <Compile Include="Assets\Controller\Manager\CombatManager.cs" />
@@ -104,9 +93,15 @@
     <Compile Include="Assets\Controller\Map\Combat\CMapGUIControllerParams.cs" />
     <Compile Include="Assets\Controller\Map\Combat\CMapGUIControllerParticle.cs" />
     <Compile Include="Assets\Controller\Map\Combat\CMapGUIControllerShapeshift.cs" />
+    <Compile Include="Assets\Controller\Map\Combat\Loader\CharLoader.cs" />
     <Compile Include="Assets\Controller\Map\Combat\Loader\MapLoader.cs" />
-    <Compile Include="Assets\Controller\Map\Tile\TileController.cs" />
+    <Compile Include="Assets\Controller\Map\Combat\Loader\PartyLoader.cs" />
+    <Compile Include="Assets\Controller\Map\Combat\Loader\TileLoader.cs" />
+    <Compile Include="Assets\Controller\Map\Combat\MapController.cs" />
+    <Compile Include="Assets\Controller\Map\Combat\MapInitInfo.cs" />
     <Compile Include="Assets\Controller\Map\Tile\FTileController.cs" />
+    <Compile Include="Assets\Controller\Map\Tile\TileController.cs" />
+    <Compile Include="Assets\Controller\Map\Tile\TileScript.cs" />
     <Compile Include="Assets\Model\Ability\AAbility.cs" />
     <Compile Include="Assets\Model\Ability\AbilityArgContainer.cs" />
     <Compile Include="Assets\Model\Ability\AbilityFactory.cs" />
@@ -135,9 +130,20 @@
     <Compile Include="Assets\Model\Ability\Magic\EMagicType.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Fighting\Hadoken.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Fighting\Kamehameha.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Psychic\Sever.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Psychic\PsychicArtillery.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Psychic\PainLink.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Psychic\MindHunt.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Psychic\MentalLaceration.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Psychic\MindBlast.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Psychic\Intellect.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Psychic\HoldPerson.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Psychic\FeebleMind.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Psychic\CerebralNova.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Water\SoothingMist.cs" />
     <Compile Include="Assets\Model\Ability\MagicTypeEnum.cs" />
     <Compile Include="Assets\Model\Ability\Music\HasteSong.cs" />
+    <Compile Include="Assets\Model\Ability\Music\OrcMetal.cs" />
     <Compile Include="Assets\Model\Ability\Music\Song.cs" />
     <Compile Include="Assets\Model\Ability\Shapeshift\Shapeshift.cs" />
     <Compile Include="Assets\Model\Ability\Shapeshift\ShapeshiftInfo.cs" />
@@ -173,20 +179,22 @@
     <Compile Include="Assets\Model\Action\Attack.cs" />
     <Compile Include="Assets\Model\Biome\Enum\EBiome.cs" />
     <Compile Include="Assets\Model\Character\AChar.cs" />
+    <Compile Include="Assets\Model\Character\Builder\CharBuilder.cs" />
     <Compile Include="Assets\Model\Character\Builder\CharacterParamBuilder.cs" />
-    <Compile Include="Assets\Model\Character\Builder\CritterBuilder.cs" />
-    <Compile Include="Assets\Model\Character\Builder\HumanoidBuilder.cs" />
     <Compile Include="Assets\Model\Character\Builder\SecondaryStatReferee.cs" />
-    <Compile Include="Assets\Model\Character\CurrentPointsContainer.cs" />
+    <Compile Include="Assets\Model\Character\Container\ACharEquipment.cs" />
+    <Compile Include="Assets\Model\Character\Container\CharAbilities.cs" />
+    <Compile Include="Assets\Model\Character\Container\CharEffects.cs" />
+    <Compile Include="Assets\Model\Character\Container\CharStats.cs" />
+    <Compile Include="Assets\Model\Character\Container\CurrentPoints.cs" />
+    <Compile Include="Assets\Model\Character\Container\Mods.cs" />
     <Compile Include="Assets\Model\Character\Enum\ECharacterType.cs" />
     <Compile Include="Assets\Model\Character\Enum\EPrimaryStat.cs" />
     <Compile Include="Assets\Model\Character\Enum\ERace.cs" />
     <Compile Include="Assets\Model\Character\Enum\ESecondaryStat.cs" />
     <Compile Include="Assets\Model\Character\Enum\FCharacterStatus.cs" />
     <Compile Include="Assets\Model\Character\Factory\CharacterFactory.cs" />
-    <Compile Include="Assets\Model\Character\GenericHoT.cs" />
     <Compile Include="Assets\Model\Character\MChar.cs" />
-    <Compile Include="Assets\Model\Character\ModContainer.cs" />
     <Compile Include="Assets\Model\Character\Param\CharParams.cs" />
     <Compile Include="Assets\Model\Character\Param\CharPerkCollection.cs" />
     <Compile Include="Assets\Model\Character\Param\FlatSecondaryStatModifier.cs" />
@@ -258,8 +266,8 @@
     <Compile Include="Assets\Model\Equipment\XML\MEquipmentReader.cs" />
     <Compile Include="Assets\Model\Equipment\XML\WeaponReader.cs" />
     <Compile Include="Assets\Model\Event\Combat\ActionEventController.cs" />
-    <Compile Include="Assets\Template\Event\AEvent.cs" />
     <Compile Include="Assets\Model\Event\Combat\AttackFXEvent.cs" />
+    <Compile Include="Assets\Model\Event\Combat\CombatEvParams.cs" />
     <Compile Include="Assets\Model\Event\Combat\DisplayActionEvent.cs" />
     <Compile Include="Assets\Model\Event\Combat\DisplayHitStatsEvent.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvApplyInjury.cs" />
@@ -298,9 +306,9 @@
     <Compile Include="Assets\Model\Injury\InjuryTable.cs" />
     <Compile Include="Assets\Model\Injury\MInjury.cs" />
     <Compile Include="Assets\Model\Injury\MInjuryParam.cs" />
-    <Compile Include="Assets\Template\Hex\IHex.cs" />
     <Compile Include="Assets\Model\Map\MMap.cs" />
     <Compile Include="Assets\Model\Map\MTile.cs" />
+    <Compile Include="Assets\Model\Map\MTileDeco.cs" />
     <Compile Include="Assets\Model\Map\Path.cs" />
     <Compile Include="Assets\Model\Mount\EMount.cs" />
     <Compile Include="Assets\Model\Mount\MMount.cs" />
@@ -314,6 +322,7 @@
     <Compile Include="Assets\Model\Party\Builder\PartyBuilder.cs" />
     <Compile Include="Assets\Model\Party\Builder\SubPartyBuilder.cs" />
     <Compile Include="Assets\Model\Party\Enum\EStartCol.cs" />
+    <Compile Include="Assets\Model\Party\MParty.cs" />
     <Compile Include="Assets\Model\Party\Param\PartyParams.cs" />
     <Compile Include="Assets\Model\Party\Param\SubPartyParams.cs" />
     <Compile Include="Assets\Model\Party\Table\PartiesTable.cs" />
@@ -370,10 +379,14 @@
     <Compile Include="Assets\Model\Zone\ZoneArgsCont.cs" />
     <Compile Include="Assets\Template\Builder\ABuilder.cs" />
     <Compile Include="Assets\Template\Builder\GBuilder.cs" />
+    <Compile Include="Assets\Template\Callback\ICallback.cs" />
+    <Compile Include="Assets\Template\Event\AEvent.cs" />
+    <Compile Include="Assets\Template\Event\AEventManager.cs" />
     <Compile Include="Assets\Template\Factory\GFactory.cs" />
     <Compile Include="Assets\Template\Hex\HexMap.cs" />
     <Compile Include="Assets\Template\Hex\HexMapBuilder.cs" />
     <Compile Include="Assets\Template\Hex\HexTile.cs" />
+    <Compile Include="Assets\Template\Hex\IHex.cs" />
     <Compile Include="Assets\Template\Other\AbstractSingleton.cs" />
     <Compile Include="Assets\Template\Other\Pair.cs" />
     <Compile Include="Assets\Template\Script\BobbingScript.cs" />
@@ -467,7 +480,6 @@
     <None Include="Assets\TODO.txt" />
     <None Include="Assets\View\Barks\XML\Barks.xml" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

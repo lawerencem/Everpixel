@@ -21,7 +21,7 @@ namespace Assets.Model.Perk.Equipment
                 if (wpn.WpnType == EWeaponType.Two_Handed)
                 {
                     var mightMod = new IndefPrimaryStatMod(EPrimaryStat.Might, this.Val);
-                    var gearMods = character.Mods.IndefPStatGearMods;
+                    var gearMods = character.GetMods().GetIndefPStatGearMods();
                     var wpnMods = gearMods.Find(x => x.X.Equals(wpn));
                     if (wpnMods.X != null)
                     {
@@ -31,7 +31,7 @@ namespace Assets.Model.Perk.Equipment
                     {
                         var list = new List<IndefPrimaryStatMod>() { mightMod };
                         var pair = new Pair<object, List<IndefPrimaryStatMod>>(wpn, list);
-                        character.Mods.AddMod(pair);
+                        character.GetMods().AddMod(pair);
                     }
                 }
             }

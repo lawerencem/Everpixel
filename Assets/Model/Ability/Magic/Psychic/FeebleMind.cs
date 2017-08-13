@@ -2,11 +2,11 @@
 using Assets.Model.Combat;
 using System.Collections.Generic;
 
-namespace Assets.Model.Ability.Shapeshift
+namespace Assets.Model.Ability.Magic.Psychic
 {
-    public class Wereween : Shapeshift
+    public class FeebleMind : MAbility
     {
-        public Wereween() : base(EAbility.Were_Ween)
+        public FeebleMind() : base(EAbility.Feeblemind)
         {
             // TODO:
             //this.CustomCastCamera = true;
@@ -14,7 +14,7 @@ namespace Assets.Model.Ability.Shapeshift
 
         public override List<Hit> Predict(AbilityArgContainer arg)
         {
-            return base.PredictMelee(arg);
+            return base.PredictBullet(arg);
         }
 
         public override List<Hit> Process(AbilityArgContainer arg)

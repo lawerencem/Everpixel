@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Music
 {
-    public class HasteSong : Song
+    public class HasteSong : MSong
     {
         public HasteSong() : base(EAbility.Haste_Song) { }
 

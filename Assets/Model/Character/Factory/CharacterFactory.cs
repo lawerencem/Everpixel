@@ -1,5 +1,4 @@
 ﻿using Assets.Model.Character.Builder;
-using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
 using System;
 using System.Collections.Generic;
@@ -9,23 +8,16 @@ namespace Assets.Model.Character.Factory
 {
     public class CharacterFactory : ASingleton<CharacterFactory>
     {
-        private CritterBuilder _critterBuilder;
-        private HumanoidBuilder _humanoidBuilder;
+        private CharBuilder _charBuilder;
 
         public CharacterFactory()
         {
-            this._critterBuilder = new CritterBuilder();
-            this._humanoidBuilder = new HumanoidBuilder();
+            this._charBuilder = new CharBuilder();
         }
 
         public MChar CreateNewObject(CharParams arg)
         {
-            switch(arg.Type)
-            {
-                case (ECharType.Critter): { return this._critterBuilder.Build(arg); }
-                case (ECharType.Humanoid): { return this._humanoidBuilder.Build(arg); }
-                default: return null;
-            }
+            return this._charBuilder.Build(arg);
         }
 
         public MChar CreateNewObject(List<CharParams> arg)

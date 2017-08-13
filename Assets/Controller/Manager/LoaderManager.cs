@@ -5,7 +5,6 @@ using Assets.Model.Equipment.XML;
 using Assets.Model.Injury;
 using Assets.Model.Mount.XML;
 using Assets.Model.Party.XML;
-using Assets.Model.Perk.XML;
 using Assets.Models.Equipment.XML;
 using Assets.View.Barks;
 using System.Collections.Generic;
@@ -20,7 +19,7 @@ namespace Assets.Controller.Manager
 
         public LoaderManager()
         {
-            //this._readers.Add(AbilityReader.Instance);
+            this._readers.Add(AbilityReader.Instance);
             this._readers.Add(ArmorReader.Instance);
             this._readers.Add(BarkReader.Instance);
             this._readers.Add(ClassReader.Instance);
