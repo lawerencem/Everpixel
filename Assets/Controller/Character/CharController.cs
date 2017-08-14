@@ -22,6 +22,7 @@ namespace Assets.Controller.Character
 
         public void SetModel(MChar m) { this._model = m; }
         public void SetView(VChar v) { this._view = v; }
+        public void SetTile(TileController t) { this._tile = t; }
 
         public List<GameObject> Particles { get; set; }
         public Dictionary<string, GameObject> SpriteHandlerDict = new Dictionary<string, GameObject>();
