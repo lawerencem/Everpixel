@@ -1,19 +1,18 @@
-﻿//using Assets.Model.Character.Enum;
-//using Model.Characters;
+﻿using Assets.Model.Character.Enum;
 
-//namespace Assets.Model.Perk.SStatMod
-//{
-//    public class ShieldPro : MSStatModPerk
-//    {
-//        public ShieldPro() : base(EPerk.Shield_Pro)
-//        {
+namespace Assets.Model.Perk.SStatMod
+{
+    public class ShieldPro : MSStatModPerk
+    {
+        public ShieldPro() : base(EPerk.Shield_Pro)
+        {
 
-//        }
+        }
 
-//        public override void TryModSStat(ESecondaryStat stat, ref double value)
-//        {
-//            if (stat == ESecondaryStat.Block)
-//                value *= this.Val;
-//        }
-//    }
-//}
+        public override void TryModSStat(ESecondaryStat stat, ref double value)
+        {
+            if (stat == ESecondaryStat.Block)
+                value *= this.Val;
+        }
+    }
+}

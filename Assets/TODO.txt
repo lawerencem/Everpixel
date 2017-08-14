@@ -1,6 +1,6 @@
 ﻿TODO
 
-Incorporate CombatReferee into abilities so they can override.
+Build character views on map
 
 
 Perks

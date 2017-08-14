@@ -9,7 +9,7 @@ namespace Assets.Model.Perk.XML
     {
         private static PerkReader _instance;
 
-        public PerkReader() { this._path = "Assets/Model/Perks/XML/Perks.xml"; }
+        public PerkReader() { this._path = "Assets/Model/Perk/XML/Perks.xml"; }
 
         public static PerkReader Instance
         {

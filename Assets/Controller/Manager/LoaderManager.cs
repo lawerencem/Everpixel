@@ -5,6 +5,7 @@ using Assets.Model.Equipment.XML;
 using Assets.Model.Injury;
 using Assets.Model.Mount.XML;
 using Assets.Model.Party.XML;
+using Assets.Model.Perk.XML;
 using Assets.Models.Equipment.XML;
 using Assets.View.Barks;
 using System.Collections.Generic;
@@ -29,7 +30,7 @@ namespace Assets.Controller.Manager
             this._readers.Add(PredefinedCharReader.Instance);
             this._readers.Add(PredefinedCritterReader.Instance);
             this._readers.Add(MountReader.Instance);
-            //this._readers.Add(PerkReader.Instance);
+            this._readers.Add(PerkReader.Instance);
             this._readers.Add(RaceReader.Instance);
             this._readers.Add(SubPartyReader.Instance);
             this._readers.Add(WeaponReader.Instance);
