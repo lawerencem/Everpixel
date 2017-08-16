@@ -21,7 +21,7 @@ namespace Assets.Controller.Map.Combat.Loader
             this._map = new MapController();
         }
 
-        public void Init(MapInitInfo info)
+        public MapController GetCombatMap(MapInitInfo info)
         {
             var hexMap = HexMapBuilder.GetMap(info.Rows, info.Cols, ViewParams.OFFSET, ViewParams.MAP_CENTER);
             var map = new MMap(hexMap);
@@ -29,6 +29,7 @@ namespace Assets.Controller.Map.Combat.Loader
             this.InitTiles(info);
             this.InitParties(info);
             this.InitChars(info);
+            return this._map;
         }
 
         private void InitChars(MapInitInfo info)

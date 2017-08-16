@@ -150,11 +150,11 @@ namespace Assets.View.GUI
             else
                 this._rWeaponSlider.maxValue = 0;
 
-            this._hpSlider.maxValue = (int)c.GetCurrentStats().GetCurrentStatValue(ESecondaryStat.HP);
+            this._hpSlider.maxValue = (int)c.GetCurrentStats().GetStatValue(ESecondaryStat.HP);
             this._hpSlider.value = c.GetCurrentHP();
-            this._moraleSlider.maxValue = (int)c.GetCurrentStats().GetCurrentStatValue(ESecondaryStat.Morale);
+            this._moraleSlider.maxValue = (int)c.GetCurrentStats().GetStatValue(ESecondaryStat.Morale);
             this._moraleSlider.value = c.GetCurrentMorale();
-            this._stamSlider.maxValue = (int)c.GetCurrentStats().GetCurrentStatValue(ESecondaryStat.Stamina);
+            this._stamSlider.maxValue = (int)c.GetCurrentStats().GetStatValue(ESecondaryStat.Stamina);
             this._stamSlider.value = c.GetCurrentStamina();
         }
 

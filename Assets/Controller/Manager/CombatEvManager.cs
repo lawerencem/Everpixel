@@ -1,4 +1,5 @@
-﻿using Template.Event;
+﻿using System.Collections.Generic;
+using Template.Event;
 
 namespace Assets.Model.Event.Combat
 {
@@ -15,12 +16,16 @@ namespace Assets.Model.Event.Combat
             }
         }
 
+        public CombatEvManager()
+        {
+            this._events = new List<MCombatEv>();
+        }
+
         public override void RegisterEvent(MCombatEv e)
         {
             this._events.Add(e);
             this._events.Sort((x, y) => x.Priority.CompareTo(y.Priority));
             e.AddCallback(this.RemoveEvent);
-            this.TryProcessEvent(e);
         }
 
         public void RemoveEvent(object o)

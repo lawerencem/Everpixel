@@ -16,7 +16,8 @@ namespace Assets.Model.Event.Combat
 
         public override void TryProcess()
         {
-            throw new NotImplementedException();
+            base.TryProcess();
+            this.Register();
         }
     }
 }

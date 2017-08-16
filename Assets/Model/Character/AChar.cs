@@ -54,8 +54,8 @@ namespace Assets.Model.Character
         public void AddStamina(double toAdd)
         {
             this._points.CurrentStamina += (int)toAdd;
-            if (this._points.CurrentStamina > (int)this._stats.GetCurrentStatValue(ESecondaryStat.Stamina))
-                this._points.CurrentStamina = (int)this._stats.GetCurrentStatValue(ESecondaryStat.Stamina);
+            if (this._points.CurrentStamina > (int)this._stats.GetStatValue(ESecondaryStat.Stamina))
+                this._points.CurrentStamina = (int)this._stats.GetStatValue(ESecondaryStat.Stamina);
         }
 
         public int GetTileTraversalAPCost(MTile tile)
@@ -84,9 +84,9 @@ namespace Assets.Model.Character
 
         public void TryAddMod(SecondaryStatMod mod)
         {
-            var oldValue = this._stats.GetCurrentStatValue(mod.Type);
+            var oldValue = this._stats.GetStatValue(mod.Type);
             this._mods.AddMod(mod);
-            var newValue = this._stats.GetCurrentStatValue(mod.Type);
+            var newValue = this._stats.GetStatValue(mod.Type);
             var delta = newValue - oldValue;
             this.SetCurrValue(mod.Type, delta);
         }

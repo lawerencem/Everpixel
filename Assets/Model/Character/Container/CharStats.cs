@@ -49,7 +49,7 @@ namespace Assets.Model.Character.Container
             }
         }
 
-        public int GetCurrentStatValue(EPrimaryStat stat)
+        public int GetStatValue(EPrimaryStat stat)
         {
             double v = 0;
             switch (stat)
@@ -71,7 +71,7 @@ namespace Assets.Model.Character.Container
             return (int)v;
         }
 
-        public double GetCurrentStatValue(ESecondaryStat stat)
+        public double GetStatValue(ESecondaryStat stat)
         {
             double v = 0;
             switch (stat)

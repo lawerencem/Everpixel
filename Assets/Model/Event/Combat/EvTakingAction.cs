@@ -44,7 +44,7 @@ namespace Assets.Model.Event.Combat
         private bool ProcessTakingAction()
         {
             CombatManager.Instance.SetCurrentlyActing(this._data.Target);
-            //            CMapGUIController.Instance.SetActingBoxToController(e.Controller);
+            //     TODO       CMapGUIController.Instance.SetActingBoxToController(e.Controller);
             var bob = this._data.Target.Handle.AddComponent<BobbingScript>();
             bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Target.Handle);
             CameraManager.Instance.InitScrollTo(this._data.Target.Handle.transform.position);

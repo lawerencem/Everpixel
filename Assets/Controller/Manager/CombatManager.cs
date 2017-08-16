@@ -1,10 +1,19 @@
 ﻿using Assets.Controller.Character;
+using Assets.Controller.Map.Combat;
+using Assets.Model.Character.Enum;
+using Assets.Model.Event.Combat;
+using Assets.Model.Party;
+using System.Collections.Generic;
 
 namespace Assets.Controller.Manager
 {
     public class CombatManager
     {
+        private List<CharController> _characters;
         private CharController _currentlyActing;
+        private MapController _map;
+        private List<MParty> _lParties;
+        private List<MParty> _rParties;
 
         private static CombatManager _instance;
         public static CombatManager Instance
@@ -15,6 +24,41 @@ namespace Assets.Controller.Manager
                     _instance = new CombatManager();
                 return _instance;
             }
+        }
+
+        public CombatManager()
+        {
+            this._characters = new List<CharController>();
+            this._lParties = new List<MParty>();
+            this._rParties = new List<MParty>();
+        }
+
+        public void Init(MapController map)
+        {
+            this._map = map;
+            this._lParties = map.GetLParties();
+            this._rParties = map.GetRParties();
+            foreach(var party in this._lParties)
+            {
+                this._characters.AddRange(party.GetChars());
+            }
+            foreach (var party in this._rParties)
+            {
+                this._characters.AddRange(party.GetChars());
+            }
+            if (this._characters.Count > 0)
+            {
+                this._characters.Sort(
+                    (x, y) =>
+                    x.Model.GetCurrentStats().GetStatValue(ESecondaryStat.Initiative)
+                    .CompareTo(y.Model.GetCurrentStats().GetStatValue(ESecondaryStat.Initiative)));
+                var acting = new EvTakingAction();
+                var data = new EvTakingActionData();
+                data.Target = this._characters[0];
+                acting.SetData(data);
+                acting.TryProcess();
+            }
+            
         }
 
         public void SetCurrentlyActing(CharController c)

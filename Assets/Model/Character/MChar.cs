@@ -34,8 +34,8 @@ namespace Assets.Model.Character
             if (isHeal)
             {
                 this.GetCurrentPoints().CurrentHP += value;
-                if (this.GetCurrentHP() > (int)this.GetCurrentStats().GetCurrentStatValue(ESecondaryStat.HP))
-                    this.SetCurrentHP((int)this.GetCurrentStats().GetCurrentStatValue(ESecondaryStat.HP));
+                if (this.GetCurrentHP() > (int)this.GetCurrentStats().GetStatValue(ESecondaryStat.HP))
+                    this.SetCurrentHP((int)this.GetCurrentStats().GetStatValue(ESecondaryStat.HP));
             }
             else
             {
@@ -59,8 +59,8 @@ namespace Assets.Model.Character
             if (isHeal)
             {
                 this.GetCurrentPoints().CurrentStamina += value;
-                if (this.GetCurrentHP() > (int)this.GetCurrentStats().GetCurrentStatValue(ESecondaryStat.Stamina))
-                    this.SetCurrentHP((int)this.GetCurrentStats().GetCurrentStatValue(ESecondaryStat.Stamina));
+                if (this.GetCurrentHP() > (int)this.GetCurrentStats().GetStatValue(ESecondaryStat.Stamina))
+                    this.SetCurrentHP((int)this.GetCurrentStats().GetStatValue(ESecondaryStat.Stamina));
             }
             else
             {
