@@ -1,16 +1,28 @@
-﻿//using Assets.Controller.Character;
-//using Assets.Generics;
-//using Assets.Model.Ability;
-//using Assets.Model.Character.Enum;
-//using Assets.Model.Map;
-//using Controller.Map;
-//using Model.Events.Combat;
-//using System.Collections.Generic;
+﻿using Assets.Controller.Character;
 
-//namespace Assets.Controller.Manager
-//{
-//    public class CombatManager
-//    {
+namespace Assets.Controller.Manager
+{
+    public class CombatManager
+    {
+        private CharController _currentlyActing;
+
+        private static CombatManager _instance;
+        public static CombatManager Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new CombatManager();
+                return _instance;
+            }
+        }
+
+        public void SetCurrentlyActing(CharController c)
+        {
+            this._currentlyActing = c;
+        }
+    }
+}
 //        private List<Pair<int, CastingEvent>> _castingOrder;
 //        private List<TileController> _curTiles;
 //        private List<CharController> _lParty;

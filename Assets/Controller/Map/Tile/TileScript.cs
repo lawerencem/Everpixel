@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.View.Event;
+using System;
 using UnityEngine;
 
 namespace Assets.Controller.Map.Tile
@@ -27,24 +28,12 @@ namespace Assets.Controller.Map.Tile
         {
             if (this._tile != null)
             {
-                if (FTileController.HasFlag(this._tile.Flags.CurFlags, FTileController.Flags.AwaitingAction))
-                {
-                    //var perform = new EvPerformAction(CombatEventManager.Instance, this, CombatEventManager.Instance.ActionPerformedCallback);
-                }
-                else if (this._tile.Current == null)
-                {
-                    //var e = new HexSelectedForMoveEvent(this, CombatEventManager.Instance);
-
-                    if (this._doubleClick)
-                    {
-                        //var doubleClick = new EvTileDoubleClick(CombatEventManager.Instance, this);
-                    }
-                    else
-                    {
-                        this._clickTime = System.DateTime.Now;
-                        this._doubleClick = true;
-                    }
-                }
+                var tileClickEvData = new EvTileClickData();
+                if (this._doubleClick)
+                    tileClickEvData.DoubleClick = true;
+                tileClickEvData.Target = this._tile;
+                this._clickTime = System.DateTime.Now;
+                this._doubleClick = true;
             }
         }
 

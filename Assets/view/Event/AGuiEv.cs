@@ -1,5 +1,4 @@
-﻿using System;
-using Assets.Controller.Managers;
+﻿using Assets.Controller.Managers;
 using Template.Event;
 
 namespace Assets.View.Event
@@ -9,16 +8,17 @@ namespace Assets.View.Event
         protected T _type;
         public T Type { get { return this._type; } }
 
-        protected GUIEventManager _manager;
+        protected GUIEvManager _manager;
 
         public AGuiEv(T t) : base()
         {
+            this._priority = Priorities.DEFAULT;
             this._type = t;
         }
 
         public override void TryProcess()
         {
-            this._manager = GUIEventManager.Instance;
+            this._manager = GUIEvManager.Instance;
         }
     }
 }

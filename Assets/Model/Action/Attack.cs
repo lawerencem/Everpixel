@@ -15,15 +15,20 @@ namespace Assets.Model.Action
             this._hits = new List<Hit>();
         }
 
-        public override void Callback()
-        {
-            base.Callback();
-        }
-
         public void AddHit(Hit hit)
         {
-            hit.AddCallback(this.Callback);
+            hit.AddCallback(this.CallbackHandler);
             this._hits.Add(hit);
+        }
+
+        public override void CallbackHandler(object o)
+        {
+            base.CallbackHandler(o);
+        }
+
+        public override void DoCallbacks()
+        {
+            base.DoCallbacks();
         }
     }
 }

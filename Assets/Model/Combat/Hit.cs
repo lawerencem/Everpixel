@@ -5,7 +5,7 @@ using Assets.Model.Effect;
 using Assets.Model.Event.Combat;
 using System;
 using System.Collections.Generic;
-using Template.Callback;
+using Template.CB;
 
 namespace Assets.Model.Combat
 {
@@ -13,7 +13,7 @@ namespace Assets.Model.Combat
     {
         private List<Callback> _callbacks;
         private List<MEffect> _effects;
-        private List<GCombatEv> _events;
+        private List<MCombatEv> _events;
         private FHit _flags;
 
         public MAbility Ability { get; set; }
@@ -33,7 +33,7 @@ namespace Assets.Model.Combat
         {
             this._callbacks = new List<Callback>();
             this._effects = new List<MEffect>();
-            this._events = new List<GCombatEv>();
+            this._events = new List<MCombatEv>();
             this._flags = new FHit();
             //this._effects = new List<Effect>();
 
@@ -53,7 +53,7 @@ namespace Assets.Model.Combat
         {
             this.IsFinished = true;
             foreach (var callback in this._callbacks)
-                callback();
+                callback(this);
         }
 
         public void AddEffect(MEffect e)
@@ -61,7 +61,7 @@ namespace Assets.Model.Combat
             this._effects.Add(e);
         }
 
-        public void AddEvent(GCombatEv e)
+        public void AddEvent(MCombatEv e)
         {
             e.AddCallback(this.Callback);
             this._events.Add(e);
@@ -73,7 +73,7 @@ namespace Assets.Model.Combat
             this._callbacks.Add(callback);
         }
 
-        public void Callback()
+        public void DoCallbacks()
         {
             throw new NotImplementedException();
         }
@@ -81,6 +81,11 @@ namespace Assets.Model.Combat
         public void SetCallback(Callback callback)
         {
             this._callbacks = new List<Callback>() { callback };
+        }
+
+        private void Callback(object o)
+        {
+
         }
     }
 }

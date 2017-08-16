@@ -2,10 +2,22 @@
 
 namespace Assets.Controller.Manager
 {
+    // TODO: Cleanup
     public class CameraManager : MonoBehaviour
     {
         protected Callback _callBack;
         public delegate void Callback();
+
+        private static CameraManager _instance;
+        public static CameraManager Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new CameraManager();
+                return _instance;
+            }
+        }
 
         private const float AUTO_SCROLL_SENSITIVITY = 0.012f;
         private const float BOUNDARY = 30f;

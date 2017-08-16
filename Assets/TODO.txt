@@ -1,6 +1,6 @@
 ﻿TODO
 
-Build character views on map
+Eventing!!!
 
 
 Perks

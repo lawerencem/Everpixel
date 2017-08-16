@@ -6,7 +6,7 @@ namespace Assets.View.Event
     {
         public MGuiEv(EGuiEv t) : base(t)
         {
-
+            
         }
 
         public override void Register()

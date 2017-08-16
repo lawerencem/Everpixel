@@ -4,6 +4,8 @@ namespace Assets.View
 {
     public class ViewParams
     {
+        public static readonly float BOB_PER_FRAME = 0.0025f;
+        public static readonly float BOB_PER_FRAME_DIST = 0.0075f;
         public static readonly string CHAR = "Character";
         public static readonly Vector3 MAP_CENTER = new Vector3(-8, 5, 0);
         public static readonly float MOUNT_X_OFFSET = 0.05f;
