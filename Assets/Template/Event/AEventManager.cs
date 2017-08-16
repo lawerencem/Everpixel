@@ -7,6 +7,6 @@ namespace Template.Event
         protected List<T> _events;
 
         public abstract void RegisterEvent(T t);
-        public abstract void TryProcessEvent(T t);
+        protected abstract void TryProcessEvent(T t);
     }
 }
