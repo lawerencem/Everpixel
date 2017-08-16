@@ -1,11 +1,11 @@
-﻿namespace Template.Callback
+﻿namespace Template.CB
 {
-    public delegate void Callback();
+    public delegate void Callback(object o);
 
     public interface ICallback
     {
         void AddCallback(Callback callback);
-        void Callback();
+        void DoCallbacks();
         void SetCallback(Callback callback);
     }
 }
