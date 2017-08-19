@@ -29,6 +29,12 @@ namespace Assets.Controller.Map.Combat
             this._familyTileDeco = new List<GameObject>();
         }
 
+        public void ClearDecoratedTiles(object o)
+        {
+            foreach (var old in this._familyTileDeco) { GameObject.Destroy(old); }
+            this._familyTileDeco.Clear();
+        }
+
         public void DecoratePath(Path p)
         {
             foreach (var old in this._familyTileDeco)
@@ -109,12 +115,6 @@ namespace Assets.Controller.Map.Combat
 //        {
 //            foreach (var old in this._aoeTiles) { GameObject.Destroy(old); }
 //            this._aoeTiles.Clear();
-//        }
-
-//        public void ClearDecoratedTiles()
-//        {
-//            foreach (var old in this._decorateTileFamily) { GameObject.Destroy(old); }     
-//            this._decorateTileFamily.Clear();
 //        }
 
 //        public void DecorateAoETiles(List<TileController> t)

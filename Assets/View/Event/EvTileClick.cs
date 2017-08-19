@@ -1,5 +1,7 @@
 ﻿using Assets.Controller.Manager;
+using Assets.Controller.Map.Combat;
 using Assets.Controller.Map.Tile;
+using Assets.Model.Event.Combat;
 
 namespace Assets.View.Event
 {
@@ -59,7 +61,15 @@ namespace Assets.View.Event
                     e.TryProcess();
                     return true;
                 }
-                // TODO: Fire off path move
+                else
+                {
+                    var data = new EvPathMoveData();
+                    data.Target = this._data.Target;
+                    var e = new EvPathMove(data);
+                    e.AddCallback(VMapController.Instance.ClearDecoratedTiles);
+                    e.TryProcess();
+                    return true;
+                }
             }
             return false;
         }

@@ -58,10 +58,10 @@ namespace Assets.Model.Character
                 this._points.CurrentStamina = (int)this._stats.GetStatValue(ESecondaryStat.Stamina);
         }
 
-        public int GetTileTraversalAPCost(MTile tile)
+        public int GetTileTraversalAPCost(MTile target)
         {
             // TODO: Work on this for height and various talents
-            return tile.GetCost();
+            return target.GetCost();
         }
 
         public int GetTileTraversalStaminaCost(MTile tile)

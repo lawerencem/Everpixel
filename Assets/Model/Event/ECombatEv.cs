@@ -21,6 +21,7 @@
         ModifyHP,
         ModifyStam,
         TileHitEvent,
+        PathMove,
         PathTraversed,
         PerformAction,
         PredictAction,
@@ -34,7 +35,7 @@
         TileHoverDeco,
         TileSelected,
         TraversePath,
-        TraverseTile,
+        TileMove,
         ZoneEnter,
         ZoneExit,
     }

@@ -269,6 +269,7 @@
     <Compile Include="Assets\Model\Event\Combat\ACombatEv.cs" />
     <Compile Include="Assets\Model\Event\Combat\ActionEventController.cs" />
     <Compile Include="Assets\Model\Event\Combat\AttackFXEvent.cs" />
+    <Compile Include="Assets\Model\Event\Combat\EvPathMove.cs" />
     <Compile Include="Assets\Model\Event\Combat\Priorities.cs" />
     <Compile Include="Assets\Model\Event\Combat\DisplayActionEvent.cs" />
     <Compile Include="Assets\Model\Event\Combat\DisplayHitStatsEvent.cs" />
@@ -298,7 +299,7 @@
     <Compile Include="Assets\Model\Event\Combat\EvTileHover.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvTileSelected.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvTraversePath.cs" />
-    <Compile Include="Assets\Model\Event\Combat\EvTraverseTile.cs" />
+    <Compile Include="Assets\Model\Event\Combat\EvTileMove.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvZoneEnter.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvZoneExit.cs" />
     <Compile Include="Assets\Model\Event\Combat\MCombatEv.cs" />
@@ -406,7 +407,7 @@
     <Compile Include="Assets\Template\Script\RotationScript.cs" />
     <Compile Include="Assets\Template\Script\ScrollCameraToScript.cs" />
     <Compile Include="Assets\Template\Script\SpriteFlipCallback.cs" />
-    <Compile Include="Assets\Template\Script\TileMoveScript.cs" />
+    <Compile Include="Assets\Template\Script\SObjectMove.cs" />
     <Compile Include="Assets\Template\Script\XAxisShake.cs" />
     <Compile Include="Assets\Template\Utility\Count.cs" />
     <Compile Include="Assets\Template\Utility\DeepCloneUtil.cs" />
@@ -489,6 +490,7 @@
     <None Include="Assets\TODO.txt" />
     <None Include="Assets\View\Barks\XML\Barks.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

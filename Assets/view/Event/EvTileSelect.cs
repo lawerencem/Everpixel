@@ -51,12 +51,14 @@ namespace Assets.View.Event
         {
             if (this._data == null)
                 return false;
+            else if (this._data.Target == null)
+                return false;
+
             if (this._data.Source == null)
                 this._data.Source = CombatManager.Instance.GetCurrentlyActing().Tile;
             if (this._data.Map == null)
                 this._data.Map = this._data.Source.Model.Map;
-            if (this._data.Target == null)
-                return false;
+            
             return true;
         }
     }

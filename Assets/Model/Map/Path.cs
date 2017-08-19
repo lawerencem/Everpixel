@@ -23,12 +23,12 @@ namespace Assets.Model.Map
 
         public TileController GetNextTile(TileController t)
         {
-            //if (this.Tiles.Contains(t.Model))
-            //{
-            //    int index = this.Tiles.IndexOf(t.Model) + 1;
-            //    if (this.Tiles.Count > index)
-            //        return this.Tiles[index].Parent;
-            //}
+            if (this._tiles.Contains(t.Model))
+            {
+                int index = this._tiles.IndexOf(t.Model) + 1;
+                if (this._tiles.Count > index)
+                    return this._tiles[index].Controller;
+            }
             return null;
         }
 

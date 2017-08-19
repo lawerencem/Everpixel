@@ -17,6 +17,8 @@ namespace Assets.View
         // Script Params
         public static readonly float BOB_PER_FRAME = 0.0025f;
         public static readonly float BOB_PER_FRAME_DIST = 0.075f;
+        public static readonly float MOVE_SPEED = 8f;
+        public static readonly float MOVE_EPSILON = 0.02f;
 
         // Tile Params
         public static readonly float TILE_DECO_ALPHA = 0.75f;
