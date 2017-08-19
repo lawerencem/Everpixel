@@ -2,8 +2,6 @@
 using Assets.Controller.Manager;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Map;
-using Assets.View;
-using Template.Script;
 
 namespace Assets.Model.Event.Combat
 {
@@ -29,23 +27,27 @@ namespace Assets.Model.Event.Combat
         public override void TryProcess()
         {
             base.TryProcess();
-            if (this.TryProcessPathMove())
-                this.DoCallbacks();
+            this.TryProcessPathMove();
         }
 
         private bool ProcessMove()
         {
             this.TryProcessNextTile();
-            this.DoCallbacks();
             return true;
         }
 
         private bool TryProcessPathMove()
         {
             if (this.VerifyAndPopulateData())
-                return this.ProcessMove();
+            {
+                this.TryProcessNextTile();
+                return true;
+            }
             else
+            {
+                this.DoCallbacks();
                 return false;
+            }
         }
 
         private void TileMoveDone(object o)
@@ -58,7 +60,7 @@ namespace Assets.Model.Event.Combat
             }
         }
 
-        private bool TryProcessNextTile()
+        private void TryProcessNextTile()
         {
             var ap = this._data.Char.Model.GetCurrentPoints().CurrentAP;
             this._next = this._data.TargetPath.GetNextTile(this._current);
@@ -75,8 +77,13 @@ namespace Assets.Model.Event.Combat
                     e.AddCallback(this.TileMoveDone);
                     e.TryProcess();
                 }
+                else
+                {
+                    this.DoCallbacks();
+                }
             }
-            return false;
+            else
+                this.DoCallbacks();
         }
 
         private bool VerifyAndPopulateData()
