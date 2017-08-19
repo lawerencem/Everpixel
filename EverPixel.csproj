@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.1f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -89,7 +87,6 @@
     <Compile Include="Assets\Controller\Manager\GUIEvManager.cs" />
     <Compile Include="Assets\Controller\Manager\GameManager.cs" />
     <Compile Include="Assets\Controller\Manager\LoaderManager.cs" />
-    <Compile Include="Assets\Controller\Map\Combat\VMapController.cs" />
     <Compile Include="Assets\Controller\Map\Combat\CMapGUIControllerHit.cs" />
     <Compile Include="Assets\Controller\Map\Combat\CMapGUIControllerParams.cs" />
     <Compile Include="Assets\Controller\Map\Combat\CMapGUIControllerParticle.cs" />
@@ -100,6 +97,7 @@
     <Compile Include="Assets\Controller\Map\Combat\Loader\TileLoader.cs" />
     <Compile Include="Assets\Controller\Map\Combat\MMapController.cs" />
     <Compile Include="Assets\Controller\Map\Combat\MapInitInfo.cs" />
+    <Compile Include="Assets\Controller\Map\Combat\VMapController.cs" />
     <Compile Include="Assets\Controller\Map\Tile\FTileController.cs" />
     <Compile Include="Assets\Controller\Map\Tile\TileController.cs" />
     <Compile Include="Assets\Controller\Map\Tile\TileScript.cs" />
@@ -131,16 +129,16 @@
     <Compile Include="Assets\Model\Ability\Magic\EMagicType.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Fighting\Hadoken.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Fighting\Kamehameha.cs" />
-    <Compile Include="Assets\Model\Ability\Magic\Psychic\Sever.cs" />
-    <Compile Include="Assets\Model\Ability\Magic\Psychic\PsychicArtillery.cs" />
-    <Compile Include="Assets\Model\Ability\Magic\Psychic\PainLink.cs" />
-    <Compile Include="Assets\Model\Ability\Magic\Psychic\MindHunt.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Psychic\CerebralNova.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Psychic\FeebleMind.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Psychic\HoldPerson.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Psychic\Intellect.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Psychic\MentalLaceration.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Psychic\MindBlast.cs" />
-    <Compile Include="Assets\Model\Ability\Magic\Psychic\Intellect.cs" />
-    <Compile Include="Assets\Model\Ability\Magic\Psychic\HoldPerson.cs" />
-    <Compile Include="Assets\Model\Ability\Magic\Psychic\FeebleMind.cs" />
-    <Compile Include="Assets\Model\Ability\Magic\Psychic\CerebralNova.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Psychic\MindHunt.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Psychic\PainLink.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Psychic\PsychicArtillery.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Psychic\Sever.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Water\SoothingMist.cs" />
     <Compile Include="Assets\Model\Ability\MagicTypeEnum.cs" />
     <Compile Include="Assets\Model\Ability\Music\HasteSong.cs" />
@@ -269,10 +267,9 @@
     <Compile Include="Assets\Model\Event\Combat\ACombatEv.cs" />
     <Compile Include="Assets\Model\Event\Combat\ActionEventController.cs" />
     <Compile Include="Assets\Model\Event\Combat\AttackFXEvent.cs" />
-    <Compile Include="Assets\Model\Event\Combat\EvPathMove.cs" />
-    <Compile Include="Assets\Model\Event\Combat\Priorities.cs" />
     <Compile Include="Assets\Model\Event\Combat\DisplayActionEvent.cs" />
     <Compile Include="Assets\Model\Event\Combat\DisplayHitStatsEvent.cs" />
+    <Compile Include="Assets\Model\Event\Combat\EvApMod.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvApplyInjury.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvAttackSelected.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvBuff.cs" />
@@ -286,6 +283,7 @@
     <Compile Include="Assets\Model\Event\Combat\EvMEffect.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvModHP.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvModStam.cs" />
+    <Compile Include="Assets\Model\Event\Combat\EvPathMove.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvPathTraversed.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvPerformAction.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvPredictAction.cs" />
@@ -297,12 +295,13 @@
     <Compile Include="Assets\Model\Event\Combat\EvTileDoubleClick.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvTileHit.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvTileHover.cs" />
+    <Compile Include="Assets\Model\Event\Combat\EvTileMove.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvTileSelected.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvTraversePath.cs" />
-    <Compile Include="Assets\Model\Event\Combat\EvTileMove.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvZoneEnter.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvZoneExit.cs" />
     <Compile Include="Assets\Model\Event\Combat\MCombatEv.cs" />
+    <Compile Include="Assets\Model\Event\Combat\Priorities.cs" />
     <Compile Include="Assets\Model\Event\ECombatEv.cs" />
     <Compile Include="Assets\Model\Injury\EInjury.cs" />
     <Compile Include="Assets\Model\Injury\InjuryReader.cs" />
@@ -405,9 +404,9 @@
     <Compile Include="Assets\Template\Script\RaycastMove.cs" />
     <Compile Include="Assets\Template\Script\RaycastMoveWithDelete.cs" />
     <Compile Include="Assets\Template\Script\RotationScript.cs" />
+    <Compile Include="Assets\Template\Script\SObjectMove.cs" />
     <Compile Include="Assets\Template\Script\ScrollCameraToScript.cs" />
     <Compile Include="Assets\Template\Script\SpriteFlipCallback.cs" />
-    <Compile Include="Assets\Template\Script\SObjectMove.cs" />
     <Compile Include="Assets\Template\Script\XAxisShake.cs" />
     <Compile Include="Assets\Template\Utility\Count.cs" />
     <Compile Include="Assets\Template\Utility\DeepCloneUtil.cs" />
@@ -434,6 +433,7 @@
     <Compile Include="Assets\View\Equipment\VWeapon.cs" />
     <Compile Include="Assets\View\Event\AGuiEv.cs" />
     <Compile Include="Assets\View\Event\EGuiEv.cs" />
+    <Compile Include="Assets\View\Event\EvTileClick.cs" />
     <Compile Include="Assets\View\Event\EvTileSelect.cs" />
     <Compile Include="Assets\View\Event\GUIEndTurnEvent.cs" />
     <Compile Include="Assets\View\Event\GUIEvent.cs" />
@@ -441,7 +441,6 @@
     <Compile Include="Assets\View\Event\MGuiEv.cs" />
     <Compile Include="Assets\View\Event\PopulateWpnBtnsEvent.cs" />
     <Compile Include="Assets\View\Event\Priorities.cs" />
-    <Compile Include="Assets\View\Event\EvTileClick.cs" />
     <Compile Include="Assets\View\Event\WpnBtnClickEvent.cs" />
     <Compile Include="Assets\View\Fatality\EFatality.cs" />
     <Compile Include="Assets\View\Fatality\FatalityFactory.cs" />
@@ -490,7 +489,6 @@
     <None Include="Assets\TODO.txt" />
     <None Include="Assets\View\Barks\XML\Barks.xml" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

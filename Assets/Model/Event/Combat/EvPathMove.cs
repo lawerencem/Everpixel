@@ -70,6 +70,7 @@ namespace Assets.Model.Event.Combat
                 if (cost <= ap)
                 {
                     var data = new EvTileMoveData();
+                    data.Cost = cost;
                     data.Char = this._data.Char;
                     data.Source = this._current;
                     data.Target = this._next;
@@ -78,9 +79,7 @@ namespace Assets.Model.Event.Combat
                     e.TryProcess();
                 }
                 else
-                {
                     this.DoCallbacks();
-                }
             }
             else
                 this.DoCallbacks();

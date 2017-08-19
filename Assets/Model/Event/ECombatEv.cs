@@ -5,6 +5,7 @@
         None,
         AttackFX,
         ApplyInjury,
+        APMod,
         AttackSelected,
         Buff,
         Casting,

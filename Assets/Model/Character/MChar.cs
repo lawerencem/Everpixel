@@ -29,6 +29,23 @@ namespace Assets.Model.Character
             this._stats = new CharStats<ECharType>(this);
         }
 
+        public void ModifyAP(int value, bool isHeal)
+        {
+            if (isHeal)
+            {
+                this.GetCurrentPoints().CurrentAP += value;
+                if (this.GetCurrentAP() > (int)this.GetCurrentStats().GetStatValue(ESecondaryStat.AP))
+                    this.SetCurrentAP((int)this.GetCurrentStats().GetStatValue(ESecondaryStat.AP));
+            }
+            else
+            {
+                if (value >= 0)
+                    this.SetCurrentAP(this.GetCurrentStamina() - value);
+                if (this.GetCurrentAP() < 0)
+                    this.SetCurrentAP(0);
+            }
+        }
+
         public void ModifyHP(int value, bool isHeal)
         {
             if (isHeal)

@@ -8,6 +8,7 @@ namespace Assets.Model.Event.Combat
     public class EvTileMoveData
     {
         public CharController Char { get; set; }
+        public int Cost { get; set; }
         public TileController Source { get; set; }
         public TileController Target { get; set; }
     }
@@ -30,6 +31,13 @@ namespace Assets.Model.Event.Combat
 
         private void MoveDone(object o)
         {
+            var data = new EvAPModData();
+            data.Char = this._data.Char;
+            data.IsHeal = false;
+            data.Qty = this._data.Cost;
+            data.ToDisplay = false;
+            var e = new EvAPMod(data);
+            e.TryProcess();
             this.DoCallbacks();
         }
 
