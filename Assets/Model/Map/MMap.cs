@@ -22,8 +22,12 @@ namespace Assets.Model.Map
             this._tiles = new List<TileController>();
             this._map = map;
             var mTiles = new List<MTile>();
-            foreach(var tile in this._map.Tiles)
-                mTiles.Add(new MTile(tile));
+            foreach(var t in this._map.Tiles)
+            {
+                var tile = new MTile(t);
+                tile.SetMap(this);
+                mTiles.Add(tile);
+            }
             foreach (var tile in mTiles)
             {
                 tile.Init();

@@ -5,13 +5,20 @@ namespace Assets.Model.Map
 {
     public class Path
     {
-        public int Score { get; set; }
-        public List<MTile> Tiles { get; set; }
+        private int _score;
+        private List<MTile> _tiles;
+
+        public int Score { get { return this._score; } }
+
+        public List<MTile> GetTiles() { return this._tiles; }
+
+        public void SetScore(int s) { this._score = s; }
+        public void SetTiles(List<MTile> t) { this._tiles = t; }
 
         public Path()
         {
-            this.Score = 0;
-            this.Tiles = new List<MTile>();
+            this._score = 0;
+            this._tiles = new List<MTile>();
         }
 
         public TileController GetNextTile(TileController t)
@@ -27,21 +34,21 @@ namespace Assets.Model.Map
 
         public void AddTile(MTile t)
         {
-            if (this.Tiles.Count > 0)
-                this.Score += (this.Tiles[this.Tiles.Count - 1].GetTravelCost(t));
+            if (this._tiles.Count > 0)
+                this._score += (this._tiles[this._tiles.Count - 1].GetTravelCost(t));
             else
-                this.Score += t.GetCost();
-            this.Tiles.Add(t);
+                this._score += t.GetCost();
+            this._tiles.Add(t);
         }
 
         public Path DeepCopy()
         {
             var path = new Path();
-            path.Score = this.Score;
+            path.SetScore(this.Score);
             var newTiles = new List<MTile>();
-            foreach (var tile in this.Tiles)
+            foreach (var tile in this._tiles)
                 newTiles.Add(tile);
-            path.Tiles = newTiles;
+            path.SetTiles(newTiles);
             return path;
         }
     }

@@ -89,7 +89,7 @@
     <Compile Include="Assets\Controller\Manager\GUIEvManager.cs" />
     <Compile Include="Assets\Controller\Manager\GameManager.cs" />
     <Compile Include="Assets\Controller\Manager\LoaderManager.cs" />
-    <Compile Include="Assets\Controller\Map\Combat\CMapGUIController.cs" />
+    <Compile Include="Assets\Controller\Map\Combat\VMapController.cs" />
     <Compile Include="Assets\Controller\Map\Combat\CMapGUIControllerHit.cs" />
     <Compile Include="Assets\Controller\Map\Combat\CMapGUIControllerParams.cs" />
     <Compile Include="Assets\Controller\Map\Combat\CMapGUIControllerParticle.cs" />
@@ -98,7 +98,7 @@
     <Compile Include="Assets\Controller\Map\Combat\Loader\MapLoader.cs" />
     <Compile Include="Assets\Controller\Map\Combat\Loader\PartyLoader.cs" />
     <Compile Include="Assets\Controller\Map\Combat\Loader\TileLoader.cs" />
-    <Compile Include="Assets\Controller\Map\Combat\MapController.cs" />
+    <Compile Include="Assets\Controller\Map\Combat\MMapController.cs" />
     <Compile Include="Assets\Controller\Map\Combat\MapInitInfo.cs" />
     <Compile Include="Assets\Controller\Map\Tile\FTileController.cs" />
     <Compile Include="Assets\Controller\Map\Tile\TileController.cs" />
@@ -433,6 +433,7 @@
     <Compile Include="Assets\View\Equipment\VWeapon.cs" />
     <Compile Include="Assets\View\Event\AGuiEv.cs" />
     <Compile Include="Assets\View\Event\EGuiEv.cs" />
+    <Compile Include="Assets\View\Event\EvTileSelect.cs" />
     <Compile Include="Assets\View\Event\GUIEndTurnEvent.cs" />
     <Compile Include="Assets\View\Event\GUIEvent.cs" />
     <Compile Include="Assets\View\Event\GUIEventEnum.cs" />

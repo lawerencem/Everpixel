@@ -1,4 +1,5 @@
-﻿using Assets.View.Event;
+﻿using Assets.View;
+using Assets.View.Event;
 using System;
 using UnityEngine;
 
@@ -22,18 +23,21 @@ namespace Assets.Controller.Map.Tile
         {
             this._tile = t;
             this._collider = this._tile.Handle.AddComponent<BoxCollider2D>();
+            this._collider.size = ViewParams.TILE_COLLIDER_SIZE;
         }
 
         public void OnMouseDown()
         {
             if (this._tile != null)
             {
-                var tileClickEvData = new EvTileClickData();
+                var data = new EvTileClickData();
                 if (this._doubleClick)
-                    tileClickEvData.DoubleClick = true;
-                tileClickEvData.Target = this._tile;
+                    data.DoubleClick = true;
+                data.Target = this._tile;
                 this._clickTime = System.DateTime.Now;
                 this._doubleClick = true;
+                var e = new EvTileClick(data);
+                e.TryProcess();
             }
         }
 

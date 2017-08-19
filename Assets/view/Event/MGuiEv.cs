@@ -16,7 +16,8 @@ namespace Assets.View.Event
 
         public override void TryProcess()
         {
-            throw new NotImplementedException();
+            base.TryProcess();
+            this.Register();
         }
     }
 }

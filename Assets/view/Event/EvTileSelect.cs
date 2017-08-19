@@ -1,4 +1,6 @@
-﻿using Assets.Controller.Map.Tile;
+﻿using Assets.Controller.Manager;
+using Assets.Controller.Map.Combat;
+using Assets.Controller.Map.Tile;
 using Assets.Model.Map;
 
 namespace Assets.View.Event
@@ -14,10 +16,8 @@ namespace Assets.View.Event
     {
         private EvTileSelectData _data;
 
-        public EvTileSelect() : base(EGuiEv.TileClick)
-        {
-            
-        }
+        public EvTileSelect() : base(EGuiEv.TileClick) { }
+        public EvTileSelect(EvTileSelectData d) : base(EGuiEv.TileClick) { this._data = d; }
 
         public void SetData(EvTileSelectData data)
         {
@@ -33,28 +33,28 @@ namespace Assets.View.Event
 
         private bool TryProcessSelect()
         {
-            if (this.VerifyData())
+            if (this.VerifyAndPopulateData())
             {
                 var s = this._data.Source.Model;
                 var t = this._data.Target.Model;
                 var path = this._data.Map.GetPath(s, t);
                 if (path != null)
                 {
-                    // TODO: Decorate path
+                    VMapController.Instance.DecoratePath(path);
                     return true;
                 }
             }
             return false;
         }
 
-        private bool VerifyData()
+        private bool VerifyAndPopulateData()
         {
             if (this._data == null)
                 return false;
-            if (this._data.Map == null)
-                return false;
             if (this._data.Source == null)
-                return false;
+                this._data.Source = CombatManager.Instance.GetCurrentlyActing().Tile;
+            if (this._data.Map == null)
+                this._data.Map = this._data.Source.Model.Map;
             if (this._data.Target == null)
                 return false;
             return true;

@@ -44,7 +44,6 @@ namespace Assets.Controller.Managers
             this._events.Add(e);
             this._events.Sort((x, y) => x.Priority.CompareTo(y.Priority));
             e.AddCallback(this.RemoveEvent);
-            this.TryProcessEvent(e);
         }
 
         public void RemoveEvent(object o)

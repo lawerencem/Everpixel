@@ -14,10 +14,8 @@ namespace Assets.Model.Event.Combat
     {
         private EvTakingActionData _data;
 
-        public EvTakingAction() : base(ECombatEv.TakingAction)
-        {
-
-        }
+        public EvTakingAction() : base(ECombatEv.TakingAction) {}
+        public EvTakingAction(EvTakingActionData d) : base(ECombatEv.TakingAction) { this._data = d; }
 
         public void SetData(EvTakingActionData data)
         {

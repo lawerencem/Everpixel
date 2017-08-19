@@ -39,7 +39,7 @@ namespace Assets.Controller.Map.Tile
         {
             this._adjacent = new List<TileController>();
             this._flags = new FTileController();
-            this._handle = new GameObject(ViewParams.TILE);
+            this._handle = new GameObject(Layers.TILE);
             this._handle.transform.position = tile.Center;
             this._nonCurrent = new List<CharController>();
             this._zones = new List<AZone>();

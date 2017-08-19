@@ -3,5 +3,6 @@
     public enum EGuiEv
     {
         TileClick,
+        TileSelect
     }
 }

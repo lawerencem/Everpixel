@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Combat;
+using Assets.Controller.Map.Tile;
 using Assets.Model.Character.Enum;
 using Assets.Model.Event.Combat;
 using Assets.Model.Party;
@@ -11,7 +12,7 @@ namespace Assets.Controller.Manager
     {
         private List<CharController> _characters;
         private CharController _currentlyActing;
-        private MapController _map;
+        private MMapController _map;
         private List<MParty> _lParties;
         private List<MParty> _rParties;
 
@@ -26,6 +27,11 @@ namespace Assets.Controller.Manager
             }
         }
 
+        public CharController GetCurrentlyActing() { return this._currentlyActing; }
+
+        public void SetCurrentlyActing(CharController c) { this._currentlyActing = c; }
+
+
         public CombatManager()
         {
             this._characters = new List<CharController>();
@@ -33,7 +39,7 @@ namespace Assets.Controller.Manager
             this._rParties = new List<MParty>();
         }
 
-        public void Init(MapController map)
+        public void Init(MMapController map)
         {
             this._map = map;
             this._lParties = map.GetLParties();
@@ -52,18 +58,16 @@ namespace Assets.Controller.Manager
                     (x, y) =>
                     x.Model.GetCurrentStats().GetStatValue(ESecondaryStat.Initiative)
                     .CompareTo(y.Model.GetCurrentStats().GetStatValue(ESecondaryStat.Initiative)));
-                var acting = new EvTakingAction();
                 var data = new EvTakingActionData();
                 data.Target = this._characters[0];
-                acting.SetData(data);
+                var acting = new EvTakingAction(data);
                 acting.TryProcess();
             }
-            
         }
 
-        public void SetCurrentlyActing(CharController c)
+        public bool IsValidActionClick(TileController t)
         {
-            this._currentlyActing = c;
+            return false;
         }
     }
 }

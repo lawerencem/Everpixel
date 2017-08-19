@@ -1,4 +1,5 @@
-﻿using Assets.Controller.Map.Tile;
+﻿using Assets.Controller.Manager;
+using Assets.Controller.Map.Tile;
 
 namespace Assets.View.Event
 {
@@ -12,10 +13,8 @@ namespace Assets.View.Event
     {
         private EvTileClickData _data;
 
-        public EvTileClick() : base(EGuiEv.TileClick)
-        {
-            
-        }
+        public EvTileClick() : base(EGuiEv.TileClick) {}
+        public EvTileClick(EvTileClickData d) : base(EGuiEv.TileClick) { this._data = d; }
 
         public void SetData(EvTileClickData data)
         {
@@ -31,13 +30,14 @@ namespace Assets.View.Event
 
         private bool TryProcessAction()
         {
-            // TODO: Grab authorization from Combat Manager to determine if tile is valid click
-            return false;
+            return CombatManager.Instance.IsValidActionClick(this._data.Target);
         }
 
         private bool TryProcessClick()
         {
             if (this._data == null)
+                return false;
+            else if (this._data.Target == null)
                 return false;
             else if (this.TryProcessAction())
                 return true;
@@ -49,10 +49,19 @@ namespace Assets.View.Event
 
         private bool TryProcessMove()
         {
-            if (!this._data.DoubleClick)
-                return false; // TODO: Fire off hex selected
-            else
-                return false; // TODO: Fire off path move
+            if (this._data.Target.Current == null)
+            {
+                if (!this._data.DoubleClick)
+                {
+                    var data = new EvTileSelectData();
+                    data.Target = this._data.Target;
+                    var e = new EvTileSelect(data);
+                    e.TryProcess();
+                    return true;
+                }
+                // TODO: Fire off path move
+            }
+            return false;
         }
     }
 }

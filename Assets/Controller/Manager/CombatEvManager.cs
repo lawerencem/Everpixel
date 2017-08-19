@@ -30,7 +30,7 @@ namespace Assets.Model.Event.Combat
 
         public void RemoveEvent(object o)
         {
-            if (o.GetType().Equals(typeof(MCombatEv)))
+            if (o.GetType().BaseType.Equals(typeof(MCombatEv)))
             {
                 var e = o as MCombatEv;
                 this._events.Remove(e);
