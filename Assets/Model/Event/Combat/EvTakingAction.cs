@@ -43,7 +43,7 @@ namespace Assets.Model.Event.Combat
         {
             CombatManager.Instance.SetCurrentlyActing(this._data.Target);
             //     TODO       CMapGUIController.Instance.SetActingBoxToController(e.Controller);
-            var bob = this._data.Target.Handle.AddComponent<BobbingScript>();
+            var bob = this._data.Target.Handle.AddComponent<SBob>();
             bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Target.Handle);
             CameraManager.Instance.InitScrollTo(this._data.Target.Handle.transform.position);
             return true;

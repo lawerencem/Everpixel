@@ -25,8 +25,7 @@ namespace Assets.Model.Event.Combat
         public override void TryProcess()
         {
             base.TryProcess();
-            this.TryProcessMove();
-                
+            this.TryProcessMove();       
         }
 
         private void MoveDone(object o)
@@ -38,6 +37,9 @@ namespace Assets.Model.Event.Combat
             data.ToDisplay = false;
             var e = new EvAPMod(data);
             e.TryProcess();
+            if (this._data.Char != null)
+                this._data.Char.SetTile(this._data.Target);
+            this._data.Target.SetCurrent(null);
             this.DoCallbacks();
         }
 

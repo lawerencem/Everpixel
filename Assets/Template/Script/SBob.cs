@@ -2,7 +2,7 @@
 
 namespace Template.Script
 {
-    public class BobbingScript : MonoBehaviour
+    public class SBob : MonoBehaviour
     {
         public float DistancePerFrame;
         public float Distance;
@@ -38,7 +38,7 @@ namespace Template.Script
                 else
                     position.y += this.DistancePerFrame;
 
-                this.Target.transform.position = position;
+                this.Target.transform.position = new Vector3(position.x, position.y);
             }
         }
 

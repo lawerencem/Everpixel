@@ -2,6 +2,8 @@
 using Assets.Controller.Manager;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Map;
+using Assets.View;
+using Template.Script;
 
 namespace Assets.Model.Event.Combat
 {
@@ -28,6 +30,15 @@ namespace Assets.Model.Event.Combat
         {
             base.TryProcess();
             this.TryProcessPathMove();
+        }
+
+        public void AddBob(object o)
+        {
+            if (this._data.Char != null)
+            {
+                var bob = this._data.Char.Handle.AddComponent<SBob>();
+                bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Char.Handle);
+            }
         }
 
         private bool ProcessMove()
@@ -89,14 +100,19 @@ namespace Assets.Model.Event.Combat
         {
             if (this._data == null)
                 return false;
-            else if (this._data.Target == null)
-                return false;
-
             if (this._data.Char == null)
                 this._data.Char = CombatManager.Instance.GetCurrentlyActing();
+
+            var bob = this._data.Char.Handle.GetComponent<SBob>();
+            if (bob != null)
+                bob.Reset();
+            this._callbacks.Add(this.AddBob);
+
+            if (this._data.Target == null)
+                return false;
             if (this._data.Source == null)
                 this._data.Source = this._data.Char.Tile;
-            
+
             this._current = this._data.Source;
             var s = this._data.Source.Model;
             var t = this._data.Target.Model;
