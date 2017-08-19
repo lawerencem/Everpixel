@@ -1,24 +1,74 @@
-﻿//using Controller.Characters;
-//using Controller.Map;
-//using Generics.Scripts;
-//using Model.Abilities;
-//using Model.Characters;
-//using Model.Combat;
-//using Model.Events.Combat;
-//using System.Collections.Generic;
-//using UnityEngine;
-//using UnityEngine.UI;
-//using View.Biomes;
-//using View.Characters;
-//using View.GUI;
+﻿using Assets.Controller.Map.Tile;
+using Assets.Model.Map;
+using Assets.View;
+using Assets.View.Map;
+using System.Collections.Generic;
+using UnityEngine;
 
-//namespace Controller.Managers.Map
-//{
-//    public class CMapGUIController
-//    {
+namespace Assets.Controller.Map.Combat
+{
+    public class VMapController
+    {
+        private const float DEFAULT_ALPHA = 0.5f;
+
+        private List<GameObject> _familyTileDeco = new List<GameObject>();
+
+        private static VMapController _instance;
+        public static VMapController Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new VMapController();
+                return _instance;
+            }
+        }
+        
+        public VMapController()
+        {
+            this._familyTileDeco = new List<GameObject>();
+        }
+
+        public void DecoratePath(Path p)
+        {
+            foreach (var old in this._familyTileDeco)
+            {
+                GameObject.Destroy(old);
+            }
+
+            if (p != null)
+            {
+                var sprite = MapBridge.Instance.GetTileHighlightSprite();
+                foreach (var t in p.GetTiles())
+                {
+                    DecorateTileFamily(t.Controller, sprite);
+                }
+            }
+        }
+
+        private GameObject DecorateTile(TileController t, Sprite sprite, float alpha = DEFAULT_ALPHA)
+        {
+            var tView = new GameObject();
+            var renderer = tView.AddComponent<SpriteRenderer>();
+            renderer.sprite = sprite;
+            renderer.transform.position = t.View.Center;
+            renderer.sortingLayerName = Layers.MAP_GUI_LAYER;
+            tView.name = "Tile Deco";
+            var color = renderer.color;
+            color.a = alpha;
+            renderer.color = color;
+            return tView;
+        }
+
+        private void DecorateTileFamily(TileController tile, Sprite deco)
+        {
+            var tView = this.DecorateTile(tile, deco, ViewParams.TILE_DECO_ALPHA);
+            this._familyTileDeco.Add(tView);
+        }
+    }
+}
 //        private List<GameObject> _aoeTiles = new List<GameObject>();
 //        private List<GameObject> _boxImages = new List<GameObject>();
-//        private List<GameObject> _decorateTileFamily = new List<GameObject>();
 //        private GameObject _singleTile;
 
 //        private AbilitiesModal _abilityModal;
@@ -28,17 +78,6 @@
 //        private CMapGUIControllerHit _hitHelper = new CMapGUIControllerHit();
 //        private CMapGUIControllerParticle _particleHelper = new CMapGUIControllerParticle();
 //        private CMapGUIControllerShapeshift _shapeshiftHelper = new CMapGUIControllerShapeshift();
-
-//        private static CMapGUIController _instance;
-//        public static CMapGUIController Instance
-//        {
-//            get
-//            {
-//                if (_instance == null)
-//                    _instance = new CMapGUIController();
-//                return _instance;
-//            }
-//        }
 
 //        public void ActivateFatalityBanner()
 //        {
@@ -94,20 +133,6 @@
 //            {
 //                var sprite = MapBridge.Instance.GetHostileHoverSprite();
 //                DecorateSingleTile(t, sprite);
-//            }
-//        }
-
-//        public void DecoratePath(List<TileController> p)
-//        {
-//            foreach (var old in this._decorateTileFamily) { GameObject.Destroy(old); }
-
-//            if (p != null)
-//            {
-//                var sprite = MapBridge.Instance.GetTileHighlightSprite();
-//                foreach (var tile in p)
-//                {
-//                    DecorateFamilyOfTiles(tile, sprite);
-//                }
 //            }
 //        }
 
@@ -291,30 +316,10 @@
 //            this._aoeTiles.Add(tView);
 //        }
 
-//        private void DecorateFamilyOfTiles(TileController tile, Sprite deco)
-//        {
-//            var tView = this.DecorateTile(tile, deco, 0.75f);
-//            this._decorateTileFamily.Add(tView);
-//        }
-
 //        private void DecorateSingleTile(TileController t, Sprite deco, float alpha = 0.50f)
 //        {
 //            var tView = this.DecorateTile(t, deco, alpha);
 //            this._singleTile = tView;
-//        }
-
-//        private GameObject DecorateTile(TileController t, Sprite deco, float alpha = 0.50f)
-//        {
-//            var tView = new GameObject();
-//            var renderer = tView.AddComponent<SpriteRenderer>();
-//            renderer.sprite = deco;
-//            renderer.transform.position = t.Model.Center;
-//            renderer.sortingLayerName = CMapGUIControllerParams.MAP_GUI_LAYER;
-//            tView.name = "Decorated Tile";
-//            var color = renderer.color;
-//            color.a = alpha;
-//            renderer.color = color;
-//            return tView;
 //        }
         
 //        private void SetTagText(string tag, string toSet)

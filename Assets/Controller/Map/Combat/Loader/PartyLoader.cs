@@ -4,7 +4,7 @@ namespace Assets.Controller.Map.Combat.Loader
 {
     public class PartyLoader
     {
-        public void Init(MapController map, MapInitInfo info)
+        public void Init(MMapController map, MapInitInfo info)
         {
             var builder = new PartyBuilder();
             foreach(var kvp in info.LParties)

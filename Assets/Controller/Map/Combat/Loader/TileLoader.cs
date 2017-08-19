@@ -10,7 +10,7 @@ namespace Assets.Controller.Map.Combat.Loader
 {
     public class TileLoader
     {
-        public void InitMapDeco(MapController controller, MapInitInfo info)
+        public void InitMapDeco(MMapController controller, MapInitInfo info)
         {
             var empty = new List<TileController>();
             foreach(var tile in controller.GetMap().GetTiles())
@@ -34,7 +34,7 @@ namespace Assets.Controller.Map.Combat.Loader
             }
         }
 
-        public void InitTiles(MapController controller, MapInitInfo info, Transform tileHolder)
+        public void InitTiles(MMapController controller, MapInitInfo info, Transform tileHolder)
         {
             var sprites = MapBridge.Instance.GetBackgroundSprites(info.Biome);
             foreach (var tile in controller.GetMap().GetTiles())
@@ -46,7 +46,7 @@ namespace Assets.Controller.Map.Combat.Loader
                 render.sprite = sprite;
                 render.sortingLayerName = Layers.TILE_LAYER;
                 tile.Handle.transform.SetParent(tileHolder);
-                tile.Handle.name = ViewParams.TILE + "( " + tile.Model.Col + " / " + tile.Model.Row + " )";
+                tile.Handle.name = Layers.TILE + "( " + tile.Model.Col + " / " + tile.Model.Row + " )";
             }
             controller.GetMap().InitControllerAdjacent();
         }

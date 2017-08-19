@@ -17,12 +17,12 @@ namespace Assets.Controller.Map.Combat.Loader
             this._container = container;
         }
 
-        public void Init(MapController map, MapInitInfo info)
+        public void Init(MMapController map, MapInitInfo info)
         {
             this.InitViews(map, info);
         }
 
-        private void InitViews(MapController map, MapInitInfo info)
+        private void InitViews(MMapController map, MapInitInfo info)
         {
             var builder = new CharacterViewBuilder();
             foreach (var party in map.GetLParties())
@@ -45,7 +45,7 @@ namespace Assets.Controller.Map.Combat.Loader
             }   
         }
 
-        private void RenderChar(MapController m, CharController c, TileController t)
+        private void RenderChar(MMapController m, CharController c, TileController t)
         {
             var sprite = c.View.Sprites[c.View.Torso];
             var render = c.Handle.AddComponent<SpriteRenderer>();

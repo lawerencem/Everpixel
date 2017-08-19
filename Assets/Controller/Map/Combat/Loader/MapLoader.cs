@@ -7,7 +7,7 @@ namespace Assets.Controller.Map.Combat.Loader
 {
     public class MapLoader
     {
-        private MapController _map;
+        private MMapController _map;
 
         public Transform MapHolder;
         public Transform BackgroundTiles;
@@ -18,10 +18,10 @@ namespace Assets.Controller.Map.Combat.Loader
             this.MapHolder.tag = "BattleMap";
             this.BackgroundTiles = new GameObject("BackgroundTiles").transform;
             this.BackgroundTiles.transform.SetParent(this.MapHolder);
-            this._map = new MapController();
+            this._map = new MMapController();
         }
 
-        public MapController GetCombatMap(MapInitInfo info)
+        public MMapController GetCombatMap(MapInitInfo info)
         {
             var hexMap = HexMapBuilder.GetMap(info.Rows, info.Cols, ViewParams.OFFSET, ViewParams.MAP_CENTER);
             var map = new MMap(hexMap);
