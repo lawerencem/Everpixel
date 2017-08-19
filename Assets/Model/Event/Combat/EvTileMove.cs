@@ -39,7 +39,8 @@ namespace Assets.Model.Event.Combat
             e.TryProcess();
             if (this._data.Char != null)
                 this._data.Char.SetTile(this._data.Target);
-            this._data.Target.SetCurrent(null);
+            this._data.Source.SetCurrent(null);
+            this._data.Target.SetCurrent(this._data.Char);
             this.DoCallbacks();
         }
 
