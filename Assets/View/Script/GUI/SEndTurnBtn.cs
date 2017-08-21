@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace Assets.View.Script.GUI
 {
-    public class SEndTurnClick : SGuiButton
+    public class SEndTurnBtn : SGuiButton
     {
         public override void OnClick()
         {

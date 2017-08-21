@@ -7,6 +7,7 @@ namespace Assets.Model.Ability
         public MAbility(EAbility type)
         {
             this.Params = new AbilityParamContainer();
+            this._type = type;
         }
     }
 }

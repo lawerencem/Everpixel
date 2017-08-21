@@ -1,4 +1,5 @@
-﻿using Assets.Controller.Manager;
+﻿using Assets.Controller.GUI;
+using Assets.Controller.Manager;
 using Assets.Controller.Map.Combat;
 using Assets.Controller.Map.Combat.Loader;
 using Assets.Model.Biome.Enum;
@@ -48,6 +49,8 @@ namespace Assets.Controller.Managers
             initInfo.Rows = 12;
             var map = this._mapLoader.GetCombatMap(initInfo);
             CombatManager.Instance.Init(map);
+            var gui = new GUILoader();
+            gui.InitCombatGUI();
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Manager;
 using Assets.View;
+using Assets.View.Event;
 using Template.Script;
 
 namespace Assets.Model.Event.Combat
@@ -46,6 +47,8 @@ namespace Assets.Model.Event.Combat
             var bob = this._data.Target.Handle.AddComponent<SBob>();
             bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Target.Handle);
             CameraManager.Instance.InitScrollTo(this._data.Target.Handle.transform.position);
+            var e = new EvPopulateWpnBtns();
+            e.TryProcess();
             return true;
         }
     }

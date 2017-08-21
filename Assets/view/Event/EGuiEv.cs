@@ -2,6 +2,7 @@
 {
     public enum EGuiEv
     {
+        PopulateWpnBtns,
         TileClick,
         TileSelect
     }

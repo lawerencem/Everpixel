@@ -1,4 +1,5 @@
-﻿using Assets.Model.Ability.Enum;
+﻿using Assets.Model.Ability;
+using Assets.Model.Ability.Enum;
 using Template.Other;
 using Template.Utility;
 using UnityEngine;
@@ -17,9 +18,8 @@ namespace Assets.View.GUI
             var path = StringUtil.PathBuilder(ICON_PATH, "Icon", EXTENSION);
             var stuff = Resources.LoadAll(path);
             int index = 0;
-            //if (AbilityTable.Instance.Table.ContainsKey(ability))
-            //    index = AbilityTable.Instance.Table[ability].Sprite;
-            // TODO
+            if (AbilityTable.Instance.Table.ContainsKey(ability))
+                index = AbilityTable.Instance.Table[ability].Params.Sprite;
             return stuff[index] as Sprite;
         }
     }

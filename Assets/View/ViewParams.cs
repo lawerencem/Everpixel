@@ -4,6 +4,9 @@ namespace Assets.View
 {
     public class ViewParams
     {
+        // Btn Params
+        public static readonly Vector3 WPN_IMG_SCALE = new Vector3(0.2f, 0.2f, 0.2f);
+
         // Char View Params
         public static readonly float MOUNT_X_OFFSET = 0.05f;
         public static readonly float MOUNT_Y_OFFSET = 0.15f;
