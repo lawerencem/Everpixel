@@ -1,9 +1,5 @@
 ﻿TODO
 
-- Remove Bob on move
-- Add Bob on move done
-  -- If character has 0 stam/ap, process next taking action ev
-
 
 
 Perks

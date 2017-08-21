@@ -13,6 +13,7 @@ namespace Assets.Controller.Manager
         private List<CharController> _characters;
         private CharController _currentlyActing;
         private MMapController _map;
+        private List<CharController> _initiativeOrder;
         private List<MParty> _lParties;
         private List<MParty> _rParties;
 
@@ -31,10 +32,10 @@ namespace Assets.Controller.Manager
 
         public void SetCurrentlyActing(CharController c) { this._currentlyActing = c; }
 
-
         public CombatManager()
         {
             this._characters = new List<CharController>();
+            this._initiativeOrder = new List<CharController>();
             this._lParties = new List<MParty>();
             this._rParties = new List<MParty>();
         }
@@ -56,18 +57,51 @@ namespace Assets.Controller.Manager
             {
                 this._characters.Sort(
                     (x, y) =>
-                    x.Model.GetCurrentStats().GetStatValue(ESecondaryStat.Initiative)
-                    .CompareTo(y.Model.GetCurrentStats().GetStatValue(ESecondaryStat.Initiative)));
-                var data = new EvTakingActionData();
-                data.Target = this._characters[0];
-                var acting = new EvTakingAction(data);
-                acting.TryProcess();
+                    y.Model.GetCurrentStats().GetStatValue(ESecondaryStat.Initiative)
+                    .CompareTo(x.Model.GetCurrentStats().GetStatValue(ESecondaryStat.Initiative)));
             }
+            foreach (var character in this._characters)
+                this._initiativeOrder.Add(character);
+            this.ProcessTakingAction();
         }
 
         public bool IsValidActionClick(TileController t)
         {
             return false;
+        }
+
+        public void ProcessEndTurn()
+        {
+            this._currentlyActing.Model.ProcessEndOfTurn();
+            this._initiativeOrder.Remove(this._currentlyActing);
+            if (this._initiativeOrder.Count > 0)
+            {
+                this.ProcessTakingAction();
+            }
+            else
+            {
+                var e = new EvNewRound();
+                e.TryProcess();
+            }
+        }
+
+        public void ProcessNewRound()
+        {
+            this._initiativeOrder.Clear();
+            foreach (var character in this._characters)
+                this._initiativeOrder.Add(character);
+            this.ProcessTakingAction();
+        }
+
+        private void ProcessTakingAction()
+        {
+            if (this._initiativeOrder.Count > 0)
+            {
+                var data = new EvTakingActionData();
+                data.Target = this._initiativeOrder[0];
+                var acting = new EvTakingAction(data);
+                acting.TryProcess();
+            }
         }
     }
 }

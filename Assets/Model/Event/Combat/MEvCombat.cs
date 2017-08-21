@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace Assets.Model.Event.Combat
+﻿namespace Assets.Model.Event.Combat
 {
-    public class MCombatEv : ACombatEv<ECombatEv>
+    public class MEvCombat : AEvCombat<ECombatEv>
     {
-        public MCombatEv(ECombatEv t) : base(t)
+        public MEvCombat(ECombatEv t) : base(t)
         {
 
         }

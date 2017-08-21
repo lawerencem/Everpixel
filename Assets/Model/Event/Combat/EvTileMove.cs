@@ -13,7 +13,7 @@ namespace Assets.Model.Event.Combat
         public TileController Target { get; set; }
     }
 
-    public class EvTileMove : MCombatEv
+    public class EvTileMove : MEvCombat
     {
         private EvTileMoveData _data;
 

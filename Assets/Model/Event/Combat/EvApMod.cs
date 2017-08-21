@@ -11,7 +11,7 @@ namespace Assets.Model.Event.Combat
         public int Qty { get; set; }
     }
 
-    public class EvAPMod : MCombatEv
+    public class EvAPMod : MEvCombat
     {
         private EvAPModData _data;
 

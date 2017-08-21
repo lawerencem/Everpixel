@@ -3,7 +3,7 @@ using Template.Event;
 
 namespace Assets.Model.Event.Combat
 {
-    public class CombatEvManager : AEventManager<MCombatEv>
+    public class CombatEvManager : AEventManager<MEvCombat>
     {
         private static CombatEvManager _instance;
         public static CombatEvManager Instance
@@ -18,10 +18,10 @@ namespace Assets.Model.Event.Combat
 
         public CombatEvManager()
         {
-            this._events = new List<MCombatEv>();
+            this._events = new List<MEvCombat>();
         }
 
-        public override void RegisterEvent(MCombatEv e)
+        public override void RegisterEvent(MEvCombat e)
         {
             this._events.Add(e);
             this._events.Sort((x, y) => x.Priority.CompareTo(y.Priority));
@@ -30,9 +30,9 @@ namespace Assets.Model.Event.Combat
 
         public void RemoveEvent(object o)
         {
-            if (o.GetType().BaseType.Equals(typeof(MCombatEv)))
+            if (o.GetType().BaseType.Equals(typeof(MEvCombat)))
             {
-                var e = o as MCombatEv;
+                var e = o as MEvCombat;
                 this._events.Remove(e);
             }
         }
@@ -45,7 +45,7 @@ namespace Assets.Model.Event.Combat
             }
         }
 
-        protected override void TryProcessEvent(MCombatEv e)
+        protected override void TryProcessEvent(MEvCombat e)
         {
             e.TryProcess();
         }

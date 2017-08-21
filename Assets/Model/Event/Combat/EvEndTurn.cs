@@ -1,16 +1,25 @@
-﻿//using Controller.Characters;
-//using Controller.Managers;
-//using Generics.Scripts;
-//using UnityEngine;
+﻿using Assets.Controller.Manager;
+using Template.Script;
 
-//namespace Assets.Model.Event.Combat
-//{
-//    public class EndTurnEvent : MCombatEv
-//    {
-//        public EndTurnEvent(CombatEventManager parent) :
-//            base(ECombatEv.EndTurn, parent)
-//        {
-//            this.RegisterEvent();
-//        }
-//    }
-//}
+namespace Assets.Model.Event.Combat
+{
+    public class EvEndTurn : MEvCombat
+    {
+        public EvEndTurn() : base(ECombatEv.EndTurn) {}
+
+        public override void TryProcess()
+        {
+            base.TryProcess();
+            var character = CombatManager.Instance.GetCurrentlyActing();
+            if (character != null)
+            {
+                var bob = character.Handle.GetComponent<SBob>();
+                if (bob != null)
+                {
+                    bob.Reset();
+                }
+            }
+            CombatManager.Instance.ProcessEndTurn();
+        }
+    }
+}

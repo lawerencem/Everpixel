@@ -39,7 +39,7 @@ namespace Assets.Controller.Map.Combat.Loader
             var sprites = MapBridge.Instance.GetBackgroundSprites(info.Biome);
             foreach (var tile in controller.GetMap().GetTiles())
             {
-                var script = tile.Handle.AddComponent<TileScript>();
+                var script = tile.Handle.AddComponent<STile>();
                 script.InitTile(tile);
                 var sprite = sprites[Random.Range(0, sprites.Length)];
                 var render = tile.Handle.AddComponent<SpriteRenderer>();

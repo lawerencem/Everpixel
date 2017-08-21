@@ -26,6 +26,7 @@ namespace Assets.View.Event
 
         public override void TryProcess()
         {
+
             base.TryProcess();
             if (this.TryProcessSelect())
                 this.DoCallbacks();

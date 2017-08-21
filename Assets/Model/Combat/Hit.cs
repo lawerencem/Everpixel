@@ -13,7 +13,7 @@ namespace Assets.Model.Combat
     {
         private List<Callback> _callbacks;
         private List<MEffect> _effects;
-        private List<MCombatEv> _events;
+        private List<MEvCombat> _events;
         private FHit _flags;
 
         public MAbility Ability { get; set; }
@@ -33,7 +33,7 @@ namespace Assets.Model.Combat
         {
             this._callbacks = new List<Callback>();
             this._effects = new List<MEffect>();
-            this._events = new List<MCombatEv>();
+            this._events = new List<MEvCombat>();
             this._flags = new FHit();
             //this._effects = new List<Effect>();
 
@@ -61,7 +61,7 @@ namespace Assets.Model.Combat
             this._effects.Add(e);
         }
 
-        public void AddEvent(MCombatEv e)
+        public void AddEvent(MEvCombat e)
         {
             e.AddCallback(this.Callback);
             this._events.Add(e);

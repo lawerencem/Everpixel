@@ -51,7 +51,9 @@ namespace Assets.View.Event
 
         private bool TryProcessMove()
         {
-            if (this._data.Target.Current == null)
+            if (this._data.Target.Current == null && 
+                !GUIManager.Instance.GetGUILocked() &&
+                !GUIManager.Instance.GetInteractionLocked())
             {
                 if (!this._data.DoubleClick)
                 {
@@ -67,11 +69,14 @@ namespace Assets.View.Event
                     data.Target = this._data.Target;
                     var e = new EvPathMove(data);
                     e.AddCallback(VMapController.Instance.ClearDecoratedTiles);
+                    e.AddCallback(GUIManager.Instance.CallbackUnlockInteraction);
                     e.TryProcess();
                     return true;
                 }
             }
             return false;
         }
+
+        
     }
 }

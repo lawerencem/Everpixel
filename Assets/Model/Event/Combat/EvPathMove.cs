@@ -15,7 +15,7 @@ namespace Assets.Model.Event.Combat
         public Path TargetPath { get; set; } 
     }
 
-    public class EvPathMove : MCombatEv
+    public class EvPathMove : MEvCombat
     {
         private TileController _current;
         private EvPathMoveData _data;
@@ -28,6 +28,7 @@ namespace Assets.Model.Event.Combat
 
         public override void TryProcess()
         {
+            GUIManager.Instance.SetInteractionLocked(true);
             base.TryProcess();
             this.TryProcessPathMove();
         }

@@ -21,6 +21,7 @@
         MapDoneLoading,
         ModifyHP,
         ModifyStam,
+        NewRound,
         TileHitEvent,
         PathMove,
         PathTraversed,

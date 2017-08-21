@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Assets.Controller.Map.Tile
 {
-    public class TileScript : MonoBehaviour
+    public class STile : MonoBehaviour
     {
         private TileController _tile;
         private BoxCollider2D _collider;
