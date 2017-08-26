@@ -79,33 +79,33 @@ namespace Assets.Models.Equipment.XML
                 double.TryParse(value, out v);
                 switch (mod)
                 {
-                    case ("AccMod"): { table[type].Params.AccMod = v; } break;
-                    case ("AoE"): { table[type].Params.AoE = v; } break;
-                    case ("APCost"): { table[type].Params.APCost = (int)v; } break;
-                    case ("ArmorIgnoreMod"): { table[type].Params.ArmorIgnoreMod = v; } break;
-                    case ("ArmorPierceMod"): { table[type].Params.ArmorPierceMod = v; } break;
-                    case ("BlockIgnoreMod"): { table[type].Params.BlockIgnoreMod = v; } break;
-                    case ("CastTime"): { table[type].Params.CastTime = v; } break;
+                    case ("AccMod"): { table[type].Data.AccMod = v; } break;
+                    case ("AoE"): { table[type].Data.AoE = v; } break;
+                    case ("APCost"): { table[type].Data.APCost = (int)v; } break;
+                    case ("ArmorIgnoreMod"): { table[type].Data.ArmorIgnoreMod = v; } break;
+                    case ("ArmorPierceMod"): { table[type].Data.ArmorPierceMod = v; } break;
+                    case ("BlockIgnoreMod"): { table[type].Data.BlockIgnoreMod = v; } break;
+                    case ("CastTime"): { table[type].Data.CastTime = v; } break;
                     case ("CastTypeEnum"): { this.HandleCastType(type, value); } break;
-                    case ("Description"): { table[type].Params.Description = value; } break;
-                    case ("DmgPerPower"): { table[type].Params.DmgPerPower = double.Parse(value); } break;
-                    case ("Duration"): { table[type].Params.Duration = double.Parse(value); } break;
-                    case ("DodgeMod"): { table[type].Params.DodgeMod = v; } break;
-                    case ("EffectDur"): { table[type].Params.EffectDur = v; } break;
-                    case ("EffectValue"): { table[type].Params.EffectValue = v; } break;
-                    case ("FlatDamage"): { table[type].Params.FlatDamage = v; } break;
-                    case ("IconSprite"): { table[type].Params.Sprite = (int)v; } break;
+                    case ("Description"): { table[type].Data.Description = value; } break;
+                    case ("DmgPerPower"): { table[type].Data.DmgPerPower = double.Parse(value); } break;
+                    case ("Duration"): { table[type].Data.Duration = double.Parse(value); } break;
+                    case ("DodgeMod"): { table[type].Data.DodgeMod = v; } break;
+                    case ("EffectDur"): { table[type].Data.EffectDur = v; } break;
+                    case ("EffectValue"): { table[type].Data.EffectValue = v; } break;
+                    case ("FlatDamage"): { table[type].Data.FlatDamage = v; } break;
+                    case ("IconSprite"): { table[type].Data.Sprite = (int)v; } break;
                     case ("Injury"): { this.HandlAPerk(type, value); } break;
-                    case ("MeleeBlockChanceMod"): { table[type].Params.MeleeBlockChanceMod = v; } break;
-                    case ("ParryModMod"): { table[type].Params.ParryModMod = v; } break;
-                    case ("Range"): { table[type].Params.Range = (int)v; } break;
-                    case ("RangeBlockMod"): { table[type].Params.RangeBlockMod = v; } break;
-                    case ("RechargeTime"): { table[type].Params.RechargeTime = v; } break;
+                    case ("MeleeBlockChanceMod"): { table[type].Data.MeleeBlockChanceMod = v; } break;
+                    case ("ParryModMod"): { table[type].Data.ParryModMod = v; } break;
+                    case ("Range"): { table[type].Data.Range = (int)v; } break;
+                    case ("RangeBlockMod"): { table[type].Data.RangeBlockMod = v; } break;
+                    case ("RechargeTime"): { table[type].Data.RechargeTime = v; } break;
                     case ("EResistType"): { this.HandleResistType(type, value); } break;
                     case ("ShapeshiftSprites"): { this.HandleShapeshiftSprites(ele, type); } break;
-                    case ("ShieldDamageMod"): { table[type].Params.ShieldDamageMod = v; } break;
-                    case ("SpellLevel"): { table[type].Params.SpellLevel = (int)v; } break;
-                    case ("StaminaCost"): { table[type].Params.StaminaCost = (int)v; } break;
+                    case ("ShieldDamageMod"): { table[type].Data.ShieldDamageMod = v; } break;
+                    case ("SpellLevel"): { table[type].Data.SpellLevel = (int)v; } break;
+                    case ("StaminaCost"): { table[type].Data.StaminaCost = (int)v; } break;
                 }
             }
             catch(KeyNotFoundException e)
@@ -119,7 +119,7 @@ namespace Assets.Models.Equipment.XML
         {
             var type = ECastType.None;
             if (EnumUtil<ECastType>.TryGetEnumValue(value, ref type))
-                AbilityTable.Instance.Table[key].Params.CastType = type;
+                AbilityTable.Instance.Table[key].Data.CastType = type;
         }
 
         private void HandlAPerk(EAbility type, string s)
@@ -127,7 +127,7 @@ namespace Assets.Models.Equipment.XML
             var injury = EInjury.None;
             if (EnumUtil<EInjury>.TryGetEnumValue(s, ref injury))
             {
-                AbilityTable.Instance.Table[type].Params.Injuries.Add(injury);
+                AbilityTable.Instance.Table[type].Data.Injuries.Add(injury);
             }
         }
 
@@ -135,7 +135,7 @@ namespace Assets.Models.Equipment.XML
         {
             var resist = EResistType.None;
             if (EnumUtil<EResistType>.TryGetEnumValue(s, ref resist))
-                AbilityTable.Instance.Table[type].Params.Resist = resist;
+                AbilityTable.Instance.Table[type].Data.Resist = resist;
         }
 
         private void HandleShapeshiftSprites(XElement element, EAbility type)

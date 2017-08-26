@@ -1,6 +1,4 @@
-﻿using Assets.Model.Ability.Enum;
-using Assets.Model.Abiltiy.Logic;
-using Assets.Model.Combat;
+﻿using Assets.Model.Combat.Hit;
 
 namespace Assets.Model.Ability.Logic.Calculator
 {
@@ -24,8 +22,8 @@ namespace Assets.Model.Ability.Logic.Calculator
 
         public void ModifyDmgViaDefender(Hit hit)
         {
-            if (!FHit.HasFlag(hit.GetFlags().CurFlags, FHit.Flags.Dodge) &&
-                !FHit.HasFlag(hit.GetFlags().CurFlags, FHit.Flags.Parry))
+            if (!FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge) &&
+                !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))
             {
                 // TODO:
                 //if (FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Block))
@@ -35,7 +33,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             }
             else
             {
-                hit.Dmg = 0;
+                hit.Data.Dmg = 0;
             }
         }
 

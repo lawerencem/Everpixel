@@ -1,4 +1,5 @@
 ﻿using Assets.Model.Combat;
+using Assets.Model.Combat.Hit;
 
 namespace Assets.Model.Ability.Logic.Calculator
 {

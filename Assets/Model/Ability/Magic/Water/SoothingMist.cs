@@ -1,5 +1,6 @@
 ﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Combat;
+using Assets.Model.Combat.Hit;
 using Assets.Model.Zone.Duration;
 using System.Collections.Generic;
 
@@ -9,7 +10,7 @@ namespace Assets.Model.Ability.Magic.Water
     {
         public SoothingMist() : base(EAbility.Soothing_Mist) { }
 
-        public override List<Hit> Process(AbilityArgContainer arg)
+        public override List<Hit> Process(AbilityArgs arg)
         {
             var hits = base.Process(arg);
             //foreach (var hit in hits)
@@ -35,7 +36,7 @@ namespace Assets.Model.Ability.Magic.Water
             return hits;
         }
 
-        public override bool IsValidActionEvent(AbilityArgContainer arg)
+        public override bool IsValidActionEvent(AbilityArgs arg)
         {
             return true;
         }

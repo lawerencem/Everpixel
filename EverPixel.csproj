@@ -107,9 +107,9 @@
     <Compile Include="Assets\Controller\Map\Tile\TileController.cs" />
     <Compile Include="Assets\Controller\Map\Tile\STile.cs" />
     <Compile Include="Assets\Model\Ability\AAbility.cs" />
-    <Compile Include="Assets\Model\Ability\AbilityArgContainer.cs" />
+    <Compile Include="Assets\Model\Ability\AbilityArgs.cs" />
     <Compile Include="Assets\Model\Ability\AbilityFactory.cs" />
-    <Compile Include="Assets\Model\Ability\AbilityParamContainer.cs" />
+    <Compile Include="Assets\Model\Ability\AbilityData.cs" />
     <Compile Include="Assets\Model\Ability\AbilityTable.cs" />
     <Compile Include="Assets\Model\Ability\Enum\EAbility.cs" />
     <Compile Include="Assets\Model\Ability\Enum\ECastType.cs" />
@@ -180,7 +180,8 @@
     <Compile Include="Assets\Model\Ability\Weapon\WeaponAbilityFactory.cs" />
     <Compile Include="Assets\Model\Ability\XML\AbilityReader.cs" />
     <Compile Include="Assets\Model\Action\AAction.cs" />
-    <Compile Include="Assets\Model\Action\Attack.cs" />
+    <Compile Include="Assets\Model\Action\ActionData.cs" />
+    <Compile Include="Assets\Model\Action\MAction.cs" />
     <Compile Include="Assets\Model\Biome\Enum\EBiome.cs" />
     <Compile Include="Assets\Model\Character\AChar.cs" />
     <Compile Include="Assets\Model\Character\Builder\CharBuilder.cs" />
@@ -229,10 +230,12 @@
     <Compile Include="Assets\Model\Class\MClass.cs" />
     <Compile Include="Assets\Model\Class\Table\ClassParamTable.cs" />
     <Compile Include="Assets\Model\Class\XML\ClassReader.cs" />
-    <Compile Include="Assets\Model\Combat\ChancePrediction.cs" />
-    <Compile Include="Assets\Model\Combat\FHit.cs" />
-    <Compile Include="Assets\Model\Combat\Hit.cs" />
-    <Compile Include="Assets\Model\Combat\HitModData.cs" />
+    <Compile Include="Assets\Model\Combat\Hit\AHit.cs" />
+    <Compile Include="Assets\Model\Combat\Hit\ChancePrediction.cs" />
+    <Compile Include="Assets\Model\Combat\Hit\FHit.cs" />
+    <Compile Include="Assets\Model\Combat\Hit\Hit.cs" />
+    <Compile Include="Assets\Model\Combat\Hit\HitData.cs" />
+    <Compile Include="Assets\Model\Combat\Hit\HitMod.cs" />
     <Compile Include="Assets\Model\Culture\ECulture.cs" />
     <Compile Include="Assets\Model\Effect\EEffect.cs" />
     <Compile Include="Assets\Model\Effect\Effect.cs" />
@@ -291,6 +294,7 @@
     <Compile Include="Assets\Model\Event\Combat\EvNewRound.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvPathMove.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvPathTraversed.cs" />
+    <Compile Include="Assets\Model\Event\Combat\EvPerformAbility.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvPerformAction.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvPredictAction.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvShapeshift.cs" />
@@ -421,7 +425,7 @@
     <Compile Include="Assets\Template\Utility\RNG.cs" />
     <Compile Include="Assets\Template\Utility\StringUtil.cs" />
     <Compile Include="Assets\Template\XML\XMLReader.cs" />
-    <Compile Include="Assets\View\Attacks\AttackSpriteLoader.cs" />
+    <Compile Include="Assets\View\Ability\AttackSpriteLoader.cs" />
     <Compile Include="Assets\View\Barks\BarkManager.cs" />
     <Compile Include="Assets\View\Barks\BarkTable.cs" />
     <Compile Include="Assets\View\Barks\EBark.cs" />
@@ -498,6 +502,7 @@
     <None Include="Assets\TODO.txt" />
     <None Include="Assets\View\Barks\XML\Barks.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

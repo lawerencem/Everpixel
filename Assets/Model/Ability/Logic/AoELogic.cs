@@ -15,7 +15,7 @@ namespace Assets.Model.Ability.Logic
             return null;
         }
 
-        public List<TileController> GetAoETiles(AbilityArgContainer arg, int aoe)
+        public List<TileController> GetAoETiles(AbilityArgs arg, int aoe)
         {
             //var list = new List<TileController>();
             //var t = arg.Target.Model;
@@ -25,7 +25,7 @@ namespace Assets.Model.Ability.Logic
             return null;
         }
 
-        public List<TileController> GetRaycastTiles(AbilityArgContainer arg)
+        public List<TileController> GetRaycastTiles(AbilityArgs arg)
         {
             return null;
             //var list = new List<TileController>();
@@ -51,7 +51,7 @@ namespace Assets.Model.Ability.Logic
             //return list;
         }
 
-        public List<TileController> GetPotentialTargets(AbilityArgContainer arg)
+        public List<TileController> GetPotentialTargets(AbilityArgs arg)
         {
             int dist = arg.Range;
             if (arg.LWeapon)

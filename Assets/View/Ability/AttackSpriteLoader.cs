@@ -3,7 +3,7 @@ using Template.Other;
 using Template.Utility;
 using UnityEngine;
 
-namespace Assets.View.Characters
+namespace Assets.View.Ability
 {
     public class AttackSpriteLoader : ASingleton<AttackSpriteLoader>
     {

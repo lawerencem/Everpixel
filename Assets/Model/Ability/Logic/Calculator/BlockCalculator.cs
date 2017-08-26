@@ -1,4 +1,4 @@
-﻿using Assets.Model.Combat;
+﻿using Assets.Model.Combat.Hit;
 using Template.Utility;
 
 namespace Assets.Model.Ability.Logic.Calculator
@@ -42,8 +42,8 @@ namespace Assets.Model.Ability.Logic.Calculator
         {
             this.Predict(hit);
             var roll = RNG.Instance.NextDouble();
-            if (hit.Chances.Block > roll)
-                FHit.SetBlockTrue(hit.GetFlags());
+            if (hit.Data.Chances.Block > roll)
+                FHit.SetBlockTrue(hit.Data.Flags);
         }
     }
 }

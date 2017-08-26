@@ -1,4 +1,4 @@
-﻿using Assets.Model.Combat;
+﻿using Assets.Model.Combat.Hit;
 using Assets.Model.Effect;
 
 namespace Assets.Model.Effects.Will

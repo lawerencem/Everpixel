@@ -1,6 +1,6 @@
 ﻿using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Enum;
-using Assets.Model.Combat;
+using Assets.Model.Combat.Hit;
 using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Magic.Fighting
@@ -9,17 +9,17 @@ namespace Assets.Model.Ability.Magic.Fighting
     {
         public Kamehameha() : base(EAbility.Kamehameha) { }
 
-        public override List<TileController> GetAoETiles(AbilityArgContainer arg)
+        public override List<TileController> GetAoETiles(AbilityArgs arg)
         {
             return base.GetRaycastTiles(arg);
         }
 
-        public override List<Hit> Predict(AbilityArgContainer arg)
+        public override List<Hit> Predict(AbilityArgs arg)
         {
             return base.PredictBullet(arg);
         }
 
-        public override List<Hit> Process(AbilityArgContainer arg)
+        public override List<Hit> Process(AbilityArgs arg)
         {
             var hits = base.Process(arg);
             foreach (var hit in hits)
@@ -29,7 +29,7 @@ namespace Assets.Model.Ability.Magic.Fighting
             return hits;
         }
 
-        public override bool IsValidActionEvent(AbilityArgContainer arg)
+        public override bool IsValidActionEvent(AbilityArgs arg)
         {
             return true;
         }

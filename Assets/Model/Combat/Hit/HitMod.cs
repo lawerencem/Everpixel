@@ -1,11 +1,11 @@
-﻿namespace Assets.Model.Combat
+﻿namespace Assets.Model.Combat.Hit
 {
-    public class HitModData
+    public class HitMod
     {
         public double BaseDamage { get; set; }
         public double BlockMod { get; set; }
 
-        public HitModData()
+        public HitMod()
         {
             this.BaseDamage = 0;
             this.BlockMod = 1;

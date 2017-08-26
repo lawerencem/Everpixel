@@ -1,6 +1,6 @@
 ﻿using Assets.Model.Character;
 using Assets.Model.Character.Enum;
-using Assets.Model.Combat;
+using Assets.Model.Combat.Hit;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
@@ -161,14 +161,14 @@ namespace Assets.View.GUI
         private void SetModalDamageValuesHelper(Hit hit)
         {
             this._dmgPredictionModal.SetActive(true);
-            this._blockText.text = Math.Truncate(hit.Chances.Block * 100).ToString() + " %";
-            this._critText.text = Math.Truncate(hit.Chances.Crit * 100).ToString() + " %";
-            this._dodgeText.text = Math.Truncate(hit.Chances.Dodge * 100).ToString() + " %";
-            if (hit.IsHeal)
-                this._dmgText.text = "+ " + Math.Truncate(hit.Chances.Damage).ToString();
+            this._blockText.text = Math.Truncate(hit.Data.Chances.Block * 100).ToString() + " %";
+            this._critText.text = Math.Truncate(hit.Data.Chances.Crit * 100).ToString() + " %";
+            this._dodgeText.text = Math.Truncate(hit.Data.Chances.Dodge * 100).ToString() + " %";
+            if (hit.Data.IsHeal)
+                this._dmgText.text = "+ " + Math.Truncate(hit.Data.Chances.Damage).ToString();
             else
-                this._dmgText.text = Math.Truncate(hit.Chances.Damage).ToString();
-            this._parryText.text = Math.Truncate(hit.Chances.Parry * 100).ToString() + " %";
+                this._dmgText.text = Math.Truncate(hit.Data.Chances.Damage).ToString();
+            this._parryText.text = Math.Truncate(hit.Data.Chances.Parry * 100).ToString() + " %";
         }
     }
 }

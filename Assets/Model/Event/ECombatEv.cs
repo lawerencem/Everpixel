@@ -25,7 +25,7 @@
         TileHitEvent,
         PathMove,
         PathTraversed,
-        PerformAction,
+        PerformAbility,
         PredictAction,
         WeaponAbilityPerformed,
         ShowPotentialPath,

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Assets.Model.Combat
+namespace Assets.Model.Combat.Hit
 {
     public class FHit
     {

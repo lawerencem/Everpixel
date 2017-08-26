@@ -25,16 +25,18 @@ namespace Assets.View.Event
         public override void TryProcess()
         {
             base.TryProcess();
-            CombatManager.Instance.SetCurrentAbility(this._data.Ability);
             if (this.IsValid())
             {
                 var ability = AbilityTable.Instance.Table[this._data.Ability];
-                var args = new AbilityArgContainer();
-                args.Range = ability.Params.Range;
+                var args = new AbilityArgs();
+                args.LWeapon = this._data.LWeapon;
+                args.Range = ability.Data.Range;
                 args.Source = this._data.Source;
                 var tiles = ability.GetTargetTiles(args);
                 VMapController.Instance.DecoratePotentialTargetTiles(tiles);
-                CombatManager.Instance.SetTgtTiles(tiles);
+                CombatManager.Instance.SetPotentialTgtTiles(tiles);
+                CombatManager.Instance.SetCurrentAbility(this._data.Ability);
+                CombatManager.Instance.SetLWeapon(this._data.LWeapon);
             }
         }
 

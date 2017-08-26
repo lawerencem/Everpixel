@@ -1,21 +1,22 @@
 ﻿using Assets.Controller.Character;
-using Template.CB;
-using System.Collections.Generic;
 using Assets.Template.CB;
-using System;
+using System.Collections.Generic;
+using Template.CB;
 
 namespace Assets.Model.Action
 {
     public abstract class AAction : ICallback, ICallbackHandler
     {
         protected List<Callback> _callbacks;
+        protected ActionData _data;
 
-        protected CharController _origin;
-        public CharController Origin { get { return this._origin; } }
+        public ActionData Data { get {return this._data; } }
 
-        public AAction(CharController origin)
+        public AAction(ActionData d)
         {
-            this._origin = origin;
+            this._data = d;
+            this._callbacks = new List<Callback>();
+            this._data = new ActionData();
         }
 
         public void AddCallback(Callback callback)
@@ -30,7 +31,8 @@ namespace Assets.Model.Action
 
         public virtual void DoCallbacks()
         {
-
+            foreach (var callback in this._callbacks)
+                callback(this);
         }
 
         public void SetCallback(Callback callback)

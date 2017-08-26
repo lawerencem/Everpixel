@@ -15,16 +15,17 @@ namespace Assets.Controller.Manager.Combat
         public MMapController Map;
         public List<CharController> InitiativeOrder;
         public List<MParty> LParties;
+        public bool LWeapon;
+        public List<TileController> PotentialTgtTiles;
         public List<MParty> RParties;
-        public List<TileController> TgtTiles;
 
         public CombatManagerData()
         {
             this.Characters = new List<CharController>();
             this.InitiativeOrder = new List<CharController>();
             this.LParties = new List<MParty>();
+            this.PotentialTgtTiles = new List<TileController>();
             this.RParties = new List<MParty>();
-            this.TgtTiles = new List<TileController>();
         }
     }
 }

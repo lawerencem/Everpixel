@@ -1,5 +1,5 @@
 ﻿using Assets.Controller.Character;
-using Assets.Model.Combat;
+using Assets.Model.Combat.Hit;
 
 namespace Assets.Model.Perk.PreHit
 {
@@ -16,15 +16,24 @@ namespace Assets.Model.Perk.PreHit
         public override void TryModHit(Hit hit)
         {
             base.TryModHit(hit);
-            if (hit.Target == this._previous)
+            if (hit.Data.Target.Current != null && hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
             {
-                this._count++;
-                hit.ModData.BaseDamage += (this._count * this.Val);
+                var target = hit.Data.Target.Current as CharController;
+                if (target.Equals(this._previous))
+                {
+                    this._count++;
+                    hit.Data.ModData.BaseDamage += (this._count * this.Val);
+                }
+                else
+                {
+                    this._count = 0;
+                    this._previous = target;
+                }
             }
             else
             {
                 this._count = 0;
-                this._previous = hit.Target;
+                this._previous = null;
             }
         }
     }

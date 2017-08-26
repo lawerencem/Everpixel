@@ -1,5 +1,5 @@
 ﻿using Assets.Model.Ability.Enum;
-using Assets.Model.Combat;
+using Assets.Model.Combat.Hit;
 using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Music
@@ -8,7 +8,7 @@ namespace Assets.Model.Ability.Music
     {
         public HasteSong() : base(EAbility.Haste_Song) { }
 
-        public override List<Hit> Process(AbilityArgContainer arg)
+        public override List<Hit> Process(AbilityArgs arg)
         {
             //var hits = base.Process(arg);
             //base.ProcessSong(hit);
@@ -32,7 +32,7 @@ namespace Assets.Model.Ability.Music
             // TODO:
         }
 
-        public override bool IsValidActionEvent(AbilityArgContainer arg)
+        public override bool IsValidActionEvent(AbilityArgs arg)
         {
             return true;
         }

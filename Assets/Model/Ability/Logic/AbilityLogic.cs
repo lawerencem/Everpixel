@@ -1,6 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Tile;
-using Assets.Model.Combat;
+using Assets.Model.Combat.Hit;
 using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Logic
@@ -19,12 +19,12 @@ namespace Assets.Model.Ability.Logic
         }
 
         public List<TileController> GetAdjacentTiles(CharController c) { return this._aoeLogic.GetAdjacentTiles(c); }
-        public List<TileController> GetAoETiles(AbilityArgContainer arg, int aoe) {return this._aoeLogic.GetAoETiles(arg, aoe);}
-        public List<TileController> GetRaycastTiles(AbilityArgContainer arg) { return this._aoeLogic.GetRaycastTiles(arg);}
-        public List<TileController> GetPotentialTargets(AbilityArgContainer arg) { return this._aoeLogic.GetPotentialTargets(arg);}
+        public List<TileController> GetAoETiles(AbilityArgs arg, int aoe) {return this._aoeLogic.GetAoETiles(arg, aoe);}
+        public List<TileController> GetRaycastTiles(AbilityArgs arg) { return this._aoeLogic.GetRaycastTiles(arg);}
+        public List<TileController> GetPotentialTargets(AbilityArgs arg) { return this._aoeLogic.GetPotentialTargets(arg);}
 
-        public bool IsValidEmptyTile(AbilityArgContainer arg) { return this._tileLogic.IsValidEmptyTile(arg); }
-        public bool IsValidEnemyTarget(AbilityArgContainer arg) { return this._tileLogic.IsValidEnemyTarget(arg); }
+        public bool IsValidEmptyTile(AbilityArgs arg) { return this._tileLogic.IsValidEmptyTile(arg); }
+        public bool IsValidEnemyTarget(AbilityArgs arg) { return this._tileLogic.IsValidEnemyTarget(arg); }
 
         public void PredictBullet(Hit hit) { this._typeLogic.PredictBullet(hit); }
         public void PredictInstant(Hit hit) { this._typeLogic.PredictInstant(hit); }

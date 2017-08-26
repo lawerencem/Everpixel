@@ -1,5 +1,4 @@
-﻿using Assets.Model.Character.Enum;
-using Assets.Model.Combat;
+﻿using Assets.Model.Combat.Hit;
 
 namespace Assets.Model.Perk.WhenHit
 {

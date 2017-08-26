@@ -33,7 +33,18 @@ namespace Assets.View.Event
 
         private bool TryProcessAction()
         {
-            return CombatManager.Instance.IsValidActionClick(this._data.Target);
+            if (CombatManager.Instance.IsValidActionClick(this._data.Target))
+            {
+                var data = new EvPerformAbilityData();
+                data.Ability = CombatManager.Instance.GetCurrentAbility();
+                data.LWeapon = CombatManager.Instance.GetLWeapon();
+                data.Source = CombatManager.Instance.GetCurrentlyActing();
+                data.Target = this._data.Target;
+                var e = new EvPerformAbility(data);
+                e.TryProcess();
+                return true;
+            }
+            return false;
         }
 
         private bool TryProcessClick()

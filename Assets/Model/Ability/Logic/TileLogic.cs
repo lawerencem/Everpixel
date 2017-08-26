@@ -2,7 +2,7 @@
 {
     public class TileLogic
     {
-        public bool IsValidEnemyTarget(AbilityArgContainer arg)
+        public bool IsValidEnemyTarget(AbilityArgs arg)
         {
             //if (arg.Target.Model.Current != null)
             //{
@@ -16,7 +16,7 @@
             return false;
         }
 
-        public bool IsValidEmptyTile(AbilityArgContainer arg)
+        public bool IsValidEmptyTile(AbilityArgs arg)
         {
             //if (arg.Target.Model.Current == null)
             //    return true;

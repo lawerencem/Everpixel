@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Assets.Model.Ability
 {
-    public class AbilityParamContainer
+    public class AbilityData
     {
         public double AccMod { get; set; }
         public double AoE { get; set; }
@@ -23,7 +23,10 @@ namespace Assets.Model.Ability
         public double EffectDur { get; set; }
         public double EffectValue { get; set; }
         public double FlatDamage { get; set; }
+        public bool HitsTiles { get; set; }
+        public bool Hostile { get; set; }
         public List<EInjury> Injuries { get; set; }
+        public bool IsHeal { get; set; }
         public MagicTypeEnum MagicType { get; set; }
         public double MeleeBlockChanceMod { get; set; }
         public double ParryModMod { get; set; }
@@ -36,7 +39,7 @@ namespace Assets.Model.Ability
         public int Sprite { get; set; }
         public int StaminaCost { get; set; }
 
-        public AbilityParamContainer()
+        public AbilityData()
         {
             this.AccMod = 1;
             this.AoE = 0;
@@ -50,6 +53,8 @@ namespace Assets.Model.Ability
             this.DmgPerPower = 0.05;
             this.DodgeMod = 1;
             this.Duration = 0;
+            this.HitsTiles = false;
+            this.Hostile = true;
             this.Injuries = new List<EInjury>();
             this.MeleeBlockChanceMod = 1;
             this.ParryModMod = 1;
@@ -60,32 +65,34 @@ namespace Assets.Model.Ability
             this.StaminaCost = 0;
         }
 
-        public AbilityParamContainer Copy()
+        public AbilityData Copy()
         {
-            var aParams = new AbilityParamContainer();
-            aParams.SpellLevel = this.SpellLevel;
-            aParams.AccMod = this.AccMod;
-            aParams.APCost = this.APCost;
-            aParams.AoE = this.AoE;
-            aParams.ArmorIgnoreMod = this.ArmorIgnoreMod;
-            aParams.ArmorPierceMod = this.ArmorPierceMod;
-            aParams.BlockIgnoreMod = this.BlockIgnoreMod;
-            aParams.CastType = this.CastType;
-            aParams.DamageMod = this.DamageMod;
-            aParams.Description = this.Description;
-            aParams.DodgeMod = this.DodgeMod;
-            aParams.Duration = this.Duration;
-            aParams.StaminaCost = this.StaminaCost;
-            aParams.MagicType = this.MagicType;
-            aParams.MeleeBlockChanceMod = this.MeleeBlockChanceMod;
-            aParams.ParryModMod = this.ParryModMod;
-            aParams.RangeBlockMod = this.RangeBlockMod;
-            aParams.RechargeTime = this.RechargeTime;
-            aParams.ShieldDamageMod = this.ShieldDamageMod;
-            aParams.SpellLevel = this.SpellLevel;
-            aParams.Sprite = this.Sprite;
-            aParams.StaminaCost = this.StaminaCost;
-            return aParams;
+            var data = new AbilityData();
+            data.SpellLevel = this.SpellLevel;
+            data.AccMod = this.AccMod;
+            data.APCost = this.APCost;
+            data.AoE = this.AoE;
+            data.ArmorIgnoreMod = this.ArmorIgnoreMod;
+            data.ArmorPierceMod = this.ArmorPierceMod;
+            data.BlockIgnoreMod = this.BlockIgnoreMod;
+            data.CastType = this.CastType;
+            data.DamageMod = this.DamageMod;
+            data.Description = this.Description;
+            data.DodgeMod = this.DodgeMod;
+            data.Duration = this.Duration;
+            data.HitsTiles = this.HitsTiles;
+            data.Hostile = this.Hostile;
+            data.IsHeal = this.IsHeal;
+            data.MagicType = this.MagicType;
+            data.MeleeBlockChanceMod = this.MeleeBlockChanceMod;
+            data.ParryModMod = this.ParryModMod;
+            data.RangeBlockMod = this.RangeBlockMod;
+            data.RechargeTime = this.RechargeTime;
+            data.ShieldDamageMod = this.ShieldDamageMod;
+            data.SpellLevel = this.SpellLevel;
+            data.Sprite = this.Sprite;
+            data.StaminaCost = this.StaminaCost;
+            return data;
         }
     }
 }

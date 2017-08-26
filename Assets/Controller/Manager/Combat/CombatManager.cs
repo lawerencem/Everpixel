@@ -26,11 +26,13 @@ namespace Assets.Controller.Manager.Combat
 
         public EAbility GetCurrentAbility() { return this._data.CurrentAbility; }
         public CharController GetCurrentlyActing() { return this._data.CurrentlyActing; }
-        public List<TileController> GetTgtTiles() { return this._data.TgtTiles; }
+        public bool GetLWeapon() { return this._data.LWeapon; }
+        public List<TileController> GetPotentialTgtTiles() { return this._data.PotentialTgtTiles; }
 
         public void SetCurrentAbility(EAbility a) { this._data.CurrentAbility = a; }
         public void SetCurrentlyActing(CharController c) { this._data.CurrentlyActing = c; }
-        public void SetTgtTiles(List<TileController> t) { this._data.TgtTiles = t; }
+        public void SetLWeapon(bool lWeapon) { this._data.LWeapon = lWeapon; }
+        public void SetPotentialTgtTiles(List<TileController> t) { this._data.PotentialTgtTiles = t; }
 
         public CombatManager()
         {
@@ -68,17 +70,17 @@ namespace Assets.Controller.Manager.Combat
             {
                 var ability = AbilityTable.Instance.Table[this._data.CurrentAbility];
                 var target = t.Current as CharController;
-                var tile = this._data.TgtTiles.Find(x => x.Equals(t));
+                var tile = this._data.PotentialTgtTiles.Find(x => x.Equals(t));
                 if (tile != null)
                 {
                     if (this._data.CurrentlyActing.Model.LParty == target.Model.LParty)
                     {
-                        if (!ability.Hostile)
+                        if (!ability.Data.Hostile)
                             return true;
                     }
                     else
                     {
-                        if (ability.Hostile)
+                        if (ability.Data.Hostile)
                             return true;
                     }
                 }

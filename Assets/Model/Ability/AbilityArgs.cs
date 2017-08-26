@@ -3,7 +3,7 @@ using Assets.Controller.Map.Tile;
 
 namespace Assets.Model.Ability
 {
-    public class AbilityArgContainer
+    public class AbilityArgs
     {
         public int Range { get; set; }
         public bool LWeapon { get; set; }

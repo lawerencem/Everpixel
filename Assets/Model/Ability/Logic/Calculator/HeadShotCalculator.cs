@@ -1,5 +1,5 @@
 ﻿using Assets.Model.Abiltiy.Logic;
-using Assets.Model.Combat;
+using Assets.Model.Combat.Hit;
 using Template.Utility;
 
 namespace Assets.Model.Ability.Logic.Calculator
@@ -15,7 +15,7 @@ namespace Assets.Model.Ability.Logic.Calculator
         {
             var roll = RNG.Instance.NextDouble();
             if (roll > LogicParams.BASE_HEAD_CHANCE)
-                FHit.SetHeadTrue(hit.GetFlags());
+                FHit.SetHeadTrue(hit.Data.Flags);
         }
     }
 }

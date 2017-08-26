@@ -1,6 +1,6 @@
-﻿namespace Assets.Model.Combat
+﻿namespace Assets.Model.Combat.Hit
 {
-    public class ChancePrediction
+    public class HitPrediction
     {
         public double Block { get; set; }
         public double Crit { get; set; }
@@ -9,7 +9,7 @@
         public double Parry { get; set; }
         public double Resist { get; set; }
 
-        public ChancePrediction()
+        public HitPrediction()
         {
             this.Block = 1;
             this.Crit = 1;

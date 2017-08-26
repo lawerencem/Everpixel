@@ -1,5 +1,5 @@
 ﻿using Assets.Model.Ability.Enum;
-using Assets.Model.Combat;
+using Assets.Model.Combat.Hit;
 
 namespace Assets.Model.Perk.AbilityMod
 {
@@ -10,8 +10,8 @@ namespace Assets.Model.Perk.AbilityMod
         public override void TryModAbility(Hit hit)
         {
             base.TryModAbility(hit);
-            if (hit.Ability.Type == EAbility.Bite)
-                hit.ModData.BaseDamage += this.Val;
+            if (hit.Data.Ability.Type == EAbility.Bite)
+                hit.Data.ModData.BaseDamage += this.Val;
         }
     }
 }
