@@ -1,5 +1,4 @@
-﻿using Assets.Controller.Manager;
-using Template.Script;
+﻿using Assets.Controller.Manager.Combat;
 
 namespace Assets.Model.Event.Combat
 {

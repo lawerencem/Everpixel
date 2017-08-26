@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Manager;
+using Assets.Controller.Manager.Combat;
 using Assets.View;
 using Assets.View.Event;
 using Template.Script;

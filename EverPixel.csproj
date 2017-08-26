@@ -85,8 +85,9 @@
     <Compile Include="Assets\Controller\GUI\GUILoader.cs" />
     <Compile Include="Assets\Controller\Manager\CameraManager.cs" />
     <Compile Include="Assets\Controller\Manager\CombatEvManager - backup.cs" />
-    <Compile Include="Assets\Controller\Manager\CombatEvManager.cs" />
-    <Compile Include="Assets\Controller\Manager\CombatManager.cs" />
+    <Compile Include="Assets\Controller\Manager\Combat\CombatEvManager.cs" />
+    <Compile Include="Assets\Controller\Manager\Combat\CombatManager.cs" />
+    <Compile Include="Assets\Controller\Manager\Combat\CombatManagerData.cs" />
     <Compile Include="Assets\Controller\Manager\GUIEvManager.cs" />
     <Compile Include="Assets\Controller\Manager\GameManager.cs" />
     <Compile Include="Assets\Controller\Manager\GUIManager.cs" />

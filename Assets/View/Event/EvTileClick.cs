@@ -1,4 +1,5 @@
 ﻿using Assets.Controller.Manager;
+using Assets.Controller.Manager.Combat;
 using Assets.Controller.Map.Combat;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Event.Combat;
