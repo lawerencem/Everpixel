@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.GUI;
 using Assets.Controller.Manager;
+using Assets.Controller.Manager.Combat;
 using Assets.Controller.Map.Combat;
 using Assets.Controller.Map.Combat.Loader;
 using Assets.Model.Biome.Enum;

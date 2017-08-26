@@ -1,21 +1,17 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Combat;
 using Assets.Controller.Map.Tile;
+using Assets.Model.Ability.Enum;
 using Assets.Model.Character.Enum;
 using Assets.Model.Event.Combat;
 using Assets.Model.Party;
 using System.Collections.Generic;
 
-namespace Assets.Controller.Manager
+namespace Assets.Controller.Manager.Combat
 {
     public class CombatManager
     {
-        private List<CharController> _characters;
-        private CharController _currentlyActing;
-        private MMapController _map;
-        private List<CharController> _initiativeOrder;
-        private List<MParty> _lParties;
-        private List<MParty> _rParties;
+        private CombatManagerData _data;
 
         private static CombatManager _instance;
         public static CombatManager Instance
@@ -28,40 +24,37 @@ namespace Assets.Controller.Manager
             }
         }
 
-        public CharController GetCurrentlyActing() { return this._currentlyActing; }
+        public CharController GetCurrentlyActing() { return this._data.CurrentlyActing; }
 
-        public void SetCurrentlyActing(CharController c) { this._currentlyActing = c; }
+        public void SetCurrentlyActing(CharController c) { this._data.CurrentlyActing = c; }
 
         public CombatManager()
         {
-            this._characters = new List<CharController>();
-            this._initiativeOrder = new List<CharController>();
-            this._lParties = new List<MParty>();
-            this._rParties = new List<MParty>();
+            this._data = new CombatManagerData();
         }
 
         public void Init(MMapController map)
         {
-            this._map = map;
-            this._lParties = map.GetLParties();
-            this._rParties = map.GetRParties();
-            foreach(var party in this._lParties)
+            this._data.Map = map;
+            this._data.LParties = map.GetLParties();
+            this._data.RParties = map.GetRParties();
+            foreach(var party in this._data.LParties)
             {
-                this._characters.AddRange(party.GetChars());
+                this._data.Characters.AddRange(party.GetChars());
             }
-            foreach (var party in this._rParties)
+            foreach (var party in this._data.RParties)
             {
-                this._characters.AddRange(party.GetChars());
+                this._data.Characters.AddRange(party.GetChars());
             }
-            if (this._characters.Count > 0)
+            if (this._data.Characters.Count > 0)
             {
-                this._characters.Sort(
+                this._data.Characters.Sort(
                     (x, y) =>
                     y.Model.GetCurrentStats().GetStatValue(ESecondaryStat.Initiative)
                     .CompareTo(x.Model.GetCurrentStats().GetStatValue(ESecondaryStat.Initiative)));
             }
-            foreach (var character in this._characters)
-                this._initiativeOrder.Add(character);
+            foreach (var character in this._data.Characters)
+                this._data.InitiativeOrder.Add(character);
             this.ProcessTakingAction();
         }
 
@@ -72,9 +65,9 @@ namespace Assets.Controller.Manager
 
         public void ProcessEndTurn()
         {
-            this._currentlyActing.Model.ProcessEndOfTurn();
-            this._initiativeOrder.Remove(this._currentlyActing);
-            if (this._initiativeOrder.Count > 0)
+            this._data.CurrentlyActing.Model.ProcessEndOfTurn();
+            this._data.InitiativeOrder.Remove(this._data.CurrentlyActing);
+            if (this._data.InitiativeOrder.Count > 0)
             {
                 this.ProcessTakingAction();
             }
@@ -87,18 +80,18 @@ namespace Assets.Controller.Manager
 
         public void ProcessNewRound()
         {
-            this._initiativeOrder.Clear();
-            foreach (var character in this._characters)
-                this._initiativeOrder.Add(character);
+            this._data.InitiativeOrder.Clear();
+            foreach (var character in this._data.Characters)
+                this._data.InitiativeOrder.Add(character);
             this.ProcessTakingAction();
         }
 
         private void ProcessTakingAction()
         {
-            if (this._initiativeOrder.Count > 0)
+            if (this._data.InitiativeOrder.Count > 0)
             {
                 var data = new EvTakingActionData();
-                data.Target = this._initiativeOrder[0];
+                data.Target = this._data.InitiativeOrder[0];
                 var acting = new EvTakingAction(data);
                 acting.TryProcess();
             }

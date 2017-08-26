@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using Assets.Model.Event.Combat;
+using System.Collections.Generic;
 using Template.Event;
 
-namespace Assets.Model.Event.Combat
+namespace Assets.Controller.Manager.Combat
 {
     public class CombatEvManager : AEventManager<MEvCombat>
     {
