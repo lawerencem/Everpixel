@@ -30,10 +30,11 @@ namespace Assets.View.Event
             {
                 var ability = AbilityTable.Instance.Table[this._data.Ability];
                 var args = new AbilityArgContainer();
-                args.Range = ability.Params.Range;  // TODO: Get range mods from character
+                args.Range = ability.Params.Range;
                 args.Source = this._data.Source;
                 var tiles = ability.GetTargetTiles(args);
                 VMapController.Instance.DecoratePotentialTargetTiles(tiles);
+                CombatManager.Instance.SetTgtTiles(tiles);
             }
         }
 
@@ -49,17 +50,3 @@ namespace Assets.View.Event
         }
     }
 }
-
-
-//            this._events.Remove(e);
-//            this._currentActionTiles = new List<TileController>();
-//            var ability = AbilityTable.Instance.Table[e.AttackType];
-//            this._currentActionTiles = ability.GetTargetTiles(e, this._combatManager.CurrActing, this._combatManager);
-//            this._combatManager.SetCurrentTargetTiles(this._currentActionTiles);
-//            CMapGUIController.Instance.DecoratePotentialAttackTiles(this._currentActionTiles);
-//            foreach (var tile in this._currentActionTiles)
-//            {
-//                TileControllerFlags.SetAwaitingActionFlagTrue(tile.Flags);
-//            }
-
-//            this._combatManager.CurAbility = ability;

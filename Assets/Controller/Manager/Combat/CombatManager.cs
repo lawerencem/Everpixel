@@ -1,9 +1,11 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Combat;
 using Assets.Controller.Map.Tile;
+using Assets.Model.Ability;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Character.Enum;
 using Assets.Model.Event.Combat;
+using System.Collections.Generic;
 
 namespace Assets.Controller.Manager.Combat
 {
@@ -22,11 +24,13 @@ namespace Assets.Controller.Manager.Combat
             }
         }
 
-        public EAbility GetCurrentAbility() { return this._data.CurrenAbility; }
+        public EAbility GetCurrentAbility() { return this._data.CurrentAbility; }
         public CharController GetCurrentlyActing() { return this._data.CurrentlyActing; }
+        public List<TileController> GetTgtTiles() { return this._data.TgtTiles; }
 
-        public void SetCurrentAbility(EAbility a) { this._data.CurrenAbility = a; }
+        public void SetCurrentAbility(EAbility a) { this._data.CurrentAbility = a; }
         public void SetCurrentlyActing(CharController c) { this._data.CurrentlyActing = c; }
+        public void SetTgtTiles(List<TileController> t) { this._data.TgtTiles = t; }
 
         public CombatManager()
         {
@@ -60,6 +64,25 @@ namespace Assets.Controller.Manager.Combat
 
         public bool IsValidActionClick(TileController t)
         {
+            if (t.Current != null && t.Current.GetType().Equals(typeof(CharController)))
+            {
+                var ability = AbilityTable.Instance.Table[this._data.CurrentAbility];
+                var target = t.Current as CharController;
+                var tile = this._data.TgtTiles.Find(x => x.Equals(t));
+                if (tile != null)
+                {
+                    if (this._data.CurrentlyActing.Model.LParty == target.Model.LParty)
+                    {
+                        if (!ability.Hostile)
+                            return true;
+                    }
+                    else
+                    {
+                        if (ability.Hostile)
+                            return true;
+                    }
+                }
+            }
             return false;
         }
 

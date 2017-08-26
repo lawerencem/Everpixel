@@ -34,7 +34,7 @@ namespace Assets.Controller.Map.Tile
                 if (this._doubleClick)
                     data.DoubleClick = true;
                 data.Target = this._tile;
-                this._clickTime = System.DateTime.Now;
+                this._clickTime = DateTime.Now;
                 this._doubleClick = true;
                 var e = new EvTileClick(data);
                 e.TryProcess();
