@@ -1,4 +1,6 @@
-﻿using Assets.Model.Ability.Enum;
+﻿using Assets.Controller.Manager.Combat;
+using Assets.Model.Ability.Enum;
+using Assets.View.Event;
 using Assets.View.GUI;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,6 +28,12 @@ namespace Assets.View.Script.GUI
         public override void OnClick()
         {
             base.OnClick();
+            var data = new EvAbilitySelectedData();
+            data.Ability = this._ability;
+            data.LWeapon = this._lWeapon;
+            data.Source = CombatManager.Instance.GetCurrentlyActing();
+            var e = new EvAbilitySelected(data);
+            e.TryProcess();
         }
 
         public void SetAbility(EAbility a, bool lWeapon)

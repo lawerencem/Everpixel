@@ -439,6 +439,7 @@
     <Compile Include="Assets\View\Equipment\VWeapon.cs" />
     <Compile Include="Assets\View\Event\AGuiEv.cs" />
     <Compile Include="Assets\View\Event\EGuiEv.cs" />
+    <Compile Include="Assets\View\Event\EvAbilitySelected.cs" />
     <Compile Include="Assets\View\Event\EvPopulateWpnBtns.cs" />
     <Compile Include="Assets\View\Event\EvTileClick.cs" />
     <Compile Include="Assets\View\Event\EvTileSelect.cs" />

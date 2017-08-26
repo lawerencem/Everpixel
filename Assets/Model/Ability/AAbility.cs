@@ -42,15 +42,14 @@ namespace Assets.Model.Ability
 
         public List<TileController> GetTargetTiles(AbilityArgContainer arg)
         {
-            return null;
-            //var list = new List<TileController>();
-            //if (this.isSelfCast())
-            //    list.Add(arg.Source.CurrentTile);
-            //else if (this.isRayCast())
-            //    list.AddRange(this._logic.GetRaycastTiles(arg));
-            //else
-            //    list.AddRange(this._logic.GetPotentialTargets(arg));
-            //return list;
+            var list = new List<TileController>();
+            if (this.isSelfCast())
+                list.Add(arg.Source.Tile);
+            else if (this.isRayCast())
+                list.AddRange(this._logic.GetRaycastTiles(arg));
+            else
+                list.AddRange(this._logic.GetPotentialTargets(arg));
+            return list;
         }
 
         public bool isRayCast()

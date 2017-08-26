@@ -53,22 +53,24 @@ namespace Assets.Model.Ability.Logic
 
         public List<TileController> GetPotentialTargets(AbilityArgContainer arg)
         {
-            //int dist = arg.Range;
-            //if (arg.RWeapon)
-            //{
-            //    if (arg.Source.Model.RWeapon != null)
-            //        dist += (int)arg.Source.Model.RWeapon.RangeMod;
-            //}
-            //else
-            //{
-            //    if (arg.Source.Model.LWeapon != null)
-            //        dist += (int)arg.Source.Model.LWeapon.RangeMod;
-            //}
-            //var hexTiles = arg.Source.CurrentTile.Model.GetAoETiles(dist);
-            //var tileControllers = new List<TileController>();
-            //foreach (var hex in hexTiles) { tileControllers.Add(hex.Parent); }
-            //return tileControllers;
-            return null;
+            int dist = arg.Range;
+            if (arg.LWeapon)
+            {
+                if (arg.Source.Model.GetEquipment().GetLWeapon() != null)
+                    dist += (int)arg.Source.Model.GetEquipment().GetLWeapon().RangeMod;
+            }
+            else
+            {
+                if (arg.Source.Model.GetEquipment().GetRWeapon() != null)
+                    dist += (int)arg.Source.Model.GetEquipment().GetRWeapon().RangeMod;
+            }
+            var hexTiles = arg.Source.Tile.Model.GetAoETiles(dist);
+            var tileControllers = new List<TileController>();
+            foreach (var hex in hexTiles)
+            {
+                tileControllers.Add(hex.Controller);
+            }
+            return tileControllers;
         }
     }
 }

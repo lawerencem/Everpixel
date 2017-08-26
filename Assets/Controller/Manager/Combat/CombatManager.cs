@@ -4,8 +4,6 @@ using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Character.Enum;
 using Assets.Model.Event.Combat;
-using Assets.Model.Party;
-using System.Collections.Generic;
 
 namespace Assets.Controller.Manager.Combat
 {
@@ -24,8 +22,10 @@ namespace Assets.Controller.Manager.Combat
             }
         }
 
+        public EAbility GetCurrentAbility() { return this._data.CurrenAbility; }
         public CharController GetCurrentlyActing() { return this._data.CurrentlyActing; }
 
+        public void SetCurrentAbility(EAbility a) { this._data.CurrenAbility = a; }
         public void SetCurrentlyActing(CharController c) { this._data.CurrentlyActing = c; }
 
         public CombatManager()

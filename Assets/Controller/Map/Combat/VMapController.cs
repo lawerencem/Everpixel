@@ -52,6 +52,23 @@ namespace Assets.Controller.Map.Combat
             }
         }
 
+        public void DecoratePotentialTargetTiles(List<TileController> tiles)
+        {
+            foreach (var old in this._familyTileDeco)
+            {
+                GameObject.Destroy(old);
+            }
+
+            if (tiles != null)
+            {
+                var sprite = MapBridge.Instance.GetPotentialAttackLocSprite();
+                foreach (var t in tiles)
+                {
+                    this.DecorateTileFamily(t, sprite);
+                }
+            }
+        }
+
         private GameObject DecorateTile(TileController t, Sprite sprite, float alpha = DEFAULT_ALPHA)
         {
             var tView = new GameObject();
@@ -133,20 +150,6 @@ namespace Assets.Controller.Map.Combat
 //            {
 //                var sprite = MapBridge.Instance.GetHostileHoverSprite();
 //                DecorateSingleTile(t, sprite);
-//            }
-//        }
-
-//        public void DecoratePotentialAttackTiles(List<TileController> tiles)
-//        {
-//            foreach (var old in this._decorateTileFamily) { GameObject.Destroy(old); }
-
-//            if (tiles != null)
-//            {
-//                var sprite = MapBridge.Instance.GetPotentialAttackLocSprite();
-//                foreach(var t in tiles)
-//                {
-//                    DecorateFamilyOfTiles(t, sprite);
-//                }
 //            }
 //        }
 
@@ -321,7 +324,7 @@ namespace Assets.Controller.Map.Combat
 //            var tView = this.DecorateTile(t, deco, alpha);
 //            this._singleTile = tView;
 //        }
-        
+
 //        private void SetTagText(string tag, string toSet)
 //        {
 //            var tagged = GameObject.FindGameObjectWithTag(tag);
