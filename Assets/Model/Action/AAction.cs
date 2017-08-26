@@ -16,7 +16,6 @@ namespace Assets.Model.Action
         {
             this._data = d;
             this._callbacks = new List<Callback>();
-            this._data = new ActionData();
         }
 
         public void AddCallback(Callback callback)

@@ -13,6 +13,7 @@ namespace Assets.Model.Action
         {
             if (this.Data.Initialized())
             {
+                this.InitAbility();
                 this.InitHits();
             }
                 
@@ -30,7 +31,7 @@ namespace Assets.Model.Action
             args.Range = this._ability.Data.Range;
             args.Source = this._data.Source;
             args.Target = this._data.Target;
-            var targetTiles = this._ability.GetTargetTiles(args);
+            var hits = this._ability.GetHits(args);
         }
     }
 }
