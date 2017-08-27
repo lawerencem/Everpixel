@@ -65,7 +65,7 @@ namespace Assets.Controller.Manager.Combat
 
                 // TODO: Try reading .xml values, or set to max...
                 character.Model.SetCurrentHP(character.Model.GetCurrentStats().GetSecondaryStats().MaxHP);
-                character.Model.SetCurrentAP(character.Model.GetCurrentStats().GetSecondaryStats().MaxHP);
+                character.Model.SetCurrentAP(character.Model.GetCurrentStats().GetSecondaryStats().MaxAP);
                 character.Model.SetCurrentMorale(character.Model.GetCurrentStats().GetSecondaryStats().Morale);
                 character.Model.SetCurrentStam(character.Model.GetCurrentStats().GetSecondaryStats().Stamina);
             }
