@@ -238,32 +238,6 @@ namespace Assets.Controller.Map.Combat
 //            this._abilityModal.SetModalInactive();
 //        }
 
-//        public void SetActingBoxToController(CharController c)
-//        {
-//            this.SetTagText(CMapGUIControllerParams.NAME, c.View.Name);
-//            this.SetTagText(CMapGUIControllerParams.AP, c.Model.GetCurrentAP() + " / " + ((int)c.Model.GetCurrentStatValue(ESecondaryStat.AP)).ToString());
-//            this.SetTagText(CMapGUIControllerParams.HP, c.Model.GetCurrentHP() + " / " + ((int)c.Model.GetCurrentStatValue(ESecondaryStat.HP)).ToString());
-//            this.SetTagText(CMapGUIControllerParams.STAM, c.Model.GetCurrentStamina() + " / " + ((int)c.Model.GetCurrentStatValue(ESecondaryStat.Stamina)).ToString());
-//            this.SetTagText(CMapGUIControllerParams.MORALE, c.Model.GetCurrentMorale() + " / " + ((int)c.Model.GetCurrentStatValue(ESecondaryStat.Morale)).ToString());
-
-//            if (c.Model.Armor != null)
-//                this.SetTagText(CMapGUIControllerParams.ARMOR, c.Model.Armor.Name);
-//            else
-//                this.SetTagText(CMapGUIControllerParams.ARMOR, "");
-//            if (c.Model.Helm != null)
-//                this.SetTagText(CMapGUIControllerParams.HELM, c.Model.Helm.Name);
-//            else
-//                this.SetTagText(CMapGUIControllerParams.HELM, "");
-//            if (c.Model.LWeapon != null)
-//                this.SetTagText(CMapGUIControllerParams.L_WEAP, c.Model.LWeapon.Name);
-//            else
-//                this.SetTagText(CMapGUIControllerParams.L_WEAP, "");
-//            if (c.Model.RWeapon != null)
-//                this.SetTagText(CMapGUIControllerParams.R_WEAP, c.Model.RWeapon.Name);
-//            else
-//                this.SetTagText(CMapGUIControllerParams.R_WEAP, "");
-//        }
-
 //        public void SetDmgModalInactive()
 //        {
 //            this._hoverModal.SetDamageModalInactive();
@@ -281,15 +255,7 @@ namespace Assets.Controller.Map.Combat
 //            this._singleTile = tView;
 //        }
 
-//        private void SetTagText(string tag, string toSet)
-//        {
-//            var tagged = GameObject.FindGameObjectWithTag(tag);
-//            if (tagged != null)
-//            {
-//                var text = tagged.GetComponent<Text>();
-//                text.text = toSet;
-//            }
-//        }
+
 
 //        private void TryProcessShieldFX(DisplayHitStatsEvent e)
 //        {

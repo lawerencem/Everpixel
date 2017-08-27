@@ -56,9 +56,12 @@ namespace Assets.Controller.Map.Tile
 
         private void HandleHover()
         {
-            this.HandleHoverTargetStats();
-            //this.HandleHoverTargetDamage();
-            VMapCombatController.Instance.DecorateHover(this._tile);
+            if (!GUIManager.Instance.GetGUILocked())
+            {
+                this.HandleHoverTargetStats();
+                //this.HandleHoverTargetDamage();
+                VMapCombatController.Instance.DecorateHover(this._tile);
+            }
         }
 
         private void HandleHoverTargetStats()

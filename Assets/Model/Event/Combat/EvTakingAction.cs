@@ -1,8 +1,10 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Manager;
 using Assets.Controller.Manager.Combat;
+using Assets.Controller.Manager.GUI;
 using Assets.View;
 using Assets.View.Event;
+using System;
 using Template.Script;
 
 namespace Assets.Model.Event.Combat
@@ -44,12 +46,14 @@ namespace Assets.Model.Event.Combat
         private bool ProcessTakingAction()
         {
             CombatManager.Instance.SetCurrentlyActing(this._data.Target);
-            //     TODO       CMapGUIController.Instance.SetActingBoxToController(e.Controller);
+            GUIManager.Instance.SetActingBoxToController(this._data.Target);
             var bob = this._data.Target.Handle.AddComponent<SBob>();
             bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Target.Handle);
-            CameraManager.Instance.InitScrollTo(this._data.Target.Handle.transform.position);
+            if (CameraManager.Instance != null)
+                CameraManager.Instance.InitScrollTo(this._data.Target.Handle.transform.position);
             var e = new EvPopulateWpnBtns();
             e.TryProcess();
+            
             return true;
         }
     }

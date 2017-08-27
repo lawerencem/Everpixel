@@ -1,8 +1,11 @@
-﻿using Assets.Model.Character;
+﻿using Assets.Controller.Character;
+using Assets.Model.Character;
+using Assets.Model.Character.Enum;
 using Assets.View.GUI;
 using System.Collections.Generic;
 using Template.Script;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Controller.Manager.GUI
 {
@@ -80,6 +83,42 @@ namespace Assets.Controller.Manager.GUI
             var banner = GameObject.FindGameObjectWithTag(GameObjectTags.BANNER);
             this.AddComponent(GameObjectTags.BANNER, banner);
             this.SetComponentActive(GameObjectTags.BANNER, false);
+        }
+
+        private void SetTagText(string tag, string toSet)
+        {
+            var tagged = GameObject.FindGameObjectWithTag(tag);
+            if (tagged != null)
+            {
+                var text = tagged.GetComponent<Text>();
+                text.text = toSet;
+            }
+        }
+
+        public void SetActingBoxToController(CharController c)
+        {
+            this.SetTagText(GameObjectTags.NAME, c.View.Name);
+            this.SetTagText(GameObjectTags.AP, c.Model.GetCurrentAP() + " / " + ((int)c.Model.GetCurrentPoints().CurrentAP).ToString());
+            this.SetTagText(GameObjectTags.HP, c.Model.GetCurrentHP() + " / " + ((int)c.Model.GetCurrentPoints().CurrentHP).ToString());
+            this.SetTagText(GameObjectTags.STAM, c.Model.GetCurrentStamina() + " / " + ((int)c.Model.GetCurrentPoints().CurrentStamina).ToString());
+            this.SetTagText(GameObjectTags.MORALE, c.Model.GetCurrentMorale() + " / " + ((int)c.Model.GetCurrentPoints().CurrentMorale).ToString());
+
+            if (c.Model.GetEquipment().GetArmor() != null)
+                this.SetTagText(GameObjectTags.ARMOR, c.Model.GetEquipment().GetArmor().Name);
+            else
+                this.SetTagText(GameObjectTags.ARMOR, "");
+            if (c.Model.GetEquipment().GetHelm() != null)
+                this.SetTagText(GameObjectTags.HELM, c.Model.GetEquipment().GetHelm().Name);
+            else
+                this.SetTagText(GameObjectTags.HELM, "");
+            if (c.Model.GetEquipment().GetLWeapon() != null)
+                this.SetTagText(GameObjectTags.L_WEAP, c.Model.GetEquipment().GetLWeapon().Name);
+            else
+                this.SetTagText(GameObjectTags.L_WEAP, "");
+            if (c.Model.GetEquipment().GetRWeapon() != null)
+                this.SetTagText(GameObjectTags.R_WEAP, c.Model.GetEquipment().GetRWeapon().Name);
+            else
+                this.SetTagText(GameObjectTags.R_WEAP, "");
         }
     }
 }
