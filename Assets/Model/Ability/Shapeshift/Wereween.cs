@@ -17,12 +17,6 @@ namespace Assets.Model.Ability.Shapeshift
             return base.PredictMelee(arg);
         }
 
-        public override List<Hit> Process(AbilityArgs arg)
-        {
-            // TODO
-            return null;
-        }
-
         public override bool IsValidActionEvent(AbilityArgs arg)
         {
             return true;

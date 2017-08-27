@@ -47,7 +47,7 @@ namespace Assets.View.Event
                     if (btn != null)
                     {
                         var script = btn.GetComponent<SWpnBtn>();
-                        script.SetAbility(abilities[i].X.Type, abilities[i].Y);
+                        script.SetAbility(abilities[i].X.Type, !abilities[i].Y);
                     }
                 }
             }

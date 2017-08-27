@@ -23,9 +23,11 @@ namespace Assets.Model.Combat.Hit
 
         public HitData()
         {
+            this.Chances = new HitPrediction();
             this.Effects = new List<MEffect>();
             this.Events = new List<MEvCombat>();
             this.Flags = new FHit();
+            this.ModData = new HitMod();
         }
     }
 }

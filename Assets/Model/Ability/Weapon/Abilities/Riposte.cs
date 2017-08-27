@@ -14,9 +14,9 @@ namespace Assets.Model.Weapon.Abilities
             return null;
         }
 
-        public override List<Hit> Process(AbilityArgs arg)
+        public override void Process(Hit hit)
         {
-            return null;
+            base.ProcessHitMelee(hit);
         }
 
         public override bool IsValidActionEvent(AbilityArgs arg)

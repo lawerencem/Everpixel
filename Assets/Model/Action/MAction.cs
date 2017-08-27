@@ -40,7 +40,7 @@ namespace Assets.Model.Action
             foreach(var hit in this._data.Hits)
             {
                 hit.AddCallback(this.TryDone);
-                this.ActiveAbility.Process(args);
+                this.ActiveAbility.Process(hit);
             }
         }
 

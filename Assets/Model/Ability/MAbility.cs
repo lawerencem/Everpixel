@@ -212,12 +212,9 @@ namespace Assets.Model.Ability
 
         protected void ProcessHitMelee(Hit hit)
         {
-            //if (!FCharacterStatus.HasFlag(hit.Target.Model.StatusFlags.CurFlags, FCharacterStatus.Flags.Dead))
-            //{
-            //    foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-            //        perk.TryModAbility(hit);
-            //    this._logic.ProcessMelee(hit);
-            //}
+            foreach (var perk in hit.Data.Source.Model.GetPerks().GetAbilityModPerks())
+                perk.TryModAbility(hit);
+            this._logic.ProcessMelee(hit);
         }
 
         protected void ProcessHitSummon(Hit hit)

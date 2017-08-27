@@ -11,11 +11,9 @@ namespace Assets.Model.Ability.Magic.Astral
 
         }
 
-        public override List<Hit> Process(AbilityArgs arg)
+        public override void Process(Hit hit)
         {
-            var hits = base.Process(arg);
-            foreach(var hit in hits) { base.ProcessHitSummon(hit); }
-            return hits;
+            // TODO
         }
 
         public override bool IsValidActionEvent(AbilityArgs arg)

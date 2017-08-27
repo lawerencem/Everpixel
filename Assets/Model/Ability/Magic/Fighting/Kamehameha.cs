@@ -19,14 +19,9 @@ namespace Assets.Model.Ability.Magic.Fighting
             return base.PredictBullet(arg);
         }
 
-        public override List<Hit> Process(AbilityArgs arg)
+        public override void Process(Hit hit)
         {
-            var hits = base.Process(arg);
-            foreach (var hit in hits)
-            {
-                base.ProcessHitLoS(hit);
-            }
-            return hits;
+            base.ProcessHitBullet(hit);
         }
 
         public override bool IsValidActionEvent(AbilityArgs arg)

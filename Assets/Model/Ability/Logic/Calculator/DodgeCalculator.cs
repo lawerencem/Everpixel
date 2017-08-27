@@ -1,4 +1,6 @@
-﻿using Assets.Model.Combat.Hit;
+﻿using Assets.Controller.Character;
+using Assets.Model.Abiltiy.Logic;
+using Assets.Model.Combat.Hit;
 using Template.Utility;
 
 namespace Assets.Model.Ability.Logic.Calculator
@@ -7,22 +9,24 @@ namespace Assets.Model.Ability.Logic.Calculator
     {
         public override  void Predict(Hit hit)
         {
-            //var acc = hit.Source.Model.GetCurrentStatValue(ESecondaryStat.Melee);
-            //var dodge = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.Dodge);
-            //var dodgeChance = LogicParams.BASE_DODGE_CHANCE / hit.Ability.AccMod;
+            var target = hit.Data.Target.Current as CharController;
+            var targetArmor = target.Model.GetEquipment().GetArmor();
+            var targetHelm = target.Model.GetEquipment().GetHelm();
 
-            //if (hit.Target.Model.Armor != null)
-            //    dodgeChance *= hit.Target.Model.Armor.DodgeMod;
-            //if (hit.Target.Model.Helm != null)
-            //    dodgeChance *= hit.Target.Model.Helm.DodgeMod;
+            var acc = hit.Data.Source.Model.GetCurrentStats().GetSecondaryStats().MeleeSkill;
 
-            //if (hit.Target.Model.Type == ECharacterType.Critter)
-            //    dodgeChance *= 1.75;
+            var dodge = target.Model.GetCurrentStats().GetSecondaryStats().DodgeSkill;
+            var dodgeChance = LogicParams.BASE_DODGE_CHANCE / hit.Data.Ability.Data.AccMod;
 
-            //acc *= hit.Ability.AccMod;
+            if (targetArmor != null)
+                dodgeChance *= targetArmor.DodgeMod;
+            if (targetHelm != null)
+                dodgeChance *= targetHelm.DodgeMod;
 
-            //hit.Chances.Dodge = this.GetAttackVSDefenseSkillChance(acc, dodge, dodgeChance);
-            //hit.Chances.Dodge *= hit.Ability.DodgeMod;
+            acc *= hit.Data.Ability.Data.AccMod;
+
+            hit.Data.Chances.Dodge = this.GetAttackVSDefenseSkillChance(acc, dodge, dodgeChance);
+            hit.Data.Chances.Dodge *= hit.Data.Ability.Data.DodgeMod;
         }
 
         public override void Process(Hit hit)

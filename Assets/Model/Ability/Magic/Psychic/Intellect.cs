@@ -18,12 +18,6 @@ namespace Assets.Model.Ability.Magic.Psychic
             return base.PredictBullet(arg);
         }
 
-        public override List<Hit> Process(AbilityArgs arg)
-        {
-            // TODO
-            return null;
-        }
-
         public override bool IsValidActionEvent(AbilityArgs arg)
         {
             return true;

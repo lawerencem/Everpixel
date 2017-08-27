@@ -1,4 +1,7 @@
-﻿using Assets.Model.Combat.Hit;
+﻿using Assets.Controller.Character;
+using Assets.Model.Ability.Enum;
+using Assets.Model.Abiltiy.Logic;
+using Assets.Model.Combat.Hit;
 
 namespace Assets.Model.Ability.Logic.Calculator
 {
@@ -6,18 +9,23 @@ namespace Assets.Model.Ability.Logic.Calculator
     {
         public void CalculateAbilityDmg(Hit hit)
         {
-            //var dmg = hit.ModData.BaseDamage;
-            //dmg += hit.Ability.FlatDamage;
-            //if (hit.Ability.CastType == ECastType.Melee)
-            //{
-            //    if (hit.Source.Model.RWeapon != null)
-            //        dmg += hit.Source.Model.RWeapon.Damage;
-            //    if (hit.Source.Model.LWeapon != null)
-            //        dmg += hit.Source.Model.LWeapon.Damage;
-            //}
-            //dmg += (hit.Ability.DmgPerPower * hit.Source.Model.GetCurrentStatValue(ESecondaryStat.Power));
-            //dmg *= hit.Ability.DamageMod;
-            //hit.Dmg = (int)dmg;
+            var hitData = hit.Data;
+            var abilityData = hitData.Ability.Data;
+            var equipment = hit.Data.Source.Model.GetEquipment();
+            var source = hit.Data.Source.Model;
+
+            var dmg = hit.Data.ModData.BaseDamage;
+            dmg += abilityData.FlatDamage;
+            if (abilityData.CastType == ECastType.Melee)
+            {
+                if (equipment.GetRWeapon() != null)
+                    dmg += equipment.GetRWeapon().Damage;
+                if (equipment.GetLWeapon() != null)
+                    dmg += equipment.GetLWeapon().Damage;
+            }
+            dmg += (abilityData.DmgPerPower * source.GetCurrentStats().GetSecondaryStats().Power);
+            dmg *= abilityData.DamageMod;
+            hit.Data.Dmg = (int)dmg;
         }
 
         public void ModifyDmgViaDefender(Hit hit)
@@ -25,11 +33,10 @@ namespace Assets.Model.Ability.Logic.Calculator
             if (!FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge) &&
                 !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))
             {
-                // TODO:
-                //if (FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Block))
-                    //ProcessShieldBlock(hit);
-                //else
-                    //ProcessDamage(hit);
+                if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Block))
+                    this.ProcessShieldBlock(hit);
+                else
+                    this.Process(hit);
             }
             else
             {
@@ -72,43 +79,55 @@ namespace Assets.Model.Ability.Logic.Calculator
 
         public override void Process(Hit hit)
         {
-            //var dmgToApply = (double)hit.Dmg;
-            //if (FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Critical))
-            //    dmgToApply *= (LogicParams.BASE_CRIT_SCALAR + (hit.Source.Model.GetCurrentStatValue(ESecondaryStat.Critical_Multiplier) / LogicParams.BASE_SCALAR));
-            //var dmgReduction = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.Damage_Reduction);
-            //double flatDmgNegate = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.Damage_Ignore);
-            //if (FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Head))
-            //{
-            //    if (hit.Target.Model.Helm != null)
-            //        flatDmgNegate += hit.Target.Model.Helm.DamageIgnore;
-            //}
-            //else
-            //{
-            //    if (hit.Target.Model.Armor != null)
-            //        flatDmgNegate += hit.Target.Model.Armor.DamageIgnore;
-            //}
-            //if (hit.Source.Model.LWeapon != null && !hit.Source.Model.LWeapon.IsTypeOfShield())
-            //    flatDmgNegate *= (hit.Source.Model.LWeapon.ArmorPierce);
-            //if (hit.Source.Model.RWeapon != null && !hit.Source.Model.RWeapon.IsTypeOfShield())
-            //    flatDmgNegate *= (hit.Source.Model.RWeapon.ArmorPierce);
-            //flatDmgNegate /= hit.Ability.ArmorPierceMod;
-            //dmgToApply -= flatDmgNegate;
-            //if (dmgToApply < 0)
-            //    dmgToApply = 0;
-            //if (FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Head))
-            //{
-            //    if (hit.Target.Model.Helm != null)
-            //        dmgToApply *= (hit.Target.Model.Helm.DamageReduction * dmgReduction * hit.Ability.ArmorIgnoreMod);
-            //}
-            //else
-            //{
-            //    if (hit.Target.Model.Armor != null)
-            //        dmgToApply *= (hit.Target.Model.Armor.DamageReduction * dmgReduction * hit.Ability.ArmorIgnoreMod);
-            //    hit.Dmg = (int)dmgToApply;
-            //}
-            //foreach (var perk in hit.Target.Model.Perks.WhenHitPerks)
-            //    perk.TryModHit(hit);
-            //hit.Dmg = (int)dmgToApply;
+            var source = hit.Data.Source.Model;
+            var targetController = hit.Data.Target.Current as CharController;
+            var target = targetController.Model;
+            var sourceEquipment = source.GetEquipment();
+            var targetEquipment = target.GetEquipment();
+            var sourceStats = source.GetCurrentStats();
+            var targetStats = target.GetCurrentStats();
+
+            var dmgToApply = (double)hit.Data.Dmg;
+            if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Critical))
+                dmgToApply *= (LogicParams.BASE_CRIT_SCALAR + (sourceStats.GetSecondaryStats().CriticalMultiplier / LogicParams.BASE_SCALAR));
+            var dmgReduction = targetStats.GetSecondaryStats().DamageReduce;
+            double flatDmgNegate = sourceStats.GetSecondaryStats().DamageIgnore;
+            if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Head))
+            {
+                if (targetEquipment.GetHelm() != null)
+                    flatDmgNegate += targetEquipment.GetHelm().DamageIgnore;
+            }
+            else
+            {
+                if (targetEquipment.GetArmor() != null)
+                    flatDmgNegate += targetEquipment.GetArmor().DamageIgnore;
+            }
+            if (sourceEquipment.GetLWeapon() != null && !sourceEquipment.GetLWeapon().IsTypeOfShield())
+                flatDmgNegate *= (sourceEquipment.GetLWeapon().ArmorPierce);
+            if (sourceEquipment.GetRWeapon() != null && !sourceEquipment.GetRWeapon().IsTypeOfShield())
+                flatDmgNegate *= (sourceEquipment.GetRWeapon().ArmorPierce);
+            
+            flatDmgNegate /= hit.Data.Ability.Data.ArmorPierceMod;
+            dmgToApply -= flatDmgNegate;
+            if (dmgToApply < 0)
+                dmgToApply = 0;
+            if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Head))
+            {
+                if (targetEquipment.GetHelm() != null)
+                    dmgToApply *= (targetEquipment.GetHelm().DamageReduction * dmgReduction * hit.Data.Ability.Data.ArmorIgnoreMod);
+            }
+            else
+            {
+                if (targetEquipment.GetArmor() != null)
+                    dmgToApply *= (targetEquipment.GetArmor().DamageReduction * dmgReduction * hit.Data.Ability.Data.ArmorIgnoreMod);
+            }
+            hit.Data.Dmg = (int)dmgToApply;
+        }
+
+        private void ProcessShieldBlock(Hit hit)
+        {
+            // TODO:
+            hit.Data.Dmg = 0;
         }
     }
 }
