@@ -31,7 +31,7 @@ namespace Assets.Controller.Map.Tile
 
         public void OnMouseDown()
         {
-            if (this._tile != null)
+            if (this._tile != null && !GUIManager.Instance.GetInteractionLocked())
             {
                 var data = new EvTileClickData();
                 if (this._doubleClick)
