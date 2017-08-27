@@ -86,11 +86,9 @@ namespace Assets.Model.Ability
             return hits;
         }
 
-        public virtual List<Hit> Process(AbilityArgs arg)
+        public virtual void Process(Hit hit)
         {
-            var hits = this.GetHits(arg);
-
-            return hits;
+            
         }
 
         public void TryApplyInjury(Hit hit)

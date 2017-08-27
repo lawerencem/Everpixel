@@ -15,14 +15,9 @@ namespace Assets.Model.Weapon.Abilities
             return base.PredictMelee(arg);
         }
 
-        public override List<Hit> Process(AbilityArgs arg)
+        public override void Process(Hit hit)
         {
-            var hits = base.Process(arg);
-            foreach (var hit in hits)
-            {
-                base.ProcessHitMelee(hit);
-            }
-            return hits;
+            base.ProcessHitMelee(hit);
         }
 
         public override bool IsValidActionEvent(AbilityArgs arg)

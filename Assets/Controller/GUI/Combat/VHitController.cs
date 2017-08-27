@@ -1,5 +1,7 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Action;
+using Assets.Model.Combat.Hit;
+using Assets.Model.Event.Combat;
 using Assets.View.Script.FX;
 using System.Collections.Generic;
 using Template.CB;
@@ -43,7 +45,7 @@ namespace Assets.Controller.GUI.Combat
             this._callbacks = new List<Callback>() { callback };
         }
 
-        private void ProcessDefenderFlinches(object o)
+        private void ProcessDefenderHits(object o)
         {
             if (o.GetType().Equals(typeof(SAttackerJolt)))
             {
@@ -56,14 +58,36 @@ namespace Assets.Controller.GUI.Combat
                             hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
                         {
                             var target = hit.Data.Target.Current as CharController;
-                            var flinch = target.Handle.AddComponent<SFlinch>();
-                            var flinchPos = target.Handle.transform.position;
-                            flinchPos.y -= CombatGUIParams.FLINCH_DIST;
-                            flinch.AddCallback(hit.CallbackHandler);
-                            flinch.Init(target, flinchPos, CombatGUIParams.FLINCH_SPEED);
+                            this.ProcessDefenderHitsHelper(target, hit);
                         }
                     }
                 }
+            }
+        }
+
+        private void ProcessDefenderHitsHelper(CharController target, Hit hit)
+        {
+            if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge))
+            {
+
+            }
+            else if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))
+            {
+
+            }
+            else
+            {
+                var flinch = target.Handle.AddComponent<SFlinch>();
+                var flinchPos = target.Handle.transform.position;
+                flinchPos.y -= CombatGUIParams.FLINCH_DIST;
+                flinch.AddCallback(hit.CallbackHandler);
+                flinch.Init(target, flinchPos, CombatGUIParams.FLINCH_SPEED);
+                var data = new EvModHPData();
+                data.Dmg = hit.Data.Dmg;
+                data.IsHeal = hit.Data.IsHeal;
+                data.Target = target;
+                var e = new EvModHP(data);
+                e.TryProcess();
             }
         }
 
@@ -84,7 +108,7 @@ namespace Assets.Controller.GUI.Combat
             var attack = a.Data.Source.Handle.AddComponent<SAttackerJolt>();
             var position = Vector3.Lerp(a.Data.Target.Model.Center, a.Data.Source.Tile.Model.Center, CombatGUIParams.ATTACK_LERP);
             attack.Action = a;
-            attack.AddCallback(this.ProcessDefenderFlinches);
+            attack.AddCallback(this.ProcessDefenderHits);
             attack.Init(a.Data.Source, position, CombatGUIParams.ATTACK_SPEED);
         }
     }

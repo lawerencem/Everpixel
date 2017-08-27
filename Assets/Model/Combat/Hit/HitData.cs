@@ -25,6 +25,7 @@ namespace Assets.Model.Combat.Hit
         {
             this.Effects = new List<MEffect>();
             this.Events = new List<MEvCombat>();
+            this.Flags = new FHit();
         }
     }
 }
