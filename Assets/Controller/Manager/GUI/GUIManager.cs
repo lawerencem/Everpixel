@@ -1,6 +1,5 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Character;
-using Assets.Model.Character.Enum;
 using Assets.View.GUI;
 using System.Collections.Generic;
 using Template.Script;

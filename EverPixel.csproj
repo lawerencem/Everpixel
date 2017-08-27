@@ -483,6 +483,7 @@
     <Compile Include="Assets\View\Script\GUI\AbilityBtnClick.cs" />
     <Compile Include="Assets\View\Script\GUI\AbilityModalBtnClick.cs" />
     <Compile Include="Assets\View\Script\GUI\SEndTurnBtn.cs" />
+    <Compile Include="Assets\View\Script\GUI\SGui.cs" />
     <Compile Include="Assets\View\Script\GUI\SGuiButton.cs" />
     <Compile Include="Assets\View\Script\GUI\SWpnBtn.cs" />
     <Compile Include="Assets\View\ViewParams.cs" />

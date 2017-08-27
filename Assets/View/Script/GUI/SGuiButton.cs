@@ -1,10 +1,8 @@
 ﻿using Assets.Controller.Manager.GUI;
-using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace Assets.View.Script.GUI
 {
-    public class SGuiButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    public class SGuiButton : SGui
     {
         protected virtual bool IsValid()
         {
@@ -17,16 +15,6 @@ namespace Assets.View.Script.GUI
         public virtual void OnClick()
         {
             
-        }
-
-        public virtual void OnPointerEnter(PointerEventData eventData)
-        {
-            GUIManager.Instance.SetGUILocked(true);
-        }
-
-        public virtual void OnPointerExit(PointerEventData eventData)
-        {
-            GUIManager.Instance.SetGUILocked(false);
         }
     }
 }
