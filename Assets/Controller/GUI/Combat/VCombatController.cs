@@ -1,19 +1,13 @@
-﻿using Assets.Controller.Character;
-using Assets.Model.Ability.Enum;
+﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
 using Assets.Scripts;
-using Assets.View.Fatality;
-using Assets.View.Fatality.Magic;
-using Assets.View.Fatality.Weapon;
-using Assets.View.Script.FX;
 using System.Collections.Generic;
 using Template.CB;
 using Template.Script;
-using Template.Utility;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Controller.GUI
+namespace Assets.Controller.GUI.Combat
 {
     public class VCombatController : ICallback
     {
@@ -45,7 +39,7 @@ namespace Assets.Controller.GUI
             this._callbacks.Clear();
             switch(a.ActiveAbility.Data.CastType)
             {
-                case (ECastType.Melee): { this.ProcessMeleeHitFX(a); } break;
+                case (ECastType.Melee): { VHitController.Instance.ProcessMeleeHitFX(a); } break;
             }
         }
 
@@ -90,94 +84,6 @@ namespace Assets.Controller.GUI
         public void SetCallback(Callback callback)
         {
             this._callbacks = new List<Callback>() { callback };
-        }
-
-        private bool FatalitySuccessful(MAction a)
-        {
-            var success = false;
-
-            var data = new FatalityData();
-            data.Target = a.Data.Target;
-            var fatality = FatalityFactory.Instance.GetFatality(a);
-            if (fatality != null)
-            {
-                switch (fatality.Type)
-                {
-                    case (EFatality.Crush): { fatality = fatality as CrushFatality; success = true; } break;
-                    case (EFatality.Fighting): { fatality = fatality as FightingFatality; success = true; } break;
-                    case (EFatality.Slash): { fatality = fatality as SlashFatality; success = true; } break;
-                }
-            }
-
-            if (success)
-                fatality.Init();
-            return success;
-        }
-
-        private bool IsFatality(MAction a)
-        {
-            bool sucess = false;
-            foreach (var hit in a.Data.Hits)
-            {
-                if (hit.Data.Target != null && hit.Data.Target.GetType().Equals(typeof(CharController)))
-                {
-                    var target = hit.Data.Target.Current as CharController;
-                    if (target.Model.GetCurrentHP() - hit.Data.Dmg <= 0)
-                    {
-                        var roll = RNG.Instance.NextDouble();
-                        if (roll < CombatGUIParams.FATALITY_CHANCE)
-                        {
-                            sucess = true;
-                            //a.FatalityHits.Add(hit);
-                        }
-                    }
-                }
-            }
-            return sucess;
-        }
-
-        private void ProcessDefenderFlinches(object o)
-        {
-            if (o.GetType().Equals(typeof(SAttackerJolt)))
-            {
-                var a = o as SAttackerJolt;
-                if (a.Action != null)
-                {
-                    foreach (var hit in a.Action.Data.Hits)
-                    {
-                        if (hit.Data.Target.Current != null && 
-                            hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
-                        {
-                            var target = hit.Data.Target.Current as CharController;
-                            var flinch = target.Handle.AddComponent<SFlinch>();
-                            var flinchPos = target.Handle.transform.position;
-                            flinchPos.y -= CombatGUIParams.FLINCH_DIST;
-                            flinch.Init(target, flinchPos, CombatGUIParams.FLINCH_SPEED);
-                        }
-                    }
-                }
-            }
-        }
-
-        private void ProcessMeleeHitFX(MAction a)
-        {
-            this.DisplayActionEventName(a);
-            if (this.IsFatality(a))
-            {
-                if (!this.FatalitySuccessful(a))
-                    this.ProcessMeleeFXNonFatality(a);
-            }
-            else
-                this.ProcessMeleeFXNonFatality(a);
-        }
-
-        private void ProcessMeleeFXNonFatality(MAction a)
-        {
-            var attack = a.Data.Source.Handle.AddComponent<SAttackerJolt>();
-            var position = Vector3.Lerp(a.Data.Target.Model.Center, a.Data.Source.Tile.Model.Center, CombatGUIParams.ATTACK_LERP);
-            attack.Action = a;
-            attack.AddCallback(this.ProcessDefenderFlinches);
-            attack.Init(a.Data.Source, position, CombatGUIParams.ATTACK_SPEED);
         }
     }
 

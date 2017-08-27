@@ -82,6 +82,8 @@
   <ItemGroup>
     <Compile Include="Assets\Controller\Character\CharController.cs" />
     <Compile Include="Assets\Controller\Character\CharScript.cs" />
+    <Compile Include="Assets\Controller\GUI\Combat\VFatalityController.cs" />
+    <Compile Include="Assets\Controller\GUI\Combat\VHitController.cs" />
     <Compile Include="Assets\Controller\GUI\GUILoader.cs" />
     <Compile Include="Assets\Controller\Manager\CameraManager.cs" />
     <Compile Include="Assets\Controller\Manager\CombatEvManager - backup.cs" />
@@ -92,8 +94,8 @@
     <Compile Include="Assets\Controller\Manager\GameManager.cs" />
     <Compile Include="Assets\Controller\Manager\GUI\GUIManager.cs" />
     <Compile Include="Assets\Controller\Manager\LoaderManager.cs" />
-    <Compile Include="Assets\Controller\GUI\VCombatGUIController.cs" />
-    <Compile Include="Assets\Controller\GUI\CombatGUIParams.cs" />
+    <Compile Include="Assets\Controller\GUI\Combat\VCombatController.cs" />
+    <Compile Include="Assets\Controller\GUI\Combat\CombatGUIParams.cs" />
     <Compile Include="Assets\Controller\GUI\CMapGUIControllerParticle.cs" />
     <Compile Include="Assets\Controller\GUI\CMapGUIControllerShapeshift.cs" />
     <Compile Include="Assets\Controller\Map\Combat\Loader\CharLoader.cs" />

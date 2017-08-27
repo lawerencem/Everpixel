@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Controller.GUI
+namespace Assets.Controller.GUI.Combat
 {
     public class CombatGUIParams
     {
