@@ -2,27 +2,23 @@
 
 namespace Assets.Controller.Manager
 {
-    // TODO: Cleanup
     public class CameraManager : MonoBehaviour
     {
-        protected Callback _callBack;
-        public delegate void Callback();
+        public static CameraManager Instance = null;
 
-        private static CameraManager _instance;
-        public static CameraManager Instance
+        void Awake()
         {
-            get
-            {
-                if (_instance == null)
-                    _instance = new CameraManager();
-                return _instance;
-            }
+            if (Instance == null)
+                Instance = this;
+
+            else if (Instance != this)
+                Destroy(gameObject);
         }
 
-        private const float AUTO_SCROLL_SENSITIVITY = 0.012f;
+        private const float AUTO_SCROLL_SENSITIVITY = 0.005f;
         private const float BOUNDARY = 30f;
         private const float SCROLL_SENSITIVITY = 0.1f;
-        private const float LERP_SPEED = 5.0f;
+        private const float LERP_SPEED = 4.5f;
         private const float ZOOM_MAX = 90f;
         private const float ZOOM_MIN = 10f;
         private const float ZOOM_SENSITIVITY = 10f;
@@ -39,16 +35,6 @@ namespace Assets.Controller.Manager
             this._target.z = Camera.main.transform.position.z;
             var fov = Camera.main.fieldOfView;
             this._target.y -= (fov * AUTO_SCROLL_SENSITIVITY);
-        }
-
-        public void InitScrollTo(Vector3 position, Callback callback = null)
-        {
-            this._scroll = true;
-            this._target = position;
-            this._target.z = Camera.main.transform.position.z;
-            var fov = Camera.main.fieldOfView;
-            this._target.y -= (fov * AUTO_SCROLL_SENSITIVITY);
-            this._callBack = callback;
         }
 
         public void Start()
@@ -76,11 +62,6 @@ namespace Assets.Controller.Manager
             {
                 Camera.main.transform.position = this._target;
                 this._scroll = false;
-                if (this._callBack != null)
-                {
-                    this._callBack();
-                    this._callBack = null;
-                }
             }
         }
 
