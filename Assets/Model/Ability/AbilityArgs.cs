@@ -5,6 +5,7 @@ namespace Assets.Model.Ability
 {
     public class AbilityArgs
     {
+        public int AoE { get; set; }
         public int Range { get; set; }
         public bool LWeapon { get; set; }
         public CharController Source { get; set; }

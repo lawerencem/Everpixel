@@ -1,4 +1,4 @@
-﻿using Assets.Controller.Manager;
+﻿using Assets.Controller.Manager.GUI;
 using Assets.View.Script.GUI;
 using UnityEngine;
 

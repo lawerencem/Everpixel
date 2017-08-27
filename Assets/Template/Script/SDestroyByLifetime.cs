@@ -2,7 +2,7 @@
 
 namespace Template.Script
 {
-    public class DestroyByLifetime : MonoBehaviour
+    public class SDestroyByLifetime : MonoBehaviour
     {
         public float lifetime;
 

@@ -2,7 +2,7 @@
 
 namespace Template.Script
 {
-    public class DeactivateByLifetime : MonoBehaviour
+    public class SDeactivateByLifetime : MonoBehaviour
     {
         private float _curTime = 0;
         private GameObject _deactivate;

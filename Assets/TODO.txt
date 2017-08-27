@@ -1,6 +1,8 @@
 ﻿TODO
 
 - Hover Event
+- Hover attack tiles
+- Perform abilities
 
 
 Perks

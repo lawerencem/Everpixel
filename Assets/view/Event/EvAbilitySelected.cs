@@ -29,11 +29,12 @@ namespace Assets.View.Event
             {
                 var ability = AbilityTable.Instance.Table[this._data.Ability];
                 var args = new AbilityArgs();
+                args.AoE = (int)ability.Data.AoE;
                 args.LWeapon = this._data.LWeapon;
                 args.Range = ability.Data.Range;
                 args.Source = this._data.Source;
-                var tiles = ability.GetTargetTiles(args);
-                VMapController.Instance.DecoratePotentialTargetTiles(tiles);
+                var tiles = ability.GetTargetableTiles(args);
+                VMapCombatController.Instance.DecoratePotentialTargetTiles(tiles);
                 CombatManager.Instance.SetPotentialTgtTiles(tiles);
                 CombatManager.Instance.SetCurrentAbility(this._data.Ability);
                 CombatManager.Instance.SetLWeapon(this._data.LWeapon);

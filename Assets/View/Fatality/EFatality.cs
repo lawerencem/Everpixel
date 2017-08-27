@@ -1,6 +1,6 @@
 ﻿namespace Assets.View.Fatality
 {
-    public enum FatalityEnum
+    public enum EFatality
     {
         None,
         Crush,

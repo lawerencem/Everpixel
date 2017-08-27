@@ -41,7 +41,7 @@ namespace Assets.View.Event
                 var path = this._data.Map.GetPath(s, t);
                 if (path != null)
                 {
-                    VMapController.Instance.DecoratePath(path);
+                    VMapCombatController.Instance.DecoratePath(path);
                     return true;
                 }
             }

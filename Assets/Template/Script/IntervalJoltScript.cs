@@ -34,7 +34,7 @@ namespace Template.Script
             this._timeCounter += Time.deltaTime;
             if (this._timeCounter >= this._timeInterval)
             {
-                var curJolt = this._toJolt.GetComponent<BoomerangScript>();
+                var curJolt = this._toJolt.GetComponent<SBoomerang>();
                 if (curJolt == null)
                 {
                     var xNeg = RNG.Instance.Next(2);
@@ -48,7 +48,7 @@ namespace Template.Script
                     var position = this._toJolt.transform.position;
                     position.x += (float)xRoll;
                     position.y += (float)yRoll;
-                    var jolt = this._toJolt.AddComponent<BoomerangScript>();
+                    var jolt = this._toJolt.AddComponent<SBoomerang>();
                     jolt.Init(this._toJolt, position, this._speed);
                 }
                 this._timeCounter = 0;

@@ -1,5 +1,5 @@
-﻿using Assets.Controller.Manager;
-using Assets.Controller.Manager.Combat;
+﻿using Assets.Controller.Manager.Combat;
+using Assets.Controller.Manager.GUI;
 using Assets.Controller.Map.Combat;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Event.Combat;
@@ -80,7 +80,7 @@ namespace Assets.View.Event
                     var data = new EvPathMoveData();
                     data.Target = this._data.Target;
                     var e = new EvPathMove(data);
-                    e.AddCallback(VMapController.Instance.ClearDecoratedTiles);
+                    e.AddCallback(VMapCombatController.Instance.ClearDecoratedTiles);
                     e.AddCallback(GUIManager.Instance.CallbackUnlockInteraction);
                     e.TryProcess();
                     return true;

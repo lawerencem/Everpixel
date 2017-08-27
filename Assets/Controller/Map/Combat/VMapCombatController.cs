@@ -7,24 +7,24 @@ using UnityEngine;
 
 namespace Assets.Controller.Map.Combat
 {
-    public class VMapController
+    public class VMapCombatController
     {
         private const float DEFAULT_ALPHA = 0.5f;
 
         private List<GameObject> _familyTileDeco = new List<GameObject>();
 
-        private static VMapController _instance;
-        public static VMapController Instance
+        private static VMapCombatController _instance;
+        public static VMapCombatController Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new VMapController();
+                    _instance = new VMapCombatController();
                 return _instance;
             }
         }
         
-        public VMapController()
+        public VMapCombatController()
         {
             this._familyTileDeco = new List<GameObject>();
         }
@@ -95,19 +95,12 @@ namespace Assets.Controller.Map.Combat
 //        private GameObject _singleTile;
 
 //        private AbilitiesModal _abilityModal;
-//        private GameObject _banner;        
+        
 //        private HoverModal _hoverModal;
 
 //        private CMapGUIControllerHit _hitHelper = new CMapGUIControllerHit();
 //        private CMapGUIControllerParticle _particleHelper = new CMapGUIControllerParticle();
 //        private CMapGUIControllerShapeshift _shapeshiftHelper = new CMapGUIControllerShapeshift();
-
-//        public void ActivateFatalityBanner()
-//        {
-//            this._banner.SetActive(true);
-//            var script = this._banner.AddComponent<DeactivateByLifetime>();
-//            script.Init(this._banner, 4);
-//        }
 
 //        public void ApplyInjuryGraphics(ApplyInjuryEvent e)
 //        {
@@ -115,18 +108,7 @@ namespace Assets.Controller.Map.Combat
 //            this._hitHelper.ProcessInjury(e);
 //        }
 
-//        public CMapGUIController()
-//        {
-//            this._abilityModal = new AbilitiesModal();
-//            this._hoverModal = new HoverModal();
 
-//            this._abilityModal.Init();
-//            this._hoverModal.Init();
-
-//            var banner = GameObject.FindGameObjectWithTag("BannerTag");
-//            this._banner = banner;
-//            this._banner.SetActive(false);
-//        }
 
 //        public void ClearAoETiles()
 //        {

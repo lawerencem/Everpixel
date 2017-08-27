@@ -1,5 +1,5 @@
-﻿using Assets.Controller.Manager;
-using Assets.Controller.Manager.Combat;
+﻿using Assets.Controller.Manager.Combat;
+using Assets.Controller.Manager.GUI;
 using Assets.Model.Ability;
 using Assets.Model.Character.Enum;
 using Assets.View.Script.GUI;

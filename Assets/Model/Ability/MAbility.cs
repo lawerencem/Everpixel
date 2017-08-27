@@ -34,7 +34,19 @@ namespace Assets.Model.Ability
             return this.Data.APCost;
         }
 
-        public List<TileController> GetTargetTiles(AbilityArgs arg)
+        public List<TileController> GetTargetedTiles(AbilityArgs arg)
+        {
+            var list = new List<TileController>();
+            if (this.isSelfCast())
+                list.Add(arg.Source.Tile);
+            else if (this.isRayCast())
+                list.AddRange(this._logic.GetRaycastTiles(arg));
+            else
+                list.AddRange(this._logic.GetAoETiles(arg, arg.AoE));
+            return list;
+        }
+
+        public List<TileController> GetTargetableTiles(AbilityArgs arg)
         {
             var list = new List<TileController>();
             if (this.isSelfCast())
@@ -109,7 +121,7 @@ namespace Assets.Model.Ability
 
         public List<Hit> GetHits(AbilityArgs arg)
         {
-            var tiles = this.GetTargetTiles(arg);
+            var tiles = this.GetTargetedTiles(arg);
             var hits = new List<Hit>();
             if (this._data.HitsTiles)
             {

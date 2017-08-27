@@ -1,17 +1,15 @@
-﻿using UnityEngine;
+﻿using Assets.Template.Script;
+using UnityEngine;
 
 namespace Template.Script
 {
-    public class JoltScript : MonoBehaviour
+    public class SJolt : AScript
     {
-        private Callback _callBack;
         private const float EPSILON = 0.05f;
 
         public GameObject Source { get; set; }
         public float Speed { get; set; }
         public Vector3 Target { get; set; }
-
-        public delegate void Callback();
 
         public void Update()
         {
@@ -21,8 +19,7 @@ namespace Template.Script
             if (Vector3.Distance(this.Source.transform.position, Target) <= EPSILON)
             {
                 this.Source.transform.position = Target;
-                if (this._callBack != null)
-                    this._callBack();
+                this.DoCallbacks();
                 Destroy(this);
             }
         }
@@ -32,14 +29,6 @@ namespace Template.Script
             this.Source = source;
             this.Speed = speed;
             this.Target = target;
-        }
-
-        public void Init(GameObject source, Vector3 target, float speed, Callback callback)
-        {
-            this.Source = source;
-            this.Speed = speed;
-            this.Target = target;
-            this._callBack = callback;
         }
     }
 }

@@ -1,69 +1,61 @@
-﻿//using Controller.Managers.Map;
-//using Generics.Scripts;
-//using Model.Events.Combat;
-//using UnityEngine;
-//using View.Barks;
+﻿using Assets.Controller.Manager.GUI;
 
-//namespace Assets.View.Fatality
-//{
-//    public class MFatality
-//    {
-//        private const float PER_FRAME = 0.0025f;
-//        private const float PER_FRAME_DIST = 0.075f;
+namespace Assets.View.Fatality
+{
+    public class MFatality
+    {
+        protected FatalityData _data;
+        protected EFatality _type;
 
-//        protected CMapGUIControllerHit _parent;
-//        protected DisplayActionEvent _event;
-//        protected FatalityEnum _type;
+        public FatalityData Data { get { return this._data; } }
+        public EFatality Type { get { return this._type; } }
 
-//        public FatalityEnum Type { get { return this._type; } }
+        public MFatality(EFatality type, FatalityData data)
+        {
+            this._data = data;
+            this._type = type;
+        }
 
-//        public MFatality(FatalityEnum type, CMapGUIControllerHit parent, DisplayActionEvent e)
-//        {
-//            this._type = type;
-//            this._parent = parent;
-//            this._event = e;
-//        }
+        public virtual void Init()
+        {
+            //CMapGUIController.Instance.ClearDecoratedTiles();
+            //foreach (var hit in this._event.FatalityHits)
+            //{
+            //    if (hit.Target != null)
+            //        foreach (var particle in hit.Target.Particles)
+            //            GameObject.Destroy(particle);
+            //}
+        }
 
-//        public virtual void Init()
-//        {
-//            CMapGUIController.Instance.ClearDecoratedTiles();
-//            foreach(var hit in this._event.FatalityHits)
-//            {
-//                if (hit.Target != null)
-//                    foreach (var particle in hit.Target.Particles)
-//                        GameObject.Destroy(particle);
-//            }
-//        }
+        public void ProcessFatalityView()
+        {
+            GUIManager.Instance.DeactivateComponentByLifetime(GameObjectTags.BANNER, 4);
+            //BarkManager.Instance.ProcessFatalityBark(this._event);
+        }
 
-//        public void ProcessFatalityView()
-//        {
-//            CMapGUIController.Instance.ActivateFatalityBanner();
-//            BarkManager.Instance.ProcessFatalityBark(this._event);
-//        }
+        protected virtual void InitMeleeFatality()
+        {
+            //var bob = this._event.EventController.Source.Handle.GetComponent<BobbingScript>();
+            //if (bob != null)
+            //    GameObject.Destroy(bob);
+        }
 
-//        protected virtual void InitMeleeFatality()
-//        {
-//            var bob = this._event.EventController.Source.Handle.GetComponent<BobbingScript>();
-//            if (bob != null)
-//                GameObject.Destroy(bob);
-//        }
+        protected virtual void InitBulletFatality()
+        {
+            //var bob = this._event.EventController.Source.Handle.GetComponent<BobbingScript>();
+            //if (bob != null)
+            //    GameObject.Destroy(bob);
+        }
 
-//        protected virtual void InitBulletFatality()
-//        {
-//            var bob = this._event.EventController.Source.Handle.GetComponent<BobbingScript>();
-//            if (bob != null)
-//                GameObject.Destroy(bob);
-//        }
+        protected void Done()
+        {
+            //var bob = this._event.EventController.Source.Handle.AddComponent<BobbingScript>();
+            //bob.Init(PER_FRAME, PER_FRAME_DIST, this._event.EventController.Source.Handle);
+        }
 
-//        protected void Done()
-//        {
-//            var bob = this._event.EventController.Source.Handle.AddComponent<BobbingScript>();
-//            bob.Init(PER_FRAME, PER_FRAME_DIST, this._event.EventController.Source.Handle);
-//        }
+        protected virtual void ProcessFatality()
+        {
 
-//        protected virtual void ProcessFatality()
-//        {
-            
-//        }
-//    }
-//}
+        }
+    }
+}

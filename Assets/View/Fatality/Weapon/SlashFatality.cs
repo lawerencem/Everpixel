@@ -1,25 +1,13 @@
-﻿//using Assets.View;
-//using Controller.Managers.Map;
-//using Controller.Map;
-//using Generics.Scripts;
-//using Generics.Utilities;
-//using Model.Abilities;
-//using Model.Characters;
-//using Model.Events.Combat;
-//using UnityEngine;
-//using View.Biomes;
-//using View.Characters;
-//using View.Scripts;
+﻿namespace Assets.View.Fatality.Weapon
+{
+    public class SlashFatality : MFatality
+    {
+        public SlashFatality(FatalityData data) : base(EFatality.Slash, data)
+        {
 
-//namespace Assets.View.Fatality.Weapon
-//{
-//    public class SlashFatality : MFatality
-//    {
-//        public SlashFatality(CMapGUIControllerHit parent, DisplayActionEvent e)
-//            : base(FatalityEnum.Slash, parent, e)
-//        {
-
-//        }
+        }
+    }
+}
 
 //        public override void Init()
 //        {
@@ -40,7 +28,7 @@
 
 //        private void ProcessHeadFatality()
 //        {
-//            foreach(var hit in this._event.FatalityHits)
+//            foreach (var hit in this._event.FatalityHits)
 //            {
 //                if (hit.Target.Model.Type == ECharacterType.Humanoid)
 //                {

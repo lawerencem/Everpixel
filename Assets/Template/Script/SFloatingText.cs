@@ -2,7 +2,7 @@
 
 namespace Assets.Scripts
 {
-    public class FloatingText : MonoBehaviour
+    public class SFloatingText : MonoBehaviour
     {
         private GameObject _parent;
         private float _offset;

@@ -1,16 +1,13 @@
-﻿//using Generics.Scripts;
-//using Generics.Utilities;
-//using UnityEngine;
+﻿namespace Assets.View.Fatality.Magic
+{
+    public class FightingFatality : MFatality
+    {
+        public FightingFatality(FatalityData data) : base(EFatality.Fighting, data)
+        {
 
-//namespace Assets.View.Fatality.Spell
-//{
-//    public class FightingFatality : MFatality
-//    {
-//        public FightingFatality(CMapGUIControllerHit parent, DisplayActionEvent e)
-//            : base(FatalityEnum.Fighting, parent, e)
-//        {
-
-//        }
+        }
+    }
+}
 
 //        public override void Init()
 //        {

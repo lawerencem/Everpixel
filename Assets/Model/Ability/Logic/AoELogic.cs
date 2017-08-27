@@ -17,12 +17,11 @@ namespace Assets.Model.Ability.Logic
 
         public List<TileController> GetAoETiles(AbilityArgs arg, int aoe)
         {
-            //var list = new List<TileController>();
-            //var t = arg.Target.Model;
-            //var hexes = t.GetAoETiles(aoe);
-            //foreach(var hex in hexes) { list.Add(hex.Parent); }
-            //return list;
-            return null;
+            var list = new List<TileController>();
+            var t = arg.Target.Model;
+            var hexes = t.GetAoETiles(aoe);
+            foreach (var hex in hexes) { list.Add(hex.Controller); }
+            return list;
         }
 
         public List<TileController> GetRaycastTiles(AbilityArgs arg)

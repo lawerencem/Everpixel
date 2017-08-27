@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Template.Event;
 
-namespace Assets.Controller.Managers
+namespace Assets.Controller.Manager.GUI
 {
     public class GUIEvManager : AEventManager<MGuiEv>
     {

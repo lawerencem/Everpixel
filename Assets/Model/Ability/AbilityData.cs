@@ -1,4 +1,5 @@
 ﻿using Assets.Model.Ability.Enum;
+using Assets.Model.Ability.Magic;
 using Assets.Model.Injury;
 using System.Collections.Generic;
 
@@ -27,7 +28,7 @@ namespace Assets.Model.Ability
         public bool Hostile { get; set; }
         public List<EInjury> Injuries { get; set; }
         public bool IsHeal { get; set; }
-        public MagicTypeEnum MagicType { get; set; }
+        public EMagicType MagicType { get; set; }
         public double MeleeBlockChanceMod { get; set; }
         public double ParryModMod { get; set; }
         public int Range { get; set; }

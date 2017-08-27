@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
+using Template.Script;
 using UnityEngine;
 
-namespace Assets.Controller.Manager
+namespace Assets.Controller.Manager.GUI
 {
     public class GUIManager
     {
@@ -23,9 +24,26 @@ namespace Assets.Controller.Manager
         public GUIManager()
         {
             this._guiComponents = new Dictionary<string, GameObject>();
+
+            //this._abilityModal = new AbilitiesModal();
+            //this._hoverModal = new HoverModal();
+
+            //this._abilityModal.Init();
+            //this._hoverModal.Init();
+
+            this.Init();
         }
 
         public void AddComponent(string tag, GameObject o) { this._guiComponents.Add(tag, o); }
+        public void DeactivateComponentByLifetime(string tag, float life)
+        {
+            if (this._guiComponents.ContainsKey(tag))
+            {
+                var component = this._guiComponents[tag];
+                var script = component.AddComponent<SDeactivateByLifetime>();
+                script.Init(component, life);
+            }
+        }
         public void CallbackLockGUI(object o) { this._guiLocked = true; }
         public void CallbackLockInteraction(object o) { this._interactionLocked = true; }
         public void CallbackUnlockGUI(object o) { this._guiLocked = false; }
@@ -48,6 +66,11 @@ namespace Assets.Controller.Manager
         public void SetGUILocked(bool locked) { this._guiLocked = locked; }
         public void SetInteractionLocked(bool locked) { this._interactionLocked = locked; }
 
-        
+        private void Init()
+        {
+            var banner = GameObject.FindGameObjectWithTag(GameObjectTags.BANNER);
+            this.AddComponent(GameObjectTags.BANNER, banner);
+            this.SetComponentActive(GameObjectTags.BANNER, false);
+        }
     }
 }

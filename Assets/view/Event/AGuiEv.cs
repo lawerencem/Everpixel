@@ -1,4 +1,4 @@
-﻿using Assets.Controller.Managers;
+﻿using Assets.Controller.Manager.GUI;
 using Template.Event;
 
 namespace Assets.View.Event
