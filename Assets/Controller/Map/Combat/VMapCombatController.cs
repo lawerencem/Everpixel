@@ -11,7 +11,9 @@ namespace Assets.Controller.Map.Combat
     {
         private const float DEFAULT_ALPHA = 0.5f;
 
+        private List<TileController> _familyTiles = new List<TileController>();
         private List<GameObject> _familyTileDeco = new List<GameObject>();
+        private GameObject _hoverTileDeco;
 
         private static VMapCombatController _instance;
         public static VMapCombatController Instance
@@ -33,6 +35,19 @@ namespace Assets.Controller.Map.Combat
         {
             foreach (var old in this._familyTileDeco) { GameObject.Destroy(old); }
             this._familyTileDeco.Clear();
+        }
+
+        public void DecorateHover(TileController t)
+        {
+            if (this._hoverTileDeco != null && !this._hoverTileDeco.Equals(t))
+                GameObject.Destroy(this._hoverTileDeco);
+
+            var tile = this._familyTiles.Find(x => x.Equals(t));
+            if (tile != null)
+            {
+                var sprite = MapBridge.Instance.GetHostileHoverSprite();
+                this._hoverTileDeco = this.DecorateTile(t, sprite);
+            }
         }
 
         public void DecoratePath(Path p)
@@ -61,6 +76,7 @@ namespace Assets.Controller.Map.Combat
 
             if (tiles != null)
             {
+                this._familyTiles = tiles;
                 var sprite = MapBridge.Instance.GetPotentialAttackLocSprite();
                 foreach (var t in tiles)
                 {
@@ -121,18 +137,6 @@ namespace Assets.Controller.Map.Combat
 //            var sprite = MapBridge.Instance.GetTileHighlightSprite();
 //            foreach (var tile in t)
 //                this.DecorateAoETile(tile, sprite);
-//        }
-
-//        public void DecorateHover(TileController t)
-//        {
-//            if (this._singleTile != null && this._singleTile != t)
-//                GameObject.Destroy(this._singleTile);
-
-//            if (TileControllerFlags.HasFlag(t.Flags.CurFlags, TileControllerFlags.Flags.AwaitingAction))
-//            {
-//                var sprite = MapBridge.Instance.GetHostileHoverSprite();
-//                DecorateSingleTile(t, sprite);
-//            }
 //        }
 
 //        public void DisplayActionEvent(DisplayActionEvent e)

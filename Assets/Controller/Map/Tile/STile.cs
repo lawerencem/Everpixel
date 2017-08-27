@@ -1,4 +1,5 @@
-﻿using Assets.View;
+﻿using Assets.Controller.Map.Combat;
+using Assets.View;
 using Assets.View.Event;
 using System;
 using UnityEngine;
@@ -43,7 +44,7 @@ namespace Assets.Controller.Map.Tile
 
         public void OnMouseEnter()
         {
-            //this.HandleHover();
+            this.HandleHover();
             //this.HandleAoE();
         }
 
@@ -52,11 +53,12 @@ namespace Assets.Controller.Map.Tile
             //CMapGUIController.Instance.SetHoverModalInactive();
         }
 
-        //        private void HandleHover()
-        //        {
-        //            this.HandleHoverTargetStats();
-        //            this.HandleHoverTargetDamage();
-        //        }
+        private void HandleHover()
+        {
+            //this.HandleHoverTargetStats();
+            //this.HandleHoverTargetDamage();
+            VMapCombatController.Instance.DecorateHover(this._tile);
+        }
 
         //        private void HandleHoverTargetDamage()
         //        {
