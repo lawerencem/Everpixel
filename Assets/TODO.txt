@@ -1,9 +1,5 @@
 ﻿TODO
 
-- Hover Event
-- Hover attack tiles
-- Perform abilities
-
 
 Perks
 howl (intstant heal of HoT)

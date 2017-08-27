@@ -60,7 +60,16 @@ namespace Assets.Controller.Manager.Combat
                     .CompareTo(x.Model.GetCurrentStats().GetStatValue(ESecondaryStat.Initiative)));
             }
             foreach (var character in this._data.Characters)
+            {
                 this._data.InitiativeOrder.Add(character);
+
+                // TODO: Try reading .xml values, or set to max...
+                character.Model.SetCurrentHP(character.Model.GetCurrentStats().GetSecondaryStats().MaxHP);
+                character.Model.SetCurrentAP(character.Model.GetCurrentStats().GetSecondaryStats().MaxHP);
+                character.Model.SetCurrentMorale(character.Model.GetCurrentStats().GetSecondaryStats().Morale);
+                character.Model.SetCurrentStam(character.Model.GetCurrentStats().GetSecondaryStats().Stamina);
+            }
+                
             this.ProcessTakingAction();
         }
 

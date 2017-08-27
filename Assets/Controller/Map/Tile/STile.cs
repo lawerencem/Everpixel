@@ -1,4 +1,6 @@
-﻿using Assets.Controller.Map.Combat;
+﻿using Assets.Controller.Character;
+using Assets.Controller.Manager.GUI;
+using Assets.Controller.Map.Combat;
 using Assets.View;
 using Assets.View.Event;
 using System;
@@ -45,7 +47,6 @@ namespace Assets.Controller.Map.Tile
         public void OnMouseEnter()
         {
             this.HandleHover();
-            //this.HandleAoE();
         }
 
         public void OnMouseExit()
@@ -55,9 +56,25 @@ namespace Assets.Controller.Map.Tile
 
         private void HandleHover()
         {
-            //this.HandleHoverTargetStats();
+            this.HandleHoverTargetStats();
             //this.HandleHoverTargetDamage();
             VMapCombatController.Instance.DecorateHover(this._tile);
+        }
+
+        private void HandleHoverTargetStats()
+        {
+            if (this._tile.Current != null && this._tile.Current.GetType().Equals(typeof(CharController)))
+            {
+                var fov = Camera.main.fieldOfView;
+                var character = this._tile.Current as CharController;
+                var position = character.Handle.transform.position;
+                position.x += (float)(fov * 0.025);
+                position.y += (float)(fov * 0.025);
+                GUIManager.Instance.SetHoverModalHeaderText(character.View.Name);
+                GUIManager.Instance.SetHoverModalLocation(position);
+                var target = this._tile.Current as CharController;
+                GUIManager.Instance.SetHoverModalStatValues(target.Model);
+            }
         }
 
         //        private void HandleHoverTargetDamage()
@@ -87,22 +104,6 @@ namespace Assets.Controller.Map.Tile
         //            }
         //            else
         //                CMapGUIController.Instance.SetDmgModalInactive();
-        //        }
-
-        //        private void HandleHoverTargetStats()
-        //        {
-        //            if (this.Model.Current != null && this.Model.Current.GetType() == typeof(CharController))
-        //            {
-        //                var fov = Camera.main.fieldOfView;
-        //                var character = this.Model.Current as CharController;
-        //                var position = character.Handle.transform.position;
-        //                position.x += (float)(fov * 0.025);
-        //                position.y += (float)(fov * 0.025);
-        //                CMapGUIController.Instance.SetHoverModalHeaderText(character.View.Name);
-        //                CMapGUIController.Instance.SetHoverModalLocation(position);
-        //                var controller = this.Model.Current as CharController;
-        //                CMapGUIController.Instance.SetHoverModalStatValues(controller.Model);
-        //            }
         //        }
         //    }
         //}

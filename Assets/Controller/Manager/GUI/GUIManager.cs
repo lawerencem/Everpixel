@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Assets.Model.Character;
+using Assets.View.GUI;
+using System.Collections.Generic;
 using Template.Script;
 using UnityEngine;
 
@@ -7,6 +9,7 @@ namespace Assets.Controller.Manager.GUI
     public class GUIManager
     {
         private bool _guiLocked = false;
+        private HoverModal _hoverModal;
         private bool _interactionLocked = false;
         private Dictionary<string, GameObject> _guiComponents;
 
@@ -26,10 +29,10 @@ namespace Assets.Controller.Manager.GUI
             this._guiComponents = new Dictionary<string, GameObject>();
 
             //this._abilityModal = new AbilitiesModal();
-            //this._hoverModal = new HoverModal();
+            this._hoverModal = new HoverModal();
 
             //this._abilityModal.Init();
-            //this._hoverModal.Init();
+            this._hoverModal.Init();
 
             this.Init();
         }
@@ -64,6 +67,12 @@ namespace Assets.Controller.Manager.GUI
                 this._guiComponents[tag].SetActive(active);
         }
         public void SetGUILocked(bool locked) { this._guiLocked = locked; }
+        public void SetHoverModalActive() { this._hoverModal.SetModalActive(); }
+        //public void SetHoverModalDamageValues(EvPredictAction e) { this._hoverModal.SetModalDamageValues(e); }
+        public void SetHoverModalInactive() { this._hoverModal.SetModalInactive(); }
+        public void SetHoverModalHeaderText(string toSet) { this._hoverModal.SetModalHeaderText(toSet); }
+        public void SetHoverModalLocation(Vector3 pos) { this._hoverModal.SetModalLocation(pos); }
+        public void SetHoverModalStatValues(MChar c) { this._hoverModal.SetModalStatValues(c); }
         public void SetInteractionLocked(bool locked) { this._interactionLocked = locked; }
 
         private void Init()

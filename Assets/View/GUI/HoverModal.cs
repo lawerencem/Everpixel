@@ -76,7 +76,6 @@ namespace Assets.View.GUI
             this._dmgText = dmgText.GetComponent<Text>();
             this._dodgeText = dodgeText.GetComponent<Text>();
             this._parryText = parryText.GetComponent<Text>();
-
         }
 
         public void SetModalActive()

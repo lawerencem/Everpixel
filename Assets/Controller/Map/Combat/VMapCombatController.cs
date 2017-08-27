@@ -269,36 +269,6 @@ namespace Assets.Controller.Map.Combat
 //            this._hoverModal.SetDamageModalInactive();
 //        }
 
-//        public void SetHoverModalActive()
-//        {
-//            this._hoverModal.SetModalActive();
-//        }
-
-//        public void SetHoverModalDamageValues(EvPredictAction e)
-//        {
-//            this._hoverModal.SetModalDamageValues(e);
-//        }
-
-//        public void SetHoverModalInactive()
-//        {
-//            this._hoverModal.SetModalInactive();
-//        }
-
-//        public void SetHoverModalHeaderText(string toSet)
-//        {
-//            this._hoverModal.SetModalHeaderText(toSet);
-//        }
-
-//        public void SetHoverModalLocation(Vector3 pos)
-//        {
-//            this._hoverModal.SetModalLocation(pos);
-//        }
-
-//        public void SetHoverModalStatValues(MChar c)
-//        {
-//            this._hoverModal.SetModalStatValues(c);
-//        }
-
 //        private void DecorateAoETile(TileController tile, Sprite deco)
 //        {
 //            var tView = this.DecorateTile(tile, deco);
