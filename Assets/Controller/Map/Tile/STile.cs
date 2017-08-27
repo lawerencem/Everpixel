@@ -51,7 +51,7 @@ namespace Assets.Controller.Map.Tile
 
         public void OnMouseExit()
         {
-            //CMapGUIController.Instance.SetHoverModalInactive();
+            GUIManager.Instance.SetHoverModalInactive();
         }
 
         private void HandleHover()
