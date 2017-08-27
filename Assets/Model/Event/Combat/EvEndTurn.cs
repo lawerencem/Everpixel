@@ -1,4 +1,6 @@
 ﻿using Assets.Controller.Manager.Combat;
+using Assets.Controller.Manager.GUI;
+using Assets.Controller.Map.Combat;
 using Template.Script;
 
 namespace Assets.Model.Event.Combat
@@ -19,6 +21,7 @@ namespace Assets.Model.Event.Combat
                     bob.Reset();
                 }
             }
+            VMapCombatController.Instance.ClearDecoratedTiles(this);
             CombatManager.Instance.ProcessEndTurn();
         }
     }

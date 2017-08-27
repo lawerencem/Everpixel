@@ -59,6 +59,7 @@ namespace Assets.Controller.GUI.Combat
                             var flinch = target.Handle.AddComponent<SFlinch>();
                             var flinchPos = target.Handle.transform.position;
                             flinchPos.y -= CombatGUIParams.FLINCH_DIST;
+                            flinch.AddCallback(hit.CallbackHandler);
                             flinch.Init(target, flinchPos, CombatGUIParams.FLINCH_SPEED);
                         }
                     }

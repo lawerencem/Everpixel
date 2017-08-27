@@ -1,4 +1,4 @@
-﻿using Assets.Controller.GUI;
+﻿using Assets.Controller.GUI.Combat;
 using Assets.Controller.Manager.GUI;
 using Assets.Model.Ability;
 
@@ -37,6 +37,10 @@ namespace Assets.Model.Action
             args.Source = this._data.Source;
             args.Target = this._data.Target;
             this._data.Hits = this.ActiveAbility.GetHits(args);
+            foreach(var hit in this._data.Hits)
+            {
+                hit.AddCallback(this.TryDone);
+            }
         }
 
         private void ProcessAction()
@@ -49,10 +53,19 @@ namespace Assets.Model.Action
             VCombatController.Instance.DisplayNewAction(this);
         }
 
-        public void Done()
+        public void TryDone(object o)
         {
-            GUIManager.Instance.SetGUILocked(false);
-            GUIManager.Instance.SetInteractionLocked(false);
+            bool done = true;
+            foreach(var hit in this._data.Hits)
+            {
+                if (!hit.Done)
+                    done = false;
+            }
+            if (done)
+            {
+                GUIManager.Instance.SetGUILocked(false);
+                GUIManager.Instance.SetInteractionLocked(false);
+            }
         }
     }
 }
