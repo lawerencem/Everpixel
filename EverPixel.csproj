@@ -449,13 +449,8 @@
     <Compile Include="Assets\View\Event\EvPopulateWpnBtns.cs" />
     <Compile Include="Assets\View\Event\EvTileClick.cs" />
     <Compile Include="Assets\View\Event\EvTileSelect.cs" />
-    <Compile Include="Assets\View\Event\GUIEndTurnEvent.cs" />
-    <Compile Include="Assets\View\Event\GUIEvent.cs" />
-    <Compile Include="Assets\View\Event\GUIEventEnum.cs" />
     <Compile Include="Assets\View\Event\MGuiEv.cs" />
-    <Compile Include="Assets\View\Event\PopulateWpnBtnsEvent.cs" />
     <Compile Include="Assets\View\Event\Priorities.cs" />
-    <Compile Include="Assets\View\Event\WpnBtnClickEvent.cs" />
     <Compile Include="Assets\View\Fatality\EFatality.cs" />
     <Compile Include="Assets\View\Fatality\FatalityData.cs" />
     <Compile Include="Assets\View\Fatality\FatalityFactory.cs" />
