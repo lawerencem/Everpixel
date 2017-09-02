@@ -80,6 +80,12 @@ namespace Assets.Controller.Map.Tile
             return null;
         }
 
+        public TileController GetRandomNearbyTile(int probes)
+        {
+            var tile = this._model.GetRandomNearbyTile(probes);
+            return tile.Controller;
+        }
+
         public void SetModel(MTile t)
         {
             this._model = t;

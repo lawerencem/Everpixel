@@ -410,13 +410,13 @@
     <Compile Include="Assets\Template\Script\SDeactivateByLifetime.cs" />
     <Compile Include="Assets\Template\Script\SDestroyByLifetime.cs" />
     <Compile Include="Assets\Template\Script\SFloatingText.cs" />
-    <Compile Include="Assets\Template\Script\HangCallbackZoomOut.cs" />
+    <Compile Include="Assets\Template\Script\SHangCallbackZoomOut.cs" />
     <Compile Include="Assets\Template\Script\HangZoomOutCallback.cs" />
     <Compile Include="Assets\Template\Script\IntervalJoltScript.cs" />
     <Compile Include="Assets\Template\Script\SJolt.cs" />
-    <Compile Include="Assets\Template\Script\RaycastMove.cs" />
+    <Compile Include="Assets\Template\Script\SRaycastMove.cs" />
     <Compile Include="Assets\Template\Script\RaycastMoveWithDelete.cs" />
-    <Compile Include="Assets\Template\Script\RotationScript.cs" />
+    <Compile Include="Assets\Template\Script\SRotation.cs" />
     <Compile Include="Assets\Template\Script\SObjectMove.cs" />
     <Compile Include="Assets\Template\Script\ScrollCameraToScript.cs" />
     <Compile Include="Assets\Template\Script\SpriteFlipCallback.cs" />
@@ -425,6 +425,7 @@
     <Compile Include="Assets\Template\Util\DeepCloneUtil.cs" />
     <Compile Include="Assets\Template\Util\EnumUtil.cs" />
     <Compile Include="Assets\Template\Util\ListUtil.cs" />
+    <Compile Include="Assets\Template\Util\RandomPositionOffset.cs" />
     <Compile Include="Assets\Template\Util\RNG.cs" />
     <Compile Include="Assets\Template\Util\StringUtil.cs" />
     <Compile Include="Assets\Template\XML\XMLReader.cs" />
@@ -471,9 +472,8 @@
     <Compile Include="Assets\View\Map\VTile.cs" />
     <Compile Include="Assets\View\Mount\MountBridge.cs" />
     <Compile Include="Assets\View\Mount\VMount.cs" />
+    <Compile Include="Assets\View\Particle\ParticleController.cs" />
     <Compile Include="Assets\View\Script\FX\SAttackerJolt.cs" />
-    <Compile Include="Assets\View\Script\FX\BoomerangFatalityScript.cs" />
-    <Compile Include="Assets\View\Script\FX\FatalityJoltScript.cs" />
     <Compile Include="Assets\View\Script\FX\SFlinch.cs" />
     <Compile Include="Assets\View\Script\FX\GearExplosionScript.cs" />
     <Compile Include="Assets\View\Script\FX\HeadRotationScript.cs" />

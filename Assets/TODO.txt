@@ -1,5 +1,7 @@
 ﻿TODO
 
+Tie Hits to fatalities
+
 Refactor .xml readers : 
 	- allow for multiple path strings for reading
 	- 
