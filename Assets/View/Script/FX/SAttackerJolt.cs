@@ -39,6 +39,7 @@ namespace Assets.View.Script.FX
         {
             base.Done(o);
             this._renderer.sprite = this._oldSprite;
+            this._source.Handle.transform.position = this._source.Tile.Model.Center;
             var bob = this._source.Handle.AddComponent<SBob>();
             bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._source.Handle);
         }
