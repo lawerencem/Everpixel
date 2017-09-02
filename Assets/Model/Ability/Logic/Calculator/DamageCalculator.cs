@@ -18,9 +18,9 @@ namespace Assets.Model.Ability.Logic.Calculator
             dmg += abilityData.FlatDamage;
             if (abilityData.CastType == ECastType.Melee)
             {
-                if (equipment.GetRWeapon() != null)
+                if (equipment.GetRWeapon() != null && !equipment.GetRWeapon().IsTypeOfShield())
                     dmg += equipment.GetRWeapon().Damage;
-                if (equipment.GetLWeapon() != null)
+                if (equipment.GetLWeapon() != null && !equipment.GetLWeapon().IsTypeOfShield())
                     dmg += equipment.GetLWeapon().Damage;
             }
             dmg += (abilityData.DmgPerPower * source.GetCurrentStats().GetSecondaryStats().Power);

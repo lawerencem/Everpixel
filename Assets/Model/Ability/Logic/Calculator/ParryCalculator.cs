@@ -1,4 +1,7 @@
-﻿using Assets.Model.Combat.Hit;
+﻿using Assets.Controller.Character;
+using Assets.Model.Abiltiy.Logic;
+using Assets.Model.Character.Enum;
+using Assets.Model.Combat.Hit;
 using Template.Utility;
 
 namespace Assets.Model.Ability.Logic.Calculator
@@ -7,31 +10,35 @@ namespace Assets.Model.Ability.Logic.Calculator
     {
         public override void Predict(Hit hit)
         {
-            //var acc = hit.Source.Model.GetCurrentStatValue(ESecondaryStat.Melee);
-            //var parry = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.Parry);
-            //var parryChance = LogicParams.BASE_PARRY_CHANCE / hit.Ability.AccMod;
+            var stats = hit.Data.Source.Model.GetCurrentStats();
+            var acc = stats.GetSecondaryStats().MeleeSkill;
+            var parry = stats.GetSecondaryStats().ParrySkill;
+            var parryChance = LogicParams.BASE_PARRY_CHANCE / hit.Data.Ability.Data.AccMod;
 
-            //if (hit.Target.Model.Armor != null)
-            //    parryChance *= hit.Target.Model.Armor.ParryReduce;
-            //if (hit.Target.Model.Helm != null)
-            //    parryChance *= hit.Target.Model.Helm.ParryReduce;
-            //if (hit.Target.Model.LWeapon != null)
-            //    parryChance *= hit.Target.Model.LWeapon.ParryMod;
-            //if (hit.Target.Model.RWeapon != null)
-            //    parryChance *= hit.Target.Model.RWeapon.ParryMod;
+            var tgt = hit.Data.Target.Current as CharController;
+            var equipment = tgt.Model.GetEquipment();
 
-            //if (hit.Target.Model.Type == ECharacterType.Critter)
-            //    parryChance = 0;
+            if (equipment.GetArmor() != null)
+                parryChance *= equipment.GetArmor().ParryReduce;
+            if (equipment.GetHelm() != null)
+                parryChance *= equipment.GetHelm().ParryReduce;
+            if (equipment.GetLWeapon() != null)
+                parryChance *= equipment.GetLWeapon().ParryMod;
+            if (equipment.GetRWeapon() != null)
+                parryChance *= equipment.GetRWeapon().ParryMod;
 
-            //acc *= hit.Ability.AccMod;
-            //parry *= hit.Ability.ParryModMod;
+            if (hit.Data.Source.Model.Type == ECharType.Critter)
+                parryChance = 0;
 
-            //if (hit.Chances.Parry > 1)
-            //    hit.Chances.Parry = 1;
-            //if (hit.Chances.Parry < 0)
-            //    hit.Chances.Parry = 0;
+            acc *= hit.Data.Ability.Data.AccMod;
+            parry *= hit.Data.Ability.Data.ParryModMod;
 
-            //hit.Chances.Parry = this.GetAttackVSDefenseSkillChance(acc, parry, parryChance);
+            if (hit.Data.Chances.Parry > 1)
+                hit.Data.Chances.Parry = 1;
+            if (hit.Data.Chances.Parry < 0)
+                hit.Data.Chances.Parry = 0;
+
+            hit.Data.Chances.Parry = this.GetAttackVSDefenseSkillChance(acc, parry, parryChance);
         }
 
         public override void Process(Hit hit)
