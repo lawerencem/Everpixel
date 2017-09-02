@@ -82,12 +82,6 @@ namespace Assets.Controller.GUI.Combat
                 flinchPos.y -= CombatGUIParams.FLINCH_DIST;
                 flinch.AddCallback(hit.CallbackHandler);
                 flinch.Init(target, flinchPos, CombatGUIParams.FLINCH_SPEED);
-                var data = new EvModHPData();
-                data.Dmg = hit.Data.Dmg;
-                data.IsHeal = hit.Data.IsHeal;
-                data.Target = target;
-                var e = new EvModHP(data);
-                e.TryProcess();
             }
         }
 
