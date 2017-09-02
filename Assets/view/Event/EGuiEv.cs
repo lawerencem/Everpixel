@@ -3,6 +3,7 @@
     public enum EGuiEv
     {
         AbilitySelected,
+        CharDeath,
         PopulateWpnBtns,
         Splatter,
         TileClick,

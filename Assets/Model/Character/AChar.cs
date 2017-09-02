@@ -1,4 +1,5 @@
-﻿using Assets.Model.Character.Container;
+﻿using Assets.Controller.Character;
+using Assets.Model.Character.Container;
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
 using Assets.Model.Class;
@@ -12,6 +13,7 @@ namespace Assets.Model.Character
     {
         protected CharAbilities<T> _abilities;
         protected Dictionary<EClass, MClass> _baseClasses;
+        private CharController _controller;
         protected CharEffects<T> _effects;
         protected ACharEquipment<T> _equipment;
         protected FCharacterStatus _flags;
@@ -24,6 +26,7 @@ namespace Assets.Model.Character
         
         protected T _type;
 
+        public CharController Controller { get { return this._controller; } }
         public bool LParty { get { return this._lParty; } }
         public T Type { get { return this._type; } }
 
@@ -43,6 +46,7 @@ namespace Assets.Model.Character
         public int GetCurrentMorale() { return this._points.CurrentMorale; }
         public int GetCurrentStamina() { return this._points.CurrentStamina; }
 
+        public void SetController(CharController c) { this._controller = c; }
         public void SetCurrentAP(int ap) { this._points.CurrentAP = ap; }
         public void SetCurrentHP(int hp) { this._points.CurrentHP = hp; }
         public void SetCurrentMorale(int mor) { this._points.CurrentMorale = mor; }

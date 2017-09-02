@@ -1,22 +1,40 @@
-﻿//using Controller.Characters;
-//using Controller.Managers;
-//using Model.Characters;
+﻿using Assets.Controller.Character;
+using Assets.Model.Character.Enum;
 
-//namespace Assets.Model.Event.Combat
-//{
-//    public class EvCharKilled : MCombatEv
-//    {
-//        public CharController Killed { get; set; }
+namespace Assets.Model.Event.Combat
+{
+    public class EvCharKilledData
+    {
+        public CharController Target { get; set; }
+    }
 
-//        public EvCharKilled(CombatEventManager parent,CharController killed) :
-//            base(ECombatEv.CharacterKilled, parent)
-//        {
-//            this.Killed = killed;
-//            this.RegisterEvent();
-//            FCharacterStatus.SetDeadTrue(this.Killed.Model.StatusFlags);
-//            var tgtTile = this.Killed.CurrentTile;
-//            tgtTile.DeadCharacters.Add(this.Killed);
-//            tgtTile.Model.Current = null;
-//        }
-//    }
-//}
+    public class EvCharKilled : MEvCombat
+    {
+        private EvCharKilledData _data;
+
+        public EvCharKilled() : base(ECombatEv.CharKilled) { }
+        public EvCharKilled(EvCharKilledData d) : base(ECombatEv.CharKilled) { this._data = d; }
+
+        public override void TryProcess()
+        {
+            base.TryProcess();
+            if (this.Initialized())
+                this.Process();
+        }
+
+        private bool Initialized()
+        {
+            if (this._data != null && this._data.Target != null)
+                return true;
+            else
+                return false;
+        }
+
+        private void Process()
+        {
+            this._data.Target.Tile.SetCurrent(null);
+            this._data.Target.Tile.AddNonCurrent(this._data.Target);
+            FCharacterStatus.SetDeadTrue(this._data.Target.Model.GetFlags());
+        }
+    }
+}

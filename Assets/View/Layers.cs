@@ -4,6 +4,8 @@ namespace Assets.View
 {
     public class Layers
     {
+
+        public static readonly string CHAR = "Char";
         public static readonly string CHAR_ARMOR = "CharArmor";
         public static readonly string CHAR_HEAD_DECO_1 = "CharHeadDeco1";
         public static readonly string CHAR_HEAD_DECO_2 = "CharHeadDeco2";
@@ -18,6 +20,7 @@ namespace Assets.View
         public static readonly string CHAR_R_WEAPON = "CharRWeapon";
         public static readonly string CHAR_TORSO = "CharTorso";
 
+        public static readonly string DEAD = "Dead";
         public static readonly string DEAD_ARMOR = "DeadArmor";
         public static readonly string DEAD_HEAD_DECO_1 = "DeadHeadDeco1";
         public static readonly string DEAD_HEAD_DECO_2 = "DeadHeadDeco2";

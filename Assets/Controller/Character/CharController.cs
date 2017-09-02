@@ -17,15 +17,13 @@ namespace Assets.Controller.Character
         public MChar Model { get { return this._model; } }
         public VChar View { get { return this._view; } }
         public TileController Tile { get { return this._tile; } }
-        
-        public bool KillFXProcessed { get; set; }   // TODO: Don't like this here...
 
-        public void SetModel(MChar m) { this._model = m; }
+        public void SetModel(MChar m) { this._model = m; m.SetController(this); }
         public void SetView(VChar v) { this._view = v; }
         public void SetTile(TileController t) { this._tile = t; }
 
         public List<GameObject> Particles { get; set; }
-        public Dictionary<string, GameObject> SpriteHandlerDict = new Dictionary<string, GameObject>();
+        public Dictionary<string, GameObject> SubComponents = new Dictionary<string, GameObject>();
 
         public CharController()
         {

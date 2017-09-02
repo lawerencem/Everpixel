@@ -439,6 +439,7 @@
     <Compile Include="Assets\View\Character\Table\CritterAttackSpriteTable.cs" />
     <Compile Include="Assets\View\Character\Table\CritterFlinchSpriteTable.cs" />
     <Compile Include="Assets\View\Character\VChar.cs" />
+    <Compile Include="Assets\View\Character\VCharUtil.cs" />
     <Compile Include="Assets\View\Equipment\EquipmentBridge.cs" />
     <Compile Include="Assets\View\Equipment\VArmor.cs" />
     <Compile Include="Assets\View\Equipment\VEquipment.cs" />
@@ -446,6 +447,7 @@
     <Compile Include="Assets\View\Event\AGuiEv.cs" />
     <Compile Include="Assets\View\Event\EGuiEv.cs" />
     <Compile Include="Assets\View\Event\EvAbilitySelected.cs" />
+    <Compile Include="Assets\View\Event\EvCharDeath.cs" />
     <Compile Include="Assets\View\Event\EvPopulateWpnBtns.cs" />
     <Compile Include="Assets\View\Event\EvSplatter.cs" />
     <Compile Include="Assets\View\Event\EvTileClick.cs" />

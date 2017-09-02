@@ -1,11 +1,13 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Action;
+using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
 using Assets.Template.CB;
 using Assets.Template.Script;
 using Assets.Template.Util;
 using Assets.View;
+using Assets.View.Event;
 using Assets.View.Script.FX;
 using System.Collections.Generic;
 using UnityEngine;
@@ -60,11 +62,22 @@ namespace Assets.Controller.GUI.Combat
 
         private void DisplayFlinch(CharController target, Hit hit)
         {
-            var flinch = target.Handle.AddComponent<SFlinch>();
-            var flinchPos = target.Handle.transform.position;
-            flinchPos.y -= CombatGUIParams.FLINCH_DIST;
-            flinch.AddCallback(hit.CallbackHandler);
-            flinch.Init(target, flinchPos, CombatGUIParams.FLINCH_SPEED);
+            if (hit.Data.Dmg < target.Model.GetCurrentPoints().CurrentHP) 
+            {
+                var flinch = target.Handle.AddComponent<SFlinch>();
+                var flinchPos = target.Handle.transform.position;
+                flinchPos.y -= CombatGUIParams.FLINCH_DIST;
+                flinch.AddCallback(hit.CallbackHandler);
+                flinch.Init(target, flinchPos, CombatGUIParams.FLINCH_SPEED);
+            }
+            else
+            {
+                var data = new EvCharDeathData();
+                data.Target = target;
+                var e = new EvCharDeath(data);
+                e.AddCallback(hit.CallbackHandler);
+                e.TryProcess();
+            }
         }
 
         private void DisplayParry(CharController target, Hit hit)
@@ -73,12 +86,12 @@ namespace Assets.Controller.GUI.Combat
             var equipment = target.Model.GetEquipment();
             if (equipment.GetRWeapon() != null && !equipment.GetRWeapon().IsTypeOfShield())
             {
-                var wpn = target.SpriteHandlerDict[Layers.CHAR_R_WEAPON];
+                var wpn = target.SubComponents[Layers.CHAR_R_WEAPON];
                 this.DisplayParryHelper(target, hit, wpn);
             }
             if (equipment.GetLWeapon() != null && !equipment.GetLWeapon().IsTypeOfShield())
             {
-                var wpn = target.SpriteHandlerDict[Layers.CHAR_L_WEAPON];
+                var wpn = target.SubComponents[Layers.CHAR_L_WEAPON];
                 this.DisplayParryHelper(target, hit, wpn);
             }
         }

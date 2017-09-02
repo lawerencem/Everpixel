@@ -9,7 +9,7 @@
         AttackSelected,
         Buff,
         Casting,
-        CharacterKilled,
+        CharKilled,
         Debuff,
         DisplayAction,
         DisplayHitStats,

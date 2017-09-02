@@ -24,6 +24,7 @@ namespace Assets.Controller.Map.Tile
         public MTile Model { get { return this._model; } }
         public VTile View { get { return this._view; } }
 
+        public void AddNonCurrent(CharController c) { this._nonCurrent.Add(c); }
         public void AddZone(AZone zone) { this._zones.Add(zone); }
 
         public List<TileController> GetAdjacent()

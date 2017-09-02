@@ -58,8 +58,8 @@ namespace Assets.Controller.Map.Combat.Loader
             this.TryAttachDeco(c, t);
             this.TryAttachEquipment(c, t);
             this.TryAttachMount(c, t);
-            c.SpriteHandlerDict.Add(Layers.CHAR_TORSO, c.Handle);
-            c.SpriteHandlerDict.Add(Layers.CHAR_MAIN, c.Handle);
+            c.SubComponents.Add(Layers.CHAR_TORSO, c.Handle);
+            c.SubComponents.Add(Layers.CHAR_MAIN, c.Handle);
             
             if (!c.Model.LParty)
                 c.Handle.transform.localRotation = Quaternion.Euler(0, 180, 0);
@@ -89,7 +89,7 @@ namespace Assets.Controller.Map.Combat.Loader
                     sort == Layers.CHAR_HEAD_DECO_1 ||
                     sort == Layers.CHAR_HEAD_DECO_2)
                 {
-                    spriteHandler.transform.SetParent(c.SpriteHandlerDict[Layers.CHAR_HEAD].transform);
+                    spriteHandler.transform.SetParent(c.SubComponents[Layers.CHAR_HEAD].transform);
                 }
                 else
                 {
@@ -99,7 +99,7 @@ namespace Assets.Controller.Map.Combat.Loader
                 spriteHandler.name = sort;
                 render.sprite = sprite;
                 render.sortingLayerName = sort;
-                c.SpriteHandlerDict.Add(sort, spriteHandler);
+                c.SubComponents.Add(sort, spriteHandler);
             }
         }
 
@@ -127,13 +127,13 @@ namespace Assets.Controller.Map.Combat.Loader
                 position.y += yOffset;
                 spriteHandler.transform.position = position;
                 if (sort == Layers.CHAR_HELM)
-                    spriteHandler.transform.SetParent(c.SpriteHandlerDict[Layers.CHAR_HEAD].transform);
+                    spriteHandler.transform.SetParent(c.SubComponents[Layers.CHAR_HEAD].transform);
                 else
                     spriteHandler.transform.SetParent(c.Handle.transform);
                 spriteHandler.name = e.Name;
                 render.sprite = sprite;
                 render.sortingLayerName = sort;
-                c.SpriteHandlerDict.Add(sort, spriteHandler);
+                c.SubComponents.Add(sort, spriteHandler);
             }
         }
 
@@ -149,7 +149,7 @@ namespace Assets.Controller.Map.Combat.Loader
                 spriteHandler.name = "Character Head";
                 render.sprite = sprite;
                 render.sortingLayerName = sort;
-                c.SpriteHandlerDict.Add(sort, spriteHandler);
+                c.SubComponents.Add(sort, spriteHandler);
             }
         }
 
@@ -168,7 +168,7 @@ namespace Assets.Controller.Map.Combat.Loader
                 spriteHandler.name = c.View.Name + " " + c.View.Mount.Name + " Mount";
                 render.sprite = sprite;
                 render.sortingLayerName = Layers.CHAR_MOUNT;
-                c.SpriteHandlerDict.Add(Layers.CHAR_MOUNT, spriteHandler);
+                c.SubComponents.Add(Layers.CHAR_MOUNT, spriteHandler);
                 var mountOffsetPos = c.Handle.transform.position;
                 mountOffsetPos.y += ViewParams.MOUNT_Y_OFFSET;
                 c.Handle.transform.position = mountOffsetPos;

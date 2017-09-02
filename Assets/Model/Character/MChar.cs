@@ -1,9 +1,9 @@
-﻿using Assets.Controller.Character;
-using Assets.Model.Character.Container;
+﻿using Assets.Model.Character.Container;
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
 using Assets.Model.Class;
 using Assets.Model.Class.Enum;
+using Assets.Model.Event.Combat;
 using System.Collections.Generic;
 
 namespace Assets.Model.Character
@@ -12,8 +12,6 @@ namespace Assets.Model.Character
     {
         private ERace _race;
         public ERace Race { get { return this._race; } }
-
-        public CharController ParentController { get; set; }
 
         public MChar(ERace race)
         {
@@ -66,7 +64,10 @@ namespace Assets.Model.Character
 
                 if (this.GetCurrentHP() <= 0)
                 {
-                    //var killed = new CharacterKilledEvent(CombatEventManager.Instance, this.ParentController);
+                    var data = new EvCharKilledData();
+                    data.Target = this.Controller;
+                    var e = new EvCharKilled(data);
+                    e.TryProcess();
                 }
             }
         }

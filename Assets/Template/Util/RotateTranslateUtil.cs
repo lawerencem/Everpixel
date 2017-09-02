@@ -22,8 +22,6 @@ namespace Assets.Template.Utility
 
         public void RandomTranslate(GameObject o, int variance, float scalar)
         {
-            //var x = RNG.Instance.Next(-75, 75) / 100;
-            //var y = RNG.Instance.Next(-75, 75) / 100;
             var x = RNG.Instance.Next(-variance, variance) / scalar;
             var y = RNG.Instance.Next(-variance, variance) / scalar;
             var position = o.transform.position;
