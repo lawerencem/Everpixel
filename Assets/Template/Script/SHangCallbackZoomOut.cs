@@ -1,12 +1,9 @@
 ﻿using UnityEngine;
 
-namespace Template.Script
+namespace Assets.Template.Script
 {
-    public class HangCallbackZoomOut : MonoBehaviour
+    public class SHangCallbackZoomOut : AScript
     {
-        private Callback _callBack;
-        public delegate void Callback();
-
         private const float EPSILON = 0.25f;
         private const float MIN_ZOOM = 10f;
 
@@ -20,9 +17,8 @@ namespace Template.Script
         private bool _hangDone = false;
         private bool _zoomDone = false;
 
-        public void Init(Vector3 position, float speed, float toFoV, float hangTime, Callback callback = null)
+        public void Init(Vector3 position, float speed, float toFoV, float hangTime)
         {
-            this._callBack = callback;
             this._hangTime = hangTime;
             this._originalFoV = Camera.main.fieldOfView;
             this._speed = speed;
@@ -51,8 +47,7 @@ namespace Template.Script
             if (this._curHangTime >= this._hangTime)
             {
                 this._hangDone = true;
-                if (this._callBack != null)
-                    this._callBack();
+                this.DoCallbacks();
             }
         }
 
