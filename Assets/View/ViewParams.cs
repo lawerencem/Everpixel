@@ -23,8 +23,13 @@ namespace Assets.View
         public static readonly float MOVE_SPEED = 8f;
         public static readonly float MOVE_EPSILON = 0.02f;
 
+        // Splatter Params
+        public static readonly float SPLATTER_SCALAR = 100;
+        public static readonly int SPLATTER_VARIANCE = 15;
+
         // Tile Params
         public static readonly float TILE_DECO_ALPHA = 0.75f;
         public static readonly Vector2 TILE_COLLIDER_SIZE = new Vector2(0.45f, 0.45f);
+        
     }
 }

@@ -81,6 +81,7 @@ namespace Assets.Model.Action
                     var target = hit.Data.Target.Current as CharController;
                     var data = new EvModHPData();
                     data.Dmg = hit.Data.Dmg;
+                    data.Flags = hit.Data.Flags;
                     data.IsHeal = hit.Data.IsHeal;
                     data.Target = target;
                     var e = new EvModHP(data);
