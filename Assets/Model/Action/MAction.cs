@@ -1,6 +1,8 @@
-﻿using Assets.Controller.GUI.Combat;
+﻿using Assets.Controller.Character;
+using Assets.Controller.GUI.Combat;
 using Assets.Controller.Manager.GUI;
 using Assets.Model.Ability;
+using Assets.Model.Event.Combat;
 
 namespace Assets.Model.Action
 {
@@ -10,7 +12,7 @@ namespace Assets.Model.Action
 
         public MAction(ActionData d) : base(d) {}
 
-        public void CalculatAbility()
+        public void TryProcess()
         {
             if (this.Data.Initialized())
             {
@@ -66,6 +68,24 @@ namespace Assets.Model.Action
             {
                 GUIManager.Instance.SetGUILocked(false);
                 GUIManager.Instance.SetInteractionLocked(false);
+                this.ProcessHitsData();
+            }
+        }
+
+        private void ProcessHitsData()
+        {
+            foreach(var hit in this._data.Hits)
+            {
+                if (hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                {
+                    var target = hit.Data.Target.Current as CharController;
+                    var data = new EvModHPData();
+                    data.Dmg = hit.Data.Dmg;
+                    data.IsHeal = hit.Data.IsHeal;
+                    data.Target = target;
+                    var e = new EvModHP(data);
+                    e.TryProcess();
+                }
             }
         }
     }

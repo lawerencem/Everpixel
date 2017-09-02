@@ -31,7 +31,7 @@ namespace Assets.Model.Event.Combat
             data.Source = this._data.Source;
             data.Target = this._data.Target;
             var action = new MAction(data);
-            action.CalculatAbility();
+            action.TryProcess();
         }
     }
 }

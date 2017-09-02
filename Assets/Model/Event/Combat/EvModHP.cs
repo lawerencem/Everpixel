@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.GUI.Combat;
+using Assets.View.Event;
 
 namespace Assets.Model.Event.Combat
 {
@@ -30,6 +31,14 @@ namespace Assets.Model.Event.Combat
                         this._data.Dmg.ToString(), this._data.Target.Handle,
                         CombatGUIParams.RED,
                         CombatGUIParams.DMG_TEXT_OFFSET);
+
+                    var data = new EvSplatterData();
+                    data.DmgPercent =
+                        (this._data.Target.Model.GetCurrentStats().GetSecondaryStats().MaxHP /
+                        this._data.Dmg);
+                    data.Target = this._data.Target.Tile;
+                    var e = new EvSplatter(data);
+                    e.TryProcess();
                 }
                 else
                 {
