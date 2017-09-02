@@ -40,6 +40,7 @@ namespace Assets.View.Event
             data.DmgPercent = 1.0;
             var e = new EvSplatter(data);
             e.TryProcess();
+            this.DoCallbacks();
         }
     }
 }
