@@ -218,13 +218,6 @@ namespace Assets.Controller.GUI.Combat
     //            this.ProcessZoneFXNonFatality(e);
     //    }
 
-    //    private Vector3 GetRandomDodgePosition(DisplayHitStatsEvent e)
-    //    {
-    //        var random = ListUtil<TileController>.GetRandomListElement(e.Hit.Target.CurrentTile.Adjacent);
-    //        var position = Vector3.Lerp(e.Hit.Target.CurrentTile.Model.Center, random.Model.Center, 0.35f);
-    //        return position;
-    //    }
-
     //    private void AssignDeadLayer(GameObject o, string layer)
     //    {
     //        var renderer = o.GetComponent<SpriteRenderer>();

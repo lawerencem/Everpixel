@@ -34,6 +34,8 @@ namespace Assets.Controller.GUI.Combat
         // Attack params
         public static readonly float ATTACK_LERP = 0.85f;
         public static readonly float ATTACK_SPEED = 8f;
+        public static readonly float DODGE_LERP = 0.35f;
+        public static readonly float DODGE_SPEED = 6f;
         public static readonly float FLINCH_DIST = 0.08f;
         public static readonly float FLINCH_SPEED = 8f;
 

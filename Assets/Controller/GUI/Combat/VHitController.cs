@@ -1,8 +1,11 @@
 ﻿using Assets.Controller.Character;
+using Assets.Controller.Map.Tile;
 using Assets.Model.Action;
 using Assets.Model.Combat.Hit;
-using Assets.Model.Event.Combat;
 using Assets.Template.CB;
+using Assets.Template.Script;
+using Assets.Template.Util;
+using Assets.View;
 using Assets.View.Script.FX;
 using System.Collections.Generic;
 using UnityEngine;
@@ -45,6 +48,53 @@ namespace Assets.Controller.GUI.Combat
             this._callbacks = new List<Callback>() { callback };
         }
 
+        private void DisplayDodge(CharController target, Hit hit)
+        {
+            var dodge = target.Handle.AddComponent<SBoomerang>();
+            var dodgeTgt = ListUtil<TileController>.GetRandomListElement(target.Tile.GetAdjacent());
+            var position = Vector3.Lerp(target.Handle.transform.position, dodgeTgt.Model.Center, CombatGUIParams.DODGE_LERP);
+            dodge.AddCallback(hit.CallbackHandler);
+            dodge.Init(target.Handle, position, CombatGUIParams.DODGE_SPEED);
+            VCombatController.Instance.DisplayText("Dodge", target.Handle, CombatGUIParams.WHITE);
+        }
+
+        private void DisplayFlinch(CharController target, Hit hit)
+        {
+            var flinch = target.Handle.AddComponent<SFlinch>();
+            var flinchPos = target.Handle.transform.position;
+            flinchPos.y -= CombatGUIParams.FLINCH_DIST;
+            flinch.AddCallback(hit.CallbackHandler);
+            flinch.Init(target, flinchPos, CombatGUIParams.FLINCH_SPEED);
+        }
+
+        private void DisplayParry(CharController target, Hit hit)
+        {
+            VCombatController.Instance.DisplayText("Parry", target.Handle, CombatGUIParams.WHITE);
+            var equipment = target.Model.GetEquipment();
+            if (equipment.GetRWeapon() != null && !equipment.GetRWeapon().IsTypeOfShield())
+            {
+                var wpn = target.SpriteHandlerDict[Layers.CHAR_R_WEAPON];
+                this.DisplayParryHelper(target, hit, wpn);
+            }
+            if (equipment.GetLWeapon() != null && !equipment.GetLWeapon().IsTypeOfShield())
+            {
+                var wpn = target.SpriteHandlerDict[Layers.CHAR_L_WEAPON];
+                this.DisplayParryHelper(target, hit, wpn);
+            }
+        }
+
+        private void DisplayParryHelper(CharController target, Hit hit, GameObject wpn)
+        {
+            var pos = wpn.transform.position;
+            if (target.Model.LParty)
+                pos.x -= CombatGUIParams.WEAPON_OFFSET;
+            else
+                pos.x += CombatGUIParams.WEAPON_OFFSET;
+            var script = wpn.AddComponent<SBoomerang>();
+            script.Init(wpn, pos, CombatGUIParams.WEAPON_PARRY);
+            script.AddCallback(hit.CallbackHandler);
+        }
+
         private void ProcessDefenderHits(object o)
         {
             if (o.GetType().Equals(typeof(SAttackerJolt)))
@@ -68,21 +118,11 @@ namespace Assets.Controller.GUI.Combat
         private void ProcessDefenderHitsHelper(CharController target, Hit hit)
         {
             if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge))
-            {
-
-            }
+                this.DisplayDodge(target, hit);
             else if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))
-            {
-
-            }
+                this.DisplayParry(target, hit);
             else
-            {
-                var flinch = target.Handle.AddComponent<SFlinch>();
-                var flinchPos = target.Handle.transform.position;
-                flinchPos.y -= CombatGUIParams.FLINCH_DIST;
-                flinch.AddCallback(hit.CallbackHandler);
-                flinch.Init(target, flinchPos, CombatGUIParams.FLINCH_SPEED);
-            }
+                this.DisplayFlinch(target, hit);
         }
 
         public void ProcessMeleeHitFX(MAction a)
