@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using Template.Utility;
+﻿using Assets.Template.Util;
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace Template.Hex
+namespace Assets.Template.Hex
 {
     public class HexTile : IHex<HexTile> 
     {

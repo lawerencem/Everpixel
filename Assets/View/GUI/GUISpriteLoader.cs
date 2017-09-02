@@ -1,7 +1,7 @@
 ﻿using Assets.Model.Ability;
 using Assets.Model.Ability.Enum;
-using Template.Other;
-using Template.Utility;
+using Assets.Template.Other;
+using Assets.Template.Util;
 using UnityEngine;
 
 namespace Assets.View.GUI

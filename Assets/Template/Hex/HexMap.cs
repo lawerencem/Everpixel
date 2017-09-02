@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Template.Hex
+namespace Assets.Template.Hex
 {
     public class HexMap
     {

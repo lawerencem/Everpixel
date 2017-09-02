@@ -1,7 +1,6 @@
 ﻿using Assets.Controller.Manager.Combat;
-using Assets.Controller.Manager.GUI;
 using Assets.Controller.Map.Combat;
-using Template.Script;
+using Assets.Template.Script;
 
 namespace Assets.Model.Event.Combat
 {

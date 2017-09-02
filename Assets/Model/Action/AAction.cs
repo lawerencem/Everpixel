@@ -1,7 +1,5 @@
-﻿using Assets.Controller.Character;
-using Assets.Template.CB;
+﻿using Assets.Template.CB;
 using System.Collections.Generic;
-using Template.CB;
 
 namespace Assets.Model.Action
 {

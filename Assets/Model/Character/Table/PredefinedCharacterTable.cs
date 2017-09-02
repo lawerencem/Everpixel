@@ -1,6 +1,6 @@
 ﻿using Assets.Model.Characters.Params;
+using Assets.Template.Other;
 using System.Collections.Generic;
-using Template.Other;
 
 namespace Assets.Model.Character.Table
 {

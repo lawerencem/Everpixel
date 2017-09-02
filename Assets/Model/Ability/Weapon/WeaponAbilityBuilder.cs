@@ -1,8 +1,8 @@
 ﻿using Assets.Model.Ability;
 using Assets.Model.Ability.Enum;
+using Assets.Template.Builder;
 using System;
 using System.Collections.Generic;
-using Template.Builder;
 
 namespace Model.Abilities
 {

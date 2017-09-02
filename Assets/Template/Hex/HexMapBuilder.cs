@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Template.Hex
+namespace Assets.Template.Hex
 {
     public class HexMapBuilder
     {

@@ -1,8 +1,8 @@
 ﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Effects.Will;
+using Assets.Template.Util;
+using Assets.Template.XML;
 using System.Xml.Linq;
-using Template.Utility;
-using Template.XML;
 
 namespace Assets.Model.Effect
 {

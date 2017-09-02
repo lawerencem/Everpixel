@@ -9,10 +9,10 @@ using Assets.Model.Ability.Music;
 using Assets.Model.Ability.Shapeshift;
 using Assets.Model.Injury;
 using Assets.Model.Weapon.Abilities;
+using Assets.Template.Util;
+using Assets.Template.XML;
 using System.Collections.Generic;
 using System.Xml.Linq;
-using Template.Utility;
-using Template.XML;
 
 namespace Assets.Models.Equipment.XML
 {

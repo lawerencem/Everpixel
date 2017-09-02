@@ -1,9 +1,9 @@
 ﻿using Assets.Controller.Map.Tile;
 using Assets.Model.Map;
+using Assets.Template.Util;
 using Assets.View;
 using Assets.View.Map;
 using System.Collections.Generic;
-using Template.Utility;
 using UnityEngine;
 
 namespace Assets.Controller.Map.Combat.Loader

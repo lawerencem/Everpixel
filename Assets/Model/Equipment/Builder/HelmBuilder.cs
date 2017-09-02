@@ -1,6 +1,6 @@
 ﻿using Assets.Model.Equipment.Table;
 using Assets.Model.Equipment.Type;
-using Template.Builder;
+using Assets.Template.Builder;
 
 namespace Assets.Model.Equipment.Builder
 {

@@ -1,7 +1,7 @@
 ﻿using Assets.Controller.Map.Tile;
+using Assets.Template.Hex;
 using System;
 using System.Collections.Generic;
-using Template.Hex;
 using UnityEngine;
 
 namespace Assets.Model.Map

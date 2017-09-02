@@ -2,9 +2,9 @@
 using Assets.Model.Action;
 using Assets.Model.Combat.Hit;
 using Assets.Model.Event.Combat;
+using Assets.Template.CB;
 using Assets.View.Script.FX;
 using System.Collections.Generic;
-using Template.CB;
 using UnityEngine;
 
 namespace Assets.Controller.GUI.Combat

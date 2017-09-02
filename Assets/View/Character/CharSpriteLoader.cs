@@ -3,8 +3,8 @@ using Assets.Model.Character.Param;
 using Assets.Model.Character.Table;
 using Assets.Model.Equipment.Param;
 using Assets.Model.Mount;
-using Template.Other;
-using Template.Utility;
+using Assets.Template.Other;
+using Assets.Template.Util;
 using UnityEngine;
 
 namespace Assets.View.Character

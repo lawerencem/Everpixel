@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Template.Event
+namespace Assets.Template.Event
 {
     public abstract class AEventManager<T>
     {

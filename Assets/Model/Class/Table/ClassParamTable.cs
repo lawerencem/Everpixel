@@ -1,7 +1,7 @@
 ﻿using Assets.Model.Character.Param;
 using Assets.Model.Class.Enum;
+using Assets.Template.Other;
 using System.Collections.Generic;
-using Template.Other;
 
 namespace Assets.Model.Class.Table
 {

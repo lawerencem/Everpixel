@@ -1,8 +1,8 @@
 ﻿using Assets.Model.Character.Builder;
 using Assets.Model.Character.Param;
+using Assets.Template.Other;
 using System;
 using System.Collections.Generic;
-using Template.Other;
 
 namespace Assets.Model.Character.Factory
 {

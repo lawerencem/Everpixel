@@ -1,7 +1,7 @@
 ﻿using Assets.Model.Equipment.Builder;
 using Assets.Model.Equipment.Enum;
 using Assets.Model.Equipment.Type;
-using Template.Other;
+using Assets.Template.Other;
 
 namespace Assets.Model.Equipment.Factory
 {

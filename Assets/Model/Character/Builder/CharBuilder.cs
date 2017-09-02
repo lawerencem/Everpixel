@@ -5,9 +5,9 @@ using Assets.Model.Class.Builder;
 using Assets.Model.Equipment.Factory;
 using Assets.Model.Perk;
 using Assets.Model.Weapon;
+using Assets.Template.Builder;
 using System;
 using System.Collections.Generic;
-using Template.Builder;
 
 namespace Assets.Model.Character.Builder
 {

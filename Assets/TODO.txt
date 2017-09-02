@@ -1,5 +1,8 @@
 ﻿TODO
 
+Refactor .xml readers : 
+	- allow for multiple path strings for reading
+	- 
 
 Perks
 howl (intstant heal of HoT)

@@ -1,8 +1,7 @@
-﻿using System;
+﻿using Assets.Template.CB;
 using System.Collections.Generic;
-using Template.CB;
 
-namespace Template.Event
+namespace Assets.Template.Event
 {
     public abstract class AEvent : ICallback
     {

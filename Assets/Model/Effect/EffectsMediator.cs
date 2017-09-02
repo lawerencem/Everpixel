@@ -1,4 +1,4 @@
-﻿using Template.Other;
+﻿using Assets.Template.Other;
 
 namespace Assets.Model.Effect
 {

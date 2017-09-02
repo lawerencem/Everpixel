@@ -1,7 +1,7 @@
 ﻿using Assets.Model.Equipment.Param;
+using Assets.Template.Other;
+using Assets.Template.Util;
 using Assets.View.Character;
-using Template.Other;
-using Template.Utility;
 
 namespace Assets.View.Equipment
 {

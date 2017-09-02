@@ -2,10 +2,9 @@
 using Assets.Controller.Manager;
 using Assets.Controller.Manager.Combat;
 using Assets.Controller.Manager.GUI;
+using Assets.Template.Script;
 using Assets.View;
 using Assets.View.Event;
-using System;
-using Template.Script;
 
 namespace Assets.Model.Event.Combat
 {

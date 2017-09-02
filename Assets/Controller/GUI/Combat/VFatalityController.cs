@@ -1,11 +1,11 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Action;
+using Assets.Template.CB;
+using Assets.Template.Util;
 using Assets.View.Fatality;
 using Assets.View.Fatality.Magic;
 using Assets.View.Fatality.Weapon;
 using System.Collections.Generic;
-using Template.CB;
-using Template.Utility;
 
 namespace Assets.Controller.GUI.Combat
 {

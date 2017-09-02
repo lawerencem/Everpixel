@@ -1,4 +1,4 @@
-﻿namespace Template.Utility
+﻿namespace Assets.Template.Util
 {
     public class StringUtil
     {

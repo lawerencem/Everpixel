@@ -1,7 +1,7 @@
 ﻿using Assets.Model.Character.Param;
 using Assets.Model.Equipment.Type;
+using Assets.Template.Other;
 using System.Collections.Generic;
-using Template.Other;
 
 namespace Assets.Model.Character.Container
 {

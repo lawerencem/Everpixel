@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Template.Builder
+namespace Assets.Template.Builder
 {
     public class GBuilder<T, U> : ABuilder<T, U>
     {

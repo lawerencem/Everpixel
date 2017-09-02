@@ -1,6 +1,6 @@
 ﻿using Assets.Model.Ability;
-using Template.Other;
-using Template.Utility;
+using Assets.Template.Other;
+using Assets.Template.Util;
 using UnityEngine;
 
 namespace Assets.View.Ability

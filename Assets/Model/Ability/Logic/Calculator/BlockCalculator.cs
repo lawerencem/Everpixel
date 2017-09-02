@@ -1,7 +1,7 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Abiltiy.Logic;
 using Assets.Model.Combat.Hit;
-using Template.Utility;
+using Assets.Template.Util;
 
 namespace Assets.Model.Ability.Logic.Calculator
 {

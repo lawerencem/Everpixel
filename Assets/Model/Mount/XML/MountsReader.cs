@@ -1,6 +1,6 @@
-﻿using System.Xml.Linq;
-using Template.Utility;
-using Template.XML;
+﻿using Assets.Template.Util;
+using Assets.Template.XML;
+using System.Xml.Linq;
 
 namespace Assets.Model.Mount.XML
 {

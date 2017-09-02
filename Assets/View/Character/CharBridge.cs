@@ -1,8 +1,8 @@
 ﻿using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
 using Assets.Model.Character.Table;
-using Template.Other;
-using Template.Utility;
+using Assets.Template.Other;
+using Assets.Template.Util;
 
 namespace Assets.View.Character
 {

@@ -1,7 +1,7 @@
 ﻿using Assets.Model.Equipment.Table;
 using Assets.Model.Equipment.Type;
 using Assets.Model.Weapon;
-using Template.Builder;
+using Assets.Template.Builder;
 
 namespace Assets.Model.Equipment.Builder
 {

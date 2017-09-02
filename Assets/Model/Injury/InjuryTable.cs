@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Template.Other;
+﻿using Assets.Template.Other;
+using System.Collections.Generic;
 
 namespace Assets.Model.Injury
 {

@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Assets.Template.Other;
+using System;
 using System.Collections.Generic;
-using Template.Other;
 
 namespace Assets.Model.Ability
 {

@@ -2,9 +2,9 @@
 using Assets.Controller.Manager.GUI;
 using Assets.Model.Ability;
 using Assets.Model.Character.Enum;
+using Assets.Template.Other;
 using Assets.View.Script.GUI;
 using System.Collections.Generic;
-using Template.Other;
 
 namespace Assets.View.Event
 {

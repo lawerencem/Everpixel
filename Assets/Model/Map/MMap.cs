@@ -1,9 +1,9 @@
 ﻿using Assets.Controller.Map.Tile;
 using Assets.Model.Party.Enum;
+using Assets.Template.Hex;
+using Assets.Template.Other;
 using System.Collections.Generic;
 using System.Linq;
-using Template.Hex;
-using Template.Other;
 
 namespace Assets.Model.Map
 {

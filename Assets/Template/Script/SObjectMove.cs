@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Assets.Template.CB;
+using System;
 using System.Collections.Generic;
-using Template.CB;
 using UnityEngine;
 
 namespace Assets.Controller.Script

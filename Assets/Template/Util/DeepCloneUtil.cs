@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace Template.Utility
+namespace Assets.Template.Util
 {
     public class DeepCloneUtil<T>
     {

@@ -1,9 +1,9 @@
 ﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Ability.Magic;
 using Assets.Model.Action;
+using Assets.Template.Other;
 using Assets.View.Fatality.Magic;
 using Assets.View.Fatality.Weapon;
-using Template.Other;
 
 namespace Assets.View.Fatality
 {

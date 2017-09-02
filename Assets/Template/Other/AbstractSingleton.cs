@@ -1,4 +1,4 @@
-﻿namespace Template.Other
+﻿namespace Assets.Template.Other
 {
     abstract public class ASingleton<T> where T : ASingleton<T>, new()
     {

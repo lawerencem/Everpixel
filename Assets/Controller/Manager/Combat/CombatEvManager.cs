@@ -1,6 +1,6 @@
 ﻿using Assets.Model.Event.Combat;
+using Assets.Template.Event;
 using System.Collections.Generic;
-using Template.Event;
 
 namespace Assets.Controller.Manager.Combat
 {

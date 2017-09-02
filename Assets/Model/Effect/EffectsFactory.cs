@@ -1,5 +1,5 @@
 ﻿using Assets.Model.Effects.Will;
-using Template.Other;
+using Assets.Template.Other;
 
 namespace Assets.Model.Effect
 {

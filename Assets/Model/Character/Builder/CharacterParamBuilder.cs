@@ -4,11 +4,11 @@ using Assets.Model.Characters.Params;
 using Assets.Model.Equipment.Param;
 using Assets.Model.Equipment.Table;
 using Assets.Model.Mount;
+using Assets.Template.Builder;
+using Assets.Template.Util;
 using Model.Equipment.Table;
 using System;
 using System.Collections.Generic;
-using Template.Builder;
-using Template.Utility;
 
 namespace Assets.Model.Character.Builder
 {

@@ -1,6 +1,6 @@
 ﻿using Assets.Model.Map;
+using Assets.Template.Hex;
 using Assets.View;
-using Template.Hex;
 using UnityEngine;
 
 namespace Assets.Controller.Map.Combat.Loader

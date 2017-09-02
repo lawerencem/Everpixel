@@ -1,5 +1,5 @@
 ﻿using Assets.Controller.Manager.GUI;
-using Template.Event;
+using Assets.Template.Event;
 
 namespace Assets.View.Event
 {

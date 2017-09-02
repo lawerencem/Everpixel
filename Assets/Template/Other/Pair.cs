@@ -1,4 +1,4 @@
-﻿namespace Template.Other
+﻿namespace Assets.Template.Other
 {
     public struct Pair<T, U>
     {

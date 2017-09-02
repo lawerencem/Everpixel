@@ -1,11 +1,11 @@
 ﻿using Assets.Model.Party.Enum;
 using Assets.Model.Party.Param;
 using Assets.Model.Party.Table;
+using Assets.Template.Other;
+using Assets.Template.Util;
+using Assets.Template.XML;
 using System.Collections.Generic;
 using System.Xml.Linq;
-using Template.Other;
-using Template.Utility;
-using Template.XML;
 
 namespace Assets.Model.Party.XML
 {

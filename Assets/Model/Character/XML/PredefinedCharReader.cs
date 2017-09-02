@@ -5,10 +5,10 @@ using Assets.Model.Characters.Params;
 using Assets.Model.Class.Enum;
 using Assets.Model.Culture;
 using Assets.Model.Mount;
+using Assets.Template.Util;
+using Assets.Template.XML;
 using System.Collections.Generic;
 using System.Xml.Linq;
-using Template.Utility;
-using Template.XML;
 
 namespace Assets.Model.Character.XML
 {

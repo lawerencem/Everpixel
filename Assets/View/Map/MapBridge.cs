@@ -1,5 +1,5 @@
 ﻿using Assets.Model.Biome.Enum;
-using Template.Other;
+using Assets.Template.Other;
 using UnityEngine;
 
 namespace Assets.View.Map

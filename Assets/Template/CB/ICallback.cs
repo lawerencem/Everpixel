@@ -1,4 +1,4 @@
-﻿namespace Template.CB
+﻿namespace Assets.Template.CB
 {
     public delegate void Callback(object o);
 

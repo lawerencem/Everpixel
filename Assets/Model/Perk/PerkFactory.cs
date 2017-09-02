@@ -6,7 +6,7 @@ using Assets.Model.Perk.PostHit;
 using Assets.Model.Perk.PreHit;
 using Assets.Model.Perk.SStatMod;
 using Assets.Model.Perk.WhenHit;
-using Template.Other;
+using Assets.Template.Other;
 
 namespace Assets.Model.Perk
 {

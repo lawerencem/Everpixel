@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Assets.Template.Util;
+using Assets.Template.XML;
+using System.Collections.Generic;
 using System.Xml.Linq;
-using Template.Utility;
-using Template.XML;
 
 namespace Assets.View.Barks
 {

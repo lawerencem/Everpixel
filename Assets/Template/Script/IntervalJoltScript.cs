@@ -1,4 +1,5 @@
-﻿using Template.Utility;
+﻿using Assets.Template.Script;
+using Assets.Template.Util;
 using UnityEngine;
 
 namespace Template.Script

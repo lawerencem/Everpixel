@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts
+namespace Assets.Template.Script
 {
     public class SFloatingText : MonoBehaviour
     {

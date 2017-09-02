@@ -4,6 +4,7 @@
     {
         AbilitySelected,
         PopulateWpnBtns,
+        Splatter,
         TileClick,
         TileSelect
     }

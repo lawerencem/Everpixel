@@ -1,8 +1,8 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Character.Enum;
+using Assets.Template.Script;
 using Assets.View.Character;
 using Assets.View.Character.Table;
-using Template.Script;
 using UnityEngine;
 
 namespace Assets.View.Script.FX

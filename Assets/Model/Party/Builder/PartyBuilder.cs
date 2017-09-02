@@ -1,10 +1,10 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Character.Factory;
 using Assets.Model.Party.Table;
+using Assets.Template.Builder;
+using Assets.Template.Other;
 using System;
 using System.Collections.Generic;
-using Template.Builder;
-using Template.Other;
 
 namespace Assets.Model.Party.Builder
 {

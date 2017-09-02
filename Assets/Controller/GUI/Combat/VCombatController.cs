@@ -1,9 +1,8 @@
 ﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
-using Assets.Scripts;
+using Assets.Template.CB;
+using Assets.Template.Script;
 using System.Collections.Generic;
-using Template.CB;
-using Template.Script;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -175,43 +174,9 @@ namespace Assets.Controller.GUI.Combat
     //        this.DisplayText("Resist", e.Hit.Target.Handle, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.CRIT_TEXT_OFFSET);
     //    }
 
-    //    public void ProcessSplatterOnHitEvent(DisplayHitStatsEvent e)
-    //    {
-    //        if (!FHit.HasFlag(e.Hit.Flags.CurFlags, FHit.Flags.Dodge) &&
-    //            !FHit.HasFlag(e.Hit.Flags.CurFlags, FHit.Flags.Parry))
-    //        {
-    //            if (e.Hit.Target.Model.GetCurrentStatValue(ESecondaryStat.HP) > 0)
-    //            {
-    //                double dmg = (double)e.Hit.Dmg;
-    //                double hp = (double)e.Hit.Target.Model.GetCurrentStatValue(ESecondaryStat.HP);
-    //                double dmgPercentage = dmg / hp;
-    //                if (dmgPercentage > 0.75 && !e.Hit.IsHeal)
-    //                    this.ProcessSplatter(4, e.Hit.Target.CurrentTile);
-    //                else if (dmgPercentage > 0.35 && !e.Hit.IsHeal)
-    //                    this.ProcessSplatter(2, e.Hit.Target.CurrentTile);
-    //                else if (dmgPercentage > 0.15 && !e.Hit.IsHeal)
-    //                    this.ProcessSplatter(1, e.Hit.Target.CurrentTile);
-    //            }
-    //        }
-    //    }
-
     //    public void ProcessSummon(DisplayHitStatsEvent e)
     //    {
     //        e.Done();
-    //    }
-
-    //    public void ProcessSplatter(int lvl, TileController t, float alpha = 1.0f)
-    //    {
-    //        var sprite = MapBridge.Instance.GetSplatterSprites(lvl);
-    //        var splatter = new GameObject("Splatter");
-    //        splatter.transform.SetParent(t.Handle.transform);
-    //        var renderer = splatter.AddComponent<SpriteRenderer>();
-    //        renderer.transform.position = t.Model.Center;
-    //        renderer.sprite = sprite;
-    //        this.RandomRotate(splatter);
-    //        renderer.sortingLayerName = CMapGUIControllerParams.MAP_GUI_LAYER;
-    //        var color = renderer.color;
-    //        color.a = alpha;
     //    }
 
     //    public void ProcessParry(DisplayHitStatsEvent e)
@@ -355,26 +320,6 @@ namespace Assets.Controller.GUI.Combat
     //        }
     //    }
 
-    //    private void RandomMoveKill(GameObject o)
-    //    {
-    //        this.RandomRotate(o);
-    //        this.RandomTranslate(o);
-    //    }
-
-    //    private void RandomRotate(GameObject o)
-    //    {
-    //        var roll = RNG.Instance.NextDouble();
-    //        o.transform.Rotate(new Vector3(0, 0, (float)(roll * 360)));
-    //    }
-
-    //    private void RandomTranslate(GameObject o)
-    //    {
-    //        var x = RNG.Instance.Next(-75, 75) / 100;
-    //        var y = RNG.Instance.Next(-75, 75) / 100;
-    //        var position = o.transform.position;
-    //        position.x += x;
-    //        position.y += y;
-    //        o.transform.position = position;
-    //    }
+    
     //}
 }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Template.Script
+namespace Assets.Template.Script
 {
     public class SDeactivateByLifetime : MonoBehaviour
     {

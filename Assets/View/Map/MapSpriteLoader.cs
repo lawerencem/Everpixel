@@ -1,7 +1,7 @@
 ﻿using Assets.Model.Biome.Enum;
+using Assets.Template.Other;
+using Assets.Template.Util;
 using System.Collections.Generic;
-using Template.Other;
-using Template.Utility;
 using UnityEngine;
 
 namespace Assets.View.Map

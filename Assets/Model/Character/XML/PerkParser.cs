@@ -1,6 +1,6 @@
 ﻿using Assets.Model.Character.Table;
 using Assets.Model.Perk;
-using Template.Utility;
+using Assets.Template.Util;
 
 namespace Assets.Model.Character.XML
 {

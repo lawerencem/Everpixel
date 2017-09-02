@@ -1,6 +1,6 @@
 ﻿using Assets.Model.Mount;
+using Assets.Template.Other;
 using Assets.View.Character;
-using Template.Other;
 
 namespace Assets.View.Mount
 {

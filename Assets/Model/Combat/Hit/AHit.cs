@@ -1,6 +1,5 @@
 ﻿using Assets.Template.CB;
 using System.Collections.Generic;
-using Template.CB;
 
 namespace Assets.Model.Combat.Hit
 {

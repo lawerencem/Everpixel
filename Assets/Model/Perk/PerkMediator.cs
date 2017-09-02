@@ -1,6 +1,6 @@
 ﻿using Assets.Model.Character;
+using Assets.Template.Other;
 using System.Collections.Generic;
-using Template.Other;
 
 namespace Assets.Model.Perk
 {

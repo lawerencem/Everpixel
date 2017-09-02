@@ -421,12 +421,12 @@
     <Compile Include="Assets\Template\Script\ScrollCameraToScript.cs" />
     <Compile Include="Assets\Template\Script\SpriteFlipCallback.cs" />
     <Compile Include="Assets\Template\Script\XAxisShake.cs" />
-    <Compile Include="Assets\Template\Utility\Count.cs" />
-    <Compile Include="Assets\Template\Utility\DeepCloneUtil.cs" />
-    <Compile Include="Assets\Template\Utility\EnumUtil.cs" />
-    <Compile Include="Assets\Template\Utility\ListUtil.cs" />
-    <Compile Include="Assets\Template\Utility\RNG.cs" />
-    <Compile Include="Assets\Template\Utility\StringUtil.cs" />
+    <Compile Include="Assets\Template\Util\Count.cs" />
+    <Compile Include="Assets\Template\Util\DeepCloneUtil.cs" />
+    <Compile Include="Assets\Template\Util\EnumUtil.cs" />
+    <Compile Include="Assets\Template\Util\ListUtil.cs" />
+    <Compile Include="Assets\Template\Util\RNG.cs" />
+    <Compile Include="Assets\Template\Util\StringUtil.cs" />
     <Compile Include="Assets\Template\XML\XMLReader.cs" />
     <Compile Include="Assets\View\Ability\AttackSpriteLoader.cs" />
     <Compile Include="Assets\View\Barks\BarkManager.cs" />
@@ -447,6 +447,7 @@
     <Compile Include="Assets\View\Event\EGuiEv.cs" />
     <Compile Include="Assets\View\Event\EvAbilitySelected.cs" />
     <Compile Include="Assets\View\Event\EvPopulateWpnBtns.cs" />
+    <Compile Include="Assets\View\Event\EvSplatter.cs" />
     <Compile Include="Assets\View\Event\EvTileClick.cs" />
     <Compile Include="Assets\View\Event\EvTileSelect.cs" />
     <Compile Include="Assets\View\Event\MGuiEv.cs" />
@@ -481,6 +482,7 @@
     <Compile Include="Assets\View\Script\GUI\SGui.cs" />
     <Compile Include="Assets\View\Script\GUI\SGuiButton.cs" />
     <Compile Include="Assets\View\Script\GUI\SWpnBtn.cs" />
+    <Compile Include="Assets\Template\Util\RotateTranslateUtil.cs" />
     <Compile Include="Assets\View\ViewParams.cs" />
   </ItemGroup>
   <ItemGroup>

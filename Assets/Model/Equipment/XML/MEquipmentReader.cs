@@ -1,7 +1,7 @@
 ﻿using Assets.Model.Equipment.Enum;
+using Assets.Template.XML;
 using Model.Equipment.Table;
 using System.Collections.Generic;
-using Template.XML;
 
 namespace Assets.Model.Equipment.XML
 {

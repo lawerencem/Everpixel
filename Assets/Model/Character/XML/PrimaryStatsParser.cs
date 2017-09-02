@@ -1,7 +1,7 @@
 ﻿using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
+using Assets.Template.Util;
 using System.Xml.Linq;
-using Template.Utility;
 
 namespace Assets.Model.Character.XML
 {

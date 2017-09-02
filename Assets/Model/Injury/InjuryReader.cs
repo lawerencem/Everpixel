@@ -1,9 +1,9 @@
 ﻿using Assets.Model.Character.Enum;
 using Assets.Model.OTE.DoT;
+using Assets.Template.Other;
+using Assets.Template.Util;
+using Assets.Template.XML;
 using System.Xml.Linq;
-using Template.Other;
-using Template.Utility;
-using Template.XML;
 
 namespace Assets.Model.Injury
 {

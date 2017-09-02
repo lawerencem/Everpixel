@@ -1,8 +1,8 @@
 ﻿using Assets.Model.Ability;
 using Assets.Model.Ability.Enum;
+using Assets.Template.Other;
 using Model.Abilities;
 using System.Collections.Generic;
-using Template.Other;
 
 namespace Assets.Model.Weapon
 {

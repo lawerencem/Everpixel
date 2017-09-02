@@ -1,6 +1,6 @@
-﻿using Assets.View.Event;
+﻿using Assets.Template.Event;
+using Assets.View.Event;
 using System.Collections.Generic;
-using Template.Event;
 
 namespace Assets.Controller.Manager.GUI
 {

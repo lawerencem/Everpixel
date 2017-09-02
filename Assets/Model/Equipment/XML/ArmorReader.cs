@@ -1,8 +1,8 @@
 ﻿using Assets.Model.Equipment.Enum;
 using Assets.Model.Equipment.Param;
 using Assets.Model.Equipment.Table;
+using Assets.Template.Util;
 using System.Xml.Linq;
-using Template.Utility;
 
 namespace Assets.Model.Equipment.XML
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Template.XML
+namespace Assets.Template.XML
 {
     public class XMLReader
     {

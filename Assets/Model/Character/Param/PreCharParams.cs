@@ -6,7 +6,6 @@ using Assets.Model.Culture;
 using Assets.Model.Mount;
 using Assets.Model.Perk;
 using System.Collections.Generic;
-using Template.Other;
 
 namespace Assets.Model.Characters.Params
 {

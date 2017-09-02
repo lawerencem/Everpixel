@@ -1,8 +1,6 @@
 ﻿using Assets.Template.CB;
 using System.Collections.Generic;
-using Template.CB;
 using UnityEngine;
-using System;
 
 namespace Assets.Template.Script
 {

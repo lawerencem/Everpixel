@@ -1,8 +1,8 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Character;
+using Assets.Template.Script;
 using Assets.View.GUI;
 using System.Collections.Generic;
-using Template.Script;
 using UnityEngine;
 using UnityEngine.UI;
 

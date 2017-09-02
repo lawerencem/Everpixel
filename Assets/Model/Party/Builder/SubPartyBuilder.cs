@@ -2,10 +2,10 @@
 using Assets.Model.Character.Param;
 using Assets.Model.Character.Table;
 using Assets.Model.Party.Table;
+using Assets.Template.Builder;
+using Assets.Template.Util;
 using System;
 using System.Collections.Generic;
-using Template.Builder;
-using Template.Utility;
 
 namespace Assets.Model.Party.Builder
 {

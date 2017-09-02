@@ -1,7 +1,7 @@
 ﻿using Assets.Template.Script;
 using UnityEngine;
 
-namespace Template.Script
+namespace Assets.Template.Script
 {
     public class SBoomerang : AScript
     {

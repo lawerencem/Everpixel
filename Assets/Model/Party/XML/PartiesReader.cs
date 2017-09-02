@@ -1,8 +1,8 @@
 ﻿using Assets.Model.Party.Param;
 using Assets.Model.Party.Table;
+using Assets.Template.Other;
+using Assets.Template.XML;
 using System.Xml.Linq;
-using Template.Other;
-using Template.XML;
 
 namespace Assets.Model.Party.XML
 {

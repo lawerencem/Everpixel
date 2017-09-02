@@ -4,7 +4,7 @@ using Assets.Controller.Manager.Combat;
 using Assets.Controller.Map.Combat;
 using Assets.Controller.Map.Combat.Loader;
 using Assets.Model.Biome.Enum;
-using Template.Other;
+using Assets.Template.Other;
 using UnityEngine;
 
 namespace Assets.Controller.Managers

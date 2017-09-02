@@ -4,10 +4,10 @@ using Assets.Model.Character.Table;
 using Assets.Model.Characters.Params;
 using Assets.Model.Class.Enum;
 using Assets.Model.Culture;
+using Assets.Template.Util;
+using Assets.Template.XML;
 using Assets.View.Character.Table;
 using System.Xml.Linq;
-using Template.Utility;
-using Template.XML;
 
 namespace Assets.Model.Character.XML
 {

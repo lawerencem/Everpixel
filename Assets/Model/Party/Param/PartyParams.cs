@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using Template.Other;
-using Template.Utility;
+﻿using Assets.Template.Other;
+using Assets.Template.Util;
+using System.Collections.Generic;
 
 namespace Assets.Model.Party.Param
 {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Template.Utility
+namespace Assets.Template.Util
 {
     public class ListUtil<T>
     {

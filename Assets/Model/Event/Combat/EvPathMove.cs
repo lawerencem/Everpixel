@@ -3,8 +3,8 @@ using Assets.Controller.Manager.Combat;
 using Assets.Controller.Manager.GUI;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Map;
+using Assets.Template.Script;
 using Assets.View;
-using Template.Script;
 
 namespace Assets.Model.Event.Combat
 {

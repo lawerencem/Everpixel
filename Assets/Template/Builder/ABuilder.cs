@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Template.Builder
+namespace Assets.Template.Builder
 {
     abstract public class ABuilder<T, U>
     {

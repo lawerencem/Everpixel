@@ -2,9 +2,9 @@
 using Assets.Model.Character.Param;
 using Assets.Model.Class.Enum;
 using Assets.Model.Class.Table;
+using Assets.Template.Util;
+using Assets.Template.XML;
 using System.Xml.Linq;
-using Template.Utility;
-using Template.XML;
 
 namespace Assets.Model.Class.XML
 {
