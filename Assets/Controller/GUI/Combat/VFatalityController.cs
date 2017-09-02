@@ -3,8 +3,6 @@ using Assets.Model.Action;
 using Assets.Template.CB;
 using Assets.Template.Util;
 using Assets.View.Fatality;
-using Assets.View.Fatality.Magic;
-using Assets.View.Fatality.Weapon;
 using System.Collections.Generic;
 
 namespace Assets.Controller.GUI.Combat
@@ -37,24 +35,14 @@ namespace Assets.Controller.GUI.Combat
 
         public bool FatalitySuccessful(MAction a)
         {
-            var success = false;
-
-            var data = new FatalityData();
-            data.Target = a.Data.Target;
             var fatality = FatalityFactory.Instance.GetFatality(a);
             if (fatality != null)
             {
-                switch (fatality.Type)
-                {
-                    case (EFatality.Crush): { fatality = fatality as CrushFatality; success = true; } break;
-                    case (EFatality.Fighting): { fatality = fatality as FightingFatality; success = true; } break;
-                    case (EFatality.Slash): { fatality = fatality as SlashFatality; success = true; } break;
-                }
-            }
-
-            if (success)
                 fatality.Init();
-            return success;
+                // TODO: Tie hit to fatality here and free up interaction lock
+                return true;
+            }
+            return false;
         }
 
         public bool IsFatality(MAction a)
@@ -62,17 +50,14 @@ namespace Assets.Controller.GUI.Combat
             bool sucess = false;
             foreach (var hit in a.Data.Hits)
             {
-                if (hit.Data.Target != null && hit.Data.Target.GetType().Equals(typeof(CharController)))
+                if (hit.Data.Target.Current != null && hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
                 {
                     var target = hit.Data.Target.Current as CharController;
                     if (target.Model.GetCurrentHP() - hit.Data.Dmg <= 0)
                     {
                         var roll = RNG.Instance.NextDouble();
                         if (roll < CombatGUIParams.FATALITY_CHANCE)
-                        {
                             sucess = true;
-                            //a.FatalityHits.Add(hit);
-                        }
                     }
                 }
             }
