@@ -49,7 +49,7 @@ namespace Assets.View.Character
             }
         }
 
-        public void ProcessDeadCharLayers(CharController c)
+        public void ProcessDeadChar(CharController c)
         {
             this.AssignDeadWeapons(c);
             this.AssignDeadEyes(c);

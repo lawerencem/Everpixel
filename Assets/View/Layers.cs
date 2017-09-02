@@ -37,6 +37,8 @@ namespace Assets.View
 
         public static readonly string MAP_GUI_LAYER = "BackgroundTileGUI";
 
+        public static readonly string PARTICLES = "Particles";
+
         public static readonly string TILE = "Tile";
         public static readonly string TILE_DECO = "BackgroundTileDeco";
         public static readonly string TILE_LAYER = "BackgroundTile";

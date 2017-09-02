@@ -34,7 +34,7 @@ namespace Assets.View.Event
 
         private void Process()
         {
-            VCharUtil.Instance.ProcessDeadCharLayers(this._data.Target);
+            VCharUtil.Instance.ProcessDeadChar(this._data.Target);
             var data = new EvSplatterData();
             data.Target = this._data.Target.Tile;
             data.DmgPercent = 1.0;
