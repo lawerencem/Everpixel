@@ -1,4 +1,6 @@
-﻿using Assets.Model.Combat.Hit;
+﻿using Assets.Controller.Character;
+using Assets.Model.Abiltiy.Logic;
+using Assets.Model.Combat.Hit;
 using Template.Utility;
 
 namespace Assets.Model.Ability.Logic.Calculator
@@ -7,35 +9,39 @@ namespace Assets.Model.Ability.Logic.Calculator
     {
         public override void Predict(Hit hit)
         {
-            //var melee = hit.Source.Model.GetCurrentStatValue(ESecondaryStat.Melee);
-            //var block = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.Block);
+            var melee = hit.Data.Source.Model.GetCurrentStats().GetSecondaryStats().MeleeSkill;
 
-            //melee *= hit.Ability.AccMod;
+            var tgt = hit.Data.Target.Current as CharController;
 
-            //bool hasShield = false;
+            var block = tgt.Model.GetCurrentStats().GetSecondaryStats().Block;
+            var tgtEquipment = tgt.Model.GetEquipment();
 
-            //if (hit.Target.Model.Armor != null)
-            //    hit.Chances.Block *= hit.Target.Model.Armor.BlockReduce;
-            //if (hit.Target.Model.Helm != null)
-            //    hit.Chances.Block *= hit.Target.Model.Helm.BlockReduce;
-            //if (hit.Target.Model.LWeapon != null && hit.Target.Model.LWeapon.IsTypeOfShield())
-            //{
-            //    hit.Chances.Block *= (+(hit.Target.Model.LWeapon.MeleeBlockChance / LogicParams.BASE_SCALAR));
-            //    hasShield = true;
-            //}
-            //if (hit.Target.Model.RWeapon != null && hit.Target.Model.RWeapon.IsTypeOfShield())
-            //{
-            //    hit.Chances.Block *= (LogicParams.BASE_SKILL_SCALAR + (hit.Target.Model.RWeapon.MeleeBlockChance / LogicParams.BASE_SCALAR));
-            //    hasShield = true;
-            //}
-            //hit.Chances.Block = this.GetAttackVSDefenseSkillChance(melee, block, hit.Chances.Block);
-            //hit.Chances.Block *= hit.ModData.BlockMod;
-            //if (hit.Chances.Block > 1)
-            //    hit.Chances.Block = 1;
-            //if (hit.Chances.Block < 0)
-            //    hit.Chances.Block = 0;
+            melee *= hit.Data.Ability.Data.AccMod;
 
-            //if (!hasShield) { hit.Chances.Block = 0; }
+            bool hasShield = false;
+
+            if (tgtEquipment.GetArmor() != null)
+                hit.Data.Chances.Block *= tgtEquipment.GetArmor().BlockReduce;
+            if (tgtEquipment.GetHelm() != null)
+                hit.Data.Chances.Block *= tgtEquipment.GetHelm().BlockReduce;
+            if (tgtEquipment.GetLWeapon() != null && tgtEquipment.GetLWeapon().IsTypeOfShield())
+            {
+                hit.Data.Chances.Block *= (tgtEquipment.GetLWeapon().MeleeBlockChance / LogicParams.BASE_SCALAR);
+                hasShield = true;
+            }
+            if (tgtEquipment.GetRWeapon() != null && tgtEquipment.GetRWeapon().IsTypeOfShield())
+            {
+                hit.Data.Chances.Block *= (tgtEquipment.GetRWeapon().MeleeBlockChance / LogicParams.BASE_SCALAR);
+                hasShield = true;
+            }
+            hit.Data.Chances.Block = this.GetAttackVSDefenseSkillChance(melee, block, hit.Data.Chances.Block);
+            hit.Data.Chances.Block *= hit.Data.ModData.BlockMod;
+            if (hit.Data.Chances.Block > 1)
+                hit.Data.Chances.Block = 1;
+            if (hit.Data.Chances.Block < 0)
+                hit.Data.Chances.Block = 0;
+
+            if (!hasShield) { hit.Data.Chances.Block = 0; }
         }
 
         public override void Process(Hit hit)
