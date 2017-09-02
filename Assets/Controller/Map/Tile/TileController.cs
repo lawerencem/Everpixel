@@ -10,7 +10,6 @@ namespace Assets.Controller.Map.Tile
 {
     public class TileController
     {
-        private List<TileController> _adjacent;
         private object _current;
         private FTileController _flags;
         private GameObject _handle;
@@ -27,7 +26,14 @@ namespace Assets.Controller.Map.Tile
 
         public void AddZone(AZone zone) { this._zones.Add(zone); }
 
-        public List<TileController> GetAdjacent() { return this._adjacent; }
+        public List<TileController> GetAdjacent()
+        {
+            var adjacent = new List<TileController>();
+            var tiles = this._model.GetAdjacent();
+            foreach (var tile in tiles)
+                adjacent.Add(tile.Controller);
+            return adjacent;
+        }
         public List<CharController> GetNonCurrent() { return this._nonCurrent; }
         public List<AZone> GetZones() { return this._zones; }
 
@@ -37,7 +43,6 @@ namespace Assets.Controller.Map.Tile
 
         public TileController(MTile tile)
         {
-            this._adjacent = new List<TileController>();
             this._flags = new FTileController();
             this._handle = new GameObject(Layers.TILE);
             this._handle.transform.position = tile.Center;
