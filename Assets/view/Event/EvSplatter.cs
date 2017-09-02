@@ -54,7 +54,10 @@ namespace Assets.View.Event
                 var renderer = splatter.AddComponent<SpriteRenderer>();
                 renderer.transform.position = this._data.Target.Model.Center;
                 renderer.sprite = sprite;
-                RotateTranslateUtil.Instance.RandomRotate(splatter);
+                RotateTranslateUtil.Instance.RandomRotateAndTranslate(
+                    splatter, 
+                    ViewParams.SPLATTER_VARIANCE, 
+                    ViewParams.SPLATTER_SCALAR);
                 renderer.sortingLayerName = Layers.MAP_GUI_LAYER;
             }
         }
