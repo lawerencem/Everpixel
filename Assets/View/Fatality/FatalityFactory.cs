@@ -12,6 +12,7 @@ namespace Assets.View.Fatality
         public MFatality GetFatality(MAction a)
         {
             var data = new FatalityData();
+            data.Source = a.Data.Source;
             data.Target = a.Data.Target;
             var active = this.TryProcessSpellFatality(a, data);
             if (active != null)

@@ -1,9 +1,12 @@
-﻿using Assets.Controller.Manager.GUI;
+﻿using Assets.Template.CB;
+using Assets.Template.Script;
+using System.Collections.Generic;
 
 namespace Assets.View.Fatality
 {
-    public class MFatality
+    public class MFatality : ICallback
     {
+        protected List<Callback> _callbacks;
         protected FatalityData _data;
         protected EFatality _type;
 
@@ -12,50 +15,38 @@ namespace Assets.View.Fatality
 
         public MFatality(EFatality type, FatalityData data)
         {
+            this._callbacks = new List<Callback>();
             this._data = data;
             this._type = type;
         }
 
         public virtual void Init()
         {
-            //CMapGUIController.Instance.ClearDecoratedTiles();
-            //foreach (var hit in this._event.FatalityHits)
-            //{
-            //    if (hit.Target != null)
-            //        foreach (var particle in hit.Target.Particles)
-            //            GameObject.Destroy(particle);
-            //}
+            var bob = this._data.Source.Handle.GetComponent<SBob>();
+            if (bob != null)
+                bob.Reset();
         }
 
-        public void ProcessFatalityView()
+        public void AddCallback(Callback callback)
         {
-            GUIManager.Instance.DeactivateComponentByLifetime(GameObjectTags.BANNER, 4);
-            //BarkManager.Instance.ProcessFatalityBark(this._event);
+            this._callbacks.Add(callback);
         }
 
-        protected virtual void InitMeleeFatality()
+        public void DoCallbacks()
         {
-            //var bob = this._event.EventController.Source.Handle.GetComponent<BobbingScript>();
-            //if (bob != null)
-            //    GameObject.Destroy(bob);
+            foreach (var callback in this._callbacks)
+                callback(this);
         }
 
-        protected virtual void InitBulletFatality()
+        public void SetCallback(Callback callback)
         {
-            //var bob = this._event.EventController.Source.Handle.GetComponent<BobbingScript>();
-            //if (bob != null)
-            //    GameObject.Destroy(bob);
+            this._callbacks = new List<Callback>() { callback };
         }
 
-        protected void Done()
+        protected virtual void CallbackHandler(object o)
         {
-            //var bob = this._event.EventController.Source.Handle.AddComponent<BobbingScript>();
-            //bob.Init(PER_FRAME, PER_FRAME_DIST, this._event.EventController.Source.Handle);
-        }
-
-        protected virtual void ProcessFatality()
-        {
-
+            // TODO: Fatalitybanner
+            this.DoCallbacks();
         }
     }
 }
