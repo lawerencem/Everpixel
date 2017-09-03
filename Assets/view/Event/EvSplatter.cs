@@ -8,7 +8,7 @@ namespace Assets.View.Event
     public class EvSplatterData
     {
         public double DmgPercent { get; set; }
-        public TileController Target { get; set; }
+        public GameObject Target { get; set; }
     }
 
     public class EvSplatter : MGuiEv
@@ -31,7 +31,9 @@ namespace Assets.View.Event
 
         private int ConvertDmgToSplatterLvl()
         {
-            if (this._data.DmgPercent > 0.75)
+            if (this._data.DmgPercent > 0.90)
+                return 5;
+            else if (this._data.DmgPercent > 0.75)
                 return 4;
             else if (this._data.DmgPercent > 0.50)
                 return 3;
@@ -50,9 +52,9 @@ namespace Assets.View.Event
             {
                 var sprite = MapBridge.Instance.GetSplatterSprites(lvl);
                 var splatter = new GameObject("Splatter");
-                splatter.transform.SetParent(this._data.Target.Handle.transform);
+                splatter.transform.SetParent(this._data.Target.transform);
                 var renderer = splatter.AddComponent<SpriteRenderer>();
-                renderer.transform.position = this._data.Target.Model.Center;
+                renderer.transform.position = this._data.Target.transform.position;
                 renderer.sprite = sprite;
                 RotateTranslateUtil.Instance.RandomRotateAndTranslate(
                     splatter, 
