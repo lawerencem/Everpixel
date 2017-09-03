@@ -4,8 +4,11 @@ namespace Assets.Template.Script
 {
     public class SFloatingText : MonoBehaviour
     {
-        private GameObject _parent;
+        private bool _activated;
+        private float _delay;
+        private GameObject _handle;
         private float _offset;
+        private float _time;
 
         void Start()
         {
@@ -14,20 +17,26 @@ namespace Assets.Template.Script
 
         void Update()
         {
-            if (this._parent != null &&
-                this._parent.transform != null &&
-                this._parent.transform.position != null)
+            this._time += Time.deltaTime;
+
+            if (!this._activated)
             {
-                var position = this._parent.transform.position;
+                if (this._time > this._delay)
+                    this._activated = true;
+            }
+            if (this._activated)
+            {
+                var position = this._handle.transform.position;
                 position.y += this._offset;
-                this._parent.transform.position = position;
+                this._handle.transform.position = position;
             }
         }
 
-        public void Init(GameObject parent, float offset = .0015f)
+        public void Init(GameObject o, float offset = .0015f, float delay = 0f)
         {
+            this._delay = delay;
             this._offset = offset;
-            this._parent = parent;
+            this._handle = o;
         }
     }
 }
