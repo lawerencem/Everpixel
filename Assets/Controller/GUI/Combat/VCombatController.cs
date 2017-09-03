@@ -50,7 +50,7 @@ namespace Assets.Controller.GUI.Combat
                 CombatGUIParams.WHITE, CombatGUIParams.ATTACK_TEXT_OFFSET);
         }
 
-        public SFloatingText DisplayText(string toDisplay, GameObject toShow, Color color, float yOffset = 0, float dur = 1, float delay = 0f)
+        public void DisplayText(string toDisplay, GameObject toShow, Color color, float yOffset = 0, float dur = 1, float delay = 0f)
         {
             var parent = GameObject.FindGameObjectWithTag("WorldSpaceCanvas");
             var display = new GameObject();
@@ -72,7 +72,6 @@ namespace Assets.Controller.GUI.Combat
             script.lifetime = dur;
             var floating = display.AddComponent<SFloatingText>();
             floating.Init(display, 0.0015f, delay);
-            return floating;
         }
 
         public void DoCallbacks()

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Template.Script
 {
@@ -8,7 +9,9 @@ namespace Assets.Template.Script
         private float _delay;
         private GameObject _handle;
         private float _offset;
+        private string _originText;
         private float _time;
+        
 
         void Start()
         {
@@ -22,7 +25,12 @@ namespace Assets.Template.Script
             if (!this._activated)
             {
                 if (this._time > this._delay)
+                {
                     this._activated = true;
+                    var text = this._handle.GetComponent<Text>();
+                    if (text != null)
+                        text.text = this._originText;
+                }
             }
             if (this._activated)
             {
@@ -37,6 +45,14 @@ namespace Assets.Template.Script
             this._delay = delay;
             this._offset = offset;
             this._handle = o;
+            var text = this._handle.GetComponent<Text>();
+            if (this._delay > 0f && text != null)
+            {
+                this._originText = text.text;
+                text.text = "";
+            }
+            else
+                this._activated = true;
         }
     }
 }

@@ -65,6 +65,7 @@ namespace Assets.Controller.GUI.Combat
             var dodge = target.Handle.AddComponent<SBoomerang>();
             var dodgeTgt = ListUtil<TileController>.GetRandomListElement(target.Tile.GetAdjacent());
             var position = Vector3.Lerp(target.Handle.transform.position, dodgeTgt.Model.Center, CombatGUIParams.DODGE_LERP);
+            position = RandomPositionOffset.RandomOffset(position, -CombatGUIParams.DEFAULT_OFFSET, CombatGUIParams.DEFAULT_OFFSET);
             dodge.AddCallback(hit.CallbackHandler);
             dodge.Init(target.Handle, position, CombatGUIParams.DODGE_SPEED);
             VCombatController.Instance.DisplayText("Dodge", target.Handle, CombatGUIParams.WHITE);
