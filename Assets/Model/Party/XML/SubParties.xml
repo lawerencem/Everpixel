@@ -380,4 +380,8 @@
     <Character>1,Dire_Ween,One</Character>
     <Character>1,Dire_Ween,One</Character>
   </SubParty>
+  <SubParty Name ="Ween Dragon">
+    <Difficulty>18</Difficulty>
+    <Character>1,Ween_Dragon,One</Character>
+  </SubParty>
 </SubParties>

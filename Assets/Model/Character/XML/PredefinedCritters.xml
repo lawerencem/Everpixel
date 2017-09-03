@@ -281,5 +281,20 @@
       </Stats>
       <WeaponAbility>Bite</WeaponAbility>
     </Character>
+    <Character name ="Ween_Dragon">
+      <AttackSpriteIndex>3</AttackSpriteIndex>
+      <FlinchSpriteIndex>1</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>450</Agility>
+        <Constitution>1250</Constitution>
+        <Intelligence>670</Intelligence>
+        <Might>1350</Might>
+        <Perception>850</Perception>
+        <Resolve>800</Resolve>
+      </Stats>
+      <WeaponAbility>Bite</WeaponAbility>
+    </Character>
   </Culture>
 </Cultures>
