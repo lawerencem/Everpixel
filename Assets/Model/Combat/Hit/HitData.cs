@@ -16,6 +16,7 @@ namespace Assets.Model.Combat.Hit
         public FHit Flags { get; set; }
         public HitMod ModData { get; set; }
         protected HitPrediction Prediction { get; set; }
+        public bool IsFatality { get; set; }
         public bool IsHeal { get; set; }
         public int Dmg { get; set; }
         public CharController Source { get; set; }

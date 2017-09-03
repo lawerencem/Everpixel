@@ -45,6 +45,16 @@ namespace Assets.Controller.GUI.Combat
                 callback(this);
         }
 
+        public void ProcessDefenderHit(Hit hit)
+        {
+            if (hit.Data.Target.Current != null &&
+                hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+            {
+                var target = hit.Data.Target.Current as CharController;
+                this.ProcessDefenderHitsHelper(target, hit);
+            }
+        }
+
         public void SetCallback(Callback callback)
         {
             this._callbacks = new List<Callback>() { callback };
@@ -89,7 +99,7 @@ namespace Assets.Controller.GUI.Combat
                 var wpn = target.SubComponents[Layers.CHAR_R_WEAPON];
                 this.DisplayParryHelper(target, hit, wpn);
             }
-            if (equipment.GetLWeapon() != null && !equipment.GetLWeapon().IsTypeOfShield())
+            else if (equipment.GetLWeapon() != null && !equipment.GetLWeapon().IsTypeOfShield())
             {
                 var wpn = target.SubComponents[Layers.CHAR_L_WEAPON];
                 this.DisplayParryHelper(target, hit, wpn);

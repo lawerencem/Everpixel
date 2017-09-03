@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Action;
+using Assets.Model.Combat.Hit;
 using Assets.Template.CB;
 using Assets.Template.Util;
 using Assets.View.Fatality;
@@ -39,7 +40,6 @@ namespace Assets.Controller.GUI.Combat
             if (fatality != null)
             {
                 fatality.Init();
-                // TODO: Tie hit to fatality here and free up interaction lock
                 return true;
             }
             return false;
@@ -52,12 +52,14 @@ namespace Assets.Controller.GUI.Combat
             {
                 if (hit.Data.Target.Current != null && hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
                 {
-                    var target = hit.Data.Target.Current as CharController;
-                    if (target.Model.GetCurrentHP() - hit.Data.Dmg <= 0)
+                    if (this.IsHitFatal(hit))
                     {
                         var roll = RNG.Instance.NextDouble();
                         if (roll < CombatGUIParams.FATALITY_CHANCE)
+                        {
                             sucess = true;
+                            hit.Data.IsFatality = true;
+                        }
                     }
                 }
             }
@@ -67,6 +69,20 @@ namespace Assets.Controller.GUI.Combat
         public void SetCallback(Callback callback)
         {
             this._callbacks = new List<Callback>() { callback };
+        }
+
+        private bool IsHitFatal(Hit hit)
+        {
+            var target = hit.Data.Target.Current as CharController;
+            if (target.Model.GetCurrentHP() - hit.Data.Dmg <= 0)
+            {
+                if (!FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge) &&
+                    !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
