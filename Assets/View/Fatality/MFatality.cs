@@ -1,4 +1,6 @@
-﻿using Assets.Template.CB;
+﻿using Assets.Controller.GUI.Combat;
+using Assets.Controller.Manager.GUI;
+using Assets.Template.CB;
 using Assets.Template.Script;
 using System.Collections.Generic;
 
@@ -6,6 +8,8 @@ namespace Assets.View.Fatality
 {
     public class MFatality : ICallback
     {
+        protected int _callbackQty = 0;
+
         protected List<Callback> _callbacks;
         protected FatalityData _data;
         protected EFatality _type;
@@ -43,10 +47,30 @@ namespace Assets.View.Fatality
             this._callbacks = new List<Callback>() { callback };
         }
 
+        protected void AddBob(object o)
+        {
+            var existingBob = this._data.Source.Handle.GetComponent<SBob>();
+            if (existingBob == null)
+            {
+                var bob = this._data.Source.Handle.AddComponent<SBob>();
+                bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Source.Handle);
+            }
+        }
+
         protected virtual void CallbackHandler(object o)
         {
-            // TODO: Fatalitybanner
-            this.DoCallbacks();
+            this._callbackQty++;
+            if (this._callbackQty == (this._data.FatalHits.Count + this._data.NonFatalHits.Count))
+            {
+                GUIManager.Instance.SetComponentActiveForLifetime(GameObjectTags.FATALITY_BANNER, true, 4f);
+                this.DoCallbacks();
+            }
+        }
+
+        protected void ProcessNonFatal(object o)
+        {
+            foreach (var nonFatal in this._data.NonFatalHits)
+                VHitController.Instance.ProcessDefenderHit(nonFatal);
         }
     }
 }

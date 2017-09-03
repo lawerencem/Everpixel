@@ -2,6 +2,7 @@
 using Assets.Model.Character.Enum;
 using Assets.Template.Other;
 using Assets.Template.Utility;
+using Assets.View.Event;
 using UnityEngine;
 
 namespace Assets.View.Character
@@ -49,6 +50,15 @@ namespace Assets.View.Character
             }
         }
 
+        public void AssignDeathSplatter(CharController c)
+        {
+            var data = new EvSplatterData();
+            data.DmgPercent = 0.50;
+            data.Target = c.Handle;
+            var e = new EvSplatter(data);
+            e.TryProcess();
+        }
+
         public void ProcessDeadChar(CharController c)
         {
             this.AssignDeadWeapons(c);
@@ -58,6 +68,7 @@ namespace Assets.View.Character
                 c.Handle,
                 ViewParams.SPLATTER_VARIANCE,
                 ViewParams.SPLATTER_SCALAR);
+            this.AssignDeathSplatter(c);
         }
     }
 }

@@ -38,7 +38,7 @@ namespace Assets.View.Map
                 case (1): return MapSpriteLoader.Instance.GetBloodSpatterLevelOne();
                 case (2): return MapSpriteLoader.Instance.GetBloodSpatterLevelTwo();
                 case (4): return MapSpriteLoader.Instance.GetBloodSpatterLevelFour();
-                case (5): return MapSpriteLoader.Instance.GetBloodSpatterLevelFive() ;
+                case (5): return MapSpriteLoader.Instance.GetBloodSpatterLevelFive();
                 default: return MapSpriteLoader.Instance.GetBloodSpatterLevelOne();
             }
         }
