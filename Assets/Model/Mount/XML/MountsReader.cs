@@ -17,26 +17,29 @@ namespace Assets.Model.Mount.XML
             }
         }
 
-        public MountReader()
+        public MountReader() : base()
         {
-            this._path = "Assets/Model/Mount/XML/Mounts.xml";
+            this._paths.Add("Assets/Model/Mount/XML/Mounts.xml");
         }
 
         public override void ReadFromFile()
         {
-            var doc = XDocument.Load(this._path);
-
-            foreach (var el in doc.Root.Elements())
+            foreach(var path in this._paths)
             {
-                if (el.Name == "Mount")
-                {
-                    var mParams = new MountParams();
-                    var type = EMount.None;
+                var doc = XDocument.Load(path);
 
-                    foreach(var att in el.Attributes())
+                foreach (var el in doc.Root.Elements())
+                {
+                    if (el.Name == "Mount")
                     {
-                        if (EnumUtil<EMount>.TryGetEnumValue(att.Value, ref type))
-                            MountsTable.Instance.Table.Add(type, mParams);
+                        var mParams = new MountParams();
+                        var type = EMount.None;
+
+                        foreach (var att in el.Attributes())
+                        {
+                            if (EnumUtil<EMount>.TryGetEnumValue(att.Value, ref type))
+                                MountsTable.Instance.Table.Add(type, mParams);
+                        }
                     }
                 }
             }

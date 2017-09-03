@@ -20,20 +20,23 @@ namespace Assets.View.Barks
             }
         }
 
-        public BarkReader()
+        public BarkReader() : base()
         {
-            this._path = "Assets/View/Barks/XML/Barks.xml";
+            this._paths.Add("Assets/View/Barks/XML/Barks.xml");
         }
 
         public override void ReadFromFile()
         {
-            var doc = XDocument.Load(this._path);
-            var type = EBark.None;
+            foreach(var path in this._paths)
+            {
+                var doc = XDocument.Load(path);
+                var type = EBark.None;
 
-            foreach (var el in doc.Root.Elements())
-                foreach (var att in el.Attributes())
-                    foreach (var ele in el.Elements())
-                        HandleIndex(att.Value, ele.Name.ToString(), ele.Value, ref type);
+                foreach (var el in doc.Root.Elements())
+                    foreach (var att in el.Attributes())
+                        foreach (var ele in el.Elements())
+                            HandleIndex(att.Value, ele.Name.ToString(), ele.Value, ref type);
+            }
         }
 
         private void HandleIndex(string name, string param, string value, ref EBark type)

@@ -11,7 +11,10 @@ namespace Assets.Model.Equipment.XML
     {
         private static WeaponReader _instance;
 
-        public WeaponReader() { this._path = "Assets/Model/Equipment/XML/Weapons.xml"; }
+        public WeaponReader() : base()
+        {
+            this._paths.Add("Assets/Model/Equipment/XML/Weapons.xml");
+        }
 
         public static WeaponReader Instance
         {
@@ -25,23 +28,26 @@ namespace Assets.Model.Equipment.XML
 
         public override void ReadFromFile()
         {
-            var doc = XDocument.Load(this._path);
-            var tier = EEquipmentTier.None;
-            foreach (var el in doc.Root.Elements())
+            foreach(var path in this._paths)
             {
-                foreach (var att in el.Attributes())
+                var doc = XDocument.Load(path);
+                var tier = EEquipmentTier.None;
+                foreach (var el in doc.Root.Elements())
                 {
-                    var skill = att.Value;
-                    foreach (var ele in el.Elements())
+                    foreach (var att in el.Attributes())
                     {
-                        foreach (var attr in ele.Attributes())
+                        var skill = att.Value;
+                        foreach (var ele in el.Elements())
                         {
-                            var name = attr.Value;
-                            foreach (var elem in ele.Elements())
+                            foreach (var attr in ele.Attributes())
                             {
-                                this.HandleIndex(name, skill, elem.Name.ToString(), elem.Value, ref tier);
+                                var name = attr.Value;
+                                foreach (var elem in ele.Elements())
+                                {
+                                    this.HandleIndex(name, skill, elem.Name.ToString(), elem.Value, ref tier);
+                                }
+                                this.HandleWeaponSkillFromFile(name, skill, tier);
                             }
-                            this.HandleWeaponSkillFromFile(name, skill, tier);
                         }
                     }
                 }

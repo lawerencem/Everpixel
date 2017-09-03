@@ -1,6 +1,11 @@
 ﻿TODO
 
-Tie Hits to fatalities
+Prediction Modal
+Block calculations
+  - Block FX
+Ability Window
+Fighting Fatalities
+
 
 Refactor .xml readers : 
 	- allow for multiple path strings for reading

@@ -9,7 +9,10 @@ namespace Assets.Model.Perk.XML
     {
         private static PerkReader _instance;
 
-        public PerkReader() { this._path = "Assets/Model/Perk/XML/Perks.xml"; }
+        public PerkReader() : base()
+        {
+            this._paths.Add("Assets/Model/Perk/XML/Perks.xml");
+        }
 
         public static PerkReader Instance
         {
@@ -23,8 +26,11 @@ namespace Assets.Model.Perk.XML
 
         public override void ReadFromFile()
         {
-            var perks = XDocument.Load(this._path);
-            this.ReadFromFileHelper(perks);
+            foreach(var path in this._paths)
+            {
+                var perks = XDocument.Load(path);
+                this.ReadFromFileHelper(perks);
+            }
         }
 
         private void ReadFromFileHelper(XDocument doc)

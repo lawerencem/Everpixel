@@ -26,49 +26,52 @@ namespace Assets.Model.Character.XML
             }
         }
 
-        public PredefinedCritterReader()
+        public PredefinedCritterReader() : base()
         {
-            this._path = "Assets/Model/Character/XML/PredefinedCritters.xml";
+            this._paths.Add("Assets/Model/Character/XML/PredefinedCritters.xml");
         }
 
         public override void ReadFromFile()
         {
-            var doc = XDocument.Load(this._path);
-
-            EClass baseClass = EClass.None;
-            ECulture culture = ECulture.None;
-
-            foreach (var el in doc.Root.Elements())
+            foreach(var path in this._paths)
             {
-                foreach (var att in el.Attributes())
+                var doc = XDocument.Load(path);
+
+                EClass baseClass = EClass.None;
+                ECulture culture = ECulture.None;
+
+                foreach (var el in doc.Root.Elements())
                 {
-                    if (EnumUtil<ECulture>.TryGetEnumValue(att.Value, ref culture))
+                    foreach (var att in el.Attributes())
                     {
-                        foreach (var ele in el.Elements())
+                        if (EnumUtil<ECulture>.TryGetEnumValue(att.Value, ref culture))
                         {
-                            foreach (var attr in ele.Attributes())
+                            foreach (var ele in el.Elements())
                             {
-                                string key = "";
-
-                                if (!table.Table.ContainsKey(attr.Value.ToString()))
+                                foreach (var attr in ele.Attributes())
                                 {
-                                    key = attr.Value.ToString();
+                                    string key = "";
 
-                                    table.Table.Add(key, new PreCharParams());
-                                    table.Table[key].Name = key;
-                                    table.Table[key].Culture = culture;
-                                    table.Table[key].Type = ECharType.Critter;
-                                }
-                                foreach (var elem in ele.Elements())
-                                {
-                                    switch (elem.Name.ToString())
+                                    if (!table.Table.ContainsKey(attr.Value.ToString()))
                                     {
-                                        case (PredefinedReaderParams.ABILITY): { HandleActiveAbility(key, elem.Value.ToString()); } break;
-                                        case (PredefinedReaderParams.ATTACK_SPRITE_INDEX): { HandleAttackSpriteIndex(key, elem.Value.ToString()); } break;
-                                        case (PredefinedReaderParams.DEFAULT_WPN_ABILITES): { HandleDefaultWpnAbility(key, elem.Value.ToString()); } break;
-                                        case (PredefinedReaderParams.FLINCH_SPRITE_INDEX): { HandleFlinchSpriteIndex(key, elem.Value.ToString()); } break;
-                                        case (PredefinedReaderParams.PERKS): { HandlePerks(elem, key); } break;
-                                        case (PredefinedReaderParams.STATS): { HandleStats(elem, key); } break;
+                                        key = attr.Value.ToString();
+
+                                        table.Table.Add(key, new PreCharParams());
+                                        table.Table[key].Name = key;
+                                        table.Table[key].Culture = culture;
+                                        table.Table[key].Type = ECharType.Critter;
+                                    }
+                                    foreach (var elem in ele.Elements())
+                                    {
+                                        switch (elem.Name.ToString())
+                                        {
+                                            case (PredefinedReaderParams.ABILITY): { HandleActiveAbility(key, elem.Value.ToString()); } break;
+                                            case (PredefinedReaderParams.ATTACK_SPRITE_INDEX): { HandleAttackSpriteIndex(key, elem.Value.ToString()); } break;
+                                            case (PredefinedReaderParams.DEFAULT_WPN_ABILITES): { HandleDefaultWpnAbility(key, elem.Value.ToString()); } break;
+                                            case (PredefinedReaderParams.FLINCH_SPRITE_INDEX): { HandleFlinchSpriteIndex(key, elem.Value.ToString()); } break;
+                                            case (PredefinedReaderParams.PERKS): { HandlePerks(elem, key); } break;
+                                            case (PredefinedReaderParams.STATS): { HandleStats(elem, key); } break;
+                                        }
                                     }
                                 }
                             }

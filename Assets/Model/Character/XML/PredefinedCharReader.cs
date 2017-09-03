@@ -27,60 +27,64 @@ namespace Assets.Model.Character.XML
             }
         }
 
-        public PredefinedCharReader()
+        public PredefinedCharReader() : base()
         {
-            this._path = "Assets/Model/Character/XML/PredefinedCharacters.xml";
+            this._paths.Add("Assets/Model/Character/XML/PredefinedCharacters.xml");
         }
 
         public override void ReadFromFile()
         {
-            var doc = XDocument.Load(this._path);
-
-            EClass baseClass = EClass.None;
-            ECharType type = ECharType.None;
-            ECulture culture = ECulture.None;
-            ERace race = ERace.None;
-
-            foreach (var el in doc.Root.Elements())
+            foreach(var path in this._paths)
             {
-                foreach(var att in el.Attributes())
+                var doc = XDocument.Load(path);
+
+                EClass baseClass = EClass.None;
+                ECharType type = ECharType.None;
+                ECulture culture = ECulture.None;
+                ERace race = ERace.None;
+
+                foreach (var el in doc.Root.Elements())
                 {
-                    if (EnumUtil<ECulture>.TryGetEnumValue(att.Value, ref culture))
+                    foreach (var att in el.Attributes())
                     {
-                        foreach(var ele in el.Elements())
+                        if (EnumUtil<ECulture>.TryGetEnumValue(att.Value, ref culture))
                         {
-                            foreach(var attr in ele.Attributes())
+                            foreach (var ele in el.Elements())
                             {
-                                string key = "";
-
-                                if (!table.Table.ContainsKey(attr.Value.ToString()))
+                                foreach (var attr in ele.Attributes())
                                 {
-                                    key = attr.Value.ToString();
+                                    string key = "";
 
-                                    table.Table.Add(key, new PreCharParams());
-                                    table.Table[key].Name = key;
-                                    table.Table[key].Culture = culture;
-                                }
-                                foreach (var elem in ele.Elements())
-                                {
-                                    switch (elem.Name.ToString())
+                                    if (!table.Table.ContainsKey(attr.Value.ToString()))
                                     {
-                                        case (PredefinedReaderParams.ABILITY): { HandleActiveAbility(key, elem.Value.ToString()); } break;
-                                        case (PredefinedReaderParams.CLASS): { HandleClassType(key, elem.Value.ToString(), ref baseClass); } break;
-                                        case (PredefinedReaderParams.MOUNT): { HandleMount(key, elem.Value); } break;
-                                        case (PredefinedReaderParams.PERKS): { HandlePerks(elem, key); } break;
-                                        case (PredefinedReaderParams.POTENTIAL_ARMORS): { HandleEquipment(elem, key); } break;
-                                        case (PredefinedReaderParams.POTENTIAL_WEAPONS): { HandleEquipment(elem, key); } break;
-                                        case (PredefinedReaderParams.RACE): { HandleRace(key, elem.Value.ToString(), ref race); } break;
-                                        //case (PredefinedReaderParams.SPELLS): { HandleSpells(elem, key); } break;
-                                        case (PredefinedReaderParams.STATS): { HandleStats(elem, key); } break;
-                                        case (PredefinedReaderParams.TYPE): { HandleCharacterType(key, elem.Value.ToString(), ref type); } break;
+                                        key = attr.Value.ToString();
+
+                                        table.Table.Add(key, new PreCharParams());
+                                        table.Table[key].Name = key;
+                                        table.Table[key].Culture = culture;
+                                    }
+                                    foreach (var elem in ele.Elements())
+                                    {
+                                        switch (elem.Name.ToString())
+                                        {
+                                            case (PredefinedReaderParams.ABILITY): { HandleActiveAbility(key, elem.Value.ToString()); } break;
+                                            case (PredefinedReaderParams.CLASS): { HandleClassType(key, elem.Value.ToString(), ref baseClass); } break;
+                                            case (PredefinedReaderParams.MOUNT): { HandleMount(key, elem.Value); } break;
+                                            case (PredefinedReaderParams.PERKS): { HandlePerks(elem, key); } break;
+                                            case (PredefinedReaderParams.POTENTIAL_ARMORS): { HandleEquipment(elem, key); } break;
+                                            case (PredefinedReaderParams.POTENTIAL_WEAPONS): { HandleEquipment(elem, key); } break;
+                                            case (PredefinedReaderParams.RACE): { HandleRace(key, elem.Value.ToString(), ref race); } break;
+                                            //case (PredefinedReaderParams.SPELLS): { HandleSpells(elem, key); } break;
+                                            case (PredefinedReaderParams.STATS): { HandleStats(elem, key); } break;
+                                            case (PredefinedReaderParams.TYPE): { HandleCharacterType(key, elem.Value.ToString(), ref type); } break;
+                                        }
                                     }
                                 }
                             }
                         }
                     }
                 }
+            
             }
         }
 

@@ -17,6 +17,13 @@
     <Bark>Hey, did anyone else see that!?</Bark>
     <Bark>(Just don't make eye contact...)</Bark>
   </Category>
+  <Category name ="OnBleed">
+    <Bark>I ain't got time to bleed!</Bark>
+    <Bark>No one makes me bleed my own blood! NOBODY!</Bark>
+    <Bark>Red...rum...</Bark>
+    <Bark>I BLEED!!!</Bark>
+    <Bark>'Tis but a flesh wound!</Bark>
+  </Category>
   <Category name ="PreFriendlyFatality">
     <Bark>I feel like something bad is about to happen...</Bark>
   </Category>

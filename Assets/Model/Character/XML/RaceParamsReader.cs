@@ -20,34 +20,36 @@ namespace Assets.Model.Character.XML
             }
         }
 
-        public RaceReader()
+        public RaceReader() : base()
         {
-            this._path = "Assets/Model/Character/XML/RaceParams.xml";
+            this._paths.Add("Assets/Model/Character/XML/RaceParams.xml");
         }
 
         public override void ReadFromFile()
         {
-            var table = RaceParamsTable.Instance as RaceParamsTable;
-            var doc = XDocument.Load(this._path);
-            ERace race = ERace.None;
-
-            foreach (var el in doc.Root.Elements())
+            foreach(var path in this._paths)
             {
-                foreach (var att in el.Attributes())
-                {
-                    EnumUtil<ERace>.TryGetEnumValue(att.Value, ref race);
-                    if (!table.Table.ContainsKey(race))
-                        table.Table.Add(race, new RaceParams());
+                var table = RaceParamsTable.Instance as RaceParamsTable;
+                var doc = XDocument.Load(path);
+                ERace race = ERace.None;
 
-                    foreach(var ele in el.Elements())
+                foreach (var el in doc.Root.Elements())
+                {
+                    foreach (var att in el.Attributes())
                     {
-                        switch (ele.Name.ToString())
+                        EnumUtil<ERace>.TryGetEnumValue(att.Value, ref race);
+                        if (!table.Table.ContainsKey(race))
+                            table.Table.Add(race, new RaceParams());
+
+                        foreach (var ele in el.Elements())
                         {
-                            case ("PrimaryStats"): { PrimaryStatsParser.ParseXElementForStats(ele, table.Table[race].PrimaryStats); } break;
-                            case ("Sprites"): { this.HandleSprites(ele, table.Table[race].Sprites); } break;
+                            switch (ele.Name.ToString())
+                            {
+                                case ("PrimaryStats"): { PrimaryStatsParser.ParseXElementForStats(ele, table.Table[race].PrimaryStats); } break;
+                                case ("Sprites"): { this.HandleSprites(ele, table.Table[race].Sprites); } break;
+                            }
                         }
                     }
-                        
                 }
             }
         }

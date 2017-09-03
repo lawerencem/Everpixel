@@ -6,7 +6,7 @@ using Assets.Model.Injury;
 using Assets.Model.Mount.XML;
 using Assets.Model.Party.XML;
 using Assets.Model.Perk.XML;
-using Assets.Models.Equipment.XML;
+using Assets.Models.Ability.XML;
 using Assets.Template.Other;
 using Assets.Template.XML;
 using Assets.View.Barks;

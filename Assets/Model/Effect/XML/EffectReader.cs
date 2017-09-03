@@ -21,33 +21,35 @@ namespace Assets.Model.Effect
             }
         }
 
-        public EffectReader()
+        public EffectReader() : base()
         {
-            this._path = "Assets/Model/Effect/XML/Effects.xml";
+            this._paths.Add("Assets/Model/Effect/XML/Effects.xml");
         }
 
         public override void ReadFromFile()
         {
-            var doc = XDocument.Load(this._path);
-
-            foreach (var el in doc.Root.Elements())
+            foreach(var path in this._paths)
             {
-                foreach (var att in el.Attributes())
+                var doc = XDocument.Load(path);
+                foreach (var el in doc.Root.Elements())
                 {
-                    var resist = EResistType.None;
-                    if (EnumUtil<EResistType>.TryGetEnumValue(att.Value, ref resist))
+                    foreach (var att in el.Attributes())
                     {
-                        foreach (var ele in el.Elements())
+                        var resist = EResistType.None;
+                        if (EnumUtil<EResistType>.TryGetEnumValue(att.Value, ref resist))
                         {
-                            foreach (var attr in ele.Attributes())
+                            foreach (var ele in el.Elements())
                             {
-                                var effect = EEffect.None;
-                                if (EnumUtil<EEffect>.TryGetEnumValue(attr.Value, ref effect))
+                                foreach (var attr in ele.Attributes())
                                 {
-                                    this.HandleType(effect);
-                                    foreach (var elem in ele.Elements())
+                                    var effect = EEffect.None;
+                                    if (EnumUtil<EEffect>.TryGetEnumValue(attr.Value, ref effect))
                                     {
-                                        this.HandleIndex(resist, effect, elem, elem.Name.ToString(), elem.Value);
+                                        this.HandleType(effect);
+                                        foreach (var elem in ele.Elements())
+                                        {
+                                            this.HandleIndex(resist, effect, elem, elem.Name.ToString(), elem.Value);
+                                        }
                                     }
                                 }
                             }

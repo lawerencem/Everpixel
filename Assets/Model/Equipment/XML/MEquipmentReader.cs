@@ -7,7 +7,7 @@ namespace Assets.Model.Equipment.XML
 {
     public class MEquipmentReader : XMLReader
     {
-        public MEquipmentReader() { }
+        public MEquipmentReader() : base() { }
 
         protected virtual void SetName(string name) { }
         protected virtual void HandleIndex(string name, string skill, string param, string value, ref EEquipmentTier tier) { }

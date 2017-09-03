@@ -14,14 +14,21 @@ using Assets.Template.XML;
 using System.Collections.Generic;
 using System.Xml.Linq;
 
-namespace Assets.Models.Equipment.XML
+namespace Assets.Models.Ability.XML
 {
     public class AbilityReader : XMLReader
     {
         private static AbilityReader _instance;
 
+        private string _abilityPath = "Assets/Model/Ability/XML/Abilities.xml";
         private string _weaponPath = "Assets/Model/Ability/XML/WeaponAbilities.xml";
-        public AbilityReader() { this._path = "Assets/Model/Ability/XML/Abilities.xml"; }
+
+
+        public AbilityReader() : base()
+        {
+            this._paths.Add(this._abilityPath);
+            this._paths.Add(this._weaponPath);
+        }
 
         public static AbilityReader Instance
         {
@@ -35,10 +42,11 @@ namespace Assets.Models.Equipment.XML
 
         public override void ReadFromFile()
         {
-            var abilities = XDocument.Load(this._path);
-            var weaponAbilities = XDocument.Load(this._weaponPath);
-            this.ReadFromFileHelper(abilities);
-            this.ReadFromFileHelper(weaponAbilities);
+            foreach(var path in this._paths)
+            {
+                var abilities = XDocument.Load(path);
+                this.ReadFromFileHelper(abilities);
+            }
         }
 
         private void ReadFromFileHelper(XDocument doc)

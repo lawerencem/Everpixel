@@ -14,9 +14,9 @@ namespace Assets.Model.Class.XML
         private const int VALUE_INDEX = 1;
 
         private static ClassReader _instance;
-        public ClassReader()
+        public ClassReader() : base()
         {
-            this._path = "Assets/Model/Class/XML/Classes.xml";
+            this._paths.Add("Assets/Model/Class/XML/Classes.xml");
             this._table = ClassParamTable.Instance;
         }
 
@@ -34,13 +34,16 @@ namespace Assets.Model.Class.XML
 
         public override void ReadFromFile()
         {
-            var doc = XDocument.Load(this._path);
-            var type = EClass.None;
+            foreach(var path in this._paths)
+            {
+                var doc = XDocument.Load(path);
+                var type = EClass.None;
 
-            foreach (var el in doc.Root.Elements())
-                foreach (var att in el.Attributes())
-                    foreach (var ele in el.Elements())
-                        HandleIndex(att.Value, ele.Name.ToString(), ele.Value, ref type);
+                foreach (var el in doc.Root.Elements())
+                    foreach (var att in el.Attributes())
+                        foreach (var ele in el.Elements())
+                            HandleIndex(att.Value, ele.Name.ToString(), ele.Value, ref type);
+            }
         }
 
         private void HandleIndex(string name, string param, string value, ref EClass type)

@@ -9,7 +9,10 @@ namespace Assets.Model.Equipment.XML
     public class ArmorReader : MEquipmentReader
     {
         private static ArmorReader _instance;
-        public ArmorReader() { this._path = "Assets/Model/Equipment/XML/Armors.xml"; }
+        public ArmorReader() : base()
+        {
+            this._paths.Add("Assets/Model/Equipment/XML/Armors.xml");
+        }
 
         public static ArmorReader Instance
         {
@@ -23,24 +26,27 @@ namespace Assets.Model.Equipment.XML
 
         public override void ReadFromFile()
         {
-            var doc = XDocument.Load(this._path);
-            var tier = EEquipmentTier.None;
-            foreach (var el in doc.Root.Elements())
+            foreach(var path in this._paths)
             {
-                foreach (var att in el.Attributes())
+                var doc = XDocument.Load(path);
+                var tier = EEquipmentTier.None;
+                foreach (var el in doc.Root.Elements())
                 {
-                    var type = att.Value;
-                    
-                    foreach (var ele in el.Elements())
+                    foreach (var att in el.Attributes())
                     {
-                        foreach (var attr in ele.Attributes())
+                        var type = att.Value;
+
+                        foreach (var ele in el.Elements())
                         {
-                            var name = attr.Value;
-                            foreach (var elem in ele.Elements())
+                            foreach (var attr in ele.Attributes())
                             {
-                                this.HandleIndex(name, type, elem.Name.ToString(), elem.Value, ref tier);
+                                var name = attr.Value;
+                                foreach (var elem in ele.Elements())
+                                {
+                                    this.HandleIndex(name, type, elem.Name.ToString(), elem.Value, ref tier);
+                                }
+                                this.HandleArmorTypeFromFile(name, type, tier);
                             }
-                            this.HandleArmorTypeFromFile(name, type, tier);
                         }
                     }
                 }
