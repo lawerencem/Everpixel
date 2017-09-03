@@ -68,6 +68,13 @@ namespace Assets.Controller.Manager.GUI
             if (this._guiComponents.ContainsKey(tag))
                 this._guiComponents[tag].SetActive(active);
         }
+        public void SetComponentActiveForLifetime(string tag, bool active, float time)
+        {
+            if (this._guiComponents.ContainsKey(tag))
+                this._guiComponents[tag].SetActive(active);
+            var script = this._guiComponents[tag].AddComponent<SDeactivateByLifetime>();
+            script.Init(this._guiComponents[tag], time);
+        }
         public void SetGUILocked(bool locked) { this._guiLocked = locked; }
         public void SetHoverModalActive() { this._hoverModal.SetModalActive(); }
         //public void SetHoverModalDamageValues(EvPredictAction e) { this._hoverModal.SetModalDamageValues(e); }
@@ -79,9 +86,9 @@ namespace Assets.Controller.Manager.GUI
 
         private void Init()
         {
-            var banner = GameObject.FindGameObjectWithTag(GameObjectTags.BANNER);
-            this.AddComponent(GameObjectTags.BANNER, banner);
-            this.SetComponentActive(GameObjectTags.BANNER, false);
+            var banner = GameObject.FindGameObjectWithTag(GameObjectTags.FATALITY_BANNER);
+            this.AddComponent(GameObjectTags.FATALITY_BANNER, banner);
+            this.SetComponentActive(GameObjectTags.FATALITY_BANNER, false);
         }
 
         private void SetTagText(string tag, string toSet)
