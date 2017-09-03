@@ -1,21 +1,25 @@
-﻿namespace Assets.View.Fatality.Weapon
+﻿using Assets.Template.Script;
+
+namespace Assets.View.Fatality.Weapon
 {
     public class CrushFatality : MFatality
     {
-        public CrushFatality(FatalityData data) : base(EFatality.Crush, data)
+        public CrushFatality(FatalityData data) : base(EFatality.Crush, data) {}
+
+        public override void Init()
+        {
+            base.Init();
+            var position = this._data.Source.Handle.transform.position;
+            position.y -= FatalityParams.ZOOM_Y_OFFSET;
+            var zoom = this._data.Source.Handle.AddComponent<SHangCallbackZoomOut>();
+            zoom.AddCallback(this.ProcessJolt);
+            zoom.Init(position, FatalityParams.ZOOM_SPEED, FatalityParams.ZOOM_FOV, FatalityParams.ZOOM_MELEE_HANG);
+        }
+
+        private void ProcessJolt(object o)
         {
 
         }
-
-        //public override void Init()
-        //{
-        //    base.Init();
-        //    base.InitMeleeFatality();
-        //    var zoom = this._event.EventController.Source.Handle.AddComponent<DramaticHangCallbackZoomOut>();
-        //    var position = this._event.EventController.Source.Handle.transform.position;
-        //    position.y -= 0.35f;
-        //    zoom.Init(position, FatalityParams.ZOOM_SPEED, FatalityParams.ZOOM_FOV, FatalityParams.ZOOM_MELEE_HANG, this.ProcessFatality);
-        //}
 
         //protected override void ProcessFatality()
         //{

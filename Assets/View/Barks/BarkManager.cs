@@ -1,73 +1,136 @@
-﻿//using Generics.Utilities;
+﻿using Assets.Controller.Character;
+using Assets.Controller.GUI.Combat;
+using Assets.Controller.Manager.Combat;
+using Assets.Model.Combat.Hit;
+using Assets.Template.CB;
+using Assets.Template.Script;
+using Assets.Template.Util;
+using Assets.View.Fatality;
+using System;
+using System.Collections.Generic;
+using UnityEngine;
 
-//namespace Assets.View.Barks
-//{
-//    public class BarkManager
-//    {
-//        private BarkManager() {}
+namespace Assets.View.Barks
+{
+    public class BarkManager : ICallback
+    {
+        private const double PRE_FATALITY_CHANCE = 0.25;
+        private const double NEUTRAL_BARK_CHANCE = 0.25;
 
-//        private static BarkManager _instance;
-//        public static BarkManager Instance
-//        {
-//            get
-//            {
-//                if (_instance == null)
-//                    _instance = new BarkManager();
-//                return _instance;
-//            }
-//        }
+        private BarkManager() { }
 
-//        public void ProcessFatalityBark(DisplayActionEvent e)
-//        {
-//            bool ownTeam = false;
-//            foreach(var hit in e.FatalityHits)
-//            {
-//                if (hit.Target != null && e.EventController.Source.LParty == hit.Target.LParty)
-//                {
-//                    ownTeam = true;
-//                    break;
-//                }
-//            }
-//            this.RandomFatalityBark(e, ownTeam);
-//        }
+        private static BarkManager _instance;
+        public static BarkManager Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new BarkManager();
+                return _instance;
+            }
+        }
 
-//        private void EnemyFatalityBark(DisplayActionEvent e)
-//        {
-//            var barks = BarkTable.Instance.Table[EBark.EnemyFatality];
-//            var bark = ListUtil<string>.GetRandomListElement(barks);
-//            CMapGUIController.Instance.DisplayText(bark, e.EventController.Source.Handle, CMapGUIControllerParams.WHITE);
-//        }
+        public bool IsPreFatalityBark()
+        {
+            double roll = RNG.Instance.NextDouble();
+            if (roll < PRE_FATALITY_CHANCE)
+                return true;
+            else
+                return false;
+        }
 
-//        private void ProcessEnemyTeamFatalityBark(DisplayActionEvent e)
-//        {
-//            var roll = RNG.Instance.Next(2);
-//            if (roll == 0)
-//                this.NeutralFataliyBark(e);
-//            else
-//                this.EnemyFatalityBark(e);
-//        }
+        public void ProcessPostFatalityBark(FatalityData data)
+        {
+            var hit = ListUtil<Hit>.GetRandomListElement(data.FatalHits);
+            var origin = data.Source.Handle;
+            var barks = new List<string>();
+            if (hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+            {
+                var tgt = hit.Data.Target.Current as CharController;
+                if (hit.Data.Source.Model.LParty == tgt.Model.LParty)
+                    barks = BarkTable.Instance.Table[EBark.FriendlyFatality];
+                else
+                {
+                    var roll = RNG.Instance.NextDouble();
+                    if (roll < NEUTRAL_BARK_CHANCE)
+                    {
+                        barks = BarkTable.Instance.Table[EBark.NeutralFatality];
+                        var characters = CombatManager.Instance.GetData().Characters;
+                        origin = ListUtil<CharController>.GetRandomListElement(characters).Handle;
+                    }
+                    else
+                        barks = BarkTable.Instance.Table[EBark.EnemyFatality];
+                }
+                var bark = ListUtil<string>.GetRandomListElement(barks);
+                if (bark != null)
+                    this.DisplayBark(bark, origin);
+            }
+        }
 
-//        private void NeutralFataliyBark(DisplayActionEvent e)
-//        {
-//            var barks = BarkTable.Instance.Table[EBark.NeutralFatality];
-//            var bark = ListUtil<string>.GetRandomListElement(barks);
-//            var character = CombatEventManager.Instance.GetRandomCharacter();
-//            CMapGUIController.Instance.DisplayText(bark, character.Handle, CMapGUIControllerParams.WHITE);
-//        }
+        public void ProcessPreFatalityBark(FatalityData data, Callback callback)
+        {
+            var hit = ListUtil<Hit>.GetRandomListElement(data.FatalHits);
+            var origin = data.Source.Handle;
+            var barks = new List<string>();
+            if (hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+            {
+                var tgt = hit.Data.Target.Current as CharController;
+                if (hit.Data.Source.Model.LParty == tgt.Model.LParty)
+                    barks = BarkTable.Instance.Table[EBark.PreFriendlyFatality];
+                else
+                {
+                    var roll = RNG.Instance.NextDouble();
+                    if (roll < NEUTRAL_BARK_CHANCE)
+                    {
+                        barks = BarkTable.Instance.Table[EBark.PreNeutralFatality];
+                        var characters = CombatManager.Instance.GetData().Characters;
+                        origin = ListUtil<CharController>.GetRandomListElement(characters).Handle;
+                    }
+                    else
+                        barks = BarkTable.Instance.Table[EBark.PreEnemyFatality];
+                }
+                var bark = ListUtil<string>.GetRandomListElement(barks);
+                if (bark != null)
+                    this.DisplayBark(bark, origin, callback);
+                else
+                    callback(this);
+            }
+            else
+                callback(this);
+        }
 
-//        private void OwnTeamFatalityBark(DisplayActionEvent e)
-//        {
-//            var barks = BarkTable.Instance.Table[EBark.FriendlyFatality];
-//            var bark = ListUtil<string>.GetRandomListElement(barks);
-//            CMapGUIController.Instance.DisplayText(bark, e.EventController.Source.Handle, CMapGUIControllerParams.WHITE);
-//        }
+        public void AddCallback(Callback callback)
+        {
+            throw new NotImplementedException();
+        }
 
-//        private void RandomFatalityBark(DisplayActionEvent e, bool ownTeam)
-//        {
-//            if (ownTeam)
-//                this.OwnTeamFatalityBark(e);
-//            else
-//                this.ProcessEnemyTeamFatalityBark(e);
-//        }        
-//    }
-//}
+        public void DisplayBark(string bark, GameObject o)
+        {
+            VCombatController.Instance.DisplayText(
+                bark,
+                o,
+                CombatGUIParams.WHITE,
+                CombatGUIParams.DODGE_TEXT_OFFSET,
+                ViewParams.BARK_DUR,
+                ViewParams.BARK_DELAY);
+        }
+
+        public void DisplayBark(string bark, GameObject o, Callback callback)
+        {
+            this.DisplayBark(bark, o);
+            var script = o.AddComponent<SDelayCallback>();
+            script.Init(ViewParams.BARK_DUR);
+            script.AddCallback(callback);
+        }
+
+        public void DoCallbacks()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetCallback(Callback callback)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

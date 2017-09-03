@@ -1,4 +1,5 @@
 ﻿using Assets.Controller.Character;
+using Assets.Controller.Manager.Combat;
 using Assets.Model.Character.Enum;
 
 namespace Assets.Model.Event.Combat
@@ -35,6 +36,7 @@ namespace Assets.Model.Event.Combat
             this._data.Target.Tile.SetCurrent(null);
             this._data.Target.Tile.AddNonCurrent(this._data.Target);
             FCharacterStatus.SetDeadTrue(this._data.Target.Model.GetFlags());
+            CombatManager.Instance.ProcessCharDeath(this._data.Target);
         }
     }
 }

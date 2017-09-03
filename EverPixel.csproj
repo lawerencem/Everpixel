@@ -408,6 +408,7 @@
     <Compile Include="Assets\Template\Script\SBob.cs" />
     <Compile Include="Assets\Template\Script\SBoomerang.cs" />
     <Compile Include="Assets\Template\Script\SDeactivateByLifetime.cs" />
+    <Compile Include="Assets\Template\Script\SDelayCallback.cs" />
     <Compile Include="Assets\Template\Script\SDestroyByLifetime.cs" />
     <Compile Include="Assets\Template\Script\SFloatingText.cs" />
     <Compile Include="Assets\Template\Script\SHangCallbackZoomOut.cs" />

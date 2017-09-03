@@ -1,6 +1,7 @@
 ﻿<Barks>
   <Category name ="FriendlyFatality">
     <Bark>Oops...</Bark>
+    <Bark>Oops, I did it again! I played with your heart! Got lost in the game...</Bark>
     <Bark>My bad...</Bark>
     <Bark>(I hope he's okay...)</Bark>
     <Bark>Probably won't get Christmas cards from him anymore...</Bark>
@@ -15,5 +16,14 @@
     <Bark>Every man dies...not every man truly lives.</Bark>
     <Bark>Hey, did anyone else see that!?</Bark>
     <Bark>(Just don't make eye contact...)</Bark>
+  </Category>
+  <Category name ="PreFriendlyFatality">
+    <Bark>I feel like something bad is about to happen...</Bark>
+  </Category>
+  <Category name ="PreEnemyFatality">
+    <Bark>I know what you're thinking - but you gotta ask yourself: "Do I feel lucky?"</Bark>
+  </Category>
+  <Category name ="PreNeutralFatality">
+    <Bark>I sure could go for a Twinky right now...</Bark>
   </Category>
 </Barks>

@@ -6,5 +6,8 @@
         EnemyFatality,
         FriendlyFatality,
         NeutralFatality,
+        PreEnemyFatality,
+        PreFriendlyFatality,
+        PreNeutralFatality,
     }
 }

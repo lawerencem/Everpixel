@@ -2,12 +2,15 @@
 using Assets.Controller.Manager.GUI;
 using Assets.Template.CB;
 using Assets.Template.Script;
+using Assets.View.Barks;
 using System.Collections.Generic;
 
 namespace Assets.View.Fatality
 {
     public class MFatality : ICallback
     {
+        private Callback _postZoomCallback;
+
         protected int _callbackQty = 0;
 
         protected List<Callback> _callbacks;
@@ -31,6 +34,23 @@ namespace Assets.View.Fatality
                 bob.Reset();
         }
 
+        public void Start(Callback callback)
+        {
+            var position = this._data.Source.Handle.transform.position;
+            position.y -= FatalityParams.ZOOM_Y_OFFSET;
+            var zoom = this._data.Source.Handle.AddComponent<SHangCallbackZoomOut>();
+            if (BarkManager.Instance.IsPreFatalityBark())
+            {
+                zoom.AddCallback(this.Stuff);
+                this._postZoomCallback = callback;
+            }
+            else
+            {
+                zoom.AddCallback(callback);
+            }
+            zoom.Init(position, FatalityParams.ZOOM_SPEED, FatalityParams.ZOOM_FOV, FatalityParams.ZOOM_MELEE_HANG);
+        }
+
         public void AddCallback(Callback callback)
         {
             this._callbacks.Add(callback);
@@ -38,6 +58,8 @@ namespace Assets.View.Fatality
 
         public void DoCallbacks()
         {
+            if (this._postZoomCallback == null)
+                BarkManager.Instance.ProcessPostFatalityBark(this._data);
             foreach (var callback in this._callbacks)
                 callback(this);
         }
@@ -71,6 +93,11 @@ namespace Assets.View.Fatality
         {
             foreach (var nonFatal in this._data.NonFatalHits)
                 VHitController.Instance.ProcessDefenderHit(nonFatal);
+        }
+
+        protected void Stuff(object o)
+        {
+            BarkManager.Instance.ProcessPreFatalityBark(this.Data, this._postZoomCallback);
         }
     }
 }

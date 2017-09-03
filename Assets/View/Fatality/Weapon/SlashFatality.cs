@@ -5,7 +5,6 @@ using Assets.Template.Script;
 using Assets.Template.Util;
 using Assets.View.Character;
 using Assets.View.Event;
-using Assets.View.Map;
 using Assets.View.Particle;
 using UnityEngine;
 
@@ -18,11 +17,7 @@ namespace Assets.View.Fatality.Weapon
         public override void Init()
         {
             base.Init();
-            var position = this._data.Source.Handle.transform.position;
-            position.y -= FatalityParams.ZOOM_Y_OFFSET;
-            var zoom = this._data.Source.Handle.AddComponent<SHangCallbackZoomOut>();
-            zoom.AddCallback(this.ProcessJolt);
-            zoom.Init(position, FatalityParams.ZOOM_SPEED, FatalityParams.ZOOM_FOV, FatalityParams.ZOOM_MELEE_HANG);
+            base.Start(this.ProcessJolt);
         }
 
         private void AttachBlood(GameObject head, GameObject body)
@@ -74,10 +69,11 @@ namespace Assets.View.Fatality.Weapon
             var pos = Vector3.Lerp(
                 this._data.Source.Handle.transform.position,
                 this._data.Target.Handle.transform.position,
-                FatalityParams.SLASH_LERP);
+                FatalityParams.FATALITY_LERP);
             var boomerang = this._data.Source.Handle.AddComponent<SBoomerang>();
             boomerang.AddCallback(this.ProcessHead);
-            boomerang.Init(this._data.Source.Handle, pos, FatalityParams.SLASH_ATTACK_SPEED);
+            boomerang.AddDoneCallback(this.AddBob);
+            boomerang.Init(this._data.Source.Handle, pos, FatalityParams.FATALITY_ATTACK_SPEED);
         }
 
         private void ProcessHead(object o)
@@ -121,7 +117,6 @@ namespace Assets.View.Fatality.Weapon
                         this.AttachBlood(head, tgt.Handle);
 
                         raycast.AddCallback(hit.CallbackHandler);
-                        raycast.AddCallback(this.AddBob);
                         raycast.AddCallback(this.AddBloodPool);
                         raycast.Init(raycastData);
                     }

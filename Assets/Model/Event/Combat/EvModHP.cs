@@ -63,8 +63,8 @@ namespace Assets.Model.Event.Combat
             {
                 var data = new EvSplatterData();
                 data.DmgPercent =
-                    (this._data.Target.Model.GetCurrentStats().GetSecondaryStats().MaxHP /
-                    this._data.Dmg);
+                    (this._data.Dmg /
+                    this._data.Target.Model.GetCurrentStats().GetSecondaryStats().MaxHP);
                 data.Target = this._data.Target.Tile.Handle;
                 var e = new EvSplatter(data);
                 e.TryProcess();

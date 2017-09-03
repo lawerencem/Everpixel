@@ -4,6 +4,10 @@ namespace Assets.View
 {
     public class ViewParams
     {
+        // Bark Params
+        public static readonly float BARK_DELAY = 0.25f;
+        public static readonly float BARK_DUR = 2.5f;
+
         // Btn Params
         public static readonly Vector3 WPN_IMG_SCALE = new Vector3(0.2f, 0.2f, 0.2f);
 

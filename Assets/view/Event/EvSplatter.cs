@@ -1,5 +1,4 @@
-﻿using Assets.Controller.Map.Tile;
-using Assets.Template.Utility;
+﻿using Assets.Template.Utility;
 using Assets.View.Map;
 using UnityEngine;
 
