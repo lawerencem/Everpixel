@@ -48,10 +48,10 @@ namespace Assets.Controller.Managers
             initInfo.Cols = 12;
             initInfo.DecoCount = 5;
             initInfo.Rows = 12;
-            var map = this._mapLoader.GetCombatMap(initInfo);
-            CombatManager.Instance.Init(map);
             var gui = new GUILoader();
             gui.InitCombatGUI();
+            var map = this._mapLoader.GetCombatMap(initInfo);
+            CombatManager.Instance.Init(map);
         }
     }
 }
