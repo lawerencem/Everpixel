@@ -36,5 +36,7 @@ namespace Assets.Template.Script
                 Destroy(this);
             }
         }
+
+        public SRaycastMoveData GetData() { return this._data; }
     }
 }
