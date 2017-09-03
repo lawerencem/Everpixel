@@ -41,15 +41,15 @@ namespace Assets.Controller.Managers
         {
             this._loader = LoaderManager.Instance;
             this._mapLoader = new MapLoader();
+            var gui = new GUILoader();
+            gui.InitCombatGUI();
             var initInfo = new MapInitInfo();
             initInfo.Biome = EBiome.Grassland;
             initInfo.LParties.Add(new Pair<string, int>("Orcs", 20));
-            initInfo.RParties.Add(new Pair<string, int>("Vikings", 20));
+            initInfo.RParties.Add(new Pair<string, int>("Lizardman War Party", 20));
             initInfo.Cols = 12;
             initInfo.DecoCount = 5;
             initInfo.Rows = 12;
-            var gui = new GUILoader();
-            gui.InitCombatGUI();
             var map = this._mapLoader.GetCombatMap(initInfo);
             CombatManager.Instance.Init(map);
         }

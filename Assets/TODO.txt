@@ -3,13 +3,9 @@
 Prediction Modal
 Block calculations
   - Block FX
-Ability Window
+- Add Btns to ability modal window
 Fighting Fatalities
-
-
-Refactor .xml readers : 
-	- allow for multiple path strings for reading
-	- 
+Injuries
 
 Perks
 howl (intstant heal of HoT)

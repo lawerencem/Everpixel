@@ -5,6 +5,8 @@ using Assets.Controller.Manager.GUI;
 using Assets.Template.Script;
 using Assets.View;
 using Assets.View.Event;
+using Assets.View.GUI;
+using Assets.View.Script.GUI;
 
 namespace Assets.Model.Event.Combat
 {
@@ -50,6 +52,8 @@ namespace Assets.Model.Event.Combat
             bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Target.Handle);
             if (CameraManager.Instance != null)
                 CameraManager.Instance.InitScrollTo(this._data.Target.Handle.transform.position);
+            if (AbilityModalManager.Instance != null)
+                AbilityModalManager.Instance.ProcessNewModalValues();
             var e = new EvPopulateWpnBtns();
             e.TryProcess();
             

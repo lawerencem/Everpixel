@@ -464,7 +464,7 @@
     <Compile Include="Assets\View\Fatality\Magic\FightingFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\CrushFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\SlashFatality.cs" />
-    <Compile Include="Assets\View\GUI\AbilitiesModal.cs" />
+    <Compile Include="Assets\View\GUI\AbilityModalManager.cs" />
     <Compile Include="Assets\View\GUI\GUISpriteLoader.cs" />
     <Compile Include="Assets\View\GUI\HoverModal.cs" />
     <Compile Include="Assets\View\Layers.cs" />
@@ -479,8 +479,6 @@
     <Compile Include="Assets\View\Script\FX\GearExplosionScript.cs" />
     <Compile Include="Assets\View\Script\FX\HeadRotationScript.cs" />
     <Compile Include="Assets\View\Script\FX\LycanthropeScript.cs" />
-    <Compile Include="Assets\View\Script\GUI\AbilityBtnClick.cs" />
-    <Compile Include="Assets\View\Script\GUI\AbilityModalBtnClick.cs" />
     <Compile Include="Assets\View\Script\GUI\SEndTurnBtn.cs" />
     <Compile Include="Assets\View\Script\GUI\SGui.cs" />
     <Compile Include="Assets\View\Script\GUI\SGuiButton.cs" />

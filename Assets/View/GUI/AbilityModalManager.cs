@@ -1,64 +1,53 @@
 ﻿using Assets.Controller.Character;
-using Assets.Controller.Manager;
+using Assets.Controller.Manager.Combat;
 using Assets.Model.Ability;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.View.GUI
+namespace Assets.View.Script.GUI
 {
-    public class AbilitiesModal : MonoBehaviour
+    public class AbilityModalManager : SGui
     {
-        private const string MODAL = "ActiveModalHeaderTag";
-        private const string PROTO = "ProtoAbilityBtnTag";
-
         private List<GameObject> _btns = new List<GameObject>();
         private GameObject _modal;
         private GameObject _proto;
 
+        public static AbilityModalManager Instance = null;
+
+        void Awake()
+        {
+            if (Instance == null)
+                Instance = this;
+
+            else if (Instance != this)
+                Destroy(gameObject);
+        }
+
         public void Init()
         {
-            this._modal = GameObject.FindGameObjectWithTag(MODAL);
-            this._proto = GameObject.FindGameObjectWithTag(PROTO);
-            this.SetModalInactive();
+            this._modal = GameObject.FindGameObjectWithTag(GameObjectTags.MODAL_HEADER);
+            this._proto = GameObject.FindGameObjectWithTag(GameObjectTags.MODAL_BTN_PROTO);
+            this._proto.SetActive(false);
         }
 
         public void ResetModal()
         {
             foreach (var btn in this._btns)
                 GameObject.Destroy(btn);
-            //if (this._modal.activeSelf)
-                //this.SetModalValues();
+            this._btns.Clear();
         }
 
-        public void SetModalActive()
+        public void ProcessNewModalValues()
         {
-            if (!this._modal.activeSelf)
-                this._modal.SetActive(true);
-            //this.SetModalValues();
+            this.ResetModal();
+            var character = CombatManager.Instance.GetCurrentlyActing();
+            var abilities = character.Model.GetAbilities().GetActiveAbilities();
+            this._proto.SetActive(true);
+            for (int i = 0; i < abilities.Count; i++)
+                this.PopulateModalList(character, abilities[i]);
+            this._proto.SetActive(false);
         }
-
-        public void SetModalInactive()
-        {
-            this._modal.SetActive(false);
-            foreach (var controller in this._btns) { GameObject.Destroy(controller); }
-        }
-
-        //public void SetModalValues()
-        //{
-        //    var character = CombatEventManager.Instance.GetCurrentCharacter();
-        //    this._proto.SetActive(true);
-        //    for (int i = 0; i < character.Model.ActiveAbilities.Count; i++)
-        //        this.PopulateModalList(character, character.Model.ActiveAbilities[i]);
-        //    foreach(var outerKVP in character.Model.ActiveSpells.Spells)
-        //    {
-        //        foreach(var innerKVP in outerKVP.Value)
-        //        {
-        //            this.PopulateModalList(character, innerKVP.Value.Y);
-        //        }
-        //    }
-        //    this._proto.SetActive(false);
-        //}
 
         private void PopulateModalList(CharController character, MAbility ability)
         {
