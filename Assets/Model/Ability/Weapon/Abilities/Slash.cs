@@ -1,8 +1,6 @@
 ﻿using Assets.Model.Ability;
 using Assets.Model.Ability.Enum;
-using Assets.Model.Combat;
 using Assets.Model.Combat.Hit;
-using System.Collections.Generic;
 
 namespace Assets.Model.Weapon.Abilities
 {
@@ -10,9 +8,9 @@ namespace Assets.Model.Weapon.Abilities
     {
         public Slash() : base(EAbility.Slash) { }
 
-        public override List<Hit> Predict(AbilityArgs arg)
+        public override void Predict(Hit hit)
         {
-            return base.PredictMelee(arg);
+            base.PredictMelee(hit);
         }
 
         public override void Process(Hit hit)

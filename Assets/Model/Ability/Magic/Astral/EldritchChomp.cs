@@ -9,9 +9,9 @@ namespace Assets.Model.Weapon.Abilities
     {
         public EldrtichChomp() : base(EAbility.Eldritch_Chomp) { }
 
-        public override List<Hit> Predict(AbilityArgs arg)
+        public override void Predict(Hit hit)
         {
-            return base.PredictBullet(arg);
+            base.PredictMelee(hit);
         }
 
         public override void Process(Hit hit)

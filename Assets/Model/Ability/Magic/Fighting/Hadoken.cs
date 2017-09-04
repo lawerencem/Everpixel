@@ -1,6 +1,5 @@
 ﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Combat.Hit;
-using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Magic.Fighting
 {
@@ -8,9 +7,9 @@ namespace Assets.Model.Ability.Magic.Fighting
     {
         public Hadoken() : base(EAbility.Hadoken) {  }
 
-        public override List<Hit> Predict(AbilityArgs arg)
+        public override void Predict(Hit hit)
         {
-            return base.PredictBullet(arg);
+            base.PredictBullet(hit);
         }
 
         public override void Process(Hit hit)

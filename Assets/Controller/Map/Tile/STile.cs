@@ -1,6 +1,9 @@
 ﻿using Assets.Controller.Character;
+using Assets.Controller.Manager.Combat;
 using Assets.Controller.Manager.GUI;
 using Assets.Controller.Map.Combat;
+using Assets.Model.Ability.Enum;
+using Assets.Model.Action;
 using Assets.View;
 using Assets.View.Event;
 using System;
@@ -59,7 +62,7 @@ namespace Assets.Controller.Map.Tile
             if (!GUIManager.Instance.GetGUILocked())
             {
                 this.HandleHoverTargetStats();
-                //this.HandleHoverTargetDamage();
+                this.HandleHoverTargetDamage();
                 VMapCombatController.Instance.DecorateHover(this._tile);
             }
         }
@@ -80,35 +83,26 @@ namespace Assets.Controller.Map.Tile
             }
         }
 
-        //        private void HandleHoverTargetDamage()
-        //        {
-        //            if (this.Model.Current != null &&
-        //                this.Model.Current.GetType() == typeof(CharController) &&
-        //                CombatEventManager.Instance.GetCurrentAbility() != null)
-        //            {
-        //                var predict = new EvPredictAction(CombatEventManager.Instance);
-
-        //                predict.Container.Ability = CombatEventManager.Instance.GetCurrentAbility();
-        //                predict.Container.Source = CombatEventManager.Instance.GetCurrentCharacter();
-        //                predict.Container.Target = this;
-        //                var targets = predict.Container.Ability.GetAoETiles(
-        //                    predict.Container.Source.CurrentTile, 
-        //                    predict.Container.Target, 
-        //                    predict.Container.Ability.Range);
-
-        //                foreach (var target in targets)
-        //                {
-        //                    var hit = new Hit(predict.Container.Source, predict.Container.Target, predict.Container.Ability);
-        //                    predict.Container.Hits.Add(hit);
-        //                }
-
-        //                predict.Process();
-        //                CMapGUIController.Instance.SetHoverModalDamageValues(predict);
-        //            }
-        //            else
-        //                CMapGUIController.Instance.SetDmgModalInactive();
-        //        }
-        //    }
-        //}
+        private void HandleHoverTargetDamage()
+        {
+            if (this._tile.Current != null && this._tile.Current.GetType().Equals(typeof(CharController)))
+            {
+                if (CombatManager.Instance.GetCurrentAbility() != EAbility.None)
+                {
+                    var data = new ActionData();
+                    data.Ability = CombatManager.Instance.GetCurrentAbility();
+                    data.LWeapon = CombatManager.Instance.GetLWeapon();
+                    data.Source = CombatManager.Instance.GetCurrentlyActing();
+                    data.Target = this._tile;
+                    var action = new MAction(data);
+                    action.TryPredict();
+                    GUIManager.Instance.SetHoverModalDamageValues(action);
+                }
+                else
+                    GUIManager.Instance.SetHoverModalDamageActive(false);
+            }
+            else
+                GUIManager.Instance.SetHoverModalDamageActive(false);
+        }
     }
 }

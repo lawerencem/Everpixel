@@ -1,7 +1,5 @@
 ﻿using Assets.Model.Ability.Enum;
-using Assets.Model.Combat;
 using Assets.Model.Combat.Hit;
-using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Magic.Psychic
 {
@@ -13,9 +11,9 @@ namespace Assets.Model.Ability.Magic.Psychic
             //this.CustomCastCamera = true;
         }
 
-        public override List<Hit> Predict(AbilityArgs arg)
+        public override void Predict(Hit hit)
         {
-            return base.PredictBullet(arg);
+            base.PredictMelee(hit);
         }
 
         public override bool IsValidActionEvent(AbilityArgs arg)

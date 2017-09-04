@@ -1,4 +1,5 @@
-﻿using Assets.Model.Character;
+﻿using Assets.Model.Action;
+using Assets.Model.Character;
 using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
 using System;
@@ -84,20 +85,17 @@ namespace Assets.View.GUI
                 this._modal.SetActive(true);
         }
 
-        public void SetDamageModalInactive()
+        public void SetDamageModalActive(bool active)
         {
-            this._dmgPredictionModal.SetActive(false);
+            this._dmgPredictionModal.SetActive(active);
         }
 
-        //public void SetModalDamageValues(EvPredictAction e)
-        //{
-        //    if (CombatEventManager.Instance.GetCurrentAbility() != null)
-        //    {
-        //        var hit = e.Container.Hits.Find(x => x.Target.Equals(e.Container.Target.Model.Current));
-        //        if (hit != null)
-        //            this.SetModalDamageValuesHelper(hit);
-        //    }
-        //}
+        public void SetModalDamageValues(MAction a)
+        {
+            var hit = a.Data.Hits.Find(x => x.Data.Target.Equals(a.Data.Target));
+            if (hit != null)
+                this.SetModalDamageValuesHelper(hit);
+        }
 
         public void SetModalInactive()
         {

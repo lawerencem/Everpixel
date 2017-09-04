@@ -1,4 +1,5 @@
 ﻿using Assets.Controller.Character;
+using Assets.Model.Action;
 using Assets.Model.Character;
 using Assets.Template.Script;
 using Assets.View.GUI;
@@ -77,7 +78,8 @@ namespace Assets.Controller.Manager.GUI
         }
         public void SetGUILocked(bool locked) { this._guiLocked = locked; }
         public void SetHoverModalActive() { this._hoverModal.SetModalActive(); }
-        //public void SetHoverModalDamageValues(EvPredictAction e) { this._hoverModal.SetModalDamageValues(e); }
+        public void SetHoverModalDamageActive(bool active) { this._hoverModal.SetDamageModalActive(active); }
+        public void SetHoverModalDamageValues(MAction a) { this._hoverModal.SetModalDamageValues(a); }
         public void SetHoverModalInactive() { this._hoverModal.SetModalInactive(); }
         public void SetHoverModalHeaderText(string toSet) { this._hoverModal.SetModalHeaderText(toSet); }
         public void SetHoverModalLocation(Vector3 pos) { this._hoverModal.SetModalLocation(pos); }

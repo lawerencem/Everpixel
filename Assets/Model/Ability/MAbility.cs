@@ -78,12 +78,9 @@ namespace Assets.Model.Ability
         public virtual bool IsValidEmptyTile(AbilityArgs arg) { return this._logic.IsValidEmptyTile(arg); }
         public virtual bool IsValidEnemyTarget(AbilityArgs arg) { return this._logic.IsValidEnemyTarget(arg); }
 
-        public virtual List<Hit> Predict(AbilityArgs arg)
+        public virtual void Predict(Hit hit)
         {
-            var hits = this.GetHits(arg);
-            //foreach (var perk in hit.Source.Model.Perks.OnActionPerks)
-            //    perk.TryProcessAction(hit);
-            return hits;
+            
         }
 
         public virtual void Process(Hit hit)
@@ -164,25 +161,16 @@ namespace Assets.Model.Ability
             return null;
         }
 
-        protected virtual List<Hit> PredictBullet(AbilityArgs arg)
+        protected virtual void PredictBullet(Hit hit)
         {
-            //// TODO: Add prehit perk stuff to all prediction
-            //foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-            //    perk.TryModAbility(hit);
-            //this._logic.PredictBullet(hit);
-            var hits = this.GetHits(arg);
-            return hits;
+            this.ProcessPerks(hit);
+            this._logic.PredictBullet(hit);
         }
 
-        protected virtual List<Hit> PredictMelee(AbilityArgs arg)
+        protected virtual void PredictMelee(Hit hit)
         {
-            //foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-            //    perk.TryModAbility(hit);
-            //this._logic.PredictMelee(hit);
-            var hits = this.GetHits(arg);
-            //foreach (var perk in hit.Source.Model.Perks.OnActionPerks)
-            //    perk.TryProcessAction(hit);
-            return hits;
+            this.ProcessPerks(hit);
+            this._logic.PredictMelee(hit);
         }
 
         protected void ProcessHitBullet(Hit hit)
@@ -212,8 +200,7 @@ namespace Assets.Model.Ability
 
         protected void ProcessHitMelee(Hit hit)
         {
-            foreach (var perk in hit.Data.Source.Model.GetPerks().GetAbilityModPerks())
-                perk.TryModAbility(hit);
+            this.ProcessPerks(hit);
             this._logic.ProcessMelee(hit);
         }
 
@@ -253,6 +240,12 @@ namespace Assets.Model.Ability
             hit.Data.IsHeal = this.Data.IsHeal;
             hit.Data.Source = args.Source;
             hit.Data.Target = tile;
+        }
+
+        private void ProcessPerks(Hit hit)
+        {
+            foreach (var perk in hit.Data.Source.Model.GetPerks().GetAbilityModPerks())
+                perk.TryModAbility(hit);
         }
     }
 }

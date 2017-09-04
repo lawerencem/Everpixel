@@ -1,6 +1,5 @@
 ﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Combat.Hit;
-using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Shapeshift
 {
@@ -12,9 +11,9 @@ namespace Assets.Model.Ability.Shapeshift
             //this.CustomCastCamera = true;
         }
 
-        public override List<Hit> Predict(AbilityArgs arg)
+        public override void Predict(Hit hit)
         {
-            return base.PredictMelee(arg);
+            base.PredictMelee(hit);
         }
 
         public override bool IsValidActionEvent(AbilityArgs arg)

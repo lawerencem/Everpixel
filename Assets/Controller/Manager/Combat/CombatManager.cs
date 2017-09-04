@@ -112,6 +112,7 @@ namespace Assets.Controller.Manager.Combat
         {
             this._data.CurrentlyActing.Model.ProcessEndOfTurn();
             this._data.InitiativeOrder.Remove(this._data.CurrentlyActing);
+            this._data.CurrentAbility = EAbility.None;
             if (this._data.InitiativeOrder.Count > 0)
             {
                 this.ProcessTakingAction();

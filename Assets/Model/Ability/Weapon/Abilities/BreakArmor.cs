@@ -9,9 +9,9 @@ namespace Assets.Model.Weapon.Abilities
     {
         public BreakArmor() : base(EAbility.Break_Armor) { }
 
-        public override List<Hit> Predict(AbilityArgs arg)
+        public override void Predict(Hit hit)
         {
-            return base.PredictMelee(arg);
+            base.PredictMelee(hit);
         }
 
         public override void Process(Hit hit)

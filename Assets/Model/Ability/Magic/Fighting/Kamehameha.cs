@@ -14,9 +14,9 @@ namespace Assets.Model.Ability.Magic.Fighting
             return base.GetRaycastTiles(arg);
         }
 
-        public override List<Hit> Predict(AbilityArgs arg)
+        public override void Predict(Hit hit)
         {
-            return base.PredictBullet(arg);
+            base.PredictMelee(hit);
         }
 
         public override void Process(Hit hit)

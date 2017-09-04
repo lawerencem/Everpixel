@@ -12,25 +12,54 @@ namespace Assets.Model.Action
 
         public MAction(ActionData d) : base(d) {}
 
+        public void TryPredict()
+        {
+            if (this.Data.Initialized())
+            {
+                this.InitPredictAbility();
+                this.InitPredictHits();
+            }
+        }
+
         public void TryProcess()
         {
             if (this.Data.Initialized())
             {
-                this.InitAbility();
-                this.InitHits();
+                this.InitProcessAbility();
+                this.InitProcessHits();
                 this.ProcessAction();
                 this.DisplayAction();
             }   
         }
 
-        private void InitAbility()
+        private void InitPredictAbility()
+        {
+            this.ActiveAbility = AbilityTable.Instance.Table[this._data.Ability];
+        }
+
+        private void InitProcessAbility()
         {
             GUIManager.Instance.SetGUILocked(true);
             GUIManager.Instance.SetInteractionLocked(true);
             this.ActiveAbility = AbilityTable.Instance.Table[this._data.Ability];
         }
 
-        private void InitHits()
+        private void InitPredictHits()
+        {
+            var args = new AbilityArgs();
+            args.AoE = (int)this.ActiveAbility.Data.AoE;
+            args.LWeapon = this._data.LWeapon;
+            args.Range = this.ActiveAbility.Data.Range;
+            args.Source = this._data.Source;
+            args.Target = this._data.Target;
+            this._data.Hits = this.ActiveAbility.GetHits(args);
+            foreach (var hit in this._data.Hits)
+            {
+                this.ActiveAbility.Predict(hit);
+            }
+        }
+
+        private void InitProcessHits()
         {
             var args = new AbilityArgs();
             args.AoE = (int)this.ActiveAbility.Data.AoE;
