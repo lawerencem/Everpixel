@@ -46,35 +46,40 @@ namespace Assets.Model.Ability.Logic.Calculator
 
         public override void Predict(Hit hit)
         {
-            //this.CalculateAbilityDmg(hit);
-            //var dmgReduction = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.Damage_Reduction);
-            //var bodyReduction = dmgReduction;
-            //var headReduction = dmgReduction;
-            //double flatDmgNegate = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.Damage_Ignore);
-            //double bodyDmgNegate = 0;
-            //double headDmgNegate = 0;
+            this.CalculateAbilityDmg(hit);
 
-            //if (hit.Target.Model.Armor != null)
-            //{
-            //    bodyDmgNegate += hit.Target.Model.Armor.DamageIgnore;
-            //    bodyReduction *= hit.Target.Model.Armor.DamageReduction;
-            //}
-            //if (hit.Target.Model.Helm != null)
-            //{
-            //    headDmgNegate += hit.Target.Model.Helm.DamageIgnore;
-            //    headReduction *= hit.Target.Model.Helm.DamageReduction;
-            //}
+            if (hit.Data.Target.Current != null && hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+            {
+                var tgt = hit.Data.Target.Current as CharController;
+                var dmgReduction = tgt.Proxy.GetStat(ESecondaryStat.Damage_Reduction);
+                var bodyReduction = dmgReduction;
+                var headReduction = dmgReduction;
+                double flatDmgNegate = tgt.Proxy.GetStat(ESecondaryStat.Damage_Ignore);
+                double bodyDmgNegate = 0;
+                double headDmgNegate = 0;
 
-            //if (hit.Source.Model.LWeapon != null && !hit.Source.Model.LWeapon.IsTypeOfShield())
-            //    flatDmgNegate *= hit.Source.Model.LWeapon.ArmorPierce;
-            //if (hit.Source.Model.RWeapon != null && !hit.Source.Model.RWeapon.IsTypeOfShield())
-            //    flatDmgNegate *= hit.Source.Model.RWeapon.ArmorPierce;
-            //foreach (var perk in hit.Target.Model.Perks.WhenHitPerks)
-            //    perk.TryModHit(hit);
+                if (tgt.Proxy.GetArmor() != null)
+                {
+                    bodyDmgNegate += tgt.Proxy.GetArmor().DamageIgnore;
+                    bodyReduction *= tgt.Proxy.GetArmor().DamageReduction;
+                }
+                if (tgt.Proxy.GetHelm() != null)
+                {
+                    headDmgNegate += tgt.Proxy.GetHelm().DamageIgnore;
+                    headReduction *= tgt.Proxy.GetHelm().DamageReduction;
+                }
 
-            //var bodyWeight = ((hit.Dmg - flatDmgNegate - bodyDmgNegate) * bodyReduction) * LogicParams.BASE_BODY_RATIO;
-            //var headWeight = ((hit.Dmg - flatDmgNegate - headDmgNegate) * headReduction);
-            //hit.Chances.Damage = (bodyWeight + headWeight) / (LogicParams.BASE_HIT_RATIO + 1);
+                if (tgt.Proxy.GetLWeapon() != null && !tgt.Proxy.GetLWeapon().IsTypeOfShield())
+                    flatDmgNegate *= tgt.Proxy.GetLWeapon().ArmorPierce;
+                if (tgt.Proxy.GetRWeapon() != null && !tgt.Proxy.GetRWeapon().IsTypeOfShield())
+                    flatDmgNegate *= tgt.Proxy.GetRWeapon().ArmorPierce;
+                foreach (var perk in tgt.Proxy.GetPerks().GetWhenHitPerks())
+                    perk.TryModHit(hit);
+
+                var bodyWeight = ((hit.Data.Dmg - flatDmgNegate - bodyDmgNegate) * bodyReduction) * LogicParams.BASE_BODY_MULTIPLIER;
+                var headWeight = ((hit.Data.Dmg - flatDmgNegate - headDmgNegate) * headReduction);
+                hit.Data.Chances.Damage = (bodyWeight + headWeight) / (LogicParams.BASE_HIT_RATIO);
+            }
         }
 
         public override void Process(Hit hit)

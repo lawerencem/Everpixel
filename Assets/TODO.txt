@@ -6,6 +6,10 @@ Block calculations
 Fighting Fatalities
 Injuries
 Make a proxy/interface for getting char stats and equipment
+move xml files and readers to "data" top-level folder
+
+Bug
+   Characters sometimes dont show death fx
 
 Perks
 howl (intstant heal of HoT)
