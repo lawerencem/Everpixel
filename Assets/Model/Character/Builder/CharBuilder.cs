@@ -48,10 +48,10 @@ namespace Assets.Model.Character.Builder
             BuildBaseClassHelper(c, character);
             BuildDefaultAbilities(c, character);
             var stats = PredefinedCharTable.Instance.Table[c.Name];
-            character.GetCurrentStats().SetPrimaryStats(stats.Stats);
+            character.GetStats().SetPrimaryStats(stats.Stats);
             BuildClassPrimaryStats(character);
-            var secondary = GetSecondaryStats(character.GetCurrentStats().GetPrimaryStats());
-            character.GetCurrentStats().SetSecondaryStats(secondary);
+            var secondary = GetSecondaryStats(character.GetStats().GetPrimaryStats());
+            character.GetStats().SetSecondaryStats(secondary);
             BuildClassSecondaryStats(character);
             character.SetType(c.Type);
             character.SetParams(c);
@@ -94,7 +94,7 @@ namespace Assets.Model.Character.Builder
             {
                 var classStats = kvp.Value.GetParams();
                 foreach (var stat in classStats.PrimaryStats)
-                    c.GetCurrentStats().SetStat(stat.Key, stat.Value);
+                    c.GetStats().SetStat(stat.Key, stat.Value);
             }
         }
 
@@ -104,7 +104,7 @@ namespace Assets.Model.Character.Builder
             {
                 var stats = kvp.Value.GetParams();
                 foreach (var stat in stats.SecondaryStats)
-                    c.GetCurrentStats().AddStat(stat.Key, stat.Value);
+                    c.GetStats().AddStat(stat.Key, stat.Value);
             }
         }
 

@@ -47,7 +47,7 @@ namespace Assets.View.Barks
             if (hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
             {
                 var tgt = hit.Data.Target.Current as CharController;
-                if (hit.Data.Source.Model.LParty == tgt.Model.LParty)
+                if (hit.Data.Source.Proxy.LParty == tgt.Proxy.LParty)
                     barks = BarkTable.Instance.Table[EBark.FriendlyFatality];
                 else
                 {
@@ -75,7 +75,7 @@ namespace Assets.View.Barks
             if (hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
             {
                 var tgt = hit.Data.Target.Current as CharController;
-                if (hit.Data.Source.Model.LParty == tgt.Model.LParty)
+                if (hit.Data.Source.Proxy.LParty == tgt.Proxy.LParty)
                     barks = BarkTable.Instance.Table[EBark.PreFriendlyFatality];
                 else
                 {

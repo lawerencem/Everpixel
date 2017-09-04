@@ -16,11 +16,11 @@ namespace Assets.View.Event
         {
             base.TryProcess();
             var curr = CombatManager.Instance.GetCurrentlyActing();
-            if (curr.Model.Type == ECharType.Humanoid)
+            if (curr.Proxy.Type == ECharType.Humanoid)
             {
                 var abilities = new List<Pair<MAbility, bool>>();
-                var left = curr.Model.GetEquipment().GetLWeapon();
-                var right = curr.Model.GetEquipment().GetRWeapon();
+                var left = curr.Proxy.GetLWeapon();
+                var right = curr.Proxy.GetRWeapon();
 
                 if (left != null)
                     foreach (var ability in left.Abilities)

@@ -27,31 +27,19 @@ namespace Assets.Model.Character
             this._stats = new CharStats<ECharType>(this);
         }
 
-        public void ModifyAP(int value, bool isHeal)
+        public void ModifyPoints(ESecondaryStat type, int value, bool isHeal)
         {
-            if (isHeal)
+            switch(type)
             {
-                this.GetCurrentPoints().CurrentAP += value;
-                if (this.GetCurrentAP() > (int)this.GetCurrentStats().GetStatValue(ESecondaryStat.AP))
-                    this.SetCurrentAP((int)this.GetCurrentStats().GetStatValue(ESecondaryStat.AP));
-            }
-            else
-            {
-                if (value >= 0)
-                    this.SetCurrentAP(this.GetCurrentStamina() - value);
-                if (this.GetCurrentAP() < 0)
-                    this.SetCurrentAP(0);
+                case (ESecondaryStat.AP): { this._points.AddValue(type, value); } break;
+                case (ESecondaryStat.HP): { this.ModifyHP(value, isHeal); } break;
             }
         }
 
-        public void ModifyHP(int value, bool isHeal)
+        private void ModifyHP(int value, bool isHeal)
         {
             if (isHeal)
-            {
-                this.GetCurrentPoints().CurrentHP += value;
-                if (this.GetCurrentHP() > (int)this.GetCurrentStats().GetStatValue(ESecondaryStat.HP))
-                    this.SetCurrentHP((int)this.GetCurrentStats().GetStatValue(ESecondaryStat.HP));
-            }
+                this._points.AddValue(ESecondaryStat.HP, value);
             else
             {
                 int dmg = value;
@@ -60,34 +48,17 @@ namespace Assets.Model.Character
                 //this.Shields.RemoveAll(x => x.CurHP <= 0); // TODO:
 
                 if (dmg >= 0)
-                    this.SetCurrentHP(this.GetCurrentHP() - dmg);
-
-                if (this.GetCurrentHP() <= 0)
+                {
+                    var curHp = this._points.GetCurrValue(ESecondaryStat.HP);
+                    this._points.SetValue(ESecondaryStat.HP, (curHp - dmg));
+                }
+                if (this._points.GetCurrValue(ESecondaryStat.HP) <= 0)
                 {
                     var data = new EvCharKilledData();
                     data.Target = this.Controller;
                     var e = new EvCharKilled(data);
                     e.TryProcess();
                 }
-            }
-        }
-
-        public void ModifyStamina(int value, bool isHeal)
-        {
-            if (isHeal)
-            {
-                this.GetCurrentPoints().CurrentStamina += value;
-                if (this.GetCurrentHP() > (int)this.GetCurrentStats().GetStatValue(ESecondaryStat.Stamina))
-                    this.SetCurrentHP((int)this.GetCurrentStats().GetStatValue(ESecondaryStat.Stamina));
-            }
-            else
-            {
-                int dmg = value;
-
-                if (dmg >= 0)
-                    this.SetCurrentStam(this.GetCurrentStamina() - dmg);
-                if (this.GetCurrentStamina() < 0)
-                    this.SetCurrentStam(0);
             }
         }
     }

@@ -21,17 +21,17 @@ namespace Assets.View.Script.FX
             this._torsoRenderer = source.Handle.GetComponent<SpriteRenderer>();
             this._oldSprite = this._torsoRenderer.sprite;
 
-            if (source.Model.Type == ECharType.Critter)
+            if (source.Proxy.Type == ECharType.Critter)
             {
                 this._sprites = CharSpriteLoader.Instance.GetCritterSprites(source.View.Name);
                 int index = CritterFlinchSpriteTable.Instance.Table[source.View.Name];
                 this._torsoRenderer.sprite = this._sprites[index];
             }
-            else if (source.Model.Type == ECharType.Humanoid)
+            else if (source.Proxy.Type == ECharType.Humanoid)
             {
                 //if (!FCharacterStatus.HasFlag(source.Model.StatusFlags.CurFlags, FCharacterStatus.Flags.Shapeshifted))
                 //{
-                    var flinchEyes = CharSpriteLoader.Instance.GetHumanoidFlinchEyes(source.Model.Race);
+                    var flinchEyes = CharSpriteLoader.Instance.GetHumanoidFlinchEyes(source.Proxy.Race);
                     this._eyeRenderer = source.SubComponents[Layers.CHAR_FACE].GetComponent<SpriteRenderer>();
                     this._oldEyes = this._eyeRenderer.sprite;
                     this._eyeRenderer.sprite = flinchEyes;

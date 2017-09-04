@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Action;
+using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
 using Assets.Template.CB;
 using Assets.Template.Util;
@@ -74,7 +75,7 @@ namespace Assets.Controller.GUI.Combat
         private bool IsHitFatal(Hit hit)
         {
             var target = hit.Data.Target.Current as CharController;
-            if (target.Model.GetCurrentHP() - hit.Data.Dmg <= 0)
+            if (target.Proxy.GetPoints(ESecondaryStat.HP) - hit.Data.Dmg <= 0)
             {
                 if (!FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge) &&
                     !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))

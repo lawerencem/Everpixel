@@ -79,7 +79,7 @@ namespace Assets.Controller.Map.Tile
                 GUIManager.Instance.SetHoverModalHeaderText(character.View.Name);
                 GUIManager.Instance.SetHoverModalLocation(position);
                 var target = this._tile.Current as CharController;
-                GUIManager.Instance.SetHoverModalStatValues(target.Model);
+                GUIManager.Instance.SetHoverModalStatValues(target.Proxy);
             }
         }
 

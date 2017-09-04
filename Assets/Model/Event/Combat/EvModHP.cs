@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.GUI.Combat;
+using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
 using Assets.View.Event;
 
@@ -26,7 +27,7 @@ namespace Assets.Model.Event.Combat
             if (this.IsInitialized())
             {
                 if (this._data.Target != null)
-                    this._data.Target.Model.ModifyHP(this._data.Dmg, this._data.IsHeal);
+                    this._data.Target.Proxy.ModifyPoints(ESecondaryStat.HP, this._data.Dmg, this._data.IsHeal);
                 if (!this._data.IsHeal)
                 {
                     this.DisplayDmg();
@@ -64,7 +65,7 @@ namespace Assets.Model.Event.Combat
                 var data = new EvSplatterData();
                 data.DmgPercent =
                     (this._data.Dmg /
-                    this._data.Target.Model.GetCurrentStats().GetSecondaryStats().MaxHP);
+                    this._data.Target.Proxy.GetStat(ESecondaryStat.HP));
                 data.Target = this._data.Target.Tile.Handle;
                 var e = new EvSplatter(data);
                 e.TryProcess();

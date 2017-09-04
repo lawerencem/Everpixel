@@ -2,6 +2,7 @@
 using Assets.Controller.Manager.Combat;
 using Assets.Controller.Manager.GUI;
 using Assets.Controller.Map.Tile;
+using Assets.Model.Character.Enum;
 using Assets.Model.Map;
 using Assets.Template.Script;
 using Assets.View;
@@ -75,11 +76,11 @@ namespace Assets.Model.Event.Combat
 
         private void TryProcessNextTile()
         {
-            var ap = this._data.Char.Model.GetCurrentPoints().CurrentAP;
+            var ap = this._data.Char.Proxy.GetStat(ESecondaryStat.AP);
             this._next = this._data.TargetPath.GetNextTile(this._current);
             if (this._next != null)
             {
-                var cost = this._data.Char.Model.GetTileTraversalAPCost(this._next.Model);
+                var cost = this._data.Char.Proxy.GetTileTraversalAPCost(this._next);
                 if (cost <= ap)
                 {
                     var data = new EvTileMoveData();

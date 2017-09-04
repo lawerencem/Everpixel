@@ -29,8 +29,8 @@ namespace Assets.Controller.Map.Combat.Loader
             {
                 foreach (var c in party.GetChars())
                 {
-                    c.SetView(builder.Build(c.Model.GetParams()));
-                    var tile = map.GetMap().GetTileForRow(c.Model.LParty, c.Model.GetParams().StartRow);
+                    c.SetView(builder.Build(c.Proxy.GetParams()));
+                    var tile = map.GetMap().GetTileForRow(c.Proxy.LParty, c.Proxy.GetParams().StartRow);
                     this.RenderChar(map, c, tile);
                 }
             }   
@@ -38,8 +38,8 @@ namespace Assets.Controller.Map.Combat.Loader
             {
                 foreach (var c in party.GetChars())
                 {
-                    c.SetView(builder.Build(c.Model.GetParams()));
-                    var tile = map.GetMap().GetTileForRow(c.Model.LParty, c.Model.GetParams().StartRow);
+                    c.SetView(builder.Build(c.Proxy.GetParams()));
+                    var tile = map.GetMap().GetTileForRow(c.Proxy.LParty, c.Proxy.GetParams().StartRow);
                     this.RenderChar(map, c, tile);
                 }
             }   
@@ -61,7 +61,7 @@ namespace Assets.Controller.Map.Combat.Loader
             c.SubComponents.Add(Layers.CHAR_TORSO, c.Handle);
             c.SubComponents.Add(Layers.CHAR_MAIN, c.Handle);
             
-            if (!c.Model.LParty)
+            if (!c.Proxy.LParty)
                 c.Handle.transform.localRotation = Quaternion.Euler(0, 180, 0);
             t.SetCurrent(c);
             c.SetTile(t);
@@ -78,7 +78,7 @@ namespace Assets.Controller.Map.Combat.Loader
 
         private void TryAttachDecoHelper(CharController c, string sort, int spriteIndex, TileController tile)
         {
-            if (c.Model.Type == ECharType.Humanoid && spriteIndex >= 0)
+            if (c.Proxy.Type == ECharType.Humanoid && spriteIndex >= 0)
             {
                 var spriteHandler = new GameObject();
                 var sprite = c.View.Sprites[spriteIndex];
@@ -139,7 +139,7 @@ namespace Assets.Controller.Map.Combat.Loader
 
         private void TryAttachHead(CharController c, string sort, int spriteIndex, TileController tile)
         {
-            if (c.Model.Type == ECharType.Humanoid)
+            if (c.Proxy.Type == ECharType.Humanoid)
             {
                 var sprite = c.View.Sprites[spriteIndex];
                 var spriteHandler = new GameObject();

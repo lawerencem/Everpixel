@@ -57,18 +57,16 @@ namespace Assets.Controller.Manager.Combat
             {
                 this._data.Characters.Sort(
                     (x, y) =>
-                    y.Model.GetCurrentStats().GetStatValue(ESecondaryStat.Initiative)
-                    .CompareTo(x.Model.GetCurrentStats().GetStatValue(ESecondaryStat.Initiative)));
+                    y.Proxy.GetStat(ESecondaryStat.Initiative)
+                    .CompareTo(x.Proxy.GetStat(ESecondaryStat.Initiative)));
             }
             foreach (var character in this._data.Characters)
             {
                 this._data.InitiativeOrder.Add(character);
-
-                // TODO: Try reading .xml values, or set to max...
-                character.Model.SetCurrentHP(character.Model.GetCurrentStats().GetSecondaryStats().MaxHP);
-                character.Model.SetCurrentAP(character.Model.GetCurrentStats().GetSecondaryStats().MaxAP);
-                character.Model.SetCurrentMorale(character.Model.GetCurrentStats().GetSecondaryStats().Morale);
-                character.Model.SetCurrentStam(character.Model.GetCurrentStats().GetSecondaryStats().Stamina);
+                character.Proxy.SetPointsToMax(ESecondaryStat.AP);
+                character.Proxy.SetPointsToMax(ESecondaryStat.HP);
+                character.Proxy.SetPointsToMax(ESecondaryStat.Morale);
+                character.Proxy.SetPointsToMax(ESecondaryStat.Stamina);
             }
                 
             this.ProcessTakingAction();
@@ -83,7 +81,7 @@ namespace Assets.Controller.Manager.Combat
                 var tile = this._data.PotentialTgtTiles.Find(x => x.Equals(t));
                 if (tile != null)
                 {
-                    if (this._data.CurrentlyActing.Model.LParty == target.Model.LParty)
+                    if (this._data.CurrentlyActing.Proxy.LParty == target.Proxy.LParty)
                     {
                         if (!ability.Data.Hostile)
                             return true;
@@ -110,7 +108,7 @@ namespace Assets.Controller.Manager.Combat
 
         public void ProcessEndTurn()
         {
-            this._data.CurrentlyActing.Model.ProcessEndOfTurn();
+            this._data.CurrentlyActing.Proxy.ProcessEndOfTurn();
             this._data.InitiativeOrder.Remove(this._data.CurrentlyActing);
             this._data.CurrentAbility = EAbility.None;
             if (this._data.InitiativeOrder.Count > 0)

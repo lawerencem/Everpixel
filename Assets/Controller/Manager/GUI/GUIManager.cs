@@ -1,6 +1,7 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Action;
 using Assets.Model.Character;
+using Assets.Model.Character.Enum;
 using Assets.Template.Script;
 using Assets.View.GUI;
 using System.Collections.Generic;
@@ -83,7 +84,7 @@ namespace Assets.Controller.Manager.GUI
         public void SetHoverModalInactive() { this._hoverModal.SetModalInactive(); }
         public void SetHoverModalHeaderText(string toSet) { this._hoverModal.SetModalHeaderText(toSet); }
         public void SetHoverModalLocation(Vector3 pos) { this._hoverModal.SetModalLocation(pos); }
-        public void SetHoverModalStatValues(MChar c) { this._hoverModal.SetModalStatValues(c); }
+        public void SetHoverModalStatValues(PChar c) { this._hoverModal.SetModalStatValues(c); }
         public void SetInteractionLocked(bool locked) { this._interactionLocked = locked; }
 
         private void Init()
@@ -106,25 +107,25 @@ namespace Assets.Controller.Manager.GUI
         public void SetActingBoxToController(CharController c)
         {
             this.SetTagText(GameObjectTags.NAME, c.View.Name);
-            this.SetTagText(GameObjectTags.AP, c.Model.GetCurrentAP() + " / " + ((int)c.Model.GetCurrentPoints().CurrentAP).ToString());
-            this.SetTagText(GameObjectTags.HP, c.Model.GetCurrentHP() + " / " + ((int)c.Model.GetCurrentPoints().CurrentHP).ToString());
-            this.SetTagText(GameObjectTags.STAM, c.Model.GetCurrentStamina() + " / " + ((int)c.Model.GetCurrentPoints().CurrentStamina).ToString());
-            this.SetTagText(GameObjectTags.MORALE, c.Model.GetCurrentMorale() + " / " + ((int)c.Model.GetCurrentPoints().CurrentMorale).ToString());
+            this.SetTagText(GameObjectTags.AP, c.Proxy.GetStat(ESecondaryStat.AP) + " / " + ((int)c.Proxy.GetStat(ESecondaryStat.AP)).ToString());
+            this.SetTagText(GameObjectTags.HP, c.Proxy.GetStat(ESecondaryStat.HP) + " / " + ((int)c.Proxy.GetStat(ESecondaryStat.HP)).ToString());
+            this.SetTagText(GameObjectTags.MORALE, c.Proxy.GetStat(ESecondaryStat.Morale) + " / " + ((int)c.Proxy.GetStat(ESecondaryStat.Morale)).ToString());
+            this.SetTagText(GameObjectTags.STAM, c.Proxy.GetStat(ESecondaryStat.Stamina) + " / " + ((int)c.Proxy.GetStat(ESecondaryStat.Stamina)).ToString());
 
-            if (c.Model.GetEquipment().GetArmor() != null)
-                this.SetTagText(GameObjectTags.ARMOR, c.Model.GetEquipment().GetArmor().Name);
+            if (c.Proxy.GetArmor() != null)
+                this.SetTagText(GameObjectTags.ARMOR, c.Proxy.GetArmor().Name);
             else
                 this.SetTagText(GameObjectTags.ARMOR, "");
-            if (c.Model.GetEquipment().GetHelm() != null)
-                this.SetTagText(GameObjectTags.HELM, c.Model.GetEquipment().GetHelm().Name);
+            if (c.Proxy.GetHelm() != null)
+                this.SetTagText(GameObjectTags.HELM, c.Proxy.GetHelm().Name);
             else
                 this.SetTagText(GameObjectTags.HELM, "");
-            if (c.Model.GetEquipment().GetLWeapon() != null)
-                this.SetTagText(GameObjectTags.L_WEAP, c.Model.GetEquipment().GetLWeapon().Name);
+            if (c.Proxy.GetLWeapon() != null)
+                this.SetTagText(GameObjectTags.L_WEAP, c.Proxy.GetLWeapon().Name);
             else
                 this.SetTagText(GameObjectTags.L_WEAP, "");
-            if (c.Model.GetEquipment().GetRWeapon() != null)
-                this.SetTagText(GameObjectTags.R_WEAP, c.Model.GetEquipment().GetRWeapon().Name);
+            if (c.Proxy.GetRWeapon() != null)
+                this.SetTagText(GameObjectTags.R_WEAP, c.Proxy.GetRWeapon().Name);
             else
                 this.SetTagText(GameObjectTags.R_WEAP, "");
         }

@@ -216,6 +216,7 @@
     <Compile Include="Assets\Model\Character\Param\Race\RaceSprites.cs" />
     <Compile Include="Assets\Model\Character\Param\SecondaryStatMod.cs" />
     <Compile Include="Assets\Model\Character\Param\SecondaryStats.cs" />
+    <Compile Include="Assets\Model\Character\PChar.cs" />
     <Compile Include="Assets\Model\Character\Table\PredefinedCharacterTable.cs" />
     <Compile Include="Assets\Model\Character\Table\RaceParamsTable.cs" />
     <Compile Include="Assets\Model\Character\XML\PerkParser.cs" />
@@ -270,7 +271,7 @@
     <Compile Include="Assets\Model\Equipment\Type\MArmor.cs" />
     <Compile Include="Assets\Model\Equipment\Type\MEquipment.cs" />
     <Compile Include="Assets\Model\Equipment\Type\MHelm.cs" />
-    <Compile Include="Assets\Model\Equipment\Type\MWEapon.cs" />
+    <Compile Include="Assets\Model\Equipment\Type\MWeapon.cs" />
     <Compile Include="Assets\Model\Equipment\XML\ArmorReader.cs" />
     <Compile Include="Assets\Model\Equipment\XML\MEquipmentReader.cs" />
     <Compile Include="Assets\Model\Equipment\XML\WeaponReader.cs" />
@@ -505,9 +506,7 @@
     <None Include="Assets\TODO.txt" />
     <None Include="Assets\View\Barks\XML\Barks.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\Model\AI\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

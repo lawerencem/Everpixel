@@ -9,16 +9,16 @@ namespace Assets.Controller.Character
     public class CharController
     {
         private GameObject _handle;
-        private MChar _model;
+        private PChar _proxy;
         private VChar _view;
         private TileController _tile;
 
         public GameObject Handle { get { return this._handle; } }
-        public MChar Model { get { return this._model; } }
+        public PChar Proxy { get { return this._proxy; } }
         public VChar View { get { return this._view; } }
         public TileController Tile { get { return this._tile; } }
 
-        public void SetModel(MChar m) { this._model = m; m.SetController(this); }
+        public void SetProxy(PChar p) { this._proxy = p; p.SetController(this); }
         public void SetView(VChar v) { this._view = v; }
         public void SetTile(TileController t) { this._tile = t; }
 

@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Abiltiy.Logic;
+using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
 using Assets.Template.Util;
 
@@ -10,18 +11,15 @@ namespace Assets.Model.Ability.Logic.Calculator
         public override  void Predict(Hit hit)
         {
             var target = hit.Data.Target.Current as CharController;
-            var targetArmor = target.Model.GetEquipment().GetArmor();
-            var targetHelm = target.Model.GetEquipment().GetHelm();
 
-            var acc = hit.Data.Source.Model.GetCurrentStats().GetSecondaryStats().MeleeSkill;
-
-            var dodge = target.Model.GetCurrentStats().GetSecondaryStats().DodgeSkill;
+            var acc = target.Proxy.GetStat(ESecondaryStat.Melee);
+            var dodge = target.Proxy.GetStat(ESecondaryStat.Dodge);
             var dodgeChance = LogicParams.BASE_DODGE_CHANCE / hit.Data.Ability.Data.AccMod;
 
-            if (targetArmor != null)
-                dodgeChance *= targetArmor.DodgeMod;
-            if (targetHelm != null)
-                dodgeChance *= targetHelm.DodgeMod;
+            if (target.Proxy.GetArmor() != null)
+                dodgeChance *= target.Proxy.GetArmor().DodgeMod;
+            if (target.Proxy.GetHelm() != null)
+                dodgeChance *= target.Proxy.GetHelm().DodgeMod;
 
             acc *= hit.Data.Ability.Data.AccMod;
 

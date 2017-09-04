@@ -84,7 +84,7 @@ namespace Assets.View.Fatality.Weapon
                     hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
                 {
                     var tgt = this._data.Target.Current as CharController;
-                    if (tgt.Model.Type == ECharType.Humanoid)
+                    if (tgt.Proxy.Type == ECharType.Humanoid)
                     {
                         VCharUtil.Instance.ProcessDeadChar(tgt);
 

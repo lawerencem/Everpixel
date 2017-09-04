@@ -42,7 +42,7 @@ namespace Assets.View.Script.GUI
         {
             this.ResetModal();
             var character = CombatManager.Instance.GetCurrentlyActing();
-            var abilities = character.Model.GetAbilities().GetActiveAbilities();
+            var abilities = character.Proxy.GetActiveAbilities();
             this._proto.SetActive(true);
             for (int i = 0; i < abilities.Count; i++)
                 this.PopulateModalList(character, abilities[i]);

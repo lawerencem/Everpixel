@@ -73,7 +73,7 @@ namespace Assets.Controller.GUI.Combat
 
         private void DisplayFlinch(CharController target, Hit hit)
         {
-            if (hit.Data.Dmg < target.Model.GetCurrentPoints().CurrentHP) 
+            if (hit.Data.Dmg < target.Proxy.GetStat(ESecondaryStat.HP)) 
             {
                 var flinch = target.Handle.AddComponent<SFlinch>();
                 var flinchPos = target.Handle.transform.position;
@@ -94,13 +94,12 @@ namespace Assets.Controller.GUI.Combat
         private void DisplayParry(CharController target, Hit hit)
         {
             VCombatController.Instance.DisplayText("Parry", target.Handle, CombatGUIParams.WHITE);
-            var equipment = target.Model.GetEquipment();
-            if (equipment.GetRWeapon() != null && !equipment.GetRWeapon().IsTypeOfShield())
+            if (target.Proxy.GetRWeapon() != null && target.Proxy.GetRWeapon().IsTypeOfShield())
             {
                 var wpn = target.SubComponents[Layers.CHAR_R_WEAPON];
                 this.DisplayParryHelper(target, hit, wpn);
             }
-            else if (equipment.GetLWeapon() != null && !equipment.GetLWeapon().IsTypeOfShield())
+            else if (target.Proxy.GetLWeapon() != null && target.Proxy.GetLWeapon().IsTypeOfShield())
             {
                 var wpn = target.SubComponents[Layers.CHAR_L_WEAPON];
                 this.DisplayParryHelper(target, hit, wpn);
@@ -110,7 +109,7 @@ namespace Assets.Controller.GUI.Combat
         private void DisplayParryHelper(CharController target, Hit hit, GameObject wpn)
         {
             var pos = wpn.transform.position;
-            if (target.Model.LParty)
+            if (target.Proxy.LParty)
                 pos.x -= CombatGUIParams.WEAPON_OFFSET;
             else
                 pos.x += CombatGUIParams.WEAPON_OFFSET;

@@ -10,24 +10,22 @@ namespace Assets.Model.Ability.Logic.Calculator
     {
         public override void Predict(Hit hit)
         {
-            var stats = hit.Data.Source.Model.GetCurrentStats();
-            var acc = stats.GetSecondaryStats().MeleeSkill;
-            var parry = stats.GetSecondaryStats().ParrySkill;
+            var acc = hit.Data.Source.Proxy.GetStat(ESecondaryStat.Melee);
+            var parry = hit.Data.Source.Proxy.GetStat(ESecondaryStat.Parry);
             var parryChance = LogicParams.BASE_PARRY_CHANCE / hit.Data.Ability.Data.AccMod;
 
             var tgt = hit.Data.Target.Current as CharController;
-            var equipment = tgt.Model.GetEquipment();
 
-            if (equipment.GetArmor() != null)
-                parryChance *= equipment.GetArmor().ParryReduce;
-            if (equipment.GetHelm() != null)
-                parryChance *= equipment.GetHelm().ParryReduce;
-            if (equipment.GetLWeapon() != null)
-                parryChance *= equipment.GetLWeapon().ParryMod;
-            if (equipment.GetRWeapon() != null)
-                parryChance *= equipment.GetRWeapon().ParryMod;
+            if (hit.Data.Source.Proxy.GetArmor() != null)
+                parryChance *= hit.Data.Source.Proxy.GetArmor().ParryReduce;
+            if (hit.Data.Source.Proxy.GetHelm() != null)
+                parryChance *= hit.Data.Source.Proxy.GetHelm().ParryReduce;
+            if (hit.Data.Source.Proxy.GetLWeapon() != null)
+                parryChance *= hit.Data.Source.Proxy.GetLWeapon().ParryMod;
+            if (hit.Data.Source.Proxy.GetRWeapon() != null)
+                parryChance *= hit.Data.Source.Proxy.GetRWeapon().ParryMod;
 
-            if (hit.Data.Source.Model.Type == ECharType.Critter)
+            if (hit.Data.Source.Proxy.Type == ECharType.Critter)
                 parryChance = 0;
 
             acc *= hit.Data.Ability.Data.AccMod;

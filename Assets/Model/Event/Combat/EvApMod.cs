@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Tile;
+using Assets.Model.Character.Enum;
 
 namespace Assets.Model.Event.Combat
 {
@@ -25,7 +26,7 @@ namespace Assets.Model.Event.Combat
             base.TryProcess();
             if (this.VerifyAndPopulateData())
             {
-                this._data.Char.Model.ModifyAP(this._data.Qty, this._data.IsHeal);
+                this._data.Char.Proxy.ModifyPoints(ESecondaryStat.AP, this._data.Qty, this._data.IsHeal);
                 if (this._data.ToDisplay)
                 {
                     // TODO: Display ap mod

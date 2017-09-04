@@ -11,9 +11,9 @@ namespace Assets.View.Character
     {
         public void AssignDeadEyes(CharController c)
         {
-            if (c.Model.Type == ECharType.Humanoid)
+            if (c.Proxy.Type == ECharType.Humanoid)
             {
-                var sprite = CharSpriteLoader.Instance.GetHumanoidDeadEyes(c.Model.Race);
+                var sprite = CharSpriteLoader.Instance.GetHumanoidDeadEyes(c.Proxy.Race);
                 var eyes = c.SubComponents[Layers.CHAR_FACE];
                 var renderer = eyes.GetComponent<SpriteRenderer>();
                 renderer.sprite = sprite;
@@ -33,15 +33,14 @@ namespace Assets.View.Character
 
         public void AssignDeadWeapons(CharController c)
         {
-            var equipment = c.Model.GetEquipment();
-            if (equipment.GetLWeapon() != null)
+            if (c.Proxy.GetLWeapon() != null)
             {
                 RotateTranslateUtil.Instance.RandomRotateAndTranslate(
                     c.SubComponents[Layers.CHAR_L_WEAPON],
                     ViewParams.SPLATTER_VARIANCE,
                     ViewParams.SPLATTER_SCALAR);
             }
-            if (equipment.GetRWeapon() != null)
+            if (c.Proxy.GetRWeapon() != null)
             {
                 RotateTranslateUtil.Instance.RandomRotateAndTranslate(
                     c.SubComponents[Layers.CHAR_R_WEAPON],

@@ -244,7 +244,7 @@ namespace Assets.Model.Ability
 
         private void ProcessPerks(Hit hit)
         {
-            foreach (var perk in hit.Data.Source.Model.GetPerks().GetAbilityModPerks())
+            foreach (var perk in hit.Data.Source.Proxy.GetPerks().GetAbilityModPerks())
                 perk.TryModAbility(hit);
         }
     }

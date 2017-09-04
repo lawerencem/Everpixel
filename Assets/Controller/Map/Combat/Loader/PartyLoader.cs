@@ -14,7 +14,7 @@ namespace Assets.Controller.Map.Combat.Loader
                 {
                     foreach (var character in party.GetChars())
                     {
-                        character.Model.SetLParty(true);
+                        character.Proxy.SetLParty(true);
                     }
                 }
             }
@@ -25,7 +25,7 @@ namespace Assets.Controller.Map.Combat.Loader
                 {
                     foreach (var character in party.GetChars())
                     {
-                        character.Model.SetLParty(false);
+                        character.Proxy.SetLParty(false);
                     }
                 }
             }

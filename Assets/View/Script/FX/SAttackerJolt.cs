@@ -27,7 +27,7 @@ namespace Assets.View.Script.FX
             this._renderer = source.Handle.GetComponent<SpriteRenderer>();
             this._source = source;
             this._oldSprite = this._renderer.sprite;
-            if (source.Model.Type == ECharType.Critter)
+            if (source.Proxy.Type == ECharType.Critter)
             {
                 this._sprites = CharSpriteLoader.Instance.GetCritterSprites(source.View.Name);
                 int index = CritterAttackSpriteTable.Instance.Table[source.View.Name];

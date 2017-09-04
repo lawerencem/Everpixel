@@ -1,4 +1,5 @@
 ﻿using Assets.Controller.Character;
+using Assets.Model.Character;
 using Assets.Model.Character.Factory;
 using Assets.Model.Party.Table;
 using Assets.Template.Builder;
@@ -36,7 +37,8 @@ namespace Assets.Model.Party.Builder
                     {
                         var model = CharacterFactory.Instance.CreateNewObject(charParam);
                         var controller = new CharController();
-                        controller.SetModel(model);
+                        var proxy = new PChar(model);
+                        controller.SetProxy(proxy);
                         party.GetChars().Add(controller);
                     }
                 }

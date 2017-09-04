@@ -55,13 +55,13 @@ namespace Assets.Model.Ability.Logic
             int dist = arg.Range;
             if (arg.LWeapon)
             {
-                if (arg.Source.Model.GetEquipment().GetLWeapon() != null)
-                    dist += (int)arg.Source.Model.GetEquipment().GetLWeapon().RangeMod;
+                if (arg.Source.Proxy.GetLWeapon() != null)
+                    dist += (int)arg.Source.Proxy.GetLWeapon().RangeMod;
             }
             else
             {
-                if (arg.Source.Model.GetEquipment().GetRWeapon() != null)
-                    dist += (int)arg.Source.Model.GetEquipment().GetRWeapon().RangeMod;
+                if (arg.Source.Proxy.GetRWeapon() != null)
+                    dist += (int)arg.Source.Proxy.GetRWeapon().RangeMod;
             }
             var hexTiles = arg.Source.Tile.Model.GetAoETiles(dist);
             var tileControllers = new List<TileController>();

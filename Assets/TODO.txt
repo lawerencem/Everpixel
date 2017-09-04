@@ -1,6 +1,5 @@
 ﻿TODO
 
-Prediction Modal
 Block calculations
   - Block FX
 - Add Btns to ability modal window
