@@ -79,6 +79,7 @@ namespace Assets.Model.Ability.Logic.Calculator
                 var bodyWeight = ((hit.Data.Dmg - flatDmgNegate - bodyDmgNegate) * bodyReduction) * LogicParams.BASE_BODY_MULTIPLIER;
                 var headWeight = ((hit.Data.Dmg - flatDmgNegate - headDmgNegate) * headReduction);
                 hit.Data.Chances.Damage = (bodyWeight + headWeight) / (LogicParams.BASE_HIT_RATIO);
+                if (hit.Data.Chances.Damage < 0) { hit.Data.Chances.Damage = 0; }
             }
         }
 

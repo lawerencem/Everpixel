@@ -7,6 +7,7 @@ using Assets.Template.CB;
 using Assets.Template.Script;
 using Assets.Template.Util;
 using Assets.View;
+using Assets.View.Ability;
 using Assets.View.Event;
 using Assets.View.Script.FX;
 using System.Collections.Generic;
@@ -118,11 +119,48 @@ namespace Assets.Controller.GUI.Combat
             script.AddCallback(hit.CallbackHandler);
         }
 
+        public void ProcessBulletFX(MAction a)
+        {
+            VCombatController.Instance.DisplayActionEventName(a);
+            if (VFatalityController.Instance.IsFatality(a))
+            {
+                if (!VFatalityController.Instance.FatalitySuccessful(a))
+                    this.ProcessBulletFXNonFatality(a);
+            }
+            else
+                this.ProcessBulletFXNonFatality(a);
+        }
+
+        private void ProcessBulletFXNonFatality(MAction a)
+        {
+            var attack = a.Data.Source.Handle.AddComponent<SAttackerJolt>();
+            var position = Vector3.Lerp(a.Data.Target.Model.Center, a.Data.Source.Tile.Model.Center, CombatGUIParams.ATTACK_LERP);
+            attack.Action = a;
+            attack.Init(a.Data.Source, position, CombatGUIParams.ATTACK_SPEED);
+            var bullet = AttackSpriteLoader.Instance.GetBullet(a, this.ProcessDefenderHits, CombatGUIParams.BULLET_SPEED);
+        }
+
         private void ProcessDefenderHits(object o)
         {
             if (o.GetType().Equals(typeof(SAttackerJolt)))
             {
                 var a = o as SAttackerJolt;
+                if (a.Action != null)
+                {
+                    foreach (var hit in a.Action.Data.Hits)
+                    {
+                        if (hit.Data.Target.Current != null &&
+                            hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                        {
+                            var target = hit.Data.Target.Current as CharController;
+                            this.ProcessDefenderHitsHelper(target, hit);
+                        }
+                    }
+                }
+            }
+            else if (o.GetType().Equals(typeof(SBullet)))
+            {
+                var a = o as SBullet;
                 if (a.Action != null)
                 {
                     foreach (var hit in a.Action.Data.Hits)

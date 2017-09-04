@@ -417,7 +417,7 @@
     <Compile Include="Assets\Template\Script\IntervalJoltScript.cs" />
     <Compile Include="Assets\Template\Script\SJolt.cs" />
     <Compile Include="Assets\Template\Script\SRaycastMove.cs" />
-    <Compile Include="Assets\Template\Script\RaycastMoveWithDelete.cs" />
+    <Compile Include="Assets\Template\Script\SRaycastMoveThenDelete.cs" />
     <Compile Include="Assets\Template\Script\SRotation.cs" />
     <Compile Include="Assets\Template\Script\SObjectMove.cs" />
     <Compile Include="Assets\Template\Script\ScrollCameraToScript.cs" />
@@ -476,9 +476,9 @@
     <Compile Include="Assets\View\Mount\VMount.cs" />
     <Compile Include="Assets\View\Particle\ParticleController.cs" />
     <Compile Include="Assets\View\Script\FX\SAttackerJolt.cs" />
+    <Compile Include="Assets\View\Script\FX\SBullet.cs" />
     <Compile Include="Assets\View\Script\FX\SFlinch.cs" />
-    <Compile Include="Assets\View\Script\FX\GearExplosionScript.cs" />
-    <Compile Include="Assets\View\Script\FX\HeadRotationScript.cs" />
+    <Compile Include="Assets\View\Script\FX\SFightFatalityExplosionMove.cs" />
     <Compile Include="Assets\View\Script\FX\LycanthropeScript.cs" />
     <Compile Include="Assets\View\Script\GUI\SAbilityBtn.cs" />
     <Compile Include="Assets\View\Script\GUI\SEndTurnBtn.cs" />

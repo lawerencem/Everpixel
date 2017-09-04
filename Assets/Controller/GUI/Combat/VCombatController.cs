@@ -38,6 +38,7 @@ namespace Assets.Controller.GUI.Combat
             this._callbacks.Clear();
             switch(a.ActiveAbility.Data.CastType)
             {
+                case (ECastType.Bullet): { VHitController.Instance.ProcessBulletFX(a); } break;
                 case (ECastType.Melee): { VHitController.Instance.ProcessMeleeHitFX(a); } break;
             }
         }
@@ -69,7 +70,7 @@ namespace Assets.Controller.GUI.Combat
             Font fontToUse = Resources.Load("Fonts/8bitOperatorPlus8-Bold") as Font;
             text.font = fontToUse;
             var script = display.AddComponent<SDestroyByLifetime>();
-            script.lifetime = dur;
+            script.Init(display, dur);
             var floating = display.AddComponent<SFloatingText>();
             floating.Init(display, 0.0015f, delay);
         }
@@ -271,25 +272,6 @@ namespace Assets.Controller.GUI.Combat
     //        }
     //    }
 
-
-
-    //    private void ProcessBulletFXNonFatality(DisplayActionEvent e)
-    //    {
-    //        var attackerScript = e.EventController.Source.Handle.AddComponent<AttackerJoltScript>();
-    //        var position = Vector3.Lerp(e.EventController.Target.Model.Center, e.EventController.Source.CurrentTile.Model.Center, 0.85f);
-    //        attackerScript.Init(e.EventController.Source, position, 8f);
-
-    //        var sprite = AttackSpriteLoader.Instance.GetAttackSprite(e.EventController.Action);
-    //        var bullet = new GameObject();
-    //        var script = bullet.AddComponent<RaycastWithDeleteScript>();
-    //        bullet.transform.position = e.EventController.Source.transform.position;
-    //        var renderer = bullet.AddComponent<SpriteRenderer>();
-    //        renderer.sprite = sprite;
-    //        renderer.sortingLayerName = CMapGUIControllerParams.PARTICLES_LAYER;
-    //        if (!e.EventController.Source.LParty)
-    //            bullet.transform.localRotation = Quaternion.Euler(0, 180, 0);
-    //        script.Init(bullet, e.EventController.Target.transform.position, 5f, e.AttackFXDone);
-    //    }
 
 
 

@@ -57,7 +57,7 @@
       <CastTypeEnum>Bullet</CastTypeEnum>
       <DmgPerPower>0.018</DmgPerPower>
       <DodgeMod>1.0</DodgeMod>
-      <FlatDamage>0</FlatDamage>
+      <FlatDamage>4000</FlatDamage>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>0.25</ParryModMod>
       <Range>4</Range>
@@ -74,9 +74,9 @@
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
       <CastTypeEnum>Raycast</CastTypeEnum>
-      <DmgPerPower>0.02</DmgPerPower>
+      <DmgPerPower>0.032</DmgPerPower>
       <DodgeMod>0.8</DodgeMod>
-      <FlatDamage>30</FlatDamage>
+      <FlatDamage>42</FlatDamage>
       <MeleeBlockChanceMod>0.5</MeleeBlockChanceMod>
       <ParryModMod>0.15</ParryModMod>
       <Range>4</Range>

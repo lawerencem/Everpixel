@@ -16,7 +16,7 @@ namespace Assets.Model.Ability.Magic.Fighting
 
         public override void Predict(Hit hit)
         {
-            base.PredictMelee(hit);
+            base.PredictBullet(hit);
         }
 
         public override void Process(Hit hit)
@@ -26,7 +26,7 @@ namespace Assets.Model.Ability.Magic.Fighting
 
         public override bool IsValidActionEvent(AbilityArgs arg)
         {
-            return true;
+            return base.IsValidEnemyTarget(arg);
         }
     }
 }

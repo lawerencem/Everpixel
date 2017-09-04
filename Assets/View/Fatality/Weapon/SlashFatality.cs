@@ -6,6 +6,7 @@ using Assets.Template.Util;
 using Assets.View.Character;
 using Assets.View.Event;
 using Assets.View.Particle;
+using Assets.View.Script.FX;
 using UnityEngine;
 
 namespace Assets.View.Fatality.Weapon
@@ -34,7 +35,7 @@ namespace Assets.View.Fatality.Weapon
                 CombatGUIParams.PARTICLES_EXTENSION);
             var blood = ParticleController.Instance.CreateParticle(path);
             var script = blood.AddComponent<SDestroyByLifetime>();
-            script.lifetime = 4;
+            script.Init(blood, 4f);
             ParticleController.Instance.RotateParticle(blood, 180f);
             ParticleController.Instance.AttachParticle(body, blood);
         }
@@ -47,7 +48,7 @@ namespace Assets.View.Fatality.Weapon
                 CombatGUIParams.PARTICLES_EXTENSION);
             var blood = ParticleController.Instance.CreateParticle(path);
             var script = blood.AddComponent<SDestroyByLifetime>();
-            script.lifetime = 4;
+            script.Init(blood, 4f);
             ParticleController.Instance.AttachParticle(head, blood);
         }
 
@@ -69,11 +70,12 @@ namespace Assets.View.Fatality.Weapon
             var pos = Vector3.Lerp(
                 this._data.Source.Handle.transform.position,
                 this._data.Target.Handle.transform.position,
-                FatalityParams.FATALITY_LERP);
-            var boomerang = this._data.Source.Handle.AddComponent<SBoomerang>();
-            boomerang.AddCallback(this.ProcessHead);
-            boomerang.AddDoneCallback(this.AddBob);
-            boomerang.Init(this._data.Source.Handle, pos, FatalityParams.FATALITY_ATTACK_SPEED);
+                FatalityParams.FATALITY_MELEE_LERP);
+            var attack = this._data.Source.Handle.AddComponent<SAttackerJolt>();
+            attack.Action = this._data.Action;
+            attack.AddCallback(this.ProcessHead);
+            attack.AddDoneCallback(this.AddBob);
+            attack.Init(this._data.Source, pos, FatalityParams.FATALITY_ATTACK_SPEED);
         }
 
         private void ProcessHead(object o)

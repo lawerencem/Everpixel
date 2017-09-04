@@ -2,13 +2,31 @@
 
 namespace Assets.Template.Script
 {
-    public class SDestroyByLifetime : MonoBehaviour
+    public class SDestroyByLifetime : AScript
     {
-        public float lifetime;
+        private float _curTime = 0;
+        private GameObject _destroy;
+        private float _lifetime;
 
-        public void Start()
+        public void Update()
         {
-            Destroy(gameObject, lifetime);
+            if (this._destroy != null)
+            {
+                this._curTime += Time.deltaTime;
+                if (this._curTime >= this._lifetime)
+                {
+                    this.DoCallbacks();
+                    GameObject.Destroy(this._destroy);
+                    GameObject.Destroy(this);
+                }
+            }
+        }
+
+        public void Init(GameObject toDestroy, float lifetime)
+        {
+            this._curTime = 0f;
+            this._destroy = toDestroy;
+            this._lifetime = lifetime;
         }
     }
 }

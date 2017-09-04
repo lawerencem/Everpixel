@@ -2,7 +2,7 @@
 
 namespace Assets.Template.Script
 {
-    public class SDeactivateByLifetime : MonoBehaviour
+    public class SDeactivateByLifetime : AScript
     {
         private float _curTime = 0;
         private GameObject _deactivate;
@@ -15,6 +15,7 @@ namespace Assets.Template.Script
                 this._curTime += Time.deltaTime;
                 if (this._curTime >= this._lifetime)
                 {
+                    this.DoCallbacks();
                     this._deactivate.SetActive(false);
                     GameObject.Destroy(this);
                 }

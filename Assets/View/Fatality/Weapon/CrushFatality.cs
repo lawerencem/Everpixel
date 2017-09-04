@@ -4,6 +4,7 @@ using Assets.Model.Character.Enum;
 using Assets.Template.Script;
 using Assets.Template.Util;
 using Assets.View.Character;
+using Assets.View.Script.FX;
 using UnityEngine;
 
 namespace Assets.View.Fatality.Weapon
@@ -36,10 +37,14 @@ namespace Assets.View.Fatality.Weapon
                     particles.transform.position = position;
                     particles.name = CombatGUIParams.CRUSH_FATALITY + " Particles";
                     var lifetime = particles.AddComponent<SDestroyByLifetime>();
-                    lifetime.lifetime = 5f;
+                    lifetime.Init(particles, 5f);
                     VCharUtil.Instance.ProcessDeadChar(tgt);
                     this.CallbackHandler(this);
                     hit.CallbackHandler(this);
+                }
+                else
+                {
+                    VHitController.Instance.ProcessDefenderHit(hit);
                 }
             }
         }
@@ -49,11 +54,12 @@ namespace Assets.View.Fatality.Weapon
             var pos = Vector3.Lerp(
                 this._data.Source.Handle.transform.position,
                 this._data.Target.Handle.transform.position,
-                FatalityParams.FATALITY_LERP);
-            var boomerang = this._data.Source.Handle.AddComponent<SBoomerang>();
-            boomerang.AddCallback(this.ProcessCrush);
-            boomerang.AddDoneCallback(this.AddBob);
-            boomerang.Init(this._data.Source.Handle, pos, FatalityParams.FATALITY_ATTACK_SPEED);
+                FatalityParams.FATALITY_MELEE_LERP);
+            var attack = this._data.Source.Handle.AddComponent<SAttackerJolt>();
+            attack.Action = this._data.Action;
+            attack.AddCallback(this.ProcessCrush);
+            attack.AddDoneCallback(this.AddBob);
+            attack.Init(this._data.Source, pos, FatalityParams.FATALITY_ATTACK_SPEED);
         }
     }
 }

@@ -1,27 +1,23 @@
 ﻿using UnityEngine;
 
-namespace Template.Script
+namespace Assets.Template.Script
 {
-    public class RaycastWithDeleteScript : MonoBehaviour
+    public class SRaycastMoveThenDelete : AScript
     {
         private const float EPSILON = 0.05f;
-
-        private Callback _callBack;
+        
         private Vector3 _origin;
-
-        public delegate void Callback();
 
         public float Speed;
         public GameObject Source;
         public Vector3 Target;
 
-        public void Init(GameObject s, Vector3 t, float speed, Callback callback = null)
+        public void Init(GameObject s, Vector3 t, float speed)
         {
             this._origin = s.transform.position;
             this.Source = s;
             this.Speed = speed;
             this.Target = t;
-            this._callBack = callback;
         }
 
         public void Update()
@@ -33,8 +29,7 @@ namespace Template.Script
             {
                 this.Source.transform.position = Target;
                 GameObject.Destroy(this.Source);
-                if (this._callBack != null)
-                    this._callBack();
+                this.DoCallbacks();
                 Destroy(this);
             }
         }

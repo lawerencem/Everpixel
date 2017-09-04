@@ -7,7 +7,12 @@
         public static readonly float PER_FRAME_DIST = 0.075f;
 
         public static readonly float FATALITY_ATTACK_SPEED = 0.8f;
-        public static readonly float FATALITY_LERP = 0.30f;
+        public static readonly float FATALITY_BULLET_LERP = 0.15f;
+        public static readonly float FATALITY_MELEE_LERP = 0.30f;
+
+        // Fighting Fatality
+        public static readonly float FIGHTING_BULLET_SPEED = 1.5f;
+        public static readonly float FIGHTING_SPEED = 3f;
 
         // Slash Fatality
         public static readonly float SLASH_HEAD_OFFSET = 0.5f;

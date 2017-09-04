@@ -12,6 +12,7 @@ namespace Assets.View.Fatality
         public MFatality GetFatality(MAction a)
         {
             var data = new FatalityData();
+            data.Action = a;
             data.Source = a.Data.Source;
             foreach(var hit in a.Data.Hits)
             {

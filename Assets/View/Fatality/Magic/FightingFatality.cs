@@ -1,163 +1,154 @@
-﻿namespace Assets.View.Fatality.Magic
+﻿using Assets.Controller.Character;
+using Assets.Controller.GUI.Combat;
+using Assets.Model.Character.Enum;
+using Assets.Template.Script;
+using Assets.Template.Util;
+using Assets.View.Ability;
+using Assets.View.Event;
+using Assets.View.Script.FX;
+using UnityEngine;
+
+namespace Assets.View.Fatality.Magic
 {
     public class FightingFatality : MFatality
     {
         public FightingFatality(FatalityData data) : base(EFatality.Fighting, data)
         {
+            base.Init();
+            base.Start(this.ProcessJolt);
+        }
 
+        private void ProcessBlood(CharController target)
+        {
+            foreach (var neighbor in target.Tile.GetAdjacent())
+            {
+                foreach (var outerNeighbor in neighbor.GetAdjacent())
+                {
+                    this.ProcessBloodHelper(target, 0.2);
+                }
+                this.ProcessBloodHelper(target, 0.5);
+            }
+            this.ProcessBloodHelper(target, 1.0);
+        }
+
+        private void ProcessBloodHelper(CharController target, double percent)
+        {
+            var data = new EvSplatterData();
+            data.DmgPercent = percent;
+            data.Target = target.Handle;
+            var e = new EvSplatter(data);
+            e.TryProcess();
+        }
+
+        private void ProcessJolt(object o)
+        {
+            var pos = Vector3.Lerp(
+                this._data.Source.Handle.transform.position,
+                this._data.Target.Handle.transform.position,
+                FatalityParams.FATALITY_MELEE_LERP);
+            var attack = this._data.Source.Handle.AddComponent<SAttackerJolt>();
+            attack.Action = this._data.Action;
+            var bullet = AttackSpriteLoader.Instance.GetBullet(this._data.Action, this.ProcessExplosion, FatalityParams.FIGHTING_BULLET_SPEED);
+            attack.Init(this._data.Source, pos, FatalityParams.FATALITY_ATTACK_SPEED);
+        }
+
+        private void ProcessExplosion(object o)
+        {
+            foreach(var hit in this._data.FatalHits)
+            {
+                if (hit.Data.Target.Current != null &&
+                    hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                {
+                    var tgt = hit.Data.Target.Current as CharController;
+
+                    var path = StringUtil.PathBuilder(
+                        CombatGUIParams.EFFECTS_PATH,
+                        CombatGUIParams.FIGHTING_FATALITY,
+                        CombatGUIParams.PARTICLES_EXTENSION);
+                    var position = tgt.Handle.transform.position;
+                    var boom = Resources.Load(path);
+                    var particles = GameObject.Instantiate(boom) as GameObject;
+                    particles.transform.position = position;
+                    particles.name = CombatGUIParams.FIGHTING_FATALITY + " Particles";
+                    var explosionPath = StringUtil.PathBuilder(
+                        CombatGUIParams.EFFECTS_PATH,
+                        "FightingFatalityExplosion",
+                        CombatGUIParams.PARTICLES_EXTENSION);
+                    var explosion = GameObject.Instantiate(Resources.Load(explosionPath)) as GameObject;
+                    explosion.transform.position = position;
+                    explosion.name = "BOOM";
+                    var scriptOne = particles.AddComponent<SDestroyByLifetime>();
+                    var scriptTwo = explosion.AddComponent<SDestroyByLifetime>();
+                    scriptOne.Init(particles, 5f);
+                    scriptOne.AddCallback(this.CallbackHandler);
+                    scriptOne.AddCallback(hit.CallbackHandler);
+                    scriptOne.AddCallback(this.AddBob);
+                    scriptTwo.Init(explosion, 8f);
+                    this.ProcessBlood(tgt);
+                    this.ProcessGear(tgt);
+                }
+                else
+                {
+                    VHitController.Instance.ProcessDefenderHit(hit);
+                }
+            }
+        }
+
+        private void ProcessGear(CharController c)
+        {
+            if (c.Proxy.Type == ECharType.Humanoid)
+            {
+                if (c.SubComponents.ContainsKey(Layers.CHAR_TORSO))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_TORSO].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
+                if (c.SubComponents.ContainsKey(Layers.CHAR_HEAD))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_HEAD].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
+                if (c.SubComponents.ContainsKey(Layers.CHAR_HEAD_DECO_1))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_HEAD_DECO_1].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
+                if (c.SubComponents.ContainsKey(Layers.CHAR_HEAD_DECO_2))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_HEAD_DECO_2].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
+                if (c.SubComponents.ContainsKey(Layers.CHAR_FACE))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_FACE].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
+                if (c.Proxy.GetArmor() != null)
+                {
+                    var script = c.SubComponents[Layers.CHAR_ARMOR].AddComponent<SFightFatalityExplosionMove>();
+                    script.Init(c.SubComponents[Layers.CHAR_ARMOR], c);
+                }
+                if (c.Proxy.GetHelm() != null)
+                {
+                    var script = c.SubComponents[Layers.CHAR_HELM].AddComponent<SFightFatalityExplosionMove>();
+                    script.Init(c.SubComponents[Layers.CHAR_HELM], c);
+                }
+                if (c.Proxy.GetLWeapon() != null)
+                {
+                    var script = c.SubComponents[Layers.CHAR_L_WEAPON].AddComponent<SFightFatalityExplosionMove>();
+                    script.Init(c.SubComponents[Layers.CHAR_L_WEAPON], c);
+                }
+                if (c.Proxy.GetRWeapon() != null)
+                {
+                    var script = c.SubComponents[Layers.CHAR_R_WEAPON].AddComponent<SFightFatalityExplosionMove>();
+                    script.Init(c.SubComponents[Layers.CHAR_R_WEAPON], c);
+                }
+            }
+            else
+            {
+                var renderer = c.SubComponents[Layers.CHAR_TORSO].GetComponent<SpriteRenderer>();
+                renderer.sprite = null;
+            }
         }
     }
 }
-
-//        public override void Init()
-//        {
-//            base.Init();
-//            if (this._event.EventController.Action.CastType == CastTypeEnum.Bullet ||
-//                this._event.EventController.Action.CastType == CastTypeEnum.Raycast)
-//                this.InitBulletFatality();
-//            else
-//                this.InitMeleeFatality();
-//            foreach(var hit in this._event.FatalityHits)
-//            {
-//                if (hit.Target != null)
-//                    hit.Target.KillFXProcessed = true;
-//            }
-//        }
-
-//        protected override void InitBulletFatality()
-//        {
-//            base.InitBulletFatality();
-//            var zoom = this._event.EventController.Source.Handle.AddComponent<DramaticHangCallbackZoomOut>();
-//            var position = this._event.EventController.Source.Handle.transform.position;
-//            position.y -= 0.35f;
-//            zoom.Init(position, FatalityParams.ZOOM_SPEED, FatalityParams.ZOOM_FOV, FatalityParams.ZOOM_BULLET_HANG, this.InitAttackSpriteWithBullet);
-//        }
-
-//        private void InitAttackSpriteWithBullet()
-//        {
-//            var attackerScript = this._event.EventController.Source.Handle.AddComponent<AttackerJoltScript>();
-//            var position = Vector3.Lerp(this._event.EventController.Target.Model.Center, this._event.EventController.Source.CurrentTile.Model.Center, 0.85f);
-//            attackerScript.Init(this._event.EventController.Source, position, 0.8f, base.Done);
-//            this.HandleBulletGraphics();
-//        }
-
-//        private void HandleBulletGraphics()
-//        {
-//            var sprite = AttackSpriteLoader.Instance.GetAttackSprite(this._event.EventController.Action);
-//            var bullet = new GameObject();
-//            var script = bullet.AddComponent<RaycastWithDeleteScript>();
-//            bullet.transform.position = this._event.EventController.Source.transform.position;
-//            var renderer = bullet.AddComponent<SpriteRenderer>();
-//            renderer.sprite = sprite;
-//            renderer.sortingLayerName = CMapGUIControllerParams.PARTICLES_LAYER;
-//            if (!this._event.EventController.Source.LParty)
-//                bullet.transform.localRotation = Quaternion.Euler(0, 180, 0);
-//            script.Init(bullet, this._event.EventController.Target.transform.position, 2f, this.ProcessFatality);
-//        }
-
-//        private void ProcessBlood(Hit hit)
-//        {
-//            var c = hit.Target;
-//            foreach(var fatality in this._event.FatalityHits)
-//            {
-//                if (fatality.Target != null)
-//                {
-//                    foreach (var neighbor in fatality.Target.CurrentTile.Adjacent)
-//                    {
-//                        foreach (var outerNeighbor in neighbor.Adjacent)
-//                        {
-//                            this._parent.ProcessSplatter(1, outerNeighbor);
-//                        }
-//                        this._parent.ProcessSplatter(2, neighbor);
-//                    }
-//                    this._parent.ProcessSplatter(5, fatality.Target.CurrentTile);
-//                }
-//            }
-//        }
-
-//        private void ProcessExplosion(Hit hit)
-//        {
-//            var path = StringUtil.PathBuilder(
-//                CMapGUIControllerParams.EFFECTS_PATH,
-//                CMapGUIControllerParams.FIGHTING_FATALITY,
-//                CMapGUIControllerParams.PARTICLES_EXTENSION);
-//            var position = hit.Target.transform.position;
-//            var boom = Resources.Load(path);
-//            var particles = GameObject.Instantiate(boom) as GameObject;
-//            particles.transform.position = position;
-//            particles.name = CMapGUIControllerParams.FIGHTING_FATALITY + " Particles";
-//            var explosionPath = StringUtil.PathBuilder(
-//                CMapGUIControllerParams.EFFECTS_PATH,
-//                "FightingFatalityExplosion",
-//                CMapGUIControllerParams.PARTICLES_EXTENSION);
-//            var explosion = GameObject.Instantiate(Resources.Load(explosionPath)) as GameObject;
-//            explosion.transform.position = position;
-//            explosion.name = "BOOM";
-//            var scriptOne = particles.AddComponent<DestroyByLifetime>();
-//            scriptOne.lifetime = 5f;
-//            var scriptTwo = explosion.AddComponent<DestroyByLifetime>();
-//            scriptTwo.lifetime = 8f;
-//        }
-
-//        protected override void ProcessFatality()
-//        {
-//            foreach(var hit in this._event.FatalityHits)
-//            {
-//                this.ProcessBlood(hit);
-//                this.ProcessExplosion(hit);
-//                this.ProcessGear(hit);
-//                hit.Done();
-//            }
-//            this._event.AttackFXDone();
-//            this.ProcessFatalityView();
-//        }
-
-//        private void ProcessGear(Hit hit)
-//        {
-//            var c = hit.Target.Model;
-//            if (c.Type == ECharacterType.Humanoid)
-//            {
-//                var renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_TORSO].GetComponent<SpriteRenderer>();
-//                renderer.sprite = null;
-//                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_HEAD].GetComponent<SpriteRenderer>();
-//                renderer.sprite = null;
-//                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_HEAD_DECO_1].GetComponent<SpriteRenderer>();
-//                renderer.sprite = null;
-//                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_HEAD_DECO_2].GetComponent<SpriteRenderer>();
-//                renderer.sprite = null;
-//                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_TORSO_DECO_1].GetComponent<SpriteRenderer>();
-//                renderer.sprite = null;
-//                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_TORSO_DECO_2].GetComponent<SpriteRenderer>();
-//                renderer.sprite = null;
-//                renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_FACE].GetComponent<SpriteRenderer>();
-//                renderer.sprite = null;
-
-//                if (c.Armor != null)
-//                {
-//                    var script = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_ARMOR].AddComponent<GearExplosionScript>();
-//                    script.Init(c.ParentController.SpriteHandlerDict[ViewParams.CHAR_ARMOR], c.ParentController);
-//                }
-//                if (c.Helm != null)
-//                {
-//                    var script = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_HELM].AddComponent<GearExplosionScript>();
-//                    script.Init(c.ParentController.SpriteHandlerDict[ViewParams.CHAR_HELM], c.ParentController);
-//                }
-//                if (c.LWeapon != null)
-//                {
-//                    var script = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_L_WEAPON].AddComponent<GearExplosionScript>();
-//                    script.Init(c.ParentController.SpriteHandlerDict[ViewParams.CHAR_L_WEAPON], c.ParentController);
-//                }
-//                if (c.RWeapon != null)
-//                {
-//                    var script = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_R_WEAPON].AddComponent<GearExplosionScript>();
-//                    script.Init(c.ParentController.SpriteHandlerDict[ViewParams.CHAR_R_WEAPON], c.ParentController);
-//                }
-//            }
-//            else
-//            {
-//                var renderer = c.ParentController.SpriteHandlerDict[ViewParams.CHAR_TORSO].GetComponent<SpriteRenderer>();
-//                renderer.sprite = null;
-//            }
-//        }
-//    }
-//}

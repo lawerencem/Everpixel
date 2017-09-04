@@ -70,6 +70,7 @@ namespace Assets.Models.Ability.XML
                                     {
                                         this.HandleIndex(type, elem, elem.Name.ToString(), elem.Value);
                                     }
+                                    AbilityTable.Instance.Table[type].Data.MagicType = magicType;
                                 }
                             }
                         }

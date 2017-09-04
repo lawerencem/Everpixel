@@ -175,12 +175,8 @@ namespace Assets.Model.Ability
 
         protected void ProcessHitBullet(Hit hit)
         {
-            //if (!FCharacterStatus.HasFlag(hit.Target.Model.StatusFlags.CurFlags, FCharacterStatus.Flags.Dead))
-            //{
-            //    foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-            //        perk.TryModAbility(hit);
-            //    this._logic.ProcessBullet(hit);
-            //}
+            this.ProcessPerks(hit);
+            this._logic.ProcessBullet(hit);
         }
 
         protected void ProcessHitLoS(Hit hit)
