@@ -27,6 +27,7 @@ namespace Assets.Controller.GUI.Combat
         public static readonly Color RED = new Color(255, 0, 0, 150);
         public static readonly Color WHITE = new Color(255, 255, 255, 255);
 
+        public static readonly string CHOP_FATALITY = "ChopFatality";
         public static readonly string CRUSH_FATALITY = "CrushFatality";
         public static readonly string FIGHTING_FATALITY = "FightingFatality";
         public static readonly string SLASH_FATALITY = "SlashFatality";

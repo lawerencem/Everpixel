@@ -44,7 +44,8 @@ namespace Assets.View.Barks
             var hit = ListUtil<Hit>.GetRandomListElement(data.FatalHits);
             var origin = data.Source.Handle;
             var barks = new List<string>();
-            if (hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+            if (hit.Data.Target.Current != null &&
+                hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
             {
                 var tgt = hit.Data.Target.Current as CharController;
                 if (hit.Data.Source.Proxy.LParty == tgt.Proxy.LParty)

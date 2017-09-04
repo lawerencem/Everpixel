@@ -14,14 +14,14 @@ namespace Assets.View.Fatality
             var data = new FatalityData();
             data.Action = a;
             data.Source = a.Data.Source;
-            foreach(var hit in a.Data.Hits)
+            data.Target = a.Data.Target;
+            foreach (var hit in a.Data.Hits)
             {
                 if (hit.Data.IsFatality)
                     data.FatalHits.Add(hit);
                 else
                     data.NonFatalHits.Add(hit);
             }
-            data.Target = a.Data.Target;
             var active = this.TryProcessSpellFatality(a, data);
             if (active != null)
                 return active;
@@ -44,6 +44,7 @@ namespace Assets.View.Fatality
         {
             switch (a.Data.Ability)
             {
+                case (EAbility.Chop): { return new ChopFatality(data); }
                 case (EAbility.Crush): { return new CrushFatality(data); }
                 case (EAbility.Slash): { return new SlashFatality(data); }
             }

@@ -1,9 +1,15 @@
-﻿using Assets.Controller.GUI.Combat;
+﻿using Assets.Controller.Character;
+using Assets.Controller.GUI.Combat;
 using Assets.Controller.Manager.GUI;
+using Assets.Model.Character.Enum;
 using Assets.Template.CB;
 using Assets.Template.Script;
+using Assets.Template.Util;
 using Assets.View.Barks;
+using Assets.View.Event;
+using Assets.View.Script.FX;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Assets.View.Fatality
 {
@@ -41,7 +47,7 @@ namespace Assets.View.Fatality
             var zoom = this._data.Source.Handle.AddComponent<SHangCallbackZoomOut>();
             if (BarkManager.Instance.IsPreFatalityBark())
             {
-                zoom.AddCallback(this.Stuff);
+                zoom.AddCallback(this.BarkCallback);
                 this._postZoomCallback = callback;
             }
             else
@@ -60,6 +66,7 @@ namespace Assets.View.Fatality
         {
             if (this._postZoomCallback == null)
                 BarkManager.Instance.ProcessPostFatalityBark(this._data);
+            this.AddBob(this);
             foreach (var callback in this._callbacks)
                 callback(this);
         }
@@ -67,6 +74,11 @@ namespace Assets.View.Fatality
         public void SetCallback(Callback callback)
         {
             this._callbacks = new List<Callback>() { callback };
+        }
+
+        protected void BarkCallback(object o)
+        {
+            BarkManager.Instance.ProcessPreFatalityBark(this.Data, this._postZoomCallback);
         }
 
         protected void AddBob(object o)
@@ -89,15 +101,130 @@ namespace Assets.View.Fatality
             }
         }
 
+        protected void ProcessBlood(CharController target)
+        {
+            foreach (var neighbor in target.Tile.GetAdjacent())
+            {
+                foreach (var outerNeighbor in neighbor.GetAdjacent())
+                {
+                    this.ProcessBloodHelper(target, 0.2);
+                }
+                this.ProcessBloodHelper(target, 0.5);
+            }
+            this.ProcessBloodHelper(target, 1.0);
+        }
+
+        private void ProcessBloodHelper(CharController target, double percent)
+        {
+            var data = new EvSplatterData();
+            data.DmgPercent = percent;
+            data.Target = target.Handle;
+            var e = new EvSplatter(data);
+            e.TryProcess();
+        }
+
+        protected void ProcessExplosion(object o)
+        {
+            foreach (var hit in this._data.FatalHits)
+            {
+                if (hit.Data.Target.Current != null &&
+                    hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                {
+                    var tgt = hit.Data.Target.Current as CharController;
+
+                    var path = StringUtil.PathBuilder(
+                        CombatGUIParams.EFFECTS_PATH,
+                        CombatGUIParams.FIGHTING_FATALITY,
+                        CombatGUIParams.PARTICLES_EXTENSION);
+                    var position = tgt.Handle.transform.position;
+                    var boom = Resources.Load(path);
+                    var particles = GameObject.Instantiate(boom) as GameObject;
+                    particles.transform.position = position;
+                    particles.name = CombatGUIParams.FIGHTING_FATALITY + " Particles";
+                    var explosionPath = StringUtil.PathBuilder(
+                        CombatGUIParams.EFFECTS_PATH,
+                        "FightingFatalityExplosion",
+                        CombatGUIParams.PARTICLES_EXTENSION);
+                    var explosion = GameObject.Instantiate(Resources.Load(explosionPath)) as GameObject;
+                    explosion.transform.position = position;
+                    explosion.name = "BOOM";
+                    var scriptOne = particles.AddComponent<SDestroyByLifetime>();
+                    var scriptTwo = explosion.AddComponent<SDestroyByLifetime>();
+                    scriptOne.Init(particles, 5f);
+                    scriptOne.AddCallback(this.CallbackHandler);
+                    scriptOne.AddCallback(hit.CallbackHandler);
+                    scriptTwo.Init(explosion, 8f);
+                    this.ProcessBlood(tgt);
+                    this.ProcessGearExplosion(tgt);
+                }
+                else
+                {
+                    VHitController.Instance.ProcessDefenderHit(hit);
+                }
+            }
+        }
+
         protected void ProcessNonFatal(object o)
         {
             foreach (var nonFatal in this._data.NonFatalHits)
                 VHitController.Instance.ProcessDefenderHit(nonFatal);
         }
 
-        protected void Stuff(object o)
+        protected void ProcessGearExplosion(CharController c)
         {
-            BarkManager.Instance.ProcessPreFatalityBark(this.Data, this._postZoomCallback);
+            if (c.Proxy.Type == ECharType.Humanoid)
+            {
+                if (c.SubComponents.ContainsKey(Layers.CHAR_TORSO))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_TORSO].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
+                if (c.SubComponents.ContainsKey(Layers.CHAR_HEAD))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_HEAD].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
+                if (c.SubComponents.ContainsKey(Layers.CHAR_HEAD_DECO_1))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_HEAD_DECO_1].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
+                if (c.SubComponents.ContainsKey(Layers.CHAR_HEAD_DECO_2))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_HEAD_DECO_2].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
+                if (c.SubComponents.ContainsKey(Layers.CHAR_FACE))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_FACE].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
+                if (c.Proxy.GetArmor() != null)
+                {
+                    var script = c.SubComponents[Layers.CHAR_ARMOR].AddComponent<SFightFatalityExplosionMove>();
+                    script.Init(c.SubComponents[Layers.CHAR_ARMOR], c);
+                }
+                if (c.Proxy.GetHelm() != null)
+                {
+                    var script = c.SubComponents[Layers.CHAR_HELM].AddComponent<SFightFatalityExplosionMove>();
+                    script.Init(c.SubComponents[Layers.CHAR_HELM], c);
+                }
+                if (c.Proxy.GetLWeapon() != null)
+                {
+                    var script = c.SubComponents[Layers.CHAR_L_WEAPON].AddComponent<SFightFatalityExplosionMove>();
+                    script.Init(c.SubComponents[Layers.CHAR_L_WEAPON], c);
+                }
+                if (c.Proxy.GetRWeapon() != null)
+                {
+                    var script = c.SubComponents[Layers.CHAR_R_WEAPON].AddComponent<SFightFatalityExplosionMove>();
+                    script.Init(c.SubComponents[Layers.CHAR_R_WEAPON], c);
+                }
+            }
+            else
+            {
+                var renderer = c.SubComponents[Layers.CHAR_TORSO].GetComponent<SpriteRenderer>();
+                renderer.sprite = null;
+            }
         }
     }
 }

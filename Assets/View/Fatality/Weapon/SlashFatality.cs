@@ -74,7 +74,6 @@ namespace Assets.View.Fatality.Weapon
             var attack = this._data.Source.Handle.AddComponent<SAttackerJolt>();
             attack.Action = this._data.Action;
             attack.AddCallback(this.ProcessHead);
-            attack.AddDoneCallback(this.AddBob);
             attack.Init(this._data.Source, pos, FatalityParams.FATALITY_ATTACK_SPEED);
         }
 
@@ -113,13 +112,12 @@ namespace Assets.View.Fatality.Weapon
                         raycastData.Speed = FatalityParams.SLASH_RAYCAST_SPEED;
                         raycastData.Target = tgtPos;
                         var raycast = head.AddComponent<SRaycastMove>();
-                        raycast.AddCallback(spin.Done);
-                        raycast.AddCallback(this.CallbackHandler);
-
                         this.AttachBlood(head, tgt.Handle);
 
                         raycast.AddCallback(hit.CallbackHandler);
                         raycast.AddCallback(this.AddBloodPool);
+                        raycast.AddCallback(spin.Done);
+                        raycast.AddCallback(this.CallbackHandler);
                         raycast.Init(raycastData);
                     }
                     else

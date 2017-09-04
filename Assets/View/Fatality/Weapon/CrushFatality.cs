@@ -58,7 +58,6 @@ namespace Assets.View.Fatality.Weapon
             var attack = this._data.Source.Handle.AddComponent<SAttackerJolt>();
             attack.Action = this._data.Action;
             attack.AddCallback(this.ProcessCrush);
-            attack.AddDoneCallback(this.AddBob);
             attack.Init(this._data.Source, pos, FatalityParams.FATALITY_ATTACK_SPEED);
         }
     }
