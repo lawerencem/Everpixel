@@ -1,10 +1,7 @@
-﻿using UnityEngine;
-
-namespace Assets.View
+﻿namespace Assets.View
 {
     public class Layers
     {
-
         public static readonly string CHAR = "Char";
         public static readonly string CHAR_ARMOR = "CharArmor";
         public static readonly string CHAR_HEAD_DECO_1 = "CharHeadDeco1";

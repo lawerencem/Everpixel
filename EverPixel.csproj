@@ -479,6 +479,7 @@
     <Compile Include="Assets\View\Script\FX\GearExplosionScript.cs" />
     <Compile Include="Assets\View\Script\FX\HeadRotationScript.cs" />
     <Compile Include="Assets\View\Script\FX\LycanthropeScript.cs" />
+    <Compile Include="Assets\View\Script\GUI\SAbilityBtn.cs" />
     <Compile Include="Assets\View\Script\GUI\SEndTurnBtn.cs" />
     <Compile Include="Assets\View\Script\GUI\SGui.cs" />
     <Compile Include="Assets\View\Script\GUI\SGuiButton.cs" />

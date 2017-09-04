@@ -89,11 +89,13 @@ namespace Assets.View.Script.GUI
             // TODO: Would really love a better way to do this, but it works for now.
             txtRect.sizeDelta = new Vector2(300, 60);
 
+            var data = new SAbilityBtnData();
+            data.Ability = ability.Type;
+            data.Handle = clone;
+            var script = clone.AddComponent<SAbilityBtn>();
+            script.Init(data);
+
             this._btns.Add(clone);
-            //var btnScript = clone.AddComponent<AbilityBtnClick>();
-            // TODO:
-            var typeEnum = ability.Type;
-            //btnScript.Init(clone, typeEnum);
         }
     }
 }

@@ -6,6 +6,7 @@ Block calculations
 - Add Btns to ability modal window
 Fighting Fatalities
 Injuries
+Make a proxy/interface for getting char stats and equipment
 
 Perks
 howl (intstant heal of HoT)
