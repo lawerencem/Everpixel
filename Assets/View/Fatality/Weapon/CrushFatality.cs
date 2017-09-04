@@ -38,9 +38,9 @@ namespace Assets.View.Fatality.Weapon
                     particles.name = CombatGUIParams.CRUSH_FATALITY + " Particles";
                     var lifetime = particles.AddComponent<SDestroyByLifetime>();
                     lifetime.Init(particles, 5f);
+                    lifetime.AddCallback(this.CallbackHandler);
+                    lifetime.AddCallback(hit.CallbackHandler);
                     VCharUtil.Instance.ProcessDeadChar(tgt);
-                    this.CallbackHandler(this);
-                    hit.CallbackHandler(this);
                 }
                 else
                 {

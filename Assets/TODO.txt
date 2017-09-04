@@ -3,13 +3,13 @@
 Block calculations
   - Block FX
 - Add Btns to ability modal window
-Fighting Fatalities
 Injuries
-Make a proxy/interface for getting char stats and equipment
 move xml files and readers to "data" top-level folder
 
 Bug
    Characters sometimes dont show death fx
+   Chop Fatality particles dont erase
+   Crush fatality doesnt add bob at correct time.
 
 Perks
 howl (intstant heal of HoT)

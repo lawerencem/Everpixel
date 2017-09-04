@@ -113,11 +113,16 @@ namespace Assets.View.Fatality.Weapon
                         raycastData.Target = tgtPos;
                         var raycast = head.AddComponent<SRaycastMove>();
                         this.AttachBlood(head, tgt.Handle);
-
-                        raycast.AddCallback(hit.CallbackHandler);
+                        
                         raycast.AddCallback(this.AddBloodPool);
                         raycast.AddCallback(spin.Done);
-                        raycast.AddCallback(this.CallbackHandler);
+
+                        var callbackDelay = head.AddComponent<SDelayCallback>();
+                        callbackDelay.AddCallback(this.CallbackHandler);
+                        callbackDelay.AddCallback(hit.CallbackHandler);
+                        callbackDelay.Init(5f);
+
+
                         raycast.Init(raycastData);
                     }
                     else

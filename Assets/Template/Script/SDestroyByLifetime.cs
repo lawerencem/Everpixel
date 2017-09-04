@@ -17,7 +17,6 @@ namespace Assets.Template.Script
                 {
                     this.DoCallbacks();
                     GameObject.Destroy(this._destroy);
-                    GameObject.Destroy(this);
                 }
             }
         }

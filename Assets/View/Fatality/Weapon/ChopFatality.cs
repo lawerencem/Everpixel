@@ -42,16 +42,16 @@ namespace Assets.View.Fatality.Weapon
                     var bonePrefab = Resources.Load(bonePath);
                     var boneParticles = GameObject.Instantiate(bonePrefab) as GameObject;
                     boneParticles.transform.position = position;
-                    boneParticles.name = CombatGUIParams.CHOP_FATALITY + " Particles";
+                    boneParticles.name = CombatGUIParams.CHOP_FATALITY + " Bone Particles";
 
                     var bloodPrefab = Resources.Load(bloodPath);
                     var bloodParticles = GameObject.Instantiate(bloodPrefab) as GameObject;
                     bloodParticles.transform.position = position;
-                    bloodParticles.name = CombatGUIParams.CHOP_FATALITY + " Particles";
+                    bloodParticles.name = CombatGUIParams.CHOP_FATALITY + " Blood Particles";
 
                     var boneLifetime = boneParticles.AddComponent<SDestroyByLifetime>();
                     boneLifetime.Init(boneParticles, 5f);
-                    var bloodLifetime = boneParticles.AddComponent<SDestroyByLifetime>();
+                    var bloodLifetime = bloodParticles.AddComponent<SDestroyByLifetime>();
                     bloodLifetime.Init(bloodParticles, 5f);
 
                     var data = new SXAxisShakeData();

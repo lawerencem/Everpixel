@@ -47,8 +47,8 @@ namespace Assets.View.Fatality
             var zoom = this._data.Source.Handle.AddComponent<SHangCallbackZoomOut>();
             if (BarkManager.Instance.IsPreFatalityBark())
             {
-                zoom.AddCallback(this.BarkCallback);
                 this._postZoomCallback = callback;
+                zoom.AddCallback(this.BarkCallback);
             }
             else
             {
@@ -66,7 +66,6 @@ namespace Assets.View.Fatality
         {
             if (this._postZoomCallback == null)
                 BarkManager.Instance.ProcessPostFatalityBark(this._data);
-            this.AddBob(this);
             foreach (var callback in this._callbacks)
                 callback(this);
         }
@@ -97,6 +96,7 @@ namespace Assets.View.Fatality
             if (this._callbackQty == (this._data.FatalHits.Count + this._data.NonFatalHits.Count))
             {
                 GUIManager.Instance.SetComponentActiveForLifetime(GameObjectTags.FATALITY_BANNER, true, 4f);
+                this.AddBob(this);
                 this.DoCallbacks();
             }
         }
