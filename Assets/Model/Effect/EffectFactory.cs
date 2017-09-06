@@ -1,4 +1,5 @@
-﻿using Assets.Model.Effects.Will;
+﻿using Assets.Model.Effect.Other;
+using Assets.Model.Effect.Will;
 using Assets.Template.Other;
 
 namespace Assets.Model.Effect
@@ -12,6 +13,7 @@ namespace Assets.Model.Effect
             switch(effect)
             {
                 case (EEffect.Horror): { return new Horror(data); }
+                case (EEffect.Ween_Bullet): { return new WeenBullet(data); }
                 default: { return null; }
             }
         }

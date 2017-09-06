@@ -1,6 +1,4 @@
-﻿using Assets.Model.Effect;
-
-namespace Assets.Model.Effects.Will
+﻿namespace Assets.Model.Effect.Will
 {
     public class Horror : MEffect
     {
