@@ -45,13 +45,18 @@ namespace Assets.View.Ability
                 a.Data.Source.Proxy.GetLWeapon() != null &&
                 a.Data.Source.Proxy.GetLWeapon().CustomBullet)
             {
-                return this.GetSprite(a.Data.Source.Proxy.GetLWeapon().SpriteFXPath);
+                var path = StringUtil.PathBuilder(
+                    BULLET_PATH,
+                    a.Data.Source.Proxy.GetLWeapon().SpriteFXPath);
+                return this.GetSprite(path);
             }
-            else if (a.Data.LWeapon &&
-                a.Data.Source.Proxy.GetRWeapon() != null &&
+            else if (a.Data.Source.Proxy.GetRWeapon() != null &&
                 a.Data.Source.Proxy.GetRWeapon().CustomBullet)
             {
-                return this.GetSprite(a.Data.Source.Proxy.GetRWeapon().SpriteFXPath);
+                var path = StringUtil.PathBuilder(
+                    BULLET_PATH,
+                    a.Data.Source.Proxy.GetRWeapon().SpriteFXPath);
+                return this.GetSprite(path);
             }
             else
             {

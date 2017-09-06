@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Weapons>
   <EWeaponSkill name="Light_Crossbow">
-    <Weapon name="Ween Crossbow">
+    <Weapon name="Weenbow">
       <Tier>Five</Tier>
       <Accuracy_Mod>0.48</Accuracy_Mod>
       <AP_Mod>1.0</AP_Mod>
@@ -27,7 +27,7 @@
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
-    <Weapon name="Ween Crossbow">
+    <Weapon name="Weenbow">
       <Tier>Four</Tier>
       <Accuracy_Mod>0.52</Accuracy_Mod>
       <AP_Mod>1.0</AP_Mod>
@@ -53,7 +53,7 @@
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
-    <Weapon name="Ween Crossbow">
+    <Weapon name="Weenbow">
       <Tier>Three</Tier>
       <Accuracy_Mod>0.58</Accuracy_Mod>
       <AP_Mod>1.0</AP_Mod>
@@ -79,7 +79,7 @@
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
-    <Weapon name="Ween Crossbow">
+    <Weapon name="Weenbow">
       <Tier>Two</Tier>
       <Accuracy_Mod>0.62</Accuracy_Mod>
       <AP_Mod>1.0</AP_Mod>

@@ -544,6 +544,26 @@
         <Resolve>420</Resolve>
       </Stats>
     </Character>
+    <Character name ="Ween Blaster">
+      <Class>Warrior,3</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Orc</ERace>
+      <Perks>
+      </Perks>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Weenbow,Five</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>350</Constitution>
+        <Intelligence>120</Intelligence>
+        <Might>420</Might>
+        <Perception>550</Perception>
+        <Resolve>480</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Ween Rider">
       <Class>Warrior,3</Class>
       <Class>Berserker,2</Class>
