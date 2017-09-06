@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Cultures>
+  <Culture name="Roman">
+    <Character name ="Praetorian">
+      <Class>Fighter,5</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Helms name="One">
+          <Helm>1.0,Galea,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <LWeapons name="One">
+          <LWeapon>1.00,Scutum,Three</LWeapon>
+        </LWeapons>
+        <RWeapons name="One">
+          <RWeapon>1.00,Gladius,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>450</Agility>
+        <Constitution>520</Constitution>
+        <Intelligence>450</Intelligence>
+        <Might>520</Might>
+        <Perception>500</Perception>
+        <Resolve>470</Resolve>
+      </Stats>
+    </Character>
+  </Culture>
+</Cultures>

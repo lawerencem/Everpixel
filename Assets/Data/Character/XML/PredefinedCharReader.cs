@@ -29,7 +29,13 @@ namespace Assets.Data.Character.XML
 
         public PredefinedCharReader() : base()
         {
-            this._paths.Add("Assets/Data/Character/XML/PredefinedCharacters.xml");
+            this._paths.Add("Assets/Data/Character/XML/Amazonian.xml");
+            this._paths.Add("Assets/Data/Character/XML/Bretonnian.xml");
+            this._paths.Add("Assets/Data/Character/XML/Goblin.xml");
+            this._paths.Add("Assets/Data/Character/XML/Jomonese.xml");
+            this._paths.Add("Assets/Data/Character/XML/Norse.xml");
+            this._paths.Add("Assets/Data/Character/XML/Orcish.xml");
+            this._paths.Add("Assets/Data/Character/XML/Roman.xml");
         }
 
         public override void ReadFromFile()

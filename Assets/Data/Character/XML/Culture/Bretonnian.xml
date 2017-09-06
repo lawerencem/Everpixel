@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Cultures>
+  <Culture name ="Bretonnian">
+    <Character name ="Greatsword Footman">
+      <Class>Fighter,3</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>1.0,Mail Shirt,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>1.0,Mail Coif,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Claymore,Three</RWeapon>
+          <RWeapon>0.25,Zweihander,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>400</Agility>
+        <Constitution>550</Constitution>
+        <Intelligence>420</Intelligence>
+        <Might>550</Might>
+        <Perception>520</Perception>
+        <Resolve>400</Resolve>
+      </Stats>
+    </Character>
+  </Culture>
+</Cultures>

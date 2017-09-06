@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Cultures>
+  <Culture name ="Norse">
+    <Character name ="Gotland Footman">
+      <Class>Fighter,2</Class>
+      <Class>Soldier,4</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Penguin</ERace>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Mail Shirt,Four</Armor>
+          <Armor>0.20,Mail Shirt,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Mail Coif,Four</Helm>
+          <Helm>0.20,Mail Coif,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.80,Zweihander,Four</RWeapon>
+          <RWeapon>0.20,Zweihander,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>380</Agility>
+        <Constitution>600</Constitution>
+        <Intelligence>400</Intelligence>
+        <Might>520</Might>
+        <Perception>550</Perception>
+        <Resolve>410</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Raider">
+      <Class>Warrior,5</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Penguin</ERace>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.40,Broadsword,Five</RWeapon>
+          <RWeapon>0.10,Broadsword,Four</RWeapon>
+          <RWeapon>0.40,Hammen,Four</RWeapon>
+          <RWeapon>0.10,Hammen,Three</RWeapon>
+        </RWeapons>
+        <LWeapons name="One">
+          <LWeapon>0.80,Skjoldr,Five</LWeapon>
+          <LWeapon>0.20,Skjoldr,Four</LWeapon>
+        </LWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>640</Constitution>
+        <Intelligence>320</Intelligence>
+        <Might>550</Might>
+        <Perception>480</Perception>
+        <Resolve>380</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Nordic Sergeant">
+      <Class>Fighter,3</Class>
+      <Class>Soldier,3</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Penguin</ERace>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Mail Shirt,Four</Armor>
+          <Armor>0.20,Mail Shirt,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Spangenhelm,Four</Helm>
+          <Helm>0.20,Spangenhelm,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.80,Spear,Four</RWeapon>
+          <RWeapon>0.20,Spear,Three</RWeapon>
+        </RWeapons>
+        <LWeapons name="One">
+          <LWeapon>0.80,Kite Shield,Four</LWeapon>
+          <LWeapon>0.20,Kite Shield,Three</LWeapon>
+        </LWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>640</Constitution>
+        <Intelligence>320</Intelligence>
+        <Might>550</Might>
+        <Perception>480</Perception>
+        <Resolve>380</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Nordic Spearman">
+      <Class>Fighter,3</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Penguin</ERace>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Mail Shirt,Five</Armor>
+          <Armor>0.20,Mail Shirt,Four</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Spangenhelm,Five</Helm>
+          <Helm>0.20,Spangenhelm,Four</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.80,Spear,Five</RWeapon>
+          <RWeapon>0.20,Spear,Four</RWeapon>
+        </RWeapons>
+        <LWeapons name="One">
+          <LWeapon>0.80,Kite Shield,Five</LWeapon>
+          <LWeapon>0.20,Kite Shield,Four</LWeapon>
+        </LWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>640</Constitution>
+        <Intelligence>320</Intelligence>
+        <Might>550</Might>
+        <Perception>480</Perception>
+        <Resolve>380</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Viking">
+      <Class>Warrior,6</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Penguin</ERace>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Byrnie,Four</Armor>
+          <Armor>0.20,Byrnie,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Viking Casque,Four</Helm>
+          <Helm>0.20,Viking Casque,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.80,Hammen,Four</RWeapon>
+          <RWeapon>0.20,Hammen,Three</RWeapon>
+        </RWeapons>
+        <LWeapons name="One">
+          <LWeapon>0.80,Skjoldr,Four</LWeapon>
+          <LWeapon>0.20,Skjoldr,Three</LWeapon>
+        </LWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>640</Constitution>
+        <Intelligence>320</Intelligence>
+        <Might>550</Might>
+        <Perception>480</Perception>
+        <Resolve>380</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Wimpy Longaxer">
+      <Class>Warrior,3</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Penguin</ERace>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+        </Armors>
+        <Helms name="One">
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Longaxe,Five</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>640</Constitution>
+        <Intelligence>320</Intelligence>
+        <Might>550</Might>
+        <Perception>480</Perception>
+        <Resolve>380</Resolve>
+      </Stats>
+    </Character>
+  </Culture>
+</Cultures>
