@@ -15,7 +15,7 @@ namespace Assets.Model.Equipment.Type
         public double ArmorIgnore { get; set; }
         public double ArmorPierce { get; set; }
         public double BlockIgnore { get; set; }
-        public bool CustomFX { get; set; }
+        public bool CustomBullet { get; set; }
         public double Damage { get; set; }
         public string Description { get; set; }
         public double FatigueMod { get; set; }
@@ -25,6 +25,7 @@ namespace Assets.Model.Equipment.Type
         public double RangeMod { get; set; }
         public double ShieldDamagePercent { get; set; }
         public EWeaponSkill Skill { get; set; }
+        public string SpriteFXPath { get; set; }
         public double StaminaMod { get; set; }
         public EWeaponType WpnType { get; set; }
 

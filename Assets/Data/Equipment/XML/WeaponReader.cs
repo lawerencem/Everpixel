@@ -78,7 +78,7 @@ namespace Assets.Data.Equipment.XML
                 case ("Armor_Ignore"): { HandleStatsFromFile(name, EWeaponStat.Armor_Ignore, v, tier); } break;
                 case ("Armor_Pierce"): { HandleStatsFromFile(name, EWeaponStat.Armor_Pierce, v, tier); } break;
                 case ("Block_Ignore"): { HandleStatsFromFile(name, EWeaponStat.Block_Ignore, v, tier); } break;
-                case ("CustomBullet"): { this.HandleCustomBullet(name, value, tier); } break;
+                case ("Custom_Bullet"): { this.HandleCustomBullet(name, value, tier); } break;
                 case ("Damage"): { HandleStatsFromFile(name, EWeaponStat.Damage, v, tier); } break;
                 case ("Description"): { } break;
                 case ("Dodge_Mod"): { HandleStatsFromFile(name, EWeaponStat.Dodge_Mod, v, tier); } break;
@@ -89,7 +89,7 @@ namespace Assets.Data.Equipment.XML
                 case ("Range_Mod"): { HandleStatsFromFile(name, EWeaponStat.Range_Mod, v, tier); } break;
                 case ("Ranged_Block_Chance"): { HandleStatsFromFile(name, EWeaponStat.Ranged_Block_Chance, v, tier); } break;
                 case ("Sprites"): { HandleSpritesFromFile(name, value, tier); } break;
-                case ("SrpiteFXPath"): { this.HandleSpriteFXPath(name, value, tier); } break;
+                case ("Sprite_FX_Path"): { this.HandleSpriteFXPath(name, value, tier); } break;
                 case ("Shield_Damage"): { HandleStatsFromFile(name, EWeaponStat.Shield_Damage_Percent, v, tier); } break;
                 case ("Stamina_Mod"): { HandleStatsFromFile(name, EWeaponStat.Stamina_Mod, v, tier); } break;
                 case ("Value"): { HandleStatsFromFile(name, EWeaponStat.Value, v, tier); } break;

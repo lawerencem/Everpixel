@@ -489,7 +489,7 @@
     <None Include="Assets\Data\Ability\XML\Abilities.xml" />
     <None Include="Assets\Data\Ability\XML\WeaponAbilities.xml" />
     <None Include="Assets\Data\Bark\XML\Barks.xml" />
-    <None Include="Assets\Data\Character\XML\PredefinedCharacters.xml" />
+    <None Include="Assets\Data\Character\XML\Culture\Amazonian.xml" />
     <None Include="Assets\Data\Character\XML\PredefinedCritters.xml" />
     <None Include="Assets\Data\Character\XML\RaceParams.xml" />
     <None Include="Assets\Data\Class\XML\Classes.xml" />
@@ -542,6 +542,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Data\Equipment\XML\Weapon\Sword.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Character\XML\Culture\Bretonnian.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Character\XML\Culture\Goblin.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Character\XML\Culture\Jomonese.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Character\XML\Culture\Norse.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Character\XML\Culture\Orcish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Character\XML\Culture\Roman.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

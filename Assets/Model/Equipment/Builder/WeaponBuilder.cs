@@ -22,6 +22,7 @@ namespace Assets.Model.Equipment.Builder
             weapon.ArmorIgnore = wStats.ArmorIgnore;
             weapon.ArmorPierce = wStats.ArmorPierce;
             weapon.BlockIgnore = wStats.BlockIgnore;
+            weapon.CustomBullet = wStats.CustomBullet;
             weapon.Damage = wStats.Damage;
             weapon.Description = wStats.Description;
             weapon.Durability = wStats.MaxDurability;
@@ -34,6 +35,7 @@ namespace Assets.Model.Equipment.Builder
             weapon.RangeMod = wStats.RangeMod;
             weapon.ShieldDamagePercent = wStats.ShieldDamagePercent;
             weapon.Skill = wStats.Skill;
+            weapon.SpriteFXPath = wStats.SpriteFXPath;
             weapon.StaminaMod = wStats.StaminaMod;
             weapon.Tier = wStats.Tier;
             weapon.WpnType = wStats.Type;
