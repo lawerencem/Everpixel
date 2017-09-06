@@ -4,5 +4,6 @@
     {
         None,
         Horror,
+        Ween_Bullet,
     }
 }

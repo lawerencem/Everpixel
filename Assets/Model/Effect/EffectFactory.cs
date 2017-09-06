@@ -7,11 +7,11 @@ namespace Assets.Model.Effect
     {
         public EffectFactory() { }
 
-        public MEffect CreateNewObject(EEffect effect)
+        public MEffect CreateNewObject(EEffect effect, MEffectData data)
         {
             switch(effect)
             {
-                case (EEffect.Horror): { return new Horror(); }
+                case (EEffect.Horror): { return new Horror(data); }
                 default: { return null; }
             }
         }

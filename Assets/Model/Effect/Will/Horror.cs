@@ -1,16 +1,14 @@
-﻿using Assets.Model.Combat.Hit;
-using Assets.Model.Effect;
+﻿using Assets.Model.Effect;
 
 namespace Assets.Model.Effects.Will
 {
     public class Horror : MEffect
     {
-        public Horror() : base(EEffect.Horror) { }
+        public Horror(MEffectData data) : base(EEffect.Horror, data) { }
 
-        public override void TryProcessEffect(Hit hit)
+        public override void TryProcessHit()
         {
-            // TODO: Add via an event
-            //this.Target.Model.AddEffect(this);
+            // TODO
         }
     }
 }
