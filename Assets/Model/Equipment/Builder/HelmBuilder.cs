@@ -15,17 +15,17 @@ namespace Assets.Model.Equipment.Builder
         {
             var helm = new MHelm();
             var aStats = ArmorParamTable.Instance.Table[arg];
-            helm.APReduce = aStats.APReduce;
-            helm.BlockReduce = aStats.BlockReduce;
+            helm.APMod = aStats.APMod;
+            helm.BlockMod = aStats.BlockMod;
             helm.DamageIgnore = aStats.DamageIgnore;
-            helm.DamageReduction = aStats.DamageReduction;
+            helm.DamageMod = aStats.DamageMod;
             helm.DodgeMod = aStats.DodgeMod;
             helm.Durability = aStats.Durability;
-            helm.FatigueCost = aStats.FatigueCost;
-            helm.InitativeReduce = aStats.InitiativeReduce;
+            helm.FatigueMod = aStats.FatigueCost;
+            helm.InitativeMod = aStats.InitativeMod;
             helm.MaxDurability = aStats.Durability;
-            helm.ParryReduce = aStats.ParryReduce;
-            helm.StaminaReduce = aStats.StaminaReduce;
+            helm.ParryMod = aStats.ParryMod;
+            helm.StaminaMod = aStats.StaminaMod;
             helm.Tier = aStats.Tier;
             helm.ArmorType = aStats.Type;
             return helm;

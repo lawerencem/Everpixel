@@ -1,6 +1,5 @@
 ﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Effect;
-using Assets.Model.Effects.Will;
 using Assets.Template.Util;
 using Assets.Template.XML;
 using System.Xml.Linq;
@@ -46,7 +45,6 @@ namespace Assets.Data.Effect.XML
                                     var effect = EEffect.None;
                                     if (EnumUtil<EEffect>.TryGetEnumValue(attr.Value, ref effect))
                                     {
-                                        this.HandleType(effect);
                                         foreach (var elem in ele.Elements())
                                         {
                                             this.HandleIndex(resist, effect, elem, elem.Name.ToString(), elem.Value);
@@ -65,12 +63,5 @@ namespace Assets.Data.Effect.XML
 
         }
 
-        private void HandleType(EEffect e)
-        {
-            switch(e)
-            {
-                case (EEffect.Horror): { EffectTable.Instance.Table[e] = new Horror(); } break;
-            }
-        }
     }
 }

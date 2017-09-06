@@ -24,6 +24,20 @@ namespace Assets.View.Ability
 
         public GameObject GetBullet(MAction a, Callback callback, float speed)
         {
+            if (a.Data.LWeapon && 
+                a.Data.Source.Proxy.GetLWeapon() != null &&
+                a.Data.Source.Proxy.GetLWeapon().CustomFX)
+            {
+                return this.GetWeaponBullet(a, callback, speed);
+            }
+            else
+            {
+                return this.GetAbilityBullet(a, callback, speed);
+            }
+        }
+
+        private GameObject GetAbilityBullet(MAction a, Callback callback, float speed)
+        {
             var bullet = new GameObject();
             var raycast = bullet.AddComponent<SBullet>();
             raycast.Action = a;
@@ -46,6 +60,11 @@ namespace Assets.View.Ability
                 return stuff[1] as Sprite;
             else
                 return null;
+        }
+
+        private GameObject GetWeaponBullet(MAction a, Callback callback, float speed)
+        {
+            return new GameObject(); // TODO
         }
     }
 }

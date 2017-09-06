@@ -16,17 +16,17 @@ namespace Assets.Model.Equipment.Builder
         {
             var armor = new MArmor();
             var aStats = ArmorParamTable.Instance.Table[arg];
-            armor.APReduce = aStats.APReduce;
-            armor.BlockReduce = aStats.BlockReduce;
-            armor.DamageIgnore = aStats.DamageIgnore;
-            armor.DamageReduction = aStats.DamageReduction;
+            armor.APMod = aStats.APMod;
+            armor.BlockMod = aStats.BlockMod;
+            armor.FlatDamageIgnore = aStats.DamageIgnore;
+            armor.DamageMod = aStats.DamageMod;
             armor.DodgeMod = aStats.DodgeMod;
             armor.Durability = aStats.Durability;
-            armor.FatigueCost = aStats.FatigueCost;
-            armor.InitativeReduce = aStats.InitiativeReduce;
+            armor.FatigueMod = aStats.FatigueCost;
+            armor.InitativeMod = aStats.InitativeMod;
             armor.MaxDurability = aStats.Durability;
-            armor.ParryReduce = aStats.ParryReduce;
-            armor.StaminaReduce = aStats.StaminaReduce;
+            armor.ParryMod = aStats.ParryMod;
+            armor.StaminaMod = aStats.StaminaMod;
             armor.Tier = aStats.Tier;
             armor.ArmorType = aStats.Type;
             return armor;

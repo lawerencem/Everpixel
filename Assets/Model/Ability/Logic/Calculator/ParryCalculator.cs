@@ -17,9 +17,9 @@ namespace Assets.Model.Ability.Logic.Calculator
             var tgt = hit.Data.Target.Current as CharController;
 
             if (hit.Data.Source.Proxy.GetArmor() != null)
-                parryChance *= hit.Data.Source.Proxy.GetArmor().ParryReduce;
+                parryChance *= hit.Data.Source.Proxy.GetArmor().ParryMod;
             if (hit.Data.Source.Proxy.GetHelm() != null)
-                parryChance *= hit.Data.Source.Proxy.GetHelm().ParryReduce;
+                parryChance *= hit.Data.Source.Proxy.GetHelm().ParryMod;
             if (hit.Data.Source.Proxy.GetLWeapon() != null)
                 parryChance *= hit.Data.Source.Proxy.GetLWeapon().ParryMod;
             if (hit.Data.Source.Proxy.GetRWeapon() != null)

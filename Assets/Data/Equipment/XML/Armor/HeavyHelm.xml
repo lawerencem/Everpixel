@@ -3,240 +3,240 @@
   <EArmorType name ="Heavy_Helm">
     <Armor name="Great Helm">
       <Tier>Five</Tier>
-      <AP_Reduce>0.76</AP_Reduce>
-      <Block_Reduce>0.72</Block_Reduce>
-      <Damage_Ignore>7</Damage_Ignore>
+      <AP_Mod>0.76</AP_Mod>
+      <Block_Mod>0.72</Block_Mod>
+      <Flat_Damage_Ignore>7</Flat_Damage_Ignore>
       <Damage_Reduction>0.52</Damage_Reduction>
       <Description>
         Even rusty and decaying, this helm still provides good defense. Conveniently, parts of the eye holes have rusted out.
       </Description>
-      <Dodge_Reduce>0.62</Dodge_Reduce>
+      <Dodge_Mod>0.62</Dodge_Mod>
       <Durability>50</Durability>
-      <Fatigue_Cost>1.28</Fatigue_Cost>
-      <Initiative_Reduce>0.72</Initiative_Reduce>
-      <Parry_Reduce>0.72</Parry_Reduce>
+      <Fatigue_Mod>1.28</Fatigue_Mod>
+      <Initiative_Mod>0.72</Initiative_Mod>
+      <Parry_Mod>0.72</Parry_Mod>
       <Sprites>0</Sprites>
-      <Stamina_Reduce>0.72</Stamina_Reduce>
+      <Stamina_Mod>0.72</Stamina_Mod>
       <Value>800</Value>
     </Armor>
     <Armor name="Great Helm">
       <Tier>Four</Tier>
-      <AP_Reduce>0.78</AP_Reduce>
-      <Block_Reduce>0.74</Block_Reduce>
-      <Damage_Ignore>8</Damage_Ignore>
+      <AP_Mod>0.78</AP_Mod>
+      <Block_Mod>0.74</Block_Mod>
+      <Flat_Damage_Ignore>8</Flat_Damage_Ignore>
       <Damage_Reduction>0.50</Damage_Reduction>
       <Description>
         This helm looks like someone took a bucket and nailed holes through it, and then called it a helm.  Whatever - it
         still provides solid protection.
       </Description>
-      <Dodge_Reduce>0.64</Dodge_Reduce>
+      <Dodge_Mod>0.64</Dodge_Mod>
       <Durability>150</Durability>
-      <Fatigue_Cost>0.74</Fatigue_Cost>
-      <Initiative_Reduce>0.74</Initiative_Reduce>
-      <Parry_Reduce>0.74</Parry_Reduce>
+      <Fatigue_Mod>0.74</Fatigue_Mod>
+      <Initiative_Mod>0.74</Initiative_Mod>
+      <Parry_Mod>0.74</Parry_Mod>
       <Sprites>15</Sprites>
-      <Stamina_Reduce>0.74</Stamina_Reduce>
+      <Stamina_Mod>0.74</Stamina_Mod>
       <Value>1500</Value>
     </Armor>
     <Armor name="Great Helm">
       <Tier>Three</Tier>
-      <AP_Reduce>0.75</AP_Reduce>
-      <Block_Reduce>0.75</Block_Reduce>
-      <Damage_Ignore>9</Damage_Ignore>
+      <AP_Mod>0.75</AP_Mod>
+      <Block_Mod>0.75</Block_Mod>
+      <Flat_Damage_Ignore>9</Flat_Damage_Ignore>
       <Damage_Reduction>0.46</Damage_Reduction>
       <Description>
         This is a quality-made helm.  It offers incredible protection, but the lack of curvature can be susceptible to
         piercing attacks.
       </Description>
-      <Dodge_Reduce>0.65</Dodge_Reduce>
+      <Dodge_Mod>0.65</Dodge_Mod>
       <Durability>220</Durability>
-      <Fatigue_Cost>0.75</Fatigue_Cost>
-      <Initiative_Reduce>0.75</Initiative_Reduce>
-      <Parry_Reduce>0.75</Parry_Reduce>
+      <Fatigue_Mod>0.75</Fatigue_Mod>
+      <Initiative_Mod>0.75</Initiative_Mod>
+      <Parry_Mod>0.75</Parry_Mod>
       <Sprites>30,31</Sprites>
-      <Stamina_Reduce>0.75</Stamina_Reduce>
+      <Stamina_Mod>0.75</Stamina_Mod>
       <Value>3500</Value>
     </Armor>
     <Armor name="Jousting Helm">
       <Tier>Four</Tier>
-      <AP_Reduce>0.80</AP_Reduce>
-      <Block_Reduce>0.60</Block_Reduce>
-      <Damage_Ignore>18</Damage_Ignore>
+      <AP_Mod>0.80</AP_Mod>
+      <Block_Mod>0.60</Block_Mod>
+      <Flat_Damage_Ignore>18</Flat_Damage_Ignore>
       <Damage_Reduction>0.80</Damage_Reduction>
       <Description>
         This jousting helm was made with tournaments in mind.  It isn't flexible, but it is light.  Since it was made with
         jousting in mind, the curved nature of it provides superior piercing protection.
       </Description>
-      <Dodge_Reduce>0.60</Dodge_Reduce>
+      <Dodge_Mod>0.60</Dodge_Mod>
       <Durability>100</Durability>
-      <Fatigue_Cost>0.80</Fatigue_Cost>
-      <Initiative_Reduce>0.80</Initiative_Reduce>
-      <Parry_Reduce>0.60</Parry_Reduce>
+      <Fatigue_Mod>0.80</Fatigue_Mod>
+      <Initiative_Mod>0.80</Initiative_Mod>
+      <Parry_Mod>0.60</Parry_Mod>
       <Sprites>18</Sprites>
-      <Stamina_Reduce>0.80</Stamina_Reduce>
+      <Stamina_Mod>0.80</Stamina_Mod>
       <Value>1800</Value>
     </Armor>
     <Armor name="Kabuto">
       <Tier>Five</Tier>
-      <AP_Reduce>0.94</AP_Reduce>
-      <Block_Reduce>0.40</Block_Reduce>
-      <Damage_Ignore>8</Damage_Ignore>
+      <AP_Mod>0.94</AP_Mod>
+      <Block_Mod>0.40</Block_Mod>
+      <Flat_Damage_Ignore>8</Flat_Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
         The helmet preferred by samurai (well, maybe not this one...)
       </Description>
-      <Dodge_Reduce>0.84</Dodge_Reduce>
+      <Dodge_Mod>0.84</Dodge_Mod>
       <Durability>15</Durability>
-      <Fatigue_Cost>1.05</Fatigue_Cost>
-      <Initiative_Reduce>0.94</Initiative_Reduce>
-      <Parry_Reduce>0.97</Parry_Reduce>
+      <Fatigue_Mod>1.05</Fatigue_Mod>
+      <Initiative_Mod>0.94</Initiative_Mod>
+      <Parry_Mod>0.97</Parry_Mod>
       <Sprites>12,13,14</Sprites>
-      <Stamina_Reduce>0.82</Stamina_Reduce>
+      <Stamina_Mod>0.82</Stamina_Mod>
       <Value>200</Value>
     </Armor>
     <Armor name="Kabuto">
       <Tier>Four</Tier>
-      <AP_Reduce>0.96</AP_Reduce>
-      <Block_Reduce>0.40</Block_Reduce>
-      <Damage_Ignore>9</Damage_Ignore>
+      <AP_Mod>0.96</AP_Mod>
+      <Block_Mod>0.40</Block_Mod>
+      <Flat_Damage_Ignore>9</Flat_Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
         The helmet preferred by samurai.
       </Description>
-      <Dodge_Reduce>0.86</Dodge_Reduce>
+      <Dodge_Mod>0.86</Dodge_Mod>
       <Durability>25</Durability>
-      <Fatigue_Cost>1.04</Fatigue_Cost>
-      <Initiative_Reduce>0.95</Initiative_Reduce>
-      <Parry_Reduce>0.97</Parry_Reduce>
+      <Fatigue_Mod>1.04</Fatigue_Mod>
+      <Initiative_Mod>0.95</Initiative_Mod>
+      <Parry_Mod>0.97</Parry_Mod>
       <Sprites>27,28,29</Sprites>
-      <Stamina_Reduce>0.84</Stamina_Reduce>
+      <Stamina_Mod>0.84</Stamina_Mod>
       <Value>350</Value>
     </Armor>
     <Armor name="Kabuto">
       <Tier>Three</Tier>
-      <AP_Reduce>0.97</AP_Reduce>
-      <Block_Reduce>0.40</Block_Reduce>
-      <Damage_Ignore>10</Damage_Ignore>
+      <AP_Mod>0.97</AP_Mod>
+      <Block_Mod>0.40</Block_Mod>
+      <Flat_Damage_Ignore>10</Flat_Damage_Ignore>
       <Damage_Reduction>0.98</Damage_Reduction>
       <Description>
         The helmet preferred by samurai.
       </Description>
-      <Dodge_Reduce>0.88</Dodge_Reduce>
+      <Dodge_Mod>0.88</Dodge_Mod>
       <Durability>40</Durability>
-      <Fatigue_Cost>1.03</Fatigue_Cost>
-      <Initiative_Reduce>0.97</Initiative_Reduce>
-      <Parry_Reduce>0.98</Parry_Reduce>
+      <Fatigue_Mod>1.03</Fatigue_Mod>
+      <Initiative_Mod>0.97</Initiative_Mod>
+      <Parry_Mod>0.98</Parry_Mod>
       <Sprites>42,43,44</Sprites>
-      <Stamina_Reduce>0.86</Stamina_Reduce>
+      <Stamina_Mod>0.86</Stamina_Mod>
       <Value>550</Value>
     </Armor>
     <Armor name="Kabuto">
       <Tier>Two</Tier>
-      <AP_Reduce>0.97</AP_Reduce>
-      <Block_Reduce>0.40</Block_Reduce>
-      <Damage_Ignore>12</Damage_Ignore>
+      <AP_Mod>0.97</AP_Mod>
+      <Block_Mod>0.40</Block_Mod>
+      <Flat_Damage_Ignore>12</Flat_Damage_Ignore>
       <Damage_Reduction>0.97</Damage_Reduction>
       <Description>
         The helmet preferred by samurai.
       </Description>
-      <Dodge_Reduce>0.90</Dodge_Reduce>
+      <Dodge_Mod>0.90</Dodge_Mod>
       <Durability>55</Durability>
-      <Fatigue_Cost>1.02</Fatigue_Cost>
-      <Initiative_Reduce>0.98</Initiative_Reduce>
-      <Parry_Reduce>0.99</Parry_Reduce>
+      <Fatigue_Mod>1.02</Fatigue_Mod>
+      <Initiative_Mod>0.98</Initiative_Mod>
+      <Parry_Mod>0.99</Parry_Mod>
       <Sprites>57,58,59</Sprites>
-      <Stamina_Reduce>0.89</Stamina_Reduce>
+      <Stamina_Mod>0.89</Stamina_Mod>
       <Value>850</Value>
     </Armor>
     <Armor name="Orc Mask">
       <Tier>Five</Tier>
-      <AP_Reduce>0.76</AP_Reduce>
-      <Block_Reduce>0.76</Block_Reduce>
-      <Damage_Ignore>6</Damage_Ignore>
+      <AP_Mod>0.76</AP_Mod>
+      <Block_Mod>0.76</Block_Mod>
+      <Flat_Damage_Ignore>6</Flat_Damage_Ignore>
       <Damage_Reduction>0.80</Damage_Reduction>
       <Description>
         Broken and well-used, this mask is still offers effective protection.  For the parts of the head it covers, anyways.
       </Description>
-      <Dodge_Reduce>0.76</Dodge_Reduce>
+      <Dodge_Mod>0.76</Dodge_Mod>
       <Durability>50</Durability>
-      <Fatigue_Cost>1.20</Fatigue_Cost>
-      <Initiative_Reduce>0.76</Initiative_Reduce>
-      <Parry_Reduce>0.76</Parry_Reduce>
+      <Fatigue_Mod>1.20</Fatigue_Mod>
+      <Initiative_Mod>0.76</Initiative_Mod>
+      <Parry_Mod>0.76</Parry_Mod>
       <Sprites>5,6,7</Sprites>
-      <Stamina_Reduce>0.76</Stamina_Reduce>
+      <Stamina_Mod>0.76</Stamina_Mod>
       <Value>300</Value>
     </Armor>
     <Armor name="Orc Mask">
       <Tier>Four</Tier>
-      <AP_Reduce>0.78</AP_Reduce>
-      <Block_Reduce>0.78</Block_Reduce>
-      <Damage_Ignore>7</Damage_Ignore>
+      <AP_Mod>0.78</AP_Mod>
+      <Block_Mod>0.78</Block_Mod>
+      <Flat_Damage_Ignore>7</Flat_Damage_Ignore>
       <Damage_Reduction>0.78</Damage_Reduction>
       <Description>
         Not pretty, but this mask coves the top-half of the head quite well.  Effective protection against wild overhead swings.
       </Description>
-      <Dodge_Reduce>0.78</Dodge_Reduce>
+      <Dodge_Mod>0.78</Dodge_Mod>
       <Durability>80</Durability>
-      <Fatigue_Cost>1.25</Fatigue_Cost>
-      <Initiative_Reduce>0.78</Initiative_Reduce>
-      <Parry_Reduce>0.78</Parry_Reduce>
+      <Fatigue_Mod>1.25</Fatigue_Mod>
+      <Initiative_Mod>0.78</Initiative_Mod>
+      <Parry_Mod>0.78</Parry_Mod>
       <Sprites>20,21,22</Sprites>
-      <Stamina_Reduce>0.78</Stamina_Reduce>
+      <Stamina_Mod>0.78</Stamina_Mod>
       <Value>600</Value>
     </Armor>
     <Armor name="Orc Mask">
       <Tier>Three</Tier>
-      <AP_Reduce>0.75</AP_Reduce>
-      <Block_Reduce>0.75</Block_Reduce>
-      <Damage_Ignore>12</Damage_Ignore>
+      <AP_Mod>0.75</AP_Mod>
+      <Block_Mod>0.75</Block_Mod>
+      <Flat_Damage_Ignore>12</Flat_Damage_Ignore>
       <Damage_Reduction>0.74</Damage_Reduction>
       <Description>
         This helmet is extremely heavy.  For those with the stamina to wear it, it offers exceptional protection.
       </Description>
-      <Dodge_Reduce>0.75</Dodge_Reduce>
+      <Dodge_Mod>0.75</Dodge_Mod>
       <Durability>140</Durability>
-      <Fatigue_Cost>1.30</Fatigue_Cost>
-      <Initiative_Reduce>0.75</Initiative_Reduce>
-      <Parry_Reduce>0.75</Parry_Reduce>
+      <Fatigue_Mod>1.30</Fatigue_Mod>
+      <Initiative_Mod>0.75</Initiative_Mod>
+      <Parry_Mod>0.75</Parry_Mod>
       <Sprites>35,36,37</Sprites>
-      <Stamina_Reduce>0.75</Stamina_Reduce>
+      <Stamina_Mod>0.75</Stamina_Mod>
       <Value>2200</Value>
     </Armor>
     <Armor name="Orc Mask">
       <Tier>Two</Tier>
-      <AP_Reduce>0.70</AP_Reduce>
-      <Block_Reduce>0.70</Block_Reduce>
-      <Damage_Ignore>15</Damage_Ignore>
+      <AP_Mod>0.70</AP_Mod>
+      <Block_Mod>0.70</Block_Mod>
+      <Flat_Damage_Ignore>15</Flat_Damage_Ignore>
       <Damage_Reduction>0.62</Damage_Reduction>
       <Description>
         This helmet is ludicrously-heavy.  For anyone strong enough to wear it, it offers peerless protection.
       </Description>
-      <Dodge_Reduce>0.70</Dodge_Reduce>
+      <Dodge_Mod>0.70</Dodge_Mod>
       <Durability>220</Durability>
-      <Fatigue_Cost>1.40</Fatigue_Cost>
-      <Initiative_Reduce>40</Initiative_Reduce>
-      <Parry_Reduce>0.70</Parry_Reduce>
+      <Fatigue_Mod>1.40</Fatigue_Mod>
+      <Initiative_Mod>40</Initiative_Mod>
+      <Parry_Mod>0.70</Parry_Mod>
       <Sprites>50,51,52</Sprites>
-      <Stamina_Reduce>0.70</Stamina_Reduce>
+      <Stamina_Mod>0.70</Stamina_Mod>
       <Value>3500</Value>
     </Armor>
     <Armor name="Sallet">
       <Tier>Three</Tier>
-      <AP_Reduce>0.78</AP_Reduce>
-      <Block_Reduce>0.70</Block_Reduce>
-      <Damage_Ignore>13</Damage_Ignore>
+      <AP_Mod>0.78</AP_Mod>
+      <Block_Mod>0.70</Block_Mod>
+      <Flat_Damage_Ignore>13</Flat_Damage_Ignore>
       <Damage_Reduction>0.60</Damage_Reduction>
       <Description>
         This sturdy helm provides excellent protection and doesn't restrict too much movement.  The curved nature of it
         provides better-than-usual protection against piercing attacks.
       </Description>
-      <Dodge_Reduce>0.70</Dodge_Reduce>
+      <Dodge_Mod>0.70</Dodge_Mod>
       <Durability>250</Durability>
-      <Fatigue_Cost>1.25</Fatigue_Cost>
-      <Initiative_Reduce>0.75</Initiative_Reduce>
-      <Parry_Reduce>0.75</Parry_Reduce>
+      <Fatigue_Mod>1.25</Fatigue_Mod>
+      <Initiative_Mod>0.75</Initiative_Mod>
+      <Parry_Mod>0.75</Parry_Mod>
       <Sprites>34</Sprites>
-      <Stamina_Reduce>0.75</Stamina_Reduce>
+      <Stamina_Mod>0.75</Stamina_Mod>
       <Value>3200</Value>
     </Armor>
   </EArmorType>

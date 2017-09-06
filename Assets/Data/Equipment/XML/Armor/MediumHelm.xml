@@ -3,398 +3,398 @@
   <EArmorType name ="Medium_Helm">
     <Armor name="Dino Scale Helm">
       <Tier>Five</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
-      <Damage_Ignore>2</Damage_Ignore>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>2</Flat_Damage_Ignore>
       <Damage_Reduction>0.97</Damage_Reduction>
       <Description>
         This cap is missing some scales and doesn't look to offer much protection...
       </Description>
-      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Dodge_Mod>1.0</Dodge_Mod>
       <Durability>5</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1.0</Initiative_Reduce>
-      <Parry_Reduce>1.0</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.0</Initiative_Mod>
+      <Parry_Mod>1.0</Parry_Mod>
       <Sprites>20</Sprites>
-      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Stamina_Mod>1.0</Stamina_Mod>
       <Value>50</Value>
     </Armor>
     <Armor name="Dino Scale Helm">
       <Tier>Four</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
-      <Damage_Ignore>3</Damage_Ignore>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>3</Flat_Damage_Ignore>
       <Damage_Reduction>0.95</Damage_Reduction>
       <Description>
         At least the cap looks cool?
       </Description>
-      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Dodge_Mod>1.0</Dodge_Mod>
       <Durability>15</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1.0</Initiative_Reduce>
-      <Parry_Reduce>1.0</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.0</Initiative_Mod>
+      <Parry_Mod>1.0</Parry_Mod>
       <Sprites>35</Sprites>
-      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Stamina_Mod>1.0</Stamina_Mod>
       <Value>120</Value>
     </Armor>
     <Armor name="Dino Scale Helm">
       <Tier>Three</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
-      <Damage_Ignore>4</Damage_Ignore>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>4</Flat_Damage_Ignore>
       <Damage_Reduction>0.92</Damage_Reduction>
       <Description>
         At least the cap looks cool?
       </Description>
-      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Dodge_Mod>1.0</Dodge_Mod>
       <Durability>25</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1.0</Initiative_Reduce>
-      <Parry_Reduce>1.0</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.0</Initiative_Mod>
+      <Parry_Mod>1.0</Parry_Mod>
       <Sprites>35</Sprites>
-      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Stamina_Mod>1.0</Stamina_Mod>
       <Value>120</Value>
     </Armor>
     <Armor name="Dino Scale Helm">
       <Tier>Two</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
-      <Damage_Ignore>5</Damage_Ignore>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>5</Flat_Damage_Ignore>
       <Damage_Reduction>0.86</Damage_Reduction>
       <Description>
         At least the cap looks cool?
       </Description>
-      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Dodge_Mod>1.0</Dodge_Mod>
       <Durability>35</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1.0</Initiative_Reduce>
-      <Parry_Reduce>1.0</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.0</Initiative_Mod>
+      <Parry_Mod>1.0</Parry_Mod>
       <Sprites>50</Sprites>
-      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Stamina_Mod>1.0</Stamina_Mod>
       <Value>250</Value>
     </Armor>
     <Armor name="Galea">
       <Tier>Four</Tier>
-      <AP_Reduce>0.84</AP_Reduce>
-      <Block_Reduce>0.94</Block_Reduce>
-      <Damage_Ignore>5</Damage_Ignore>
+      <AP_Mod>0.84</AP_Mod>
+      <Block_Mod>0.94</Block_Mod>
+      <Flat_Damage_Ignore>5</Flat_Damage_Ignore>
       <Damage_Reduction>0.86</Damage_Reduction>
       <Description>
         This helm is of the type favored by legionnaires.  It provides solid defense without weighing much.
       </Description>
-      <Dodge_Reduce>0.94</Dodge_Reduce>
+      <Dodge_Mod>0.94</Dodge_Mod>
       <Durability>55</Durability>
-      <Fatigue_Cost>1.08</Fatigue_Cost>
-      <Initiative_Reduce>0.89</Initiative_Reduce>
-      <Parry_Reduce>0.94</Parry_Reduce>
+      <Fatigue_Mod>1.08</Fatigue_Mod>
+      <Initiative_Mod>0.89</Initiative_Mod>
+      <Parry_Mod>0.94</Parry_Mod>
       <Sprites>17</Sprites>
-      <Stamina_Reduce>0.84</Stamina_Reduce>
+      <Stamina_Mod>0.84</Stamina_Mod>
       <Value>350</Value>
     </Armor>
     <Armor name="Galea">
       <Tier>Three</Tier>
-      <AP_Reduce>0.85</AP_Reduce>
-      <Block_Reduce>0.95</Block_Reduce>
-      <Damage_Ignore>6</Damage_Ignore>
+      <AP_Mod>0.85</AP_Mod>
+      <Block_Mod>0.95</Block_Mod>
+      <Flat_Damage_Ignore>6</Flat_Damage_Ignore>
       <Damage_Reduction>0.85</Damage_Reduction>
       <Description>
         This helm is of the type favored by legionnaires.  It provides solid defense without weighing much.
       </Description>
-      <Dodge_Reduce>0.95</Dodge_Reduce>
+      <Dodge_Mod>0.95</Dodge_Mod>
       <Durability>70</Durability>
-      <Fatigue_Cost>1.07</Fatigue_Cost>
-      <Initiative_Reduce>0.90</Initiative_Reduce>
-      <Parry_Reduce>0.95</Parry_Reduce>
+      <Fatigue_Mod>1.07</Fatigue_Mod>
+      <Initiative_Mod>0.90</Initiative_Mod>
+      <Parry_Mod>0.95</Parry_Mod>
       <Sprites>32</Sprites>
-      <Stamina_Reduce>0.85</Stamina_Reduce>
+      <Stamina_Mod>0.85</Stamina_Mod>
       <Value>550</Value>
     </Armor>
     <Armor name="Goblin Cap">
       <Tier>Five</Tier>
-      <AP_Reduce>0.93</AP_Reduce>
-      <Block_Reduce>0.98</Block_Reduce>
-      <Damage_Ignore>1</Damage_Ignore>
+      <AP_Mod>0.93</AP_Mod>
+      <Block_Mod>0.98</Block_Mod>
+      <Flat_Damage_Ignore>1</Flat_Damage_Ignore>
       <Damage_Reduction>0.97</Damage_Reduction>
       <Description>
         Just a goblin cap.
       </Description>
-      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Dodge_Mod>0.98</Dodge_Mod>
       <Durability>5</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>0.98</Initiative_Reduce>
-      <Parry_Reduce>0.98</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>0.98</Initiative_Mod>
+      <Parry_Mod>0.98</Parry_Mod>
       <Sprites>4</Sprites>
-      <Stamina_Reduce>0.98</Stamina_Reduce>
+      <Stamina_Mod>0.98</Stamina_Mod>
       <Value>30</Value>
     </Armor>
     <Armor name="Goblin Cap">
       <Tier>Four</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.99</Block_Reduce>
-      <Damage_Ignore>1</Damage_Ignore>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.99</Block_Mod>
+      <Flat_Damage_Ignore>1</Flat_Damage_Ignore>
       <Damage_Reduction>0.96</Damage_Reduction>
       <Description>
         Just a goblin cap.
       </Description>
-      <Dodge_Reduce>0.99</Dodge_Reduce>
+      <Dodge_Mod>0.99</Dodge_Mod>
       <Durability>10</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>0.99</Initiative_Reduce>
-      <Parry_Reduce>0.99</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>0.99</Initiative_Mod>
+      <Parry_Mod>0.99</Parry_Mod>
       <Sprites>19</Sprites>
-      <Stamina_Reduce>0.99</Stamina_Reduce>
+      <Stamina_Mod>0.99</Stamina_Mod>
       <Value>70</Value>
     </Armor>
     <Armor name="Goblin Cap">
       <Tier>Three</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
-      <Damage_Ignore>1</Damage_Ignore>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>1</Flat_Damage_Ignore>
       <Damage_Reduction>0.95</Damage_Reduction>
       <Description>
         Just a goblin cap.
       </Description>
-      <Dodge_Reduce>1</Dodge_Reduce>
+      <Dodge_Mod>1</Dodge_Mod>
       <Durability>20</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1</Initiative_Reduce>
-      <Parry_Reduce>1</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
       <Sprites>34</Sprites>
-      <Stamina_Reduce>1</Stamina_Reduce>
+      <Stamina_Mod>1</Stamina_Mod>
       <Value>150</Value>
     </Armor>
     <Armor name="Goblin Cap">
       <Tier>Two</Tier>
-      <AP_Reduce>0.96</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
-      <Damage_Ignore>2</Damage_Ignore>
+      <AP_Mod>0.96</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>2</Flat_Damage_Ignore>
       <Damage_Reduction>0.95</Damage_Reduction>
       <Description>
         Just a goblin cap.
       </Description>
-      <Dodge_Reduce>1</Dodge_Reduce>
+      <Dodge_Mod>1</Dodge_Mod>
       <Durability>35</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1</Initiative_Reduce>
-      <Parry_Reduce>1</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
       <Sprites>49</Sprites>
-      <Stamina_Reduce>1</Stamina_Reduce>
+      <Stamina_Mod>1</Stamina_Mod>
       <Value>250</Value>
     </Armor>
     <Armor name="Mail Coif">
       <Tier>Five</Tier>
-      <AP_Reduce>0.94</AP_Reduce>
-      <Block_Reduce>0.94</Block_Reduce>
-      <Damage_Ignore>2</Damage_Ignore>
+      <AP_Mod>0.94</AP_Mod>
+      <Block_Mod>0.94</Block_Mod>
+      <Flat_Damage_Ignore>2</Flat_Damage_Ignore>
       <Damage_Reduction>0.93</Damage_Reduction>
       <Description>
         A simple mail coif.  It doesn't protect the face much, but it's sure better than nothing.
       </Description>
-      <Dodge_Reduce>0.97</Dodge_Reduce>
+      <Dodge_Mod>0.97</Dodge_Mod>
       <Durability>15</Durability>
-      <Fatigue_Cost>0.87</Fatigue_Cost>
-      <Initiative_Reduce>0.87</Initiative_Reduce>
-      <Parry_Reduce>0.87</Parry_Reduce>
+      <Fatigue_Mod>0.87</Fatigue_Mod>
+      <Initiative_Mod>0.87</Initiative_Mod>
+      <Parry_Mod>0.87</Parry_Mod>
       <Sprites>0</Sprites>
-      <Stamina_Reduce>0.87</Stamina_Reduce>
+      <Stamina_Mod>0.87</Stamina_Mod>
       <Value>50</Value>
     </Armor>
     <Armor name="Mail Coif">
       <Tier>Four</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.95</Block_Reduce>
-      <Damage_Ignore>2</Damage_Ignore>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.95</Block_Mod>
+      <Flat_Damage_Ignore>2</Flat_Damage_Ignore>
       <Damage_Reduction>0.92</Damage_Reduction>
       <Description>
         A simple mail coif.  It doesn't protect the face much, but it's sure better than nothing.
       </Description>
-      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Dodge_Mod>0.98</Dodge_Mod>
       <Durability>30</Durability>
-      <Fatigue_Cost>0.89</Fatigue_Cost>
-      <Initiative_Reduce>0.89</Initiative_Reduce>
-      <Parry_Reduce>0.89</Parry_Reduce>
+      <Fatigue_Mod>0.89</Fatigue_Mod>
+      <Initiative_Mod>0.89</Initiative_Mod>
+      <Parry_Mod>0.89</Parry_Mod>
       <Sprites>15</Sprites>
-      <Stamina_Reduce>0.89</Stamina_Reduce>
+      <Stamina_Mod>0.89</Stamina_Mod>
       <Value>100</Value>
     </Armor>
     <Armor name="Mail Coif">
       <Tier>Three</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.95</Block_Reduce>
-      <Damage_Ignore>2</Damage_Ignore>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.95</Block_Mod>
+      <Flat_Damage_Ignore>2</Flat_Damage_Ignore>
       <Damage_Reduction>0.90</Damage_Reduction>
       <Description>
         A simple mail coif.  It offers decent protection for its weight.
       </Description>
-      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Dodge_Mod>0.98</Dodge_Mod>
       <Durability>40</Durability>
-      <Fatigue_Cost>1.10</Fatigue_Cost>
-      <Initiative_Reduce>0.90</Initiative_Reduce>
-      <Parry_Reduce>0.90</Parry_Reduce>
+      <Fatigue_Mod>1.10</Fatigue_Mod>
+      <Initiative_Mod>0.90</Initiative_Mod>
+      <Parry_Mod>0.90</Parry_Mod>
       <Sprites>30</Sprites>
-      <Stamina_Reduce>0.90</Stamina_Reduce>
+      <Stamina_Mod>0.90</Stamina_Mod>
       <Value>150</Value>
     </Armor>
     <Armor name="Mail Coif">
       <Tier>Two</Tier>
-      <AP_Reduce>0.96</AP_Reduce>
-      <Block_Reduce>0.96</Block_Reduce>
-      <Damage_Ignore>2</Damage_Ignore>
+      <AP_Mod>0.96</AP_Mod>
+      <Block_Mod>0.96</Block_Mod>
+      <Flat_Damage_Ignore>2</Flat_Damage_Ignore>
       <Damage_Reduction>0.88</Damage_Reduction>
       <Description>
         A simple mail coif.  It offers decent protection for its weight.
       </Description>
-      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Dodge_Mod>0.98</Dodge_Mod>
       <Durability>45</Durability>
-      <Fatigue_Cost>1.10</Fatigue_Cost>
-      <Initiative_Reduce>0.90</Initiative_Reduce>
-      <Parry_Reduce>0.90</Parry_Reduce>
+      <Fatigue_Mod>1.10</Fatigue_Mod>
+      <Initiative_Mod>0.90</Initiative_Mod>
+      <Parry_Mod>0.90</Parry_Mod>
       <Sprites>45</Sprites>
-      <Stamina_Reduce>0.90</Stamina_Reduce>
+      <Stamina_Mod>0.90</Stamina_Mod>
       <Value>250</Value>
     </Armor>
     <Armor name ="Spangenhelm">
       <Tier>Five</Tier>
-      <AP_Reduce>0.93</AP_Reduce>
-      <Block_Reduce>0.93</Block_Reduce>
-      <Damage_Ignore>3</Damage_Ignore>
+      <AP_Mod>0.93</AP_Mod>
+      <Block_Mod>0.93</Block_Mod>
+      <Flat_Damage_Ignore>3</Flat_Damage_Ignore>
       <Damage_Reduction>1</Damage_Reduction>
       <Description>
         A helm that offers deccent protection and doesn't restrict sight too much.
       </Description>
-      <Dodge_Reduce>0.92</Dodge_Reduce>
+      <Dodge_Mod>0.92</Dodge_Mod>
       <Durability>10</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1.0</Initiative_Reduce>
-      <Parry_Reduce>0.92</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.0</Initiative_Mod>
+      <Parry_Mod>0.92</Parry_Mod>
       <Sprites>3</Sprites>
-      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Stamina_Mod>1.0</Stamina_Mod>
       <Value>30</Value>
     </Armor>
     <Armor name ="Spangenhelm">
       <Tier>Four</Tier>
-      <AP_Reduce>0.94</AP_Reduce>
-      <Block_Reduce>0.94</Block_Reduce>
-      <Damage_Ignore>3</Damage_Ignore>
+      <AP_Mod>0.94</AP_Mod>
+      <Block_Mod>0.94</Block_Mod>
+      <Flat_Damage_Ignore>3</Flat_Damage_Ignore>
       <Damage_Reduction>0.98</Damage_Reduction>
       <Description>
         A helm that offers deccent protection and doesn't restrict sight too much.
       </Description>
-      <Dodge_Reduce>0.93</Dodge_Reduce>
+      <Dodge_Mod>0.93</Dodge_Mod>
       <Durability>20</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1.0</Initiative_Reduce>
-      <Parry_Reduce>0.93</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.0</Initiative_Mod>
+      <Parry_Mod>0.93</Parry_Mod>
       <Sprites>18</Sprites>
-      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Stamina_Mod>1.0</Stamina_Mod>
       <Value>80</Value>
     </Armor>
     <Armor name ="Spangenhelm">
       <Tier>Three</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.95</Block_Reduce>
-      <Damage_Ignore>4</Damage_Ignore>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.95</Block_Mod>
+      <Flat_Damage_Ignore>4</Flat_Damage_Ignore>
       <Damage_Reduction>0.98</Damage_Reduction>
       <Description>
         A helm that offers deccent protection and doesn't restrict sight too much.
       </Description>
-      <Dodge_Reduce>0.94</Dodge_Reduce>
+      <Dodge_Mod>0.94</Dodge_Mod>
       <Durability>25</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1.0</Initiative_Reduce>
-      <Parry_Reduce>0.94</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.0</Initiative_Mod>
+      <Parry_Mod>0.94</Parry_Mod>
       <Sprites>33</Sprites>
-      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Stamina_Mod>1.0</Stamina_Mod>
       <Value>200</Value>
     </Armor>
     <Armor name ="Spangenhelm">
       <Tier>Two</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.95</Block_Reduce>
-      <Damage_Ignore>4</Damage_Ignore>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.95</Block_Mod>
+      <Flat_Damage_Ignore>4</Flat_Damage_Ignore>
       <Damage_Reduction>0.96</Damage_Reduction>
       <Description>
         A helm that offers deccent protection and doesn't restrict sight too much.
       </Description>
-      <Dodge_Reduce>0.95</Dodge_Reduce>
+      <Dodge_Mod>0.95</Dodge_Mod>
       <Durability>30</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1.0</Initiative_Reduce>
-      <Parry_Reduce>0.95</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.0</Initiative_Mod>
+      <Parry_Mod>0.95</Parry_Mod>
       <Sprites>48</Sprites>
-      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Stamina_Mod>1.0</Stamina_Mod>
       <Value>450</Value>
     </Armor>
     <Armor name="Viking Casque">
       <Tier>Five</Tier>
-      <AP_Reduce>0.93</AP_Reduce>
-      <Block_Reduce>0.93</Block_Reduce>
-      <Damage_Ignore>2</Damage_Ignore>
+      <AP_Mod>0.93</AP_Mod>
+      <Block_Mod>0.93</Block_Mod>
+      <Flat_Damage_Ignore>2</Flat_Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
         This helmet has seen better days.
       </Description>
-      <Dodge_Reduce>0.88</Dodge_Reduce>
+      <Dodge_Mod>0.88</Dodge_Mod>
       <Durability>5</Durability>
-      <Fatigue_Cost>0.88</Fatigue_Cost>
-      <Initiative_Reduce>0.88</Initiative_Reduce>
-      <Parry_Reduce>0.88</Parry_Reduce>
+      <Fatigue_Mod>0.88</Fatigue_Mod>
+      <Initiative_Mod>0.88</Initiative_Mod>
+      <Parry_Mod>0.88</Parry_Mod>
       <Sprites>2</Sprites>
-      <Stamina_Reduce>0.93</Stamina_Reduce>
+      <Stamina_Mod>0.93</Stamina_Mod>
       <Value>25</Value>
     </Armor>
     <Armor name="Viking Casque">
       <Tier>Four</Tier>
-      <AP_Reduce>0.94</AP_Reduce>
-      <Block_Reduce>0.94</Block_Reduce>
-      <Damage_Ignore>3</Damage_Ignore>
+      <AP_Mod>0.94</AP_Mod>
+      <Block_Mod>0.94</Block_Mod>
+      <Flat_Damage_Ignore>3</Flat_Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
         A rather basic nordic-style helmet.
       </Description>
-      <Dodge_Reduce>0.89</Dodge_Reduce>
+      <Dodge_Mod>0.89</Dodge_Mod>
       <Durability>15</Durability>
-      <Fatigue_Cost>0.89</Fatigue_Cost>
-      <Initiative_Reduce>0.89</Initiative_Reduce>
-      <Parry_Reduce>0.89</Parry_Reduce>
+      <Fatigue_Mod>0.89</Fatigue_Mod>
+      <Initiative_Mod>0.89</Initiative_Mod>
+      <Parry_Mod>0.89</Parry_Mod>
       <Sprites>17</Sprites>
-      <Stamina_Reduce>0.94</Stamina_Reduce>
+      <Stamina_Mod>0.94</Stamina_Mod>
       <Value>80</Value>
     </Armor>
     <Armor name="Viking Casque">
       <Tier>Three</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.95</Block_Reduce>
-      <Damage_Ignore>4</Damage_Ignore>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.95</Block_Mod>
+      <Flat_Damage_Ignore>4</Flat_Damage_Ignore>
       <Damage_Reduction>0.98</Damage_Reduction>
       <Description>
         A rather stylish nordic-style helmet.
       </Description>
-      <Dodge_Reduce>0.90</Dodge_Reduce>
+      <Dodge_Mod>0.90</Dodge_Mod>
       <Durability>25</Durability>
-      <Fatigue_Cost>0.90</Fatigue_Cost>
-      <Initiative_Reduce>0.90</Initiative_Reduce>
-      <Parry_Reduce>0.90</Parry_Reduce>
+      <Fatigue_Mod>0.90</Fatigue_Mod>
+      <Initiative_Mod>0.90</Initiative_Mod>
+      <Parry_Mod>0.90</Parry_Mod>
       <Sprites>32</Sprites>
-      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Stamina_Mod>0.95</Stamina_Mod>
       <Value>200</Value>
     </Armor>
     <Armor name="Viking Casque">
       <Tier>Two</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.95</Block_Reduce>
-      <Damage_Ignore>4</Damage_Ignore>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.95</Block_Mod>
+      <Flat_Damage_Ignore>4</Flat_Damage_Ignore>
       <Damage_Reduction>0.95</Damage_Reduction>
       <Description>
         A rather stylish nordic-style helmet.  Horns included.
       </Description>
-      <Dodge_Reduce>0.90</Dodge_Reduce>
+      <Dodge_Mod>0.90</Dodge_Mod>
       <Durability>35</Durability>
-      <Fatigue_Cost>0.90</Fatigue_Cost>
-      <Initiative_Reduce>0.90</Initiative_Reduce>
-      <Parry_Reduce>0.90</Parry_Reduce>
+      <Fatigue_Mod>0.90</Fatigue_Mod>
+      <Initiative_Mod>0.90</Initiative_Mod>
+      <Parry_Mod>0.90</Parry_Mod>
       <Sprites>47</Sprites>
-      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Stamina_Mod>0.95</Stamina_Mod>
       <Value>200</Value>
     </Armor>
   </EArmorType>

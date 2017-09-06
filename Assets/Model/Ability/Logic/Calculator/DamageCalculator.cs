@@ -60,13 +60,13 @@ namespace Assets.Model.Ability.Logic.Calculator
 
                 if (tgt.Proxy.GetArmor() != null)
                 {
-                    bodyDmgNegate += tgt.Proxy.GetArmor().DamageIgnore;
-                    bodyReduction *= tgt.Proxy.GetArmor().DamageReduction;
+                    bodyDmgNegate += tgt.Proxy.GetArmor().FlatDamageIgnore;
+                    bodyReduction *= tgt.Proxy.GetArmor().DamageMod;
                 }
                 if (tgt.Proxy.GetHelm() != null)
                 {
                     headDmgNegate += tgt.Proxy.GetHelm().DamageIgnore;
-                    headReduction *= tgt.Proxy.GetHelm().DamageReduction;
+                    headReduction *= tgt.Proxy.GetHelm().DamageMod;
                 }
 
                 if (tgt.Proxy.GetLWeapon() != null && !tgt.Proxy.GetLWeapon().IsTypeOfShield())
@@ -105,7 +105,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             else
             {
                 if (target.GetArmor() != null)
-                    flatDmgNegate += target.GetArmor().DamageIgnore;
+                    flatDmgNegate += target.GetArmor().FlatDamageIgnore;
             }
             if (source.GetLWeapon() != null && !source.GetLWeapon().IsTypeOfShield())
                 flatDmgNegate *= (source.GetLWeapon().ArmorPierce);
@@ -120,7 +120,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             {
                 if (target.GetHelm() != null)
                     dmgToApply *= 
-                        (target.GetHelm().DamageReduction * 
+                        (target.GetHelm().DamageMod * 
                         dmgReduction * 
                         hit.Data.Ability.Data.ArmorIgnoreMod);
             }
@@ -128,7 +128,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             {
                 if (target.GetArmor() != null)
                     dmgToApply *= 
-                        (target.GetArmor().DamageReduction * 
+                        (target.GetArmor().DamageMod * 
                         dmgReduction * 
                         hit.Data.Ability.Data.ArmorIgnoreMod);
             }

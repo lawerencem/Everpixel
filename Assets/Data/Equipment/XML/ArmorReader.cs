@@ -66,18 +66,18 @@ namespace Assets.Data.Equipment.XML
             switch (param)
             {
                 case ("Tier"): { HandleTierFromFile(name, value, ref tier); } break;
-                case ("AP_Reduce"): { HandleStatsFromFile(name, EArmorStat.AP_Reduce, v, tier); } break;
-                case ("Block_Reduce"): { HandleStatsFromFile(name, EArmorStat.Block_Reduce, v, tier); } break;
-                case ("Damage_Ignore"): { HandleStatsFromFile(name, EArmorStat.Damage_Ignore, v, tier); } break;
-                case ("Damage_Reduction"): { HandleStatsFromFile(name, EArmorStat.Damage_Reduction, v, tier); } break;
+                case ("AP_Mod"): { HandleStatsFromFile(name, EArmorStat.AP_Mod, v, tier); } break;
+                case ("Block_Mod"): { HandleStatsFromFile(name, EArmorStat.Block_Mod, v, tier); } break;
+                case ("Flat_Damage_Ignore"): { HandleStatsFromFile(name, EArmorStat.Flat_Damage_Ignore, v, tier); } break;
+                case ("Damage_Reduction"): { HandleStatsFromFile(name, EArmorStat.Damage_Mod, v, tier); } break;
                 case ("Description"): { } break;
-                case ("Dodge_Reduce"): { HandleStatsFromFile(name, EArmorStat.Dodge_Reduce, v, tier); } break;
+                case ("Dodge_Mod"): { HandleStatsFromFile(name, EArmorStat.Dodge_Mod, v, tier); } break;
                 case ("Durability"): { HandleStatsFromFile(name, EArmorStat.Durability, v, tier); } break;
-                case ("Fatigue_Cost"): { HandleStatsFromFile(name, EArmorStat.Fatigue_Cost, v, tier); } break;
-                case ("Initiative_Reduce"): { HandleStatsFromFile(name, EArmorStat.Initiative_Reduce, v, tier); } break;
-                case ("Parry_Reduce"): { HandleStatsFromFile(name, EArmorStat.Parry_Reduce, v, tier); } break;
+                case ("Fatigue_Mod"): { HandleStatsFromFile(name, EArmorStat.Fatigue_Mod, v, tier); } break;
+                case ("Initiative_Mod"): { HandleStatsFromFile(name, EArmorStat.Initative_Mod, v, tier); } break;
+                case ("Parry_Mod"): { HandleStatsFromFile(name, EArmorStat.Parry_Mod, v, tier); } break;
                 case ("Sprites"): { HandleSpritesFromFile(name, value, tier); } break;
-                case ("Stamina_Reduce"): { HandleStatsFromFile(name, EArmorStat.Stamina_Reduce, v, tier); } break;
+                case ("Stamina_Mod"): { HandleStatsFromFile(name, EArmorStat.Stamina_Mod, v, tier); } break;
                 case ("Value"): { HandleStatsFromFile(name, EArmorStat.Value, v, tier); } break;
             }
         }
@@ -89,16 +89,16 @@ namespace Assets.Data.Equipment.XML
 
             switch (x)
             {
-                case (EArmorStat.AP_Reduce): { stats.Table[key].APReduce = v; } break;
-                case (EArmorStat.Block_Reduce): { stats.Table[key].BlockReduce = v; } break;
-                case (EArmorStat.Damage_Ignore): { stats.Table[key].DamageIgnore = v; } break;
-                case (EArmorStat.Damage_Reduction): { stats.Table[key].DamageReduction = v; } break;
-                case (EArmorStat.Dodge_Reduce): { stats.Table[key].DodgeMod = v; } break;
+                case (EArmorStat.AP_Mod): { stats.Table[key].APMod = v; } break;
+                case (EArmorStat.Block_Mod): { stats.Table[key].BlockMod = v; } break;
+                case (EArmorStat.Flat_Damage_Ignore): { stats.Table[key].DamageIgnore = v; } break;
+                case (EArmorStat.Damage_Mod): { stats.Table[key].DamageMod = v; } break;
+                case (EArmorStat.Dodge_Mod): { stats.Table[key].DodgeMod = v; } break;
                 case (EArmorStat.Durability): { stats.Table[key].Durability = (int)v; } break;
-                case (EArmorStat.Fatigue_Cost): { stats.Table[key].FatigueCost = v; } break;
-                case (EArmorStat.Initiative_Reduce): { stats.Table[key].InitiativeReduce = v; } break;
-                case (EArmorStat.Parry_Reduce): { stats.Table[key].ParryReduce = v; } break;
-                case (EArmorStat.Stamina_Reduce): { stats.Table[key].StaminaReduce = v; } break;
+                case (EArmorStat.Fatigue_Mod): { stats.Table[key].FatigueCost = v; } break;
+                case (EArmorStat.Initative_Mod): { stats.Table[key].InitativeMod = v; } break;
+                case (EArmorStat.Parry_Mod): { stats.Table[key].ParryMod = v; } break;
+                case (EArmorStat.Stamina_Mod): { stats.Table[key].StaminaMod = v; } break;
                 case (EArmorStat.Value): { stats.Table[key].Value = v; } break;
             }
         }

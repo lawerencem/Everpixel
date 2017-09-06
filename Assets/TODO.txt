@@ -1,12 +1,12 @@
 ﻿TODO
 
-split .xml out into specific data folders and files
 
 Block calculations
   - Block FX
 - Add Btns to ability modal window
 Injuries
-move xml files and readers to "data" top-level folder
+Clean up weapon and armor models, params
+Clean up effect reader
 
 Bug
    Characters sometimes dont show death fx

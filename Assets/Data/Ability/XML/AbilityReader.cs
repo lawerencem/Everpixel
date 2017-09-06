@@ -20,14 +20,10 @@ namespace Assets.Data.Ability.XML
     {
         private static AbilityReader _instance;
 
-        private string _abilityPath = "Assets/Data/Ability/XML/Abilities.xml";
-        private string _weaponPath = "Assets/Data/Ability/XML/WeaponAbilities.xml";
-
-
         public AbilityReader() : base()
         {
-            this._paths.Add(this._abilityPath);
-            this._paths.Add(this._weaponPath);
+            this._paths.Add("Assets/Data/Ability/XML/Abilities.xml");
+            this._paths.Add("Assets/Data/Ability/XML/WeaponAbilities.xml");
         }
 
         public static AbilityReader Instance
@@ -96,6 +92,7 @@ namespace Assets.Data.Ability.XML
                     case ("BlockIgnoreMod"): { table[type].Data.BlockIgnoreMod = v; } break;
                     case ("CastTime"): { table[type].Data.CastTime = v; } break;
                     case ("CastTypeEnum"): { this.HandleCastType(type, value); } break;
+                    case ("CustomGraphics"): { this.HandleCustomGraphics(type, value); } break;
                     case ("Description"): { table[type].Data.Description = value; } break;
                     case ("DmgPerPower"): { table[type].Data.DmgPerPower = double.Parse(value); } break;
                     case ("Duration"): { table[type].Data.Duration = double.Parse(value); } break;
@@ -129,6 +126,12 @@ namespace Assets.Data.Ability.XML
             var type = ECastType.None;
             if (EnumUtil<ECastType>.TryGetEnumValue(value, ref type))
                 AbilityTable.Instance.Table[key].Data.CastType = type;
+        }
+
+        private void HandleCustomGraphics(EAbility key, string value)
+        {
+            if (value.ToLowerInvariant().Equals("true"))
+                AbilityTable.Instance.Table[key].Data.CustomGraphics = true;
         }
 
         private void HandlAPerk(EAbility type, string s)

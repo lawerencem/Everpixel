@@ -3,16 +3,16 @@
     public enum EArmorStat
     {
         None,
-        AP_Reduce,
-        Block_Reduce,
-        Damage_Ignore,
-        Damage_Reduction,
-        Dodge_Reduce,
+        AP_Mod,
+        Block_Mod,
+        Flat_Damage_Ignore,
+        Damage_Mod,
+        Dodge_Mod,
         Durability,
-        Fatigue_Cost,
-        Initiative_Reduce,
-        Parry_Reduce,
-        Stamina_Reduce,
+        Fatigue_Mod,
+        Initative_Mod,
+        Parry_Mod,
+        Stamina_Mod,
         Value,
     }
 }

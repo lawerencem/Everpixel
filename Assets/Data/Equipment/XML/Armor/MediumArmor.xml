@@ -3,293 +3,293 @@
   <EArmorType name ="Medium_Armor">
     <Armor name="Byrnie">
       <Tier>Five</Tier>
-      <AP_Reduce>0.97</AP_Reduce>
-      <Block_Reduce>0.97</Block_Reduce>
-      <Damage_Ignore>1</Damage_Ignore>
+      <AP_Mod>0.97</AP_Mod>
+      <Block_Mod>0.97</Block_Mod>
+      <Flat_Damage_Ignore>1</Flat_Damage_Ignore>
       <Damage_Reduction>0.97</Damage_Reduction>
       <Description>
         Leather straps don't tend to make the most effective armor.
       </Description>
-      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Dodge_Mod>1.0</Dodge_Mod>
       <Durability>5</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1.0</Initiative_Reduce>
-      <Parry_Reduce>1.0</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.0</Initiative_Mod>
+      <Parry_Mod>1.0</Parry_Mod>
       <Sprites>4</Sprites>
-      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Stamina_Mod>1.0</Stamina_Mod>
       <Value>20</Value>
     </Armor>
     <Armor name="Byrnie">
       <Tier>Four</Tier>
-      <AP_Reduce>0.97</AP_Reduce>
-      <Block_Reduce>0.97</Block_Reduce>
-      <Damage_Ignore>1</Damage_Ignore>
+      <AP_Mod>0.97</AP_Mod>
+      <Block_Mod>0.97</Block_Mod>
+      <Flat_Damage_Ignore>1</Flat_Damage_Ignore>
       <Damage_Reduction>0.95</Damage_Reduction>
       <Description>
         Leather straps don't tend to make the most effective armor.
       </Description>
-      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Dodge_Mod>1.0</Dodge_Mod>
       <Durability>12</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1.0</Initiative_Reduce>
-      <Parry_Reduce>1.0</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.0</Initiative_Mod>
+      <Parry_Mod>1.0</Parry_Mod>
       <Sprites>19</Sprites>
-      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Stamina_Mod>1.0</Stamina_Mod>
       <Value>50</Value>
     </Armor>
     <Armor name="Byrnie">
       <Tier>Three</Tier>
-      <AP_Reduce>0.98</AP_Reduce>
-      <Block_Reduce>0.98</Block_Reduce>
-      <Damage_Ignore>2</Damage_Ignore>
+      <AP_Mod>0.98</AP_Mod>
+      <Block_Mod>0.98</Block_Mod>
+      <Flat_Damage_Ignore>2</Flat_Damage_Ignore>
       <Damage_Reduction>0.92</Damage_Reduction>
       <Description>
         These leather straps have several plates attached that are rather effective at protecting the body.
       </Description>
-      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Dodge_Mod>1.0</Dodge_Mod>
       <Durability>25</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1.0</Initiative_Reduce>
-      <Parry_Reduce>1.0</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.0</Initiative_Mod>
+      <Parry_Mod>1.0</Parry_Mod>
       <Sprites>34</Sprites>
-      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Stamina_Mod>1.0</Stamina_Mod>
       <Value>180</Value>
     </Armor>
     <Armor name="Byrnie">
       <Tier>Two</Tier>
-      <AP_Reduce>0.98</AP_Reduce>
-      <Block_Reduce>0.98</Block_Reduce>
-      <Damage_Ignore>3</Damage_Ignore>
+      <AP_Mod>0.98</AP_Mod>
+      <Block_Mod>0.98</Block_Mod>
+      <Flat_Damage_Ignore>3</Flat_Damage_Ignore>
       <Damage_Reduction>0.88</Damage_Reduction>
       <Description>
         These leather straps have several plates attached that are rather effective at protecting the body.
       </Description>
-      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Dodge_Mod>1.0</Dodge_Mod>
       <Durability>35</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1.0</Initiative_Reduce>
-      <Parry_Reduce>1.0</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.0</Initiative_Mod>
+      <Parry_Mod>1.0</Parry_Mod>
       <Sprites>49</Sprites>
-      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Stamina_Mod>1.0</Stamina_Mod>
       <Value>400</Value>
     </Armor>
     <Armor name="Dino Scale Armor">
       <Tier>Five</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
-      <Damage_Ignore>3</Damage_Ignore>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>3</Flat_Damage_Ignore>
       <Damage_Reduction>0.95</Damage_Reduction>
       <Description>
         These shoulder pads have been cobbled together using a handful of dinosaur scales.
       </Description>
-      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Dodge_Mod>1.0</Dodge_Mod>
       <Durability>5</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1.0</Initiative_Reduce>
-      <Parry_Reduce>1.0</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.0</Initiative_Mod>
+      <Parry_Mod>1.0</Parry_Mod>
       <Sprites>3</Sprites>
-      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Stamina_Mod>1.0</Stamina_Mod>
       <Value>50</Value>
     </Armor>
     <Armor name="Dino Scale Armor">
       <Tier>Four</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
-      <Damage_Ignore>5</Damage_Ignore>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>5</Flat_Damage_Ignore>
       <Damage_Reduction>0.90</Damage_Reduction>
       <Description>
         Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
         not very durable...
       </Description>
-      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Dodge_Mod>1.0</Dodge_Mod>
       <Durability>10</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1.0</Initiative_Reduce>
-      <Parry_Reduce>1.0</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.0</Initiative_Mod>
+      <Parry_Mod>1.0</Parry_Mod>
       <Sprites>18</Sprites>
-      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Stamina_Mod>1.0</Stamina_Mod>
       <Value>250</Value>
     </Armor>
     <Armor name="Dino Scale Armor">
       <Tier>Three</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
-      <Damage_Ignore>7</Damage_Ignore>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>7</Flat_Damage_Ignore>
       <Damage_Reduction>0.86</Damage_Reduction>
       <Description>
         Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
         not very durable...
       </Description>
-      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Dodge_Mod>1.0</Dodge_Mod>
       <Durability>20</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1.0</Initiative_Reduce>
-      <Parry_Reduce>1.0</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.0</Initiative_Mod>
+      <Parry_Mod>1.0</Parry_Mod>
       <Sprites>33</Sprites>
-      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Stamina_Mod>1.0</Stamina_Mod>
       <Value>500</Value>
     </Armor>
     <Armor name="Dino Scale Armor">
       <Tier>Two</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
-      <Damage_Ignore>8</Damage_Ignore>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>8</Flat_Damage_Ignore>
       <Damage_Reduction>0.80</Damage_Reduction>
       <Description>
         Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
         not very durable...
       </Description>
-      <Dodge_Reduce>1.0</Dodge_Reduce>
+      <Dodge_Mod>1.0</Dodge_Mod>
       <Durability>28</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1.0</Initiative_Reduce>
-      <Parry_Reduce>1.0</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.0</Initiative_Mod>
+      <Parry_Mod>1.0</Parry_Mod>
       <Sprites>46</Sprites>
-      <Stamina_Reduce>1.0</Stamina_Reduce>
+      <Stamina_Mod>1.0</Stamina_Mod>
       <Value>800</Value>
     </Armor>
     <Armor name="Goblin Pads">
       <Tier>Five</Tier>
-      <AP_Reduce>0.93</AP_Reduce>
-      <Block_Reduce>0.87</Block_Reduce>
-      <Damage_Ignore>2</Damage_Ignore>
+      <AP_Mod>0.93</AP_Mod>
+      <Block_Mod>0.87</Block_Mod>
+      <Flat_Damage_Ignore>2</Flat_Damage_Ignore>
       <Damage_Reduction>0.86</Damage_Reduction>
       <Description>
         While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection.
       </Description>
-      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Dodge_Mod>0.98</Dodge_Mod>
       <Durability>20</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>0.97</Initiative_Reduce>
-      <Parry_Reduce>0.92</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>0.97</Initiative_Mod>
+      <Parry_Mod>0.92</Parry_Mod>
       <Sprites>2</Sprites>
-      <Stamina_Reduce>0.82</Stamina_Reduce>
+      <Stamina_Mod>0.82</Stamina_Mod>
       <Value>250</Value>
     </Armor>
     <Armor name="Goblin Pads">
       <Tier>Four</Tier>
-      <AP_Reduce>0.94</AP_Reduce>
-      <Block_Reduce>0.88</Block_Reduce>
-      <Damage_Ignore>2</Damage_Ignore>
+      <AP_Mod>0.94</AP_Mod>
+      <Block_Mod>0.88</Block_Mod>
+      <Flat_Damage_Ignore>2</Flat_Damage_Ignore>
       <Damage_Reduction>0.85</Damage_Reduction>
       <Description>
         While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection.
       </Description>
-      <Dodge_Reduce>1</Dodge_Reduce>
+      <Dodge_Mod>1</Dodge_Mod>
       <Durability>35</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>0.98</Initiative_Reduce>
-      <Parry_Reduce>0.93</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>0.98</Initiative_Mod>
+      <Parry_Mod>0.93</Parry_Mod>
       <Sprites>17</Sprites>
-      <Stamina_Reduce>0.83</Stamina_Reduce>
+      <Stamina_Mod>0.83</Stamina_Mod>
       <Value>350</Value>
     </Armor>
     <Armor name="Goblin Pads">
       <Tier>Three</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.90</Block_Reduce>
-      <Damage_Ignore>2</Damage_Ignore>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.90</Block_Mod>
+      <Flat_Damage_Ignore>2</Flat_Damage_Ignore>
       <Damage_Reduction>0.84</Damage_Reduction>
       <Description>
         While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection.
       </Description>
-      <Dodge_Reduce>1</Dodge_Reduce>
+      <Dodge_Mod>1</Dodge_Mod>
       <Durability>50</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>0.98</Initiative_Reduce>
-      <Parry_Reduce>0.95</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>0.98</Initiative_Mod>
+      <Parry_Mod>0.95</Parry_Mod>
       <Sprites>32</Sprites>
-      <Stamina_Reduce>0.85</Stamina_Reduce>
+      <Stamina_Mod>0.85</Stamina_Mod>
       <Value>500</Value>
     </Armor>
     <Armor name="Goblin Pads">
       <Tier>Two</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.90</Block_Reduce>
-      <Damage_Ignore>3</Damage_Ignore>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.90</Block_Mod>
+      <Flat_Damage_Ignore>3</Flat_Damage_Ignore>
       <Damage_Reduction>0.82</Damage_Reduction>
       <Description>
         While not made of the finest material, these pads are layered in a clever way that offers surprisingly-effective protection.
       </Description>
-      <Dodge_Reduce>1</Dodge_Reduce>
+      <Dodge_Mod>1</Dodge_Mod>
       <Durability>70</Durability>
-      <Fatigue_Cost>1</Fatigue_Cost>
-      <Initiative_Reduce>1</Initiative_Reduce>
-      <Parry_Reduce>0.95</Parry_Reduce>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>0.95</Parry_Mod>
       <Sprites>47</Sprites>
-      <Stamina_Reduce>0.85</Stamina_Reduce>
+      <Stamina_Mod>0.85</Stamina_Mod>
       <Value>750</Value>
     </Armor>
     <Armor name="Mail Shirt">
       <Tier>Five</Tier>
-      <AP_Reduce>0.92</AP_Reduce>
-      <Block_Reduce>0.92</Block_Reduce>
-      <Damage_Ignore>4</Damage_Ignore>
+      <AP_Mod>0.92</AP_Mod>
+      <Block_Mod>0.92</Block_Mod>
+      <Flat_Damage_Ignore>4</Flat_Damage_Ignore>
       <Damage_Reduction>0.88</Damage_Reduction>
       <Description>
         This mail has seen better days, but it still offers decent protection.
       </Description>
-      <Dodge_Reduce>0.97</Dodge_Reduce>
+      <Dodge_Mod>0.97</Dodge_Mod>
       <Durability>30</Durability>
-      <Fatigue_Cost>1.14</Fatigue_Cost>
-      <Initiative_Reduce>0.85</Initiative_Reduce>
-      <Parry_Reduce>0.90</Parry_Reduce>
+      <Fatigue_Mod>1.14</Fatigue_Mod>
+      <Initiative_Mod>0.85</Initiative_Mod>
+      <Parry_Mod>0.90</Parry_Mod>
       <Sprites>0,1</Sprites>
-      <Stamina_Reduce>0.85</Stamina_Reduce>
+      <Stamina_Mod>0.85</Stamina_Mod>
       <Value>200</Value>
     </Armor>
     <Armor name="Mail Shirt">
       <Tier>Four</Tier>
-      <AP_Reduce>0.93</AP_Reduce>
-      <Block_Reduce>0.93</Block_Reduce>
-      <Damage_Ignore>4</Damage_Ignore>
+      <AP_Mod>0.93</AP_Mod>
+      <Block_Mod>0.93</Block_Mod>
+      <Flat_Damage_Ignore>4</Flat_Damage_Ignore>
       <Damage_Reduction>0.87</Damage_Reduction>
       <Description>
         This mail has seen better days, but it still offers decent protection.
       </Description>
-      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Dodge_Mod>0.98</Dodge_Mod>
       <Durability>35</Durability>
-      <Fatigue_Cost>1.13</Fatigue_Cost>
-      <Initiative_Reduce>0.87</Initiative_Reduce>
-      <Parry_Reduce>0.92</Parry_Reduce>
+      <Fatigue_Mod>1.13</Fatigue_Mod>
+      <Initiative_Mod>0.87</Initiative_Mod>
+      <Parry_Mod>0.92</Parry_Mod>
       <Sprites>15,16</Sprites>
-      <Stamina_Reduce>0.87</Stamina_Reduce>
+      <Stamina_Mod>0.87</Stamina_Mod>
       <Value>350</Value>
     </Armor>
     <Armor name="Mail Shirt">
       <Tier>Three</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.93</Block_Reduce>
-      <Damage_Ignore>4</Damage_Ignore>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.93</Block_Mod>
+      <Flat_Damage_Ignore>4</Flat_Damage_Ignore>
       <Damage_Reduction>0.85</Damage_Reduction>
       <Description>
         This solid mail offers great protection for the weight.
       </Description>
-      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Dodge_Mod>0.98</Dodge_Mod>
       <Durability>45</Durability>
-      <Fatigue_Cost>1.12</Fatigue_Cost>
-      <Initiative_Reduce>0.88</Initiative_Reduce>
-      <Parry_Reduce>0.93</Parry_Reduce>
+      <Fatigue_Mod>1.12</Fatigue_Mod>
+      <Initiative_Mod>0.88</Initiative_Mod>
+      <Parry_Mod>0.93</Parry_Mod>
       <Sprites>30,31</Sprites>
-      <Stamina_Reduce>0.88</Stamina_Reduce>
+      <Stamina_Mod>0.88</Stamina_Mod>
       <Value>600</Value>
     </Armor>
     <Armor name="Mail Shirt">
       <Tier>Two</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.95</Block_Reduce>
-      <Damage_Ignore>4</Damage_Ignore>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.95</Block_Mod>
+      <Flat_Damage_Ignore>4</Flat_Damage_Ignore>
       <Damage_Reduction>0.82</Damage_Reduction>
       <Description>
         This solid mail offers great protection for the weight.
       </Description>
-      <Dodge_Reduce>0.97</Dodge_Reduce>
+      <Dodge_Mod>0.97</Dodge_Mod>
       <Durability>50</Durability>
-      <Fatigue_Cost>1.10</Fatigue_Cost>
-      <Initiative_Reduce>0.89</Initiative_Reduce>
-      <Parry_Reduce>0.94</Parry_Reduce>
+      <Fatigue_Mod>1.10</Fatigue_Mod>
+      <Initiative_Mod>0.89</Initiative_Mod>
+      <Parry_Mod>0.94</Parry_Mod>
       <Sprites>45,46</Sprites>
-      <Stamina_Reduce>0.89</Stamina_Reduce>
+      <Stamina_Mod>0.89</Stamina_Mod>
       <Value>1000</Value>
     </Armor>
   </EArmorType>

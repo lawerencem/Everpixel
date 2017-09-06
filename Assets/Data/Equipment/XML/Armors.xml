@@ -3,8 +3,8 @@
   <EArmorType name = "Light_Armor">
     <Armor name="Bone Armor">
       <Tier>Five</Tier>
-      <AP_Reduce>0.99</AP_Reduce>
-      <Block_Reduce>0.92</Block_Reduce>
+      <AP_Mod>0.99</AP_Mod>
+      <Block_Mod>0.92</Block_Mod>
       <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
@@ -21,8 +21,8 @@
     </Armor>
     <Armor name="Bone Armor">
       <Tier>Four</Tier>
-      <AP_Reduce>0.99</AP_Reduce>
-      <Block_Reduce>0.93</Block_Reduce>
+      <AP_Mod>0.99</AP_Mod>
+      <Block_Mod>0.93</Block_Mod>
       <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0.98</Damage_Reduction>
       <Description>
@@ -39,8 +39,8 @@
     </Armor>
     <Armor name="Bone Armor">
       <Tier>Three</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>0.95</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>0.95</Block_Mod>
       <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0.97</Damage_Reduction>
       <Description>
@@ -57,8 +57,8 @@
     </Armor>
     <Armor name="Bone Armor">
       <Tier>Two</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>0.97</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>0.97</Block_Mod>
       <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0.96</Damage_Reduction>
       <Description>
@@ -75,8 +75,8 @@
     </Armor>
     <Armor name="Dino Regalia">
       <Tier>Five</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0</Damage_Reduction>
       <Description>
@@ -93,8 +93,8 @@
     </Armor>
     <Armor name="Dino Regalia">
       <Tier>Four</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0</Damage_Reduction>
       <Description>
@@ -111,8 +111,8 @@
     </Armor>
     <Armor name="Dino Regalia">
       <Tier>Three</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0</Damage_Reduction>
       <Description>
@@ -129,8 +129,8 @@
     </Armor>
     <Armor name="Dino Regalia">
       <Tier>Two</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0</Damage_Reduction>
       <Description>
@@ -147,8 +147,8 @@
     </Armor>
     <Armor name="Slime Handler Robes">
       <Tier>Five</Tier>
-      <AP_Reduce>0.97</AP_Reduce>
-      <Block_Reduce>0.97</Block_Reduce>
+      <AP_Mod>0.97</AP_Mod>
+      <Block_Mod>0.97</Block_Mod>
       <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
@@ -166,8 +166,8 @@
     </Armor>
     <Armor name="Slime Handler Robes">
       <Tier>Four</Tier>
-      <AP_Reduce>0.98</AP_Reduce>
-      <Block_Reduce>0.98</Block_Reduce>
+      <AP_Mod>0.98</AP_Mod>
+      <Block_Mod>0.98</Block_Mod>
       <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0.98</Damage_Reduction>
       <Description>
@@ -185,8 +185,8 @@
     </Armor>
     <Armor name="Slime Handler Robes">
       <Tier>Three</Tier>
-      <AP_Reduce>0.99</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>0.99</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>1</Damage_Ignore>
       <Damage_Reduction>0.98</Damage_Reduction>
       <Description>
@@ -204,8 +204,8 @@
     </Armor>
     <Armor name="Tunic">
       <Tier>Five</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>1</Damage_Ignore>
       <Damage_Reduction>0.97</Damage_Reduction>
       <Description>
@@ -222,8 +222,8 @@
     </Armor>
     <Armor name="Tunic">
       <Tier>Four</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>1</Damage_Ignore>
       <Damage_Reduction>0.96</Damage_Reduction>
       <Description>
@@ -240,8 +240,8 @@
     </Armor>
     <Armor name="Void Handler Robes">
       <Tier>Five</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>1</Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
@@ -259,8 +259,8 @@
     </Armor>
     <Armor name="Void Handler Robes">
       <Tier>Four</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>1</Damage_Ignore>
       <Damage_Reduction>0.98</Damage_Reduction>
       <Description>
@@ -278,8 +278,8 @@
     </Armor>
     <Armor name="Void Handler Robes">
       <Tier>Three</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>1</Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
@@ -297,8 +297,8 @@
     </Armor>
     <Armor name="Void Handler Robes">
       <Tier>Two</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>1</Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
@@ -318,8 +318,8 @@
   <EArmorType name = "Light_Helm">
     <Armor name="Dino Headdress">
       <Tier>Five</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
@@ -336,8 +336,8 @@
     </Armor>
     <Armor name="Dino Headdress">
       <Tier>Four</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0.98</Damage_Reduction>
       <Description>
@@ -354,8 +354,8 @@
     </Armor>
     <Armor name="Dino Headdress">
       <Tier>Three</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0.97</Damage_Reduction>
       <Description>
@@ -372,8 +372,8 @@
     </Armor>
     <Armor name="Dino Headdress">
       <Tier>Two</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0.96</Damage_Reduction>
       <Description>
@@ -390,8 +390,8 @@
     </Armor>
     <Armor name="Skull">
       <Tier>Five</Tier>
-      <AP_Reduce>0.98</AP_Reduce>
-      <Block_Reduce>0.72</Block_Reduce>
+      <AP_Mod>0.98</AP_Mod>
+      <Block_Mod>0.72</Block_Mod>
       <Damage_Ignore>1</Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
@@ -408,8 +408,8 @@
     </Armor>
     <Armor name="Skull">
       <Tier>Four</Tier>
-      <AP_Reduce>0.98</AP_Reduce>
-      <Block_Reduce>0.74</Block_Reduce>
+      <AP_Mod>0.98</AP_Mod>
+      <Block_Mod>0.74</Block_Mod>
       <Damage_Ignore>2</Damage_Ignore>
       <Damage_Reduction>0.98</Damage_Reduction>
       <Description>
@@ -426,8 +426,8 @@
     </Armor>
     <Armor name="Skull">
       <Tier>Three</Tier>
-      <AP_Reduce>0.98</AP_Reduce>
-      <Block_Reduce>0.76</Block_Reduce>
+      <AP_Mod>0.98</AP_Mod>
+      <Block_Mod>0.76</Block_Mod>
       <Damage_Ignore>2</Damage_Ignore>
       <Damage_Reduction>0.96</Damage_Reduction>
       <Description>
@@ -444,8 +444,8 @@
     </Armor>
     <Armor name="Skull">
       <Tier>Two</Tier>
-      <AP_Reduce>0.99</AP_Reduce>
-      <Block_Reduce>0.78</Block_Reduce>
+      <AP_Mod>0.99</AP_Mod>
+      <Block_Mod>0.78</Block_Mod>
       <Damage_Ignore>3</Damage_Ignore>
       <Damage_Reduction>0.95</Damage_Reduction>
       <Description>
@@ -462,8 +462,8 @@
     </Armor>
     <Armor name="Slime Handler Cap">
       <Tier>Five</Tier>
-      <AP_Reduce>0.98</AP_Reduce>
-      <Block_Reduce>0.99</Block_Reduce>
+      <AP_Mod>0.98</AP_Mod>
+      <Block_Mod>0.99</Block_Mod>
       <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
@@ -480,8 +480,8 @@
     </Armor>
     <Armor name="Slime Handler Cap">
       <Tier>Four</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0.98</Damage_Reduction>
       <Description>
@@ -498,8 +498,8 @@
     </Armor>
     <Armor name="Slime Handler Cap">
       <Tier>Three</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>0</Damage_Ignore>
       <Damage_Reduction>0.98</Damage_Reduction>
       <Description>
@@ -516,8 +516,8 @@
     </Armor>
     <Armor name="Void Handler Hood">
       <Tier>Five</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>1</Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
@@ -535,8 +535,8 @@
     </Armor>
     <Armor name="Void Handler Hood">
       <Tier>Four</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>1</Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
@@ -554,8 +554,8 @@
     </Armor>
     <Armor name="Void Handler Hood">
       <Tier>Three</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>1</Damage_Ignore>
       <Damage_Reduction>1</Damage_Reduction>
       <Description>
@@ -573,8 +573,8 @@
     </Armor>
     <Armor name="Void Handler Hood">
       <Tier>Two</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>1</Damage_Ignore>
       <Damage_Reduction>1</Damage_Reduction>
       <Description>
@@ -594,8 +594,8 @@
   <EArmorType name ="Medium_Armor">
     <Armor name="Byrnie">
       <Tier>Five</Tier>
-      <AP_Reduce>0.97</AP_Reduce>
-      <Block_Reduce>0.97</Block_Reduce>
+      <AP_Mod>0.97</AP_Mod>
+      <Block_Mod>0.97</Block_Mod>
       <Damage_Ignore>1</Damage_Ignore>
       <Damage_Reduction>0.97</Damage_Reduction>
       <Description>
@@ -612,8 +612,8 @@
     </Armor>
     <Armor name="Byrnie">
       <Tier>Four</Tier>
-      <AP_Reduce>0.97</AP_Reduce>
-      <Block_Reduce>0.97</Block_Reduce>
+      <AP_Mod>0.97</AP_Mod>
+      <Block_Mod>0.97</Block_Mod>
       <Damage_Ignore>1</Damage_Ignore>
       <Damage_Reduction>0.95</Damage_Reduction>
       <Description>
@@ -630,8 +630,8 @@
     </Armor>
     <Armor name="Byrnie">
       <Tier>Three</Tier>
-      <AP_Reduce>0.98</AP_Reduce>
-      <Block_Reduce>0.98</Block_Reduce>
+      <AP_Mod>0.98</AP_Mod>
+      <Block_Mod>0.98</Block_Mod>
       <Damage_Ignore>2</Damage_Ignore>
       <Damage_Reduction>0.92</Damage_Reduction>
       <Description>
@@ -648,8 +648,8 @@
     </Armor>
     <Armor name="Byrnie">
       <Tier>Two</Tier>
-      <AP_Reduce>0.98</AP_Reduce>
-      <Block_Reduce>0.98</Block_Reduce>
+      <AP_Mod>0.98</AP_Mod>
+      <Block_Mod>0.98</Block_Mod>
       <Damage_Ignore>3</Damage_Ignore>
       <Damage_Reduction>0.88</Damage_Reduction>
       <Description>
@@ -666,8 +666,8 @@
     </Armor>
     <Armor name="Dino Scale Armor">
       <Tier>Five</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>3</Damage_Ignore>
       <Damage_Reduction>0.95</Damage_Reduction>
       <Description>
@@ -684,8 +684,8 @@
     </Armor>
     <Armor name="Dino Scale Armor">
       <Tier>Four</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>5</Damage_Ignore>
       <Damage_Reduction>0.90</Damage_Reduction>
       <Description>
@@ -703,8 +703,8 @@
     </Armor>
     <Armor name="Dino Scale Armor">
       <Tier>Three</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>7</Damage_Ignore>
       <Damage_Reduction>0.86</Damage_Reduction>
       <Description>
@@ -722,8 +722,8 @@
     </Armor>
     <Armor name="Dino Scale Armor">
       <Tier>Two</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>8</Damage_Ignore>
       <Damage_Reduction>0.80</Damage_Reduction>
       <Description>
@@ -741,8 +741,8 @@
     </Armor>
     <Armor name="Goblin Pads">
       <Tier>Five</Tier>
-      <AP_Reduce>0.93</AP_Reduce>
-      <Block_Reduce>0.87</Block_Reduce>
+      <AP_Mod>0.93</AP_Mod>
+      <Block_Mod>0.87</Block_Mod>
       <Damage_Ignore>2</Damage_Ignore>
       <Damage_Reduction>0.86</Damage_Reduction>
       <Description>
@@ -759,8 +759,8 @@
     </Armor>
     <Armor name="Goblin Pads">
       <Tier>Four</Tier>
-      <AP_Reduce>0.94</AP_Reduce>
-      <Block_Reduce>0.88</Block_Reduce>
+      <AP_Mod>0.94</AP_Mod>
+      <Block_Mod>0.88</Block_Mod>
       <Damage_Ignore>2</Damage_Ignore>
       <Damage_Reduction>0.85</Damage_Reduction>
       <Description>
@@ -777,8 +777,8 @@
     </Armor>
     <Armor name="Goblin Pads">
       <Tier>Three</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.90</Block_Reduce>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.90</Block_Mod>
       <Damage_Ignore>2</Damage_Ignore>
       <Damage_Reduction>0.84</Damage_Reduction>
       <Description>
@@ -795,8 +795,8 @@
     </Armor>
     <Armor name="Goblin Pads">
       <Tier>Two</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.90</Block_Reduce>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.90</Block_Mod>
       <Damage_Ignore>3</Damage_Ignore>
       <Damage_Reduction>0.82</Damage_Reduction>
       <Description>
@@ -813,8 +813,8 @@
     </Armor>
     <Armor name="Mail Shirt">
       <Tier>Five</Tier>
-      <AP_Reduce>0.92</AP_Reduce>
-      <Block_Reduce>0.92</Block_Reduce>
+      <AP_Mod>0.92</AP_Mod>
+      <Block_Mod>0.92</Block_Mod>
       <Damage_Ignore>4</Damage_Ignore>
       <Damage_Reduction>0.88</Damage_Reduction>
       <Description>
@@ -831,8 +831,8 @@
     </Armor>
     <Armor name="Mail Shirt">
       <Tier>Four</Tier>
-      <AP_Reduce>0.93</AP_Reduce>
-      <Block_Reduce>0.93</Block_Reduce>
+      <AP_Mod>0.93</AP_Mod>
+      <Block_Mod>0.93</Block_Mod>
       <Damage_Ignore>4</Damage_Ignore>
       <Damage_Reduction>0.87</Damage_Reduction>
       <Description>
@@ -849,8 +849,8 @@
     </Armor>
     <Armor name="Mail Shirt">
       <Tier>Three</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.93</Block_Reduce>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.93</Block_Mod>
       <Damage_Ignore>4</Damage_Ignore>
       <Damage_Reduction>0.85</Damage_Reduction>
       <Description>
@@ -867,8 +867,8 @@
     </Armor>
     <Armor name="Mail Shirt">
       <Tier>Two</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.95</Block_Reduce>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.95</Block_Mod>
       <Damage_Ignore>4</Damage_Ignore>
       <Damage_Reduction>0.82</Damage_Reduction>
       <Description>
@@ -887,8 +887,8 @@
   <EArmorType name ="Medium_Helm">
     <Armor name="Dino Scale Helm">
       <Tier>Five</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>2</Damage_Ignore>
       <Damage_Reduction>0.97</Damage_Reduction>
       <Description>
@@ -905,8 +905,8 @@
     </Armor>
     <Armor name="Dino Scale Helm">
       <Tier>Four</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>3</Damage_Ignore>
       <Damage_Reduction>0.95</Damage_Reduction>
       <Description>
@@ -923,8 +923,8 @@
     </Armor>
     <Armor name="Dino Scale Helm">
       <Tier>Three</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>4</Damage_Ignore>
       <Damage_Reduction>0.92</Damage_Reduction>
       <Description>
@@ -941,8 +941,8 @@
     </Armor>
     <Armor name="Dino Scale Helm">
       <Tier>Two</Tier>
-      <AP_Reduce>1</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>5</Damage_Ignore>
       <Damage_Reduction>0.86</Damage_Reduction>
       <Description>
@@ -959,9 +959,9 @@
     </Armor>
     <Armor name="Galea">
       <Tier>Four</Tier>
-      <AP_Reduce>0.84</AP_Reduce>
+      <AP_Mod>0.84</AP_Mod>
       <EArmorType>Medium_Helm</EArmorType>
-      <Block_Reduce>0.94</Block_Reduce>
+      <Block_Mod>0.94</Block_Mod>
       <Damage_Ignore>5</Damage_Ignore>
       <Damage_Reduction>0.86</Damage_Reduction>
       <Description>
@@ -978,9 +978,9 @@
     </Armor>
     <Armor name="Galea">
       <Tier>Three</Tier>
-      <AP_Reduce>0.85</AP_Reduce>
+      <AP_Mod>0.85</AP_Mod>
       <EArmorType>Medium_Helm</EArmorType>
-      <Block_Reduce>0.95</Block_Reduce>
+      <Block_Mod>0.95</Block_Mod>
       <Damage_Ignore>6</Damage_Ignore>
       <Damage_Reduction>0.85</Damage_Reduction>
       <Description>
@@ -997,8 +997,8 @@
     </Armor>
     <Armor name="Goblin Cap">
       <Tier>Five</Tier>
-      <AP_Reduce>0.93</AP_Reduce>
-      <Block_Reduce>0.98</Block_Reduce>
+      <AP_Mod>0.93</AP_Mod>
+      <Block_Mod>0.98</Block_Mod>
       <Damage_Ignore>1</Damage_Ignore>
       <Damage_Reduction>0.97</Damage_Reduction>
       <Description>
@@ -1015,8 +1015,8 @@
     </Armor>
     <Armor name="Goblin Cap">
       <Tier>Four</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.99</Block_Reduce>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.99</Block_Mod>
       <Damage_Ignore>1</Damage_Ignore>
       <Damage_Reduction>0.96</Damage_Reduction>
       <Description>
@@ -1033,8 +1033,8 @@
     </Armor>
     <Armor name="Goblin Cap">
       <Tier>Three</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>1</Damage_Ignore>
       <Damage_Reduction>0.95</Damage_Reduction>
       <Description>
@@ -1051,8 +1051,8 @@
     </Armor>
     <Armor name="Goblin Cap">
       <Tier>Two</Tier>
-      <AP_Reduce>0.96</AP_Reduce>
-      <Block_Reduce>1</Block_Reduce>
+      <AP_Mod>0.96</AP_Mod>
+      <Block_Mod>1</Block_Mod>
       <Damage_Ignore>2</Damage_Ignore>
       <Damage_Reduction>0.95</Damage_Reduction>
       <Description>
@@ -1069,8 +1069,8 @@
     </Armor>
     <Armor name="Mail Coif">
       <Tier>Five</Tier>
-      <AP_Reduce>0.94</AP_Reduce>
-      <Block_Reduce>0.94</Block_Reduce>
+      <AP_Mod>0.94</AP_Mod>
+      <Block_Mod>0.94</Block_Mod>
       <Damage_Ignore>2</Damage_Ignore>
       <Damage_Reduction>0.93</Damage_Reduction>
       <Description>
@@ -1087,8 +1087,8 @@
     </Armor>
     <Armor name="Mail Coif">
       <Tier>Four</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.95</Block_Reduce>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.95</Block_Mod>
       <Damage_Ignore>2</Damage_Ignore>
       <Damage_Reduction>0.92</Damage_Reduction>
       <Description>
@@ -1105,8 +1105,8 @@
     </Armor>
     <Armor name="Mail Coif">
       <Tier>Three</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.95</Block_Reduce>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.95</Block_Mod>
       <Damage_Ignore>2</Damage_Ignore>
       <Damage_Reduction>0.90</Damage_Reduction>
       <Description>
@@ -1123,8 +1123,8 @@
     </Armor>
     <Armor name="Mail Coif">
       <Tier>Two</Tier>
-      <AP_Reduce>0.96</AP_Reduce>
-      <Block_Reduce>0.96</Block_Reduce>
+      <AP_Mod>0.96</AP_Mod>
+      <Block_Mod>0.96</Block_Mod>
       <Damage_Ignore>2</Damage_Ignore>
       <Damage_Reduction>0.88</Damage_Reduction>
       <Description>
@@ -1141,8 +1141,8 @@
     </Armor>
     <Armor name ="Spangenhelm">
       <Tier>Five</Tier>
-      <AP_Reduce>0.93</AP_Reduce>
-      <Block_Reduce>0.93</Block_Reduce>
+      <AP_Mod>0.93</AP_Mod>
+      <Block_Mod>0.93</Block_Mod>
       <Damage_Ignore>3</Damage_Ignore>
       <Damage_Reduction>1</Damage_Reduction>
       <Description>
@@ -1159,8 +1159,8 @@
     </Armor>
     <Armor name ="Spangenhelm">
       <Tier>Four</Tier>
-      <AP_Reduce>0.94</AP_Reduce>
-      <Block_Reduce>0.94</Block_Reduce>
+      <AP_Mod>0.94</AP_Mod>
+      <Block_Mod>0.94</Block_Mod>
       <Damage_Ignore>3</Damage_Ignore>
       <Damage_Reduction>0.98</Damage_Reduction>
       <Description>
@@ -1177,8 +1177,8 @@
     </Armor>
     <Armor name ="Spangenhelm">
       <Tier>Three</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.95</Block_Reduce>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.95</Block_Mod>
       <Damage_Ignore>4</Damage_Ignore>
       <Damage_Reduction>0.98</Damage_Reduction>
       <Description>
@@ -1195,8 +1195,8 @@
     </Armor>
     <Armor name ="Spangenhelm">
       <Tier>Two</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.95</Block_Reduce>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.95</Block_Mod>
       <Damage_Ignore>4</Damage_Ignore>
       <Damage_Reduction>0.96</Damage_Reduction>
       <Description>
@@ -1213,8 +1213,8 @@
     </Armor>
     <Armor name="Viking Casque">
       <Tier>Five</Tier>
-      <AP_Reduce>0.93</AP_Reduce>
-      <Block_Reduce>0.93</Block_Reduce>
+      <AP_Mod>0.93</AP_Mod>
+      <Block_Mod>0.93</Block_Mod>
       <Damage_Ignore>2</Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
@@ -1231,8 +1231,8 @@
     </Armor>
     <Armor name="Viking Casque">
       <Tier>Four</Tier>
-      <AP_Reduce>0.94</AP_Reduce>
-      <Block_Reduce>0.94</Block_Reduce>
+      <AP_Mod>0.94</AP_Mod>
+      <Block_Mod>0.94</Block_Mod>
       <Damage_Ignore>3</Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
@@ -1249,8 +1249,8 @@
     </Armor>
     <Armor name="Viking Casque">
       <Tier>Three</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.95</Block_Reduce>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.95</Block_Mod>
       <Damage_Ignore>4</Damage_Ignore>
       <Damage_Reduction>0.98</Damage_Reduction>
       <Description>
@@ -1267,8 +1267,8 @@
     </Armor>
     <Armor name="Viking Casque">
       <Tier>Two</Tier>
-      <AP_Reduce>0.95</AP_Reduce>
-      <Block_Reduce>0.95</Block_Reduce>
+      <AP_Mod>0.95</AP_Mod>
+      <Block_Mod>0.95</Block_Mod>
       <Damage_Ignore>4</Damage_Ignore>
       <Damage_Reduction>0.95</Damage_Reduction>
       <Description>
@@ -1287,8 +1287,8 @@
   <EArmorType name ="Heavy_Armor">
     <Armor name="Dou">
       <Tier>Five</Tier>
-      <AP_Reduce>0.94</AP_Reduce>
-      <Block_Reduce>0.40</Block_Reduce>
+      <AP_Mod>0.94</AP_Mod>
+      <Block_Mod>0.40</Block_Mod>
       <Damage_Ignore>11</Damage_Ignore>
       <Damage_Reduction>0.98</Damage_Reduction>
       <Description>
@@ -1305,8 +1305,8 @@
     </Armor>
     <Armor name="Dou">
       <Tier>Four</Tier>
-      <AP_Reduce>0.94</AP_Reduce>
-      <Block_Reduce>0.40</Block_Reduce>
+      <AP_Mod>0.94</AP_Mod>
+      <Block_Mod>0.40</Block_Mod>
       <Damage_Ignore>13</Damage_Ignore>
       <Damage_Reduction>0.97</Damage_Reduction>
       <Description>
@@ -1323,8 +1323,8 @@
     </Armor>
     <Armor name="Dou">
       <Tier>Three</Tier>
-      <AP_Reduce>0.96</AP_Reduce>
-      <Block_Reduce>0.40</Block_Reduce>
+      <AP_Mod>0.96</AP_Mod>
+      <Block_Mod>0.40</Block_Mod>
       <Damage_Ignore>18</Damage_Ignore>
       <Damage_Reduction>0.97</Damage_Reduction>
       <Description>
@@ -1341,8 +1341,8 @@
     </Armor>
     <Armor name="Dou">
       <Tier>Two</Tier>
-      <AP_Reduce>0.97</AP_Reduce>
-      <Block_Reduce>0.40</Block_Reduce>
+      <AP_Mod>0.97</AP_Mod>
+      <Block_Mod>0.40</Block_Mod>
       <Damage_Ignore>20</Damage_Ignore>
       <Damage_Reduction>0.80</Damage_Reduction>
       <Description>
@@ -1359,8 +1359,8 @@
     </Armor>
     <Armor name="Orcish Plate Mail">
       <Tier>Five</Tier>
-      <AP_Reduce>0.51</AP_Reduce>
-      <Block_Reduce>0.51</Block_Reduce>
+      <AP_Mod>0.51</AP_Mod>
+      <Block_Mod>0.51</Block_Mod>
       <Damage_Ignore>21</Damage_Ignore>
       <Damage_Reduction>0.52</Damage_Reduction>
       <Description>
@@ -1378,8 +1378,8 @@
     </Armor>
     <Armor name="Orcish Plate Mail">
       <Tier>Four</Tier>
-      <AP_Reduce>0.53</AP_Reduce>
-      <Block_Reduce>0.53</Block_Reduce>
+      <AP_Mod>0.53</AP_Mod>
+      <Block_Mod>0.53</Block_Mod>
       <Damage_Ignore>23</Damage_Ignore>
       <Damage_Reduction>0.50</Damage_Reduction>
       <Description>
@@ -1397,8 +1397,8 @@
     </Armor>
     <Armor name="Orcish Plate Mail">
       <Tier>Three</Tier>
-      <AP_Reduce>0.55</AP_Reduce>
-      <Block_Reduce>0.55</Block_Reduce>
+      <AP_Mod>0.55</AP_Mod>
+      <Block_Mod>0.55</Block_Mod>
       <Damage_Ignore>25</Damage_Ignore>
       <Damage_Reduction>0.45</Damage_Reduction>
       <Description>
@@ -1416,8 +1416,8 @@
     </Armor>
     <Armor name="Orcish Plate Mail">
       <Tier>Two</Tier>
-      <AP_Reduce>0.55</AP_Reduce>
-      <Block_Reduce>0.55</Block_Reduce>
+      <AP_Mod>0.55</AP_Mod>
+      <Block_Mod>0.55</Block_Mod>
       <Damage_Ignore>28</Damage_Ignore>
       <Damage_Reduction>0.40</Damage_Reduction>
       <Description>
@@ -1435,8 +1435,8 @@
     </Armor>
     <Armor name="Plate Mail">
       <Tier>Five</Tier>
-      <AP_Reduce>0.55</AP_Reduce>
-      <Block_Reduce>0.62</Block_Reduce>
+      <AP_Mod>0.55</AP_Mod>
+      <Block_Mod>0.62</Block_Mod>
       <Damage_Ignore>18</Damage_Ignore>
       <Damage_Reduction>0.42</Damage_Reduction>
       <Description>
@@ -1454,8 +1454,8 @@
     </Armor>
     <Armor name="Plate Mail">
       <Tier>Four</Tier>
-      <AP_Reduce>0.56</AP_Reduce>
-      <Block_Reduce>0.63</Block_Reduce>
+      <AP_Mod>0.56</AP_Mod>
+      <Block_Mod>0.63</Block_Mod>
       <Damage_Ignore>20</Damage_Ignore>
       <Damage_Reduction>0.50</Damage_Reduction>
       <Description>
@@ -1472,8 +1472,8 @@
     </Armor>
     <Armor name="Plate Mail">
       <Tier>Three</Tier>
-      <AP_Reduce>0.60</AP_Reduce>
-      <Block_Reduce>0.65</Block_Reduce>
+      <AP_Mod>0.60</AP_Mod>
+      <Block_Mod>0.65</Block_Mod>
       <Damage_Ignore>22</Damage_Ignore>
       <Damage_Reduction>0.48</Damage_Reduction>
       <Description>
@@ -1492,8 +1492,8 @@
   <EArmorType name ="Heavy_Helm">
     <Armor name="Great Helm">
       <Tier>Five</Tier>
-      <AP_Reduce>0.76</AP_Reduce>
-      <Block_Reduce>0.72</Block_Reduce>
+      <AP_Mod>0.76</AP_Mod>
+      <Block_Mod>0.72</Block_Mod>
       <Damage_Ignore>7</Damage_Ignore>
       <Damage_Reduction>0.52</Damage_Reduction>
       <Description>
@@ -1510,8 +1510,8 @@
     </Armor>
     <Armor name="Great Helm">
       <Tier>Four</Tier>
-      <AP_Reduce>0.78</AP_Reduce>
-      <Block_Reduce>0.74</Block_Reduce>
+      <AP_Mod>0.78</AP_Mod>
+      <Block_Mod>0.74</Block_Mod>
       <Damage_Ignore>8</Damage_Ignore>
       <Damage_Reduction>0.50</Damage_Reduction>
       <Description>
@@ -1529,8 +1529,8 @@
     </Armor>
     <Armor name="Great Helm">
       <Tier>Three</Tier>
-      <AP_Reduce>0.75</AP_Reduce>
-      <Block_Reduce>0.75</Block_Reduce>
+      <AP_Mod>0.75</AP_Mod>
+      <Block_Mod>0.75</Block_Mod>
       <Damage_Ignore>9</Damage_Ignore>
       <Damage_Reduction>0.46</Damage_Reduction>
       <Description>
@@ -1548,8 +1548,8 @@
     </Armor>
     <Armor name="Jousting Helm">
       <Tier>Four</Tier>
-      <AP_Reduce>0.80</AP_Reduce>
-      <Block_Reduce>0.60</Block_Reduce>
+      <AP_Mod>0.80</AP_Mod>
+      <Block_Mod>0.60</Block_Mod>
       <Damage_Ignore>18</Damage_Ignore>
       <Damage_Reduction>0.80</Damage_Reduction>
       <Description>
@@ -1567,8 +1567,8 @@
     </Armor>
     <Armor name="Kabuto">
       <Tier>Five</Tier>
-      <AP_Reduce>0.94</AP_Reduce>
-      <Block_Reduce>0.40</Block_Reduce>
+      <AP_Mod>0.94</AP_Mod>
+      <Block_Mod>0.40</Block_Mod>
       <Damage_Ignore>8</Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
@@ -1585,8 +1585,8 @@
     </Armor>
     <Armor name="Kabuto">
       <Tier>Four</Tier>
-      <AP_Reduce>0.96</AP_Reduce>
-      <Block_Reduce>0.40</Block_Reduce>
+      <AP_Mod>0.96</AP_Mod>
+      <Block_Mod>0.40</Block_Mod>
       <Damage_Ignore>9</Damage_Ignore>
       <Damage_Reduction>0.99</Damage_Reduction>
       <Description>
@@ -1603,8 +1603,8 @@
     </Armor>
     <Armor name="Kabuto">
       <Tier>Three</Tier>
-      <AP_Reduce>0.97</AP_Reduce>
-      <Block_Reduce>0.40</Block_Reduce>
+      <AP_Mod>0.97</AP_Mod>
+      <Block_Mod>0.40</Block_Mod>
       <Damage_Ignore>10</Damage_Ignore>
       <Damage_Reduction>0.98</Damage_Reduction>
       <Description>
@@ -1621,8 +1621,8 @@
     </Armor>
     <Armor name="Kabuto">
       <Tier>Two</Tier>
-      <AP_Reduce>0.97</AP_Reduce>
-      <Block_Reduce>0.40</Block_Reduce>
+      <AP_Mod>0.97</AP_Mod>
+      <Block_Mod>0.40</Block_Mod>
       <Damage_Ignore>12</Damage_Ignore>
       <Damage_Reduction>0.97</Damage_Reduction>
       <Description>
@@ -1639,8 +1639,8 @@
     </Armor>
     <Armor name="Orc Mask">
       <Tier>Five</Tier>
-      <AP_Reduce>0.76</AP_Reduce>
-      <Block_Reduce>0.76</Block_Reduce>
+      <AP_Mod>0.76</AP_Mod>
+      <Block_Mod>0.76</Block_Mod>
       <Damage_Ignore>6</Damage_Ignore>
       <Damage_Reduction>0.80</Damage_Reduction>
       <Description>
@@ -1657,8 +1657,8 @@
     </Armor>
     <Armor name="Orc Mask">
       <Tier>Four</Tier>
-      <AP_Reduce>0.78</AP_Reduce>
-      <Block_Reduce>0.78</Block_Reduce>
+      <AP_Mod>0.78</AP_Mod>
+      <Block_Mod>0.78</Block_Mod>
       <Damage_Ignore>7</Damage_Ignore>
       <Damage_Reduction>0.78</Damage_Reduction>
       <Description>
@@ -1675,8 +1675,8 @@
     </Armor>
     <Armor name="Orc Mask">
       <Tier>Three</Tier>
-      <AP_Reduce>0.75</AP_Reduce>
-      <Block_Reduce>0.75</Block_Reduce>
+      <AP_Mod>0.75</AP_Mod>
+      <Block_Mod>0.75</Block_Mod>
       <Damage_Ignore>12</Damage_Ignore>
       <Damage_Reduction>0.74</Damage_Reduction>
       <Description>
@@ -1693,8 +1693,8 @@
     </Armor>
     <Armor name="Orc Mask">
       <Tier>Two</Tier>
-      <AP_Reduce>0.70</AP_Reduce>
-      <Block_Reduce>0.70</Block_Reduce>
+      <AP_Mod>0.70</AP_Mod>
+      <Block_Mod>0.70</Block_Mod>
       <Damage_Ignore>15</Damage_Ignore>
       <Damage_Reduction>0.62</Damage_Reduction>
       <Description>
@@ -1711,8 +1711,8 @@
     </Armor>
     <Armor name="Sallet">
       <Tier>Three</Tier>
-      <AP_Reduce>0.78</AP_Reduce>
-      <Block_Reduce>0.70</Block_Reduce>
+      <AP_Mod>0.78</AP_Mod>
+      <Block_Mod>0.70</Block_Mod>
       <Damage_Ignore>13</Damage_Ignore>
       <Damage_Reduction>0.60</Damage_Reduction>
       <Description>

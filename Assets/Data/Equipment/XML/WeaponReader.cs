@@ -62,25 +62,25 @@ namespace Assets.Data.Equipment.XML
             switch (param)
             {
                 case ("Tier"): { HandleTierFromFile(name, value, ref tier); } break;
-                case ("Accuracy"): { HandleStatsFromFile(name, EWeaponStat.Accuracy, v, tier); } break;
-                case ("AP_Reduce"): { HandleStatsFromFile(name, EWeaponStat.AP_Reduce, v, tier); } break;
+                case ("Accuracy"): { HandleStatsFromFile(name, EWeaponStat.Accuracy_Mod, v, tier); } break;
+                case ("AP_Mod"): { HandleStatsFromFile(name, EWeaponStat.AP_Mod, v, tier); } break;
                 case ("Armor_Ignore"): { HandleStatsFromFile(name, EWeaponStat.Armor_Ignore, v, tier); } break;
                 case ("Armor_Pierce"): { HandleStatsFromFile(name, EWeaponStat.Armor_Pierce, v, tier); } break;
                 case ("Block_Ignore"): { HandleStatsFromFile(name, EWeaponStat.Block_Ignore, v, tier); } break;
+                case ("CustomBullet"): { this.HandleCustomBullet(name, value, tier); } break;
                 case ("Damage"): { HandleStatsFromFile(name, EWeaponStat.Damage, v, tier); } break;
                 case ("Description"): { } break;
-                case ("Dodge_Reduce"): { HandleStatsFromFile(name, EWeaponStat.Dodge_Reduce, v, tier); } break;
-                case ("Fatigue_Cost_Mod"): { HandleStatsFromFile(name, EWeaponStat.Fatigue_Cost_Mod, v, tier); } break;
-                case ("Initiative_Reduce"): { HandleStatsFromFile(name, EWeaponStat.Initiative_Reduce, v, tier); } break;
+                case ("Dodge_Mod"): { HandleStatsFromFile(name, EWeaponStat.Dodge_Mod, v, tier); } break;
+                case ("Initiative_Mod"): { HandleStatsFromFile(name, EWeaponStat.Initiative_Mod, v, tier); } break;
                 case ("Max_Durability"): { HandleStatsFromFile(name, EWeaponStat.Max_Durability, v, tier); } break;
                 case ("Melee_Block_Chance"): { HandleStatsFromFile(name, EWeaponStat.Melee_Block_Chance, v, tier); } break;
-                case ("Parry_Chance"): { HandleStatsFromFile(name, EWeaponStat.Parry_Chance, v, tier); } break;
                 case ("Parry_Mod"): { HandleStatsFromFile(name, EWeaponStat.Parry_Mod, v, tier); } break;
                 case ("Range_Mod"): { HandleStatsFromFile(name, EWeaponStat.Range_Mod, v, tier); } break;
                 case ("Ranged_Block_Chance"): { HandleStatsFromFile(name, EWeaponStat.Ranged_Block_Chance, v, tier); } break;
                 case ("Sprites"): { HandleSpritesFromFile(name, value, tier); } break;
-                case ("Shield_Damage"): { HandleStatsFromFile(name, EWeaponStat.Shield_Damage, v, tier); } break;
-                case ("Stamina_Reduce"): { HandleStatsFromFile(name, EWeaponStat.Stamina_Reduce, v, tier); } break;
+                case ("SrpiteFXPath"): { this.HandleSpriteFXPath(name, value, tier); } break;
+                case ("Shield_Damage"): { HandleStatsFromFile(name, EWeaponStat.Shield_Damage_Percent, v, tier); } break;
+                case ("Stamina_Mod"): { HandleStatsFromFile(name, EWeaponStat.Stamina_Mod, v, tier); } break;
                 case ("Value"): { HandleStatsFromFile(name, EWeaponStat.Value, v, tier); } break;
                 case ("WeaponEAbility"): { HandleWeaponAbilitiesFromFile(name, value, tier); } break;
                 case ("EWeaponType"): { HandleWeaponTypeFromFile(name, value, tier); } break;
@@ -95,22 +95,21 @@ namespace Assets.Data.Equipment.XML
 
             switch (x)
             {
-                case (EWeaponStat.Accuracy): { stats.Table[key].ArmorIgnore = v; } break;
+                case (EWeaponStat.Accuracy_Mod): { stats.Table[key].ArmorIgnore = v; } break;
                 case (EWeaponStat.Armor_Ignore): { stats.Table[key].ArmorIgnore = v; } break;
                 case (EWeaponStat.Armor_Pierce): { stats.Table[key].ArmorPierce = v; } break;
-                case (EWeaponStat.AP_Reduce): { stats.Table[key].APReduce = v; } break;
+                case (EWeaponStat.AP_Mod): { stats.Table[key].APMod = v; } break;
                 case (EWeaponStat.Block_Ignore): { stats.Table[key].BlockIgnore = v; } break;
                 case (EWeaponStat.Damage): { stats.Table[key].Damage = (int)v; } break;
-                case (EWeaponStat.Dodge_Reduce): { stats.Table[key].DodgeMod = v; } break;
-                case (EWeaponStat.Max_Durability): { stats.Table[key].Durability = (int)v; } break;
-                case (EWeaponStat.Fatigue_Cost_Mod): { stats.Table[key].FatigueCostMod = v; } break;
-                case (EWeaponStat.Initiative_Reduce): { stats.Table[key].InitiativeReduce = v; } break;
+                case (EWeaponStat.Dodge_Mod): { stats.Table[key].Dodge_Mod = v; } break;
+                case (EWeaponStat.Max_Durability): { stats.Table[key].MaxDurability = (int)v; } break;
+                case (EWeaponStat.Initiative_Mod): { stats.Table[key].InitiativeMod = v; } break;
                 case (EWeaponStat.Melee_Block_Chance): { stats.Table[key].MeleeBlockChance = v; } break;
                 case (EWeaponStat.Parry_Mod): { stats.Table[key].ParryMod = v; } break;
                 case (EWeaponStat.Range_Mod): { stats.Table[key].RangeMod = (int)v; } break;
                 case (EWeaponStat.Ranged_Block_Chance): { stats.Table[key].RangeBlockChance = v; } break;
-                case (EWeaponStat.Shield_Damage): { stats.Table[key].ShieldDamage = v; } break;
-                case (EWeaponStat.Stamina_Reduce): { stats.Table[key].StaminaReduce = v; } break;
+                case (EWeaponStat.Shield_Damage_Percent): { stats.Table[key].ShieldDamagePercent = v; } break;
+                case (EWeaponStat.Stamina_Mod): { stats.Table[key].StaminaMod = v; } break;
                 case (EWeaponStat.Value): { stats.Table[key].Value = v; } break;
             }
         }
@@ -126,6 +125,16 @@ namespace Assets.Data.Equipment.XML
                 stats.Table.Add(key, new WeaponParams());
                 stats.Table[key].Tier = x;
                 stats.Table[key].Name = name;
+            }
+        }
+
+        private void HandleCustomBullet(string name, string value, EEquipmentTier tier)
+        {
+            var key = name + "_" + tier.ToString();
+            if (value.ToLowerInvariant().Equals("true"))
+            {
+                var stats = WeaponParamTable.Instance;
+                stats.Table[key].CustomBullet = true;
             }
         }
 
@@ -167,6 +176,15 @@ namespace Assets.Data.Equipment.XML
             var stats = WeaponParamTable.Instance;
             if (EnumUtil<EWeaponUse>.TryGetEnumValue(value, ref x))
                 stats.Table[key].Use = x;
+        }
+
+        private void HandleSpriteFXPath(string name, string value, EEquipmentTier tier)
+        {
+            var key = name + "_" + tier.ToString();
+
+            var x = EWeaponUse.None;
+            var stats = WeaponParamTable.Instance;
+            stats.Table[key].SpriteFXPath = value;
         }
     }
 }

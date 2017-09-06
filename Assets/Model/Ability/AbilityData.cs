@@ -16,6 +16,7 @@ namespace Assets.Model.Ability
         public double CastTime { get; set; }
         public ECastType CastType { get; set; }
         public bool CustomCastCamera { get; set; }
+        public bool CustomGraphics { get; set; }
         public double DamageMod { get; set; }
         public double DmgPerPower { get; set; }
         public double DodgeMod { get; set; }

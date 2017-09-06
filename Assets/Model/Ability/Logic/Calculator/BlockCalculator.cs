@@ -18,9 +18,9 @@ namespace Assets.Model.Ability.Logic.Calculator
             bool hasShield = false;
 
             if (tgt.Proxy.GetArmor() != null)
-                hit.Data.Chances.Block *= tgt.Proxy.GetArmor().BlockReduce;
+                hit.Data.Chances.Block *= tgt.Proxy.GetArmor().BlockMod;
             if (tgt.Proxy.GetHelm() != null)
-                hit.Data.Chances.Block *= tgt.Proxy.GetHelm().BlockReduce;
+                hit.Data.Chances.Block *= tgt.Proxy.GetHelm().BlockMod;
             if (tgt.Proxy.GetLWeapon() != null && tgt.Proxy.GetLWeapon().IsTypeOfShield())
             {
                 hit.Data.Chances.Block *= (tgt.Proxy.GetLWeapon().MeleeBlockChance / LogicParams.BASE_SCALAR);
