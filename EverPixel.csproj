@@ -502,14 +502,48 @@
     <None Include="Assets\Data\Equipment\XML\Armor\LightHelm.xml" />
     <None Include="Assets\Data\Equipment\XML\Armor\MediumArmor.xml" />
     <None Include="Assets\Data\Equipment\XML\Armor\MediumHelm.xml" />
-    <None Include="Assets\Data\Equipment\XML\Armors.xml" />
-    <None Include="Assets\Data\Equipment\XML\Weapons.xml" />
     <None Include="Assets\Data\Injury\XML\Injuries.xml" />
     <None Include="Assets\Data\Mount\XML\Mounts.xml" />
     <None Include="Assets\Data\Party\XML\Parties.xml" />
     <None Include="Assets\Data\Party\XML\SubParties.xml" />
     <None Include="Assets\Data\Perk\XML\Perks.xml" />
     <None Include="Assets\TODO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Equipment\XML\Weapon\Axe.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Equipment\XML\Weapon\Flail.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Equipment\XML\Weapon\Hammer.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Equipment\XML\Weapon\LargeShield.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Equipment\XML\Weapon\LightCrossbow.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Equipment\XML\Weapon\MediumShield.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Equipment\XML\Weapon\Polearm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Equipment\XML\Weapon\ShortBow.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Equipment\XML\Weapon\SmallShield.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Equipment\XML\Weapon\Spear.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Equipment\XML\Weapon\Staff.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Equipment\XML\Weapon\Sword.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

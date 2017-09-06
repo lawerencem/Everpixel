@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Weapons>
+  <EWeaponSkill name="Light_Crossbow">
+    <Weapon name="Ween Crossbow">
+      <Tier>Five</Tier>
+      <Accuracy_Mod>0.48</Accuracy_Mod>
+      <AP_Mod>1.0</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>5</Damage>
+      <Description>
+        This incredible bow fires live (i.e., dangerous) weens!
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>8</Max_Durability>
+      <Parry_Mod>1.0</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0</Shield_Damage_Percent>
+      <Sprites>0</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>250</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+    <Weapon name="Ween Crossbow">
+      <Tier>Four</Tier>
+      <Accuracy_Mod>0.52</Accuracy_Mod>
+      <AP_Mod>1.0</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>8</Damage>
+      <Description>
+        This incredible bow fires live (i.e., dangerous) weens!
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>15</Max_Durability>
+      <Parry_Mod>1.0</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0</Shield_Damage_Percent>
+      <Sprites>0</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>550</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+    <Weapon name="Ween Crossbow">
+      <Tier>Three</Tier>
+      <Accuracy_Mod>0.58</Accuracy_Mod>
+      <AP_Mod>1.0</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>18</Damage>
+      <Description>
+        This incredible bow fires live (i.e., dangerous) weens!
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>1.0</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0</Shield_Damage_Percent>
+      <Sprites>0</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>800</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+    <Weapon name="Ween Crossbow">
+      <Tier>Two</Tier>
+      <Accuracy_Mod>0.62</Accuracy_Mod>
+      <AP_Mod>1.0</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>24</Damage>
+      <Description>
+        As if a ween wasn't scary enough - they can now fly! 
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>1.0</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0</Shield_Damage_Percent>
+      <Sprites>0</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>1200</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+</Weapons>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Weapons>
+  <EWeaponSkill name ="Hammer">
+    <Weapon name="Dino Warhammer">
+      <Tier>Five</Tier>
+      <Accuracy_Mod>0.63</Accuracy_Mod>
+      <AP_Mod>0.73</AP_Mod>
+      <Armor_Ignore>0.75</Armor_Ignore>
+      <Armor_Pierce>0.92</Armor_Pierce>
+      <Block_Ignore>0.20</Block_Ignore>
+      <Damage>45</Damage>
+      <Description>
+        This log has some strangely-heavy bones protruding from the end.
+      </Description>
+      <Fatigue_Mod>1.24</Fatigue_Mod>
+      <Initiative_Mod>0.85</Initiative_Mod>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>0.55</Parry_Mod>
+      <Shield_Damage_Percent>0.22</Shield_Damage_Percent>
+      <Sprites>0</Sprites>
+      <Stamina_Mod>0.84</Stamina_Mod>
+      <Value>50</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Break_Armor</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Warhammer">
+      <Tier>Four</Tier>
+      <Accuracy_Mod>0.65</Accuracy_Mod>
+      <AP_Mod>0.75</AP_Mod>
+      <Armor_Ignore>0.73</Armor_Ignore>
+      <Armor_Pierce>0.91</Armor_Pierce>
+      <Block_Ignore>0.21</Block_Ignore>
+      <Damage>52</Damage>
+      <Description>
+        This log has some strangely-heavy bones protruding from the end.
+      </Description>
+      <Fatigue_Mod>1.22</Fatigue_Mod>
+      <Initiative_Mod>0.83</Initiative_Mod>
+      <Max_Durability>50</Max_Durability>
+      <Parry_Mod>0.58</Parry_Mod>
+      <Shield_Damage_Percent>0.25</Shield_Damage_Percent>
+      <Sprites>15</Sprites>
+      <Stamina_Mod>0.85</Stamina_Mod>
+      <Value>200</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Break_Armor</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Warhammer">
+      <Tier>Three</Tier>
+      <Accuracy_Mod>0.68</Accuracy_Mod>
+      <AP_Mod>0.78</AP_Mod>
+      <Armor_Ignore>0.70</Armor_Ignore>
+      <Armor_Pierce>0.90</Armor_Pierce>
+      <Block_Ignore>0.22</Block_Ignore>
+      <Damage>60</Damage>
+      <Description>
+        This log has some strangely-heavy bones protruding from the end.
+      </Description>
+      <Fatigue_Mod>1.20</Fatigue_Mod>
+      <Initiative_Mod>0.85</Initiative_Mod>
+      <Max_Durability>85</Max_Durability>
+      <Parry_Mod>0.60</Parry_Mod>
+      <Shield_Damage_Percent>0.26</Shield_Damage_Percent>
+      <Sprites>30</Sprites>
+      <Stamina_Mod>0.85</Stamina_Mod>
+      <Value>350</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Break_Armor</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Warhammer">
+      <Tier>Two</Tier>
+      <Accuracy_Mod>0.70</Accuracy_Mod>
+      <AP_Mod>0.80</AP_Mod>
+      <Armor_Ignore>0.68</Armor_Ignore>
+      <Armor_Pierce>0.89</Armor_Pierce>
+      <Block_Ignore>0.23</Block_Ignore>
+      <Damage>72</Damage>
+      <Description>
+        This log has some strangely-heavy bones protruding from the end.
+      </Description>
+      <Fatigue_Mod>1.20</Fatigue_Mod>
+      <Initiative_Mod>0.85</Initiative_Mod>
+      <Max_Durability>115</Max_Durability>
+      <Parry_Mod>0.60</Parry_Mod>
+      <Shield_Damage_Percent>0.27</Shield_Damage_Percent>
+      <Sprites>45</Sprites>
+      <Stamina_Mod>0.85</Stamina_Mod>
+      <Value>700</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Break_Armor</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+</Weapons>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  

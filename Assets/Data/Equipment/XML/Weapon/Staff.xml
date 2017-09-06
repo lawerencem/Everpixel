@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Weapons>
+  <EWeaponSkill name ="Staff">
+    <Weapon name="Dino Staff">
+      <Tier>Five</Tier>
+      <Accuracy_Mod>0.78</Accuracy_Mod>
+      <AP_Mod>0.85</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>10</Damage>
+      <Description>
+        Not exactly the most effective weapon, but its presence inspires the troops.
+      </Description>
+      <Fatigue_Mod>1.08</Fatigue_Mod>
+      <Initiative_Mod>0.72</Initiative_Mod>
+      <Max_Durability>10</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>3</Sprites>
+      <Stamina_Mod>0.92</Stamina_Mod>
+      <Value>100</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Staff">
+      <Tier>Four</Tier>
+      <Accuracy_Mod>0.80</Accuracy_Mod>
+      <AP_Mod>0.87</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>12</Damage>
+      <Description>
+        Not exactly the most effective weapon, but its presence inspires the troops.
+      </Description>
+      <Fatigue_Mod>1.06</Fatigue_Mod>
+      <Initiative_Mod>0.74</Initiative_Mod>
+      <Max_Durability>10</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>18</Sprites>
+      <Stamina_Mod>0.94</Stamina_Mod>
+      <Value>250</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Staff">
+      <Tier>Three</Tier>
+      <Accuracy_Mod>0.82</Accuracy_Mod>
+      <AP_Mod>0.88</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>15</Damage>
+      <Description>
+        Not exactly the most effective weapon, but its presence inspires the troops.
+      </Description>
+      <Fatigue_Mod>1.04</Fatigue_Mod>
+      <Initiative_Mod>0.76</Initiative_Mod>
+      <Max_Durability>10</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>33</Sprites>
+      <Stamina_Mod>0.95</Stamina_Mod>
+      <Value>355</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Staff">
+      <Tier>Two</Tier>
+      <Accuracy_Mod>0.84</Accuracy_Mod>
+      <AP_Mod>0.90</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>18</Damage>
+      <Description>
+        Not exactly the most effective weapon, but its presence inspires the troops.
+      </Description>
+      <Fatigue_Mod>1.03</Fatigue_Mod>
+      <Initiative_Mod>0.78</Initiative_Mod>
+      <Max_Durability>15</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>48</Sprites>
+      <Stamina_Mod>0.95</Stamina_Mod>
+      <Value>550</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Slime Staff">
+      <Tier>Five</Tier>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>0.88</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>8</Damage>
+      <Description>
+        This odd staff has a slimy tip...
+      </Description>
+      <Fatigue_Mod>1.12</Fatigue_Mod>
+      <Initiative_Mod>0.78</Initiative_Mod>
+      <Max_Durability>15</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Sprites>0,1</Sprites>
+      <Stamina_Mod>0.88</Stamina_Mod>
+      <Value>150</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+    <Weapon name="Slime Staff">
+      <Tier>Four</Tier>
+      <Accuracy_Mod>0.88</Accuracy_Mod>
+      <AP_Mod>0.89</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>10</Damage>
+      <Description>
+        This odd staff has a prodigious amount of slime coming from the tip...
+      </Description>
+      <Fatigue_Mod>1.11</Fatigue_Mod>
+      <Initiative_Mod>0.79</Initiative_Mod>
+      <Max_Durability>25</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Sprites>15,16</Sprites>
+      <Stamina_Mod>0.89</Stamina_Mod>
+      <Value>300</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+    <Weapon name="Slime Staff">
+      <Tier>Three</Tier>
+      <Accuracy_Mod>0.90</Accuracy_Mod>
+      <AP_Mod>0.90</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>12</Damage>
+      <Description>
+        This staff is covered in slime...and it looks like its *gazing* at you...
+      </Description>
+      <Fatigue_Mod>1.10</Fatigue_Mod>
+      <Initiative_Mod>0.80</Initiative_Mod>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Sprites>30,31</Sprites>
+      <Stamina_Mod>0.90</Stamina_Mod>
+      <Value>650</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+    <Weapon name="Void Staff">
+      <Tier>Five</Tier>
+      <Accuracy_Mod>0.80</Accuracy_Mod>
+      <AP_Mod>0.85</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>20</Damage>
+      <Description>
+        An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
+        that are best avoided...
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Sprites>2</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>100</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Void Staff">
+      <Tier>Four</Tier>
+      <Accuracy_Mod>0.82</Accuracy_Mod>
+      <AP_Mod>0.87</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>25</Damage>
+      <Description>
+        An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
+        that are best avoided...
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>30</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Sprites>17</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>200</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Void Staff">
+      <Tier>Three</Tier>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>0.90</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>40</Damage>
+      <Description>
+        An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
+        that are best avoided...
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Sprites>32</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>400</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Void Staff">
+      <Tier>Two</Tier>
+      <Accuracy_Mod>0.92</Accuracy_Mod>
+      <AP_Mod>0.95</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>50</Damage>
+      <Description>
+        An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
+        that are best avoided...
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>50</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Sprites>47</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>1000</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+</Weapons>
+  

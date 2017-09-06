@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Weapons>
+  <EWeaponSkill name ="Small_Shield">
+    <Weapon name="Buckler">
+      <Tier>Five</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Description>
+        This flimsy thing could probably deflect a few blows before completely disintegrating...hopefully...
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>20</Max_Durability>
+      <Melee_Block_Chance>1.01</Melee_Block_Chance>
+      <Parry_Mod>0.99</Parry_Mod>
+      <Ranged_Block_Chance>1</Ranged_Block_Chance>
+      <Sprites>0,1,2</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>20</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Buckler">
+      <Tier>Four</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Description>
+        A rather small shield meant for deflecting blows rather than blocking.  It's not exactly the finest quality...
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>35</Max_Durability>
+      <Melee_Block_Chance>1.03</Melee_Block_Chance>
+      <Parry_Mod>1</Parry_Mod>
+      <Ranged_Block_Chance>1.01</Ranged_Block_Chance>
+      <Sprites>15,16,17</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>20</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Goblin Buckler">
+      <Tier>Five</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Description>
+        A small, light shield favored by goblins.
+      </Description>
+      <Fatigue_Mod>1.02</Fatigue_Mod>
+      <Initiative_Mod>0.98</Initiative_Mod>
+      <Max_Durability>25</Max_Durability>
+      <Melee_Block_Chance>1.02</Melee_Block_Chance>
+      <Parry_Mod>0.98</Parry_Mod>
+      <Ranged_Block_Chance>1</Ranged_Block_Chance>
+      <Sprites>3</Sprites>
+      <Stamina_Mod>0.98</Stamina_Mod>
+      <Value>40</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Goblin Buckler">
+      <Tier>Four</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Description>
+        A small, light shield favored by goblins.
+      </Description>
+      <Fatigue_Mod>1.01</Fatigue_Mod>
+      <Initiative_Mod>0.99</Initiative_Mod>
+      <Max_Durability>35</Max_Durability>
+      <Melee_Block_Chance>1.03</Melee_Block_Chance>
+      <Parry_Mod>0.99</Parry_Mod>
+      <Ranged_Block_Chance>1</Ranged_Block_Chance>
+      <Sprites>3</Sprites>
+      <Stamina_Mod>0.99</Stamina_Mod>
+      <Value>100</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Goblin Buckler">
+      <Tier>Three</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Description>
+        A small, light shield favored by goblins.
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>50</Max_Durability>
+      <Melee_Block_Chance>1.04</Melee_Block_Chance>
+      <Parry_Mod>1</Parry_Mod>
+      <Ranged_Block_Chance>1</Ranged_Block_Chance>
+      <Sprites>3</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>170</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+</Weapons>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  

@@ -13,7 +13,18 @@ namespace Assets.Data.Equipment.XML
 
         public WeaponReader() : base()
         {
-            this._paths.Add("Assets/Data/Equipment/XML/Weapons.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Weapon/Axe.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Weapon/Flail.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Weapon/Hammer.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Weapon/LargeShield.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Weapon/LightCrossbow.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Weapon/MediumShield.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Weapon/Polearm.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Weapon/ShortBow.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Weapon/SmallShield.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Weapon/Spear.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Weapon/Staff.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Weapon/Sword.xml");
         }
 
         public static WeaponReader Instance

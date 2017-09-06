@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Weapons>
+  <EWeaponSkill name ="Axe">
+    <Weapon name="Dino Greataxe">
+      <Tier>Five</Tier>
+      <Accuracy_Mod>0.68</Accuracy_Mod>
+      <AP_Mod>0.80</AP_Mod>
+      <Armor_Ignore>0.84</Armor_Ignore>
+      <Armor_Pierce>0.88</Armor_Pierce>
+      <Block_Ignore>0.02</Block_Ignore>
+      <Damage>52</Damage>
+      <Description>
+        This gigantic log has a few razor-sharp teeth protruding from it.  Lizardman warriors use it like an axe.
+      </Description>
+      <Fatigue_Mod>1.24</Fatigue_Mod>
+      <Initiative_Mod>0.82</Initiative_Mod>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>0.72</Parry_Mod>
+      <Shield_Damage_Percent>0.05</Shield_Damage_Percent>
+      <Sprites>7</Sprites>
+      <Stamina_Mod>0.82</Stamina_Mod>
+      <Value>50</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Greataxe">
+      <Tier>Four</Tier>
+      <Accuracy_Mod>0.70</Accuracy_Mod>
+      <AP_Mod>0.81</AP_Mod>
+      <Armor_Ignore>0.82</Armor_Ignore>
+      <Armor_Pierce>0.86</Armor_Pierce>
+      <Block_Ignore>0.02</Block_Ignore>
+      <Damage>60</Damage>
+      <Description>
+        This log has a very large and very sharp tooth protruding from the end.  What kind of creature has teeth like that?
+      </Description>
+      <Fatigue_Mod>1.22</Fatigue_Mod>
+      <Initiative_Mod>0.83</Initiative_Mod>
+      <Max_Durability>50</Max_Durability>
+      <Parry_Mod>0.74</Parry_Mod>
+      <Shield_Damage_Percent>0.06</Shield_Damage_Percent>
+      <Sprites>22</Sprites>
+      <Stamina_Mod>0.84</Stamina_Mod>
+      <Value>150</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Greataxe">
+      <Tier>Three</Tier>
+      <Accuracy_Mod>0.71</Accuracy_Mod>
+      <AP_Mod>0.82</AP_Mod>
+      <Armor_Ignore>0.80</Armor_Ignore>
+      <Armor_Pierce>0.84</Armor_Pierce>
+      <Block_Ignore>0.02</Block_Ignore>
+      <Damage>78</Damage>
+      <Description>
+        This log has a very large and very sharp tooth protruding from the end.  What kind of creature has teeth like that?
+      </Description>
+      <Fatigue_Mod>1.20</Fatigue_Mod>
+      <Initiative_Mod>0.85</Initiative_Mod>
+      <Max_Durability>85</Max_Durability>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Shield_Damage_Percent>0.07</Shield_Damage_Percent>
+      <Sprites>37</Sprites>
+      <Stamina_Mod>0.85</Stamina_Mod>
+      <Value>350</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Greataxe">
+      <Tier>Two</Tier>
+      <Accuracy_Mod>0.72</Accuracy_Mod>
+      <AP_Mod>0.84</AP_Mod>
+      <Armor_Ignore>0.78</Armor_Ignore>
+      <Armor_Pierce>0.83</Armor_Pierce>
+      <Block_Ignore>0.03</Block_Ignore>
+      <Damage>90</Damage>
+      <Description>
+        This log has a very large and very sharp tooth protruding from the end.  What kind of creature has teeth like that?
+      </Description>
+      <Fatigue_Mod>1.20</Fatigue_Mod>
+      <Initiative_Mod>0.85</Initiative_Mod>
+      <Max_Durability>120</Max_Durability>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Shield_Damage_Percent>0.08</Shield_Damage_Percent>
+      <Sprites>52</Sprites>
+      <Stamina_Mod>0.85</Stamina_Mod>
+      <Value>700</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Great Axe Choppa">
+      <Tier>Five</Tier>
+      <Accuracy_Mod>0.75</Accuracy_Mod>
+      <AP_Mod>0.76</AP_Mod>
+      <Armor_Ignore>0.40</Armor_Ignore>
+      <Armor_Pierce>0.93</Armor_Pierce>
+      <Block_Ignore>0.07</Block_Ignore>
+      <Damage>90</Damage>
+      <Description>
+        Basically a giant slab of metal tied to a big stick.  It's sharp though - and it can assuredly do some damage when swung.
+      </Description>
+      <Fatigue_Mod>1.40</Fatigue_Mod>
+      <Initiative_Mod>0.70</Initiative_Mod>
+      <Max_Durability>80</Max_Durability>
+      <Parry_Mod>1.04</Parry_Mod>
+      <Shield_Damage_Percent>0.68</Shield_Damage_Percent>
+      <Sprites>4,5,6</Sprites>
+      <Stamina_Mod>0.58</Stamina_Mod>
+      <Value>300</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Maim</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Great Axe Choppa">
+      <Tier>Four</Tier>
+      <Accuracy_Mod>0.78</Accuracy_Mod>
+      <AP_Mod>0.78</AP_Mod>
+      <Armor_Ignore>0.37</Armor_Ignore>
+      <Armor_Pierce>0.91</Armor_Pierce>
+      <Block_Ignore>0.08</Block_Ignore>
+      <Damage>110</Damage>
+      <Description>
+        A giant slab of sharpened metal tied to a stick.  Tiresome to wield, but deadly when swung.
+      </Description>
+      <Fatigue_Mod>1.38</Fatigue_Mod>
+      <Initiative_Mod>0.72</Initiative_Mod>
+      <Max_Durability>110</Max_Durability>
+      <Parry_Mod>1.04</Parry_Mod>
+      <Shield_Damage_Percent>0.70</Shield_Damage_Percent>
+      <Sprites>19,20,21</Sprites>
+      <Stamina_Mod>0.60</Stamina_Mod>
+      <Value>500</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Maim</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Great Axe Choppa">
+      <Tier>Three</Tier>
+      <Accuracy_Mod>0.80</Accuracy_Mod>
+      <AP_Mod>0.80</AP_Mod>
+      <Armor_Ignore>0.35</Armor_Ignore>
+      <Armor_Pierce>0.90</Armor_Pierce>
+      <Block_Ignore>0.09</Block_Ignore>
+      <Damage>120</Damage>
+      <Description>
+        This savagely-heavy "axe" is favored by orc shock troops to decimate enemy front-lines.
+      </Description>
+      <Fatigue_Mod>1.35</Fatigue_Mod>
+      <Initiative_Mod>0.75</Initiative_Mod>
+      <Max_Durability>300</Max_Durability>
+      <Parry_Mod>1.05</Parry_Mod>
+      <Shield_Damage_Percent>0.75</Shield_Damage_Percent>
+      <Sprites>34</Sprites>
+      <Stamina_Mod>0.65</Stamina_Mod>
+      <Value>1200</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Maim</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Great Axe Choppa">
+      <Tier>Two</Tier>
+      <Accuracy_Mod>0.80</Accuracy_Mod>
+      <AP_Mod>0.80</AP_Mod>
+      <Armor_Ignore>0.30</Armor_Ignore>
+      <Armor_Pierce>0.85</Armor_Pierce>
+      <Block_Ignore>0.09</Block_Ignore>
+      <Damage>140</Damage>
+      <Description>
+        This savagely-heavy "axe" is also very, very sharp...
+      </Description>
+      <Fatigue_Mod>1.35</Fatigue_Mod>
+      <Initiative_Mod>0.75</Initiative_Mod>
+      <Max_Durability>350</Max_Durability>
+      <Parry_Mod>1.06</Parry_Mod>
+      <Shield_Damage_Percent>0.75</Shield_Damage_Percent>
+      <Sprites>34</Sprites>
+      <Stamina_Mod>0.65</Stamina_Mod>
+      <Value>2000</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Maim</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Hammen">
+      <Tier>Five</Tier>
+      <Accuracy_Mod>0.97</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
+      <Armor_Ignore>0.99</Armor_Ignore>
+      <Armor_Pierce>0.99</Armor_Pierce>
+      <Block_Ignore>0.00</Block_Ignore>
+      <Damage>24</Damage>
+      <Description>
+        These small axes are favored by vikings.
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>25</Max_Durability>
+      <Parry_Mod>0.78</Parry_Mod>
+      <Shield_Damage_Percent>0.05</Shield_Damage_Percent>
+      <Sprites>0</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>50</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Hammen">
+      <Tier>Four</Tier>
+      <Accuracy_Mod>0.98</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
+      <Armor_Ignore>0.98</Armor_Ignore>
+      <Armor_Pierce>0.98</Armor_Pierce>
+      <Block_Ignore>0.00</Block_Ignore>
+      <Damage>26</Damage>
+      <Description>
+        These small axes are favored by vikings.
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>30</Max_Durability>
+      <Parry_Mod>0.79</Parry_Mod>
+      <Shield_Damage_Percent>0.05</Shield_Damage_Percent>
+      <Sprites>1</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>125</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Hammen">
+      <Tier>Three</Tier>
+      <Accuracy_Mod>0.99</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
+      <Armor_Ignore>0.97</Armor_Ignore>
+      <Armor_Pierce>0.97</Armor_Pierce>
+      <Block_Ignore>0.0</Block_Ignore>
+      <Damage>29</Damage>
+      <Description>
+        These small axes are favored by vikings.
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>40</Max_Durability>
+      <Parry_Mod>0.80</Parry_Mod>
+      <Shield_Damage_Percent>0.05</Shield_Damage_Percent>
+      <Sprites>2</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>280</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Hammen">
+      <Tier>Two</Tier>
+      <Accuracy_Mod>1</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
+      <Armor_Ignore>0.96</Armor_Ignore>
+      <Armor_Pierce>0.96</Armor_Pierce>
+      <Block_Ignore>0.0</Block_Ignore>
+      <Damage>35</Damage>
+      <Description>
+        These small axes are favored by vikings.
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>50</Max_Durability>
+      <Parry_Mod>0.80</Parry_Mod>
+      <Shield_Damage_Percent>0.05</Shield_Damage_Percent>
+      <Sprites>3</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>600</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Longaxe">
+      <Tier>Five</Tier>
+      <Accuracy_Mod>0.81</Accuracy_Mod>
+      <AP_Mod>0.88</AP_Mod>
+      <Armor_Ignore>0.90</Armor_Ignore>
+      <Armor_Pierce>0.90</Armor_Pierce>
+      <Block_Ignore>0.02</Block_Ignore>
+      <Damage>35</Damage>
+      <Description>
+        These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
+        is useful, it makes them poor defensive weapons.
+      </Description>
+      <Fatigue_Mod>1.00</Fatigue_Mod>
+      <Initiative_Mod>0.78</Initiative_Mod>
+      <Max_Durability>25</Max_Durability>
+      <Parry_Mod>0.58</Parry_Mod>
+      <Range_Mod>1</Range_Mod>
+      <Shield_Damage_Percent>0.52</Shield_Damage_Percent>
+      <Sprites>0</Sprites>
+      <Stamina_Mod>0.89</Stamina_Mod>
+      <Value>100</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Longaxe">
+      <Tier>Four</Tier>
+      <Accuracy_Mod>0.82</Accuracy_Mod>
+      <AP_Mod>0.89</AP_Mod>
+      <Armor_Ignore>0.89</Armor_Ignore>
+      <Armor_Pierce>0.89</Armor_Pierce>
+      <Block_Ignore>0.02</Block_Ignore>
+      <Damage>39</Damage>
+      <Description>
+        These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
+        is useful, it makes them poor defensive weapons.
+      </Description>
+      <Fatigue_Mod>1.00</Fatigue_Mod>
+      <Initiative_Mod>0.80</Initiative_Mod>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>0.60</Parry_Mod>
+      <Range_Mod>1</Range_Mod>
+      <Shield_Damage_Percent>0.54</Shield_Damage_Percent>
+      <Sprites>15</Sprites>
+      <Stamina_Mod>0.91</Stamina_Mod>
+      <Value>250</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Longaxe">
+      <Tier>Three</Tier>
+      <Accuracy_Mod>0.84</Accuracy_Mod>
+      <AP_Mod>0.90</AP_Mod>
+      <Armor_Ignore>0.88</Armor_Ignore>
+      <Armor_Pierce>0.88</Armor_Pierce>
+      <Block_Ignore>0.03</Block_Ignore>
+      <Damage>44</Damage>
+      <Description>
+        These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
+        is useful, it makes them poor defensive weapons.
+      </Description>
+      <Fatigue_Mod>1.00</Fatigue_Mod>
+      <Initiative_Mod>0.80</Initiative_Mod>
+      <Max_Durability>45</Max_Durability>
+      <Parry_Mod>0.60</Parry_Mod>
+      <Range_Mod>1</Range_Mod>
+      <Shield_Damage_Percent>0.58</Shield_Damage_Percent>
+      <Sprites>30</Sprites>
+      <Stamina_Mod>0.93</Stamina_Mod>
+      <Value>550</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Longaxe">
+      <Tier>Two</Tier>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>0.90</AP_Mod>
+      <Armor_Ignore>0.87</Armor_Ignore>
+      <Armor_Pierce>0.87</Armor_Pierce>
+      <Block_Ignore>0.03</Block_Ignore>
+      <Damage>52</Damage>
+      <Description>
+        These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
+        is useful, it makes them poor defensive weapons.
+      </Description>
+      <Fatigue_Mod>1.00</Fatigue_Mod>
+      <Initiative_Mod>0.80</Initiative_Mod>
+      <Max_Durability>45</Max_Durability>
+      <Parry_Mod>0.60</Parry_Mod>
+      <Range_Mod>1</Range_Mod>
+      <Shield_Damage_Percent>0.60</Shield_Damage_Percent>
+      <Sprites>45</Sprites>
+      <Stamina_Mod>0.93</Stamina_Mod>
+      <Value>800</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+  </Weapons>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  

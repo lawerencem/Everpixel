@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Weapons>
+  <EWeaponSkill name ="Medium_Shield">
+    <Weapon name="Dino Shield">
+      <Tier>Five</Tier>
+      <AP_Mod>0.92</AP_Mod>
+      <Description>
+        A suprisingly-effective shield made of dino scales.
+      </Description>
+      <Fatigue_Mod>1.07</Fatigue_Mod>
+      <Initiative_Mod>0.98</Initiative_Mod>
+      <Max_Durability>35</Max_Durability>
+      <Melee_Block_Chance>1.07</Melee_Block_Chance>
+      <Parry_Mod>0.98</Parry_Mod>
+      <Ranged_Block_Chance>1.02</Ranged_Block_Chance>
+      <Sprites>5</Sprites>
+      <Stamina_Mod>1.04</Stamina_Mod>
+      <Value>150</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Shield">
+      <Tier>Four</Tier>
+      <AP_Mod>0.93</AP_Mod>
+      <Description>
+        A suprisingly-effective shield made of dino scales.
+      </Description>
+      <Fatigue_Mod>1.06</Fatigue_Mod>
+      <Initiative_Mod>0.98</Initiative_Mod>
+      <Max_Durability>55</Max_Durability>
+      <Melee_Block_Chance>1.08</Melee_Block_Chance>
+      <Parry_Mod>0.98</Parry_Mod>
+      <Ranged_Block_Chance>1.03</Ranged_Block_Chance>
+      <Sprites>20</Sprites>
+      <Stamina_Mod>1.03</Stamina_Mod>
+      <Value>250</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Shield">
+      <Tier>Three</Tier>
+      <AP_Mod>0.96</AP_Mod>
+      <Description>
+        A suprisingly-effective shield made of dino scales.
+      </Description>
+      <Fatigue_Mod>1.05</Fatigue_Mod>
+      <Initiative_Mod>0.99</Initiative_Mod>
+      <Max_Durability>85</Max_Durability>
+      <Melee_Block_Chance>1.1</Melee_Block_Chance>
+      <Parry_Mod>0.99</Parry_Mod>
+      <Ranged_Block_Chance>1.04</Ranged_Block_Chance>
+      <Sprites>35</Sprites>
+      <Stamina_Mod>1.02</Stamina_Mod>
+      <Value>400</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Shield">
+      <Tier>Two</Tier>
+      <AP_Mod>0.98</AP_Mod>
+      <Description>
+        A suprisingly-effective shield made of dino scales.
+      </Description>
+      <Fatigue_Mod>1.03</Fatigue_Mod>
+      <Initiative_Mod>0.99</Initiative_Mod>
+      <Max_Durability>120</Max_Durability>
+      <Melee_Block_Chance>1.12</Melee_Block_Chance>
+      <Parry_Mod>0.99</Parry_Mod>
+      <Ranged_Block_Chance>1.05</Ranged_Block_Chance>
+      <Sprites>50</Sprites>
+      <Stamina_Mod>1.01</Stamina_Mod>
+      <Value>700</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Kite Shield">
+      <Tier>Five</Tier>
+      <AP_Mod>0.82</AP_Mod>
+      <Description>
+        This is a solidly-made shield.  The heaviness of it restricts some movement, but it will easily block
+        melee attacks.
+      </Description>
+      <Fatigue_Mod>1.13</Fatigue_Mod>
+      <Initiative_Mod>0.87</Initiative_Mod>
+      <Max_Durability>25</Max_Durability>
+      <Melee_Block_Chance>1.12</Melee_Block_Chance>
+      <Parry_Mod>0.72</Parry_Mod>
+      <Ranged_Block_Chance>1.17</Ranged_Block_Chance>
+      <Sprites>6,7,8</Sprites>
+      <Stamina_Mod>0.87</Stamina_Mod>
+      <Value>80</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Kite Shield">
+      <Tier>Four</Tier>
+      <AP_Mod>0.84</AP_Mod>
+      <Description>
+        This is a solidly-made shield.  The heaviness of it restricts some movement, but it will easily block
+        melee attacks.
+      </Description>
+      <Fatigue_Mod>1.12</Fatigue_Mod>
+      <Initiative_Mod>0.89</Initiative_Mod>
+      <Max_Durability>35</Max_Durability>
+      <Melee_Block_Chance>1.14</Melee_Block_Chance>
+      <Parry_Mod>0.74</Parry_Mod>
+      <Ranged_Block_Chance>1.18</Ranged_Block_Chance>
+      <Sprites>21,22,23</Sprites>
+      <Stamina_Mod>0.88</Stamina_Mod>
+      <Value>200</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Kite Shield">
+      <Tier>Three</Tier>
+      <AP_Mod>0.85</AP_Mod>
+      <Description>
+        This is a solidly-made shield.  The heaviness of it restricts some movement, but it will easily block
+        melee attacks.
+      </Description>
+      <Fatigue_Mod>1.10</Fatigue_Mod>
+      <Initiative_Mod>0.90</Initiative_Mod>
+      <Max_Durability>40</Max_Durability>
+      <Melee_Block_Chance>1.15</Melee_Block_Chance>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Ranged_Block_Chance>1.20</Ranged_Block_Chance>
+      <Sprites>36,37,38</Sprites>
+      <Stamina_Mod>0.90</Stamina_Mod>
+      <Value>450</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Kite Shield">
+      <Tier>Two</Tier>
+      <AP_Mod>0.85</AP_Mod>
+      <Description>
+        This is a solidly-made shield.  The heaviness of it restricts some movement, but it will easily block
+        melee attacks.
+      </Description>
+      <Fatigue_Mod>1.10</Fatigue_Mod>
+      <Initiative_Mod>0.90</Initiative_Mod>
+      <Max_Durability>50</Max_Durability>
+      <Melee_Block_Chance>1.18</Melee_Block_Chance>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Ranged_Block_Chance>1.22</Ranged_Block_Chance>
+      <Sprites>51,52,53</Sprites>
+      <Stamina_Mod>0.90</Stamina_Mod>
+      <Value>800</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Orc Slab">
+      <Tier>Five</Tier>
+      <AP_Mod>0.71</AP_Mod>
+      <Description>
+        A big, heavy chunk of metal.  Unsurprsingly, its weight make it a favorite amongst orcish heavy infantry.
+      </Description>
+      <Fatigue_Mod>1.25</Fatigue_Mod>
+      <Initiative_Mod>0.69</Initiative_Mod>
+      <Max_Durability>80</Max_Durability>
+      <Melee_Block_Chance>1.18</Melee_Block_Chance>
+      <Parry_Mod>0.81</Parry_Mod>
+      <Ranged_Block_Chance>1.15</Ranged_Block_Chance>
+      <Sprites>3,4</Sprites>
+      <Stamina_Mod>0.75</Stamina_Mod>
+      <Value>180</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Orc Slab">
+      <Tier>Four</Tier>
+      <AP_Mod>0.73</AP_Mod>
+      <Description>
+        A big, heavy chunk of metal.  Unsurprsingly, its weight make it a favorite amongst orcish heavy infantry.
+      </Description>
+      <Fatigue_Mod>1.21</Fatigue_Mod>
+      <Initiative_Mod>0.67</Initiative_Mod>
+      <Max_Durability>110</Max_Durability>
+      <Melee_Block_Chance>1.22</Melee_Block_Chance>
+      <Parry_Mod>0.83</Parry_Mod>
+      <Ranged_Block_Chance>1.18</Ranged_Block_Chance>
+      <Sprites>18,19</Sprites>
+      <Stamina_Mod>0.77</Stamina_Mod>
+      <Value>350</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Orc Slab">
+      <Tier>Three</Tier>
+      <AP_Mod>0.75</AP_Mod>
+      <Description>
+        A big, heavy chunk of metal.  Unsurprsingly, its weight make it a favorite amongst orcish heavy infantry.
+      </Description>
+      <Fatigue_Mod>1.20</Fatigue_Mod>
+      <Initiative_Mod>0.70</Initiative_Mod>
+      <Max_Durability>150</Max_Durability>
+      <Melee_Block_Chance>1.24</Melee_Block_Chance>
+      <Parry_Mod>0.85</Parry_Mod>
+      <Ranged_Block_Chance>1.19</Ranged_Block_Chance>
+      <Sprites>33,34</Sprites>
+      <Stamina_Mod>0.78</Stamina_Mod>
+      <Value>600</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Orc Slab">
+      <Tier>Two</Tier>
+      <AP_Mod>0.78</AP_Mod>
+      <Description>
+        A big, heavy chunk of metal.  Unsurprsingly, its weight make it a favorite amongst orcish heavy infantry.
+      </Description>
+      <Fatigue_Mod>1.18</Fatigue_Mod>
+      <Initiative_Mod>0.72</Initiative_Mod>
+      <Max_Durability>160</Max_Durability>
+      <Melee_Block_Chance>1.26</Melee_Block_Chance>
+      <Parry_Mod>0.86</Parry_Mod>
+      <Ranged_Block_Chance>1.20</Ranged_Block_Chance>
+      <Sprites>48,49</Sprites>
+      <Stamina_Mod>0.80</Stamina_Mod>
+      <Value>1000</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Skjoldr">
+      <Tier>Five</Tier>
+      <AP_Mod>0.92</AP_Mod>
+      <Description>
+        A shield favored by vikings.  The soft wood it is made of means it quite effective at absorbing blows.
+      </Description>
+      <Fatigue_Mod>1.02</Fatigue_Mod>
+      <Initiative_Mod>0.98</Initiative_Mod>
+      <Max_Durability>25</Max_Durability>
+      <Melee_Block_Chance>1.03</Melee_Block_Chance>
+      <Parry_Mod>1.03</Parry_Mod>
+      <Ranged_Block_Chance>1.02</Ranged_Block_Chance>
+      <Sprites>1,2</Sprites>
+      <Stamina_Mod>1.04</Stamina_Mod>
+      <Value>100</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Skjoldr">
+      <Tier>Four</Tier>
+      <AP_Mod>0.93</AP_Mod>
+      <Description>
+        A shield favored by vikings.  The soft wood it is made of means it quite effective at absorbing blows.
+      </Description>
+      <Fatigue_Mod>1.02</Fatigue_Mod>
+      <Initiative_Mod>0.98</Initiative_Mod>
+      <Max_Durability>30</Max_Durability>
+      <Melee_Block_Chance>1.04</Melee_Block_Chance>
+      <Parry_Mod>1.04</Parry_Mod>
+      <Ranged_Block_Chance>1.02</Ranged_Block_Chance>
+      <Sprites>16,17</Sprites>
+      <Stamina_Mod>1.03</Stamina_Mod>
+      <Value>250</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Skjoldr">
+      <Tier>Three</Tier>
+      <AP_Mod>0.94</AP_Mod>
+      <Description>
+        A shield favored by vikings.  The soft wood it is made of means it quite effective at absorbing blows.
+      </Description>
+      <Fatigue_Mod>1.01</Fatigue_Mod>
+      <Initiative_Mod>0.99</Initiative_Mod>
+      <Max_Durability>40</Max_Durability>
+      <Melee_Block_Chance>1.06</Melee_Block_Chance>
+      <Parry_Mod>1.06</Parry_Mod>
+      <Ranged_Block_Chance>1.03</Ranged_Block_Chance>
+      <Sprites>31,32</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>550</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Skjoldr">
+      <Tier>Two</Tier>
+      <AP_Mod>0.95</AP_Mod>
+      <Description>
+        A shield favored by vikings.  The soft wood it is made of means it quite effective at absorbing blows.
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>50</Max_Durability>
+      <Melee_Block_Chance>1.07</Melee_Block_Chance>
+      <Parry_Mod>1.08</Parry_Mod>
+      <Ranged_Block_Chance>1.03</Ranged_Block_Chance>
+      <Sprites>46,47</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>800</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+</Weapons>
+  

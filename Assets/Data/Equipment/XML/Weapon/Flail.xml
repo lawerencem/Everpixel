@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Weapons>
+  <EWeaponSkill name ="Flail">
+    <Weapon name="Megaflail">
+      <Tier>Five</Tier>
+      <Accuracy_Mod>0.51</Accuracy_Mod>
+      <AP_Mod>0.51</AP_Mod>
+      <Armor_Ignore>0.18</Armor_Ignore>
+      <Armor_Pierce>0.87</Armor_Pierce>
+      <Block_Ignore>0.85</Block_Ignore>
+      <Damage>92</Damage>
+      <Description>
+        
+      </Description>
+      <Fatigue_Mod>1.48</Fatigue_Mod>
+      <Initiative_Mod>0.62</Initiative_Mod>
+      <Max_Durability>120</Max_Durability>
+      <Parry_Mod>0</Parry_Mod>
+      <Shield_Damage_Percent>1.82</Shield_Damage_Percent>
+      <Sprites>0</Sprites>
+      <Stamina_Mod>0.32</Stamina_Mod>
+      <Value>300</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Megaflail">
+      <Tier>Four</Tier>
+      <Accuracy_Mod>0.53</Accuracy_Mod>
+      <AP_Mod>0.53</AP_Mod>
+      <Armor_Ignore>0.16</Armor_Ignore>
+      <Armor_Pierce>0.86</Armor_Pierce>
+      <Block_Ignore>0.86</Block_Ignore>
+      <Damage>102</Damage>
+      <Description>
+        This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
+        it will certainly cause utter devastation on the battlefield.
+      </Description>
+      <Fatigue_Mod>1.47</Fatigue_Mod>
+      <Initiative_Mod>0.63</Initiative_Mod>
+      <Max_Durability>135</Max_Durability>
+      <Parry_Mod>0</Parry_Mod>
+      <Shield_Damage_Percent>1.84</Shield_Damage_Percent>
+      <Sprites>1</Sprites>
+      <Stamina_Mod>0.34</Stamina_Mod>
+      <Value>650</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Megaflail">
+      <Tier>Three</Tier>
+      <Accuracy_Mod>0.54</Accuracy_Mod>
+      <AP_Mod>0.54</AP_Mod>
+      <Armor_Ignore>0.15</Armor_Ignore>
+      <Armor_Pierce>0.85</Armor_Pierce>
+      <Block_Ignore>0.87</Block_Ignore>
+      <Damage>110</Damage>
+      <Description>
+        This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
+        it will certainly cause utter devastation on the battlefield.
+      </Description>
+      <Fatigue_Mod>1.45</Fatigue_Mod>
+      <Initiative_Mod>0.64</Initiative_Mod>
+      <Max_Durability>155</Max_Durability>
+      <Parry_Mod>0</Parry_Mod>
+      <Shield_Damage_Percent>1.88</Shield_Damage_Percent>
+      <Sprites>2</Sprites>
+      <Stamina_Mod>0.35</Stamina_Mod>
+      <Value>1100</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Megaflail">
+      <Tier>Two</Tier>
+      <Accuracy_Mod>0.55</Accuracy_Mod>
+      <AP_Mod>0.55</AP_Mod>
+      <Armor_Ignore>0.13</Armor_Ignore>
+      <Armor_Pierce>0.84</Armor_Pierce>
+      <Block_Ignore>0.88</Block_Ignore>
+      <Damage>120</Damage>
+      <Description>
+        This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
+        it will certainly cause utter devastation on the battlefield.
+      </Description>
+      <Fatigue_Mod>1.45</Fatigue_Mod>
+      <Initiative_Mod>0.65</Initiative_Mod>
+      <Max_Durability>180</Max_Durability>
+      <Parry_Mod>0</Parry_Mod>
+      <Shield_Damage_Percent>2.00</Shield_Damage_Percent>
+      <Sprites>3</Sprites>
+      <Stamina_Mod>0.35</Stamina_Mod>
+      <Value>1500</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+</Weapons>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  
