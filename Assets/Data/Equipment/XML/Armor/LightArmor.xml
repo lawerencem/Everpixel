@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Armors>
+  <EArmorType name = "Light_Armor">
+    <Armor name="Bone Armor">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.99</AP_Reduce>
+      <Block_Reduce>0.92</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        Turns out tying a bunch of bones together doesn't make for effective armor - but it does look frightening.
+      </Description>
+      <Dodge_Reduce>0.97</Dodge_Reduce>
+      <Durability>10</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Parry_Reduce>0.97</Parry_Reduce>
+      <Sprites>4</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>80</Value>
+    </Armor>
+    <Armor name="Bone Armor">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.99</AP_Reduce>
+      <Block_Reduce>0.93</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        Turns out tying a bunch of bones together doesn't make for effective armor - but it does look frightening.
+      </Description>
+      <Dodge_Reduce>0.97</Dodge_Reduce>
+      <Durability>15</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Parry_Reduce>0.97</Parry_Reduce>
+      <Sprites>19</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>200</Value>
+    </Armor>
+    <Armor name="Bone Armor">
+      <Tier>Three</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>0.95</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        Turns out tying a bunch of bones together doesn't make for effective armor - but it does look frightening.
+      </Description>
+      <Dodge_Reduce>0.97</Dodge_Reduce>
+      <Durability>20</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Parry_Reduce>0.97</Parry_Reduce>
+      <Sprites>34</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>450</Value>
+    </Armor>
+    <Armor name="Bone Armor">
+      <Tier>Two</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>0.97</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.96</Damage_Reduction>
+      <Description>
+        Turns out tying a bunch of bones together doesn't make for effective armor - but it does look frightening.
+      </Description>
+      <Dodge_Reduce>0.95</Dodge_Reduce>
+      <Durability>20</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Parry_Reduce>0.97</Parry_Reduce>
+      <Sprites>49</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>1000</Value>
+    </Armor>
+    <Armor name="Dino Regalia">
+      <Tier>Five</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0</Damage_Reduction>
+      <Description>
+        Golden swag doesn't make for good armor...
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>10</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>5</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>10</Value>
+    </Armor>
+    <Armor name="Dino Regalia">
+      <Tier>Four</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0</Damage_Reduction>
+      <Description>
+        Golden swag doesn't make for good armor...
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>15</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>20</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>50</Value>
+    </Armor>
+    <Armor name="Dino Regalia">
+      <Tier>Three</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0</Damage_Reduction>
+      <Description>
+        Golden swag doesn't make for good armor...
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>35</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>35</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>150</Value>
+    </Armor>
+    <Armor name="Dino Regalia">
+      <Tier>Two</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0</Damage_Reduction>
+      <Description>
+        Golden swag doesn't make for good armor...
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>55</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>35</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>250</Value>
+    </Armor>
+    <Armor name="Slime Handler Robes">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Block_Reduce>0.97</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        These robes don't offer much protection against attacks.  However, they are imbued with a slight magical property
+        that makes the user resistant to poison.
+      </Description>
+      <Dodge_Reduce>0.97</Dodge_Reduce>
+      <Durability>5</Durability>
+      <Fatigue_Cost>1.03</Fatigue_Cost>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>1,2</Sprites>
+      <Stamina_Reduce>0.97</Stamina_Reduce>
+      <Value>30</Value>
+    </Armor>
+    <Armor name="Slime Handler Robes">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Block_Reduce>0.98</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        These robes don't offer much protection against attacks.  However, they are imbued with a slight magical property
+        that makes the user resistant to poision.
+      </Description>
+      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Durability>10</Durability>
+      <Fatigue_Cost>1.02</Fatigue_Cost>
+      <Initiative_Reduce>0.98</Initiative_Reduce>
+      <Parry_Reduce>0.98</Parry_Reduce>
+      <Sprites>16,17</Sprites>
+      <Stamina_Reduce>0.98</Stamina_Reduce>
+      <Value>200</Value>
+    </Armor>
+    <Armor name="Slime Handler Robes">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.99</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        These robes don't offer much protection against attacks.  However, they are imbued with a slight magical property
+        that makes the user resistant to poision.
+      </Description>
+      <Dodge_Reduce>0.97</Dodge_Reduce>
+      <Durability>20</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>31,32</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>450</Value>
+    </Armor>
+    <Armor name="Tunic">
+      <Tier>Five</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        This "tunic" is basically a shirt made of patchy cloth.  It probably doesn't even offer protection against a bee sting.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>15</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>5</Value>
+    </Armor>
+    <Armor name="Tunic">
+      <Tier>Four</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.96</Damage_Reduction>
+      <Description>
+        This tunic offers minimal protection - but it's better than nothing.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>25</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>0</Stamina_Reduce>
+      <Value>25</Value>
+    </Armor>
+    <Armor name="Void Handler Robes">
+      <Tier>Five</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
+        beings that are best left alone.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>15</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>3</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>100</Value>
+    </Armor>
+    <Armor name="Void Handler Robes">
+      <Tier>Four</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
+        beings that are best left alone.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>20</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>18</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>250</Value>
+    </Armor>
+    <Armor name="Void Handler Robes">
+      <Tier>Three</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
+        beings that are best left alone.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>35</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>33</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>400</Value>
+    </Armor>
+    <Armor name="Void Handler Robes">
+      <Tier>Two</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        This robe doesn't offer much physical protection.  However, they do offer some protection from being noticed by
+        beings that are best left alone.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>50</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>48</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>1000</Value>
+    </Armor>
+  </EArmorType>
+</Armors>

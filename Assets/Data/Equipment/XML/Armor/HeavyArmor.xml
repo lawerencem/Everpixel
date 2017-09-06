@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Armors>
+  <EArmorType name ="Heavy_Armor">
+    <Armor name="Dou">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.94</AP_Reduce>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>11</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        The armor preferred by samurai.  This one isn't particularly well-crafted...
+      </Description>
+      <Dodge_Reduce>0.82</Dodge_Reduce>
+      <Durability>30</Durability>
+      <Fatigue_Cost>1.08</Fatigue_Cost>
+      <Initiative_Reduce>0.92</Initiative_Reduce>
+      <Parry_Reduce>0.97</Parry_Reduce>
+      <Sprites>4,5</Sprites>
+      <Stamina_Reduce>0.78</Stamina_Reduce>
+      <Value>350</Value>
+    </Armor>
+    <Armor name="Dou">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.94</AP_Reduce>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>13</Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        The armor preferred by samurai.  The interlocking plates offer great protection while still being quite light.
+      </Description>
+      <Dodge_Reduce>0.84</Dodge_Reduce>
+      <Durability>50</Durability>
+      <Fatigue_Cost>1.06</Fatigue_Cost>
+      <Initiative_Reduce>0.94</Initiative_Reduce>
+      <Parry_Reduce>0.98</Parry_Reduce>
+      <Sprites>19,20</Sprites>
+      <Stamina_Reduce>0.80</Stamina_Reduce>
+      <Value>550</Value>
+    </Armor>
+    <Armor name="Dou">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.96</AP_Reduce>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>18</Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        The armor preferred by samurai.  The interlocking plates offer great protection while still being quite light.
+      </Description>
+      <Dodge_Reduce>0.84</Dodge_Reduce>
+      <Durability>70</Durability>
+      <Fatigue_Cost>1.06</Fatigue_Cost>
+      <Initiative_Reduce>0.94</Initiative_Reduce>
+      <Parry_Reduce>0.99</Parry_Reduce>
+      <Sprites>34,35</Sprites>
+      <Stamina_Reduce>0.82</Stamina_Reduce>
+      <Value>800</Value>
+    </Armor>
+    <Armor name="Dou">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Block_Reduce>0.40</Block_Reduce>
+      <Damage_Ignore>20</Damage_Ignore>
+      <Damage_Reduction>0.80</Damage_Reduction>
+      <Description>
+        The armor preferred by samurai.  This armor has a cuirass rather than interlocking plates, but is still very light.
+      </Description>
+      <Dodge_Reduce>0.80</Dodge_Reduce>
+      <Durability>110</Durability>
+      <Fatigue_Cost>1.10</Fatigue_Cost>
+      <Initiative_Reduce>0.90</Initiative_Reduce>
+      <Parry_Reduce>0.95</Parry_Reduce>
+      <Sprites>49,50</Sprites>
+      <Stamina_Reduce>0.80</Stamina_Reduce>
+      <Value>2000</Value>
+    </Armor>
+    <Armor name="Orcish Plate Mail">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.51</AP_Reduce>
+      <Block_Reduce>0.51</Block_Reduce>
+      <Damage_Ignore>21</Damage_Ignore>
+      <Damage_Reduction>0.52</Damage_Reduction>
+      <Description>
+        This orcish plate consists of a few pieces of heavy metal slabs melted over some chain mail.  It's heavy, and doesn't allow
+        for much movement...but offers incredible protection.
+      </Description>
+      <Dodge_Reduce>0.22</Dodge_Reduce>
+      <Durability>200</Durability>
+      <Fatigue_Cost>1.72</Fatigue_Cost>
+      <Initiative_Reduce>0.50</Initiative_Reduce>
+      <Parry_Reduce>0.31</Parry_Reduce>
+      <Sprites>2,3</Sprites>
+      <Stamina_Reduce>0.50</Stamina_Reduce>
+      <Value>800</Value>
+    </Armor>
+    <Armor name="Orcish Plate Mail">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.53</AP_Reduce>
+      <Block_Reduce>0.53</Block_Reduce>
+      <Damage_Ignore>23</Damage_Ignore>
+      <Damage_Reduction>0.50</Damage_Reduction>
+      <Description>
+        This orcish plate consists of a few pieces of heavy metal slabs melted over some chain mail.  It's heavy, and doesn't allow
+        for much movement...but offers incredible protection.
+      </Description>
+      <Dodge_Reduce>0.26</Dodge_Reduce>
+      <Durability>220</Durability>
+      <Fatigue_Cost>1.66</Fatigue_Cost>
+      <Initiative_Reduce>0.55</Initiative_Reduce>
+      <Parry_Reduce>0.35</Parry_Reduce>
+      <Sprites>17,18</Sprites>
+      <Stamina_Reduce>0.55</Stamina_Reduce>
+      <Value>2000</Value>
+    </Armor>
+    <Armor name="Orcish Plate Mail">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.55</AP_Reduce>
+      <Block_Reduce>0.55</Block_Reduce>
+      <Damage_Ignore>25</Damage_Ignore>
+      <Damage_Reduction>0.45</Damage_Reduction>
+      <Description>
+        This orcish plate consists of a few pieces of heavy metal slabs melted over some chain mail.  It's heavy, and doesn't allow
+        for much movement...but offers incredible protection.
+      </Description>
+      <Dodge_Reduce>0.30</Dodge_Reduce>
+      <Durability>500</Durability>
+      <Fatigue_Cost>1.60</Fatigue_Cost>
+      <Initiative_Reduce>0.60</Initiative_Reduce>
+      <Parry_Reduce>0.40</Parry_Reduce>
+      <Sprites>32,33</Sprites>
+      <Stamina_Reduce>0.60</Stamina_Reduce>
+      <Value>3200</Value>
+    </Armor>
+    <Armor name="Orcish Plate Mail">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.55</AP_Reduce>
+      <Block_Reduce>0.55</Block_Reduce>
+      <Damage_Ignore>28</Damage_Ignore>
+      <Damage_Reduction>0.40</Damage_Reduction>
+      <Description>
+        This is orcish plate mail favored by the best orcish troops.  It is quality-made, consisting of heavy slabs of metal
+        essentially melted together.  It affords excellent protection for those strong enough to wear it.
+      </Description>
+      <Dodge_Reduce>0.30</Dodge_Reduce>
+      <Durability>650</Durability>
+      <Fatigue_Cost>1.60</Fatigue_Cost>
+      <Initiative_Reduce>0.60</Initiative_Reduce>
+      <Parry_Reduce>0.40</Parry_Reduce>
+      <Sprites>47,48</Sprites>
+      <Stamina_Reduce>0.60</Stamina_Reduce>
+      <Value>4800</Value>
+    </Armor>
+    <Armor name="Plate Mail">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.55</AP_Reduce>
+      <Block_Reduce>0.62</Block_Reduce>
+      <Damage_Ignore>18</Damage_Ignore>
+      <Damage_Reduction>0.42</Damage_Reduction>
+      <Description>
+        Even rusty and decaying, this armor still provides good defense. Unfortunately, it's not as durable
+        as it once was...
+      </Description>
+      <Dodge_Reduce>0.55</Dodge_Reduce>
+      <Durability>150</Durability>
+      <Fatigue_Cost>1.45</Fatigue_Cost>
+      <Initiative_Reduce>0.68</Initiative_Reduce>
+      <Parry_Reduce>0.52</Parry_Reduce>
+      <Sprites>0,1</Sprites>
+      <Stamina_Reduce>0.63</Stamina_Reduce>
+      <Value>1200</Value>
+    </Armor>
+    <Armor name="Plate Mail">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.56</AP_Reduce>
+      <Block_Reduce>0.63</Block_Reduce>
+      <Damage_Ignore>20</Damage_Ignore>
+      <Damage_Reduction>0.50</Damage_Reduction>
+      <Description>
+        This armor doesn't represent the finest craftsmanship, but it still offers excellent protection.
+      </Description>
+      <Dodge_Reduce>0.55</Dodge_Reduce>
+      <Durability>250</Durability>
+      <Fatigue_Cost>1.43</Fatigue_Cost>
+      <Initiative_Reduce>0.67</Initiative_Reduce>
+      <Parry_Reduce>0.53</Parry_Reduce>
+      <Sprites>15,16</Sprites>
+      <Stamina_Reduce>0.64</Stamina_Reduce>
+      <Value>2000</Value>
+    </Armor>
+    <Armor name="Plate Mail">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.60</AP_Reduce>
+      <Block_Reduce>0.65</Block_Reduce>
+      <Damage_Ignore>22</Damage_Ignore>
+      <Damage_Reduction>0.48</Damage_Reduction>
+      <Description>
+        This is a fine example of plate mail.  It does restrict movement, but it offers excellent protection.
+      </Description>
+      <Dodge_Reduce>0.55</Dodge_Reduce>
+      <Durability>300</Durability>
+      <Fatigue_Cost>1.42</Fatigue_Cost>
+      <Initiative_Reduce>0.68</Initiative_Reduce>
+      <Parry_Reduce>0.55</Parry_Reduce>
+      <Sprites>30</Sprites>
+      <Stamina_Reduce>0.65</Stamina_Reduce>
+      <Value>5000</Value>
+    </Armor>
+  </EArmorType>
+  </Armors>

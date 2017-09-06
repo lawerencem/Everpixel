@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Armors>
+  <EArmorType name = "Light_Helm">
+    <Armor name="Dino Headdress">
+      <Tier>Five</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        Big and bulky, this headdress can magnify the psychic abilities of its wearer.
+      </Description>
+      <Dodge_Reduce>0.88</Dodge_Reduce>
+      <Durability>5</Durability>
+      <Fatigue_Cost>0.88</Fatigue_Cost>
+      <Initiative_Reduce>0.82</Initiative_Reduce>
+      <Parry_Reduce>0.50</Parry_Reduce>
+      <Sprites>3</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>50</Value>
+    </Armor>
+    <Armor name="Dino Headdress">
+      <Tier>Four</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        Big and bulky, this headdress can magnify the psychic abilities of its wearer.
+      </Description>
+      <Dodge_Reduce>0.89</Dodge_Reduce>
+      <Durability>12</Durability>
+      <Fatigue_Cost>0.89</Fatigue_Cost>
+      <Initiative_Reduce>0.83</Initiative_Reduce>
+      <Parry_Reduce>0.52</Parry_Reduce>
+      <Sprites>18</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>150</Value>
+    </Armor>
+    <Armor name="Dino Headdress">
+      <Tier>Three</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        Big and bulky, this headdress can magnify the psychic abilities of its wearer.
+      </Description>
+      <Dodge_Reduce>0.90</Dodge_Reduce>
+      <Durability>20</Durability>
+      <Fatigue_Cost>0.90</Fatigue_Cost>
+      <Initiative_Reduce>0.84</Initiative_Reduce>
+      <Parry_Reduce>0.55</Parry_Reduce>
+      <Sprites>33</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>250</Value>
+    </Armor>
+    <Armor name="Dino Headdress">
+      <Tier>Two</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.96</Damage_Reduction>
+      <Description>
+        Big and bulky, this headdress can magnify the psychic abilities of its wearer.
+      </Description>
+      <Dodge_Reduce>0.90</Dodge_Reduce>
+      <Durability>25</Durability>
+      <Fatigue_Cost>0.91</Fatigue_Cost>
+      <Initiative_Reduce>0.85</Initiative_Reduce>
+      <Parry_Reduce>0.58</Parry_Reduce>
+      <Sprites>48</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>500</Value>
+    </Armor>
+    <Armor name="Skull">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Block_Reduce>0.72</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        Who knew a skull offered such good protection?  It's not very durable - and it's also hard to see with...
+      </Description>
+      <Dodge_Reduce>0.82</Dodge_Reduce>
+      <Durability>3</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.82</Initiative_Reduce>
+      <Parry_Reduce>0.82</Parry_Reduce>
+      <Sprites>2</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>100</Value>
+    </Armor>
+    <Armor name="Skull">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Block_Reduce>0.74</Block_Reduce>
+      <Damage_Ignore>2</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        Who knew a skull offered such good protection?  It's not very durable - and it's also hard to see with...
+      </Description>
+      <Dodge_Reduce>0.85</Dodge_Reduce>
+      <Durability>5</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.84</Initiative_Reduce>
+      <Parry_Reduce>0.84</Parry_Reduce>
+      <Sprites>17</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>250</Value>
+    </Armor>
+    <Armor name="Skull">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Block_Reduce>0.76</Block_Reduce>
+      <Damage_Ignore>2</Damage_Ignore>
+      <Damage_Reduction>0.96</Damage_Reduction>
+      <Description>
+        Who knew a skull offered such good protection?  It's not very durable - and it's also hard to see with...
+      </Description>
+      <Dodge_Reduce>0.85</Dodge_Reduce>
+      <Durability>8</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.86</Initiative_Reduce>
+      <Parry_Reduce>0.86</Parry_Reduce>
+      <Sprites>32</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>550</Value>
+    </Armor>
+    <Armor name="Skull">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.99</AP_Reduce>
+      <Block_Reduce>0.78</Block_Reduce>
+      <Damage_Ignore>3</Damage_Ignore>
+      <Damage_Reduction>0.95</Damage_Reduction>
+      <Description>
+        Who knew a skull offered such good protection?  It's not very durable - and it's also hard to see with...
+      </Description>
+      <Dodge_Reduce>0.88</Dodge_Reduce>
+      <Durability>12</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>0.88</Initiative_Reduce>
+      <Parry_Reduce>0.88</Parry_Reduce>
+      <Sprites>47</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>850</Value>
+    </Armor>
+    <Armor name="Slime Handler Cap">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Block_Reduce>0.99</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        This cap is all style and no practicality...except that it does offer slight protection against poison.
+      </Description>
+      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Durability>3</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>50</Value>
+    </Armor>
+    <Armor name="Slime Handler Cap">
+      <Tier>Four</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        This cap is all style and no practicality...except that it does offer slight protection against poison.
+      </Description>
+      <Dodge_Reduce>0.98</Dodge_Reduce>
+      <Durability>10</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>15</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>100</Value>
+    </Armor>
+    <Armor name="Slime Handler Cap">
+      <Tier>Three</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>0</Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        This cap is all style and no practicality...except that it does offer slight protection against poison.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>15</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>30</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>200</Value>
+    </Armor>
+    <Armor name="Void Handler Hood">
+      <Tier>Five</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
+        from the nightmares that lurk in the void.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>5</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>1</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>100</Value>
+    </Armor>
+    <Armor name="Void Handler Hood">
+      <Tier>Four</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
+        from the nightmares that lurk in the void.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>10</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>16</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>250</Value>
+    </Armor>
+    <Armor name="Void Handler Hood">
+      <Tier>Three</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>1</Damage_Reduction>
+      <Description>
+        This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
+        from the nightmares that lurk in the void.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>10</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>31</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>550</Value>
+    </Armor>
+    <Armor name="Void Handler Hood">
+      <Tier>Two</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Block_Reduce>1</Block_Reduce>
+      <Damage_Ignore>1</Damage_Ignore>
+      <Damage_Reduction>1</Damage_Reduction>
+      <Description>
+        This cap doesn't offer much protection from the physical realm.  More importantly; however, it offers protection
+        from the nightmares that lurk in the void.
+      </Description>
+      <Dodge_Reduce>1</Dodge_Reduce>
+      <Durability>10</Durability>
+      <Fatigue_Cost>1</Fatigue_Cost>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Parry_Reduce>1</Parry_Reduce>
+      <Sprites>46</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>1200</Value>
+    </Armor>
+  </EArmorType>
+</Armors>

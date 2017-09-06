@@ -11,7 +11,12 @@ namespace Assets.Data.Equipment.XML
         private static ArmorReader _instance;
         public ArmorReader() : base()
         {
-            this._paths.Add("Assets/Data/Equipment/XML/Armors.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Armor/HeavyArmor.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Armor/HeavyHelm.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Armor/LightArmor.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Armor/LightHelm.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Armor/MediumArmor.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Armor/MediumHelm.xml");
         }
 
         public static ArmorReader Instance
