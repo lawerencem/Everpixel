@@ -1,6 +1,6 @@
-﻿using Assets.Model.Character.Enum;
+﻿using Assets.Data.Character.Table;
+using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
-using Assets.Model.Character.Table;
 using Assets.Model.Equipment.Param;
 using Assets.Model.Mount;
 using Assets.Template.Other;

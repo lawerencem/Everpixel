@@ -5,7 +5,7 @@ using Assets.Model.Character.Enum;
 using Assets.Template.CB;
 using Assets.Template.Script;
 using Assets.Template.Util;
-using Assets.View.Barks;
+using Assets.View.Bark;
 using Assets.View.Event;
 using Assets.View.Script.FX;
 using System.Collections.Generic;

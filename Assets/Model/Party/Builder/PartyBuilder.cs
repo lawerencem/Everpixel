@@ -1,7 +1,7 @@
 ﻿using Assets.Controller.Character;
+using Assets.Data.Party.Table;
 using Assets.Model.Character;
 using Assets.Model.Character.Factory;
-using Assets.Model.Party.Table;
 using Assets.Template.Builder;
 using Assets.Template.Other;
 using System;

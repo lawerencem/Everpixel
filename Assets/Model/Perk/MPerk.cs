@@ -1,4 +1,5 @@
 ﻿
+using Assets.Data.Perk.Table;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Character;
 

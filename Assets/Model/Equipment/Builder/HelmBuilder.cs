@@ -1,4 +1,4 @@
-﻿using Assets.Model.Equipment.Table;
+﻿using Assets.Data.Equipment.Table;
 using Assets.Model.Equipment.Type;
 using Assets.Template.Builder;
 

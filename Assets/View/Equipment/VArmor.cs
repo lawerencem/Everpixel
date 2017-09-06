@@ -1,6 +1,4 @@
 ﻿using Assets.Model.Equipment.Enum;
-using Model.Equipment;
-using UnityEngine;
 
 namespace Assets.View.Equipment
 {

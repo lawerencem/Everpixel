@@ -1,7 +1,7 @@
-﻿using Assets.Model.Character.Builder;
+﻿using Assets.Data.Character.Table;
+using Assets.Data.Party.Table;
+using Assets.Model.Character.Builder;
 using Assets.Model.Character.Param;
-using Assets.Model.Character.Table;
-using Assets.Model.Party.Table;
 using Assets.Template.Builder;
 using Assets.Template.Util;
 using System;

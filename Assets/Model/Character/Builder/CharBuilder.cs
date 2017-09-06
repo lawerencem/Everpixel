@@ -1,6 +1,6 @@
-﻿using Assets.Model.Ability;
+﻿using Assets.Data.Character.Table;
+using Assets.Model.Ability;
 using Assets.Model.Character.Param;
-using Assets.Model.Character.Table;
 using Assets.Model.Class.Builder;
 using Assets.Model.Equipment.Factory;
 using Assets.Model.Perk;

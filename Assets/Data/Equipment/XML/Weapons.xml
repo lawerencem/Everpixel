@@ -1,0 +1,3025 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Weapons>
+  <EWeaponSkill name ="Axe">
+    <Weapon name="Dino Greataxe">
+      <Tier>Five</Tier>
+      <Accuracy>0.68</Accuracy>
+      <AP_Reduce>0.80</AP_Reduce>
+      <Armor_Ignore>0.84</Armor_Ignore>
+      <Armor_Pierce>0.88</Armor_Pierce>
+      <Block_Ignore>0.02</Block_Ignore>
+      <Damage>52</Damage>
+      <Description>
+        This gigantic log has a few razor-sharp teeth protruding from it.  Lizardman warriors use it like an axe.
+      </Description>
+      <Fatigue_Cost_Mod>1.24</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.82</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>0.72</Parry_Mod>
+      <Shield_Damage>0.05</Shield_Damage>
+      <EWeaponSkill>Axe</EWeaponSkill>
+      <Sprites>7</Sprites>
+      <Stamina_Reduce>0.82</Stamina_Reduce>
+      <Value>50</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Greataxe">
+      <Tier>Four</Tier>
+      <Accuracy>0.70</Accuracy>
+      <AP_Reduce>0.81</AP_Reduce>
+      <Armor_Ignore>0.82</Armor_Ignore>
+      <Armor_Pierce>0.86</Armor_Pierce>
+      <Block_Ignore>0.02</Block_Ignore>
+      <Damage>60</Damage>
+      <Description>
+        This log has a very large and very sharp tooth protruding from the end.  What kind of creature has teeth like that?
+      </Description>
+      <Fatigue_Cost_Mod>1.22</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.83</Initiative_Reduce>
+      <Max_Durability>50</Max_Durability>
+      <Parry_Mod>0.74</Parry_Mod>
+      <Shield_Damage>0.06</Shield_Damage>
+      <EWeaponSkill>Axe</EWeaponSkill>
+      <Sprites>22</Sprites>
+      <Stamina_Reduce>0.84</Stamina_Reduce>
+      <Value>150</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Greataxe">
+      <Tier>Three</Tier>
+      <Accuracy>0.71</Accuracy>
+      <AP_Reduce>0.82</AP_Reduce>
+      <Armor_Ignore>0.80</Armor_Ignore>
+      <Armor_Pierce>0.84</Armor_Pierce>
+      <Block_Ignore>0.02</Block_Ignore>
+      <Damage>78</Damage>
+      <Description>
+        This log has a very large and very sharp tooth protruding from the end.  What kind of creature has teeth like that?
+      </Description>
+      <Fatigue_Cost_Mod>1.20</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.85</Initiative_Reduce>
+      <Max_Durability>85</Max_Durability>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Shield_Damage>0.07</Shield_Damage>
+      <EWeaponSkill>Axe</EWeaponSkill>
+      <Sprites>37</Sprites>
+      <Stamina_Reduce>0.85</Stamina_Reduce>
+      <Value>350</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Greataxe">
+      <Tier>Two</Tier>
+      <Accuracy>0.72</Accuracy>
+      <AP_Reduce>0.84</AP_Reduce>
+      <Armor_Ignore>0.78</Armor_Ignore>
+      <Armor_Pierce>0.83</Armor_Pierce>
+      <Block_Ignore>0.03</Block_Ignore>
+      <Damage>90</Damage>
+      <Description>
+        This log has a very large and very sharp tooth protruding from the end.  What kind of creature has teeth like that?
+      </Description>
+      <Fatigue_Cost_Mod>1.20</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.85</Initiative_Reduce>
+      <Max_Durability>120</Max_Durability>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Shield_Damage>0.08</Shield_Damage>
+      <EWeaponSkill>Axe</EWeaponSkill>
+      <Sprites>52</Sprites>
+      <Stamina_Reduce>0.85</Stamina_Reduce>
+      <Value>700</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Great Axe Choppa">
+      <Tier>Five</Tier>
+      <Accuracy>0.75</Accuracy>
+      <AP_Reduce>0.76</AP_Reduce>
+      <Armor_Ignore>0.40</Armor_Ignore>
+      <Armor_Pierce>0.93</Armor_Pierce>
+      <Block_Ignore>0.07</Block_Ignore>
+      <Damage>90</Damage>
+      <Description>
+        Basically a giant slab of metal tied to a big stick.  It's sharp though - and it can assuredly do some damage when swung.
+      </Description>
+      <Fatigue_Cost_Mod>1.40</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.70</Initiative_Reduce>
+      <Max_Durability>80</Max_Durability>
+      <Parry_Mod>1.04</Parry_Mod>
+      <Shield_Damage>0.68</Shield_Damage>
+      <EWeaponSkill>Axe</EWeaponSkill>
+      <Sprites>4,5,6</Sprites>
+      <Stamina_Reduce>0.58</Stamina_Reduce>
+      <Value>300</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Maim</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Great Axe Choppa">
+      <Tier>Four</Tier>
+      <Accuracy>0.78</Accuracy>
+      <AP_Reduce>0.78</AP_Reduce>
+      <Armor_Ignore>0.37</Armor_Ignore>
+      <Armor_Pierce>0.91</Armor_Pierce>
+      <Block_Ignore>0.08</Block_Ignore>
+      <Damage>110</Damage>
+      <Description>
+        A giant slab of sharpened metal tied to a stick.  Tiresome to wield, but deadly when swung.
+      </Description>
+      <Fatigue_Cost_Mod>1.38</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.72</Initiative_Reduce>
+      <Max_Durability>110</Max_Durability>
+      <Parry_Mod>1.04</Parry_Mod>
+      <Shield_Damage>0.70</Shield_Damage>
+      <EWeaponSkill>Axe</EWeaponSkill>
+      <Sprites>19,20,21</Sprites>
+      <Stamina_Reduce>0.60</Stamina_Reduce>
+      <Value>500</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Maim</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Great Axe Choppa">
+      <Tier>Three</Tier>
+      <Accuracy>0.80</Accuracy>
+      <AP_Reduce>0.80</AP_Reduce>
+      <Armor_Ignore>0.35</Armor_Ignore>
+      <Armor_Pierce>0.90</Armor_Pierce>
+      <Block_Ignore>0.09</Block_Ignore>
+      <Damage>120</Damage>
+      <Description>
+        This savagely-heavy "axe" is favored by orc shock troops to decimate enemy front-lines.
+      </Description>
+      <Fatigue_Cost_Mod>1.35</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.75</Initiative_Reduce>
+      <Max_Durability>300</Max_Durability>
+      <Parry_Mod>1.05</Parry_Mod>
+      <Shield_Damage>0.75</Shield_Damage>
+      <EWeaponSkill>Axe</EWeaponSkill>
+      <Sprites>34</Sprites>
+      <Stamina_Reduce>0.65</Stamina_Reduce>
+      <Value>1200</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Maim</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Great Axe Choppa">
+      <Tier>Two</Tier>
+      <Accuracy>0.80</Accuracy>
+      <AP_Reduce>0.80</AP_Reduce>
+      <Armor_Ignore>0.30</Armor_Ignore>
+      <Armor_Pierce>0.85</Armor_Pierce>
+      <Block_Ignore>0.09</Block_Ignore>
+      <Damage>140</Damage>
+      <Description>
+        This savagely-heavy "axe" is also very, very sharp...
+      </Description>
+      <Fatigue_Cost_Mod>1.35</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.75</Initiative_Reduce>
+      <Max_Durability>350</Max_Durability>
+      <Parry_Mod>1.06</Parry_Mod>
+      <Shield_Damage>0.75</Shield_Damage>
+      <EWeaponSkill>Axe</EWeaponSkill>
+      <Sprites>34</Sprites>
+      <Stamina_Reduce>0.65</Stamina_Reduce>
+      <Value>2000</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Maim</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Hammen">
+      <Tier>Five</Tier>
+      <Accuracy>0.97</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>0.99</Armor_Ignore>
+      <Armor_Pierce>0.99</Armor_Pierce>
+      <Block_Ignore>0.00</Block_Ignore>
+      <Damage>24</Damage>
+      <Description>
+        These small axes are favored by vikings.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>25</Max_Durability>
+      <Parry_Mod>0.78</Parry_Mod>
+      <Shield_Damage>0.05</Shield_Damage>
+      <EWeaponSkill>Axe</EWeaponSkill>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>50</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Hammen">
+      <Tier>Four</Tier>
+      <Accuracy>0.98</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>0.98</Armor_Ignore>
+      <Armor_Pierce>0.98</Armor_Pierce>
+      <Block_Ignore>0.00</Block_Ignore>
+      <Damage>26</Damage>
+      <Description>
+        These small axes are favored by vikings.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>30</Max_Durability>
+      <Parry_Mod>0.79</Parry_Mod>
+      <Shield_Damage>0.05</Shield_Damage>
+      <EWeaponSkill>Axe</EWeaponSkill>
+      <Sprites>1</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>125</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Hammen">
+      <Tier>Three</Tier>
+      <Accuracy>0.99</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>0.97</Armor_Ignore>
+      <Armor_Pierce>0.97</Armor_Pierce>
+      <Block_Ignore>0.0</Block_Ignore>
+      <Damage>29</Damage>
+      <Description>
+        These small axes are favored by vikings.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>40</Max_Durability>
+      <Parry_Mod>0.80</Parry_Mod>
+      <Shield_Damage>0.05</Shield_Damage>
+      <EWeaponSkill>Axe</EWeaponSkill>
+      <Sprites>2</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>280</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Hammen">
+      <Tier>Two</Tier>
+      <Accuracy>1</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>0.96</Armor_Ignore>
+      <Armor_Pierce>0.96</Armor_Pierce>
+      <Block_Ignore>0.0</Block_Ignore>
+      <Damage>35</Damage>
+      <Description>
+        These small axes are favored by vikings.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>50</Max_Durability>
+      <Parry_Mod>0.80</Parry_Mod>
+      <Shield_Damage>0.05</Shield_Damage>
+      <EWeaponSkill>Axe</EWeaponSkill>
+      <Sprites>3</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>600</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Longaxe">
+      <Tier>Five</Tier>
+      <Accuracy>0.81</Accuracy>
+      <AP_Reduce>0.88</AP_Reduce>
+      <Armor_Ignore>0.90</Armor_Ignore>
+      <Armor_Pierce>0.90</Armor_Pierce>
+      <Block_Ignore>0.02</Block_Ignore>
+      <Damage>35</Damage>
+      <Description>
+        These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
+        is useful, it makes them poor defensive weapons.
+      </Description>
+      <Fatigue_Cost_Mod>1.00</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.78</Initiative_Reduce>
+      <Max_Durability>25</Max_Durability>
+      <Parry_Mod>0.58</Parry_Mod>
+      <Range_Mod>1</Range_Mod>
+      <Shield_Damage>0.52</Shield_Damage>
+      <EWeaponSkill>Axe</EWeaponSkill>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>0.89</Stamina_Reduce>
+      <Value>100</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Longaxe">
+      <Tier>Four</Tier>
+      <Accuracy>0.82</Accuracy>
+      <AP_Reduce>0.89</AP_Reduce>
+      <Armor_Ignore>0.89</Armor_Ignore>
+      <Armor_Pierce>0.89</Armor_Pierce>
+      <Block_Ignore>0.02</Block_Ignore>
+      <Damage>39</Damage>
+      <Description>
+        These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
+        is useful, it makes them poor defensive weapons.
+      </Description>
+      <Fatigue_Cost_Mod>1.00</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.80</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>0.60</Parry_Mod>
+      <Range_Mod>1</Range_Mod>
+      <Shield_Damage>0.54</Shield_Damage>
+      <EWeaponSkill>Axe</EWeaponSkill>
+      <Sprites>15</Sprites>
+      <Stamina_Reduce>0.91</Stamina_Reduce>
+      <Value>250</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Longaxe">
+      <Tier>Three</Tier>
+      <Accuracy>0.84</Accuracy>
+      <AP_Reduce>0.90</AP_Reduce>
+      <Armor_Ignore>0.88</Armor_Ignore>
+      <Armor_Pierce>0.88</Armor_Pierce>
+      <Block_Ignore>0.03</Block_Ignore>
+      <Damage>44</Damage>
+      <Description>
+        These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
+        is useful, it makes them poor defensive weapons.
+      </Description>
+      <Fatigue_Cost_Mod>1.00</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.80</Initiative_Reduce>
+      <Max_Durability>45</Max_Durability>
+      <Parry_Mod>0.60</Parry_Mod>
+      <Range_Mod>1</Range_Mod>
+      <Shield_Damage>0.58</Shield_Damage>
+      <EWeaponSkill>Axe</EWeaponSkill>
+      <Sprites>30</Sprites>
+      <Stamina_Reduce>0.93</Stamina_Reduce>
+      <Value>550</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Longaxe">
+      <Tier>Two</Tier>
+      <Accuracy>0.85</Accuracy>
+      <AP_Reduce>0.90</AP_Reduce>
+      <Armor_Ignore>0.87</Armor_Ignore>
+      <Armor_Pierce>0.87</Armor_Pierce>
+      <Block_Ignore>0.03</Block_Ignore>
+      <Damage>52</Damage>
+      <Description>
+        These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
+        is useful, it makes them poor defensive weapons.
+      </Description>
+      <Fatigue_Cost_Mod>1.00</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.80</Initiative_Reduce>
+      <Max_Durability>45</Max_Durability>
+      <Parry_Mod>0.60</Parry_Mod>
+      <Range_Mod>1</Range_Mod>
+      <Shield_Damage>0.60</Shield_Damage>
+      <EWeaponSkill>Axe</EWeaponSkill>
+      <Sprites>45</Sprites>
+      <Stamina_Reduce>0.93</Stamina_Reduce>
+      <Value>800</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+  <EWeaponSkill name ="Flail">
+    <Weapon name="Megaflail">
+      <Tier>Five</Tier>
+      <Accuracy>0.51</Accuracy>
+      <AP_Reduce>0.51</AP_Reduce>
+      <Armor_Ignore>0.18</Armor_Ignore>
+      <Armor_Pierce>0.87</Armor_Pierce>
+      <Block_Ignore>0.85</Block_Ignore>
+      <Damage>92</Damage>
+      <Description>
+        
+      </Description>
+      <Fatigue_Cost_Mod>1.48</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.62</Initiative_Reduce>
+      <Max_Durability>120</Max_Durability>
+      <Parry_Mod>0</Parry_Mod>
+      <Shield_Damage>1.82</Shield_Damage>
+      <EWeaponSkill>Flail</EWeaponSkill>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>0.32</Stamina_Reduce>
+      <Value>300</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Megaflail">
+      <Tier>Four</Tier>
+      <Accuracy>0.53</Accuracy>
+      <AP_Reduce>0.53</AP_Reduce>
+      <Armor_Ignore>0.16</Armor_Ignore>
+      <Armor_Pierce>0.86</Armor_Pierce>
+      <Block_Ignore>0.86</Block_Ignore>
+      <Damage>102</Damage>
+      <Description>
+        This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
+        it will certainly cause utter devastation on the battlefield.
+      </Description>
+      <Fatigue_Cost_Mod>1.47</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.63</Initiative_Reduce>
+      <Max_Durability>135</Max_Durability>
+      <Parry_Mod>0</Parry_Mod>
+      <Shield_Damage>1.84</Shield_Damage>
+      <EWeaponSkill>Flail</EWeaponSkill>
+      <Sprites>1</Sprites>
+      <Stamina_Reduce>0.34</Stamina_Reduce>
+      <Value>650</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Megaflail">
+      <Tier>Three</Tier>
+      <Accuracy>0.54</Accuracy>
+      <AP_Reduce>0.54</AP_Reduce>
+      <Armor_Ignore>0.15</Armor_Ignore>
+      <Armor_Pierce>0.85</Armor_Pierce>
+      <Block_Ignore>0.87</Block_Ignore>
+      <Damage>110</Damage>
+      <Description>
+        This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
+        it will certainly cause utter devastation on the battlefield.
+      </Description>
+      <Fatigue_Cost_Mod>1.45</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.64</Initiative_Reduce>
+      <Max_Durability>155</Max_Durability>
+      <Parry_Mod>0</Parry_Mod>
+      <Shield_Damage>1.88</Shield_Damage>
+      <EWeaponSkill>Flail</EWeaponSkill>
+      <Sprites>2</Sprites>
+      <Stamina_Reduce>0.35</Stamina_Reduce>
+      <Value>1100</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Megaflail">
+      <Tier>Two</Tier>
+      <Accuracy>0.55</Accuracy>
+      <AP_Reduce>0.55</AP_Reduce>
+      <Armor_Ignore>0.13</Armor_Ignore>
+      <Armor_Pierce>0.84</Armor_Pierce>
+      <Block_Ignore>0.88</Block_Ignore>
+      <Damage>120</Damage>
+      <Description>
+        This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
+        it will certainly cause utter devastation on the battlefield.
+      </Description>
+      <Fatigue_Cost_Mod>1.45</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.65</Initiative_Reduce>
+      <Max_Durability>180</Max_Durability>
+      <Parry_Mod>0</Parry_Mod>
+      <Shield_Damage>2.00</Shield_Damage>
+      <EWeaponSkill>Flail</EWeaponSkill>
+      <Sprites>3</Sprites>
+      <Stamina_Reduce>0.35</Stamina_Reduce>
+      <Value>1500</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+  <EWeaponSkill name ="Hammer">
+    <Weapon name="Dino Warhammer">
+      <Tier>Five</Tier>
+      <Accuracy>0.63</Accuracy>
+      <AP_Reduce>0.73</AP_Reduce>
+      <Armor_Ignore>0.75</Armor_Ignore>
+      <Armor_Pierce>0.92</Armor_Pierce>
+      <Block_Ignore>0.20</Block_Ignore>
+      <Damage>45</Damage>
+      <Description>
+        This log has some strangely-heavy bones protruding from the end.
+      </Description>
+      <Fatigue_Cost_Mod>1.24</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.85</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>0.55</Parry_Mod>
+      <Shield_Damage>0.22</Shield_Damage>
+      <EWeaponSkill>Hammer</EWeaponSkill>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>0.84</Stamina_Reduce>
+      <Value>50</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Break_Armor</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Warhammer">
+      <Tier>Four</Tier>
+      <Accuracy>0.65</Accuracy>
+      <AP_Reduce>0.75</AP_Reduce>
+      <Armor_Ignore>0.73</Armor_Ignore>
+      <Armor_Pierce>0.91</Armor_Pierce>
+      <Block_Ignore>0.21</Block_Ignore>
+      <Damage>52</Damage>
+      <Description>
+        This log has some strangely-heavy bones protruding from the end.
+      </Description>
+      <Fatigue_Cost_Mod>1.22</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.83</Initiative_Reduce>
+      <Max_Durability>50</Max_Durability>
+      <Parry_Mod>0.58</Parry_Mod>
+      <Shield_Damage>0.25</Shield_Damage>
+      <EWeaponSkill>Hammer</EWeaponSkill>
+      <Sprites>15</Sprites>
+      <Stamina_Reduce>0.85</Stamina_Reduce>
+      <Value>200</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Break_Armor</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Warhammer">
+      <Tier>Three</Tier>
+      <Accuracy>0.68</Accuracy>
+      <AP_Reduce>0.78</AP_Reduce>
+      <Armor_Ignore>0.70</Armor_Ignore>
+      <Armor_Pierce>0.90</Armor_Pierce>
+      <Block_Ignore>0.22</Block_Ignore>
+      <Damage>60</Damage>
+      <Description>
+        This log has some strangely-heavy bones protruding from the end.
+      </Description>
+      <Fatigue_Cost_Mod>1.20</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.85</Initiative_Reduce>
+      <Max_Durability>85</Max_Durability>
+      <Parry_Mod>0.60</Parry_Mod>
+      <Shield_Damage>0.26</Shield_Damage>
+      <EWeaponSkill>Hammer</EWeaponSkill>
+      <Sprites>30</Sprites>
+      <Stamina_Reduce>0.85</Stamina_Reduce>
+      <Value>350</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Break_Armor</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Warhammer">
+      <Tier>Two</Tier>
+      <Accuracy>0.70</Accuracy>
+      <AP_Reduce>0.80</AP_Reduce>
+      <Armor_Ignore>0.68</Armor_Ignore>
+      <Armor_Pierce>0.89</Armor_Pierce>
+      <Block_Ignore>0.23</Block_Ignore>
+      <Damage>72</Damage>
+      <Description>
+        This log has some strangely-heavy bones protruding from the end.
+      </Description>
+      <Fatigue_Cost_Mod>1.20</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.85</Initiative_Reduce>
+      <Max_Durability>115</Max_Durability>
+      <Parry_Mod>0.60</Parry_Mod>
+      <Shield_Damage>0.27</Shield_Damage>
+      <EWeaponSkill>Hammer</EWeaponSkill>
+      <Sprites>45</Sprites>
+      <Stamina_Reduce>0.85</Stamina_Reduce>
+      <Value>700</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Break_Armor</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+  <EWeaponSkill name ="Large_Shield">
+    <Weapon name="Scutum">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.79</AP_Reduce>
+      <Description>
+        A relatively light shield given its size.  Commonly wielded by legionnaires.
+        It's large size leaves few openings for attackers to exploit.
+      </Description>
+      <Fatigue_Cost_Mod>1.21</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.79</Initiative_Reduce>
+      <Max_Durability>80</Max_Durability>
+      <Melee_Block_Chance>1.34</Melee_Block_Chance>
+      <Parry_Mod>0.79</Parry_Mod>
+      <Ranged_Block_Chance>1.34</Ranged_Block_Chance>
+      <EWeaponSkill>Large_Shield</EWeaponSkill>
+      <Sprites>15,16</Sprites>
+      <Stamina_Reduce>0.84</Stamina_Reduce>
+      <Value>500</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Scutum">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.80</AP_Reduce>
+      <Description>
+        A relatively light shield commonly wielded by legionnaires.  It's large size leaves few openings for attackers to exploit.
+      </Description>
+      <Fatigue_Cost_Mod>1.20</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.80</Initiative_Reduce>
+      <Max_Durability>100</Max_Durability>
+      <Melee_Block_Chance>1.35</Melee_Block_Chance>
+      <Parry_Mod>0.80</Parry_Mod>
+      <Ranged_Block_Chance>1.35</Ranged_Block_Chance>
+      <EWeaponSkill>Large_Shield</EWeaponSkill>
+      <Sprites>30,31</Sprites>
+      <Stamina_Reduce>0.85</Stamina_Reduce>
+      <Value>650</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+  <EWeaponSkill name="Light_Crossbow">
+    <Weapon name="Ween Crossbow">
+      <Tier>Five</Tier>
+      <Accuracy>0.48</Accuracy>
+      <AP_Reduce>1.0</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>5</Damage>
+      <Description>
+        This incredible bow fires live (i.e., dangerous) weens!
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>8</Max_Durability>
+      <Parry_Mod>1.0</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0</Shield_Damage>
+      <EWeaponSkill>Light_Crossbow</EWeaponSkill>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>250</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+    <Weapon name="Ween Crossbow">
+      <Tier>Four</Tier>
+      <Accuracy>0.52</Accuracy>
+      <AP_Reduce>1.0</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>8</Damage>
+      <Description>
+        This incredible bow fires live (i.e., dangerous) weens!
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>15</Max_Durability>
+      <Parry_Mod>1.0</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0</Shield_Damage>
+      <EWeaponSkill>Light_Crossbow</EWeaponSkill>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>550</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+    <Weapon name="Ween Crossbow">
+      <Tier>Three</Tier>
+      <Accuracy>0.58</Accuracy>
+      <AP_Reduce>1.0</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>18</Damage>
+      <Description>
+        This incredible bow fires live (i.e., dangerous) weens!
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>1.0</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0</Shield_Damage>
+      <EWeaponSkill>Light_Crossbow</EWeaponSkill>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>800</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+    <Weapon name="Ween Crossbow">
+      <Tier>Two</Tier>
+      <Accuracy>0.62</Accuracy>
+      <AP_Reduce>1.0</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>24</Damage>
+      <Description>
+        As if a ween wasn't scary enough - they can now fly! 
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>1.0</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0</Shield_Damage>
+      <EWeaponSkill>Light_Crossbow</EWeaponSkill>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>1200</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+  <EWeaponSkill name ="Medium_Shield">
+    <Weapon name="Dino Shield">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.92</AP_Reduce>
+      <Description>
+        A suprisingly-effective shield made of dino scales.
+      </Description>
+      <Fatigue_Cost_Mod>1.07</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.98</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Melee_Block_Chance>1.07</Melee_Block_Chance>
+      <Parry_Mod>0.98</Parry_Mod>
+      <Ranged_Block_Chance>1.02</Ranged_Block_Chance>
+      <EWeaponSkill>Medium_Shield</EWeaponSkill>
+      <Sprites>5</Sprites>
+      <Stamina_Reduce>1.04</Stamina_Reduce>
+      <Value>150</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Shield">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.93</AP_Reduce>
+      <Description>
+        A suprisingly-effective shield made of dino scales.
+      </Description>
+      <Fatigue_Cost_Mod>1.06</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.98</Initiative_Reduce>
+      <Max_Durability>55</Max_Durability>
+      <Melee_Block_Chance>1.08</Melee_Block_Chance>
+      <Parry_Mod>0.98</Parry_Mod>
+      <Ranged_Block_Chance>1.03</Ranged_Block_Chance>
+      <EWeaponSkill>Medium_Shield</EWeaponSkill>
+      <Sprites>20</Sprites>
+      <Stamina_Reduce>1.03</Stamina_Reduce>
+      <Value>250</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Shield">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.96</AP_Reduce>
+      <Description>
+        A suprisingly-effective shield made of dino scales.
+      </Description>
+      <Fatigue_Cost_Mod>1.05</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.99</Initiative_Reduce>
+      <Max_Durability>85</Max_Durability>
+      <Melee_Block_Chance>1.1</Melee_Block_Chance>
+      <Parry_Mod>0.99</Parry_Mod>
+      <Ranged_Block_Chance>1.04</Ranged_Block_Chance>
+      <EWeaponSkill>Medium_Shield</EWeaponSkill>
+      <Sprites>35</Sprites>
+      <Stamina_Reduce>1.02</Stamina_Reduce>
+      <Value>400</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Shield">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Description>
+        A suprisingly-effective shield made of dino scales.
+      </Description>
+      <Fatigue_Cost_Mod>1.03</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.99</Initiative_Reduce>
+      <Max_Durability>120</Max_Durability>
+      <Melee_Block_Chance>1.12</Melee_Block_Chance>
+      <Parry_Mod>0.99</Parry_Mod>
+      <Ranged_Block_Chance>1.05</Ranged_Block_Chance>
+      <EWeaponSkill>Medium_Shield</EWeaponSkill>
+      <Sprites>50</Sprites>
+      <Stamina_Reduce>1.01</Stamina_Reduce>
+      <Value>700</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Kite Shield">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.82</AP_Reduce>
+      <Description>
+        This is a solidly-made shield.  The heaviness of it restricts some movement, but it will easily block
+        melee attacks.
+      </Description>
+      <Fatigue_Cost_Mod>1.13</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.87</Initiative_Reduce>
+      <Max_Durability>25</Max_Durability>
+      <Melee_Block_Chance>1.12</Melee_Block_Chance>
+      <Parry_Mod>0.72</Parry_Mod>
+      <Ranged_Block_Chance>1.17</Ranged_Block_Chance>
+      <EWeaponSkill>Medium_Shield</EWeaponSkill>
+      <Sprites>6,7,8</Sprites>
+      <Stamina_Reduce>0.87</Stamina_Reduce>
+      <Value>80</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Kite Shield">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.84</AP_Reduce>
+      <Description>
+        This is a solidly-made shield.  The heaviness of it restricts some movement, but it will easily block
+        melee attacks.
+      </Description>
+      <Fatigue_Cost_Mod>1.12</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.89</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Melee_Block_Chance>1.14</Melee_Block_Chance>
+      <Parry_Mod>0.74</Parry_Mod>
+      <Ranged_Block_Chance>1.18</Ranged_Block_Chance>
+      <EWeaponSkill>Medium_Shield</EWeaponSkill>
+      <Sprites>21,22,23</Sprites>
+      <Stamina_Reduce>0.88</Stamina_Reduce>
+      <Value>200</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Kite Shield">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.85</AP_Reduce>
+      <Description>
+        This is a solidly-made shield.  The heaviness of it restricts some movement, but it will easily block
+        melee attacks.
+      </Description>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.90</Initiative_Reduce>
+      <Max_Durability>40</Max_Durability>
+      <Melee_Block_Chance>1.15</Melee_Block_Chance>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Ranged_Block_Chance>1.20</Ranged_Block_Chance>
+      <EWeaponSkill>Medium_Shield</EWeaponSkill>
+      <Sprites>36,37,38</Sprites>
+      <Stamina_Reduce>0.90</Stamina_Reduce>
+      <Value>450</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Kite Shield">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.85</AP_Reduce>
+      <Description>
+        This is a solidly-made shield.  The heaviness of it restricts some movement, but it will easily block
+        melee attacks.
+      </Description>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.90</Initiative_Reduce>
+      <Max_Durability>50</Max_Durability>
+      <Melee_Block_Chance>1.18</Melee_Block_Chance>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Ranged_Block_Chance>1.22</Ranged_Block_Chance>
+      <EWeaponSkill>Medium_Shield</EWeaponSkill>
+      <Sprites>51,52,53</Sprites>
+      <Stamina_Reduce>0.90</Stamina_Reduce>
+      <Value>800</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Orc Slab">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.71</AP_Reduce>
+      <Description>
+        A big, heavy chunk of metal.  Unsurprsingly, its weight make it a favorite amongst orcish heavy infantry.
+      </Description>
+      <Fatigue_Cost_Mod>1.25</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.69</Initiative_Reduce>
+      <Max_Durability>80</Max_Durability>
+      <Melee_Block_Chance>1.18</Melee_Block_Chance>
+      <Parry_Mod>0.81</Parry_Mod>
+      <Ranged_Block_Chance>1.15</Ranged_Block_Chance>
+      <EWeaponSkill>Medium_Shield</EWeaponSkill>
+      <Sprites>3,4</Sprites>
+      <Stamina_Reduce>0.75</Stamina_Reduce>
+      <Value>180</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Orc Slab">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.73</AP_Reduce>
+      <Description>
+        A big, heavy chunk of metal.  Unsurprsingly, its weight make it a favorite amongst orcish heavy infantry.
+      </Description>
+      <Fatigue_Cost_Mod>1.21</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.67</Initiative_Reduce>
+      <Max_Durability>110</Max_Durability>
+      <Melee_Block_Chance>1.22</Melee_Block_Chance>
+      <Parry_Mod>0.83</Parry_Mod>
+      <Ranged_Block_Chance>1.18</Ranged_Block_Chance>
+      <EWeaponSkill>Medium_Shield</EWeaponSkill>
+      <Sprites>18,19</Sprites>
+      <Stamina_Reduce>0.77</Stamina_Reduce>
+      <Value>350</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Orc Slab">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.75</AP_Reduce>
+      <Description>
+        A big, heavy chunk of metal.  Unsurprsingly, its weight make it a favorite amongst orcish heavy infantry.
+      </Description>
+      <Fatigue_Cost_Mod>1.20</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.70</Initiative_Reduce>
+      <Max_Durability>150</Max_Durability>
+      <Melee_Block_Chance>1.24</Melee_Block_Chance>
+      <Parry_Mod>0.85</Parry_Mod>
+      <Ranged_Block_Chance>1.19</Ranged_Block_Chance>
+      <EWeaponSkill>Medium_Shield</EWeaponSkill>
+      <Sprites>33,34</Sprites>
+      <Stamina_Reduce>0.78</Stamina_Reduce>
+      <Value>600</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Orc Slab">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.78</AP_Reduce>
+      <Description>
+        A big, heavy chunk of metal.  Unsurprsingly, its weight make it a favorite amongst orcish heavy infantry.
+      </Description>
+      <Fatigue_Cost_Mod>1.18</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.72</Initiative_Reduce>
+      <Max_Durability>160</Max_Durability>
+      <Melee_Block_Chance>1.26</Melee_Block_Chance>
+      <Parry_Mod>0.86</Parry_Mod>
+      <Ranged_Block_Chance>1.20</Ranged_Block_Chance>
+      <EWeaponSkill>Medium_Shield</EWeaponSkill>
+      <Sprites>48,49</Sprites>
+      <Stamina_Reduce>0.80</Stamina_Reduce>
+      <Value>1000</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Skjoldr">
+      <Tier>Five</Tier>
+      <AP_Reduce>0.92</AP_Reduce>
+      <Description>
+        A shield favored by vikings.  The soft wood it is made of means it quite effective at absorbing blows.
+      </Description>
+      <Fatigue_Cost_Mod>1.02</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.98</Initiative_Reduce>
+      <Max_Durability>25</Max_Durability>
+      <Melee_Block_Chance>1.03</Melee_Block_Chance>
+      <Parry_Mod>1.03</Parry_Mod>
+      <Ranged_Block_Chance>1.02</Ranged_Block_Chance>
+      <EWeaponSkill>Medium_Shield</EWeaponSkill>
+      <Sprites>1,2</Sprites>
+      <Stamina_Reduce>1.04</Stamina_Reduce>
+      <Value>100</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Skjoldr">
+      <Tier>Four</Tier>
+      <AP_Reduce>0.93</AP_Reduce>
+      <Description>
+        A shield favored by vikings.  The soft wood it is made of means it quite effective at absorbing blows.
+      </Description>
+      <Fatigue_Cost_Mod>1.02</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.98</Initiative_Reduce>
+      <Max_Durability>30</Max_Durability>
+      <Melee_Block_Chance>1.04</Melee_Block_Chance>
+      <Parry_Mod>1.04</Parry_Mod>
+      <Ranged_Block_Chance>1.02</Ranged_Block_Chance>
+      <EWeaponSkill>Medium_Shield</EWeaponSkill>
+      <Sprites>16,17</Sprites>
+      <Stamina_Reduce>1.03</Stamina_Reduce>
+      <Value>250</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Skjoldr">
+      <Tier>Three</Tier>
+      <AP_Reduce>0.94</AP_Reduce>
+      <Description>
+        A shield favored by vikings.  The soft wood it is made of means it quite effective at absorbing blows.
+      </Description>
+      <Fatigue_Cost_Mod>1.01</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.99</Initiative_Reduce>
+      <Max_Durability>40</Max_Durability>
+      <Melee_Block_Chance>1.06</Melee_Block_Chance>
+      <Parry_Mod>1.06</Parry_Mod>
+      <Ranged_Block_Chance>1.03</Ranged_Block_Chance>
+      <EWeaponSkill>Medium_Shield</EWeaponSkill>
+      <Sprites>31,32</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>550</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Skjoldr">
+      <Tier>Two</Tier>
+      <AP_Reduce>0.95</AP_Reduce>
+      <Description>
+        A shield favored by vikings.  The soft wood it is made of means it quite effective at absorbing blows.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>50</Max_Durability>
+      <Melee_Block_Chance>1.07</Melee_Block_Chance>
+      <Parry_Mod>1.08</Parry_Mod>
+      <Ranged_Block_Chance>1.03</Ranged_Block_Chance>
+      <EWeaponSkill>Medium_Shield</EWeaponSkill>
+      <Sprites>46,47</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>800</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+  <EWeaponSkill name ="Polearm">
+    <Weapon name="Naginata">
+      <Tier>Five</Tier>
+      <Accuracy>0.88</Accuracy>
+      <AP_Reduce>0.92</AP_Reduce>
+      <Armor_Ignore>0.99</Armor_Ignore>
+      <Armor_Pierce>0.92</Armor_Pierce>
+      <Block_Ignore>0.0</Block_Ignore>
+      <Damage>62</Damage>
+      <Description>
+        This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
+      </Description>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.92</Initiative_Reduce>
+      <Max_Durability>58</Max_Durability>
+      <Parry_Mod>0.92</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <EWeaponSkill>Polearm</EWeaponSkill>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>0.97</Stamina_Reduce>
+      <Range_Mod>1</Range_Mod>
+      <Value>150</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Naginata">
+      <Tier>Four</Tier>
+      <Accuracy>0.90</Accuracy>
+      <AP_Reduce>0.94</AP_Reduce>
+      <Armor_Ignore>0.99</Armor_Ignore>
+      <Armor_Pierce>0.91</Armor_Pierce>
+      <Block_Ignore>0.00</Block_Ignore>
+      <Damage>75</Damage>
+      <Description>
+        This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
+      </Description>
+      <Fatigue_Cost_Mod>1.08</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.94</Initiative_Reduce>
+      <Max_Durability>70</Max_Durability>
+      <Parry_Mod>0.94</Parry_Mod>
+      <Shield_Damage>0.02</Shield_Damage>
+      <EWeaponSkill>Polearm</EWeaponSkill>
+      <Sprites>15</Sprites>
+      <Stamina_Reduce>0.98</Stamina_Reduce>
+      <Range_Mod>1</Range_Mod>
+      <Value>300</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Naginata">
+      <Tier>Three</Tier>
+      <Accuracy>0.92</Accuracy>
+      <AP_Reduce>0.96</AP_Reduce>
+      <Armor_Ignore>0.99</Armor_Ignore>
+      <Armor_Pierce>0.89</Armor_Pierce>
+      <Block_Ignore>0.07</Block_Ignore>
+      <Damage>88</Damage>
+      <Description>
+        This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
+      </Description>
+      <Fatigue_Cost_Mod>1.05</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.96</Initiative_Reduce>
+      <Max_Durability>85</Max_Durability>
+      <Parry_Mod>0.96</Parry_Mod>
+      <Shield_Damage>0.03</Shield_Damage>
+      <EWeaponSkill>Polearm</EWeaponSkill>
+      <Sprites>30</Sprites>
+      <Stamina_Reduce>0.99</Stamina_Reduce>
+      <Range_Mod>1</Range_Mod>
+      <Value>550</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Naginata">
+      <Tier>Two</Tier>
+      <Accuracy>0.94</Accuracy>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Armor_Ignore>0.98</Armor_Ignore>
+      <Armor_Pierce>0.87</Armor_Pierce>
+      <Block_Ignore>0.08</Block_Ignore>
+      <Damage>102</Damage>
+      <Description>
+        This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
+      </Description>
+      <Fatigue_Cost_Mod>1.03</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.98</Initiative_Reduce>
+      <Max_Durability>100</Max_Durability>
+      <Parry_Mod>0.98</Parry_Mod>
+      <Shield_Damage>0.04</Shield_Damage>
+      <EWeaponSkill>Polearm</EWeaponSkill>
+      <Sprites>45</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Range_Mod>1</Range_Mod>
+      <Value>550</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+  <EWeaponSkill name ="Short_Bow">
+    <Weapon name="Goblin Bow">
+      <Tier>Five</Tier>
+      <Accuracy>0.92</Accuracy>
+      <AP_Reduce>1.0</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>22</Damage>
+      <Description>
+        A small bow favored by goblins.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>15</Max_Durability>
+      <Parry_Mod>1.0</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0</Shield_Damage>
+      <EWeaponSkill>Short_Bow</EWeaponSkill>
+      <Sprites>0</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>50</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <WeaponEAbility>Aim</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+    <Weapon name="Goblin Bow">
+      <Tier>Four</Tier>
+      <Accuracy>0.94</Accuracy>
+      <AP_Reduce>1.0</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.98</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>28</Damage>
+      <Description>
+        A small bow favored by goblins.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>15</Max_Durability>
+      <Parry_Mod>1.0</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0</Shield_Damage>
+      <EWeaponSkill>Short_Bow</EWeaponSkill>
+      <Sprites>15</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>50</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <WeaponEAbility>Aim</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+    <Weapon name="Goblin Bow">
+      <Tier>Three</Tier>
+      <Accuracy>0.96</Accuracy>
+      <AP_Reduce>1.0</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.96</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>35</Damage>
+      <Description>
+        A small bow favored by goblins.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>15</Max_Durability>
+      <Parry_Mod>1.0</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0</Shield_Damage>
+      <EWeaponSkill>Short_Bow</EWeaponSkill>
+      <Sprites>30</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>50</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <WeaponEAbility>Aim</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+    <Weapon name="Goblin Bow">
+      <Tier>Two</Tier>
+      <Accuracy>0.98</Accuracy>
+      <AP_Reduce>1.0</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.94</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>40</Damage>
+      <Description>
+        A small bow favored by goblins.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>15</Max_Durability>
+      <Parry_Mod>1.0</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0</Shield_Damage>
+      <EWeaponSkill>Short_Bow</EWeaponSkill>
+      <Sprites>45</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>50</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <WeaponEAbility>Aim</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+  <EWeaponSkill name ="Small_Shield">
+    <Weapon name="Buckler">
+      <Tier>Five</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Description>
+        This flimsy thing could probably deflect a few blows before completely disintegrating...hopefully...
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>20</Max_Durability>
+      <Melee_Block_Chance>1.01</Melee_Block_Chance>
+      <Parry_Mod>0.99</Parry_Mod>
+      <Ranged_Block_Chance>1</Ranged_Block_Chance>
+      <Sprites>0,1,2</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>20</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Buckler">
+      <Tier>Four</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Description>
+        A rather small shield meant for deflecting blows rather than blocking.  It's not exactly the finest quality...
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Melee_Block_Chance>1.03</Melee_Block_Chance>
+      <Parry_Mod>1</Parry_Mod>
+      <Ranged_Block_Chance>1.01</Ranged_Block_Chance>
+      <Sprites>15,16,17</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>20</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Goblin Buckler">
+      <Tier>Five</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Description>
+        A small, light shield favored by goblins.
+      </Description>
+      <Fatigue_Cost_Mod>1.02</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.98</Initiative_Reduce>
+      <Max_Durability>25</Max_Durability>
+      <Melee_Block_Chance>1.02</Melee_Block_Chance>
+      <Parry_Mod>0.98</Parry_Mod>
+      <Ranged_Block_Chance>1</Ranged_Block_Chance>
+      <EWeaponSkill>Small_Shield</EWeaponSkill>
+      <Sprites>3</Sprites>
+      <Stamina_Reduce>0.98</Stamina_Reduce>
+      <Value>40</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Goblin Buckler">
+      <Tier>Four</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Description>
+        A small, light shield favored by goblins.
+      </Description>
+      <Fatigue_Cost_Mod>1.01</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.99</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Melee_Block_Chance>1.03</Melee_Block_Chance>
+      <Parry_Mod>0.99</Parry_Mod>
+      <Ranged_Block_Chance>1</Ranged_Block_Chance>
+      <EWeaponSkill>Small_Shield</EWeaponSkill>
+      <Sprites>3</Sprites>
+      <Stamina_Reduce>0.99</Stamina_Reduce>
+      <Value>100</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Goblin Buckler">
+      <Tier>Three</Tier>
+      <AP_Reduce>1</AP_Reduce>
+      <Description>
+        A small, light shield favored by goblins.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>50</Max_Durability>
+      <Melee_Block_Chance>1.04</Melee_Block_Chance>
+      <Parry_Mod>1</Parry_Mod>
+      <Ranged_Block_Chance>1</Ranged_Block_Chance>
+      <EWeaponSkill>Small_Shield</EWeaponSkill>
+      <Sprites>3</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>170</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+  <EWeaponSkill name ="Spear">
+    <Weapon name="Dino Spear">
+      <Tier>Five</Tier>
+      <Accuracy>0.88</Accuracy>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.83</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>42</Damage>
+      <Description>
+        This spear is used to hunt dinosaurs.  It's not very good at it.
+      </Description>
+      <Fatigue_Cost_Mod>1.12</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Shield_Damage>0.00</Shield_Damage>
+      <EWeaponSkill>Spear</EWeaponSkill>
+      <Sprites>7</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>100</Value>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Spear">
+      <Tier>Four</Tier>
+      <Accuracy>0.90</Accuracy>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.80</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>50</Damage>
+      <Description>
+        This spear is used to hunt dinosaurs.  It's not very effective...
+      </Description>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>55</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Shield_Damage>0.00</Shield_Damage>
+      <EWeaponSkill>Spear</EWeaponSkill>
+      <Sprites>22</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>250</Value>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Spear">
+      <Tier>Three</Tier>
+      <Accuracy>0.92</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.72</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>55</Damage>
+      <Description>
+        This spear is used to hunt dinosaurs.
+      </Description>
+      <Fatigue_Cost_Mod>1.08</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>70</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Shield_Damage>0.00</Shield_Damage>
+      <EWeaponSkill>Spear</EWeaponSkill>
+      <Sprites>37</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>450</Value>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Kali">
+      <Tier>One</Tier>
+      <Accuracy>1.50</Accuracy>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Armor_Ignore>0</Armor_Ignore>
+      <Armor_Pierce>0.35</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>85</Damage>
+      <Description>
+        Kali: The Demon Barb
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>150</Max_Durability>
+      <Parry_Mod>1.05</Parry_Mod>
+      <Shield_Damage>0.05</Shield_Damage>
+      <Sprites>60</Sprites>
+      <EWeaponSkill>Spear</EWeaponSkill>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>50000</Value>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Skewer">
+      <Tier>Five</Tier>
+      <Accuracy>0.80</Accuracy>
+      <AP_Reduce>0.96</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.97</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>38</Damage>
+      <Description>
+        This spear has a wide blade.  Goblins love using these as they can inflict bleeding wounds.
+      </Description>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <EWeaponSkill>Spear</EWeaponSkill>
+      <Sprites>5</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>55</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Gash</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Skewer">
+      <Tier>Four</Tier>
+      <Accuracy>0.86</Accuracy>
+      <AP_Reduce>0.96</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.93</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>42</Damage>
+      <Description>
+        This spear has a wide blade.  Goblins love using these as they can inflict bleeding wounds.
+      </Description>
+      <Fatigue_Cost_Mod>1.09</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>55</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <EWeaponSkill>Spear</EWeaponSkill>
+      <Sprites>5</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>120</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Gash</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Skewer">
+      <Tier>Three</Tier>
+      <Accuracy>0.88</Accuracy>
+      <AP_Reduce>0.96</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.90</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>50</Damage>
+      <Description>
+        This spear has a wide blade.  Goblins love using these as they can inflict bleeding wounds.
+      </Description>
+      <Fatigue_Cost_Mod>1.08</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>75</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <EWeaponSkill>Spear</EWeaponSkill>
+      <Sprites>5</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>200</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Gash</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Spear">
+      <Tier>Five</Tier>
+      <Accuracy>0.85</Accuracy>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.85</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>33</Damage>
+      <Description>
+        This spear is simply a sharp rock tied to the end of a stick.  It looks like it could still do some damage, though.
+      </Description>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>30</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <EWeaponSkill>Spear</EWeaponSkill>
+      <Sprites>0,1,2</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>50</Value>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Spear">
+      <Tier>Four</Tier>
+      <Accuracy>0.92</Accuracy>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.80</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>34</Damage>
+      <Description>
+        Simple, yet effective.
+      </Description>
+      <Fatigue_Cost_Mod>1.08</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>50</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <EWeaponSkill>Spear</EWeaponSkill>
+      <Sprites>15,16,17</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>250</Value>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Spear">
+      <Tier>Three</Tier>
+      <Accuracy>0.98</Accuracy>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.72</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>35</Damage>
+      <Description>
+        Simple, yet effective.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>65</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <EWeaponSkill>Spear</EWeaponSkill>
+      <Sprites>30,31,32</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>1000</Value>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Spear">
+      <Tier>Two</Tier>
+      <Accuracy>0.98</Accuracy>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.70</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>40</Damage>
+      <Description>
+        Simple, yet effective.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>70</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Shield_Damage>0.02</Shield_Damage>
+      <EWeaponSkill>Spear</EWeaponSkill>
+      <Sprites>45,46,47</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>1500</Value>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Yari">
+      <Tier>Five</Tier>
+      <Accuracy>0.95</Accuracy>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.88</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>28</Damage>
+      <Description>
+        A low-quality Jomonese spear.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>0.98</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <EWeaponSkill>Spear</EWeaponSkill>
+      <Sprites>3,4</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>200</Value>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Yari">
+      <Tier>Four</Tier>
+      <Accuracy>0.96</Accuracy>
+      <AP_Reduce>0.98</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.86</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>32</Damage>
+      <Description>
+        A Jomonese spear.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>42</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <EWeaponSkill>Spear</EWeaponSkill>
+      <Sprites>18,19</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>300</Value>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Yari">
+      <Tier>Three</Tier>
+      <Accuracy>0.97</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.84</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>38</Damage>
+      <Description>
+        A Jomonese spear.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>42</Max_Durability>
+      <Parry_Mod>1.03</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <EWeaponSkill>Spear</EWeaponSkill>
+      <Sprites>33,34</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>550</Value>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>  
+    <Weapon name="Yari">
+      <Tier>Two</Tier>
+      <Accuracy>0.98</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.82</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>44</Damage>
+      <Description>
+        A Jomonese spear.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>55</Max_Durability>
+      <Parry_Mod>1.05</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <EWeaponSkill>Spear</EWeaponSkill>
+      <Sprites>48,49</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>700</Value>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>  
+  </EWeaponSkill>
+  <EWeaponSkill name ="Staff">
+    <Weapon name="Dino Staff">
+      <Tier>Five</Tier>
+      <Accuracy>0.78</Accuracy>
+      <AP_Reduce>0.85</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>10</Damage>
+      <Description>
+        Not exactly the most effective weapon, but its presence inspires the troops.
+      </Description>
+      <Fatigue_Cost_Mod>1.08</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.72</Initiative_Reduce>
+      <Max_Durability>10</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0.00</Shield_Damage>
+      <EWeaponSkill>Staff</EWeaponSkill>
+      <Sprites>3</Sprites>
+      <Stamina_Reduce>0.92</Stamina_Reduce>
+      <Value>100</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Staff">
+      <Tier>Four</Tier>
+      <Accuracy>0.80</Accuracy>
+      <AP_Reduce>0.87</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>12</Damage>
+      <Description>
+        Not exactly the most effective weapon, but its presence inspires the troops.
+      </Description>
+      <Fatigue_Cost_Mod>1.06</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.74</Initiative_Reduce>
+      <Max_Durability>10</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0.00</Shield_Damage>
+      <EWeaponSkill>Staff</EWeaponSkill>
+      <Sprites>18</Sprites>
+      <Stamina_Reduce>0.94</Stamina_Reduce>
+      <Value>250</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Staff">
+      <Tier>Three</Tier>
+      <Accuracy>0.82</Accuracy>
+      <AP_Reduce>0.88</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>15</Damage>
+      <Description>
+        Not exactly the most effective weapon, but its presence inspires the troops.
+      </Description>
+      <Fatigue_Cost_Mod>1.04</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.76</Initiative_Reduce>
+      <Max_Durability>10</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0.00</Shield_Damage>
+      <EWeaponSkill>Staff</EWeaponSkill>
+      <Sprites>33</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>355</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Staff">
+      <Tier>Two</Tier>
+      <Accuracy>0.84</Accuracy>
+      <AP_Reduce>0.90</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>18</Damage>
+      <Description>
+        Not exactly the most effective weapon, but its presence inspires the troops.
+      </Description>
+      <Fatigue_Cost_Mod>1.03</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.78</Initiative_Reduce>
+      <Max_Durability>15</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0.00</Shield_Damage>
+      <EWeaponSkill>Staff</EWeaponSkill>
+      <Sprites>48</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>550</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Slime Staff">
+      <Tier>Five</Tier>
+      <Accuracy>0.85</Accuracy>
+      <AP_Reduce>0.88</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>8</Damage>
+      <Description>
+        This odd staff has a slimy tip...
+      </Description>
+      <Fatigue_Cost_Mod>1.12</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.78</Initiative_Reduce>
+      <Max_Durability>15</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <EWeaponSkill>Staff</EWeaponSkill>
+      <Sprites>0,1</Sprites>
+      <Stamina_Reduce>0.88</Stamina_Reduce>
+      <Value>150</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+    <Weapon name="Slime Staff">
+      <Tier>Four</Tier>
+      <Accuracy>0.88</Accuracy>
+      <AP_Reduce>0.89</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>10</Damage>
+      <Description>
+        This odd staff has a prodigious amount of slime coming from the tip...
+      </Description>
+      <Fatigue_Cost_Mod>1.11</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.79</Initiative_Reduce>
+      <Max_Durability>25</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <EWeaponSkill>Staff</EWeaponSkill>
+      <Sprites>15,16</Sprites>
+      <Stamina_Reduce>0.89</Stamina_Reduce>
+      <Value>300</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+    <Weapon name="Slime Staff">
+      <Tier>Three</Tier>
+      <Accuracy>0.90</Accuracy>
+      <AP_Reduce>0.90</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>12</Damage>
+      <Description>
+        This staff is covered in slime...and it looks like its *gazing* at you...
+      </Description>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.80</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <EWeaponSkill>Staff</EWeaponSkill>
+      <Sprites>30,31</Sprites>
+      <Stamina_Reduce>0.90</Stamina_Reduce>
+      <Value>650</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+    <Weapon name="Void Staff">
+      <Tier>Five</Tier>
+      <Accuracy>0.80</Accuracy>
+      <AP_Reduce>0.85</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>20</Damage>
+      <Description>
+        An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
+        that are best avoided...
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <EWeaponSkill>Staff</EWeaponSkill>
+      <Sprites>2</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>100</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Void Staff">
+      <Tier>Four</Tier>
+      <Accuracy>0.82</Accuracy>
+      <AP_Reduce>0.87</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>25</Damage>
+      <Description>
+        An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
+        that are best avoided...
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>30</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <EWeaponSkill>Staff</EWeaponSkill>
+      <Sprites>17</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>200</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Void Staff">
+      <Tier>Three</Tier>
+      <Accuracy>0.85</Accuracy>
+      <AP_Reduce>0.90</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>40</Damage>
+      <Description>
+        An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
+        that are best avoided...
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <EWeaponSkill>Staff</EWeaponSkill>
+      <Sprites>32</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>400</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Void Staff">
+      <Tier>Two</Tier>
+      <Accuracy>0.92</Accuracy>
+      <AP_Reduce>0.95</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>50</Damage>
+      <Description>
+        An eldritch staff that goblins use to attract things from the void.  Those touched by it attract things
+        that are best avoided...
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>50</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <EWeaponSkill>Staff</EWeaponSkill>
+      <Sprites>47</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>1000</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+  <EWeaponSkill name ="Sword">
+    <Weapon name="Broadsword">
+      <Tier>Five</Tier>
+      <Accuracy>0.92</Accuracy>
+      <AP_Reduce>0.92</AP_Reduce>
+      <Armor_Ignore>0.99</Armor_Ignore>
+      <Armor_Pierce>0.92</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>32</Damage>
+      <Description>
+        A well-rounded weapon.  It's heavier than comparative swords, thus less effective as a defensive weapon.
+      </Description>
+      <Fatigue_Cost_Mod>1.06</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>0.88</Parry_Mod>
+      <Shield_Damage>0</Shield_Damage>
+      <Sprites>2</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>80</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Broadsword">
+      <Tier>Four</Tier>
+      <Accuracy>0.93</Accuracy>
+      <AP_Reduce>0.93</AP_Reduce>
+      <Armor_Ignore>0.99</Armor_Ignore>
+      <Armor_Pierce>0.91</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>36</Damage>
+      <Description>
+        A well-rounded weapon.  It's heavier than comparative swords, thus less effective as a defensive weapon.
+      </Description>
+      <Fatigue_Cost_Mod>1.05</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.96</Initiative_Reduce>
+      <Max_Durability>25</Max_Durability>
+      <Parry_Mod>0.89</Parry_Mod>
+      <Shield_Damage>0</Shield_Damage>
+      <Sprites>17</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>180</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Broadsword">
+      <Tier>Three</Tier>
+      <Accuracy>0.94</Accuracy>
+      <AP_Reduce>0.94</AP_Reduce>
+      <Armor_Ignore>0.99</Armor_Ignore>
+      <Armor_Pierce>0.91</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>42</Damage>
+      <Description>
+        A well-rounded weapon.  It's heavier than comparative swords, thus less effective as a defensive weapon.
+      </Description>
+      <Fatigue_Cost_Mod>1.05</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Max_Durability>30</Max_Durability>
+      <Parry_Mod>0.90</Parry_Mod>
+      <Shield_Damage>0</Shield_Damage>
+      <Sprites>32</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>300</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Broadsword">
+      <Tier>Two</Tier>
+      <Accuracy>0.95</Accuracy>
+      <AP_Reduce>0.95</AP_Reduce>
+      <Armor_Ignore>0.99</Armor_Ignore>
+      <Armor_Pierce>0.91</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>45</Damage>
+      <Description>
+        A well-rounded weapon.  It's heavier than comparative swords, thus less effective as a defensive weapon.
+      </Description>
+      <Fatigue_Cost_Mod>1.05</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>0.90</Parry_Mod>
+      <Shield_Damage>0</Shield_Damage>
+      <Sprites>47</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>650</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Choppa">
+      <Tier>Five</Tier>
+      <Accuracy>0.85</Accuracy>
+      <AP_Reduce>0.86</AP_Reduce>
+      <Armor_Ignore>0.91</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0.03</Block_Ignore>
+      <Damage>58</Damage>
+      <Description>
+        Supposedly, this is some fashion of sword... but it looks as if someone simply tied a sharp rock to a stick.
+        Nonetheless, the jagged and heavy nature of the rock could probably cause some grisly injuries.
+      </Description>
+      <Fatigue_Cost_Mod>1.20</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.94</Initiative_Reduce>
+      <Max_Durability>100</Max_Durability>
+      <Parry_Mod>1.02</Parry_Mod>
+      <Shield_Damage>0.18</Shield_Damage>
+      <Sprites>3,4,5</Sprites>
+      <Stamina_Reduce>0.94</Stamina_Reduce>
+      <Value>100</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Gash</WeaponEAbility>
+      <WeaponEAbility>Maim</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Choppa">
+      <Tier>Four</Tier>
+      <Accuracy>0.85</Accuracy>
+      <AP_Reduce>0.89</AP_Reduce>
+      <Armor_Ignore>0.90</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0.03</Block_Ignore>
+      <Damage>59</Damage>
+      <Description>
+        Exemplifying typical orcish technology, someone has tied a jagged piece of metal to a stick and now calls it a "choppa".
+      </Description>
+      <Fatigue_Cost_Mod>1.18</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.95</Initiative_Reduce>
+      <Max_Durability>100</Max_Durability>
+      <Parry_Mod>1.03</Parry_Mod>
+      <Shield_Damage>0.20</Shield_Damage>
+      <Sprites>33,34,35</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>150</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Gash</WeaponEAbility>
+      <WeaponEAbility>Maim</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Choppa">
+      <Tier>Three</Tier>
+      <Accuracy>0.88</Accuracy>
+      <AP_Reduce>0.90</AP_Reduce>
+      <Armor_Ignore>0.89</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0.04</Block_Ignore>
+      <Damage>60</Damage>
+      <Description>
+        Someone has taken the time to sharpen this metal-on-a-stick.  Rather impressive by Orc standards.
+      </Description>
+      <Fatigue_Cost_Mod>1.15</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.95</Initiative_Reduce>
+      <Max_Durability>120</Max_Durability>
+      <Parry_Mod>1.03</Parry_Mod>
+      <Shield_Damage>0.22</Shield_Damage>
+      <Sprites>63,64,65</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>500</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Gash</WeaponEAbility>
+      <WeaponEAbility>Maim</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Choppa">
+      <Tier>Two</Tier>
+      <Accuracy>0.90</Accuracy>
+      <AP_Reduce>0.90</AP_Reduce>
+      <Armor_Ignore>0.88</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0.05</Block_Ignore>
+      <Damage>65</Damage>
+      <Description>
+        Simple yet sturdy, this sword represents the finest Orcish craftmanship.
+      </Description>
+      <Fatigue_Cost_Mod>1.14</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.95</Initiative_Reduce>
+      <Max_Durability>200</Max_Durability>
+      <Parry_Mod>1.03</Parry_Mod>
+      <Shield_Damage>0.24</Shield_Damage>
+      <Sprites>93,94,95</Sprites>
+      <Stamina_Reduce>5</Stamina_Reduce>
+      <Value>1500</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Gash</WeaponEAbility>
+      <WeaponEAbility>Maim</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Claymore">
+      <Tier>Three</Tier>
+      <Accuracy>0.95</Accuracy>
+      <AP_Reduce>0.90</AP_Reduce>
+      <Armor_Ignore>0.75</Armor_Ignore>
+      <Armor_Pierce>0.90</Armor_Pierce>
+      <Block_Ignore>0.30</Block_Ignore>
+      <Damage>100</Damage>
+      <Description>
+        This sword represents a good balance beteween size and strength.  It is a potent defensive weapon, capable of parrying
+        savage blows.  However, its size still makes it a fearsome offensive weapon.
+      </Description>
+      <Fatigue_Cost_Mod>1.25</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.75</Initiative_Reduce>
+      <Max_Durability>180</Max_Durability>
+      <Parry_Mod>1.15</Parry_Mod>
+      <Shield_Damage>0.52</Shield_Damage>
+      <Sprites>30,31,32</Sprites>
+      <Stamina_Reduce>0.75</Stamina_Reduce>
+      <Value>1800</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Great_Strike</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Fang Club">
+      <Tier>Five</Tier>
+      <Accuracy>0.82</Accuracy>
+      <AP_Reduce>0.92</AP_Reduce>
+      <Armor_Ignore>0.91</Armor_Ignore>
+      <Armor_Pierce>0.99</Armor_Pierce>
+      <Block_Ignore>0.02</Block_Ignore>
+      <Damage>28</Damage>
+      <Description>
+        This is basically just some heavy bones attached to a wooden club.
+      </Description>
+      <Fatigue_Cost_Mod>1.12</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.92</Initiative_Reduce>
+      <Max_Durability>15</Max_Durability>
+      <Parry_Mod>1.02</Parry_Mod>
+      <Shield_Damage>0.24</Shield_Damage>
+      <Sprites>22</Sprites>
+      <Stamina_Reduce>0.93</Stamina_Reduce>
+      <Value>50</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Fang Club">
+      <Tier>Four</Tier>
+      <Accuracy>0.84</Accuracy>
+      <AP_Reduce>0.93</AP_Reduce>
+      <Armor_Ignore>0.90</Armor_Ignore>
+      <Armor_Pierce>0.97</Armor_Pierce>
+      <Block_Ignore>0.02</Block_Ignore>
+      <Damage>32</Damage>
+      <Description>
+        Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
+        can easily pierce armor.
+      </Description>
+      <Fatigue_Cost_Mod>1.11</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.93</Initiative_Reduce>
+      <Max_Durability>25</Max_Durability>
+      <Parry_Mod>1.03</Parry_Mod>
+      <Shield_Damage>0.25</Shield_Damage>
+      <Sprites>52</Sprites>
+      <Stamina_Reduce>0.94</Stamina_Reduce>
+      <Value>150</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Fang Club">
+      <Tier>Three</Tier>
+      <Accuracy>0.86</Accuracy>
+      <AP_Reduce>0.94</AP_Reduce>
+      <Armor_Ignore>0.89</Armor_Ignore>
+      <Armor_Pierce>0.96</Armor_Pierce>
+      <Block_Ignore>0.02</Block_Ignore>
+      <Damage>35</Damage>
+      <Description>
+        Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
+        can easily pierce armor.
+      </Description>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.95</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>1.04</Parry_Mod>
+      <Shield_Damage>0.27</Shield_Damage>
+      <Sprites>82</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>350</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Fang Club">
+      <Tier>Two</Tier>
+      <Accuracy>0.88</Accuracy>
+      <AP_Reduce>0.95</AP_Reduce>
+      <Armor_Ignore>0.88</Armor_Ignore>
+      <Armor_Pierce>0.95</Armor_Pierce>
+      <Block_Ignore>0.03</Block_Ignore>
+      <Damage>42</Damage>
+      <Description>
+        Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
+        can easily pierce armor.
+      </Description>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.95</Initiative_Reduce>
+      <Max_Durability>60</Max_Durability>
+      <Parry_Mod>1.05</Parry_Mod>
+      <Shield_Damage>0.28</Shield_Damage>
+      <Sprites>112</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>700</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Gladius">
+      <Tier>Three</Tier>
+      <Accuracy>1</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.80</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>39</Damage>
+      <Description>
+        A short blade meant more for thrusting motions than swinging.  Nonetheless, it can still do damage when swung.
+      </Description>
+      <Fatigue_Cost_Mod>1.07</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>70</Max_Durability>
+      <Parry_Mod>1.15</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <Sprites>36</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>800</Value>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Katana">
+      <Tier>Five</Tier>
+      <Accuracy>1</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.97</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>52</Damage>
+      <Description>
+        Normally, katanas are exemplary works of craftmanship.  Normally.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>5</Max_Durability>
+      <Parry_Mod>1.19</Parry_Mod>
+      <Shield_Damage>0.02</Shield_Damage>
+      <Sprites>10,11</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>70</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Double_Strike</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Katana">
+      <Tier>Four</Tier>
+      <Accuracy>1</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.95</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>60</Damage>
+      <Description>
+        This katana is slightly less majestic than most...
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>15</Max_Durability>
+      <Parry_Mod>1.22</Parry_Mod>
+      <Shield_Damage>0.02</Shield_Damage>
+      <Sprites>40,41</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>500</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Double_Strike</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Katana">
+      <Tier>Three</Tier>
+      <Accuracy>1</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.93</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>65</Damage>
+      <Description>
+        This katana is well-rounded weapon of fine craftmanship.
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>1.25</Parry_Mod>
+      <Shield_Damage>0.02</Shield_Damage>
+      <Sprites>70,71</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>800</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Double_Strike</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Katana">
+      <Tier>Two</Tier>
+      <Accuracy>1</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.92</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>75</Damage>
+      <Description>
+        TODO
+      </Description>
+      <Fatigue_Cost_Mod>1</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>50</Max_Durability>
+      <Parry_Mod>1.26</Parry_Mod>
+      <Shield_Damage>0.02</Shield_Damage>
+      <Sprites>100,101</Sprites>
+      <Stamina_Reduce>1</Stamina_Reduce>
+      <Value>1400</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Double_Strike</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Long Sword">
+      <Tier>Four</Tier>
+      <Accuracy>0.93</Accuracy>
+      <AP_Reduce>0.96</AP_Reduce>
+      <Armor_Ignore>0.97</Armor_Ignore>
+      <Armor_Pierce>0.93</Armor_Pierce>
+      <Block_Ignore>0.05</Block_Ignore>
+      <Damage>49</Damage>
+      <Description>
+        A well-rounded, versatile weapon.  Not the finest quality, but a deadly weapon nonetheless.
+      </Description>
+      <Fatigue_Cost_Mod>1.16</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.96</Initiative_Reduce>
+      <Max_Durability>80</Max_Durability>
+      <Parry_Mod>1.12</Parry_Mod>
+      <Shield_Damage>0.04</Shield_Damage>
+      <Sprites>15</Sprites>
+      <Stamina_Reduce>0.88</Stamina_Reduce>
+      <Value>800</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Long Sword">
+      <Tier>Three</Tier>
+      <Accuracy>0.95</Accuracy>
+      <AP_Reduce>0.97</AP_Reduce>
+      <Armor_Ignore>0.95</Armor_Ignore>
+      <Armor_Pierce>0.92</Armor_Pierce>
+      <Block_Ignore>0.06</Block_Ignore>
+      <Damage>50</Damage>
+      <Description>
+        A well-rounded, versatile weapon.  It isn't fancy, but it is quality-made.  In the right hands, this weapon
+        could be deadly.
+      </Description>
+      <Fatigue_Cost_Mod>1.15</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.97</Initiative_Reduce>
+      <Max_Durability>100</Max_Durability>
+      <Parry_Mod>1.15</Parry_Mod>
+      <Shield_Damage>0.04</Shield_Damage>
+      <Sprites>15</Sprites>
+      <Stamina_Reduce>0.90</Stamina_Reduce>
+      <Value>1500</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Nodachi">
+      <Tier>Five</Tier>
+      <Accuracy>0.92</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>0.98</Armor_Ignore>
+      <Armor_Pierce>0.99</Armor_Pierce>
+      <Block_Ignore>0.15</Block_Ignore>
+      <Damage>95</Damage>
+      <Description>
+        A heavier version of the traditional katana meant to easily penetrate even the heaviest armor.  This one
+        has seen some wear, though...
+      </Description>
+      <Fatigue_Cost_Mod>1.12</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.94</Initiative_Reduce>
+      <Max_Durability>8</Max_Durability>
+      <Parry_Mod>1.01</Parry_Mod>
+      <Shield_Damage>0.18</Shield_Damage>
+      <Sprites>9,10</Sprites>
+      <Stamina_Reduce>0.92</Stamina_Reduce>
+      <Value>70</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Double_Strike</WeaponEAbility>
+      <WeaponEAbility>Great_Strike</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <WeaponEAbility>Wide_Slash</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Nodachi">
+      <Tier>Four</Tier>
+      <Accuracy>0.93</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>0.96</Armor_Ignore>
+      <Armor_Pierce>0.98</Armor_Pierce>
+      <Block_Ignore>0.15</Block_Ignore>
+      <Damage>125</Damage>
+      <Description>
+        A heavier version of the traditional katana meant to easily penetrate even the heaviest armor.
+      </Description>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.96</Initiative_Reduce>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>1.02</Parry_Mod>
+      <Shield_Damage>0.20</Shield_Damage>
+      <Sprites>24,25</Sprites>
+      <Stamina_Reduce>0.94</Stamina_Reduce>
+      <Value>300</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Double_Strike</WeaponEAbility>
+      <WeaponEAbility>Great_Strike</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <WeaponEAbility>Wide_Slash</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Nodachi">
+      <Tier>Three</Tier>
+      <Accuracy>0.95</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>0.94</Armor_Ignore>
+      <Armor_Pierce>0.96</Armor_Pierce>
+      <Block_Ignore>0.15</Block_Ignore>
+      <Damage>165</Damage>
+      <Description>
+        A heavier version of the traditional katana meant to easily penetrate even the heaviest armor.
+      </Description>
+      <Fatigue_Cost_Mod>1.08</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.98</Initiative_Reduce>
+      <Max_Durability>40</Max_Durability>
+      <Parry_Mod>1.04</Parry_Mod>
+      <Shield_Damage>0.22</Shield_Damage>
+      <Sprites>39,40</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>800</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Double_Strike</WeaponEAbility>
+      <WeaponEAbility>Great_Strike</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <WeaponEAbility>Wide_Slash</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Nodachi">
+      <Tier>Two</Tier>
+      <Accuracy>0.95</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>0.93</Armor_Ignore>
+      <Armor_Pierce>0.95</Armor_Pierce>
+      <Block_Ignore>0.15</Block_Ignore>
+      <Damage>185</Damage>
+      <Description>
+        A heavier version of the traditional katana meant to easily penetrate even the heaviest armor. It is absolutely lethal in the right hands.
+      </Description>
+      <Fatigue_Cost_Mod>1.06</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.99</Initiative_Reduce>
+      <Max_Durability>60</Max_Durability>
+      <Parry_Mod>1.05</Parry_Mod>
+      <Shield_Damage>0.24</Shield_Damage>
+      <Sprites>54,55</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>2200</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Double_Strike</WeaponEAbility>
+      <WeaponEAbility>Great_Strike</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <WeaponEAbility>Wide_Slash</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Notched Blade">
+      <Tier>Five</Tier>
+      <Accuracy>0.88</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.97</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>22</Damage>
+      <Description>
+        A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
+      </Description>
+      <Fatigue_Cost_Mod>1.12</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>1.02</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <Sprites>19</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>50</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Gash</WeaponEAbility>
+      <WeaponEAbility>Maim</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Notched Blade">
+      <Tier>Four</Tier>
+      <Accuracy>0.92</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.96</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>25</Damage>
+      <Description>
+        A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
+      </Description>
+      <Fatigue_Cost_Mod>1.11</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>30</Max_Durability>
+      <Parry_Mod>1.03</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <Sprites>49</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>80</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Gash</WeaponEAbility>
+      <WeaponEAbility>Maim</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Notched Blade">
+      <Tier>Three</Tier>
+      <Accuracy>0.95</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.96</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>32</Damage>
+      <Description>
+        A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
+      </Description>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>50</Max_Durability>
+      <Parry_Mod>0.95</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <Sprites>79</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>200</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Gash</WeaponEAbility>
+      <WeaponEAbility>Maim</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Notched Blade">
+      <Tier>Two</Tier>
+      <Accuracy>0.98</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.92</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>45</Damage>
+      <Description>
+        A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
+      </Description>
+      <Fatigue_Cost_Mod>1.10</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>65</Max_Durability>
+      <Parry_Mod>0.97</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <Sprites>109</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>450</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Gash</WeaponEAbility>
+      <WeaponEAbility>Maim</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Slime Blade">
+      <Tier>Five</Tier>
+      <Accuracy>0.82</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.88</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>25</Damage>
+      <Description>
+        A blade covered in disgusting slime.  It's fairly obvious the pointy nature of the blade is meant to poison enemies with the slime.
+      </Description>
+      <Fatigue_Cost_Mod>1.08</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>1.03</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <Sprites>20</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>80</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Slime Blade">
+      <Tier>Four</Tier>
+      <Accuracy>0.85</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.85</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>28</Damage>
+      <Description>
+        A blade covered in disgusting slime.  It's fairly obvious the pointy nature of the blade is meant to poison enemies with the slime.
+      </Description>
+      <Fatigue_Cost_Mod>1.07</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>25</Max_Durability>
+      <Parry_Mod>1.08</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <Sprites>50</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>200</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Slime Blade">
+      <Tier>Three</Tier>
+      <Accuracy>0.95</Accuracy>
+      <AP_Reduce>1</AP_Reduce>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.80</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>32</Damage>
+      <Description>
+        This blade is covered in living, breathing slime...
+      </Description>
+      <Fatigue_Cost_Mod>1.05</Fatigue_Cost_Mod>
+      <Initiative_Reduce>1</Initiative_Reduce>
+      <Max_Durability>40</Max_Durability>
+      <Parry_Mod>1.12</Parry_Mod>
+      <Shield_Damage>0.01</Shield_Damage>
+      <Sprites>80</Sprites>
+      <Stamina_Reduce>0.95</Stamina_Reduce>
+      <Value>500</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Zweihander">
+      <Tier>Five</Tier>
+      <Accuracy>0.75</Accuracy>
+      <AP_Reduce>0.75</AP_Reduce>
+      <Armor_Ignore>0.60</Armor_Ignore>
+      <Armor_Pierce>0.95</Armor_Pierce>
+      <Block_Ignore>0.70</Block_Ignore>
+      <Damage>92</Damage>
+      <Description>
+        This massive sword is too heavy to utilize for any defensive purposes.  It is; however, quite capable of
+        decimating enemies on the battlefield.
+      </Description>
+      <Fatigue_Cost_Mod>1.40</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.65</Initiative_Reduce>
+      <Max_Durability>80</Max_Durability>
+      <Parry_Mod>0.10</Parry_Mod>
+      <Shield_Damage>0.94</Shield_Damage>
+      <Sprites>3</Sprites>
+      <Stamina_Reduce>0.65</Stamina_Reduce>
+      <Value>800</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Great_Strike</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Zweihander">
+      <Tier>Four</Tier>
+      <Accuracy>0.80</Accuracy>
+      <AP_Reduce>0.80</AP_Reduce>
+      <Armor_Ignore>0.55</Armor_Ignore>
+      <Armor_Pierce>0.90</Armor_Pierce>
+      <Block_Ignore>0.65</Block_Ignore>
+      <Damage>100</Damage>
+      <Description>
+        This massive sword is too heavy to utilize for any defensive purposes.  It is; however, quite capable of
+        decimating enemies on the battlefield.
+      </Description>
+      <Fatigue_Cost_Mod>1.35</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.70</Initiative_Reduce>
+      <Max_Durability>90</Max_Durability>
+      <Parry_Mod>0.15</Parry_Mod>
+      <Shield_Damage>0.90</Shield_Damage>
+      <Sprites>18</Sprites>
+      <Stamina_Reduce>0.70</Stamina_Reduce>
+      <Value>500</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Great_Strike</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Zweihander">
+      <Tier>Three</Tier>
+      <Accuracy>0.80</Accuracy>
+      <AP_Reduce>0.80</AP_Reduce>
+      <Armor_Ignore>0.50</Armor_Ignore>
+      <Armor_Pierce>0.85</Armor_Pierce>
+      <Block_Ignore>0.60</Block_Ignore>
+      <Damage>110</Damage>
+      <Description>
+        This massive sword is too heavy to utilize for any defensive purposes.  It is; however, quite capable of
+        decimating enemies on the battlefield.
+      </Description>
+      <Fatigue_Cost_Mod>1.30</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.75</Initiative_Reduce>
+      <Max_Durability>100</Max_Durability>
+      <Parry_Mod>0.20</Parry_Mod>
+      <Shield_Damage>0.88</Shield_Damage>
+      <Sprites>33</Sprites>
+      <Stamina_Reduce>0.65</Stamina_Reduce>
+      <Value>800</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Great_Strike</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Zweihander">
+      <Tier>Two</Tier>
+      <Accuracy>0.80</Accuracy>
+      <AP_Reduce>0.80</AP_Reduce>
+      <Armor_Ignore>0.50</Armor_Ignore>
+      <Armor_Pierce>0.85</Armor_Pierce>
+      <Block_Ignore>0.60</Block_Ignore>
+      <Damage>120</Damage>
+      <Description>
+        This massive sword is too heavy to utilize for any defensive purposes.  It is; however, quite capable of
+        decimating enemies on the battlefield.
+      </Description>
+      <Fatigue_Cost_Mod>1.30</Fatigue_Cost_Mod>
+      <Initiative_Reduce>0.75</Initiative_Reduce>
+      <Max_Durability>110</Max_Durability>
+      <Parry_Mod>0.20</Parry_Mod>
+      <Shield_Damage>0.88</Shield_Damage>
+      <Sprites>48</Sprites>
+      <Stamina_Reduce>0.65</Stamina_Reduce>
+      <Value>1200</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <WeaponEAbility>Great_Strike</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+</Weapons>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  

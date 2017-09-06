@@ -1,12 +1,13 @@
-﻿using Assets.Model.Character.Param;
-using Assets.Model.Character.XML;
+﻿using Assets.Data.Character.XML;
+using Assets.Data.Equipment.Table;
+using Assets.Data.Mount.Table;
+using Assets.Model.Character.Param;
 using Assets.Model.Characters.Params;
 using Assets.Model.Equipment.Param;
 using Assets.Model.Equipment.Table;
 using Assets.Model.Mount;
 using Assets.Template.Builder;
 using Assets.Template.Util;
-using Model.Equipment.Table;
 using System;
 using System.Collections.Generic;
 

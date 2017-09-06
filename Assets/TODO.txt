@@ -1,5 +1,7 @@
 ﻿TODO
 
+split .xml out into specific data folders and files
+
 Block calculations
   - Block FX
 - Add Btns to ability modal window

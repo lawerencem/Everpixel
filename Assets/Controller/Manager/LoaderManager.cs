@@ -1,15 +1,15 @@
-﻿using Assets.Model.Character.XML;
-using Assets.Model.Class.XML;
-using Assets.Model.Effect;
-using Assets.Model.Equipment.XML;
-using Assets.Model.Injury;
-using Assets.Model.Mount.XML;
-using Assets.Model.Party.XML;
-using Assets.Model.Perk.XML;
-using Assets.Models.Ability.XML;
+﻿using Assets.Data.Ability.XML;
+using Assets.Data.Character.XML;
+using Assets.Data.Class.XML;
+using Assets.Data.Effect.XML;
+using Assets.Data.Equipment.XML;
+using Assets.Data.Injury.XML;
+using Assets.Data.Mount.XML;
+using Assets.Data.Party.XML;
+using Assets.Data.Perk.XML;
 using Assets.Template.Other;
 using Assets.Template.XML;
-using Assets.View.Barks;
+using Assets.View.Bark;
 using System.Collections.Generic;
 
 namespace Assets.Controller.Manager
