@@ -26,8 +26,14 @@ namespace Assets.View.Ability
             var renderer = bullet.AddComponent<SpriteRenderer>();
             renderer.sprite = sprite;
             renderer.sortingLayerName = Layers.PARTICLES;
-            if (!a.Data.Source.Proxy.LParty)
-                bullet.transform.localRotation = Quaternion.Euler(0, 180, 0);
+            var angle = Vector3.Angle(a.Data.Target.Handle.transform.position, bullet.transform.position);
+            if (a.Data.Target.Handle.transform.position.y < bullet.transform.position.y)
+                angle = -angle;
+            if (a.Data.Source.Proxy.LParty)
+                bullet.transform.Rotate(0, 0, angle);
+            else
+                bullet.transform.localRotation = Quaternion.Euler(0, 180, angle);
+                
             raycast.Init(bullet, a.Data.Target.Handle.transform.position, speed);
             raycast.AddCallback(callback);
             return bullet;

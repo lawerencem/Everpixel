@@ -421,6 +421,7 @@
     <Compile Include="Assets\Template\Script\SXAxisShake.cs" />
     <Compile Include="Assets\Template\Script\ScrollCameraToScript.cs" />
     <Compile Include="Assets\Template\Script\SpriteFlipCallback.cs" />
+    <Compile Include="Assets\Template\Util\AngleUtil.cs" />
     <Compile Include="Assets\Template\Util\Count.cs" />
     <Compile Include="Assets\Template\Util\DeepCloneUtil.cs" />
     <Compile Include="Assets\Template\Util\EnumUtil.cs" />
