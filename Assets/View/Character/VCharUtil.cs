@@ -37,15 +37,13 @@ namespace Assets.View.Character
             {
                 RotateTranslateUtil.Instance.RandomRotateAndTranslate(
                     c.SubComponents[Layers.CHAR_L_WEAPON],
-                    ViewParams.SPLATTER_VARIANCE,
-                    ViewParams.SPLATTER_SCALAR);
+                    ViewParams.SPLATTER_VARIANCE);
             }
             if (c.Proxy.GetRWeapon() != null)
             {
                 RotateTranslateUtil.Instance.RandomRotateAndTranslate(
                     c.SubComponents[Layers.CHAR_R_WEAPON],
-                    ViewParams.SPLATTER_VARIANCE,
-                    ViewParams.SPLATTER_SCALAR);
+                    ViewParams.SPLATTER_VARIANCE);
             }
         }
 
@@ -65,8 +63,7 @@ namespace Assets.View.Character
             this.AssignDeadLayer(c);
             RotateTranslateUtil.Instance.RandomRotateAndTranslate(
                 c.Handle,
-                ViewParams.SPLATTER_VARIANCE,
-                ViewParams.SPLATTER_SCALAR);
+                ViewParams.SPLATTER_VARIANCE);
             this.AssignDeathSplatter(c);
         }
     }

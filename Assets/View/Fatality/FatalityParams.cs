@@ -22,6 +22,11 @@
         public static readonly float SLASH_RAYCAST_SPEED = 1.8f;
         public static readonly float SLASH_ROTATION_SPEED = 3f;
 
+        // Weenbow Fatality
+        public static readonly float WEEN_INTERVAL = 0.0005f;
+        public static readonly float WEEN_OFFSET = 20f;
+        public static readonly float WEEN_SPEED = 8f;
+
         public static readonly float ZOOM_BULLET_HANG = 0.25f;
         public static readonly float ZOOM_FOV = 12f;
         public static readonly float ZOOM_Y_OFFSET = 0.5f;

@@ -16,6 +16,11 @@ namespace Assets.Template.Util
             }
         }
 
+        public float GetRandomBetweenRange(float range)
+        {
+            return Convert.ToSingle((base.NextDouble() * range * this.RandomNegOrPos()));
+        }
+
         public double GetRandomBetweenRange(double range)
         {
             return base.NextDouble() * range * this.RandomNegOrPos();

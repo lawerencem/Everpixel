@@ -57,8 +57,7 @@ namespace Assets.View.Event
                 renderer.sprite = sprite;
                 RotateTranslateUtil.Instance.RandomRotateAndTranslate(
                     splatter, 
-                    ViewParams.SPLATTER_VARIANCE, 
-                    ViewParams.SPLATTER_SCALAR);
+                    ViewParams.SPLATTER_VARIANCE);
                 renderer.sortingLayerName = Layers.MAP_GUI_LAYER;
             }
         }

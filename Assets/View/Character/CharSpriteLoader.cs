@@ -15,6 +15,7 @@ namespace Assets.View.Character
         private const string CRITTER_PATH = "Sprites/Critters/";
         private const int CRITTER_INDEX = 0;
         private const int DEAD_EYES = 8;
+        private const string EFFECT_PATH = "Sprites/Effects/";
         private const int FLINCH_EYES = 7;
         private const string EQUIPMENT_PATH = "Sprites/Equipment/";
         private const string EXTENSION = "_Spritesheet";
@@ -45,6 +46,13 @@ namespace Assets.View.Character
         {
             var path = StringUtil.PathBuilder(CHARACTER_PATH, c.Race.ToString(), EXTENSION);
             return GetSprites(path);
+        }
+
+        public Sprite GetEffectSprite(string path)
+        {
+            var effectPath = StringUtil.PathBuilder(EFFECT_PATH, path);
+            var sprites = GetSprites(effectPath);
+            return sprites[0];
         }
 
         public Sprite GetHumanoidDeadEyes(ERace race)

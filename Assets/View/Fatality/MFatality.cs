@@ -5,6 +5,7 @@ using Assets.Model.Character.Enum;
 using Assets.Template.CB;
 using Assets.Template.Script;
 using Assets.Template.Util;
+using Assets.Template.Utility;
 using Assets.View.Bark;
 using Assets.View.Event;
 using Assets.View.Script.FX;
@@ -90,6 +91,20 @@ namespace Assets.View.Fatality
             }
         }
 
+        protected GameObject AddBloodGeyser(CharController tgt)
+        {
+            var path = StringUtil.PathBuilder(
+                        CombatGUIParams.EFFECTS_PATH,
+                        CombatGUIParams.FIGHTING_FATALITY,
+                        CombatGUIParams.PARTICLES_EXTENSION);
+            var position = tgt.Handle.transform.position;
+            var boom = Resources.Load(path);
+            var particles = GameObject.Instantiate(boom) as GameObject;
+            particles.transform.position = position;
+            particles.name = CombatGUIParams.FIGHTING_FATALITY + " Particles";
+            return particles;
+        }
+
         protected virtual void CallbackHandler(object o)
         {
             this._callbackQty++;
@@ -99,6 +114,16 @@ namespace Assets.View.Fatality
                 this.AddBob(this);
                 this.DoCallbacks();
             }
+        }
+
+        protected void LayFatalityDeco(Sprite sprite, CharController c)
+        {
+            var deco = new GameObject();
+            deco.transform.position = c.Handle.transform.position;
+            var renderer = deco.AddComponent<SpriteRenderer>();
+            renderer.sprite = sprite;
+            renderer.sortingLayerName = Layers.DEAD_TORSO;
+            RotateTranslateUtil.Instance.RandomRotateAndTranslate(deco, CombatGUIParams.DEFAULT_OFFSET);
         }
 
         protected void ProcessBlood(CharController target)
@@ -131,26 +156,17 @@ namespace Assets.View.Fatality
                     hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
                 {
                     var tgt = hit.Data.Target.Current as CharController;
-
-                    var path = StringUtil.PathBuilder(
-                        CombatGUIParams.EFFECTS_PATH,
-                        CombatGUIParams.FIGHTING_FATALITY,
-                        CombatGUIParams.PARTICLES_EXTENSION);
-                    var position = tgt.Handle.transform.position;
-                    var boom = Resources.Load(path);
-                    var particles = GameObject.Instantiate(boom) as GameObject;
-                    particles.transform.position = position;
-                    particles.name = CombatGUIParams.FIGHTING_FATALITY + " Particles";
+                    var geyser = this.AddBloodGeyser(tgt);
                     var explosionPath = StringUtil.PathBuilder(
                         CombatGUIParams.EFFECTS_PATH,
                         "FightingFatalityExplosion",
                         CombatGUIParams.PARTICLES_EXTENSION);
                     var explosion = GameObject.Instantiate(Resources.Load(explosionPath)) as GameObject;
-                    explosion.transform.position = position;
+                    explosion.transform.position = tgt.Handle.transform.position;
                     explosion.name = "BOOM";
-                    var scriptOne = particles.AddComponent<SDestroyByLifetime>();
+                    var scriptOne = geyser.AddComponent<SDestroyByLifetime>();
                     var scriptTwo = explosion.AddComponent<SDestroyByLifetime>();
-                    scriptOne.Init(particles, 5f);
+                    scriptOne.Init(geyser, 5f);
                     scriptOne.AddCallback(this.CallbackHandler);
                     scriptOne.AddCallback(hit.CallbackHandler);
                     scriptTwo.Init(explosion, 8f);
@@ -224,6 +240,22 @@ namespace Assets.View.Fatality
             {
                 var renderer = c.SubComponents[Layers.CHAR_TORSO].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;
+            }
+        }
+
+        protected void SetBodyComponentsNull(CharController c)
+        {
+            foreach (var sub in c.SubComponents)
+            {
+                if (!sub.Key.ToLowerInvariant().Contains("Weapon") &&
+                    !sub.Key.ToLowerInvariant().Contains("Armor"))
+                {
+                    var renderer = sub.Value.GetComponent<SpriteRenderer>();
+                    if (renderer != null)
+                    {
+                        renderer.sprite = null;
+                    }
+                }
             }
         }
     }

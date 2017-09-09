@@ -1,5 +1,6 @@
 ﻿using Assets.Template.Util;
 using Assets.View;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Template.Script
@@ -11,7 +12,13 @@ namespace Assets.Template.Script
         public float MaxOffset { get; set; }
         public float Speed { get; set; }
         public Sprite Sprite { get; set; }
+        public List<GameObject> Swarm { get; set; }
         public Vector3 Target { get; set; }
+
+        public SSwarmOnTargetData()
+        {
+            this.Swarm = new List<GameObject>();
+        }
     }
 
     public class SSwarmOnTarget : AScript
@@ -35,14 +42,12 @@ namespace Assets.Template.Script
                 {
                     this._curInterval = 0;
                     var swarm = new GameObject();
+                    this._data.Swarm.Add(swarm);
                     var renderer = swarm.AddComponent<SpriteRenderer>();
                     renderer.sprite = this._data.Sprite;
                     swarm.transform.position = RandomPositionOffset.RandomOffset(
                         this._data.Target,
                         this._data.MaxOffset);
-                    //var relativePos = this._data.Target - swarm.transform.position;
-                    //var rotation = Quaternion.LookRotation(relativePos);
-                    //swarm.transform.rotation = rotation;
                     renderer.sortingLayerName = Layers.PARTICLES;
                     var raycastData = new SRaycastMoveData();
                     raycastData.Epsilon = 0.05f;
@@ -57,9 +62,7 @@ namespace Assets.Template.Script
             }
         }
 
-        public void Init(SSwarmOnTargetData data)
-        {
-            this._data = data;
-        }
+        public List<GameObject> GetSwarm() { return this._data.Swarm; }
+        public void Init(SSwarmOnTargetData data) { this._data = data; }
     }
 }

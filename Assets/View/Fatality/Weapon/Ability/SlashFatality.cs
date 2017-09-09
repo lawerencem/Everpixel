@@ -119,8 +119,7 @@ namespace Assets.View.Fatality.Weapon.Ability
                         var callbackDelay = head.AddComponent<SDelayCallback>();
                         callbackDelay.AddCallback(this.CallbackHandler);
                         callbackDelay.AddCallback(hit.CallbackHandler);
-                        callbackDelay.Init(5f);
-
+                        callbackDelay.Init(FatalityParams.DEFAULT_DUR);
 
                         raycast.Init(raycastData);
                     }

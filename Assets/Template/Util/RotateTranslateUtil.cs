@@ -14,16 +14,16 @@ namespace Assets.Template.Utility
             o.transform.Rotate(new Vector3(0, 0, (float)(roll * 360)));
         }
 
-        public void RandomRotateAndTranslate(GameObject o, int variance, float scalar)
+        public void RandomRotateAndTranslate(GameObject o, float range)
         {
             this.RandomRotate(o);
-            this.RandomTranslate(o, variance, scalar);
+            this.RandomTranslate(o, range);
         }
 
-        public void RandomTranslate(GameObject o, int variance, float scalar)
+        public void RandomTranslate(GameObject o, float range)
         {
-            var x = RNG.Instance.Next(-variance, variance) / scalar;
-            var y = RNG.Instance.Next(-variance, variance) / scalar;
+            var x = RNG.Instance.GetRandomBetweenRange(range);
+            var y = RNG.Instance.GetRandomBetweenRange(range);
             var position = o.transform.position;
             position.x += x;
             position.y += y;

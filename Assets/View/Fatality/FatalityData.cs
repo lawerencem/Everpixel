@@ -10,6 +10,7 @@ namespace Assets.View.Fatality
     {
         public MAction Action { get; set; }
         public List<Hit> FatalHits { get; set; }
+        public List<string> CustomPreFatalityBarks { get; set; }
         public List<Hit> NonFatalHits { get; set; }
         public CharController Source { get; set; }
         public TileController Target { get; set; }
@@ -17,6 +18,7 @@ namespace Assets.View.Fatality
         public FatalityData()
         {
             this.FatalHits = new List<Hit>();
+            this.CustomPreFatalityBarks = new List<string>();
             this.NonFatalHits = new List<Hit>();
         }
     }

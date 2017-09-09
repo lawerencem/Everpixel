@@ -15,7 +15,7 @@ namespace Assets.View.Bark
 {
     public class BarkManager : ICallback
     {
-        private const double PRE_FATALITY_CHANCE = 0.25;
+        private const double PRE_FATALITY_CHANCE = 1.0;
         private const double NEUTRAL_BARK_CHANCE = 0.25;
 
         private BarkManager() { }
@@ -89,7 +89,7 @@ namespace Assets.View.Bark
                         origin = ListUtil<CharController>.GetRandomListElement(characters).Handle;
                     }
                     else
-                        barks = BarkTable.Instance.Table[EBark.PreEnemyFatality];
+                        barks = this.GetPreEnemyFatalityBarks(data);
                 }
                 var bark = ListUtil<string>.GetRandomListElement(barks);
                 if (bark != null)
@@ -133,6 +133,13 @@ namespace Assets.View.Bark
         public void SetCallback(Callback callback)
         {
             throw new NotImplementedException();
+        }
+
+        private List<string> GetPreEnemyFatalityBarks(FatalityData data)
+        {
+            var barks = BarkTable.Instance.Table[EBark.PreEnemyFatality];
+            barks.AddRange(data.CustomPreFatalityBarks);
+            return barks;
         }
     }
 }
