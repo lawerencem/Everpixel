@@ -10,6 +10,7 @@ namespace Assets.View.Fatality
     {
         public MAction Action { get; set; }
         public List<Hit> FatalHits { get; set; }
+        public List<string> CustomPostFatalityBarks { get; set; }
         public List<string> CustomPreFatalityBarks { get; set; }
         public List<Hit> NonFatalHits { get; set; }
         public CharController Source { get; set; }
@@ -18,6 +19,7 @@ namespace Assets.View.Fatality
         public FatalityData()
         {
             this.FatalHits = new List<Hit>();
+            this.CustomPostFatalityBarks = new List<string>();
             this.CustomPreFatalityBarks = new List<string>();
             this.NonFatalHits = new List<Hit>();
         }
