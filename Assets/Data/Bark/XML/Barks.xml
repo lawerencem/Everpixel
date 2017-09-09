@@ -8,9 +8,9 @@
   </Category>
   <Category name ="EnemyFatality">
     <Bark>All hail the king, baby.</Bark>
-    <Bark>Welcome to Thunderdome.</Bark>
+    <!--<Bark>Welcome to Thunderdome.</Bark>
     <Bark>Hasta la vista, baby.</Bark>
-    <Bark>Don't act like you're not impressed.</Bark>
+    <Bark>Don't act like you're not impressed.</Bark>-->
   </Category>
   <Category name ="NeutralFatality">
     <Bark>Every man dies...not every man truly lives.</Bark>
@@ -29,10 +29,10 @@
     <Bark>Frankly my dear, I don't give a damn.</Bark>
   </Category>
   <Category name ="PreEnemyFatality">
-    <Bark>I know what you're thinking - but you gotta ask yourself: "Do I feel lucky?" Well? Do ya, punk?</Bark>
+    <!--<Bark>I know what you're thinking - but you gotta ask yourself: "Do I feel lucky?" Well? Do ya, punk?</Bark>
     <Bark>I'm gonna make him an offer he can't refuse.</Bark>
     <Bark>May The Force be with you.</Bark>
-    <Bark>Go ahead...make my day.</Bark>
+    <Bark>Go ahead...make my day.</Bark>-->
     <Bark>I see dead people.</Bark>
   </Category>
   <Category name ="PreNeutralFatality">

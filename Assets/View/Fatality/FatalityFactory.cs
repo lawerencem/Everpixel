@@ -72,6 +72,7 @@ namespace Assets.View.Fatality
         {
             switch (a.Data.Ability)
             {
+                case (EAbility.Bite): { return new BiteFatality(data); }
                 case (EAbility.Chop): { return new ChopFatality(data); }
                 case (EAbility.Crush): { return new CrushFatality(data); }
                 case (EAbility.Slash): { return new SlashFatality(data); }

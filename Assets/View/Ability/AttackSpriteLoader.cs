@@ -1,7 +1,9 @@
-﻿using Assets.Model.Ability;
+﻿using Assets.Controller.GUI.Combat;
+using Assets.Model.Ability;
 using Assets.Model.Action;
 using Assets.Template.CB;
 using Assets.Template.Other;
+using Assets.Template.Script;
 using Assets.Template.Util;
 using Assets.View.Script.FX;
 using UnityEngine;
@@ -39,8 +41,13 @@ namespace Assets.View.Ability
                 bullet.transform.Rotate(0, 0, angle);
             else
                 bullet.transform.localRotation = Quaternion.Euler(0, 180, angle);
-                
-            raycast.Init(bullet, a.Data.Target.Handle.transform.position, speed);
+
+            var raycastData = new SRaycastMoveData();
+            raycastData.Epsilon = CombatGUIParams.DEFAULT_EPSILON;
+            raycastData.Handle = bullet;
+            raycastData.Speed = speed;
+            raycastData.Target = a.Data.Target.Handle.transform.position;
+            raycast.Init(raycastData);
             raycast.AddCallback(callback);
             return bullet;
         }

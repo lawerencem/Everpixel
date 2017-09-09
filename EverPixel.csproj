@@ -420,6 +420,7 @@
     <Compile Include="Assets\Template\Script\SRotation.cs" />
     <Compile Include="Assets\Template\Script\SScale.cs" />
     <Compile Include="Assets\Template\Script\SSwarmOnTarget.cs" />
+    <Compile Include="Assets\Template\Script\STrackMove.cs" />
     <Compile Include="Assets\Template\Script\SXAxisShake.cs" />
     <Compile Include="Assets\Template\Script\ScrollCameraToScript.cs" />
     <Compile Include="Assets\Template\Script\SpriteFlipCallback.cs" />

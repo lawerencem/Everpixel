@@ -4,6 +4,7 @@ namespace Assets.Controller.GUI.Combat
 {
     public class CombatGUIParams
     {
+        public static readonly float DEFAULT_EPSILON = 0.05f;
         public static readonly float DEFAULT_OFFSET = 0.15f;
 
         public static readonly string EFFECTS_PATH = "Effects/";

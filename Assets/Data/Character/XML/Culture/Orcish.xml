@@ -36,6 +36,9 @@
     </Character>
     <Character name ="Dire_Ween">
       <AttackSpriteIndex>3</AttackSpriteIndex>
+      <Abilities>
+        <Ability>Bite</Ability>
+      </Abilities>
       <ECharacterType>Critter</ECharacterType>
       <Description>
         Dire weens can often be found in the ocean hunting for sharks.
@@ -585,6 +588,9 @@
     </Character>
     <Character name ="Ween">
       <AttackSpriteIndex>18</AttackSpriteIndex>
+      <Abilities>
+        <Ability>Bite</Ability>
+      </Abilities>
       <ECharacterType>Critter</ECharacterType>
       <FlinchSpriteIndex>13</FlinchSpriteIndex>
       <Perks>
@@ -601,6 +607,9 @@
     </Character>
     <Character name ="Ween_Dragon">
       <AttackSpriteIndex>3</AttackSpriteIndex>
+      <Abilities>
+        <Ability>Bite</Ability>
+      </Abilities>
       <ECharacterType>Critter</ECharacterType>
       <FlinchSpriteIndex>1</FlinchSpriteIndex>
       <Perks>

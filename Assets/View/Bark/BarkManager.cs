@@ -63,10 +63,22 @@ namespace Assets.View.Bark
                     else
                         barks = this.GetPostEnemyFatalityBarks(data);
                 }
-                var bark = ListUtil<string>.GetRandomListElement(barks);
-                if (bark != null)
-                    this.DisplayBark(bark, origin);
             }
+            else
+            {
+                var roll = RNG.Instance.NextDouble();
+                if (roll < NEUTRAL_BARK_CHANCE)
+                {
+                    barks = BarkTable.Instance.Table[EBark.NeutralFatality];
+                    var characters = CombatManager.Instance.GetData().Characters;
+                    origin = ListUtil<CharController>.GetRandomListElement(characters).Handle;
+                }
+                else
+                    barks = this.GetPostEnemyFatalityBarks(data);
+            }
+            var bark = ListUtil<string>.GetRandomListElement(barks);
+            if (bark != null)
+                this.DisplayBark(bark, origin);
         }
 
         public void ProcessPreFatalityBark(FatalityData data, Callback callback)

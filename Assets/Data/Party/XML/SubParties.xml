@@ -381,7 +381,7 @@
     <Character>1,Dire_Ween,One</Character>
   </SubParty>
   <SubParty Name ="Ween Dragon">
-    <Difficulty>18</Difficulty>
+    <Difficulty>4</Difficulty>
     <Character>1,Ween_Dragon,One</Character>
   </SubParty>
   <SubParty Name ="Ween Tamers">

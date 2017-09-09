@@ -2,7 +2,7 @@
 {
     public class FatalityParams
     {
-        public static readonly float DEFAULT_EPSILON = 0.05f;
+        public static readonly float DEFAULT_EPSILON = 0.005f;
         public static readonly float DEFAULT_DUR = 5f;
         public static readonly float DEFAULT_X_SHAKE_DIST = 0.05f;
         public static readonly float DEFAULT_X_SHAKE_SPEED = 2f;
