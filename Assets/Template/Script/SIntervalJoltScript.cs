@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Template.Script
 {
-    public class IntervalJoltScript : MonoBehaviour
+    public class SIntervalJoltScript : MonoBehaviour
     {
         private Vector3 _origin;
         private float _timeCounter;

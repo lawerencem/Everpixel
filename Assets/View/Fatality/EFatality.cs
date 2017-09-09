@@ -3,6 +3,7 @@
     public enum EFatality
     {
         None,
+        Bite,
         Chop,
         Crush,
         Fighting,

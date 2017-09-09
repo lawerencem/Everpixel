@@ -1,6 +1,77 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Cultures>
   <Culture name="Amazonian">
+    <Character name ="Arms">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+        <Perk>Scaly</Perk>
+        <Perk>T_Rex_Bite</Perk>
+      </Perks>
+      <Stats>
+        <Agility>320</Agility>
+        <Constitution>420</Constitution>
+        <Intelligence>400</Intelligence>
+        <Might>620</Might>
+        <Perception>400</Perception>
+        <Resolve>380</Resolve>
+      </Stats>
+      <WeaponAbility>Bite</WeaponAbility>
+    </Character>
+    <Character name ="Beardedino">
+      <AttackSpriteIndex>9</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+        <Perk>Dino_Bite</Perk>
+        <Perk>Scaly</Perk>
+      </Perks>
+      <Stats>
+        <Agility>280</Agility>
+        <Constitution>350</Constitution>
+        <Intelligence>600</Intelligence>
+        <Might>570</Might>
+        <Perception>280</Perception>
+        <Resolve>300</Resolve>
+      </Stats>
+      <WeaponAbility>Bite</WeaponAbility>
+    </Character>
+    <Character name ="Curizard">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+        <Perk>Scaly</Perk>
+      </Perks>
+      <Stats>
+        <Agility>320</Agility>
+        <Constitution>200</Constitution>
+        <Intelligence>680</Intelligence>
+        <Might>420</Might>
+        <Perception>350</Perception>
+        <Resolve>550</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Denture">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perk>Dino_Bite</Perk>
+      <Perks>
+        <Perk>Dino_Bite</Perk>
+        <Perk>Scaly</Perk>
+      </Perks>
+      <Stats>
+        <Agility>400</Agility>
+        <Constitution>420</Constitution>
+        <Intelligence>280</Intelligence>
+        <Might>550</Might>
+        <Perception>380</Perception>
+        <Resolve>620</Resolve>
+      </Stats>
+      <WeaponAbility>Bite</WeaponAbility>
+    </Character>
     <Character name ="Dino Knight">
       <Class>Knight,4</Class>
       <Class>Dino_Knight,4</Class>
@@ -70,6 +141,47 @@
         <Might>450</Might>
         <Perception>680</Perception>
         <Resolve>550</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Dino Scaleman">
+      <Class>Soldier,5</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Lizardman</ERace>
+      <Perks>
+        <Perk>Bastion</Perk>
+        <Perk>Scaly</Perk>
+        <Perk>Medium_Shield_Expert</Perk>
+        <Perk>Shield_Brother</Perk>
+        <Perk>Shield_Happy</Perk>
+        <Perk>Shield_Pro</Perk>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.75,Dino Scale Armor,Four</Armor>
+          <Armor>0.25,Dino Scale Armor,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.75,Dino Scale Helm,Four</Helm>
+          <Helm>0.25,Dino Scale Helm,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <LWeapons name="One">
+          <LWeapon>0.75,Dino Shield,Four</LWeapon>
+          <LWeapon>0.25,Dino Shield,Three</LWeapon>
+        </LWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Dino Fang Club,Four</RWeapon>
+          <RWeapon>0.25,Dino Fang Club,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>480</Agility>
+        <Constitution>520</Constitution>
+        <Intelligence>450</Intelligence>
+        <Might>480</Might>
+        <Perception>550</Perception>
+        <Resolve>520</Resolve>
       </Stats>
     </Character>
     <Character name ="Dino Seraph">
@@ -204,6 +316,40 @@
         <Resolve>380</Resolve>
       </Stats>
     </Character>
+    <Character name ="Raptard">
+      <AttackSpriteIndex>2</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>1</FlinchSpriteIndex>
+      <Perks>
+        <Perk>Dino_Bite</Perk>
+        <Perk>Scaly</Perk>
+      </Perks>
+      <Stats>
+        <Agility>650</Agility>
+        <Constitution>380</Constitution>
+        <Intelligence>250</Intelligence>
+        <Might>620</Might>
+        <Perception>320</Perception>
+        <Resolve>400</Resolve>
+      </Stats>
+      <WeaponAbility>Bite</WeaponAbility>
+    </Character>
+    <Character name ="Rawrasaur">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+        <Perk>Scaly</Perk>
+      </Perks>
+      <Stats>
+        <Agility>300</Agility>
+        <Constitution>350</Constitution>
+        <Intelligence>520</Intelligence>
+        <Might>620</Might>
+        <Perception>320</Perception>
+        <Resolve>380</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Raptard Rider">
       <Class>Warrior,3</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -233,46 +379,80 @@
         <Resolve>400</Resolve>
       </Stats>
     </Character>
-    <Character name ="Dino Scaleman">
-      <Class>Soldier,5</Class>
-      <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Lizardman</ERace>
+    <Character name ="Solizard">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Perks>
-        <Perk>Bastion</Perk>
         <Perk>Scaly</Perk>
-        <Perk>Medium_Shield_Expert</Perk>
-        <Perk>Shield_Brother</Perk>
-        <Perk>Shield_Happy</Perk>
-        <Perk>Shield_Pro</Perk>
       </Perks>
-      <PotentialArmors>
-        <Armors name="One">
-          <Armor>0.75,Dino Scale Armor,Four</Armor>
-          <Armor>0.25,Dino Scale Armor,Three</Armor>
-        </Armors>
-        <Helms name="One">
-          <Helm>0.75,Dino Scale Helm,Four</Helm>
-          <Helm>0.25,Dino Scale Helm,Three</Helm>
-        </Helms>
-      </PotentialArmors>
-      <PotentialWeapons>
-        <LWeapons name="One">
-          <LWeapon>0.75,Dino Shield,Four</LWeapon>
-          <LWeapon>0.25,Dino Shield,Three</LWeapon>
-        </LWeapons>
-        <RWeapons name="One">
-          <RWeapon>0.75,Dino Fang Club,Four</RWeapon>
-          <RWeapon>0.25,Dino Fang Club,Three</RWeapon>
-        </RWeapons>
-      </PotentialWeapons>
       <Stats>
-        <Agility>480</Agility>
-        <Constitution>520</Constitution>
-        <Intelligence>450</Intelligence>
-        <Might>480</Might>
-        <Perception>550</Perception>
-        <Resolve>520</Resolve>
+        <Agility>300</Agility>
+        <Constitution>350</Constitution>
+        <Intelligence>520</Intelligence>
+        <Might>620</Might>
+        <Perception>320</Perception>
+        <Resolve>380</Resolve>
       </Stats>
+    </Character>
+    <Character name ="Tearex">
+      <AttackSpriteIndex>24</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>16</FlinchSpriteIndex>
+      <Perks>
+        <Perk>Scaly</Perk>
+      </Perks>
+      <Spells>
+        <Spell>2,Soothing_Mist</Spell>
+      </Spells>
+      <Stats>
+        <Agility>350</Agility>
+        <Constitution>350</Constitution>
+        <Intelligence>580</Intelligence>
+        <Might>420</Might>
+        <Perception>480</Perception>
+        <Resolve>500</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Thairex">
+      <Ability>Hadoken</Ability>
+      <Ability>Kamehameha</Ability>
+      <AttackSpriteIndex>1</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>13</FlinchSpriteIndex>
+      <Perks>
+        <Perk>Scaly</Perk>
+      </Perks>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>420</Constitution>
+        <Intelligence>400</Intelligence>
+        <Might>580</Might>
+        <Perception>400</Perception>
+        <Resolve>480</Resolve>
+      </Stats>
+      <WeaponAbility>Bite</WeaponAbility>
+    </Character>
+    <Character name ="Tyrantaur">
+      <AttackSpriteIndex>24</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>16</FlinchSpriteIndex>
+      <Perks>
+        <Perk>Gargantuan</Perk>
+        <Perk>Iron_Hide</Perk>
+        <Perk>Massive</Perk>
+        <Perk>Scaly</Perk>
+        <Perk>T_Rex_Bite</Perk>
+      </Perks>
+      <Stats>
+        <Agility>400</Agility>
+        <Constitution>820</Constitution>
+        <Intelligence>320</Intelligence>
+        <Might>850</Might>
+        <Perception>350</Perception>
+        <Resolve>650</Resolve>
+      </Stats>
+      <WeaponAbility>Bite</WeaponAbility>
     </Character>
     <Character name ="Veteran Dino Knight">
       <Class>Knight,5</Class>

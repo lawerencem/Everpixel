@@ -34,6 +34,25 @@
         <Resolve>350</Resolve>
       </Stats>
     </Character>
+    <Character name ="Dire Ween">
+      <AttackSpriteIndex>3</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <Description>
+        Dire weens can often be found in the ocean hunting for sharks.
+      </Description>
+      <FlinchSpriteIndex>2</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>350</Agility>
+        <Constitution>650</Constitution>
+        <Intelligence>220</Intelligence>
+        <Might>820</Might>
+        <Perception>600</Perception>
+        <Resolve>300</Resolve>
+      </Stats>
+      <WeaponAbility>Bite</WeaponAbility>
+    </Character>
     <Character name ="Dire Ween Rider">
       <Class>Warrior,5</Class>
       <Class>Berserker,8</Class>
@@ -563,6 +582,38 @@
         <Perception>550</Perception>
         <Resolve>480</Resolve>
       </Stats>
+    </Character>
+    <Character name ="Ween">
+      <AttackSpriteIndex>18</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>13</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>700</Agility>
+        <Constitution>280</Constitution>
+        <Intelligence>300</Intelligence>
+        <Might>380</Might>
+        <Perception>550</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+      <WeaponAbility>Bite</WeaponAbility>
+    </Character>
+    <Character name ="Ween Dragon">
+      <AttackSpriteIndex>3</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>1</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>450</Agility>
+        <Constitution>1250</Constitution>
+        <Intelligence>670</Intelligence>
+        <Might>1350</Might>
+        <Perception>850</Perception>
+        <Resolve>800</Resolve>
+      </Stats>
+      <WeaponAbility>Bite</WeaponAbility>
     </Character>
     <Character name ="Ween Rider">
       <Class>Warrior,3</Class>

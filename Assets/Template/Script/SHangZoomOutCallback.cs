@@ -2,7 +2,7 @@
 
 namespace Template.Script
 {
-    public class HangZoomOutCallback : MonoBehaviour
+    public class SHangZoomOutCallback : MonoBehaviour
     {
         private Callback _callBack;
         public delegate void Callback();

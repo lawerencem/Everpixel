@@ -113,7 +113,6 @@
     <Compile Include="Assets\Data\Character\Table\RaceParamsTable.cs" />
     <Compile Include="Assets\Data\Character\XML\PerkParser.cs" />
     <Compile Include="Assets\Data\Character\XML\PredefinedCharReader.cs" />
-    <Compile Include="Assets\Data\Character\XML\PredefinedCritterReader.cs" />
     <Compile Include="Assets\Data\Character\XML\PredefinedEquipmentXMLIndexes.cs" />
     <Compile Include="Assets\Data\Character\XML\PredefinedReaderParams.cs" />
     <Compile Include="Assets\Data\Character\XML\PrimaryStatsParser.cs" />
@@ -404,8 +403,8 @@
     <Compile Include="Assets\Template\Other\AbstractSingleton.cs" />
     <Compile Include="Assets\Template\Other\Pair.cs" />
     <Compile Include="Assets\Template\Script\AScript.cs" />
-    <Compile Include="Assets\Template\Script\HangZoomOutCallback.cs" />
-    <Compile Include="Assets\Template\Script\IntervalJoltScript.cs" />
+    <Compile Include="Assets\Template\Script\SHangZoomOutCallback.cs" />
+    <Compile Include="Assets\Template\Script\SIntervalJoltScript.cs" />
     <Compile Include="Assets\Template\Script\SBob.cs" />
     <Compile Include="Assets\Template\Script\SBoomerang.cs" />
     <Compile Include="Assets\Template\Script\SDeactivateByLifetime.cs" />
@@ -418,6 +417,7 @@
     <Compile Include="Assets\Template\Script\SRaycastMove.cs" />
     <Compile Include="Assets\Template\Script\SRaycastMoveThenDelete.cs" />
     <Compile Include="Assets\Template\Script\SRotation.cs" />
+    <Compile Include="Assets\Template\Script\SScale.cs" />
     <Compile Include="Assets\Template\Script\SSwarmOnTarget.cs" />
     <Compile Include="Assets\Template\Script\SXAxisShake.cs" />
     <Compile Include="Assets\Template\Script\ScrollCameraToScript.cs" />
@@ -461,6 +461,7 @@
     <Compile Include="Assets\View\Fatality\FatalityParams.cs" />
     <Compile Include="Assets\View\Fatality\MFatality.cs" />
     <Compile Include="Assets\View\Fatality\Magic\FightingFatality.cs" />
+    <Compile Include="Assets\View\Fatality\Weapon\Ability\BiteFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Ability\ChopFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Ability\CrushFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Ability\SlashFatality.cs" />
@@ -492,7 +493,6 @@
     <None Include="Assets\Data\Ability\XML\WeaponAbilities.xml" />
     <None Include="Assets\Data\Bark\XML\Barks.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Amazonian.xml" />
-    <None Include="Assets\Data\Character\XML\PredefinedCritters.xml" />
     <None Include="Assets\Data\Character\XML\RaceParams.xml" />
     <None Include="Assets\Data\Class\XML\Classes.xml" />
     <None Include="Assets\Data\Effect\XML\Effects.xml" />

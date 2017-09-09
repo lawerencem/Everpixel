@@ -12,7 +12,6 @@
         Byzantine,
         Celtic,
         Chinese,
-        Critter, //TODO:
         Drowish,
         Dwarvish,
         Egyptian,

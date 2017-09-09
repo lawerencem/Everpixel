@@ -2,7 +2,7 @@
 
 namespace Assets.Template.Script
 {
-    public class SBob : MonoBehaviour
+    public class SBob : AScript
     {
         public float DistancePerFrame;
         public float Distance;

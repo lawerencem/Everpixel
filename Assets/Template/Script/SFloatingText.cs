@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace Assets.Template.Script
 {
-    public class SFloatingText : MonoBehaviour
+    public class SFloatingText : AScript
     {
         private bool _activated;
         private float _delay;

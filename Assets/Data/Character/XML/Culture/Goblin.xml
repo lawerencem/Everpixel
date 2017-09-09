@@ -340,6 +340,33 @@
         <Resolve>350</Resolve>
       </Stats>
     </Character>
+    <Character name ="Psycargot">
+      <AttackSpriteIndex>24</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>16</FlinchSpriteIndex>
+      <Stats>
+        <Agility>280</Agility>
+        <Constitution>320</Constitution>
+        <Intelligence>550</Intelligence>
+        <Might>400</Might>
+        <Perception>400</Perception>
+        <Resolve>480</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Psylug">
+      <AttackSpriteIndex>24</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <Class>Warrior,1</Class>
+      <FlinchSpriteIndex>16</FlinchSpriteIndex>
+      <Stats>
+        <Agility>280</Agility>
+        <Constitution>450</Constitution>
+        <Intelligence>600</Intelligence>
+        <Might>420</Might>
+        <Perception>300</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Rookie Slimer">
       <Class>Ninja,3</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -371,6 +398,61 @@
         <Might>380</Might>
         <Perception>480</Perception>
         <Resolve>350</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Razorback">
+      <AttackSpriteIndex>24</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>16</FlinchSpriteIndex>
+      <Stats>
+        <Agility>250</Agility>
+        <Constitution>400</Constitution>
+        <Intelligence>350</Intelligence>
+        <Might>420</Might>
+        <Perception>420</Perception>
+        <Resolve>400</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Shoggoth">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+        <Perk>Squishy</Perk>
+      </Perks>
+      <Stats>
+        <Agility>300</Agility>
+        <Constitution>280</Constitution>
+        <Intelligence>320</Intelligence>
+        <Might>550</Might>
+        <Perception>600</Perception>
+        <Resolve>620</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Sluggemoth">
+      <AttackSpriteIndex>24</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>16</FlinchSpriteIndex>
+      <Stats>
+        <Agility>300</Agility>
+        <Constitution>280</Constitution>
+        <Intelligence>320</Intelligence>
+        <Might>520</Might>
+        <Perception>420</Perception>
+        <Resolve>600</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Sluggish">
+      <AttackSpriteIndex>24</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>16</FlinchSpriteIndex>
+      <Stats>
+        <Agility>250</Agility>
+        <Constitution>250</Constitution>
+        <Intelligence>300</Intelligence>
+        <Might>350</Might>
+        <Perception>400</Perception>
+        <Resolve>550</Resolve>
       </Stats>
     </Character>
     <Character name ="Slime Lord">

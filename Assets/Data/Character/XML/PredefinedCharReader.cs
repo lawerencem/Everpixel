@@ -7,6 +7,7 @@ using Assets.Model.Culture;
 using Assets.Model.Mount;
 using Assets.Template.Util;
 using Assets.Template.XML;
+using Assets.View.Character.Table;
 using System.Collections.Generic;
 using System.Xml.Linq;
 
@@ -74,13 +75,14 @@ namespace Assets.Data.Character.XML
                                         switch (elem.Name.ToString())
                                         {
                                             case (PredefinedReaderParams.ABILITY): { HandleActiveAbility(key, elem.Value.ToString()); } break;
+                                            case (PredefinedReaderParams.ATTACK_SPRITE_INDEX): { HandleCritterAttackSpriteIndex(key, elem.Value.ToString()); } break;
                                             case (PredefinedReaderParams.CLASS): { HandleClassType(key, elem.Value.ToString(), ref baseClass); } break;
+                                            case (PredefinedReaderParams.FLINCH_SPRITE_INDEX): { HandleCritterFlinchSpriteIndex(key, elem.Value.ToString()); } break;
                                             case (PredefinedReaderParams.MOUNT): { HandleMount(key, elem.Value); } break;
                                             case (PredefinedReaderParams.PERKS): { HandlePerks(elem, key); } break;
                                             case (PredefinedReaderParams.POTENTIAL_ARMORS): { HandleEquipment(elem, key); } break;
                                             case (PredefinedReaderParams.POTENTIAL_WEAPONS): { HandleEquipment(elem, key); } break;
                                             case (PredefinedReaderParams.RACE): { HandleRace(key, elem.Value.ToString(), ref race); } break;
-                                            //case (PredefinedReaderParams.SPELLS): { HandleSpells(elem, key); } break;
                                             case (PredefinedReaderParams.STATS): { HandleStats(elem, key); } break;
                                             case (PredefinedReaderParams.TYPE): { HandleCharacterType(key, elem.Value.ToString(), ref type); } break;
                                         }
@@ -115,7 +117,21 @@ namespace Assets.Data.Character.XML
             if (EnumUtil<ECharType>.TryGetEnumValue(value, ref type))
                 table.Table[rootKey].Type = type;
         }
-        
+
+        private void HandleCritterAttackSpriteIndex(string rootkey, string value)
+        {
+            int v = 0;
+            if (int.TryParse(value, out v))
+                CritterAttackSpriteTable.Instance.Table.Add(rootkey, v);
+        }
+
+        private void HandleCritterFlinchSpriteIndex(string rootkey, string value)
+        {
+            int v = 0;
+            if (int.TryParse(value, out v))
+                CritterFlinchSpriteTable.Instance.Table.Add(rootkey, v);
+        }
+
         private void HandleEquipment(XElement el, string rootKey)
         {
             foreach (var att in el.Elements())
