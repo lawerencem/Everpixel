@@ -34,7 +34,7 @@ namespace Assets.Controller.Managers
 
         void Update()
         {
-            //CombatEventManager.Instance.Update();
+
         }
 
         private void InitManagers()

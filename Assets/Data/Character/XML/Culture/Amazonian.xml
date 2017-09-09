@@ -412,8 +412,10 @@
       </Stats>
     </Character>
     <Character name ="Thairex">
-      <Ability>Hadoken</Ability>
-      <Ability>Kamehameha</Ability>
+      <Abilities>
+        <Ability>Hadoken</Ability>
+        <Ability>Kamehameha</Ability>
+      </Abilities>
       <AttackSpriteIndex>1</AttackSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
       <FlinchSpriteIndex>13</FlinchSpriteIndex>
