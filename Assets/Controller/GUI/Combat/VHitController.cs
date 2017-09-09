@@ -74,7 +74,7 @@ namespace Assets.Controller.GUI.Combat
 
         private void DisplayFlinch(CharController target, Hit hit)
         {
-            if (hit.Data.Dmg < target.Proxy.GetStat(ESecondaryStat.HP)) 
+            if (hit.Data.Dmg < target.Proxy.GetPoints(ESecondaryStat.HP)) 
             {
                 var flinch = target.Handle.AddComponent<SFlinch>();
                 var flinchPos = target.Handle.transform.position;

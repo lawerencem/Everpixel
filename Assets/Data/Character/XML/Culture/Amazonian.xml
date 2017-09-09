@@ -434,6 +434,9 @@
     </Character>
     <Character name ="Tyrantaur">
       <AttackSpriteIndex>24</AttackSpriteIndex>
+      <Abilities>
+        <Ability>Bite</Ability>
+      </Abilities>
       <ECharacterType>Critter</ECharacterType>
       <FlinchSpriteIndex>16</FlinchSpriteIndex>
       <Perks>
