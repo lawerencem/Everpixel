@@ -81,6 +81,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Controller\Character\CharController.cs" />
+    <Compile Include="Assets\Controller\Equipment\Armor\CArmor.cs" />
+    <Compile Include="Assets\Controller\Equipment\Armor\CHelm.cs" />
+    <Compile Include="Assets\Controller\Equipment\Weapon\CWeapon.cs" />
     <Compile Include="Assets\Controller\GUI\CMapGUIControllerParticle.cs" />
     <Compile Include="Assets\Controller\GUI\CMapGUIControllerShapeshift.cs" />
     <Compile Include="Assets\Controller\GUI\Combat\CombatGUIParams.cs" />
@@ -106,6 +109,7 @@
     <Compile Include="Assets\Controller\Map\Tile\FTileController.cs" />
     <Compile Include="Assets\Controller\Map\Tile\STile.cs" />
     <Compile Include="Assets\Controller\Map\Tile\TileController.cs" />
+    <Compile Include="Assets\Controller\Mount\CMount.cs" />
     <Compile Include="Assets\Data\Ability\XML\AbilityReader.cs" />
     <Compile Include="Assets\Data\Bark\Table\BarkTable.cs" />
     <Compile Include="Assets\Data\Bark\XML\BarkReader.cs" />
@@ -120,7 +124,6 @@
     <Compile Include="Assets\Data\Character\XML\RaceParamsReader.cs" />
     <Compile Include="Assets\Data\Class\Table\ClassParamTable.cs" />
     <Compile Include="Assets\Data\Class\XML\ClassReader.cs" />
-    <Compile Include="Assets\Data\Effect\XML\EffectReader.cs" />
     <Compile Include="Assets\Data\Equipment\Table\ArmorParamTable.cs" />
     <Compile Include="Assets\Data\Equipment\Table\EquipmentSpritesTable.cs" />
     <Compile Include="Assets\Data\Equipment\Table\WeaponParamTable.cs" />
@@ -257,12 +260,18 @@
     <Compile Include="Assets\Model\Combat\Hit\HitData.cs" />
     <Compile Include="Assets\Model\Combat\Hit\HitMod.cs" />
     <Compile Include="Assets\Model\Culture\ECulture.cs" />
+    <Compile Include="Assets\Model\Effect\Ability\Megabite.cs" />
     <Compile Include="Assets\Model\Effect\EEffect.cs" />
+    <Compile Include="Assets\Model\Effect\EffectBuilder.cs" />
     <Compile Include="Assets\Model\Effect\EffectFactory.cs" />
     <Compile Include="Assets\Model\Effect\EffectTable.cs" />
     <Compile Include="Assets\Model\Effect\MEffect.cs" />
     <Compile Include="Assets\Model\Effect\Other\WeenBullet.cs" />
     <Compile Include="Assets\Model\Effect\Will\Horror.cs" />
+    <Compile Include="Assets\Model\Equipment\AEquipment.cs" />
+    <Compile Include="Assets\Model\Equipment\Armor\ArmorParams.cs" />
+    <Compile Include="Assets\Model\Equipment\Armor\MArmor.cs" />
+    <Compile Include="Assets\Model\Equipment\Armor\MHelm.cs" />
     <Compile Include="Assets\Model\Equipment\Builder\ArmorBuilder.cs" />
     <Compile Include="Assets\Model\Equipment\Builder\HelmBuilder.cs" />
     <Compile Include="Assets\Model\Equipment\Builder\WeaponBuilder.cs" />
@@ -277,13 +286,9 @@
     <Compile Include="Assets\Model\Equipment\Factory\ArmorFactory.cs" />
     <Compile Include="Assets\Model\Equipment\Factory\HelmFactory.cs" />
     <Compile Include="Assets\Model\Equipment\Factory\WeaponFactory.cs" />
-    <Compile Include="Assets\Model\Equipment\Param\ArmorParams.cs" />
-    <Compile Include="Assets\Model\Equipment\Param\WeaponParams.cs" />
-    <Compile Include="Assets\Model\Equipment\Type\AEquipment.cs" />
-    <Compile Include="Assets\Model\Equipment\Type\MArmor.cs" />
-    <Compile Include="Assets\Model\Equipment\Type\MEquipment.cs" />
-    <Compile Include="Assets\Model\Equipment\Type\MHelm.cs" />
-    <Compile Include="Assets\Model\Equipment\Type\MWeapon.cs" />
+    <Compile Include="Assets\Model\Equipment\MEquipment.cs" />
+    <Compile Include="Assets\Model\Equipment\Weapon\MWeapon.cs" />
+    <Compile Include="Assets\Model\Equipment\Weapon\WeaponParams.cs" />
     <Compile Include="Assets\Model\Event\Combat\AEvCombat.cs" />
     <Compile Include="Assets\Model\Event\Combat\ActionEventController.cs" />
     <Compile Include="Assets\Model\Event\Combat\AttackFXEvent.cs" />
@@ -334,6 +339,7 @@
     <Compile Include="Assets\Model\Map\Path.cs" />
     <Compile Include="Assets\Model\Mount\EMount.cs" />
     <Compile Include="Assets\Model\Mount\MMount.cs" />
+    <Compile Include="Assets\Model\Mount\MountBuilder.cs" />
     <Compile Include="Assets\Model\Mount\MountParams.cs" />
     <Compile Include="Assets\Model\OTE\DoT\EDoT.cs" />
     <Compile Include="Assets\Model\OTE\DoT\MDoT.cs" />
@@ -404,8 +410,6 @@
     <Compile Include="Assets\Template\Other\AbstractSingleton.cs" />
     <Compile Include="Assets\Template\Other\Pair.cs" />
     <Compile Include="Assets\Template\Script\AScript.cs" />
-    <Compile Include="Assets\Template\Script\SHangZoomOutCallback.cs" />
-    <Compile Include="Assets\Template\Script\SIntervalJoltScript.cs" />
     <Compile Include="Assets\Template\Script\SBob.cs" />
     <Compile Include="Assets\Template\Script\SBoomerang.cs" />
     <Compile Include="Assets\Template\Script\SDeactivateByLifetime.cs" />
@@ -413,6 +417,8 @@
     <Compile Include="Assets\Template\Script\SDestroyByLifetime.cs" />
     <Compile Include="Assets\Template\Script\SFloatingText.cs" />
     <Compile Include="Assets\Template\Script\SHangCallbackZoomOut.cs" />
+    <Compile Include="Assets\Template\Script\SHangZoomOutCallback.cs" />
+    <Compile Include="Assets\Template\Script\SIntervalJoltScript.cs" />
     <Compile Include="Assets\Template\Script\SJolt.cs" />
     <Compile Include="Assets\Template\Script\SObjectMove.cs" />
     <Compile Include="Assets\Template\Script\SRaycastMove.cs" />
@@ -436,7 +442,7 @@
     <Compile Include="Assets\View\Ability\AttackSpriteLoader.cs" />
     <Compile Include="Assets\View\Bark\BarkManager.cs" />
     <Compile Include="Assets\View\Bark\EBark.cs" />
-    <Compile Include="Assets\View\Builder\CharacterViewBuilder.cs" />
+    <Compile Include="Assets\View\Builder\CharViewBuilder.cs" />
     <Compile Include="Assets\View\Character\CharBridge.cs" />
     <Compile Include="Assets\View\Character\CharSpriteLoader.cs" />
     <Compile Include="Assets\View\Character\Table\CritterAttackSpriteTable.cs" />
@@ -495,15 +501,32 @@
     <None Include="Assets\Data\Ability\XML\WeaponAbilities.xml" />
     <None Include="Assets\Data\Bark\XML\Barks.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Amazonian.xml" />
+    <None Include="Assets\Data\Character\XML\Culture\Bretonnian.xml" />
+    <None Include="Assets\Data\Character\XML\Culture\Goblin.xml" />
+    <None Include="Assets\Data\Character\XML\Culture\Jomonese.xml" />
+    <None Include="Assets\Data\Character\XML\Culture\Norse.xml" />
+    <None Include="Assets\Data\Character\XML\Culture\Orcish.xml" />
+    <None Include="Assets\Data\Character\XML\Culture\Roman.xml" />
     <None Include="Assets\Data\Character\XML\RaceParams.xml" />
     <None Include="Assets\Data\Class\XML\Classes.xml" />
-    <None Include="Assets\Data\Effect\XML\Effects.xml" />
     <None Include="Assets\Data\Equipment\XML\Armor\HeavyArmor.xml" />
     <None Include="Assets\Data\Equipment\XML\Armor\HeavyHelm.xml" />
     <None Include="Assets\Data\Equipment\XML\Armor\LightArmor.xml" />
     <None Include="Assets\Data\Equipment\XML\Armor\LightHelm.xml" />
     <None Include="Assets\Data\Equipment\XML\Armor\MediumArmor.xml" />
     <None Include="Assets\Data\Equipment\XML\Armor\MediumHelm.xml" />
+    <None Include="Assets\Data\Equipment\XML\Weapon\Axe.xml" />
+    <None Include="Assets\Data\Equipment\XML\Weapon\Flail.xml" />
+    <None Include="Assets\Data\Equipment\XML\Weapon\Hammer.xml" />
+    <None Include="Assets\Data\Equipment\XML\Weapon\LargeShield.xml" />
+    <None Include="Assets\Data\Equipment\XML\Weapon\LightCrossbow.xml" />
+    <None Include="Assets\Data\Equipment\XML\Weapon\MediumShield.xml" />
+    <None Include="Assets\Data\Equipment\XML\Weapon\Polearm.xml" />
+    <None Include="Assets\Data\Equipment\XML\Weapon\ShortBow.xml" />
+    <None Include="Assets\Data\Equipment\XML\Weapon\SmallShield.xml" />
+    <None Include="Assets\Data\Equipment\XML\Weapon\Spear.xml" />
+    <None Include="Assets\Data\Equipment\XML\Weapon\Staff.xml" />
+    <None Include="Assets\Data\Equipment\XML\Weapon\Sword.xml" />
     <None Include="Assets\Data\Injury\XML\Injuries.xml" />
     <None Include="Assets\Data\Mount\XML\Mounts.xml" />
     <None Include="Assets\Data\Party\XML\Parties.xml" />
@@ -511,61 +534,6 @@
     <None Include="Assets\Data\Perk\XML\Perks.xml" />
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Equipment\XML\Weapon\Axe.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Equipment\XML\Weapon\Flail.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Equipment\XML\Weapon\Hammer.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Equipment\XML\Weapon\LargeShield.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Equipment\XML\Weapon\LightCrossbow.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Equipment\XML\Weapon\MediumShield.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Equipment\XML\Weapon\Polearm.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Equipment\XML\Weapon\ShortBow.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Equipment\XML\Weapon\SmallShield.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Equipment\XML\Weapon\Spear.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Equipment\XML\Weapon\Staff.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Equipment\XML\Weapon\Sword.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Character\XML\Culture\Bretonnian.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Character\XML\Culture\Goblin.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Character\XML\Culture\Jomonese.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Character\XML\Culture\Norse.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Character\XML\Culture\Orcish.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Character\XML\Culture\Roman.xml" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

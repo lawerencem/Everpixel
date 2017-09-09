@@ -1,5 +1,5 @@
 ﻿using Assets.Model.Character.Param;
-using Assets.Model.Equipment.Type;
+using Assets.Model.Equipment.Armor;
 using Assets.Template.Other;
 using System.Collections.Generic;
 
@@ -8,48 +8,49 @@ namespace Assets.Model.Character.Container
     public class ACharEquipment<T>
     {
         private AChar<T> _parent;
-        private MArmor _armor;
-        private MHelm _helm;
-        private MWeapon _lWeapon;
-        private MWeapon _rWeapon;
+        private CArmor _armor;
+        private CHelm _helm;
+        private CWeapon _lWeapon;
+        private CWeapon _rWeapon;
 
-        public MArmor GetArmor() { return this._armor; }
-        public MHelm GetHelm() { return this._helm; }
-        public MWeapon GetLWeapon() { return this._lWeapon; }
-        public MWeapon GetRWeapon() { return this._rWeapon; }
+        public CArmor GetArmor() { return this._armor; }
+        public CHelm GetHelm() { return this._helm; }
+        public CWeapon GetLWeapon() { return this._lWeapon; }
+        public CWeapon GetRWeapon() { return this._rWeapon; }
 
         public ACharEquipment(AChar<T> parent)
         {
             this._parent = parent;
         }
 
-        public void AddArmor(MArmor armor)
+        public void AddArmor(CArmor armor)
         {
             this.RemoveArmor();
             this._armor = armor;
-            var mods = new Pair<object, List<IndefSecondaryStatModifier>>(armor, armor.GetStatModifiers());
+            var mods = new Pair<object, List<IndefSecondaryStatModifier>>(
+                armor, armor.Model.GetStatModifiers());
             foreach (var perk in this._parent.GetPerks().GetEquipmentSStatPerks())
                 perk.TryModEquipmentMod(mods);
             this._parent.GetMods().AddMod(mods);
         }
 
-        public void AddHelm(MHelm helm)
+        public void AddHelm(CHelm helm)
         {
             this.RemoveHelm();
             this._helm = helm;
-            var mods = new Pair<object, List<IndefSecondaryStatModifier>>(helm, helm.GetStatModifiers());
+            var mods = new Pair<object, List<IndefSecondaryStatModifier>>(helm, helm.Model.GetStatModifiers());
             foreach (var perk in this._parent.GetPerks().GetEquipmentSStatPerks())
                 perk.TryModEquipmentMod(mods);
             this._parent.GetMods().AddMod(mods);
         }
 
-        public void AddWeapon(MWeapon weapon, bool lWeapon)
+        public void AddWeapon(CWeapon weapon, bool lWeapon)
         {
             // TODO: 2handed weapon check
             if (lWeapon)
             {
                 this._lWeapon = weapon;
-                var mods = new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.GetStatModifiers());
+                var mods = new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.Model.GetStatModifiers());
 
                 foreach (var perk in this._parent.GetPerks().GetEquipmentSStatPerks())
                     perk.TryModEquipmentMod(mods);
@@ -62,7 +63,7 @@ namespace Assets.Model.Character.Container
             else
             {
                 this._rWeapon = weapon;
-                var mods = new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.GetStatModifiers());
+                var mods = new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.Model.GetStatModifiers());
 
                 foreach (var perk in this._parent.GetPerks().GetEquipmentSStatPerks())
                     perk.TryModEquipmentMod(mods);

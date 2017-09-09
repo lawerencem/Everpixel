@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Tile;
+using Assets.Model.Equipment.Enum;
 using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Logic
@@ -56,12 +57,12 @@ namespace Assets.Model.Ability.Logic
             if (arg.LWeapon)
             {
                 if (arg.Source.Proxy.GetLWeapon() != null)
-                    dist += (int)arg.Source.Proxy.GetLWeapon().RangeMod;
+                    dist += (int)arg.Source.Proxy.GetLWeapon().GetStat(EWeaponStat.Range_Mod);
             }
             else
             {
                 if (arg.Source.Proxy.GetRWeapon() != null)
-                    dist += (int)arg.Source.Proxy.GetRWeapon().RangeMod;
+                    dist += (int)arg.Source.Proxy.GetRWeapon().GetStat(EWeaponStat.Range_Mod);
             }
             var hexTiles = arg.Source.Tile.Model.GetAoETiles(dist);
             var tileControllers = new List<TileController>();

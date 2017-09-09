@@ -1,7 +1,7 @@
 ﻿using Assets.Model.Equipment.Enum;
 using System.Collections.Generic;
 
-namespace Assets.Model.Equipment.Param
+namespace Assets.Model.Equipment.Armor
 {
     public class ArmorParams
     {

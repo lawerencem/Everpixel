@@ -10,8 +10,8 @@ namespace Assets.Model.Character.Container
         private List<MAbility> _activeAbilities;
         private List<MAbility> _defaultAbilities;
 
-        public List<MAbility> GetActiveAbilities() { return this._activeAbilities; }
-        public List<MAbility> GetDefaultAbilities() { return this._defaultAbilities; }
+        public List<MAbility> GetNonWpnAbilities() { return this._activeAbilities; }
+        public List<MAbility> GetWpnAbilities() { return this._defaultAbilities; }
 
         public CharAbilities(AChar<T> parent)
         {

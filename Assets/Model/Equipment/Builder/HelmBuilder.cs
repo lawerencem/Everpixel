@@ -1,34 +1,37 @@
 ﻿using Assets.Data.Equipment.Table;
-using Assets.Model.Equipment.Type;
+using Assets.Model.Equipment.Armor;
 using Assets.Template.Builder;
 
 namespace Assets.Model.Equipment.Builder
 {
-    public class HelmBuilder : GBuilder<string, MHelm>
+    public class HelmBuilder : GBuilder<string, CHelm>
     {
-        public override MHelm Build(string arg)
+        public override CHelm Build(string arg)
         {
             return BuildHelper(arg);
         }
 
-        private MHelm BuildHelper(string arg)
+        private CHelm BuildHelper(string arg)
         {
-            var helm = new MHelm();
+            var model = new MHelm();
             var aStats = ArmorParamTable.Instance.Table[arg];
-            helm.APMod = aStats.APMod;
-            helm.BlockMod = aStats.BlockMod;
-            helm.DamageIgnore = aStats.DamageIgnore;
-            helm.DamageMod = aStats.DamageMod;
-            helm.DodgeMod = aStats.DodgeMod;
-            helm.Durability = aStats.Durability;
-            helm.FatigueMod = aStats.FatigueCost;
-            helm.InitativeMod = aStats.InitativeMod;
-            helm.MaxDurability = aStats.Durability;
-            helm.ParryMod = aStats.ParryMod;
-            helm.StaminaMod = aStats.StaminaMod;
-            helm.Tier = aStats.Tier;
-            helm.ArmorType = aStats.Type;
-            return helm;
+            model.Data.APMod = aStats.APMod;
+            model.Data.BlockMod = aStats.BlockMod;
+            model.Data.FlatDamageIgnore = aStats.DamageIgnore;
+            model.Data.DamageMod = aStats.DamageMod;
+            model.Data.DodgeMod = aStats.DodgeMod;
+            model.Data.Durability = aStats.Durability;
+            model.Data.FatigueMod = aStats.FatigueCost;
+            model.Data.InitativeMod = aStats.InitativeMod;
+            model.Data.MaxDurability = aStats.Durability;
+            model.Data.ParryMod = aStats.ParryMod;
+            model.Data.StaminaMod = aStats.StaminaMod;
+            model.Data.Tier = aStats.Tier;
+            model.Data.ArmorType = aStats.Type;
+            var controller = new CHelm();
+            controller.SetModel(model);
+            controller.SetParams(aStats);
+            return controller;
         }
     }
 }

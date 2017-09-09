@@ -1,4 +1,4 @@
-﻿using Assets.Model.Equipment.Param;
+﻿using Assets.Model.Equipment.Weapon;
 using Assets.Template.Other;
 using System.Collections.Generic;
 

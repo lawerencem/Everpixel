@@ -113,19 +113,19 @@ namespace Assets.Controller.Manager.GUI
             this.SetTagText(GameObjectTags.STAM, c.Proxy.GetStat(ESecondaryStat.Stamina) + " / " + ((int)c.Proxy.GetStat(ESecondaryStat.Stamina)).ToString());
 
             if (c.Proxy.GetArmor() != null)
-                this.SetTagText(GameObjectTags.ARMOR, c.Proxy.GetArmor().Name);
+                this.SetTagText(GameObjectTags.ARMOR, c.Proxy.GetArmor().Model.Data.Name);
             else
                 this.SetTagText(GameObjectTags.ARMOR, "");
             if (c.Proxy.GetHelm() != null)
-                this.SetTagText(GameObjectTags.HELM, c.Proxy.GetHelm().Name);
+                this.SetTagText(GameObjectTags.HELM, c.Proxy.GetHelm().Model.Data.Name);
             else
                 this.SetTagText(GameObjectTags.HELM, "");
             if (c.Proxy.GetLWeapon() != null)
-                this.SetTagText(GameObjectTags.L_WEAP, c.Proxy.GetLWeapon().Name);
+                this.SetTagText(GameObjectTags.L_WEAP, c.Proxy.GetLWeapon().Model.Data.Name);
             else
                 this.SetTagText(GameObjectTags.L_WEAP, "");
             if (c.Proxy.GetRWeapon() != null)
-                this.SetTagText(GameObjectTags.R_WEAP, c.Proxy.GetRWeapon().Name);
+                this.SetTagText(GameObjectTags.R_WEAP, c.Proxy.GetRWeapon().Model.Data.Name);
             else
                 this.SetTagText(GameObjectTags.R_WEAP, "");
         }

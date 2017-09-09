@@ -1,6 +1,6 @@
-﻿using Assets.Model.Equipment.Builder;
+﻿using Assets.Model.Equipment.Armor;
+using Assets.Model.Equipment.Builder;
 using Assets.Model.Equipment.Enum;
-using Assets.Model.Equipment.Type;
 using Assets.Template.Other;
 
 namespace Assets.Model.Equipment.Factory
@@ -11,10 +11,10 @@ namespace Assets.Model.Equipment.Factory
 
         public WeaponFactory() { this._weaponBuilder = new WeaponBuilder(); }
 
-        public MWeapon CreateNewObject(string name, EEquipmentTier tier)
+        public CWeapon CreateNewObject(string name, EEquipmentTier tier)
         {
             var weapon = this._weaponBuilder.Build(name + "_" + tier.ToString());
-            weapon.Name = name;
+            weapon.Model.Data.Name = name;
             return weapon;
         }
     }

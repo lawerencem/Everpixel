@@ -1,7 +1,6 @@
 ﻿using Assets.Data.Ability.XML;
 using Assets.Data.Character.XML;
 using Assets.Data.Class.XML;
-using Assets.Data.Effect.XML;
 using Assets.Data.Equipment.XML;
 using Assets.Data.Injury.XML;
 using Assets.Data.Mount.XML;
@@ -24,7 +23,6 @@ namespace Assets.Controller.Manager
             this._readers.Add(ArmorReader.Instance);
             this._readers.Add(BarkReader.Instance);
             this._readers.Add(ClassReader.Instance);
-            this._readers.Add(EffectReader.Instance);
             this._readers.Add(InjuryReader.Instance);
             this._readers.Add(PartyReader.Instance);
             this._readers.Add(PredefinedCharReader.Instance);

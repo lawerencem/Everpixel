@@ -1,6 +1,6 @@
 ﻿using Assets.Data.Equipment.Table;
+using Assets.Model.Equipment.Armor;
 using Assets.Model.Equipment.Enum;
-using Assets.Model.Equipment.Param;
 using Assets.Template.Util;
 using System.Xml.Linq;
 

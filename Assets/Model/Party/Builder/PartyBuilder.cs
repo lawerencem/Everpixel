@@ -32,12 +32,13 @@ namespace Assets.Model.Party.Builder
                 var subs = partyParams.GetRandomSubPartyNames(arg.Y);
                 foreach (var sub in subs)
                 {
-                    var charParams = this._subPartyBuilder.Build(sub);
-                    foreach(var charParam in charParams)
+                    var characterStartColPair = this._subPartyBuilder.Build(sub);
+                    foreach(var pair in characterStartColPair)
                     {
-                        var model = CharacterFactory.Instance.CreateNewObject(charParam);
+                        var model = CharacterFactory.Instance.CreateNewObject(pair.X);
                         var controller = new CharController();
                         var proxy = new PChar(model);
+                        proxy.StartCol = pair.Y;
                         controller.SetProxy(proxy);
                         party.GetChars().Add(controller);
                     }

@@ -1,31 +1,20 @@
 ﻿using Assets.Data.Character.Table;
 using Assets.Data.Party.Table;
-using Assets.Model.Character.Builder;
-using Assets.Model.Character.Param;
-using Assets.Template.Builder;
+using Assets.Model.Characters.Params;
+using Assets.Model.Party.Enum;
+using Assets.Template.Other;
 using Assets.Template.Util;
-using System;
 using System.Collections.Generic;
 
 namespace Assets.Model.Party.Builder
 {
-    public class SubPartyBuilder : ABuilder<string, List<CharParams>>
+    public class SubPartyBuilder : ASingleton<SubPartyBuilder>
     {
-        public override List<CharParams> Build()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override List<CharParams> Build(List<string> args)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override List<CharParams> Build(string arg)
+        public List<Pair<PreCharParams, EStartCol>> Build(string arg)
         {
             if (SubPartiesTable.Instance.Table.ContainsKey(arg))
             {
-                var buildList = new List<CharParams>();
+                var buildList = new List<Pair<PreCharParams, EStartCol>>();
                 var cParams = SubPartiesTable.Instance.Table[arg];
                 foreach(var param in cParams)
                 {
@@ -33,10 +22,7 @@ namespace Assets.Model.Party.Builder
                     if (chance < param.Chance)
                     {
                         var pParams = PredefinedCharTable.Instance.Table[param.Name];
-                        var builder = new CharacterParamBuilder();
-                        var toAdd = builder.Build(pParams);
-                        toAdd.StartRow = param.Row;
-                        buildList.Add(toAdd);
+                        buildList.Add(new Pair<PreCharParams, EStartCol>(pParams, param.Row));
                     }
                 }
                 return buildList;

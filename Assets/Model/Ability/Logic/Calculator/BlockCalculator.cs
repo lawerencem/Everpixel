@@ -2,6 +2,7 @@
 using Assets.Model.Abiltiy.Logic;
 using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
+using Assets.Model.Equipment.Enum;
 using Assets.Template.Util;
 
 namespace Assets.Model.Ability.Logic.Calculator
@@ -18,17 +19,17 @@ namespace Assets.Model.Ability.Logic.Calculator
             bool hasShield = false;
 
             if (tgt.Proxy.GetArmor() != null)
-                hit.Data.Chances.Block *= tgt.Proxy.GetArmor().BlockMod;
+                hit.Data.Chances.Block *= tgt.Proxy.GetArmor().GetStat(EArmorStat.Block_Mod);
             if (tgt.Proxy.GetHelm() != null)
-                hit.Data.Chances.Block *= tgt.Proxy.GetHelm().BlockMod;
+                hit.Data.Chances.Block *= tgt.Proxy.GetHelm().GetStat(EArmorStat.Block_Mod);
             if (tgt.Proxy.GetLWeapon() != null && tgt.Proxy.GetLWeapon().IsTypeOfShield())
             {
-                hit.Data.Chances.Block *= (tgt.Proxy.GetLWeapon().MeleeBlockChance / LogicParams.BASE_SCALAR);
+                hit.Data.Chances.Block *= (tgt.Proxy.GetLWeapon().GetStat(EWeaponStat.Melee_Block_Chance) / LogicParams.BASE_SCALAR);
                 hasShield = true;
             }
             if (tgt.Proxy.GetRWeapon() != null && tgt.Proxy.GetRWeapon().IsTypeOfShield())
             {
-                hit.Data.Chances.Block *= (tgt.Proxy.GetRWeapon().MeleeBlockChance / LogicParams.BASE_SCALAR);
+                hit.Data.Chances.Block *= (tgt.Proxy.GetRWeapon().GetStat(EWeaponStat.Melee_Block_Chance) / LogicParams.BASE_SCALAR);
                 hasShield = true;
             }
             hit.Data.Chances.Block = this.GetAttackVSDefenseSkillChance(melee, block, hit.Data.Chances.Block);

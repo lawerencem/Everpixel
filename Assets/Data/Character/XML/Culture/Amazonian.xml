@@ -432,11 +432,13 @@
       </Stats>
       <WeaponAbility>Bite</WeaponAbility>
     </Character>
-    <Character name ="Tyrantaur">
+    <Character name="Tyrantaur">
       <AttackSpriteIndex>24</AttackSpriteIndex>
       <Abilities>
-        <Ability name ="Bite">
-          <EEffect></EEffect>
+        <Ability name="Bite">
+          <EEffect name="Megabite">
+            
+          </EEffect>
         </Ability>
       </Abilities>
       <ECharacterType>Critter</ECharacterType>

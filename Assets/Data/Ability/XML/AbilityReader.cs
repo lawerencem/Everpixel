@@ -97,8 +97,6 @@ namespace Assets.Data.Ability.XML
                     case ("DmgPerPower"): { table[type].Data.DmgPerPower = double.Parse(value); } break;
                     case ("Duration"): { table[type].Data.Duration = double.Parse(value); } break;
                     case ("DodgeMod"): { table[type].Data.DodgeMod = v; } break;
-                    case ("EffectDur"): { table[type].Data.EffectDur = v; } break;
-                    case ("EffectValue"): { table[type].Data.EffectValue = v; } break;
                     case ("FlatDamage"): { table[type].Data.FlatDamage = v; } break;
                     case ("IconSprite"): { table[type].Data.Sprite = (int)v; } break;
                     case ("Injury"): { this.HandlAPerk(type, value); } break;

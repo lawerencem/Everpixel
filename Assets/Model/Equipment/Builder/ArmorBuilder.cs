@@ -1,35 +1,37 @@
 ﻿using Assets.Data.Equipment.Table;
-using Assets.Model.Equipment.Table;
-using Assets.Model.Equipment.Type;
+using Assets.Model.Equipment.Armor;
 using Assets.Template.Builder;
 
 namespace Assets.Model.Equipment.Builder
 {
-    public class ArmorBuilder : GBuilder<string, MArmor>
+    public class ArmorBuilder : GBuilder<string, CArmor>
     {
-        public override MArmor Build(string arg)
+        public override CArmor Build(string arg)
         {
             return BuildHelper(arg);
         }
 
-        private MArmor BuildHelper(string arg)
+        private CArmor BuildHelper(string arg)
         {
-            var armor = new MArmor();
+            var model = new MArmor();
             var aStats = ArmorParamTable.Instance.Table[arg];
-            armor.APMod = aStats.APMod;
-            armor.BlockMod = aStats.BlockMod;
-            armor.FlatDamageIgnore = aStats.DamageIgnore;
-            armor.DamageMod = aStats.DamageMod;
-            armor.DodgeMod = aStats.DodgeMod;
-            armor.Durability = aStats.Durability;
-            armor.FatigueMod = aStats.FatigueCost;
-            armor.InitativeMod = aStats.InitativeMod;
-            armor.MaxDurability = aStats.Durability;
-            armor.ParryMod = aStats.ParryMod;
-            armor.StaminaMod = aStats.StaminaMod;
-            armor.Tier = aStats.Tier;
-            armor.ArmorType = aStats.Type;
-            return armor;
+            model.Data.APMod = aStats.APMod;
+            model.Data.BlockMod = aStats.BlockMod;
+            model.Data.FlatDamageIgnore = aStats.DamageIgnore;
+            model.Data.DamageMod = aStats.DamageMod;
+            model.Data.DodgeMod = aStats.DodgeMod;
+            model.Data.Durability = aStats.Durability;
+            model.Data.FatigueMod = aStats.FatigueCost;
+            model.Data.InitativeMod = aStats.InitativeMod;
+            model.Data.MaxDurability = aStats.Durability;
+            model.Data.ParryMod = aStats.ParryMod;
+            model.Data.StaminaMod = aStats.StaminaMod;
+            model.Data.Tier = aStats.Tier;
+            model.Data.ArmorType = aStats.Type;
+            var controller = new CArmor();
+            controller.SetModel(model);
+            controller.SetParams(aStats);
+            return controller;
         }
     }
 }

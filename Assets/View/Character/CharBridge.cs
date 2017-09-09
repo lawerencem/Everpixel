@@ -1,6 +1,7 @@
 ﻿using Assets.Data.Character.Table;
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
+using Assets.Model.Characters.Params;
 using Assets.Template.Other;
 using Assets.Template.Util;
 
@@ -12,7 +13,7 @@ namespace Assets.View.Character
 
         public CharBridge() { }
 
-        public VChar GetRandomizedCharacterSprites(CharParams c)
+        public VChar GetRandomizedCharacterSprites(PreCharParams c)
         {
             var random = new VChar();
             switch(c.Type)
@@ -23,14 +24,14 @@ namespace Assets.View.Character
             return random;
         }
 
-        private VChar GetRandomCritter(CharParams c)
+        private VChar GetRandomCritter(PreCharParams c)
         {
             var p = new VChar();
             p.Sprites = CharSpriteLoader.Instance.GetCritterSprites(c);
             return p;
         }
 
-        private VChar GetRandomHumanoid(CharParams c)
+        private VChar GetRandomHumanoid(PreCharParams c)
         {
             var p = new VChar();
             var table = RaceParamsTable.Instance.Table;

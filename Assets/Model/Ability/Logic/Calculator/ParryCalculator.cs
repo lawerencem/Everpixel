@@ -2,6 +2,7 @@
 using Assets.Model.Abiltiy.Logic;
 using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
+using Assets.Model.Equipment.Enum;
 using Assets.Template.Util;
 
 namespace Assets.Model.Ability.Logic.Calculator
@@ -17,13 +18,13 @@ namespace Assets.Model.Ability.Logic.Calculator
             var tgt = hit.Data.Target.Current as CharController;
 
             if (hit.Data.Source.Proxy.GetArmor() != null)
-                parryChance *= hit.Data.Source.Proxy.GetArmor().ParryMod;
+                parryChance *= hit.Data.Source.Proxy.GetArmor().GetStat(EArmorStat.Parry_Mod);
             if (hit.Data.Source.Proxy.GetHelm() != null)
-                parryChance *= hit.Data.Source.Proxy.GetHelm().ParryMod;
+                parryChance *= hit.Data.Source.Proxy.GetHelm().GetStat(EArmorStat.Parry_Mod);
             if (hit.Data.Source.Proxy.GetLWeapon() != null)
-                parryChance *= hit.Data.Source.Proxy.GetLWeapon().ParryMod;
+                parryChance *= hit.Data.Source.Proxy.GetLWeapon().GetStat(EWeaponStat.Parry_Mod);
             if (hit.Data.Source.Proxy.GetRWeapon() != null)
-                parryChance *= hit.Data.Source.Proxy.GetRWeapon().ParryMod;
+                parryChance *= hit.Data.Source.Proxy.GetRWeapon().GetStat(EWeaponStat.Parry_Mod);
 
             if (hit.Data.Source.Proxy.Type == ECharType.Critter)
                 parryChance = 0;

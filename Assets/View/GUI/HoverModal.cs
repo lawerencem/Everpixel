@@ -2,6 +2,7 @@
 using Assets.Model.Character;
 using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
+using Assets.Model.Equipment.Enum;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
@@ -120,29 +121,29 @@ namespace Assets.View.GUI
         {
             if (c.GetArmor() != null)
             {
-                this._armorSlider.maxValue = c.GetArmor().MaxDurability;
-                this._armorSlider.value = c.GetArmor().Durability;
+                this._armorSlider.maxValue = (float)c.GetArmor().GetStat(EArmorStat.Durability);
+                this._armorSlider.value = (float)c.GetArmor().GetStat(EArmorStat.Durability);
             }
             else
                 this._armorSlider.maxValue = 0;
             if (c.GetHelm() != null)
             {
-                this._helmSlider.maxValue = c.GetHelm().MaxDurability;
-                this._helmSlider.value = c.GetHelm().Durability;
+                this._helmSlider.maxValue = (float)c.GetHelm().GetStat(EArmorStat.Durability);
+                this._helmSlider.value = (float)c.GetHelm().GetStat(EArmorStat.Durability);
             }
             else
                 this._helmSlider.maxValue = 0;
             if (c.GetLWeapon() != null)
             {
-                this._lWeaponSlider.maxValue = c.GetLWeapon().MaxDurability;
-                this._lWeaponSlider.value = c.GetLWeapon().Durability;
+                this._lWeaponSlider.maxValue = (float)c.GetLWeapon().GetStat(EWeaponStat.Max_Durability);
+                this._lWeaponSlider.value = (float)c.GetLWeapon().GetStat(EWeaponStat.Max_Durability);
             }
             else
                 this._lWeaponSlider.maxValue = 0;
             if (c.GetRWeapon() != null)
             {
-                this._rWeaponSlider.maxValue = c.GetRWeapon().MaxDurability;
-                this._rWeaponSlider.value = c.GetRWeapon().Durability;
+                this._rWeaponSlider.maxValue = (float)c.GetRWeapon().GetStat(EWeaponStat.Max_Durability);
+                this._rWeaponSlider.value = (float)c.GetRWeapon().GetStat(EWeaponStat.Max_Durability);
             }
             else
                 this._rWeaponSlider.maxValue = 0;

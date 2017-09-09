@@ -24,13 +24,13 @@ namespace Assets.Controller.Map.Combat.Loader
 
         private void InitViews(MMapController map, MapInitInfo info)
         {
-            var builder = new CharacterViewBuilder();
+            var builder = new CharViewBuilder();
             foreach (var party in map.GetLParties())
             {
                 foreach (var c in party.GetChars())
                 {
-                    c.SetView(builder.Build(c.Proxy.GetParams()));
-                    var tile = map.GetMap().GetTileForRow(c.Proxy.LParty, c.Proxy.GetParams().StartRow);
+                    c.SetView(builder.Build(c.Proxy));
+                    var tile = map.GetMap().GetTileForRow(c.Proxy.LParty, c.Proxy.StartCol);
                     this.RenderChar(map, c, tile);
                 }
             }   
@@ -38,8 +38,8 @@ namespace Assets.Controller.Map.Combat.Loader
             {
                 foreach (var c in party.GetChars())
                 {
-                    c.SetView(builder.Build(c.Proxy.GetParams()));
-                    var tile = map.GetMap().GetTileForRow(c.Proxy.LParty, c.Proxy.GetParams().StartRow);
+                    c.SetView(builder.Build(c.Proxy));
+                    var tile = map.GetMap().GetTileForRow(c.Proxy.LParty, c.Proxy.StartCol);
                     this.RenderChar(map, c, tile);
                 }
             }   
@@ -120,7 +120,7 @@ namespace Assets.Controller.Map.Combat.Loader
             if (e != null)
             {
                 var spriteHandler = new GameObject();
-                var sprite = e.Sprites[e.Index];
+                var sprite = e.Sprites[e.SpriteIndex];
                 var render = spriteHandler.AddComponent<SpriteRenderer>();
                 var position = c.Handle.transform.position;
                 position.x += xOffset;

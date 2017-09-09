@@ -3,6 +3,7 @@ using Assets.Model.Ability.Enum;
 using Assets.Model.Abiltiy.Logic;
 using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
+using Assets.Model.Equipment.Enum;
 
 namespace Assets.Model.Ability.Logic.Calculator
 {
@@ -17,9 +18,9 @@ namespace Assets.Model.Ability.Logic.Calculator
             var dmg = hit.Data.ModData.BaseDamage;
             dmg += abilityData.FlatDamage;
             if (source.GetRWeapon() != null && !source.GetRWeapon().IsTypeOfShield())
-                dmg += source.GetRWeapon().Damage;
+                dmg += source.GetRWeapon().GetStat(EWeaponStat.Damage);
             if (source.GetLWeapon() != null && !source.GetLWeapon().IsTypeOfShield())
-                dmg += source.GetLWeapon().Damage;
+                dmg += source.GetLWeapon().GetStat(EWeaponStat.Damage);
             dmg += (abilityData.DmgPerPower * source.GetStat(ESecondaryStat.Power));
             dmg *= abilityData.DamageMod;
             hit.Data.Dmg = (int)dmg;
@@ -57,19 +58,19 @@ namespace Assets.Model.Ability.Logic.Calculator
 
                 if (tgt.Proxy.GetArmor() != null)
                 {
-                    bodyDmgNegate += tgt.Proxy.GetArmor().FlatDamageIgnore;
-                    bodyReduction *= tgt.Proxy.GetArmor().DamageMod;
+                    bodyDmgNegate += tgt.Proxy.GetArmor().GetStat(EArmorStat.Flat_Damage_Ignore);
+                    bodyReduction *= tgt.Proxy.GetArmor().GetStat(EArmorStat.Damage_Mod);
                 }
                 if (tgt.Proxy.GetHelm() != null)
                 {
-                    headDmgNegate += tgt.Proxy.GetHelm().DamageIgnore;
-                    headReduction *= tgt.Proxy.GetHelm().DamageMod;
+                    headDmgNegate += tgt.Proxy.GetHelm().GetStat(EArmorStat.Flat_Damage_Ignore);
+                    headReduction *= tgt.Proxy.GetHelm().GetStat(EArmorStat.Damage_Mod);
                 }
 
                 if (tgt.Proxy.GetLWeapon() != null && !tgt.Proxy.GetLWeapon().IsTypeOfShield())
-                    flatDmgNegate *= tgt.Proxy.GetLWeapon().ArmorPierce;
+                    flatDmgNegate *= tgt.Proxy.GetLWeapon().GetStat(EWeaponStat.Armor_Pierce);
                 if (tgt.Proxy.GetRWeapon() != null && !tgt.Proxy.GetRWeapon().IsTypeOfShield())
-                    flatDmgNegate *= tgt.Proxy.GetRWeapon().ArmorPierce;
+                    flatDmgNegate *= tgt.Proxy.GetRWeapon().GetStat(EWeaponStat.Armor_Pierce);
                 foreach (var perk in tgt.Proxy.GetPerks().GetWhenHitPerks())
                     perk.TryModHit(hit);
 
@@ -97,17 +98,17 @@ namespace Assets.Model.Ability.Logic.Calculator
             if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Head))
             {
                 if (target.GetHelm() != null)
-                    flatDmgNegate += target.GetHelm().DamageIgnore;
+                    flatDmgNegate += target.GetHelm().GetStat(EArmorStat.Flat_Damage_Ignore);
             }
             else
             {
                 if (target.GetArmor() != null)
-                    flatDmgNegate += target.GetArmor().FlatDamageIgnore;
+                    flatDmgNegate += target.GetArmor().GetStat(EArmorStat.Flat_Damage_Ignore);
             }
             if (source.GetLWeapon() != null && !source.GetLWeapon().IsTypeOfShield())
-                flatDmgNegate *= (source.GetLWeapon().ArmorPierce);
+                flatDmgNegate *= (source.GetLWeapon().GetStat(EWeaponStat.Armor_Pierce));
             if (source.GetRWeapon() != null && !source.GetRWeapon().IsTypeOfShield())
-                flatDmgNegate *= (source.GetRWeapon().ArmorPierce);
+                flatDmgNegate *= (source.GetRWeapon().GetStat(EWeaponStat.Armor_Pierce));
             
             flatDmgNegate /= hit.Data.Ability.Data.ArmorPierceMod;
             dmgToApply -= flatDmgNegate;
@@ -117,7 +118,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             {
                 if (target.GetHelm() != null)
                     dmgToApply *= 
-                        (target.GetHelm().DamageMod * 
+                        (target.GetHelm().GetStat(EArmorStat.Damage_Mod) * 
                         dmgReduction * 
                         hit.Data.Ability.Data.ArmorIgnoreMod);
             }
@@ -125,7 +126,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             {
                 if (target.GetArmor() != null)
                     dmgToApply *= 
-                        (target.GetArmor().DamageMod * 
+                        (target.GetArmor().GetStat(EArmorStat.Damage_Mod) * 
                         dmgReduction * 
                         hit.Data.Ability.Data.ArmorIgnoreMod);
             }

@@ -23,9 +23,7 @@ namespace Assets.Model.Ability
         public double DodgeMod { get; set; }
         public double Duration { get; set; }
         public string Description { get; set; }
-        public List<EEffect> Effects { get; set; }
-        public double EffectDur { get; set; }
-        public double EffectValue { get; set; }
+        public List<MEffect> Effects { get; set; }
         public double FlatDamage { get; set; }
         public bool HitsTiles { get; set; }
         public bool Hostile { get; set; }
@@ -53,7 +51,7 @@ namespace Assets.Model.Ability
             this.BlockIgnoreMod = 1;
             this.CastTime = 0;
             this.CustomCastCamera = false;
-            this.Effects = new List<EEffect>();
+            this.Effects = new List<MEffect>();
             this.DamageMod = 1;
             this.DmgPerPower = 0.05;
             this.DodgeMod = 1;

@@ -1,5 +1,5 @@
 ﻿using Assets.Model.Character.Builder;
-using Assets.Model.Character.Param;
+using Assets.Model.Characters.Params;
 using Assets.Template.Other;
 using System;
 using System.Collections.Generic;
@@ -15,12 +15,12 @@ namespace Assets.Model.Character.Factory
             this._charBuilder = new CharBuilder();
         }
 
-        public MChar CreateNewObject(CharParams arg)
+        public MChar CreateNewObject(PreCharParams arg)
         {
             return this._charBuilder.Build(arg);
         }
 
-        public MChar CreateNewObject(List<CharParams> arg)
+        public MChar CreateNewObject(List<PreCharParams> arg)
         {
             throw new NotImplementedException();
         }

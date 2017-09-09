@@ -91,8 +91,7 @@ namespace Assets.Data.Character.XML
                             }
                         }
                     }
-                }
-            
+                }   
             }
         }
 

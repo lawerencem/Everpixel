@@ -2,6 +2,7 @@
 using Assets.Model.Abiltiy.Logic;
 using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
+using Assets.Model.Equipment.Enum;
 using Assets.Template.Util;
 
 namespace Assets.Model.Ability.Logic.Calculator
@@ -17,9 +18,9 @@ namespace Assets.Model.Ability.Logic.Calculator
             var dodgeChance = LogicParams.BASE_DODGE_CHANCE / hit.Data.Ability.Data.AccMod;
 
             if (target.Proxy.GetArmor() != null)
-                dodgeChance *= target.Proxy.GetArmor().DodgeMod;
+                dodgeChance *= target.Proxy.GetArmor().GetStat(EArmorStat.Dodge_Mod);
             if (target.Proxy.GetHelm() != null)
-                dodgeChance *= target.Proxy.GetHelm().DodgeMod;
+                dodgeChance *= target.Proxy.GetHelm().GetStat(EArmorStat.Dodge_Mod);
 
             acc *= hit.Data.Ability.Data.AccMod;
 

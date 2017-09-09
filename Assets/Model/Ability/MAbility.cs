@@ -163,18 +163,21 @@ namespace Assets.Model.Ability
 
         protected virtual void PredictBullet(Hit hit)
         {
+            this.ProcessEffects(hit);
             this.ProcessPerks(hit);
             this._logic.PredictBullet(hit);
         }
 
         protected virtual void PredictMelee(Hit hit)
         {
+            this.ProcessEffects(hit);
             this.ProcessPerks(hit);
             this._logic.PredictMelee(hit);
         }
 
         protected void ProcessHitBullet(Hit hit)
         {
+            this.ProcessEffects(hit);
             this.ProcessPerks(hit);
             this._logic.ProcessBullet(hit);
         }
@@ -196,6 +199,7 @@ namespace Assets.Model.Ability
 
         protected void ProcessHitMelee(Hit hit)
         {
+            this.ProcessEffects(hit);
             this.ProcessPerks(hit);
             this._logic.ProcessMelee(hit);
         }
@@ -236,6 +240,14 @@ namespace Assets.Model.Ability
             hit.Data.IsHeal = this.Data.IsHeal;
             hit.Data.Source = args.Source;
             hit.Data.Target = tile;
+        }
+
+        private void ProcessEffects(Hit hit)
+        {
+            foreach(var effect in this._data.Effects)
+            {
+                // TODO:
+            }
         }
 
         private void ProcessPerks(Hit hit)

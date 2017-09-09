@@ -1,6 +1,6 @@
 ﻿using Assets.Model.Equipment.Enum;
 
-namespace Assets.Model.Equipment.Type
+namespace Assets.Model.Equipment
 {
     abstract public class AEquipment
     {

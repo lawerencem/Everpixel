@@ -4,7 +4,7 @@ using Assets.Model.Equipment.Enum;
 using Assets.View.Fatality;
 using System.Collections.Generic;
 
-namespace Assets.Model.Equipment.Param
+namespace Assets.Model.Equipment.Weapon
 {
     public class WeaponParams
     {

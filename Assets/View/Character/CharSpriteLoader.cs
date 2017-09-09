@@ -1,7 +1,8 @@
 ﻿using Assets.Data.Character.Table;
 using Assets.Model.Character.Enum;
-using Assets.Model.Character.Param;
-using Assets.Model.Equipment.Param;
+using Assets.Model.Characters.Params;
+using Assets.Model.Equipment.Armor;
+using Assets.Model.Equipment.Weapon;
 using Assets.Model.Mount;
 using Assets.Template.Other;
 using Assets.Template.Util;
@@ -30,7 +31,7 @@ namespace Assets.View.Character
             return GetSprites(path);
         }
 
-        public Sprite[] GetCritterSprites(CharParams c)
+        public Sprite[] GetCritterSprites(PreCharParams c)
         {
             var path = StringUtil.PathBuilder(CRITTER_PATH, c.Name, EXTENSION);
             return GetSprites(path);
@@ -42,7 +43,7 @@ namespace Assets.View.Character
             return GetSprites(path);
         }
 
-        public Sprite[] GetCharacterSprites(CharParams c)
+        public Sprite[] GetCharacterSprites(PreCharParams c)
         {
             var path = StringUtil.PathBuilder(CHARACTER_PATH, c.Race.ToString(), EXTENSION);
             return GetSprites(path);

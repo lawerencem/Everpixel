@@ -18,5 +18,11 @@ namespace Assets.Model.Ability
             }
             return abs;
         }
+
+        public MAbility CreateNewObject(EAbility ability)
+        {
+            var proto = AbilityTable.Instance.Table[ability];
+            return proto.Copy();
+        }
     }
 }

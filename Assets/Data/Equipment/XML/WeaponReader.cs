@@ -1,7 +1,7 @@
 ﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Equipment.Enum;
-using Assets.Model.Equipment.Param;
 using Assets.Model.Equipment.Table;
+using Assets.Model.Equipment.Weapon;
 using Assets.Template.Util;
 using Assets.View.Fatality;
 using System.Xml.Linq;

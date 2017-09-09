@@ -23,10 +23,10 @@ namespace Assets.View.Event
                 var right = curr.Proxy.GetRWeapon();
 
                 if (left != null)
-                    foreach (var ability in left.Abilities)
+                    foreach (var ability in left.Model.Data.Abilities)
                         abilities.Add(new Pair<MAbility, bool>(ability, false));
                 if (right != null)
-                    foreach (var ability in right.Abilities)
+                    foreach (var ability in right.Model.Data.Abilities)
                         abilities.Add(new Pair<MAbility, bool>(ability, true));
 
                 this.ProcessAbilities(abilities);

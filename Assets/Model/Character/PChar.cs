@@ -1,12 +1,15 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Tile;
+using Assets.Controller.Mount;
 using Assets.Model.Ability;
 using Assets.Model.Character.Container;
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
+using Assets.Model.Characters.Params;
 using Assets.Model.Class;
 using Assets.Model.Class.Enum;
-using Assets.Model.Equipment.Type;
+using Assets.Model.Equipment.Armor;
+using Assets.Model.Party.Enum;
 using System.Collections.Generic;
 
 namespace Assets.Model.Character
@@ -20,20 +23,23 @@ namespace Assets.Model.Character
         public ERace Race { get { return this._model.Race; } }
         public ECharType Type { get { return this._model.Type; } }
 
+        public EStartCol StartCol { get; set; }
+
         public void AddPoints(ESecondaryStat s, double v) { this._model.GetPoints().AddValue(s, v); }
-        public List<MAbility> GetActiveAbilities() { return this._model.GetAbilities().GetActiveAbilities(); }
-        public MArmor GetArmor() { return this._model.GetEquipment().GetArmor(); }
+        public List<MAbility> GetActiveAbilities() { return this._model.GetAbilities().GetNonWpnAbilities(); }
+        public CArmor GetArmor() { return this._model.GetEquipment().GetArmor(); }
         public Dictionary<EClass, MClass> GetBaseClasses() { return this._model.GetBaseClasses(); }
-        public List<MAbility> GetDefaultAbilities() { return this._model.GetAbilities().GetDefaultAbilities(); }
+        public List<MAbility> GetDefaultAbilities() { return this._model.GetAbilities().GetWpnAbilities(); }
         public CharEffects<ECharType> GetEffects() { return this._model.GetEffects(); }        
         public FCharacterStatus GetFlags() { return this._model.GetFlags(); }
-        public MHelm GetHelm() { return this._model.GetEquipment().GetHelm(); }
-        public MWeapon GetLWeapon() { return this._model.GetEquipment().GetLWeapon(); }
+        public CHelm GetHelm() { return this._model.GetEquipment().GetHelm(); }
+        public CWeapon GetLWeapon() { return this._model.GetEquipment().GetLWeapon(); }
         public double GetPoints(ESecondaryStat s) { return this._model.GetPoints().GetCurrValue(s); }
         public Mods GetMods() { return this._model.GetMods(); }
-        public CharParams GetParams() { return this._model.GetParams(); }
+        public CMount GetMount() { return this._model.Mount; }
+        public PreCharParams GetParams() { return this._model.GetParams(); }
         public CharPerks GetPerks() { return this._model.GetPerks(); }
-        public MWeapon GetRWeapon() { return this._model.GetEquipment().GetRWeapon(); }
+        public CWeapon GetRWeapon() { return this._model.GetEquipment().GetRWeapon(); }
         public double GetStat(ESecondaryStat s) { return this._model.GetStats().GetStatValue(s); }
         public double GetStat(EPrimaryStat s) { return this._model.GetStats().GetStatValue(s); }
         public int GetTileTraversalAPCost(TileController t) { return this._model.GetTileTraversalAPCost(t); }

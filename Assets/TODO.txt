@@ -1,5 +1,6 @@
 ﻿TODO
 
+-Refactor char readers
 
 Block calculations
   - Block FX
