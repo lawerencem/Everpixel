@@ -107,10 +107,10 @@ namespace Assets.Controller.Manager.GUI
         public void SetActingBoxToController(CharController c)
         {
             this.SetTagText(GameObjectTags.NAME, c.View.Name.Replace("_", " "));
-            this.SetTagText(GameObjectTags.AP, c.Proxy.GetStat(ESecondaryStat.AP) + " / " + ((int)c.Proxy.GetStat(ESecondaryStat.AP)).ToString());
-            this.SetTagText(GameObjectTags.HP, c.Proxy.GetStat(ESecondaryStat.HP) + " / " + ((int)c.Proxy.GetStat(ESecondaryStat.HP)).ToString());
-            this.SetTagText(GameObjectTags.MORALE, c.Proxy.GetStat(ESecondaryStat.Morale) + " / " + ((int)c.Proxy.GetStat(ESecondaryStat.Morale)).ToString());
-            this.SetTagText(GameObjectTags.STAM, c.Proxy.GetStat(ESecondaryStat.Stamina) + " / " + ((int)c.Proxy.GetStat(ESecondaryStat.Stamina)).ToString());
+            this.SetTagText(GameObjectTags.AP, ((int)c.Proxy.GetStat(ESecondaryStat.AP)) + " / " + ((int)c.Proxy.GetStat(ESecondaryStat.AP)).ToString());
+            this.SetTagText(GameObjectTags.HP, ((int)c.Proxy.GetStat(ESecondaryStat.HP)) + " / " + ((int)c.Proxy.GetStat(ESecondaryStat.HP)).ToString());
+            this.SetTagText(GameObjectTags.MORALE, ((int)c.Proxy.GetStat(ESecondaryStat.Morale)) + " / " + ((int)c.Proxy.GetStat(ESecondaryStat.Morale)).ToString());
+            this.SetTagText(GameObjectTags.STAM, ((int)c.Proxy.GetStat(ESecondaryStat.Stamina)) + " / " + ((int)c.Proxy.GetStat(ESecondaryStat.Stamina)).ToString());
 
             if (c.Proxy.GetArmor() != null)
                 this.SetTagText(GameObjectTags.ARMOR, c.Proxy.GetArmor().Model.Data.Name);

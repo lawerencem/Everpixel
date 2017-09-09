@@ -14,7 +14,6 @@ namespace Assets.Model.Characters.Params
     public class PreCharParams
     {
         public Dictionary<string, List<List<string>>> Armors { get; set; }
-        public List<EAbility> Abilities { get; set; }
         public Dictionary<EClass, int> Classes { get; set; }
         public ECulture Culture { get; set; }
         public Dictionary<EAbility, List<MEffect>> AbilityEffectDict { get; set; }
@@ -31,7 +30,6 @@ namespace Assets.Model.Characters.Params
 
         public PreCharParams()
         {
-            this.Abilities = new List<EAbility>();
             this.Armors = new Dictionary<string, List<List<string>>>();
             this.Classes = new Dictionary<EClass, int>();
             this.AbilityEffectDict = new Dictionary<EAbility, List<MEffect>>();

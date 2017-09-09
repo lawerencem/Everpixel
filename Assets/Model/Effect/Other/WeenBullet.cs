@@ -1,10 +1,12 @@
-﻿namespace Assets.Model.Effect.Other
+﻿using Assets.Model.Combat.Hit;
+
+namespace Assets.Model.Effect.Other
 {
     public class WeenBullet : MEffect
     {
         public WeenBullet() : base(EEffect.Ween_Bullet) { }
 
-        public override void TryProcessHit()
+        public override void TryProcessHit(Hit hit)
         {
             // TODO
         }

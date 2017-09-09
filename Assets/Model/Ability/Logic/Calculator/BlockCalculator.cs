@@ -33,7 +33,6 @@ namespace Assets.Model.Ability.Logic.Calculator
                 hasShield = true;
             }
             hit.Data.Chances.Block = this.GetAttackVSDefenseSkillChance(melee, block, hit.Data.Chances.Block);
-            hit.Data.Chances.Block *= hit.Data.ModData.BlockMod;
             if (hit.Data.Chances.Block > 1)
                 hit.Data.Chances.Block = 1;
             if (hit.Data.Chances.Block < 0)

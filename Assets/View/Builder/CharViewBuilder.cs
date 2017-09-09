@@ -17,7 +17,7 @@ namespace Assets.View.Builder
             if (proxy.GetArmor() != null)
                 view.Armor = EquipmentBridge.Instance.GetRandomArmorSprite(proxy.GetArmor().Params);
             if (proxy.GetHelm() != null)
-                view.Helm = EquipmentBridge.Instance.GetRandomArmorSprite(proxy.GetArmor().Params);
+                view.Helm = EquipmentBridge.Instance.GetRandomArmorSprite(proxy.GetHelm().Params);
             if (proxy.GetLWeapon() != null)
                 view.LWeapon = EquipmentBridge.Instance.GetRandomWeaponSprite(proxy.GetLWeapon().Params);
             if (proxy.GetMount() != null)

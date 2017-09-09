@@ -26,6 +26,7 @@ namespace Assets.Model.Ability.Logic.Calculator
 
             hit.Data.Chances.Dodge = this.GetAttackVSDefenseSkillChance(acc, dodge, dodgeChance);
             hit.Data.Chances.Dodge *= hit.Data.Ability.Data.DodgeMod;
+            hit.Data.Chances.Dodge *= hit.Data.ModData.TgtDodgeMod;
         }
 
         public override void Process(Hit hit)

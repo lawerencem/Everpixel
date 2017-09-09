@@ -77,46 +77,38 @@ namespace Assets.Data.Ability.XML
 
         private void HandleIndex(EAbility type, XElement ele, string mod, string value)
         {
-            try
+            var table = AbilityTable.Instance.Table;
+            double v = 1;
+            double.TryParse(value, out v);
+            switch (mod)
             {
-                var table = AbilityTable.Instance.Table;
-                double v = 1;
-                double.TryParse(value, out v);
-                switch (mod)
-                {
-                    case ("AccMod"): { table[type].Data.AccMod = v; } break;
-                    case ("AoE"): { table[type].Data.AoE = v; } break;
-                    case ("APCost"): { table[type].Data.APCost = (int)v; } break;
-                    case ("ArmorIgnoreMod"): { table[type].Data.ArmorIgnoreMod = v; } break;
-                    case ("ArmorPierceMod"): { table[type].Data.ArmorPierceMod = v; } break;
-                    case ("BlockIgnoreMod"): { table[type].Data.BlockIgnoreMod = v; } break;
-                    case ("CastTime"): { table[type].Data.CastTime = v; } break;
-                    case ("CastTypeEnum"): { this.HandleCastType(type, value); } break;
-                    case ("CustomGraphics"): { this.HandleCustomGraphics(type, value); } break;
-                    case ("Description"): { table[type].Data.Description = value; } break;
-                    case ("DmgPerPower"): { table[type].Data.DmgPerPower = double.Parse(value); } break;
-                    case ("Duration"): { table[type].Data.Duration = double.Parse(value); } break;
-                    case ("DodgeMod"): { table[type].Data.DodgeMod = v; } break;
-                    case ("FlatDamage"): { table[type].Data.FlatDamage = v; } break;
-                    case ("IconSprite"): { table[type].Data.Sprite = (int)v; } break;
-                    case ("Injury"): { this.HandlAPerk(type, value); } break;
-                    case ("MeleeBlockChanceMod"): { table[type].Data.MeleeBlockChanceMod = v; } break;
-                    case ("ParryModMod"): { table[type].Data.ParryModMod = v; } break;
-                    case ("Range"): { table[type].Data.Range = (int)v; } break;
-                    case ("RangeBlockMod"): { table[type].Data.RangeBlockMod = v; } break;
-                    case ("RechargeTime"): { table[type].Data.RechargeTime = v; } break;
-                    case ("EResistType"): { this.HandleResistType(type, value); } break;
-                    case ("ShapeshiftSprites"): { this.HandleShapeshiftSprites(ele, type); } break;
-                    case ("ShieldDamageMod"): { table[type].Data.ShieldDamageMod = v; } break;
-                    case ("SpellLevel"): { table[type].Data.SpellLevel = (int)v; } break;
-                    case ("StaminaCost"): { table[type].Data.StaminaCost = (int)v; } break;
-                }
+                case ("AccMod"): { table[type].Data.AccMod = v; } break;
+                case ("AoE"): { table[type].Data.AoE = v; } break;
+                case ("APCost"): { table[type].Data.APCost = (int)v; } break;
+                case ("ArmorIgnoreMod"): { table[type].Data.ArmorIgnoreMod = v; } break;
+                case ("ArmorPierceMod"): { table[type].Data.ArmorPierceMod = v; } break;
+                case ("BlockIgnoreMod"): { table[type].Data.BlockIgnoreMod = v; } break;
+                case ("CastTime"): { table[type].Data.CastTime = v; } break;
+                case ("CastTypeEnum"): { this.HandleCastType(type, value); } break;
+                case ("CustomGraphics"): { this.HandleCustomGraphics(type, value); } break;
+                case ("Description"): { table[type].Data.Description = value; } break;
+                case ("DmgPerPower"): { table[type].Data.DmgPerPower = double.Parse(value); } break;
+                case ("Duration"): { table[type].Data.Duration = double.Parse(value); } break;
+                case ("DodgeMod"): { table[type].Data.DodgeMod = v; } break;
+                case ("FlatDamage"): { table[type].Data.FlatDamage = v; } break;
+                case ("IconSprite"): { table[type].Data.Sprite = (int)v; } break;
+                case ("Injury"): { this.HandlAPerk(type, value); } break;
+                case ("MeleeBlockChanceMod"): { table[type].Data.MeleeBlockChanceMod = v; } break;
+                case ("ParryModMod"): { table[type].Data.ParryModMod = v; } break;
+                case ("Range"): { table[type].Data.Range = (int)v; } break;
+                case ("RangeBlockMod"): { table[type].Data.RangeBlockMod = v; } break;
+                case ("RechargeTime"): { table[type].Data.RechargeTime = v; } break;
+                case ("EResistType"): { this.HandleResistType(type, value); } break;
+                case ("ShapeshiftSprites"): { this.HandleShapeshiftSprites(ele, type); } break;
+                case ("ShieldDamageMod"): { table[type].Data.ShieldDamageMod = v; } break;
+                case ("SpellLevel"): { table[type].Data.SpellLevel = (int)v; } break;
+                case ("StaminaCost"): { table[type].Data.StaminaCost = (int)v; } break;
             }
-            catch(KeyNotFoundException e)
-            {
-                int temp = 0;
-            }
-            
         }
 
         private void HandleCastType(EAbility key, string value)

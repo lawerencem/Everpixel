@@ -1,18 +1,10 @@
 ﻿TODO
 
--Refactor char readers
-
+Refactor Dmg Calculations
 Block calculations
   - Block FX
-- Add Btns to ability modal window
+Crit Calculations
 Injuries
-Clean up weapon and armor models, params
-Clean up effect reader
-
-Bug
-   Characters sometimes dont show death fx
-   Chop Fatality particles dont erase
-   Crush fatality doesnt add bob at correct time.
 
 Perks
 howl (intstant heal of HoT)

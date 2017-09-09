@@ -111,6 +111,8 @@ namespace Assets.Model.Ability.Logic.Calculator
                 flatDmgNegate *= (source.GetRWeapon().GetStat(EWeaponStat.Armor_Pierce));
             
             flatDmgNegate /= hit.Data.Ability.Data.ArmorPierceMod;
+            flatDmgNegate *= hit.Data.ModData.SrcArmorPierceMod;
+
             dmgToApply -= flatDmgNegate;
             if (dmgToApply < 0)
                 dmgToApply = 0;
@@ -120,15 +122,17 @@ namespace Assets.Model.Ability.Logic.Calculator
                     dmgToApply *= 
                         (target.GetHelm().GetStat(EArmorStat.Damage_Mod) * 
                         dmgReduction * 
-                        hit.Data.Ability.Data.ArmorIgnoreMod);
+                        hit.Data.Ability.Data.ArmorIgnoreMod *
+                        hit.Data.ModData.SrcArmorIgnoreMod);
             }
             else
             {
                 if (target.GetArmor() != null)
-                    dmgToApply *= 
-                        (target.GetArmor().GetStat(EArmorStat.Damage_Mod) * 
-                        dmgReduction * 
-                        hit.Data.Ability.Data.ArmorIgnoreMod);
+                    dmgToApply *=
+                        (target.GetArmor().GetStat(EArmorStat.Damage_Mod) *
+                        dmgReduction *
+                        hit.Data.Ability.Data.ArmorIgnoreMod *
+                        hit.Data.ModData.SrcArmorIgnoreMod);
             }
             hit.Data.Dmg = (int)dmgToApply;
         }

@@ -413,8 +413,10 @@
     </Character>
     <Character name ="Thairex">
       <Abilities>
-        <Ability>Hadoken</Ability>
-        <Ability>Kamehameha</Ability>
+        <Ability name="Hadoken">
+        </Ability>
+        <Ability name ="Kamehameha">
+        </Ability>
       </Abilities>
       <AttackSpriteIndex>1</AttackSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
@@ -437,7 +439,8 @@
       <Abilities>
         <Ability name="Bite">
           <EEffect name="Megabite">
-            
+            <X>2.0</X>
+            <Y>2.0</Y>
           </EEffect>
         </Ability>
       </Abilities>

@@ -245,9 +245,7 @@ namespace Assets.Model.Ability
         private void ProcessEffects(Hit hit)
         {
             foreach(var effect in this._data.Effects)
-            {
-                // TODO:
-            }
+                effect.TryProcessHit(hit);
         }
 
         private void ProcessPerks(Hit hit)

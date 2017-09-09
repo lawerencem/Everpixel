@@ -5,8 +5,8 @@ namespace Assets.Model.Effect
     public class MEffectData
     {
         public int Duration { get; set; }
-        public Hit Hit { get; set; }
-        public int Value { get; set; }
+        public double X { get; set; }
+        public double Y { get; set; }
     }
 
     public class MEffect
@@ -24,7 +24,7 @@ namespace Assets.Model.Effect
             this._type = type;
         }
 
-        public virtual void TryProcessHit() { }
-        public virtual void TryProcessTurn() { }
+        public virtual void TryProcessHit(Hit hit) { }
+        public virtual void TryProcessTurn(Hit hit) { }
     }
 }

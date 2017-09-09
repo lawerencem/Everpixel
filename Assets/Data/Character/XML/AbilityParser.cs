@@ -17,14 +17,18 @@ namespace Assets.Data.Character.XML
             {
                 if (EnumUtil<EAbility>.TryGetEnumValue(att.Value, ref ability))
                 {
-                    PredefinedCharTable.Instance.Table[key].Abilities.Add(ability);
+                    PredefinedCharTable.Instance.Table[key].AbilityEffectDict.Add(ability, new List<MEffect>());
                     var character = PredefinedCharTable.Instance.Table[key];
                     foreach (var ele in el.Elements())
                     {
                         var type = EEffect.None;
-                        if (EnumUtil<EEffect>.TryGetEnumValue(ele.Value, ref type))
+                        foreach(var attr in ele.Attributes())
                         {
-                            var effect = EffectBuilder.Instance.BuildEffect(ele);
+                            if (EnumUtil<EEffect>.TryGetEnumValue(attr.Value, ref type))
+                            {
+                                var effect = EffectBuilder.Instance.BuildEffect(ele, type);
+                                PredefinedCharTable.Instance.Table[key].AbilityEffectDict[ability].Add(effect);
+                            }
                         }
                     }
                 }
