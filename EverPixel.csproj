@@ -111,6 +111,7 @@
     <Compile Include="Assets\Data\Bark\XML\BarkReader.cs" />
     <Compile Include="Assets\Data\Character\Table\PredefinedCharacterTable.cs" />
     <Compile Include="Assets\Data\Character\Table\RaceParamsTable.cs" />
+    <Compile Include="Assets\Data\Character\XML\AbilityParser.cs" />
     <Compile Include="Assets\Data\Character\XML\PerkParser.cs" />
     <Compile Include="Assets\Data\Character\XML\PredefinedCharReader.cs" />
     <Compile Include="Assets\Data\Character\XML\PredefinedEquipmentXMLIndexes.cs" />

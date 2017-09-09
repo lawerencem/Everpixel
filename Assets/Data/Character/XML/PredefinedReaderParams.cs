@@ -2,7 +2,7 @@
 {
     public class PredefinedReaderParams
     {
-        public const string ABILITY = "Ability";
+        public const string ABILITIES = "Abilities";
         public const string ARMORS = "Armors";
         public const string ATTACK_SPRITE_INDEX = "AttackSpriteIndex";
         public const string CLASS = "Class";

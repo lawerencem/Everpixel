@@ -76,7 +76,7 @@ namespace Assets.Controller.Map.Tile
                 var position = character.Handle.transform.position;
                 position.x += (float)(fov * 0.025);
                 position.y += (float)(fov * 0.025);
-                GUIManager.Instance.SetHoverModalHeaderText(character.View.Name);
+                GUIManager.Instance.SetHoverModalHeaderText(character.View.Name.Replace("_", " "));
                 GUIManager.Instance.SetHoverModalLocation(position);
                 var target = this._tile.Current as CharController;
                 GUIManager.Instance.SetHoverModalStatValues(target.Proxy);

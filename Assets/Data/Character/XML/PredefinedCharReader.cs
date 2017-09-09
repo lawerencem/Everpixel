@@ -74,7 +74,7 @@ namespace Assets.Data.Character.XML
                                     {
                                         switch (elem.Name.ToString())
                                         {
-                                            case (PredefinedReaderParams.ABILITY): { HandleActiveAbility(key, elem.Value.ToString()); } break;
+                                            case (PredefinedReaderParams.ABILITIES): { HandleAbilities(elem, key); } break;
                                             case (PredefinedReaderParams.ATTACK_SPRITE_INDEX): { HandleCritterAttackSpriteIndex(key, elem.Value.ToString()); } break;
                                             case (PredefinedReaderParams.CLASS): { HandleClassType(key, elem.Value.ToString(), ref baseClass); } break;
                                             case (PredefinedReaderParams.FLINCH_SPRITE_INDEX): { HandleCritterFlinchSpriteIndex(key, elem.Value.ToString()); } break;
@@ -96,11 +96,10 @@ namespace Assets.Data.Character.XML
             }
         }
 
-        private void HandleActiveAbility(string rootKey, string value)
+        private void HandleAbilities(XElement el, string rootkey)
         {
-            var ab = EAbility.None;
-            if (EnumUtil<EAbility>.TryGetEnumValue(value, ref ab))
-                table.Table[rootKey].ActiveAbilities.Add(ab);
+            foreach (var ele in el.Elements())
+                AbilityParser.ParseAbility(rootkey, ele.Value);
         }
 
         private void HandleClassType(string rootKey, string value, ref EClass type)

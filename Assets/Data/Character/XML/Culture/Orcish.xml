@@ -34,7 +34,7 @@
         <Resolve>350</Resolve>
       </Stats>
     </Character>
-    <Character name ="Dire Ween">
+    <Character name ="Dire_Ween">
       <AttackSpriteIndex>3</AttackSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
       <Description>
@@ -599,7 +599,7 @@
       </Stats>
       <WeaponAbility>Bite</WeaponAbility>
     </Character>
-    <Character name ="Ween Dragon">
+    <Character name ="Ween_Dragon">
       <AttackSpriteIndex>3</AttackSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
       <FlinchSpriteIndex>1</FlinchSpriteIndex>
