@@ -7,7 +7,7 @@ using Assets.View.Character;
 using Assets.View.Script.FX;
 using UnityEngine;
 
-namespace Assets.View.Fatality.Weapon
+namespace Assets.View.Fatality.Weapon.Ability
 {
     public class CrushFatality : MFatality
     {

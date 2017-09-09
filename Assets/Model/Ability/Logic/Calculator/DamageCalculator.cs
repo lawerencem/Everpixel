@@ -16,13 +16,10 @@ namespace Assets.Model.Ability.Logic.Calculator
 
             var dmg = hit.Data.ModData.BaseDamage;
             dmg += abilityData.FlatDamage;
-            if (abilityData.CastType == ECastType.Melee)
-            {
-                if (source.GetRWeapon() != null && !source.GetRWeapon().IsTypeOfShield())
-                    dmg += source.GetRWeapon().Damage;
-                if (source.GetLWeapon() != null && !source.GetLWeapon().IsTypeOfShield())
-                    dmg += source.GetLWeapon().Damage;
-            }
+            if (source.GetRWeapon() != null && !source.GetRWeapon().IsTypeOfShield())
+                dmg += source.GetRWeapon().Damage;
+            if (source.GetLWeapon() != null && !source.GetLWeapon().IsTypeOfShield())
+                dmg += source.GetLWeapon().Damage;
             dmg += (abilityData.DmgPerPower * source.GetStat(ESecondaryStat.Power));
             dmg *= abilityData.DamageMod;
             hit.Data.Dmg = (int)dmg;

@@ -7,5 +7,6 @@
         Crush,
         Fighting,
         Slash,
+        Weenbow,
     }
 }

@@ -9,7 +9,8 @@
       <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
       <Custom_Bullet>True</Custom_Bullet>
-      <Damage>5</Damage>
+      <Custom_Fatality>Weenbow</Custom_Fatality>
+      <Damage>5000</Damage>
       <Description>
         This incredible bow fires live (i.e., dangerous) weens!
       </Description>
@@ -35,6 +36,7 @@
       <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
       <Custom_Bullet>True</Custom_Bullet>
+      <Custom_Fatality>Weenbow</Custom_Fatality>
       <Damage>8</Damage>
       <Description>
         This incredible bow fires live (i.e., dangerous) weens!
@@ -61,6 +63,7 @@
       <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
       <Custom_Bullet>True</Custom_Bullet>
+      <Custom_Fatality>Weenbow</Custom_Fatality>
       <Damage>18</Damage>
       <Description>
         This incredible bow fires live (i.e., dangerous) weens!
@@ -87,6 +90,7 @@
       <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
       <Custom_Bullet>True</Custom_Bullet>
+      <Custom_Fatality>Weenbow</Custom_Fatality>
       <Damage>24</Damage>
       <Description>
         As if a ween wasn't scary enough - they can now fly! 

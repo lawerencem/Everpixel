@@ -23,6 +23,7 @@ namespace Assets.Model.Equipment.Builder
             weapon.ArmorPierce = wStats.ArmorPierce;
             weapon.BlockIgnore = wStats.BlockIgnore;
             weapon.CustomBullet = wStats.CustomBullet;
+            weapon.CustomFatality = wStats.CustomFatality;
             weapon.Damage = wStats.Damage;
             weapon.Description = wStats.Description;
             weapon.Durability = wStats.MaxDurability;

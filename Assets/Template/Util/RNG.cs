@@ -4,7 +4,7 @@ namespace Assets.Template.Util
 {
     public class RNG : Random
     {
-        private RNG() { Guid.NewGuid().GetHashCode(); }
+        private RNG() : base(Guid.NewGuid().GetHashCode()) { }
         private static RNG _instance;
         public static RNG Instance
         {
@@ -16,10 +16,9 @@ namespace Assets.Template.Util
             }
         }
 
-        public double GetRandomBetweenRange(double min, double max)
+        public double GetRandomBetweenRange(double range)
         {
-            Random random = new Random();
-            return random.NextDouble() * (max - min) + min;
+            return base.NextDouble() * range * this.RandomNegOrPos();
         }
 
         public int RandomNegOrPos()

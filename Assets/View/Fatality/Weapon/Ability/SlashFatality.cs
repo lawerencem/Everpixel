@@ -9,7 +9,7 @@ using Assets.View.Particle;
 using Assets.View.Script.FX;
 using UnityEngine;
 
-namespace Assets.View.Fatality.Weapon
+namespace Assets.View.Fatality.Weapon.Ability
 {
     public class SlashFatality : MFatality
     {
@@ -92,8 +92,7 @@ namespace Assets.View.Fatality.Weapon
                         var head = tgt.SubComponents[Layers.CHAR_HEAD];
                         var tgtTile = tgt.Tile;
                         var tgtPos = RandomPositionOffset.RandomOffset(
-                            tgtTile.Handle.transform.position,
-                            -FatalityParams.SLASH_HEAD_OFFSET,
+                            tgtTile.Handle.transform.position, 
                             FatalityParams.SLASH_HEAD_OFFSET);
                         head.transform.SetParent(tgtTile.Handle.transform);
 

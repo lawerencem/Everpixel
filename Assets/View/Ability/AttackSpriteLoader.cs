@@ -16,6 +16,12 @@ namespace Assets.View.Ability
 
         public AttackSpriteLoader() { }
 
+        public Sprite GetAttackSprite(MAbility a)
+        {
+            var path = StringUtil.PathBuilder(ATTACK_PATH, a.Type.ToString());
+            return GetSprite(path);
+        }
+
         public GameObject GetBullet(MAction a, Callback callback, float speed)
         {
             var sprite = this.GetBulletSprite(a);
@@ -37,12 +43,6 @@ namespace Assets.View.Ability
             raycast.Init(bullet, a.Data.Target.Handle.transform.position, speed);
             raycast.AddCallback(callback);
             return bullet;
-        }
-
-        private Sprite GetAttackSprite(MAbility a)
-        {
-            var path = StringUtil.PathBuilder(ATTACK_PATH, a.Type.ToString());
-            return GetSprite(path);
         }
 
         private Sprite GetBulletSprite(MAction a)
@@ -70,7 +70,7 @@ namespace Assets.View.Ability
             }
         }
 
-        private Sprite GetSprite(string path)
+        public Sprite GetSprite(string path)
         {
             var stuff = Resources.LoadAll(path);
             if (stuff.Length == 2)

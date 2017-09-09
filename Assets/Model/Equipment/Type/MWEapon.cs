@@ -2,6 +2,7 @@
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
 using Assets.Model.Equipment.Enum;
+using Assets.View.Fatality;
 using System.Collections.Generic;
 
 namespace Assets.Model.Equipment.Type
@@ -16,6 +17,7 @@ namespace Assets.Model.Equipment.Type
         public double ArmorPierce { get; set; }
         public double BlockIgnore { get; set; }
         public bool CustomBullet { get; set; }
+        public EFatality CustomFatality { get; set; }
         public double Damage { get; set; }
         public string Description { get; set; }
         public double FatigueMod { get; set; }

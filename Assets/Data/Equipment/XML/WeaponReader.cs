@@ -3,6 +3,7 @@ using Assets.Model.Equipment.Enum;
 using Assets.Model.Equipment.Param;
 using Assets.Model.Equipment.Table;
 using Assets.Template.Util;
+using Assets.View.Fatality;
 using System.Xml.Linq;
 
 namespace Assets.Data.Equipment.XML
@@ -79,6 +80,7 @@ namespace Assets.Data.Equipment.XML
                 case ("Armor_Pierce"): { HandleStatsFromFile(name, EWeaponStat.Armor_Pierce, v, tier); } break;
                 case ("Block_Ignore"): { HandleStatsFromFile(name, EWeaponStat.Block_Ignore, v, tier); } break;
                 case ("Custom_Bullet"): { this.HandleCustomBullet(name, value, tier); } break;
+                case ("Custom_Fatality"): { this.HandleCustomFatality(name, value, tier); } break;
                 case ("Damage"): { HandleStatsFromFile(name, EWeaponStat.Damage, v, tier); } break;
                 case ("Description"): { } break;
                 case ("Dodge_Mod"): { HandleStatsFromFile(name, EWeaponStat.Dodge_Mod, v, tier); } break;
@@ -147,6 +149,16 @@ namespace Assets.Data.Equipment.XML
                 var stats = WeaponParamTable.Instance;
                 stats.Table[key].CustomBullet = true;
             }
+        }
+
+        private void HandleCustomFatality(string name, string value, EEquipmentTier tier)
+        {
+            var key = name + "_" + tier.ToString();
+
+            var x = EFatality.None;
+            var stats = WeaponParamTable.Instance;
+            if (EnumUtil<EFatality>.TryGetEnumValue(value, ref x))
+                stats.Table[key].CustomFatality = x;
         }
 
         private void HandleWeaponAbilitiesFromFile(string name, string value, EEquipmentTier tier)

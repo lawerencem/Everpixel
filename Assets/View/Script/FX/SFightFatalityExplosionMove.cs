@@ -17,7 +17,7 @@ namespace Assets.View.Script.FX
             this._handle = source;
             var sourceTile = character.Tile;
             var landTile = character.Tile.Model.GetRandomNearbyTile(5);
-            var pos = RandomPositionOffset.RandomOffset(landTile.Center, -CombatGUIParams.DEFAULT_OFFSET, CombatGUIParams.DEFAULT_OFFSET);
+            var pos = RandomPositionOffset.RandomOffset(landTile.Center, CombatGUIParams.DEFAULT_OFFSET);
             var data = new SRaycastMoveData();
             data.Epsilon = FatalityParams.DEFAULT_EPSILON;
             data.Handle = source;

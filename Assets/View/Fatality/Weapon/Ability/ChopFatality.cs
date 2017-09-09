@@ -6,7 +6,7 @@ using Assets.View.Character;
 using Assets.View.Script.FX;
 using UnityEngine;
 
-namespace Assets.View.Fatality.Weapon
+namespace Assets.View.Fatality.Weapon.Ability
 {
     public class ChopFatality : MFatality
     {
@@ -55,9 +55,9 @@ namespace Assets.View.Fatality.Weapon
                     bloodLifetime.Init(bloodParticles, 5f);
 
                     var data = new SXAxisShakeData();
-                    data.Duration = 5f;
-                    data.MaxDistance = 0.05f;
-                    data.Speed = 2f;
+                    data.Duration = FatalityParams.DEFAULT_DUR;
+                    data.MaxDistance = FatalityParams.DEFAULT_X_SHAKE_DIST;
+                    data.Speed = FatalityParams.DEFAULT_X_SHAKE_SPEED;
                     data.Target = tgt.Handle;
                     var shake = tgt.Handle.AddComponent<SXAxisShake>();
                     shake.AddCallback(this.ProcessExplosion);

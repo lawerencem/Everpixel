@@ -1,6 +1,7 @@
 ﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Effect;
 using Assets.Model.Equipment.Enum;
+using Assets.View.Fatality;
 using System.Collections.Generic;
 
 namespace Assets.Model.Equipment.Param
@@ -14,6 +15,7 @@ namespace Assets.Model.Equipment.Param
         public double ArmorPierce { get; set; }
         public double BlockIgnore { get; set; }
         public bool CustomBullet { get; set; }
+        public EFatality CustomFatality { get; set; }
         public int Damage { get; set; }
         public double Dodge_Mod { get; set; }
         public string Description { get; set; }

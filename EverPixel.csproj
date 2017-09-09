@@ -418,10 +418,10 @@
     <Compile Include="Assets\Template\Script\SRaycastMove.cs" />
     <Compile Include="Assets\Template\Script\SRaycastMoveThenDelete.cs" />
     <Compile Include="Assets\Template\Script\SRotation.cs" />
+    <Compile Include="Assets\Template\Script\SSwarmOnTarget.cs" />
     <Compile Include="Assets\Template\Script\SXAxisShake.cs" />
     <Compile Include="Assets\Template\Script\ScrollCameraToScript.cs" />
     <Compile Include="Assets\Template\Script\SpriteFlipCallback.cs" />
-    <Compile Include="Assets\Template\Util\AngleUtil.cs" />
     <Compile Include="Assets\Template\Util\Count.cs" />
     <Compile Include="Assets\Template\Util\DeepCloneUtil.cs" />
     <Compile Include="Assets\Template\Util\EnumUtil.cs" />
@@ -461,9 +461,10 @@
     <Compile Include="Assets\View\Fatality\FatalityParams.cs" />
     <Compile Include="Assets\View\Fatality\MFatality.cs" />
     <Compile Include="Assets\View\Fatality\Magic\FightingFatality.cs" />
-    <Compile Include="Assets\View\Fatality\Weapon\ChopFatality.cs" />
-    <Compile Include="Assets\View\Fatality\Weapon\CrushFatality.cs" />
-    <Compile Include="Assets\View\Fatality\Weapon\SlashFatality.cs" />
+    <Compile Include="Assets\View\Fatality\Weapon\Ability\ChopFatality.cs" />
+    <Compile Include="Assets\View\Fatality\Weapon\Ability\CrushFatality.cs" />
+    <Compile Include="Assets\View\Fatality\Weapon\Ability\SlashFatality.cs" />
+    <Compile Include="Assets\View\Fatality\Weapon\Specific\WeenbowFatality.cs" />
     <Compile Include="Assets\View\GUI\AbilityModalManager.cs" />
     <Compile Include="Assets\View\GUI\GUISpriteLoader.cs" />
     <Compile Include="Assets\View\GUI\HoverModal.cs" />
@@ -562,6 +563,7 @@
   <ItemGroup>
     <None Include="Assets\Data\Character\XML\Culture\Roman.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

@@ -3,7 +3,7 @@ using Assets.Model.Ability.Magic;
 using Assets.Model.Action;
 using Assets.Template.Other;
 using Assets.View.Fatality.Magic;
-using Assets.View.Fatality.Weapon;
+using Assets.View.Fatality.Weapon.Ability;
 
 namespace Assets.View.Fatality
 {
@@ -22,12 +22,15 @@ namespace Assets.View.Fatality
                 else
                     data.NonFatalHits.Add(hit);
             }
-            var active = this.TryProcessSpellFatality(a, data);
-            if (active != null)
-                return active;
-            active = this.TryProcessWeaponFatality(a, data);
-            if (active != null)
-                return active;
+            var fatality = this.TryProcessSpecificFatality(a, data);
+            if (fatality != null)
+                return fatality;
+            fatality = this.TryProcessSpellFatality(a, data);
+            if (fatality != null)
+                return fatality;
+            fatality = this.TryProcessWeaponFatality(a, data);
+            if (fatality != null)
+                return fatality;
             return null;
         }
 
@@ -36,8 +39,33 @@ namespace Assets.View.Fatality
             switch (a.ActiveAbility.Data.MagicType)
             {
                 case (EMagicType.Fighting): { return new FightingFatality(data); }
+                default: return null;
             }
-            return null;
+        }
+
+        private MFatality TryProcessSpecificFatality(MAction a, FatalityData data)
+        {
+            var type = EFatality.None;
+            if (a.Data.LWeapon)
+            {
+                if (a.Data.Source.Proxy.GetLWeapon() != null)
+                    type = a.Data.Source.Proxy.GetLWeapon().CustomFatality;
+            }
+            else
+            {
+                if (a.Data.Source.Proxy.GetRWeapon() != null)
+                    type = a.Data.Source.Proxy.GetRWeapon().CustomFatality;
+            }
+            return this.TryProcessSpecificFatalityHelper(type, data);
+        }
+
+        private MFatality TryProcessSpecificFatalityHelper(EFatality type, FatalityData data)
+        {
+            switch(type)
+            {
+                case (EFatality.Weenbow): { return new WeenbowFatality(data); }
+                default: return null;
+            }
         }
 
         private MFatality TryProcessWeaponFatality(MAction a, FatalityData data)
@@ -47,8 +75,8 @@ namespace Assets.View.Fatality
                 case (EAbility.Chop): { return new ChopFatality(data); }
                 case (EAbility.Crush): { return new CrushFatality(data); }
                 case (EAbility.Slash): { return new SlashFatality(data); }
+                default: return null;
             }
-            return null;
         }
     }
 }
