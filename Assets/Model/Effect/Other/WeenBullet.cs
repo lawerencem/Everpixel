@@ -2,7 +2,7 @@
 {
     public class WeenBullet : MEffect
     {
-        public WeenBullet(MEffectData data) : base(EEffect.Ween_Bullet, data) { }
+        public WeenBullet() : base(EEffect.Ween_Bullet) { }
 
         public override void TryProcessHit()
         {

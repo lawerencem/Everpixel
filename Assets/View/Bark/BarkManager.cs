@@ -149,7 +149,7 @@ namespace Assets.View.Bark
 
         private List<string> GetPostEnemyFatalityBarks(FatalityData data)
         {
-            var barks = BarkTable.Instance.Table[EBark.PreEnemyFatality];
+            var barks = BarkTable.Instance.Table[EBark.EnemyFatality];
             barks.AddRange(data.CustomPostFatalityBarks);
             return barks;
         }

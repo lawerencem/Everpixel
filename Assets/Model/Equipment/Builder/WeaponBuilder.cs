@@ -1,4 +1,5 @@
-﻿using Assets.Model.Equipment.Table;
+﻿using Assets.Model.Effect;
+using Assets.Model.Equipment.Table;
 using Assets.Model.Equipment.Type;
 using Assets.Model.Weapon;
 using Assets.Template.Builder;
@@ -27,6 +28,8 @@ namespace Assets.Model.Equipment.Builder
             weapon.Damage = wStats.Damage;
             weapon.Description = wStats.Description;
             weapon.Durability = wStats.MaxDurability;
+            foreach (var effect in wStats.Effects)
+                weapon.Effects.Add(EffectFactory.Instance.CreateNewObject(effect));
             weapon.FatigueMod = wStats.FatigueMod;
             weapon.InitiativeMod = wStats.InitiativeMod;
             weapon.MaxDurability = wStats.MaxDurability;

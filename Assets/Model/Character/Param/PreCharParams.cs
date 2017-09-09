@@ -12,10 +12,10 @@ namespace Assets.Model.Characters.Params
     public class PreCharParams
     {
         public Dictionary<string, List<List<string>>> Armors { get; set; }
-        public List<EAbility> ActiveAbilities { get; set; }
+        public List<EAbility> Abilities { get; set; }
         public Dictionary<EClass, int> Classes { get; set; }
         public ECulture Culture { get; set; }
-        public List<EAbility>  DefaultWpnAbilities { get; set; }
+        public List<EAbility>  WpnAbilities { get; set; }
         public Dictionary<string, List<List<string>>> Helms { get; set; }
         public Dictionary<string, List<List<string>>> LWeapons { get; set; }
         public EMount Mount { get; set; }
@@ -28,10 +28,10 @@ namespace Assets.Model.Characters.Params
 
         public PreCharParams()
         {
-            this.ActiveAbilities = new List<EAbility>();
+            this.Abilities = new List<EAbility>();
             this.Armors = new Dictionary<string, List<List<string>>>();
             this.Classes = new Dictionary<EClass, int>();
-            this.DefaultWpnAbilities = new List<EAbility>();
+            this.WpnAbilities = new List<EAbility>();
             this.Helms = new Dictionary<string, List<List<string>>>();
             this.LWeapons = new Dictionary<string, List<List<string>>>();
             this.Perks = new List<EPerk>();

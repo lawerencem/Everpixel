@@ -8,12 +8,12 @@ namespace Assets.Model.Effect
     {
         public EffectFactory() { }
 
-        public MEffect CreateNewObject(EEffect effect, MEffectData data)
+        public MEffect CreateNewObject(EEffect effect)
         {
             switch(effect)
             {
-                case (EEffect.Horror): { return new Horror(data); }
-                case (EEffect.Ween_Bullet): { return new WeenBullet(data); }
+                case (EEffect.Horror): { return new Horror(); }
+                case (EEffect.Ween_Bullet): { return new WeenBullet(); }
                 default: { return null; }
             }
         }

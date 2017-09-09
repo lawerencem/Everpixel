@@ -19,8 +19,8 @@ namespace Assets.Model.Equipment.Param
         public int Damage { get; set; }
         public double Dodge_Mod { get; set; }
         public string Description { get; set; }
-        public int MaxDurability { get; set; }
         public List<EEffect> Effects { get; set; }
+        public int MaxDurability { get; set; }
         public double FatigueMod { get; set; }
         public double InitiativeMod { get; set; }
         public double MeleeBlockChance { get; set; }

@@ -83,7 +83,7 @@ namespace Assets.Model.Character.Builder
             foreach (var v in activeAbs)
                 c.GetAbilities().GetActiveAbilities().Add(v);
 
-            var wpnAbs = WeaponAbilityFactory.Instance.CreateNewObject(p.DefaultWpnAbilities);
+            var wpnAbs = WeaponAbilityFactory.Instance.CreateNewObject(p.WpnAbilities);
             foreach (var v in wpnAbs)
                 c.GetAbilities().GetDefaultAbilities().Add(v);
         }

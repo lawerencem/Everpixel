@@ -2,7 +2,7 @@
 {
     public class Horror : MEffect
     {
-        public Horror(MEffectData data) : base(EEffect.Horror, data) { }
+        public Horror() : base(EEffect.Horror) { }
 
         public override void TryProcessHit()
         {

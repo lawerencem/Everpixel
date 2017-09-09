@@ -37,7 +37,9 @@
     <Character name ="Dire_Ween">
       <AttackSpriteIndex>3</AttackSpriteIndex>
       <Abilities>
-        <Ability>Bite</Ability>
+        <Ability name ="Bite">
+          <EEffect></EEffect>
+        </Ability>
       </Abilities>
       <ECharacterType>Critter</ECharacterType>
       <Description>
@@ -589,7 +591,9 @@
     <Character name ="Ween">
       <AttackSpriteIndex>18</AttackSpriteIndex>
       <Abilities>
-        <Ability>Bite</Ability>
+        <Ability name ="Bite">
+          <EEffect></EEffect>
+        </Ability>
       </Abilities>
       <ECharacterType>Critter</ECharacterType>
       <FlinchSpriteIndex>13</FlinchSpriteIndex>
@@ -608,7 +612,9 @@
     <Character name ="Ween_Dragon">
       <AttackSpriteIndex>3</AttackSpriteIndex>
       <Abilities>
-        <Ability>Bite</Ability>
+        <Ability name ="Bite">
+          <EEffect></EEffect>
+        </Ability>
       </Abilities>
       <ECharacterType>Critter</ECharacterType>
       <FlinchSpriteIndex>1</FlinchSpriteIndex>

@@ -99,7 +99,7 @@ namespace Assets.Data.Character.XML
         private void HandleAbilities(XElement el, string rootkey)
         {
             foreach (var ele in el.Elements())
-                AbilityParser.ParseAbility(rootkey, ele.Value);
+                AbilityParser.ParseAbility(rootkey, ele);
         }
 
         private void HandleClassType(string rootKey, string value, ref EClass type)

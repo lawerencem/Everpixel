@@ -15,14 +15,14 @@ namespace Assets.Model.Character.Param
         {
             this.Abilities = new List<EAbility>();
             this.BaseClasses = new Dictionary<EClass, int>();
-            this.DefaultWpnAbilities = new List<EAbility>();
+            this.WpnAbilities = new List<EAbility>();
             this.Perks = new List<EPerk>();
         }
         
         public List<EAbility> Abilities { get; set; }
         public ArmorParams Armor { get; set; }
         public Dictionary<EClass, int> BaseClasses { get; set; }
-        public List<EAbility> DefaultWpnAbilities { get; set; }
+        public List<EAbility> WpnAbilities { get; set; }
         public ArmorParams Helm { get; set; }
         public WeaponParams LWeapon { get; set; }
         public MountParams Mount { get; set; }

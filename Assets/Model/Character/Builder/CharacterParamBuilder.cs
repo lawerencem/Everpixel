@@ -31,9 +31,9 @@ namespace Assets.Model.Character.Builder
         {
             var cParams = new CharParams();
             cParams.Armor = GetArmor(arg);
-            foreach (var v in arg.ActiveAbilities) { cParams.Abilities.Add(v); }
+            foreach (var v in arg.Abilities) { cParams.Abilities.Add(v); }
             foreach (var kvp in arg.Classes) { cParams.BaseClasses.Add(kvp.Key, kvp.Value); }
-            foreach (var v in arg.DefaultWpnAbilities) { cParams.DefaultWpnAbilities.Add(v); }
+            foreach (var v in arg.WpnAbilities) { cParams.WpnAbilities.Add(v); }
             cParams.Helm = GetHelm(arg);
             cParams.LWeapon = GetWeapon(arg, arg.LWeapons);
             cParams.Mount = this.GetMount(arg);

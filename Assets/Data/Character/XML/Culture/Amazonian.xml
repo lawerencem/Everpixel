@@ -435,7 +435,9 @@
     <Character name ="Tyrantaur">
       <AttackSpriteIndex>24</AttackSpriteIndex>
       <Abilities>
-        <Ability>Bite</Ability>
+        <Ability name ="Bite">
+          <EEffect></EEffect>
+        </Ability>
       </Abilities>
       <ECharacterType>Critter</ECharacterType>
       <FlinchSpriteIndex>16</FlinchSpriteIndex>
@@ -454,7 +456,6 @@
         <Perception>350</Perception>
         <Resolve>650</Resolve>
       </Stats>
-      <WeaponAbility>Bite</WeaponAbility>
     </Character>
     <Character name ="Veteran Dino Knight">
       <Class>Knight,5</Class>

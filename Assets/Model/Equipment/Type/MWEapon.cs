@@ -1,6 +1,7 @@
 ﻿using Assets.Model.Ability;
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
+using Assets.Model.Effect;
 using Assets.Model.Equipment.Enum;
 using Assets.View.Fatality;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace Assets.Model.Equipment.Type
         public EFatality CustomFatality { get; set; }
         public double Damage { get; set; }
         public string Description { get; set; }
+        public List<MEffect> Effects { get; set; }
         public double FatigueMod { get; set; }
         public double InitiativeMod { get; set; }
         public double MeleeBlockChance { get; set; }
@@ -39,6 +41,7 @@ namespace Assets.Model.Equipment.Type
             this.ArmorIgnore = 1;
             this.ArmorPierce = 1;
             this.BlockIgnore = 1;
+            this.Effects = new List<MEffect>();
             this.Damage = 0;
             this.Durability = 0;
             this.FatigueMod = 1;

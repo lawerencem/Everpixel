@@ -1,5 +1,6 @@
 ﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Ability.Magic;
+using Assets.Model.Effect;
 using Assets.Model.Injury;
 using System.Collections.Generic;
 
@@ -22,6 +23,7 @@ namespace Assets.Model.Ability
         public double DodgeMod { get; set; }
         public double Duration { get; set; }
         public string Description { get; set; }
+        public List<EEffect> Effects { get; set; }
         public double EffectDur { get; set; }
         public double EffectValue { get; set; }
         public double FlatDamage { get; set; }
@@ -51,6 +53,7 @@ namespace Assets.Model.Ability
             this.BlockIgnoreMod = 1;
             this.CastTime = 0;
             this.CustomCastCamera = false;
+            this.Effects = new List<EEffect>();
             this.DamageMod = 1;
             this.DmgPerPower = 0.05;
             this.DodgeMod = 1;
@@ -82,6 +85,7 @@ namespace Assets.Model.Ability
             data.Description = this.Description;
             data.DodgeMod = this.DodgeMod;
             data.Duration = this.Duration;
+            data.Effects = this.Effects;
             data.HitsTiles = this.HitsTiles;
             data.Hostile = this.Hostile;
             data.IsHeal = this.IsHeal;

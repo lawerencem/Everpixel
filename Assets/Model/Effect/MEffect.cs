@@ -16,10 +16,11 @@ namespace Assets.Model.Effect
 
         public MEffectData Data { get { return this._data; } }
         public EEffect Type { get { return this._type; } }
+
+        public void SetData(MEffectData data) { this._data = data; }
         
-        public MEffect(EEffect type, MEffectData data)
+        public MEffect(EEffect type)
         {
-            this._data = data;
             this._type = type;
         }
 
