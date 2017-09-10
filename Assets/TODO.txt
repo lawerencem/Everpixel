@@ -5,6 +5,10 @@ Block calculations
   - Block FX
 Crit Calculations
 Injuries
+Ween summon on xbow
+
+bugs
+   parry locks gui
 
 Perks
 howl (intstant heal of HoT)

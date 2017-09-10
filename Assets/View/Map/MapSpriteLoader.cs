@@ -13,10 +13,11 @@ namespace Assets.View.Map
         private const int HOSTILE_HOVER_SPRITE_INDEX = 2;
         private const int TILE_HIGHLIGHT_SPRITE_INDEX = 3;
 
-        private readonly List<int> LEVEL_ONE_BLOOD_SPATTER = new List<int>() { 1, 2, 3, 4, 5, 6, 7 };
-        private readonly List<int> LEVEL_TWO_BLOOD_SPATTER = new List<int>() { 8, 9, 10};
-        private readonly List<int> LEVEL_FOUR_BLOOD_SPATTER = new List<int>() { 11, 12 };
-        private readonly List<int> LEVEL_FIVE_BLOOD_SPATTER = new List<int>() { 13, 14 };
+        private readonly List<int> LEVEL_ONE_BLOOD_SPATTER = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8 };
+        private readonly List<int> LEVEL_TWO_BLOOD_SPATTER = new List<int>() { 9, 10, 11, 12, 13, 14, 15, 16};
+        private readonly List<int> LEVEL_THREE_BLOOD_SPATTER = new List<int>() { 17, 18, 19, 20, 21, 22, 23, 24 };
+        private readonly List<int> LEVEL_FOUR_BLOOD_SPATTER = new List<int>() { 25, 26, 27, 28, 29, 30, 31, 32};
+        private readonly List<int> LEVEL_FIVE_BLOOD_SPATTER = new List<int>() { 33, 34, 35};
 
         private const string PATH = "Sprites/CombatMap/";
         private const string DECO_EXTENSION = "_Deco";

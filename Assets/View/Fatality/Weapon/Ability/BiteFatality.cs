@@ -17,8 +17,8 @@ namespace Assets.View.Fatality.Weapon.Ability
         public BiteFatality(FatalityData data) : base(EFatality.Bite, data)
         {
             this._data.CustomPostFatalityBarks.Add("Nom nom nom");
-            //this._data.CustomPostFatalityBarks.Add("Tastes like chicken...");
-            //this._data.CustomPostFatalityBarks.Add("Where's the beef!?");
+            this._data.CustomPostFatalityBarks.Add("Tastes like chicken...");
+            this._data.CustomPostFatalityBarks.Add("Where's the beef!?");
             this._data.CustomPreFatalityBarks.Add("Get in my belly!!!");
         }
 
