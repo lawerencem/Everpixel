@@ -30,11 +30,11 @@ namespace Assets.View.Event
 
         private int ConvertDmgToSplatterLvl()
         {
-            if (this._data.DmgPercent > 0.90)
+            if (this._data.DmgPercent >= 0.95)
                 return 5;
-            else if (this._data.DmgPercent > 0.75)
+            else if (this._data.DmgPercent > 0.90)
                 return 4;
-            else if (this._data.DmgPercent > 0.50)
+            else if (this._data.DmgPercent > 0.75)
                 return 3;
             else if (this._data.DmgPercent > 0.35)
                 return 2;

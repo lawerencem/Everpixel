@@ -10,6 +10,7 @@ namespace Assets.Model.Event.Combat
     {
         public int Dmg { get; set; }
         public FHit Flags { get; set; }
+        public bool isFatality { get; set; }
         public bool IsHeal { get; set; }
         public CharController Target { get; set; }
     }
@@ -60,7 +61,7 @@ namespace Assets.Model.Event.Combat
 
         private void DisplaySplatter()
         {
-            if (this._data.Dmg > 0)
+            if (this._data.Dmg > 0 && !this._data.isFatality)
             {
                 var data = new EvSplatterData();
                 data.DmgPercent =

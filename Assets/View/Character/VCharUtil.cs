@@ -56,14 +56,19 @@ namespace Assets.View.Character
             e.TryProcess();
         }
 
+        public void RandomTranslateRotateOnDeath(CharController c)
+        {
+            RotateTranslateUtil.Instance.RandomRotateAndTranslate(
+                c.Handle,
+                ViewParams.SPLATTER_VARIANCE);
+        }
+
         public void ProcessDeadChar(CharController c)
         {
             this.AssignDeadWeapons(c);
             this.AssignDeadEyes(c);
             this.AssignDeadLayer(c);
-            RotateTranslateUtil.Instance.RandomRotateAndTranslate(
-                c.Handle,
-                ViewParams.SPLATTER_VARIANCE);
+            this.RandomTranslateRotateOnDeath(c);
             this.AssignDeathSplatter(c);
         }
     }

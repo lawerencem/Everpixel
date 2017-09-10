@@ -7,6 +7,7 @@ using Assets.Template.Script;
 using Assets.Template.Util;
 using Assets.Template.Utility;
 using Assets.View.Bark;
+using Assets.View.Character;
 using Assets.View.Event;
 using Assets.View.Script.FX;
 using System.Collections.Generic;
@@ -178,6 +179,14 @@ namespace Assets.View.Fatality
                     VHitController.Instance.ProcessDefenderHit(hit);
                 }
             }
+        }
+
+        protected void ProcessNoBloodDeath(CharController tgt)
+        {
+            VCharUtil.Instance.AssignDeadEyes(tgt);
+            VCharUtil.Instance.AssignDeadLayer(tgt);
+            VCharUtil.Instance.AssignDeadWeapons(tgt);
+            VCharUtil.Instance.RandomTranslateRotateOnDeath(tgt);
         }
 
         protected void ProcessNonFatal(object o)

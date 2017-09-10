@@ -67,6 +67,14 @@ namespace Assets.View.Map
             return stuff[index] as Sprite;
         }
 
+        public Sprite GetBloodSpatterLevelThree()
+        {
+            var path = StringUtil.PathBuilder(PATH, "Tileblood", TILE_EXTENSION);
+            var stuff = Resources.LoadAll(path);
+            var index = ListUtil<int>.GetRandomListElement(this.LEVEL_THREE_BLOOD_SPATTER);
+            return stuff[index] as Sprite;
+        }
+
         public Sprite GetBloodSpatterLevelFour()
         {
             var path = StringUtil.PathBuilder(PATH, "Tileblood", TILE_EXTENSION);

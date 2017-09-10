@@ -15,7 +15,6 @@ namespace Assets.View.Fatality.Weapon.Ability
         public override void Init()
         {
             base.Init();
-            this.AddCallback(this.AssignDeadLayers);
             base.Start(this.ProcessJolt);
         }
 
@@ -80,18 +79,6 @@ namespace Assets.View.Fatality.Weapon.Ability
             attack.Action = this._data.Action;
             attack.AddCallback(this.ProcessChop);
             attack.Init(this._data.Source, pos, FatalityParams.FATALITY_ATTACK_SPEED);
-        }
-
-        private void AssignDeadLayers(object o)
-        {
-            foreach(var hit in this._data.FatalHits)
-            {
-                if (hit.Data.Target.Current != null && hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
-                {
-                    var tgt = hit.Data.Target.Current as CharController;
-                    VCharUtil.Instance.ProcessDeadChar(tgt);
-                }
-            }
         }
     }
 }
