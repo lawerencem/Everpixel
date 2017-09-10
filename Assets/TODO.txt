@@ -1,14 +1,26 @@
 ﻿TODO
 
+Embed: 
+   Refactor sprite loader
+   Don't have arrows embed on dodge
+
 Refactor Dmg Calculations
 Block calculations
   - Block FX
 Crit Calculations
 Injuries
 Ween summon on xbow
+Mounts
+Zones
+Armor and Weapon durability
+Critter eyes on kill
+Missiles missing
+Deco blocking missiles
 
 bugs
    parry locks gui
+   Wpn icons show from previous character on critters
+   various deco (lizardmen) is still attached on fatalities.
 
 Perks
 howl (intstant heal of HoT)

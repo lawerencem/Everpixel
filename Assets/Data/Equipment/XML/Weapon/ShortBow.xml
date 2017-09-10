@@ -8,10 +8,12 @@
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
+      <Custom_Bullet>True</Custom_Bullet>
       <Damage>22</Damage>
       <Description>
         A small bow favored by goblins.
       </Description>
+      <Embed>True</Embed>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>15</Max_Durability>
@@ -19,6 +21,7 @@
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0</Shield_Damage_Percent>
       <Sprites>0</Sprites>
+      <Sprite_FX_Path>Arrow</Sprite_FX_Path>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>50</Value>
       <WeaponEAbility>Fire</WeaponEAbility>
@@ -33,10 +36,12 @@
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.98</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
+      <Custom_Bullet>True</Custom_Bullet>
       <Damage>28</Damage>
       <Description>
         A small bow favored by goblins.
       </Description>
+      <Embed>True</Embed>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>15</Max_Durability>
@@ -44,6 +49,7 @@
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0</Shield_Damage_Percent>
       <Sprites>15</Sprites>
+      <Sprite_FX_Path>Arrow</Sprite_FX_Path>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>50</Value>
       <WeaponEAbility>Fire</WeaponEAbility>
@@ -58,10 +64,12 @@
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.96</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
+      <Custom_Bullet>True</Custom_Bullet>
       <Damage>35</Damage>
       <Description>
         A small bow favored by goblins.
       </Description>
+      <Embed>True</Embed>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>15</Max_Durability>
@@ -69,13 +77,15 @@
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0</Shield_Damage_Percent>
       <Sprites>30</Sprites>
+      <Sprite_FX_Path>Arrow</Sprite_FX_Path>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>50</Value>
       <WeaponEAbility>Fire</WeaponEAbility>
       <WeaponEAbility>Aim</WeaponEAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
-    </Weapon>
+    
+  </Weapon>
     <Weapon name="Goblin Bow">
       <Tier>Two</Tier>
       <Accuracy_Mod>0.98</Accuracy_Mod>
@@ -83,10 +93,12 @@
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.94</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
+      <Custom_Bullet>True</Custom_Bullet>
       <Damage>40</Damage>
       <Description>
         A small bow favored by goblins.
       </Description>
+      <Embed>True</Embed>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>15</Max_Durability>
@@ -94,6 +106,7 @@
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0</Shield_Damage_Percent>
       <Sprites>45</Sprites>
+      <Sprite_FX_Path>Arrow</Sprite_FX_Path>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>50</Value>
       <WeaponEAbility>Fire</WeaponEAbility>

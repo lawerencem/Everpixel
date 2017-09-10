@@ -23,6 +23,8 @@ namespace Assets.Model.Equipment.Weapon
         public string Description { get; set; }
         public double DodgeMod { get; set; }
         public List<MEffect> Effects { get; set; }
+        public bool Embed { get; set; }
+        public string EmbedPath { get; set; }
         public double FatigueMod { get; set; }
         public double InitiativeMod { get; set; }
         public double MeleeBlockChance { get; set; }
@@ -51,6 +53,8 @@ namespace Assets.Model.Equipment.Weapon
             this.Data.ArmorPierce = 1;
             this.Data.BlockIgnore = 1;
             this.Data.Effects = new List<MEffect>();
+            this.Data.Embed = false;
+            this.Data.EmbedPath = "";
             this.Data.Damage = 0;
             this.Data.Durability = 0;
             this.Data.FatigueMod = 1;

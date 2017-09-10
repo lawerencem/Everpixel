@@ -33,6 +33,7 @@ namespace Assets.Model.Equipment.Builder
             weapon.Model.Data.Durability = wStats.MaxDurability;
             foreach (var effect in wStats.Effects)
                 weapon.Model.Data.Effects.Add(EffectFactory.Instance.CreateNewObject(effect));
+            weapon.Model.Data.Embed = wStats.Embed;
             weapon.Model.Data.FatigueMod = wStats.FatigueMod;
             weapon.Model.Data.InitiativeMod = wStats.InitiativeMod;
             weapon.Model.Data.MaxDurability = wStats.MaxDurability;

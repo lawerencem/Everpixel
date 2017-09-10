@@ -33,7 +33,7 @@ namespace Assets.Controller.GUI.Combat
         public static readonly string FIGHTING_FATALITY = "FightingFatality";
         public static readonly string SLASH_FATALITY = "SlashFatality";
 
-        public static readonly double FATALITY_CHANCE = 1.0;
+        public static readonly double FATALITY_CHANCE = 0.25;
 
         // Attack params
         public static readonly float ATTACK_LERP = 0.85f;

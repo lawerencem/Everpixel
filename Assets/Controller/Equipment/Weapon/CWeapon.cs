@@ -17,6 +17,8 @@ namespace Assets.Model.Equipment.Armor
 
         public bool CustomBullet { get { return this.Model.Data.CustomBullet; } }
         public EFatality CustomFatality { get { return this.Model.Data.CustomFatality; } }
+        public bool Embed { get { return this.Model.Data.Embed; } }
+        public string EmbedPath { get { return this._model.Data.EmbedPath; } }
         public string SpriteFXPath { get { return this.Model.Data.SpriteFXPath; } }
 
         public void SetModel(MWeapon m) { this._model = m; }

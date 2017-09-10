@@ -421,6 +421,7 @@
     <Compile Include="Assets\Template\Script\SIntervalJoltScript.cs" />
     <Compile Include="Assets\Template\Script\SJolt.cs" />
     <Compile Include="Assets\Template\Script\SObjectMove.cs" />
+    <Compile Include="Assets\Template\Script\SRacyastMoveThenEmbed.cs" />
     <Compile Include="Assets\Template\Script\SRaycastMove.cs" />
     <Compile Include="Assets\Template\Script\SRaycastMoveThenDelete.cs" />
     <Compile Include="Assets\Template\Script\SRotation.cs" />
@@ -486,7 +487,8 @@
     <Compile Include="Assets\View\Particle\ParticleController.cs" />
     <Compile Include="Assets\View\Script\FX\LycanthropeScript.cs" />
     <Compile Include="Assets\View\Script\FX\SAttackerJolt.cs" />
-    <Compile Include="Assets\View\Script\FX\SBullet.cs" />
+    <Compile Include="Assets\View\Script\FX\SBulletThenDelete.cs" />
+    <Compile Include="Assets\View\Script\FX\SBulletThenEmbed.cs" />
     <Compile Include="Assets\View\Script\FX\SFightFatalityExplosionMove.cs" />
     <Compile Include="Assets\View\Script\FX\SFlinch.cs" />
     <Compile Include="Assets\View\Script\GUI\SAbilityBtn.cs" />

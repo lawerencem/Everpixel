@@ -14,6 +14,12 @@ namespace Assets.Template.Utility
             o.transform.Rotate(new Vector3(0, 0, (float)(roll * 360)));
         }
 
+        public void RandomRotateRange(GameObject o, float range)
+        {
+            var roll = RNG.Instance.GetRandomBetweenRange(range);
+            o.transform.Rotate(new Vector3(0, 0, (float)(roll)));
+        }
+
         public void RandomRotateAndTranslate(GameObject o, float range)
         {
             this.RandomRotate(o);
@@ -28,6 +34,16 @@ namespace Assets.Template.Utility
             position.x += x;
             position.y += y;
             o.transform.position = position;
+        }
+
+        public Vector3 RandomTranslate(Vector3 origin, float range)
+        {
+            var x = RNG.Instance.GetRandomBetweenRange(range);
+            var y = RNG.Instance.GetRandomBetweenRange(range);
+            var position = origin;
+            position.x += x;
+            position.y += y;
+            return position;
         }
     }
 }

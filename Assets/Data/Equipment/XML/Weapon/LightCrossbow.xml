@@ -10,7 +10,7 @@
       <Block_Ignore>0</Block_Ignore>
       <Custom_Bullet>True</Custom_Bullet>
       <Custom_Fatality>Weenbow</Custom_Fatality>
-      <Damage>5000</Damage>
+      <Damage>5</Damage>
       <Description>
         This incredible bow fires live (i.e., dangerous) weens!
       </Description>

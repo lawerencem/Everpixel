@@ -1,24 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Perks>
   <PerkClass name ="AbilityModPerk">
-    <Perk name ="Dino_Bite">
-      <AoE>0</AoE>
-      <Description>
-        TODO
-      </Description>
-      <Dur>0</Dur>
-      <Val>25</Val>
-      <ValPerPower>0</ValPerPower>
-    </Perk>
-    <Perk name ="T_Rex_Bite">
-      <AoE>0</AoE>
-      <Description>
-        TODO
-      </Description>
-      <Dur>0</Dur>
-      <Val>50</Val>
-      <ValPerPower>0</ValPerPower>
-    </Perk>
   </PerkClass>
   <PerkClass name ="EquipmentPerk">
     <Perk name ="Two_Handed_Expert">
@@ -178,19 +160,19 @@
     <Perk name ="Iron_Hide">
       <AoE>0</AoE>
       <Description>
-        Character gains 25% damage reduction.
+        Character gains 15% damage reduction.
       </Description>
       <Dur>0</Dur>
-      <Val>0.75</Val>
+      <Val>0.85</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
     <Perk name ="Massive">
       <AoE>0</AoE>
       <Description>
-        Gives a 15% boost to this character's HP.
+        Gives a 10% boost to this character's Consitution.
       </Description>
       <Dur>0</Dur>
-      <Val>1.15</Val>
+      <Val>1.10</Val>
       <ValPerPower>0</ValPerPower>
     </Perk>
     <Perk name ="Scaly">

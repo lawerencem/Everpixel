@@ -84,6 +84,7 @@ namespace Assets.Data.Equipment.XML
                 case ("Damage"): { HandleStatsFromFile(name, EWeaponStat.Damage, v, tier); } break;
                 case ("Description"): { } break;
                 case ("Dodge_Mod"): { HandleStatsFromFile(name, EWeaponStat.Dodge_Mod, v, tier); } break;
+                case ("Embed"): { this.HandleEmbed(name, value, tier); } break;
                 case ("Initiative_Mod"): { HandleStatsFromFile(name, EWeaponStat.Initiative_Mod, v, tier); } break;
                 case ("Max_Durability"): { HandleStatsFromFile(name, EWeaponStat.Max_Durability, v, tier); } break;
                 case ("Melee_Block_Chance"): { HandleStatsFromFile(name, EWeaponStat.Melee_Block_Chance, v, tier); } break;
@@ -159,6 +160,16 @@ namespace Assets.Data.Equipment.XML
             var stats = WeaponParamTable.Instance;
             if (EnumUtil<EFatality>.TryGetEnumValue(value, ref x))
                 stats.Table[key].CustomFatality = x;
+        }
+
+        private void HandleEmbed(string name, string value, EEquipmentTier tier)
+        {
+            var key = name + "_" + tier.ToString();
+            if (value.ToLowerInvariant().Equals("true"))
+            {
+                var stats = WeaponParamTable.Instance;
+                stats.Table[key].Embed = true;
+            }
         }
 
         private void HandleWeaponAbilitiesFromFile(string name, string value, EEquipmentTier tier)

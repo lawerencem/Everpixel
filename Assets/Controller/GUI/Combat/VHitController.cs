@@ -140,40 +140,65 @@ namespace Assets.Controller.GUI.Combat
             var bullet = AttackSpriteLoader.Instance.GetBullet(a, this.ProcessDefenderHits, CombatGUIParams.BULLET_SPEED);
         }
 
+        private void ProcessDefenderHitsJolt(object o)
+        {
+            var a = o as SAttackerJolt;
+            if (a.Action != null)
+            {
+                foreach (var hit in a.Action.Data.Hits)
+                {
+                    if (hit.Data.Target.Current != null &&
+                        hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                    {
+                        var target = hit.Data.Target.Current as CharController;
+                        this.ProcessDefenderHitsHelper(target, hit);
+                    }
+                }
+            }
+        }
+
+        private void ProcessDefenderHitsBulletThenDelete(object o)
+        {
+            var a = o as SBulletThenDelete;
+            if (a.Action != null)
+            {
+                foreach (var hit in a.Action.Data.Hits)
+                {
+                    if (hit.Data.Target.Current != null &&
+                        hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                    {
+                        var target = hit.Data.Target.Current as CharController;
+                        this.ProcessDefenderHitsHelper(target, hit);
+                    }    
+                }
+            }
+        }
+
+        private void ProcessDefenderHitsBulletThenEmbed(object o)
+        {
+            var a = o as SBulletThenEmbed;
+            if (a.Action != null)
+            {
+                foreach (var hit in a.Action.Data.Hits)
+                {
+                    if (hit.Data.Target.Current != null &&
+                        hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                    {
+                        var target = hit.Data.Target.Current as CharController;
+                        this.ProcessDefenderHitsHelper(target, hit);
+                    }
+                }
+            }
+        }
+
         private void ProcessDefenderHits(object o)
         {
             if (o.GetType().Equals(typeof(SAttackerJolt)))
-            {
-                var a = o as SAttackerJolt;
-                if (a.Action != null)
-                {
-                    foreach (var hit in a.Action.Data.Hits)
-                    {
-                        if (hit.Data.Target.Current != null &&
-                            hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
-                        {
-                            var target = hit.Data.Target.Current as CharController;
-                            this.ProcessDefenderHitsHelper(target, hit);
-                        }
-                    }
-                }
-            }
-            else if (o.GetType().Equals(typeof(SBullet)))
-            {
-                var a = o as SBullet;
-                if (a.Action != null)
-                {
-                    foreach (var hit in a.Action.Data.Hits)
-                    {
-                        if (hit.Data.Target.Current != null &&
-                            hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
-                        {
-                            var target = hit.Data.Target.Current as CharController;
-                            this.ProcessDefenderHitsHelper(target, hit);
-                        }
-                    }
-                }
-            }
+                this.ProcessDefenderHitsJolt(o);
+            else if (o.GetType().Equals(typeof(SBulletThenDelete)))
+                this.ProcessDefenderHitsBulletThenDelete(o);
+            else if (o.GetType().Equals(typeof(SBulletThenEmbed)))
+                this.ProcessDefenderHitsBulletThenEmbed(o);
         }
 
         private void ProcessDefenderHitsHelper(CharController target, Hit hit)
