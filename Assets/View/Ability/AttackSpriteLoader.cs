@@ -11,7 +11,6 @@ using UnityEngine;
 
 namespace Assets.View.Ability
 {
-
     // TODO: Clean this up
     public class AttackSpriteLoader : ASingleton<AttackSpriteLoader>
     {
@@ -74,12 +73,12 @@ namespace Assets.View.Ability
             data.Speed = speed;
             var pos = a.Data.Target.Handle.transform.position;
             if (a.Data.Source.Handle.transform.position.x > pos.x)
-                pos.x += 0.14f;
+                pos.x += CombatGUIParams.X_CORRECTION;
             else
-                pos.x -= 0.14f;
+                pos.x -= CombatGUIParams.X_CORRECTION;
             data.Target = pos;
-            data.Offset = 0.125f;
-            data.Rotation = 25f;
+            data.Offset = CombatGUIParams.BULLET_OFFSET;
+            data.Rotation = CombatGUIParams.MAX_ROTATION;
             
             if (a.Data.Target.Current.GetType().Equals(typeof(CharController)))
             {

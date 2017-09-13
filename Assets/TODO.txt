@@ -4,6 +4,9 @@ Embed:
    Refactor sprite loader
    Don't have arrows embed on dodge
 
+Action
+  - Display effects on queue
+
 Refactor Dmg Calculations
 Block calculations
   - Block FX
@@ -11,11 +14,16 @@ Crit Calculations
 Injuries
 Ween summon on xbow
 Mounts
+  - Have mounts give abilities
+  - Perks
+  - Effects
 Zones
 Armor and Weapon durability
 Critter eyes on kill
 Missiles missing
 Deco blocking missiles
+Height on tiles
+
 
 bugs
    parry locks gui

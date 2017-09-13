@@ -44,5 +44,10 @@ namespace Assets.Controller.GUI.Combat
         public static readonly float FLINCH_DIST = 0.08f;
         public static readonly float FLINCH_SPEED = 8f;
 
+
+        // Bullet Param Stuff
+        public static readonly float X_CORRECTION = 0.14f;
+        public static readonly float BULLET_OFFSET = 0.125f;
+        public static readonly float MAX_ROTATION = 25f;
     }
 }
