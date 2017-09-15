@@ -1,5 +1,6 @@
 ﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Ability.Magic;
+using Assets.Model.Action;
 using Assets.Model.Effect;
 using Assets.Model.Injury;
 using System.Collections.Generic;
@@ -32,6 +33,7 @@ namespace Assets.Model.Ability
         public EMagicType MagicType { get; set; }
         public double MeleeBlockChanceMod { get; set; }
         public double ParryModMod { get; set; }
+        public MAction ParentAction { get; set; }
         public int Range { get; set; }
         public double RangeBlockMod { get; set; }
         public double RechargeTime { get; set; }

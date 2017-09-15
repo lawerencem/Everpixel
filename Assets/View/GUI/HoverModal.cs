@@ -156,7 +156,7 @@ namespace Assets.View.GUI
             this._stamSlider.value = (int)c.GetPoints(ESecondaryStat.Stamina);
         }
 
-        private void SetModalDamageValuesHelper(Hit hit)
+        private void SetModalDamageValuesHelper(MHit hit)
         {
             this._dmgPredictionModal.SetActive(true);
             this._blockText.text = ((int)(hit.Data.Chances.Block * 100)).ToString() + " %";

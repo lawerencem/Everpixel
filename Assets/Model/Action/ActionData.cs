@@ -9,14 +9,14 @@ namespace Assets.Model.Action
     public class ActionData
     {
         public EAbility Ability { get; set; }
-        public List<Hit> Hits { get; set; }
+        public List<MHit> Hits { get; set; }
         public bool LWeapon { get; set; }
         public CharController Source { get; set; }
         public TileController Target { get; set; }
 
         public ActionData()
         {
-            this.Hits = new List<Hit>();
+            this.Hits = new List<MHit>();
         }
 
         public bool Initialized()

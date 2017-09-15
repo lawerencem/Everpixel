@@ -9,7 +9,7 @@ namespace Assets.Model.Perk.OnAction
 
         }
 
-        public override void TryProcessAction(Hit hit)
+        public override void TryProcessAction(MHit hit)
         {
             //if (hit.Ability.CastType == ECastType.Melee)
             //{

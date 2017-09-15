@@ -11,7 +11,7 @@ namespace Assets.Model.Ability.Magic.Astral
 
         }
 
-        public override void Process(Hit hit)
+        public override void Process(MHit hit)
         {
             // TODO
         }

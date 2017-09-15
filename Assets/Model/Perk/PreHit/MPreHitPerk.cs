@@ -9,7 +9,7 @@ namespace Assets.Model.Perk.PreHit
 
         }
 
-        public virtual void TryModHit(Hit hit)
+        public virtual void TryModHit(MHit hit)
         {
 
         }

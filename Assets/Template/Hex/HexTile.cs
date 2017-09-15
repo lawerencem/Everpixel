@@ -61,10 +61,10 @@ namespace Assets.Template.Hex
             var currNeighbors = this._adjacent;
             for(int i = 0; i < probes; i++)
             {
-                var tile = ListUtil<HexTile>.GetRandomListElement(currNeighbors);
+                var tile = ListUtil<HexTile>.GetRandomElement(currNeighbors);
                 currNeighbors = tile._adjacent;
             }
-            return ListUtil<HexTile>.GetRandomListElement(currNeighbors); 
+            return ListUtil<HexTile>.GetRandomElement(currNeighbors); 
         }
 
         public List<HexTile> GetAoETiles(int dist)

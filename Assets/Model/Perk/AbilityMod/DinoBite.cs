@@ -7,7 +7,7 @@ namespace Assets.Model.Perk.AbilityMod
     {
         public DinoBite() : base(EPerk.Dino_Bite) { }
 
-        public override void TryModAbility(Hit hit)
+        public override void TryModAbility(MHit hit)
         {
             base.TryModAbility(hit);
             if (hit.Data.Ability.Type == EAbility.Bite)

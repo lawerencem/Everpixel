@@ -5,8 +5,8 @@ namespace Assets.Model.Ability.Logic.Calculator
 {
     public abstract class AAbilityCalculator
     {
-        public abstract void Predict(Hit hit);
-        public abstract void Process(Hit hit);
+        public abstract void Predict(MHit hit);
+        public abstract void Process(MHit hit);
 
         public double GetAttackVSDefenseSkillChance(double attackSkill, double defenseSkill, double baseDefenseChance)
         {

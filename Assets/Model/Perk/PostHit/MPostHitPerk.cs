@@ -9,7 +9,7 @@ namespace Assets.Model.Perk.PostHit
 
         }
 
-        public virtual void TryProcessAction(Hit hit)
+        public virtual void TryProcessAction(MHit hit)
         {
 
         }

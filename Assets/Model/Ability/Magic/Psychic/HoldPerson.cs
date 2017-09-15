@@ -11,7 +11,7 @@ namespace Assets.Model.Ability.Magic.Psychic
             //this.CustomCastCamera = true;
         }
 
-        public override void Predict(Hit hit)
+        public override void Predict(MHit hit)
         {
             base.PredictMelee(hit);
         }

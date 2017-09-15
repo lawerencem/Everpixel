@@ -7,7 +7,7 @@ namespace Assets.Model.Effect.Ability
     {
         public Megabite() : base(EEffect.Megabite) { }
 
-        public override void TryProcessHit(Hit hit)
+        public override void TryProcessHit(MHit hit)
         {
             base.TryProcessHit(hit);
             if (hit.Data.Ability.Type == EAbility.Bite)

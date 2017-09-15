@@ -55,7 +55,7 @@ namespace Assets.View.Map
         {
             var path = StringUtil.PathBuilder(PATH, "Tileblood", TILE_EXTENSION);
             var stuff = Resources.LoadAll(path);
-            var index = ListUtil<int>.GetRandomListElement(this.LEVEL_ONE_BLOOD_SPATTER);
+            var index = ListUtil<int>.GetRandomElement(this.LEVEL_ONE_BLOOD_SPATTER);
             return stuff[index] as Sprite;
         }
 
@@ -63,7 +63,7 @@ namespace Assets.View.Map
         {
             var path = StringUtil.PathBuilder(PATH, "Tileblood", TILE_EXTENSION);
             var stuff = Resources.LoadAll(path);
-            var index = ListUtil<int>.GetRandomListElement(this.LEVEL_TWO_BLOOD_SPATTER);
+            var index = ListUtil<int>.GetRandomElement(this.LEVEL_TWO_BLOOD_SPATTER);
             return stuff[index] as Sprite;
         }
 
@@ -71,7 +71,7 @@ namespace Assets.View.Map
         {
             var path = StringUtil.PathBuilder(PATH, "Tileblood", TILE_EXTENSION);
             var stuff = Resources.LoadAll(path);
-            var index = ListUtil<int>.GetRandomListElement(this.LEVEL_THREE_BLOOD_SPATTER);
+            var index = ListUtil<int>.GetRandomElement(this.LEVEL_THREE_BLOOD_SPATTER);
             return stuff[index] as Sprite;
         }
 
@@ -79,7 +79,7 @@ namespace Assets.View.Map
         {
             var path = StringUtil.PathBuilder(PATH, "Tileblood", TILE_EXTENSION);
             var stuff = Resources.LoadAll(path);
-            var index = ListUtil<int>.GetRandomListElement(this.LEVEL_FOUR_BLOOD_SPATTER);
+            var index = ListUtil<int>.GetRandomElement(this.LEVEL_FOUR_BLOOD_SPATTER);
             return stuff[index] as Sprite;
         }
 
@@ -87,7 +87,7 @@ namespace Assets.View.Map
         {
             var path = StringUtil.PathBuilder(PATH, "Tileblood", TILE_EXTENSION);
             var stuff = Resources.LoadAll(path);
-            var index = ListUtil<int>.GetRandomListElement(this.LEVEL_FIVE_BLOOD_SPATTER);
+            var index = ListUtil<int>.GetRandomElement(this.LEVEL_FIVE_BLOOD_SPATTER);
             return stuff[index] as Sprite;
         }
 

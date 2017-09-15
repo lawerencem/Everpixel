@@ -24,7 +24,7 @@ namespace Assets.Model.Effect
             this._type = type;
         }
 
-        public virtual void TryProcessHit(Hit hit) { }
-        public virtual void TryProcessTurn(Hit hit) { }
+        public virtual void TryProcessHit(MHit hit) { }
+        public virtual void TryProcessTurn(MHit hit) { }
     }
 }

@@ -27,7 +27,16 @@ namespace Assets.View.Character
                 var sub = subcomponent.Value;
                 var renderer = sub.GetComponent<SpriteRenderer>();
                 var layer = renderer.sortingLayerName;
-                renderer.sortingLayerName =  layer.Replace(Layers.CHAR, Layers.DEAD);
+                renderer.sortingLayerName = layer.Replace(Layers.CHAR, Layers.DEAD);
+            }
+            foreach(var embed in c.Embedded)
+            {
+                var renderer = embed.GetComponent<SpriteRenderer>();
+                if (renderer != null)
+                {
+                    var layer = renderer.sortingLayerName;
+                    renderer.sortingLayerName = layer.Replace(Layers.CHAR, Layers.DEAD);
+                }
             }
         }
 

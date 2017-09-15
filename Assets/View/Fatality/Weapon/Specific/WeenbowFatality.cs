@@ -34,8 +34,11 @@ namespace Assets.View.Fatality.Weapon.Ability
                 FatalityParams.FATALITY_BULLET_LERP);
             var attack = this._data.Source.Handle.AddComponent<SAttackerJolt>();
             attack.Action = this._data.Action;
-            var bullet = AttackSpriteLoader.Instance.GetBullet(this._data.Action, this.ProcessWeens, FatalityParams.FATALITY_BULLET_SPEED);
-            attack.Init(this._data.Source, pos, FatalityParams.FATALITY_ATTACK_SPEED);
+            foreach(var hit in this._data.FatalHits)
+            {
+                var bullet = AttackSpriteLoader.Instance.GetBullet(hit, this.ProcessWeens, FatalityParams.FATALITY_BULLET_SPEED);
+                attack.Init(this._data.Source, pos, FatalityParams.FATALITY_ATTACK_SPEED);
+            }
         }
 
         private void ProcessWeens(object o)

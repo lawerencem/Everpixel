@@ -9,7 +9,7 @@ namespace Assets.Model.Perk.WhenHit
 
         }
 
-        public override void TryModHit(Hit hit)
+        public override void TryModHit(MHit hit)
         {
             //double delta = 0;
             //if (hit.Ability.ArmorIgnoreMod < 1)

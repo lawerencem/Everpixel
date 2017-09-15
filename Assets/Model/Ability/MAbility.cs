@@ -11,7 +11,6 @@ namespace Assets.Model.Ability
     {
         public MAbility(EAbility t) : base(t) { }
 
-
         public MAbility Copy()
         {
             var ability = new MAbility(this._type);
@@ -78,17 +77,17 @@ namespace Assets.Model.Ability
         public virtual bool IsValidEmptyTile(AbilityArgs arg) { return this._logic.IsValidEmptyTile(arg); }
         public virtual bool IsValidEnemyTarget(AbilityArgs arg) { return this._logic.IsValidEnemyTarget(arg); }
 
-        public virtual void Predict(Hit hit)
+        public virtual void Predict(MHit hit)
         {
             
         }
 
-        public virtual void Process(Hit hit)
+        public virtual void Process(MHit hit)
         {
             
         }
 
-        public void TryApplyInjury(Hit hit)
+        public void TryApplyInjury(MHit hit)
         {
             //if (!FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Dodge) &&
             //    !FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Parry) &&
@@ -114,16 +113,16 @@ namespace Assets.Model.Ability
             //}
         }
 
-        public List<Hit> GetHits(AbilityArgs arg)
+        public List<MHit> GetHits(AbilityArgs arg)
         {
             var tiles = this.GetTargetedTiles(arg);
-            var hits = new List<Hit>();
+            var hits = new List<MHit>();
             if (this._data.HitsTiles)
             {
                 foreach (var tile in tiles)
                 {
                     var data = new HitData();
-                    var hit = new Hit(data);
+                    var hit = new MHit(data);
                     this.PopulateHitData(hit, tile, arg);
                     hits.Add(hit);
                 }
@@ -136,7 +135,7 @@ namespace Assets.Model.Ability
                     {
                         var target = tile.Current as CharController;
                         var data = new HitData();
-                        var hit = new Hit(data);
+                        var hit = new MHit(data);
                         this.PopulateHitData(hit, target.Tile, arg);
                         hits.Add(hit);
                     }
@@ -161,28 +160,28 @@ namespace Assets.Model.Ability
             return null;
         }
 
-        protected virtual void PredictBullet(Hit hit)
+        protected virtual void PredictBullet(MHit hit)
         {
             this.ProcessEffects(hit);
             this.ProcessPerks(hit);
             this._logic.PredictBullet(hit);
         }
 
-        protected virtual void PredictMelee(Hit hit)
+        protected virtual void PredictMelee(MHit hit)
         {
             this.ProcessEffects(hit);
             this.ProcessPerks(hit);
             this._logic.PredictMelee(hit);
         }
 
-        protected void ProcessHitBullet(Hit hit)
+        protected void ProcessHitBullet(MHit hit)
         {
             this.ProcessEffects(hit);
             this.ProcessPerks(hit);
             this._logic.ProcessBullet(hit);
         }
 
-        protected void ProcessHitLoS(Hit hit)
+        protected void ProcessHitLoS(MHit hit)
         {
             //if (hit.Target != null)
             //{
@@ -197,14 +196,14 @@ namespace Assets.Model.Ability
             //    hit.Done();
         }
 
-        protected void ProcessHitMelee(Hit hit)
+        protected void ProcessHitMelee(MHit hit)
         {
             this.ProcessEffects(hit);
             this.ProcessPerks(hit);
             this._logic.ProcessMelee(hit);
         }
 
-        protected void ProcessHitSummon(Hit hit)
+        protected void ProcessHitSummon(MHit hit)
         {
             //FHit.SetSummonTrue(hit.Flags);
             //foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
@@ -212,7 +211,7 @@ namespace Assets.Model.Ability
             //this._logic.ProcessSummon(hit);
         }
 
-        protected void ProcessShapeshift(Hit hit)
+        protected void ProcessShapeshift(MHit hit)
         {
             //FHit.SetShapeshiftTrue(hit.Flags);
             //FCharacterStatus.SetShapeshiftedTrue(hit.Source.Model.StatusFlags);
@@ -221,20 +220,20 @@ namespace Assets.Model.Ability
             //this._logic.ProcessShapeshift(hit);
         }
 
-        protected void ProcessHitSong(Hit hit)
+        protected void ProcessHitSong(MHit hit)
         {
             //foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
             //    perk.TryModAbility(hit);
             //this._logic.ProcessSong(hit);
         }
 
-        protected void ProcessHitZone(Hit hit)
+        protected void ProcessHitZone(MHit hit)
         {
             //foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
             //    perk.TryModAbility(hit);
         }
 
-        private void PopulateHitData(Hit hit, TileController tile, AbilityArgs args)
+        private void PopulateHitData(MHit hit, TileController tile, AbilityArgs args)
         {
             hit.Data.Ability = this;
             hit.Data.IsHeal = this.Data.IsHeal;
@@ -242,13 +241,13 @@ namespace Assets.Model.Ability
             hit.Data.Target = tile;
         }
 
-        private void ProcessEffects(Hit hit)
+        private void ProcessEffects(MHit hit)
         {
             foreach(var effect in this._data.Effects)
                 effect.TryProcessHit(hit);
         }
 
-        private void ProcessPerks(Hit hit)
+        private void ProcessPerks(MHit hit)
         {
             foreach (var perk in hit.Data.Source.Proxy.GetPerks().GetAbilityModPerks())
                 perk.TryModAbility(hit);

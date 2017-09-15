@@ -4,7 +4,7 @@ namespace Assets.Template.Util
 {
     public class ListUtil<T>
     {
-        public static T GetRandomListElement(List<T> toGet)
+        public static T GetRandomElement(List<T> toGet)
         {
             if (toGet.Count > 0)
             {

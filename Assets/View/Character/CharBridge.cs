@@ -36,24 +36,24 @@ namespace Assets.View.Character
             var p = new VChar();
             var table = RaceParamsTable.Instance.Table;
 
-            p.Face = ListUtil<int>.GetRandomListElement(table[c.Race].Sprites.Face);
+            p.Face = ListUtil<int>.GetRandomElement(table[c.Race].Sprites.Face);
             if (table[c.Race].Sprites.HeadDeco1.Count > 0)
-                p.HeadDeco1 = ListUtil<int>.GetRandomListElement(table[c.Race].Sprites.HeadDeco1);
+                p.HeadDeco1 = ListUtil<int>.GetRandomElement(table[c.Race].Sprites.HeadDeco1);
             else
                 p.HeadDeco1 = -1;
             if (table[c.Race].Sprites.HeadDeco2.Count > 0)
-                p.HeadDeco2 = ListUtil<int>.GetRandomListElement(table[c.Race].Sprites.HeadDeco2);
+                p.HeadDeco2 = ListUtil<int>.GetRandomElement(table[c.Race].Sprites.HeadDeco2);
             else
                 p.HeadDeco2 = -1;
             if (table[c.Race].Sprites.TorsoDeco1.Count > 0)
-                p.TorsoDeco1 = ListUtil<int>.GetRandomListElement(table[c.Race].Sprites.TorsoDeco1);
+                p.TorsoDeco1 = ListUtil<int>.GetRandomElement(table[c.Race].Sprites.TorsoDeco1);
             else
                 p.TorsoDeco1 = -1;
             if (table[c.Race].Sprites.TorsoDeco2.Count > 0)
-                p.TorsoDeco2 = ListUtil<int>.GetRandomListElement(table[c.Race].Sprites.TorsoDeco2);
+                p.TorsoDeco2 = ListUtil<int>.GetRandomElement(table[c.Race].Sprites.TorsoDeco2);
             else
                 p.TorsoDeco2 = -1;
-            p.Torso = ListUtil<int>.GetRandomListElement(table[c.Race].Sprites.Torso);
+            p.Torso = ListUtil<int>.GetRandomElement(table[c.Race].Sprites.Torso);
             p.Head = p.Torso - TORSO_OFFSET;
             p.Sprites = CharSpriteLoader.Instance.GetCharacterSprites(c);
 

@@ -7,12 +7,12 @@ namespace Assets.Model.Ability.Magic.Fighting
     {
         public Hadoken() : base(EAbility.Hadoken) {  }
 
-        public override void Predict(Hit hit)
+        public override void Predict(MHit hit)
         {
             base.PredictBullet(hit);
         }
 
-        public override void Process(Hit hit)
+        public override void Process(MHit hit)
         {
             base.ProcessHitBullet(hit);
         }

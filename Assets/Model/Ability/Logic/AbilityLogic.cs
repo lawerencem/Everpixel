@@ -26,18 +26,18 @@ namespace Assets.Model.Ability.Logic
         public bool IsValidEmptyTile(AbilityArgs arg) { return this._tileLogic.IsValidEmptyTile(arg); }
         public bool IsValidEnemyTarget(AbilityArgs arg) { return this._tileLogic.IsValidEnemyTarget(arg); }
 
-        public void PredictBullet(Hit hit) { this._typeLogic.PredictBullet(hit); }
-        public void PredictInstant(Hit hit) { this._typeLogic.PredictInstant(hit); }
-        public void PredictMelee(Hit hit) { this._typeLogic.PredictMelee(hit); }
-        public void PredictRay(Hit hit) { this._typeLogic.PredictRay(hit); }
-        public void ProcessBullet(Hit hit) { this._typeLogic.ProcessBullet(hit); }
-        public void ProcessInstant(Hit hit) { this._typeLogic.ProcessInstant(hit); }
-        public void ProcessMelee(Hit hit) { this._typeLogic.ProcessMelee(hit); }
-        public void ProcessRay(Hit hit) { this._typeLogic.ProcessRay(hit); }
-        public void ProcessResist(Hit hit) { this._typeLogic.ProcessResist(hit); }
-        public void ProcessShapeshift(Hit hit) { this._typeLogic.ProcessShapeshift(hit); }
-        public void ProcessSong(Hit hit) { this._typeLogic.ProcessSong(hit); }
-        public void ProcessSummon(Hit hit) { this._typeLogic.ProcessSummon(hit); }
+        public void PredictBullet(MHit hit) { this._typeLogic.PredictBullet(hit); }
+        public void PredictInstant(MHit hit) { this._typeLogic.PredictInstant(hit); }
+        public void PredictMelee(MHit hit) { this._typeLogic.PredictMelee(hit); }
+        public void PredictRay(MHit hit) { this._typeLogic.PredictRay(hit); }
+        public void ProcessBullet(MHit hit) { this._typeLogic.ProcessBullet(hit); }
+        public void ProcessInstant(MHit hit) { this._typeLogic.ProcessInstant(hit); }
+        public void ProcessMelee(MHit hit) { this._typeLogic.ProcessMelee(hit); }
+        public void ProcessRay(MHit hit) { this._typeLogic.ProcessRay(hit); }
+        public void ProcessResist(MHit hit) { this._typeLogic.ProcessResist(hit); }
+        public void ProcessShapeshift(MHit hit) { this._typeLogic.ProcessShapeshift(hit); }
+        public void ProcessSong(MHit hit) { this._typeLogic.ProcessSong(hit); }
+        public void ProcessSummon(MHit hit) { this._typeLogic.ProcessSummon(hit); }
 
     }
 }

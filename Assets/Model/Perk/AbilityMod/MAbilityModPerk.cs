@@ -9,7 +9,7 @@ namespace Assets.Model.Perk.AbilityMod
 
         }
 
-        public virtual void TryModAbility(Hit hit)
+        public virtual void TryModAbility(MHit hit)
         {
 
         }

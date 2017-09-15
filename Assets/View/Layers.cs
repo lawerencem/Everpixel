@@ -32,6 +32,8 @@
         public static readonly string DEAD_R_WEAPON = "DeadRWeapon";
         public static readonly string DEAD_TORSO = "DeadTorso";
 
+        public static readonly string EMBED = "LCharEmbed";
+
         public static readonly string MAP_GUI_LAYER = "BackgroundTileGUI";
 
         public static readonly string PARTICLES = "Particles";

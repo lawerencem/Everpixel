@@ -9,7 +9,7 @@ namespace Assets.Model.Perk.PostHit
 
         }
 
-        public override void TryProcessAction(Hit hit)
+        public override void TryProcessAction(MHit hit)
         {
             //if (this.Parent.Equals(hit.Source.Model))
             //{

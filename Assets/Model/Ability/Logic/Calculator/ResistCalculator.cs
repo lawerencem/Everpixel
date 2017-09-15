@@ -5,7 +5,7 @@ namespace Assets.Model.Ability.Logic.Calculator
 {
     public class ResistCalculator : AAbilityCalculator
     {
-        public override void Predict(Hit hit)
+        public override void Predict(MHit hit)
         {
             //if (hit.Ability.Resist != EResistType.None)
             //{
@@ -37,7 +37,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             //        hit.Chances.Resist = 0;
         }
 
-        public override void Process(Hit hit)
+        public override void Process(MHit hit)
         {
             //this.Predict(hit);
             //if (hit.Ability.Resist != EResistType.None)

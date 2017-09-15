@@ -9,7 +9,7 @@ namespace Assets.Model.Ability.Logic.Calculator
 {
     public class DodgeCalculator : AAbilityCalculator
     {
-        public override  void Predict(Hit hit)
+        public override  void Predict(MHit hit)
         {
             var target = hit.Data.Target.Current as CharController;
 
@@ -29,7 +29,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             hit.Data.Chances.Dodge *= hit.Data.ModData.TgtDodgeMod;
         }
 
-        public override void Process(Hit hit)
+        public override void Process(MHit hit)
         {
             this.Predict(hit);
             var roll = RNG.Instance.NextDouble();

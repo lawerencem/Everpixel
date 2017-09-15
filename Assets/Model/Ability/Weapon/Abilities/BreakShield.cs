@@ -9,12 +9,12 @@ namespace Assets.Model.Weapon.Abilities
     {
         public BreakShield() : base(EAbility.Break_Shield) { }
 
-        public override void Predict(Hit hit)
+        public override void Predict(MHit hit)
         {
             base.PredictMelee(hit);
         }
 
-        public override void Process(Hit hit)
+        public override void Process(MHit hit)
         {
             base.ProcessHitMelee(hit);
         }

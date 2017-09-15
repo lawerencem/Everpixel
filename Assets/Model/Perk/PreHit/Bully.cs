@@ -13,7 +13,7 @@ namespace Assets.Model.Perk.PreHit
 
         }
 
-        public override void TryModHit(Hit hit)
+        public override void TryModHit(MHit hit)
         {
             base.TryModHit(hit);
             if (hit.Data.Target.Current != null && hit.Data.Target.Current.GetType().Equals(typeof(CharController)))

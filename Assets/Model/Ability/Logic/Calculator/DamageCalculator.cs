@@ -9,7 +9,7 @@ namespace Assets.Model.Ability.Logic.Calculator
 {
     public class DamageCalculator : AAbilityCalculator
     {
-        public void CalculateAbilityDmg(Hit hit)
+        public void CalculateAbilityDmg(MHit hit)
         {
             var hitData = hit.Data;
             var abilityData = hitData.Ability.Data;
@@ -26,7 +26,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             hit.Data.Dmg = (int)dmg;
         }
 
-        public void ModifyDmgViaDefender(Hit hit)
+        public void ModifyDmgViaDefender(MHit hit)
         {
             if (!FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge) &&
                 !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))
@@ -42,7 +42,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             }
         }
 
-        public override void Predict(Hit hit)
+        public override void Predict(MHit hit)
         {
             this.CalculateAbilityDmg(hit);
 
@@ -81,7 +81,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             }
         }
 
-        public override void Process(Hit hit)
+        public override void Process(MHit hit)
         {
             var source = hit.Data.Source.Proxy;
             var targetController = hit.Data.Target.Current as CharController;
@@ -137,7 +137,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             hit.Data.Dmg = (int)dmgToApply;
         }
 
-        private void ProcessShieldBlock(Hit hit)
+        private void ProcessShieldBlock(MHit hit)
         {
             // TODO:
             hit.Data.Dmg = 0;

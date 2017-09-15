@@ -9,7 +9,7 @@ namespace Assets.Model.Ability.Logic.Calculator
 {
     public class ParryCalculator : AAbilityCalculator
     {
-        public override void Predict(Hit hit)
+        public override void Predict(MHit hit)
         {
             var acc = hit.Data.Source.Proxy.GetStat(ESecondaryStat.Melee);
             var parry = hit.Data.Source.Proxy.GetStat(ESecondaryStat.Parry);
@@ -40,7 +40,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             hit.Data.Chances.Parry = this.GetAttackVSDefenseSkillChance(acc, parry, parryChance);
         }
 
-        public override void Process(Hit hit)
+        public override void Process(MHit hit)
         {
             this.Predict(hit);
             var roll = RNG.Instance.NextDouble();

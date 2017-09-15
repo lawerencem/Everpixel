@@ -46,7 +46,7 @@ namespace Assets.Controller.GUI.Combat
                 callback(this);
         }
 
-        public void ProcessDefenderHit(Hit hit)
+        public void ProcessDefenderHit(MHit hit)
         {
             if (hit.Data.Target.Current != null &&
                 hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
@@ -61,10 +61,10 @@ namespace Assets.Controller.GUI.Combat
             this._callbacks = new List<Callback>() { callback };
         }
 
-        private void DisplayDodge(CharController target, Hit hit)
+        private void DisplayDodge(CharController target, MHit hit)
         {
             var dodge = target.Handle.AddComponent<SBoomerang>();
-            var dodgeTgt = ListUtil<TileController>.GetRandomListElement(target.Tile.GetAdjacent());
+            var dodgeTgt = ListUtil<TileController>.GetRandomElement(target.Tile.GetAdjacent());
             var position = Vector3.Lerp(target.Handle.transform.position, dodgeTgt.Model.Center, CombatGUIParams.DODGE_LERP);
             position = RandomPositionOffset.RandomOffset(position, CombatGUIParams.DEFAULT_OFFSET);
             dodge.AddCallback(hit.CallbackHandler);
@@ -72,7 +72,7 @@ namespace Assets.Controller.GUI.Combat
             VCombatController.Instance.DisplayText("Dodge", target.Handle, CombatGUIParams.WHITE);
         }
 
-        private void DisplayFlinch(CharController target, Hit hit)
+        private void DisplayFlinch(CharController target, MHit hit)
         {
             if (hit.Data.Dmg < target.Proxy.GetPoints(ESecondaryStat.HP)) 
             {
@@ -92,7 +92,7 @@ namespace Assets.Controller.GUI.Combat
             }
         }
 
-        private void DisplayParry(CharController target, Hit hit)
+        private void DisplayParry(CharController target, MHit hit)
         {
             VCombatController.Instance.DisplayText("Parry", target.Handle, CombatGUIParams.WHITE);
             if (target.Proxy.GetRWeapon() != null && target.Proxy.GetRWeapon().IsTypeOfShield())
@@ -107,7 +107,7 @@ namespace Assets.Controller.GUI.Combat
             }
         }
 
-        private void DisplayParryHelper(CharController target, Hit hit, GameObject wpn)
+        private void DisplayParryHelper(CharController target, MHit hit, GameObject wpn)
         {
             var pos = wpn.transform.position;
             if (target.Proxy.LParty)
@@ -137,7 +137,21 @@ namespace Assets.Controller.GUI.Combat
             var position = Vector3.Lerp(a.Data.Target.Model.Center, a.Data.Source.Tile.Model.Center, CombatGUIParams.ATTACK_LERP);
             attack.Action = a;
             attack.Init(a.Data.Source, position, CombatGUIParams.ATTACK_SPEED);
-            var bullet = AttackSpriteLoader.Instance.GetBullet(a, this.ProcessDefenderHits, CombatGUIParams.BULLET_SPEED);
+            foreach(var hit in a.Data.Hits)
+            {
+                var bullet = AttackSpriteLoader.Instance.GetBullet(
+                    hit, 
+                    this.ProcessBulletHit, 
+                    CombatGUIParams.BULLET_SPEED);
+            }
+        }
+
+        private void ProcessBulletHit(object o)
+        {
+            if (o.GetType().Equals(typeof(SBulletThenDelete)))
+                this.ProcessDefenderHitsBulletThenDelete(o);
+            else if (o.GetType().Equals(typeof(SBulletThenEmbed)))
+                this.ProcessDefenderHitsBulletThenEmbed(o);
         }
 
         private void ProcessDefenderHitsJolt(object o)
@@ -195,13 +209,9 @@ namespace Assets.Controller.GUI.Combat
         {
             if (o.GetType().Equals(typeof(SAttackerJolt)))
                 this.ProcessDefenderHitsJolt(o);
-            else if (o.GetType().Equals(typeof(SBulletThenDelete)))
-                this.ProcessDefenderHitsBulletThenDelete(o);
-            else if (o.GetType().Equals(typeof(SBulletThenEmbed)))
-                this.ProcessDefenderHitsBulletThenEmbed(o);
         }
 
-        private void ProcessDefenderHitsHelper(CharController target, Hit hit)
+        private void ProcessDefenderHitsHelper(CharController target, MHit hit)
         {
             if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge))
                 this.DisplayDodge(target, hit);

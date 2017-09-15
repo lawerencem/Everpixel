@@ -9,7 +9,7 @@ namespace Assets.Model.Perk.PreHit
 
         }
 
-        public override void TryModHit(Hit hit)
+        public override void TryModHit(MHit hit)
         {
             //base.TryModHit(hit);
             //var maxHp = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.HP);

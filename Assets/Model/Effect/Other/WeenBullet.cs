@@ -6,7 +6,7 @@ namespace Assets.Model.Effect.Other
     {
         public WeenBullet() : base(EEffect.Ween_Bullet) { }
 
-        public override void TryProcessHit(Hit hit)
+        public override void TryProcessHit(MHit hit)
         {
             // TODO
         }

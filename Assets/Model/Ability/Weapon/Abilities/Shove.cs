@@ -8,12 +8,12 @@ namespace Assets.Model.Weapon.Abilities
     {
         public Shove() : base(EAbility.Shove) { }
 
-        public override void Predict(Hit hit)
+        public override void Predict(MHit hit)
         {
             base.PredictMelee(hit);
         }
 
-        public override void Process(Hit hit)
+        public override void Process(MHit hit)
         {
             base.ProcessHitMelee(hit);
         }

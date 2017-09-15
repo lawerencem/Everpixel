@@ -42,6 +42,7 @@ namespace Assets.Model.Action
             GUIManager.Instance.SetGUILocked(true);
             GUIManager.Instance.SetInteractionLocked(true);
             this.ActiveAbility = AbilityTable.Instance.Table[this._data.Ability];
+            this.ActiveAbility.Data.ParentAction = this;
         }
 
         private void InitPredictHits()

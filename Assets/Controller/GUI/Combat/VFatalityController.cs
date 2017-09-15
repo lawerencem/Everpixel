@@ -72,7 +72,7 @@ namespace Assets.Controller.GUI.Combat
             this._callbacks = new List<Callback>() { callback };
         }
 
-        private bool IsHitFatal(Hit hit)
+        private bool IsHitFatal(MHit hit)
         {
             var target = hit.Data.Target.Current as CharController;
             if (target.Proxy.GetPoints(ESecondaryStat.HP) - hit.Data.Dmg <= 0)

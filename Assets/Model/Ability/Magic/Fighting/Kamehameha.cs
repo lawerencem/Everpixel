@@ -14,12 +14,12 @@ namespace Assets.Model.Ability.Magic.Fighting
             return base.GetRaycastTiles(arg);
         }
 
-        public override void Predict(Hit hit)
+        public override void Predict(MHit hit)
         {
             base.PredictBullet(hit);
         }
 
-        public override void Process(Hit hit)
+        public override void Process(MHit hit)
         {
             base.ProcessHitBullet(hit);
         }

@@ -1,9 +1,5 @@
 ﻿TODO
 
-Embed: 
-   Refactor sprite loader
-   Don't have arrows embed on dodge
-
 Action
   - Display effects on queue
 

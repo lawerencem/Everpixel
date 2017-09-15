@@ -22,7 +22,7 @@ namespace Assets.Controller.Map.Combat.Loader
             {
                 var sprites = MapBridge.Instance.GetBackgroundDecoSprites(info.Biome);
                 var sprite = sprites[Random.Range(0, sprites.Length)];
-                var random = ListUtil<TileController>.GetRandomListElement(empty);
+                var random = ListUtil<TileController>.GetRandomElement(empty);
                 empty.Remove(random);
                 var Deco = new GameObject("Tile Deco");
                 var render = Deco.AddComponent<SpriteRenderer>();

@@ -9,7 +9,7 @@ namespace Assets.Model.Perk.WhenHit
 
         }
 
-        public override void TryModHit(Hit hit)
+        public override void TryModHit(MHit hit)
         {
             //if (FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Critical) && !hit.IsHeal)
             //{

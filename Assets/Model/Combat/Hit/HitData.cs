@@ -1,6 +1,7 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability;
+using Assets.Model.Action;
 using Assets.Model.Effect;
 using Assets.Model.Event.Combat;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ namespace Assets.Model.Combat.Hit
     public class HitData
     {
         public MAbility Ability { get; set; }
+        public MAction Action { get; set; }
         public HitPrediction Chances { get; set; }
         public List<MEffect> Effects { get; set; }
         public List<MEvCombat> Events { get; set; }

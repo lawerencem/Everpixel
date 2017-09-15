@@ -8,12 +8,12 @@ namespace Assets.Model.Weapon.Abilities
     {
         public SpearWall() : base(EAbility.Spear_Wall) { }
 
-        public override void Predict(Hit hit)
+        public override void Predict(MHit hit)
         {
             base.PredictMelee(hit);
         }
 
-        public override void Process(Hit hit)
+        public override void Process(MHit hit)
         {
             base.ProcessHitMelee(hit);
         }
