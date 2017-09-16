@@ -9,7 +9,9 @@ namespace Assets.Model.Effect.Other
 
         public override void TryProcessHit(MHit hit)
         {
-            hit.AddCallback(this.ProcessSummon);
+            base.TryProcessHit(hit);
+            if (base.CheckConditions(hit))
+                hit.AddCallback(this.ProcessSummon);
         }
 
         private void ProcessSummon(object o)

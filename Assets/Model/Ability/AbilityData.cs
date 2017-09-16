@@ -2,6 +2,7 @@
 using Assets.Model.Ability.Magic;
 using Assets.Model.Action;
 using Assets.Model.Effect;
+using Assets.Model.Equipment.Weapon;
 using Assets.Model.Injury;
 using System.Collections.Generic;
 
@@ -32,6 +33,7 @@ namespace Assets.Model.Ability
         public bool IsHeal { get; set; }
         public EMagicType MagicType { get; set; }
         public double MeleeBlockChanceMod { get; set; }
+        public MWeapon ParentWeapon { get; set; }
         public double ParryModMod { get; set; }
         public MAction ParentAction { get; set; }
         public int Range { get; set; }
@@ -92,6 +94,7 @@ namespace Assets.Model.Ability
             data.MagicType = this.MagicType;
             data.MeleeBlockChanceMod = this.MeleeBlockChanceMod;
             data.ParryModMod = this.ParryModMod;
+            data.ParentWeapon = this.ParentWeapon;
             data.RangeBlockMod = this.RangeBlockMod;
             data.RechargeTime = this.RechargeTime;
             data.ShieldDamageMod = this.ShieldDamageMod;

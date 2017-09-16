@@ -1,5 +1,7 @@
 ﻿TODO
 
+Give abilities parent weapons
+
 Action
   - Display effects on queue
 

@@ -1,4 +1,6 @@
-﻿using Assets.Template.Other;
+﻿using Assets.Model.Ability.Enum;
+using Assets.Template.Other;
+using Assets.Template.Util;
 using System.Xml.Linq;
 
 namespace Assets.Model.Effect
@@ -28,11 +30,32 @@ namespace Assets.Model.Effect
         {
             switch(key)
             {
+                case ("AbilityCondition"): { this.HandleAbilityCondition(data, key, value); } break;
+                case ("CastCondition"): { this.HandleCastCondition(data, key, value); } break;
                 case ("Duration"): { data.Duration = int.Parse(value); } break;
                 case ("ParticlePath"): { data.ParticlePath = value; } break;
                 case ("SummonKey"): { data.SummonKey = value; } break;
+                case ("WeaponCondition"): { data.WeaponCondition = value; } break;
                 case ("X"): { data.X = double.Parse(value); } break;
                 case ("Y"): { data.Y = double.Parse(value); } break;
+            }
+        }
+
+        private void HandleAbilityCondition(MEffectData data, string key, string value)
+        {
+            var type = EAbility.None;
+            if (EnumUtil<EAbility>.TryGetEnumValue(value, ref type))
+            {
+                data.AbilityCondition = type;
+            }
+        }
+
+        private void HandleCastCondition(MEffectData data, string key, string value)
+        {
+            var type = ECastType.None;
+            if (EnumUtil<ECastType>.TryGetEnumValue(value, ref type))
+            {
+                data.CastCondition = type;
             }
         }
     }

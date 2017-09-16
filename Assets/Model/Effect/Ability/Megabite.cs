@@ -10,7 +10,7 @@ namespace Assets.Model.Effect.Ability
         public override void TryProcessHit(MHit hit)
         {
             base.TryProcessHit(hit);
-            if (hit.Data.Ability.Type == EAbility.Bite)
+            if (base.CheckConditions(hit))
             {
                 hit.Data.ModData.SrcArmorPierceMod = this.Data.X;
                 hit.Data.ModData.SrcArmorIgnoreMod = this.Data.X;

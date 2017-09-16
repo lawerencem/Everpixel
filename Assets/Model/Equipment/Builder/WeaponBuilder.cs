@@ -21,6 +21,8 @@ namespace Assets.Model.Equipment.Builder
             var model = new MWeapon();
             weapon.SetModel(model);
             weapon.Model.Data.Abilities = WeaponAbilityFactory.Instance.CreateNewObject(wStats.Abilities);
+            foreach (var ability in weapon.Model.Data.Abilities)
+                ability.Data.ParentWeapon = weapon.Model;
             weapon.Model.Data.AccuracyMod = wStats.AccuracyMod;
             weapon.Model.Data.APMod = wStats.APMod;
             weapon.Model.Data.ArmorIgnore = wStats.ArmorIgnore;
