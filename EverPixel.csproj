@@ -267,7 +267,7 @@
     <Compile Include="Assets\Model\Effect\EffectFactory.cs" />
     <Compile Include="Assets\Model\Effect\EffectTable.cs" />
     <Compile Include="Assets\Model\Effect\MEffect.cs" />
-    <Compile Include="Assets\Model\Effect\Other\WeenBullet.cs" />
+    <Compile Include="Assets\Model\Effect\Other\SummonOnHit.cs" />
     <Compile Include="Assets\Model\Effect\Will\Horror.cs" />
     <Compile Include="Assets\Model\Equipment\AEquipment.cs" />
     <Compile Include="Assets\Model\Equipment\Armor\ArmorParams.cs" />

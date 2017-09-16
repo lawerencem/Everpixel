@@ -2,9 +2,9 @@
 
 namespace Assets.Model.Effect.Other
 {
-    public class WeenBullet : MEffect
+    public class SummonOnHit : MEffect
     {
-        public WeenBullet() : base(EEffect.Ween_Bullet) { }
+        public SummonOnHit() : base(EEffect.SummonOnHit) { }
 
         public override void TryProcessHit(MHit hit)
         {

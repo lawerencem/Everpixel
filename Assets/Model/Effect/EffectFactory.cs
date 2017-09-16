@@ -15,7 +15,7 @@ namespace Assets.Model.Effect
             {
                 case (EEffect.Megabite): { return new Megabite(); }
                 case (EEffect.Horror): { return new Horror(); }
-                case (EEffect.Ween_Bullet): { return new WeenBullet(); }
+                case (EEffect.SummonOnHit): { return new SummonOnHit(); }
                 default: { return null; }
             }
         }

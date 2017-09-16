@@ -1,6 +1,7 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Character.Enum;
+using Assets.Template.Other;
 using Assets.View;
 using Assets.View.Builder;
 using Assets.View.Equipment;
@@ -8,44 +9,17 @@ using UnityEngine;
 
 namespace Assets.Controller.Map.Combat.Loader
 {
-    public class CharLoader
+    public class CharLoader: ASingleton<CharLoader>
     {
         private Transform _container;
 
-        public CharLoader(Transform container)
+        public void Init(Transform container, MMapController map, MapInitInfo info)
         {
             this._container = container;
-        }
-
-        public void Init(MMapController map, MapInitInfo info)
-        {
             this.InitViews(map, info);
         }
 
-        private void InitViews(MMapController map, MapInitInfo info)
-        {
-            var builder = new CharViewBuilder();
-            foreach (var party in map.GetLParties())
-            {
-                foreach (var c in party.GetChars())
-                {
-                    c.SetView(builder.Build(c.Proxy));
-                    var tile = map.GetMap().GetTileForRow(c.Proxy.LParty, c.Proxy.StartCol);
-                    this.RenderChar(map, c, tile);
-                }
-            }   
-            foreach (var party in map.GetRParties())
-            {
-                foreach (var c in party.GetChars())
-                {
-                    c.SetView(builder.Build(c.Proxy));
-                    var tile = map.GetMap().GetTileForRow(c.Proxy.LParty, c.Proxy.StartCol);
-                    this.RenderChar(map, c, tile);
-                }
-            }   
-        }
-
-        private void RenderChar(MMapController m, CharController c, TileController t)
+        public void RenderChar(CharController c, TileController t)
         {
             var sprite = c.View.Sprites[c.View.Torso];
             var render = c.Handle.AddComponent<SpriteRenderer>();
@@ -60,11 +34,36 @@ namespace Assets.Controller.Map.Combat.Loader
             this.TryAttachMount(c, t);
             c.SubComponents.Add(Layers.CHAR_TORSO, c.Handle);
             c.SubComponents.Add(Layers.CHAR_MAIN, c.Handle);
-            
+
             if (!c.Proxy.LParty)
                 c.Handle.transform.localRotation = Quaternion.Euler(0, 180, 0);
+
+            // TODO: This really should be elsewhere, but it works for now.
             t.SetCurrent(c);
             c.SetTile(t);
+        }
+
+        private void InitViews(MMapController map, MapInitInfo info)
+        {
+            var builder = new CharViewBuilder();
+            foreach (var party in map.GetLParties())
+            {
+                foreach (var c in party.GetChars())
+                {
+                    c.SetView(builder.Build(c.Proxy));
+                    var tile = map.GetMap().GetTileForRow(c.Proxy.LParty, c.Proxy.StartCol);
+                    this.RenderChar(c, tile);
+                }
+            }   
+            foreach (var party in map.GetRParties())
+            {
+                foreach (var c in party.GetChars())
+                {
+                    c.SetView(builder.Build(c.Proxy));
+                    var tile = map.GetMap().GetTileForRow(c.Proxy.LParty, c.Proxy.StartCol);
+                    this.RenderChar(c, tile);
+                }
+            }   
         }
 
         private void TryAttachDeco(CharController c, TileController t)

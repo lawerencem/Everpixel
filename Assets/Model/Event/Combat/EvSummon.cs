@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Manager.Combat;
+using Assets.Controller.Map.Combat.Loader;
 using Assets.Controller.Map.Tile;
 using Assets.Data.Character.Table;
 using Assets.Model.Character;
@@ -11,6 +12,7 @@ namespace Assets.Model.Event.Combat
 {
     public class EvSummonData
     {
+        public int Duration { get; set; }
         public bool LParty { get; set; }
         public SummonModData ModData { get; set; }
         public string ParticlePath { get; set; }
@@ -60,6 +62,8 @@ namespace Assets.Model.Event.Combat
                 controller.SetProxy(proxy);
                 this._data.Party.GetChars().Add(controller);
                 CombatManager.Instance.ProcessSummon(controller);
+                this._data.TargetTile = this._data.TargetTile.GetNearestEmptyTile();
+                CharLoader.Instance.RenderChar(controller, this._data.TargetTile);
             }
         }
     }

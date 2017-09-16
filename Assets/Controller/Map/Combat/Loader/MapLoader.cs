@@ -34,8 +34,7 @@ namespace Assets.Controller.Map.Combat.Loader
 
         private void InitChars(MapInitInfo info)
         {
-            var loader = new CharLoader(this.MapHolder);
-            loader.Init(this._map, info);
+            CharLoader.Instance.Init(this.MapHolder, this._map, info);
         }
 
         private void InitParties(MapInitInfo info)
