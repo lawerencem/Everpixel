@@ -14,6 +14,10 @@
       <Description>
         This incredible bow fires live (i.e., dangerous) weens!
       </Description>
+      <EEffect name="SummonOnHit">
+        <Duration>5</Duration>
+        <SummonKey>Ween</SummonKey>
+      </EEffect>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>8</Max_Durability>

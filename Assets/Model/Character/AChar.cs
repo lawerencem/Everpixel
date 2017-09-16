@@ -9,6 +9,7 @@ using Assets.Model.Class;
 using Assets.Model.Class.Enum;
 using Assets.Model.Map;
 using Assets.Model.Mount;
+using Assets.Model.Party;
 using System.Collections.Generic;
 
 namespace Assets.Model.Character
@@ -26,6 +27,7 @@ namespace Assets.Model.Character
         protected Mods _mods;
         protected CMount _mount; 
         protected PreCharParams _params;
+        protected MParty _parentParty;
         protected CharPerks _perks;
         protected CurrentPoints<T> _points;
         protected CharStats<T> _stats;
@@ -44,6 +46,7 @@ namespace Assets.Model.Character
         public FCharacterStatus GetFlags() { return this._flags; }
         public Mods GetMods() { return this._mods; }
         public PreCharParams GetParams() { return this._params; }
+        public MParty GetParentParty() { return this._parentParty; }
         public CharPerks GetPerks() { return this._perks; }
         public CurrentPoints<T> GetPoints() { return this._points; }
         public CharStats<T> GetStats() { return this._stats; }
@@ -52,6 +55,7 @@ namespace Assets.Model.Character
         public void SetLParty(bool lParty) { this._lParty = lParty; }
         public void SetMount(CMount m) { this._mount = m; }
         public void SetParams(PreCharParams p) { this._params = p; }
+        public void SetParentParty(MParty p) { this._parentParty = p; }
         public void SetType(T t) { this._type = t; }
 
         public int GetTileTraversalAPCost(TileController t)

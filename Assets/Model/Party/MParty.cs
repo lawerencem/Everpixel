@@ -7,11 +7,23 @@ namespace Assets.Model.Party
     {
         private List<CharController> _chars;
 
+        public List<CharController> GetChars() { return this._chars; }
+
         public MParty()
         {
             this._chars = new List<CharController>();
         }
 
-        public List<CharController> GetChars() { return this._chars; }
+        public void AddChar(CharController c)
+        {
+            this._chars.Add(c);
+            c.Proxy.SetParentParty(this);
+        }
+
+        public void RemoveChar(CharController c)
+        {
+            this._chars.Remove(c);
+            c.Proxy.SetParentParty(null);
+        }
     }
 }

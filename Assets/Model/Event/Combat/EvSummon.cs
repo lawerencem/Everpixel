@@ -60,11 +60,17 @@ namespace Assets.Model.Event.Combat
                 var controller = new CharController();
                 var proxy = new PChar(summon);
                 controller.SetProxy(proxy);
-                this._data.Party.GetChars().Add(controller);
+                this._data.Party.AddChar(controller);
                 CombatManager.Instance.ProcessSummon(controller);
                 this._data.TargetTile = this._data.TargetTile.GetNearestEmptyTile();
                 CharLoader.Instance.RenderChar(controller, this._data.TargetTile);
+                this.ProcessParticles();
             }
+        }
+
+        private void ProcessParticles()
+        {
+
         }
     }
 }

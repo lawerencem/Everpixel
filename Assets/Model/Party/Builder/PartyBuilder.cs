@@ -40,7 +40,7 @@ namespace Assets.Model.Party.Builder
                         var proxy = new PChar(model);
                         proxy.StartCol = pair.Y;
                         controller.SetProxy(proxy);
-                        party.GetChars().Add(controller);
+                        party.AddChar(controller);
                     }
                 }
                 return party;

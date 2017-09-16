@@ -5,6 +5,7 @@ namespace Assets.Model.Effect
     public class MEffectData
     {
         public int Duration { get; set; }
+        public string ParticlePath { get; set; }
         public string SummonKey { get; set; }
         public double X { get; set; }
         public double Y { get; set; }

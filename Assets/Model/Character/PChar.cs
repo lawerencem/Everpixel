@@ -9,6 +9,7 @@ using Assets.Model.Characters.Params;
 using Assets.Model.Class;
 using Assets.Model.Class.Enum;
 using Assets.Model.Equipment.Armor;
+using Assets.Model.Party;
 using Assets.Model.Party.Enum;
 using System.Collections.Generic;
 
@@ -38,6 +39,7 @@ namespace Assets.Model.Character
         public Mods GetMods() { return this._model.GetMods(); }
         public CMount GetMount() { return this._model.Mount; }
         public PreCharParams GetParams() { return this._model.GetParams(); }
+        public MParty GetParentParty() { return this._model.GetParentParty(); }
         public CharPerks GetPerks() { return this._model.GetPerks(); }
         public CWeapon GetRWeapon() { return this._model.GetEquipment().GetRWeapon(); }
         public double GetStat(ESecondaryStat s) { return this._model.GetStats().GetStatValue(s); }
@@ -47,6 +49,7 @@ namespace Assets.Model.Character
         public void ProcessEndOfTurn() { this._model.ProcessEndOfTurn(); }
         public void SetController(CharController c) { this._model.SetController(c); }
         public void SetLParty(bool lParty) { this._model.SetLParty(lParty); }
+        public void SetParentParty(MParty p) { this._model.SetParentParty(p); }
         public void SetPoints(ESecondaryStat s, double v) { this._model.GetPoints().SetValue(s, v); }
         public void SetPointsToMax(ESecondaryStat s)
         {

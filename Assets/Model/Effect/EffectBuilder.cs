@@ -22,6 +22,8 @@ namespace Assets.Model.Effect
             switch(key)
             {
                 case ("Duration"): { data.Duration = int.Parse(value); } break;
+                case ("ParticlePath"): { data.ParticlePath = value; } break;
+                case ("SummonKey"): { data.SummonKey = value; } break;
                 case ("X"): { data.X = double.Parse(value); } break;
                 case ("Y"): { data.Y = double.Parse(value); } break;
             }
