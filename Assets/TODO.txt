@@ -16,7 +16,7 @@ Mounts
 Zones
 Armor and Weapon durability
 Critter eyes on kill
-Missiles missing
+Missiles missing (hit other targets)
 Deco blocking missiles
 Height on tiles
 
