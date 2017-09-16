@@ -26,6 +26,17 @@ namespace Assets.Model.Effect
             this._type = type;
         }
 
+        public virtual MEffectData CloneData()
+        {
+            var data = new MEffectData();
+            data.Duration = this.Data.Duration;
+            data.ParticlePath = this.Data.ParticlePath;
+            data.SummonKey = this.Data.SummonKey;
+            data.X = this.Data.X;
+            data.Y = this.Data.Y;
+            return data;
+        }
+
         public virtual void TryProcessHit(MHit hit) { }
         public virtual void TryProcessTurn(MHit hit) { }
     }

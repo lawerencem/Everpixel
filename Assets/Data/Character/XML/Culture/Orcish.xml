@@ -613,7 +613,10 @@
       <AttackSpriteIndex>3</AttackSpriteIndex>
       <Abilities>
         <Ability name ="Bite">
-          <EEffect></EEffect>
+          <EEffect name="Megabite">
+            <X>2.0</X>
+            <Y>2.0</Y>
+          </EEffect>
         </Ability>
       </Abilities>
       <ECharacterType>Critter</ECharacterType>

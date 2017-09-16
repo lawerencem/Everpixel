@@ -7,6 +7,7 @@ using Assets.Model.Character;
 using Assets.Model.Character.Factory;
 using Assets.Model.Character.Summon;
 using Assets.Model.Party;
+using Assets.View.Builder;
 
 namespace Assets.Model.Event.Combat
 {
@@ -63,12 +64,12 @@ namespace Assets.Model.Event.Combat
                 this._data.Party.AddChar(controller);
                 CombatManager.Instance.ProcessSummon(controller);
                 this._data.TargetTile = this._data.TargetTile.GetNearestEmptyTile();
-                CharLoader.Instance.RenderChar(controller, this._data.TargetTile);
-                this.ProcessParticles();
+                CharLoader.Instance.LoadSummon(controller, this._data.TargetTile);
+                this.ProcessParticles(controller);
             }
         }
 
-        private void ProcessParticles()
+        private void ProcessParticles(CharController c)
         {
 
         }

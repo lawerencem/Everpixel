@@ -1,4 +1,5 @@
 ﻿using Assets.Model.Ability.Enum;
+using Assets.Model.Effect;
 using Assets.Model.Equipment.Enum;
 using Assets.Model.Equipment.Table;
 using Assets.Model.Equipment.Weapon;
@@ -56,7 +57,8 @@ namespace Assets.Data.Equipment.XML
                                 var name = attr.Value;
                                 foreach (var elem in ele.Elements())
                                 {
-                                    this.HandleIndex(name, skill, elem.Name.ToString(), elem.Value, ref tier);
+                                    this.HandleIndex(name, skill, elem, elem.Value, ref tier);
+                                    //this.HandleIndex(name, skill, elem.Name.ToString(), elem.Value, ref tier);
                                 }
                                 this.HandleWeaponSkillFromFile(name, skill, tier);
                             }
@@ -66,12 +68,12 @@ namespace Assets.Data.Equipment.XML
             }
         }
 
-        protected override void HandleIndex(string name, string skill, string param, string value, ref EEquipmentTier tier)
+        protected void HandleIndex(string name, string skill, XElement elem, string value, ref EEquipmentTier tier)
         {
             double v = 0;
             double.TryParse(value, out v);
 
-            switch (param)
+            switch (elem.Name.ToString())
             {
                 case ("Tier"): { HandleTierFromFile(name, value, ref tier); } break;
                 case ("Accuracy"): { HandleStatsFromFile(name, EWeaponStat.Accuracy_Mod, v, tier); } break;
@@ -84,6 +86,7 @@ namespace Assets.Data.Equipment.XML
                 case ("Damage"): { HandleStatsFromFile(name, EWeaponStat.Damage, v, tier); } break;
                 case ("Description"): { } break;
                 case ("Dodge_Mod"): { HandleStatsFromFile(name, EWeaponStat.Dodge_Mod, v, tier); } break;
+                case ("EEffect"): { this.HandleEffects(elem, name, tier); } break;
                 case ("Embed"): { this.HandleEmbed(name, value, tier); } break;
                 case ("Initiative_Mod"): { HandleStatsFromFile(name, EWeaponStat.Initiative_Mod, v, tier); } break;
                 case ("Max_Durability"): { HandleStatsFromFile(name, EWeaponStat.Max_Durability, v, tier); } break;
@@ -99,6 +102,24 @@ namespace Assets.Data.Equipment.XML
                 case ("WeaponEAbility"): { HandleWeaponAbilitiesFromFile(name, value, tier); } break;
                 case ("EWeaponType"): { HandleWeaponTypeFromFile(name, value, tier); } break;
                 case ("EWeaponUse"): { HandleWeaponUseFromFile(name, value, tier); } break;
+            }
+        }
+
+        private void HandleEffects(XElement el, string name, EEquipmentTier tier)
+        {
+            var stats = WeaponParamTable.Instance;
+            var key = name + "_" + tier.ToString();
+            foreach(var att in el.Attributes())
+            {
+                var type = EEffect.None;
+                if (EnumUtil<EEffect>.TryGetEnumValue(att.Value, ref type))
+                {
+                    var effect = EffectBuilder.Instance.BuildEffect(el, type);
+                    if (effect != null)
+                    {
+                        stats.Table[key].Effects.Add(effect);
+                    }
+                }
             }
         }
 

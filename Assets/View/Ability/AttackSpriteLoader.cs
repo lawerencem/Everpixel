@@ -59,9 +59,10 @@ namespace Assets.View.Ability
             data.Handle = bullet;
             data.Speed = speed;
             data.Target = hit.Data.Target.Handle.transform.position;
-            var raycast = bullet.AddComponent<SBulletThenDelete>();
-            raycast.Init(data);
-            raycast.AddCallback(callback);
+            var script = bullet.AddComponent<SBulletThenDelete>();
+            script.Action = hit.Data.Action;
+            script.Init(data);
+            script.AddCallback(callback);
             return bullet;
         }
 

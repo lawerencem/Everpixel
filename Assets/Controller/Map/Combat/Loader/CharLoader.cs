@@ -19,28 +19,11 @@ namespace Assets.Controller.Map.Combat.Loader
             this.InitViews(map, info);
         }
 
-        public void RenderChar(CharController c, TileController t)
+        public void LoadSummon(CharController c, TileController t)
         {
-            var sprite = c.View.Sprites[c.View.Torso];
-            var render = c.Handle.AddComponent<SpriteRenderer>();
-            c.Handle.transform.position = t.View.Center;
-            c.Handle.transform.SetParent(this._container);
-            c.Handle.name = c.View.Type.ToString() + " " + c.View.Race.ToString();
-            render.sprite = sprite;
-            render.sortingLayerName = Layers.CHAR_TORSO;
-            this.TryAttachHead(c, Layers.CHAR_HEAD, c.View.Head, t);
-            this.TryAttachDeco(c, t);
-            this.TryAttachEquipment(c, t);
-            this.TryAttachMount(c, t);
-            c.SubComponents.Add(Layers.CHAR_TORSO, c.Handle);
-            c.SubComponents.Add(Layers.CHAR_MAIN, c.Handle);
-
-            if (!c.Proxy.LParty)
-                c.Handle.transform.localRotation = Quaternion.Euler(0, 180, 0);
-
-            // TODO: This really should be elsewhere, but it works for now.
-            t.SetCurrent(c);
-            c.SetTile(t);
+            var builder = new CharViewBuilder();
+            c.SetView(builder.Build(c.Proxy));
+            this.RenderChar(c, t);
         }
 
         private void InitViews(MMapController map, MapInitInfo info)
@@ -64,6 +47,30 @@ namespace Assets.Controller.Map.Combat.Loader
                     this.RenderChar(c, tile);
                 }
             }   
+        }
+
+        private void RenderChar(CharController c, TileController t)
+        {
+            var sprite = c.View.Sprites[c.View.Torso];
+            var render = c.Handle.AddComponent<SpriteRenderer>();
+            c.Handle.transform.position = t.View.Center;
+            c.Handle.transform.SetParent(this._container);
+            c.Handle.name = c.View.Type.ToString() + " " + c.View.Race.ToString();
+            render.sprite = sprite;
+            render.sortingLayerName = Layers.CHAR_TORSO;
+            this.TryAttachHead(c, Layers.CHAR_HEAD, c.View.Head, t);
+            this.TryAttachDeco(c, t);
+            this.TryAttachEquipment(c, t);
+            this.TryAttachMount(c, t);
+            c.SubComponents.Add(Layers.CHAR_TORSO, c.Handle);
+            c.SubComponents.Add(Layers.CHAR_MAIN, c.Handle);
+
+            if (!c.Proxy.LParty)
+                c.Handle.transform.localRotation = Quaternion.Euler(0, 180, 0);
+
+            // TODO: This really should be elsewhere, but it works for now.
+            t.SetCurrent(c);
+            c.SetTile(t);
         }
 
         private void TryAttachDeco(CharController c, TileController t)

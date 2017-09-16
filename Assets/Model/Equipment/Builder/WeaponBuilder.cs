@@ -32,7 +32,11 @@ namespace Assets.Model.Equipment.Builder
             weapon.Model.Data.Description = wStats.Description;
             weapon.Model.Data.Durability = wStats.MaxDurability;
             foreach (var effect in wStats.Effects)
-                weapon.Model.Data.Effects.Add(EffectFactory.Instance.CreateNewObject(effect));
+            {
+                var data = effect.CloneData();
+                var clone = EffectBuilder.Instance.BuildEffect(data, effect.Type);
+                weapon.Model.Data.Effects.Add(clone);
+            }
             weapon.Model.Data.Embed = wStats.Embed;
             weapon.Model.Data.FatigueMod = wStats.FatigueMod;
             weapon.Model.Data.InitiativeMod = wStats.InitiativeMod;

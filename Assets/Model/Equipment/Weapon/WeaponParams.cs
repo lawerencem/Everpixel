@@ -19,7 +19,7 @@ namespace Assets.Model.Equipment.Weapon
         public int Damage { get; set; }
         public double Dodge_Mod { get; set; }
         public string Description { get; set; }
-        public List<EEffect> Effects { get; set; }
+        public List<MEffect> Effects { get; set; }
         public bool Embed { get; set; }
         public string EmbedPath { get; set; }
         public int MaxDurability { get; set; }
@@ -43,7 +43,7 @@ namespace Assets.Model.Equipment.Weapon
         public WeaponParams()
         {
             this.Abilities = new List<EAbility>();
-            this.Effects = new List<EEffect>();
+            this.Effects = new List<MEffect>();
         }
     }
 }

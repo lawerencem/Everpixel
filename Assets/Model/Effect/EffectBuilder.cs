@@ -16,6 +16,13 @@ namespace Assets.Model.Effect
             effect.SetData(data);
             return effect;
         }
+
+        public MEffect BuildEffect(MEffectData data, EEffect type)
+        {
+            var effect = EffectFactory.Instance.CreateNewObject(type);
+            effect.SetData(data);
+            return effect;
+        }
         
         private void HandleIndex(MEffectData data, string key, string value)
         {

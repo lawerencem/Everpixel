@@ -236,6 +236,7 @@ namespace Assets.Model.Ability
         private void PopulateHitData(MHit hit, TileController tile, AbilityArgs args)
         {
             hit.Data.Ability = this;
+            hit.Data.Action = this.Data.ParentAction;
             hit.Data.IsHeal = this.Data.IsHeal;
             hit.Data.Source = args.Source;
             hit.Data.Target = tile;
@@ -243,8 +244,19 @@ namespace Assets.Model.Ability
 
         private void ProcessEffects(MHit hit)
         {
+            var proxy = hit.Data.Source.Proxy;
             foreach(var effect in this._data.Effects)
                 effect.TryProcessHit(hit);
+            if (proxy.GetLWeapon() != null)
+            {
+                foreach (var effect in proxy.GetLWeapon().Model.Data.Effects)
+                    effect.TryProcessHit(hit);
+            }
+            if (proxy.GetRWeapon() != null)
+            {
+                foreach (var effect in proxy.GetRWeapon().Model.Data.Effects)
+                    effect.TryProcessHit(hit);
+            }
         }
 
         private void ProcessPerks(MHit hit)
