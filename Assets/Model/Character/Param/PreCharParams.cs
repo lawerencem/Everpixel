@@ -5,7 +5,6 @@ using Assets.Model.Class.Enum;
 using Assets.Model.Culture;
 using Assets.Model.Effect;
 using Assets.Model.Mount;
-using Assets.Model.Party.Enum;
 using Assets.Model.Perk;
 using System.Collections.Generic;
 

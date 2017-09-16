@@ -130,6 +130,12 @@ namespace Assets.Controller.Manager.Combat
             this.ProcessTakingAction();
         }
 
+        public void ProcessSummon(CharController c)
+        {
+            this._data.Characters.Add(c);
+            this._data.InitiativeOrder.Add(c);
+        }
+
         private void ProcessTakingAction()
         {
             if (this._data.InitiativeOrder.Count > 0)
