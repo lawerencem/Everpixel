@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Parties>
+  <Party Name ="Vikings">
+    <SubParty>Nordic Shock Troops,6</SubParty>
+    <SubParty>Nordic Spearmen,5</SubParty>
+    <SubParty>Nordic Spearmen,9</SubParty>
+    <SubParty>Longaxers,1</SubParty>
+    <SubParty>Raiders,5</SubParty>
+    <SubParty>Vikings,3</SubParty>
+  </Party>
+</Parties>

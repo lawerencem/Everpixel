@@ -413,6 +413,30 @@
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
+    <Weapon name="Rainmaker">
+      <Tier>One</Tier>
+      <Accuracy_Mod>1.1</Accuracy_Mod>
+      <AP_Mod>0.85</AP_Mod>
+      <Armor_Ignore>0.70</Armor_Ignore>
+      <Armor_Pierce>0.70</Armor_Pierce>
+      <Block_Ignore>0.125</Block_Ignore>
+      <Damage>90</Damage>
+      <Description>
+        The sharp edges of this weapon help "make it rain".  
+      </Description>
+      <Fatigue_Mod>0.85</Fatigue_Mod>
+      <Initiative_Mod>0.90</Initiative_Mod>
+      <Max_Durability>100</Max_Durability>
+      <Parry_Mod>0.65</Parry_Mod>
+      <Shield_Damage_Percent>0.15</Shield_Damage_Percent>
+      <Sprites>64</Sprites>
+      <Stamina_Mod>0.85</Stamina_Mod>
+      <Value>2500</Value>
+      <WeaponEAbility>Chop</WeaponEAbility>
+      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
   </EWeaponSkill>
   </Weapons>
   

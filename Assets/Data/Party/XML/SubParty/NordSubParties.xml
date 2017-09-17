@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SubParties>
+  <SubParty Name ="Longaxers">
+    <Difficulty>1</Difficulty>
+    <Character>1,Wimpy Longaxer,Two</Character>
+    <Character>1,Wimpy Longaxer,Two</Character>
+  </SubParty>
+  <SubParty Name ="Nordic Shock Troops">
+    <Difficulty>6</Difficulty>
+    <Character>1,Gotland Footman,One</Character>
+    <Character>1,Gotland Footman,One</Character>
+  </SubParty>
+  <SubParty Name ="Nordic Spearmen">
+    <Difficulty>5</Difficulty>
+    <Character>1,Nordic Spearman,One</Character>
+    <Character>1,Nordic Spearman,One</Character>
+  </SubParty>
+  <SubParty Name ="Nordic Spearmen">
+    <Difficulty>9</Difficulty>
+    <Character>1,Nordic Sergeant,One</Character>
+    <Character>1,Nordic Spearman,One</Character>
+    <Character>1,Nordic Spearman,One</Character>
+  </SubParty>
+  <SubParty Name ="Raiders">
+    <Difficulty>5</Difficulty>
+    <Character>1,Raider,One</Character>
+    <Character>1,Raider,One</Character>
+  </SubParty>
+  <SubParty Name ="Vikings">
+    <Difficulty>3</Difficulty>
+    <Character>1,Viking,One</Character>
+  </SubParty>
+</SubParties>

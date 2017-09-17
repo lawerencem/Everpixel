@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Parties>
+  <Party Name ="Orcs">
+    <SubParty>Orc Berserkers,4</SubParty>
+    <SubParty>Orc Berserkers,7</SubParty>
+    <SubParty>Orc Berserkers,11</SubParty>
+    <SubParty>Orc Berserkers,14</SubParty>
+    <SubParty>Orc Scavengers,1</SubParty>
+    <SubParty>Shock Troopas,5</SubParty>
+    <SubParty>Shock Troopas,9</SubParty>
+    <SubParty>Shock Troopas,15</SubParty>
+    <SubParty>Shock Troopa Calvary,6</SubParty>
+    <SubParty>Shock Troopa Calvary,9</SubParty>
+    <SubParty>Shock Troopa Calvary,13</SubParty>
+    <SubParty>Orc Lord,12</SubParty>
+    <SubParty>Orc Lord,16</SubParty>
+    <SubParty>Orc Warriors,4</SubParty>
+    <SubParty>Orc Warriors,8</SubParty>
+    <SubParty>Orc Warriors,11</SubParty>
+    <SubParty>Orc Warriors,16</SubParty>
+    <SubParty>Orc Wereweens,5</SubParty>
+    <SubParty>Weens,3</SubParty>
+    <SubParty>Weens,7</SubParty>
+    <SubParty>Weens,9</SubParty>
+    <SubParty>Ween Dragon,14</SubParty>
+    <SubParty>Ween Tamers,4</SubParty>
+    <SubParty>Ween Tamers,6</SubParty>
+    <SubParty>Ween Tamers,9</SubParty>
+    <SubParty>Ween Tamers,14</SubParty>
+  </Party>
+</Parties>

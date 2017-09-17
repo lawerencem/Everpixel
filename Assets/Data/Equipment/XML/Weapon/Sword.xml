@@ -101,6 +101,31 @@
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
+    <Weapon name="Chainsaw Blade">
+      <Tier>One</Tier>
+      <Accuracy_Mod>0.75</Accuracy_Mod>
+      <AP_Mod>0.90</AP_Mod>
+      <Armor_Ignore>0.15</Armor_Ignore>
+      <Armor_Pierce>0.15</Armor_Pierce>
+      <Block_Ignore>0.25</Block_Ignore>
+      <Damage>80</Damage>
+      <Description>
+        Klaatu Varada Nikto!
+      </Description>
+      <Fatigue_Mod>1.10</Fatigue_Mod>
+      <Initiative_Mod>0.95</Initiative_Mod>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>0.20</Parry_Mod>
+      <Shield_Damage_Percent>0.25</Shield_Damage_Percent>
+      <Sprites>125</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>2500</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Gash</WeaponEAbility>
+      <WeaponEAbility>Maim</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
     <Weapon name="Choppa">
       <Tier>Five</Tier>
       <Accuracy_Mod>0.85</Accuracy_Mod>
@@ -194,7 +219,7 @@
       <Parry_Mod>1.03</Parry_Mod>
       <Shield_Damage_Percent>0.24</Shield_Damage_Percent>
       <Sprites>93,94,95</Sprites>
-      <Stamina_Mod>5</Stamina_Mod>
+      <Stamina_Mod>0.95</Stamina_Mod>
       <Value>1500</Value>
       <WeaponEAbility>Slash</WeaponEAbility>
       <WeaponEAbility>Gash</WeaponEAbility>

@@ -8,7 +8,8 @@
         Gromp,
         Octolegs,
         Raptard,
-        Ween,
         War_Ween,
+        Ween,
+        Ween_Dragon,
     }
 }

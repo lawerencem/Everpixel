@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Parties>
+  <Party Name ="Goblins">
+    <SubParty>Gobbo Spider Riders,2</SubParty>
+    <SubParty>Gobbo Spider Riders,4</SubParty>
+    <SubParty>Goblin Fodder,1</SubParty>
+    <SubParty>Goblin Warboss Retinue,12</SubParty>
+    <SubParty>Goblin Void Weavers,6</SubParty>
+    <SubParty>Goblin Void Weavers,10</SubParty>
+    <SubParty>Goblin Void Weavers,12</SubParty>
+    <SubParty>Goblin Void Weavers,15</SubParty>
+    <SubParty>Gromp Hoppers,4</SubParty>
+    <SubParty>Gromp Hoppers,6</SubParty>
+    <SubParty>Gromp Hoppers,8</SubParty>
+    <SubParty>Gromp Hoppers,10</SubParty>
+    <SubParty>Slimers,3</SubParty>
+    <SubParty>Slime Lords,4</SubParty>
+    <SubParty>Slime Lords,5</SubParty>
+    <SubParty>Slime Lords,6</SubParty>
+  </Party>
+</Parties>

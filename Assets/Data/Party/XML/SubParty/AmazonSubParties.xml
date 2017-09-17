@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SubParties>
+  <SubParty Name ="Dino Calvary">
+    <Difficulty>2</Difficulty>
+    <Character>1,Raptard Rider,One</Character>
+  </SubParty>
+  <SubParty Name ="Dino Healers">
+    <Difficulty>2</Difficulty>
+    <Character>1,Curizard,Three</Character>
+  </SubParty>
+  <SubParty Name ="Dino Healers">
+    <Difficulty>3</Difficulty>
+    <Character>1,Curizard,Three</Character>
+    <Character>1,Beardedino,Three</Character>
+  </SubParty>
+  <SubParty Name ="Dino Infantry">
+    <Difficulty>5</Difficulty>
+    <Character>1,Dino Scaleman,One</Character>
+    <Character>1,Dino Scaleman,One</Character>
+  </SubParty>
+  <SubParty Name ="Dino Knights">
+    <Difficulty>3</Difficulty>
+    <Character>1,Dino Squire,One</Character>
+    <Character>1,Dino Squire,One</Character>
+  </SubParty>
+  <SubParty Name ="Dino Knights">
+    <Difficulty>5</Difficulty>
+    <Character>1,Dino Knight,One</Character>
+    <Character>1,Dino Knight,One</Character>
+  </SubParty>
+  <SubParty Name ="Dino Knights">
+    <Difficulty>6</Difficulty>
+    <Character>1,Dino Knight,One</Character>
+    <Character>1,Veteran Dino Knight,One</Character>
+  </SubParty>
+  <SubParty Name ="Dino Mages">
+    <Difficulty>4</Difficulty>
+    <Character>1,Solizard,Two</Character>
+    <Character>1,Rawrasaur,Two</Character>
+  </SubParty>
+  <SubParty Name ="Dino Priest">
+    <Difficulty>4</Difficulty>
+    <Character>1,Dino Priest,Three</Character>
+  </SubParty>
+  <SubParty Name ="Dino Priest">
+    <Difficulty>6</Difficulty>
+    <Character>1,Divine Dino Priest,Three</Character>
+  </SubParty>
+  <SubParty Name ="Dino Priest">
+    <Difficulty>8</Difficulty>
+    <Character>1,Dino Seraph,Three</Character>
+  </SubParty>
+  <SubParty Name ="Lizardman Fodder">
+    <Difficulty>1</Difficulty>
+    <Character>1,Lizardman Militia,One</Character>
+    <Character>1,Lizardman Militia,One</Character>
+  </SubParty>
+  <SubParty Name ="Raptors">
+    <Difficulty>3</Difficulty>
+    <Character>1,Raptard,One</Character>
+    <Character>1,Raptard,One</Character>
+  </SubParty>
+  <SubParty Name ="Raptors">
+    <Difficulty>5</Difficulty>
+    <Character>1,Raptard,One</Character>
+    <Character>1,Raptard,One</Character>
+    <Character>1,Denture,One</Character>
+  </SubParty>
+  <SubParty Name ="Rexes">
+    <Difficulty>3</Difficulty>
+    <Character>1,Tearex,Three</Character>
+    <Character>1,Thairex,Two</Character>
+  </SubParty>
+  <SubParty Name ="Rexes">
+    <Difficulty>4</Difficulty>
+    <Character>1,Arms,Two</Character>
+    <Character>1,Arms,Two</Character>
+  </SubParty>
+  <SubParty Name ="Rexes">
+    <Difficulty>7</Difficulty>
+    <Character>1,Tyrantaur,One</Character>
+    <Character>1,Tearex,Three</Character>
+    <Character>1,Thairex,Two</Character>
+  </SubParty>
+  <SubParty Name ="Rexes">
+    <Difficulty>9</Difficulty>
+    <Character>1,Arms,Two</Character>
+    <Character>1,Tyrantaur,One</Character>
+    <Character>1,Tearex,Three</Character>
+    <Character>1,Thairex,Two</Character>
+  </SubParty>
+</SubParties>

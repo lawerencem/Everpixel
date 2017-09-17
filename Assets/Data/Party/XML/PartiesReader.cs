@@ -21,7 +21,12 @@ namespace Assets.Data.Party.XML
 
         public PartyReader() : base()
         {
-            this._paths.Add("Assets/Data/Party/XML/Parties.xml");
+            this._paths.Add("Assets/Data/Party/XML/Party/AmazonParties.xml");
+            this._paths.Add("Assets/Data/Party/XML/Party/BretonParties.xml");
+            this._paths.Add("Assets/Data/Party/XML/Party/GoblinParties.xml");
+            this._paths.Add("Assets/Data/Party/XML/Party/JomonParties.xml");
+            this._paths.Add("Assets/Data/Party/XML/Party/NordParties.xml");
+            this._paths.Add("Assets/Data/Party/XML/Party/OrcParties.xml");
         }
 
         public override void ReadFromFile()

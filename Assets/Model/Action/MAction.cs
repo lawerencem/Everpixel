@@ -36,7 +36,8 @@ namespace Assets.Model.Action
         {
             this.ActiveAbility = AbilityTable.Instance.Table[this._data.Ability];
             this.ActiveAbility.Data.ParentAction = this;
-            this.ActiveAbility.Data.ParentWeapon = this.Data.ParentWeapon.Model;
+            if (this.Data.ParentWeapon != null)
+                this.ActiveAbility.Data.ParentWeapon = this.Data.ParentWeapon.Model;
         }
 
         private void InitProcessAbility()
@@ -45,7 +46,8 @@ namespace Assets.Model.Action
             GUIManager.Instance.SetInteractionLocked(true);
             this.ActiveAbility = AbilityTable.Instance.Table[this._data.Ability];
             this.ActiveAbility.Data.ParentAction = this;
-            this.ActiveAbility.Data.ParentWeapon = this.Data.ParentWeapon.Model;
+            if (this.Data.ParentWeapon != null)
+                this.ActiveAbility.Data.ParentWeapon = this.Data.ParentWeapon.Model;
         }
 
         private void InitPredictHits()

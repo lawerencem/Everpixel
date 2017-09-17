@@ -34,6 +34,59 @@
         <Resolve>350</Resolve>
       </Stats>
     </Character>
+    <Character name ="Armer Wall">
+      <Class>Fighter,14</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Orc</ERace>
+      <Perks>
+        <Perk>Hulk</Perk>
+        <Perk>Colossus</Perk>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>1.0,Orcish Plate Mail,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>1.0,Orc Mask,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Choppa,Two</RWeapon>
+        </RWeapons>
+        <LWeapons name="One">
+          <LWeapon>1,Orc Slab,Two</LWeapon>
+        </LWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>300</Agility>
+        <Constitution>720</Constitution>
+        <Intelligence>180</Intelligence>
+        <Might>600</Might>
+        <Perception>350</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Cannoneer">
+      <Class>Warrior,10</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Orc</ERace>
+      <Perks>
+      </Perks>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Weenbow,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>350</Constitution>
+        <Intelligence>120</Intelligence>
+        <Might>420</Might>
+        <Perception>550</Perception>
+        <Resolve>480</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Dire_Ween">
       <AttackSpriteIndex>3</AttackSpriteIndex>
       <Abilities>
@@ -224,6 +277,40 @@
         <Might>680</Might>
         <Perception>350</Perception>
         <Resolve>350</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Orc Khan">
+      <Class>Berserker,15</Class>
+      <Class>Warrior,7</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Orc</ERace>
+      <Perks>
+        <Perk>Barbarism</Perk>
+        <Perk>Colossus</Perk>
+        <Perk>Executioner</Perk>
+        <Perk>Hulk</Perk>
+        <Perk>Savage_Soul</Perk>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>1.0,Orcish Plate Mail,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>1.0,Orc Mask,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Rainmaker,One</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>350</Agility>
+        <Constitution>700</Constitution>
+        <Intelligence>250</Intelligence>
+        <Might>720</Might>
+        <Perception>405</Perception>
+        <Resolve>400</Resolve>
       </Stats>
     </Character>
     <Character name ="Orc Poet">
@@ -568,26 +655,6 @@
         <Resolve>420</Resolve>
       </Stats>
     </Character>
-    <Character name ="Ween Blaster">
-      <Class>Warrior,3</Class>
-      <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Orc</ERace>
-      <Perks>
-      </Perks>
-      <PotentialWeapons>
-        <RWeapons name="One">
-          <RWeapon>1,Weenbow,Five</RWeapon>
-        </RWeapons>
-      </PotentialWeapons>
-      <Stats>
-        <Agility>420</Agility>
-        <Constitution>350</Constitution>
-        <Intelligence>120</Intelligence>
-        <Might>420</Might>
-        <Perception>550</Perception>
-        <Resolve>480</Resolve>
-      </Stats>
-    </Character>
     <Character name ="Ween">
       <AttackSpriteIndex>18</AttackSpriteIndex>
       <Abilities>
@@ -608,6 +675,26 @@
         <Resolve>350</Resolve>
       </Stats>
       <WeaponAbility>Bite</WeaponAbility>
+    </Character>
+    <Character name ="Ween Blaster">
+      <Class>Warrior,3</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Orc</ERace>
+      <Perks>
+      </Perks>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Weenbow,Five</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>350</Constitution>
+        <Intelligence>120</Intelligence>
+        <Might>420</Might>
+        <Perception>550</Perception>
+        <Resolve>480</Resolve>
+      </Stats>
     </Character>
     <Character name ="Ween_Dragon">
       <AttackSpriteIndex>3</AttackSpriteIndex>
@@ -633,6 +720,46 @@
         <Resolve>800</Resolve>
       </Stats>
       <WeaponAbility>Bite</WeaponAbility>
+    </Character>
+    <Character name ="Ween Lord">
+      <Class>Berserker,18</Class>
+      <Class>Warrior,8</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Orc</ERace>
+      <Mount>Ween_Dragon</Mount>
+      <Perks>
+        <Perk>Barbarism</Perk>
+        <Perk>Colossus</Perk>
+        <Perk>Executioner</Perk>
+        <Perk>Hulk</Perk>
+        <Perk>Savage_Soul</Perk>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>1.0,Orcish Plate Mail,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>1.0,Orc Mask,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Choppa,Two</RWeapon>
+          <RWeapon>0.25,Chainsaw Blade,One</RWeapon>
+        </RWeapons>
+        <LWeapons name="One">
+          <LWeapon>0.75,Orc Slab,Two</LWeapon>
+          <LWeapon>0.25,Orc Bladewall,One</LWeapon>
+        </LWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>350</Agility>
+        <Constitution>700</Constitution>
+        <Intelligence>250</Intelligence>
+        <Might>720</Might>
+        <Perception>405</Perception>
+        <Resolve>400</Resolve>
+      </Stats>
     </Character>
     <Character name ="Ween Rider">
       <Class>Warrior,3</Class>
@@ -661,6 +788,46 @@
         <Might>600</Might>
         <Perception>580</Perception>
         <Resolve>420</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Weenslinger">
+      <Class>Warrior,15</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Orc</ERace>
+      <Perks>
+      </Perks>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Weenbow,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>350</Constitution>
+        <Intelligence>120</Intelligence>
+        <Might>420</Might>
+        <Perception>550</Perception>
+        <Resolve>480</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Ween Tamer">
+      <Class>Warrior,7</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Orc</ERace>
+      <Perks>
+      </Perks>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Weenbow,Four</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>350</Constitution>
+        <Intelligence>120</Intelligence>
+        <Might>420</Might>
+        <Perception>550</Perception>
+        <Resolve>480</Resolve>
       </Stats>
     </Character>
     <Character name ="Wimpy Armer Boy">

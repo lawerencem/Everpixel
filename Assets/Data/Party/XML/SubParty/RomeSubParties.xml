@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SubParties>
+  <SubParty Name ="Legionnaires">
+    <Difficulty>3</Difficulty>
+    <Character>1,Praetorian,One</Character>
+    <Character>1,Praetorian,One</Character>
+  </SubParty>
+</SubParties>

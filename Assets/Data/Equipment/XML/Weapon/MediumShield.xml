@@ -221,6 +221,24 @@
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Shield</EWeaponUse>
     </Weapon>
+    <Weapon name="Orc Bladewall">
+      <Tier>One</Tier>
+      <AP_Mod>0.70</AP_Mod>
+      <Description>
+        
+      </Description>
+      <Fatigue_Mod>1.20</Fatigue_Mod>
+      <Initiative_Mod>0.70</Initiative_Mod>
+      <Max_Durability>180</Max_Durability>
+      <Melee_Block_Chance>1.30</Melee_Block_Chance>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Ranged_Block_Chance>1.25</Ranged_Block_Chance>
+      <Sprites>63</Sprites>
+      <Stamina_Mod>0.75</Stamina_Mod>
+      <Value>2500</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
     <Weapon name="Skjoldr">
       <Tier>Five</Tier>
       <AP_Mod>0.92</AP_Mod>

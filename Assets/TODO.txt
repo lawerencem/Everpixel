@@ -5,6 +5,7 @@ data classes being populated on weapon/ability click can be consolidated
 Action
   - Display effects on queue
 
+Stealth
 Refactor Dmg Calculations
 Block calculations
   - Block FX

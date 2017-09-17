@@ -516,12 +516,28 @@
     <None Include="Assets\Data\Equipment\XML\Weapon\Sword.xml" />
     <None Include="Assets\Data\Injury\XML\Injuries.xml" />
     <None Include="Assets\Data\Mount\XML\Mounts.xml" />
-    <None Include="Assets\Data\Party\XML\Parties.xml" />
-    <None Include="Assets\Data\Party\XML\SubParties.xml" />
+    <None Include="Assets\Data\Party\XML\Party\AmazonParties.xml" />
+    <None Include="Assets\Data\Party\XML\Party\BretonParties.xml" />
+    <None Include="Assets\Data\Party\XML\Party\GoblinParties.xml" />
+    <None Include="Assets\Data\Party\XML\Party\JomonParties.xml" />
+    <None Include="Assets\Data\Party\XML\Party\NordParties.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Assets\Data\Party\XML\Party\OrcParties.xml" />
+    <None Include="Assets\Data\Party\XML\SubParty\AmazonSubParties.xml" />
+    <None Include="Assets\Data\Party\XML\SubParty\BretonSubParties.xml" />
+    <None Include="Assets\Data\Party\XML\SubParty\GoblinSubParties.xml" />
+    <None Include="Assets\Data\Party\XML\SubParty\JomonSubParties.xml" />
+    <None Include="Assets\Data\Party\XML\SubParty\OrcSubParties.xml" />
     <None Include="Assets\Data\Perk\XML\Perks.xml" />
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Assets\Data\Party\XML\SubParty\RomeSubParties.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Party\XML\SubParty\NordSubParties.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

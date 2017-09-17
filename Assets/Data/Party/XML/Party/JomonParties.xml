@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Parties>
+  <Party Name ="Jomonese Infantry">
+    <SubParty>Katana Samurais,5</SubParty>
+    <SubParty>Nodachi Samurais,5</SubParty>
+  </Party>
+</Parties>

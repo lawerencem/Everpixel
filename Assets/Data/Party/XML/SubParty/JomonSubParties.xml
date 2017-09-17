@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SubParties>
+  <SubParty Name ="Katana Samurais">
+    <Difficulty>5</Difficulty>
+    <Character>1,Ronin Katana Samurai,One</Character>
+    <Character>1,Katana Samurai,One</Character>
+  </SubParty>
+  <SubParty Name ="Nodachi Samurais">
+    <Difficulty>5</Difficulty>
+    <Character>1,Ronin Nodachi Samurai,One</Character>
+    <Character>1,Nodachi Samurai,One</Character>
+  </SubParty>
+</SubParties>

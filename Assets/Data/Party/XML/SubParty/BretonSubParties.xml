@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SubParties>
+  <SubParty Name ="Bretonnian Greatswordsmen">
+    <Difficulty>2</Difficulty>
+    <Character>1,Medium Great Sword Footman,One</Character>
+    <Character>1,Medium Great Sword Footman,One</Character>
+  </SubParty>
+  <SubParty Name ="Bretonnian Greatswordsmen">
+    <Difficulty>3</Difficulty>
+    <Character>1,Medium Great Sword Footman,One</Character>
+    <Character>1,Medium Great Sword Footman,One</Character>
+    <Character>1,Medium Great Sword Footman,One</Character>
+  </SubParty>
+</SubParties>
