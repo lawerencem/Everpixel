@@ -9,12 +9,12 @@ namespace Assets.Model.Perk.Equipment
 
         }
 
-        public virtual void TryProcessAdd(MChar character, object equipment)
+        public virtual void TryProcessAdd(PChar character, object equipment)
         {
 
         }
 
-        public virtual void TryProcessRemove(MChar character, object equipment)
+        public virtual void TryProcessRemove(PChar character, object equipment)
         {
 
         }

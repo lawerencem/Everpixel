@@ -75,7 +75,7 @@
     </Armor>
     <Armor name="Orcish Plate Mail">
       <Tier>Five</Tier>
-      <AP_Mod>0.51</AP_Mod>
+      <AP_Mod>0.63</AP_Mod>
       <Block_Mod>0.51</Block_Mod>
       <Flat_Damage_Ignore>21</Flat_Damage_Ignore>
       <Damage_Reduction>0.52</Damage_Reduction>
@@ -94,7 +94,7 @@
     </Armor>
     <Armor name="Orcish Plate Mail">
       <Tier>Four</Tier>
-      <AP_Mod>0.53</AP_Mod>
+      <AP_Mod>0.64</AP_Mod>
       <Block_Mod>0.53</Block_Mod>
       <Flat_Damage_Ignore>23</Flat_Damage_Ignore>
       <Damage_Reduction>0.50</Damage_Reduction>
@@ -113,7 +113,7 @@
     </Armor>
     <Armor name="Orcish Plate Mail">
       <Tier>Three</Tier>
-      <AP_Mod>0.55</AP_Mod>
+      <AP_Mod>0.65</AP_Mod>
       <Block_Mod>0.55</Block_Mod>
       <Flat_Damage_Ignore>25</Flat_Damage_Ignore>
       <Damage_Reduction>0.45</Damage_Reduction>
@@ -132,7 +132,7 @@
     </Armor>
     <Armor name="Orcish Plate Mail">
       <Tier>Two</Tier>
-      <AP_Mod>0.55</AP_Mod>
+      <AP_Mod>0.65</AP_Mod>
       <Block_Mod>0.55</Block_Mod>
       <Flat_Damage_Ignore>28</Flat_Damage_Ignore>
       <Damage_Reduction>0.40</Damage_Reduction>
@@ -151,7 +151,7 @@
     </Armor>
     <Armor name="Plate Mail">
       <Tier>Five</Tier>
-      <AP_Mod>0.55</AP_Mod>
+      <AP_Mod>0.65</AP_Mod>
       <Block_Mod>0.62</Block_Mod>
       <Flat_Damage_Ignore>18</Flat_Damage_Ignore>
       <Damage_Reduction>0.42</Damage_Reduction>

@@ -338,9 +338,7 @@
     <Compile Include="Assets\Model\Party\Param\PartyParams.cs" />
     <Compile Include="Assets\Model\Party\Param\SubPartyParams.cs" />
     <Compile Include="Assets\Model\Perk\APerk.cs" />
-    <Compile Include="Assets\Model\Perk\AbilityMod\DinoBite.cs" />
     <Compile Include="Assets\Model\Perk\AbilityMod\MAbilityModPerk.cs" />
-    <Compile Include="Assets\Model\Perk\AbilityMod\TRexBite.cs" />
     <Compile Include="Assets\Model\Perk\EPerk.cs" />
     <Compile Include="Assets\Model\Perk\Equipment\MEquipmentPerk.cs" />
     <Compile Include="Assets\Model\Perk\Equipment\TwoHandedExpert.cs" />

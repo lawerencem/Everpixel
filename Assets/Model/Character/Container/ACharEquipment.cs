@@ -68,9 +68,8 @@ namespace Assets.Model.Character.Container
 
                 foreach (var perk in this._parent.GetPerks().GetEquipmentSStatPerks())
                     perk.TryModEquipmentMod(mods);
-                //foreach (var perk in this._parent.GetPerks().GetEquipmentPerks())
-                //    perk.TryProcessAdd(this._parent, weapon);
-                // TODO
+                foreach (var perk in this._parent.GetPerks().GetEquipmentPerks())
+                    perk.TryProcessAdd(this._parent.Controller.Proxy, weapon);
 
                 this._parent.GetMods().AddMod(mods);
             }

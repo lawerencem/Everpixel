@@ -8,7 +8,6 @@
         Bastion,
         Bully,
         Colossus,
-        Dino_Bite,
         Enrage,
         Executioner,
         Gargantuan,
@@ -27,7 +26,6 @@
         Squishy,
         Weightlifter,
         Violence_Fetish,
-        T_Rex_Bite,
         Two_Handed_Expert,
     }
 }

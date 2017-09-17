@@ -1,4 +1,6 @@
-﻿using Assets.Model.Combat.Hit;
+﻿using Assets.Controller.Character;
+using Assets.Model.Character.Enum;
+using Assets.Model.Combat.Hit;
 
 namespace Assets.Model.Perk.PreHit
 {
@@ -11,12 +13,18 @@ namespace Assets.Model.Perk.PreHit
 
         public override void TryModHit(MHit hit)
         {
-            //base.TryModHit(hit);
-            //var maxHp = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.HP);
-            //if (hit.Target.Model.GetCurrentHP() / maxHp <= 0.25)
-            //{
-            //    hit.Ability.DamageMod *= this.Val;
-            //}
+            base.TryModHit(hit);
+            if (hit.Data.Target.Current != null &&
+                hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
+            {
+                var tgt = hit.Data.Target.Current as CChar;
+                var maxHp = tgt.Proxy.GetStat(ESecondaryStat.HP);
+                var hp = tgt.Proxy.GetPoints(ESecondaryStat.HP);
+                if (hp / maxHp <= 0.25)
+                {
+                    hit.Data.Ability.Data.DamageMod *= this.Val;
+                }
+            }
         }
     }
 }

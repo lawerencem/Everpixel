@@ -23,7 +23,6 @@ namespace Assets.Model.Perk
                 case (EPerk.Bastion): { return new Bastion(); }
                 case (EPerk.Bully): { return new Bully(); }
                 case (EPerk.Colossus): { return new Colossus(); }
-                case (EPerk.Dino_Bite): { return new DinoBite(); }
                 case (EPerk.Enrage): { return new Enrage(); }
                 case (EPerk.Executioner): { return new Executioner(); }
                 case (EPerk.Hulk): { return new Hulk(); }
@@ -42,7 +41,6 @@ namespace Assets.Model.Perk
                 case (EPerk.Squishy): { return new Squishy(); }
                 case (EPerk.Weightlifter): { return new Weightlifter(); }
                 case (EPerk.Violence_Fetish): { return new ViolenceFetish(); }
-                case (EPerk.T_Rex_Bite): { return new TRexBite(); }
                 case (EPerk.Two_Handed_Expert): { return new TwoHandedExpert(); }
                 default: { return null; }
             }
