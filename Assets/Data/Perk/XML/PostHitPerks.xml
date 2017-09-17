@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Perks>
+  <PerkClass name ="PostHitPerk">
+    <Perk name ="Barbarism">
+      <AoE>0</AoE>
+      <Description>
+        Gain a HoT that heals this character's entire HP back in 5 turns upon killing an enemy.
+      </Description>
+      <Dur>5</Dur>
+      <Val>0</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Bastion">
+      <AoE>0</AoE>
+      <Description>
+        Gain a Stamina after a successful block.
+      </Description>
+      <Dur>0</Dur>
+      <Val>15</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Savage_Visage">
+      <AoE>3</AoE>
+      <Description>
+        Applies a horror effect to enemies within range upon dealing damage.
+      </Description>
+      <Dur>3</Dur>
+      <Val>1</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Small_Shield_Expert">
+      <AoE>0</AoE>
+      <Description>
+        Buffs character with dodge and parry after a successful block.
+      </Description>
+      <Dur>3</Dur>
+      <Val>1.15</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Violence_Fetish">
+      <AoE>0</AoE>
+      <Description>
+        Gain a HoT for 5% of the damage dealt over 5 turns.
+      </Description>
+      <Dur>5</Dur>
+      <Val>0.05</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+  </PerkClass>
+</Perks>

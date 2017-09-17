@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Perks>
+  <PerkClass name ="WhenHitPerk">
+    <Perk name ="Enrage">
+      <AoE>0</AoE>
+      <Description>
+        Gain a +15% bonus to power whenever damaged.
+      </Description>
+      <Dur>3</Dur>
+      <Val>1.15</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Savage_Soul">
+      <AoE>0</AoE>
+      <Description>
+        Gain a shield worth 25% of this character's HP whenever critically hit with a damaging attack.
+      </Description>
+      <Dur>5</Dur>
+      <Val>1.25</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Squishy">
+      <AoE>0</AoE>
+      <Description>
+        Reduces the damage of attacks against this character by 3% for each percentage point of Armor Ignore.
+      </Description>
+      <Dur>0</Dur>
+      <Val>0</Val>
+      <ValPerPower>0.03</ValPerPower>
+    </Perk>
+  </PerkClass>
+</Perks>

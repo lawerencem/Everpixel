@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Perks>
+  <PerkClass name ="EquipmentSStatPerk">
+    <Perk name ="Colossus">
+      <AoE>0</AoE>
+      <Description>
+        Increase AP by 15% for every piece of heavy armor the character is wearing.
+      </Description>
+      <Dur>0</Dur>
+      <Val>1.15</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Hulk">
+      <AoE>0</AoE>
+      <Description>
+        Increase AP by 10% for every weapon the character is currently wielding.
+      </Description>
+      <Dur>0</Dur>
+      <Val>1.10</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Medium_Shield_Expert">
+      <AoE>0</AoE>
+      <Description>
+        Buffs character with additional block chance after a successful block.
+      </Description>
+      <Dur>3</Dur>
+      <Val>1.25</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Weightlifter">
+      <AoE>0</AoE>
+      <Description>
+        Increase Stamina by 15% for every piece of heavy armor the character is wearing.
+      </Description>
+      <Dur>0</Dur>
+      <Val>1.15</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+  </PerkClass>
+</Perks>

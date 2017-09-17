@@ -13,7 +13,13 @@ namespace Assets.Data.Perk.XML
 
         public PerkReader() : base()
         {
-            this._paths.Add("Assets/Data/Perk/XML/Perks.xml");
+            this._paths.Add("Assets/Data/Perk/XML/AbilityPerks.xml");
+            this._paths.Add("Assets/Data/Perk/XML/EquipmentPerks.xml");
+            this._paths.Add("Assets/Data/Perk/XML/EquipmentSStatPerks.xml");
+            this._paths.Add("Assets/Data/Perk/XML/OnActionPerks.xml");
+            this._paths.Add("Assets/Data/Perk/XML/PostHitPerks.xml");
+            this._paths.Add("Assets/Data/Perk/XML/SStatModPerks.xml");
+            this._paths.Add("Assets/Data/Perk/XML/WhenHitPerks.xml");
         }
 
         public static PerkReader Instance

@@ -529,7 +529,6 @@
     <None Include="Assets\Data\Party\XML\SubParty\GoblinSubParties.xml" />
     <None Include="Assets\Data\Party\XML\SubParty\JomonSubParties.xml" />
     <None Include="Assets\Data\Party\XML\SubParty\OrcSubParties.xml" />
-    <None Include="Assets\Data\Perk\XML\Perks.xml" />
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -537,6 +536,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Data\Party\XML\SubParty\NordSubParties.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Perk\XML\AbilityPerks.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Perk\XML\EquipmentPerks.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Perk\XML\EquipmentSStatPerks.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Perk\XML\PostHitPerks.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Perk\XML\OnActionPerks.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Perk\XML\SStatModPerks.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\Perk\XML\WhenHitPerks.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

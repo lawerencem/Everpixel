@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Perks>
+  <PerkClass name ="EquipmentPerk">
+    <Perk name ="Two_Handed_Expert">
+      <AoE>0</AoE>
+      <Description>
+        Gain +15% might when wielding a two-handed weapon.
+      </Description>
+      <Dur>0</Dur>
+      <Val>1.15</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+  </PerkClass>
+</Perks>

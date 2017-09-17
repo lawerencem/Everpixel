@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Perks>
+  <PerkClass name ="OnActionPerk">
+    <Perk name ="Bash_Buddy">
+      <AoE>3</AoE>
+      <Description>
+        Give nearby allies a shield whenever performing an action.
+      </Description>
+      <Dur>3</Dur>
+      <Val>3</Val>
+      <ValPerPower>0.003</ValPerPower>
+    </Perk>
+  </PerkClass>
+  <PerkClass name ="PreHitPerk">
+    <Perk name ="Bully">
+      <AoE>0</AoE>
+      <Description>
+        Gain +15% bonus to damage each consecutive attack against a target.
+      </Description>
+      <Dur>0</Dur>
+      <Val>1.15</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Executioner">
+      <AoE>0</AoE>
+      <Description>
+        Triple damage against targets with less than 25% health.
+      </Description>
+      <Dur>0</Dur>
+      <Val>3</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Predator">
+      <AoE>0</AoE>
+      <Description>
+        Do +50% damage to target for each injury on target.
+      </Description>
+      <Dur>0</Dur>
+      <Val>1.10</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Shield_Happy">
+      <AoE>0</AoE>
+      <Description>
+        Double the character's chance to block with whenever shielded.
+      </Description>
+      <Dur>0</Dur>
+      <Val>2</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+  </PerkClass>
+</Perks>

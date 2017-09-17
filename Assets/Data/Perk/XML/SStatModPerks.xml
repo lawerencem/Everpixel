@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Perks>
+  <PerkClass name ="SStadModPerk">
+    <Perk name ="Gargantuan">
+      <AoE>0</AoE>
+      <Description>
+        Gives a 25% boost to this character's HP.
+      </Description>
+      <Dur>0</Dur>
+      <Val>1.25</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Iron_Hide">
+      <AoE>0</AoE>
+      <Description>
+        Character gains 15% damage reduction.
+      </Description>
+      <Dur>0</Dur>
+      <Val>0.85</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Massive">
+      <AoE>0</AoE>
+      <Description>
+        Gives a 10% boost to this character's Consitution.
+      </Description>
+      <Dur>0</Dur>
+      <Val>1.10</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+    <Perk name ="Scaly">
+      <AoE>0</AoE>
+      <Description>
+        Character gains 4 points of flat damage reduction.
+      </Description>
+      <Dur>0</Dur>
+      <Val>4.0</Val>
+      <ValPerPower>0</ValPerPower>
+    </Perk>
+  <Perk name ="Shield_Pro">
+    <AoE>0</AoE>
+    <Description>
+      Character gains a 15% bonus to their block skill.
+    </Description>
+    <Dur>0</Dur>
+    <Val>1.15</Val>
+    <ValPerPower>0</ValPerPower>
+  </Perk>
+  </PerkClass>
+</Perks>
