@@ -4,7 +4,7 @@ namespace Assets.Model.Character.Builder
 {
     public class SecondaryStatReferee
     {
-        private static readonly double ActionPoints_Agi = 0.8;
+        private static readonly double ActionPoints_Agi = 0.6;
         private static readonly double ActionPoints_Int = 0.4;
         private static readonly double BaseHPAndStamina = 50;
         private static readonly double Block_Agi = 0.4;
@@ -51,7 +51,7 @@ namespace Assets.Model.Character.Builder
         private static readonly double Will_Int = 0.2;
         private static readonly double Will_Res = 0.8;
 
-        public static int DetermineActionPoints(PrimaryStats p) { return (int) ((ActionPoints_Agi * p.Agility) + (ActionPoints_Int * p.Intelligence)) / 50; }
+        public static int DetermineActionPoints(PrimaryStats p) { return (int)(((ActionPoints_Agi * p.Agility) + (ActionPoints_Int * p.Intelligence)) / 200) + 12; }
         public static int DetermineBlock(PrimaryStats p) { return (int) ((Block_Agi * p.Agility) + (Block_Might * p.Might) + (Block_Per * p.Perception) / 2); }
         public static int DetermineConcentration(PrimaryStats p) { return (int) ((Concentration_Con * p.Constitution) + (Concentration_Res * p.Resolve) / 2); }
         public static int DetermineCriticalChance(PrimaryStats p) { return (int) ((CriticalChance_Agi * p.Agility) + (CriticalChance_Might * p.Might) / 2); }
