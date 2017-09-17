@@ -4,7 +4,7 @@ namespace Assets.Model.Zone
 {
     public abstract class AZone
     {
-        public TileController Tile { get; set; }
+        public CTile Tile { get; set; }
 
         public AZone(ZoneArgsCont arg) { this.Tile = arg.Tile; }
 

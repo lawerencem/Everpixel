@@ -10,16 +10,16 @@ namespace Assets.Model.Map
     public class MMap
     {
         private HexMap _map;
-        private Dictionary<Pair<int, int>, TileController> _tileDict;
-        private List<TileController> _tiles;
+        private Dictionary<Pair<int, int>, CTile> _tileDict;
+        private List<CTile> _tiles;
 
-        public Dictionary<Pair<int, int>, TileController> GetTileDict() { return this._tileDict; }
-        public List<TileController> GetTiles() { return this._tiles; }
+        public Dictionary<Pair<int, int>, CTile> GetTileDict() { return this._tileDict; }
+        public List<CTile> GetTiles() { return this._tiles; }
 
         public MMap(HexMap map)
         {
-            this._tileDict = new Dictionary<Pair<int, int>, TileController>();
-            this._tiles = new List<TileController>();
+            this._tileDict = new Dictionary<Pair<int, int>, CTile>();
+            this._tiles = new List<CTile>();
             this._map = map;
             var mTiles = new List<MTile>();
             foreach(var t in this._map.Tiles)
@@ -31,7 +31,7 @@ namespace Assets.Model.Map
             foreach (var tile in mTiles)
             {
                 tile.Init();
-                var controller = new TileController(tile);
+                var controller = new CTile(tile);
                 this._tiles.Add(controller);
                 this._tileDict.Add(new Pair<int, int>(tile.Col, tile.Row), controller);
             }
@@ -105,7 +105,7 @@ namespace Assets.Model.Map
                 return initPath;
         }
 
-        public TileController GetTileForRow(bool lParty, EStartCol col)
+        public CTile GetTileForRow(bool lParty, EStartCol col)
         {
             int rowInd = -1;
             int colInd = -1;

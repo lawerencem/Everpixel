@@ -46,9 +46,9 @@ namespace Assets.View.Bark
             var origin = data.Source.Handle;
             var barks = new List<string>();
             if (hit.Data.Target.Current != null &&
-                hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
             {
-                var tgt = hit.Data.Target.Current as CharController;
+                var tgt = hit.Data.Target.Current as CChar;
                 if (hit.Data.Source.Proxy.LParty == tgt.Proxy.LParty)
                     barks = BarkTable.Instance.Table[EBark.FriendlyFatality];
                 else
@@ -58,7 +58,7 @@ namespace Assets.View.Bark
                     {
                         barks = BarkTable.Instance.Table[EBark.NeutralFatality];
                         var characters = CombatManager.Instance.GetData().Characters;
-                        origin = ListUtil<CharController>.GetRandomElement(characters).Handle;
+                        origin = ListUtil<CChar>.GetRandomElement(characters).Handle;
                     }
                     else
                         barks = this.GetPostEnemyFatalityBarks(data);
@@ -71,7 +71,7 @@ namespace Assets.View.Bark
                 {
                     barks = BarkTable.Instance.Table[EBark.NeutralFatality];
                     var characters = CombatManager.Instance.GetData().Characters;
-                    origin = ListUtil<CharController>.GetRandomElement(characters).Handle;
+                    origin = ListUtil<CChar>.GetRandomElement(characters).Handle;
                 }
                 else
                     barks = this.GetPostEnemyFatalityBarks(data);
@@ -86,9 +86,9 @@ namespace Assets.View.Bark
             var hit = ListUtil<MHit>.GetRandomElement(data.FatalHits);
             var origin = data.Source.Handle;
             var barks = new List<string>();
-            if (hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+            if (hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
             {
-                var tgt = hit.Data.Target.Current as CharController;
+                var tgt = hit.Data.Target.Current as CChar;
                 if (hit.Data.Source.Proxy.LParty == tgt.Proxy.LParty)
                     barks = BarkTable.Instance.Table[EBark.PreFriendlyFatality];
                 else
@@ -98,7 +98,7 @@ namespace Assets.View.Bark
                     {
                         barks = BarkTable.Instance.Table[EBark.PreNeutralFatality];
                         var characters = CombatManager.Instance.GetData().Characters;
-                        origin = ListUtil<CharController>.GetRandomElement(characters).Handle;
+                        origin = ListUtil<CChar>.GetRandomElement(characters).Handle;
                     }
                     else
                         barks = this.GetPreEnemyFatalityBarks(data);

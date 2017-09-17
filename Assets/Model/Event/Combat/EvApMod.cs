@@ -6,7 +6,7 @@ namespace Assets.Model.Event.Combat
 {
     public class EvAPModData
     {
-        public CharController Char { get; set; }
+        public CChar Char { get; set; }
         public bool ToDisplay { get; set; }
         public bool IsHeal { get; set; }
         public int Qty { get; set; }

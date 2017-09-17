@@ -15,7 +15,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             var parry = hit.Data.Source.Proxy.GetStat(ESecondaryStat.Parry);
             var parryChance = LogicParams.BASE_PARRY_CHANCE / hit.Data.Ability.Data.AccMod;
 
-            var tgt = hit.Data.Target.Current as CharController;
+            var tgt = hit.Data.Target.Current as CChar;
 
             if (hit.Data.Source.Proxy.GetArmor() != null)
                 parryChance *= hit.Data.Source.Proxy.GetArmor().GetStat(EArmorStat.Parry_Mod);

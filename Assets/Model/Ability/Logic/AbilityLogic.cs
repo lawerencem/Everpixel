@@ -18,10 +18,10 @@ namespace Assets.Model.Ability.Logic
             this._typeLogic = new TypeLogic();
         }
 
-        public List<TileController> GetAdjacentTiles(CharController c) { return this._aoeLogic.GetAdjacentTiles(c); }
-        public List<TileController> GetAoETiles(AbilityArgs arg, int aoe) {return this._aoeLogic.GetAoETiles(arg, aoe);}
-        public List<TileController> GetRaycastTiles(AbilityArgs arg) { return this._aoeLogic.GetRaycastTiles(arg);}
-        public List<TileController> GetPotentialTargets(AbilityArgs arg) { return this._aoeLogic.GetPotentialTargets(arg);}
+        public List<CTile> GetAdjacentTiles(CChar c) { return this._aoeLogic.GetAdjacentTiles(c); }
+        public List<CTile> GetAoETiles(AbilityArgs arg, int aoe) {return this._aoeLogic.GetAoETiles(arg, aoe);}
+        public List<CTile> GetRaycastTiles(AbilityArgs arg) { return this._aoeLogic.GetRaycastTiles(arg);}
+        public List<CTile> GetPotentialTargets(AbilityArgs arg) { return this._aoeLogic.GetPotentialTargets(arg);}
 
         public bool IsValidEmptyTile(AbilityArgs arg) { return this._tileLogic.IsValidEmptyTile(arg); }
         public bool IsValidEnemyTarget(AbilityArgs arg) { return this._tileLogic.IsValidEnemyTarget(arg); }

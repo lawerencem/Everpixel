@@ -21,8 +21,8 @@ namespace Assets.Model.Combat.Hit
         public bool IsFatality { get; set; }
         public bool IsHeal { get; set; }
         public int Dmg { get; set; }
-        public CharController Source { get; set; }
-        public TileController Target { get; set; }
+        public CChar Source { get; set; }
+        public CTile Target { get; set; }
 
         public HitData()
         {

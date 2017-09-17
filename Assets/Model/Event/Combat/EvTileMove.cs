@@ -7,10 +7,10 @@ namespace Assets.Model.Event.Combat
 {
     public class EvTileMoveData
     {
-        public CharController Char { get; set; }
+        public CChar Char { get; set; }
         public int Cost { get; set; }
-        public TileController Source { get; set; }
-        public TileController Target { get; set; }
+        public CTile Source { get; set; }
+        public CTile Target { get; set; }
     }
 
     public class EvTileMove : MEvCombat

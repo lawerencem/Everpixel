@@ -16,7 +16,7 @@ namespace Assets.Model.Character
 {
     abstract public class AChar<T>
     {
-        private CharController _controller;
+        private CChar _controller;
 
         protected CharAbilities<T> _abilities;
         protected Dictionary<EClass, MClass> _baseClasses;
@@ -34,7 +34,7 @@ namespace Assets.Model.Character
         
         protected T _type;
 
-        public CharController Controller { get { return this._controller; } }
+        public CChar Controller { get { return this._controller; } }
         public CMount Mount { get { return this._mount; } }
         public bool LParty { get { return this._lParty; } }
         public T Type { get { return this._type; } }
@@ -51,14 +51,14 @@ namespace Assets.Model.Character
         public CurrentPoints<T> GetPoints() { return this._points; }
         public CharStats<T> GetStats() { return this._stats; }
 
-        public void SetController(CharController c) { this._controller = c; }
+        public void SetController(CChar c) { this._controller = c; }
         public void SetLParty(bool lParty) { this._lParty = lParty; }
         public void SetMount(CMount m) { this._mount = m; }
         public void SetParams(PreCharParams p) { this._params = p; }
         public void SetParentParty(MParty p) { this._parentParty = p; }
         public void SetType(T t) { this._type = t; }
 
-        public int GetTileTraversalAPCost(TileController t)
+        public int GetTileTraversalAPCost(CTile t)
         {
             // TODO: Work on this for height and various talents
             return t.Model.GetCost();

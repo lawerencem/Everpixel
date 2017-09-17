@@ -23,7 +23,7 @@ namespace Assets.Model.Ability
 
         }
 
-        public virtual List<TileController> GetAoETiles(AbilityArgs arg)
+        public virtual List<CTile> GetAoETiles(AbilityArgs arg)
         {
             return this._logic.GetAoETiles(arg, (int)this.Data.AoE);
         }
@@ -33,9 +33,9 @@ namespace Assets.Model.Ability
             return this.Data.APCost;
         }
 
-        public List<TileController> GetTargetedTiles(AbilityArgs arg)
+        public List<CTile> GetTargetedTiles(AbilityArgs arg)
         {
-            var list = new List<TileController>();
+            var list = new List<CTile>();
             if (this.isSelfCast())
                 list.Add(arg.Source.Tile);
             else if (this.isRayCast())
@@ -45,9 +45,9 @@ namespace Assets.Model.Ability
             return list;
         }
 
-        public List<TileController> GetTargetableTiles(AbilityArgs arg)
+        public List<CTile> GetTargetableTiles(AbilityArgs arg)
         {
-            var list = new List<TileController>();
+            var list = new List<CTile>();
             if (this.isSelfCast())
                 list.Add(arg.Source.Tile);
             else if (this.isRayCast())
@@ -131,9 +131,9 @@ namespace Assets.Model.Ability
             {
                 foreach(var tile in tiles)
                 {
-                    if (tile.Current != null && tile.Current.GetType().Equals(typeof(CharController)))
+                    if (tile.Current != null && tile.Current.GetType().Equals(typeof(CChar)))
                     {
-                        var target = tile.Current as CharController;
+                        var target = tile.Current as CChar;
                         var data = new HitData();
                         var hit = new MHit(data);
                         this.PopulateHitData(hit, target.Tile, arg);
@@ -144,12 +144,12 @@ namespace Assets.Model.Ability
             return hits;
         }
 
-        protected List<TileController> GetRaycastTiles(AbilityArgs arg)
+        protected List<CTile> GetRaycastTiles(AbilityArgs arg)
         {
             return this._logic.GetRaycastTiles(arg);
         }
 
-        protected ZoneArgsCont GetZoneArgs(AbilityArgs arg, TileController tile)
+        protected ZoneArgsCont GetZoneArgs(AbilityArgs arg, CTile tile)
         {
             //var zoneArgs = new ZoneArgsCont();
             //zoneArgs.Caster = arg.Source;
@@ -233,7 +233,7 @@ namespace Assets.Model.Ability
             //    perk.TryModAbility(hit);
         }
 
-        private void PopulateHitData(MHit hit, TileController tile, AbilityArgs args)
+        private void PopulateHitData(MHit hit, CTile tile, AbilityArgs args)
         {
             hit.Data.Ability = this;
             hit.Data.Action = this.Data.ParentAction;

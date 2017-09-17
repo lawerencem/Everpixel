@@ -19,7 +19,7 @@ namespace Assets.Controller.Map.Combat.Loader
             this.InitViews(map, info);
         }
 
-        public void LoadSummon(CharController c, TileController t)
+        public void LoadSummon(CChar c, CTile t)
         {
             var builder = new CharViewBuilder();
             c.SetView(builder.Build(c.Proxy));
@@ -49,7 +49,7 @@ namespace Assets.Controller.Map.Combat.Loader
             }   
         }
 
-        private void RenderChar(CharController c, TileController t)
+        private void RenderChar(CChar c, CTile t)
         {
             var sprite = c.View.Sprites[c.View.Torso];
             var render = c.Handle.AddComponent<SpriteRenderer>();
@@ -73,7 +73,7 @@ namespace Assets.Controller.Map.Combat.Loader
             c.SetTile(t);
         }
 
-        private void TryAttachDeco(CharController c, TileController t)
+        private void TryAttachDeco(CChar c, CTile t)
         {
             this.TryAttachDecoHelper(c, Layers.CHAR_FACE, c.View.Face, t);
             this.TryAttachDecoHelper(c, Layers.CHAR_HEAD_DECO_1, c.View.HeadDeco1, t);
@@ -82,7 +82,7 @@ namespace Assets.Controller.Map.Combat.Loader
             this.TryAttachDecoHelper(c, Layers.CHAR_TORSO_DECO_2, c.View.TorsoDeco2, t);
         }
 
-        private void TryAttachDecoHelper(CharController c, string sort, int spriteIndex, TileController tile)
+        private void TryAttachDecoHelper(CChar c, string sort, int spriteIndex, CTile tile)
         {
             if (c.Proxy.Type == ECharType.Humanoid && spriteIndex >= 0)
             {
@@ -109,7 +109,7 @@ namespace Assets.Controller.Map.Combat.Loader
             }
         }
 
-        private void TryAttachEquipment(CharController c, TileController t)
+        private void TryAttachEquipment(CChar c, CTile t)
         {
             if (c.View.Armor != null)
                 TryAttachEquipmentHelper(c, c.View.Armor, Layers.CHAR_ARMOR, t);
@@ -121,7 +121,7 @@ namespace Assets.Controller.Map.Combat.Loader
                 TryAttachEquipmentHelper(c, c.View.RWeapon, Layers.CHAR_R_WEAPON, t, -ViewParams.WEAPON_OFFSET);
         }
 
-        private void TryAttachEquipmentHelper(CharController c, VEquipment e, string sort, TileController tile, float xOffset = 0, float yOffset = 0)
+        private void TryAttachEquipmentHelper(CChar c, VEquipment e, string sort, CTile tile, float xOffset = 0, float yOffset = 0)
         {
             if (e != null)
             {
@@ -143,7 +143,7 @@ namespace Assets.Controller.Map.Combat.Loader
             }
         }
 
-        private void TryAttachHead(CharController c, string sort, int spriteIndex, TileController tile)
+        private void TryAttachHead(CChar c, string sort, int spriteIndex, CTile tile)
         {
             if (c.Proxy.Type == ECharType.Humanoid)
             {
@@ -159,7 +159,7 @@ namespace Assets.Controller.Map.Combat.Loader
             }
         }
 
-        private void TryAttachMount(CharController c, TileController tile)
+        private void TryAttachMount(CChar c, CTile tile)
         {
             if (c.View.Mount != null)
             {

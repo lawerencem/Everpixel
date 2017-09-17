@@ -53,9 +53,9 @@ namespace Assets.View.Fatality.Weapon.Ability
         {
             foreach(var hit in this._data.FatalHits)
             {
-                if (hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                if (hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
                 {
-                    var tgt = hit.Data.Target.Current as CharController;
+                    var tgt = hit.Data.Target.Current as CChar;
 
                     var scaleData = new SScaleData();
                     scaleData.ScalePerFrame = 0.99f;

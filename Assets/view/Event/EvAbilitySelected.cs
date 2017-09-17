@@ -10,7 +10,8 @@ namespace Assets.View.Event
     {
         public EAbility Ability { get; set; }
         public bool LWeapon { get; set; }
-        public CharController Source { get; set; }
+        public CChar Source { get; set; }
+        public bool WpnAbility { get; set; }
     }
 
     public class EvAbilitySelected : MGuiEv
@@ -33,11 +34,23 @@ namespace Assets.View.Event
                 args.LWeapon = this._data.LWeapon;
                 args.Range = ability.Data.Range;
                 args.Source = this._data.Source;
+                args.WpnAbility = this._data.WpnAbility;
                 var tiles = ability.GetTargetableTiles(args);
                 VMapCombatController.Instance.DecoratePotentialTargetTiles(tiles);
                 CombatManager.Instance.SetPotentialTgtTiles(tiles);
-                CombatManager.Instance.SetCurrentAbility(this._data.Ability);
-                CombatManager.Instance.SetLWeapon(this._data.LWeapon);
+
+                var data = new CurrentlyActingData();
+                data.Ability = this._data.Ability;
+                data.CurrentlyActing = CombatManager.Instance.GetCurrentlyActing();
+
+                if (data.LWeapon)
+                    data.CurrentWeapon = data.CurrentlyActing.Proxy.GetLWeapon();
+                else
+                    data.CurrentWeapon = data.CurrentlyActing.Proxy.GetRWeapon();
+
+                data.LWeapon = this._data.LWeapon;
+                data.IsWpnAbility = this._data.WpnAbility;
+                CombatManager.Instance.SetCurrentData(data);
             }
         }
 

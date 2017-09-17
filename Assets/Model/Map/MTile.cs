@@ -9,14 +9,14 @@ namespace Assets.Model.Map
     public class MTile : IHex<MTile>
     {
         private List<MTile> _adjacent;
-        private TileController _controller;
+        private CTile _controller;
         private int _height;
         private MMap _map;
         private HexTile _tile;
 
         public Vector3 Center { get { return this._tile.Center; } }
         public int Col { get { return this._tile.Col; } }
-        public TileController Controller { get { return this._controller; } }
+        public CTile Controller { get { return this._controller; } }
         public int Height { get { return this._height; } }
         public MMap Map { get { return this._map; } }
         public int Row { get { return this._tile.Row; } }
@@ -31,7 +31,7 @@ namespace Assets.Model.Map
         public List<MTile> GetAdjacent() { return this._adjacent; }
         public HexTile GetTile() { return this._tile; }
 
-        public void SetController(TileController c) { this._controller = c; }
+        public void SetController(CTile c) { this._controller = c; }
         public void SetHeight(int h) { this._height = h; }
         public void SetMap(MMap m) { this._map = m; }
 

@@ -15,7 +15,7 @@ namespace Assets.View.Script.FX
         private SpriteRenderer _torsoRenderer;
         private Sprite[] _sprites;
 
-        public void Init(CharController source, Vector3 target, float speed)
+        public void Init(CChar source, Vector3 target, float speed)
         {
             base.Init(source.Handle, target, speed);
             this._torsoRenderer = source.Handle.GetComponent<SpriteRenderer>();

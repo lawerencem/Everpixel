@@ -13,8 +13,8 @@ namespace Assets.View.Fatality
         public List<string> CustomPostFatalityBarks { get; set; }
         public List<string> CustomPreFatalityBarks { get; set; }
         public List<MHit> NonFatalHits { get; set; }
-        public CharController Source { get; set; }
-        public TileController Target { get; set; }
+        public CChar Source { get; set; }
+        public CTile Target { get; set; }
 
         public FatalityData()
         {

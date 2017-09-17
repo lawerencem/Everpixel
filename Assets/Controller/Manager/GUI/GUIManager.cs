@@ -104,7 +104,7 @@ namespace Assets.Controller.Manager.GUI
             }
         }
 
-        public void SetActingBoxToController(CharController c)
+        public void SetActingBoxToController(CChar c)
         {
             this.SetTagText(GameObjectTags.NAME, c.View.Name.Replace("_", " "));
             this.SetTagText(GameObjectTags.AP, ((int)c.Proxy.GetStat(ESecondaryStat.AP)) + " / " + ((int)c.Proxy.GetStat(ESecondaryStat.AP)).ToString());

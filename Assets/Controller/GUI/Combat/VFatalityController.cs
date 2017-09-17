@@ -51,7 +51,7 @@ namespace Assets.Controller.GUI.Combat
             bool sucess = false;
             foreach (var hit in a.Data.Hits)
             {
-                if (hit.Data.Target.Current != null && hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                if (hit.Data.Target.Current != null && hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
                 {
                     if (this.IsHitFatal(hit))
                     {
@@ -74,7 +74,7 @@ namespace Assets.Controller.GUI.Combat
 
         private bool IsHitFatal(MHit hit)
         {
-            var target = hit.Data.Target.Current as CharController;
+            var target = hit.Data.Target.Current as CChar;
             if (target.Proxy.GetPoints(ESecondaryStat.HP) - hit.Data.Dmg <= 0)
             {
                 if (!FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge) &&

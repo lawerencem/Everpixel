@@ -1,4 +1,5 @@
 ﻿using Assets.Controller.Character;
+using Assets.Controller.Equipment.Weapon;
 using Assets.Controller.Map.Combat;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability;
@@ -11,7 +12,8 @@ namespace Assets.Controller.Manager.Combat
 {
     public class CombatManager
     {
-        private CombatManagerData _data;
+        private CurrentlyActingData _currActingData;
+        private CombatManagerData _combatData;
 
         private static CombatManager _instance;
         public static CombatManager Instance
@@ -24,45 +26,47 @@ namespace Assets.Controller.Manager.Combat
             }
         }
 
-        public EAbility GetCurrentAbility() { return this._data.CurrentAbility; }
-        public CharController GetCurrentlyActing() { return this._data.CurrentlyActing; }
-        public CombatManagerData GetData() { return this._data; }
-        public bool GetLWeapon() { return this._data.LWeapon; }
-        public List<TileController> GetPotentialTgtTiles() { return this._data.PotentialTgtTiles; }
-
-        public void SetCurrentAbility(EAbility a) { this._data.CurrentAbility = a; }
-        public void SetCurrentlyActing(CharController c) { this._data.CurrentlyActing = c; }
-        public void SetLWeapon(bool lWeapon) { this._data.LWeapon = lWeapon; }
-        public void SetPotentialTgtTiles(List<TileController> t) { this._data.PotentialTgtTiles = t; }
+        public EAbility GetCurrentAbility() { return this._currActingData.Ability; }
+        public CChar GetCurrentlyActing() { return this._currActingData.CurrentlyActing; }
+        public CWeapon GetCurrentWeapon() { return this._currActingData.CurrentWeapon; }
+        public CombatManagerData GetData() { return this._combatData; }
+        public bool GetLWeapon() { return this._combatData.LWeapon; }
+        public List<CTile> GetPotentialTgtTiles() { return this._combatData.PotentialTgtTiles; }
+        public bool GetWpnAbility() { return this._combatData.WpnAbility; }
+        
+        public void SetCurrentData(CurrentlyActingData d) { this._currActingData = d; }
+        public void SetCurrentlyActing(CChar c) { this._currActingData.CurrentlyActing = c; }
+        public void SetPotentialTgtTiles(List<CTile> t) { this._combatData.PotentialTgtTiles = t; }
 
         public CombatManager()
         {
-            this._data = new CombatManagerData();
+            this._combatData = new CombatManagerData();
+            this._currActingData = new CurrentlyActingData();
         }
 
         public void Init(MMapController map)
         {
-            this._data.Map = map;
-            this._data.LParties = map.GetLParties();
-            this._data.RParties = map.GetRParties();
-            foreach(var party in this._data.LParties)
+            this._combatData.Map = map;
+            this._combatData.LParties = map.GetLParties();
+            this._combatData.RParties = map.GetRParties();
+            foreach(var party in this._combatData.LParties)
             {
-                this._data.Characters.AddRange(party.GetChars());
+                this._combatData.Characters.AddRange(party.GetChars());
             }
-            foreach (var party in this._data.RParties)
+            foreach (var party in this._combatData.RParties)
             {
-                this._data.Characters.AddRange(party.GetChars());
+                this._combatData.Characters.AddRange(party.GetChars());
             }
-            if (this._data.Characters.Count > 0)
+            if (this._combatData.Characters.Count > 0)
             {
-                this._data.Characters.Sort(
+                this._combatData.Characters.Sort(
                     (x, y) =>
                     y.Proxy.GetStat(ESecondaryStat.Initiative)
                     .CompareTo(x.Proxy.GetStat(ESecondaryStat.Initiative)));
             }
-            foreach (var character in this._data.Characters)
+            foreach (var character in this._combatData.Characters)
             {
-                this._data.InitiativeOrder.Add(character);
+                this._combatData.InitiativeOrder.Add(character);
                 character.Proxy.SetPointsToMax(ESecondaryStat.AP);
                 character.Proxy.SetPointsToMax(ESecondaryStat.HP);
                 character.Proxy.SetPointsToMax(ESecondaryStat.Morale);
@@ -72,16 +76,16 @@ namespace Assets.Controller.Manager.Combat
             this.ProcessTakingAction();
         }
 
-        public bool IsValidActionClick(TileController t)
+        public bool IsValidActionClick(CTile t)
         {
-            if (t.Current != null && t.Current.GetType().Equals(typeof(CharController)))
+            if (t.Current != null && t.Current.GetType().Equals(typeof(CChar)))
             {
-                var ability = AbilityTable.Instance.Table[this._data.CurrentAbility];
-                var target = t.Current as CharController;
-                var tile = this._data.PotentialTgtTiles.Find(x => x.Equals(t));
+                var ability = AbilityTable.Instance.Table[this._currActingData.Ability];
+                var target = t.Current as CChar;
+                var tile = this._combatData.PotentialTgtTiles.Find(x => x.Equals(t));
                 if (tile != null)
                 {
-                    if (this._data.CurrentlyActing.Proxy.LParty == target.Proxy.LParty)
+                    if (this._currActingData.CurrentlyActing.Proxy.LParty == target.Proxy.LParty)
                     {
                         if (!ability.Data.Hostile)
                             return true;
@@ -96,22 +100,22 @@ namespace Assets.Controller.Manager.Combat
             return false;
         }
 
-        public void ProcessCharDeath(CharController c)
+        public void ProcessCharDeath(CChar c)
         {
-            this._data.Characters.Remove(c);
-            foreach (var party in this._data.LParties)
+            this._combatData.Characters.Remove(c);
+            foreach (var party in this._combatData.LParties)
                 party.GetChars().Remove(c);
-            foreach (var party in this._data.RParties)
+            foreach (var party in this._combatData.RParties)
                 party.GetChars().Remove(c);
-            this._data.InitiativeOrder.Remove(c);
+            this._combatData.InitiativeOrder.Remove(c);
         }
 
         public void ProcessEndTurn()
         {
-            this._data.CurrentlyActing.Proxy.ProcessEndOfTurn();
-            this._data.InitiativeOrder.Remove(this._data.CurrentlyActing);
-            this._data.CurrentAbility = EAbility.None;
-            if (this._data.InitiativeOrder.Count > 0)
+            this._currActingData.CurrentlyActing.Proxy.ProcessEndOfTurn();
+            this._combatData.InitiativeOrder.Remove(this._currActingData.CurrentlyActing);
+            this._currActingData.Ability = EAbility.None;
+            if (this._combatData.InitiativeOrder.Count > 0)
             {
                 this.ProcessTakingAction();
             }
@@ -124,24 +128,24 @@ namespace Assets.Controller.Manager.Combat
 
         public void ProcessNewRound()
         {
-            this._data.InitiativeOrder.Clear();
-            foreach (var character in this._data.Characters)
-                this._data.InitiativeOrder.Add(character);
+            this._combatData.InitiativeOrder.Clear();
+            foreach (var character in this._combatData.Characters)
+                this._combatData.InitiativeOrder.Add(character);
             this.ProcessTakingAction();
         }
 
-        public void ProcessSummon(CharController c)
+        public void ProcessSummon(CChar c)
         {
-            this._data.Characters.Add(c);
-            this._data.InitiativeOrder.Add(c);
+            this._combatData.Characters.Add(c);
+            this._combatData.InitiativeOrder.Add(c);
         }
 
         private void ProcessTakingAction()
         {
-            if (this._data.InitiativeOrder.Count > 0)
+            if (this._combatData.InitiativeOrder.Count > 0)
             {
                 var data = new EvTakingActionData();
-                data.Target = this._data.InitiativeOrder[0];
+                data.Target = this._combatData.InitiativeOrder[0];
                 var acting = new EvTakingAction(data);
                 acting.TryProcess();
             }

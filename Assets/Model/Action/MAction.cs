@@ -35,6 +35,8 @@ namespace Assets.Model.Action
         private void InitPredictAbility()
         {
             this.ActiveAbility = AbilityTable.Instance.Table[this._data.Ability];
+            this.ActiveAbility.Data.ParentAction = this;
+            this.ActiveAbility.Data.ParentWeapon = this.Data.ParentWeapon.Model;
         }
 
         private void InitProcessAbility()
@@ -43,6 +45,7 @@ namespace Assets.Model.Action
             GUIManager.Instance.SetInteractionLocked(true);
             this.ActiveAbility = AbilityTable.Instance.Table[this._data.Ability];
             this.ActiveAbility.Data.ParentAction = this;
+            this.ActiveAbility.Data.ParentWeapon = this.Data.ParentWeapon.Model;
         }
 
         private void InitPredictHits()
@@ -107,9 +110,9 @@ namespace Assets.Model.Action
             foreach(var hit in this._data.Hits)
             {
                 
-                if (hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                if (hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
                 {
-                    var target = hit.Data.Target.Current as CharController;
+                    var target = hit.Data.Target.Current as CChar;
                     var data = new EvModHPData();
                     data.Dmg = hit.Data.Dmg;
                     data.Flags = hit.Data.Flags;

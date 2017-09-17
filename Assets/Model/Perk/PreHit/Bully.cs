@@ -6,7 +6,7 @@ namespace Assets.Model.Perk.PreHit
     public class Bully : MPreHitPerk
     {
         private int _count;
-        private CharController _previous;
+        private CChar _previous;
 
         public Bully() : base(EPerk.Bully)
         {
@@ -16,9 +16,9 @@ namespace Assets.Model.Perk.PreHit
         public override void TryModHit(MHit hit)
         {
             base.TryModHit(hit);
-            if (hit.Data.Target.Current != null && hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+            if (hit.Data.Target.Current != null && hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
             {
-                var target = hit.Data.Target.Current as CharController;
+                var target = hit.Data.Target.Current as CChar;
                 if (target.Equals(this._previous))
                 {
                     this._count++;

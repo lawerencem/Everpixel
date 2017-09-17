@@ -11,7 +11,7 @@ namespace Assets.Model.Ability.Logic.Calculator
     {
         public override  void Predict(MHit hit)
         {
-            var target = hit.Data.Target.Current as CharController;
+            var target = hit.Data.Target.Current as CChar;
 
             var acc = target.Proxy.GetStat(ESecondaryStat.Melee);
             var dodge = target.Proxy.GetStat(ESecondaryStat.Dodge);

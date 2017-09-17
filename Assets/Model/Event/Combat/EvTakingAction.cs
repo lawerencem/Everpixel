@@ -12,7 +12,7 @@ namespace Assets.Model.Event.Combat
 {
     public class EvTakingActionData
     {
-        public CharController Target { get; set; }
+        public CChar Target { get; set; }
     }
 
     public class EvTakingAction : MEvCombat

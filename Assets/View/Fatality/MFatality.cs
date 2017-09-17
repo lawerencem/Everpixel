@@ -92,7 +92,7 @@ namespace Assets.View.Fatality
             }
         }
 
-        protected GameObject AddBloodGeyser(CharController tgt)
+        protected GameObject AddBloodGeyser(CChar tgt)
         {
             var path = StringUtil.PathBuilder(
                         CombatGUIParams.EFFECTS_PATH,
@@ -117,7 +117,7 @@ namespace Assets.View.Fatality
             }
         }
 
-        protected void LayFatalityDeco(Sprite sprite, CharController c)
+        protected void LayFatalityDeco(Sprite sprite, CChar c)
         {
             var deco = new GameObject();
             deco.transform.position = c.Handle.transform.position;
@@ -127,7 +127,7 @@ namespace Assets.View.Fatality
             RotateTranslateUtil.Instance.RandomRotateAndTranslate(deco, CombatGUIParams.DEFAULT_OFFSET);
         }
 
-        protected void ProcessBlood(CharController target)
+        protected void ProcessBlood(CChar target)
         {
             foreach (var neighbor in target.Tile.GetAdjacent())
             {
@@ -140,7 +140,7 @@ namespace Assets.View.Fatality
             this.ProcessBloodHelper(target, 1.0);
         }
 
-        private void ProcessBloodHelper(CharController target, double percent)
+        private void ProcessBloodHelper(CChar target, double percent)
         {
             var data = new EvSplatterData();
             data.DmgPercent = percent;
@@ -154,9 +154,9 @@ namespace Assets.View.Fatality
             foreach (var hit in this._data.FatalHits)
             {
                 if (hit.Data.Target.Current != null &&
-                    hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                    hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
                 {
-                    var tgt = hit.Data.Target.Current as CharController;
+                    var tgt = hit.Data.Target.Current as CChar;
                     var geyser = this.AddBloodGeyser(tgt);
                     var explosionPath = StringUtil.PathBuilder(
                         CombatGUIParams.EFFECTS_PATH,
@@ -181,7 +181,7 @@ namespace Assets.View.Fatality
             }
         }
 
-        protected void ProcessNoBloodDeath(CharController tgt)
+        protected void ProcessNoBloodDeath(CChar tgt)
         {
             VCharUtil.Instance.AssignDeadEyes(tgt);
             VCharUtil.Instance.AssignDeadLayer(tgt);
@@ -195,7 +195,7 @@ namespace Assets.View.Fatality
                 VHitController.Instance.ProcessDefenderHit(nonFatal);
         }
 
-        protected void ProcessGearExplosion(CharController c)
+        protected void ProcessGearExplosion(CChar c)
         {
             if (c.Proxy.Type == ECharType.Humanoid)
             {
@@ -252,7 +252,7 @@ namespace Assets.View.Fatality
             }
         }
 
-        protected void SetBodyComponentsNull(CharController c)
+        protected void SetBodyComponentsNull(CChar c)
         {
             foreach (var sub in c.SubComponents)
             {

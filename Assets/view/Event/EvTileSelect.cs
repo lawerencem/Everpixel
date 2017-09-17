@@ -7,9 +7,9 @@ namespace Assets.View.Event
 {
     public class EvTileSelectData
     {
-        public TileController Source { get; set; }
+        public CTile Source { get; set; }
         public MMap Map { get; set; }
-        public TileController Target { get; set; }
+        public CTile Target { get; set; }
     }
 
     public class EvTileSelect : MGuiEv

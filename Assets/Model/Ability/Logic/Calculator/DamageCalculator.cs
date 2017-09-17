@@ -46,9 +46,9 @@ namespace Assets.Model.Ability.Logic.Calculator
         {
             this.CalculateAbilityDmg(hit);
 
-            if (hit.Data.Target.Current != null && hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+            if (hit.Data.Target.Current != null && hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
             {
-                var tgt = hit.Data.Target.Current as CharController;
+                var tgt = hit.Data.Target.Current as CChar;
                 var dmgReduction = tgt.Proxy.GetStat(ESecondaryStat.Damage_Reduction);
                 var bodyReduction = dmgReduction;
                 var headReduction = dmgReduction;
@@ -84,7 +84,7 @@ namespace Assets.Model.Ability.Logic.Calculator
         public override void Process(MHit hit)
         {
             var source = hit.Data.Source.Proxy;
-            var targetController = hit.Data.Target.Current as CharController;
+            var targetController = hit.Data.Target.Current as CChar;
             var target = targetController.Proxy;
 
             var dmgToApply = (double)hit.Data.Dmg;

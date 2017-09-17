@@ -9,7 +9,7 @@ namespace Assets.View.Character
 {
     public class VCharUtil : ASingleton<VCharUtil>
     {
-        public void AssignDeadEyes(CharController c)
+        public void AssignDeadEyes(CChar c)
         {
             if (c.Proxy.Type == ECharType.Humanoid)
             {
@@ -20,7 +20,7 @@ namespace Assets.View.Character
             }
         }
 
-        public void AssignDeadLayer(CharController c)
+        public void AssignDeadLayer(CChar c)
         {
             foreach(var subcomponent in c.SubComponents)
             {
@@ -40,7 +40,7 @@ namespace Assets.View.Character
             }
         }
 
-        public void AssignDeadWeapons(CharController c)
+        public void AssignDeadWeapons(CChar c)
         {
             if (c.Proxy.GetLWeapon() != null)
             {
@@ -56,7 +56,7 @@ namespace Assets.View.Character
             }
         }
 
-        public void AssignDeathSplatter(CharController c)
+        public void AssignDeathSplatter(CChar c)
         {
             var data = new EvSplatterData();
             data.DmgPercent = 0.50;
@@ -65,14 +65,14 @@ namespace Assets.View.Character
             e.TryProcess();
         }
 
-        public void RandomTranslateRotateOnDeath(CharController c)
+        public void RandomTranslateRotateOnDeath(CChar c)
         {
             RotateTranslateUtil.Instance.RandomRotateAndTranslate(
                 c.Handle,
                 ViewParams.SPLATTER_VARIANCE);
         }
 
-        public void ProcessDeadChar(CharController c)
+        public void ProcessDeadChar(CChar c)
         {
             this.AssignDeadWeapons(c);
             this.AssignDeadEyes(c);

@@ -3,7 +3,7 @@ using Assets.Model.Equipment.Weapon;
 using Assets.View.Equipment;
 using Assets.View.Fatality;
 
-namespace Assets.Model.Equipment.Armor
+namespace Assets.Controller.Equipment.Weapon
 {
     public class CWeapon
     {

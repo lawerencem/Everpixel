@@ -8,13 +8,13 @@ using UnityEngine;
 
 namespace Assets.Controller.Map.Tile
 {
-    public class TileController
+    public class CTile
     {
         private object _current;
         private FTileController _flags;
         private GameObject _handle;
         private MTile _model;
-        private List<CharController> _nonCurrent;
+        private List<CChar> _nonCurrent;
         private VTile _view;
         private List<AZone> _zones;
 
@@ -24,42 +24,42 @@ namespace Assets.Controller.Map.Tile
         public MTile Model { get { return this._model; } }
         public VTile View { get { return this._view; } }
 
-        public void AddNonCurrent(CharController c) { this._nonCurrent.Add(c); }
+        public void AddNonCurrent(CChar c) { this._nonCurrent.Add(c); }
         public void AddZone(AZone zone) { this._zones.Add(zone); }
 
-        public List<TileController> GetAdjacent()
+        public List<CTile> GetAdjacent()
         {
-            var adjacent = new List<TileController>();
+            var adjacent = new List<CTile>();
             var tiles = this._model.GetAdjacent();
             foreach (var tile in tiles)
                 adjacent.Add(tile.Controller);
             return adjacent;
         }
-        public List<CharController> GetNonCurrent() { return this._nonCurrent; }
+        public List<CChar> GetNonCurrent() { return this._nonCurrent; }
         public List<AZone> GetZones() { return this._zones; }
 
         public void RemoveZone(AZone zone) { this._zones.Remove(zone); }
 
         public void SetCurrent(object o) { this._current = o; }
 
-        public TileController(MTile tile)
+        public CTile(MTile tile)
         {
             this._flags = new FTileController();
             this._handle = new GameObject(Layers.TILE);
             this._handle.transform.position = tile.Center;
-            this._nonCurrent = new List<CharController>();
+            this._nonCurrent = new List<CChar>();
             this._zones = new List<AZone>();
             this.SetModel(tile);
         }
 
-        public TileController GetNearestEmptyTile()
+        public CTile GetNearestEmptyTile()
         {
             if (this.Current == null)
                 return this;
             else
             {
-                var openSet = new List<TileController>() { this };
-                var closed = new List<TileController>();
+                var openSet = new List<CTile>() { this };
+                var closed = new List<CTile>();
                 while (openSet.Count > 0)
                 {
                     var tile = openSet[0];
@@ -80,7 +80,7 @@ namespace Assets.Controller.Map.Tile
             return null;
         }
 
-        public TileController GetRandomNearbyTile(int probes)
+        public CTile GetRandomNearbyTile(int probes)
         {
             var tile = this._model.GetRandomNearbyTile(probes);
             return tile.Controller;

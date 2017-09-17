@@ -80,7 +80,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Controller\Character\CharController.cs" />
+    <Compile Include="Assets\Controller\Character\CChar.cs" />
     <Compile Include="Assets\Controller\Equipment\Armor\CArmor.cs" />
     <Compile Include="Assets\Controller\Equipment\Armor\CHelm.cs" />
     <Compile Include="Assets\Controller\Equipment\Weapon\CWeapon.cs" />

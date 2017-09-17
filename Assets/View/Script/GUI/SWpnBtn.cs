@@ -32,6 +32,7 @@ namespace Assets.View.Script.GUI
             data.Ability = this._ability;
             data.LWeapon = this._lWeapon;
             data.Source = CombatManager.Instance.GetCurrentlyActing();
+            data.WpnAbility = true;
             var e = new EvAbilitySelected(data);
             e.TryProcess();
         }

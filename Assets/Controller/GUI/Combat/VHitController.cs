@@ -49,9 +49,9 @@ namespace Assets.Controller.GUI.Combat
         public void ProcessDefenderHit(MHit hit)
         {
             if (hit.Data.Target.Current != null &&
-                hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
             {
-                var target = hit.Data.Target.Current as CharController;
+                var target = hit.Data.Target.Current as CChar;
                 this.ProcessDefenderHitsHelper(target, hit);
             }
         }
@@ -61,10 +61,10 @@ namespace Assets.Controller.GUI.Combat
             this._callbacks = new List<Callback>() { callback };
         }
 
-        private void DisplayDodge(CharController target, MHit hit)
+        private void DisplayDodge(CChar target, MHit hit)
         {
             var dodge = target.Handle.AddComponent<SBoomerang>();
-            var dodgeTgt = ListUtil<TileController>.GetRandomElement(target.Tile.GetAdjacent());
+            var dodgeTgt = ListUtil<CTile>.GetRandomElement(target.Tile.GetAdjacent());
             var position = Vector3.Lerp(target.Handle.transform.position, dodgeTgt.Model.Center, CombatGUIParams.DODGE_LERP);
             position = RandomPositionOffset.RandomOffset(position, CombatGUIParams.DEFAULT_OFFSET);
             dodge.AddCallback(hit.CallbackHandler);
@@ -72,7 +72,7 @@ namespace Assets.Controller.GUI.Combat
             VCombatController.Instance.DisplayText("Dodge", target.Handle, CombatGUIParams.WHITE);
         }
 
-        private void DisplayFlinch(CharController target, MHit hit)
+        private void DisplayFlinch(CChar target, MHit hit)
         {
             if (hit.Data.Dmg < target.Proxy.GetPoints(ESecondaryStat.HP)) 
             {
@@ -92,7 +92,7 @@ namespace Assets.Controller.GUI.Combat
             }
         }
 
-        private void DisplayParry(CharController target, MHit hit)
+        private void DisplayParry(CChar target, MHit hit)
         {
             VCombatController.Instance.DisplayText("Parry", target.Handle, CombatGUIParams.WHITE);
             if (target.Proxy.GetRWeapon() != null && target.Proxy.GetRWeapon().IsTypeOfShield())
@@ -107,7 +107,7 @@ namespace Assets.Controller.GUI.Combat
             }
         }
 
-        private void DisplayParryHelper(CharController target, MHit hit, GameObject wpn)
+        private void DisplayParryHelper(CChar target, MHit hit, GameObject wpn)
         {
             var pos = wpn.transform.position;
             if (target.Proxy.LParty)
@@ -162,9 +162,9 @@ namespace Assets.Controller.GUI.Combat
                 foreach (var hit in a.Action.Data.Hits)
                 {
                     if (hit.Data.Target.Current != null &&
-                        hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                        hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
                     {
-                        var target = hit.Data.Target.Current as CharController;
+                        var target = hit.Data.Target.Current as CChar;
                         this.ProcessDefenderHitsHelper(target, hit);
                     }
                 }
@@ -179,9 +179,9 @@ namespace Assets.Controller.GUI.Combat
                 foreach (var hit in a.Action.Data.Hits)
                 {
                     if (hit.Data.Target.Current != null &&
-                        hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                        hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
                     {
-                        var target = hit.Data.Target.Current as CharController;
+                        var target = hit.Data.Target.Current as CChar;
                         this.ProcessDefenderHitsHelper(target, hit);
                     }    
                 }
@@ -196,9 +196,9 @@ namespace Assets.Controller.GUI.Combat
                 foreach (var hit in a.Action.Data.Hits)
                 {
                     if (hit.Data.Target.Current != null &&
-                        hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                        hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
                     {
-                        var target = hit.Data.Target.Current as CharController;
+                        var target = hit.Data.Target.Current as CChar;
                         this.ProcessDefenderHitsHelper(target, hit);
                     }
                 }
@@ -211,7 +211,7 @@ namespace Assets.Controller.GUI.Combat
                 this.ProcessDefenderHitsJolt(o);
         }
 
-        private void ProcessDefenderHitsHelper(CharController target, MHit hit)
+        private void ProcessDefenderHitsHelper(CChar target, MHit hit)
         {
             if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge))
                 this.DisplayDodge(target, hit);

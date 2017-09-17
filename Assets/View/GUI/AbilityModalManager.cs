@@ -49,7 +49,7 @@ namespace Assets.View.Script.GUI
             this._proto.SetActive(false);
         }
 
-        private void PopulateModalList(CharController character, MAbility ability)
+        private void PopulateModalList(CChar character, MAbility ability)
         {
             var protoBtn = this._proto.GetComponent<Button>();
             var protoImg = this._proto.GetComponent<Image>();

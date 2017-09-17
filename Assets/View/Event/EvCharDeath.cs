@@ -5,7 +5,7 @@ namespace Assets.View.Event
 {
     public class EvCharDeathData
     {
-        public CharController Target { get; set; }
+        public CChar Target { get; set; }
     }
 
     public class EvCharDeath : MGuiEv

@@ -1,4 +1,5 @@
 ﻿using Assets.Controller.Character;
+using Assets.Controller.Equipment.Weapon;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Combat.Hit;
@@ -11,8 +12,10 @@ namespace Assets.Model.Action
         public EAbility Ability { get; set; }
         public List<MHit> Hits { get; set; }
         public bool LWeapon { get; set; }
-        public CharController Source { get; set; }
-        public TileController Target { get; set; }
+        public CWeapon ParentWeapon { get; set; }
+        public CChar Source { get; set; }
+        public CTile Target { get; set; }
+        public bool WpnAbility { get; set; }
 
         public ActionData()
         {

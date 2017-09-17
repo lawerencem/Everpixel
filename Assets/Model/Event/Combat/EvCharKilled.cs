@@ -6,7 +6,7 @@ namespace Assets.Model.Event.Combat
 {
     public class EvCharKilledData
     {
-        public CharController Target { get; set; }
+        public CChar Target { get; set; }
     }
 
     public class EvCharKilled : MEvCombat

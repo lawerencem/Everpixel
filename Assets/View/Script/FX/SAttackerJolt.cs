@@ -12,12 +12,12 @@ namespace Assets.View.Script.FX
     {
         private Sprite _oldSprite;
         private SpriteRenderer _renderer;
-        private CharController _source;
+        private CChar _source;
         private Sprite[] _sprites;
 
         public MAction Action { get; set; }
 
-        public void Init(CharController source, Vector3 target, float speed)
+        public void Init(CChar source, Vector3 target, float speed)
         {
             base.Init(source.Handle, target, speed);
             var bob = source.Handle.GetComponent<SBob>();

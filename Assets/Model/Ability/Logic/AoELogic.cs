@@ -7,7 +7,7 @@ namespace Assets.Model.Ability.Logic
 {
     public class AoELogic
     {
-        public List<TileController> GetAdjacentTiles(CharController c)
+        public List<CTile> GetAdjacentTiles(CChar c)
         {
             //var list = new List<TileController>();
             //foreach (var neighbor in c.CurrentTile.Adjacent)
@@ -16,16 +16,16 @@ namespace Assets.Model.Ability.Logic
             return null;
         }
 
-        public List<TileController> GetAoETiles(AbilityArgs arg, int aoe)
+        public List<CTile> GetAoETiles(AbilityArgs arg, int aoe)
         {
-            var list = new List<TileController>();
+            var list = new List<CTile>();
             var t = arg.Target.Model;
             var hexes = t.GetAoETiles(aoe);
             foreach (var hex in hexes) { list.Add(hex.Controller); }
             return list;
         }
 
-        public List<TileController> GetRaycastTiles(AbilityArgs arg)
+        public List<CTile> GetRaycastTiles(AbilityArgs arg)
         {
             return null;
             //var list = new List<TileController>();
@@ -51,7 +51,7 @@ namespace Assets.Model.Ability.Logic
             //return list;
         }
 
-        public List<TileController> GetPotentialTargets(AbilityArgs arg)
+        public List<CTile> GetPotentialTargets(AbilityArgs arg)
         {
             int dist = arg.Range;
             if (arg.LWeapon)
@@ -65,7 +65,7 @@ namespace Assets.Model.Ability.Logic
                     dist += (int)arg.Source.Proxy.GetRWeapon().GetStat(EWeaponStat.Range_Mod);
             }
             var hexTiles = arg.Source.Tile.Model.GetAoETiles(dist);
-            var tileControllers = new List<TileController>();
+            var tileControllers = new List<CTile>();
             foreach (var hex in hexTiles)
             {
                 tileControllers.Add(hex.Controller);

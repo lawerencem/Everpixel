@@ -12,7 +12,7 @@ namespace Assets.Controller.Map.Combat.Loader
     {
         public void InitMapDeco(MMapController controller, MapInitInfo info)
         {
-            var empty = new List<TileController>();
+            var empty = new List<CTile>();
             foreach(var tile in controller.GetMap().GetTiles())
             {
                 if (tile.Current == null)
@@ -22,7 +22,7 @@ namespace Assets.Controller.Map.Combat.Loader
             {
                 var sprites = MapBridge.Instance.GetBackgroundDecoSprites(info.Biome);
                 var sprite = sprites[Random.Range(0, sprites.Length)];
-                var random = ListUtil<TileController>.GetRandomElement(empty);
+                var random = ListUtil<CTile>.GetRandomElement(empty);
                 empty.Remove(random);
                 var Deco = new GameObject("Tile Deco");
                 var render = Deco.AddComponent<SpriteRenderer>();

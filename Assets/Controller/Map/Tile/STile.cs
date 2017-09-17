@@ -13,7 +13,7 @@ namespace Assets.Controller.Map.Tile
 {
     public class STile : MonoBehaviour
     {
-        private TileController _tile;
+        private CTile _tile;
         private BoxCollider2D _collider;
         private double _clickDelta = 0.5;
         private DateTime _clickTime;
@@ -25,7 +25,7 @@ namespace Assets.Controller.Map.Tile
                 this._doubleClick = false;
         }
 
-        public void InitTile(TileController t)
+        public void InitTile(CTile t)
         {
             this._tile = t;
             this._collider = this._tile.Handle.AddComponent<BoxCollider2D>();
@@ -69,31 +69,33 @@ namespace Assets.Controller.Map.Tile
 
         private void HandleHoverTargetStats()
         {
-            if (this._tile.Current != null && this._tile.Current.GetType().Equals(typeof(CharController)))
+            if (this._tile.Current != null && this._tile.Current.GetType().Equals(typeof(CChar)))
             {
                 var fov = Camera.main.fieldOfView;
-                var character = this._tile.Current as CharController;
+                var character = this._tile.Current as CChar;
                 var position = character.Handle.transform.position;
                 position.x += (float)(fov * 0.025);
                 position.y += (float)(fov * 0.025);
                 GUIManager.Instance.SetHoverModalHeaderText(character.View.Name.Replace("_", " "));
                 GUIManager.Instance.SetHoverModalLocation(position);
-                var target = this._tile.Current as CharController;
+                var target = this._tile.Current as CChar;
                 GUIManager.Instance.SetHoverModalStatValues(target.Proxy);
             }
         }
 
         private void HandleHoverTargetDamage()
         {
-            if (this._tile.Current != null && this._tile.Current.GetType().Equals(typeof(CharController)))
+            if (this._tile.Current != null && this._tile.Current.GetType().Equals(typeof(CChar)))
             {
                 if (CombatManager.Instance.GetCurrentAbility() != EAbility.None)
                 {
                     var data = new ActionData();
                     data.Ability = CombatManager.Instance.GetCurrentAbility();
                     data.LWeapon = CombatManager.Instance.GetLWeapon();
+                    data.ParentWeapon = CombatManager.Instance.GetCurrentWeapon();
                     data.Source = CombatManager.Instance.GetCurrentlyActing();
                     data.Target = this._tile;
+                    data.WpnAbility = CombatManager.Instance.GetWpnAbility();
                     var action = new MAction(data);
                     action.TryPredict();
                     GUIManager.Instance.SetHoverModalDamageValues(action);

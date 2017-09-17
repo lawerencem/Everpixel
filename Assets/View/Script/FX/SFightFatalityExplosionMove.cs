@@ -12,7 +12,7 @@ namespace Assets.View.Script.FX
     {
         private GameObject _handle;
 
-        public void Init(GameObject source, CharController character)
+        public void Init(GameObject source, CChar character)
         {
             this._handle = source;
             var sourceTile = character.Tile;

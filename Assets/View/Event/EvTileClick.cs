@@ -9,7 +9,7 @@ namespace Assets.View.Event
     public class EvTileClickData
     {
         public bool DoubleClick { get; set; }
-        public TileController Target { get; set; }
+        public CTile Target { get; set; }
     }
 
     public class EvTileClick : MGuiEv
@@ -38,8 +38,10 @@ namespace Assets.View.Event
                 var data = new EvPerformAbilityData();
                 data.Ability = CombatManager.Instance.GetCurrentAbility();
                 data.LWeapon = CombatManager.Instance.GetLWeapon();
+                data.ParentWeapon = CombatManager.Instance.GetCurrentWeapon();
                 data.Source = CombatManager.Instance.GetCurrentlyActing();
                 data.Target = this._data.Target;
+                data.WpnAbility = CombatManager.Instance.GetWpnAbility();
                 var e = new EvPerformAbility(data);
                 e.TryProcess();
                 return true;

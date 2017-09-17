@@ -84,9 +84,9 @@ namespace Assets.View.Ability
             data.Offset = CombatGUIParams.BULLET_OFFSET;
             data.Rotation = CombatGUIParams.MAX_ROTATION;
             if (hit.Data.Target.Current != null && 
-                hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
             {
-                data.TargetChar = hit.Data.Target.Current as CharController;
+                data.TargetChar = hit.Data.Target.Current as CChar;
             }
             data.TargetableObjects = this.GetEmbedBulletTargets(hit);
             if (a.Data.LWeapon && proxy.GetLWeapon() != null && proxy.GetLWeapon().Embed)
@@ -113,9 +113,9 @@ namespace Assets.View.Ability
         {
             var tgts = new List<GameObject>();
 
-            if (hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+            if (hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
             {
-                var tgt = hit.Data.Target.Current as CharController;
+                var tgt = hit.Data.Target.Current as CChar;
                 if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge))
                     tgts.Add(tgt.Tile.Handle);
                 else if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Block))

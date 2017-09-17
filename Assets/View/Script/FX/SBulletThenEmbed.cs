@@ -15,7 +15,7 @@ namespace Assets.View.Script.FX
         public float Offset { get; set; }
         public float Rotation { get; set; }
         public MHit Hit;
-        public CharController TargetChar;
+        public CChar TargetChar;
         public List<GameObject> TargetableObjects;
         public GameObject TargetObject { get; set; }
 

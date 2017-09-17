@@ -1,4 +1,5 @@
 ﻿using Assets.Controller.Character;
+using Assets.Controller.Equipment.Weapon;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
@@ -9,8 +10,10 @@ namespace Assets.Model.Event.Combat
     {
         public EAbility Ability { get; set; }
         public bool LWeapon { get; set; }
-        public CharController Source { get; set; }
-        public TileController Target { get; set; }
+        public CWeapon ParentWeapon { get; set; }
+        public CChar Source { get; set; }
+        public CTile Target { get; set; }
+        public bool WpnAbility { get; set; }
     }
 
     public class EvPerformAbility : MEvCombat
@@ -28,8 +31,10 @@ namespace Assets.Model.Event.Combat
             var data = new ActionData();
             data.Ability = this._data.Ability;
             data.LWeapon = this._data.LWeapon;
+            data.ParentWeapon = this._data.ParentWeapon;
             data.Source = this._data.Source;
             data.Target = this._data.Target;
+            data.WpnAbility = this._data.WpnAbility;
             var action = new MAction(data);
             action.TryProcess();
         }

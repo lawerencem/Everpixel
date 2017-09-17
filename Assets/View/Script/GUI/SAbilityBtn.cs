@@ -11,7 +11,7 @@ namespace Assets.View.Script.GUI
     {
         public EAbility Ability { get; set; }
         public GameObject Handle { get; set; }
-        public CharController Source { get; set; }
+        public CChar Source { get; set; }
     }
 
     public class SAbilityBtn : SGuiButton

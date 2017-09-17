@@ -12,7 +12,7 @@ namespace Assets.Model.Event.Combat
         public FHit Flags { get; set; }
         public bool isFatality { get; set; }
         public bool IsHeal { get; set; }
-        public CharController Target { get; set; }
+        public CChar Target { get; set; }
     }
 
     public class EvModHP : MEvCombat

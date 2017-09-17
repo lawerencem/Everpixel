@@ -11,17 +11,17 @@ namespace Assets.Model.Event.Combat
 {
     public class EvPathMoveData
     {
-        public CharController Char { get; set; }
-        public TileController Source { get; set; }
-        public TileController Target { get; set; }
+        public CChar Char { get; set; }
+        public CTile Source { get; set; }
+        public CTile Target { get; set; }
         public Path TargetPath { get; set; } 
     }
 
     public class EvPathMove : MEvCombat
     {
-        private TileController _current;
+        private CTile _current;
         private EvPathMoveData _data;
-        private TileController _next;
+        private CTile _next;
 
         public EvPathMove() : base(ECombatEv.TakingAction) { }
         public EvPathMove(EvPathMoveData d) : base(ECombatEv.TakingAction) { this._data = d; }

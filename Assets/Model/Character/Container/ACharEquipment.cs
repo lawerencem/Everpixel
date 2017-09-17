@@ -1,4 +1,5 @@
-﻿using Assets.Model.Character.Param;
+﻿using Assets.Controller.Equipment.Weapon;
+using Assets.Model.Character.Param;
 using Assets.Model.Equipment.Armor;
 using Assets.Template.Other;
 using System.Collections.Generic;

@@ -9,7 +9,7 @@ namespace Assets.Model.Ability.Magic.Fighting
     {
         public Kamehameha() : base(EAbility.Kamehameha) { }
 
-        public override List<TileController> GetAoETiles(AbilityArgs arg)
+        public override List<CTile> GetAoETiles(AbilityArgs arg)
         {
             return base.GetRaycastTiles(arg);
         }

@@ -18,7 +18,7 @@ namespace Assets.Model.Event.Combat
         public SummonModData ModData { get; set; }
         public string ParticlePath { get; set; }
         public MParty Party { get; set; }
-        public TileController TargetTile { get; set; }
+        public CTile TargetTile { get; set; }
         public string ToSummon { get; set; }
     }
 
@@ -58,7 +58,7 @@ namespace Assets.Model.Event.Combat
                 var preCharParams = PredefinedCharTable.Instance.Table[this._data.ToSummon];
                 var summon = CharacterFactory.Instance.CreateNewObject(preCharParams);
                 summon.SetLParty(this._data.LParty);
-                var controller = new CharController();
+                var controller = new CChar();
                 var proxy = new PChar(summon);
                 controller.SetProxy(proxy);
                 this._data.Party.AddChar(controller);
@@ -69,7 +69,7 @@ namespace Assets.Model.Event.Combat
             }
         }
 
-        private void ProcessParticles(CharController c)
+        private void ProcessParticles(CChar c)
         {
 
         }

@@ -36,7 +36,7 @@ namespace Assets.Model.Party.Builder
                     foreach(var pair in characterStartColPair)
                     {
                         var model = CharacterFactory.Instance.CreateNewObject(pair.X);
-                        var controller = new CharController();
+                        var controller = new CChar();
                         var proxy = new PChar(model);
                         proxy.StartCol = pair.Y;
                         controller.SetProxy(proxy);

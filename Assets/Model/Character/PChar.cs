@@ -1,4 +1,5 @@
 ﻿using Assets.Controller.Character;
+using Assets.Controller.Equipment.Weapon;
 using Assets.Controller.Map.Tile;
 using Assets.Controller.Mount;
 using Assets.Model.Ability;
@@ -44,10 +45,10 @@ namespace Assets.Model.Character
         public CWeapon GetRWeapon() { return this._model.GetEquipment().GetRWeapon(); }
         public double GetStat(ESecondaryStat s) { return this._model.GetStats().GetStatValue(s); }
         public double GetStat(EPrimaryStat s) { return this._model.GetStats().GetStatValue(s); }
-        public int GetTileTraversalAPCost(TileController t) { return this._model.GetTileTraversalAPCost(t); }
+        public int GetTileTraversalAPCost(CTile t) { return this._model.GetTileTraversalAPCost(t); }
         public void ModifyPoints(ESecondaryStat s, int v, bool isHeal) { this._model.ModifyPoints(s, v, isHeal); }
         public void ProcessEndOfTurn() { this._model.ProcessEndOfTurn(); }
-        public void SetController(CharController c) { this._model.SetController(c); }
+        public void SetController(CChar c) { this._model.SetController(c); }
         public void SetLParty(bool lParty) { this._model.SetLParty(lParty); }
         public void SetParentParty(MParty p) { this._model.SetParentParty(p); }
         public void SetPoints(ESecondaryStat s, double v) { this._model.GetPoints().SetValue(s, v); }

@@ -24,9 +24,9 @@ namespace Assets.View.Fatality.Weapon.Ability
             foreach (var hit in this._data.FatalHits)
             {
                 if (hit.Data.Target.Current != null &&
-                    hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                    hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
                 {
-                    var tgt = this._data.Target.Current as CharController;
+                    var tgt = this._data.Target.Current as CChar;
                     var path = StringUtil.PathBuilder(
                         CombatGUIParams.EFFECTS_PATH,
                         CombatGUIParams.CRUSH_FATALITY,

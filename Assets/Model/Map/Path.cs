@@ -21,7 +21,7 @@ namespace Assets.Model.Map
             this._tiles = new List<MTile>();
         }
 
-        public TileController GetNextTile(TileController t)
+        public CTile GetNextTile(CTile t)
         {
             if (this._tiles.Contains(t.Model))
             {

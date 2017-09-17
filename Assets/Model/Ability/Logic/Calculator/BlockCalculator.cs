@@ -12,7 +12,7 @@ namespace Assets.Model.Ability.Logic.Calculator
         public override void Predict(MHit hit)
         {
             var melee = hit.Data.Source.Proxy.GetStat(ESecondaryStat.Melee);
-            var tgt = hit.Data.Target.Current as CharController;
+            var tgt = hit.Data.Target.Current as CChar;
             var block = tgt.Proxy.GetStat(ESecondaryStat.Block);
             melee *= hit.Data.Ability.Data.AccMod;
 

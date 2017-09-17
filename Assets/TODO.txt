@@ -1,6 +1,6 @@
 ﻿TODO
 
-Give abilities parent weapons
+data classes being populated on weapon/ability click can be consolidated
 
 Action
   - Display effects on queue

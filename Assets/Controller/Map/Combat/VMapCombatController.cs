@@ -11,7 +11,7 @@ namespace Assets.Controller.Map.Combat
     {
         private const float DEFAULT_ALPHA = 0.5f;
 
-        private List<TileController> _familyTiles = new List<TileController>();
+        private List<CTile> _familyTiles = new List<CTile>();
         private List<GameObject> _familyTileDeco = new List<GameObject>();
         private GameObject _hoverTileDeco;
 
@@ -37,7 +37,7 @@ namespace Assets.Controller.Map.Combat
             this._familyTileDeco.Clear();
         }
 
-        public void DecorateHover(TileController t)
+        public void DecorateHover(CTile t)
         {
             if (this._hoverTileDeco != null && !this._hoverTileDeco.Equals(t))
                 GameObject.Destroy(this._hoverTileDeco);
@@ -67,7 +67,7 @@ namespace Assets.Controller.Map.Combat
             }
         }
 
-        public void DecoratePotentialTargetTiles(List<TileController> tiles)
+        public void DecoratePotentialTargetTiles(List<CTile> tiles)
         {
             foreach (var old in this._familyTileDeco)
             {
@@ -85,7 +85,7 @@ namespace Assets.Controller.Map.Combat
             }
         }
 
-        private GameObject DecorateTile(TileController t, Sprite sprite, float alpha = DEFAULT_ALPHA)
+        private GameObject DecorateTile(CTile t, Sprite sprite, float alpha = DEFAULT_ALPHA)
         {
             var tView = new GameObject();
             var renderer = tView.AddComponent<SpriteRenderer>();
@@ -99,7 +99,7 @@ namespace Assets.Controller.Map.Combat
             return tView;
         }
 
-        private void DecorateTileFamily(TileController tile, Sprite deco)
+        private void DecorateTileFamily(CTile tile, Sprite deco)
         {
             var tView = this.DecorateTile(tile, deco, ViewParams.TILE_DECO_ALPHA);
             this._familyTileDeco.Add(tView);

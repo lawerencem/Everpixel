@@ -1,4 +1,4 @@
-﻿using Assets.Model.Equipment.Armor;
+﻿using Assets.Controller.Equipment.Weapon;
 using Assets.Model.Equipment.Builder;
 using Assets.Model.Equipment.Enum;
 using Assets.Template.Other;

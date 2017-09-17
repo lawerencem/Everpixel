@@ -47,9 +47,9 @@ namespace Assets.View.Fatality.Weapon.Ability
             foreach (var hit in this._data.FatalHits)
             {
                 if (hit.Data.Target.Current != null &&
-                    hit.Data.Target.Current.GetType().Equals(typeof(CharController)))
+                    hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
                 {
-                    var tgt = this._data.Target.Current as CharController;
+                    var tgt = this._data.Target.Current as CChar;
                     var shakeData = new SXAxisShakeData();
                     shakeData.Duration = FatalityParams.DEFAULT_DUR;
                     shakeData.MaxDistance = FatalityParams.DEFAULT_X_SHAKE_DIST;
@@ -94,7 +94,7 @@ namespace Assets.View.Fatality.Weapon.Ability
 
         private void ProcessTarget()
         {
-            var tgt = this._data.Target.Current as CharController;
+            var tgt = this._data.Target.Current as CChar;
             this.ProcessBlood(tgt);
             this.SetBodyComponentsNull(tgt);
             var ribs = CharSpriteLoader.Instance.GetEffectSprite(RIBS);
