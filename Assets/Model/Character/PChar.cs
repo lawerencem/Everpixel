@@ -10,6 +10,7 @@ using Assets.Model.Characters.Params;
 using Assets.Model.Class;
 using Assets.Model.Class.Enum;
 using Assets.Model.Equipment.Armor;
+using Assets.Model.Injury;
 using Assets.Model.Party;
 using Assets.Model.Party.Enum;
 using System.Collections.Generic;
@@ -27,6 +28,7 @@ namespace Assets.Model.Character
 
         public EStartCol StartCol { get; set; }
 
+        public void AddInjury(MInjury i) { this._model.GetEffects().AddInjury(i); }
         public void AddPoints(ESecondaryStat s, double v) { this._model.GetPoints().AddValue(s, v); }
         public List<MAbility> GetActiveAbilities() { return this._model.GetAbilities().GetNonWpnAbilities(); }
         public CArmor GetArmor() { return this._model.GetEquipment().GetArmor(); }

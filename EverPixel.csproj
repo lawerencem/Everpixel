@@ -259,6 +259,7 @@
     <Compile Include="Assets\Model\Combat\Hit\FHit.cs" />
     <Compile Include="Assets\Model\Combat\Hit\HitData.cs" />
     <Compile Include="Assets\Model\Combat\Hit\HitMod.cs" />
+    <Compile Include="Assets\Model\Combat\Hit\HitTextDisplayData.cs" />
     <Compile Include="Assets\Model\Combat\Hit\MHit.cs" />
     <Compile Include="Assets\Model\Culture\ECulture.cs" />
     <Compile Include="Assets\Model\Effect\Ability\Megabite.cs" />
@@ -293,7 +294,7 @@
     <Compile Include="Assets\Model\Event\Combat\AEvCombat.cs" />
     <Compile Include="Assets\Model\Event\Combat\ActionEventController.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvApMod.cs" />
-    <Compile Include="Assets\Model\Event\Combat\EvApplyInjury.cs" />
+    <Compile Include="Assets\Model\Event\Combat\EvInjury.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvBuff.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvCasting.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvCharKilled.cs" />
@@ -384,6 +385,7 @@
     <Compile Include="Assets\Template\Builder\GBuilder.cs" />
     <Compile Include="Assets\Template\CB\ICallback.cs" />
     <Compile Include="Assets\Template\CB\ICallbackHandler.cs" />
+    <Compile Include="Assets\Template\CB\IQueueCallback.cs" />
     <Compile Include="Assets\Template\Event\AEvent.cs" />
     <Compile Include="Assets\Template\Event\AEventManager.cs" />
     <Compile Include="Assets\Template\Factory\GFactory.cs" />

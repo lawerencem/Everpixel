@@ -47,6 +47,12 @@
       <Description>
         This incredible bow fires live (i.e., dangerous) weens!
       </Description>
+      <EEffect name="SummonOnHit">
+        <AbilityCondition>Fire</AbilityCondition>
+        <Duration>5</Duration>
+        <SummonKey>Ween</SummonKey>
+        <WeaponCondition>Weenbow</WeaponCondition>
+      </EEffect>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>15</Max_Durability>
@@ -74,6 +80,12 @@
       <Description>
         This incredible bow fires live (i.e., dangerous) weens!
       </Description>
+      <EEffect name="SummonOnHit">
+        <AbilityCondition>Fire</AbilityCondition>
+        <Duration>5</Duration>
+        <SummonKey>Ween</SummonKey>
+        <WeaponCondition>Weenbow</WeaponCondition>
+      </EEffect>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>20</Max_Durability>
@@ -101,6 +113,12 @@
       <Description>
         As if a ween wasn't scary enough - they can now fly! 
       </Description>
+      <EEffect name="SummonOnHit">
+        <AbilityCondition>Fire</AbilityCondition>
+        <Duration>5</Duration>
+        <SummonKey>Ween</SummonKey>
+        <WeaponCondition>Weenbow</WeaponCondition>
+      </EEffect>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>20</Max_Durability>

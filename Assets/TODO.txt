@@ -2,9 +2,14 @@
 
 data classes being populated on weapon/ability click can be consolidated
 
+Reimplement injuries
 Action
-  - Display effects on queue
+  - Display effects on queue (Via HitTextDisplayData)
+Ghost Weens
+Slime Bow
+Slime Fatality
 
+Shields
 Stealth
 Refactor Dmg Calculations
 Block calculations

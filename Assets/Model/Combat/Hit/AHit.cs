@@ -1,5 +1,7 @@
 ﻿using Assets.Template.CB;
+using Assets.Template.Other;
 using System.Collections.Generic;
+using System;
 
 namespace Assets.Model.Combat.Hit
 {
@@ -8,6 +10,8 @@ namespace Assets.Model.Combat.Hit
         private bool _done;
         protected List<Callback> _callbacks;
         protected HitData _data;
+        protected HitTextDisplayData _display;
+        protected List<Pair<int, QueueCallback>> _queueCallbacks;
 
         public HitData Data { get { return this._data; } }
         public bool Done { get { return this._done; } }

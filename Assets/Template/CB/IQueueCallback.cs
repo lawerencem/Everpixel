@@ -6,5 +6,6 @@
     {
         void AddQueueCallback(int priority, QueueCallback callback);
         void DoQueueCallbacks();
+        void DoQueueCallbacks(object o);
     }
 }

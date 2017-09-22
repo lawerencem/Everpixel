@@ -13,7 +13,6 @@ namespace Assets.Model.Combat.Hit
         public MAbility Ability { get; set; }
         public MAction Action { get; set; }
         public HitPrediction Chances { get; set; }
-        public List<MEffect> Effects { get; set; }
         public List<MEvCombat> Events { get; set; }
         public FHit Flags { get; set; }
         public HitMod ModData { get; set; }
@@ -27,7 +26,6 @@ namespace Assets.Model.Combat.Hit
         public HitData()
         {
             this.Chances = new HitPrediction();
-            this.Effects = new List<MEffect>();
             this.Events = new List<MEvCombat>();
             this.Flags = new FHit();
             this.ModData = new HitMod();
