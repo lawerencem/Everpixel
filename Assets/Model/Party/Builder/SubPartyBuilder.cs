@@ -4,6 +4,7 @@ using Assets.Model.Characters.Params;
 using Assets.Model.Party.Enum;
 using Assets.Template.Other;
 using Assets.Template.Util;
+using System;
 using System.Collections.Generic;
 
 namespace Assets.Model.Party.Builder
@@ -16,7 +17,7 @@ namespace Assets.Model.Party.Builder
             {
                 var buildList = new List<Pair<PreCharParams, EStartCol>>();
                 var cParams = SubPartiesTable.Instance.Table[arg];
-                foreach(var param in cParams)
+                foreach (var param in cParams)
                 {
                     double chance = RNG.Instance.NextDouble();
                     if (chance < param.Chance)

@@ -10,6 +10,10 @@
     <Character>1,Veteran Spider Rider,One</Character>
     <Character>1,Veteran Spider Rider Archer,Two</Character>
   </SubParty>
+  <SubParty Name ="Gobbo Spider Riders">
+    <Difficulty>12</Difficulty>
+    <Character>1,Spider Boss,One</Character>
+  </SubParty>
   <SubParty Name ="Goblin Fodder">
     <Difficulty>1</Difficulty>
     <Character>1,Goblin Fodder,One</Character>

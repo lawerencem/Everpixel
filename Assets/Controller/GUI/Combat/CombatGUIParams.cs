@@ -46,7 +46,7 @@ namespace Assets.Controller.GUI.Combat
 
 
         // Bullet Param Stuff
-        public static readonly float X_CORRECTION = 0.14f;
+        public static readonly float X_CORRECTION = 0.165f;
         public static readonly float BULLET_OFFSET = 0.125f;
         public static readonly float MAX_ROTATION = 25f;
     }

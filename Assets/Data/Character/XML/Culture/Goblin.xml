@@ -429,6 +429,39 @@
         <Resolve>620</Resolve>
       </Stats>
     </Character>
+    <Character name ="Slimer">
+      <Class>Ninja,5</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Goblin</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.75,Goblin Pads,Four</Armor>
+          <Armor>0.25,Goblin Pads,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.75,Goblin Cap,Four</Helm>
+          <Helm>0.25,Goblin Cap,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <LWeapons name="One">
+          <LWeapon>0.75,Notched Blade,Four</LWeapon>
+          <LWeapon>0.25,Notched Blade,Three</LWeapon>
+        </LWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Slime Blade,Four</RWeapon>
+          <RWeapon>0.25,Slime Blade,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>350</Constitution>
+        <Intelligence>480</Intelligence>
+        <Might>380</Might>
+        <Perception>480</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Sluggemoth">
       <AttackSpriteIndex>24</AttackSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
@@ -486,39 +519,63 @@
       </Stats>
       <Spell>1,Summon_Shoggoth</Spell>
     </Character>
-    <Character name ="Slimer">
-      <Class>Ninja,5</Class>
-      <Class>Assassin,3</Class>
+    <Character name ="Spider Boss">
+      <Class>Ninja,15</Class>
+      <Class>Fighter,7</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Goblin</ERace>
+      <Mount>Octolegs</Mount>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.75,Goblin Pads,Four</Armor>
-          <Armor>0.25,Goblin Pads,Three</Armor>
+          <Armor>1,Goblin Pads,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.75,Goblin Cap,Four</Helm>
-          <Helm>0.25,Goblin Cap,Three</Helm>
+          <Helm>1,Goblin Cap,Two</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
-        <LWeapons name="One">
-          <LWeapon>0.75,Notched Blade,Four</LWeapon>
-          <LWeapon>0.25,Notched Blade,Three</LWeapon>
-        </LWeapons>
         <RWeapons name="One">
-          <RWeapon>0.75,Slime Blade,Four</RWeapon>
-          <RWeapon>0.25,Slime Blade,Three</RWeapon>
+          <RWeapon>1,Slime Launcher,One</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
-        <Agility>550</Agility>
-        <Constitution>350</Constitution>
-        <Intelligence>480</Intelligence>
-        <Might>380</Might>
+        <Agility>610</Agility>
+        <Constitution>380</Constitution>
+        <Intelligence>600</Intelligence>
+        <Might>410</Might>
         <Perception>480</Perception>
-        <Resolve>350</Resolve>
+        <Resolve>410</Resolve>
       </Stats>
+      <Character name ="Veteran Spider Rider Archer">
+        <Class>Fighter,6</Class>
+        <ECharacterType>Humanoid</ECharacterType>
+        <ERace>Goblin</ERace>
+        <Mount>Octolegs</Mount>
+        <PotentialArmors>
+          <Armors name="One">
+            <Armor>0.75,Goblin Pads,Three</Armor>
+            <Armor>0.25,Goblin Pads,Two</Armor>
+          </Armors>
+          <Helms name="One">
+            <Helm>0.75,Goblin Cap,Three</Helm>
+            <Helm>0.25,Goblin Cap,Two</Helm>
+          </Helms>
+        </PotentialArmors>
+        <PotentialWeapons>
+          <RWeapons name="One">
+            <RWeapon>0.75,Goblin Bow,Three</RWeapon>
+            <RWeapon>0.25,Goblin Bow,Two</RWeapon>
+          </RWeapons>
+        </PotentialWeapons>
+        <Stats>
+          <Agility>600</Agility>
+          <Constitution>350</Constitution>
+          <Intelligence>520</Intelligence>
+          <Might>520</Might>
+          <Perception>500</Perception>
+          <Resolve>450</Resolve>
+        </Stats>
+      </Character>
     </Character>
     <Character name ="Spider Rider">
       <Class>Fighter,3</Class>
