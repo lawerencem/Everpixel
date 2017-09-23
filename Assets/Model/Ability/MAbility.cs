@@ -118,6 +118,15 @@ namespace Assets.Model.Ability
             return this._logic.GetRaycastTiles(arg);
         }
 
+        protected List<CTile> GetSelfCenteredTiles(MHit hit)
+        {
+            var cTiles = new List<CTile>();
+            var tiles = hit.Data.Source.Tile.Model.GetAoETiles(this.Data.Range);
+            foreach (var tile in tiles)
+                cTiles.Add(tile.Controller);
+            return cTiles;
+        }
+
         protected ZoneArgsCont GetZoneArgs(AbilityArgs arg, CTile tile)
         {
             //var zoneArgs = new ZoneArgsCont();
@@ -170,30 +179,6 @@ namespace Assets.Model.Ability
             this.ProcessEffects(hit);
             this.ProcessPerks(hit);
             this._logic.ProcessMelee(hit);
-        }
-
-        protected void ProcessHitSummon(MHit hit)
-        {
-            //FHit.SetSummonTrue(hit.Flags);
-            //foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-            //    perk.TryModAbility(hit);
-            //this._logic.ProcessSummon(hit);
-        }
-
-        protected void ProcessShapeshift(MHit hit)
-        {
-            //FHit.SetShapeshiftTrue(hit.Flags);
-            //FCharacterStatus.SetShapeshiftedTrue(hit.Source.Model.StatusFlags);
-            //foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-            //    perk.TryModAbility(hit);
-            //this._logic.ProcessShapeshift(hit);
-        }
-
-        protected void ProcessHitSong(MHit hit)
-        {
-            //foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-            //    perk.TryModAbility(hit);
-            //this._logic.ProcessSong(hit);
         }
 
         protected void ProcessHitZone(MHit hit)

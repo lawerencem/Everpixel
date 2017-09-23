@@ -1,5 +1,6 @@
 ﻿using Assets.Model.Ability.Enum;
 using Assets.Template.Other;
+using System;
 using System.Collections.Generic;
 
 namespace Assets.Model.Ability
@@ -21,8 +22,16 @@ namespace Assets.Model.Ability
 
         public MAbility CreateNewObject(EAbility ability)
         {
-            var proto = AbilityTable.Instance.Table[ability];
-            return proto.Copy();
+            try
+            {
+                var proto = AbilityTable.Instance.Table[ability];
+                return proto.Copy();
+            }
+            catch(Exception e)
+            {
+                int temp = 0;
+                return null;
+            }
         }
     }
 }

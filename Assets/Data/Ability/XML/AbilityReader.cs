@@ -11,7 +11,6 @@ using Assets.Model.Injury;
 using Assets.Model.Weapon.Abilities;
 using Assets.Template.Util;
 using Assets.Template.XML;
-using System.Collections.Generic;
 using System.Xml.Linq;
 
 namespace Assets.Data.Ability.XML
@@ -24,6 +23,7 @@ namespace Assets.Data.Ability.XML
         {
             this._paths.Add("Assets/Data/Ability/XML/Abilities.xml");
             this._paths.Add("Assets/Data/Ability/XML/PhysicalAbilities.xml");
+            this._paths.Add("Assets/Data/Ability/XML/Songs.xml");
             this._paths.Add("Assets/Data/Ability/XML/WeaponAbilities.xml");
         }
 
@@ -97,6 +97,7 @@ namespace Assets.Data.Ability.XML
                 case ("Duration"): { table[type].Data.Duration = double.Parse(value); } break;
                 case ("DodgeMod"): { table[type].Data.DodgeMod = v; } break;
                 case ("FlatDamage"): { table[type].Data.FlatDamage = v; } break;
+                case ("Hostile"): { this.HandleHostile(type, value); } break;
                 case ("IconSprite"): { table[type].Data.Sprite = (int)v; } break;
                 case ("Injury"): { this.HandlAPerk(type, value); } break;
                 case ("MeleeBlockChanceMod"): { table[type].Data.MeleeBlockChanceMod = v; } break;
@@ -132,6 +133,12 @@ namespace Assets.Data.Ability.XML
             {
                 AbilityTable.Instance.Table[type].Data.Injuries.Add(injury);
             }
+        }
+
+        private void HandleHostile(EAbility key, string value)
+        {
+            if (value.ToLowerInvariant().Equals("false"))
+                AbilityTable.Instance.Table[key].Data.Hostile = false;
         }
 
         private void HandleResistType(EAbility type, string s)
@@ -203,6 +210,7 @@ namespace Assets.Data.Ability.XML
                 case (EAbility.Stun): { table.Add(type, new Stun()); } break;
                 case (EAbility.Summon_Shoggoth): { table.Add(type, new SummonShoggoth()); } break;
                 case (EAbility.Triple_Strike): { table.Add(type, new TripleStrike()); } break;
+                case (EAbility.Weenlight_Sonata): { table.Add(type, new WeenlightSonata()); } break;
                 case (EAbility.Were_Ween): { table.Add(type, new Wereween()); } break;
                 case (EAbility.Wide_Slash): { table.Add(type, new WideSlash()); } break;
                 case (EAbility.Wrap): { table.Add(type, new Wrap()); } break;

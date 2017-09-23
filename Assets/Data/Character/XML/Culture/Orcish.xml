@@ -201,8 +201,10 @@
       </Stats>
     </Character>
     <Character name ="Orc Battlesinger">
-      <Ability>Haste_Song</Ability>
-      <Ability>Orc_Metal</Ability>
+      <Abilities>
+        <Ability name ="Haste_Song"></Ability>
+        <Ability name ="Orc_Metal"></Ability>
+      </Abilities>
       <Class>Bard,3</Class>
       <Class>Skald,1</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -333,8 +335,11 @@
       </Stats>
     </Character>
     <Character name ="Orc Poet">
-      <Ability>Haste_Song</Ability>
-      <Ability>Orc_Metal</Ability>
+      <Abilities>
+        <Ability name ="Haste_Song"></Ability>
+        <Ability name ="Orc_Metal"></Ability>
+        <Ability name ="Weenlight_Sonata"></Ability>
+      </Abilities>
       <Class>Bard,3</Class>
       <Class>Skald,15</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -402,8 +407,11 @@
       </Stats>
     </Character>
     <Character name ="Orc Rhapsodist">
-      <Ability>Haste_Song</Ability>
-      <Ability>Orc_Metal</Ability>
+      <Abilities>
+        <Ability name ="Haste_Song"></Ability>
+        <Ability name ="Orc_Metal"></Ability>
+        <Ability name ="Weenlight_Sonata"></Ability>
+      </Abilities>
       <Class>Bard,3</Class>
       <Class>Skald,9</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -482,8 +490,11 @@
       </Stats>
     </Character>
     <Character name ="Orc Warsinger">
-      <Ability>Haste_Song</Ability>
-      <Ability>Orc_Metal</Ability>
+      <Abilities>
+        <Ability name ="Haste_Song"></Ability>
+        <Ability name ="Orc_Metal"></Ability>
+        <Ability name ="Weenlight_Sonata"></Ability>
+      </Abilities>
       <Class>Bard,3</Class>
       <Class>Skald,5</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -527,6 +538,11 @@
       <ERace>Orc</ERace>
       <Perks>
       </Perks>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Great Axe Choppa,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
       <Stats>
         <Agility>750</Agility>
         <Constitution>750</Constitution>

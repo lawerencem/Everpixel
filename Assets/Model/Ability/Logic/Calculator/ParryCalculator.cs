@@ -26,9 +26,6 @@ namespace Assets.Model.Ability.Logic.Calculator
             if (hit.Data.Source.Proxy.GetRWeapon() != null)
                 parryChance *= hit.Data.Source.Proxy.GetRWeapon().GetStat(EWeaponStat.Parry_Mod);
 
-            if (hit.Data.Source.Proxy.Type == ECharType.Critter)
-                parryChance = 0;
-
             acc *= hit.Data.Ability.Data.AccMod;
             parry *= hit.Data.Ability.Data.ParryModMod;
 
@@ -38,6 +35,14 @@ namespace Assets.Model.Ability.Logic.Calculator
                 hit.Data.Chances.Parry = 0;
 
             hit.Data.Chances.Parry = this.GetAttackVSDefenseSkillChance(acc, parry, parryChance);
+
+            if (hit.Data.Source.Proxy.Type == ECharType.Critter)
+                hit.Data.Chances.Parry = 0;
+            else if ((tgt.Proxy.GetLWeapon() == null || tgt.Proxy.GetLWeapon().IsTypeOfShield() &&
+                tgt.Proxy.GetRWeapon() == null || tgt.Proxy.GetRWeapon().IsTypeOfShield()))
+            {
+                hit.Data.Chances.Parry = 0;
+            }
         }
 
         public override void Process(MHit hit)

@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Tile;
+using Assets.Model.Ability.Music;
 using Assets.Model.Action;
 using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
@@ -9,6 +10,7 @@ using Assets.Template.Util;
 using Assets.View;
 using Assets.View.Ability;
 using Assets.View.Event;
+using Assets.View.Particle;
 using Assets.View.Script.FX;
 using System.Collections.Generic;
 using UnityEngine;
@@ -80,6 +82,22 @@ namespace Assets.Controller.GUI.Combat
                 this.ProcessMeleeFXNonFatality(a);
         }
 
+        public void ProcessSongFX(MAction a)
+        {
+            var ability = a.ActiveAbility as MSong;
+            VCombatController.Instance.DisplayActionEventName(a);
+            var path = StringUtil.PathBuilder(
+                CombatGUIParams.EFFECTS_PATH,
+                ability.SongType.ToString().Replace("_", ""),
+                CombatGUIParams.PARTICLES_EXTENSION);
+            var particles = ParticleController.Instance.CreateParticle(path);
+            var script = particles.AddComponent<SDestroyByLifetime>();
+            script.Init(particles, 5f);
+            ParticleController.Instance.AttachParticle(a.Data.Source.Handle, particles);
+            foreach (var hit in a.Data.Hits)
+                hit.CallbackHandler(this);
+        }
+
         public void SetCallback(Callback callback)
         {
             this._callbacks = new List<Callback>() { callback };
@@ -144,15 +162,20 @@ namespace Assets.Controller.GUI.Combat
             data.YOffset = CombatGUIParams.FLOAT_OFFSET;
             data.Hit.AddDataDisplay(data);
             
-            if (target.Proxy.GetRWeapon() != null && target.Proxy.GetRWeapon().IsTypeOfShield())
+            if (target.Proxy.GetRWeapon() != null && !target.Proxy.GetRWeapon().IsTypeOfShield())
             {
                 var wpn = target.SubComponents[Layers.CHAR_R_WEAPON];
                 this.DisplayParryHelper(target, hit, wpn);
             }
-            else if (target.Proxy.GetLWeapon() != null && target.Proxy.GetLWeapon().IsTypeOfShield())
+            else if (target.Proxy.GetLWeapon() != null && !target.Proxy.GetLWeapon().IsTypeOfShield())
             {
                 var wpn = target.SubComponents[Layers.CHAR_L_WEAPON];
                 this.DisplayParryHelper(target, hit, wpn);
+            }
+            else
+            {
+                // THIS IS IN ERROR
+                int temp = 0;
             }
         }
 

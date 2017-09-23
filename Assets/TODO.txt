@@ -2,6 +2,7 @@
 
 Add Injuries to weapons
 Fix parry / block lock bugs
+Orc Wereween
 Ghost Weens
 Pierce fatality
 

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ActiveAbilities>
+  <MagicType name="Physical">
+    <ActiveAbility name="Haste_Song">
+      <APCost>6</APCost>
+      <CastTypeEnum>Song</CastTypeEnum>
+      <Duration>1</Duration>
+      <Hostile>False</Hostile>
+      <Range>5</Range>
+      <StaminaCost>40</StaminaCost>
+    </ActiveAbility>
+    <ActiveAbility name="Orc_Metal">
+      <APCost>5</APCost>
+      <CastTypeEnum>Song</CastTypeEnum>
+      <DmgPerPower>.003</DmgPerPower>
+      <Duration>1</Duration>
+      <Hostile>False</Hostile>
+      <Range>5</Range>
+      <StaminaCost>50</StaminaCost>
+    </ActiveAbility>
+    <ActiveAbility name="Weenlight_Sonata">
+      <APCost>3</APCost>
+      <CastTypeEnum>Song</CastTypeEnum>
+      <Hostile>False</Hostile>
+      <Range>3</Range>
+      <StaminaCost>60</StaminaCost>
+    </ActiveAbility>
+  </MagicType>
+</ActiveAbilities>
