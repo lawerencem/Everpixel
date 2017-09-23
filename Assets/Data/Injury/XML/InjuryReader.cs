@@ -13,7 +13,7 @@ namespace Assets.Data.Injury.XML
     {
         private const string DOT = "DoT";
         private const string P_STAT = "EPrimaryStat";
-        private const string S_STAT = "SecondaryStatsEnum";
+        private const string S_STAT = "ESecondaryStat";
 
         private InjuryTable table = InjuryTable.Instance;
 

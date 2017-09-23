@@ -11,9 +11,6 @@
       <DamageMod>1.30</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>1</IconSprite>
-      <Injury>Major_Bleeding</Injury>
-      <Injury>Minor_Bleeding</Injury>
-      <Injury>Profuse_Bleeding</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -34,8 +31,12 @@
       <Injury>Major_Bleeding</Injury>
       <Injury>Massive_Bleeding</Injury>
       <Injury>Minor_Bleeding</Injury>
+      <Injury>Pierced_Arm</Injury>
+      <Injury>Pierced_Foot</Injury>
+      <Injury>Pierced_Hand</Injury>
       <Injury>Profuse_Bleeding</Injury>
-      <Injury>Torrential_Bleeding</Injury>
+      <Injury>Rip</Injury>
+      <Injury>Tear</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -53,7 +54,14 @@
       <DamageMod>0.25</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>2</IconSprite>
+      <Injury>Broken_Foot</Injury>
+      <Injury>Broken_Knee</Injury>
       <Injury>Broken_Ribs</Injury>
+      <Injury>Broken_Shoulder</Injury>
+      <Injury>Crushed_Foot</Injury>
+      <Injury>Dislocated_Shoulder</Injury>
+      <Injury>Fractured_Ribs</Injury>
+      <Injury>Shattered_Ribs</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>0.80</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -71,6 +79,13 @@
       <DamageMod>0.25</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>3</IconSprite>
+      <Injury>Broken_Arm</Injury>
+      <Injury>Broken_Hand</Injury>
+      <Injury>Crushed_Finger</Injury>
+      <Injury>Crushed_Hand</Injury>
+      <Injury>Fractured_Elbow</Injury>
+      <Injury>Fractured_Hand</Injury>
+      <Injury>Shattered_Elbow</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -88,10 +103,23 @@
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>4</IconSprite>
+      <Injury>Dislocated_Shoulder</Injury>
+      <Injury>Fractured_Elbow</Injury>
+      <Injury>Fractured_Hand</Injury>
+      <Injury>Fractured_Skull</Injury>
+      <Injury>Maimed_Foot</Injury>
+      <Injury>Maimed_Hand</Injury>
       <Injury>Major_Bleeding</Injury>
       <Injury>Massive_Bleeding</Injury>
       <Injury>Minor_Bleeding</Injury>
+      <Injury>Minor_Concussion</Injury>
+      <Injury>Lacerated_Arm</Injury>
+      <Injury>Lacerated_Chest</Injury>
+      <Injury>Lacerated_Leg</Injury>
       <Injury>Profuse_Bleeding</Injury>
+      <Injury>Split_Hand</Injury>
+      <Injury>Split_Nose</Injury>
+      <Injury>Split_Shoulder</Injury>
       <Injury>Torrential_Bleeding</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.10</ParryModMod>
@@ -111,11 +139,28 @@
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>0</IconSprite>
       <Injury>Broken_Arm</Injury>
+      <Injury>Broken_Foot</Injury>
+      <Injury>Broken_Hand</Injury>
       <Injury>Broken_Jaw</Injury>
+      <Injury>Broken_Knee</Injury>
+      <Injury>Broken_Leg</Injury>
       <Injury>Broken_Ribs</Injury>
+      <Injury>Broken_Shoulder</Injury>
       <Injury>Broken_Wrist</Injury>
       <Injury>Concussion</Injury>
+      <Injury>Crushed_Finger</Injury>
+      <Injury>Crushed_Hand</Injury>
+      <Injury>Crushed_Windpipe</Injury>
+      <Injury>Crushed_Foot</Injury>
+      <Injury>Dislocated_Shoulder</Injury>
+      <Injury>Fractured_Elbow</Injury>
+      <Injury>Fractured_Hand</Injury>
+      <Injury>Fractured_Ribs</Injury>
+      <Injury>Fractured_Skull</Injury>
+      <Injury>Minor_Concussion</Injury>
       <Injury>Severe_Concussion</Injury>
+      <Injury>Shattered_Elbow</Injury>
+      <Injury>Shattered_Knee</Injury>
       <Injury>Shattered_Ribs</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>0.65</ParryModMod>
@@ -134,11 +179,6 @@
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>5</IconSprite>
-      <Injury>Major_Bleeding</Injury>
-      <Injury>Massive_Bleeding</Injury>
-      <Injury>Minor_Bleeding</Injury>
-      <Injury>Profuse_Bleeding</Injury>
-      <Injury>Torrential_Bleeding</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.20</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -156,9 +196,6 @@
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>6</IconSprite>
-      <Injury>Major_Bleeding</Injury>
-      <Injury>Minor_Bleeding</Injury>
-      <Injury>Profuse_Bleeding</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -176,10 +213,10 @@
       <DamageMod>1.75</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>7</IconSprite>
-      <Injury>Major_Bleeding</Injury>
       <Injury>Massive_Bleeding</Injury>
-      <Injury>Minor_Bleeding</Injury>
       <Injury>Profuse_Bleeding</Injury>
+      <Injury>Rip</Injury>
+      <Injury>Tear</Injury>
       <Injury>Torrential_Bleeding</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.15</ParryModMod>
@@ -198,10 +235,20 @@
       <DamageMod>0.85</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>7</IconSprite>
-      <Injury>Broken_Ribs</Injury>
-      <Injury>Major_Bleeding</Injury>
-      <Injury>Minor_Bleeding</Injury>
-      <Injury>Profuse_Bleeding</Injury>
+      <Injury>Broken_Arm</Injury>
+      <Injury>Broken_Foot</Injury>
+      <Injury>Broken_Hand</Injury>
+      <Injury>Broken_Jaw</Injury>
+      <Injury>Broken_Shoulder</Injury>
+      <Injury>Broken_Wrist</Injury>
+      <Injury>Concussion</Injury>
+      <Injury>Crushed_Finger</Injury>
+      <Injury>Crushed_Hand</Injury>
+      <Injury>Crushed_Foot</Injury>
+      <Injury>Dislocated_Shoulder</Injury>
+      <Injury>Fractured_Skull</Injury>
+      <Injury>Minor_Concussion</Injury>
+      <Injury>Severe_Concussion</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.25</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -219,11 +266,14 @@
       <DamageMod>2.25</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>9</IconSprite>
-      <Injury>Major_Bleeding</Injury>
-      <Injury>Massive_Bleeding</Injury>
-      <Injury>Minor_Bleeding</Injury>
-      <Injury>Profuse_Bleeding</Injury>
-      <Injury>Torrential_Bleeding</Injury>
+      <Injury>Maimed_Arm</Injury>
+      <Injury>Maimed_Foot</Injury>
+      <Injury>Maimed_Hand</Injury>
+      <Injury>Maimed_Knee</Injury>
+      <Injury>Maimed_Leg</Injury>
+      <Injury>Maimed_Shoulder</Injury>
+      <Injury>Rip</Injury>
+      <Injury>Tear</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -241,10 +291,18 @@
       <DamageMod>0.75</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>9</IconSprite>
-      <Injury>Major_Bleeding</Injury>
-      <Injury>Massive_Bleeding</Injury>
       <Injury>Minor_Bleeding</Injury>
-      <Injury>Profuse_Bleeding</Injury>
+      <Injury>Major_Bleeding</Injury>
+      <Injury>Pierced_Arm</Injury>
+      <Injury>Pierced_Chest</Injury>
+      <Injury>Pierced_Foot</Injury>
+      <Injury>Pierced_Hand</Injury>
+      <Injury>Pierced_Knee</Injury>
+      <Injury>Pierced_Guts</Injury>
+      <Injury>Pierced_Heart</Injury>
+      <Injury>Pierced_Leg</Injury>
+      <Injury>Pierced_Lung</Injury>
+      <Injury>Pierced_Shoulder</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>0.75</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -262,6 +320,12 @@
       <DamageMod>0.75</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>0</IconSprite>
+      <Injury>Crushed_Windpipe</Injury>
+      <Injury>Dislocated_Shoulder</Injury>
+      <Injury>Fractured_Elbow</Injury>
+      <Injury>Maimed_Shoulder</Injury>
+      <Injury>Pierced_Shoulder</Injury>
+      <Injury>Split_Shoulder</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -296,7 +360,12 @@
       <DamageMod>1.50</DamageMod>
       <DodgeMod>0.75</DodgeMod>
       <IconSprite>0</IconSprite>
+      <Injury>Broken_Hand</Injury>
+      <Injury>Broken_Knee</Injury>
+      <Injury>Broken_Leg</Injury>
       <Injury>Broken_Ribs</Injury>
+      <Injury>Fractured_Hand</Injury>
+      <Injury>Fractured_Ribs</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>0.25</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -348,11 +417,27 @@
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>11</IconSprite>
+      <Injury>Cut_Abdomine</Injury>
+      <Injury>Cut_Arm</Injury>
+      <Injury>Cut_Chest</Injury>
+      <Injury>Cut_Ear</Injury>
+      <Injury>Cut_Face</Injury>
+      <Injury>Cut_Foot</Injury>
+      <Injury>Cut_Hand</Injury>
+      <Injury>Cut_Knee</Injury>
+      <Injury>Cut_Leg</Injury>
+      <Injury>Cut_Nose</Injury>
+      <Injury>Cut_Shoulder</Injury>
+      <Injury>Lacerated_Abdomine</Injury>
+      <Injury>Lacerated_Arm</Injury>
+      <Injury>Lacerated_Chest</Injury>
+      <Injury>Lacerated_Leg</Injury>
+      <Injury>Lacerated_Shoulder</Injury>
       <Injury>Major_Bleeding</Injury>
       <Injury>Massive_Bleeding</Injury>
       <Injury>Minor_Bleeding</Injury>
-      <Injury>Profuse_Bleeding</Injury>
-      <Injury>Torrential_Bleeding</Injury>
+      <Injury>Split_Hand</Injury>
+      <Injury>Split_Nose</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.15</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -370,9 +455,18 @@
       <DamageMod>0.85</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>14</IconSprite>
-      <Injury>Major_Bleeding</Injury>
       <Injury>Minor_Bleeding</Injury>
-      <Injury>Profuse_Bleeding</Injury>
+      <Injury>Major_Bleeding</Injury>
+      <Injury>Pierced_Arm</Injury>
+      <Injury>Pierced_Chest</Injury>
+      <Injury>Pierced_Foot</Injury>
+      <Injury>Pierced_Hand</Injury>
+      <Injury>Pierced_Knee</Injury>
+      <Injury>Pierced_Guts</Injury>
+      <Injury>Pierced_Heart</Injury>
+      <Injury>Pierced_Leg</Injury>
+      <Injury>Pierced_Lung</Injury>
+      <Injury>Pierced_Shoulder</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>0.50</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -407,7 +501,13 @@
       <DamageMod>0.35</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>0</IconSprite>
-      <Injury>Broken_Ribs</Injury>
+      <Injury>Broken_Jaw</Injury>
+      <Injury>Broken_Nose</Injury>
+      <Injury>Concussion</Injury>
+      <Injury>Crushed_Windpipe</Injury>
+      <Injury>Fractured_Skull</Injury>
+      <Injury>Minor_Concussion</Injury>
+      <Injury>Severe_Concussion</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -425,11 +525,6 @@
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>15</IconSprite>
-      <Injury>Major_Bleeding</Injury>
-      <Injury>Massive_Bleeding</Injury>
-      <Injury>Minor_Bleeding</Injury>
-      <Injury>Profuse_Bleeding</Injury>
-      <Injury>Torrential_Bleeding</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -447,10 +542,20 @@
       <DamageMod>1</DamageMod>
       <DodgeMod>0.75</DodgeMod>
       <IconSprite>0</IconSprite>
+      <Injury>Cut_Abdomine</Injury>
+      <Injury>Cut_Arm</Injury>
+      <Injury>Cut_Chest</Injury>
+      <Injury>Cut_Ear</Injury>
+      <Injury>Cut_Face</Injury>
+      <Injury>Cut_Foot</Injury>
+      <Injury>Cut_Hand</Injury>
+      <Injury>Cut_Knee</Injury>
+      <Injury>Cut_Leg</Injury>
+      <Injury>Cut_Nose</Injury>
+      <Injury>Cut_Shoulder</Injury>
       <Injury>Major_Bleeding</Injury>
       <Injury>Massive_Bleeding</Injury>
       <Injury>Minor_Bleeding</Injury>
-      <Injury>Profuse_Bleeding</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.20</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -468,7 +573,19 @@
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>0</IconSprite>
+      <Injury>Broken_Hand</Injury>
+      <Injury>Broken_Jaw</Injury>
       <Injury>Broken_Ribs</Injury>
+      <Injury>Broken_Wrist</Injury>
+      <Injury>Concussion</Injury>
+      <Injury>Crushed_Finger</Injury>
+      <Injury>Crushed_Hand</Injury>
+      <Injury>Crushed_Windpipe</Injury>
+      <Injury>Dislocated_Shoulder</Injury>
+      <Injury>Fractured_Hand</Injury>
+      <Injury>Fractured_Ribs</Injury>
+      <Injury>Fractured_Skull</Injury>
+      <Injury>Minor_Concussion</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>0.25</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>

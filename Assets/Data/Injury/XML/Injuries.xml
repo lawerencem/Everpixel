@@ -1,78 +1,264 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Injuries>
   <Injury name ="Abdominal_Cut">
-    <Dot>Bleed, 20</Dot>
     <EPrimaryStat>Constitution, 0.85</EPrimaryStat>
-    <SecondaryStatsEnum>Stamina, 0.75</SecondaryStatsEnum>
+    <ESecondaryStat>Stamina, 0.75</ESecondaryStat>
+  </Injury>
+  <Injury name ="Brain_Damage">
+    <EPrimaryStat>Intelligence, 0.70</EPrimaryStat>
+    <EPrimaryStat>Perception, 0.90</EPrimaryStat>
+    <EPrimaryStat>Resolve, 0.85</EPrimaryStat>
   </Injury>
   <Injury name ="Broken_Arm">
-    <SecondaryStatsEnum>Block, 0.85</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Parry, 0.85</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Power, 0.75</SecondaryStatsEnum>
+    <ESecondaryStat>Block, 0.85</ESecondaryStat>
+    <ESecondaryStat>Parry, 0.85</ESecondaryStat>
+    <ESecondaryStat>Power, 0.75</ESecondaryStat>
+  </Injury>
+  <Injury name ="Broken_Foot">
+    <ESecondaryStat>AP, 0.75</ESecondaryStat>
+    <ESecondaryStat>Dodge, 0.75</ESecondaryStat>
+    <ESecondaryStat>Reflex, 0.75</ESecondaryStat>
+    <ESecondaryStat>Initiative, 0.75</ESecondaryStat>
   </Injury>
   <Injury name ="Broken_Jaw">
-    <SecondaryStatsEnum>Concentration, 0.85</SecondaryStatsEnum>
+    <ESecondaryStat>Concentration, 0.85</ESecondaryStat>
+  </Injury>
+  <Injury name ="Broken_Knee">
+    <ESecondaryStat>Agility, 0.55</ESecondaryStat>
+    <ESecondaryStat>Might, 0.55</ESecondaryStat>
+  </Injury>
+  <Injury name ="Broken_Leg">
+    <ESecondaryStat>Agility, 0.65</ESecondaryStat>
+  </Injury>
+  <Injury name ="Broken_Nose">
+    <ESecondaryStat>Constitution, 0.95</ESecondaryStat>
   </Injury>
   <Injury name ="Broken_Hand">
-    <SecondaryStatsEnum>Block, 0.85</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Melee, 0.65</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Parry, 0.55</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Power, 0.85</SecondaryStatsEnum>
+    <ESecondaryStat>Block, 0.85</ESecondaryStat>
+    <ESecondaryStat>Melee, 0.65</ESecondaryStat>
+    <ESecondaryStat>Parry, 0.55</ESecondaryStat>
+    <ESecondaryStat>Power, 0.85</ESecondaryStat>
   </Injury>
   <Injury Name ="Broken_Ribs">
     <EPrimaryStat>Might, 0.85</EPrimaryStat>
     <EPrimaryStat>Constitution, 0.90</EPrimaryStat>
-    <SecondaryStatsEnum>Stamina, 0.75</SecondaryStatsEnum>
+    <ESecondaryStat>Stamina, 0.75</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Broken_Shoulder">
+    <ESecondaryStat>Melee, 0.75</ESecondaryStat>
+    <EPrimaryStat>Agility, 0.90</EPrimaryStat>
+    <EPrimaryStat>Might, 0.75</EPrimaryStat>
   </Injury>
   <Injury Name ="Broken_Wrist">
-    <SecondaryStatsEnum>Melee, 0.75</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Parry, 0.85</SecondaryStatsEnum>
+    <ESecondaryStat>Melee, 0.75</ESecondaryStat>
+    <ESecondaryStat>Parry, 0.85</ESecondaryStat>
   </Injury>
   <Injury Name ="Concussion">
-    <SecondaryStatsEnum>Concentration, 0.80</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Block, 0.95</SecondaryStatsEnum>
+    <ESecondaryStat>Concentration, 0.80</ESecondaryStat>
+    <EPrimaryStat>Intelligence, 0.80</EPrimaryStat>
+    <EPrimaryStat>Perception, 0.95</EPrimaryStat>
+  </Injury>
+  <Injury Name ="Cut_Abdomine">
+    <EPrimaryStat>Constitution, 0.80</EPrimaryStat>
   </Injury>
   <Injury Name ="Cut_Arm">
-    <SecondaryStatsEnum>Melee, 0.95</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Block, 0.95</SecondaryStatsEnum>
-    <DoT>Bleed, 5</DoT>
+    <ESecondaryStat>Melee, 0.95</ESecondaryStat>
+    <ESecondaryStat>Block, 0.95</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Cut_Chest">
+    <ESecondaryStat>Block, 0.90</ESecondaryStat>
+    <ESecondaryStat>Stamina, 0.90</ESecondaryStat>
   </Injury>
   <Injury Name ="Cut_Ear">
-    <SecondaryStatsEnum>Initiative, 0.85</SecondaryStatsEnum>
+    <ESecondaryStat>Initiative, 0.85</ESecondaryStat>
+    <EPrimaryStat>Perception, 0.90</EPrimaryStat>
+  </Injury>
+  <Injury Name ="Cut_Face">
+    <EPrimaryStat>Resolve, 0.90</EPrimaryStat>
+    <EPrimaryStat>Perception, 0.90</EPrimaryStat>
   </Injury>
   <Injury Name ="Cut_Hand">
-    <SecondaryStatsEnum>Melee, 0.85</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Ranged, 0.85</SecondaryStatsEnum>
-    <DoT>Bleed, 5</DoT>
+    <ESecondaryStat>Melee, 0.85</ESecondaryStat>
+    <ESecondaryStat>Ranged, 0.85</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Cut_Knee">
+    <EPrimaryStat>Agility, 0.90</EPrimaryStat>
+    <ESecondaryStat>Melee, 0.90</ESecondaryStat>
   </Injury>
   <Injury Name ="Cut_Leg">
     <EPrimaryStat>Agility, 0.90</EPrimaryStat>
-    <SecondaryStatsEnum>Stamina, 0.85</SecondaryStatsEnum>
-    <DoT>Bleed, 10</DoT>
+    <ESecondaryStat>Stamina, 0.85</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Cut_Foot">
+    <EPrimaryStat>Agility, 0.95</EPrimaryStat>
+    <ESecondaryStat>Dodge, 0.90</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Cut_Nose">
+    <EPrimaryStat>Perception, 0.90</EPrimaryStat>
+    <EPrimaryStat>Resolve, 0.95</EPrimaryStat>
+  </Injury>
+  <Injury Name ="Cut_Shoulder">
+    <EPrimaryStat>Might, 0.90</EPrimaryStat>
+    <ESecondaryStat>Dodge, 0.90</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Dislocated_Shoulder">
+    <EPrimaryStat>Might, 0.90</EPrimaryStat>
+    <EPrimaryStat>Constitution, 0.90</EPrimaryStat>
+  </Injury>
+  <Injury Name ="Fractured_Elbow">
+    <ESecondaryStat>Block, 0.75</ESecondaryStat>
+    <EPrimaryStat>Might, 0.85</EPrimaryStat>
+    <ESecondaryStat>Melee, 0.75</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Fractured_Hand">
+    <ESecondaryStat>Block, 0.85</ESecondaryStat>
+    <ESecondaryStat>Melee, 0.85</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Fractured_Ribs">
+    <EPrimaryStat>Constitution, 0.70</EPrimaryStat>
+    <EPrimaryStat>Might, 0.85</EPrimaryStat>
+  </Injury>
+  <Injury Name ="Fractured_Skull">
+    <EPrimaryStat>Constitution, 0.75</EPrimaryStat>
+    <EPrimaryStat>Intelligence, 0.90</EPrimaryStat>
+  </Injury>
+  <Injury Name ="Cut_Abdomine">
+    <EPrimaryStat>Constitution, 0.70</EPrimaryStat>
+  </Injury>
+  <Injury Name ="Lacerated_Arm">
+    <ESecondaryStat>Melee, 0.80</ESecondaryStat>
+    <ESecondaryStat>Block, 0.80</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Lacerated_Chest">
+    <ESecondaryStat>Block, 0.80</ESecondaryStat>
+    <ESecondaryStat>Stamina, 0.80</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Lacerated_Leg">
+    <EPrimaryStat>Agility, 0.80</EPrimaryStat>
+    <ESecondaryStat>Stamina, 0.75</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Lacerated_Shoulder">
+    <EPrimaryStat>Might, 0.80</EPrimaryStat>
+    <ESecondaryStat>Dodge, 0.80</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Maimed_Arm">
+    <EPrimaryStat>Might, 0.75</EPrimaryStat>
+    <ESecondaryStat>Melee, 0.75</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Maimed_Foot">
+    <EPrimaryStat>Agility, 0.75</EPrimaryStat>
+    <ESecondaryStat>Initative, 0.70</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Maimed_Hand">
+    <ESecondaryStat>Block, 0.75</ESecondaryStat>
+    <ESecondaryStat>Melee, 0.75</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Maimed_Knee">
+    <EPrimaryStat>Agility, 0.75</EPrimaryStat>
+    <ESecondaryStat>AP, 0.85</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Maimed_Leg">
+    <EPrimaryStat>Agility, 0.70</EPrimaryStat>
+    <ESecondaryStat>AP, 0.90</ESecondaryStat>
+    <EPrimaryStat>Constitution, 0.80</EPrimaryStat>
+  </Injury>
+  <Injury Name ="Maimed_Shoulder">
+    <EPrimaryStat>Constitution, 0.80</EPrimaryStat>
+    <EPrimaryStat>Might, 0.70</EPrimaryStat>
   </Injury>
   <Injury Name ="Major_Bleeding">
-    <DoT>Bleed, 20</DoT>
+    <DoT>Bleed, 3</DoT>
   </Injury>
   <Injury Name ="Massive_Bleeding">
-    <DoT>Bleed, 25</DoT>
-  </Injury>
-  <Injury Name ="Minor_Bleeding">
     <DoT>Bleed, 5</DoT>
   </Injury>
+  <Injury Name ="Minor_Bleeding">
+    <DoT>Bleed, 1</DoT>
+  </Injury>
+  <Injury Name ="Minor_Concussion">
+    <ESecondaryStat>Concentration, 0.90</ESecondaryStat>
+    <EPrimaryStat>Intelligence, 0.90</EPrimaryStat>
+    <EPrimaryStat>Perception, 0.95</EPrimaryStat>
+  </Injury>
+  <Injury Name ="Pierced_Arm">
+    <ESecondaryStat>Block, 0.90</ESecondaryStat>
+    <EPrimaryStat>Melee, 0.90</EPrimaryStat>
+    <EPrimaryStat>Might, 0.90</EPrimaryStat>
+  </Injury>
+  <Injury Name ="Pierced_Chest">
+    <EPrimaryStat>Constitution, 0.90</EPrimaryStat>
+    <ESecondaryStat>Stamina, 0.90</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Pierced_Foot">
+    <EPrimaryStat>Agility, 0.90</EPrimaryStat>
+    <ESecondaryStat>AP, 0.90</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Pierced_Knee">
+    <EPrimaryStat>Agility, 0.80</EPrimaryStat>
+    <ESecondaryStat>AP, 0.80</ESecondaryStat>
+    <ESecondaryStat>Dodge, 0.80</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Pierced_Guts">
+    <EPrimaryStat>Constitution, 0.75</EPrimaryStat>
+  </Injury>
+  <Injury Name ="Pierced_Heart">
+    <EPrimaryStat>Constitution, 0.55</EPrimaryStat>
+  </Injury>
+  <Injury Name ="Pierced_Leg">
+    <EPrimaryStat>Agility, 0.95</EPrimaryStat>
+  </Injury>
+  <Injury Name ="Pierced_Lung">
+    <EPrimaryStat>Constitution, 0.65</EPrimaryStat>
+  </Injury>
+  <Injury Name ="Pierced_Shoulder">
+    <ESecondaryStat>Block, 0.95</ESecondaryStat>
+    <ESecondaryStat>Melee, 0.90</ESecondaryStat>
+    <EPrimaryStat>Might, 0.95</EPrimaryStat>
+  </Injury>
   <Injury Name ="Profuse_Bleeding">
-    <DoT>Bleed, 15</DoT>
+    <DoT>Bleed, 4</DoT>
+  </Injury>
+  <Injury Name ="Rip">
+    <EPrimaryStat>Consitution, 0.80</EPrimaryStat>
+    <EPrimaryStat>Resolve, 0.80</EPrimaryStat>
   </Injury>
   <Injury Name ="Severe_Concussion">
-    <SecondaryStatsEnum>Concentration, 0.60</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Block, 0.85</SecondaryStatsEnum>
+    <ESecondaryStat>Concentration, 0.60</ESecondaryStat>
+    <ESecondaryStat>Block, 0.85</ESecondaryStat>
     <EPrimaryStat>Intelligence, 0.65</EPrimaryStat>
+  </Injury>
+  <Injury Name ="Shattered_Elbow">
+    <ESecondaryStat>Block, 0.65</ESecondaryStat>
+    <ESecondaryStat>Melee, 0.65</ESecondaryStat>
+    <EPrimaryStat>Might, 0.65</EPrimaryStat>
   </Injury>
   <Injury Name ="Shattered_Ribs">
     <EPrimaryStat>Might, 0.65</EPrimaryStat>
     <EPrimaryStat>Constitution, 0.65</EPrimaryStat>
-    <SecondaryStatsEnum>Stamina, 0.65</SecondaryStatsEnum>
+    <ESecondaryStat>Stamina, 0.65</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Shattered_Knee">
+    <EPrimaryStat>Agility, 0.65</EPrimaryStat>
+    <EPrimaryStat>Constitution, 0.75</EPrimaryStat>
+    <ESecondaryStat>AP, 0.65</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Split_Hand">
+    <ESecondaryStat>Block, 0.80</ESecondaryStat>
+    <ESecondaryStat>Melee, 0.80</ESecondaryStat>
+    <ESecondaryStat>Ranged, 0.80</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Split_Nose">
+    <EPrimaryStat>Perception, 0.90</EPrimaryStat>
+  </Injury>
+  <Injury Name ="Split_Shoulder">
+    <EPrimaryStat>Constitution, 0.70</EPrimaryStat>
+    <EPrimaryStat>Might, 0.70</EPrimaryStat>
+  </Injury>
+  <Injury Name ="Tear">
+    <EPrimaryStat>Might, 0.80</EPrimaryStat>
+    <EPrimaryStat>Resolve, 0.80</EPrimaryStat>
   </Injury>
   <Injury Name ="Torrential_Bleeding">
-    <DoT>Bleed, 30</DoT>
+    <DoT>Bleed, 6</DoT>
   </Injury>
 </Injuries>

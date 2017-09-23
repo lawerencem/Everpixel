@@ -4,10 +4,10 @@ using Assets.Controller.Map.Combat.Loader;
 using Assets.Controller.Map.Tile;
 using Assets.Data.Character.Table;
 using Assets.Model.Character;
+using Assets.Model.Character.Enum;
 using Assets.Model.Character.Factory;
 using Assets.Model.Character.Summon;
 using Assets.Model.Party;
-using Assets.View.Builder;
 
 namespace Assets.Model.Event.Combat
 {
@@ -65,6 +65,10 @@ namespace Assets.Model.Event.Combat
                 CombatManager.Instance.ProcessSummon(controller);
                 this._data.TargetTile = this._data.TargetTile.GetNearestEmptyTile();
                 CharLoader.Instance.LoadSummon(controller, this._data.TargetTile);
+                proxy.SetPointsToMax(ESecondaryStat.AP);
+                proxy.SetPointsToMax(ESecondaryStat.HP);
+                proxy.SetPointsToMax(ESecondaryStat.Stamina);
+                proxy.SetPointsToMax(ESecondaryStat.Morale);
                 this.ProcessParticles(controller);
             }
         }

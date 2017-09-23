@@ -4,6 +4,7 @@ using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
 using Assets.Model.Event.Combat;
 using Assets.Template.Util;
+using System;
 
 namespace Assets.Model.Injury.Calculator
 {
@@ -40,15 +41,30 @@ namespace Assets.Model.Injury.Calculator
 
         private void ProcessNewInjury(CChar tgt, MHit hit)
         {
-            var random = ListUtil<EInjury>.GetRandomElement(hit.Data.Ability.Data.Injuries);
-            var injuryParams = InjuryTable.Instance.Table[random];
-            var injury = injuryParams.GetInjury();
-            var data = new EvInjuryData();
-            data.Hit = hit;
-            data.Injury = injury;
-            data.Target = tgt;
-            var e = new EvInjury(data);
-            e.TryProcess();
+            try
+            {
+                var random = ListUtil<EInjury>.GetRandomElement(hit.Data.Ability.Data.Injuries);
+                if (random != EInjury.None)
+                {
+                    var injuryParams = InjuryTable.Instance.Table[random];
+                    var injury = injuryParams.GetInjury();
+                    var data = new EvInjuryData();
+                    data.Hit = hit;
+                    data.Injury = injury;
+                    data.Target = tgt;
+                    var e = new EvInjury(data);
+                    e.TryProcess();
+                }
+                else
+                {
+                    int temp = 0;
+                }
+            }
+            catch (Exception e)
+            {
+                int temp = 0;
+            }
+            
         }
     }
 }
