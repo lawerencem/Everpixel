@@ -6,8 +6,9 @@ Reimplement injuries
 Action
   - Display effects on queue (Via HitTextDisplayData)
 Ghost Weens
-Slime Bow
-Slime Fatality
+
+Jomonese and turtles
+Trolls and druids
 
 Shields
 Stealth

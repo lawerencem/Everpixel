@@ -111,14 +111,14 @@ namespace Assets.Model.Action
         {
             foreach(var hit in this._data.Hits)
             {
-                
                 if (hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
                 {
                     var target = hit.Data.Target.Current as CChar;
                     var data = new EvModHPData();
                     data.Dmg = hit.Data.Dmg;
                     data.Flags = hit.Data.Flags;
-                    data.isFatality = hit.Data.IsFatality;
+                    data.Hit = hit;
+                    data.IsFatality = hit.Data.IsFatality;
                     data.IsHeal = hit.Data.IsHeal;
                     data.Target = target;
                     var e = new EvModHP(data);

@@ -21,6 +21,12 @@ namespace Assets.View
         public static readonly Vector3 MAP_CENTER = new Vector3(-8, 5, 0);
         public static readonly float OFFSET = 0.63f;
 
+        // Hit Priorities
+        public static readonly int DMG_PRIORITY = 10;
+        public static readonly int DODGE_PRIORITY = 6;
+        public static readonly int PARRY_PRIRORITY = 8;
+        public static readonly int HEAL_PRIORITY = 12;
+
         // Script Params
         public static readonly float BOB_PER_FRAME = 0.0025f;
         public static readonly float BOB_PER_FRAME_DIST = 0.075f;

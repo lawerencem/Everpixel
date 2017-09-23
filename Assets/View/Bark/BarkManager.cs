@@ -120,13 +120,13 @@ namespace Assets.View.Bark
 
         public void DisplayBark(string bark, GameObject o)
         {
-            VCombatController.Instance.DisplayText(
-                bark,
-                o,
-                CombatGUIParams.WHITE,
-                CombatGUIParams.DODGE_TEXT_OFFSET,
-                ViewParams.BARK_DUR,
-                ViewParams.BARK_DELAY);
+            var data = new HitDisplayData();
+            data.Color = CombatGUIParams.WHITE;
+            data.Delay = ViewParams.BARK_DELAY;
+            data.Dur = ViewParams.BARK_DUR;
+            data.Target = o;
+            data.YOffset = CombatGUIParams.FLOAT_OFFSET;
+            data.Display();
         }
 
         public void DisplayBark(string bark, GameObject o, Callback callback)

@@ -13,15 +13,7 @@ namespace Assets.Controller.GUI.Combat
         public static readonly string PARTICLES_LAYER = "Particles";
         public static readonly string UI_LAYER = "UI";
 
-        public static readonly float ATTACK_TEXT_OFFSET = 0.20f;
-        public static readonly float BLOCK_TEXT_OFFSET = 0.30f;
-        public static readonly float CRIT_TEXT_OFFSET = 0.50f;
-        public static readonly float DODGE_TEXT_OFFSET = 0.40f;
-        public static readonly float DMG_TEXT_OFFSET = 0.20f;
-        public static readonly float INJURY_TEXT_OFFSET = 0.60f;
-        public static readonly float PARRY_TEXT_OFFSET = 0.50f;
-        public static readonly float WEAPON_OFFSET = 0.075f;
-        public static readonly float WEAPON_PARRY = 4f;
+        public static readonly float FLOAT_OFFSET = 0.20f;
 
         public static readonly Color BLUE = new Color(0, 0, 255, 150);
         public static readonly Color GREEN = new Color(0, 255, 0, 150);

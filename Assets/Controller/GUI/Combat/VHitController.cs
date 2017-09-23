@@ -46,6 +46,18 @@ namespace Assets.Controller.GUI.Combat
                 callback(this);
         }
 
+        public void ProcessBulletFX(MAction a)
+        {
+            VCombatController.Instance.DisplayActionEventName(a);
+            if (VFatalityController.Instance.IsFatality(a))
+            {
+                if (!VFatalityController.Instance.FatalitySuccessful(a))
+                    this.ProcessBulletFXNonFatality(a);
+            }
+            else
+                this.ProcessBulletFXNonFatality(a);
+        }
+
         public void ProcessDefenderHit(MHit hit)
         {
             if (hit.Data.Target.Current != null &&
@@ -54,6 +66,18 @@ namespace Assets.Controller.GUI.Combat
                 var target = hit.Data.Target.Current as CChar;
                 this.ProcessDefenderHitsHelper(target, hit);
             }
+        }
+
+        public void ProcessMeleeHitFX(MAction a)
+        {
+            VCombatController.Instance.DisplayActionEventName(a);
+            if (VFatalityController.Instance.IsFatality(a))
+            {
+                if (!VFatalityController.Instance.FatalitySuccessful(a))
+                    this.ProcessMeleeFXNonFatality(a);
+            }
+            else
+                this.ProcessMeleeFXNonFatality(a);
         }
 
         public void SetCallback(Callback callback)
@@ -69,11 +93,27 @@ namespace Assets.Controller.GUI.Combat
             position = RandomPositionOffset.RandomOffset(position, CombatGUIParams.DEFAULT_OFFSET);
             dodge.AddCallback(hit.CallbackHandler);
             dodge.Init(target.Handle, position, CombatGUIParams.DODGE_SPEED);
-            VCombatController.Instance.DisplayText("Dodge", target.Handle, CombatGUIParams.WHITE);
+            var data = new HitDisplayData();
+            data.Color = CombatGUIParams.WHITE;
+            data.Hit = hit;
+            data.Priority = ViewParams.DODGE_PRIORITY;
+            data.Text = "Dodge";
+            data.Target = target.Handle;
+            data.YOffset = CombatGUIParams.FLOAT_OFFSET;
+            data.Hit.AddDataDisplay(data);
         }
 
         private void DisplayFlinch(CChar target, MHit hit)
         {
+            var dmgData = new HitDisplayData();
+            dmgData.Color = CombatGUIParams.RED;
+            dmgData.Hit = hit;
+            dmgData.Priority = ViewParams.DMG_PRIORITY;
+            dmgData.Text = hit.Data.Dmg.ToString();
+            dmgData.Target = target.Handle;
+            dmgData.YOffset = CombatGUIParams.FLOAT_OFFSET;
+            dmgData.Hit.AddDataDisplay(dmgData);
+
             if (hit.Data.Dmg < target.Proxy.GetPoints(ESecondaryStat.HP)) 
             {
                 var flinch = target.Handle.AddComponent<SFlinch>();
@@ -81,6 +121,7 @@ namespace Assets.Controller.GUI.Combat
                 flinchPos.y -= CombatGUIParams.FLINCH_DIST;
                 flinch.AddCallback(hit.CallbackHandler);
                 flinch.Init(target, flinchPos, CombatGUIParams.FLINCH_SPEED);
+                this.DisplaySplatter(hit);
             }
             else
             {
@@ -94,7 +135,15 @@ namespace Assets.Controller.GUI.Combat
 
         private void DisplayParry(CChar target, MHit hit)
         {
-            VCombatController.Instance.DisplayText("Parry", target.Handle, CombatGUIParams.WHITE);
+            var data = new HitDisplayData();
+            data.Color = CombatGUIParams.WHITE;
+            data.Hit = hit;
+            data.Priority = ViewParams.PARRY_PRIRORITY;
+            data.Target = target.Handle;
+            data.Text = "Parry";
+            data.YOffset = CombatGUIParams.FLOAT_OFFSET;
+            data.Hit.AddDataDisplay(data);
+            
             if (target.Proxy.GetRWeapon() != null && target.Proxy.GetRWeapon().IsTypeOfShield())
             {
                 var wpn = target.SubComponents[Layers.CHAR_R_WEAPON];
@@ -111,24 +160,31 @@ namespace Assets.Controller.GUI.Combat
         {
             var pos = wpn.transform.position;
             if (target.Proxy.LParty)
-                pos.x -= CombatGUIParams.WEAPON_OFFSET;
+                pos.x -= CombatGUIParams.FLOAT_OFFSET;
             else
-                pos.x += CombatGUIParams.WEAPON_OFFSET;
+                pos.x += CombatGUIParams.FLOAT_OFFSET;
             var script = wpn.AddComponent<SBoomerang>();
-            script.Init(wpn, pos, CombatGUIParams.WEAPON_PARRY);
+            script.Init(wpn, pos, CombatGUIParams.FLOAT_OFFSET);
             script.AddCallback(hit.CallbackHandler);
         }
 
-        public void ProcessBulletFX(MAction a)
+        private void DisplaySplatter(MHit hit)
         {
-            VCombatController.Instance.DisplayActionEventName(a);
-            if (VFatalityController.Instance.IsFatality(a))
+            if (hit.Data.Target.Current != null && 
+                hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
             {
-                if (!VFatalityController.Instance.FatalitySuccessful(a))
-                    this.ProcessBulletFXNonFatality(a);
+                var tgt = hit.Data.Target.Current as CChar;
+                if (hit.Data.Dmg > 0 && !hit.Data.IsFatality)
+                {
+                    var data = new EvSplatterData();
+                    data.DmgPercent =
+                        (hit.Data.Dmg /
+                        tgt.Proxy.GetStat(ESecondaryStat.HP));
+                    data.Target = tgt.Tile.Handle;
+                    var e = new EvSplatter(data);
+                    e.TryProcess();
+                }
             }
-            else
-                this.ProcessBulletFXNonFatality(a);
         }
 
         private void ProcessBulletFXNonFatality(MAction a)
@@ -219,18 +275,6 @@ namespace Assets.Controller.GUI.Combat
                 this.DisplayParry(target, hit);
             else
                 this.DisplayFlinch(target, hit);
-        }
-
-        public void ProcessMeleeHitFX(MAction a)
-        {
-            VCombatController.Instance.DisplayActionEventName(a);
-            if (VFatalityController.Instance.IsFatality(a))
-            {
-                if (!VFatalityController.Instance.FatalitySuccessful(a))
-                    this.ProcessMeleeFXNonFatality(a);
-            }
-            else
-                this.ProcessMeleeFXNonFatality(a);
         }
 
         private void ProcessMeleeFXNonFatality(MAction a)
