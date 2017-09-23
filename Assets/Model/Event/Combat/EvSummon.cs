@@ -1,4 +1,5 @@
 ﻿using Assets.Controller.Character;
+using Assets.Controller.GUI.Combat;
 using Assets.Controller.Manager.Combat;
 using Assets.Controller.Map.Combat.Loader;
 using Assets.Controller.Map.Tile;
@@ -8,6 +9,9 @@ using Assets.Model.Character.Enum;
 using Assets.Model.Character.Factory;
 using Assets.Model.Character.Summon;
 using Assets.Model.Party;
+using Assets.Template.Script;
+using Assets.Template.Util;
+using Assets.View.Particle;
 
 namespace Assets.Model.Event.Combat
 {
@@ -75,7 +79,17 @@ namespace Assets.Model.Event.Combat
 
         private void ProcessParticles(CChar c)
         {
-
+            if (this._data.ParticlePath != null && !this._data.ParticlePath.Equals(""))
+            {
+                var path = StringUtil.PathBuilder(
+                    CombatGUIParams.EFFECTS_PATH,
+                    this._data.ParticlePath,
+                    CombatGUIParams.PARTICLES_EXTENSION);
+                var particles = ParticleController.Instance.CreateParticle(path);
+                var script = particles.AddComponent<SDestroyByLifetime>();
+                script.Init(particles, CombatGUIParams.PARTICLE_DUR);
+                ParticleController.Instance.AttachParticle(c.Handle, particles);
+            }
         }
     }
 }
