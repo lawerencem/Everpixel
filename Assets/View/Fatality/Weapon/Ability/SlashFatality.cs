@@ -59,6 +59,7 @@ namespace Assets.View.Fatality.Weapon.Ability
                 var script = o as SRaycastMove;
                 var data = new EvSplatterData();
                 data.DmgPercent = 1;
+                data.Fatality = true;
                 data.Target = script.GetData().Handle;
                 var e = new EvSplatter(data);
                 e.TryProcess();
@@ -92,6 +93,7 @@ namespace Assets.View.Fatality.Weapon.Ability
                         var body = tgt.SubComponents[Layers.CHAR_MAIN];
                         var data = new EvSplatterData();
                         data.DmgPercent = 1;
+                        data.Fatality = true;
                         data.Target = body;
                         var e = new EvSplatter(data);
 

@@ -137,13 +137,14 @@ namespace Assets.View.Fatality
                 }
                 this.ProcessBloodHelper(target, 0.5);
             }
-            this.ProcessBloodHelper(target, 1.0);
+            this.ProcessBloodHelper(target, 1.0, true);
         }
 
-        private void ProcessBloodHelper(CChar target, double percent)
+        private void ProcessBloodHelper(CChar target, double percent, bool fatality = false)
         {
             var data = new EvSplatterData();
             data.DmgPercent = percent;
+            data.Fatality = fatality;
             data.Target = target.Handle;
             var e = new EvSplatter(data);
             e.TryProcess();

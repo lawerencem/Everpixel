@@ -7,6 +7,7 @@ namespace Assets.View.Event
     public class EvSplatterData
     {
         public double DmgPercent { get; set; }
+        public bool Fatality { get; set; }
         public GameObject Target { get; set; }
     }
 
@@ -30,7 +31,9 @@ namespace Assets.View.Event
 
         private int ConvertDmgToSplatterLvl()
         {
-            if (this._data.DmgPercent >= 0.95)
+            if (this._data.Fatality)
+                return 5;
+            else if (this._data.DmgPercent >= 0.95)
                 return 4;
             else if (this._data.DmgPercent > 0.90)
                 return 3;
