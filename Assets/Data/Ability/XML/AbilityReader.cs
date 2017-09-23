@@ -23,6 +23,7 @@ namespace Assets.Data.Ability.XML
         public AbilityReader() : base()
         {
             this._paths.Add("Assets/Data/Ability/XML/Abilities.xml");
+            this._paths.Add("Assets/Data/Ability/XML/PhysicalAbilities.xml");
             this._paths.Add("Assets/Data/Ability/XML/WeaponAbilities.xml");
         }
 

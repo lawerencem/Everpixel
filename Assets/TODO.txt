@@ -2,8 +2,8 @@
 
 Add Injuries to weapons
 Fix parry / block lock bugs
-Summoned critters don't have max points
 Ghost Weens
+Pierce fatality
 
 Jomonese and turtles
 Trolls and druids

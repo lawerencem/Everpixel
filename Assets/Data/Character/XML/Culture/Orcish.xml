@@ -109,7 +109,6 @@
         <Perception>600</Perception>
         <Resolve>300</Resolve>
       </Stats>
-      <WeaponAbility>Bite</WeaponAbility>
     </Character>
     <Character name ="Dire Ween Rider">
       <Class>Warrior,5</Class>
@@ -179,6 +178,26 @@
         <Might>700</Might>
         <Perception>400</Perception>
         <Resolve>320</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Ghost_Ween">
+      <AttackSpriteIndex>2</AttackSpriteIndex>
+      <Abilities>
+        <Ability name ="Bite">
+          <EEffect></EEffect>
+        </Ability>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>1</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>80</Constitution>
+        <Intelligence>550</Intelligence>
+        <Might>480</Might>
+        <Perception>300</Perception>
+        <Resolve>420</Resolve>
       </Stats>
     </Character>
     <Character name ="Orc Battlesinger">
@@ -674,7 +693,6 @@
         <Perception>550</Perception>
         <Resolve>350</Resolve>
       </Stats>
-      <WeaponAbility>Bite</WeaponAbility>
     </Character>
     <Character name ="Ween Blaster">
       <Class>Warrior,3</Class>
@@ -719,7 +737,6 @@
         <Perception>850</Perception>
         <Resolve>800</Resolve>
       </Stats>
-      <WeaponAbility>Bite</WeaponAbility>
     </Character>
     <Character name ="Ween Lord">
       <Class>Berserker,18</Class>

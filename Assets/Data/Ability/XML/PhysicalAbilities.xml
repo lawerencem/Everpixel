@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ActiveAbilities>
+  <MagicType name="Physical">
+    <ActiveAbility name="Bite">
+      <AccMod>1</AccMod>
+      <APCost>3</APCost>
+      <ArmorIgnoreMod>1</ArmorIgnoreMod>
+      <ArmorPierceMod>1</ArmorPierceMod>
+      <BlockIgnoreMod>1</BlockIgnoreMod>
+      <CastTypeEnum>Melee</CastTypeEnum>
+      <DamageMod>1</DamageMod>
+      <DodgeMod>1.0</DodgeMod>
+      <IconSprite>0</IconSprite>
+      <Injury>Major_Bleeding</Injury>
+      <Injury>Massive_Bleeding</Injury>
+      <Injury>Minor_Bleeding</Injury>
+      <Injury>Pierced_Arm</Injury>
+      <Injury>Pierced_Foot</Injury>
+      <Injury>Pierced_Hand</Injury>
+      <Injury>Profuse_Bleeding</Injury>
+      <Injury>Rip</Injury>
+      <Injury>Tear</Injury>
+      <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
+      <ParryModMod>1.0</ParryModMod>
+      <RangeBlockMod>1.0</RangeBlockMod>
+      <ShieldDamageMod>1</ShieldDamageMod>
+      <StaminaCost>35</StaminaCost>
+      <Range>1</Range>
+    </ActiveAbility>
+  </MagicType>
+</ActiveAbilities>

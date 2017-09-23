@@ -30,6 +30,7 @@
         // Songs
         Haste_Song,
         Orc_Metal,
+        Weenlight_Sonata,
 
         // Water Spells
         Soothing_Mist,

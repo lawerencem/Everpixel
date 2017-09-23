@@ -258,8 +258,8 @@
     <Compile Include="Assets\Model\Combat\Hit\ChancePrediction.cs" />
     <Compile Include="Assets\Model\Combat\Hit\FHit.cs" />
     <Compile Include="Assets\Model\Combat\Hit\HitData.cs" />
-    <Compile Include="Assets\Model\Combat\Hit\HitMod.cs" />
     <Compile Include="Assets\Model\Combat\Hit\HitDisplayData.cs" />
+    <Compile Include="Assets\Model\Combat\Hit\HitMod.cs" />
     <Compile Include="Assets\Model\Combat\Hit\MHit.cs" />
     <Compile Include="Assets\Model\Culture\ECulture.cs" />
     <Compile Include="Assets\Model\Effect\Ability\Megabite.cs" />
@@ -294,7 +294,6 @@
     <Compile Include="Assets\Model\Event\Combat\AEvCombat.cs" />
     <Compile Include="Assets\Model\Event\Combat\ActionEventController.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvApMod.cs" />
-    <Compile Include="Assets\Model\Event\Combat\EvInjury.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvBuff.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvCasting.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvCharKilled.cs" />
@@ -302,6 +301,7 @@
     <Compile Include="Assets\Model\Event\Combat\EvDot.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvEndTurn.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvHoT.cs" />
+    <Compile Include="Assets\Model\Event\Combat\EvInjury.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvModHP.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvModStam.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvNewRound.cs" />
@@ -486,6 +486,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Data\Ability\XML\Abilities.xml" />
+    <None Include="Assets\Data\Ability\XML\PhysicalAbilities.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Data\Ability\XML\WeaponAbilities.xml" />
     <None Include="Assets\Data\Bark\XML\Barks.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Amazonian.xml" />
@@ -521,43 +524,23 @@
     <None Include="Assets\Data\Party\XML\Party\BretonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\GoblinParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\JomonParties.xml" />
-    <None Include="Assets\Data\Party\XML\Party\NordParties.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Party\XML\Party\NordParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\OrcParties.xml" />
     <None Include="Assets\Data\Party\XML\SubParty\AmazonSubParties.xml" />
     <None Include="Assets\Data\Party\XML\SubParty\BretonSubParties.xml" />
     <None Include="Assets\Data\Party\XML\SubParty\GoblinSubParties.xml" />
     <None Include="Assets\Data\Party\XML\SubParty\JomonSubParties.xml" />
-    <None Include="Assets\Data\Party\XML\SubParty\OrcSubParties.xml" />
-    <None Include="Assets\TODO.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Party\XML\SubParty\RomeSubParties.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Assets\Data\Party\XML\SubParty\NordSubParties.xml" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Assets\Data\Party\XML\SubParty\OrcSubParties.xml" />
+    <None Include="Assets\Data\Party\XML\SubParty\RomeSubParties.xml" />
     <None Include="Assets\Data\Perk\XML\AbilityPerks.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Assets\Data\Perk\XML\EquipmentPerks.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Assets\Data\Perk\XML\EquipmentSStatPerks.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Perk\XML\PostHitPerks.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Assets\Data\Perk\XML\OnActionPerks.xml" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Assets\Data\Perk\XML\PostHitPerks.xml" />
     <None Include="Assets\Data\Perk\XML\SStatModPerks.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Assets\Data\Perk\XML\WhenHitPerks.xml" />
+    <None Include="Assets\TODO.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
