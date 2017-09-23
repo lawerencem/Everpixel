@@ -317,6 +317,7 @@
     <Compile Include="Assets\Model\Event\Combat\MEvCombat.cs" />
     <Compile Include="Assets\Model\Event\Combat\Priorities.cs" />
     <Compile Include="Assets\Model\Event\ECombatEv.cs" />
+    <Compile Include="Assets\Model\Injury\Calculator\InjuryCalculator.cs" />
     <Compile Include="Assets\Model\Injury\EInjury.cs" />
     <Compile Include="Assets\Model\Injury\MInjury.cs" />
     <Compile Include="Assets\Model\Injury\MInjuryParam.cs" />

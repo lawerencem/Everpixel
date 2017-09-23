@@ -49,6 +49,7 @@ namespace Assets.Template.Script
                         this._data.Target,
                         this._data.MaxOffset);
                     renderer.sortingLayerName = Layers.PARTICLES;
+                    renderer.sortingOrder--;
                     var raycastData = new SRaycastMoveData();
                     raycastData.Epsilon = 0.05f;
                     raycastData.Handle = swarm;

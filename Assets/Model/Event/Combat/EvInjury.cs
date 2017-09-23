@@ -1,10 +1,13 @@
 ﻿using Assets.Controller.Character;
+using Assets.Controller.GUI.Combat;
+using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
 using Assets.Model.Injury;
+using Assets.View;
 
 namespace Assets.Model.Event.Combat
 {
-    public class EvApplyInjuryData
+    public class EvInjuryData
     {
         public MHit Hit { get; set; }
         public MInjury Injury { get; set; }
@@ -13,8 +16,8 @@ namespace Assets.Model.Event.Combat
 
     public class EvInjury : MEvCombat
     {
-        private EvApplyInjuryData _data;
-        public EvInjury(EvApplyInjuryData d) : base(ECombatEv.ApplyInjury)
+        private EvInjuryData _data;
+        public EvInjury(EvInjuryData d) : base(ECombatEv.ApplyInjury)
         {
             this._data = d;
         }
@@ -28,12 +31,18 @@ namespace Assets.Model.Event.Combat
 
         private void Process()
         {
-            var proxy = this._data.Target.Proxy;
-            var injuries = proxy.GetEffects().GetInjuries();
-            var exists = injuries.Find(x => x.Type == this._data.Injury.Type);
-            if (exists == null)
+            if (this._data.Hit.Data.Dmg < this._data.Target.Proxy.GetPoints(ESecondaryStat.HP))
             {
+                var proxy = this._data.Target.Proxy;
                 proxy.AddInjury(this._data.Injury);
+                var data = new HitDisplayData();
+                data.Color = CombatGUIParams.RED;
+                data.Hit = this._data.Hit;
+                data.Priority = ViewParams.INJURY_PRIORITY;
+                data.Target = this._data.Target.Handle;
+                data.Text = this._data.Injury.Type.ToString().Replace("_", " ");
+                data.YOffset = CombatGUIParams.FLOAT_OFFSET;
+                data.Hit.AddDataDisplay(data);
             }
         }
 

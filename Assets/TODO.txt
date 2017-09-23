@@ -2,9 +2,8 @@
 
 data classes being populated on weapon/ability click can be consolidated
 
-Reimplement injuries
-Action
-  - Display effects on queue (Via HitTextDisplayData)
+Fix parry / block lock bugs
+Summoned critters don't have max points
 Ghost Weens
 
 Jomonese and turtles
@@ -16,7 +15,6 @@ Refactor Dmg Calculations
 Block calculations
   - Block FX
 Crit Calculations
-Injuries
 Mounts
   - Have mounts give abilities
   - Perks

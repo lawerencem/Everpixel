@@ -18,11 +18,6 @@ namespace Assets.Model.Ability
             return ability;
         }
 
-        public void Display()
-        {
-
-        }
-
         public virtual List<CTile> GetAoETiles(AbilityArgs arg)
         {
             return this._logic.GetAoETiles(arg, (int)this.Data.AoE);
@@ -85,32 +80,6 @@ namespace Assets.Model.Ability
         public virtual void Process(MHit hit)
         {
             
-        }
-
-        public void TryApplyInjury(MHit hit)
-        {
-            //if (!FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Dodge) &&
-            //    !FHit.HasFlag(hit.Flags.CurFlags, FHit.Flags.Parry) &&
-            //    hit.Target != null)
-            //{
-            //    var roll = RNG.Instance.NextDouble();
-            //    var hp = hit.Target.Model.GetCurrentStatValue(ESecondaryStat.HP);
-            //    var currentHP = hit.Target.Model.GetCurrentHP();
-            //    if (currentHP > 0)
-            //    {
-            //        var chance = ((double)hit.Dmg / (double)hp) * (hp / currentHP);
-            //        if (roll < chance)
-            //        {
-            //            if (this.Params.Injuries.Count > 0)
-            //            {
-            //                var injuryType = ListUtil<EInjury>.GetRandomListElement(this.Params.Injuries);
-            //                var injuryParams = InjuryTable.Instance.Table[injuryType];
-            //                var injury = injuryParams.GetInjury();
-            //                var apply = new ApplyInjuryEvent(CombatEventManager.Instance, hit, injury);
-            //            }
-            //        }
-            //    }
-            //}
         }
 
         public List<MHit> GetHits(AbilityArgs arg)

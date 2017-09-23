@@ -124,7 +124,9 @@ namespace Assets.View.Bark
             data.Color = CombatGUIParams.WHITE;
             data.Delay = ViewParams.BARK_DELAY;
             data.Dur = ViewParams.BARK_DUR;
+            data.Priority = ViewParams.DMG_PRIORITY;
             data.Target = o;
+            data.Text = bark;
             data.YOffset = CombatGUIParams.FLOAT_OFFSET;
             data.Display();
         }

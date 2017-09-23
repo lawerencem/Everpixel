@@ -34,7 +34,10 @@ namespace Assets.Model.Ability.Logic.Calculator
             this.Predict(hit);
             var roll = RNG.Instance.NextDouble();
             if (hit.Data.Chances.Dodge > roll)
+            {
                 FHit.SetDodgeTrue(hit.Data.Flags);
+                hit.Data.Dmg = 0;
+            }
         }
     }
 }

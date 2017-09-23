@@ -1,4 +1,7 @@
-﻿using Assets.Template.CB;
+﻿using Assets.Controller.Character;
+using Assets.Model.Character.Enum;
+using Assets.Template.CB;
+using Assets.View;
 using System.Collections.Generic;
 
 namespace Assets.Model.Combat.Hit
@@ -33,7 +36,7 @@ namespace Assets.Model.Combat.Hit
         public void CallbackHandler(object o)
         {
             this._done = true;
-            this._displays.Sort((x, y) => y.Priority.CompareTo(x.Priority));
+            this.CleanDisplayData();
             this.DisplayData(this);
         }
 
@@ -46,6 +49,11 @@ namespace Assets.Model.Combat.Hit
         public void SetCallback(Callback callback)
         {
             this._callbacks = new List<Callback>() { callback };
+        }
+
+        private void CleanDisplayData()
+        {
+            this._displays.Sort((x, y) => y.Priority.CompareTo(x.Priority));
         }
 
         private void DisplayData(object o)

@@ -3,14 +3,20 @@ using Assets.Controller.GUI.Combat;
 using Assets.Controller.Manager.GUI;
 using Assets.Model.Ability;
 using Assets.Model.Event.Combat;
+using Assets.Model.Injury.Calculator;
 
 namespace Assets.Model.Action
 {
     public class MAction : AAction
     {
+        private InjuryCalculator _injuryCalc;
+
         public MAbility ActiveAbility;
 
-        public MAction(ActionData d) : base(d) {}
+        public MAction(ActionData d) : base(d)
+        {
+            this._injuryCalc = new InjuryCalculator();
+        }
 
         public void TryPredict()
         {
@@ -83,7 +89,8 @@ namespace Assets.Model.Action
 
         private void ProcessAction()
         {
-
+            foreach (var hit in this._data.Hits)
+                this._injuryCalc.ProcessHitInjuries(hit);
         }
 
         private void DisplayAction()
