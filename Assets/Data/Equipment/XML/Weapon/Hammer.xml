@@ -105,6 +105,106 @@
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
+    <Weapon name="Shroom Hammer">
+      <Tier>Five</Tier>
+      <Accuracy_Mod>0.76</Accuracy_Mod>
+      <AP_Mod>0.90</AP_Mod>
+      <Armor_Ignore>0.81</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0.13</Block_Ignore>
+      <Damage>39</Damage>
+      <Description>
+        A mushroom grown into a hammer-like shape. It's...suprisingly effective.
+      </Description>
+      <Fatigue_Mod>1.08</Fatigue_Mod>
+      <Initiative_Mod>0.89</Initiative_Mod>
+      <Max_Durability>30</Max_Durability>
+      <Parry_Mod>0.20</Parry_Mod>
+      <Shield_Damage_Percent>0.13</Shield_Damage_Percent>
+      <Sprites>1</Sprites>
+      <Stamina_Mod>0.91</Stamina_Mod>
+      <Value>350</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Shroom Hammer">
+      <Tier>Four</Tier>
+      <Accuracy_Mod>0.77</Accuracy_Mod>
+      <AP_Mod>0.90</AP_Mod>
+      <Armor_Ignore>0.80</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0.14</Block_Ignore>
+      <Damage>44</Damage>
+      <Description>
+        A mushroom grown into a hammer-like shape. It's...suprisingly effective.
+      </Description>
+      <Fatigue_Mod>1.07</Fatigue_Mod>
+      <Initiative_Mod>0.90</Initiative_Mod>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>0.20</Parry_Mod>
+      <Shield_Damage_Percent>0.15</Shield_Damage_Percent>
+      <Sprites>16</Sprites>
+      <Stamina_Mod>0.92</Stamina_Mod>
+      <Value>400</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Shroom Hammer">
+      <Tier>Three</Tier>
+      <Accuracy_Mod>0.78</Accuracy_Mod>
+      <AP_Mod>0.90</AP_Mod>
+      <Armor_Ignore>0.79</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0.15</Block_Ignore>
+      <Damage>48</Damage>
+      <Description>
+        A mushroom grown into a hammer-like shape. It's...suprisingly effective.
+      </Description>
+      <Fatigue_Mod>1.06</Fatigue_Mod>
+      <Initiative_Mod>0.90</Initiative_Mod>
+      <Max_Durability>40</Max_Durability>
+      <Parry_Mod>0.20</Parry_Mod>
+      <Shield_Damage_Percent>0.15</Shield_Damage_Percent>
+      <Sprites>33</Sprites>
+      <Stamina_Mod>0.93</Stamina_Mod>
+      <Value>550</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Shroom Hammer">
+      <Tier>Two</Tier>
+      <Accuracy_Mod>0.80</Accuracy_Mod>
+      <AP_Mod>0.90</AP_Mod>
+      <Armor_Ignore>0.78</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0.15</Block_Ignore>
+      <Damage>54</Damage>
+      <Description>
+        A mushroom grown into a hammer-like shape. It's...suprisingly effective.
+      </Description>
+      <Fatigue_Mod>1.05</Fatigue_Mod>
+      <Initiative_Mod>0.90</Initiative_Mod>
+      <Max_Durability>50</Max_Durability>
+      <Parry_Mod>0.20</Parry_Mod>
+      <Shield_Damage_Percent>0.15</Shield_Damage_Percent>
+      <Sprites>48</Sprites>
+      <Stamina_Mod>0.95</Stamina_Mod>
+      <Value>650</Value>
+      <WeaponEAbility>Crush</WeaponEAbility>
+      <WeaponEAbility>Scatter</WeaponEAbility>
+      <WeaponEAbility>Stun</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
   </EWeaponSkill>
 </Weapons>
   
