@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SubParties>
+  <SubParty Name ="Troll Farmers">
+    <Difficulty>1</Difficulty>
+    <Character>1,Shroom Farmer,One</Character>
+  </SubParty>
+</SubParties>

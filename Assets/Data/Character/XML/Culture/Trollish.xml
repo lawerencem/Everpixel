@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Cultures>
+  <Culture name ="Trollish">
+    <Character name ="Shroom Farmer">
+      <Class>Druid,1</Class>
+      <Class>Warrior,1</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Shroom Hammer,Five</RWeapon>
+          <RWeapon>0.25,Shroom Hammer,Four</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>350</Agility>
+        <Constitution>700</Constitution>
+        <Intelligence>550</Intelligence>
+        <Might>600</Might>
+        <Perception>350</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
+  </Culture>
+</Cultures>

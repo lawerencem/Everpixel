@@ -37,6 +37,7 @@ namespace Assets.Data.Character.XML
             this._paths.Add("Assets/Data/Character/XML/Culture/Norse.xml");
             this._paths.Add("Assets/Data/Character/XML/Culture/Orcish.xml");
             this._paths.Add("Assets/Data/Character/XML/Culture/Roman.xml");
+            this._paths.Add("Assets/Data/Character/XML/Culture/Trollish.xml");
         }
 
         public override void ReadFromFile()

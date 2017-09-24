@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Parties>
+  <Party Name ="Trolls">
+    <SubParty>Troll Farmers,1</SubParty>
+  </Party>
+</Parties>

@@ -35,7 +35,7 @@
         Sioux,
         Spanish,
         Thai,
-        Troll,
+        Trollish,
         Turkish,
         Uruk,
         Yomi,

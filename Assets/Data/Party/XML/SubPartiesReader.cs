@@ -31,6 +31,7 @@ namespace Assets.Data.Party.XML
             this._paths.Add("Assets/Data/Party/XML/SubParty/NordSubParties.xml");
             this._paths.Add("Assets/Data/Party/XML/SubParty/OrcSubParties.xml");
             this._paths.Add("Assets/Data/Party/XML/SubParty/RomeSubParties.xml");
+            this._paths.Add("Assets/Data/Party/XML/SubParty/TrollSubParties.xml");
         }
 
         public override void ReadFromFile()
