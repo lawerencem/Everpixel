@@ -3,8 +3,13 @@
 Add Injuries to weapons
 Fix parry / block lock bugs
 Orc Wereween
-Ghost Weens
+Orc Metal
+Haste Song
 Pierce fatality
+
+- Spear wall
+- Bonuses to Hit when surrounding
+- Bonuses to Dmg when surrounding
 
 Jomonese and turtles
 Trolls and druids
@@ -25,6 +30,11 @@ Critter eyes on kill
 Missiles missing (hit other targets)
 Deco blocking missiles
 Height on tiles
+
+1) - Dual-Wield
+3) - Critter classes / abilities during level up on the xml
+5) - Calculate "height diff" when going from one height to another in hexes
+6) - Force A* to directional search after so many nodes
 
 
 bugs
@@ -75,27 +85,6 @@ Dino Priest
 	 - Thai Rex shield spell
 	 - Healing song
 
-   - Casting events dont reset ability modal
-   - Spear wall
-   - Bonuses to Hit when surrounding
-   - Bonuses to Dmg when surrounding
-   - Shield wall (and nearby allies)
-   - Return to original vector3 on cast...
-   - orc khan
-   - Ween Tamer
-   - Ween
-   - War Ween
-   - Dire Ween
-   - Weenosaurus Rex
-   - GUI popup for stats, predicted dmg
-   - Hop ability
-   - Were Ween Hop
-
-Next Weekend
-   - Ability gui popups
-   - Troll Culture
-   - Refactor character stuff with structs
-
 Before pre-alpha
    - Orcish culture
    - Goblin
@@ -104,24 +93,6 @@ Before pre-alpha
    - Jomonese
    - Amazonian
    - Nordic
-
-1) - Dual-Wield
-3) - Critter classes / abilities during level up on the xml
-5) - Calculate "height diff" when going from one height to another in hexes
-6) - Force A* to directional search after so many nodes
-
-Long Term: 
-	Replace eyes with dead eyes when killed for Critter
-	Zone of Control
-
-Refactor:
-	Combat Turn system
-
-Bugs:
-	Goblin Void Weavers sometimes dont get turns...
-	no bobbing after slash fatality
-	Blood is higher layer than equipment on fatalities.
-
 
 ideas: 
 	shoggoth ability: eat corpse (makes unit grow like mario)
