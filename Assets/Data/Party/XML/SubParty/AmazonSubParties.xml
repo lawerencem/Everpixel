@@ -50,6 +50,10 @@
     <Difficulty>8</Difficulty>
     <Character>1,Dino Seraph,Three</Character>
   </SubParty>
+  <SubParty Name ="Dino Priest">
+    <Difficulty>13</Difficulty>
+    <Character>1,Dino Archmind,Three</Character>
+  </SubParty>
   <SubParty Name ="Lizardman Fodder">
     <Difficulty>1</Difficulty>
     <Character>1,Lizardman Militia,One</Character>

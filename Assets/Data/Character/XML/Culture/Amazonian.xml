@@ -184,28 +184,26 @@
         <Resolve>520</Resolve>
       </Stats>
     </Character>
-    <Character name ="Dino Seraph">
+    <Character name ="Dino Archmind">
       <Class>Cleric,5</Class>
       <Class>Divine_Mind,6</Class>
-      <Class>Psion,5</Class>
+      <Class>Psion,12</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Lizardman</ERace>
       <Perks>
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.75,Dino Regalia,Three</Armor>
-          <Armor>0.25,Dino Regalia,Two</Armor>
+          <Armor>1,Dino Regalia,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.75,Dino Headdress,Three</Helm>
-          <Helm>0.25,Dino Headdress,Two</Helm>
+          <Helm>1,Dino Headdress,Two</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.75,Dino Staff,Four</RWeapon>
-          <RWeapon>0.25,Dino Staff,Three</RWeapon>
+          <RWeapon>0.75,Dino Staff,Two</RWeapon>
+          <RWeapon>0.25,Aboleth Prison,One</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
