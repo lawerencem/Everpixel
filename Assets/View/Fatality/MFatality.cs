@@ -245,6 +245,16 @@ namespace Assets.View.Fatality
                     var script = c.SubComponents[Layers.CHAR_R_WEAPON].AddComponent<SFightFatalityExplosionMove>();
                     script.Init(c.SubComponents[Layers.CHAR_R_WEAPON], c);
                 }
+                if (c.SubComponents.ContainsKey(Layers.CHAR_TORSO_DECO_1))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_TORSO_DECO_1].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
+                if (c.SubComponents.ContainsKey(Layers.CHAR_TORSO_DECO_2))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_TORSO_DECO_2].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
             }
             else
             {

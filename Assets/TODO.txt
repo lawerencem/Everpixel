@@ -8,10 +8,13 @@ Orc Wereween
 Orc Metal
 Haste Song
 Pierce fatality
-
-- Spear wall
-- Bonuses to Hit when surrounding
-- Bonuses to Dmg when surrounding
+Add FX
+  - HoT
+  - DoT
+  - Bleed
+Spear wall
+Bonuses to Hit when surrounding
+Bonuses to Dmg when surrounding
 
 Jomonese and turtles
 Trolls and druids

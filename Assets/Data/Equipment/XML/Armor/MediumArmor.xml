@@ -144,7 +144,7 @@
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1.0</Initiative_Mod>
       <Parry_Mod>1.0</Parry_Mod>
-      <Sprites>46</Sprites>
+      <Sprites>48</Sprites>
       <Stamina_Mod>1.0</Stamina_Mod>
       <Value>800</Value>
     </Armor>

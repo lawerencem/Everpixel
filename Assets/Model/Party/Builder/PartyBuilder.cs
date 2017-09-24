@@ -25,28 +25,35 @@ namespace Assets.Model.Party.Builder
 
         public override MParty Build(Pair<string, int> arg)
         {
-            if (PartyTable.Instance.Table.ContainsKey(arg.X))
+            try
             {
-                var party = new MParty();
-                var partyParams = PartyTable.Instance.Table[arg.X];
-                var subs = partyParams.GetRandomSubPartyNames(arg.Y);
-                foreach (var sub in subs)
+                if (PartyTable.Instance.Table.ContainsKey(arg.X))
                 {
-                    var characterStartColPair = this._subPartyBuilder.Build(sub);
-                    foreach(var pair in characterStartColPair)
+                    var party = new MParty();
+                    var partyParams = PartyTable.Instance.Table[arg.X];
+                    var subs = partyParams.GetRandomSubPartyNames(arg.Y);
+                    foreach (var sub in subs)
                     {
-                        var model = CharacterFactory.Instance.CreateNewObject(pair.X);
-                        var controller = new CChar();
-                        var proxy = new PChar(model);
-                        proxy.StartCol = pair.Y;
-                        controller.SetProxy(proxy);
-                        party.AddChar(controller);
+                        var characterStartColPair = this._subPartyBuilder.Build(sub);
+                        foreach (var pair in characterStartColPair)
+                        {
+                            var model = CharacterFactory.Instance.CreateNewObject(pair.X);
+                            var controller = new CChar();
+                            var proxy = new PChar(model);
+                            proxy.StartCol = pair.Y;
+                            controller.SetProxy(proxy);
+                            party.AddChar(controller);
+                        }
                     }
+                    return party;
                 }
-                return party;
+                else
+                    return null;
             }
-            else
+            catch (KeyNotFoundException e)
+            {
                 return null;
+            }
         }
     }
 }

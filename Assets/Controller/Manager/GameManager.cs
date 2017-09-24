@@ -45,8 +45,8 @@ namespace Assets.Controller.Managers
             gui.InitCombatGUI();
             var initInfo = new MapInitInfo();
             initInfo.Biome = EBiome.Grassland;
-            initInfo.LParties.Add(new Pair<string, int>("Lizardman War Party", 20));
-            initInfo.RParties.Add(new Pair<string, int>("Trolls", 20));
+            initInfo.LParties.Add(new Pair<string, int>("Goblins", 20));
+            initInfo.RParties.Add(new Pair<string, int>("Jomonese Infantry", 20));
             initInfo.Cols = 12;
             initInfo.DecoCount = 5;
             initInfo.Rows = 12;

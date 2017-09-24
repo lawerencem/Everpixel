@@ -13,23 +13,31 @@ namespace Assets.Model.Party.Builder
     {
         public List<Pair<PreCharParams, EStartCol>> Build(string arg)
         {
-            if (SubPartiesTable.Instance.Table.ContainsKey(arg))
+            try
             {
-                var buildList = new List<Pair<PreCharParams, EStartCol>>();
-                var cParams = SubPartiesTable.Instance.Table[arg];
-                foreach (var param in cParams)
+                if (SubPartiesTable.Instance.Table.ContainsKey(arg))
                 {
-                    double chance = RNG.Instance.NextDouble();
-                    if (chance < param.Chance)
+                    var buildList = new List<Pair<PreCharParams, EStartCol>>();
+                    var cParams = SubPartiesTable.Instance.Table[arg];
+                    foreach (var param in cParams)
                     {
-                        var pParams = PredefinedCharTable.Instance.Table[param.Name];
-                        buildList.Add(new Pair<PreCharParams, EStartCol>(pParams, param.Row));
+                        double chance = RNG.Instance.NextDouble();
+                        if (chance < param.Chance)
+                        {
+                            var pParams = PredefinedCharTable.Instance.Table[param.Name];
+                            buildList.Add(new Pair<PreCharParams, EStartCol>(pParams, param.Row));
+                        }
                     }
+                    return buildList;
                 }
-                return buildList;
+                else
+                    return null;
             }
-            else
+            catch (KeyNotFoundException e)
+            {
+                int temp = 0;
                 return null;
+            }
         }
     }
 }
