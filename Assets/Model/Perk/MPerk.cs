@@ -2,6 +2,7 @@
 using Assets.Data.Perk.Table;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Character;
+using System.Collections.Generic;
 
 namespace Assets.Model.Perk
 {
@@ -21,13 +22,21 @@ namespace Assets.Model.Perk
 
         public virtual void Init(MChar parent)
         {
-            var proto = PerkTable.Instance.Table[this.Type];
-            this.AoE = proto.AoE;
-            this.Dur = proto.Dur;
-            this.Parent = parent;
-            this.Resist = EResistType.None;
-            this.Val = proto.Val;
-            this.ValPerPower = proto.ValPerPower;
+            try
+            {
+                var proto = PerkTable.Instance.Table[this.Type];
+                this.AoE = proto.AoE;
+                this.Dur = proto.Dur;
+                this.Parent = parent;
+                this.Resist = EResistType.None;
+                this.Val = proto.Val;
+                this.ValPerPower = proto.ValPerPower;
+            }
+            catch(KeyNotFoundException e)
+            {
+                int temp = 0;
+            }
+            
         }
     }
 }

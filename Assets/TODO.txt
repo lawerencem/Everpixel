@@ -1,6 +1,8 @@
 ﻿TODO
 
 Add Injuries to weapons
+Why are trolls showing 1 morale
+Fix Keynotfound in main gui
 Fix parry / block lock bugs
 Orc Wereween
 Orc Metal

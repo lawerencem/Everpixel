@@ -116,12 +116,12 @@
       <Dead>8</Dead>
       <Face>6</Face>
       <Flinch>7</Flinch>
-      <CharHeadDeco1>24,25,26,27</CharHeadDeco1>
-      <CharHeadDeco2>32,33,34,35</CharHeadDeco2>
-      <CharTorsoDeco1>40,41,42,43</CharTorsoDeco1>
+      <CharHeadDeco1>9,10,11</CharHeadDeco1>
+      <CharHeadDeco2>12,13,14</CharHeadDeco2>
+      <CharTorsoDeco1>15,16,17</CharTorsoDeco1>
       <CharTorsoDeco2></CharTorsoDeco2>
       <Head>0,1,2</Head>
-      <Torso>8,9,10</Torso>
+      <Torso>3,4,5</Torso>
     </Sprites>
     <PrimaryStats>
       <Agility>320</Agility>

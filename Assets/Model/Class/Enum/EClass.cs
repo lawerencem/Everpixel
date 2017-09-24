@@ -72,7 +72,7 @@
         Soldier,
         Slime_Lord,
         Shroom_Druid,
-        Shroom_Warden,
+        Shroom_Herder,
         Spellblade,
         Stormlord,
         Summoner,

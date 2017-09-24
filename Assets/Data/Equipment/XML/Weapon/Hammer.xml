@@ -171,7 +171,7 @@
       <Max_Durability>40</Max_Durability>
       <Parry_Mod>0.20</Parry_Mod>
       <Shield_Damage_Percent>0.15</Shield_Damage_Percent>
-      <Sprites>33</Sprites>
+      <Sprites>31</Sprites>
       <Stamina_Mod>0.93</Stamina_Mod>
       <Value>550</Value>
       <WeaponEAbility>Crush</WeaponEAbility>
@@ -196,7 +196,7 @@
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>0.20</Parry_Mod>
       <Shield_Damage_Percent>0.15</Shield_Damage_Percent>
-      <Sprites>48</Sprites>
+      <Sprites>46</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
       <Value>650</Value>
       <WeaponEAbility>Crush</WeaponEAbility>

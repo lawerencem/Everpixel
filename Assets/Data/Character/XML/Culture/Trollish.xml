@@ -1,11 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Cultures>
   <Culture name ="Trollish">
+    <Character name="Banebloom">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <Abilities>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>180</Agility>
+        <Constitution>320</Constitution>
+        <Intelligence>550</Intelligence>
+        <Might>350</Might>
+        <Perception>250</Perception>
+        <Resolve>600</Resolve>
+      </Stats>
+    </Character>
+    <Character name="Fungursa">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <Abilities>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>350</Agility>
+        <Constitution>600</Constitution>
+        <Intelligence>180</Intelligence>
+        <Might>520</Might>
+        <Perception>600</Perception>
+        <Resolve>250</Resolve>
+      </Stats>
+    </Character>
+    <Character name="Otyugh">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <Abilities>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>320</Agility>
+        <Constitution>370</Constitution>
+        <Intelligence>220</Intelligence>
+        <Might>710</Might>
+        <Perception>340</Perception>
+        <Resolve>620</Resolve>
+      </Stats>
+    </Character>
+    <Character name="Petalchomp">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <Abilities>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>100</Agility>
+        <Constitution>200</Constitution>
+        <Intelligence>220</Intelligence>
+        <Might>600</Might>
+        <Perception>180</Perception>
+        <Resolve>550</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Shroom Farmer">
       <Class>Druid,1</Class>
       <Class>Warrior,1</Class>
       <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Human</ERace>
+      <ERace>Troll</ERace>
       <PotentialWeapons>
         <RWeapons name="One">
           <RWeapon>0.75,Shroom Hammer,Five</RWeapon>
@@ -19,6 +87,81 @@
         <Might>600</Might>
         <Perception>350</Perception>
         <Resolve>350</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Shroom Keeper">
+      <Class>Druid,2</Class>
+      <Class>Warrior,3</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Troll</ERace>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Shroom Hammer,Four</RWeapon>
+          <RWeapon>0.25,Shroom Hammer,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>350</Agility>
+        <Constitution>700</Constitution>
+        <Intelligence>550</Intelligence>
+        <Might>600</Might>
+        <Perception>350</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Shroom Rancher">
+      <Class>Druid,2</Class>
+      <Class>Warrior,3</Class>
+      <Class>Shroom_Herder,3</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Troll</ERace>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Shroom Hammer,Three</RWeapon>
+          <RWeapon>0.25,Shroom Hammer,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>350</Agility>
+        <Constitution>700</Constitution>
+        <Intelligence>550</Intelligence>
+        <Might>600</Might>
+        <Perception>350</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
+    <Character name="Venihunter">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <Abilities>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>320</Agility>
+        <Constitution>650</Constitution>
+        <Intelligence>80</Intelligence>
+        <Might>680</Might>
+        <Perception>120</Perception>
+        <Resolve>450</Resolve>
+      </Stats>
+    </Character>
+    <Character name="Venitrap">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <Abilities>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>250</Agility>
+        <Constitution>400</Constitution>
+        <Intelligence>250</Intelligence>
+        <Might>400</Might>
+        <Perception>300</Perception>
+        <Resolve>520</Resolve>
       </Stats>
     </Character>
   </Culture>

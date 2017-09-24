@@ -1,7 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <SubParties>
+  <SubParty Name ="Fungursas">
+    <Difficulty>5</Difficulty>
+    <Character>1,Fungursa,One</Character>
+    <Character>1,Fungursa,One</Character>
+  </SubParty>
+  <SubParty Name ="Shrooms">
+    <Difficulty>3</Difficulty>
+    <Character>1,Banebloom,Two</Character>
+  </SubParty>
   <SubParty Name ="Troll Farmers">
     <Difficulty>1</Difficulty>
     <Character>1,Shroom Farmer,One</Character>
+  </SubParty>
+  <SubParty Name ="Troll Farmers">
+    <Difficulty>3</Difficulty>
+    <Character>1,Shroom Farmer,One</Character>
+    <Character>1,Shroom Farmer,One</Character>
+  </SubParty>
+  <SubParty Name ="Troll Farmers">
+    <Difficulty>6</Difficulty>
+    <Character>1,Shroom Keeper,One</Character>
+    <Character>1,Shroom Keeper,One</Character>
+  </SubParty>
+  <SubParty Name ="Troll Farmers">
+    <Difficulty>11</Difficulty>
+    <Character>1,Shroom Rancher,One</Character>
+    <Character>1,Shroom Rancher,One</Character>
+  </SubParty>
+  <SubParty Name ="Warplants">
+    <Difficulty>2</Difficulty>
+    <Character>1,Venitrap,Three</Character>
+    <Character>1,Venitrap,Three</Character>
+  </SubParty>
+  <SubParty Name ="Warplants">
+    <Difficulty>3</Difficulty>
+    <Character>1,Venihunter,Two</Character>
+  </SubParty>
+  <SubParty Name ="Warplants">
+    <Difficulty>8</Difficulty>
+    <Character>1,Otyugh,One</Character>
   </SubParty>
 </SubParties>

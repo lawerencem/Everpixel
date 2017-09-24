@@ -57,6 +57,7 @@ namespace Assets.Model.Perk
                         case (EPerk.Weightlifter): { equipmentSStatPerks.Add(gPerk as Weightlifter); } break;
                         case (EPerk.Violence_Fetish): { postHitPerks.Add(gPerk as ViolenceFetish); } break;
                         case (EPerk.Two_Handed_Expert): { equipmentPerks.Add(gPerk as TwoHandedExpert); } break;
+                        default: { int temp = 0; } break;
                     }
                 }
             }

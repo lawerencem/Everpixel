@@ -40,8 +40,15 @@
     <EPrimaryStat>Intelligence,2</EPrimaryStat>
     <EPrimaryStat>Perception,6</EPrimaryStat>
     <SecondaryStatsEnum>Concentration,4</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Inititative,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Initiative,4</SecondaryStatsEnum>
     <SecondaryStatsEnum>Power,8</SecondaryStatsEnum>
+  </Class>
+  <Class name="Druid">
+    <EPrimaryStat>Intelligence,4</EPrimaryStat>
+    <EPrimaryStat>Might,2</EPrimaryStat>
+    <EPrimaryStat>Resolve,2</EPrimaryStat>
+    <SecondaryStatsEnum>Power,8</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Spell_Duration,8</SecondaryStatsEnum>
   </Class>
   <Class name="Eldritch_Weaver">
     <EPrimaryStat>Intelligence,1</EPrimaryStat>
@@ -120,6 +127,14 @@
     <SecondaryStatsEnum>Power,6</SecondaryStatsEnum>
     <SecondaryStatsEnum>Morale,2</SecondaryStatsEnum>
     <SecondaryStatsEnum>Reflex,4</SecondaryStatsEnum>
+  </Class>
+  <Class name="Shroom_Herder">
+    <EPrimaryStat>Intelligence,3</EPrimaryStat>
+    <EPrimaryStat>Might,3</EPrimaryStat>
+    <EPrimaryStat>Resolve,3</EPrimaryStat>
+    <SecondaryStatsEnum>Power,4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Spell_Duration4</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Morale,2</SecondaryStatsEnum>
   </Class>
   <Class name="Slime_Lord">
     <EPrimaryStat>Intelligence,5</EPrimaryStat>
