@@ -1,6 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Weapons>
   <EWeaponSkill name ="Staff">
+    <Weapon name="Aboleth Prison">
+      <Tier>One</Tier>
+      <Accuracy_Mod>1.15</Accuracy_Mod>
+      <AP_Mod>0.80</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>55</Damage>
+      <Description>
+        Ever seen a psychic jellyfish in an aquarium on a staff? Now you have.
+      </Description>
+      <Fatigue_Mod>1.20</Fatigue_Mod>
+      <Initiative_Mod>1.20</Initiative_Mod>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>1</Range_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>63</Sprites>
+      <Stamina_Mod>0.95</Stamina_Mod>
+      <Value>3500</Value>
+      <WeaponEAbility>Fire</WeaponEAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
     <Weapon name="Dino Staff">
       <Tier>Five</Tier>
       <Accuracy_Mod>0.78</Accuracy_Mod>
