@@ -16,6 +16,16 @@
       <Embed>True</Embed>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
+      <Injury>Pierced_Arm</Injury>
+      <Injury>Pierced_Chest</Injury>
+      <Injury>Pierced_Foot</Injury>
+      <Injury>Pierced_Hand</Injury>
+      <Injury>Pierced_Knee</Injury>
+      <Injury>Pierced_Guts</Injury>
+      <Injury>Pierced_Heart</Injury>
+      <Injury>Pierced_Leg</Injury>
+      <Injury>Pierced_Lung</Injury>
+      <Injury>Pierced_Shoulder</Injury>
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1.0</Parry_Mod>
       <Range_Mod>0</Range_Mod>
@@ -44,6 +54,16 @@
       <Embed>True</Embed>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
+      <Injury>Pierced_Arm</Injury>
+      <Injury>Pierced_Chest</Injury>
+      <Injury>Pierced_Foot</Injury>
+      <Injury>Pierced_Hand</Injury>
+      <Injury>Pierced_Knee</Injury>
+      <Injury>Pierced_Guts</Injury>
+      <Injury>Pierced_Heart</Injury>
+      <Injury>Pierced_Leg</Injury>
+      <Injury>Pierced_Lung</Injury>
+      <Injury>Pierced_Shoulder</Injury>
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1.0</Parry_Mod>
       <Range_Mod>0</Range_Mod>
@@ -72,6 +92,16 @@
       <Embed>True</Embed>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
+      <Injury>Pierced_Arm</Injury>
+      <Injury>Pierced_Chest</Injury>
+      <Injury>Pierced_Foot</Injury>
+      <Injury>Pierced_Hand</Injury>
+      <Injury>Pierced_Knee</Injury>
+      <Injury>Pierced_Guts</Injury>
+      <Injury>Pierced_Heart</Injury>
+      <Injury>Pierced_Leg</Injury>
+      <Injury>Pierced_Lung</Injury>
+      <Injury>Pierced_Shoulder</Injury>
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1.0</Parry_Mod>
       <Range_Mod>0</Range_Mod>
@@ -100,6 +130,16 @@
       <Embed>True</Embed>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
+      <Injury>Pierced_Arm</Injury>
+      <Injury>Pierced_Chest</Injury>
+      <Injury>Pierced_Foot</Injury>
+      <Injury>Pierced_Hand</Injury>
+      <Injury>Pierced_Knee</Injury>
+      <Injury>Pierced_Guts</Injury>
+      <Injury>Pierced_Heart</Injury>
+      <Injury>Pierced_Leg</Injury>
+      <Injury>Pierced_Lung</Injury>
+      <Injury>Pierced_Shoulder</Injury>
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1.0</Parry_Mod>
       <Range_Mod>0</Range_Mod>

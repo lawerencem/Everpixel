@@ -5,6 +5,7 @@ using Assets.Model.Combat.Hit;
 using Assets.Model.Event.Combat;
 using Assets.Template.Util;
 using System;
+using System.Collections.Generic;
 
 namespace Assets.Model.Injury.Calculator
 {
@@ -43,7 +44,10 @@ namespace Assets.Model.Injury.Calculator
         {
             try
             {
-                var random = ListUtil<EInjury>.GetRandomElement(hit.Data.Ability.Data.Injuries);
+                var injuries = new List<EInjury>();
+                injuries.AddRange(hit.Data.Ability.Data.Injuries);
+                injuries.AddRange(hit.Data.Ability.Data.ParentWeapon.Data.Injuries);
+                var random = ListUtil<EInjury>.GetRandomElement(injuries);
                 if (random != EInjury.None)
                 {
                     var injuryParams = InjuryTable.Instance.Table[random];
@@ -55,16 +59,11 @@ namespace Assets.Model.Injury.Calculator
                     var e = new EvInjury(data);
                     e.TryProcess();
                 }
-                else
-                {
-                    int temp = 0;
-                }
             }
             catch (Exception e)
             {
                 int temp = 0;
             }
-            
         }
     }
 }

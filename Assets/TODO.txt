@@ -1,6 +1,6 @@
 ﻿TODO
 
-Add Injuries to weapons
+Stamina / AP / HP (current points) aren't "getting" from proper source 
 Chest burser fatality
 Slime Rain
 Zones

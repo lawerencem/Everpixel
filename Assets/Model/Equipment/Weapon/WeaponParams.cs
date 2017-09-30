@@ -1,6 +1,7 @@
 ﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Effect;
 using Assets.Model.Equipment.Enum;
+using Assets.Model.Injury;
 using Assets.View.Fatality;
 using System.Collections.Generic;
 
@@ -25,6 +26,7 @@ namespace Assets.Model.Equipment.Weapon
         public int MaxDurability { get; set; }
         public double FatigueMod { get; set; }
         public double InitiativeMod { get; set; }
+        public List<EInjury> Injuries { get; set; }
         public double MeleeBlockChance { get; set; }
         public string Name { get; set; }
         public double ParryMod { get; set; }
@@ -44,6 +46,7 @@ namespace Assets.Model.Equipment.Weapon
         {
             this.Abilities = new List<EAbility>();
             this.Effects = new List<MEffect>();
+            this.Injuries = new List<EInjury>();
         }
     }
 }

@@ -99,7 +99,7 @@ namespace Assets.Data.Ability.XML
                 case ("FlatDamage"): { table[type].Data.FlatDamage = v; } break;
                 case ("Hostile"): { this.HandleHostile(type, value); } break;
                 case ("IconSprite"): { table[type].Data.Sprite = (int)v; } break;
-                case ("Injury"): { this.HandlAPerk(type, value); } break;
+                case ("Injury"): { this.HandleInjuries(type, value); } break;
                 case ("MeleeBlockChanceMod"): { table[type].Data.MeleeBlockChanceMod = v; } break;
                 case ("ParryModMod"): { table[type].Data.ParryModMod = v; } break;
                 case ("Range"): { table[type].Data.Range = (int)v; } break;
@@ -126,13 +126,11 @@ namespace Assets.Data.Ability.XML
                 AbilityTable.Instance.Table[key].Data.CustomGraphics = true;
         }
 
-        private void HandlAPerk(EAbility type, string s)
+        private void HandleInjuries(EAbility type, string s)
         {
             var injury = EInjury.None;
             if (EnumUtil<EInjury>.TryGetEnumValue(s, ref injury))
-            {
                 AbilityTable.Instance.Table[type].Data.Injuries.Add(injury);
-            }
         }
 
         private void HandleHostile(EAbility key, string value)

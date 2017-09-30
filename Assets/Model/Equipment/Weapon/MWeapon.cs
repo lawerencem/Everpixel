@@ -3,6 +3,7 @@ using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
 using Assets.Model.Effect;
 using Assets.Model.Equipment.Enum;
+using Assets.Model.Injury;
 using Assets.View.Fatality;
 using System.Collections.Generic;
 
@@ -27,6 +28,7 @@ namespace Assets.Model.Equipment.Weapon
         public string EmbedPath { get; set; }
         public double FatigueMod { get; set; }
         public double InitiativeMod { get; set; }
+        public List<EInjury> Injuries { get; set; }
         public double MeleeBlockChance { get; set; }
         public double ParryMod { get; set; }
         public double RangeBlockChance { get; set; }
@@ -59,6 +61,7 @@ namespace Assets.Model.Equipment.Weapon
             this.Data.Durability = 0;
             this.Data.FatigueMod = 1;
             this.Data.InitiativeMod = 1;
+            this.Data.Injuries = new List<EInjury>();
             this.Data.MaxDurability = 0;
             this.Data.ParryMod = 1;
             this.Data.RangeMod = 0;

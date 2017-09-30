@@ -3,6 +3,7 @@ using Assets.Model.Effect;
 using Assets.Model.Equipment.Enum;
 using Assets.Model.Equipment.Table;
 using Assets.Model.Equipment.Weapon;
+using Assets.Model.Injury;
 using Assets.Template.Util;
 using Assets.View.Fatality;
 using System.Xml.Linq;
@@ -58,7 +59,6 @@ namespace Assets.Data.Equipment.XML
                                 foreach (var elem in ele.Elements())
                                 {
                                     this.HandleIndex(name, skill, elem, elem.Value, ref tier);
-                                    //this.HandleIndex(name, skill, elem.Name.ToString(), elem.Value, ref tier);
                                 }
                                 this.HandleWeaponSkillFromFile(name, skill, tier);
                             }
@@ -89,6 +89,7 @@ namespace Assets.Data.Equipment.XML
                 case ("EEffect"): { this.HandleEffects(elem, name, tier); } break;
                 case ("Embed"): { this.HandleEmbed(name, value, tier); } break;
                 case ("Initiative_Mod"): { HandleStatsFromFile(name, EWeaponStat.Initiative_Mod, v, tier); } break;
+                case ("Injury"): { this.HandleInjuries(name, value, tier); } break;
                 case ("Max_Durability"): { HandleStatsFromFile(name, EWeaponStat.Max_Durability, v, tier); } break;
                 case ("Melee_Block_Chance"): { HandleStatsFromFile(name, EWeaponStat.Melee_Block_Chance, v, tier); } break;
                 case ("Parry_Mod"): { HandleStatsFromFile(name, EWeaponStat.Parry_Mod, v, tier); } break;
@@ -191,6 +192,14 @@ namespace Assets.Data.Equipment.XML
                 var stats = WeaponParamTable.Instance;
                 stats.Table[key].Embed = true;
             }
+        }
+
+        private void HandleInjuries(string name, string value, EEquipmentTier tier)
+        {
+            var key = name + "_" + tier.ToString();
+            var injury = EInjury.None;
+            if (EnumUtil<EInjury>.TryGetEnumValue(value, ref injury))
+                WeaponParamTable.Instance.Table[key].Injuries.Add(injury);
         }
 
         private void HandleWeaponAbilitiesFromFile(string name, string value, EEquipmentTier tier)
