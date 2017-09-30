@@ -3,6 +3,7 @@ using Assets.Data.Character.XML;
 using Assets.Data.Equipment.Table;
 using Assets.Data.Mount.Table;
 using Assets.Model.Ability;
+using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
 using Assets.Model.Characters.Params;
 using Assets.Model.Class.Builder;
@@ -45,6 +46,11 @@ namespace Assets.Model.Character.Builder
         private MChar BuildHelper(PreCharParams c)
         {
             var character = new MChar(c.Race);
+            if (c.Race != ERace.Critter && c.Race != ERace.None)
+            {
+                var racialPerks = RaceParamsTable.Instance.Table[c.Race].DefaultPerks;
+                PerkMediator.Instance.SetCharacterPerks(character, racialPerks);
+            }
             PerkMediator.Instance.SetCharacterPerks(character, c.Perks);
             this.BuildBaseClassHelper(c, character);
             this.BuildAbilities(c, character);

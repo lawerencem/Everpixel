@@ -45,6 +45,7 @@ namespace Assets.Data.Character.XML
                         {
                             switch (ele.Name.ToString())
                             {
+                                case ("Perks"): { this.HandlePerks(ele, race); } break;
                                 case ("PrimaryStats"): { PrimaryStatsParser.ParseXElementForStats(ele, table.Table[race].PrimaryStats); } break;
                                 case ("Sprites"): { this.HandleSprites(ele, table.Table[race].Sprites); } break;
                             }
@@ -52,6 +53,18 @@ namespace Assets.Data.Character.XML
                     }
                 }
             }
+        }
+
+        private void HandlePerks(XElement el, ERace race)
+        {
+            foreach (var ele in el.Elements())
+                PerkParser.ParseRacialPerk(el.Value, race);
+        }
+
+        private void HandlePerks(XElement el, string rootkey)
+        {
+            foreach (var ele in el.Elements())
+                PerkParser.ParsePerk(rootkey, ele.Value);
         }
 
         private void HandleSprites(XElement el, RaceSprites sprites)

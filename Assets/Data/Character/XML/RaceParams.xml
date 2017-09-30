@@ -43,9 +43,9 @@
     </PrimaryStats>
   </Race>
   <Race name="Lizardman">
-    <DefaultPerks>
+    <Perks>
       <Perk>Scaly</Perk>
-    </DefaultPerks>
+    </Perks>
     <Sprites>
       <Dead>8</Dead>
       <Face>6</Face>
@@ -67,9 +67,9 @@
     </PrimaryStats>
   </Race>
   <Race name="Orc">
-    <DefaultPerks>
+    <Perks>
       <Perk>Weightlifter</Perk>
-    </DefaultPerks>
+    </Perks>
     <Sprites>
       <Dead>8</Dead>
       <Face>6</Face>

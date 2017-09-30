@@ -46,7 +46,7 @@ namespace Assets.Controller.Managers
             var initInfo = new MapInitInfo();
             initInfo.Biome = EBiome.Grassland;
             initInfo.LParties.Add(new Pair<string, int>("Goblins", 20));
-            initInfo.RParties.Add(new Pair<string, int>("Jomonese Infantry", 20));
+            initInfo.RParties.Add(new Pair<string, int>("Orcs", 20));
             initInfo.Cols = 12;
             initInfo.DecoCount = 5;
             initInfo.Rows = 12;

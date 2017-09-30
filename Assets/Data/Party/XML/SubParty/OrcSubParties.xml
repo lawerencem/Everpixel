@@ -1,5 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <SubParties>
+  <SubParty Name ="Orc Berserkers">
+    <Difficulty>4</Difficulty>
+    <Character>1,Wimpy Orc Berserker,One</Character>
+    <Character>1,Wimpy Orc Berserker,One</Character>
+    <Character>1,Orc Battlesinger,Three</Character>
+  </SubParty>
+  <SubParty Name ="Orc Berserkers">
+    <Difficulty>7</Difficulty>
+    <Character>1,Orc Berserker,One</Character>
+    <Character>1,Orc Berserker,One</Character>
+    <Character>1,Orc Battlesinger,One</Character>
+  </SubParty>
+  <SubParty Name ="Orc Berserkers">
+    <Difficulty>11</Difficulty>
+    <Character>1,Orc Fury,One</Character>
+    <Character>1,Orc Fury,One</Character>
+    <Character>1,Orc Warsinger,Three</Character>
+  </SubParty>
+  <SubParty Name ="Orc Berserkers">
+    <Difficulty>14</Difficulty>
+    <Character>1,Orc Rampager,One</Character>
+    <Character>1,Orc Rampager,One</Character>
+    <Character>1,Orc Warsinger,Three</Character>
+  </SubParty>
   <SubParty Name ="Orc Warriors">
     <Difficulty>4</Difficulty>
     <Character>1,Wimpy Armer Boy,One</Character>
@@ -28,30 +52,6 @@
     <Difficulty>5</Difficulty>
     <Character>1,Orc Wereween,Three</Character>
     <Character>1,Orc Wereween,Three</Character>
-  </SubParty>
-  <SubParty Name ="Orc Berserkers">
-    <Difficulty>4</Difficulty>
-    <Character>1,Wimpy Orc Berserker,One</Character>
-    <Character>1,Wimpy Orc Berserker,One</Character>
-    <Character>1,Orc Battlesinger,Three</Character>
-  </SubParty>
-  <SubParty Name ="Orc Berserkers">
-    <Difficulty>7</Difficulty>
-    <Character>1,Orc Berserker,One</Character>
-    <Character>1,Orc Berserker,One</Character>
-    <Character>1,Orc Battlesinger,One</Character>
-  </SubParty>
-  <SubParty Name ="Orc Berserkers">
-    <Difficulty>11</Difficulty>
-    <Character>1,Orc Fury,One</Character>
-    <Character>1,Orc Fury,One</Character>
-    <Character>1,Orc Warsinger,Three</Character>
-  </SubParty>
-  <SubParty Name ="Orc Berserkers">
-    <Difficulty>14</Difficulty>
-    <Character>1,Orc Rampager,One</Character>
-    <Character>1,Orc Rampager,One</Character>
-    <Character>1,Orc Warsinger,Three</Character>
   </SubParty>
   <SubParty Name ="Orc Lord">
     <Difficulty>12</Difficulty>

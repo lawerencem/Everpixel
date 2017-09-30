@@ -1,6 +1,9 @@
 ﻿TODO
 
 Add Injuries to weapons
+Chest burser fatality
+Slime Rain
+Zones
 Why are trolls showing 1 morale
 Fix Keynotfound in main gui
 Fix parry / block lock bugs
@@ -17,7 +20,6 @@ Bonuses to Hit when surrounding
 Bonuses to Dmg when surrounding
 
 Jomonese and turtles
-Trolls and druids
 
 Shields
 Stealth
