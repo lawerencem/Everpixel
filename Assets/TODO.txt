@@ -1,7 +1,14 @@
 ﻿TODO
 
+Priority: 
+   - slime rain
+   - zones
+   - yari ashigaru
+   - naginata samurai
+   - dodo riders
+   - dodo knight
+
 Stamina / AP / HP (current points) aren't "getting" from proper source 
-Chest burser fatality
 Charge ability
 bulldoze ability
 Slime Rain
