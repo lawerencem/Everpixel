@@ -4,56 +4,61 @@ using UnityEngine;
 
 namespace Template.Script
 {
-    public class SIntervalJoltScript : MonoBehaviour
+    public class SIntervalJoltScriptData
     {
+        public float Dur { get; set; }
+        public float TimeInterval { get; set; }
+        public GameObject ToJolt { get; set; }
+        public float Speed { get; set; }
+        public float X { get; set; }
+        public float Y { get; set; }
+    }
+
+    public class SIntervalJoltScript : AScript
+    {
+        private SIntervalJoltScriptData _data;
+        private float _elapsed;
         private Vector3 _origin;
         private float _timeCounter;
-        private float _timeInterval;
-        private GameObject _toJolt;
-        private float _speed;
-        private float _x;
-        private float _y;
-        
-        public void Init(GameObject toJolt, float interval, float speed, float maxX, float maxY)
+
+        public void Init(SIntervalJoltScriptData data)
         {
-            this._origin = toJolt.transform.position;
-            this._timeInterval = interval;
-            this._toJolt = toJolt;
-            this._speed = speed;
-            this._x = maxX;
-            this._y = maxY;
+            this._data = data;
+            this._elapsed = 0f;
+            this._origin = this._data.ToJolt.transform.position;
+            this._timeCounter = 0f;
         }
 
         public void Done()
         {
-            this._toJolt.transform.position = this._origin;
+            this._data.ToJolt.transform.position = this._origin;
+            this.DoCallbacks();
             GameObject.Destroy(this);
         }
 
         public void Update()
         {
+            this._elapsed += Time.deltaTime;
             this._timeCounter += Time.deltaTime;
-            if (this._timeCounter >= this._timeInterval)
+            if (this._timeCounter >= this._data.TimeInterval)
             {
-                var curJolt = this._toJolt.GetComponent<SBoomerang>();
+                var curJolt = this._data.ToJolt.GetComponent<SBoomerang>();
                 if (curJolt == null)
                 {
-                    var xNeg = RNG.Instance.Next(2);
-                    var yNeg = RNG.Instance.Next(2);
-                    var xRoll = RNG.Instance.NextDouble() * this._x;
-                    var yRoll = RNG.Instance.NextDouble() * this._y;
-                    if (xNeg == 1)
-                        xRoll *= -1;
-                    if (yNeg == 1)
-                        yRoll *= -1;
-                    var position = this._toJolt.transform.position;
+                    var xRoll = RNG.Instance.NextDouble() * this._data.X;
+                    var yRoll = RNG.Instance.NextDouble() * this._data.Y;
+                    xRoll *= RNG.Instance.RandomNegOrPos();
+                    yRoll *= RNG.Instance.RandomNegOrPos();
+                    var position = this._data.ToJolt.transform.position;
                     position.x += (float)xRoll;
                     position.y += (float)yRoll;
-                    var jolt = this._toJolt.AddComponent<SBoomerang>();
-                    jolt.Init(this._toJolt, position, this._speed);
+                    var jolt = this._data.ToJolt.AddComponent<SBoomerang>();
+                    jolt.Init(this._data.ToJolt, position, this._data.Speed);
                 }
                 this._timeCounter = 0;
             }
+            if (this._elapsed >= this._data.Dur)
+                this.Done();
         }
     }
 }

@@ -33,6 +33,7 @@ namespace Assets.Template.Script
         {
             foreach (var callback in this._doneCallbacks)
                 callback(this);
+            GameObject.Destroy(this);
         }
 
         protected virtual void Retract(object o)

@@ -9,5 +9,6 @@
         Fighting,
         Slash,
         Weenbow,
+        Weenburster,
     }
 }

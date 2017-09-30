@@ -2,11 +2,13 @@
 
 Stamina / AP / HP (current points) aren't "getting" from proper source 
 Chest burser fatality
+Charge ability
+bulldoze ability
 Slime Rain
 Zones
 Why are trolls showing 1 morale
 Fix Keynotfound in main gui
-Fix parry / block lock bugs
+Display Blocks
 Orc Wereween
 Orc Metal
 Haste Song

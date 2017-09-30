@@ -98,12 +98,12 @@ namespace Assets.View.Fatality.Weapon.Ability
             this.ProcessBlood(tgt);
             this.SetBodyComponentsNull(tgt);
             var ribs = CharSpriteLoader.Instance.GetEffectSprite(RIBS);
-            this.LayFatalityDeco(ribs, tgt);
+            this.LayFatalityDecoRandomPosition(ribs, tgt);
             var random = RNG.Instance.Next(5);
             for (int i = 0; i < random; i++)
             {
                 var bone = CharSpriteLoader.Instance.GetEffectSprite(BONE);
-                this.LayFatalityDeco(bone, tgt);
+                this.LayFatalityDecoRandomPosition(bone, tgt);
             }
             var geyser = this.AddBloodGeyser(tgt);
             var lifetime = geyser.AddComponent<SDestroyByLifetime>();

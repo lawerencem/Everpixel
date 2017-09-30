@@ -10,6 +10,7 @@ using Assets.View.Bark;
 using Assets.View.Character;
 using Assets.View.Event;
 using Assets.View.Script.FX;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,6 +24,7 @@ namespace Assets.View.Fatality
 
         protected List<Callback> _callbacks;
         protected FatalityData _data;
+        protected Dictionary<Guid, AScript> _fatalityMap;
         protected EFatality _type;
 
         public FatalityData Data { get { return this._data; } }
@@ -32,6 +34,7 @@ namespace Assets.View.Fatality
         {
             this._callbacks = new List<Callback>();
             this._data = data;
+            this._fatalityMap = new Dictionary<Guid, AScript>();
             this._type = type;
         }
 
@@ -117,14 +120,21 @@ namespace Assets.View.Fatality
             }
         }
 
-        protected void LayFatalityDeco(Sprite sprite, CChar c)
+        protected GameObject LayFatalityDecoRandomPosition(Sprite sprite, CChar c)
+        {
+            var deco = this.LayFatalityDeco(sprite, c, Layers.DEAD_TORSO);
+            RotateTranslateUtil.Instance.RandomRotateAndTranslate(deco, CombatGUIParams.DEFAULT_OFFSET);
+            return deco;
+        }
+
+        protected GameObject LayFatalityDeco(Sprite sprite, CChar c, string layer)
         {
             var deco = new GameObject();
             deco.transform.position = c.Handle.transform.position;
             var renderer = deco.AddComponent<SpriteRenderer>();
             renderer.sprite = sprite;
-            renderer.sortingLayerName = Layers.DEAD_TORSO;
-            RotateTranslateUtil.Instance.RandomRotateAndTranslate(deco, CombatGUIParams.DEFAULT_OFFSET);
+            renderer.sortingLayerName = layer;
+            return deco;
         }
 
         protected void ProcessBlood(CChar target)

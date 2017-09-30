@@ -462,6 +462,7 @@
     <Compile Include="Assets\View\Fatality\Weapon\Ability\CrushFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Ability\SlashFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Specific\WeenbowFatality.cs" />
+    <Compile Include="Assets\View\Fatality\Weapon\Specific\WeenBurster.cs" />
     <Compile Include="Assets\View\GUI\AbilityModalManager.cs" />
     <Compile Include="Assets\View\GUI\GUISpriteLoader.cs" />
     <Compile Include="Assets\View\GUI\HoverModal.cs" />

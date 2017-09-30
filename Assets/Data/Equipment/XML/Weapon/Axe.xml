@@ -420,6 +420,8 @@
       <Armor_Ignore>0.70</Armor_Ignore>
       <Armor_Pierce>0.70</Armor_Pierce>
       <Block_Ignore>0.125</Block_Ignore>
+      <Custom_Bullet>True</Custom_Bullet>
+      <Custom_Fatality>WeenBurster</Custom_Fatality>
       <Damage>90</Damage>
       <Description>
         The sharp edges of this weapon help "make it rain".  

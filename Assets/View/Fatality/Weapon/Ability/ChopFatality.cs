@@ -2,7 +2,6 @@
 using Assets.Controller.GUI.Combat;
 using Assets.Template.Script;
 using Assets.Template.Util;
-using Assets.View.Character;
 using Assets.View.Script.FX;
 using UnityEngine;
 
