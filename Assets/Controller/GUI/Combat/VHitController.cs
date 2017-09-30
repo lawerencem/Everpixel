@@ -156,7 +156,7 @@ namespace Assets.Controller.GUI.Combat
             var data = new HitDisplayData();
             data.Color = CombatGUIParams.WHITE;
             data.Hit = hit;
-            data.Priority = ViewParams.PARRY_PRIRORITY;
+            data.Priority = ViewParams.PARRY_PRIORITY;
             data.Target = target.Handle;
             data.Text = "Parry";
             data.YOffset = CombatGUIParams.FLOAT_OFFSET;
@@ -183,11 +183,11 @@ namespace Assets.Controller.GUI.Combat
         {
             var pos = wpn.transform.position;
             if (target.Proxy.LParty)
-                pos.x -= CombatGUIParams.FLOAT_OFFSET;
+                pos.x -= CombatGUIParams.PARRY_OFFSET;
             else
-                pos.x += CombatGUIParams.FLOAT_OFFSET;
+                pos.x += CombatGUIParams.PARRY_OFFSET;
             var script = wpn.AddComponent<SBoomerang>();
-            script.Init(wpn, pos, CombatGUIParams.FLOAT_OFFSET);
+            script.Init(wpn, pos, CombatGUIParams.PARRY_SPEED);
             script.AddCallback(hit.CallbackHandler);
         }
 

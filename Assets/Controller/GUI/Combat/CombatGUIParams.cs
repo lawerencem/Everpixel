@@ -25,7 +25,7 @@ namespace Assets.Controller.GUI.Combat
         public static readonly string FIGHTING_FATALITY = "FightingFatality";
         public static readonly string SLASH_FATALITY = "SlashFatality";
 
-        public static readonly double FATALITY_CHANCE = 0.25;
+        public static readonly double FATALITY_CHANCE = 0;
 
         // Attack params
         public static readonly float ATTACK_LERP = 0.85f;
@@ -35,6 +35,9 @@ namespace Assets.Controller.GUI.Combat
         public static readonly float DODGE_SPEED = 6f;
         public static readonly float FLINCH_DIST = 0.08f;
         public static readonly float FLINCH_SPEED = 8f;
+        public static readonly float PARRY_OFFSET = 0.10f;
+        public static readonly float PARRY_SPEED = 8f;
+        
 
         // Bullet Param Stuff
         public static readonly float X_CORRECTION = 0.165f;

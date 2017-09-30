@@ -25,7 +25,7 @@ namespace Assets.View
         public static readonly int DMG_PRIORITY = 10;
         public static readonly int DODGE_PRIORITY = 6;
         public static readonly int INJURY_PRIORITY = 14;
-        public static readonly int PARRY_PRIRORITY = 8;
+        public static readonly int PARRY_PRIORITY = 8;
         public static readonly int HEAL_PRIORITY = 12;
 
         // Script Params

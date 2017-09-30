@@ -294,7 +294,6 @@
     <Compile Include="Assets\Model\Equipment\Weapon\MWeapon.cs" />
     <Compile Include="Assets\Model\Equipment\Weapon\WeaponParams.cs" />
     <Compile Include="Assets\Model\Event\Combat\AEvCombat.cs" />
-    <Compile Include="Assets\Model\Event\Combat\ActionEventController.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvApMod.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvBuff.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvCasting.cs" />
