@@ -103,7 +103,7 @@
       </Stats>
     </Character>
     <Character name ="Goblin Fodder">
-      <Class>Fighter,3</Class>
+      <Class>Soldier,1</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Goblin</ERace>
       <PotentialArmors>
@@ -519,9 +519,35 @@
       </Stats>
       <Spell>1,Summon_Shoggoth</Spell>
     </Character>
+    <Character name ="Slugzilla">
+      <AttackSpriteIndex>24</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>16</FlinchSpriteIndex>
+      <Stats>
+        <Agility>120</Agility>
+        <Constitution>950</Constitution>
+        <Intelligence>330</Intelligence>
+        <Might>850</Might>
+        <Perception>350</Perception>
+        <Resolve>435</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Sluggoth">
+      <AttackSpriteIndex>24</AttackSpriteIndex>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>16</FlinchSpriteIndex>
+      <Stats>
+        <Agility>280</Agility>
+        <Constitution>240</Constitution>
+        <Intelligence>360</Intelligence>
+        <Might>220</Might>
+        <Perception>460</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Spider Boss">
       <Class>Ninja,15</Class>
-      <Class>Fighter,7</Class>
+      <Class>Soldier,7</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Goblin</ERace>
       <Mount>Octolegs</Mount>
@@ -547,7 +573,7 @@
         <Resolve>410</Resolve>
       </Stats>
       <Character name ="Veteran Spider Rider Archer">
-        <Class>Fighter,6</Class>
+        <Class>Soldier,6</Class>
         <ECharacterType>Humanoid</ECharacterType>
         <ERace>Goblin</ERace>
         <Mount>Octolegs</Mount>
@@ -578,7 +604,7 @@
       </Character>
     </Character>
     <Character name ="Spider Rider">
-      <Class>Fighter,3</Class>
+      <Class>Soldier,3</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Goblin</ERace>
       <Mount>Octolegs</Mount>
@@ -612,7 +638,7 @@
       </Stats>
     </Character>
     <Character name ="Spider Rider Archer">
-      <Class>Fighter,3</Class>
+      <Class>Soldier,3</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Goblin</ERace>
       <Mount>Octolegs</Mount>
@@ -642,7 +668,7 @@
       </Stats>
     </Character>
     <Character name ="Veteran Spider Rider">
-      <Class>Fighter,7</Class>
+      <Class>Soldier,7</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Goblin</ERace>
       <Mount>Octolegs</Mount>
@@ -676,7 +702,7 @@
       </Stats>
     </Character>
     <Character name ="Veteran Spider Rider Archer">
-      <Class>Fighter,6</Class>
+      <Class>SoldierS,6</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Goblin</ERace>
       <Mount>Octolegs</Mount>

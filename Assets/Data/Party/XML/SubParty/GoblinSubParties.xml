@@ -69,6 +69,40 @@
     <Character>1,Lunatic Gromp Hopper,One</Character>
     <Character>1,Crazed Gromp Hopper,One</Character>
   </SubParty>
+  <SubParty Name ="Psychic Slugs">
+    <Difficulty>4</Difficulty>
+    <Character>1,Psycargot,Three</Character>
+    <Character>1,Psycargot,Three</Character>
+  </SubParty>
+  <SubParty Name ="Psychic Slugs">
+    <Difficulty>9</Difficulty>
+    <Character>1,Psycargot,Three</Character>
+    <Character>1,Psycargot,Three</Character>
+    <Character>1,Psylug,Three</Character>
+  </SubParty>
+  <SubParty Name ="Razorbacks">
+    <Difficulty>5</Difficulty>
+    <Character>1,Razorback,One</Character>
+    <Character>1,Razorback,One</Character>
+    <Character>1,Razorback,One</Character>
+  </SubParty>
+  <SubParty Name ="Shoggoths">
+    <Difficulty>3</Difficulty>
+    <Character>1,Sluggoth,One</Character>
+    <Character>1,Sluggoth,One</Character>
+    <Character>1,Sluggoth,One</Character>
+  </SubParty>
+  <SubParty Name ="Shoggoths">
+    <Difficulty>5</Difficulty>
+    <Character>1,Shoggoth,One</Character>
+    <Character>1,Sluggoth,One</Character>
+    <Character>1,Sluggoth,One</Character>
+  </SubParty>
+  <SubParty Name ="Shoggoths">
+    <Difficulty>7</Difficulty>
+    <Character>1,Shoggoth,One</Character>
+    <Character>1,Shoggoth,One</Character>
+  </SubParty>
   <SubParty Name ="Slime Lords">
     <Difficulty>2</Difficulty>
     <Character>1,Fledgling Slime Lord,Three</Character>
@@ -100,7 +134,7 @@
     <Character>1,Rookie Slimer,One</Character>
   </SubParty>
   <SubParty Name ="Slug Horde">
-    <Difficulty>4</Difficulty>
+    <Difficulty>3</Difficulty>
     <Character>1,Sluggish,One</Character>
     <Character>1,Sluggish,One</Character>
     <Character>1,Sluggish,One</Character>
@@ -108,32 +142,20 @@
   </SubParty>
   <SubParty Name ="Slug Horde">
     <Difficulty>5</Difficulty>
-    <Character>1,Sluggeemoth,One</Character>
+    <Character>1,Sluggemoth,One</Character>
     <Character>1,Sluggish,One</Character>
     <Character>1,Sluggish,One</Character>
     <Character>1,Sluggish,One</Character>
   </SubParty>
   <SubParty Name ="Slug Horde">
-    <Difficulty>6</Difficulty>
-    <Character>1,Sluggeemoth,One</Character>
-    <Character>1,Psycargot,One</Character>
+    <Difficulty>7</Difficulty>
+    <Character>1,Sluggemoth,One</Character>
+    <Character>1,Sluggemoth,One</Character>
     <Character>1,Sluggish,One</Character>
     <Character>1,Sluggish,One</Character>
   </SubParty>
-  <SubParty Name ="Slug Horde">
-    <Difficulty>8</Difficulty>
-    <Character>1,Sluggeemoth,One</Character>
-    <Character>1,Psycargot,One</Character>
-    <Character>1,Psycargot,One</Character>
-    <Character>1,Sluggish,One</Character>
-    <Character>1,Razorback,One</Character>
-  </SubParty>
-  <SubParty Name ="Slug Horde">
-    <Difficulty>10</Difficulty>
-    <Character>1,Sluggeemoth,One</Character>
-    <Character>1,Psycargot,One</Character>
-    <Character>1,Psycargot,One</Character>
-    <Character>1,Psylug,One</Character>
-    <Character>1,Razorback,One</Character>
+  <SubParty Name ="Slugzilla">
+    <Difficulty>15</Difficulty>
+    <Character>1,Slugzilla,One</Character>
   </SubParty>
 </SubParties>
