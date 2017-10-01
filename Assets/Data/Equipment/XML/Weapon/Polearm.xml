@@ -3,23 +3,22 @@
   <EWeaponSkill name ="Polearm">
     <Weapon name="Naginata">
       <Tier>Five</Tier>
-      <Accuracy_Mod>0.88</Accuracy_Mod>
-      <AP_Mod>0.92</AP_Mod>
-      <Armor_Ignore>0.99</Armor_Ignore>
-      <Armor_Pierce>0.92</Armor_Pierce>
+      <Accuracy_Mod>0.82</Accuracy_Mod>
+      <AP_Mod>0.94</AP_Mod>
+      <Armor_Ignore>0.98</Armor_Ignore>
+      <Armor_Pierce>0.88</Armor_Pierce>
       <Block_Ignore>0.0</Block_Ignore>
-      <Damage>62</Damage>
+      <Damage>49</Damage>
       <Description>
         This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
       </Description>
-      <Fatigue_Mod>1.10</Fatigue_Mod>
       <Initiative_Mod>0.92</Initiative_Mod>
-      <Max_Durability>58</Max_Durability>
+      <Max_Durability>35</Max_Durability>
       <Parry_Mod>0.92</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <EWeaponSkill>Polearm</EWeaponSkill>
       <Sprites>0</Sprites>
-      <Stamina_Mod>0.97</Stamina_Mod>
+      <Stamina_Mod>0.94</Stamina_Mod>
       <Range_Mod>1</Range_Mod>
       <Value>150</Value>
       <WeaponEAbility>Slash</WeaponEAbility>
@@ -32,20 +31,19 @@
     </Weapon>
     <Weapon name="Naginata">
       <Tier>Four</Tier>
-      <Accuracy_Mod>0.90</Accuracy_Mod>
-      <AP_Mod>0.94</AP_Mod>
-      <Armor_Ignore>0.99</Armor_Ignore>
-      <Armor_Pierce>0.91</Armor_Pierce>
+      <Accuracy_Mod>0.83</Accuracy_Mod>
+      <AP_Mod>0.95</AP_Mod>
+      <Armor_Ignore>0.97</Armor_Ignore>
+      <Armor_Pierce>0.87</Armor_Pierce>
       <Block_Ignore>0.00</Block_Ignore>
-      <Damage>75</Damage>
+      <Damage>52</Damage>
       <Description>
         This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
       </Description>
-      <Fatigue_Mod>1.08</Fatigue_Mod>
-      <Initiative_Mod>0.94</Initiative_Mod>
-      <Max_Durability>70</Max_Durability>
-      <Parry_Mod>0.94</Parry_Mod>
-      <Shield_Damage_Percent>0.02</Shield_Damage_Percent>
+      <Initiative_Mod>0.93</Initiative_Mod>
+      <Max_Durability>38</Max_Durability>
+      <Parry_Mod>0.93</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <EWeaponSkill>Polearm</EWeaponSkill>
       <Sprites>15</Sprites>
       <Stamina_Mod>0.98</Stamina_Mod>
@@ -61,20 +59,19 @@
     </Weapon>
     <Weapon name="Naginata">
       <Tier>Three</Tier>
-      <Accuracy_Mod>0.92</Accuracy_Mod>
-      <AP_Mod>0.96</AP_Mod>
-      <Armor_Ignore>0.99</Armor_Ignore>
-      <Armor_Pierce>0.89</Armor_Pierce>
-      <Block_Ignore>0.07</Block_Ignore>
-      <Damage>88</Damage>
+      <Accuracy_Mod>0.84</Accuracy_Mod>
+      <AP_Mod>0.95</AP_Mod>
+      <Armor_Ignore>0.96</Armor_Ignore>
+      <Armor_Pierce>0.86</Armor_Pierce>
+      <Block_Ignore>0.00</Block_Ignore>
+      <Damage>53</Damage>
       <Description>
         This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
       </Description>
-      <Fatigue_Mod>1.05</Fatigue_Mod>
-      <Initiative_Mod>0.96</Initiative_Mod>
-      <Max_Durability>85</Max_Durability>
-      <Parry_Mod>0.96</Parry_Mod>
-      <Shield_Damage_Percent>0.03</Shield_Damage_Percent>
+      <Initiative_Mod>0.94</Initiative_Mod>
+      <Max_Durability>42</Max_Durability>
+      <Parry_Mod>0.94</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <EWeaponSkill>Polearm</EWeaponSkill>
       <Sprites>30</Sprites>
       <Stamina_Mod>0.99</Stamina_Mod>
@@ -90,20 +87,19 @@
     </Weapon>
     <Weapon name="Naginata">
       <Tier>Two</Tier>
-      <Accuracy_Mod>0.94</Accuracy_Mod>
-      <AP_Mod>0.98</AP_Mod>
-      <Armor_Ignore>0.98</Armor_Ignore>
-      <Armor_Pierce>0.87</Armor_Pierce>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>0.95</AP_Mod>
+      <Armor_Ignore>0.95</Armor_Ignore>
+      <Armor_Pierce>0.85</Armor_Pierce>
       <Block_Ignore>0.08</Block_Ignore>
-      <Damage>102</Damage>
+      <Damage>56</Damage>
       <Description>
         This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
       </Description>
-      <Fatigue_Mod>1.03</Fatigue_Mod>
-      <Initiative_Mod>0.98</Initiative_Mod>
-      <Max_Durability>100</Max_Durability>
-      <Parry_Mod>0.98</Parry_Mod>
-      <Shield_Damage_Percent>0.04</Shield_Damage_Percent>
+      <Initiative_Mod>0.95</Initiative_Mod>
+      <Max_Durability>45</Max_Durability>
+      <Parry_Mod>0.95</Parry_Mod>
+      <Shield_Damage_Percent>0.0</Shield_Damage_Percent>
       <EWeaponSkill>Polearm</EWeaponSkill>
       <Sprites>45</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
