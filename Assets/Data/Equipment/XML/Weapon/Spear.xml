@@ -1,21 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Weapons>
   <EWeaponSkill name ="Spear">
+    <Weapon name="Dino Prodder">
+      <Tier>One</Tier>
+      <Accuracy_Mod>0.90</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
+      <Armor_Ignore>0.60</Armor_Ignore>
+      <Armor_Pierce>0.90</Armor_Pierce>
+      <Block_Ignore>0.45</Block_Ignore>
+      <Damage>60</Damage>
+      <Description>
+        Dinosaurs fear it - why shouldn't you?
+      </Description>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>28</Max_Durability>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>67</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>3000</Value>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
     <Weapon name="Dino Spear">
       <Tier>Five</Tier>
-      <Accuracy_Mod>0.88</Accuracy_Mod>
+      <Accuracy_Mod>0.84</Accuracy_Mod>
       <AP_Mod>0.97</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.83</Armor_Pierce>
+      <Armor_Pierce>0.78</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>42</Damage>
+      <Damage>28</Damage>
       <Description>
         This spear is used to hunt dinosaurs.  It's not very good at it.
       </Description>
-      <Fatigue_Mod>1.12</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>35</Max_Durability>
-      <Parry_Mod>1</Parry_Mod>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>0.73</Parry_Mod>
       <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>7</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
@@ -28,19 +50,18 @@
     </Weapon>
     <Weapon name="Dino Spear">
       <Tier>Four</Tier>
-      <Accuracy_Mod>0.90</Accuracy_Mod>
+      <Accuracy_Mod>0.86</Accuracy_Mod>
       <AP_Mod>0.98</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.80</Armor_Pierce>
+      <Armor_Pierce>0.76</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>50</Damage>
+      <Damage>30</Damage>
       <Description>
         This spear is used to hunt dinosaurs.  It's not very effective...
       </Description>
-      <Fatigue_Mod>1.10</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>55</Max_Durability>
-      <Parry_Mod>1</Parry_Mod>
+      <Max_Durability>25</Max_Durability>
+      <Parry_Mod>0.75</Parry_Mod>
       <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>22</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
@@ -53,19 +74,42 @@
     </Weapon>
     <Weapon name="Dino Spear">
       <Tier>Three</Tier>
-      <Accuracy_Mod>0.92</Accuracy_Mod>
+      <Accuracy_Mod>0.88</Accuracy_Mod>
       <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.72</Armor_Pierce>
+      <Armor_Pierce>0.74</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>55</Damage>
+      <Damage>34</Damage>
       <Description>
         This spear is used to hunt dinosaurs.
       </Description>
-      <Fatigue_Mod>1.08</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>70</Max_Durability>
-      <Parry_Mod>1</Parry_Mod>
+      <Max_Durability>30</Max_Durability>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>37</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>450</Value>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Spear">
+      <Tier>Two</Tier>
+      <Accuracy_Mod>0.90</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.70</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>40</Damage>
+      <Description>
+        This spear is used to hunt dinosaurs.
+      </Description>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>0.75</Parry_Mod>
       <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>37</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
@@ -78,25 +122,71 @@
     </Weapon>
     <Weapon name="Kali">
       <Tier>One</Tier>
-      <Accuracy_Mod>1.50</Accuracy_Mod>
-      <AP_Mod>0.97</AP_Mod>
+      <Accuracy_Mod>1.05</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
       <Armor_Ignore>0</Armor_Ignore>
-      <Armor_Pierce>0.35</Armor_Pierce>
+      <Armor_Pierce>0.70</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>85</Damage>
+      <Damage>50</Damage>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>70</Max_Durability>
+      <Parry_Mod>0.80</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>60</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>2500</Value>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Nihongo">
+      <Tier>One</Tier>
+      <Accuracy_Mod>0.75</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
+      <Armor_Ignore>0.65</Armor_Ignore>
+      <Armor_Pierce>0.55</Armor_Pierce>
+      <Block_Ignore>0.25</Block_Ignore>
+      <Damage>80</Damage>
       <Description>
-        Kali: The Demon Barb
+        This oddly-massive spear is unwieldy, but does outsized damage.
       </Description>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>150</Max_Durability>
-      <Parry_Mod>1.05</Parry_Mod>
-      <Shield_Damage_Percent>0.05</Shield_Damage_Percent>
-      <Sprites>60</Sprites>
+      <Max_Durability>65</Max_Durability>
+      <Parry_Mod>0.80</Parry_Mod>
+      <Shield_Damage_Percent>0.15</Shield_Damage_Percent>
+      <Sprites>63</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
-      <Value>50000</Value>
+      <Value>2250</Value>
       <WeaponEAbility>Stab</WeaponEAbility>
       <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Septic Barb">
+      <Tier>One</Tier>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.85</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>60</Damage>
+      <Description>
+        This doozy causes horrific injuries - and then horribly infects those wounds.
+      </Description>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>45</Max_Durability>
+      <Parry_Mod>0.50</Parry_Mod>
+      <Shield_Damage_Percent>0.0</Shield_Damage_Percent>
+      <Sprites>65</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>3000</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Gash</WeaponEAbility>
       <WeaponEAbility>Spear Wall</WeaponEAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
@@ -104,19 +194,18 @@
     <Weapon name="Skewer">
       <Tier>Five</Tier>
       <Accuracy_Mod>0.80</Accuracy_Mod>
-      <AP_Mod>0.96</AP_Mod>
+      <AP_Mod>1.0</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.97</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>38</Damage>
+      <Damage>45</Damage>
       <Description>
-        This spear has a wide blade.  Goblins love using these as they can inflict bleeding wounds.
+        This spear has a wide blade that can cause grisly injuries.
       </Description>
-      <Fatigue_Mod>1.10</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>35</Max_Durability>
-      <Parry_Mod>1</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Max_Durability>32</Max_Durability>
+      <Parry_Mod>0.60</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>5</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>55</Value>
@@ -129,21 +218,20 @@
     </Weapon>
     <Weapon name="Skewer">
       <Tier>Four</Tier>
-      <Accuracy_Mod>0.86</Accuracy_Mod>
-      <AP_Mod>0.96</AP_Mod>
+      <Accuracy_Mod>0.81</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.93</Armor_Pierce>
+      <Armor_Pierce>0.95</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>42</Damage>
+      <Damage>48</Damage>
       <Description>
         This spear has a wide blade.  Goblins love using these as they can inflict bleeding wounds.
       </Description>
-      <Fatigue_Mod>1.09</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>55</Max_Durability>
-      <Parry_Mod>1</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
-      <Sprites>5</Sprites>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>0.62</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>20</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>120</Value>
       <WeaponEAbility>Slash</WeaponEAbility>
@@ -155,21 +243,45 @@
     </Weapon>
     <Weapon name="Skewer">
       <Tier>Three</Tier>
-      <Accuracy_Mod>0.88</Accuracy_Mod>
-      <AP_Mod>0.96</AP_Mod>
+      <Accuracy_Mod>0.82</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.90</Armor_Pierce>
+      <Armor_Pierce>0.93</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>50</Damage>
+      <Damage>52</Damage>
       <Description>
         This spear has a wide blade.  Goblins love using these as they can inflict bleeding wounds.
       </Description>
-      <Fatigue_Mod>1.08</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>75</Max_Durability>
-      <Parry_Mod>1</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
-      <Sprites>5</Sprites>
+      <Max_Durability>38</Max_Durability>
+      <Parry_Mod>0.64</Parry_Mod>
+      <Shield_Damage_Percent>0.0</Shield_Damage_Percent>
+      <Sprites>35</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>200</Value>
+      <WeaponEAbility>Slash</WeaponEAbility>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Gash</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Skewer">
+      <Tier>Two</Tier>
+      <Accuracy_Mod>0.84</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.92</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>54</Damage>
+      <Description>
+        This spear has a wide blade.  Goblins love using these as they can inflict bleeding wounds.
+      </Description>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>42</Max_Durability>
+      <Parry_Mod>0.65</Parry_Mod>
+      <Shield_Damage_Percent>0.0</Shield_Damage_Percent>
+      <Sprites>50</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>200</Value>
       <WeaponEAbility>Slash</WeaponEAbility>
@@ -182,7 +294,7 @@
     <Weapon name="Spear">
       <Tier>Five</Tier>
       <Accuracy_Mod>0.85</Accuracy_Mod>
-      <AP_Mod>0.97</AP_Mod>
+      <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.85</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
@@ -190,11 +302,10 @@
       <Description>
         This spear is simply a sharp rock tied to the end of a stick.  It looks like it could still do some damage, though.
       </Description>
-      <Fatigue_Mod>1.10</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>30</Max_Durability>
-      <Parry_Mod>1</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Parry_Mod>0.85</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>0,1,2</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>50</Value>
@@ -206,20 +317,19 @@
     </Weapon>
     <Weapon name="Spear">
       <Tier>Four</Tier>
-      <Accuracy_Mod>0.92</Accuracy_Mod>
-      <AP_Mod>0.97</AP_Mod>
+      <Accuracy_Mod>0.87</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.80</Armor_Pierce>
+      <Armor_Pierce>0.82</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>34</Damage>
+      <Damage>35</Damage>
       <Description>
         Simple, yet effective.
       </Description>
-      <Fatigue_Mod>1.08</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>50</Max_Durability>
-      <Parry_Mod>1</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Max_Durability>32</Max_Durability>
+      <Parry_Mod>0.85</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>15,16,17</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>250</Value>
@@ -231,10 +341,10 @@
     </Weapon>
     <Weapon name="Spear">
       <Tier>Three</Tier>
-      <Accuracy_Mod>0.98</Accuracy_Mod>
-      <AP_Mod>0.97</AP_Mod>
+      <Accuracy_Mod>0.88</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.72</Armor_Pierce>
+      <Armor_Pierce>0.80</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
       <Damage>35</Damage>
       <Description>
@@ -242,12 +352,12 @@
       </Description>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>65</Max_Durability>
-      <Parry_Mod>1</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Max_Durability>40</Max_Durability>
+      <Parry_Mod>0.85</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>30,31,32</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
-      <Value>1000</Value>
+      <Value>350</Value>
       <WeaponEAbility>Stab</WeaponEAbility>
       <WeaponEAbility>Pierce</WeaponEAbility>
       <WeaponEAbility>Spear Wall</WeaponEAbility>
@@ -256,23 +366,48 @@
     </Weapon>
     <Weapon name="Spear">
       <Tier>Two</Tier>
-      <Accuracy_Mod>0.98</Accuracy_Mod>
-      <AP_Mod>0.97</AP_Mod>
+      <Accuracy_Mod>0.88</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.70</Armor_Pierce>
+      <Armor_Pierce>0.78</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>40</Damage>
+      <Damage>38</Damage>
       <Description>
         Simple, yet effective.
       </Description>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>70</Max_Durability>
-      <Parry_Mod>1</Parry_Mod>
-      <Shield_Damage_Percent>0.02</Shield_Damage_Percent>
+      <Max_Durability>45</Max_Durability>
+      <Parry_Mod>0.85</Parry_Mod>
+      <Shield_Damage_Percent>0.0</Shield_Damage_Percent>
       <Sprites>45,46,47</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
-      <Value>1500</Value>
+      <Value>700</Value>
+      <WeaponEAbility>Stab</WeaponEAbility>
+      <WeaponEAbility>Pierce</WeaponEAbility>
+      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Tonbogiri">
+      <Tier>One</Tier>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
+      <Armor_Ignore>0.85</Armor_Ignore>
+      <Armor_Pierce>0.15</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>50</Damage>
+      <Description>
+        The light protruding from the end of this spear slices through armor like butter.
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>50</Max_Durability>
+      <Parry_Mod>0.90</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>64</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>2250</Value>
       <WeaponEAbility>Stab</WeaponEAbility>
       <WeaponEAbility>Pierce</WeaponEAbility>
       <WeaponEAbility>Spear Wall</WeaponEAbility>
@@ -281,20 +416,19 @@
     </Weapon>
     <Weapon name="Yari">
       <Tier>Five</Tier>
-      <Accuracy_Mod>0.95</Accuracy_Mod>
-      <AP_Mod>0.97</AP_Mod>
-      <Armor_Ignore>1</Armor_Ignore>
+      <Accuracy_Mod>0.78</Accuracy_Mod>
+      <AP_Mod>1.0</AP_Mod>
+      <Armor_Ignore>0.98</Armor_Ignore>
       <Armor_Pierce>0.88</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>28</Damage>
+      <Damage>24</Damage>
       <Description>
         A low-quality Jomonese spear.
       </Description>
-      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
-      <Parry_Mod>0.98</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Parry_Mod>0.95</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>3,4</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>200</Value>
@@ -306,20 +440,19 @@
     </Weapon>
     <Weapon name="Yari">
       <Tier>Four</Tier>
-      <Accuracy_Mod>0.96</Accuracy_Mod>
-      <AP_Mod>0.98</AP_Mod>
-      <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.86</Armor_Pierce>
+      <Accuracy_Mod>0.80</Accuracy_Mod>
+      <AP_Mod>1.0</AP_Mod>
+      <Armor_Ignore>0.97</Armor_Ignore>
+      <Armor_Pierce>0.85</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>32</Damage>
+      <Damage>27</Damage>
       <Description>
         A Jomonese spear.
       </Description>
-      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>42</Max_Durability>
-      <Parry_Mod>1</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Max_Durability>38</Max_Durability>
+      <Parry_Mod>0.99</Parry_Mod>
+      <Shield_Damage_Percent>0.0</Shield_Damage_Percent>
       <Sprites>18,19</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>300</Value>
@@ -331,20 +464,20 @@
     </Weapon>
     <Weapon name="Yari">
       <Tier>Three</Tier>
-      <Accuracy_Mod>0.97</Accuracy_Mod>
+      <Accuracy_Mod>0.82</Accuracy_Mod>
       <AP_Mod>1</AP_Mod>
-      <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.84</Armor_Pierce>
+      <Armor_Ignore>0.96</Armor_Ignore>
+      <Armor_Pierce>0.83</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>38</Damage>
+      <Damage>30</Damage>
       <Description>
         A Jomonese spear.
       </Description>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>42</Max_Durability>
-      <Parry_Mod>1.03</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Parry_Mod>1.02</Parry_Mod>
+      <Shield_Damage_Percent>0.0</Shield_Damage_Percent>
       <Sprites>33,34</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>550</Value>
@@ -356,20 +489,20 @@
     </Weapon>  
     <Weapon name="Yari">
       <Tier>Two</Tier>
-      <Accuracy_Mod>0.98</Accuracy_Mod>
+      <Accuracy_Mod>0.84</Accuracy_Mod>
       <AP_Mod>1</AP_Mod>
-      <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.82</Armor_Pierce>
+      <Armor_Ignore>0.95</Armor_Ignore>
+      <Armor_Pierce>0.81</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>44</Damage>
+      <Damage>33</Damage>
       <Description>
         A Jomonese spear.
       </Description>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>55</Max_Durability>
+      <Max_Durability>45</Max_Durability>
       <Parry_Mod>1.05</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>48,49</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>700</Value>
