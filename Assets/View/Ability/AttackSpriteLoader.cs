@@ -133,16 +133,21 @@ namespace Assets.View.Ability
                 }
                 else
                 {
-                    tgts.Add(tgt.SubComponents[Layers.CHAR_MAIN]);
                     if (tgt.Proxy.Type != ECharType.Critter)
                     {
                         if (tgt.SubComponents.ContainsKey(Layers.CHAR_ARMOR))
                             tgts.Add(tgt.SubComponents[Layers.CHAR_ARMOR]);
+                        else
+                            tgts.Add(tgt.SubComponents[Layers.CHAR_TORSO]);
                         if (tgt.SubComponents.ContainsKey(Layers.CHAR_HELM))
                             tgts.Add(tgt.SubComponents[Layers.CHAR_HELM]);
+                        else
+                            tgts.Add(tgt.SubComponents[Layers.CHAR_HEAD]);
                         if (tgt.SubComponents.ContainsKey(Layers.CHAR_MOUNT))
                             tgts.Add(tgt.SubComponents[Layers.CHAR_MOUNT]);
                     }
+                    else
+                        tgts.Add(tgt.SubComponents[Layers.CHAR_MAIN]);
                 }
             }
             else

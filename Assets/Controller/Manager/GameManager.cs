@@ -45,8 +45,8 @@ namespace Assets.Controller.Managers
             gui.InitCombatGUI();
             var initInfo = new MapInitInfo();
             initInfo.Biome = EBiome.Grassland;
-            initInfo.LParties.Add(new Pair<string, int>("Goblins", 20));
-            initInfo.RParties.Add(new Pair<string, int>("Orcs", 20));
+            initInfo.LParties.Add(new Pair<string, int>("Goblins", 25));
+            initInfo.RParties.Add(new Pair<string, int>("Jomonese", 25));
             initInfo.Cols = 12;
             initInfo.DecoCount = 5;
             initInfo.Rows = 12;

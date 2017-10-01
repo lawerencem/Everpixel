@@ -35,11 +35,11 @@ namespace Assets.View.Event
                 return 5;
             else if (this._data.DmgPercent >= 0.95)
                 return 4;
-            else if (this._data.DmgPercent > 0.90)
-                return 3;
             else if (this._data.DmgPercent > 0.75)
+                return 3;
+            else if (this._data.DmgPercent > 0.45)
                 return 2;
-            else if (this._data.DmgPercent > 0.35)
+            else if (this._data.DmgPercent > 0.10)
                 return 1;
             else
                 return 0;
