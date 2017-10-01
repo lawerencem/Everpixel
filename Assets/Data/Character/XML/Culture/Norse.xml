@@ -2,7 +2,6 @@
 <Cultures>
   <Culture name ="Norse">
     <Character name ="Gotland Footman">
-      <Class>Fighter,2</Class>
       <Class>Soldier,4</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Penguin</ERace>
@@ -64,8 +63,7 @@
       </Stats>
     </Character>
     <Character name ="Nordic Sergeant">
-      <Class>Fighter,3</Class>
-      <Class>Soldier,3</Class>
+      <Class>Soldier,6</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Penguin</ERace>
       <Perks>
@@ -100,7 +98,7 @@
       </Stats>
     </Character>
     <Character name ="Nordic Spearman">
-      <Class>Fighter,3</Class>
+      <Class>Soldier,3</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Penguin</ERace>
       <Perks>

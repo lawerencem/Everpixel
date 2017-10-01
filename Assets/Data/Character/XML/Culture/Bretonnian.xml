@@ -2,7 +2,7 @@
 <Cultures>
   <Culture name ="Bretonnian">
     <Character name ="Greatsword Footman">
-      <Class>Fighter,3</Class>
+      <Class>Soldier,3</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Human</ERace>
       <PotentialArmors>

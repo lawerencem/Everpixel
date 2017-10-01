@@ -21,6 +21,7 @@ namespace Assets.Data.Equipment.XML
             this._paths.Add("Assets/Data/Equipment/XML/Weapon/Hammer.xml");
             this._paths.Add("Assets/Data/Equipment/XML/Weapon/LargeShield.xml");
             this._paths.Add("Assets/Data/Equipment/XML/Weapon/LightCrossbow.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Weapon/LongBow.xml");
             this._paths.Add("Assets/Data/Equipment/XML/Weapon/MediumShield.xml");
             this._paths.Add("Assets/Data/Equipment/XML/Weapon/Polearm.xml");
             this._paths.Add("Assets/Data/Equipment/XML/Weapon/ShortBow.xml");
@@ -100,7 +101,7 @@ namespace Assets.Data.Equipment.XML
                 case ("Shield_Damage"): { HandleStatsFromFile(name, EWeaponStat.Shield_Damage_Percent, v, tier); } break;
                 case ("Stamina_Mod"): { HandleStatsFromFile(name, EWeaponStat.Stamina_Mod, v, tier); } break;
                 case ("Value"): { HandleStatsFromFile(name, EWeaponStat.Value, v, tier); } break;
-                case ("WeaponEAbility"): { HandleWeaponAbilitiesFromFile(name, value, tier); } break;
+                case ("EAbility"): { HandleWeaponAbilitiesFromFile(name, value, tier); } break;
                 case ("EWeaponType"): { HandleWeaponTypeFromFile(name, value, tier); } break;
                 case ("EWeaponUse"): { HandleWeaponUseFromFile(name, value, tier); } break;
             }

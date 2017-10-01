@@ -1,6 +1,307 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Cultures>
   <Culture name ="Jomonese">
+    <Character name="Armoise">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <Abilities>
+        <Ability name="Bite">
+          <EEffect name="Megabite">
+            <AbilityCondition>Bite</AbilityCondition>
+            <X>2.0</X>
+            <Y>2.0</Y>
+          </EEffect>
+        </Ability>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>200</Agility>
+        <Constitution>750</Constitution>
+        <Intelligence>250</Intelligence>
+        <Might>330</Might>
+        <Perception>350</Perception>
+        <Resolve>420</Resolve>
+      </Stats>
+    </Character>
+    <Character name="Dreadnot">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <Abilities>
+        <Ability name="Bite">
+          <EEffect name="Megabite">
+            <AbilityCondition>Bite</AbilityCondition>
+            <X>2.0</X>
+            <Y>2.0</Y>
+          </EEffect>
+        </Ability>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>180</Agility>
+        <Constitution>1050</Constitution>
+        <Intelligence>600</Intelligence>
+        <Might>580</Might>
+        <Perception>360</Perception>
+        <Resolve>470</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Elite Katana Samurai">
+      <Class>Samurai,13</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Dou,Three</Armor>
+          <Armor>0.20,Dou,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Kabuto,Three</Helm>
+          <Helm>0.20,Kabuto,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Katana,Three</RWeapon>
+          <RWeapon>0.25,Katana,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>500</Constitution>
+        <Intelligence>410</Intelligence>
+        <Might>530</Might>
+        <Perception>520</Perception>
+        <Resolve>580</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Elite Naginata Samurai">
+      <Class>Samurai,13</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Dou,Three</Armor>
+          <Armor>0.20,Dou,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Kabuto,Three</Helm>
+          <Helm>0.20,Kabuto,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Naginata,Three</RWeapon>
+          <RWeapon>0.25,Naginata,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>500</Constitution>
+        <Intelligence>410</Intelligence>
+        <Might>530</Might>
+        <Perception>520</Perception>
+        <Resolve>580</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Elite Nodachi Samurai">
+      <Class>Samurai,13</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Dou,Three</Armor>
+          <Armor>0.20,Dou,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Kabuto,Three</Helm>
+          <Helm>0.20,Kabuto,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Nodachi,Three</RWeapon>
+          <RWeapon>0.25,Nodachi,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>500</Constitution>
+        <Intelligence>410</Intelligence>
+        <Might>530</Might>
+        <Perception>520</Perception>
+        <Resolve>580</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Elite Yari Samurai">
+      <Class>Samurai,13</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Dou,Three</Armor>
+          <Armor>0.20,Dou,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Kabuto,Three</Helm>
+          <Helm>0.20,Kabuto,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Yari,Three</RWeapon>
+          <RWeapon>0.25,Yari,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>500</Constitution>
+        <Intelligence>410</Intelligence>
+        <Might>530</Might>
+        <Perception>520</Perception>
+        <Resolve>580</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Elite Yumi Samurai">
+      <Class>Samurai,13</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Dou,Three</Armor>
+          <Armor>0.20,Dou,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Kabuto,Three</Helm>
+          <Helm>0.20,Kabuto,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Yumi,Three</RWeapon>
+          <RWeapon>0.25,Yumi,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>500</Constitution>
+        <Intelligence>410</Intelligence>
+        <Might>530</Might>
+        <Perception>520</Perception>
+        <Resolve>580</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Grizzled Yari Ashigaru">
+      <Class>Soldier,3</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.75,Do-Maru,Three</Armor>
+          <Armor>0.25,Do-Maru,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.75,Jingasa,Three</Helm>
+          <Helm>0.25,Jingasa,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Yari,Three</RWeapon>
+          <RWeapon>0.25,Yari,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>380</Constitution>
+        <Intelligence>380</Intelligence>
+        <Might>400</Might>
+        <Perception>400</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Grizzled Yumi Ashigaru">
+      <Class>Soldier,3</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.75,Do-Maru,Three</Armor>
+          <Armor>0.25,Do-Maru,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.75,Jingasa,Three</Helm>
+          <Helm>0.25,Jingasa,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Yumi,Three</RWeapon>
+          <RWeapon>0.25,Yumi,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>380</Constitution>
+        <Intelligence>380</Intelligence>
+        <Might>400</Might>
+        <Perception>400</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
+    <Character name="Horrorpin">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <Abilities>
+        <Ability name="Bite">
+          <EEffect name="Megabite">
+            <AbilityCondition>Bite</AbilityCondition>
+            <X>2.0</X>
+            <Y>2.0</Y>
+          </EEffect>
+        </Ability>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>320</Agility>
+        <Constitution>680</Constitution>
+        <Intelligence>720</Intelligence>
+        <Might>380</Might>
+        <Perception>350</Perception>
+        <Resolve>415</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Katana Hero">
+      <Class>Samurai,19</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>1,Dou,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>1,Kabuto,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Katana,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>500</Constitution>
+        <Intelligence>410</Intelligence>
+        <Might>530</Might>
+        <Perception>520</Perception>
+        <Resolve>580</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Katana Samurai">
       <Class>Samurai,9</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -30,24 +331,21 @@
         <Resolve>580</Resolve>
       </Stats>
     </Character>
-    <Character name ="Ronin Nodachi Samurai">
-      <Class>Samurai,5</Class>
+    <Character name ="Naginata Hero">
+      <Class>Samurai,19</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Human</ERace>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.80,Dou,Five</Armor>
-          <Armor>0.20,Dou,Four</Armor>
+          <Armor>1,Dou,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.80,Kabuto,Five</Helm>
-          <Helm>0.20,Kabuto,Four</Helm>
+          <Helm>1,Kabuto,Two</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.75,Nodachi,Five</RWeapon>
-          <RWeapon>0.25,Nodachi,Four</RWeapon>
+          <RWeapon>1,Naginata,Two</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
@@ -59,24 +357,50 @@
         <Resolve>580</Resolve>
       </Stats>
     </Character>
-    <Character name ="Ronin Katana Samurai">
-      <Class>Samurai,5</Class>
+    <Character name ="Naginata Samurai">
+      <Class>Samurai,9</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Human</ERace>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.80,Dou,Five</Armor>
-          <Armor>0.20,Dou,Four</Armor>
+          <Armor>0.80,Dou,Four</Armor>
+          <Armor>0.20,Dou,Three</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.80,Kabuto,Five</Helm>
-          <Helm>0.20,Kabuto,Four</Helm>
+          <Helm>0.80,Kabuto,Four</Helm>
+          <Helm>0.20,Kabuto,Three</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.75,Katana,Five</RWeapon>
-          <RWeapon>0.25,Katana,Four</RWeapon>
+          <RWeapon>0.75,Naginata,Four</RWeapon>
+          <RWeapon>0.25,Naginata,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>500</Constitution>
+        <Intelligence>410</Intelligence>
+        <Might>530</Might>
+        <Perception>520</Perception>
+        <Resolve>580</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Nodachi Hero">
+      <Class>Samurai,19</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>1,Dou,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>1,Kabuto,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Nodachi,Two</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
@@ -117,24 +441,209 @@
         <Resolve>580</Resolve>
       </Stats>
     </Character>
-    <Character name ="Veteran Katana Samurai">
-      <Class>Samurai,13</Class>
+    <Character name="Terrorpin">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <Abilities>
+        <Ability name="Bite">
+          <EEffect name="Megabite">
+            <AbilityCondition>Bite</AbilityCondition>
+            <X>2.0</X>
+            <Y>2.0</Y>
+          </EEffect>
+        </Ability>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>380</Agility>
+        <Constitution>720</Constitution>
+        <Intelligence>220</Intelligence>
+        <Might>710</Might>
+        <Perception>315</Perception>
+        <Resolve>450</Resolve>
+      </Stats>
+    </Character>
+    <Character name="Tortard">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <Abilities>
+        <Ability name="Bite">
+          <EEffect name="Megabite">
+            <AbilityCondition>Bite</AbilityCondition>
+            <X>2.0</X>
+            <Y>2.0</Y>
+          </EEffect>
+        </Ability>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>250</Agility>
+        <Constitution>640</Constitution>
+        <Intelligence>80</Intelligence>
+        <Might>820</Might>
+        <Perception>260</Perception>
+        <Resolve>640</Resolve>
+      </Stats>
+    </Character>
+    <Character name="Tortugaia">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <Abilities>
+        <Ability name="Bite">
+          <EEffect name="Megabite">
+            <AbilityCondition>Bite</AbilityCondition>
+            <X>2.0</X>
+            <Y>2.0</Y>
+          </EEffect>
+        </Ability>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>130</Agility>
+        <Constitution>800</Constitution>
+        <Intelligence>630</Intelligence>
+        <Might>550</Might>
+        <Perception>730</Perception>
+        <Resolve>500</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Veteran Yari Ashigaru">
+      <Class>Soldier,2</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Human</ERace>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.80,Dou,Three</Armor>
-          <Armor>0.20,Dou,Two</Armor>
+          <Armor>0.75,Do-Maru,Four</Armor>
+          <Armor>0.25,Do-Maru,Three</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.80,Kabuto,Three</Helm>
-          <Helm>0.20,Kabuto,Two</Helm>
+          <Helm>0.75,Jingasa,Four</Helm>
+          <Helm>0.25,Jingasa,Three</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.75,Katana,Three</RWeapon>
-          <RWeapon>0.25,Katana,Two</RWeapon>
+          <RWeapon>0.75,Yari,Four</RWeapon>
+          <RWeapon>0.75,Yari,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>380</Constitution>
+        <Intelligence>380</Intelligence>
+        <Might>400</Might>
+        <Perception>400</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Veteran Yumi Ashigaru">
+      <Class>Soldier,2</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.75,Do-Maru,Four</Armor>
+          <Armor>0.25,Do-Maru,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.75,Jingasa,Four</Helm>
+          <Helm>0.25,Jingasa,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Yumi,Four</RWeapon>
+          <RWeapon>0.25,Yumi,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>380</Constitution>
+        <Intelligence>380</Intelligence>
+        <Might>400</Might>
+        <Perception>400</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Yari Ashigaru">
+      <Class>Soldier,1</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.75,Do-Maru,Five</Armor>
+          <Armor>0.25,Do-Maru,Four</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.75,Jingasa,Five</Helm>
+          <Helm>0.25,Jingasa,Five</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Yari,Five</RWeapon>
+          <RWeapon>0.25,Yari,Four</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>380</Constitution>
+        <Intelligence>380</Intelligence>
+        <Might>400</Might>
+        <Perception>400</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Yumi Ashigaru">
+      <Class>Soldier,1</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.75,Do-Maru,Five</Armor>
+          <Armor>0.25,Do-Maru,Four</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.75,Jingasa,Five</Helm>
+          <Helm>0.25,Jingasa,Five</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Yumi,Five</RWeapon>
+          <RWeapon>0.25,Yumi,Four</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>380</Constitution>
+        <Intelligence>380</Intelligence>
+        <Might>400</Might>
+        <Perception>400</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Yari Hero">
+      <Class>Samurai,19</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>1,Dou,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>1,Kabuto,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Yari,Two</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
@@ -146,24 +655,79 @@
         <Resolve>580</Resolve>
       </Stats>
     </Character>
-    <Character name ="Veteran Nodachi Samurai">
-      <Class>Samurai,13</Class>
+    <Character name ="Yari Samurai">
+      <Class>Samurai,9</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Human</ERace>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.80,Dou,Three</Armor>
-          <Armor>0.20,Dou,Two</Armor>
+          <Armor>0.80,Dou,Four</Armor>
+          <Armor>0.20,Dou,Three</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.80,Kabuto,Three</Helm>
-          <Helm>0.20,Kabuto,Two</Helm>
+          <Helm>0.80,Kabuto,Four</Helm>
+          <Helm>0.20,Kabuto,Three</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.75,Nodachi,Three</RWeapon>
-          <RWeapon>0.25,Nodachi,Two</RWeapon>
+          <RWeapon>0.75,Yari,Four</RWeapon>
+          <RWeapon>0.25,Yari,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>500</Constitution>
+        <Intelligence>410</Intelligence>
+        <Might>530</Might>
+        <Perception>520</Perception>
+        <Resolve>580</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Yumi Hero">
+      <Class>Samurai,19</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>1,Dou,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>1,Kabuto,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Yumi,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>500</Constitution>
+        <Intelligence>410</Intelligence>
+        <Might>530</Might>
+        <Perception>520</Perception>
+        <Resolve>580</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Yumi Samurai">
+      <Class>Samurai,9</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Dou,Four</Armor>
+          <Armor>0.20,Dou,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Kabuto,Four</Helm>
+          <Helm>0.20,Kabuto,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Yumi,Four</RWeapon>
+          <RWeapon>0.25,Yumi,Three</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>

@@ -2,7 +2,7 @@
 <Cultures>
   <Culture name="Roman">
     <Character name ="Praetorian">
-      <Class>Fighter,5</Class>
+      <Class>Soldier,5</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Human</ERace>
       <PotentialArmors>

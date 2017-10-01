@@ -27,15 +27,15 @@
       <Injury>Pierced_Lung</Injury>
       <Injury>Pierced_Shoulder</Injury>
       <Max_Durability>15</Max_Durability>
-      <Parry_Mod>1.0</Parry_Mod>
+      <Parry_Mod>0.15</Parry_Mod>
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0</Shield_Damage_Percent>
       <Sprites>0</Sprites>
       <Sprite_FX_Path>Arrow</Sprite_FX_Path>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>50</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
-      <WeaponEAbility>Aim</WeaponEAbility>
+      <EAbility>Fire</EAbility>
+      <EAbility>Aim</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -65,15 +65,15 @@
       <Injury>Pierced_Lung</Injury>
       <Injury>Pierced_Shoulder</Injury>
       <Max_Durability>15</Max_Durability>
-      <Parry_Mod>1.0</Parry_Mod>
+      <Parry_Mod>0.15</Parry_Mod>
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0</Shield_Damage_Percent>
       <Sprites>15</Sprites>
       <Sprite_FX_Path>Arrow</Sprite_FX_Path>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>50</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
-      <WeaponEAbility>Aim</WeaponEAbility>
+      <EAbility>Fire</EAbility>
+      <EAbility>Aim</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -103,15 +103,15 @@
       <Injury>Pierced_Lung</Injury>
       <Injury>Pierced_Shoulder</Injury>
       <Max_Durability>15</Max_Durability>
-      <Parry_Mod>1.0</Parry_Mod>
+      <Parry_Mod>0.15</Parry_Mod>
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0</Shield_Damage_Percent>
       <Sprites>30</Sprites>
       <Sprite_FX_Path>Arrow</Sprite_FX_Path>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>50</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
-      <WeaponEAbility>Aim</WeaponEAbility>
+      <EAbility>Fire</EAbility>
+      <EAbility>Aim</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -141,15 +141,15 @@
       <Injury>Pierced_Lung</Injury>
       <Injury>Pierced_Shoulder</Injury>
       <Max_Durability>15</Max_Durability>
-      <Parry_Mod>1.0</Parry_Mod>
+      <Parry_Mod>0.15</Parry_Mod>
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0</Shield_Damage_Percent>
       <Sprites>45</Sprites>
       <Sprite_FX_Path>Arrow</Sprite_FX_Path>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>50</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
-      <WeaponEAbility>Aim</WeaponEAbility>
+      <EAbility>Fire</EAbility>
+      <EAbility>Aim</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -169,35 +169,18 @@
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>25</Max_Durability>
-      <Parry_Mod>1.0</Parry_Mod>
+      <Parry_Mod>0.15</Parry_Mod>
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0</Shield_Damage_Percent>
       <Sprites>60</Sprites>
       <Sprite_FX_Path>Slime_Bullet</Sprite_FX_Path>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>500</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
-      <WeaponEAbility>Aim</WeaponEAbility>
+      <EAbility>Fire</EAbility>
+      <EAbility>Aim</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
   </EWeaponSkill>
 </Weapons>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  
   

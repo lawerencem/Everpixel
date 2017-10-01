@@ -2,7 +2,7 @@
 <Cultures>
   <Culture name ="Orcish">
     <Character name ="Armer Boy">
-      <Class>Fighter,5</Class>
+      <Class>Soldier,5</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
       <Perks>
@@ -35,7 +35,7 @@
       </Stats>
     </Character>
     <Character name ="Armer Wall">
-      <Class>Fighter,14</Class>
+      <Class>Soldier,14</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
       <Perks>
@@ -584,7 +584,7 @@
       </Stats>
     </Character>
     <Character name ="Stout Armer Boy">
-      <Class>Fighter,9</Class>
+      <Class>Soldier,9</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
       <Perks>
@@ -864,7 +864,7 @@
       </Stats>
     </Character>
     <Character name ="Wimpy Armer Boy">
-      <Class>Fighter,2</Class>
+      <Class>Soldier,2</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
       <Perks>

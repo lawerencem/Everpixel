@@ -95,8 +95,8 @@
       <Tier>Four</Tier>
       <AP_Mod>1</AP_Mod>
       <Block_Mod>1</Block_Mod>
-      <Flat_Damage_Ignore>5</Flat_Damage_Ignore>
-      <Damage_Reduction>0.90</Damage_Reduction>
+      <Flat_Damage_Ignore>4</Flat_Damage_Ignore>
+      <Damage_Reduction>0.93</Damage_Reduction>
       <Description>
         Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
         not very durable...
@@ -114,14 +114,14 @@
       <Tier>Three</Tier>
       <AP_Mod>1</AP_Mod>
       <Block_Mod>1</Block_Mod>
-      <Flat_Damage_Ignore>7</Flat_Damage_Ignore>
-      <Damage_Reduction>0.86</Damage_Reduction>
+      <Flat_Damage_Ignore>5</Flat_Damage_Ignore>
+      <Damage_Reduction>0.92</Damage_Reduction>
       <Description>
         Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
         not very durable...
       </Description>
       <Dodge_Mod>1.0</Dodge_Mod>
-      <Durability>20</Durability>
+      <Durability>14</Durability>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1.0</Initiative_Mod>
       <Parry_Mod>1.0</Parry_Mod>
@@ -133,14 +133,14 @@
       <Tier>Two</Tier>
       <AP_Mod>1</AP_Mod>
       <Block_Mod>1</Block_Mod>
-      <Flat_Damage_Ignore>8</Flat_Damage_Ignore>
-      <Damage_Reduction>0.80</Damage_Reduction>
+      <Flat_Damage_Ignore>5</Flat_Damage_Ignore>
+      <Damage_Reduction>0.88</Damage_Reduction>
       <Description>
         Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
         not very durable...
       </Description>
       <Dodge_Mod>1.0</Dodge_Mod>
-      <Durability>28</Durability>
+      <Durability>17</Durability>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1.0</Initiative_Mod>
       <Parry_Mod>1.0</Parry_Mod>
@@ -148,9 +148,77 @@
       <Stamina_Mod>1.0</Stamina_Mod>
       <Value>800</Value>
     </Armor>
+    <Armor name="Do-Maru">
+      <Tier>Five</Tier>
+      <AP_Mod>1.16</AP_Mod>
+      <Block_Mod>0.55</Block_Mod>
+      <Flat_Damage_Ignore>4</Flat_Damage_Ignore>
+      <Damage_Reduction>0.74</Damage_Reduction>
+      <Description>
+        This is the armor worn by lower-ranking samurais.  It is lighter, but still effective.
+      </Description>
+      <Dodge_Mod>0.80</Dodge_Mod>
+      <Durability>25</Durability>
+      <Initiative_Mod>0.82</Initiative_Mod>
+      <Parry_Mod>1.0</Parry_Mod>
+      <Sprites>5,6</Sprites>
+      <Stamina_Mod>0.82</Stamina_Mod>
+      <Value>250</Value>
+    </Armor>
+    <Armor name="Do-Maru">
+      <Tier>Four</Tier>
+      <AP_Mod>1.15</AP_Mod>
+      <Block_Mod>0.55</Block_Mod>
+      <Flat_Damage_Ignore>4</Flat_Damage_Ignore>
+      <Damage_Reduction>0.72</Damage_Reduction>
+      <Description>
+        This is the armor worn by lower-ranking samurais.  It is lighter, but still effective.
+      </Description>
+      <Dodge_Mod>0.81</Dodge_Mod>
+      <Durability>32</Durability>
+      <Initiative_Mod>0.83</Initiative_Mod>
+      <Parry_Mod>1.02</Parry_Mod>
+      <Sprites>20,21</Sprites>
+      <Stamina_Mod>0.83</Stamina_Mod>
+      <Value>400</Value>
+    </Armor>
+    <Armor name="Do-Maru">
+      <Tier>Three</Tier>
+      <AP_Mod>1.14</AP_Mod>
+      <Block_Mod>0.55</Block_Mod>
+      <Flat_Damage_Ignore>5</Flat_Damage_Ignore>
+      <Damage_Reduction>0.70</Damage_Reduction>
+      <Description>
+        This is the armor worn by lower-ranking samurais.  It is lighter, but still effective.
+      </Description>
+      <Dodge_Mod>0.82</Dodge_Mod>
+      <Durability>38</Durability>
+      <Initiative_Mod>0.84</Initiative_Mod>
+      <Parry_Mod>1.04</Parry_Mod>
+      <Sprites>35,36</Sprites>
+      <Stamina_Mod>0.84</Stamina_Mod>
+      <Value>650</Value>
+    </Armor>
+    <Armor name="Do-Maru">
+      <Tier>Two</Tier>
+      <AP_Mod>1.13</AP_Mod>
+      <Block_Mod>0.55</Block_Mod>
+      <Flat_Damage_Ignore>5</Flat_Damage_Ignore>
+      <Damage_Reduction>0.68</Damage_Reduction>
+      <Description>
+        This is the armor worn by lower-ranking samurais.  It is lighter, but still effective.
+      </Description>
+      <Dodge_Mod>0.83</Dodge_Mod>
+      <Durability>45</Durability>
+      <Initiative_Mod>0.85</Initiative_Mod>
+      <Parry_Mod>1.05</Parry_Mod>
+      <Sprites>50,51</Sprites>
+      <Stamina_Mod>0.85</Stamina_Mod>
+      <Value>1050</Value>
+    </Armor>
     <Armor name="Goblin Pads">
       <Tier>Five</Tier>
-      <AP_Mod>0.93</AP_Mod>
+      <AP_Mod>1.06</AP_Mod>
       <Block_Mod>0.87</Block_Mod>
       <Flat_Damage_Ignore>2</Flat_Damage_Ignore>
       <Damage_Reduction>0.86</Damage_Reduction>
@@ -168,7 +236,7 @@
     </Armor>
     <Armor name="Goblin Pads">
       <Tier>Four</Tier>
-      <AP_Mod>0.94</AP_Mod>
+      <AP_Mod>1.05</AP_Mod>
       <Block_Mod>0.88</Block_Mod>
       <Flat_Damage_Ignore>2</Flat_Damage_Ignore>
       <Damage_Reduction>0.85</Damage_Reduction>
@@ -186,7 +254,7 @@
     </Armor>
     <Armor name="Goblin Pads">
       <Tier>Three</Tier>
-      <AP_Mod>0.95</AP_Mod>
+      <AP_Mod>1.04</AP_Mod>
       <Block_Mod>0.90</Block_Mod>
       <Flat_Damage_Ignore>2</Flat_Damage_Ignore>
       <Damage_Reduction>0.84</Damage_Reduction>
@@ -204,7 +272,7 @@
     </Armor>
     <Armor name="Goblin Pads">
       <Tier>Two</Tier>
-      <AP_Mod>0.95</AP_Mod>
+      <AP_Mod>1.03</AP_Mod>
       <Block_Mod>0.90</Block_Mod>
       <Flat_Damage_Ignore>3</Flat_Damage_Ignore>
       <Damage_Reduction>0.82</Damage_Reduction>

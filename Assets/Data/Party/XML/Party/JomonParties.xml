@@ -1,7 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Parties>
-  <Party Name ="Jomonese Infantry">
-    <SubParty>Katana Samurais,5</SubParty>
-    <SubParty>Nodachi Samurais,5</SubParty>
+  <Party Name ="Jomonese">
+    <SubParty>Healing Kappas,4</SubParty>
+    <SubParty>Healing Kappas,6</SubParty>
+    <SubParty>Katana Samurai,4</SubParty>
+    <SubParty>Katana Samurai,6</SubParty>
+    <SubParty>Katana Samurai,8</SubParty>
+    <SubParty>Naginata Samurai,4</SubParty>
+    <SubParty>Naginata Samurai,6</SubParty>
+    <SubParty>Naginata Samurai,8</SubParty>
+    <SubParty>Nodachi Samurai,4</SubParty>
+    <SubParty>Nodachi Samurai,6</SubParty>
+    <SubParty>Nodachi Samurai,8</SubParty>
+    <SubParty>Spell Kappas,6</SubParty>
+    <SubParty>Spell Kappas,7</SubParty>
+    <SubParty>War Kappas,5</SubParty>
+    <SubParty>War Kappas,12</SubParty>
+    <SubParty>Yari Ashigaru,1</SubParty>
+    <SubParty>Yari Ashigaru,2</SubParty>
+    <SubParty>Yari Ashigaru,3</SubParty>
+    <SubParty>Yari Samurai,4</SubParty>
+    <SubParty>Yari Samurai,6</SubParty>
+    <SubParty>Yari Samurai,8</SubParty>
+    <SubParty>Yumi Ashigaru,1</SubParty>
+    <SubParty>Yumi Ashigaru,2</SubParty>
+    <SubParty>Yumi Ashigaru,3</SubParty>
+    <SubParty>Yumi Samurai,4</SubParty>
+    <SubParty>Yumi Samurai,6</SubParty>
+    <SubParty>Yumi Samurai,8</SubParty>
   </Party>
 </Parties>

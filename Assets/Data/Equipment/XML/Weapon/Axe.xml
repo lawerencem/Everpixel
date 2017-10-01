@@ -20,10 +20,10 @@
       <Sprites>7</Sprites>
       <Stamina_Mod>0.82</Stamina_Mod>
       <Value>50</Value>
-      <WeaponEAbility>Chop</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
-      <WeaponEAbility>Stun</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EAbility>Chop</EAbility>
+      <EAbility>Break_Shield</EAbility>
+      <EAbility>Stun</EAbility>
+      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -46,10 +46,10 @@
       <Sprites>22</Sprites>
       <Stamina_Mod>0.84</Stamina_Mod>
       <Value>150</Value>
-      <WeaponEAbility>Chop</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
-      <WeaponEAbility>Stun</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EAbility>Chop</EAbility>
+      <EAbility>Break_Shield</EAbility>
+      <EAbility>Stun</EAbility>
+      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -72,10 +72,10 @@
       <Sprites>37</Sprites>
       <Stamina_Mod>0.85</Stamina_Mod>
       <Value>350</Value>
-      <WeaponEAbility>Chop</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
-      <WeaponEAbility>Stun</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EAbility>Chop</EAbility>
+      <EAbility>Break_Shield</EAbility>
+      <EAbility>Stun</EAbility>
+      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -98,10 +98,10 @@
       <Sprites>52</Sprites>
       <Stamina_Mod>0.85</Stamina_Mod>
       <Value>700</Value>
-      <WeaponEAbility>Chop</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
-      <WeaponEAbility>Stun</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EAbility>Chop</EAbility>
+      <EAbility>Break_Shield</EAbility>
+      <EAbility>Stun</EAbility>
+      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -124,10 +124,10 @@
       <Sprites>4,5,6</Sprites>
       <Stamina_Mod>0.58</Stamina_Mod>
       <Value>300</Value>
-      <WeaponEAbility>Chop</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
-      <WeaponEAbility>Maim</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EAbility>Chop</EAbility>
+      <EAbility>Break_Shield</EAbility>
+      <EAbility>Maim</EAbility>
+      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -150,10 +150,10 @@
       <Sprites>19,20,21</Sprites>
       <Stamina_Mod>0.60</Stamina_Mod>
       <Value>500</Value>
-      <WeaponEAbility>Chop</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
-      <WeaponEAbility>Maim</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EAbility>Chop</EAbility>
+      <EAbility>Break_Shield</EAbility>
+      <EAbility>Maim</EAbility>
+      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -176,10 +176,10 @@
       <Sprites>34</Sprites>
       <Stamina_Mod>0.65</Stamina_Mod>
       <Value>1200</Value>
-      <WeaponEAbility>Chop</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
-      <WeaponEAbility>Maim</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EAbility>Chop</EAbility>
+      <EAbility>Break_Shield</EAbility>
+      <EAbility>Maim</EAbility>
+      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -202,10 +202,10 @@
       <Sprites>34</Sprites>
       <Stamina_Mod>0.65</Stamina_Mod>
       <Value>2000</Value>
-      <WeaponEAbility>Chop</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
-      <WeaponEAbility>Maim</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EAbility>Chop</EAbility>
+      <EAbility>Break_Shield</EAbility>
+      <EAbility>Maim</EAbility>
+      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -228,8 +228,8 @@
       <Sprites>0</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>50</Value>
-      <WeaponEAbility>Chop</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <EAbility>Chop</EAbility>
+      <EAbility>Break_Shield</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -252,8 +252,8 @@
       <Sprites>1</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>125</Value>
-      <WeaponEAbility>Chop</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <EAbility>Chop</EAbility>
+      <EAbility>Break_Shield</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -276,8 +276,8 @@
       <Sprites>2</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>280</Value>
-      <WeaponEAbility>Chop</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <EAbility>Chop</EAbility>
+      <EAbility>Break_Shield</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -300,8 +300,8 @@
       <Sprites>3</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>600</Value>
-      <WeaponEAbility>Chop</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <EAbility>Chop</EAbility>
+      <EAbility>Break_Shield</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -326,9 +326,9 @@
       <Sprites>0</Sprites>
       <Stamina_Mod>0.89</Stamina_Mod>
       <Value>100</Value>
-      <WeaponEAbility>Chop</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EAbility>Chop</EAbility>
+      <EAbility>Break_Shield</EAbility>
+      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -353,9 +353,9 @@
       <Sprites>15</Sprites>
       <Stamina_Mod>0.91</Stamina_Mod>
       <Value>250</Value>
-      <WeaponEAbility>Chop</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EAbility>Chop</EAbility>
+      <EAbility>Break_Shield</EAbility>
+      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -380,9 +380,9 @@
       <Sprites>30</Sprites>
       <Stamina_Mod>0.93</Stamina_Mod>
       <Value>550</Value>
-      <WeaponEAbility>Chop</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EAbility>Chop</EAbility>
+      <EAbility>Break_Shield</EAbility>
+      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -407,9 +407,9 @@
       <Sprites>45</Sprites>
       <Stamina_Mod>0.93</Stamina_Mod>
       <Value>800</Value>
-      <WeaponEAbility>Chop</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EAbility>Chop</EAbility>
+      <EAbility>Break_Shield</EAbility>
+      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -434,8 +434,8 @@
       <Sprites>64</Sprites>
       <Stamina_Mod>0.85</Stamina_Mod>
       <Value>2500</Value>
-      <WeaponEAbility>Chop</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
+      <EAbility>Chop</EAbility>
+      <EAbility>Break_Shield</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>

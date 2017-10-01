@@ -4,7 +4,7 @@
     <Weapon name="Broadsword">
       <Tier>Five</Tier>
       <Accuracy_Mod>0.92</Accuracy_Mod>
-      <AP_Mod>0.92</AP_Mod>
+      <AP_Mod>1.15</AP_Mod>
       <Armor_Ignore>0.99</Armor_Ignore>
       <Armor_Pierce>0.92</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
@@ -12,7 +12,6 @@
       <Description>
         A well-rounded weapon.  It's heavier than comparative swords, thus less effective as a defensive weapon.
       </Description>
-      <Fatigue_Mod>1.06</Fatigue_Mod>
       <Initiative_Mod>0.97</Initiative_Mod>
       <Max_Durability>20</Max_Durability>
       <Parry_Mod>0.88</Parry_Mod>
@@ -20,16 +19,16 @@
       <Sprites>2</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
       <Value>80</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Riposte</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Broadsword">
       <Tier>Four</Tier>
       <Accuracy_Mod>0.93</Accuracy_Mod>
-      <AP_Mod>0.93</AP_Mod>
+      <AP_Mod>1.14</AP_Mod>
       <Armor_Ignore>0.99</Armor_Ignore>
       <Armor_Pierce>0.91</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
@@ -37,7 +36,6 @@
       <Description>
         A well-rounded weapon.  It's heavier than comparative swords, thus less effective as a defensive weapon.
       </Description>
-      <Fatigue_Mod>1.05</Fatigue_Mod>
       <Initiative_Mod>0.96</Initiative_Mod>
       <Max_Durability>25</Max_Durability>
       <Parry_Mod>0.89</Parry_Mod>
@@ -45,16 +43,16 @@
       <Sprites>17</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
       <Value>180</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Riposte</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Broadsword">
       <Tier>Three</Tier>
       <Accuracy_Mod>0.94</Accuracy_Mod>
-      <AP_Mod>0.94</AP_Mod>
+      <AP_Mod>1.13</AP_Mod>
       <Armor_Ignore>0.99</Armor_Ignore>
       <Armor_Pierce>0.91</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
@@ -70,16 +68,16 @@
       <Sprites>32</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
       <Value>300</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Riposte</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Broadsword">
       <Tier>Two</Tier>
       <Accuracy_Mod>0.95</Accuracy_Mod>
-      <AP_Mod>0.95</AP_Mod>
+      <AP_Mod>1.12</AP_Mod>
       <Armor_Ignore>0.99</Armor_Ignore>
       <Armor_Pierce>0.91</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
@@ -95,16 +93,16 @@
       <Sprites>47</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
       <Value>650</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Riposte</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Chainsaw Blade">
       <Tier>One</Tier>
       <Accuracy_Mod>0.75</Accuracy_Mod>
-      <AP_Mod>0.90</AP_Mod>
+      <AP_Mod>1.22</AP_Mod>
       <Armor_Ignore>0.15</Armor_Ignore>
       <Armor_Pierce>0.15</Armor_Pierce>
       <Block_Ignore>0.25</Block_Ignore>
@@ -120,145 +118,139 @@
       <Sprites>125</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>2500</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Gash</WeaponEAbility>
-      <WeaponEAbility>Maim</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Gash</EAbility>
+      <EAbility>Maim</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Choppa">
       <Tier>Five</Tier>
-      <Accuracy_Mod>0.85</Accuracy_Mod>
-      <AP_Mod>0.86</AP_Mod>
-      <Armor_Ignore>0.91</Armor_Ignore>
+      <Accuracy_Mod>0.72</Accuracy_Mod>
+      <AP_Mod>1.28</AP_Mod>
+      <Armor_Ignore>0.88</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0.03</Block_Ignore>
-      <Damage>58</Damage>
+      <Damage>28</Damage>
       <Description>
         Supposedly, this is some fashion of sword... but it looks as if someone simply tied a sharp rock to a stick.
         Nonetheless, the jagged and heavy nature of the rock could probably cause some grisly injuries.
       </Description>
-      <Fatigue_Mod>1.20</Fatigue_Mod>
       <Initiative_Mod>0.94</Initiative_Mod>
-      <Max_Durability>100</Max_Durability>
-      <Parry_Mod>1.02</Parry_Mod>
-      <Shield_Damage_Percent>0.18</Shield_Damage_Percent>
+      <Max_Durability>28</Max_Durability>
+      <Parry_Mod>0.68</Parry_Mod>
+      <Shield_Damage_Percent>0.08</Shield_Damage_Percent>
       <Sprites>3,4,5</Sprites>
-      <Stamina_Mod>0.94</Stamina_Mod>
+      <Stamina_Mod>0.93</Stamina_Mod>
       <Value>100</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Gash</WeaponEAbility>
-      <WeaponEAbility>Maim</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Gash</EAbility>
+      <EAbility>Maim</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Choppa">
       <Tier>Four</Tier>
-      <Accuracy_Mod>0.85</Accuracy_Mod>
-      <AP_Mod>0.89</AP_Mod>
-      <Armor_Ignore>0.90</Armor_Ignore>
+      <Accuracy_Mod>0.73</Accuracy_Mod>
+      <AP_Mod>1.26</AP_Mod>
+      <Armor_Ignore>0.86</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>0.03</Block_Ignore>
-      <Damage>59</Damage>
+      <Block_Ignore>0.04</Block_Ignore>
+      <Damage>30</Damage>
       <Description>
         Exemplifying typical orcish technology, someone has tied a jagged piece of metal to a stick and now calls it a "choppa".
       </Description>
-      <Fatigue_Mod>1.18</Fatigue_Mod>
       <Initiative_Mod>0.95</Initiative_Mod>
-      <Max_Durability>100</Max_Durability>
-      <Parry_Mod>1.03</Parry_Mod>
-      <Shield_Damage_Percent>0.20</Shield_Damage_Percent>
+      <Max_Durability>30</Max_Durability>
+      <Parry_Mod>0.70</Parry_Mod>
+      <Shield_Damage_Percent>0.12</Shield_Damage_Percent>
       <Sprites>33,34,35</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
       <Value>150</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Gash</WeaponEAbility>
-      <WeaponEAbility>Maim</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Gash</EAbility>
+      <EAbility>Maim</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Choppa">
       <Tier>Three</Tier>
-      <Accuracy_Mod>0.88</Accuracy_Mod>
-      <AP_Mod>0.90</AP_Mod>
-      <Armor_Ignore>0.89</Armor_Ignore>
+      <Accuracy_Mod>0.75</Accuracy_Mod>
+      <AP_Mod>1.25</AP_Mod>
+      <Armor_Ignore>0.85</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>0.04</Block_Ignore>
-      <Damage>60</Damage>
+      <Block_Ignore>0.05</Block_Ignore>
+      <Damage>33</Damage>
       <Description>
         Someone has taken the time to sharpen this metal-on-a-stick.  Rather impressive by Orc standards.
       </Description>
-      <Fatigue_Mod>1.15</Fatigue_Mod>
       <Initiative_Mod>0.95</Initiative_Mod>
-      <Max_Durability>120</Max_Durability>
-      <Parry_Mod>1.03</Parry_Mod>
-      <Shield_Damage_Percent>0.22</Shield_Damage_Percent>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>0.72</Parry_Mod>
+      <Shield_Damage_Percent>0.14</Shield_Damage_Percent>
       <Sprites>63,64,65</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
-      <Value>500</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Gash</WeaponEAbility>
-      <WeaponEAbility>Maim</WeaponEAbility>
+      <Value>350</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Gash</EAbility>
+      <EAbility>Maim</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Choppa">
       <Tier>Two</Tier>
-      <Accuracy_Mod>0.90</Accuracy_Mod>
-      <AP_Mod>0.90</AP_Mod>
-      <Armor_Ignore>0.88</Armor_Ignore>
+      <Accuracy_Mod>0.76</Accuracy_Mod>
+      <AP_Mod>1.25</AP_Mod>
+      <Armor_Ignore>0.84</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
-      <Block_Ignore>0.05</Block_Ignore>
-      <Damage>65</Damage>
+      <Block_Ignore>0.06</Block_Ignore>
+      <Damage>36</Damage>
       <Description>
         Simple yet sturdy, this sword represents the finest Orcish craftmanship.
       </Description>
-      <Fatigue_Mod>1.14</Fatigue_Mod>
       <Initiative_Mod>0.95</Initiative_Mod>
-      <Max_Durability>200</Max_Durability>
-      <Parry_Mod>1.03</Parry_Mod>
-      <Shield_Damage_Percent>0.24</Shield_Damage_Percent>
+      <Max_Durability>50</Max_Durability>
+      <Parry_Mod>0.72</Parry_Mod>
+      <Shield_Damage_Percent>0.15</Shield_Damage_Percent>
       <Sprites>93,94,95</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
-      <Value>1500</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Gash</WeaponEAbility>
-      <WeaponEAbility>Maim</WeaponEAbility>
+      <Value>550</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Gash</EAbility>
+      <EAbility>Maim</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Claymore">
       <Tier>Three</Tier>
       <Accuracy_Mod>0.95</Accuracy_Mod>
-      <AP_Mod>0.90</AP_Mod>
+      <AP_Mod>1.15</AP_Mod>
       <Armor_Ignore>0.75</Armor_Ignore>
       <Armor_Pierce>0.90</Armor_Pierce>
-      <Block_Ignore>0.30</Block_Ignore>
-      <Damage>100</Damage>
+      <Block_Ignore>0.25</Block_Ignore>
+      <Damage>62</Damage>
       <Description>
         This sword represents a good balance beteween size and strength.  It is a potent defensive weapon, capable of parrying
         savage blows.  However, its size still makes it a fearsome offensive weapon.
       </Description>
-      <Fatigue_Mod>1.25</Fatigue_Mod>
-      <Initiative_Mod>0.75</Initiative_Mod>
-      <Max_Durability>180</Max_Durability>
-      <Parry_Mod>1.15</Parry_Mod>
-      <Shield_Damage_Percent>0.52</Shield_Damage_Percent>
+      <Initiative_Mod>0.80</Initiative_Mod>
+      <Max_Durability>50</Max_Durability>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Shield_Damage_Percent>0.10</Shield_Damage_Percent>
       <Sprites>30,31,32</Sprites>
-      <Stamina_Mod>0.75</Stamina_Mod>
-      <Value>1800</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Great_Strike</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <Stamina_Mod>0.80</Stamina_Mod>
+      <Value>400</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Great_Strike</EAbility>
+      <EAbility>Riposte</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Dino Fang Club">
       <Tier>Five</Tier>
       <Accuracy_Mod>0.82</Accuracy_Mod>
-      <AP_Mod>0.92</AP_Mod>
+      <AP_Mod>1.08</AP_Mod>
       <Armor_Ignore>0.91</Armor_Ignore>
       <Armor_Pierce>0.99</Armor_Pierce>
       <Block_Ignore>0.02</Block_Ignore>
@@ -266,95 +258,115 @@
       <Description>
         This is basically just some heavy bones attached to a wooden club.
       </Description>
-      <Fatigue_Mod>1.12</Fatigue_Mod>
       <Initiative_Mod>0.92</Initiative_Mod>
       <Max_Durability>15</Max_Durability>
-      <Parry_Mod>1.02</Parry_Mod>
-      <Shield_Damage_Percent>0.24</Shield_Damage_Percent>
+      <Parry_Mod>0.78</Parry_Mod>
+      <Shield_Damage_Percent>0.04</Shield_Damage_Percent>
       <Sprites>22</Sprites>
       <Stamina_Mod>0.93</Stamina_Mod>
       <Value>50</Value>
-      <WeaponEAbility>Crush</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
-      <WeaponEAbility>Stun</WeaponEAbility>
+      <EAbility>Crush</EAbility>
+      <EAbility>Riposte</EAbility>
+      <EAbility>Stun</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Dino Fang Club">
       <Tier>Four</Tier>
       <Accuracy_Mod>0.84</Accuracy_Mod>
-      <AP_Mod>0.93</AP_Mod>
+      <AP_Mod>1.07</AP_Mod>
       <Armor_Ignore>0.90</Armor_Ignore>
-      <Armor_Pierce>0.97</Armor_Pierce>
+      <Armor_Pierce>0.93</Armor_Pierce>
+      <Block_Ignore>0.02</Block_Ignore>
+      <Damage>30</Damage>
+      <Description>
+        Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
+        can easily pierce armor.
+      </Description>
+      <Initiative_Mod>0.93</Initiative_Mod>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>0.81</Parry_Mod>
+      <Shield_Damage_Percent>0.05</Shield_Damage_Percent>
+      <Sprites>52</Sprites>
+      <Stamina_Mod>0.94</Stamina_Mod>
+      <Value>150</Value>
+      <EAbility>Crush</EAbility>
+      <EAbility>Riposte</EAbility>
+      <EAbility>Stun</EAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Dino Fang Club">
+      <Tier>Three</Tier>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>1.06</AP_Mod>
+      <Armor_Ignore>0.89</Armor_Ignore>
+      <Armor_Pierce>0.89</Armor_Pierce>
       <Block_Ignore>0.02</Block_Ignore>
       <Damage>32</Damage>
       <Description>
         Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
         can easily pierce armor.
       </Description>
-      <Fatigue_Mod>1.11</Fatigue_Mod>
-      <Initiative_Mod>0.93</Initiative_Mod>
+      <Initiative_Mod>0.94</Initiative_Mod>
       <Max_Durability>25</Max_Durability>
-      <Parry_Mod>1.03</Parry_Mod>
-      <Shield_Damage_Percent>0.25</Shield_Damage_Percent>
-      <Sprites>52</Sprites>
-      <Stamina_Mod>0.94</Stamina_Mod>
-      <Value>150</Value>
-      <WeaponEAbility>Crush</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
-      <WeaponEAbility>Stun</WeaponEAbility>
-      <EWeaponType>One_Handed</EWeaponType>
-      <EWeaponUse>Melee</EWeaponUse>
-    </Weapon>
-    <Weapon name="Dino Fang Club">
-      <Tier>Three</Tier>
-      <Accuracy_Mod>0.86</Accuracy_Mod>
-      <AP_Mod>0.94</AP_Mod>
-      <Armor_Ignore>0.89</Armor_Ignore>
-      <Armor_Pierce>0.96</Armor_Pierce>
-      <Block_Ignore>0.02</Block_Ignore>
-      <Damage>35</Damage>
-      <Description>
-        Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
-        can easily pierce armor.
-      </Description>
-      <Fatigue_Mod>1.10</Fatigue_Mod>
-      <Initiative_Mod>0.95</Initiative_Mod>
-      <Max_Durability>35</Max_Durability>
-      <Parry_Mod>1.04</Parry_Mod>
-      <Shield_Damage_Percent>0.27</Shield_Damage_Percent>
+      <Parry_Mod>0.82</Parry_Mod>
+      <Shield_Damage_Percent>0.06</Shield_Damage_Percent>
       <Sprites>82</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
       <Value>350</Value>
-      <WeaponEAbility>Crush</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
-      <WeaponEAbility>Stun</WeaponEAbility>
+      <EAbility>Crush</EAbility>
+      <EAbility>Riposte</EAbility>
+      <EAbility>Stun</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Dino Fang Club">
       <Tier>Two</Tier>
-      <Accuracy_Mod>0.88</Accuracy_Mod>
-      <AP_Mod>0.95</AP_Mod>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>1.05</AP_Mod>
       <Armor_Ignore>0.88</Armor_Ignore>
-      <Armor_Pierce>0.95</Armor_Pierce>
+      <Armor_Pierce>0.86</Armor_Pierce>
       <Block_Ignore>0.03</Block_Ignore>
-      <Damage>42</Damage>
+      <Damage>35</Damage>
       <Description>
         Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
         can easily pierce armor.
       </Description>
-      <Fatigue_Mod>1.10</Fatigue_Mod>
       <Initiative_Mod>0.95</Initiative_Mod>
       <Max_Durability>60</Max_Durability>
       <Parry_Mod>1.05</Parry_Mod>
-      <Shield_Damage_Percent>0.28</Shield_Damage_Percent>
+      <Shield_Damage_Percent>0.07</Shield_Damage_Percent>
       <Sprites>112</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
-      <Value>700</Value>
-      <WeaponEAbility>Crush</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
-      <WeaponEAbility>Stun</WeaponEAbility>
+      <Value>550</Value>
+      <EAbility>Crush</EAbility>
+      <EAbility>Riposte</EAbility>
+      <EAbility>Stun</EAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Toof">
+      <Tier>One</Tier>
+      <Accuracy_Mod>0.80</Accuracy_Mod>
+      <AP_Mod>1.15</AP_Mod>
+      <Armor_Ignore>0.52</Armor_Ignore>
+      <Armor_Pierce>0.85</Armor_Pierce>
+      <Block_Ignore>0.05</Block_Ignore>
+      <Damage>52</Damage>
+      <Description>
+        You don't want to meet the creature that produced this tooth...
+      </Description>
+      <Initiative_Mod>0.80</Initiative_Mod>
+      <Max_Durability>80</Max_Durability>
+      <Parry_Mod>0.60</Parry_Mod>
+      <Shield_Damage_Percent>0.15</Shield_Damage_Percent>
+      <Sprites>142</Sprites>
+      <Stamina_Mod>0.85</Stamina_Mod>
+      <Value>900</Value>
+      <EAbility>Crush</EAbility>
+      <EAbility>Great_Strike</EAbility>
+      <EAbility>Stun</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -377,9 +389,9 @@
       <Sprites>36</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
       <Value>800</Value>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Riposte</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -388,76 +400,71 @@
       <Accuracy_Mod>1</Accuracy_Mod>
       <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.97</Armor_Pierce>
+      <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>52</Damage>
+      <Damage>38</Damage>
       <Description>
         Normally, katanas are exemplary works of craftmanship.  Normally.
       </Description>
-      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>5</Max_Durability>
-      <Parry_Mod>1.19</Parry_Mod>
-      <Shield_Damage_Percent>0.02</Shield_Damage_Percent>
+      <Max_Durability>10</Max_Durability>
+      <Parry_Mod>1.0</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>10,11</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>70</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Double_Strike</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Riposte</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Katana">
       <Tier>Four</Tier>
-      <Accuracy_Mod>1</Accuracy_Mod>
+      <Accuracy_Mod>1.02</Accuracy_Mod>
       <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.95</Armor_Pierce>
+      <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>60</Damage>
+      <Damage>44</Damage>
       <Description>
         This katana is slightly less majestic than most...
       </Description>
-      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>15</Max_Durability>
-      <Parry_Mod>1.22</Parry_Mod>
-      <Shield_Damage_Percent>0.02</Shield_Damage_Percent>
+      <Parry_Mod>1.02</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>40,41</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
-      <Value>500</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Double_Strike</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
+      <Value>200</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Riposte</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Katana">
       <Tier>Three</Tier>
-      <Accuracy_Mod>1</Accuracy_Mod>
+      <Accuracy_Mod>1.04</Accuracy_Mod>
       <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.93</Armor_Pierce>
+      <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>65</Damage>
+      <Damage>48</Damage>
       <Description>
         This katana is well-rounded weapon of fine craftmanship.
       </Description>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>35</Max_Durability>
-      <Parry_Mod>1.25</Parry_Mod>
-      <Shield_Damage_Percent>0.02</Shield_Damage_Percent>
+      <Max_Durability>22</Max_Durability>
+      <Parry_Mod>1.05</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>70,71</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
-      <Value>800</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Double_Strike</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
+      <Value>450</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Riposte</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -466,24 +473,23 @@
       <Accuracy_Mod>1</Accuracy_Mod>
       <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.92</Armor_Pierce>
+      <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>75</Damage>
+      <Damage>53</Damage>
       <Description>
-        TODO
+        A beautiful, deadly weapon.  
       </Description>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>50</Max_Durability>
-      <Parry_Mod>1.26</Parry_Mod>
-      <Shield_Damage_Percent>0.02</Shield_Damage_Percent>
+      <Max_Durability>28</Max_Durability>
+      <Parry_Mod>1.08</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>100,101</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
-      <Value>1400</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Double_Strike</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
+      <Value>800</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Riposte</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -506,10 +512,10 @@
       <Sprites>15</Sprites>
       <Stamina_Mod>0.88</Stamina_Mod>
       <Value>800</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Riposte</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -525,7 +531,6 @@
         A well-rounded, versatile weapon.  It isn't fancy, but it is quality-made.  In the right hands, this weapon
         could be deadly.
       </Description>
-      <Fatigue_Mod>1.15</Fatigue_Mod>
       <Initiative_Mod>0.97</Initiative_Mod>
       <Max_Durability>100</Max_Durability>
       <Parry_Mod>1.15</Parry_Mod>
@@ -533,119 +538,111 @@
       <Sprites>15</Sprites>
       <Stamina_Mod>0.90</Stamina_Mod>
       <Value>1500</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Riposte</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Nodachi">
       <Tier>Five</Tier>
-      <Accuracy_Mod>0.92</Accuracy_Mod>
-      <AP_Mod>1</AP_Mod>
-      <Armor_Ignore>0.98</Armor_Ignore>
-      <Armor_Pierce>0.99</Armor_Pierce>
+      <Accuracy_Mod>1</Accuracy_Mod>
+      <AP_Mod>0.89</AP_Mod>
+      <Armor_Ignore>0.92</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0.15</Block_Ignore>
-      <Damage>95</Damage>
+      <Damage>58</Damage>
       <Description>
         A heavier version of the traditional katana meant to easily penetrate even the heaviest armor.  This one
         has seen some wear, though...
       </Description>
-      <Fatigue_Mod>1.12</Fatigue_Mod>
-      <Initiative_Mod>0.94</Initiative_Mod>
-      <Max_Durability>8</Max_Durability>
+      <Initiative_Mod>0.88</Initiative_Mod>
+      <Max_Durability>10</Max_Durability>
       <Parry_Mod>1.01</Parry_Mod>
-      <Shield_Damage_Percent>0.18</Shield_Damage_Percent>
+      <Shield_Damage_Percent>0.08</Shield_Damage_Percent>
       <Sprites>9,10</Sprites>
       <Stamina_Mod>0.92</Stamina_Mod>
       <Value>70</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Double_Strike</WeaponEAbility>
-      <WeaponEAbility>Great_Strike</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
-      <WeaponEAbility>Wide_Slash</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Great_Strike</EAbility>
+      <EAbility>Riposte</EAbility>
+      <EAbility>Wide_Slash</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Nodachi">
       <Tier>Four</Tier>
-      <Accuracy_Mod>0.93</Accuracy_Mod>
-      <AP_Mod>1</AP_Mod>
-      <Armor_Ignore>0.96</Armor_Ignore>
-      <Armor_Pierce>0.98</Armor_Pierce>
-      <Block_Ignore>0.15</Block_Ignore>
-      <Damage>125</Damage>
+      <Accuracy_Mod>1.01</Accuracy_Mod>
+      <AP_Mod>0.90</AP_Mod>
+      <Armor_Ignore>0.93</Armor_Ignore>
+      <Armor_Pierce>1.0</Armor_Pierce>
+      <Block_Ignore>0.16</Block_Ignore>
+      <Damage>64</Damage>
       <Description>
         A heavier version of the traditional katana meant to easily penetrate even the heaviest armor.
       </Description>
-      <Fatigue_Mod>1.10</Fatigue_Mod>
-      <Initiative_Mod>0.96</Initiative_Mod>
-      <Max_Durability>20</Max_Durability>
+      <Initiative_Mod>0.89</Initiative_Mod>
+      <Max_Durability>15</Max_Durability>
       <Parry_Mod>1.02</Parry_Mod>
-      <Shield_Damage_Percent>0.20</Shield_Damage_Percent>
+      <Shield_Damage_Percent>0.10</Shield_Damage_Percent>
       <Sprites>24,25</Sprites>
-      <Stamina_Mod>0.94</Stamina_Mod>
-      <Value>300</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Double_Strike</WeaponEAbility>
-      <WeaponEAbility>Great_Strike</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
-      <WeaponEAbility>Wide_Slash</WeaponEAbility>
+      <Stamina_Mod>0.93</Stamina_Mod>
+      <Value>250</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Great_Strike</EAbility>
+      <EAbility>Riposte</EAbility>
+      <EAbility>Wide_Slash</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Nodachi">
       <Tier>Three</Tier>
-      <Accuracy_Mod>0.95</Accuracy_Mod>
-      <AP_Mod>1</AP_Mod>
-      <Armor_Ignore>0.94</Armor_Ignore>
-      <Armor_Pierce>0.96</Armor_Pierce>
-      <Block_Ignore>0.15</Block_Ignore>
-      <Damage>165</Damage>
+      <Accuracy_Mod>1.02</Accuracy_Mod>
+      <AP_Mod>0.91</AP_Mod>
+      <Armor_Ignore>0.92</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0.17</Block_Ignore>
+      <Damage>68</Damage>
       <Description>
         A heavier version of the traditional katana meant to easily penetrate even the heaviest armor.
       </Description>
-      <Fatigue_Mod>1.08</Fatigue_Mod>
-      <Initiative_Mod>0.98</Initiative_Mod>
-      <Max_Durability>40</Max_Durability>
+      <Initiative_Mod>0.90</Initiative_Mod>
+      <Max_Durability>22</Max_Durability>
       <Parry_Mod>1.04</Parry_Mod>
-      <Shield_Damage_Percent>0.22</Shield_Damage_Percent>
+      <Shield_Damage_Percent>0.12</Shield_Damage_Percent>
       <Sprites>39,40</Sprites>
-      <Stamina_Mod>0.95</Stamina_Mod>
-      <Value>800</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Double_Strike</WeaponEAbility>
-      <WeaponEAbility>Great_Strike</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
-      <WeaponEAbility>Wide_Slash</WeaponEAbility>
+      <Stamina_Mod>0.94</Stamina_Mod>
+      <Value>350</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Great_Strike</EAbility>
+      <EAbility>Riposte</EAbility>
+      <EAbility>Wide_Slash</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Nodachi">
       <Tier>Two</Tier>
-      <Accuracy_Mod>0.95</Accuracy_Mod>
-      <AP_Mod>1</AP_Mod>
-      <Armor_Ignore>0.93</Armor_Ignore>
-      <Armor_Pierce>0.95</Armor_Pierce>
-      <Block_Ignore>0.15</Block_Ignore>
-      <Damage>185</Damage>
+      <Accuracy_Mod>1.03</Accuracy_Mod>
+      <AP_Mod>0.92</AP_Mod>
+      <Armor_Ignore>0.91</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0.18</Block_Ignore>
+      <Damage>73</Damage>
       <Description>
         A heavier version of the traditional katana meant to easily penetrate even the heaviest armor. It is absolutely lethal in the right hands.
       </Description>
-      <Fatigue_Mod>1.06</Fatigue_Mod>
-      <Initiative_Mod>0.99</Initiative_Mod>
-      <Max_Durability>60</Max_Durability>
+      <Initiative_Mod>0.90</Initiative_Mod>
+      <Max_Durability>25</Max_Durability>
       <Parry_Mod>1.05</Parry_Mod>
-      <Shield_Damage_Percent>0.24</Shield_Damage_Percent>
+      <Shield_Damage_Percent>0.13</Shield_Damage_Percent>
       <Sprites>54,55</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
-      <Value>2200</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Double_Strike</WeaponEAbility>
-      <WeaponEAbility>Great_Strike</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
-      <WeaponEAbility>Wide_Slash</WeaponEAbility>
+      <Value>600</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Great_Strike</EAbility>
+      <EAbility>Riposte</EAbility>
+      <EAbility>Wide_Slash</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -656,96 +653,92 @@
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.97</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>22</Damage>
+      <Damage>18</Damage>
       <Description>
         A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
       </Description>
-      <Fatigue_Mod>1.12</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>20</Max_Durability>
+      <Max_Durability>10</Max_Durability>
       <Parry_Mod>1.02</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>19</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
       <Value>50</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Gash</WeaponEAbility>
-      <WeaponEAbility>Maim</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Gash</EAbility>
+      <EAbility>Maim</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Notched Blade">
       <Tier>Four</Tier>
-      <Accuracy_Mod>0.92</Accuracy_Mod>
+      <Accuracy_Mod>0.89</Accuracy_Mod>
       <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.96</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>25</Damage>
+      <Damage>20</Damage>
       <Description>
         A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
       </Description>
-      <Fatigue_Mod>1.11</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>30</Max_Durability>
+      <Max_Durability>12</Max_Durability>
       <Parry_Mod>1.03</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>49</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
       <Value>80</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Gash</WeaponEAbility>
-      <WeaponEAbility>Maim</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Gash</EAbility>
+      <EAbility>Maim</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Notched Blade">
       <Tier>Three</Tier>
-      <Accuracy_Mod>0.95</Accuracy_Mod>
+      <Accuracy_Mod>0.90</Accuracy_Mod>
       <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.96</Armor_Pierce>
+      <Armor_Pierce>0.94</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>32</Damage>
+      <Damage>22</Damage>
       <Description>
         A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
       </Description>
-      <Fatigue_Mod>1.10</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>50</Max_Durability>
-      <Parry_Mod>0.95</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Max_Durability>15</Max_Durability>
+      <Parry_Mod>1.05</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>79</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
-      <Value>200</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Gash</WeaponEAbility>
-      <WeaponEAbility>Maim</WeaponEAbility>
+      <Value>180</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Gash</EAbility>
+      <EAbility>Maim</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Notched Blade">
       <Tier>Two</Tier>
-      <Accuracy_Mod>0.98</Accuracy_Mod>
+      <Accuracy_Mod>0.91</Accuracy_Mod>
       <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.92</Armor_Pierce>
+      <Armor_Pierce>0.93</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>45</Damage>
+      <Damage>25</Damage>
       <Description>
         A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
       </Description>
-      <Fatigue_Mod>1.10</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>65</Max_Durability>
-      <Parry_Mod>0.97</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Max_Durability>18</Max_Durability>
+      <Parry_Mod>1.06</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>109</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
-      <Value>450</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Gash</WeaponEAbility>
-      <WeaponEAbility>Maim</WeaponEAbility>
+      <Value>350</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Gash</EAbility>
+      <EAbility>Maim</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -754,184 +747,173 @@
       <Accuracy_Mod>0.82</Accuracy_Mod>
       <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.88</Armor_Pierce>
+      <Armor_Pierce>0.78</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>25</Damage>
+      <Damage>18</Damage>
       <Description>
         A blade covered in disgusting slime.  It's fairly obvious the pointy nature of the blade is meant to poison enemies with the slime.
       </Description>
-      <Fatigue_Mod>1.08</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>20</Max_Durability>
-      <Parry_Mod>1.03</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Max_Durability>5</Max_Durability>
+      <Parry_Mod>0.78</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>20</Sprites>
-      <Stamina_Mod>0.95</Stamina_Mod>
+      <Stamina_Mod>1</Stamina_Mod>
       <Value>80</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Riposte</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Slime Blade">
       <Tier>Four</Tier>
-      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <Accuracy_Mod>0.83</Accuracy_Mod>
       <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.85</Armor_Pierce>
+      <Armor_Pierce>0.77</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>28</Damage>
+      <Damage>20</Damage>
       <Description>
         A blade covered in disgusting slime.  It's fairly obvious the pointy nature of the blade is meant to poison enemies with the slime.
       </Description>
-      <Fatigue_Mod>1.07</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>25</Max_Durability>
-      <Parry_Mod>1.08</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Max_Durability>8</Max_Durability>
+      <Parry_Mod>0.79</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>50</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
       <Value>200</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Riposte</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Slime Blade">
       <Tier>Three</Tier>
-      <Accuracy_Mod>0.95</Accuracy_Mod>
+      <Accuracy_Mod>0.84</Accuracy_Mod>
       <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
-      <Armor_Pierce>0.80</Armor_Pierce>
+      <Armor_Pierce>0.76</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
-      <Damage>32</Damage>
+      <Damage>23</Damage>
       <Description>
         This blade is covered in living, breathing slime...
       </Description>
-      <Fatigue_Mod>1.05</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>40</Max_Durability>
-      <Parry_Mod>1.12</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Max_Durability>10</Max_Durability>
+      <Parry_Mod>0.80</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>80</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
       <Value>500</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Riposte</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Riposte</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Zweihander">
       <Tier>Five</Tier>
-      <Accuracy_Mod>0.75</Accuracy_Mod>
-      <AP_Mod>0.75</AP_Mod>
-      <Armor_Ignore>0.60</Armor_Ignore>
-      <Armor_Pierce>0.95</Armor_Pierce>
-      <Block_Ignore>0.70</Block_Ignore>
-      <Damage>92</Damage>
+      <Accuracy_Mod>0.73</Accuracy_Mod>
+      <AP_Mod>1.38</AP_Mod>
+      <Armor_Ignore>0.62</Armor_Ignore>
+      <Armor_Pierce>0.97</Armor_Pierce>
+      <Block_Ignore>0.73</Block_Ignore>
+      <Damage>55</Damage>
       <Description>
         This massive sword is too heavy to utilize for any defensive purposes.  It is; however, quite capable of
         decimating enemies on the battlefield.
       </Description>
-      <Fatigue_Mod>1.40</Fatigue_Mod>
-      <Initiative_Mod>0.65</Initiative_Mod>
-      <Max_Durability>80</Max_Durability>
-      <Parry_Mod>0.10</Parry_Mod>
-      <Shield_Damage_Percent>0.94</Shield_Damage_Percent>
+      <Initiative_Mod>0.62</Initiative_Mod>
+      <Max_Durability>25</Max_Durability>
+      <Parry_Mod>0.22</Parry_Mod>
+      <Shield_Damage_Percent>0.48</Shield_Damage_Percent>
       <Sprites>3</Sprites>
-      <Stamina_Mod>0.65</Stamina_Mod>
-      <Value>800</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
-      <WeaponEAbility>Great_Strike</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <Stamina_Mod>0.70</Stamina_Mod>
+      <Value>250</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Break_Shield</EAbility>
+      <EAbility>Great_Strike</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Zweihander">
       <Tier>Four</Tier>
-      <Accuracy_Mod>0.80</Accuracy_Mod>
-      <AP_Mod>0.80</AP_Mod>
-      <Armor_Ignore>0.55</Armor_Ignore>
-      <Armor_Pierce>0.90</Armor_Pierce>
-      <Block_Ignore>0.65</Block_Ignore>
-      <Damage>100</Damage>
+      <Accuracy_Mod>0.74</Accuracy_Mod>
+      <AP_Mod>1.36</AP_Mod>
+      <Armor_Ignore>0.60</Armor_Ignore>
+      <Armor_Pierce>0.96</Armor_Pierce>
+      <Block_Ignore>0.72</Block_Ignore>
+      <Damage>60</Damage>
       <Description>
         This massive sword is too heavy to utilize for any defensive purposes.  It is; however, quite capable of
         decimating enemies on the battlefield.
       </Description>
-      <Fatigue_Mod>1.35</Fatigue_Mod>
-      <Initiative_Mod>0.70</Initiative_Mod>
-      <Max_Durability>90</Max_Durability>
-      <Parry_Mod>0.15</Parry_Mod>
-      <Shield_Damage_Percent>0.90</Shield_Damage_Percent>
+      <Initiative_Mod>0.63</Initiative_Mod>
+      <Max_Durability>30</Max_Durability>
+      <Parry_Mod>0.24</Parry_Mod>
+      <Shield_Damage_Percent>0.50</Shield_Damage_Percent>
       <Sprites>18</Sprites>
-      <Stamina_Mod>0.70</Stamina_Mod>
-      <Value>500</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
-      <WeaponEAbility>Great_Strike</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <Stamina_Mod>0.72</Stamina_Mod>
+      <Value>350</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Break_Shield</EAbility>
+      <EAbility>Great_Strike</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Zweihander">
       <Tier>Three</Tier>
-      <Accuracy_Mod>0.80</Accuracy_Mod>
-      <AP_Mod>0.80</AP_Mod>
-      <Armor_Ignore>0.50</Armor_Ignore>
-      <Armor_Pierce>0.85</Armor_Pierce>
-      <Block_Ignore>0.60</Block_Ignore>
-      <Damage>110</Damage>
+      <Accuracy_Mod>0.75</Accuracy_Mod>
+      <AP_Mod>1.35</AP_Mod>
+      <Armor_Ignore>0.58</Armor_Ignore>
+      <Armor_Pierce>0.95</Armor_Pierce>
+      <Block_Ignore>0.70</Block_Ignore>
+      <Damage>65</Damage>
       <Description>
         This massive sword is too heavy to utilize for any defensive purposes.  It is; however, quite capable of
         decimating enemies on the battlefield.
       </Description>
-      <Fatigue_Mod>1.30</Fatigue_Mod>
-      <Initiative_Mod>0.75</Initiative_Mod>
-      <Max_Durability>100</Max_Durability>
-      <Parry_Mod>0.20</Parry_Mod>
-      <Shield_Damage_Percent>0.88</Shield_Damage_Percent>
+      <Initiative_Mod>0.64</Initiative_Mod>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>0.25</Parry_Mod>
+      <Shield_Damage_Percent>0.52</Shield_Damage_Percent>
       <Sprites>33</Sprites>
-      <Stamina_Mod>0.65</Stamina_Mod>
-      <Value>800</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
-      <WeaponEAbility>Great_Strike</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <Stamina_Mod>0.73</Stamina_Mod>
+      <Value>500</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Break_Shield</EAbility>
+      <EAbility>Great_Strike</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Zweihander">
       <Tier>Two</Tier>
-      <Accuracy_Mod>0.80</Accuracy_Mod>
-      <AP_Mod>0.80</AP_Mod>
-      <Armor_Ignore>0.50</Armor_Ignore>
-      <Armor_Pierce>0.85</Armor_Pierce>
-      <Block_Ignore>0.60</Block_Ignore>
-      <Damage>120</Damage>
+      <Accuracy_Mod>0.76</Accuracy_Mod>
+      <AP_Mod>1.34</AP_Mod>
+      <Armor_Ignore>0.57</Armor_Ignore>
+      <Armor_Pierce>0.64</Armor_Pierce>
+      <Block_Ignore>0.69</Block_Ignore>
+      <Damage>70</Damage>
       <Description>
         This massive sword is too heavy to utilize for any defensive purposes.  It is; however, quite capable of
         decimating enemies on the battlefield.
       </Description>
-      <Fatigue_Mod>1.30</Fatigue_Mod>
-      <Initiative_Mod>0.75</Initiative_Mod>
-      <Max_Durability>110</Max_Durability>
-      <Parry_Mod>0.20</Parry_Mod>
-      <Shield_Damage_Percent>0.88</Shield_Damage_Percent>
+      <Initiative_Mod>0.65</Initiative_Mod>
+      <Max_Durability>40</Max_Durability>
+      <Parry_Mod>0.26</Parry_Mod>
+      <Shield_Damage_Percent>0.54</Shield_Damage_Percent>
       <Sprites>48</Sprites>
-      <Stamina_Mod>0.65</Stamina_Mod>
-      <Value>1200</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Break_Shield</WeaponEAbility>
-      <WeaponEAbility>Great_Strike</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <Stamina_Mod>0.75</Stamina_Mod>
+      <Value>900</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Break_Shield</EAbility>
+      <EAbility>Great_Strike</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>

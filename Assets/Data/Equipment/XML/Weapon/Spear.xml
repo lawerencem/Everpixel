@@ -19,8 +19,8 @@
       <Sprites>67</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>3000</Value>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -42,9 +42,9 @@
       <Sprites>7</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>100</Value>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -66,9 +66,9 @@
       <Sprites>22</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>250</Value>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -90,9 +90,9 @@
       <Sprites>37</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>450</Value>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -114,9 +114,9 @@
       <Sprites>37</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>450</Value>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -135,9 +135,9 @@
       <Sprites>60</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>2500</Value>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -160,9 +160,9 @@
       <Sprites>63</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>2250</Value>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -184,10 +184,10 @@
       <Sprites>65</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>3000</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Gash</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Gash</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -209,10 +209,10 @@
       <Sprites>5</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>55</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Gash</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Gash</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -234,10 +234,10 @@
       <Sprites>20</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>120</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Gash</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Gash</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -259,10 +259,10 @@
       <Sprites>35</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>200</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Gash</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Gash</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -284,10 +284,10 @@
       <Sprites>50</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>200</Value>
-      <WeaponEAbility>Slash</WeaponEAbility>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Gash</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Gash</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -309,9 +309,9 @@
       <Sprites>0,1,2</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>50</Value>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -333,9 +333,9 @@
       <Sprites>15,16,17</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>250</Value>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -358,9 +358,9 @@
       <Sprites>30,31,32</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>350</Value>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -383,9 +383,9 @@
       <Sprites>45,46,47</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>700</Value>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -408,9 +408,9 @@
       <Sprites>64</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>2250</Value>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -432,9 +432,9 @@
       <Sprites>3,4</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>200</Value>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -456,9 +456,9 @@
       <Sprites>18,19</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>300</Value>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -481,9 +481,9 @@
       <Sprites>33,34</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>550</Value>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>  
@@ -506,9 +506,9 @@
       <Sprites>48,49</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>700</Value>
-      <WeaponEAbility>Stab</WeaponEAbility>
-      <WeaponEAbility>Pierce</WeaponEAbility>
-      <WeaponEAbility>Spear Wall</WeaponEAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Spear Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>  

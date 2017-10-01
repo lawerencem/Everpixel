@@ -23,14 +23,14 @@
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>8</Max_Durability>
-      <Parry_Mod>1.0</Parry_Mod>
+      <Parry_Mod>0.15</Parry_Mod>
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0</Shield_Damage_Percent>
       <Sprite_FX_Path>Ween_Bullet</Sprite_FX_Path>
       <Sprites>0</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>250</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
+      <EAbility>Fire</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -56,14 +56,14 @@
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>15</Max_Durability>
-      <Parry_Mod>1.0</Parry_Mod>
+      <Parry_Mod>0.15</Parry_Mod>
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0</Shield_Damage_Percent>
       <Sprite_FX_Path>Ween_Bullet</Sprite_FX_Path>
       <Sprites>0</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>550</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
+      <EAbility>Fire</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -89,14 +89,14 @@
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>20</Max_Durability>
-      <Parry_Mod>1.0</Parry_Mod>
+      <Parry_Mod>0.15</Parry_Mod>
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0</Shield_Damage_Percent>
       <Sprite_FX_Path>Ween_Bullet</Sprite_FX_Path>
       <Sprites>0</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>800</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
+      <EAbility>Fire</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -122,14 +122,14 @@
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>20</Max_Durability>
-      <Parry_Mod>1.0</Parry_Mod>
+      <Parry_Mod>0.15</Parry_Mod>
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0</Shield_Damage_Percent>
       <Sprite_FX_Path>Ween_Bullet</Sprite_FX_Path>
       <Sprites>0</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>1200</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
+      <EAbility>Fire</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>

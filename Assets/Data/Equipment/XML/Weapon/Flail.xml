@@ -20,8 +20,8 @@
       <Sprites>0</Sprites>
       <Stamina_Mod>0.32</Stamina_Mod>
       <Value>300</Value>
-      <WeaponEAbility>Crush</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EAbility>Crush</EAbility>
+      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -45,8 +45,8 @@
       <Sprites>1</Sprites>
       <Stamina_Mod>0.34</Stamina_Mod>
       <Value>650</Value>
-      <WeaponEAbility>Crush</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EAbility>Crush</EAbility>
+      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -70,8 +70,8 @@
       <Sprites>2</Sprites>
       <Stamina_Mod>0.35</Stamina_Mod>
       <Value>1100</Value>
-      <WeaponEAbility>Crush</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EAbility>Crush</EAbility>
+      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -95,8 +95,8 @@
       <Sprites>3</Sprites>
       <Stamina_Mod>0.35</Stamina_Mod>
       <Value>1500</Value>
-      <WeaponEAbility>Crush</WeaponEAbility>
-      <WeaponEAbility>Scatter</WeaponEAbility>
+      <EAbility>Crush</EAbility>
+      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>

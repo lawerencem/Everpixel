@@ -33,8 +33,8 @@
       <Sprite_FX_Path>Arrow</Sprite_FX_Path>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>180</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
-      <WeaponEAbility>Aim</WeaponEAbility>
+      <EAbility>Fire</EAbility>
+      <EAbility>Aim</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -70,8 +70,8 @@
       <Sprite_FX_Path>Arrow</Sprite_FX_Path>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>200</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
-      <WeaponEAbility>Aim</WeaponEAbility>
+      <EAbility>Fire</EAbility>
+      <EAbility>Aim</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -107,8 +107,8 @@
       <Sprite_FX_Path>Arrow</Sprite_FX_Path>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>250</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
-      <WeaponEAbility>Aim</WeaponEAbility>
+      <EAbility>Fire</EAbility>
+      <EAbility>Aim</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -144,8 +144,8 @@
       <Sprite_FX_Path>Arrow</Sprite_FX_Path>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>350</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
-      <WeaponEAbility>Aim</WeaponEAbility>
+      <EAbility>Fire</EAbility>
+      <EAbility>Aim</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>

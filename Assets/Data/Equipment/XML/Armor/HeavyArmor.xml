@@ -3,151 +3,143 @@
   <EArmorType name ="Heavy_Armor">
     <Armor name="Dou">
       <Tier>Five</Tier>
-      <AP_Mod>0.94</AP_Mod>
-      <Block_Mod>0.40</Block_Mod>
+      <AP_Mod>1.22</AP_Mod>
+      <Block_Mod>0.35</Block_Mod>
       <Flat_Damage_Ignore>11</Flat_Damage_Ignore>
-      <Damage_Reduction>0.98</Damage_Reduction>
+      <Damage_Reduction>0.76</Damage_Reduction>
       <Description>
         The armor preferred by samurai.  This one isn't particularly well-crafted...
       </Description>
-      <Dodge_Mod>0.82</Dodge_Mod>
+      <Dodge_Mod>0.68</Dodge_Mod>
       <Durability>30</Durability>
-      <Fatigue_Mod>1.08</Fatigue_Mod>
-      <Initiative_Mod>0.92</Initiative_Mod>
+      <Initiative_Mod>0.78</Initiative_Mod>
       <Parry_Mod>0.97</Parry_Mod>
       <Sprites>4,5</Sprites>
-      <Stamina_Mod>0.78</Stamina_Mod>
+      <Stamina_Mod>0.81</Stamina_Mod>
       <Value>350</Value>
     </Armor>
     <Armor name="Dou">
       <Tier>Four</Tier>
-      <AP_Mod>0.94</AP_Mod>
-      <Block_Mod>0.40</Block_Mod>
-      <Flat_Damage_Ignore>13</Flat_Damage_Ignore>
-      <Damage_Reduction>0.97</Damage_Reduction>
+      <AP_Mod>1.21</AP_Mod>
+      <Block_Mod>0.35</Block_Mod>
+      <Flat_Damage_Ignore>12</Flat_Damage_Ignore>
+      <Damage_Reduction>0.75</Damage_Reduction>
       <Description>
         The armor preferred by samurai.  The interlocking plates offer great protection while still being quite light.
       </Description>
-      <Dodge_Mod>0.84</Dodge_Mod>
-      <Durability>50</Durability>
-      <Fatigue_Mod>1.06</Fatigue_Mod>
-      <Initiative_Mod>0.94</Initiative_Mod>
+      <Dodge_Mod>0.70</Dodge_Mod>
+      <Durability>36</Durability>
+      <Initiative_Mod>0.79</Initiative_Mod>
       <Parry_Mod>0.98</Parry_Mod>
       <Sprites>19,20</Sprites>
-      <Stamina_Mod>0.80</Stamina_Mod>
-      <Value>550</Value>
+      <Stamina_Mod>0.82</Stamina_Mod>
+      <Value>650</Value>
     </Armor>
     <Armor name="Dou">
       <Tier>Three</Tier>
-      <AP_Mod>0.96</AP_Mod>
-      <Block_Mod>0.40</Block_Mod>
-      <Flat_Damage_Ignore>18</Flat_Damage_Ignore>
-      <Damage_Reduction>0.97</Damage_Reduction>
+      <AP_Mod>1.20</AP_Mod>
+      <Block_Mod>0.35</Block_Mod>
+      <Flat_Damage_Ignore>12</Flat_Damage_Ignore>
+      <Damage_Reduction>0.74</Damage_Reduction>
       <Description>
         The armor preferred by samurai.  The interlocking plates offer great protection while still being quite light.
       </Description>
-      <Dodge_Mod>0.84</Dodge_Mod>
-      <Durability>70</Durability>
-      <Fatigue_Mod>1.06</Fatigue_Mod>
-      <Initiative_Mod>0.94</Initiative_Mod>
+      <Dodge_Mod>0.71</Dodge_Mod>
+      <Durability>42</Durability>
+      <Initiative_Mod>0.78</Initiative_Mod>
       <Parry_Mod>0.99</Parry_Mod>
       <Sprites>34,35</Sprites>
-      <Stamina_Mod>0.82</Stamina_Mod>
-      <Value>800</Value>
+      <Stamina_Mod>0.83</Stamina_Mod>
+      <Value>1200</Value>
     </Armor>
     <Armor name="Dou">
       <Tier>Two</Tier>
-      <AP_Mod>0.97</AP_Mod>
-      <Block_Mod>0.40</Block_Mod>
-      <Flat_Damage_Ignore>20</Flat_Damage_Ignore>
-      <Damage_Reduction>0.80</Damage_Reduction>
+      <AP_Mod>1.19</AP_Mod>
+      <Block_Mod>0.35</Block_Mod>
+      <Flat_Damage_Ignore>13</Flat_Damage_Ignore>
+      <Damage_Reduction>0.73</Damage_Reduction>
       <Description>
         The armor preferred by samurai.  This armor has a cuirass rather than interlocking plates, but is still very light.
       </Description>
-      <Dodge_Mod>0.80</Dodge_Mod>
-      <Durability>110</Durability>
-      <Fatigue_Mod>1.10</Fatigue_Mod>
-      <Initiative_Mod>0.90</Initiative_Mod>
-      <Parry_Mod>0.95</Parry_Mod>
+      <Dodge_Mod>0.72</Dodge_Mod>
+      <Durability>52</Durability>
+      <Initiative_Mod>0.79</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
       <Sprites>49,50</Sprites>
-      <Stamina_Mod>0.80</Stamina_Mod>
+      <Stamina_Mod>0.84</Stamina_Mod>
       <Value>2000</Value>
     </Armor>
     <Armor name="Orcish Plate Mail">
       <Tier>Five</Tier>
-      <AP_Mod>0.63</AP_Mod>
-      <Block_Mod>0.51</Block_Mod>
-      <Flat_Damage_Ignore>21</Flat_Damage_Ignore>
-      <Damage_Reduction>0.52</Damage_Reduction>
+      <AP_Mod>1.27</AP_Mod>
+      <Block_Mod>0.73</Block_Mod>
+      <Flat_Damage_Ignore>18</Flat_Damage_Ignore>
+      <Damage_Reduction>0.86</Damage_Reduction>
       <Description>
         This orcish plate consists of a few pieces of heavy metal slabs melted over some chain mail.  It's heavy, and doesn't allow
         for much movement...but offers incredible protection.
       </Description>
       <Dodge_Mod>0.22</Dodge_Mod>
-      <Durability>200</Durability>
-      <Fatigue_Mod>1.72</Fatigue_Mod>
-      <Initiative_Mod>0.50</Initiative_Mod>
+      <Durability>45</Durability>
+      <Initiative_Mod>0.52</Initiative_Mod>
       <Parry_Mod>0.31</Parry_Mod>
       <Sprites>2,3</Sprites>
-      <Stamina_Mod>0.50</Stamina_Mod>
-      <Value>800</Value>
+      <Stamina_Mod>0.78</Stamina_Mod>
+      <Value>350</Value>
     </Armor>
     <Armor name="Orcish Plate Mail">
       <Tier>Four</Tier>
-      <AP_Mod>0.64</AP_Mod>
-      <Block_Mod>0.53</Block_Mod>
-      <Flat_Damage_Ignore>23</Flat_Damage_Ignore>
-      <Damage_Reduction>0.50</Damage_Reduction>
+      <AP_Mod>1.26</AP_Mod>
+      <Block_Mod>0.74</Block_Mod>
+      <Flat_Damage_Ignore>19</Flat_Damage_Ignore>
+      <Damage_Reduction>0.85</Damage_Reduction>
       <Description>
         This orcish plate consists of a few pieces of heavy metal slabs melted over some chain mail.  It's heavy, and doesn't allow
         for much movement...but offers incredible protection.
       </Description>
-      <Dodge_Mod>0.26</Dodge_Mod>
-      <Durability>220</Durability>
-      <Fatigue_Mod>1.66</Fatigue_Mod>
-      <Initiative_Mod>0.55</Initiative_Mod>
-      <Parry_Mod>0.35</Parry_Mod>
+      <Dodge_Mod>0.23</Dodge_Mod>
+      <Durability>52</Durability>
+      <Initiative_Mod>0.53</Initiative_Mod>
+      <Parry_Mod>0.33</Parry_Mod>
       <Sprites>17,18</Sprites>
-      <Stamina_Mod>0.55</Stamina_Mod>
-      <Value>2000</Value>
+      <Stamina_Mod>0.79</Stamina_Mod>
+      <Value>600</Value>
     </Armor>
     <Armor name="Orcish Plate Mail">
       <Tier>Three</Tier>
-      <AP_Mod>0.65</AP_Mod>
-      <Block_Mod>0.55</Block_Mod>
-      <Flat_Damage_Ignore>25</Flat_Damage_Ignore>
-      <Damage_Reduction>0.45</Damage_Reduction>
+      <AP_Mod>1.25</AP_Mod>
+      <Block_Mod>0.75</Block_Mod>
+      <Flat_Damage_Ignore>20</Flat_Damage_Ignore>
+      <Damage_Reduction>0.85</Damage_Reduction>
       <Description>
         This orcish plate consists of a few pieces of heavy metal slabs melted over some chain mail.  It's heavy, and doesn't allow
         for much movement...but offers incredible protection.
       </Description>
-      <Dodge_Mod>0.30</Dodge_Mod>
-      <Durability>500</Durability>
-      <Fatigue_Mod>1.60</Fatigue_Mod>
-      <Initiative_Mod>0.60</Initiative_Mod>
-      <Parry_Mod>0.40</Parry_Mod>
+      <Dodge_Mod>0.24</Dodge_Mod>
+      <Durability>55</Durability>
+      <Initiative_Mod>0.54</Initiative_Mod>
+      <Parry_Mod>0.35</Parry_Mod>
       <Sprites>32,33</Sprites>
-      <Stamina_Mod>0.60</Stamina_Mod>
-      <Value>3200</Value>
+      <Stamina_Mod>0.80</Stamina_Mod>
+      <Value>1300</Value>
     </Armor>
     <Armor name="Orcish Plate Mail">
       <Tier>Two</Tier>
-      <AP_Mod>0.65</AP_Mod>
-      <Block_Mod>0.55</Block_Mod>
-      <Flat_Damage_Ignore>28</Flat_Damage_Ignore>
-      <Damage_Reduction>0.40</Damage_Reduction>
+      <AP_Mod>1.25</AP_Mod>
+      <Block_Mod>0.75</Block_Mod>
+      <Flat_Damage_Ignore>20</Flat_Damage_Ignore>
+      <Damage_Reduction>0.83</Damage_Reduction>
       <Description>
         This is orcish plate mail favored by the best orcish troops.  It is quality-made, consisting of heavy slabs of metal
         essentially melted together.  It affords excellent protection for those strong enough to wear it.
       </Description>
-      <Dodge_Mod>0.30</Dodge_Mod>
-      <Durability>650</Durability>
-      <Fatigue_Mod>1.60</Fatigue_Mod>
-      <Initiative_Mod>0.60</Initiative_Mod>
-      <Parry_Mod>0.40</Parry_Mod>
+      <Dodge_Mod>0.25</Dodge_Mod>
+      <Durability>58</Durability>
+      <Initiative_Mod>0.55</Initiative_Mod>
+      <Parry_Mod>0.35</Parry_Mod>
       <Sprites>47,48</Sprites>
-      <Stamina_Mod>0.60</Stamina_Mod>
-      <Value>4800</Value>
+      <Stamina_Mod>0.80</Stamina_Mod>
+      <Value>2000</Value>
     </Armor>
     <Armor name="Plate Mail">
       <Tier>Five</Tier>

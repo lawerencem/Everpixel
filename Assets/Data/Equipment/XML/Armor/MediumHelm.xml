@@ -181,6 +181,74 @@
       <Stamina_Mod>1</Stamina_Mod>
       <Value>250</Value>
     </Armor>
+    <Armor name="Jingasa">
+      <Tier>Five</Tier>
+      <AP_Mod>1.03</AP_Mod>
+      <Block_Mod>0.35</Block_Mod>
+      <Flat_Damage_Ignore>4</Flat_Damage_Ignore>
+      <Damage_Reduction>0.87</Damage_Reduction>
+      <Description>
+        A typical helmet worn by lesser-ranking samurais.
+      </Description>
+      <Dodge_Mod>0.87</Dodge_Mod>
+      <Durability>6</Durability>
+      <Initiative_Mod>0.97</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>6,7</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>200</Value>
+    </Armor>
+    <Armor name="Jingasa">
+      <Tier>Four</Tier>
+      <AP_Mod>1.03</AP_Mod>
+      <Block_Mod>0.35</Block_Mod>
+      <Flat_Damage_Ignore>4</Flat_Damage_Ignore>
+      <Damage_Reduction>0.86</Damage_Reduction>
+      <Description>
+        A typical helmet worn by lesser-ranking samurais.
+      </Description>
+      <Dodge_Mod>0.88</Dodge_Mod>
+      <Durability>8</Durability>
+      <Initiative_Mod>0.97</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>21,22</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>300</Value>
+    </Armor>
+    <Armor name="Jingasa">
+      <Tier>Three</Tier>
+      <AP_Mod>1.03</AP_Mod>
+      <Block_Mod>0.35</Block_Mod>
+      <Flat_Damage_Ignore>4</Flat_Damage_Ignore>
+      <Damage_Reduction>0.85</Damage_Reduction>
+      <Description>
+        A typical helmet worn by lesser-ranking samurais.
+      </Description>
+      <Dodge_Mod>0.89</Dodge_Mod>
+      <Durability>10</Durability>
+      <Initiative_Mod>0.97</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>36,37</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>550</Value>
+    </Armor>
+    <Armor name="Jingasa">
+      <Tier>Two</Tier>
+      <AP_Mod>1.03</AP_Mod>
+      <Block_Mod>0.35</Block_Mod>
+      <Flat_Damage_Ignore>4</Flat_Damage_Ignore>
+      <Damage_Reduction>0.83</Damage_Reduction>
+      <Description>
+        A typical helmet worn by lesser-ranking samurais.
+      </Description>
+      <Dodge_Mod>0.90</Dodge_Mod>
+      <Durability>14</Durability>
+      <Initiative_Mod>0.97</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>51,52</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>800</Value>
+    </Armor>
     <Armor name="Mail Coif">
       <Tier>Five</Tier>
       <AP_Mod>0.94</AP_Mod>

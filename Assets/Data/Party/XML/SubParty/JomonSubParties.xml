@@ -1,13 +1,128 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <SubParties>
-  <SubParty Name ="Katana Samurais">
-    <Difficulty>5</Difficulty>
-    <Character>1,Ronin Katana Samurai,One</Character>
-    <Character>1,Katana Samurai,One</Character>
+  <SubParty Name ="Healing Kappas">
+    <Difficulty>4</Difficulty>
+    <Character>1,Tortard,Three</Character>
   </SubParty>
-  <SubParty Name ="Nodachi Samurais">
+  <SubParty Name ="Healing Kappas">
+    <Difficulty>6</Difficulty>
+    <Character>1,Tortugaia,Three</Character>
+  </SubParty>
+  <SubParty Name ="Katana Samurai">
+    <Difficulty>4</Difficulty>
+    <Character>1,Katana Samurai,Two</Character>
+  </SubParty>
+  <SubParty Name ="Katana Samurai">
+    <Difficulty>6</Difficulty>
+    <Character>1,Elite Katana Samurai,Two</Character>
+  </SubParty>
+  <SubParty Name ="Katana Samurai">
+    <Difficulty>8</Difficulty>
+    <Character>1,Katana Hero,Two</Character>
+  </SubParty>
+  <SubParty Name ="Naginata Samurai">
+    <Difficulty>4</Difficulty>
+    <Character>1,Naginata Samurai,Two</Character>
+  </SubParty>
+  <SubParty Name ="Naginata Samurai">
+    <Difficulty>6</Difficulty>
+    <Character>1,Elite Naginata Samurai,Two</Character>
+  </SubParty>
+  <SubParty Name ="Naginata Samurai">
+    <Difficulty>8</Difficulty>
+    <Character>1,Naginata Hero,Two</Character>
+  </SubParty>
+  <SubParty Name ="Nodachi Samurai">
+    <Difficulty>4</Difficulty>
+    <Character>1,Nodachi Samurai,Two</Character>
+  </SubParty>
+  <SubParty Name ="Nodachi Samurai">
+    <Difficulty>6</Difficulty>
+    <Character>1,Elite Nodachi Samurai,Two</Character>
+  </SubParty>
+  <SubParty Name ="Nodachi Samurai">
+    <Difficulty>8</Difficulty>
+    <Character>1,Nodachi Hero,Two</Character>
+  </SubParty>
+  <SubParty Name ="Spell Kappas">
+    <Difficulty>6</Difficulty>
+    <Character>1,Terrorpin,Two</Character>
+  </SubParty>
+  <SubParty Name ="Spell Kappas">
+    <Difficulty>7</Difficulty>
+    <Character>1,Horrorpin,Two</Character>
+  </SubParty>
+  <SubParty Name ="War Kappas">
+    <Difficulty>4</Difficulty>
+    <Character>1,Armoise,One</Character>
+    <Character>1,Armoise,One</Character>
+  </SubParty>
+  <SubParty Name ="War Kappas">
     <Difficulty>5</Difficulty>
-    <Character>1,Ronin Nodachi Samurai,One</Character>
-    <Character>1,Nodachi Samurai,One</Character>
+    <Character>1,Terrorpin,One</Character>
+  </SubParty>
+  <SubParty Name ="War Kappas">
+    <Difficulty>12</Difficulty>
+    <Character>1,Dreadnot,One</Character>
+  </SubParty>
+  <SubParty Name ="Yari Ashigaru">
+    <Difficulty>1</Difficulty>
+    <Character>1,Yari Ashigaru,One</Character>
+    <Character>1,Yari Ashigaru,One</Character>
+    <Character>1,Yari Ashigaru,One</Character>
+  </SubParty>
+  <SubParty Name ="Yari Ashigaru">
+    <Difficulty>2</Difficulty>
+    <Character>1,Veteran Yari Ashigaru,One</Character>
+    <Character>1,Veteran Yari Ashigaru,One</Character>
+    <Character>1,Veteran Yari Ashigaru,One</Character>
+  </SubParty>
+  <SubParty Name ="Yari Ashigaru">
+    <Difficulty>3</Difficulty>
+    <Character>1,Grizzled Yari Ashigaru,One</Character>
+    <Character>1,Grizzled Yari Ashigaru,One</Character>
+    <Character>1,Grizzled Yari Ashigaru,One</Character>
+  </SubParty>
+  <SubParty Name ="Yari Samurai">
+    <Difficulty>4</Difficulty>
+    <Character>1,Yari Samurai,One</Character>
+  </SubParty>
+  <SubParty Name ="Yari Samurai">
+    <Difficulty>6</Difficulty>
+    <Character>1,Elite Yari Samurai,One</Character>
+  </SubParty>
+  <SubParty Name ="Yari Samurai">
+    <Difficulty>8</Difficulty>
+    <Character>1,Yari Hero,One</Character>
+  </SubParty>
+  <SubParty Name ="Yumi Ashigaru">
+    <Difficulty>1</Difficulty>
+    <Character>1,Yumi Ashigaru,Three</Character>
+    <Character>1,Yumi Ashigaru,Three</Character>
+    <Character>1,Yumi Ashigaru,Three</Character>
+  </SubParty>
+  <SubParty Name ="Yumi Ashigaru">
+    <Difficulty>2</Difficulty>
+    <Character>1,Veteran Yumi Ashigaru,Three</Character>
+    <Character>1,Veteran Yumi Ashigaru,Three</Character>
+    <Character>1,Veteran Yumi Ashigaru,Three</Character>
+  </SubParty>
+  <SubParty Name ="Yumi Ashigaru">
+    <Difficulty>3</Difficulty>
+    <Character>1,Grizzled Yumi Ashigaru,Three</Character>
+    <Character>1,Grizzled Yumi Ashigaru,Three</Character>
+    <Character>1,Grizzled Yumi Ashigaru,Three</Character>
+  </SubParty>
+  <SubParty Name ="Yumi Samurai">
+    <Difficulty>4</Difficulty>
+    <Character>1,Yumi Samurai,Three</Character>
+  </SubParty>
+  <SubParty Name ="Yumi Samurai">
+    <Difficulty>6</Difficulty>
+    <Character>1,Elite Yumi Samurai,Three</Character>
+  </SubParty>
+  <SubParty Name ="Yumi Samurai">
+    <Difficulty>8</Difficulty>
+    <Character>1,Yumi Hero,Three</Character>
   </SubParty>
 </SubParties>

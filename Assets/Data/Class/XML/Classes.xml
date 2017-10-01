@@ -57,19 +57,6 @@
     <SecondaryStatsEnum>Morale,1</SecondaryStatsEnum>
     <SecondaryStatsEnum>Will,16</SecondaryStatsEnum>
   </Class>
-  <Class name="Fighter">
-    <EPrimaryStat>Agility,1</EPrimaryStat>
-    <EPrimaryStat>Constitution,2</EPrimaryStat>
-    <EPrimaryStat>Might,2</EPrimaryStat>
-    <EPrimaryStat>Perception,1</EPrimaryStat>
-    <EPrimaryStat>Resolve,1</EPrimaryStat>
-    <SecondaryStatsEnum>Block,3</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Critical_Chance,2</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Critical_Multiplier,3</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Melee,4</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Parry,1</SecondaryStatsEnum>
-    <SecondaryStatsEnum>Ranged,3</SecondaryStatsEnum>
-  </Class>
   <Class name="Knight">
     <EPrimaryStat>Constitution,3</EPrimaryStat>
     <EPrimaryStat>Might,3</EPrimaryStat>

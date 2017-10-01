@@ -21,7 +21,7 @@
       <Sprites>63</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
       <Value>3500</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
+      <EAbility>Fire</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -45,7 +45,7 @@
       <Sprites>3</Sprites>
       <Stamina_Mod>0.92</Stamina_Mod>
       <Value>100</Value>
-      <WeaponEAbility>Crush</WeaponEAbility>
+      <EAbility>Crush</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -69,7 +69,7 @@
       <Sprites>18</Sprites>
       <Stamina_Mod>0.94</Stamina_Mod>
       <Value>250</Value>
-      <WeaponEAbility>Crush</WeaponEAbility>
+      <EAbility>Crush</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -93,7 +93,7 @@
       <Sprites>33</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
       <Value>355</Value>
-      <WeaponEAbility>Crush</WeaponEAbility>
+      <EAbility>Crush</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -117,7 +117,7 @@
       <Sprites>48</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
       <Value>550</Value>
-      <WeaponEAbility>Crush</WeaponEAbility>
+      <EAbility>Crush</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -141,7 +141,7 @@
       <Sprites>0,1</Sprites>
       <Stamina_Mod>0.88</Stamina_Mod>
       <Value>150</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
+      <EAbility>Fire</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -165,7 +165,7 @@
       <Sprites>15,16</Sprites>
       <Stamina_Mod>0.89</Stamina_Mod>
       <Value>300</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
+      <EAbility>Fire</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -189,7 +189,7 @@
       <Sprites>30,31</Sprites>
       <Stamina_Mod>0.90</Stamina_Mod>
       <Value>650</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
+      <EAbility>Fire</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -214,7 +214,7 @@
       <Sprites>2</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>100</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
+      <EAbility>Fire</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -239,7 +239,7 @@
       <Sprites>17</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>200</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
+      <EAbility>Fire</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -264,7 +264,7 @@
       <Sprites>32</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>400</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
+      <EAbility>Fire</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -289,7 +289,7 @@
       <Sprites>47</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>1000</Value>
-      <WeaponEAbility>Fire</WeaponEAbility>
+      <EAbility>Fire</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
