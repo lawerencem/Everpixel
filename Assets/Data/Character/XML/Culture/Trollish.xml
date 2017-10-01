@@ -18,6 +18,92 @@
         <Resolve>600</Resolve>
       </Stats>
     </Character>
+    <Character name="Dodo">
+      <AttackSpriteIndex>24</AttackSpriteIndex>
+      <Abilities>
+        <Ability name="Bite">
+          <EEffect name="Megabite">
+            <AbilityCondition>Bite</AbilityCondition>
+            <X>2.0</X>
+            <Y>2.0</Y>
+          </EEffect>
+        </Ability>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>16</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>520</Agility>
+        <Constitution>550</Constitution>
+        <Intelligence>220</Intelligence>
+        <Might>370</Might>
+        <Perception>350</Perception>
+        <Resolve>520</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Elite Dodo Knight">
+      <Class>Druid,5</Class>
+      <Class>Knight,9</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Troll</ERace>
+      <Mount>Dodo</Mount>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.75,Mushroom Hauberk,Three</Armor>
+          <Armor>0.25,Mushroom Hauberk,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.75,Mushroom Cap,Three</Helm>
+          <Helm>0.25,Mushroom Cap,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Shroom Hammer,Three</RWeapon>
+          <RWeapon>0.25,Shroom Hammer,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>280</Agility>
+        <Constitution>770</Constitution>
+        <Intelligence>620</Intelligence>
+        <Might>570</Might>
+        <Perception>410</Perception>
+        <Resolve>420</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Dodo Knight">
+      <Class>Druid,3</Class>
+      <Class>Knight,5</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Troll</ERace>
+      <Mount>Dodo</Mount>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.75,Mushroom Hauberk,Four</Armor>
+          <Armor>0.25,Mushroom Hauberk,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.75,Mushroom Cap,Four</Helm>
+          <Helm>0.25,Mushroom Cap,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Shroom Hammer,Four</RWeapon>
+          <RWeapon>0.25,Shroom Hammer,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>280</Agility>
+        <Constitution>770</Constitution>
+        <Intelligence>620</Intelligence>
+        <Might>570</Might>
+        <Perception>410</Perception>
+        <Resolve>420</Resolve>
+      </Stats>
+    </Character>
     <Character name="Fungursa">
       <AttackSpriteIndex>8</AttackSpriteIndex>
       <Abilities>
@@ -38,6 +124,13 @@
     <Character name="Otyugh">
       <AttackSpriteIndex>8</AttackSpriteIndex>
       <Abilities>
+        <Ability name="Bite">
+          <EEffect name="Megabite">
+            <AbilityCondition>Bite</AbilityCondition>
+            <X>2.0</X>
+            <Y>2.0</Y>
+          </EEffect>
+        </Ability>
       </Abilities>
       <ECharacterType>Critter</ECharacterType>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
@@ -74,6 +167,16 @@
       <Class>Warrior,1</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Troll</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.75,Mushroom Hauberk,Five</Armor>
+          <Armor>0.25,Mushroom Hauberk,Four</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.75,Mushroom Cap,Five</Helm>
+          <Helm>0.25,Mushroom Cap,Four</Helm>
+        </Helms>
+      </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
           <RWeapon>0.75,Shroom Hammer,Five</RWeapon>
@@ -95,6 +198,16 @@
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Troll</ERace>
       <PotentialWeapons>
+        <PotentialArmors>
+          <Armors name="One">
+            <Armor>0.75,Mushroom Hauberk,Four</Armor>
+            <Armor>0.25,Mushroom Hauberk,Three</Armor>
+          </Armors>
+          <Helms name="One">
+            <Helm>0.75,Mushroom Cap,Four</Helm>
+            <Helm>0.25,Mushroom Cap,Three</Helm>
+          </Helms>
+        </PotentialArmors>
         <RWeapons name="One">
           <RWeapon>0.75,Shroom Hammer,Four</RWeapon>
           <RWeapon>0.25,Shroom Hammer,Three</RWeapon>
@@ -115,6 +228,16 @@
       <Class>Shroom_Herder,3</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Troll</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.75,Mushroom Hauberk,Three</Armor>
+          <Armor>0.25,Mushroom Hauberk,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.75,Mushroom Cap,Three</Helm>
+          <Helm>0.25,Mushroom Cap,Two</Helm>
+        </Helms>
+      </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
           <RWeapon>0.75,Shroom Hammer,Three</RWeapon>

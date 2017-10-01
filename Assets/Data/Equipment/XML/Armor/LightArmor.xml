@@ -145,6 +145,78 @@
       <Stamina_Mod>1</Stamina_Mod>
       <Value>250</Value>
     </Armor>
+    <Armor name="Mushroom Hauberk">
+      <Tier>Five</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>1</Flat_Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        This armor has been "grown".  It's not very effective in the traditional sense, but it does offer surprising benefits.
+      </Description>
+      <Dodge_Mod>1</Dodge_Mod>
+      <Durability>5</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>6</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>75</Value>
+    </Armor>
+    <Armor name="Mushroom Hauberk">
+      <Tier>Four</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>1</Flat_Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        This armor has been "grown".  It's not very effective in the traditional sense, but it does offer surprising benefits.
+      </Description>
+      <Dodge_Mod>1</Dodge_Mod>
+      <Durability>7</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>21</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>200</Value>
+    </Armor>
+    <Armor name="Mushroom Hauberk">
+      <Tier>Three</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>1</Flat_Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        This armor has been "grown".  It's not very effective in the traditional sense, but it does offer surprising benefits.
+      </Description>
+      <Dodge_Mod>1</Dodge_Mod>
+      <Durability>9</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>36</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>350</Value>
+    </Armor>
+    <Armor name="Mushroom Hauberk">
+      <Tier>Two</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>2</Flat_Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        This armor has been "grown".  It's not very effective in the traditional sense, but it does offer surprising benefits.
+      </Description>
+      <Dodge_Mod>1</Dodge_Mod>
+      <Durability>12</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>51</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>550</Value>
+    </Armor>
     <Armor name="Slime Handler Robes">
       <Tier>Five</Tier>
       <AP_Mod>0.97</AP_Mod>

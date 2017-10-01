@@ -17,7 +17,6 @@
         <Perception>400</Perception>
         <Resolve>380</Resolve>
       </Stats>
-      <WeaponAbility>Bite</WeaponAbility>
     </Character>
     <Character name ="Beardedino">
       <AttackSpriteIndex>9</AttackSpriteIndex>
@@ -35,7 +34,6 @@
         <Perception>280</Perception>
         <Resolve>300</Resolve>
       </Stats>
-      <WeaponAbility>Bite</WeaponAbility>
     </Character>
     <Character name ="Curizard">
       <AttackSpriteIndex>8</AttackSpriteIndex>

@@ -73,6 +73,78 @@
       <Stamina_Mod>1</Stamina_Mod>
       <Value>500</Value>
     </Armor>
+    <Armor name="Mushroom Cap">
+      <Tier>Five</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        This cap doesn't offer much protection, but it offers surprising benefits.
+      </Description>
+      <Dodge_Mod>1</Dodge_Mod>
+      <Durability>2</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>4</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>50</Value>
+    </Armor>
+    <Armor name="Mushroom Cap">
+      <Tier>Four</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        This cap doesn't offer much protection, but it offers surprising benefits.
+      </Description>
+      <Dodge_Mod>1</Dodge_Mod>
+      <Durability>2</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>19</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>150</Value>
+    </Armor>
+    <Armor name="Mushroom Cap">
+      <Tier>Three</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        This cap doesn't offer much protection, but it offers surprising benefits.
+      </Description>
+      <Dodge_Mod>1</Dodge_Mod>
+      <Durability>3</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>34</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>350</Value>
+    </Armor>
+    <Armor name="Mushroom Cap">
+      <Tier>Two</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>0.96</Damage_Reduction>
+      <Description>
+        This cap doesn't offer much protection, but it offers surprising benefits.
+      </Description>
+      <Dodge_Mod>1</Dodge_Mod>
+      <Durability>4</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>49</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>350</Value>
+    </Armor>
     <Armor name="Skull">
       <Tier>Five</Tier>
       <AP_Mod>0.98</AP_Mod>

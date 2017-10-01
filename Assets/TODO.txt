@@ -3,14 +3,12 @@
 Priority: 
    - slime rain
    - zones
-   - yari ashigaru
-   - naginata samurai
-   - dodo riders
-   - dodo knight
    - Ninja Garb
    - Touch up new samurai armor
+   - Finalize calculators
 
 Stamina / AP / HP (current points) aren't "getting" from proper source 
+Primary stats are not being Modified by injuries
 Charge ability
 bulldoze ability
 Slime Rain

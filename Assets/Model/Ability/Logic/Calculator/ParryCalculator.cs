@@ -38,8 +38,10 @@ namespace Assets.Model.Ability.Logic.Calculator
 
             if (hit.Data.Source.Proxy.Type == ECharType.Critter)
                 hit.Data.Chances.Parry = 0;
-            else if ((tgt.Proxy.GetLWeapon() == null || tgt.Proxy.GetLWeapon().IsTypeOfShield() &&
-                tgt.Proxy.GetRWeapon() == null || tgt.Proxy.GetRWeapon().IsTypeOfShield()))
+            else if (
+                (tgt.Proxy.GetLWeapon() == null || tgt.Proxy.GetLWeapon().IsTypeOfShield()) &&
+                (tgt.Proxy.GetRWeapon() == null || tgt.Proxy.GetRWeapon().IsTypeOfShield())
+                )
             {
                 hit.Data.Chances.Parry = 0;
             }

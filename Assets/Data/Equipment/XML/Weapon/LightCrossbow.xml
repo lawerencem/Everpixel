@@ -60,7 +60,7 @@
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0</Shield_Damage_Percent>
       <Sprite_FX_Path>Ween_Bullet</Sprite_FX_Path>
-      <Sprites>0</Sprites>
+      <Sprites>15</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>550</Value>
       <EAbility>Fire</EAbility>
@@ -93,7 +93,7 @@
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0</Shield_Damage_Percent>
       <Sprite_FX_Path>Ween_Bullet</Sprite_FX_Path>
-      <Sprites>0</Sprites>
+      <Sprites>30</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>800</Value>
       <EAbility>Fire</EAbility>
@@ -126,7 +126,7 @@
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0</Shield_Damage_Percent>
       <Sprite_FX_Path>Ween_Bullet</Sprite_FX_Path>
-      <Sprites>0</Sprites>
+      <Sprites>45</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>1200</Value>
       <EAbility>Fire</EAbility>

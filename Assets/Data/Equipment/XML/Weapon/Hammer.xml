@@ -4,7 +4,7 @@
     <Weapon name="Dino Warhammer">
       <Tier>Five</Tier>
       <Accuracy_Mod>0.63</Accuracy_Mod>
-      <AP_Mod>0.73</AP_Mod>
+      <AP_Mod>1.28</AP_Mod>
       <Armor_Ignore>0.75</Armor_Ignore>
       <Armor_Pierce>0.92</Armor_Pierce>
       <Block_Ignore>0.20</Block_Ignore>
@@ -12,7 +12,6 @@
       <Description>
         This log has some strangely-heavy bones protruding from the end.
       </Description>
-      <Fatigue_Mod>1.24</Fatigue_Mod>
       <Initiative_Mod>0.85</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>0.55</Parry_Mod>
@@ -30,7 +29,7 @@
     <Weapon name="Dino Warhammer">
       <Tier>Four</Tier>
       <Accuracy_Mod>0.65</Accuracy_Mod>
-      <AP_Mod>0.75</AP_Mod>
+      <AP_Mod>1.27</AP_Mod>
       <Armor_Ignore>0.73</Armor_Ignore>
       <Armor_Pierce>0.91</Armor_Pierce>
       <Block_Ignore>0.21</Block_Ignore>
@@ -38,7 +37,6 @@
       <Description>
         This log has some strangely-heavy bones protruding from the end.
       </Description>
-      <Fatigue_Mod>1.22</Fatigue_Mod>
       <Initiative_Mod>0.83</Initiative_Mod>
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>0.58</Parry_Mod>
@@ -56,7 +54,7 @@
     <Weapon name="Dino Warhammer">
       <Tier>Three</Tier>
       <Accuracy_Mod>0.68</Accuracy_Mod>
-      <AP_Mod>0.78</AP_Mod>
+      <AP_Mod>1.26</AP_Mod>
       <Armor_Ignore>0.70</Armor_Ignore>
       <Armor_Pierce>0.90</Armor_Pierce>
       <Block_Ignore>0.22</Block_Ignore>
@@ -64,7 +62,6 @@
       <Description>
         This log has some strangely-heavy bones protruding from the end.
       </Description>
-      <Fatigue_Mod>1.20</Fatigue_Mod>
       <Initiative_Mod>0.85</Initiative_Mod>
       <Max_Durability>85</Max_Durability>
       <Parry_Mod>0.60</Parry_Mod>
@@ -82,7 +79,7 @@
     <Weapon name="Dino Warhammer">
       <Tier>Two</Tier>
       <Accuracy_Mod>0.70</Accuracy_Mod>
-      <AP_Mod>0.80</AP_Mod>
+      <AP_Mod>1.25</AP_Mod>
       <Armor_Ignore>0.68</Armor_Ignore>
       <Armor_Pierce>0.89</Armor_Pierce>
       <Block_Ignore>0.23</Block_Ignore>
@@ -108,7 +105,7 @@
     <Weapon name="Shroom Hammer">
       <Tier>Five</Tier>
       <Accuracy_Mod>0.76</Accuracy_Mod>
-      <AP_Mod>0.90</AP_Mod>
+      <AP_Mod>0.95</AP_Mod>
       <Armor_Ignore>0.81</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0.13</Block_Ignore>
@@ -116,7 +113,6 @@
       <Description>
         A mushroom grown into a hammer-like shape. It's...suprisingly effective.
       </Description>
-      <Fatigue_Mod>1.08</Fatigue_Mod>
       <Initiative_Mod>0.89</Initiative_Mod>
       <Max_Durability>30</Max_Durability>
       <Parry_Mod>0.20</Parry_Mod>
@@ -133,7 +129,7 @@
     <Weapon name="Shroom Hammer">
       <Tier>Four</Tier>
       <Accuracy_Mod>0.77</Accuracy_Mod>
-      <AP_Mod>0.90</AP_Mod>
+      <AP_Mod>0.94</AP_Mod>
       <Armor_Ignore>0.80</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0.14</Block_Ignore>
@@ -141,7 +137,6 @@
       <Description>
         A mushroom grown into a hammer-like shape. It's...suprisingly effective.
       </Description>
-      <Fatigue_Mod>1.07</Fatigue_Mod>
       <Initiative_Mod>0.90</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>0.20</Parry_Mod>
@@ -158,7 +153,7 @@
     <Weapon name="Shroom Hammer">
       <Tier>Three</Tier>
       <Accuracy_Mod>0.78</Accuracy_Mod>
-      <AP_Mod>0.90</AP_Mod>
+      <AP_Mod>0.93</AP_Mod>
       <Armor_Ignore>0.79</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0.15</Block_Ignore>
@@ -166,7 +161,6 @@
       <Description>
         A mushroom grown into a hammer-like shape. It's...suprisingly effective.
       </Description>
-      <Fatigue_Mod>1.06</Fatigue_Mod>
       <Initiative_Mod>0.90</Initiative_Mod>
       <Max_Durability>40</Max_Durability>
       <Parry_Mod>0.20</Parry_Mod>
@@ -183,7 +177,7 @@
     <Weapon name="Shroom Hammer">
       <Tier>Two</Tier>
       <Accuracy_Mod>0.80</Accuracy_Mod>
-      <AP_Mod>0.90</AP_Mod>
+      <AP_Mod>0.92</AP_Mod>
       <Armor_Ignore>0.78</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0.15</Block_Ignore>
@@ -191,7 +185,6 @@
       <Description>
         A mushroom grown into a hammer-like shape. It's...suprisingly effective.
       </Description>
-      <Fatigue_Mod>1.05</Fatigue_Mod>
       <Initiative_Mod>0.90</Initiative_Mod>
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>0.20</Parry_Mod>

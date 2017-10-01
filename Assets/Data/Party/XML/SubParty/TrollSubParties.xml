@@ -1,5 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <SubParties>
+  <SubParty Name ="Dodos">
+    <Difficulty>4</Difficulty>
+    <Character>1,Dodo,Two</Character>
+    <Character>1,Dodo,Two</Character>
+  </SubParty>
+  <SubParty Name ="Dodo Knights">
+    <Difficulty>7</Difficulty>
+    <Character>1,Dodo Knight,Two</Character>
+    <Character>1,Dodo Knight,Two</Character>
+  </SubParty>
+  <SubParty Name ="Dodo Knights">
+    <Difficulty>10</Difficulty>
+    <Character>1,Elite Dodo Knight,Two</Character>
+    <Character>1,Elite Dodo Knight,Two</Character>
+  </SubParty>
   <SubParty Name ="Fungursas">
     <Difficulty>5</Difficulty>
     <Character>1,Fungursa,One</Character>
@@ -11,11 +26,6 @@
   </SubParty>
   <SubParty Name ="Troll Farmers">
     <Difficulty>1</Difficulty>
-    <Character>1,Shroom Farmer,One</Character>
-  </SubParty>
-  <SubParty Name ="Troll Farmers">
-    <Difficulty>3</Difficulty>
-    <Character>1,Shroom Farmer,One</Character>
     <Character>1,Shroom Farmer,One</Character>
   </SubParty>
   <SubParty Name ="Troll Farmers">

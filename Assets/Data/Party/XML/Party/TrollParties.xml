@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Parties>
   <Party Name ="Trolls">
+    <SubParty>Dodos,4</SubParty>
+    <SubParty>Dodo Knights,7</SubParty>
+    <SubParty>Dodo Knights,10</SubParty>
     <SubParty>Fungursas,5</SubParty>
     <SubParty>Shrooms,3</SubParty>
     <SubParty>Troll Farmers,1</SubParty>
-    <SubParty>Troll Farmers,3</SubParty>
     <SubParty>Troll Farmers,6</SubParty>
     <SubParty>Troll Farmers,11</SubParty>
     <SubParty>Warplants,2</SubParty>

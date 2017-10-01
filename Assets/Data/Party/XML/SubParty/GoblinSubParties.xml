@@ -2,17 +2,17 @@
 <SubParties>
   <SubParty Name ="Gobbo Spider Riders">
     <Difficulty>2</Difficulty>
-    <Character>1,Spider Rider,One</Character>
-    <Character>1,Spider Rider Archer,Two</Character>
+    <Character>1,Spider Rider,Two</Character>
+    <Character>1,Spider Rider Archer,Three</Character>
   </SubParty>
   <SubParty Name ="Gobbo Spider Riders">
     <Difficulty>4</Difficulty>
-    <Character>1,Veteran Spider Rider,One</Character>
-    <Character>1,Veteran Spider Rider Archer,Two</Character>
+    <Character>1,Veteran Spider Rider,Two</Character>
+    <Character>1,Veteran Spider Rider Archer,Three</Character>
   </SubParty>
   <SubParty Name ="Gobbo Spider Riders">
     <Difficulty>12</Difficulty>
-    <Character>1,Spider Boss,One</Character>
+    <Character>1,Spider Boss,Three</Character>
   </SubParty>
   <SubParty Name ="Goblin Fodder">
     <Difficulty>1</Difficulty>
@@ -51,23 +51,23 @@
   </SubParty>
   <SubParty Name ="Gromp Hoppers">
     <Difficulty>4</Difficulty>
-    <Character>1,Gromp Hopper,One</Character>
-    <Character>1,Gromp Hopper,One</Character>
+    <Character>1,Gromp Hopper,Two</Character>
+    <Character>1,Gromp Hopper,Two</Character>
   </SubParty>
   <SubParty Name ="Gromp Hoppers">
     <Difficulty>6</Difficulty>
-    <Character>1,Crazed Gromp Hopper,One</Character>
-    <Character>1,Gromp Hopper,One</Character>
+    <Character>1,Crazed Gromp Hopper,Two</Character>
+    <Character>1,Gromp Hopper,Two</Character>
   </SubParty>
   <SubParty Name ="Gromp Hoppers">
     <Difficulty>8</Difficulty>
-    <Character>1,Crazed Gromp Hopper,One</Character>
-    <Character>1,Crazed Gromp Hopper,One</Character>
+    <Character>1,Crazed Gromp Hopper,Two</Character>
+    <Character>1,Crazed Gromp Hopper,Two</Character>
   </SubParty>
   <SubParty Name ="Gromp Hoppers">
     <Difficulty>10</Difficulty>
-    <Character>1,Lunatic Gromp Hopper,One</Character>
-    <Character>1,Crazed Gromp Hopper,One</Character>
+    <Character>1,Lunatic Gromp Hopper,Two</Character>
+    <Character>1,Crazed Gromp Hopper,Two</Character>
   </SubParty>
   <SubParty Name ="Psychic Slugs">
     <Difficulty>4</Difficulty>

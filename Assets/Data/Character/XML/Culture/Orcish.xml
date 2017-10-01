@@ -180,6 +180,29 @@
         <Resolve>320</Resolve>
       </Stats>
     </Character>
+    <Character name ="Greater Orc Wereween">
+      <Ability>Were_Ween</Ability>
+      <Class>Warrior,5</Class>
+      <Class>Lycanthrope,10</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Orc</ERace>
+      <Perks>
+      </Perks>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.50,Great Axe Choppa,Three</RWeapon>
+          <RWeapon>0.50,Great Axe Choppa,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>750</Agility>
+        <Constitution>750</Constitution>
+        <Intelligence>320</Intelligence>
+        <Might>650</Might>
+        <Perception>650</Perception>
+        <Resolve>320</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Ghost_Ween">
       <AttackSpriteIndex>2</AttackSpriteIndex>
       <Abilities>
@@ -540,7 +563,8 @@
       </Perks>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>1,Great Axe Choppa,Three</RWeapon>
+          <RWeapon>0.50,Great Axe Choppa,Four</RWeapon>
+          <RWeapon>0.50,Great Axe Choppa,Three</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
