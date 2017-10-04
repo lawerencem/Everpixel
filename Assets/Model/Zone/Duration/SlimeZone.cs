@@ -1,7 +1,7 @@
 ﻿namespace Assets.Model.Zone.Duration
 {
-    class SlimeZone : ADurationZone
+    public class SlimeZone : ADurationZone
     {
-
+        public SlimeZone() : base(EZone.Slime) { }
     }
 }

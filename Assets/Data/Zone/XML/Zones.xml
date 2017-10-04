@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Zones>
-  <Zone name="Slime">
-    <EOTE>Slime</EOTE>
+  <Zone name="Slime_Zone">
+    <EOTE>Slimed</EOTE>
     <Sprites>16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34</Sprites>
   </Zone>
 </Zones>

@@ -106,9 +106,9 @@
     <Compile Include="Assets\Controller\Map\Combat\MMapController.cs" />
     <Compile Include="Assets\Controller\Map\Combat\MapInitInfo.cs" />
     <Compile Include="Assets\Controller\Map\Combat\VMapCombatController.cs" />
+    <Compile Include="Assets\Controller\Map\Tile\CTile.cs" />
     <Compile Include="Assets\Controller\Map\Tile\FCTile.cs" />
     <Compile Include="Assets\Controller\Map\Tile\STile.cs" />
-    <Compile Include="Assets\Controller\Map\Tile\CTile.cs" />
     <Compile Include="Assets\Controller\Mount\CMount.cs" />
     <Compile Include="Assets\Data\Ability\XML\AbilityReader.cs" />
     <Compile Include="Assets\Data\Bark\Table\BarkTable.cs" />
@@ -141,6 +141,8 @@
     <Compile Include="Assets\Data\Party\XML\SubPartiesXMLIndexes.cs" />
     <Compile Include="Assets\Data\Perk\Table\PerkTable.cs" />
     <Compile Include="Assets\Data\Perk\XML\PerkReader.cs" />
+    <Compile Include="Assets\Data\Zone\Table\ZoneTable.cs" />
+    <Compile Include="Assets\Data\Zone\XML\ZoneReader.cs" />
     <Compile Include="Assets\GameObjectTags.cs" />
     <Compile Include="Assets\Model\Ability\AAbility.cs" />
     <Compile Include="Assets\Model\Ability\AbilityArgs.cs" />
@@ -330,8 +332,10 @@
     <Compile Include="Assets\Model\Mount\MountParams.cs" />
     <Compile Include="Assets\Model\OTE\DoT\EDoT.cs" />
     <Compile Include="Assets\Model\OTE\DoT\MDoT.cs" />
+    <Compile Include="Assets\Model\OTE\EOTE.cs" />
     <Compile Include="Assets\Model\OTE\HoT\MHoT.cs" />
     <Compile Include="Assets\Model\OTE\MOTE.cs" />
+    <Compile Include="Assets\Model\OTE\Other\Slimed.cs" />
     <Compile Include="Assets\Model\Party\Builder\PartyBuilder.cs" />
     <Compile Include="Assets\Model\Party\Builder\SubPartyBuilder.cs" />
     <Compile Include="Assets\Model\Party\Enum\EStartCol.cs" />
@@ -381,7 +385,9 @@
     <Compile Include="Assets\Model\Zone\Duration\SlimeZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\SoothingMistZone.cs" />
     <Compile Include="Assets\Model\Zone\EZone.cs" />
+    <Compile Include="Assets\Model\Zone\ZoneBuilder.cs" />
     <Compile Include="Assets\Model\Zone\ZoneFactory.cs" />
+    <Compile Include="Assets\Model\Zone\ZoneParams.cs" />
     <Compile Include="Assets\Template\Builder\ABuilder.cs" />
     <Compile Include="Assets\Template\Builder\GBuilder.cs" />
     <Compile Include="Assets\Template\CB\ICallback.cs" />
@@ -512,14 +518,10 @@
     <None Include="Assets\Data\Equipment\XML\Weapon\Hammer.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\LargeShield.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\LightCrossbow.xml" />
-    <None Include="Assets\Data\Equipment\XML\Weapon\LongBow.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Equipment\XML\Weapon\LongBow.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\MediumShield.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\Polearm.xml" />
-    <None Include="Assets\Data\Equipment\XML\Weapon\ShortBow.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Equipment\XML\Weapon\ShortBow.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\SmallShield.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\Spear.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\Staff.xml" />
@@ -548,6 +550,9 @@
     <None Include="Assets\Data\Perk\XML\PostHitPerks.xml" />
     <None Include="Assets\Data\Perk\XML\SStatModPerks.xml" />
     <None Include="Assets\Data\Perk\XML\WhenHitPerks.xml" />
+    <None Include="Assets\Data\Zone\XML\Zones.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

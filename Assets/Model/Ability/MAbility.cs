@@ -127,17 +127,6 @@ namespace Assets.Model.Ability
             return cTiles;
         }
 
-        protected ZoneArgsCont GetZoneArgs(AbilityArgs arg, CTile tile)
-        {
-            //var zoneArgs = new ZoneArgsCont();
-            //zoneArgs.Caster = arg.Source;
-            //zoneArgs.Dur = (int)this.Params.Duration; // TODO;
-            //zoneArgs.Handle = arg.Source.Handle;
-            //zoneArgs.Tile = tile;
-            //return zoneArgs;
-            return null;
-        }
-
         protected virtual void PredictBullet(MHit hit)
         {
             this.ProcessEffects(hit);

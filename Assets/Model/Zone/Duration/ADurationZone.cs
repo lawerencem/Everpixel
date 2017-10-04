@@ -11,6 +11,8 @@ namespace Assets.Model.Zone.Duration
     {
         protected DurationZoneData _data;
 
+        public ADurationZone(EZone type) : base(type) { }
+
         public void SetData(DurationZoneData data) { this._data = data; }
 
         public void ProcessTurn()

@@ -6,6 +6,7 @@ using Assets.Data.Injury.XML;
 using Assets.Data.Mount.XML;
 using Assets.Data.Party.XML;
 using Assets.Data.Perk.XML;
+using Assets.Data.Zone.XML;
 using Assets.Template.Other;
 using Assets.Template.XML;
 using Assets.View.Bark;
@@ -31,6 +32,7 @@ namespace Assets.Controller.Manager
             this._readers.Add(RaceReader.Instance);
             this._readers.Add(SubPartyReader.Instance);
             this._readers.Add(WeaponReader.Instance);
+            this._readers.Add(ZoneReader.Instance);
 
             foreach (var reader in this._readers)
                 reader.ReadFromFile();

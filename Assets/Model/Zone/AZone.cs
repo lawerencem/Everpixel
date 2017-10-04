@@ -11,7 +11,10 @@ namespace Assets.Model.Zone
 
     public abstract class AZone
     {
-        public AZone() { }
+        private EZone _type;
+        public EZone Type { get { return this._type; } }
+
+        public AZone(EZone type) { this._type = type; }
         public virtual void ProcessEnterZone(CChar target) { }
         public virtual void ProcessExitZone(CChar target) { }
         public virtual void ProcessTurnInZone(CChar target) { }

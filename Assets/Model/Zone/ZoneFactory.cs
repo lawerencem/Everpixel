@@ -7,9 +7,10 @@ namespace Assets.Model.Zone
     {
         public AZone CreateNewObject(EZone type)
         {
+            var zoneBuilder = new ZoneBuilder();
             switch(type)
             {
-                case (EZone.Slime): { return new SlimeZone(); }
+                case (EZone.Slime_Zone): { return zoneBuilder.Build(new SlimeZone()); }
                 default: return null;
             }
         }
