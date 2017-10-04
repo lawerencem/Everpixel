@@ -1,5 +1,11 @@
 ﻿TODO
 
+Zones: 
+	- Reader
+		-- Sprites
+		-- Debuffs/buff/effect
+		
+
 Priority: 
    - slime rain
    - zones

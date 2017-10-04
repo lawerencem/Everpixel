@@ -2,22 +2,20 @@
 
 namespace Assets.Model.Zone.Duration
 {
+    public class DurationZoneData : ZoneData
+    {
+        public int Dur { get; set; }
+    }
+
     public abstract class ADurationZone : AZone
     {
-        protected int _duration;
+        protected DurationZoneData _data;
 
-        public int Duration { get { return this._duration; } }
-        public GameObject Handle { get; set; }
-
-        public ADurationZone(ZoneArgsCont arg) : base(arg)
-        {
-            this._duration = arg.Dur;
-            this.Handle = arg.Handle;
-        }
+        public void SetData(DurationZoneData data) { this._data = data; }
 
         public void ProcessTurn()
         {
-            this._duration--;
+            this._data.Dur--;
         }
     }
 }

@@ -1,14 +1,19 @@
-﻿using Assets.Controller.Map.Tile;
+﻿using Assets.Controller.Character;
+using UnityEngine;
 
 namespace Assets.Model.Zone
 {
+    public class ZoneData
+    {
+        public GameObject Handle { get; set; }
+        public CChar Source { get; set; }
+    }
+
     public abstract class AZone
     {
-        public CTile Tile { get; set; }
-
-        public AZone(ZoneArgsCont arg) { this.Tile = arg.Tile; }
-
-        //public virtual void ProcessEnterZone(EvZoneEnter e) { }
-        //public virtual void ProcessExitZone(EvZoneExit e) { }
+        public AZone() { }
+        public virtual void ProcessEnterZone(CChar target) { }
+        public virtual void ProcessExitZone(CChar target) { }
+        public virtual void ProcessTurnInZone(CChar target) { }
     }
 }

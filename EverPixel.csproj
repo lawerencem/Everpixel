@@ -106,9 +106,9 @@
     <Compile Include="Assets\Controller\Map\Combat\MMapController.cs" />
     <Compile Include="Assets\Controller\Map\Combat\MapInitInfo.cs" />
     <Compile Include="Assets\Controller\Map\Combat\VMapCombatController.cs" />
-    <Compile Include="Assets\Controller\Map\Tile\FTileController.cs" />
+    <Compile Include="Assets\Controller\Map\Tile\FCTile.cs" />
     <Compile Include="Assets\Controller\Map\Tile\STile.cs" />
-    <Compile Include="Assets\Controller\Map\Tile\TileController.cs" />
+    <Compile Include="Assets\Controller\Map\Tile\CTile.cs" />
     <Compile Include="Assets\Controller\Mount\CMount.cs" />
     <Compile Include="Assets\Data\Ability\XML\AbilityReader.cs" />
     <Compile Include="Assets\Data\Bark\Table\BarkTable.cs" />
@@ -378,8 +378,10 @@
     <Compile Include="Assets\Model\Shield\MShield.cs" />
     <Compile Include="Assets\Model\Zone\AZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\ADurationZone.cs" />
-    <Compile Include="Assets\Model\Zone\Duration\ASpellZone.cs" />
+    <Compile Include="Assets\Model\Zone\Duration\SlimeZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\SoothingMistZone.cs" />
+    <Compile Include="Assets\Model\Zone\EZone.cs" />
+    <Compile Include="Assets\Model\Zone\ZoneFactory.cs" />
     <Compile Include="Assets\Template\Builder\ABuilder.cs" />
     <Compile Include="Assets\Template\Builder\GBuilder.cs" />
     <Compile Include="Assets\Template\CB\ICallback.cs" />
