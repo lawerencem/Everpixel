@@ -23,7 +23,5 @@
         Summon,
         TakingAction,
         TileMove,
-        ZoneEnter,
-        ZoneExit,
     }
 }

@@ -313,8 +313,6 @@
     <Compile Include="Assets\Model\Event\Combat\EvSummon.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvTakingAction.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvTileMove.cs" />
-    <Compile Include="Assets\Model\Event\Combat\EvZoneEnter.cs" />
-    <Compile Include="Assets\Model\Event\Combat\EvZoneExit.cs" />
     <Compile Include="Assets\Model\Event\Combat\MEvCombat.cs" />
     <Compile Include="Assets\Model\Event\Combat\Priorities.cs" />
     <Compile Include="Assets\Model\Event\ECombatEv.cs" />
@@ -382,7 +380,6 @@
     <Compile Include="Assets\Model\Zone\Duration\ADurationZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\ASpellZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\SoothingMistZone.cs" />
-    <Compile Include="Assets\Model\Zone\ZoneArgsCont.cs" />
     <Compile Include="Assets\Template\Builder\ABuilder.cs" />
     <Compile Include="Assets\Template\Builder\GBuilder.cs" />
     <Compile Include="Assets\Template\CB\ICallback.cs" />

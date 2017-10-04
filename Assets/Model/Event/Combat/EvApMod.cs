@@ -1,5 +1,4 @@
 ﻿using Assets.Controller.Character;
-using Assets.Controller.Map.Tile;
 using Assets.Model.Character.Enum;
 
 namespace Assets.Model.Event.Combat
