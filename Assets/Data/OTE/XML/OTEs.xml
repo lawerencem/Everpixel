@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<OTES>
+  <OTE name="Slimed">
+    <Dur>3</Dur>
+    <EResist>Fortitude</EResist>
+    <X>1.2</X>
+    <Y>1.2</Y>
+  </OTE>
+</OTES>
