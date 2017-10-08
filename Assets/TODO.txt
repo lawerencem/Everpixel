@@ -2,7 +2,6 @@
 
 Zones: 
 	- Reader
-		-- Sprites
 		-- Debuffs/buff/effect
 		
 

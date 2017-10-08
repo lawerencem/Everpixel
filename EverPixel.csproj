@@ -134,6 +134,8 @@
     <Compile Include="Assets\Data\Injury\XML\InjuryReader.cs" />
     <Compile Include="Assets\Data\Mount\Table\MountTable.cs" />
     <Compile Include="Assets\Data\Mount\XML\MountsReader.cs" />
+    <Compile Include="Assets\Data\OTE\Table\OTETable.cs" />
+    <Compile Include="Assets\Data\OTE\XML\OTEReader.cs" />
     <Compile Include="Assets\Data\Party\Table\PartiesTable.cs" />
     <Compile Include="Assets\Data\Party\Table\SubPartiesTable.cs" />
     <Compile Include="Assets\Data\Party\XML\PartiesReader.cs" />
@@ -335,6 +337,7 @@
     <Compile Include="Assets\Model\OTE\EOTE.cs" />
     <Compile Include="Assets\Model\OTE\HoT\MHoT.cs" />
     <Compile Include="Assets\Model\OTE\MOTE.cs" />
+    <Compile Include="Assets\Model\OTE\OTEParams.cs" />
     <Compile Include="Assets\Model\OTE\Other\Slimed.cs" />
     <Compile Include="Assets\Model\Party\Builder\PartyBuilder.cs" />
     <Compile Include="Assets\Model\Party\Builder\SubPartyBuilder.cs" />
@@ -554,6 +557,11 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Assets\TODO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Data\OTE\XML\OTEs.xml">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

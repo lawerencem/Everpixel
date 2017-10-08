@@ -2,6 +2,6 @@
 {
     public class SlimeZone : ADurationZone
     {
-        public SlimeZone() : base(EZone.Slime) { }
+        public SlimeZone() : base(EZone.Slime_Zone) { }
     }
 }

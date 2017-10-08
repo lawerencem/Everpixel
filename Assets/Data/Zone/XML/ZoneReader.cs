@@ -1,4 +1,5 @@
 ﻿using Assets.Data.Zone.Table;
+using Assets.Model.OTE;
 using Assets.Model.Zone;
 using Assets.Template.Util;
 using Assets.Template.XML;
@@ -6,7 +7,7 @@ using System.Xml.Linq;
 
 namespace Assets.Data.Zone.XML
 {
-    class ZoneReader : XMLReader
+    public class ZoneReader : XMLReader
     {
         private static ZoneReader _instance;
 
@@ -43,21 +44,31 @@ namespace Assets.Data.Zone.XML
                     var type = EZone.None;
                     if (EnumUtil<EZone>.TryGetEnumValue(att.Value, ref type))
                     {
+                        if (!ZoneTable.Instance.Table.ContainsKey(type))
+                            ZoneTable.Instance.Table.Add(type, new ZoneParams());
 
+                        foreach (var ele in el.Elements())
+                            this.HandleIndex(type, ele, ele.Name.ToString());
                     }
                 }
             }
         }
 
-        private void HandleIndex(EZone type, XElement ele, string mod, string value)
+        private void HandleIndex(EZone type, XElement ele, string mod)
         {
-            var table = ZoneTable.Instance.Table;
-            double v = 1;
-            double.TryParse(value, out v);
             switch (mod)
             {
+                case ("EOTE"): { this.HandleSprites(ele, type); } break;
                 case ("Sprites"): { this.HandleSprites(ele, type); } break;
             }
+        }
+
+        private void HandleOTE(XElement el, EZone type)
+        {
+            var table = ZoneTable.Instance.Table;
+            var ote = EOTE.None;
+            if (EnumUtil<EOTE>.TryGetEnumValue(el.Value, ref ote))
+                table[type].OTE = ote;
         }
 
         private void HandleSprites(XElement el, EZone type)
