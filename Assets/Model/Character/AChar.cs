@@ -19,7 +19,9 @@ namespace Assets.Model.Character
 
         protected CharAbilities<T> _abilities;
         protected Dictionary<EClass, MClass> _baseClasses;
-        protected CharEffects<T> _effects;
+        protected BaseStats _baseStats;
+        protected CharStats _curStats;
+        protected CharEffects _effects;
         protected ACharEquipment<T> _equipment;
         protected FCharacterStatus _flags;
         protected bool _lParty;
@@ -28,8 +30,7 @@ namespace Assets.Model.Character
         protected MParty _parentParty;
         protected CharPerks _perks;
         protected CurrentPoints<T> _points;
-        protected CharStats<T> _stats;
-        protected StatMods _statMods;
+        protected CharStatMods _statMods;
 
         protected T _type;
 
@@ -40,15 +41,16 @@ namespace Assets.Model.Character
 
         public CharAbilities<T> GetAbilities() { return this._abilities; }
         public Dictionary<EClass, MClass> GetBaseClasses() { return this._baseClasses; }
-        public CharEffects<T> GetEffects() { return this._effects; }
+        public BaseStats GetBaseStats() { return this._baseStats; }
+        public CharStats GetCurStats() { return this._curStats; }
+        public CharEffects GetEffects() { return this._effects; }
         public ACharEquipment<T> GetEquipment() { return this._equipment; }
         public FCharacterStatus GetFlags() { return this._flags; }
-        public StatMods GetMods() { return this._statMods; }
         public PreCharParams GetParams() { return this._params; }
         public MParty GetParentParty() { return this._parentParty; }
         public CharPerks GetPerks() { return this._perks; }
         public CurrentPoints<T> GetPoints() { return this._points; }
-        public CharStats<T> GetStats() { return this._stats; }
+        public CharStatMods GetStatMods() { return this._statMods; }
 
         public void SetController(CChar c) { this._controller = c; }
         public void SetLParty(bool lParty) { this._lParty = lParty; }

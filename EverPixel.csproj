@@ -230,9 +230,10 @@
     <Compile Include="Assets\Model\Character\Container\ACharEquipment.cs" />
     <Compile Include="Assets\Model\Character\Container\CharAbilities.cs" />
     <Compile Include="Assets\Model\Character\Container\CharEffects.cs" />
+    <Compile Include="Assets\Model\Character\Container\BaseStats.cs" />
     <Compile Include="Assets\Model\Character\Container\CharStats.cs" />
     <Compile Include="Assets\Model\Character\Container\CurrentPoints.cs" />
-    <Compile Include="Assets\Model\Character\Container\Mods.cs" />
+    <Compile Include="Assets\Model\Character\Container\CharStatMods.cs" />
     <Compile Include="Assets\Model\Character\Enum\ECharacterType.cs" />
     <Compile Include="Assets\Model\Character\Enum\EPrimaryStat.cs" />
     <Compile Include="Assets\Model\Character\Enum\ERace.cs" />

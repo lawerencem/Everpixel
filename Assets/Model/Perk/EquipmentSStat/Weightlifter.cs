@@ -20,7 +20,7 @@ namespace Assets.Model.Perk.EquipmentSStat
                 {
                     foreach (var kvp in mods.Y)
                     {
-                        if (kvp.Data.StatType.Equals(ESecondaryStat.Stamina))
+                        if (kvp.Data.Stat.Equals(ESecondaryStat.Stamina))
                             kvp.Data.Scalar *= this.Val;
                     }
                 }
@@ -32,7 +32,7 @@ namespace Assets.Model.Perk.EquipmentSStat
                 {
                     foreach (var kvp in mods.Y)
                     {
-                        if (kvp.Data.StatType.Equals(ESecondaryStat.Stamina))
+                        if (kvp.Data.Stat.Equals(ESecondaryStat.Stamina))
                             kvp.Data.Scalar *= this.Val;
                     }
                 }

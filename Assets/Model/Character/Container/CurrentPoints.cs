@@ -31,7 +31,7 @@ namespace Assets.Model.Character.Container
         public void CheckMaxValue(ESecondaryStat type)
         {
             var current = this.GetCurrValue(type);
-            var max = this._parent.GetStats().GetStatValue(type);
+            var max = this._parent.GetBaseStats().GetStatValue(type);
             if (current > max)
                 this.SetValue(type, max);
         }

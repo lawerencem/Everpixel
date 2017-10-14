@@ -29,14 +29,14 @@ namespace Assets.Model.Injury
 
         public void TryScaleStat(EPrimaryStat stat, ref double value)
         {
-            var scalars = this.Mods.FindAll(x => x.Data.StatType.Equals(stat));
+            var scalars = this.Mods.FindAll(x => x.Data.Stat.Equals(stat));
             foreach (var scalar in scalars)
                 value *= scalar.Data.Scalar;
         }
 
         public void TryScaleStat(ESecondaryStat stat, ref double value)
         {
-            var scalars = this.Mods.FindAll(x => x.Data.StatType.Equals(stat));
+            var scalars = this.Mods.FindAll(x => x.Data.Stat.Equals(stat));
             foreach (var scalar in scalars)
                 value *= scalar.Data.Scalar;
         }

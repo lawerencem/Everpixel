@@ -9,16 +9,6 @@
         public int Perception { get; set; }
         public int Resolve { get; set; }
 
-        public PStats(int agi, int cons, int intel, int might, int per, int res)
-        {
-            this.Agility = agi;
-            this.Constitution = cons;
-            this.Intelligence = intel;
-            this.Might = might;
-            this.Perception = per;
-            this.Resolve = res;
-        }
-
         public PStats()
         {
             this.Agility = 0;

@@ -18,13 +18,14 @@ namespace Assets.Model.Character
             this._race = race;
             this._abilities = new CharAbilities<ECharType>(this);
             this._baseClasses = new Dictionary<EClass, MClass>();
-            this._effects = new CharEffects<ECharType>(this);
+            this._baseStats = new BaseStats();
+            this._curStats = new CharStats();
+            this._effects = new CharEffects();
             this._equipment = new ACharEquipment<ECharType>(this);
             this._flags = new FCharacterStatus();
-            this._statMods = new StatMods();
+            this._statMods = new CharStatMods();
             this._perks = new CharPerks();
             this._points = new CurrentPoints<ECharType>(this);
-            this._stats = new CharStats<ECharType>(this);
         }
 
         public void ModifyPoints(ESecondaryStat type, int value, bool isHeal)

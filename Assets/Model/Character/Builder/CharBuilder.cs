@@ -55,11 +55,12 @@ namespace Assets.Model.Character.Builder
             this.BuildBaseClassHelper(c, character);
             this.BuildAbilities(c, character);
             var stats = PredefinedCharTable.Instance.Table[c.Name];
-            character.GetStats().SetPrimaryStats(stats.Stats);
+            character.GetBaseStats().SetPrimaryStats(stats.Stats);
             this.BuildClassPrimaryStats(character);
-            var secondary = GetSecondaryStats(character.GetStats().GetPrimaryStats());
-            character.GetStats().SetSecondaryStats(secondary);
+            var secondary = GetSecondaryStats(character.GetBaseStats().GetPrimaryStats());
+            character.GetBaseStats().SetSecondaryStats(secondary);
             this.BuildClassSecondaryStats(character);
+            this.BuildCurStats(character);
             character.SetType(c.Type);
             character.SetParams(c);
             
@@ -108,7 +109,7 @@ namespace Assets.Model.Character.Builder
             {
                 var classStats = kvp.Value.GetParams();
                 foreach (var stat in classStats.PrimaryStats)
-                    c.GetStats().SetStat(stat.Key, stat.Value);
+                    c.GetBaseStats().SetStat(stat.Key, stat.Value);
             }
         }
 
@@ -118,8 +119,13 @@ namespace Assets.Model.Character.Builder
             {
                 var stats = kvp.Value.GetParams();
                 foreach (var stat in stats.SecondaryStats)
-                    c.GetStats().AddStat(stat.Key, stat.Value);
+                    c.GetBaseStats().AddStat(stat.Key, stat.Value);
             }
+        }
+
+        private void BuildCurStats(MChar c)
+        {
+            c.GetCurStats().Init(c.GetBaseStats());
         }
 
         private void BuildWeaponHelper(MChar c, PreCharParams p)

@@ -19,7 +19,7 @@ namespace Assets.Model.Perk.EquipmentSStat
                 {
                     foreach (var kvp in mods.Y)
                     {
-                        if (kvp.Data.StatType.Equals(ESecondaryStat.AP))
+                        if (kvp.Data.Stat.Equals(ESecondaryStat.AP))
                             kvp.Data.Scalar *= this.Val;
                     }
                 }

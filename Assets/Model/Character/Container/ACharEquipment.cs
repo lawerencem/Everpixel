@@ -32,7 +32,7 @@ namespace Assets.Model.Character.Container
                 armor, armor.Model.GetStatModifiers());
             foreach (var perk in this._parent.GetPerks().GetEquipmentSStatPerks())
                 perk.TryModEquipmentMod(mods);
-            this._parent.GetMods().AddMod(mods);
+            this._parent.GetStatMods().AddMod(mods);
         }
 
         public void AddHelm(CHelm helm)
@@ -42,7 +42,7 @@ namespace Assets.Model.Character.Container
             var mods = new Pair<object, List<StatMod>>(helm, helm.Model.GetStatModifiers());
             foreach (var perk in this._parent.GetPerks().GetEquipmentSStatPerks())
                 perk.TryModEquipmentMod(mods);
-            this._parent.GetMods().AddMod(mods);
+            this._parent.GetStatMods().AddMod(mods);
         }
 
         public void AddWeapon(CWeapon weapon, bool lWeapon)
@@ -59,7 +59,7 @@ namespace Assets.Model.Character.Container
                 //    perk.TryProcessAdd(this._parent, weapon);
                 // TODO
 
-                this._parent.GetMods().AddMod(mods);
+                this._parent.GetStatMods().AddMod(mods);
             }
             else
             {
@@ -72,19 +72,19 @@ namespace Assets.Model.Character.Container
                 //    perk.TryProcessAdd(this._parent.Controller.Proxy, weapon);
                 // TODO
 
-                this._parent.GetMods().AddMod(mods);
+                this._parent.GetStatMods().AddMod(mods);
             }
         }
 
         public void RemoveArmor()
         {
-            this._parent.GetMods().RemoveGearMods(this._armor);
+            this._parent.GetStatMods().RemoveGearMods(this._armor);
             this._armor = null;
         }
 
         public void RemoveHelm()
         {
-            this._parent.GetMods().RemoveGearMods(this._helm);
+            this._parent.GetStatMods().RemoveGearMods(this._helm);
             this._helm = null;
         }
 
@@ -92,12 +92,12 @@ namespace Assets.Model.Character.Container
         {
             if (lWeapon)
             {
-                this._parent.GetMods().RemoveGearMods(this._lWeapon);
+                this._parent.GetStatMods().RemoveGearMods(this._lWeapon);
                 this._lWeapon = null;
             }
             else
             {
-                this._parent.GetMods().RemoveGearMods(this._rWeapon);
+                this._parent.GetStatMods().RemoveGearMods(this._rWeapon);
                 this._rWeapon = null;
             }
         }

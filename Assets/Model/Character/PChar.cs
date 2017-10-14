@@ -28,37 +28,143 @@ namespace Assets.Model.Character
 
         public EStartCol StartCol { get; set; }
 
-        public void AddInjury(MInjury i) { this._model.GetEffects().AddInjury(i); }
-        public void AddPoints(ESecondaryStat s, double v) { this._model.GetPoints().AddValue(s, v); }
-        public List<MAbility> GetActiveAbilities() { return this._model.GetAbilities().GetNonWpnAbilities(); }
-        public CArmor GetArmor() { return this._model.GetEquipment().GetArmor(); }
-        public Dictionary<EClass, MClass> GetBaseClasses() { return this._model.GetBaseClasses(); }
-        public List<MAbility> GetDefaultAbilities() { return this._model.GetAbilities().GetWpnAbilities(); }
-        public CharEffects<ECharType> GetEffects() { return this._model.GetEffects(); }        
-        public FCharacterStatus GetFlags() { return this._model.GetFlags(); }
-        public CHelm GetHelm() { return this._model.GetEquipment().GetHelm(); }
-        public CWeapon GetLWeapon() { return this._model.GetEquipment().GetLWeapon(); }
-        public double GetPoints(ESecondaryStat s) { return this._model.GetPoints().GetCurrValue(s); }
-        public StatMods GetMods() { return this._model.GetMods(); }
-        public CMount GetMount() { return this._model.Mount; }
-        public PreCharParams GetParams() { return this._model.GetParams(); }
-        public MParty GetParentParty() { return this._model.GetParentParty(); }
-        public CharPerks GetPerks() { return this._model.GetPerks(); }
-        public CWeapon GetRWeapon() { return this._model.GetEquipment().GetRWeapon(); }
-        public double GetStat(ESecondaryStat s) { return this._model.GetStats().GetStatValue(s); }
-        public double GetStat(EPrimaryStat s) { return this._model.GetStats().GetStatValue(s); }
-        public int GetTileTraversalAPCost(CTile t) { return this._model.GetTileTraversalAPCost(t); }
-        public void ModifyPoints(ESecondaryStat s, int v, bool isHeal) { this._model.ModifyPoints(s, v, isHeal); }
-        public void ProcessEndOfTurn() { this._model.ProcessEndOfTurn(); }
-        public void SetController(CChar c) { this._model.SetController(c); }
-        public void SetLParty(bool lParty) { this._model.SetLParty(lParty); }
-        public void SetParentParty(MParty p) { this._model.SetParentParty(p); }
-        public void SetPoints(ESecondaryStat s, double v) { this._model.GetPoints().SetValue(s, v); }
+        public void AddInjury(MInjury i)
+        {
+            this._model.GetStatMods().AddInjury(i);
+            this._model.GetCurStats().Reset(
+                this._model.GetBaseStats(),
+                this._model.GetStatMods());
+        }
+
+        public void AddPoints(ESecondaryStat s, double v)
+        {
+            this._model.GetPoints().AddValue(s, v);
+        }
+
+        public List<MAbility> GetActiveAbilities()
+        {
+            return this._model.GetAbilities().GetNonWpnAbilities();
+        }
+
+        public CArmor GetArmor()
+        {
+            return this._model.GetEquipment().GetArmor();
+        }
+
+        public Dictionary<EClass, MClass> GetBaseClasses()
+        {
+            return this._model.GetBaseClasses();
+        }
+
+        public List<MAbility> GetDefaultAbilities()
+        {
+            return this._model.GetAbilities().GetWpnAbilities();
+        }
+
+        public CharEffects GetEffects()
+        {
+            return this._model.GetEffects();
+        }    
+        
+        public FCharacterStatus GetFlags()
+        {
+            return this._model.GetFlags();
+        }
+
+        public CHelm GetHelm()
+        {
+            return this._model.GetEquipment().GetHelm();
+        }
+
+        public CWeapon GetLWeapon()
+        {
+            return this._model.GetEquipment().GetLWeapon();
+        }
+
+        public double GetPoints(ESecondaryStat s)
+        {
+            return this._model.GetPoints().GetCurrValue(s);
+        }
+
+        public CharStatMods GetMods()
+        {
+            return this._model.GetStatMods();
+        }
+
+        public CMount GetMount()
+        {
+            return this._model.Mount;
+        }
+
+        public PreCharParams GetParams()
+        {
+            return this._model.GetParams();
+        }
+
+        public MParty GetParentParty()
+        {
+            return this._model.GetParentParty();
+        }
+
+        public CharPerks GetPerks()
+        {
+            return this._model.GetPerks();
+        }
+
+        public CWeapon GetRWeapon()
+        {
+            return this._model.GetEquipment().GetRWeapon();
+        }
+
+        public double GetStat(ESecondaryStat s)
+        {
+            return this._model.GetCurStats().GetStatValue(s);
+        }
+
+        public double GetStat(EPrimaryStat s)
+        {
+            return this._model.GetCurStats().GetStatValue(s);
+        }
+
+        public int GetTileTraversalAPCost(CTile t)
+        {
+            return this._model.GetTileTraversalAPCost(t);
+        }
+
+        public void ModifyPoints(ESecondaryStat s, int v, bool isHeal)
+        {
+            this._model.ModifyPoints(s, v, isHeal);
+        }
+
+        public void ProcessEndOfTurn()
+        {
+            this._model.ProcessEndOfTurn();
+        }
+
+        public void SetController(CChar c)
+        {
+            this._model.SetController(c);
+        }
+
+        public void SetLParty(bool lParty)
+        {
+            this._model.SetLParty(lParty);
+        }
+
+        public void SetParentParty(MParty p)
+        {
+            this._model.SetParentParty(p);
+        }
+
+        public void SetPoints(ESecondaryStat s, double v)
+        {
+            this._model.GetPoints().SetValue(s, v);
+        }
+
         public void SetPointsToMax(ESecondaryStat s)
         {
-            double max = this._model.GetStats().GetStatValue(s);
+            double max = this._model.GetBaseStats().GetStatValue(s);
             this._model.GetPoints().SetValue(s, max);
         }
-        
     }
 }

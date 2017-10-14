@@ -34,14 +34,14 @@ namespace Assets.Model.Injury
             foreach (var stat in this.PStatMods)
             {
                 var data = this.GetModProto();
-                data.StatType = stat.X;
+                data.Stat = stat.X;
                 data.Scalar = stat.Y;
                 injury.Mods.Add(new StatMod(data));
             }
             foreach (var stat in this.SStatMods)
             {
                 var data = this.GetModProto();
-                data.StatType = stat.X;
+                data.Stat = stat.X;
                 data.Scalar = stat.Y;
                 injury.Mods.Add(new StatMod(data));
             }
