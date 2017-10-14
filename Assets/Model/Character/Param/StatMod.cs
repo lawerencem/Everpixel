@@ -32,63 +32,63 @@ namespace Assets.Model.Character.Param
         public void TryScalePStats(CharStats stats)
         {
             if (this.Data.Stat.Equals(EPrimaryStat.Agility))
-                stats.ScaleStat(EPrimaryStat.Agility, this.Data.Scalar);
+                stats.ScaleStat(EPrimaryStat.Agility, this);
             else if (this.Data.Stat.Equals(EPrimaryStat.Constitution))
-                stats.ScaleStat(EPrimaryStat.Constitution, this.Data.Scalar);
+                stats.ScaleStat(EPrimaryStat.Constitution, this);
             else if (this.Data.Stat.Equals(EPrimaryStat.Intelligence))
-                stats.ScaleStat(EPrimaryStat.Intelligence, this.Data.Scalar);
+                stats.ScaleStat(EPrimaryStat.Intelligence, this);
             else if (this.Data.Stat.Equals(EPrimaryStat.Might))
-                stats.ScaleStat(EPrimaryStat.Might, this.Data.Scalar);
+                stats.ScaleStat(EPrimaryStat.Might, this);
             else if (this.Data.Stat.Equals(EPrimaryStat.Perception))
-                stats.ScaleStat(EPrimaryStat.Perception, this.Data.Scalar);
+                stats.ScaleStat(EPrimaryStat.Perception, this);
             else if (this.Data.Stat.Equals(EPrimaryStat.Resolve))
-                stats.ScaleStat(EPrimaryStat.Resolve, this.Data.Scalar);
+                stats.ScaleStat(EPrimaryStat.Resolve, this);
         }
 
         public void TryScaleSStats(CharStats stats)
         {
             if (this.Data.Stat.Equals(ESecondaryStat.AP))
-                stats.ScaleStat(ESecondaryStat.AP, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.AP, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Block))
-                stats.ScaleStat(ESecondaryStat.Block, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Block, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Concentration))
-                stats.ScaleStat(ESecondaryStat.Concentration, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Concentration, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Critical_Chance))
-                stats.ScaleStat(ESecondaryStat.Critical_Chance, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Critical_Chance, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Critical_Multiplier))
-                stats.ScaleStat(ESecondaryStat.Critical_Multiplier, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Critical_Multiplier, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Damage_Ignore))
-                stats.ScaleStat(ESecondaryStat.Damage_Ignore, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Damage_Ignore, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Damage_Reduction))
-                stats.ScaleStat(ESecondaryStat.Damage_Reduction, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Damage_Reduction, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Dodge))
-                stats.ScaleStat(ESecondaryStat.Dodge, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Dodge, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Fortitude))
-                stats.ScaleStat(ESecondaryStat.Fortitude, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Fortitude, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.HP))
-                stats.ScaleStat(ESecondaryStat.HP, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.HP, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Initiative))
-                stats.ScaleStat(ESecondaryStat.Initiative, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Initiative, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Melee))
-                stats.ScaleStat(ESecondaryStat.Melee, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Melee, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Morale))
-                stats.ScaleStat(ESecondaryStat.Morale, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Morale, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Parry))
-                stats.ScaleStat(ESecondaryStat.Parry, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Parry, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Power))
-                stats.ScaleStat(ESecondaryStat.Power, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Power, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Ranged))
-                stats.ScaleStat(ESecondaryStat.Ranged, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Ranged, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Reflex))
-                stats.ScaleStat(ESecondaryStat.Reflex, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Reflex, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Spell_Duration))
-                stats.ScaleStat(ESecondaryStat.Spell_Duration, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Spell_Duration, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Spell_Penetration))
-                stats.ScaleStat(ESecondaryStat.Spell_Penetration, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Spell_Penetration, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Stamina))
-                stats.ScaleStat(ESecondaryStat.Stamina, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Stamina, this);
             else if (this.Data.Stat.Equals(ESecondaryStat.Will))
-                stats.ScaleStat(ESecondaryStat.Will, this.Data.Scalar);
+                stats.ScaleStat(ESecondaryStat.Will, this);
         }
     }
 }

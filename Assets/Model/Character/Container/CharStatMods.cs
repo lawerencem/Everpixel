@@ -12,17 +12,47 @@ namespace Assets.Model.Character.Container
         private List<Pair<object, List<StatMod>>> _gearMods { get; set; }
         private List<MInjury> _injuries { get; set; }
 
-        public void AddBuff(StatMod mod) { this._buffs.Add(mod); }
-        public void AddDebuff(StatMod mod) { this._debuffs.Add(mod); }
-        public void AddInjury(MInjury i) { this._injuries.Add(i); }
-        public void AddMod(Pair<object, List<StatMod>> mod) { this._gearMods.Add(mod); }
+        public void AddBuff(StatMod mod)
+        {
+            this._buffs.Add(mod);
+        }
 
-        public List<StatMod> GetBuffs() { return this._buffs; }
-        public List<StatMod> GetDebuffs() { return this._buffs; }
-        public List<Pair<object, List<StatMod>>> GetGearMods() { return this._gearMods; }
+        public void AddDebuff(StatMod mod)
+        {
+            this._debuffs.Add(mod);
+        }
+
+        public void AddInjury(MInjury i)
+        {
+            this._injuries.Add(i);
+        }
+
+        public void AddMod(Pair<object, List<StatMod>> mod)
+        {
+            this._gearMods.Add(mod);
+        }
+
+        public List<StatMod> GetBuffs()
+        {
+            return this._buffs;
+        }
+
+        public List<StatMod> GetDebuffs()
+        {
+            return this._buffs;
+        }
+
+        public List<Pair<object, List<StatMod>>> GetGearMods()
+        {
+            return this._gearMods;
+        }
+
         public List<MInjury> GetInjuries() { return this._injuries; }
 
-        public void RemoveMod(Pair<object, List<StatMod>> mod) { this._gearMods.Remove(mod); }
+        public void RemoveMod(Pair<object, List<StatMod>> mod)
+        {
+            this._gearMods.Remove(mod);
+        }
 
         public CharStatMods()
         {
@@ -45,7 +75,9 @@ namespace Assets.Model.Character.Container
         {
             var obj = this._gearMods.Find(x => x.X.Equals(gear));
             if (!obj.Equals(null))
+            {
                 this._gearMods.Remove(obj);
+            }
         }
 
         public void RemoveZeroDurations()
