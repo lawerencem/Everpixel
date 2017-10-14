@@ -7,14 +7,14 @@ namespace Assets.Model.Character.Container
     {
         private AChar<T> _parent;
 
-        private PrimaryStats _primaryStats;
-        private SecondaryStats _secondaryStats;
+        private PStats _primaryStats;
+        private SStats _secondaryStats;
 
-        public PrimaryStats GetPrimaryStats() { return this._primaryStats; }
-        public SecondaryStats GetSecondaryStats() { return this._secondaryStats; }
+        public PStats GetPrimaryStats() { return this._primaryStats; }
+        public SStats GetSecondaryStats() { return this._secondaryStats; }
 
-        public void SetPrimaryStats(PrimaryStats p) { this._primaryStats = p; }
-        public void SetSecondaryStats(SecondaryStats s) { this._secondaryStats = s; }
+        public void SetPrimaryStats(PStats p) { this._primaryStats = p; }
+        public void SetSecondaryStats(SStats s) { this._secondaryStats = s; }
 
         public CharStats(AChar<T> parent)
         {
@@ -61,13 +61,11 @@ namespace Assets.Model.Character.Container
                 case (EPrimaryStat.Perception): { v = (double)this._primaryStats.Perception; } break;
                 case (EPrimaryStat.Resolve): { v = (double)this._primaryStats.Resolve; } break;
             }
-            foreach (var kvp in this._parent.GetMods().GetIndefPStatGearMods())
-                foreach (var mod in kvp.Y)
-                    mod.TryScaleValue(stat, ref v);
+            //foreach (var kvp in this._parent.GetMods().GetGearMods())
+            //    foreach (var mod in kvp.Y)
+            //        mod.TryScaleValue(stat, ref v);
             foreach (var injury in this._parent.GetEffects().GetInjuries())
                 injury.TryScaleStat(stat, ref v);
-            foreach (var mod in this._parent.GetMods().GetPStatMods())
-                mod.TryScaleValue(stat, ref v);
             return (int)v;
         }
 
@@ -98,17 +96,17 @@ namespace Assets.Model.Character.Container
                 case (ESecondaryStat.Stamina): { v = (double)this._secondaryStats.Stamina; } break;
                 case (ESecondaryStat.Will): { v = (double)this._secondaryStats.Will; } break;
             }
-            foreach (var kvp in this._parent.GetMods().GetIndefSStatGearMods())
-                foreach (var mod in kvp.Y)
-                    mod.TryScaleValue(stat, ref v);
-            foreach (var injury in this._parent.GetEffects().GetInjuries())
-                injury.TryScaleStat(stat, ref v);
-            foreach (var mod in this._parent.GetMods().GetSStatMods())
-                mod.TryScaleValue(stat, ref v);
-            foreach (var perk in this._parent.GetPerks().GetSStatModPerks())
-                perk.TryModSStat(stat, ref v);
-            foreach (var mod in this._parent.GetMods().GetFlatSStatMods())
-                mod.TryFlatScaleStat(stat, ref v);
+            //foreach (var kvp in this._parent.GetMods().GetIndefSStatGearMods())
+            //    foreach (var mod in kvp.Y)
+            //        mod.TryScaleValue(stat, ref v);
+            //foreach (var injury in this._parent.GetEffects().GetInjuries())
+            //    injury.TryScaleStat(stat, ref v);
+            //foreach (var mod in this._parent.GetMods().GetSStatMods())
+            //    mod.TryScaleValue(stat, ref v);
+            //foreach (var perk in this._parent.GetPerks().GetSStatModPerks())
+            //    perk.TryModSStat(stat, ref v);
+            //foreach (var mod in this._parent.GetMods().GetFlatSStatMods())
+            //    mod.TryFlatScaleStat(stat, ref v);
             return v;
         }
 

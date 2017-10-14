@@ -11,32 +11,32 @@ namespace Assets.Model.Perk.EquipmentSStat
     {
         public Colossus() : base(EPerk.Colossus) { }
 
-        public override void TryModEquipmentMod(Pair<object, List<IndefSecondaryStatModifier>> mods)
+        public override void TryModEquipmentMod(Pair<object, List<StatMod>> mods)
         {
-            if (mods.X.GetType() == typeof(CArmor))
-            {
-                var armor = mods.X as CArmor;
-                if (armor.Model.Data.ArmorType == EArmorType.Heavy_Armor)
-                {
-                    foreach (var kvp in mods.Y)
-                    {
-                        if (kvp.Type == ESecondaryStat.AP)
-                            kvp.Scalar *= this.Val;
-                    }
-                }
-            }
-            else if (mods.X.GetType() == typeof(CHelm))
-            {
-                var helm = mods.X as CHelm;
-                if (helm.Model.Data.ArmorType == EArmorType.Heavy_Helm)
-                {
-                    foreach (var kvp in mods.Y)
-                    {
-                        if (kvp.Type == ESecondaryStat.AP)
-                            kvp.Scalar *= this.Val;
-                    }
-                }
-            }
+            //if (mods.X.GetType() == typeof(CArmor))
+            //{
+            //    var armor = mods.X as CArmor;
+            //    if (armor.Model.Data.ArmorType == EArmorType.Heavy_Armor)
+            //    {
+            //        foreach (var kvp in mods.Y)
+            //        {
+            //            if (kvp.Type == ESecondaryStat.AP)
+            //                kvp.Scalar *= this.Val;
+            //        }
+            //    }
+            //}
+            //else if (mods.X.GetType() == typeof(CHelm))
+            //{
+            //    var helm = mods.X as CHelm;
+            //    if (helm.Model.Data.ArmorType == EArmorType.Heavy_Helm)
+            //    {
+            //        foreach (var kvp in mods.Y)
+            //        {
+            //            if (kvp.Type == ESecondaryStat.AP)
+            //                kvp.Scalar *= this.Val;
+            //        }
+            //    }
+            //}
         }
     }
 }

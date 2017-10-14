@@ -30,7 +30,7 @@ namespace Assets.Model.Character.Builder
             return BuildHelper(arg);
         }
 
-        private PrimaryStats GetRaceStats(PreCharParams c)
+        private PStats GetRaceStats(PreCharParams c)
         {
             if (RaceParamsTable.Instance.Table.ContainsKey(c.Race))
                 return RaceParamsTable.Instance.Table[c.Race].PrimaryStats.Clone();
@@ -38,9 +38,9 @@ namespace Assets.Model.Character.Builder
                 return null;
         }
 
-        private SecondaryStats GetSecondaryStats(PrimaryStats p)
+        private SStats GetSecondaryStats(PStats p)
         {
-            return new SecondaryStats(p);
+            return new SStats(p);
         }
 
         private MChar BuildHelper(PreCharParams c)

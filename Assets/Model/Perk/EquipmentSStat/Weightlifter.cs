@@ -11,7 +11,7 @@ namespace Assets.Model.Perk.EquipmentSStat
     {
         public Weightlifter() : base(EPerk.Weightlifter) { }
 
-        public override void TryModEquipmentMod(Pair<object, List<IndefSecondaryStatModifier>> mods)
+        public override void TryModEquipmentMod(Pair<object, List<StatMod>> mods)
         {
             if (mods.X.GetType() == typeof(CArmor))
             {
@@ -20,8 +20,8 @@ namespace Assets.Model.Perk.EquipmentSStat
                 {
                     foreach (var kvp in mods.Y)
                     {
-                        if (kvp.Type == ESecondaryStat.Stamina)
-                            kvp.Scalar *= this.Val;
+                        if (kvp.Data.StatType.Equals(ESecondaryStat.Stamina))
+                            kvp.Data.Scalar *= this.Val;
                     }
                 }
             }
@@ -32,8 +32,8 @@ namespace Assets.Model.Perk.EquipmentSStat
                 {
                     foreach (var kvp in mods.Y)
                     {
-                        if (kvp.Type == ESecondaryStat.Stamina)
-                            kvp.Scalar *= this.Val;
+                        if (kvp.Data.StatType.Equals(ESecondaryStat.Stamina))
+                            kvp.Data.Scalar *= this.Val;
                     }
                 }
             }

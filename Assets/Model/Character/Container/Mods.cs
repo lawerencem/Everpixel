@@ -4,66 +4,49 @@ using System.Collections.Generic;
 
 namespace Assets.Model.Character.Container
 {
-    public class Mods
+    public class StatMods
     {
-        private List<FlatSecondaryStatModifier> _flatSStatMods { get; set; }
-        private List<Pair<object, List<IndefPrimaryStatMod>>> _indefPStatGearMods { get; set; }
-        private List<Pair<object, List<IndefSecondaryStatModifier>>> _indefSStatGearMods { get; set; }
-        private List<PrimaryStatMod> _pStatMods { get; set; }
-        private List<SecondaryStatMod> _sStatMods { get; set; }
-        
-        public List<FlatSecondaryStatModifier> GetFlatSStatMods() { return this._flatSStatMods; }
-        public List<Pair<object, List<IndefPrimaryStatMod>>> GetIndefPStatGearMods() { return this._indefPStatGearMods; }
-        public List<Pair<object, List<IndefSecondaryStatModifier>>> GetIndefSStatGearMods() { return this._indefSStatGearMods; }
-        public List<PrimaryStatMod> GetPStatMods() { return this._pStatMods; }
-        public List<SecondaryStatMod> GetSStatMods() { return this._sStatMods; }
-        
-        public void AddMod(FlatSecondaryStatModifier mod) { this._flatSStatMods.Add(mod); }
-        public void AddMod(Pair<object, List<IndefPrimaryStatMod>> mod) { this._indefPStatGearMods.Add(mod); }
-        public void AddMod(Pair<object, List<IndefSecondaryStatModifier>> mod) { this._indefSStatGearMods.Add(mod); }
-        public void AddMod(PrimaryStatMod mod) { this._pStatMods.Add(mod); }
-        public void AddMod(SecondaryStatMod mod) { this._sStatMods.Add(mod); }
+        private List<StatMod> _buffs { get; set; }
+        private List<StatMod> _debuffs { get; set; }
+        private List<Pair<object, List<StatMod>>> _gearMods { get; set; }
 
-        public void RemoveMod(FlatSecondaryStatModifier mod) { this._flatSStatMods.Remove(mod); }
-        public void RemoveMod(Pair<object, List<IndefPrimaryStatMod>> mod) { this._indefPStatGearMods.Remove(mod); }
-        public void RemoveMod(Pair<object, List<IndefSecondaryStatModifier>> mod) { this._indefSStatGearMods.Remove(mod); }
-        public void RemoveMod(PrimaryStatMod mod) { this._pStatMods.Remove(mod); }
+        public void AddBuff(StatMod mod) { this._buffs.Add(mod); }
+        public void AddDebuff(StatMod mod) { this._debuffs.Add(mod); }
+        public void AddMod(Pair<object, List<StatMod>> mod) { this._gearMods.Add(mod); }
 
-        public Mods()
+        public List<StatMod> GetBuffs() { return this._buffs; }
+        public List<StatMod> GetDebuffs() { return this._buffs; }
+        public List<Pair<object, List<StatMod>>> GetGearMods() { return this._gearMods; }
+
+        public void RemoveMod(Pair<object, List<StatMod>> mod) { this._gearMods.Remove(mod); }
+
+        public StatMods()
         {
-            this._flatSStatMods = new List<FlatSecondaryStatModifier>();
-            this._indefPStatGearMods = new List<Pair<object, List<IndefPrimaryStatMod>>>();
-            this._indefSStatGearMods = new List<Pair<object, List<IndefSecondaryStatModifier>>>();
-            this._pStatMods = new List<PrimaryStatMod>();
-            this._sStatMods = new List<SecondaryStatMod>();
+            this._buffs = new List<StatMod>();
+            this._debuffs = new List<StatMod>();
+            this._gearMods = new List<Pair<object, List<StatMod>>>();
         }
 
         public void ProcessBuffDurations()
         {
-            foreach (var buff in this._flatSStatMods)
+            foreach (var buff in this._buffs)
                 buff.ProcessTurn();
-            foreach (var buff in this._pStatMods)
-                buff.ProcessTurn();
-            foreach (var buff in this._sStatMods)
-                buff.ProcessTurn();
+            foreach (var debuff in this._debuffs)
+                debuff.ProcessTurn();
             this.RemoveZeroDurations();
         }
 
         public void RemoveGearMods(object gear)
         {
-            var obj = this._indefPStatGearMods.Find(x => x.X.Equals(gear));
+            var obj = this._gearMods.Find(x => x.X.Equals(gear));
             if (!obj.Equals(null))
-                this._indefPStatGearMods.Remove(obj);
-            var obj2 = this._indefSStatGearMods.Find(x => x.X.Equals(gear));
-            if (!obj.Equals(null))
-                this._indefSStatGearMods.Remove(obj2);
+                this._gearMods.Remove(obj);
         }
 
         public void RemoveZeroDurations()
         {
-            this._flatSStatMods.RemoveAll(x => x.Duration <= 0);
-            this._pStatMods.RemoveAll(x => x.Duration <= 0);
-            this._sStatMods.RemoveAll(x => x.Duration <= 0);
+            this._buffs.RemoveAll(x => x.Data.DurationMod && x.Data.Dur <= 0);
+            this._debuffs.RemoveAll(x => x.Data.DurationMod && x.Data.Dur <= 0);
         }
     }
 }

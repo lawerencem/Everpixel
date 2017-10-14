@@ -22,7 +22,7 @@ namespace Assets.Model.Equipment.Builder
             model.Data.DodgeMod = aStats.DodgeMod;
             model.Data.Durability = aStats.Durability;
             model.Data.FatigueMod = aStats.FatigueCost;
-            model.Data.InitativeMod = aStats.InitativeMod;
+            model.Data.InitiativeMod = aStats.InitativeMod;
             model.Data.MaxDurability = aStats.Durability;
             model.Data.ParryMod = aStats.ParryMod;
             model.Data.StaminaMod = aStats.StaminaMod;

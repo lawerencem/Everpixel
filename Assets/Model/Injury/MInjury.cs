@@ -10,15 +10,13 @@ namespace Assets.Model.Injury
         private EInjury _type;
 
         public MDoT DoT { get; set; }
-        public List<IndefPrimaryStatMod> PStatMods { get; set; }
-        public List<IndefSecondaryStatModifier> SStatMods { get; set; }
+        public List<StatMod> Mods { get; set; }
         public EInjury Type { get { return this._type; } }
 
         public MInjury(EInjury type)
         {
             this._type = type;
-            this.PStatMods = new List<IndefPrimaryStatMod>();
-            this.SStatMods = new List<IndefSecondaryStatModifier>();
+            this.Mods = new List<StatMod>();
         }
 
         public bool IsTypeOfBleeding()
@@ -31,16 +29,16 @@ namespace Assets.Model.Injury
 
         public void TryScaleStat(EPrimaryStat stat, ref double value)
         {
-            var scalars = this.PStatMods.FindAll(x => x.Type == stat);
+            var scalars = this.Mods.FindAll(x => x.Data.StatType.Equals(stat));
             foreach (var scalar in scalars)
-                value *= scalar.Scalar;
+                value *= scalar.Data.Scalar;
         }
 
         public void TryScaleStat(ESecondaryStat stat, ref double value)
         {
-            var scalars = this.SStatMods.FindAll(x => x.Type == stat);
+            var scalars = this.Mods.FindAll(x => x.Data.StatType.Equals(stat));
             foreach (var scalar in scalars)
-                value *= scalar.Scalar;
+                value *= scalar.Data.Scalar;
         }
     }
 }

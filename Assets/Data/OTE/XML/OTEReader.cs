@@ -1,5 +1,6 @@
 ﻿using Assets.Data.OTE.Table;
 using Assets.Model.Ability.Enum;
+using Assets.Model.Effect.OTE;
 using Assets.Model.OTE;
 using Assets.Template.Util;
 using Assets.Template.XML;

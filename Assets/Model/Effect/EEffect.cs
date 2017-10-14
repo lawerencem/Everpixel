@@ -5,6 +5,8 @@
         None,
         Horror,
         Megabite,
+        Slime,
+        SlimeZone,
         SummonOnHit,
     }
 }

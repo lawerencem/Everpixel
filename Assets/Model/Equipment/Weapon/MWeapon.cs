@@ -1,5 +1,4 @@
 ﻿using Assets.Model.Ability;
-using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
 using Assets.Model.Effect;
 using Assets.Model.Equipment.Enum;
@@ -79,14 +78,24 @@ namespace Assets.Model.Equipment.Weapon
                 return false;
         }
 
-        public List<IndefSecondaryStatModifier> GetStatModifiers()
+        public List<StatMod> GetStatModifiers()
         {
-            var toReturn = new List<IndefSecondaryStatModifier>();
+            var toReturn = new List<StatMod>();
 
-            toReturn.Add(new IndefSecondaryStatModifier(ESecondaryStat.AP, this.Data.APMod));
-            toReturn.Add(new IndefSecondaryStatModifier(ESecondaryStat.Initiative, this.Data.InitiativeMod));
-            toReturn.Add(new IndefSecondaryStatModifier(ESecondaryStat.Parry, this.Data.ParryMod));
-            toReturn.Add(new IndefSecondaryStatModifier(ESecondaryStat.Stamina, this.Data.StaminaMod));
+            var ap = this.GetModProto();
+            var init = this.GetModProto();
+            var parry = this.GetModProto();
+            var stam = this.GetModProto();
+
+            ap.Scalar = this.Data.APMod;
+            init.Scalar = this.Data.InitiativeMod;
+            parry.Scalar = this.Data.ParryMod;
+            stam.Scalar = this.Data.StaminaMod;
+
+            toReturn.Add(new StatMod(ap));
+            toReturn.Add(new StatMod(init));
+            toReturn.Add(new StatMod(parry));
+            toReturn.Add(new StatMod(stam));
 
             return toReturn;
         }

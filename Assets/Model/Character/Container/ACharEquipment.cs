@@ -28,7 +28,7 @@ namespace Assets.Model.Character.Container
         {
             this.RemoveArmor();
             this._armor = armor;
-            var mods = new Pair<object, List<IndefSecondaryStatModifier>>(
+            var mods = new Pair<object, List<StatMod>>(
                 armor, armor.Model.GetStatModifiers());
             foreach (var perk in this._parent.GetPerks().GetEquipmentSStatPerks())
                 perk.TryModEquipmentMod(mods);
@@ -39,7 +39,7 @@ namespace Assets.Model.Character.Container
         {
             this.RemoveHelm();
             this._helm = helm;
-            var mods = new Pair<object, List<IndefSecondaryStatModifier>>(helm, helm.Model.GetStatModifiers());
+            var mods = new Pair<object, List<StatMod>>(helm, helm.Model.GetStatModifiers());
             foreach (var perk in this._parent.GetPerks().GetEquipmentSStatPerks())
                 perk.TryModEquipmentMod(mods);
             this._parent.GetMods().AddMod(mods);
@@ -51,7 +51,7 @@ namespace Assets.Model.Character.Container
             if (lWeapon)
             {
                 this._lWeapon = weapon;
-                var mods = new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.Model.GetStatModifiers());
+                var mods = new Pair<object, List<StatMod>>(weapon, weapon.Model.GetStatModifiers());
 
                 foreach (var perk in this._parent.GetPerks().GetEquipmentSStatPerks())
                     perk.TryModEquipmentMod(mods);
@@ -64,7 +64,7 @@ namespace Assets.Model.Character.Container
             else
             {
                 this._rWeapon = weapon;
-                var mods = new Pair<object, List<IndefSecondaryStatModifier>>(weapon, weapon.Model.GetStatModifiers());
+                var mods = new Pair<object, List<StatMod>>(weapon, weapon.Model.GetStatModifiers());
 
                 foreach (var perk in this._parent.GetPerks().GetEquipmentSStatPerks())
                     perk.TryModEquipmentMod(mods);

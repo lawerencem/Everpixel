@@ -28,7 +28,7 @@ namespace Assets.Model.Equipment.Armor
                 case (EArmorStat.Durability): { return this._model.Data.Durability; }
                 case (EArmorStat.Fatigue_Mod): { return this._model.Data.FatigueMod; }
                 case (EArmorStat.Flat_Damage_Ignore): { return this._model.Data.FlatDamageIgnore; }
-                case (EArmorStat.Initative_Mod): { return this._model.Data.InitativeMod; }
+                case (EArmorStat.Initative_Mod): { return this._model.Data.InitiativeMod; }
                 case (EArmorStat.Parry_Mod): { return this._model.Data.ParryMod; }
                 case (EArmorStat.Stamina_Mod): { return this._model.Data.StaminaMod; }
                 case (EArmorStat.Value): { return this._model.Data.Value; }

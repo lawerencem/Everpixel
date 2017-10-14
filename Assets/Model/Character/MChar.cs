@@ -21,7 +21,7 @@ namespace Assets.Model.Character
             this._effects = new CharEffects<ECharType>(this);
             this._equipment = new ACharEquipment<ECharType>(this);
             this._flags = new FCharacterStatus();
-            this._mods = new Mods();
+            this._statMods = new StatMods();
             this._perks = new CharPerks();
             this._points = new CurrentPoints<ECharType>(this);
             this._stats = new CharStats<ECharType>(this);

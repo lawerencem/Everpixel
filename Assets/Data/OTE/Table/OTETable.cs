@@ -1,4 +1,5 @@
-﻿using Assets.Model.OTE;
+﻿using Assets.Model.Effect.OTE;
+using Assets.Model.OTE;
 using Assets.Template.Other;
 using System.Collections.Generic;
 

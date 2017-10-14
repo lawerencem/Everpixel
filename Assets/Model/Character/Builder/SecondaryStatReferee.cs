@@ -51,24 +51,24 @@ namespace Assets.Model.Character.Builder
         private static readonly double Will_Int = 0.2;
         private static readonly double Will_Res = 0.8;
 
-        public static int DetermineActionPoints(PrimaryStats p) { return (int)(((ActionPoints_Agi * p.Agility) + (ActionPoints_Int * p.Intelligence)) / 200) + 12; }
-        public static int DetermineBlock(PrimaryStats p) { return (int) ((Block_Agi * p.Agility) + (Block_Might * p.Might) + (Block_Per * p.Perception) / 2); }
-        public static int DetermineConcentration(PrimaryStats p) { return (int) ((Concentration_Con * p.Constitution) + (Concentration_Res * p.Resolve) / 2); }
-        public static int DetermineCriticalChance(PrimaryStats p) { return (int) ((CriticalChance_Agi * p.Agility) + (CriticalChance_Might * p.Might) / 2); }
-        public static int DetermineCriticalMultiplier(PrimaryStats p) { return (int) ( (CriticalMultiplier_Might * p.Might) + (CriticalMultiplier_Per * p.Perception) / 2); }
-        public static int DeterminePower(PrimaryStats p) { return (int) ( (Power_Might * p.Might) + (Power_Res* p.Resolve) / 2); }
-        public static int DetermineDodge(PrimaryStats p) { return (int) ( (Dodge_Agi * p.Agility) + (Dodge_Per * p.Resolve) / 2); }
-        public static int DetermineFortitude(PrimaryStats p) { return (int) ( (Fortitude_Con * p.Constitution) + (Fortitude_Res * p.Resolve) / 2); }
-        public static int DetermineInitiative(PrimaryStats p) { return (int) ( (Initiative_Agi * p.Agility) + (Initiative_Con * p.Constitution) + (Initiative_Per * p.Perception) / 2); }
-        public static int DetermineMaxHP(PrimaryStats p) { return (int) ( (((MaxHP_Con * p.Constitution) + (MaxHP_Res * p.Resolve)) * 0.25) + BaseHPAndStamina); }
-        public static int DetermineMeleeSkill(PrimaryStats p) { return (int) ( (MeleeSkill_Agi * p.Agility) + (MeleeSkill_Int * p.Intelligence) + (MeleeSkill_Might + p.Might) / 2); }
-        public static int DetermineMoraleSkill(PrimaryStats p) { return (int) (((Morale_Con * p.Constitution) + (Morale_Int * p.Intelligence) + (Morale_Res + p.Resolve)) * 0.25); }
-        public static int DetermineParry(PrimaryStats p) { return (int) ( (Parry_Agi * p.Agility) + (Parry_Int * p.Intelligence) + (Parry_Per * p.Perception) / 2); }
-        public static int DetermineRangedSkill(PrimaryStats p) { return (int) ( (RangedSkill_Agi * p.Agility) + (RangedSkill_Per * p.Perception) / 2); }
-        public static int DetermineReflexe(PrimaryStats p) { return (int) ( (Reflexes_Agi * p.Agility) + (Reflexes_Per * p.Perception) / 2); }
-        public static int DetermineSavingThrowModifier(PrimaryStats p) { return (int) ( (SpellPen_Int * p.Intelligence) + (SpellPen_Res * p.Resolve) / 2); }
-        public static int DetermineSpellDuration(PrimaryStats p) { return (int)((SpellDur_Con * p.Constitution) + (SpellDur_Int * p.Intelligence) + (SpellDur_Res * p.Resolve) / 2); }
-        public static int DetermineStamina(PrimaryStats p) { return (int) ( (((Stamina_Con * p.Constitution) + (Stamina_Might * p.Might) + (Stamina_Res * p.Resolve)) * 0.25) + BaseHPAndStamina); }
-        public static int DetermineWill(PrimaryStats p) { return (int) ( (Will_Int * p.Intelligence) + (Will_Res * p.Resolve) / 2); }
+        public static int DetermineActionPoints(PStats p) { return (int)(((ActionPoints_Agi * p.Agility) + (ActionPoints_Int * p.Intelligence)) / 200) + 12; }
+        public static int DetermineBlock(PStats p) { return (int) ((Block_Agi * p.Agility) + (Block_Might * p.Might) + (Block_Per * p.Perception) / 2); }
+        public static int DetermineConcentration(PStats p) { return (int) ((Concentration_Con * p.Constitution) + (Concentration_Res * p.Resolve) / 2); }
+        public static int DetermineCriticalChance(PStats p) { return (int) ((CriticalChance_Agi * p.Agility) + (CriticalChance_Might * p.Might) / 2); }
+        public static int DetermineCriticalMultiplier(PStats p) { return (int) ( (CriticalMultiplier_Might * p.Might) + (CriticalMultiplier_Per * p.Perception) / 2); }
+        public static int DeterminePower(PStats p) { return (int) ( (Power_Might * p.Might) + (Power_Res* p.Resolve) / 2); }
+        public static int DetermineDodge(PStats p) { return (int) ( (Dodge_Agi * p.Agility) + (Dodge_Per * p.Resolve) / 2); }
+        public static int DetermineFortitude(PStats p) { return (int) ( (Fortitude_Con * p.Constitution) + (Fortitude_Res * p.Resolve) / 2); }
+        public static int DetermineInitiative(PStats p) { return (int) ( (Initiative_Agi * p.Agility) + (Initiative_Con * p.Constitution) + (Initiative_Per * p.Perception) / 2); }
+        public static int DetermineMaxHP(PStats p) { return (int) ( (((MaxHP_Con * p.Constitution) + (MaxHP_Res * p.Resolve)) * 0.25) + BaseHPAndStamina); }
+        public static int DetermineMeleeSkill(PStats p) { return (int) ( (MeleeSkill_Agi * p.Agility) + (MeleeSkill_Int * p.Intelligence) + (MeleeSkill_Might + p.Might) / 2); }
+        public static int DetermineMoraleSkill(PStats p) { return (int) (((Morale_Con * p.Constitution) + (Morale_Int * p.Intelligence) + (Morale_Res + p.Resolve)) * 0.25); }
+        public static int DetermineParry(PStats p) { return (int) ( (Parry_Agi * p.Agility) + (Parry_Int * p.Intelligence) + (Parry_Per * p.Perception) / 2); }
+        public static int DetermineRangedSkill(PStats p) { return (int) ( (RangedSkill_Agi * p.Agility) + (RangedSkill_Per * p.Perception) / 2); }
+        public static int DetermineReflexe(PStats p) { return (int) ( (Reflexes_Agi * p.Agility) + (Reflexes_Per * p.Perception) / 2); }
+        public static int DetermineSavingThrowModifier(PStats p) { return (int) ( (SpellPen_Int * p.Intelligence) + (SpellPen_Res * p.Resolve) / 2); }
+        public static int DetermineSpellDuration(PStats p) { return (int)((SpellDur_Con * p.Constitution) + (SpellDur_Int * p.Intelligence) + (SpellDur_Res * p.Resolve) / 2); }
+        public static int DetermineStamina(PStats p) { return (int) ( (((Stamina_Con * p.Constitution) + (Stamina_Might * p.Might) + (Stamina_Res * p.Resolve)) * 0.25) + BaseHPAndStamina); }
+        public static int DetermineWill(PStats p) { return (int) ( (Will_Int * p.Intelligence) + (Will_Res * p.Resolve) / 2); }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Assets.Model.Character.Param
 {
-    public class PrimaryStats
+    public class PStats
     {
         public int Agility { get; set; }
         public int Constitution { get; set; }
@@ -9,7 +9,7 @@
         public int Perception { get; set; }
         public int Resolve { get; set; }
 
-        public PrimaryStats(int agi, int cons, int intel, int might, int per, int res)
+        public PStats(int agi, int cons, int intel, int might, int per, int res)
         {
             this.Agility = agi;
             this.Constitution = cons;
@@ -19,7 +19,7 @@
             this.Resolve = res;
         }
 
-        public PrimaryStats()
+        public PStats()
         {
             this.Agility = 0;
             this.Constitution = 0;
@@ -29,9 +29,9 @@
             this.Resolve = 0;
         }
 
-        public PrimaryStats Clone()
+        public PStats Clone()
         {
-            var stats = new PrimaryStats();
+            var stats = new PStats();
             stats.Agility = this.Agility;
             stats.Constitution = this.Agility;
             stats.Intelligence = this.Intelligence;

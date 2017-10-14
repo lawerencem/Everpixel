@@ -23,14 +23,14 @@ namespace Assets.Model.Character
         protected ACharEquipment<T> _equipment;
         protected FCharacterStatus _flags;
         protected bool _lParty;
-        protected Mods _mods;
         protected CMount _mount; 
         protected PreCharParams _params;
         protected MParty _parentParty;
         protected CharPerks _perks;
         protected CurrentPoints<T> _points;
         protected CharStats<T> _stats;
-        
+        protected StatMods _statMods;
+
         protected T _type;
 
         public CChar Controller { get { return this._controller; } }
@@ -43,7 +43,7 @@ namespace Assets.Model.Character
         public CharEffects<T> GetEffects() { return this._effects; }
         public ACharEquipment<T> GetEquipment() { return this._equipment; }
         public FCharacterStatus GetFlags() { return this._flags; }
-        public Mods GetMods() { return this._mods; }
+        public StatMods GetMods() { return this._statMods; }
         public PreCharParams GetParams() { return this._params; }
         public MParty GetParentParty() { return this._parentParty; }
         public CharPerks GetPerks() { return this._perks; }
@@ -75,19 +75,10 @@ namespace Assets.Model.Character
             //this.ProcessShields();
         }
 
-        public void TryAddMod(FlatSecondaryStatModifier mod)
+        public void TryAddMod(StatMod mod)
         {
-            this._mods.AddMod(mod);
-            this._points.SetValue(mod.Type, mod.FlatMod);
-        }
-
-        public void TryAddMod(SecondaryStatMod mod)
-        {
-            var oldValue = this._stats.GetStatValue(mod.Type);
-            this._mods.AddMod(mod);
-            var newValue = this._stats.GetStatValue(mod.Type);
-            var delta = newValue - oldValue;
-            this._points.SetValue(mod.Type, delta);
+            //this._statMods.AddMod(mod);
+            //this._points.SetValue(mod.Type, mod.FlatMod);
         }
     }
 }

@@ -39,7 +39,7 @@ namespace Assets.Model.Character
         public CHelm GetHelm() { return this._model.GetEquipment().GetHelm(); }
         public CWeapon GetLWeapon() { return this._model.GetEquipment().GetLWeapon(); }
         public double GetPoints(ESecondaryStat s) { return this._model.GetPoints().GetCurrValue(s); }
-        public Mods GetMods() { return this._model.GetMods(); }
+        public StatMods GetMods() { return this._model.GetMods(); }
         public CMount GetMount() { return this._model.Mount; }
         public PreCharParams GetParams() { return this._model.GetParams(); }
         public MParty GetParentParty() { return this._model.GetParentParty(); }

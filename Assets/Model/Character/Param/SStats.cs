@@ -2,7 +2,7 @@
 
 namespace Assets.Model.Character.Param
 {
-    public class SecondaryStats
+    public class SStats
     {
         public int MaxAP { get; set; }
         public double Block { get; set; }
@@ -26,8 +26,8 @@ namespace Assets.Model.Character.Param
         public int Stamina { get; set; }
         public double Will { get; set; }
 
-        public SecondaryStats() { }
-        public SecondaryStats(PrimaryStats p)
+        public SStats() { }
+        public SStats(PStats p)
         {
             this.MaxAP = SecondaryStatReferee.DetermineActionPoints(p);
             this.Block = SecondaryStatReferee.DetermineBlock(p);

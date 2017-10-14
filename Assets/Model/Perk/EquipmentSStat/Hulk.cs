@@ -10,7 +10,7 @@ namespace Assets.Model.Perk.EquipmentSStat
     {
         public Hulk() : base(EPerk.Hulk) { }
 
-        public override void TryModEquipmentMod(Pair<object, List<IndefSecondaryStatModifier>> mods)
+        public override void TryModEquipmentMod(Pair<object, List<StatMod>> mods)
         {
             if (mods.X.GetType() == typeof(CWeapon))
             {
@@ -19,8 +19,8 @@ namespace Assets.Model.Perk.EquipmentSStat
                 {
                     foreach (var kvp in mods.Y)
                     {
-                        if (kvp.Type == ESecondaryStat.AP)
-                            kvp.Scalar *= this.Val;
+                        if (kvp.Data.StatType.Equals(ESecondaryStat.AP))
+                            kvp.Data.Scalar *= this.Val;
                     }
                 }
             }

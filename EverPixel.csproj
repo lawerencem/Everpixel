@@ -241,25 +241,19 @@
     <Compile Include="Assets\Model\Character\Factory\CharacterFactory.cs" />
     <Compile Include="Assets\Model\Character\MChar.cs" />
     <Compile Include="Assets\Model\Character\PChar.cs" />
-    <Compile Include="Assets\Model\Character\Param\CharParams.cs" />
-    <Compile Include="Assets\Model\Character\Param\CharPerkCollection.cs" />
-    <Compile Include="Assets\Model\Character\Param\FlatSecondaryStatModifier.cs" />
-    <Compile Include="Assets\Model\Character\Param\GIndefStatMod.cs" />
-    <Compile Include="Assets\Model\Character\Param\GStatMod.cs" />
-    <Compile Include="Assets\Model\Character\Param\IndefPrimaryStatMod.cs" />
-    <Compile Include="Assets\Model\Character\Param\IndefSecondaryStatsModifier.cs" />
+    <Compile Include="Assets\Model\Character\Param\CharPerks.cs" />
+    <Compile Include="Assets\Model\Character\Param\StatMod.cs" />
     <Compile Include="Assets\Model\Character\Param\PreCharParams.cs" />
-    <Compile Include="Assets\Model\Character\Param\PrimaryStatMod.cs" />
-    <Compile Include="Assets\Model\Character\Param\PrimaryStats.cs" />
+    <Compile Include="Assets\Model\Character\Param\PStats.cs" />
     <Compile Include="Assets\Model\Character\Param\Race\RaceParams.cs" />
     <Compile Include="Assets\Model\Character\Param\Race\RaceSprites.cs" />
-    <Compile Include="Assets\Model\Character\Param\SecondaryStatMod.cs" />
-    <Compile Include="Assets\Model\Character\Param\SecondaryStats.cs" />
+    <Compile Include="Assets\Model\Character\Param\SStats.cs" />
     <Compile Include="Assets\Model\Character\Summon\SummonModData.cs" />
     <Compile Include="Assets\Model\Class\Builder\ClassBuilder.cs" />
     <Compile Include="Assets\Model\Class\ClassParams.cs" />
     <Compile Include="Assets\Model\Class\Enum\EClass.cs" />
     <Compile Include="Assets\Model\Class\MClass.cs" />
+    <Compile Include="Assets\Model\Combat\Calculator\ResistCalculator.cs" />
     <Compile Include="Assets\Model\Combat\Hit\AHit.cs" />
     <Compile Include="Assets\Model\Combat\Hit\ChancePrediction.cs" />
     <Compile Include="Assets\Model\Combat\Hit\FHit.cs" />
@@ -338,7 +332,6 @@
     <Compile Include="Assets\Model\OTE\HoT\MHoT.cs" />
     <Compile Include="Assets\Model\OTE\MOTE.cs" />
     <Compile Include="Assets\Model\OTE\OTEParams.cs" />
-    <Compile Include="Assets\Model\OTE\Other\Slimed.cs" />
     <Compile Include="Assets\Model\Party\Builder\PartyBuilder.cs" />
     <Compile Include="Assets\Model\Party\Builder\SubPartyBuilder.cs" />
     <Compile Include="Assets\Model\Party\Enum\EStartCol.cs" />
@@ -531,6 +524,7 @@
     <None Include="Assets\Data\Equipment\XML\Weapon\Sword.xml" />
     <None Include="Assets\Data\Injury\XML\Injuries.xml" />
     <None Include="Assets\Data\Mount\XML\Mounts.xml" />
+    <None Include="Assets\Data\OTE\XML\OTEs.xml" />
     <None Include="Assets\Data\Party\XML\Party\AmazonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\BretonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\GoblinParties.xml" />
@@ -553,16 +547,10 @@
     <None Include="Assets\Data\Perk\XML\PostHitPerks.xml" />
     <None Include="Assets\Data\Perk\XML\SStatModPerks.xml" />
     <None Include="Assets\Data\Perk\XML\WhenHitPerks.xml" />
-    <None Include="Assets\Data\Zone\XML\Zones.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Zone\XML\Zones.xml" />
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\OTE\XML\OTEs.xml">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

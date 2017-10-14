@@ -24,7 +24,7 @@ namespace Assets.Model.Characters.Params
         public List<EPerk> Perks { get; set; }
         public ERace Race { get; set; }
         public Dictionary<string, List<List<string>>> RWeapons { get; set; }
-        public PrimaryStats Stats { get; set; }
+        public PStats Stats { get; set; }
         public ECharType Type { get; set; }
 
         public PreCharParams()
@@ -37,7 +37,7 @@ namespace Assets.Model.Characters.Params
             this.LWeapons = new Dictionary<string, List<List<string>>>();
             this.Perks = new List<EPerk>();
             this.RWeapons = new Dictionary<string, List<List<string>>>();
-            this.Stats = new PrimaryStats();
+            this.Stats = new PStats();
         }
     }
 }

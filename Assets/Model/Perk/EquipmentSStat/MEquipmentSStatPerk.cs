@@ -11,7 +11,7 @@ namespace Assets.Model.Perk.EquipmentSStat
 
         }
 
-        public virtual void TryModEquipmentMod(Pair<object, List<IndefSecondaryStatModifier>> mods)
+        public virtual void TryModEquipmentMod(Pair<object, List<StatMod>> mods)
         {
 
         }

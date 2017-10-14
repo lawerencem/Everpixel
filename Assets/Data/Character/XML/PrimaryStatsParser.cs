@@ -7,7 +7,7 @@ namespace Assets.Data.Character.XML
 {
     public class PrimaryStatsParser
     {
-        public static void ParseStats(XElement root, PrimaryStats p)
+        public static void ParseStats(XElement root, PStats p)
         {
                 var statSet = EPrimaryStat.None;
                 var stat = root.Name.ToString();
@@ -17,7 +17,7 @@ namespace Assets.Data.Character.XML
                     HandleStats(p, statSet, value);
         }
 
-        public static void ParseXElementForStats(XElement root, PrimaryStats p)
+        public static void ParseXElementForStats(XElement root, PStats p)
         {
             foreach(var ele in root.Elements())
             {
@@ -30,7 +30,7 @@ namespace Assets.Data.Character.XML
             }
         }
 
-        private static void HandleStats(PrimaryStats p, EPrimaryStat s, int v)
+        private static void HandleStats(PStats p, EPrimaryStat s, int v)
         {
             switch (s)
             {

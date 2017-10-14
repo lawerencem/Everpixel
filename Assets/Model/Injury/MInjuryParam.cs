@@ -32,11 +32,28 @@ namespace Assets.Model.Injury
                 injury.DoT.SetDur(this.DoT.Y);
             }
             foreach (var stat in this.PStatMods)
-                injury.PStatMods.Add(new IndefPrimaryStatMod(stat.X, stat.Y));
+            {
+                var data = this.GetModProto();
+                data.StatType = stat.X;
+                data.Scalar = stat.Y;
+                injury.Mods.Add(new StatMod(data));
+            }
             foreach (var stat in this.SStatMods)
-                injury.SStatMods.Add(new IndefSecondaryStatModifier(stat.X, stat.Y));
-
+            {
+                var data = this.GetModProto();
+                data.StatType = stat.X;
+                data.Scalar = stat.Y;
+                injury.Mods.Add(new StatMod(data));
+            }
             return injury;
+        }
+
+        protected StatModData GetModProto()
+        {
+            var mod = new StatModData();
+            mod.DurationMod = false;
+            mod.FlatMod = false;
+            return mod;
         }
     }
 }
