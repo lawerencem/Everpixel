@@ -15,10 +15,5 @@ namespace Assets.Model.Ability.Magic.Psychic
         {
             base.PredictMelee(hit);
         }
-
-        public override bool IsValidActionEvent(AbilityArgs arg)
-        {
-            return true;
-        }
     }
 }

@@ -20,13 +20,6 @@ namespace Assets.Model.Ability.Logic
             this._calcContainer.ResistCalc.Predict(hit);
         }
 
-        public void PredictInstant(MHit hit)
-        {
-            this._calcContainer.CritCalc.Predict(hit);
-            this._calcContainer.DmgCalc.Predict(hit);
-            this._calcContainer.ResistCalc.Predict(hit);
-        }
-
         public void PredictMelee(MHit hit)
         {
             this._calcContainer.DodgeCalc.Predict(hit);
@@ -45,6 +38,13 @@ namespace Assets.Model.Ability.Logic
             this._calcContainer.ResistCalc.Predict(hit);
         }
 
+        public void PredictSingle(MHit hit)
+        {
+            this._calcContainer.CritCalc.Predict(hit);
+            this._calcContainer.DmgCalc.Predict(hit);
+            this._calcContainer.ResistCalc.Predict(hit);
+        }
+
         public void ProcessBullet(MHit hit)
         {
             this.ProcessBulletFlags(hit);
@@ -52,9 +52,10 @@ namespace Assets.Model.Ability.Logic
             this._calcContainer.DmgCalc.ModifyDmgViaDefender(hit);
         }
 
-        public void ProcessInstant(MHit hit)
+        public void ProcessSingle(MHit hit)
         {
-
+            this._calcContainer.DmgCalc.CalculateAbilityDmg(hit);
+            this._calcContainer.DmgCalc.ModifyDmgViaDefender(hit);
         }
 
         public void ProcessMelee(MHit hit)

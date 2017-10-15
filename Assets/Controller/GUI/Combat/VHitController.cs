@@ -82,6 +82,18 @@ namespace Assets.Controller.GUI.Combat
                 this.ProcessMeleeFXNonFatality(a);
         }
 
+        public void ProcessSingleHitFX(MAction a)
+        {
+            VCombatController.Instance.DisplayActionEventName(a);
+            if (VFatalityController.Instance.IsFatality(a))
+            {
+                if (!VFatalityController.Instance.FatalitySuccessful(a))
+                    this.ProcessSingleFXNonFatality(a);
+            }
+            else
+                this.ProcessSingleFXNonFatality(a);
+        }
+
         public void ProcessSongFX(MAction a)
         {
             var ability = a.ActiveAbility as MSong;
@@ -307,6 +319,18 @@ namespace Assets.Controller.GUI.Combat
             attack.Action = a;
             attack.AddCallback(this.ProcessDefenderHits);
             attack.Init(a.Data.Source, position, CombatGUIParams.ATTACK_SPEED);
+        }
+
+        private void ProcessSingleFXNonFatality(MAction a)
+        {
+            var attack = a.Data.Source.Handle.AddComponent<SAttackerJolt>();
+            var position = Vector3.Lerp(a.Data.Target.Model.Center, a.Data.Source.Tile.Model.Center, CombatGUIParams.ATTACK_LERP);
+            attack.Action = a;
+            attack.Init(a.Data.Source, position, CombatGUIParams.ATTACK_SPEED);
+            foreach (var hit in a.Data.Hits)
+            {
+                AttackSpriteLoader.Instance.GetSingleFX(hit);
+            }
         }
     }
 }

@@ -198,7 +198,6 @@
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\BreakShield.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\Chop.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\Crush.cs" />
-    <Compile Include="Assets\Model\Ability\Weapon\Abilities\DoubleStrike.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\Fire.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\Gash.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\GreatStrike.cs" />
@@ -213,7 +212,6 @@
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\SpearWall.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\Stab.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\Stun.cs" />
-    <Compile Include="Assets\Model\Ability\Weapon\Abilities\TripleStrike.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\WideSlash.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\Wrap.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\WeaponAbilityBuilder.cs" />

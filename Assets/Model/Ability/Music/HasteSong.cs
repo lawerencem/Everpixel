@@ -30,10 +30,5 @@ namespace Assets.Model.Ability.Music
         //    return hits;
         //    // TODO:
         //}
-
-        public override bool IsValidActionEvent(AbilityArgs arg)
-        {
-            return true;
-        }
     }
 }

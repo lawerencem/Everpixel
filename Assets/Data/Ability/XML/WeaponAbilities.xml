@@ -143,23 +143,6 @@
       <StaminaCost>25</StaminaCost>
       <Range>1</Range>
     </WeaponAbility>
-    <WeaponAbility name="Double_Strike">
-      <AccMod>0.75</AccMod>
-      <APCost>5</APCost>
-      <ArmorIgnoreMod>1</ArmorIgnoreMod>
-      <ArmorPierceMod>1</ArmorPierceMod>
-      <BlockIgnoreMod>1</BlockIgnoreMod>
-      <ECastType>Melee</ECastType>
-      <DamageMod>1</DamageMod>
-      <DodgeMod>1.0</DodgeMod>
-      <IconSprite>5</IconSprite>
-      <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
-      <ParryModMod>1.20</ParryModMod>
-      <RangeBlockMod>1.0</RangeBlockMod>
-      <ShieldDamageMod>1</ShieldDamageMod>
-      <StaminaCost>55</StaminaCost>
-      <Range>1</Range>
-    </WeaponAbility>
     <WeaponAbility name="Fire">
       <AccMod>1</AccMod>
       <APCost>3</APCost>
@@ -487,23 +470,6 @@
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
       <StaminaCost>45</StaminaCost>
-      <Range>1</Range>
-    </WeaponAbility>
-    <WeaponAbility name="Triple_Strike">
-      <AccMod>0.85</AccMod>
-      <APCost>7</APCost>
-      <ArmorIgnoreMod>1</ArmorIgnoreMod>
-      <ArmorPierceMod>1</ArmorPierceMod>
-      <BlockIgnoreMod>1</BlockIgnoreMod>
-      <ECastType>Melee</ECastType>
-      <DamageMod>1</DamageMod>
-      <DodgeMod>1.0</DodgeMod>
-      <IconSprite>15</IconSprite>
-      <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
-      <ParryModMod>1.0</ParryModMod>
-      <RangeBlockMod>1.0</RangeBlockMod>
-      <ShieldDamageMod>1</ShieldDamageMod>
-      <StaminaCost>85</StaminaCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Wide_Slash">

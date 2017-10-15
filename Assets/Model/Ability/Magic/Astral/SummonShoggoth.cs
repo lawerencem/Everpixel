@@ -15,10 +15,5 @@ namespace Assets.Model.Ability.Magic.Astral
         {
             // TODO
         }
-
-        public override bool IsValidActionEvent(AbilityArgs arg)
-        {
-            return base.IsValidEmptyTile(arg);
-        }
     }
 }

@@ -68,10 +68,6 @@ namespace Assets.Model.Ability
                 return false;
         }
 
-        public virtual bool IsValidActionEvent(AbilityArgs arg) { return false; }
-        public virtual bool IsValidEmptyTile(AbilityArgs arg) { return this._logic.IsValidEmptyTile(arg); }
-        public virtual bool IsValidEnemyTarget(AbilityArgs arg) { return this._logic.IsValidEnemyTarget(arg); }
-
         public virtual void Predict(MHit hit)
         {
             
@@ -141,6 +137,19 @@ namespace Assets.Model.Ability
             this._logic.PredictMelee(hit);
         }
 
+        protected virtual void PredictSingle(MHit hit)
+        {
+            this.ProcessEffects(hit);
+            this.ProcessPerks(hit);
+            this._logic.PredictSingle(hit);
+        }
+
+        protected void PredictTile(MHit hit)
+        {
+            this.ProcessEffects(hit);
+            this.ProcessPerks(hit);
+        }
+
         protected void ProcessHitBullet(MHit hit)
         {
             this.ProcessEffects(hit);
@@ -170,10 +179,17 @@ namespace Assets.Model.Ability
             this._logic.ProcessMelee(hit);
         }
 
-        protected void ProcessHitZone(MHit hit)
+        protected void ProcessSingle(MHit hit)
         {
-            //foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-            //    perk.TryModAbility(hit);
+            this.ProcessEffects(hit);
+            this.ProcessPerks(hit);
+            this._logic.ProcessSingle(hit);
+        }
+
+        protected void ProcessTile(MHit hit)
+        {
+            this.ProcessEffects(hit);
+            this.ProcessPerks(hit);
         }
 
         private void PopulateHitData(MHit hit, CTile tile, AbilityArgs args)

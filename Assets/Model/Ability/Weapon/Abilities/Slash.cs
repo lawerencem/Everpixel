@@ -17,10 +17,5 @@ namespace Assets.Model.Weapon.Abilities
         {
             base.ProcessHitMelee(hit);
         }
-
-        public override bool IsValidActionEvent(AbilityArgs arg)
-        {
-            return base.IsValidEnemyTarget(arg);
-        }
     }
 }

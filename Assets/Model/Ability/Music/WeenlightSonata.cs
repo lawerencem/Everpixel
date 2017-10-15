@@ -47,11 +47,6 @@ namespace Assets.Model.Ability.Music
             this.ProcessDeadWeens(deadWeens, hit);
         }
 
-        public override bool IsValidActionEvent(AbilityArgs arg)
-        {
-            return true;
-        }
-
         private void ProcessDeadWeens(List<CChar> deadweens, MHit hit)
         {
             foreach(var ween in deadweens)

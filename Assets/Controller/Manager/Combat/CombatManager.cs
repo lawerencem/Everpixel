@@ -78,25 +78,10 @@ namespace Assets.Controller.Manager.Combat
 
         public bool IsValidActionClick(CTile t)
         {
-            if (t.Current != null && t.Current.GetType().Equals(typeof(CChar)))
-            {
-                var ability = AbilityTable.Instance.Table[this._currActingData.Ability];
-                var target = t.Current as CChar;
-                var tile = this._combatData.PotentialTgtTiles.Find(x => x.Equals(t));
-                if (tile != null)
-                {
-                    if (this._currActingData.CurrentlyActing.Proxy.LParty == target.Proxy.LParty)
-                    {
-                        if (!ability.Data.Hostile)
-                            return true;
-                    }
-                    else
-                    {
-                        if (ability.Data.Hostile)
-                            return true;
-                    }
-                }
-            }
+            if (this.TryProcessTileWithChar(t))
+                return true;
+            if (this.TryProcessEmptyTile(t))
+                return true;
             return false;
         }
 
@@ -149,6 +134,42 @@ namespace Assets.Controller.Manager.Combat
                 var acting = new EvTakingAction(data);
                 acting.TryProcess();
             }
+        }
+
+        private bool TryProcessEmptyTile(CTile t)
+        {
+            if (this._currActingData.Ability != EAbility.None)
+            {
+                var ability = AbilityTable.Instance.Table[this._currActingData.Ability];
+                return ability.Data.HitsTiles;
+            }
+            else
+                return false;
+            
+        }
+
+        private bool TryProcessTileWithChar(CTile t)
+        {
+            if (t.Current != null && t.Current.GetType().Equals(typeof(CChar)))
+            {
+                var ability = AbilityTable.Instance.Table[this._currActingData.Ability];
+                var target = t.Current as CChar;
+                var tile = this._combatData.PotentialTgtTiles.Find(x => x.Equals(t));
+                if (tile != null)
+                {
+                    if (this._currActingData.CurrentlyActing.Proxy.LParty == target.Proxy.LParty)
+                    {
+                        if (!ability.Data.Hostile)
+                            return true;
+                    }
+                    else
+                    {
+                        if (ability.Data.Hostile)
+                            return true;
+                    }
+                }
+            }
+            return false;
         }
     }
 }

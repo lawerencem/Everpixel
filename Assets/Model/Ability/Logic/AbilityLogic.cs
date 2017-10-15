@@ -27,15 +27,15 @@ namespace Assets.Model.Ability.Logic
         public bool IsValidEnemyTarget(AbilityArgs arg) { return this._tileLogic.IsValidEnemyTarget(arg); }
 
         public void PredictBullet(MHit hit) { this._typeLogic.PredictBullet(hit); }
-        public void PredictInstant(MHit hit) { this._typeLogic.PredictInstant(hit); }
         public void PredictMelee(MHit hit) { this._typeLogic.PredictMelee(hit); }
         public void PredictRay(MHit hit) { this._typeLogic.PredictRay(hit); }
+        public void PredictSingle(MHit hit) { this._typeLogic.PredictSingle(hit); }
         public void ProcessBullet(MHit hit) { this._typeLogic.ProcessBullet(hit); }
-        public void ProcessInstant(MHit hit) { this._typeLogic.ProcessInstant(hit); }
         public void ProcessMelee(MHit hit) { this._typeLogic.ProcessMelee(hit); }
         public void ProcessRay(MHit hit) { this._typeLogic.ProcessRay(hit); }
         public void ProcessResist(MHit hit) { this._typeLogic.ProcessResist(hit); }
         public void ProcessShapeshift(MHit hit) { this._typeLogic.ProcessShapeshift(hit); }
+        public void ProcessSingle(MHit hit) { this._typeLogic.ProcessSingle(hit); }
         public void ProcessSong(MHit hit) { this._typeLogic.ProcessSong(hit); }
         public void ProcessSummon(MHit hit) { this._typeLogic.ProcessSummon(hit); }
 

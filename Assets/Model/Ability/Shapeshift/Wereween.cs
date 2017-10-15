@@ -15,10 +15,5 @@ namespace Assets.Model.Ability.Shapeshift
         {
             base.PredictMelee(hit);
         }
-
-        public override bool IsValidActionEvent(AbilityArgs arg)
-        {
-            return true;
-        }
     }
 }

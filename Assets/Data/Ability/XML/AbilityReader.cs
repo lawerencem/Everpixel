@@ -100,9 +100,12 @@ namespace Assets.Data.Ability.XML
                 case ("DodgeMod"): { table[type].Data.DodgeMod = v; } break;
                 case ("FlatDamage"): { table[type].Data.FlatDamage = v; } break;
                 case ("Hostile"): { this.HandleHostile(type, value); } break;
+                case ("HitsTiles"): { this.HandleHitsTiles(type, value); } break;
                 case ("IconSprite"): { table[type].Data.IconSprite = (int)v; } break;
                 case ("Injury"): { this.HandleInjuries(type, value); } break;
+                case ("MaxSprites"): { table[type].Data.MaxSprites = (int)v; } break;
                 case ("MeleeBlockChanceMod"): { table[type].Data.MeleeBlockChanceMod = v; } break;
+                case ("MinSprites"): { table[type].Data.MinSprites = (int)v; } break;
                 case ("ParryModMod"): { table[type].Data.ParryModMod = v; } break;
                 case ("Range"): { table[type].Data.Range = (int)v; } break;
                 case ("RangeBlockMod"): { table[type].Data.RangeBlockMod = v; } break;
@@ -110,6 +113,7 @@ namespace Assets.Data.Ability.XML
                 case ("EResistType"): { this.HandleResistType(type, value); } break;
                 case ("ShapeshiftSprites"): { this.HandleShapeshiftSprites(ele, type); } break;
                 case ("ShieldDamageMod"): { table[type].Data.ShieldDamageMod = v; } break;
+                case ("Sprites"): { this.HandleSprites(type, value); } break;
                 case ("SpellLevel"): { table[type].Data.SpellLevel = (int)v; } break;
                 case ("StaminaCost"): { table[type].Data.StaminaCost = (int)v; } break;
             }
@@ -141,6 +145,12 @@ namespace Assets.Data.Ability.XML
                 AbilityTable.Instance.Table[key].Data.Hostile = false;
         }
 
+        private void HandleHitsTiles(EAbility key, string value)
+        {
+            if (value.ToLowerInvariant().Equals("true"))
+                AbilityTable.Instance.Table[key].Data.HitsTiles = true;
+        }
+
         private void HandleResistType(EAbility type, string s)
         {
             var resist = EResistType.None;
@@ -165,6 +175,17 @@ namespace Assets.Data.Ability.XML
             }
         }
 
+        private void HandleSprites(EAbility key, string value)
+        {
+            var csv = value.Split(',');
+            foreach (var v in csv)
+            {
+                int parsed = 0;
+                if (int.TryParse(v, out parsed))
+                    AbilityTable.Instance.Table[key].Data.Sprites.Add(parsed);
+            }
+        }
+
         private void HandleType(EAbility type)
         {
             var table = AbilityTable.Instance.Table;
@@ -178,7 +199,6 @@ namespace Assets.Data.Ability.XML
                 case (EAbility.Cerebral_Nova): { table.Add(type, new CerebralNova()); } break;
                 case (EAbility.Chop): { table.Add(type, new Chop()); } break;
                 case (EAbility.Crush): { table.Add(type, new Crush()); } break;
-                case (EAbility.Double_Strike): { table.Add(type, new DoubleStrike()); } break;
                 case (EAbility.Eldritch_Chomp): { table.Add(type, new EldrtichChomp()); } break;
                 case (EAbility.Feeblemind): { table.Add(type, new FeebleMind()); } break;
                 case (EAbility.Fire): { table.Add(type, new Fire()); } break;
@@ -210,7 +230,6 @@ namespace Assets.Data.Ability.XML
                 case (EAbility.Stab): { table.Add(type, new Stab()); } break;
                 case (EAbility.Stun): { table.Add(type, new Stun()); } break;
                 case (EAbility.Summon_Shoggoth): { table.Add(type, new SummonShoggoth()); } break;
-                case (EAbility.Triple_Strike): { table.Add(type, new TripleStrike()); } break;
                 case (EAbility.Weenlight_Sonata): { table.Add(type, new WeenlightSonata()); } break;
                 case (EAbility.Were_Ween): { table.Add(type, new Wereween()); } break;
                 case (EAbility.Wide_Slash): { table.Add(type, new WideSlash()); } break;

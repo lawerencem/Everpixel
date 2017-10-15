@@ -44,6 +44,11 @@ namespace Assets.Controller.GUI.Combat
         public static readonly float BULLET_OFFSET = 0.075f;
         public static readonly float MAX_ROTATION = 25f;
 
+        // Particle Stuff
         public static readonly float PARTICLE_DUR = 4f;
+
+        // Singe FX Stuff
+        public static readonly float SINGLE_FX_DUR = 3f;
+        public static readonly float SINGLE_FX_OFFSET = 0.35f;
     }
 }

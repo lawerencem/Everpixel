@@ -34,10 +34,5 @@ namespace Assets.Model.Ability.Magic.Water
         //    //}
         //    return hits;
         //}
-
-        public override bool IsValidActionEvent(AbilityArgs arg)
-        {
-            return true;
-        }
     }
 }

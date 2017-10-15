@@ -16,10 +16,5 @@ namespace Assets.Model.Ability.Magic.Fighting
         {
             base.ProcessHitBullet(hit);
         }
-
-        public override bool IsValidActionEvent(AbilityArgs arg)
-        {
-            return base.IsValidEnemyTarget(arg);
-        }
     }
 }

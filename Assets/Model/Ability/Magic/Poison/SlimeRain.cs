@@ -9,17 +9,12 @@ namespace Assets.Model.Ability.Magic.Poison
 
         public override void Predict(MHit hit)
         {
-            //base.p(hit);
+            base.PredictTile(hit);
         }
 
         public override void Process(MHit hit)
         {
-            //base.ProcessHitBullet(hit);
-        }
-
-        public override bool IsValidActionEvent(AbilityArgs arg)
-        {
-            return true;
+            base.ProcessTile(hit);
         }
     }
 }

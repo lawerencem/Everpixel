@@ -8,6 +8,7 @@ using Assets.Template.CB;
 using Assets.Template.Other;
 using Assets.Template.Script;
 using Assets.Template.Util;
+using Assets.Template.Utility;
 using Assets.View.Script.FX;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,7 +27,17 @@ namespace Assets.View.Ability
         public Sprite GetAttackSprite(MAbility a)
         {
             var path = StringUtil.PathBuilder(ATTACK_PATH, a.Type.ToString());
-            return GetSprite(path);
+            return this.GetSprite(path);
+        }
+
+        public List<Sprite> GetSingleFXSprites(MAbility a)
+        {
+            var path = StringUtil.PathBuilder(ATTACK_PATH, a.Type.ToString());
+            var stuff = Resources.LoadAll(path);
+            var sprites = new List<Sprite>();
+            for(int i = 1; i < stuff.Length; i++)
+                sprites.Add(stuff[i] as Sprite);
+            return sprites;
         }
 
         public GameObject GetBullet(MHit hit, Callback callback, float speed)
@@ -50,6 +61,27 @@ namespace Assets.View.Ability
                 return embed;
             else
                 return this.GetDeleteBullet(hit, callback, bullet, speed);
+        }
+
+        public void GetSingleFX(MHit hit)
+        {
+            var ability = hit.Data.Ability.Data.ParentAction.ActiveAbility;
+            var sprites = this.GetSingleFXSprites(ability);
+            var roll = RNG.Instance.Next(ability.Data.MinSprites, ability.Data.MaxSprites);
+            for(int i = 0; i < roll; i++)
+            {
+                var fx = new GameObject();
+                var renderer = fx.AddComponent<SpriteRenderer>();
+                var index = ListUtil<int>.GetRandomElement(ability.Data.Sprites);
+                renderer.sprite = sprites[index];
+                renderer.sortingLayerName = Layers.PARTICLES;
+                fx.transform.position = hit.Data.Target.Model.Center;
+                RotateTranslateUtil.Instance.RandomTranslate(fx, CombatGUIParams.SINGLE_FX_OFFSET);
+                fx.transform.SetParent(hit.Data.Target.Handle.transform);
+                var delete = fx.AddComponent<SDestroyByLifetime>();
+                delete.Init(fx, CombatGUIParams.SINGLE_FX_DUR);
+            }
+            hit.CallbackHandler(null);
         }
 
         private GameObject GetDeleteBullet(MHit hit, Callback callback, GameObject bullet, float speed)
