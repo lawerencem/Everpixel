@@ -16,7 +16,6 @@ namespace Assets.Model.Ability
         public double ArmorIgnoreMod { get; set; }
         public double ArmorPierceMod { get; set; }
         public double BlockIgnoreMod { get; set; }
-        public double CastTime { get; set; }
         public ECastType CastType { get; set; }
         public bool CustomCastCamera { get; set; }
         public bool CustomGraphics { get; set; }
@@ -29,6 +28,7 @@ namespace Assets.Model.Ability
         public double FlatDamage { get; set; }
         public bool HitsTiles { get; set; }
         public bool Hostile { get; set; }
+        public int IconSprite { get; set; }
         public List<EInjury> Injuries { get; set; }
         public bool IsHeal { get; set; }
         public EMagicType MagicType { get; set; }
@@ -42,7 +42,6 @@ namespace Assets.Model.Ability
         public EResistType Resist { get; set; }
         public double ShieldDamageMod { get; set; }
         public int SpellLevel { get; set; }
-        public int Sprite { get; set; }
         public int StaminaCost { get; set; }
 
         public AbilityData()
@@ -53,7 +52,6 @@ namespace Assets.Model.Ability
             this.ArmorIgnoreMod = 1;
             this.ArmorPierceMod = 1;
             this.BlockIgnoreMod = 1;
-            this.CastTime = 0;
             this.CustomCastCamera = false;
             this.Effects = new List<MEffect>();
             this.DamageMod = 1;
@@ -62,13 +60,13 @@ namespace Assets.Model.Ability
             this.Duration = 0;
             this.HitsTiles = false;
             this.Hostile = true;
+            this.IconSprite = 0;
             this.Injuries = new List<EInjury>();
             this.MeleeBlockChanceMod = 1;
             this.ParryModMod = 1;
             this.Range = 0;
             this.RangeBlockMod = 1;
             this.ShieldDamageMod = 1;
-            this.Sprite = 0;
             this.StaminaCost = 0;
         }
 
@@ -90,6 +88,7 @@ namespace Assets.Model.Ability
             data.Effects = this.Effects;
             data.HitsTiles = this.HitsTiles;
             data.Hostile = this.Hostile;
+            data.IconSprite = this.IconSprite;
             data.IsHeal = this.IsHeal;
             data.MagicType = this.MagicType;
             data.MeleeBlockChanceMod = this.MeleeBlockChanceMod;
@@ -99,7 +98,6 @@ namespace Assets.Model.Ability
             data.RechargeTime = this.RechargeTime;
             data.ShieldDamageMod = this.ShieldDamageMod;
             data.SpellLevel = this.SpellLevel;
-            data.Sprite = this.Sprite;
             data.StaminaCost = this.StaminaCost;
             return data;
         }

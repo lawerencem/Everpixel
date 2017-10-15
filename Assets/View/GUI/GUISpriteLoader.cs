@@ -19,7 +19,7 @@ namespace Assets.View.GUI
             var stuff = Resources.LoadAll(path);
             int index = 0;
             if (AbilityTable.Instance.Table.ContainsKey(ability))
-                index = AbilityTable.Instance.Table[ability].Data.Sprite;
+                index = AbilityTable.Instance.Table[ability].Data.IconSprite;
             return stuff[index] as Sprite;
         }
     }

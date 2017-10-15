@@ -39,6 +39,7 @@ namespace Assets.Controller.GUI.Combat
             this._callbacks.Clear();
             switch(a.ActiveAbility.Data.CastType)
             {
+                case (ECastType.AoE): { VHitController.Instance} break;
                 case (ECastType.Bullet): { VHitController.Instance.ProcessBulletFX(a); } break;
                 case (ECastType.Melee): { VHitController.Instance.ProcessMeleeHitFX(a); } break;
                 case (ECastType.Song): { VHitController.Instance.ProcessSongFX(a); } break;

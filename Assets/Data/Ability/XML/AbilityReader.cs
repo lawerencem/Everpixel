@@ -92,7 +92,6 @@ namespace Assets.Data.Ability.XML
                 case ("ArmorIgnoreMod"): { table[type].Data.ArmorIgnoreMod = v; } break;
                 case ("ArmorPierceMod"): { table[type].Data.ArmorPierceMod = v; } break;
                 case ("BlockIgnoreMod"): { table[type].Data.BlockIgnoreMod = v; } break;
-                case ("CastTime"): { table[type].Data.CastTime = v; } break;
                 case ("ECastType"): { this.HandleCastType(type, value); } break;
                 case ("CustomGraphics"): { this.HandleCustomGraphics(type, value); } break;
                 case ("Description"): { table[type].Data.Description = value; } break;
@@ -101,7 +100,7 @@ namespace Assets.Data.Ability.XML
                 case ("DodgeMod"): { table[type].Data.DodgeMod = v; } break;
                 case ("FlatDamage"): { table[type].Data.FlatDamage = v; } break;
                 case ("Hostile"): { this.HandleHostile(type, value); } break;
-                case ("IconSprite"): { table[type].Data.Sprite = (int)v; } break;
+                case ("IconSprite"): { table[type].Data.IconSprite = (int)v; } break;
                 case ("Injury"): { this.HandleInjuries(type, value); } break;
                 case ("MeleeBlockChanceMod"): { table[type].Data.MeleeBlockChanceMod = v; } break;
                 case ("ParryModMod"): { table[type].Data.ParryModMod = v; } break;
