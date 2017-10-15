@@ -9,7 +9,7 @@
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
       <CastTime>80</CastTime>
-      <CastTypeEnum>No_Collision_Bullet</CastTypeEnum>
+      <ECastType>No_Collision_Bullet</ECastType>
       <DmgPerPower>0.05</DmgPerPower>
       <DodgeMod>1.0</DodgeMod>
       <EffectDur>3</EffectDur>
@@ -33,7 +33,7 @@
       <ArmorPierceMod>0</ArmorPierceMod>
       <BlockIgnoreMod>0</BlockIgnoreMod>
       <CastTime>50</CastTime>
-      <CastTypeEnum>Summon</CastTypeEnum>
+      <ECastType>Summon</ECastType>
       <DmgPerPower>0</DmgPerPower>
       <DodgeMod>1.0</DodgeMod>
       <FlatDamage>0</FlatDamage>
@@ -54,7 +54,7 @@
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Bullet</CastTypeEnum>
+      <ECastType>Bullet</ECastType>
       <DmgPerPower>0.018</DmgPerPower>
       <DodgeMod>1.0</DodgeMod>
       <FlatDamage>4000</FlatDamage>
@@ -73,7 +73,7 @@
       <ArmorIgnoreMod>0.8</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Raycast</CastTypeEnum>
+      <ECastType>Raycast</ECastType>
       <DmgPerPower>0.032</DmgPerPower>
       <DodgeMod>0.8</DodgeMod>
       <FlatDamage>42</FlatDamage>
@@ -91,7 +91,7 @@
       <AoE>1</AoE>
       <APCost>6</APCost>
       <CastTime>250</CastTime>
-      <CastTypeEnum>AoE</CastTypeEnum>
+      <ECastType>AoE</ECastType>
       <Description>AoE damage dealt is per every point of intelligence caster has above target.</Description>
       <DmgPerPower>0.125</DmgPerPower>
       <Duration>0</Duration>
@@ -103,7 +103,7 @@
       <AoE>0</AoE>
       <APCost>3</APCost>
       <CastTime>50</CastTime>
-      <CastTypeEnum>Single</CastTypeEnum>
+      <ECastType>Single</ECastType>
       <Description>Debuff target's intelligence.</Description>
       <DmgPerPower>0.01</DmgPerPower>
       <Duration>0</Duration>
@@ -115,7 +115,7 @@
       <AoE>1</AoE>
       <APCost>4</APCost>
       <CastTime>150</CastTime>
-      <CastTypeEnum>Single</CastTypeEnum>
+      <ECastType>Single</ECastType>
       <DmgPerPower>0.125</DmgPerPower>
       <Duration>1</Duration>
       <FlatDamage>0</FlatDamage>
@@ -126,7 +126,7 @@
       <AoE>0</AoE>
       <APCost>3</APCost>
       <CastTime>50</CastTime>
-      <CastTypeEnum>Single</CastTypeEnum>
+      <ECastType>Single</ECastType>
       <Description>Buff target's intelligence.</Description>
       <DmgPerPower>0.0125</DmgPerPower>
       <Duration>1</Duration>
@@ -138,7 +138,7 @@
       <AoE>0</AoE>
       <APCost>4</APCost>
       <CastTime>150</CastTime>
-      <CastTypeEnum>Single</CastTypeEnum>
+      <ECastType>Single</ECastType>
       <Description>Damage dealt is per every point of intelligence that caster has above target.</Description>
       <DmgPerPower>0.25</DmgPerPower>
       <Duration>0</Duration>
@@ -150,7 +150,7 @@
       <AoE>0</AoE>
       <APCost>7</APCost>
       <CastTime>150</CastTime>
-      <CastTypeEnum>Single</CastTypeEnum>
+      <ECastType>Single</ECastType>
       <DmgPerPower>0.075</DmgPerPower>
       <Duration>0</Duration>
       <FlatDamage>15</FlatDamage>
@@ -161,7 +161,7 @@
       <AoE>0</AoE>
       <APCost>3</APCost>
       <CastTime>100</CastTime>
-      <CastTypeEnum>Single</CastTypeEnum>
+      <ECastType>Single</ECastType>
       <Description>Target takes damage each turn, but caster takes +50% damage while this effect is active.</Description>
       <DmgPerPower>0.15</DmgPerPower>
       <Duration>4</Duration>
@@ -173,7 +173,7 @@
       <AoE>0</AoE>
       <APCost>4</APCost>
       <CastTime>300</CastTime>
-      <CastTypeEnum>Single</CastTypeEnum>
+      <ECastType>Single</ECastType>
       <Description>Caster and target now split all damage taken.</Description>
       <DmgPerPower>0.0</DmgPerPower>
       <Duration>3</Duration>
@@ -185,7 +185,7 @@
       <AoE>1</AoE>
       <APCost>5</APCost>
       <CastTime>350</CastTime>
-      <CastTypeEnum>AoE</CastTypeEnum>
+      <ECastType>AoE</ECastType>
       <Description>Divine Mind spell.</Description>
       <DmgPerPower>0.15</DmgPerPower>
       <Duration>0</Duration>
@@ -197,7 +197,7 @@
       <AoE>0</AoE>
       <APCost>3</APCost>
       <CastTime>50</CastTime>
-      <CastTypeEnum>Single</CastTypeEnum>
+      <ECastType>Single</ECastType>
       <Description>Does quadruple damage to stunned targets.</Description>
       <DmgPerPower>0.15</DmgPerPower>
       <Duration>0</Duration>
@@ -211,7 +211,7 @@
       <AoE>1</AoE>
       <APCost>5</APCost>
       <CastTime>35</CastTime>
-      <CastTypeEnum>Zone</CastTypeEnum>
+      <ECastType>Zone</ECastType>
       <DmgPerPower>0.003</DmgPerPower>
       <Duration>3</Duration>
       <FlatDamage>2</FlatDamage>
@@ -228,7 +228,7 @@
       <ArmorPierceMod>0</ArmorPierceMod>
       <BlockIgnoreMod>0</BlockIgnoreMod>
       <CastTime>80</CastTime>
-      <CastTypeEnum>Shapeshift</CastTypeEnum>
+      <ECastType>Shapeshift</ECastType>
       <DmgPerPower>0</DmgPerPower>
       <DodgeMod>1.0</DodgeMod>
       <FlatDamage>0</FlatDamage>

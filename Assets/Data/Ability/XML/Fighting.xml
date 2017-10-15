@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ActiveAbilities>
+  <MagicType name="Fighting">
+    <ActiveAbility name="Hadoken">
+      <AccMod>1</AccMod>
+      <AoE>0</AoE>
+      <APCost>4</APCost>
+      <ArmorIgnoreMod>1</ArmorIgnoreMod>
+      <ArmorPierceMod>1</ArmorPierceMod>
+      <BlockIgnoreMod>1</BlockIgnoreMod>
+      <ECastType>Bullet</ECastType>
+      <DmgPerPower>0.018</DmgPerPower>
+      <DodgeMod>1.0</DodgeMod>
+      <FlatDamage>4000</FlatDamage>
+      <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
+      <ParryModMod>0.25</ParryModMod>
+      <Range>4</Range>
+      <RangeBlockMod>1.25</RangeBlockMod>
+      <RechargeTime>0</RechargeTime>
+      <ShieldDamageMod>1.5</ShieldDamageMod>
+      <StaminaCost>25</StaminaCost>
+    </ActiveAbility>
+    <ActiveAbility name="Kamehameha">
+      <AccMod>1</AccMod>
+      <AoE>0</AoE>
+      <APCost>6</APCost>
+      <ArmorIgnoreMod>0.8</ArmorIgnoreMod>
+      <ArmorPierceMod>1</ArmorPierceMod>
+      <BlockIgnoreMod>1</BlockIgnoreMod>
+      <ECastType>Raycast</ECastType>
+      <DmgPerPower>0.032</DmgPerPower>
+      <DodgeMod>0.8</DodgeMod>
+      <FlatDamage>42</FlatDamage>
+      <MeleeBlockChanceMod>0.5</MeleeBlockChanceMod>
+      <ParryModMod>0.15</ParryModMod>
+      <Range>4</Range>
+      <RangeBlockMod>0.75</RangeBlockMod>
+      <RechargeTime>0</RechargeTime>
+      <ShieldDamageMod>1</ShieldDamageMod>
+      <StaminaCost>70</StaminaCost>
+    </ActiveAbility>
+  </MagicType>
+</ActiveAbilities>

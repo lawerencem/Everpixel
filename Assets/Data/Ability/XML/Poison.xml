@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ActiveAbilities>
+  <MagicType name="Poison">
+    <ActiveAbility name="Slime_Rain">
+      <AccMod>1</AccMod>
+      <AoE>2</AoE>
+      <APCost>3</APCost>
+      <ArmorIgnoreMod>1</ArmorIgnoreMod>
+      <ArmorPierceMod>1</ArmorPierceMod>
+      <BlockIgnoreMod>1</BlockIgnoreMod>
+      <ECastType>AoE</ECastType>
+      <DmgPerPower>0.00</DmgPerPower>
+      <DodgeMod>1.0</DodgeMod>
+      <EffectDur>3</EffectDur>
+      <EffectValue>0</EffectValue>
+      <FlatDamage>0</FlatDamage>
+      <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
+      <ParryModMod>1</ParryModMod>
+      <Range>6</Range>
+      <RangeBlockMod>1</RangeBlockMod>
+      <EResistType>Fortitude</EResistType>
+      <ShieldDamageMod>1</ShieldDamageMod>
+      <StaminaCost>35</StaminaCost>
+    </ActiveAbility>
+  </MagicType>
+</ActiveAbilities>

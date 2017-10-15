@@ -7,7 +7,7 @@
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>0</IconSprite>

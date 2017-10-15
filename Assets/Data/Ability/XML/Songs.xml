@@ -3,7 +3,7 @@
   <MagicType name="Physical">
     <ActiveAbility name="Haste_Song">
       <APCost>6</APCost>
-      <CastTypeEnum>Song</CastTypeEnum>
+      <ECastType>Song</ECastType>
       <Duration>1</Duration>
       <Hostile>False</Hostile>
       <Range>5</Range>
@@ -11,7 +11,7 @@
     </ActiveAbility>
     <ActiveAbility name="Orc_Metal">
       <APCost>5</APCost>
-      <CastTypeEnum>Song</CastTypeEnum>
+      <ECastType>Song</ECastType>
       <DmgPerPower>.003</DmgPerPower>
       <Duration>1</Duration>
       <Hostile>False</Hostile>
@@ -20,7 +20,7 @@
     </ActiveAbility>
     <ActiveAbility name="Weenlight_Sonata">
       <APCost>3</APCost>
-      <CastTypeEnum>Song</CastTypeEnum>
+      <ECastType>Song</ECastType>
       <Hostile>False</Hostile>
       <Range>3</Range>
       <StaminaCost>60</StaminaCost>

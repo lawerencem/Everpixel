@@ -7,7 +7,7 @@
       <ArmorIgnoreMod>1.0</ArmorIgnoreMod>
       <ArmorPierceMod>1.20</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Bullet</CastTypeEnum>
+      <ECastType>Bullet</ECastType>
       <DamageMod>1.30</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>1</IconSprite>
@@ -24,7 +24,7 @@
       <ArmorIgnoreMod>1.20</ArmorIgnoreMod>
       <ArmorPierceMod>1.20</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>0.25</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>2</IconSprite>
@@ -49,7 +49,7 @@
       <ArmorIgnoreMod>0.75</ArmorIgnoreMod>
       <ArmorPierceMod>0.75</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>0.25</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>3</IconSprite>
@@ -73,7 +73,7 @@
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>4</IconSprite>
@@ -108,7 +108,7 @@
       <ArmorIgnoreMod>1.15</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>0</IconSprite>
@@ -149,7 +149,7 @@
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>5</IconSprite>
@@ -166,7 +166,7 @@
       <ArmorIgnoreMod>1.0</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Bullet</CastTypeEnum>
+      <ECastType>Bullet</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>6</IconSprite>
@@ -183,7 +183,7 @@
       <ArmorIgnoreMod>0.55</ArmorIgnoreMod>
       <ArmorPierceMod>1.20</ArmorPierceMod>
       <BlockIgnoreMod>0.15</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>1.75</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>7</IconSprite>
@@ -205,7 +205,7 @@
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>0.85</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>7</IconSprite>
@@ -236,7 +236,7 @@
       <ArmorIgnoreMod>0.25</ArmorIgnoreMod>
       <ArmorPierceMod>0.25</ArmorPierceMod>
       <BlockIgnoreMod>0.25</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>2.25</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>9</IconSprite>
@@ -261,7 +261,7 @@
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>2.25</ArmorPierceMod>
       <BlockIgnoreMod>0.55</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>0.75</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>9</IconSprite>
@@ -290,7 +290,7 @@
       <ArmorIgnoreMod>0.75</ArmorIgnoreMod>
       <ArmorPierceMod>0.75</ArmorPierceMod>
       <BlockIgnoreMod>0.75</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>0.75</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>0</IconSprite>
@@ -313,7 +313,7 @@
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>10</IconSprite>
@@ -330,7 +330,7 @@
       <ArmorIgnoreMod>1.50</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1.50</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>1.50</DamageMod>
       <DodgeMod>0.75</DodgeMod>
       <IconSprite>0</IconSprite>
@@ -353,7 +353,7 @@
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>11</IconSprite>
@@ -370,7 +370,7 @@
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>0.15</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>0</IconSprite>
@@ -387,7 +387,7 @@
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>11</IconSprite>
@@ -425,7 +425,7 @@
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>1.50</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>0.85</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>14</IconSprite>
@@ -454,7 +454,7 @@
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>1.25</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>0.75</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>13</IconSprite>
@@ -471,7 +471,7 @@
       <ArmorIgnoreMod>1.20</ArmorIgnoreMod>
       <ArmorPierceMod>0.75</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>0.35</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>0</IconSprite>
@@ -495,7 +495,7 @@
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>15</IconSprite>
@@ -512,7 +512,7 @@
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>0.75</DodgeMod>
       <IconSprite>0</IconSprite>
@@ -543,7 +543,7 @@
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>3.5</BlockIgnoreMod>
-      <CastTypeEnum>Melee</CastTypeEnum>
+      <ECastType>Melee</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>0</IconSprite>

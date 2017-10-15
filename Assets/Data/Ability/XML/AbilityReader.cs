@@ -3,6 +3,7 @@ using Assets.Model.Ability.Enum;
 using Assets.Model.Ability.Magic;
 using Assets.Model.Ability.Magic.Astral;
 using Assets.Model.Ability.Magic.Fighting;
+using Assets.Model.Ability.Magic.Poison;
 using Assets.Model.Ability.Magic.Psychic;
 using Assets.Model.Ability.Magic.Water;
 using Assets.Model.Ability.Music;
@@ -21,8 +22,10 @@ namespace Assets.Data.Ability.XML
 
         public AbilityReader() : base()
         {
-            this._paths.Add("Assets/Data/Ability/XML/Abilities.xml");
-            this._paths.Add("Assets/Data/Ability/XML/PhysicalAbilities.xml");
+            this._paths.Add("Assets/Data/Ability/XML/Astral.xml");
+            this._paths.Add("Assets/Data/Ability/XML/Fighting.xml");
+            this._paths.Add("Assets/Data/Ability/XML/Poison.xml");
+            this._paths.Add("Assets/Data/Ability/XML/Physical.xml");
             this._paths.Add("Assets/Data/Ability/XML/Songs.xml");
             this._paths.Add("Assets/Data/Ability/XML/WeaponAbilities.xml");
         }
@@ -90,7 +93,7 @@ namespace Assets.Data.Ability.XML
                 case ("ArmorPierceMod"): { table[type].Data.ArmorPierceMod = v; } break;
                 case ("BlockIgnoreMod"): { table[type].Data.BlockIgnoreMod = v; } break;
                 case ("CastTime"): { table[type].Data.CastTime = v; } break;
-                case ("CastTypeEnum"): { this.HandleCastType(type, value); } break;
+                case ("ECastType"): { this.HandleCastType(type, value); } break;
                 case ("CustomGraphics"): { this.HandleCustomGraphics(type, value); } break;
                 case ("Description"): { table[type].Data.Description = value; } break;
                 case ("DmgPerPower"): { table[type].Data.DmgPerPower = double.Parse(value); } break;
@@ -203,6 +206,7 @@ namespace Assets.Data.Ability.XML
                 case (EAbility.Shield_Wall): { table.Add(type, new ShieldWall()); } break;
                 case (EAbility.Shove): { table.Add(type, new Shove()); } break;
                 case (EAbility.Slash): { table.Add(type, new Slash()); } break;
+                case (EAbility.Slime_Rain): { table.Add(type, new SlimeRain()); } break;
                 case (EAbility.Spear_Wall): { table.Add(type, new SpearWall()); } break;
                 case (EAbility.Stab): { table.Add(type, new Stab()); } break;
                 case (EAbility.Stun): { table.Add(type, new Stun()); } break;
