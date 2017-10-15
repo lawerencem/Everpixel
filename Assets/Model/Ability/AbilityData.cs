@@ -32,6 +32,8 @@ namespace Assets.Model.Ability
         public List<EInjury> Injuries { get; set; }
         public bool IsHeal { get; set; }
         public EMagicType MagicType { get; set; }
+        public int MaxSprites { get; set; }
+        public int MinSprites { get; set; }
         public double MeleeBlockChanceMod { get; set; }
         public MWeapon ParentWeapon { get; set; }
         public double ParryModMod { get; set; }
@@ -42,6 +44,7 @@ namespace Assets.Model.Ability
         public EResistType Resist { get; set; }
         public double ShieldDamageMod { get; set; }
         public int SpellLevel { get; set; }
+        public List<int> Sprites { get; set; }
         public int StaminaCost { get; set; }
 
         public AbilityData()
@@ -62,11 +65,14 @@ namespace Assets.Model.Ability
             this.Hostile = true;
             this.IconSprite = 0;
             this.Injuries = new List<EInjury>();
+            this.MaxSprites = 0;
             this.MeleeBlockChanceMod = 1;
+            this.MinSprites = 0;
             this.ParryModMod = 1;
             this.Range = 0;
             this.RangeBlockMod = 1;
             this.ShieldDamageMod = 1;
+            this.Sprites = new List<int>();
             this.StaminaCost = 0;
         }
 
@@ -91,13 +97,17 @@ namespace Assets.Model.Ability
             data.IconSprite = this.IconSprite;
             data.IsHeal = this.IsHeal;
             data.MagicType = this.MagicType;
+            data.MaxSprites = this.MaxSprites;
             data.MeleeBlockChanceMod = this.MeleeBlockChanceMod;
+            data.MinSprites = this.MinSprites;
             data.ParryModMod = this.ParryModMod;
             data.ParentWeapon = this.ParentWeapon;
             data.RangeBlockMod = this.RangeBlockMod;
             data.RechargeTime = this.RechargeTime;
             data.ShieldDamageMod = this.ShieldDamageMod;
             data.SpellLevel = this.SpellLevel;
+            foreach (var sprite in this.Sprites)
+                data.Sprites.Add(sprite);
             data.StaminaCost = this.StaminaCost;
             return data;
         }
