@@ -95,7 +95,7 @@ namespace Assets.Controller.Map.Tile
                     data.ParentWeapon = CombatManager.Instance.GetCurrentWeapon();
                     data.Source = CombatManager.Instance.GetCurrentlyActing();
                     data.Target = this._tile;
-                    data.WpnAbility = CombatManager.Instance.GetWpnAbility();
+                    data.WpnAbility = CombatManager.Instance.GetIsWpnAbility();
                     var action = new MAction(data);
                     action.TryPredict();
                     GUIManager.Instance.SetHoverModalDamageValues(action);
