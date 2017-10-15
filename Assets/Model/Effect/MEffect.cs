@@ -11,8 +11,10 @@ namespace Assets.Model.Effect
         public string ParticlePath { get; set; }
         public string SummonKey { get; set; }
         public string WeaponCondition { get; set; }
+        public EEffect Type { get; set; }
         public double X { get; set; }
         public double Y { get; set; }
+        public double Z { get; set; }
 
         public MEffectData()
         {

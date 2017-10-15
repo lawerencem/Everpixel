@@ -4,7 +4,6 @@ using Assets.Data.Class.XML;
 using Assets.Data.Equipment.XML;
 using Assets.Data.Injury.XML;
 using Assets.Data.Mount.XML;
-using Assets.Data.OTE.XML;
 using Assets.Data.Party.XML;
 using Assets.Data.Perk.XML;
 using Assets.Data.Zone.XML;
@@ -26,7 +25,6 @@ namespace Assets.Controller.Manager
             this._readers.Add(BarkReader.Instance);
             this._readers.Add(ClassReader.Instance);
             this._readers.Add(InjuryReader.Instance);
-            this._readers.Add(OTEReader.Instance);
             this._readers.Add(PartyReader.Instance);
             this._readers.Add(PredefinedCharReader.Instance);
             this._readers.Add(MountReader.Instance);

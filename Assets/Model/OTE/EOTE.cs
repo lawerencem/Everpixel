@@ -5,6 +5,6 @@
         None,
         DoT,
         HoT,
-        Slime,
+        Slimed,
     }
 }

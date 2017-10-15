@@ -41,7 +41,7 @@ namespace Assets.View.Event
                 data.ParentWeapon = CombatManager.Instance.GetCurrentWeapon();
                 data.Source = CombatManager.Instance.GetCurrentlyActing();
                 data.Target = this._data.Target;
-                data.WpnAbility = CombatManager.Instance.GetWpnAbility();
+                data.WpnAbility = CombatManager.Instance.GetIsWpnAbility();
                 var e = new EvPerformAbility(data);
                 e.TryProcess();
                 return true;

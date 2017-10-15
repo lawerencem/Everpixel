@@ -32,7 +32,7 @@ namespace Assets.Controller.Manager.Combat
         public CombatManagerData GetData() { return this._combatData; }
         public bool GetLWeapon() { return this._combatData.LWeapon; }
         public List<CTile> GetPotentialTgtTiles() { return this._combatData.PotentialTgtTiles; }
-        public bool GetWpnAbility() { return this._combatData.WpnAbility; }
+        public bool GetIsWpnAbility() { return this._combatData.WpnAbility; }
         
         public void SetCurrentData(CurrentlyActingData d) { this._currActingData = d; }
         public void SetCurrentlyActing(CChar c) { this._currActingData.CurrentlyActing = c; }

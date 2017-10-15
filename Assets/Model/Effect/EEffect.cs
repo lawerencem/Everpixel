@@ -3,10 +3,11 @@
     public enum EEffect
     {
         None,
+        DoT,
         Horror,
+        HoT,
         Megabite,
         Slime,
-        SlimeZone,
         SummonOnHit,
     }
 }

@@ -3,6 +3,7 @@
     public enum ECastType
     {
         None,
+        AoE,
         Bullet,
         No_Collision_Bullet,
         Raycast,
@@ -11,6 +12,5 @@
         Song,
         Summon,
         Melee,
-        Zone,
     }
 }

@@ -1,5 +1,5 @@
 ﻿using Assets.Data.Zone.Table;
-using Assets.Model.OTE;
+using Assets.Model.Effect;
 using Assets.Model.Zone;
 using Assets.Template.Util;
 using Assets.Template.XML;
@@ -10,10 +10,12 @@ namespace Assets.Data.Zone.XML
     public class ZoneReader : XMLReader
     {
         private static ZoneReader _instance;
+        private ZoneTable ZoneTable;
 
         public ZoneReader() : base()
         {
             this._paths.Add("Assets/Data/Zone/XML/Zones.xml");
+            this.ZoneTable = ZoneTable.Instance;
         }
 
         public static ZoneReader Instance
@@ -44,8 +46,8 @@ namespace Assets.Data.Zone.XML
                     var type = EZone.None;
                     if (EnumUtil<EZone>.TryGetEnumValue(att.Value, ref type))
                     {
-                        if (!ZoneTable.Instance.Table.ContainsKey(type))
-                            ZoneTable.Instance.Table.Add(type, new ZoneParams());
+                        if (!this.ZoneTable.Table.ContainsKey(type))
+                            this.ZoneTable.Table.Add(type, new ZoneParams());
 
                         foreach (var ele in el.Elements())
                             this.HandleIndex(type, ele, ele.Name.ToString());
@@ -58,17 +60,19 @@ namespace Assets.Data.Zone.XML
         {
             switch (mod)
             {
-                case ("EOTE"): { this.HandleSprites(ele, type); } break;
+                case ("EEffect"): { this.HandleEEffect(ele, type); } break;
                 case ("Sprites"): { this.HandleSprites(ele, type); } break;
             }
         }
 
-        private void HandleOTE(XElement el, EZone type)
+        private void HandleEEffect(XElement el, EZone type)
         {
-            var table = ZoneTable.Instance.Table;
-            var ote = EOTE.None;
-            if (EnumUtil<EOTE>.TryGetEnumValue(el.Value, ref ote))
-                table[type].OTE = ote;
+            var effectType = EEffect.None;
+            if (EnumUtil<EEffect>.TryGetEnumValue(el.Value, ref effectType))
+            {
+                var effect = EffectBuilder.Instance.BuildEffect(el, effectType);
+                this.ZoneTable.Table[type].Effects.Add(effect);
+            }
         }
 
         private void HandleSprites(XElement el, EZone type)

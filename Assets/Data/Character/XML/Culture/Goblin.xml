@@ -59,10 +59,6 @@
           <RWeapon>0.25,Void Staff,Three</RWeapon>
         </RWeapons>
       </PotentialWeapons>
-      <Spells>
-        <Spell>3,Eldritch_Chomp</Spell>
-        <Spell>2,Summon_Shoggoth</Spell>
-      </Spells>
       <Stats>
         <Agility>350</Agility>
         <Constitution>280</Constitution>
@@ -73,6 +69,11 @@
       </Stats>
     </Character>
     <Character name ="Fledgling Slime Lord">
+      <Abilities>
+        <Ability name ="Slime_Rain">
+          <EEffect></EEffect>
+        </Ability>
+      </Abilities>
       <Class>Wizard,3</Class>
       <Class>Slime_Lord,2</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -156,10 +157,6 @@
           <RWeapon>0.25,Void Staff,Four</RWeapon>
         </RWeapons>
       </PotentialWeapons>
-      <Spells>
-        <Spell>2,Eldritch_Chomp</Spell>
-        <Spell>1,Summon_Shoggoth</Spell>
-      </Spells>
       <Stats>
         <Agility>350</Agility>
         <Constitution>280</Constitution>
@@ -264,10 +261,6 @@
         <Perception>620</Perception>
         <Resolve>480</Resolve>
       </Stats>
-      <Spells>
-        <Spell>4,Eldritch_Chomp</Spell>
-        <Spell>3,Summon_Shoggoth</Spell>
-      </Spells>
     </Character>
     <Character name ="Lunatic Gromp Hopper">
       <Class>Warrior,5</Class>
@@ -489,6 +482,11 @@
       </Stats>
     </Character>
     <Character name ="Slime Lord">
+      <Abilities>
+        <Ability name ="Slime_Rain">
+          <EEffect></EEffect>
+        </Ability>
+      </Abilities>
       <Class>Wizard,5</Class>
       <Class>Slime Lord,3</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -517,9 +515,17 @@
         <Perception>550</Perception>
         <Resolve>480</Resolve>
       </Stats>
-      <Spell>1,Summon_Shoggoth</Spell>
     </Character>
     <Character name ="Slugzilla">
+      <Abilities>
+        <Ability name ="Bite">
+          <EEffect name="Megabite">
+            <AbilityCondition>Bite</AbilityCondition>
+            <X>3.5</X>
+            <Y>3</Y>
+          </EEffect>
+        </Ability>
+      </Abilities>
       <AttackSpriteIndex>24</AttackSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
       <FlinchSpriteIndex>16</FlinchSpriteIndex>

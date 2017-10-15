@@ -29,7 +29,6 @@ namespace Assets.Model.Ability
             }
             catch(Exception e)
             {
-                int temp = 0;
                 return null;
             }
         }

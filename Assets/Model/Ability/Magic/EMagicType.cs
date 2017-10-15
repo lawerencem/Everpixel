@@ -6,6 +6,7 @@
         Astral,
         Light,
         Fighting,
+        Poison,
         Psychic,
         Water,
     }

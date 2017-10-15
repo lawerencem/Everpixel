@@ -12,6 +12,9 @@
         Hadoken,
         Kamehameha,
 
+        // Poison,
+        Slime_Rain,
+
         // Psychic
         Cerebral_Nova,
         Feeblemind,

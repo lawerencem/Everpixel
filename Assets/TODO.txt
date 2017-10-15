@@ -1,6 +1,11 @@
 ﻿TODO
 		
-Resist
+Resist Calculator
+Allow perks to have "flat" modifiers and code them into mods
+Embed injuries a level down on abilities.xml files
+Have Zones.xml able to generate Effects (e.g., slimed)
+  - Ensure effects can generate debuffs/buffs that attach particles
+  - Ensure effects; once removed, also remove particles
 		
 Priority: 
    - slime rain
@@ -10,7 +15,6 @@ Priority:
    - Finalize calculators
 
 Stamina / AP / HP (current points) aren't "getting" from proper source 
-Primary stats are not being Modified by injuries
 Charge ability
 bulldoze ability
 Slime Rain

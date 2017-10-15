@@ -9,6 +9,7 @@ namespace Assets.Model.Character.Param
         public int Dur { get; set; }
         public double FlatScalar { get; set; }
         public bool FlatMod { get; set; }
+        public string ParticlePath { get; set; }
         public double Scalar { get; set; }
         public object Stat { get; set; }
     }

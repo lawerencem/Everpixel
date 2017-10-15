@@ -1,4 +1,6 @@
-﻿using Assets.Controller.Map.Tile;
+﻿using Assets.Controller.Manager.Combat;
+using Assets.Controller.Map.Tile;
+using Assets.Model.Ability;
 using Assets.Model.Map;
 using Assets.View;
 using Assets.View.Map;
@@ -11,8 +13,9 @@ namespace Assets.Controller.Map.Combat
     {
         private const float DEFAULT_ALPHA = 0.5f;
 
-        private List<CTile> _familyTiles = new List<CTile>();
+        private List<GameObject> _aoeTiles = new List<GameObject>();
         private List<GameObject> _familyTileDeco = new List<GameObject>();
+        private List<CTile> _potentialTargetTiles = new List<CTile>();
         private GameObject _hoverTileDeco;
 
         private static VMapCombatController _instance;
@@ -28,12 +31,15 @@ namespace Assets.Controller.Map.Combat
         
         public VMapCombatController()
         {
+            this._aoeTiles = new List<GameObject>();
             this._familyTileDeco = new List<GameObject>();
         }
 
         public void ClearDecoratedTiles(object o)
         {
+            foreach (var old in this._aoeTiles) { GameObject.Destroy(old); }
             foreach (var old in this._familyTileDeco) { GameObject.Destroy(old); }
+            this._aoeTiles.Clear();
             this._familyTileDeco.Clear();
         }
 
@@ -42,11 +48,12 @@ namespace Assets.Controller.Map.Combat
             if (this._hoverTileDeco != null && !this._hoverTileDeco.Equals(t))
                 GameObject.Destroy(this._hoverTileDeco);
 
-            var tile = this._familyTiles.Find(x => x.Equals(t));
+            var tile = this._potentialTargetTiles.Find(x => x.Equals(t));
             if (tile != null)
             {
                 var sprite = MapBridge.Instance.GetHostileHoverSprite();
                 this._hoverTileDeco = this.DecorateTile(t, sprite);
+                this.TryHandleAoEHover(t);
             }
         }
 
@@ -76,7 +83,7 @@ namespace Assets.Controller.Map.Combat
 
             if (tiles != null)
             {
-                this._familyTiles = tiles;
+                this._potentialTargetTiles = tiles;
                 var sprite = MapBridge.Instance.GetPotentialAttackLocSprite();
                 foreach (var t in tiles)
                 {
@@ -104,190 +111,22 @@ namespace Assets.Controller.Map.Combat
             var tView = this.DecorateTile(tile, deco, ViewParams.TILE_DECO_ALPHA);
             this._familyTileDeco.Add(tView);
         }
+
+        private void TryHandleAoEHover(CTile t)
+        {
+            // TODO: Handle Raycast and other AoEs not strictly being a radius-based AOE
+            foreach (var tile in this._aoeTiles)
+                GameObject.Destroy(tile);
+            this._aoeTiles.Clear();
+            var eAbility = CombatManager.Instance.GetCurrentAbility();
+            var active = AbilityTable.Instance.Table[eAbility];
+            if (active.Data.AoE > 1)
+            {
+                var sprite = MapBridge.Instance.GetTileHighlightSprite();
+                var tiles = t.Model.GetAoETiles((int)(active.Data.AoE - 1));
+                foreach(var tile in tiles)
+                    this._aoeTiles.Add(this.DecorateTile(tile.Controller, sprite));
+            }
+        }
     }
 }
-//        private List<GameObject> _aoeTiles = new List<GameObject>();
-//        private List<GameObject> _boxImages = new List<GameObject>();
-//        private GameObject _singleTile;
-
-//        private AbilitiesModal _abilityModal;
-        
-//        private HoverModal _hoverModal;
-
-//        private CMapGUIControllerHit _hitHelper = new CMapGUIControllerHit();
-//        private CMapGUIControllerParticle _particleHelper = new CMapGUIControllerParticle();
-//        private CMapGUIControllerShapeshift _shapeshiftHelper = new CMapGUIControllerShapeshift();
-
-//        public void ApplyInjuryGraphics(ApplyInjuryEvent e)
-//        {
-//            this._particleHelper.ApplyInjuryParticle(e);
-//            this._hitHelper.ProcessInjury(e);
-//        }
-
-
-
-//        public void ClearAoETiles()
-//        {
-//            foreach (var old in this._aoeTiles) { GameObject.Destroy(old); }
-//            this._aoeTiles.Clear();
-//        }
-
-//        public void DecorateAoETiles(List<TileController> t)
-//        {
-//            var sprite = MapBridge.Instance.GetTileHighlightSprite();
-//            foreach (var tile in t)
-//                this.DecorateAoETile(tile, sprite);
-//        }
-
-//        public void DisplayActionEvent(DisplayActionEvent e)
-//        {
-//            switch(e.EventController.Action.CastType)
-//            {
-//                case (CastTypeEnum.Bullet): { this._hitHelper.ProcessBulletFX(e); } break;
-//                case (CastTypeEnum.Raycast): { this._hitHelper.ProcessBulletFX(e); } break;
-//                case (CastTypeEnum.Melee): { this._hitHelper.ProcessMeleeHitFX(e); } break;
-//                case (CastTypeEnum.No_Collision_Bullet): { this._hitHelper.ProcessBulletFX(e); } break;
-//                case (CastTypeEnum.Zone): { this._hitHelper.ProcessZoneFX(e); } break;
-//                default: { e.AttackFXDone(); } break;
-//            }
-//        }
-
-//        public void DisplayBuff(BuffEvent e)
-//        {
-//            this._hitHelper.DisplayText("+ " + e.BuffStr, e.ToBuff.Handle, CMapGUIControllerParams.BLUE);
-//        }
-
-//        public void DisplayCast(CastingEvent e)
-//        {
-//            this._hitHelper.DisplayText(e.SpellName, e.Caster.Handle, CMapGUIControllerParams.WHITE, CMapGUIControllerParams.ATTACK_TEXT_OFFSET);
-//        }
-
-//        public void DisplayDebuff(DebuffEvent e)
-//        {
-//            this._hitHelper.DisplayText("Debuff", e.ToDebuff.Handle, CMapGUIControllerParams.RED);
-//        }
-
-//        public void DisplayGenericEffect(GenericEffectEvent e)
-//        {
-//            var display = e.Effect.Type.ToString().Replace("_", " ");
-//            this._hitHelper.DisplayText(display, e.Target.Handle, CMapGUIControllerParams.WHITE);
-//        }
-
-//        public void DisplayHitStatsEvent(DisplayHitStatsEvent e)
-//        {
-//            switch(e.Hit.Ability.CastType)
-//            {
-//                case (CastTypeEnum.Bullet): { this.ProcessDefenderGraphics(e); } break;
-//                case (CastTypeEnum.Raycast): { this.ProcessDefenderGraphics(e); } break;
-//                case (CastTypeEnum.Melee): { this.ProcessDefenderGraphics(e); } break;
-//                case (CastTypeEnum.No_Collision_Bullet): { this.ProcessDefenderGraphics(e); } break;
-//                case (CastTypeEnum.Shapeshift): { this._shapeshiftHelper.ProcessShapeshiftFX(e); } break;
-//                case (CastTypeEnum.Song): { this._particleHelper.HandleSongParticle(e); } break;
-//                case (CastTypeEnum.Summon): { this.ProcessSummonFX(e); } break;
-//                case (CastTypeEnum.Zone): { e.Done(); } break;
-//            }
-//        }
-
-//        public void DisplayText(string toDisplay, GameObject toShow, Color color, float yOffset = 0, float dur = 3)
-//        {
-//            this._hitHelper.DisplayText(toDisplay, toShow, color, yOffset, dur);
-//        }
-
-//        public void ProcessCharacterKilled(CharacterKilledEvent e)
-//        {
-//            this._hitHelper.ProcessCharacterKilled(e.Killed);
-//        }
-
-//        private void ProcessDefenderGraphics(DisplayHitStatsEvent e)
-//        {
-//            if (e.Hit.Target != null)
-//            {
-//                this.TryProcessShieldFX(e);
-//                if (FHit.HasFlag(e.Hit.Flags.CurFlags, FHit.Flags.Dodge))
-//                    this._hitHelper.ProcessDodge(e);
-//                else if (FHit.HasFlag(e.Hit.Flags.CurFlags, FHit.Flags.Parry))
-//                    this._hitHelper.ProcessParry(e);
-//                else if (FHit.HasFlag(e.Hit.Flags.CurFlags, FHit.Flags.Block))
-//                    this._hitHelper.ProcessBlock(e);
-//                else
-//                    this._hitHelper.ProcessNormalHit(e);
-//                if (FHit.HasFlag(e.Hit.Flags.CurFlags, FHit.Flags.Resist))
-//                    this._hitHelper.ProcessResist(e);
-//                this._hitHelper.ProcessSplatterOnHitEvent(e);
-//            }
-//            e.Done();
-//        }
-
-//        public void ProcessNewTurn()
-//        {
-//            this._abilityModal.ResetModal();
-//        }
-
-//        public void ProcessSummonFX(DisplayHitStatsEvent e)
-//        {
-//            this._hitHelper.ProcessSummon(e);
-//        }
-
-//        public void SetAbilityModalActive()
-//        {
-//            this._abilityModal.SetModalActive();
-//        }
-
-//        public void SetAbilityModalInactive()
-//        {
-//            this._abilityModal.SetModalInactive();
-//        }
-
-//        public void SetDmgModalInactive()
-//        {
-//            this._hoverModal.SetDamageModalInactive();
-//        }
-
-//        private void DecorateAoETile(TileController tile, Sprite deco)
-//        {
-//            var tView = this.DecorateTile(tile, deco);
-//            this._aoeTiles.Add(tView);
-//        }
-
-//        private void DecorateSingleTile(TileController t, Sprite deco, float alpha = 0.50f)
-//        {
-//            var tView = this.DecorateTile(t, deco, alpha);
-//            this._singleTile = tView;
-//        }
-
-
-
-//        private void TryProcessShieldFX(DisplayHitStatsEvent e)
-//        {
-//            if (e.Hit.Target != null)
-//            {
-//                if (e.Hit.Target.Model.Shields.Count > 0)
-//                {
-//                    var shield = CharacterSpriteLoader.Instance.GetShieldSprite();
-//                    var shieldView = new GameObject();
-//                    var renderer = shieldView.AddComponent<SpriteRenderer>();
-//                    renderer.sprite = shield;
-//                    renderer.transform.position = e.Hit.Target.Handle.transform.position;
-//                    renderer.sortingLayerName = CMapGUIControllerParams.PARTICLES_LAYER;
-//                    shieldView.name = "Shield Sprite";
-//                    var destroy = shieldView.AddComponent<DestroyByLifetime>();
-//                    destroy.lifetime = 1f;
-//                    if (!e.Hit.Target.LParty)
-//                    {
-//                        var position = shieldView.transform.position;
-//                        position.x -= 0.15f;
-//                        shieldView.transform.localRotation = Quaternion.Euler(0, 180, 0);
-//                        shieldView.transform.position = position;
-//                    }
-//                    else
-//                    {
-//                        var position = shieldView.transform.position;
-//                        position.x += 0.15f;
-//                        shieldView.transform.position = position;
-//                    }
-//                    shieldView.transform.SetParent(e.Hit.Target.Handle.transform);
-//                }
-//            }
-//        }
-//    }
-//}

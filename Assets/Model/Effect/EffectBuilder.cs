@@ -38,6 +38,7 @@ namespace Assets.Model.Effect
                 case ("WeaponCondition"): { data.WeaponCondition = value; } break;
                 case ("X"): { data.X = double.Parse(value); } break;
                 case ("Y"): { data.Y = double.Parse(value); } break;
+                case ("Z"): { data.Z = double.Parse(value); } break;
             }
         }
 

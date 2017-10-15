@@ -760,8 +760,8 @@
         <Ability name ="Bite">
           <EEffect name="Megabite">
             <AbilityCondition>Bite</AbilityCondition>
-            <X>2.0</X>
-            <Y>2.0</Y>
+            <X>3.5</X>
+            <Y>3</Y>
           </EEffect>
         </Ability>
       </Abilities>

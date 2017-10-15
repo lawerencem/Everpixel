@@ -9,7 +9,6 @@ namespace Assets.Model.Zone.Duration
         public override void ProcessEnterZone(CChar target)
         {
             base.ProcessEnterZone(target);
-
         }
     }
 }
