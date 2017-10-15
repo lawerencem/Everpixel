@@ -3,7 +3,7 @@
   <MagicType name="Poison">
     <ActiveAbility name="Slime_Rain">
       <AccMod>1</AccMod>
-      <AoE>2</AoE>
+      <AoE>1</AoE>
       <APCost>3</APCost>
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>

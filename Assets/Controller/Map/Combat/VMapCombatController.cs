@@ -120,10 +120,10 @@ namespace Assets.Controller.Map.Combat
             this._aoeTiles.Clear();
             var eAbility = CombatManager.Instance.GetCurrentAbility();
             var active = AbilityTable.Instance.Table[eAbility];
-            if (active.Data.AoE > 1)
+            if (active.Data.AoE >= 1)
             {
                 var sprite = MapBridge.Instance.GetTileHighlightSprite();
-                var tiles = t.Model.GetAoETiles((int)(active.Data.AoE - 1));
+                var tiles = t.Model.GetAoETiles((int)(active.Data.AoE));
                 foreach(var tile in tiles)
                     this._aoeTiles.Add(this.DecorateTile(tile.Controller, sprite));
             }
