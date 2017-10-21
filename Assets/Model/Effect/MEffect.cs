@@ -1,5 +1,6 @@
 ﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Combat.Hit;
+using System.Collections.Generic;
 
 namespace Assets.Model.Effect
 {
@@ -8,6 +9,10 @@ namespace Assets.Model.Effect
         public EAbility AbilityCondition { get; set; }
         public ECastType CastCondition { get; set; }
         public int Duration { get; set; }
+        public List<int> SpriteIndexes { get; set; }
+        public int SpritesMax { get; set; }
+        public int SpritesMin { get; set; }
+        public string SpritesPath { get; set; }
         public string ParticlePath { get; set; }
         public string SummonKey { get; set; }
         public string WeaponCondition { get; set; }
@@ -18,6 +23,7 @@ namespace Assets.Model.Effect
 
         public MEffectData()
         {
+            this.SpriteIndexes = new List<int>();
             this.WeaponCondition = "None";
         }
     }
@@ -70,6 +76,7 @@ namespace Assets.Model.Effect
             data.WeaponCondition = this.Data.WeaponCondition;
             data.X = this.Data.X;
             data.Y = this.Data.Y;
+            data.Z = this.Data.Z;
             return data;
         }
 
