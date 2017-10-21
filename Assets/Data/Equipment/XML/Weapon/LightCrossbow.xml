@@ -14,7 +14,7 @@
       <Description>
         This incredible bow fires live (i.e., dangerous) weens!
       </Description>
-      <EEffect name="SummonOnHit">
+      <EEffect name="Summon_On_Hit">
         <AbilityCondition>Fire</AbilityCondition>
         <Duration>5</Duration>
         <SummonKey>Ween</SummonKey>
@@ -47,7 +47,7 @@
       <Description>
         This incredible bow fires live (i.e., dangerous) weens!
       </Description>
-      <EEffect name="SummonOnHit">
+      <EEffect name="Summon_On_Hit">
         <AbilityCondition>Fire</AbilityCondition>
         <Duration>5</Duration>
         <SummonKey>Ween</SummonKey>
@@ -80,7 +80,7 @@
       <Description>
         This incredible bow fires live (i.e., dangerous) weens!
       </Description>
-      <EEffect name="SummonOnHit">
+      <EEffect name="Summon_On_Hit">
         <AbilityCondition>Fire</AbilityCondition>
         <Duration>5</Duration>
         <SummonKey>Ween</SummonKey>
@@ -113,7 +113,7 @@
       <Description>
         As if a ween wasn't scary enough - they can now fly! 
       </Description>
-      <EEffect name="SummonOnHit">
+      <EEffect name="Summon_On_Hit">
         <AbilityCondition>Fire</AbilityCondition>
         <Duration>5</Duration>
         <SummonKey>Ween</SummonKey>

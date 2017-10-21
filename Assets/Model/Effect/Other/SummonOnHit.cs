@@ -3,9 +3,9 @@ using Assets.Model.Event.Combat;
 
 namespace Assets.Model.Effect.Other
 {
-    public class SummonOnHit : MEffect
+    public class EffectSummonOnHit : MEffect
     {
-        public SummonOnHit() : base(EEffect.SummonOnHit) { }
+        public EffectSummonOnHit() : base(EEffect.Summon_On_Hit) { }
 
         public override void TryProcessHit(MHit hit)
         {

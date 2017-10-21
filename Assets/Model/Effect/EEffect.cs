@@ -8,7 +8,7 @@
         HoT,
         Megabite,
         Slime,
-        SummonOnHit,
-        ZoneSlime,
+        Summon_On_Hit,
+        Zone_Slime,
     }
 }
