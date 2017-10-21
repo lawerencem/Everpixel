@@ -1,12 +1,25 @@
 ﻿using Assets.Controller.Character;
+using Assets.Model.Effect;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Model.Zone
 {
     public class ZoneData
     {
+        public MEffect Effect { get; set; }
         public GameObject Handle { get; set; }
         public CChar Source { get; set; }
+        public List<int> SpriteIndexes { get; set; }
+        public string SpritesPath { get; set; }
+        public double X { get; set; }
+        public double Y { get; set; }
+        public double Z { get; set; }
+
+        public ZoneData()
+        {
+            this.SpriteIndexes = new List<int>();
+        }
     }
 
     public abstract class AZone

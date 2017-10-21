@@ -8,6 +8,7 @@ using Assets.Model.Ability.Magic.Psychic;
 using Assets.Model.Ability.Magic.Water;
 using Assets.Model.Ability.Music;
 using Assets.Model.Ability.Shapeshift;
+using Assets.Model.Effect;
 using Assets.Model.Injury;
 using Assets.Model.Weapon.Abilities;
 using Assets.Template.Util;
@@ -20,6 +21,8 @@ namespace Assets.Data.Ability.XML
     {
         private static AbilityReader _instance;
 
+        private AbilityTable _table;
+
         public AbilityReader() : base()
         {
             this._paths.Add("Assets/Data/Ability/XML/Astral.xml");
@@ -28,6 +31,8 @@ namespace Assets.Data.Ability.XML
             this._paths.Add("Assets/Data/Ability/XML/Physical.xml");
             this._paths.Add("Assets/Data/Ability/XML/Songs.xml");
             this._paths.Add("Assets/Data/Ability/XML/WeaponAbilities.xml");
+
+            this._table = AbilityTable.Instance;
         }
 
         public static AbilityReader Instance
@@ -70,7 +75,7 @@ namespace Assets.Data.Ability.XML
                                     {
                                         this.HandleIndex(type, elem, elem.Name.ToString(), elem.Value);
                                     }
-                                    AbilityTable.Instance.Table[type].Data.MagicType = magicType;
+                                    this._table.Table[type].Data.MagicType = magicType;
                                 }
                             }
                         }
@@ -81,41 +86,41 @@ namespace Assets.Data.Ability.XML
 
         private void HandleIndex(EAbility type, XElement ele, string mod, string value)
         {
-            var table = AbilityTable.Instance.Table;
             double v = 1;
             double.TryParse(value, out v);
             switch (mod)
             {
-                case ("AccMod"): { table[type].Data.AccMod = v; } break;
-                case ("AoE"): { table[type].Data.AoE = v; } break;
-                case ("APCost"): { table[type].Data.APCost = (int)v; } break;
-                case ("ArmorIgnoreMod"): { table[type].Data.ArmorIgnoreMod = v; } break;
-                case ("ArmorPierceMod"): { table[type].Data.ArmorPierceMod = v; } break;
-                case ("BlockIgnoreMod"): { table[type].Data.BlockIgnoreMod = v; } break;
+                case ("AccMod"): { this._table.Table[type].Data.AccMod = v; } break;
+                case ("AoE"): { this._table.Table[type].Data.AoE = v; } break;
+                case ("APCost"): { this._table.Table[type].Data.APCost = (int)v; } break;
+                case ("ArmorIgnoreMod"): { this._table.Table[type].Data.ArmorIgnoreMod = v; } break;
+                case ("ArmorPierceMod"): { this._table.Table[type].Data.ArmorPierceMod = v; } break;
+                case ("BlockIgnoreMod"): { this._table.Table[type].Data.BlockIgnoreMod = v; } break;
                 case ("ECastType"): { this.HandleCastType(type, value); } break;
                 case ("CustomGraphics"): { this.HandleCustomGraphics(type, value); } break;
-                case ("Description"): { table[type].Data.Description = value; } break;
-                case ("DmgPerPower"): { table[type].Data.DmgPerPower = double.Parse(value); } break;
-                case ("Duration"): { table[type].Data.Duration = double.Parse(value); } break;
-                case ("DodgeMod"): { table[type].Data.DodgeMod = v; } break;
-                case ("FlatDamage"): { table[type].Data.FlatDamage = v; } break;
+                case ("Description"): { this._table.Table[type].Data.Description = value; } break;
+                case ("DmgPerPower"): { this._table.Table[type].Data.DmgPerPower = double.Parse(value); } break;
+                case ("Duration"): { this._table.Table[type].Data.Duration = double.Parse(value); } break;
+                case ("DodgeMod"): { this._table.Table[type].Data.DodgeMod = v; } break;
+                case ("EEffect"): { this.HandleEffects(ele, value, type); } break;
+                case ("FlatDamage"): { this._table.Table[type].Data.FlatDamage = v; } break;
                 case ("Hostile"): { this.HandleHostile(type, value); } break;
                 case ("HitsTiles"): { this.HandleHitsTiles(type, value); } break;
-                case ("IconSprite"): { table[type].Data.IconSprite = (int)v; } break;
+                case ("IconSprite"): { this._table.Table[type].Data.IconSprite = (int)v; } break;
                 case ("Injury"): { this.HandleInjuries(type, value); } break;
-                case ("MaxSprites"): { table[type].Data.MaxSprites = (int)v; } break;
-                case ("MeleeBlockChanceMod"): { table[type].Data.MeleeBlockChanceMod = v; } break;
-                case ("MinSprites"): { table[type].Data.MinSprites = (int)v; } break;
-                case ("ParryModMod"): { table[type].Data.ParryModMod = v; } break;
-                case ("Range"): { table[type].Data.Range = (int)v; } break;
-                case ("RangeBlockMod"): { table[type].Data.RangeBlockMod = v; } break;
-                case ("RechargeTime"): { table[type].Data.RechargeTime = v; } break;
+                case ("MaxSprites"): { this._table.Table[type].Data.MaxSprites = (int)v; } break;
+                case ("MeleeBlockChanceMod"): { this._table.Table[type].Data.MeleeBlockChanceMod = v; } break;
+                case ("MinSprites"): { this._table.Table[type].Data.MinSprites = (int)v; } break;
+                case ("ParryModMod"): { this._table.Table[type].Data.ParryModMod = v; } break;
+                case ("Range"): { this._table.Table[type].Data.Range = (int)v; } break;
+                case ("RangeBlockMod"): { this._table.Table[type].Data.RangeBlockMod = v; } break;
+                case ("RechargeTime"): { this._table.Table[type].Data.RechargeTime = v; } break;
                 case ("EResistType"): { this.HandleResistType(type, value); } break;
                 case ("ShapeshiftSprites"): { this.HandleShapeshiftSprites(ele, type); } break;
-                case ("ShieldDamageMod"): { table[type].Data.ShieldDamageMod = v; } break;
+                case ("ShieldDamageMod"): { this._table.Table[type].Data.ShieldDamageMod = v; } break;
                 case ("Sprites"): { this.HandleSprites(type, value); } break;
-                case ("SpellLevel"): { table[type].Data.SpellLevel = (int)v; } break;
-                case ("StaminaCost"): { table[type].Data.StaminaCost = (int)v; } break;
+                case ("SpellLevel"): { this._table.Table[type].Data.SpellLevel = (int)v; } break;
+                case ("StaminaCost"): { this._table.Table[type].Data.StaminaCost = (int)v; } break;
             }
         }
 
@@ -130,6 +135,19 @@ namespace Assets.Data.Ability.XML
         {
             if (value.ToLowerInvariant().Equals("true"))
                 AbilityTable.Instance.Table[key].Data.CustomGraphics = true;
+        }
+
+        private void HandleEffects(XElement el, string value, EAbility key)
+        {
+            var type = EEffect.None;
+            foreach (var att in el.Attributes())
+            {
+                if (EnumUtil<EEffect>.TryGetEnumValue(att.Value, ref type))
+                {
+                    var effect = EffectBuilder.Instance.BuildEffect(el, type);
+                    this._table.Table[key].Data.Effects.Add(effect);
+                }
+            }
         }
 
         private void HandleInjuries(EAbility type, string s)

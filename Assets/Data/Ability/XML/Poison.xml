@@ -11,7 +11,12 @@
       <ECastType>Single</ECastType>
       <DmgPerPower>0.00</DmgPerPower>
       <DodgeMod>1.0</DodgeMod>
-      <EEffect name="ZoneSlime">
+      <EEffect name="Zone_Slime">
+        <Duration>3</Duration>
+        <SpritesMax>1</SpritesMax>
+        <SpritesMin>1</SpritesMin>
+        <SpritesIndexes>16,17,18,19,20,21,22,23,24,25,26,27,28,29,30</SpritesIndexes>
+        <SpritesPath>Slime</SpritesPath>
         <X>3</X>
         <Y>0.85</Y>
       </EEffect>

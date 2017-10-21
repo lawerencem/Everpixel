@@ -265,10 +265,11 @@
     <Compile Include="Assets\Model\Effect\EffectBuilder.cs" />
     <Compile Include="Assets\Model\Effect\EffectFactory.cs" />
     <Compile Include="Assets\Model\Effect\EffectTable.cs" />
+    <Compile Include="Assets\Model\Effect\Fortitude\EffectSlime.cs" />
     <Compile Include="Assets\Model\Effect\MEffect.cs" />
     <Compile Include="Assets\Model\Effect\Other\SummonOnHit.cs" />
     <Compile Include="Assets\Model\Effect\Will\Horror.cs" />
-    <Compile Include="Assets\Model\Effect\Zone\EffectZoneSlime.cs" />
+    <Compile Include="Assets\Model\Effect\Zone\EffectSlimeZone.cs" />
     <Compile Include="Assets\Model\Equipment\AEquipment.cs" />
     <Compile Include="Assets\Model\Equipment\Armor\ArmorParams.cs" />
     <Compile Include="Assets\Model\Equipment\Armor\MArmor.cs" />

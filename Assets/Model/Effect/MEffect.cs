@@ -1,6 +1,13 @@
 ﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Combat.Hit;
+using Assets.Model.Zone;
+using Assets.Model.Zone.Duration;
+using Assets.Template.Utility;
+using Assets.View;
+using Assets.View.Map;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 namespace Assets.Model.Effect
 {
@@ -82,5 +89,32 @@ namespace Assets.Model.Effect
 
         public virtual void TryProcessHit(MHit hit) { }
         public virtual void TryProcessTurn(MHit hit) { }
+
+        protected DurationZoneData GetDurationZoneData(MHit hit)
+        {
+            var data = new DurationZoneData();
+            data.SpriteIndexes = this.Data.SpriteIndexes.ToList();
+            data.SpritesPath = this.Data.SpritesPath;
+            data.Source = hit.Data.Source;
+            data.X = this.Data.X;
+            data.Y = this.Data.Y;
+            data.Z = this.Data.Z;
+            return data;
+        }
+
+        protected void ProcessZoneFX(ZoneData data, MHit hit)
+        {
+            var sprite = MapSpriteLoader.Instance.GetZoneSprite(data);
+            var handle = new GameObject();
+            handle.name = data.SpritesPath;
+            var renderer = handle.AddComponent<SpriteRenderer>();
+            renderer.sprite = sprite;
+            renderer.sortingLayerName = Layers.TILE_DECO;
+            renderer.transform.SetParent(hit.Data.Target.Handle.transform);
+            renderer.transform.position = hit.Data.Target.Handle.transform.position;
+            RotateTranslateUtil.Instance.RandomRotateAndTranslate(
+                    handle,
+                    ViewParams.SPLATTER_VARIANCE);
+        }
     }
 }

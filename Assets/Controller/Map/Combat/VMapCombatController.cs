@@ -114,6 +114,7 @@ namespace Assets.Controller.Map.Combat
 
         private void TryHandleAoEHover(CTile t)
         {
+            // TODO: Error here after slime rain
             // TODO: Handle Raycast and other AoEs not strictly being a radius-based AOE
             foreach (var tile in this._aoeTiles)
                 GameObject.Destroy(tile);
