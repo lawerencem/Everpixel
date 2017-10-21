@@ -33,6 +33,10 @@ namespace Assets.Model.Effect
                 case ("AbilityCondition"): { this.HandleAbilityCondition(data, key, value); } break;
                 case ("CastCondition"): { this.HandleCastCondition(data, key, value); } break;
                 case ("Duration"): { data.Duration = int.Parse(value); } break;
+                case ("SpritesIndexes"): { this.HandleSpriteIndexes(data, value); } break;
+                case ("SpritesMax"): { data.SpritesMax = int.Parse(value); } break;
+                case ("SpritesMin"): { data.SpritesMin = int.Parse(value); } break;
+                case ("SpritesPath"): { data.SpritesPath = value; } break;
                 case ("ParticlePath"): { data.ParticlePath = value; } break;
                 case ("SummonKey"): { data.SummonKey = value; } break;
                 case ("WeaponCondition"): { data.WeaponCondition = value; } break;
@@ -57,6 +61,17 @@ namespace Assets.Model.Effect
             if (EnumUtil<ECastType>.TryGetEnumValue(value, ref type))
             {
                 data.CastCondition = type;
+            }
+        }
+
+        private void HandleSpriteIndexes(MEffectData data, string value)
+        {
+            var csv = value.Split(',');
+            for(int i = 0; i < csv.Length; i++)
+            {
+                int result = 0;
+                if (int.TryParse(csv[i], out result))
+                    data.SpriteIndexes.Add(result);
             }
         }
     }
