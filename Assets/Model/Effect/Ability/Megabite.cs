@@ -1,5 +1,4 @@
-﻿using Assets.Model.Ability.Enum;
-using Assets.Model.Combat.Hit;
+﻿using Assets.Model.Combat.Hit;
 
 namespace Assets.Model.Effect.Ability
 {

@@ -9,5 +9,6 @@
         Megabite,
         Slime,
         SummonOnHit,
+        ZoneSlime,
     }
 }

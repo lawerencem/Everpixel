@@ -225,12 +225,12 @@
     <Compile Include="Assets\Model\Character\Builder\CharacterParamBuilder.cs" />
     <Compile Include="Assets\Model\Character\Builder\SecondaryStatReferee.cs" />
     <Compile Include="Assets\Model\Character\Container\ACharEquipment.cs" />
+    <Compile Include="Assets\Model\Character\Container\BaseStats.cs" />
     <Compile Include="Assets\Model\Character\Container\CharAbilities.cs" />
     <Compile Include="Assets\Model\Character\Container\CharEffects.cs" />
-    <Compile Include="Assets\Model\Character\Container\BaseStats.cs" />
+    <Compile Include="Assets\Model\Character\Container\CharStatMods.cs" />
     <Compile Include="Assets\Model\Character\Container\CharStats.cs" />
     <Compile Include="Assets\Model\Character\Container\CurrentPoints.cs" />
-    <Compile Include="Assets\Model\Character\Container\CharStatMods.cs" />
     <Compile Include="Assets\Model\Character\Enum\ECharacterType.cs" />
     <Compile Include="Assets\Model\Character\Enum\EPrimaryStat.cs" />
     <Compile Include="Assets\Model\Character\Enum\ERace.cs" />
@@ -240,12 +240,12 @@
     <Compile Include="Assets\Model\Character\MChar.cs" />
     <Compile Include="Assets\Model\Character\PChar.cs" />
     <Compile Include="Assets\Model\Character\Param\CharPerks.cs" />
-    <Compile Include="Assets\Model\Character\Param\StatMod.cs" />
-    <Compile Include="Assets\Model\Character\Param\PreCharParams.cs" />
     <Compile Include="Assets\Model\Character\Param\PStats.cs" />
+    <Compile Include="Assets\Model\Character\Param\PreCharParams.cs" />
     <Compile Include="Assets\Model\Character\Param\Race\RaceParams.cs" />
     <Compile Include="Assets\Model\Character\Param\Race\RaceSprites.cs" />
     <Compile Include="Assets\Model\Character\Param\SStats.cs" />
+    <Compile Include="Assets\Model\Character\Param\StatMod.cs" />
     <Compile Include="Assets\Model\Character\Summon\SummonModData.cs" />
     <Compile Include="Assets\Model\Class\Builder\ClassBuilder.cs" />
     <Compile Include="Assets\Model\Class\ClassParams.cs" />
@@ -268,6 +268,7 @@
     <Compile Include="Assets\Model\Effect\MEffect.cs" />
     <Compile Include="Assets\Model\Effect\Other\SummonOnHit.cs" />
     <Compile Include="Assets\Model\Effect\Will\Horror.cs" />
+    <Compile Include="Assets\Model\Effect\Zone\EffectZoneSlime.cs" />
     <Compile Include="Assets\Model\Equipment\AEquipment.cs" />
     <Compile Include="Assets\Model\Equipment\Armor\ArmorParams.cs" />
     <Compile Include="Assets\Model\Equipment\Armor\MArmor.cs" />
@@ -376,8 +377,8 @@
     <Compile Include="Assets\Model\Shield\MShield.cs" />
     <Compile Include="Assets\Model\Zone\AZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\ADurationZone.cs" />
-    <Compile Include="Assets\Model\Zone\Duration\SlimeZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\SoothingMistZone.cs" />
+    <Compile Include="Assets\Model\Zone\Duration\ZoneSlime.cs" />
     <Compile Include="Assets\Model\Zone\EZone.cs" />
     <Compile Include="Assets\Model\Zone\ZoneBuilder.cs" />
     <Compile Include="Assets\Model\Zone\ZoneFactory.cs" />
@@ -486,8 +487,12 @@
     <Compile Include="Assets\View\ViewParams.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Data\Ability\XML\Abilities.xml" />
+    <None Include="Assets\Data\Ability\XML\Astral.xml" />
+    <None Include="Assets\Data\Ability\XML\Fighting.xml" />
     <None Include="Assets\Data\Ability\XML\Physical.xml" />
+    <None Include="Assets\Data\Ability\XML\Poison.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Data\Ability\XML\Songs.xml" />
     <None Include="Assets\Data\Ability\XML\WeaponAbilities.xml" />
     <None Include="Assets\Data\Bark\XML\Barks.xml" />
@@ -546,15 +551,6 @@
     <None Include="Assets\Data\Perk\XML\WhenHitPerks.xml" />
     <None Include="Assets\Data\Zone\XML\Zones.xml" />
     <None Include="Assets\TODO.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Ability\XML\Astral.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Ability\XML\Fighting.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Ability\XML\Poison.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

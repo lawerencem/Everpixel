@@ -2,7 +2,6 @@
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Combat.Hit;
-using Assets.Model.Zone;
 using System.Collections.Generic;
 
 namespace Assets.Model.Ability

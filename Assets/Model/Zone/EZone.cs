@@ -3,6 +3,6 @@
     public enum EZone
     {
         None,
-        Slime_Zone,
+        Zone_Slime,
     }
 }
