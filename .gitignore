@@ -1,4 +1,5 @@
 *.meta
+.vs/
 $tf/
 Library/
 Temp/
