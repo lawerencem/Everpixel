@@ -1,4 +1,5 @@
 ﻿using Assets.Model.Biome.Enum;
+using Assets.Model.Zone;
 using Assets.Template.Other;
 using Assets.Template.Util;
 using System.Collections.Generic;
@@ -22,6 +23,7 @@ namespace Assets.View.Map
         private const string PATH = "Sprites/CombatMap/";
         private const string DECO_EXTENSION = "_Deco";
         private const string TILE_EXTENSION = "_Tiles";
+        private const string ZONE_EXTENSION = "_Zone";
 
         public MapSpriteLoader() { }
 
@@ -96,6 +98,14 @@ namespace Assets.View.Map
             var path = StringUtil.PathBuilder(PATH, "Base", TILE_EXTENSION);
             var stuff = Resources.LoadAll(path);
             return stuff[TILE_HIGHLIGHT_SPRITE_INDEX] as Sprite;
+        }
+
+        public Sprite GetZoneSprite(ZoneData data)
+        {
+            var path = StringUtil.PathBuilder(PATH, data.SpritesPath, ZONE_EXTENSION);
+            var stuff = Resources.LoadAll(path);
+            var index = ListUtil<int>.GetRandomElement(data.SpriteIndexes);
+            return stuff[index] as Sprite;
         }
 
         private Sprite[] GetBackgroundDecoSprites(string path)
