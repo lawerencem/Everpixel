@@ -1,3 +1,4 @@
+*.meta
+$tf/
 Library/
 Temp/
-*.meta
