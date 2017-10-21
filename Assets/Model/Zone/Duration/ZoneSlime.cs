@@ -2,9 +2,9 @@
 
 namespace Assets.Model.Zone.Duration
 {
-    public class SlimeZone : ADurationZone
+    public class ZoneSlime : ADurationZone
     {
-        public SlimeZone() : base(EZone.Slime_Zone) { }
+        public ZoneSlime() : base(EZone.Zone_Slime) { }
 
         public override void ProcessEnterZone(CChar target)
         {
