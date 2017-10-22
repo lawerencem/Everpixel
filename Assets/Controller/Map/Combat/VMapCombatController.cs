@@ -1,6 +1,7 @@
 ﻿using Assets.Controller.Manager.Combat;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability;
+using Assets.Model.Ability.Enum;
 using Assets.Model.Map;
 using Assets.View;
 using Assets.View.Map;
@@ -114,19 +115,23 @@ namespace Assets.Controller.Map.Combat
 
         private void TryHandleAoEHover(CTile t)
         {
-            // TODO: Error here after slime rain
             // TODO: Handle Raycast and other AoEs not strictly being a radius-based AOE
             foreach (var tile in this._aoeTiles)
                 GameObject.Destroy(tile);
             this._aoeTiles.Clear();
             var eAbility = CombatManager.Instance.GetCurrentAbility();
-            var active = AbilityTable.Instance.Table[eAbility];
-            if (active.Data.AoE >= 1)
+
+            // TODO: Figure out why this is coming in none here - it shouldnt be.
+            if (eAbility != EAbility.None)
             {
-                var sprite = MapBridge.Instance.GetTileHighlightSprite();
-                var tiles = t.Model.GetAoETiles((int)(active.Data.AoE));
-                foreach(var tile in tiles)
-                    this._aoeTiles.Add(this.DecorateTile(tile.Controller, sprite));
+                var active = AbilityTable.Instance.Table[eAbility];
+                if (active.Data.AoE >= 1)
+                {
+                    var sprite = MapBridge.Instance.GetTileHighlightSprite();
+                    var tiles = t.Model.GetAoETiles((int)(active.Data.AoE));
+                    foreach (var tile in tiles)
+                        this._aoeTiles.Add(this.DecorateTile(tile.Controller, sprite));
+                }
             }
         }
     }
