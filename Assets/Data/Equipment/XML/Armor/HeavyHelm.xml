@@ -231,5 +231,22 @@
       <Stamina_Mod>0.75</Stamina_Mod>
       <Value>3200</Value>
     </Armor>
+    <Armor name="Shi">
+      <Tier>One</Tier>
+      <AP_Mod>1.03</AP_Mod>
+      <Block_Mod>0.40</Block_Mod>
+      <Flat_Damage_Ignore>10</Flat_Damage_Ignore>
+      <Damage_Reduction>0.78</Damage_Reduction>
+      <Description>
+        
+      </Description>
+      <Dodge_Mod>0.85</Dodge_Mod>
+      <Durability>22</Durability>
+      <Initiative_Mod>0.95</Initiative_Mod>
+      <Parry_Mod>1.0</Parry_Mod>
+      <Sprites>74</Sprites>
+      <Stamina_Mod>1.0</Stamina_Mod>
+      <Value>1800</Value>
+    </Armor>
   </EArmorType>
 </Armors>

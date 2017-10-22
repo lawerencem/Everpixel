@@ -198,6 +198,30 @@
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
+    <Weapon name="Goomhammer">
+      <Tier>One</Tier>
+      <Accuracy_Mod>0.80</Accuracy_Mod>
+      <AP_Mod>0.92</AP_Mod>
+      <Armor_Ignore>0.72</Armor_Ignore>
+      <Armor_Pierce>0.95</Armor_Pierce>
+      <Block_Ignore>0.16</Block_Ignore>
+      <Damage>66</Damage>
+      <Description>
+        
+      </Description>
+      <Initiative_Mod>0.90</Initiative_Mod>
+      <Max_Durability>80</Max_Durability>
+      <Parry_Mod>0.20</Parry_Mod>
+      <Shield_Damage_Percent>0.15</Shield_Damage_Percent>
+      <Sprites>61</Sprites>
+      <Stamina_Mod>0.95</Stamina_Mod>
+      <Value>1500</Value>
+      <EAbility>Crush</EAbility>
+      <EAbility>Scatter</EAbility>
+      <EAbility>Stun</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
   </EWeaponSkill>
 </Weapons>
   

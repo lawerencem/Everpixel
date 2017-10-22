@@ -395,6 +395,31 @@
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
+    <Weapon name="Kasai">
+      <Tier>One</Tier>
+      <Accuracy_Mod>0.95</Accuracy_Mod>
+      <AP_Mod>0.95</AP_Mod>
+      <Armor_Ignore>0.68</Armor_Ignore>
+      <Armor_Pierce>0.95</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>75</Damage>
+      <Description>
+
+      </Description>
+      <Initiative_Mod>0.90</Initiative_Mod>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Shield_Damage_Percent>0.15</Shield_Damage_Percent>
+      <Sprites>69</Sprites>
+      <Stamina_Mod>0.95</Stamina_Mod>
+      <Value>3000</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Great_Strike</EAbility>
+      <EAbility>Riposte</EAbility>
+      <EAbility>Wide_Slash</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
     <Weapon name="Katana">
       <Tier>Five</Tier>
       <Accuracy_Mod>1</Accuracy_Mod>
@@ -493,6 +518,31 @@
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
+    <Weapon name="Kusanagi">
+      <Tier>One</Tier>
+      <Accuracy_Mod>1</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>62</Damage>
+      <Description>
+        A beautiful, deadly weapon.
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>1.10</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>130</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>2500</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Riposte</EAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
     <Weapon name="Long Sword">
       <Tier>Four</Tier>
       <Accuracy_Mod>0.93</Accuracy_Mod>
@@ -543,6 +593,31 @@
       <EAbility>Pierce</EAbility>
       <EAbility>Riposte</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Masamune">
+      <Tier>One</Tier>
+      <Accuracy_Mod>1.05</Accuracy_Mod>
+      <AP_Mod>0.95</AP_Mod>
+      <Armor_Ignore>0.85</Armor_Ignore>
+      <Armor_Pierce>0.97</Armor_Pierce>
+      <Block_Ignore>0.22</Block_Ignore>
+      <Damage>88</Damage>
+      <Description>
+        
+      </Description>
+      <Initiative_Mod>0.90</Initiative_Mod>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>1.05</Parry_Mod>
+      <Shield_Damage_Percent>0.15</Shield_Damage_Percent>
+      <Sprites>70</Sprites>
+      <Stamina_Mod>0.95</Stamina_Mod>
+      <Value>3000</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Great_Strike</EAbility>
+      <EAbility>Riposte</EAbility>
+      <EAbility>Wide_Slash</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Nodachi">
@@ -813,6 +888,31 @@
       <EAbility>Slash</EAbility>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
+      <EAbility>Riposte</EAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Taiyo">
+      <Tier>One</Tier>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
+      <Armor_Ignore>0.15</Armor_Ignore>
+      <Armor_Pierce>0.15</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>48</Damage>
+      <Description>
+        
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>35</Max_Durability>
+      <Parry_Mod>0.20</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>131</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>2500</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
       <EAbility>Riposte</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>

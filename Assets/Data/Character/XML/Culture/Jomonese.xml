@@ -314,12 +314,15 @@
           <Armor>1,Dou,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>1,Kabuto,Two</Helm>
+          <Helm>0.80,Kabuto,Two</Helm>
+          <Helm>0.20,Shi,One</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>1,Katana,Two</RWeapon>
+          <RWeapon>0.80,Katana,Two</RWeapon>
+          <RWeapon>0.10,Kusanagi,Two</RWeapon>
+          <RWeapon>0.10,Taiyo,Two</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
@@ -369,7 +372,8 @@
           <Armor>1,Dou,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>1,Kabuto,Two</Helm>
+          <Helm>0.80,Kabuto,Two</Helm>
+          <Helm>0.20,Shi,One</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
@@ -487,7 +491,9 @@
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>1.0,Katana,Two</RWeapon>
+          <RWeapon>0.80,Katana,Two</RWeapon>
+          <RWeapon>0.10,Kusanagi,Two</RWeapon>
+          <RWeapon>0.10,Taiyo,Two</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
@@ -508,12 +514,15 @@
           <Armor>1,Dou,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>1,Kabuto,Two</Helm>
+          <Helm>0.80,Kabuto,Two</Helm>
+          <Helm>0.20,Shi,One</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>1,Nodachi,Two</RWeapon>
+          <RWeapon>0.80,Nodachi,Two</RWeapon>
+          <RWeapon>0.10,Kasai,One</RWeapon>
+          <RWeapon>0.10,Masamune,One</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
@@ -751,12 +760,15 @@
           <Armor>1,Dou,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>1,Kabuto,Two</Helm>
+          <Helm>0.80,Kabuto,Two</Helm>
+          <Helm>0.20,Shi,One</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>1,Yari,Two</RWeapon>
+          <RWeapon>0.80,Yari,Two</RWeapon>
+          <RWeapon>0.10,Nihongo,One</RWeapon>
+          <RWeapon>0.10,Tonbogiri,One</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
@@ -806,7 +818,8 @@
           <Armor>1,Dou,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>1,Kabuto,Two</Helm>
+          <Helm>0.80,Kabuto,Two</Helm>
+          <Helm>0.20,Shi,One</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
