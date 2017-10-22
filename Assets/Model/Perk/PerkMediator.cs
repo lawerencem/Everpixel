@@ -15,7 +15,7 @@ namespace Assets.Model.Perk
     {
         public void SetCharacterPerks(MChar c, List<EPerk> perks)
         {
-            var abilityModPerks = c.GetPerks().GetAbilityModPerks();
+            //var abilityModPerks = c.GetPerks().GetAbilityModPerks();
             var equipmentPerks = c.GetPerks().GetEquipmentPerks();
             var equipmentSStatPerks = c.GetPerks().GetEquipmentSStatPerks();
             var onActionPerks = c.GetPerks().GetOnActionPerks();
@@ -57,7 +57,6 @@ namespace Assets.Model.Perk
                         case (EPerk.Weightlifter): { equipmentSStatPerks.Add(gPerk as Weightlifter); } break;
                         case (EPerk.Violence_Fetish): { postHitPerks.Add(gPerk as ViolenceFetish); } break;
                         case (EPerk.Two_Handed_Expert): { equipmentPerks.Add(gPerk as TwoHandedExpert); } break;
-                        default: { int temp = 0; } break;
                     }
                 }
             }

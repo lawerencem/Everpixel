@@ -10,7 +10,6 @@ namespace Assets.Data.Character.XML
         public static void ParseStats(XElement root, PStats p)
         {
                 var statSet = EPrimaryStat.None;
-                var stat = root.Name.ToString();
                 int value = int.Parse(root.Value);
 
                 if (EnumUtil<EPrimaryStat>.TryGetEnumValue(root.Name.ToString(), ref statSet))
@@ -22,7 +21,6 @@ namespace Assets.Data.Character.XML
             foreach(var ele in root.Elements())
             {
                 var statSet = EPrimaryStat.None;
-                var stat = ele.Name.ToString();
                 int value = int.Parse(ele.Value);
 
                 if (EnumUtil<EPrimaryStat>.TryGetEnumValue(ele.Name.ToString(), ref statSet))

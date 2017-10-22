@@ -184,11 +184,6 @@ namespace Assets.Controller.GUI.Combat
                 var wpn = target.SubComponents[Layers.CHAR_L_WEAPON];
                 this.DisplayParryHelper(target, hit, wpn);
             }
-            else
-            {
-                // THIS IS IN ERROR
-                int temp = 0;
-            }
         }
 
         private void DisplayParryHelper(CChar target, MHit hit, GameObject wpn)
@@ -230,7 +225,7 @@ namespace Assets.Controller.GUI.Combat
             attack.Init(a.Data.Source, position, CombatGUIParams.ATTACK_SPEED);
             foreach(var hit in a.Data.Hits)
             {
-                var bullet = AttackSpriteLoader.Instance.GetBullet(
+                AttackSpriteLoader.Instance.GetBullet(
                     hit, 
                     this.ProcessBulletHit, 
                     CombatGUIParams.BULLET_SPEED);

@@ -59,8 +59,6 @@ namespace Assets.Data.Party.XML
                                 difficulty = int.Parse(ele.Value);
                             else if (ele.Name == "Character")
                             {
-                                var key = new Pair<string, int>(name, difficulty);
-
                                 if (!SubPartiesTable.Instance.Table.ContainsKey(name + "_" + difficulty))
                                     SubPartiesTable.Instance.Table.Add((name + "_" + difficulty), new List<SubPartyParams>());
 

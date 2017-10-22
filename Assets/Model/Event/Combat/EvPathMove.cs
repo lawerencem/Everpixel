@@ -68,7 +68,6 @@ namespace Assets.Model.Event.Combat
         {
             if (o.GetType().Equals(typeof(EvTileMove)))
             {
-                var e = o as EvTileMove;
                 this._current = this._next;
                 this.TryProcessNextTile();
             }

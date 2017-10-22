@@ -3,6 +3,7 @@ using Assets.Data.Perk.Table;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Character;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Assets.Model.Perk
 {
@@ -34,7 +35,7 @@ namespace Assets.Model.Perk
             }
             catch(KeyNotFoundException e)
             {
-                int temp = 0;
+                Debug.LogError(e);
             }
             
         }

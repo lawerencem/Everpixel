@@ -24,7 +24,6 @@ namespace Assets.View.Script.FX
             data.Speed = FatalityParams.FIGHTING_SPEED;
             data.Target = pos;
             var move = source.AddComponent<SRaycastMove>();
-            var roll = RNG.Instance.NextDouble();
             RotateTranslateUtil.Instance.RandomRotate(source);
             move.AddCallback(this.SetDeadLayer);
             move.Init(data);

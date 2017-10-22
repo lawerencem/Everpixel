@@ -36,7 +36,7 @@ namespace Assets.View.Fatality.Weapon.Ability
             attack.Action = this._data.Action;
             foreach(var hit in this._data.FatalHits)
             {
-                var bullet = AttackSpriteLoader.Instance.GetBullet(hit, this.ProcessWeens, FatalityParams.FATALITY_BULLET_SPEED);
+                AttackSpriteLoader.Instance.GetBullet(hit, this.ProcessWeens, FatalityParams.FATALITY_BULLET_SPEED);
                 attack.Init(this._data.Source, pos, FatalityParams.FATALITY_ATTACK_SPEED);
             }
         }

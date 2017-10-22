@@ -25,7 +25,7 @@ namespace Assets.Template.Script
 
         public void Update()
         {
-            if (this.Target.transform != null && this.Target.transform.position != null)
+            if (this.Target != null)
             {
                 var position = Target.transform.position;
                 if (position.y > this._max)

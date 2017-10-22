@@ -6,6 +6,7 @@ using Assets.Model.Event.Combat;
 using Assets.Template.Util;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Assets.Model.Injury.Calculator
 {
@@ -62,7 +63,7 @@ namespace Assets.Model.Injury.Calculator
             }
             catch (Exception e)
             {
-                int temp = 0;
+                Debug.LogError(e);
             }
         }
     }

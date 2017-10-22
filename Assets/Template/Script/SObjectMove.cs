@@ -70,11 +70,7 @@ namespace Assets.Controller.Script
                 return false;
             if (this._data.Object == null)
                 return false;
-            if (this._data.Source == null)
-                return false;
             if (this._data.Speed <= 0)
-                return false;
-            if (this._data.Target == null)
                 return false;
             return true;
         }

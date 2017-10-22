@@ -6,6 +6,7 @@ using Assets.Template.Other;
 using Assets.Template.Util;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Assets.Model.Party.Builder
 {
@@ -35,7 +36,7 @@ namespace Assets.Model.Party.Builder
             }
             catch (KeyNotFoundException e)
             {
-                int temp = 0;
+                Debug.LogError(e);
                 return null;
             }
         }

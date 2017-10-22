@@ -2,6 +2,7 @@
 using Assets.Template.Other;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Assets.Model.Ability
 {
@@ -29,6 +30,7 @@ namespace Assets.Model.Ability
             }
             catch(Exception e)
             {
+                Debug.LogError(e);
                 return null;
             }
         }

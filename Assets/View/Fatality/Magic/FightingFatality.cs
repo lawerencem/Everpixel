@@ -22,7 +22,7 @@ namespace Assets.View.Fatality.Magic
             attack.Action = this._data.Action;
             foreach(var hit in this.Data.FatalHits)
             {
-                var bullet = AttackSpriteLoader.Instance.GetBullet(hit, this.ProcessExplosion, FatalityParams.FATALITY_BULLET_SPEED);
+                AttackSpriteLoader.Instance.GetBullet(hit, this.ProcessExplosion, FatalityParams.FATALITY_BULLET_SPEED);
                 attack.Init(this._data.Source, pos, FatalityParams.FATALITY_ATTACK_SPEED);
             }
         }

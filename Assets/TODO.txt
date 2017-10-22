@@ -1,5 +1,8 @@
 ﻿TODO
 		
+- Knock out slime rain bug
+- ninja garb
+
 Resist Calculator
 Allow perks to have "flat" modifiers and code them into mods
 Embed injuries a level down on abilities.xml files

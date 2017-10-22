@@ -55,7 +55,7 @@ namespace Assets.View.Script.GUI
             var protoImg = this._proto.GetComponent<Image>();
             var protoTxtContainer = GameObject.FindGameObjectWithTag("ProtoAbilityBtnTextTag");
             var protoTxt = protoTxtContainer.GetComponent<Text>();
-            var protoRect = protoTxtContainer.GetComponent<RectTransform>();
+            //var protoRect = protoTxtContainer.GetComponent<RectTransform>();
             var content = GameObject.FindGameObjectWithTag("ActiveModalContent");
 
             var clone = new GameObject();

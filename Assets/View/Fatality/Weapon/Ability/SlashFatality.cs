@@ -95,7 +95,7 @@ namespace Assets.View.Fatality.Weapon.Ability
                         data.DmgPercent = 1;
                         data.Fatality = true;
                         data.Target = body;
-                        var e = new EvSplatter(data);
+                        new EvSplatter(data);
 
                         var head = tgt.SubComponents[Layers.CHAR_HEAD];
                         var tgtTile = tgt.Tile;

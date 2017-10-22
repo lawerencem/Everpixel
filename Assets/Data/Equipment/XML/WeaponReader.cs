@@ -246,8 +246,6 @@ namespace Assets.Data.Equipment.XML
         private void HandleSpriteFXPath(string name, string value, EEquipmentTier tier)
         {
             var key = name + "_" + tier.ToString();
-
-            var x = EWeaponUse.None;
             var stats = WeaponParamTable.Instance;
             stats.Table[key].SpriteFXPath = value;
         }
