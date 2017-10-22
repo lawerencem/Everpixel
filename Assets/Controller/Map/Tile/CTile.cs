@@ -86,6 +86,30 @@ namespace Assets.Controller.Map.Tile
             return tile.Controller;
         }
 
+        public void ProcessEnterTile(CChar c)
+        {
+            foreach(var zone in this._zones)
+            {
+                zone.ProcessEnterZone(c);
+            }
+        }
+
+        public void ProcessExitTile(CChar c)
+        {
+            foreach (var zone in this._zones)
+            {
+                zone.ProcessExitZone(c);
+            }
+        }
+
+        public void ProcessTurnInTile(CChar c)
+        {
+            foreach (var zone in this._zones)
+            {
+                zone.ProcessTurnInZone(c);
+            }
+        }
+
         public void SetModel(MTile t)
         {
             this._model = t;
@@ -97,28 +121,5 @@ namespace Assets.Controller.Map.Tile
         {
             this._view = v;
         }
-
-        //        private void HandleAoE()
-        //        {
-        //            var curChar = CombatEventManager.Instance.GetCurrentCharacter();
-        //            var curAbility = CombatEventManager.Instance.GetCurrentAbility();
-        //            var aoe = new List<TileController>();
-        //            if (curAbility != null && TileControllerFlags.HasFlag(this.Flags.CurFlags, TileControllerFlags.Flags.AwaitingAction))
-        //            {
-        //                if (!curAbility.isRayCast())
-        //                {
-        //                    var hexes = this.Model.GetAoETiles((int)curAbility.AoE);
-        //                    foreach (var hex in hexes)
-        //                        aoe.Add(hex.Parent);
-        //                }
-        //                else
-        //                {
-        //                    var hexes = this.Model.GetRaycastTiles(curChar.CurrentTile.Model, curAbility.Range);
-        //                    foreach (var hex in hexes)
-        //                        aoe.Add(hex.Parent);
-        //                }
-        //            }
-        //            var hover = new EvTileHover(CombatEventManager.Instance, this, aoe);
-        //        }
     }
 }

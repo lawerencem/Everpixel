@@ -21,6 +21,7 @@ namespace Assets.Model.Effect.Zone
                     zoneData.Effect = this.GetSlimeEffect();
                     var zone = new ZoneSlime();
                     zone.SetData(zoneData);
+                    hit.Data.Target.AddZone(zone);
                 }
             }
 
