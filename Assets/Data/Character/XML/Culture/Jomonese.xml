@@ -107,6 +107,35 @@
         <Resolve>580</Resolve>
       </Stats>
     </Character>
+    <Character name ="Elite Ninja">
+      <Class>Ninja,13</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Ninja Garb,Three</Armor>
+          <Armor>0.20,Ninja Garb,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Ninja Hood,Three</Helm>
+          <Helm>0.20,Ninja Hood,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Katana,Three</RWeapon>
+          <RWeapon>0.25,Katana,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>620</Agility>
+        <Constitution>350</Constitution>
+        <Intelligence>540</Intelligence>
+        <Might>480</Might>
+        <Perception>550</Perception>
+        <Resolve>450</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Elite Nodachi Samurai">
       <Class>Samurai,13</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -384,6 +413,90 @@
         <Might>530</Might>
         <Perception>520</Perception>
         <Resolve>580</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Ninja Trainee">
+      <Class>Ninja,2</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Ninja Garb,Five</Armor>
+          <Armor>0.20,Ninja Garb,Four</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Ninja Hood,Five</Helm>
+          <Helm>0.20,Ninja Hood,Four</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Katana,Five</RWeapon>
+          <RWeapon>0.25,Katana,Four</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>620</Agility>
+        <Constitution>350</Constitution>
+        <Intelligence>540</Intelligence>
+        <Might>480</Might>
+        <Perception>550</Perception>
+        <Resolve>450</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Ninja">
+      <Class>Ninja,9</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Ninja Garb,Four</Armor>
+          <Armor>0.20,Ninja Garb,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Ninja Hood,Four</Helm>
+          <Helm>0.20,Ninja Hood,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Katana,Four</RWeapon>
+          <RWeapon>0.25,Katana,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>620</Agility>
+        <Constitution>350</Constitution>
+        <Intelligence>540</Intelligence>
+        <Might>480</Might>
+        <Perception>550</Perception>
+        <Resolve>450</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Ninja Hero">
+      <Class>Ninja,19</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>1.0,Ninja Garb,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>1.0,Ninja Hood,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1.0,Katana,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>620</Agility>
+        <Constitution>350</Constitution>
+        <Intelligence>540</Intelligence>
+        <Might>480</Might>
+        <Perception>550</Perception>
+        <Resolve>450</Resolve>
       </Stats>
     </Character>
     <Character name ="Nodachi Hero">

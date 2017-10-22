@@ -145,6 +145,78 @@
       <Stamina_Mod>1</Stamina_Mod>
       <Value>350</Value>
     </Armor>
+    <Armor name="Ninja Hood">
+      <Tier>Five</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>1.0</Damage_Reduction>
+      <Description>
+        
+      </Description>
+      <Dodge_Mod>1.05</Dodge_Mod>
+      <Durability>2</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.05</Initiative_Mod>
+      <Parry_Mod>1.05</Parry_Mod>
+      <Sprites>5</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>20</Value>
+    </Armor>
+    <Armor name="Ninja Hood">
+      <Tier>Four</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>1.0</Damage_Reduction>
+      <Description>
+
+      </Description>
+      <Dodge_Mod>1.06</Dodge_Mod>
+      <Durability>2</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.06</Initiative_Mod>
+      <Parry_Mod>1.06</Parry_Mod>
+      <Sprites>20</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>50</Value>
+    </Armor>
+    <Armor name="Ninja Hood">
+      <Tier>Three</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>1.0</Damage_Reduction>
+      <Description>
+
+      </Description>
+      <Dodge_Mod>1.07</Dodge_Mod>
+      <Durability>2</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.07</Initiative_Mod>
+      <Parry_Mod>1.07</Parry_Mod>
+      <Sprites>35</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>100</Value>
+    </Armor>
+    <Armor name="Ninja Hood">
+      <Tier>Two</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>1.0</Damage_Reduction>
+      <Description>
+
+      </Description>
+      <Dodge_Mod>1.08</Dodge_Mod>
+      <Durability>2</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.08</Initiative_Mod>
+      <Parry_Mod>1.08</Parry_Mod>
+      <Sprites>50</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>100</Value>
+    </Armor>
     <Armor name="Skull">
       <Tier>Five</Tier>
       <AP_Mod>0.98</AP_Mod>

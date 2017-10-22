@@ -1,22 +1,14 @@
 ﻿TODO
 		
-- Knock out slime rain bug
+- Resist Calculators
+  -- Particles added on non-resist
 - ninja garb
 
-Resist Calculator
 Allow perks to have "flat" modifiers and code them into mods
 Embed injuries a level down on abilities.xml files
-
-Priority: 
-   - Ninja Garb
-   - Touch up new samurai armor
-   - Finalize calculators
-
 Stamina / AP / HP (current points) aren't "getting" from proper source 
 Charge ability
 bulldoze ability
-Slime Rain
-Zones
 Why are trolls showing 1 morale
 Fix Keynotfound in main gui
 Display Blocks

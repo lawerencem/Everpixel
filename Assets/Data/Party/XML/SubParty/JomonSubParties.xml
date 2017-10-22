@@ -32,6 +32,22 @@
     <Difficulty>8</Difficulty>
     <Character>1,Naginata Hero,Two</Character>
   </SubParty>
+  <SubParty Name ="Ninjas">
+    <Difficulty>2</Difficulty>
+    <Character>1,Ninja Trainee,Three</Character>
+  </SubParty>
+  <SubParty Name ="Ninjas">
+    <Difficulty>3</Difficulty>
+    <Character>1,Ninja,Three</Character>
+  </SubParty>
+  <SubParty Name ="Ninjas">
+    <Difficulty>5</Difficulty>
+    <Character>1,Elite Ninja,Three</Character>
+  </SubParty>
+  <SubParty Name ="Ninjas">
+    <Difficulty>7</Difficulty>
+    <Character>1,Ninja Hero,Three</Character>
+  </SubParty>
   <SubParty Name ="Nodachi Samurai">
     <Difficulty>4</Difficulty>
     <Character>1,Nodachi Samurai,Two</Character>

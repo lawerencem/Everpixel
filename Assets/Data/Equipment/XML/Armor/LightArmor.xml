@@ -217,6 +217,78 @@
       <Stamina_Mod>1</Stamina_Mod>
       <Value>550</Value>
     </Armor>
+    <Armor name="Ninja Garb">
+      <Tier>Five</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>1</Damage_Reduction>
+      <Description>
+        
+      </Description>
+      <Dodge_Mod>1.10</Dodge_Mod>
+      <Durability>5</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.05</Initiative_Mod>
+      <Parry_Mod>1.05</Parry_Mod>
+      <Sprites>7</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>50</Value>
+    </Armor>
+    <Armor name="Ninja Garb">
+      <Tier>Four</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+
+      </Description>
+      <Dodge_Mod>1.11</Dodge_Mod>
+      <Durability>5</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.06</Initiative_Mod>
+      <Parry_Mod>1.06</Parry_Mod>
+      <Sprites>22</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>150</Value>
+    </Armor>
+    <Armor name="Ninja Garb">
+      <Tier>Three</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+
+      </Description>
+      <Dodge_Mod>1.12</Dodge_Mod>
+      <Durability>5</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.07</Initiative_Mod>
+      <Parry_Mod>1.07</Parry_Mod>
+      <Sprites>37</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>250</Value>
+    </Armor>
+    <Armor name="Ninja Garb">
+      <Tier>Two</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+
+      </Description>
+      <Dodge_Mod>1.13</Dodge_Mod>
+      <Durability>5</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1.08</Initiative_Mod>
+      <Parry_Mod>1.08</Parry_Mod>
+      <Sprites>52</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>400</Value>
+    </Armor>
     <Armor name="Slime Handler Robes">
       <Tier>Five</Tier>
       <AP_Mod>0.97</AP_Mod>
