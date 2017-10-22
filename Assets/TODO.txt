@@ -2,7 +2,6 @@
 		
 - Resist Calculators
   -- Particles added on non-resist
-- ninja garb
 
 Allow perks to have "flat" modifiers and code them into mods
 Embed injuries a level down on abilities.xml files
