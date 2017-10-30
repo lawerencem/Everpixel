@@ -6,9 +6,9 @@ namespace Assets.Model.Effect.Fortitude
     {
         public EffectSlime() : base(EEffect.Slime) { }
 
-        public override void TryProcessHit(MHit hit)
+        public override void TryProcessHit(MHit hit, bool prediction)
         {
-            base.TryProcessHit(hit);
+            base.TryProcessHit(hit, prediction);
             if (base.CheckConditions(hit))
             {
 

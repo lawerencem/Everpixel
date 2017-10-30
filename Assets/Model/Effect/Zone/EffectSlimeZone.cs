@@ -10,18 +10,21 @@ namespace Assets.Model.Effect.Zone
         {
             public EffectSlimeZone() : base(EEffect.Zone_Slime) { }
 
-            public override void TryProcessHit(MHit hit)
+            public override void TryProcessHit(MHit hit, bool prediction)
             {
-                base.TryProcessHit(hit);
+                base.TryProcessHit(hit, prediction);
                 if (base.CheckConditions(hit))
                 {
                     var zoneData = base.GetDurationZoneData(hit);
-                    base.ProcessZoneFX(zoneData, hit);
                     zoneData.Dur = (int)this.Data.X;
                     zoneData.Effect = this.GetSlimeEffect();
                     var zone = new ZoneSlime();
                     zone.SetData(zoneData);
-                    hit.Data.Target.AddZone(zone);
+                    if (!prediction)
+                    {
+                        base.ProcessZoneFX(zoneData, hit);
+                        hit.Data.Target.AddZone(zone);
+                    }
                 }
             }
 

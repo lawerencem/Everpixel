@@ -7,9 +7,9 @@ namespace Assets.Model.Effect.Other
     {
         public EffectSummonOnHit() : base(EEffect.Summon_On_Hit) { }
 
-        public override void TryProcessHit(MHit hit)
+        public override void TryProcessHit(MHit hit, bool prediction)
         {
-            base.TryProcessHit(hit);
+            base.TryProcessHit(hit, prediction);
             if (base.CheckConditions(hit))
                 hit.AddCallback(this.ProcessSummon);
         }

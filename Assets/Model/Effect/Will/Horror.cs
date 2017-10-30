@@ -6,7 +6,7 @@ namespace Assets.Model.Effect.Will
     {
         public Horror() : base(EEffect.Horror) { }
 
-        public override void TryProcessHit(MHit hit)
+        public override void TryProcessHit(MHit hit, bool prediction)
         {
             // TODO
         }

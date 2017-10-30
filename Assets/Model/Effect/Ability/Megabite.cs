@@ -6,9 +6,9 @@ namespace Assets.Model.Effect.Ability
     {
         public Megabite() : base(EEffect.Megabite) { }
 
-        public override void TryProcessHit(MHit hit)
+        public override void TryProcessHit(MHit hit, bool prediction)
         {
-            base.TryProcessHit(hit);
+            base.TryProcessHit(hit, prediction);
             if (base.CheckConditions(hit))
             {
                 hit.Data.ModData.SrcArmorPierceMod = this.Data.X;

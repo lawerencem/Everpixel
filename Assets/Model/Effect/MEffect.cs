@@ -87,7 +87,7 @@ namespace Assets.Model.Effect
             return data;
         }
 
-        public virtual void TryProcessHit(MHit hit) { }
+        public virtual void TryProcessHit(MHit hit, bool prediction) { }
         public virtual void TryProcessTurn(MHit hit) { }
 
         protected DurationZoneData GetDurationZoneData(MHit hit)

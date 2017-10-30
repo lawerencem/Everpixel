@@ -124,34 +124,34 @@ namespace Assets.Model.Ability
 
         protected virtual void PredictBullet(MHit hit)
         {
-            this.ProcessEffects(hit);
+            this.ProcessEffects(hit, true);
             this.ProcessPerks(hit);
             this._logic.PredictBullet(hit);
         }
 
         protected virtual void PredictMelee(MHit hit)
         {
-            this.ProcessEffects(hit);
+            this.ProcessEffects(hit, true);
             this.ProcessPerks(hit);
             this._logic.PredictMelee(hit);
         }
 
         protected virtual void PredictSingle(MHit hit)
         {
-            this.ProcessEffects(hit);
+            this.ProcessEffects(hit, true);
             this.ProcessPerks(hit);
             this._logic.PredictSingle(hit);
         }
 
         protected void PredictTile(MHit hit)
         {
-            this.ProcessEffects(hit);
+            this.ProcessEffects(hit, true);
             this.ProcessPerks(hit);
         }
 
         protected void ProcessHitBullet(MHit hit)
         {
-            this.ProcessEffects(hit);
+            this.ProcessEffects(hit, false);
             this.ProcessPerks(hit);
             this._logic.ProcessBullet(hit);
         }
@@ -173,21 +173,21 @@ namespace Assets.Model.Ability
 
         protected void ProcessHitMelee(MHit hit)
         {
-            this.ProcessEffects(hit);
+            this.ProcessEffects(hit, false);
             this.ProcessPerks(hit);
             this._logic.ProcessMelee(hit);
         }
 
         protected void ProcessSingle(MHit hit)
         {
-            this.ProcessEffects(hit);
+            this.ProcessEffects(hit, false);
             this.ProcessPerks(hit);
             this._logic.ProcessSingle(hit);
         }
 
         protected void ProcessTile(MHit hit)
         {
-            this.ProcessEffects(hit);
+            this.ProcessEffects(hit, false);
             this.ProcessPerks(hit);
         }
 
@@ -200,20 +200,20 @@ namespace Assets.Model.Ability
             hit.Data.Target = tile;
         }
 
-        private void ProcessEffects(MHit hit)
+        private void ProcessEffects(MHit hit, bool prediction)
         {
             var proxy = hit.Data.Source.Proxy;
             foreach(var effect in this._data.Effects)
-                effect.TryProcessHit(hit);
+                effect.TryProcessHit(hit, prediction);
             if (proxy.GetLWeapon() != null)
             {
                 foreach (var effect in proxy.GetLWeapon().Model.Data.Effects)
-                    effect.TryProcessHit(hit);
+                    effect.TryProcessHit(hit, prediction);
             }
             if (proxy.GetRWeapon() != null)
             {
                 foreach (var effect in proxy.GetRWeapon().Model.Data.Effects)
-                    effect.TryProcessHit(hit);
+                    effect.TryProcessHit(hit, prediction);
             }
         }
 
