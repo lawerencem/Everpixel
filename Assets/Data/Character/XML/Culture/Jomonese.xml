@@ -305,7 +305,7 @@
         <Resolve>415</Resolve>
       </Stats>
     </Character>
-    <Character name ="Katana Hero">
+    <Character name ="Katana Kensai">
       <Class>Samurai,19</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Human</ERace>
@@ -363,7 +363,7 @@
         <Resolve>580</Resolve>
       </Stats>
     </Character>
-    <Character name ="Naginata Hero">
+    <Character name ="Naginata Kensai">
       <Class>Samurai,19</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Human</ERace>
@@ -477,7 +477,7 @@
         <Resolve>450</Resolve>
       </Stats>
     </Character>
-    <Character name ="Ninja Hero">
+    <Character name ="Ninja Kensai">
       <Class>Ninja,19</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Human</ERace>
@@ -505,7 +505,7 @@
         <Resolve>450</Resolve>
       </Stats>
     </Character>
-    <Character name ="Nodachi Hero">
+    <Character name ="Nodachi Kensai">
       <Class>Samurai,19</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Human</ERace>
@@ -751,7 +751,7 @@
         <Resolve>350</Resolve>
       </Stats>
     </Character>
-    <Character name ="Yari Hero">
+    <Character name ="Yari Kensai">
       <Class>Samurai,19</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Human</ERace>
@@ -809,7 +809,7 @@
         <Resolve>580</Resolve>
       </Stats>
     </Character>
-    <Character name ="Yumi Hero">
+    <Character name ="Yumi Kensai">
       <Class>Samurai,19</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Human</ERace>

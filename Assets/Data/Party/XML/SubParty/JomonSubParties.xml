@@ -18,7 +18,7 @@
   </SubParty>
   <SubParty Name ="Katana Samurai">
     <Difficulty>8</Difficulty>
-    <Character>1,Katana Hero,Two</Character>
+    <Character>1,Katana Kensai,Two</Character>
   </SubParty>
   <SubParty Name ="Naginata Samurai">
     <Difficulty>4</Difficulty>
@@ -30,7 +30,7 @@
   </SubParty>
   <SubParty Name ="Naginata Samurai">
     <Difficulty>8</Difficulty>
-    <Character>1,Naginata Hero,Two</Character>
+    <Character>1,Naginata Kensai,Two</Character>
   </SubParty>
   <SubParty Name ="Ninjas">
     <Difficulty>2</Difficulty>
@@ -46,7 +46,7 @@
   </SubParty>
   <SubParty Name ="Ninjas">
     <Difficulty>7</Difficulty>
-    <Character>1,Ninja Hero,Three</Character>
+    <Character>1,Ninja Kensai,Three</Character>
   </SubParty>
   <SubParty Name ="Nodachi Samurai">
     <Difficulty>4</Difficulty>
@@ -58,7 +58,7 @@
   </SubParty>
   <SubParty Name ="Nodachi Samurai">
     <Difficulty>8</Difficulty>
-    <Character>1,Nodachi Hero,Two</Character>
+    <Character>1,Nodachi Kensai,Two</Character>
   </SubParty>
   <SubParty Name ="Spell Kappas">
     <Difficulty>6</Difficulty>
@@ -109,7 +109,7 @@
   </SubParty>
   <SubParty Name ="Yari Samurai">
     <Difficulty>8</Difficulty>
-    <Character>1,Yari Hero,One</Character>
+    <Character>1,Yari Kensai,One</Character>
   </SubParty>
   <SubParty Name ="Yumi Ashigaru">
     <Difficulty>1</Difficulty>
@@ -139,6 +139,6 @@
   </SubParty>
   <SubParty Name ="Yumi Samurai">
     <Difficulty>8</Difficulty>
-    <Character>1,Yumi Hero,Three</Character>
+    <Character>1,Yumi Kensai,Three</Character>
   </SubParty>
 </SubParties>

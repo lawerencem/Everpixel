@@ -1,6 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Armors>
   <EArmorType name ="Medium_Armor">
+    <Armor name="Astral Mail">
+      <Tier>One</Tier>
+      <AP_Mod>1.05</AP_Mod>
+      <Block_Mod>0.90</Block_Mod>
+      <Flat_Damage_Ignore>4</Flat_Damage_Ignore>
+      <Damage_Reduction>0.75</Damage_Reduction>
+      <Description>
+        
+      </Description>
+      <Dodge_Mod>1</Dodge_Mod>
+      <Durability>55</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>62</Sprites>
+      <Stamina_Mod>0.85</Stamina_Mod>
+      <Value>1800</Value>
+    </Armor>
     <Armor name="Byrnie">
       <Tier>Five</Tier>
       <AP_Mod>0.97</AP_Mod>

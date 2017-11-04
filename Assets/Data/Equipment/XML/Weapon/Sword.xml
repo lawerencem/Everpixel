@@ -346,27 +346,27 @@
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
-    <Weapon name="Toof">
+    <Weapon name="Entropic Blade">
       <Tier>One</Tier>
-      <Accuracy_Mod>0.80</Accuracy_Mod>
-      <AP_Mod>1.15</AP_Mod>
-      <Armor_Ignore>0.52</Armor_Ignore>
-      <Armor_Pierce>0.85</Armor_Pierce>
-      <Block_Ignore>0.05</Block_Ignore>
-      <Damage>52</Damage>
+      <Accuracy_Mod>0.93</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.91</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>35</Damage>
       <Description>
-        You don't want to meet the creature that produced this tooth...
+        
       </Description>
-      <Initiative_Mod>0.80</Initiative_Mod>
-      <Max_Durability>80</Max_Durability>
-      <Parry_Mod>0.60</Parry_Mod>
-      <Shield_Damage_Percent>0.15</Shield_Damage_Percent>
-      <Sprites>142</Sprites>
-      <Stamina_Mod>0.85</Stamina_Mod>
-      <Value>900</Value>
-      <EAbility>Crush</EAbility>
-      <EAbility>Great_Strike</EAbility>
-      <EAbility>Stun</EAbility>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>22</Max_Durability>
+      <Parry_Mod>1.08</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>139</Sprites>
+      <Stamina_Mod>0.95</Stamina_Mod>
+      <Value>800</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Gash</EAbility>
+      <EAbility>Maim</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -389,6 +389,31 @@
       <Sprites>36</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
       <Value>800</Value>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Riposte</EAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Glop Gift">
+      <Tier>One</Tier>
+      <Accuracy_Mod>0.87</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
+      <Armor_Ignore>0.98</Armor_Ignore>
+      <Armor_Pierce>0.68</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>32</Damage>
+      <Description>
+        Giving the gift of glop.
+      </Description>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>15</Max_Durability>
+      <Parry_Mod>0.84</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>140</Sprites>
+      <Stamina_Mod>0.95</Stamina_Mod>
+      <Value>1500</Value>
+      <EAbility>Slash</EAbility>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
       <EAbility>Riposte</EAbility>
@@ -892,6 +917,31 @@
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
+    <Weapon name="Slime Blade">
+      <Tier>Two</Tier>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.72</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>28</Damage>
+      <Description>
+        This blade is covered in living, breathing slime...
+      </Description>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>13</Max_Durability>
+      <Parry_Mod>0.82</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>110</Sprites>
+      <Stamina_Mod>0.95</Stamina_Mod>
+      <Value>880</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Pierce</EAbility>
+      <EAbility>Riposte</EAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
     <Weapon name="Taiyo">
       <Tier>One</Tier>
       <Accuracy_Mod>0.85</Accuracy_Mod>
@@ -914,6 +964,30 @@
       <EAbility>Slash</EAbility>
       <EAbility>Stab</EAbility>
       <EAbility>Riposte</EAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Toof">
+      <Tier>One</Tier>
+      <Accuracy_Mod>0.80</Accuracy_Mod>
+      <AP_Mod>1.15</AP_Mod>
+      <Armor_Ignore>0.52</Armor_Ignore>
+      <Armor_Pierce>0.85</Armor_Pierce>
+      <Block_Ignore>0.05</Block_Ignore>
+      <Damage>52</Damage>
+      <Description>
+        You don't want to meet the creature that produced this tooth...
+      </Description>
+      <Initiative_Mod>0.80</Initiative_Mod>
+      <Max_Durability>80</Max_Durability>
+      <Parry_Mod>0.60</Parry_Mod>
+      <Shield_Damage_Percent>0.15</Shield_Damage_Percent>
+      <Sprites>142</Sprites>
+      <Stamina_Mod>0.85</Stamina_Mod>
+      <Value>900</Value>
+      <EAbility>Crush</EAbility>
+      <EAbility>Great_Strike</EAbility>
+      <EAbility>Stun</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>

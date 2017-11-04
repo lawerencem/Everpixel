@@ -1,6 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Armors>
   <EArmorType name ="Medium_Helm">
+    <Armor name="Astral Cap">
+      <Tier>One</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>3</Flat_Damage_Ignore>
+      <Damage_Reduction>0.90</Damage_Reduction>
+      <Description>
+        
+      </Description>
+      <Dodge_Mod>1</Dodge_Mod>
+      <Durability>35</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>64</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>550</Value>
+    </Armor>
     <Armor name="Dino Scale Helm">
       <Tier>Five</Tier>
       <AP_Mod>1</AP_Mod>

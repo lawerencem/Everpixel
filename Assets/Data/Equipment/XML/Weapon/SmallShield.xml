@@ -1,6 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Weapons>
   <EWeaponSkill name ="Small_Shield">
+    <Weapon name="Astral Buckler">
+      <Tier>One</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Description>
+        
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>45</Max_Durability>
+      <Melee_Block_Chance>1.08</Melee_Block_Chance>
+      <Parry_Mod>1</Parry_Mod>
+      <Ranged_Block_Chance>1</Ranged_Block_Chance>
+      <Sprites>63</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>800</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
     <Weapon name="Buckler">
       <Tier>Five</Tier>
       <AP_Mod>1</AP_Mod>
@@ -67,7 +85,7 @@
       <Melee_Block_Chance>1.03</Melee_Block_Chance>
       <Parry_Mod>0.99</Parry_Mod>
       <Ranged_Block_Chance>1</Ranged_Block_Chance>
-      <Sprites>3</Sprites>
+      <Sprites>18</Sprites>
       <Stamina_Mod>0.99</Stamina_Mod>
       <Value>100</Value>
       <EWeaponType>One_Handed</EWeaponType>
@@ -85,9 +103,27 @@
       <Melee_Block_Chance>1.04</Melee_Block_Chance>
       <Parry_Mod>1</Parry_Mod>
       <Ranged_Block_Chance>1</Ranged_Block_Chance>
-      <Sprites>3</Sprites>
+      <Sprites>33</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>170</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Goblin Buckler">
+      <Tier>Two</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Description>
+        A small, light shield favored by goblins.
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>35</Max_Durability>
+      <Melee_Block_Chance>1.05</Melee_Block_Chance>
+      <Parry_Mod>1</Parry_Mod>
+      <Ranged_Block_Chance>1</Ranged_Block_Chance>
+      <Sprites>48</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>350</Value>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Shield</EWeaponUse>
     </Weapon>

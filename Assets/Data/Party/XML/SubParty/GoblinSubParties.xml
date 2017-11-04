@@ -16,18 +16,38 @@
   </SubParty>
   <SubParty Name ="Goblin Fodder">
     <Difficulty>1</Difficulty>
-    <Character>1,Goblin Fodder,One</Character>
-    <Character>1,Goblin Fodder,One</Character>
+    <Character>1,Fodder,One</Character>
+    <Character>1,Fodder,One</Character>
+    <Character>1,Fodder,One</Character>
+  </SubParty>
+  <SubParty Name ="Goblin Fodder">
+    <Difficulty>2</Difficulty>
+    <Character>1,Grizzled Fodder,One</Character>
+    <Character>1,Grizzled Fodder,One</Character>
+    <Character>1,Grizzled Fodder,One</Character>
   </SubParty>
   <SubParty Name ="Goblin Fodder">
     <Difficulty>3</Difficulty>
-    <Character>1,Goblin Fodder,One</Character>
-    <Character>1,Goblin Fodder,One</Character>
-    <Character>1,Goblin Fodder,One</Character>
+    <Character>1,Fodder Hero,One</Character>
+    <Character>1,Fodder Hero,One</Character>
   </SubParty>
-  <SubParty Name ="Goblin Warboss Retinue">
-    <Difficulty>12</Difficulty>
-    <Character>1,Goblin Warboss,One</Character>
+  <SubParty Name ="Goblin Boss">
+    <Difficulty>6</Difficulty>
+    <Character>1,Grizzled Fodder,One</Character>
+    <Character>1,Grizzled Fodder,One</Character>
+    <Character>1,Boss,Two</Character>
+  </SubParty>
+  <SubParty Name ="Goblin Boss">
+    <Difficulty>10</Difficulty>
+    <Character>1,Grizzled Fodder,One</Character>
+    <Character>1,Grizzled Fodder,One</Character>
+    <Character>1,Warboss,Two</Character>
+  </SubParty>
+  <SubParty Name ="Goblin Boss">
+    <Difficulty>15</Difficulty>
+    <Character>1,Crazed Gromp Hopper,One</Character>
+    <Character>1,Crazed Gromp Hopper,One</Character>
+    <Character>1,Gromp Boss,Two</Character>
   </SubParty>
   <SubParty Name ="Goblin Void Weavers">
     <Difficulty>6</Difficulty>
@@ -132,6 +152,16 @@
     <Difficulty>3</Difficulty>
     <Character>1,Slimer,One</Character>
     <Character>1,Rookie Slimer,One</Character>
+  </SubParty>
+  <SubParty Name ="Slimers">
+    <Difficulty>5</Difficulty>
+    <Character>1,Slimer,One</Character>
+    <Character>1,Pro Slimer,One</Character>
+  </SubParty>
+  <SubParty Name ="Slimers">
+    <Difficulty>8</Difficulty>
+    <Character>1,Licensed Slimer,One</Character>
+    <Character>1,Pro Slimer,One</Character>
   </SubParty>
   <SubParty Name ="Slug Horde">
     <Difficulty>3</Difficulty>
