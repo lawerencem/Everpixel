@@ -4,6 +4,7 @@ using Assets.Controller.Manager.Combat;
 using Assets.Controller.Map.Combat;
 using Assets.Controller.Map.Combat.Loader;
 using Assets.Model.Biome.Enum;
+using Assets.Model.Culture;
 using Assets.Template.Other;
 using UnityEngine;
 
@@ -45,8 +46,8 @@ namespace Assets.Controller.Managers
             gui.InitCombatGUI();
             var initInfo = new MapInitInfo();
             initInfo.Biome = EBiome.Grassland;
-            initInfo.LParties.Add(new Pair<string, int>("Jomonese", 20));
-            initInfo.RParties.Add(new Pair<string, int>("Goblins", 20));
+            initInfo.LArmies.Add(new Pair<ECulture, string>(ECulture.Jomonese, "Vanguard"));
+            initInfo.RArmies.Add(new Pair<ECulture, string>(ECulture.Jomonese, "Vanguard"));
             initInfo.Cols = 14;
             initInfo.DecoCount = 5;
             initInfo.Rows = 14;

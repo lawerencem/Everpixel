@@ -27,20 +27,20 @@ namespace Assets.Controller.Map.Combat.Loader
             var map = new MMap(hexMap);
             this._map.SetMap(map);
             this.InitTiles(info);
-            this.InitParties(info);
+            this.InitArmies(info);
             this.InitChars(info);
             return this._map;
+        }
+
+        private void InitArmies(MapInitInfo info)
+        {
+            var loader = new PartyLoader();
+            loader.Init(this._map, info);
         }
 
         private void InitChars(MapInitInfo info)
         {
             CharLoader.Instance.Init(this.MapHolder, this._map, info);
-        }
-
-        private void InitParties(MapInitInfo info)
-        {
-            var loader = new PartyLoader();
-            loader.Init(this._map, info);
         }
 
         private void InitTiles(MapInitInfo info)

@@ -8,6 +8,18 @@
     <Difficulty>6</Difficulty>
     <Character>1,Tortugaia,Three</Character>
   </SubParty>
+  <SubParty Name ="Katana Calvary">
+    <Difficulty>5</Difficulty>
+    <Character>1,Katana Calvary,Two</Character>
+  </SubParty>
+  <SubParty Name ="Katana Calvary">
+    <Difficulty>7</Difficulty>
+    <Character>1,Elite Katana Calvary,Two</Character>
+  </SubParty>
+  <SubParty Name ="Katana Calvary">
+    <Difficulty>9</Difficulty>
+    <Character>1,Katana Calvary Kensai,Two</Character>
+  </SubParty>
   <SubParty Name ="Katana Samurai">
     <Difficulty>4</Difficulty>
     <Character>1,Katana Samurai,Two</Character>

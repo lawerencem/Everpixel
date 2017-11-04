@@ -16,10 +16,10 @@ namespace Assets.Model.Party.Builder
         {
             try
             {
-                if (SubPartiesTable.Instance.Table.ContainsKey(arg))
+                if (SubpartyTable.Instance.Table.ContainsKey(arg))
                 {
                     var buildList = new List<Pair<PreCharParams, EStartCol>>();
-                    var cParams = SubPartiesTable.Instance.Table[arg];
+                    var cParams = SubpartyTable.Instance.Table[arg];
                     foreach (var param in cParams)
                     {
                         double chance = RNG.Instance.NextDouble();

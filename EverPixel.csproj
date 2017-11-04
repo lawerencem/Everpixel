@@ -134,11 +134,15 @@
     <Compile Include="Assets\Data\Injury\XML\InjuryReader.cs" />
     <Compile Include="Assets\Data\Mount\Table\MountTable.cs" />
     <Compile Include="Assets\Data\Mount\XML\MountsReader.cs" />
-    <Compile Include="Assets\Data\Party\Table\PartiesTable.cs" />
-    <Compile Include="Assets\Data\Party\Table\SubPartiesTable.cs" />
-    <Compile Include="Assets\Data\Party\XML\PartiesReader.cs" />
-    <Compile Include="Assets\Data\Party\XML\SubPartiesReader.cs" />
+    <Compile Include="Assets\Data\Party\Table\ArmyTable.cs" />
+    <Compile Include="Assets\Data\Party\Table\MetapartyTable.cs" />
+    <Compile Include="Assets\Data\Party\Table\PartyTable.cs" />
+    <Compile Include="Assets\Data\Party\Table\SubpartyTable.cs" />
+    <Compile Include="Assets\Data\Party\XML\ArmyReader.cs" />
+    <Compile Include="Assets\Data\Party\XML\MetapartyReader.cs" />
+    <Compile Include="Assets\Data\Party\XML\PartyReader.cs" />
     <Compile Include="Assets\Data\Party\XML\SubPartiesXMLIndexes.cs" />
+    <Compile Include="Assets\Data\Party\XML\SubpartyReader.cs" />
     <Compile Include="Assets\Data\Perk\Table\PerkTable.cs" />
     <Compile Include="Assets\Data\Perk\XML\PerkReader.cs" />
     <Compile Include="Assets\Data\Zone\Table\ZoneTable.cs" />
@@ -335,6 +339,8 @@
     <Compile Include="Assets\Model\Party\Builder\SubPartyBuilder.cs" />
     <Compile Include="Assets\Model\Party\Enum\EStartCol.cs" />
     <Compile Include="Assets\Model\Party\MParty.cs" />
+    <Compile Include="Assets\Model\Party\Param\ArmyParams.cs" />
+    <Compile Include="Assets\Model\Party\Param\MetapartyParams.cs" />
     <Compile Include="Assets\Model\Party\Param\PartyParams.cs" />
     <Compile Include="Assets\Model\Party\Param\SubPartyParams.cs" />
     <Compile Include="Assets\Model\Perk\APerk.cs" />
@@ -491,9 +497,7 @@
     <None Include="Assets\Data\Ability\XML\Astral.xml" />
     <None Include="Assets\Data\Ability\XML\Fighting.xml" />
     <None Include="Assets\Data\Ability\XML\Physical.xml" />
-    <None Include="Assets\Data\Ability\XML\Poison.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Ability\XML\Poison.xml" />
     <None Include="Assets\Data\Ability\XML\Songs.xml" />
     <None Include="Assets\Data\Ability\XML\WeaponAbilities.xml" />
     <None Include="Assets\Data\Bark\XML\Barks.xml" />
@@ -528,6 +532,10 @@
     <None Include="Assets\Data\Equipment\XML\Weapon\Sword.xml" />
     <None Include="Assets\Data\Injury\XML\Injuries.xml" />
     <None Include="Assets\Data\Mount\XML\Mounts.xml" />
+    <None Include="Assets\Data\Party\XML\Army\JomonArmies.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Assets\Data\Party\XML\MetaParty\JomonMetaparties.xml" />
     <None Include="Assets\Data\Party\XML\Party\AmazonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\BretonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\GoblinParties.xml" />

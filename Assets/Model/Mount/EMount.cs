@@ -3,6 +3,7 @@
     public enum EMount
     {
         None,
+        Armoise,
         Dire_Ween,
         Dodo,
         Gromp,

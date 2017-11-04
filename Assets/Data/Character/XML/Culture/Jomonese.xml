@@ -49,6 +49,36 @@
         <Resolve>470</Resolve>
       </Stats>
     </Character>
+    <Character name ="Elite Katana Calvary">
+      <Class>Samurai,9</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <Mount>Armoise</Mount>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Dou,Three</Armor>
+          <Armor>0.20,Dou,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Kabuto,Three</Helm>
+          <Helm>0.20,Kabuto,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Katana,Three</RWeapon>
+          <RWeapon>0.25,Katana,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>500</Constitution>
+        <Intelligence>410</Intelligence>
+        <Might>530</Might>
+        <Perception>520</Perception>
+        <Resolve>580</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Elite Katana Samurai">
       <Class>Samurai,13</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -309,6 +339,66 @@
       <Class>Samurai,19</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Human</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>1,Dou,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Kabuto,Two</Helm>
+          <Helm>0.20,Shi,One</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.80,Katana,Two</RWeapon>
+          <RWeapon>0.10,Kusanagi,Two</RWeapon>
+          <RWeapon>0.10,Taiyo,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>500</Constitution>
+        <Intelligence>410</Intelligence>
+        <Might>530</Might>
+        <Perception>520</Perception>
+        <Resolve>580</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Katana Calvary">
+      <Class>Samurai,6</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <Mount>Armoise</Mount>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Dou,Four</Armor>
+          <Armor>0.20,Dou,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Kabuto,Four</Helm>
+          <Helm>0.20,Kabuto,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Katana,Four</RWeapon>
+          <RWeapon>0.25,Katana,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>500</Constitution>
+        <Intelligence>410</Intelligence>
+        <Might>530</Might>
+        <Perception>520</Perception>
+        <Resolve>580</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Katana Calvary Kensai">
+      <Class>Samurai,14</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Human</ERace>
+      <Mount>Armoise</Mount>
       <PotentialArmors>
         <Armors name="One">
           <Armor>1,Dou,Two</Armor>

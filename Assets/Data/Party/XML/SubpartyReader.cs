@@ -59,8 +59,8 @@ namespace Assets.Data.Party.XML
                                 difficulty = int.Parse(ele.Value);
                             else if (ele.Name == "Character")
                             {
-                                if (!SubPartiesTable.Instance.Table.ContainsKey(name + "_" + difficulty))
-                                    SubPartiesTable.Instance.Table.Add((name + "_" + difficulty), new List<SubPartyParams>());
+                                if (!SubpartyTable.Instance.Table.ContainsKey(name + "_" + difficulty))
+                                    SubpartyTable.Instance.Table.Add((name + "_" + difficulty), new List<SubPartyParams>());
 
                                 var csv = ele.Value.Split(',');
                                 var values = new List<string>();
@@ -77,7 +77,7 @@ namespace Assets.Data.Party.XML
                                     param.Name = values[SubPartiesXMLIndexes.NAME];
                                     if (EnumUtil<EStartCol>.TryGetEnumValue(values[SubPartiesXMLIndexes.ROW], ref row))
                                         param.Row = row;
-                                    SubPartiesTable.Instance.Table[name + "_" + difficulty].Add(param);
+                                    SubpartyTable.Instance.Table[name + "_" + difficulty].Add(param);
                                 }
                             }
                         }

@@ -1,4 +1,6 @@
-﻿using Assets.Model.Party.Builder;
+﻿using Assets.Data.Party.Table;
+using Assets.Model.Party.Builder;
+using Assets.Template.Other;
 
 namespace Assets.Controller.Map.Combat.Loader
 {
@@ -7,25 +9,36 @@ namespace Assets.Controller.Map.Combat.Loader
         public void Init(MMapController map, MapInitInfo info)
         {
             var builder = new PartyBuilder();
-            foreach(var kvp in info.LParties)
+            foreach(var armyParam in info.LArmies)
             {
-                map.GetLParties().Add(builder.Build(kvp));
-                foreach (var party in map.GetLParties())
+                var army = ArmyTable.Instance.Table[armyParam.X][armyParam.Y];
+                foreach(var metaParams in army.Metaparties)
                 {
-                    foreach (var character in party.GetChars())
+                    var kvp = new Pair<string, int>(metaParams.X, metaParams.Y);
+                    var meta = MetapartyTable.Instance.Table[armyParam.X][metaParams.X];
+                    foreach(var party in meta.Parties)
                     {
-                        character.Proxy.SetLParty(true);
+                        var partyParams = new Pair<string, int>(party.X, (int)(party.Y * metaParams.Y));
+                        map.GetLParties().Add(builder.Build(partyParams));
                     }
                 }
             }
-            foreach (var kvp in info.RParties)
+
+            foreach (var party in map.GetLParties())
+                foreach (var character in party.GetChars())
+                    character.Proxy.SetLParty(true);
+
+            foreach (var armyParam in info.RArmies)
             {
-                map.GetRParties().Add(builder.Build(kvp));
-                foreach (var party in map.GetRParties())
+                var army = ArmyTable.Instance.Table[armyParam.X][armyParam.Y];
+                foreach (var metaParams in army.Metaparties)
                 {
-                    foreach (var character in party.GetChars())
+                    var kvp = new Pair<string, int>(metaParams.X, metaParams.Y);
+                    var meta = MetapartyTable.Instance.Table[armyParam.X][metaParams.X];
+                    foreach (var party in meta.Parties)
                     {
-                        character.Proxy.SetLParty(false);
+                        var partyParams = new Pair<string, int>(party.X, (int)(party.Y * metaParams.Y));
+                        map.GetRParties().Add(builder.Build(partyParams));
                     }
                 }
             }

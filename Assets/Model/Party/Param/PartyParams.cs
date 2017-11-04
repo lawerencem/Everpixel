@@ -13,7 +13,7 @@ namespace Assets.Model.Party.Param
         {
             var names = new List<string>();
             int remaining = difficulty;
-            while (remaining > 0)
+            for(int i = 0; i < 10; i++)
             {
                 int index = RNG.Instance.Next(this.SubParties.Count);
                 if (remaining >= this.SubParties[index].Y)
@@ -22,7 +22,6 @@ namespace Assets.Model.Party.Param
                     remaining -= this.SubParties[index].Y;
                 }
             }
-
             return names;
         }
     }

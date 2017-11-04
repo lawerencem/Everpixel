@@ -4,10 +4,10 @@ using System.Collections.Generic;
 
 namespace Assets.Data.Party.Table
 {
-    public class SubPartiesTable : ASingleton<SubPartiesTable>
+    public class SubpartyTable : ASingleton<SubpartyTable>
     {
         public Dictionary<string, List<SubPartyParams>> Table;
 
-        public SubPartiesTable() { Table = new Dictionary<string, List<SubPartyParams>>(); }
+        public SubpartyTable() { Table = new Dictionary<string, List<SubPartyParams>>(); }
     }
 }
