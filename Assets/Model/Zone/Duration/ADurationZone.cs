@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Assets.Model.Zone.Duration
+﻿namespace Assets.Model.Zone.Duration
 {
     public class DurationZoneData : ZoneData
     {

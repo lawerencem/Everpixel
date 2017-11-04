@@ -1,10 +1,14 @@
-﻿using Assets.Model.Ability.Enum;
+﻿using Assets.Controller.Character;
+using Assets.Controller.GUI.Combat;
+using Assets.Model.Ability.Enum;
 using Assets.Model.Combat.Hit;
 using Assets.Model.Zone;
 using Assets.Model.Zone.Duration;
+using Assets.Template.Util;
 using Assets.Template.Utility;
 using Assets.View;
 using Assets.View.Map;
+using Assets.View.Particle;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -48,6 +52,14 @@ namespace Assets.Model.Effect
         public MEffect(EEffect type)
         {
             this._type = type;
+        }
+
+        public void ApplyEffectFx(CChar tgt, MEffect effect)
+        {
+            var particles = ParticleController.Instance.CreateParticle(effect.Data.ParticlePath);
+            if (particles != null)
+                DecoUtil.AttachParticles(particles, tgt.Handle);
+            VCombatController.Instance.DisplayText(effect.Type.ToString().Replace("_", " "), tgt);
         }
 
         public virtual bool CheckConditions(MHit hit)
@@ -113,8 +125,8 @@ namespace Assets.Model.Effect
             renderer.transform.SetParent(hit.Data.Target.Handle.transform);
             renderer.transform.position = hit.Data.Target.Handle.transform.position;
             RotateTranslateUtil.Instance.RandomRotateAndTranslate(
-                    handle,
-                    ViewParams.SPLATTER_VARIANCE);
+                handle,
+                ViewParams.SPLATTER_VARIANCE);
         }
     }
 }

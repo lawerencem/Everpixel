@@ -12,7 +12,7 @@ namespace Assets.View.Particle
         }
 
         public GameObject CreateParticle(string path)
-        {
+        {  
             var prefab = Resources.Load(path);
             var particles = GameObject.Instantiate(prefab) as GameObject;
             var renderer = particles.GetComponent<Renderer>();

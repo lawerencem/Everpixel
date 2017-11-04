@@ -1,4 +1,5 @@
-﻿using Assets.Model.Ability.Enum;
+﻿using Assets.Controller.Character;
+using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
 using Assets.Model.Combat.Hit;
 using Assets.Template.CB;
@@ -53,6 +54,17 @@ namespace Assets.Controller.GUI.Combat
             data.Hit = null;
             data.Target = a.Data.Source.Handle;
             data.Text = a.ActiveAbility.Type.ToString().Replace("_", " ");
+            data.YOffset = CombatGUIParams.FLOAT_OFFSET;
+            data.Display();
+        }
+
+        public void DisplayText(string text, CChar tgt)
+        {
+            var data = new HitDisplayData();
+            data.Color = CombatGUIParams.WHITE;
+            data.Hit = null;
+            data.Target = tgt.Handle;
+            data.Text = text;
             data.YOffset = CombatGUIParams.FLOAT_OFFSET;
             data.Display();
         }

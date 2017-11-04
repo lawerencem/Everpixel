@@ -251,7 +251,6 @@
     <Compile Include="Assets\Model\Class\ClassParams.cs" />
     <Compile Include="Assets\Model\Class\Enum\EClass.cs" />
     <Compile Include="Assets\Model\Class\MClass.cs" />
-    <Compile Include="Assets\Model\Combat\Calculator\ResistCalculator.cs" />
     <Compile Include="Assets\Model\Combat\Hit\AHit.cs" />
     <Compile Include="Assets\Model\Combat\Hit\ChancePrediction.cs" />
     <Compile Include="Assets\Model\Combat\Hit\FHit.cs" />
@@ -420,6 +419,7 @@
     <Compile Include="Assets\Template\Script\ScrollCameraToScript.cs" />
     <Compile Include="Assets\Template\Script\SpriteFlipCallback.cs" />
     <Compile Include="Assets\Template\Util\Count.cs" />
+    <Compile Include="Assets\Template\Util\DecoUtil.cs" />
     <Compile Include="Assets\Template\Util\DeepCloneUtil.cs" />
     <Compile Include="Assets\Template\Util\EnumUtil.cs" />
     <Compile Include="Assets\Template\Util\ListUtil.cs" />

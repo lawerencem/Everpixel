@@ -9,6 +9,7 @@ using Assets.Model.Character.Param;
 using Assets.Model.Characters.Params;
 using Assets.Model.Class;
 using Assets.Model.Class.Enum;
+using Assets.Model.Effect;
 using Assets.Model.Equipment.Armor;
 using Assets.Model.Injury;
 using Assets.Model.Party;
@@ -27,6 +28,11 @@ namespace Assets.Model.Character
         public ECharType Type { get { return this._model.Type; } }
 
         public EStartCol StartCol { get; set; }
+
+        public void AddEffect(MEffect e)
+        {
+            this.GetEffects().AddEffect(e);
+        }
 
         public void AddInjury(MInjury i)
         {
