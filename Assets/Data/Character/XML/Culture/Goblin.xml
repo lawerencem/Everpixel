@@ -74,6 +74,7 @@
     </Character>
     <Character name ="Expert Fodder">
       <Class>Soldier,5</Class>
+      <Description>This one is good at being fodder.</Description>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Goblin</ERace>
       <PotentialArmors>
@@ -105,7 +106,7 @@
         <Resolve>350</Resolve>
       </Stats>
     </Character>
-    <Character name ="Expert Goblin Void Weaver">
+    <Character name ="Expert Voidweaver">
       <Class>Sorcerer,5</Class>
       <Class>Eldritch_Weaver,4</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -203,6 +204,35 @@
         <Resolve>350</Resolve>
       </Stats>
     </Character>
+    <Character name ="Fodder Archer">
+      <Class>Soldier,1</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Goblin</ERace>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.75,Goblin Pads,Five</Armor>
+          <Armor>0.25,Goblin Pads,Four</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.75,Goblin Cap,Five</Helm>
+          <Helm>0.25,Goblin Cap,Four</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.75,Goblin Bow,Five</RWeapon>
+          <RWeapon>0.25,Goblin Bow,Four</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>380</Constitution>
+        <Intelligence>520</Intelligence>
+        <Might>400</Might>
+        <Perception>480</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Fodder Hero">
       <Class>Soldier,8</Class>
       <Description>The hero we deserve, not the hero we need.</Description>
@@ -237,7 +267,7 @@
         <Resolve>350</Resolve>
       </Stats>
     </Character>
-    <Character name ="Goblin Void Weaver">
+    <Character name ="Voidweaver">
       <Class>Sorcerer,5</Class>
       <Class>Eldritch_Weaver,1</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -439,7 +469,7 @@
         <Resolve>350</Resolve>
       </Stats>
     </Character>
-    <Character name ="Master Goblin Void Weaver">
+    <Character name ="Master Voidweaver">
       <Class>Sorcerer,5</Class>
       <Class>Eldritch_Weaver,9</Class>
       <ECharacterType>Humanoid</ECharacterType>

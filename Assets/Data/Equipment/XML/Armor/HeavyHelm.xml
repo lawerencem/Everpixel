@@ -144,6 +144,23 @@
       <Stamina_Mod>0.99</Stamina_Mod>
       <Value>850</Value>
     </Armor>
+    <Armor name="Plasma Kabuto">
+      <Tier>One</Tier>
+      <AP_Mod>1.08</AP_Mod>
+      <Block_Mod>0.30</Block_Mod>
+      <Flat_Damage_Ignore>10</Flat_Damage_Ignore>
+      <Damage_Reduction>0.78</Damage_Reduction>
+      <Description>
+        Powered by plasma.
+      </Description>
+      <Dodge_Mod>0.85</Dodge_Mod>
+      <Durability>25</Durability>
+      <Initiative_Mod>0.95</Initiative_Mod>
+      <Parry_Mod>0.99</Parry_Mod>
+      <Sprites>72</Sprites>
+      <Stamina_Mod>0.99</Stamina_Mod>
+      <Value>1500</Value>
+    </Armor>
     <Armor name="Orc Mask">
       <Tier>Five</Tier>
       <AP_Mod>1.17</AP_Mod>

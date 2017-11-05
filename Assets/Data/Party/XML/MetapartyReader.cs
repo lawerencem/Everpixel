@@ -24,6 +24,7 @@ namespace Assets.Data.Party.XML
 
         public MetapartyReader() : base()
         {
+            this._paths.Add("Assets/Data/Party/XML/Metaparty/GoblinMetaparties.xml");
             this._paths.Add("Assets/Data/Party/XML/Metaparty/JomonMetaparties.xml");
         }
 

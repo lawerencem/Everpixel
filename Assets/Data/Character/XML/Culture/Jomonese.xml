@@ -341,18 +341,19 @@
       <ERace>Human</ERace>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>1,Dou,Two</Armor>
+          <Armor>0.80,Dou,Two</Armor>
+          <Armor>0.20,Plasma Dou,One</Armor>
         </Armors>
         <Helms name="One">
           <Helm>0.80,Kabuto,Two</Helm>
-          <Helm>0.20,Shi,One</Helm>
+          <Helm>0.20,Plasma Kabuto,One</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
           <RWeapon>0.80,Katana,Two</RWeapon>
-          <RWeapon>0.10,Kusanagi,Two</RWeapon>
-          <RWeapon>0.10,Taiyo,Two</RWeapon>
+          <RWeapon>0.10,Kusanagi,One</RWeapon>
+          <RWeapon>0.10,Plasma Katana,One</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
@@ -401,18 +402,19 @@
       <Mount>Armoise</Mount>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>1,Dou,Two</Armor>
+          <Armor>0.80,Dou,Two</Armor>
+          <Armor>0.20,Plasma Dou,One</Armor>
         </Armors>
         <Helms name="One">
           <Helm>0.80,Kabuto,Two</Helm>
-          <Helm>0.20,Shi,One</Helm>
+          <Helm>0.20,Plasma Kabuto,One</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
           <RWeapon>0.80,Katana,Two</RWeapon>
-          <RWeapon>0.10,Kusanagi,Two</RWeapon>
-          <RWeapon>0.10,Taiyo,Two</RWeapon>
+          <RWeapon>0.10,Kusanagi,One</RWeapon>
+          <RWeapon>0.10,Plasma Katana,One</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>

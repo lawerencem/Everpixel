@@ -10,15 +10,15 @@
     <Party>Jomonese Polearms, 0.80</Party>
     <Party>Jomonese Light Infantry, 0.20</Party>
   </Metaparty>
-  <Metaparty Name ="Healers">
-    <Party>Jomonese Spell Kappas, 1</Party>
-  </Metaparty>
   <Metaparty Name ="Heavy Calvary">
     <Party>Jomonese Calvary, 1</Party>
   </Metaparty>
   <Metaparty Name ="Infantry">
     <Party>Jomonese Heavy Infantry, 0.70</Party>
     <Party>Jomonese Heavy Spearmen, 0.30</Party>
+  </Metaparty>
+  <Metaparty Name ="Mages">
+    <Party>Jomonese Spell Kappas, 1</Party>
   </Metaparty>
   <Metaparty Name ="Militia">
     <Party>Jomonese Light Infantry, 1.0</Party>
@@ -27,8 +27,8 @@
     <Party>Jomonese War Kappas, 1.0</Party>
   </Metaparty>
   <Metaparty Name ="Scouts">
-    <Party>Jomonese Assassins, 0.55</Party>
-    <Party>Jomonese Light Infantry, 0.45</Party>
+    <Party>Jomonese Assassins, 0.75</Party>
+    <Party>Jomonese Light Infantry, 0.25</Party>
   </Metaparty>
   <Metaparty Name ="Shock Troops">
     <Party>Jomonese Shock Troops, 0.70</Party>

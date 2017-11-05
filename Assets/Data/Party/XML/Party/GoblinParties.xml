@@ -1,37 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Parties>
-  <Party Name ="Goblins">
-    <SubParty>Gobbo Spider Riders,2</SubParty>
-    <SubParty>Gobbo Spider Riders,4</SubParty>
-    <SubParty>Gobbo Spider Riders,12</SubParty>
-    <SubParty>Goblin Fodder,1</SubParty>
-    <SubParty>Goblin Fodder,2</SubParty>
-    <SubParty>Goblin Fodder,3</SubParty>
+  <Party Name ="Goblin Archers">
+    <SubParty>Fodder,2</SubParty>
+  </Party>
+  <Party Name ="Goblin Assassins">
+    <SubParty>Slimers,2</SubParty>
+    <SubParty>Slimers,3</SubParty>
+    <SubParty>Slimers,4</SubParty>
+    <SubParty>Slimers,6</SubParty>
+  </Party>
+  <Party Name ="Goblin Commanders">
     <SubParty>Goblin Boss,6</SubParty>
-    <SubParty>Goblin Boss,10</SubParty>
-    <SubParty>Goblin Boss,15</SubParty>
-    <SubParty>Goblin Void Weavers,6</SubParty>
-    <SubParty>Goblin Void Weavers,10</SubParty>
-    <SubParty>Goblin Void Weavers,12</SubParty>
-    <SubParty>Goblin Void Weavers,15</SubParty>
+    <SubParty>Goblin Boss,8</SubParty>
+    <SubParty>Goblin Boss,9</SubParty>
+    <SubParty>Goblin Boss,13</SubParty>
+  </Party>
+  <Party Name ="Goblin Eldritch Slugs">
+    <SubParty>Shoggoths,3</SubParty>
+    <SubParty>Shoggoths,6</SubParty>
+    <SubParty>Shoggoths,7</SubParty>
+  </Party>
+  <Party Name ="Goblin Heavy Calvary">
     <SubParty>Gromp Hoppers,4</SubParty>
     <SubParty>Gromp Hoppers,6</SubParty>
     <SubParty>Gromp Hoppers,8</SubParty>
-    <SubParty>Gromp Hoppers,10</SubParty>
-    <SubParty>Psychic Slugs,4</SubParty>
-    <SubParty>Psychic Slugs,9</SubParty>
-    <SubParty>Razorbacks,5</SubParty>
-    <SubParty>Shoggoths,3</SubParty>
-    <SubParty>Shoggoths,5</SubParty>
-    <SubParty>Shoggoths,7</SubParty>
-    <SubParty>Slug Horde,3</SubParty>
-    <SubParty>Slug Horde,5</SubParty>
-    <SubParty>Slug Horde,7</SubParty>
-    <SubParty>Slugzilla,15</SubParty>
-    <SubParty>Slimers,2</SubParty>
-    <SubParty>Slimers,3</SubParty>
+  </Party>
+  <Party Name ="Goblin Light Infantry">
+    <SubParty>Fodder,1</SubParty>
+    <SubParty>Fodder,3</SubParty>
+  </Party>
+  <Party Name ="Goblin Light Calvary">
+    <SubParty>Spider Riders,2</SubParty>
+    <SubParty>Spider Riders,4</SubParty>
+  </Party>
+  <Party Name ="Goblin Skirmishers">
+    <SubParty>Spider Rider Archers,3</SubParty>
+    <SubParty>Spider Rider Archers,5</SubParty>
+  </Party>
+  <Party Name ="Goblin Mindslugs">
+    <SubParty>Mindslugs,4</SubParty>
+    <SubParty>Mindslugs,5</SubParty>
+    <SubParty>Mindslugs,8</SubParty>
+  </Party>
+  <Party Name ="Goblin Slimelords">
     <SubParty>Slime Lords,4</SubParty>
     <SubParty>Slime Lords,5</SubParty>
-    <SubParty>Slime Lords,6</SubParty>
+    <SubParty>Slime Lords,7</SubParty>
+  </Party>
+  <Party Name ="Goblin Voidweavers">
+    <SubParty>Voidweavers,6</SubParty>
+    <SubParty>Voidweavers,9</SubParty>
+    <SubParty>Voidweavers,14</SubParty>
+  </Party>
+  <Party Name ="Goblin Warslugs">
+    <SubParty>Slug Horde,3</SubParty>
+    <SubParty>Slug Horde,5</SubParty>
+    <SubParty>Razorbacks,6</SubParty>
+    <SubParty>Slug Horde,7</SubParty>
+    <SubParty>Slugzilla,15</SubParty>
   </Party>
 </Parties>

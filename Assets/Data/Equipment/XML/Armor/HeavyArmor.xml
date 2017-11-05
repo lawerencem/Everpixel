@@ -69,6 +69,23 @@
       <Stamina_Mod>0.84</Stamina_Mod>
       <Value>2000</Value>
     </Armor>
+    <Armor name="Plasma Dou">
+      <Tier>One</Tier>
+      <AP_Mod>1.22</AP_Mod>
+      <Block_Mod>0.20</Block_Mod>
+      <Flat_Damage_Ignore>18</Flat_Damage_Ignore>
+      <Damage_Reduction>0.65</Damage_Reduction>
+      <Description>
+        Powered by plasma.  
+      </Description>
+      <Dodge_Mod>0.70</Dodge_Mod>
+      <Durability>35</Durability>
+      <Initiative_Mod>0.75</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>64</Sprites>
+      <Stamina_Mod>0.75</Stamina_Mod>
+      <Value>3500</Value>
+    </Armor>
     <Armor name="Orcish Plate Mail">
       <Tier>Five</Tier>
       <AP_Mod>1.27</AP_Mod>

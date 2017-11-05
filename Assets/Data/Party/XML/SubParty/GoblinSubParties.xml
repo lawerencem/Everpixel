@@ -1,73 +1,77 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <SubParties>
-  <SubParty Name ="Gobbo Spider Riders">
-    <Difficulty>2</Difficulty>
-    <Character>1,Spider Rider,Two</Character>
+  <SubParty Name ="Spider Rider Archers">
+    <Difficulty>3</Difficulty>
     <Character>1,Spider Rider Archer,Three</Character>
   </SubParty>
-  <SubParty Name ="Gobbo Spider Riders">
-    <Difficulty>4</Difficulty>
-    <Character>1,Veteran Spider Rider,Two</Character>
+  <SubParty Name ="Spider Rider Archers">
+    <Difficulty>5</Difficulty>
     <Character>1,Veteran Spider Rider Archer,Three</Character>
   </SubParty>
-  <SubParty Name ="Gobbo Spider Riders">
-    <Difficulty>12</Difficulty>
-    <Character>1,Spider Boss,Three</Character>
+  <SubParty Name ="Spider Riders">
+    <Difficulty>2</Difficulty>
+    <Character>1,Spider Rider,Two</Character>
   </SubParty>
-  <SubParty Name ="Goblin Fodder">
+  <SubParty Name ="Spider Riders">
+    <Difficulty>4</Difficulty>
+    <Character>1,Veteran Spider Rider,Two</Character>
+  </SubParty>
+  <SubParty Name ="Fodder">
     <Difficulty>1</Difficulty>
     <Character>1,Fodder,One</Character>
     <Character>1,Fodder,One</Character>
-    <Character>1,Fodder,One</Character>
   </SubParty>
-  <SubParty Name ="Goblin Fodder">
+  <SubParty Name ="Fodder">
     <Difficulty>2</Difficulty>
-    <Character>1,Grizzled Fodder,One</Character>
+    <Character>1,Fodder Archer,Two</Character>
+    <Character>1,Fodder Archer,Two</Character>
+  </SubParty>
+  <SubParty Name ="Fodder">
+    <Difficulty>3</Difficulty>
     <Character>1,Grizzled Fodder,One</Character>
     <Character>1,Grizzled Fodder,One</Character>
   </SubParty>
-  <SubParty Name ="Goblin Fodder">
-    <Difficulty>3</Difficulty>
+  <SubParty Name ="Fodder">
+    <Difficulty>6</Difficulty>
+    <Character>1,Fodder Hero,One</Character>
     <Character>1,Fodder Hero,One</Character>
     <Character>1,Fodder Hero,One</Character>
   </SubParty>
   <SubParty Name ="Goblin Boss">
     <Difficulty>6</Difficulty>
-    <Character>1,Grizzled Fodder,One</Character>
-    <Character>1,Grizzled Fodder,One</Character>
     <Character>1,Boss,Two</Character>
   </SubParty>
   <SubParty Name ="Goblin Boss">
-    <Difficulty>10</Difficulty>
-    <Character>1,Grizzled Fodder,One</Character>
-    <Character>1,Grizzled Fodder,One</Character>
+    <Difficulty>8</Difficulty>
     <Character>1,Warboss,Two</Character>
   </SubParty>
   <SubParty Name ="Goblin Boss">
-    <Difficulty>15</Difficulty>
-    <Character>1,Crazed Gromp Hopper,One</Character>
-    <Character>1,Crazed Gromp Hopper,One</Character>
+    <Difficulty>9</Difficulty>
+    <Character>1,Spider Boss,Three</Character>
+  </SubParty>
+  <SubParty Name ="Goblin Boss">
+    <Difficulty>13</Difficulty>
     <Character>1,Gromp Boss,Two</Character>
   </SubParty>
-  <SubParty Name ="Goblin Void Weavers">
+  <SubParty Name ="Voidweavers">
     <Difficulty>6</Difficulty>
-    <Character>1,Goblin Void Weaver,Three</Character>
-    <Character>1,Goblin Void Weaver,Three</Character>
+    <Character>1,Voidweaver,Three</Character>
+    <Character>1,Voidweaver,Three</Character>
   </SubParty>
-  <SubParty Name ="Goblin Void Weavers">
-    <Difficulty>10</Difficulty>
-    <Character>1,Expert Goblin Void Weaver,Three</Character>
-    <Character>1,Goblin Void Weaver,Three</Character>
+  <SubParty Name ="Voidweavers">
+    <Difficulty>6</Difficulty>
+    <Character>1,Voidweaver,Three</Character>
+    <Character>1,Voidweaver,Three</Character>
   </SubParty>
-  <SubParty Name ="Goblin Void Weavers">
-    <Difficulty>12</Difficulty>
-    <Character>1,Expert Goblin Void Weaver,Three</Character>
-    <Character>1,Expert Goblin Void Weaver,Three</Character>
+  <SubParty Name ="Voidweavers">
+    <Difficulty>9</Difficulty>
+    <Character>1,Expert Voidweaver,Three</Character>
+    <Character>1,Expert Voidweaver,Three</Character>
   </SubParty>
-  <SubParty Name ="Goblin Void Weavers">
-    <Difficulty>15</Difficulty>
-    <Character>1,Master Goblin Void Weaver,Three</Character>
-    <Character>1,Expert Goblin Void Weaver,Three</Character>
+  <SubParty Name ="Voidweavers">
+    <Difficulty>14</Difficulty>
+    <Character>1,Master Voidweaver,Three</Character>
+    <Character>1,Master Voidweaver,Three</Character>
   </SubParty>
   <SubParty Name ="Gromp Hoppers">
     <Difficulty>4</Difficulty>
@@ -77,32 +81,30 @@
   <SubParty Name ="Gromp Hoppers">
     <Difficulty>6</Difficulty>
     <Character>1,Crazed Gromp Hopper,Two</Character>
-    <Character>1,Gromp Hopper,Two</Character>
+    <Character>1,Crazed Gromp Hopper,Two</Character>
   </SubParty>
   <SubParty Name ="Gromp Hoppers">
     <Difficulty>8</Difficulty>
-    <Character>1,Crazed Gromp Hopper,Two</Character>
-    <Character>1,Crazed Gromp Hopper,Two</Character>
-  </SubParty>
-  <SubParty Name ="Gromp Hoppers">
-    <Difficulty>10</Difficulty>
     <Character>1,Lunatic Gromp Hopper,Two</Character>
-    <Character>1,Crazed Gromp Hopper,Two</Character>
+    <Character>1,Lunatic Gromp Hopper,Two</Character>
   </SubParty>
-  <SubParty Name ="Psychic Slugs">
+  <SubParty Name ="Mindslugs">
     <Difficulty>4</Difficulty>
     <Character>1,Psycargot,Three</Character>
     <Character>1,Psycargot,Three</Character>
   </SubParty>
-  <SubParty Name ="Psychic Slugs">
-    <Difficulty>9</Difficulty>
+  <SubParty Name ="Mindslugs">
+    <Difficulty>5</Difficulty>
+    <Character>1,Psylug,Three</Character>
+  </SubParty>
+  <SubParty Name ="Mindslugs">
+    <Difficulty>8</Difficulty>
     <Character>1,Psycargot,Three</Character>
     <Character>1,Psycargot,Three</Character>
     <Character>1,Psylug,Three</Character>
   </SubParty>
   <SubParty Name ="Razorbacks">
-    <Difficulty>5</Difficulty>
-    <Character>1,Razorback,One</Character>
+    <Difficulty>6</Difficulty>
     <Character>1,Razorback,One</Character>
     <Character>1,Razorback,One</Character>
   </SubParty>
@@ -113,7 +115,7 @@
     <Character>1,Sluggoth,One</Character>
   </SubParty>
   <SubParty Name ="Shoggoths">
-    <Difficulty>5</Difficulty>
+    <Difficulty>6</Difficulty>
     <Character>1,Shoggoth,One</Character>
     <Character>1,Sluggoth,One</Character>
     <Character>1,Sluggoth,One</Character>
@@ -124,25 +126,19 @@
     <Character>1,Shoggoth,One</Character>
   </SubParty>
   <SubParty Name ="Slime Lords">
-    <Difficulty>2</Difficulty>
+    <Difficulty>4</Difficulty>
     <Character>1,Fledgling Slime Lord,Three</Character>
     <Character>1,Sluggish,One</Character>
   </SubParty>
   <SubParty Name ="Slime Lords">
-    <Difficulty>4</Difficulty>
-    <Character>1,Slime Lord,Three</Character>
-    <Character>1,Sluggish,One</Character>
-  </SubParty>
-  <SubParty Name ="Slime Lords">
     <Difficulty>5</Difficulty>
     <Character>1,Slime Lord,Three</Character>
-    <Character>1,Sluggemoth,One</Character>
+    <Character>1,Sluggish,One</Character>
   </SubParty>
   <SubParty Name ="Slime Lords">
-    <Difficulty>6</Difficulty>
+    <Difficulty>7</Difficulty>
     <Character>1,Slime Lord,Three</Character>
     <Character>1,Sluggemoth,One</Character>
-    <Character>1,Sluggish,One</Character>
   </SubParty>
   <SubParty Name ="Slimers">
     <Difficulty>2</Difficulty>
@@ -151,16 +147,13 @@
   <SubParty Name ="Slimers">
     <Difficulty>3</Difficulty>
     <Character>1,Slimer,One</Character>
-    <Character>1,Rookie Slimer,One</Character>
   </SubParty>
   <SubParty Name ="Slimers">
-    <Difficulty>5</Difficulty>
-    <Character>1,Slimer,One</Character>
+    <Difficulty>4</Difficulty>
     <Character>1,Pro Slimer,One</Character>
   </SubParty>
   <SubParty Name ="Slimers">
-    <Difficulty>8</Difficulty>
-    <Character>1,Licensed Slimer,One</Character>
+    <Difficulty>6</Difficulty>
     <Character>1,Pro Slimer,One</Character>
   </SubParty>
   <SubParty Name ="Slug Horde">
@@ -168,12 +161,10 @@
     <Character>1,Sluggish,One</Character>
     <Character>1,Sluggish,One</Character>
     <Character>1,Sluggish,One</Character>
-    <Character>1,Sluggish,One</Character>
   </SubParty>
   <SubParty Name ="Slug Horde">
     <Difficulty>5</Difficulty>
     <Character>1,Sluggemoth,One</Character>
-    <Character>1,Sluggish,One</Character>
     <Character>1,Sluggish,One</Character>
     <Character>1,Sluggish,One</Character>
   </SubParty>
@@ -181,7 +172,6 @@
     <Difficulty>7</Difficulty>
     <Character>1,Sluggemoth,One</Character>
     <Character>1,Sluggemoth,One</Character>
-    <Character>1,Sluggish,One</Character>
     <Character>1,Sluggish,One</Character>
   </SubParty>
   <SubParty Name ="Slugzilla">

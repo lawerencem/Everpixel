@@ -35,14 +35,17 @@ namespace Assets.Model.Party.Builder
                     foreach (var sub in subs)
                     {
                         var characterStartColPair = this._subPartyBuilder.Build(sub);
-                        foreach (var pair in characterStartColPair)
+                        if (characterStartColPair != null)
                         {
-                            var model = CharacterFactory.Instance.CreateNewObject(pair.X);
-                            var controller = new CChar();
-                            var proxy = new PChar(model);
-                            proxy.StartCol = pair.Y;
-                            controller.SetProxy(proxy);
-                            party.AddChar(controller);
+                            foreach (var pair in characterStartColPair)
+                            {
+                                var model = CharacterFactory.Instance.CreateNewObject(pair.X);
+                                var controller = new CChar();
+                                var proxy = new PChar(model);
+                                proxy.StartCol = pair.Y;
+                                controller.SetProxy(proxy);
+                                party.AddChar(controller);
+                            }
                         }
                     }
                     return party;

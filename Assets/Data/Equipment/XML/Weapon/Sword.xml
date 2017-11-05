@@ -942,7 +942,7 @@
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
-    <Weapon name="Taiyo">
+    <Weapon name="Plasma Katana">
       <Tier>One</Tier>
       <Accuracy_Mod>0.85</Accuracy_Mod>
       <AP_Mod>1</AP_Mod>

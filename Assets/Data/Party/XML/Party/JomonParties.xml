@@ -51,8 +51,10 @@
   <Party Name ="Jomonese Spell Kappas">
     <SubParty>Spell Kappas,6</SubParty>
     <SubParty>Spell Kappas,7</SubParty>
+    <SubParty>Spell Kappas,9</SubParty>
   </Party>
   <Party Name ="Jomonese War Kappas">
+    <SubParty>War Kappas,4</SubParty>
     <SubParty>War Kappas,5</SubParty>
     <SubParty>War Kappas,12</SubParty>
   </Party>

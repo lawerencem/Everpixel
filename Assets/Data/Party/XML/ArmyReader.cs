@@ -24,6 +24,7 @@ namespace Assets.Data.Party.XML
 
         public ArmyReader() : base()
         {
+            this._paths.Add("Assets/Data/Party/XML/Army/GoblinArmies.xml");
             this._paths.Add("Assets/Data/Party/XML/Army/JomonArmies.xml");
         }
 

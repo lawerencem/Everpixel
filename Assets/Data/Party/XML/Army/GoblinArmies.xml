@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Culture name ="Goblin">
+  <Army id="Aggressive Battle Party">
+    <Name>Battle Party</Name>
+    <Metaparty>Commanders,12</Metaparty>
+    <Metaparty>Sorcerers,11</Metaparty>
+    <Metaparty>Heavy Calvary,8</Metaparty>
+    <Metaparty>Artillery,8</Metaparty>
+    <Metaparty>Archers,7</Metaparty>
+    <Metaparty>Shock Monsters,5</Metaparty>
+    <Metaparty>Militia,4</Metaparty>
+  </Army>
+  <Army id="Forward Scouting Party">
+    <Name>Forward Scouting Party</Name>
+    <Metaparty>Scouts,3</Metaparty>
+    <Metaparty>Militia,2</Metaparty>
+  </Army>
+  <Army id="Militia">
+    <Name>Militia</Name>
+    <Metaparty>Militia,3</Metaparty>
+    <Metaparty>Archers,2</Metaparty>
+  </Army>
+  <Army id="Raiders">
+    <Name>Raiders</Name>
+    <Metaparty>Light Calvary,8</Metaparty>
+    <Metaparty>Archers,6</Metaparty>
+    <Metaparty>Militia,2</Metaparty>
+  </Army>
+  <Army id="Scouting Party">
+    <Name>Scouting Party</Name>
+    <Metaparty>Scouts,5</Metaparty>
+    <Metaparty>Militia,3</Metaparty>
+  </Army>
+  <Army id="Vanguard">
+    <Name>Vanguard</Name>
+    <Metaparty>Infantry,15</Metaparty>
+    <Metaparty>Monsters,12</Metaparty>
+  </Army>
+</Culture>

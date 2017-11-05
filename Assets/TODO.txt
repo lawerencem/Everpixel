@@ -3,12 +3,6 @@
 - Resist Calculators
   -- Particles added on non-resist
 
-- Figure out party/subparty system for good
-  -- Meta party
-    --- Party
-	  ---- Sub Party
-	    ----- Characters
-
 Allow perks to have "flat" modifiers and code them into mods
 Embed injuries a level down on abilities.xml files
 Stamina / AP / HP (current points) aren't "getting" from proper source 
