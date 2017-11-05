@@ -14,15 +14,15 @@ namespace Assets.Model.Perk.EquipmentSStat
         {
             if (mods.X.GetType() == typeof(CWeapon))
             {
-                var wpn = mods.X as CWeapon;
-                if (!wpn.IsTypeOfShield())
-                {
-                    foreach (var kvp in mods.Y)
-                    {
-                        if (kvp.Data.Stat.Equals(ESecondaryStat.AP))
-                            kvp.Data.Scalar *= this.Val;
-                    }
-                }
+                //var wpn = mods.X as CWeapon;
+                //if (!wpn.IsTypeOfShield())
+                //{
+                //    foreach (var kvp in mods.Y)
+                //    {
+                //        if (kvp.Data.Stat.Equals(ESecondaryStat.AP))
+                //            kvp.Data.Scalar *= this.Val;
+                //    }
+                //}
             }
         }
     }

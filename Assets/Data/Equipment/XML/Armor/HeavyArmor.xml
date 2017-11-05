@@ -158,6 +158,23 @@
       <Stamina_Mod>0.80</Stamina_Mod>
       <Value>2000</Value>
     </Armor>
+    <Armor name="Gorkish Plate Mail">
+      <Tier>One</Tier>
+      <AP_Mod>1.28</AP_Mod>
+      <Block_Mod>0.72</Block_Mod>
+      <Flat_Damage_Ignore>28</Flat_Damage_Ignore>
+      <Damage_Reduction>0.72</Damage_Reduction>
+      <Description>
+        
+      </Description>
+      <Dodge_Mod>0.18</Dodge_Mod>
+      <Durability>80</Durability>
+      <Initiative_Mod>0.48</Initiative_Mod>
+      <Parry_Mod>0.30</Parry_Mod>
+      <Sprites>62</Sprites>
+      <Stamina_Mod>0.72</Stamina_Mod>
+      <Value>3500</Value>
+    </Armor>
     <Armor name="Plate Mail">
       <Tier>Five</Tier>
       <AP_Mod>0.65</AP_Mod>

@@ -13,30 +13,30 @@ namespace Assets.Model.Perk.EquipmentSStat
 
         public override void TryModEquipmentMod(Pair<object, List<StatMod>> mods)
         {
-            if (mods.X.GetType() == typeof(CArmor))
-            {
-                var armor = mods.X as CArmor;
-                if (armor.Model.Data.ArmorType == EArmorType.Heavy_Armor)
-                {
-                    foreach (var kvp in mods.Y)
-                    {
-                        if (kvp.Data.Stat.Equals(ESecondaryStat.Stamina))
-                            kvp.Data.Scalar *= this.Val;
-                    }
-                }
-            }
-            else if (mods.X.GetType() == typeof(CHelm))
-            {
-                var helm = mods.X as CHelm;
-                if (helm.Model.Data.ArmorType == EArmorType.Heavy_Helm)
-                {
-                    foreach (var kvp in mods.Y)
-                    {
-                        if (kvp.Data.Stat.Equals(ESecondaryStat.Stamina))
-                            kvp.Data.Scalar *= this.Val;
-                    }
-                }
-            }
+        //    if (mods.X.GetType() == typeof(CArmor))
+        //    {
+        //        var armor = mods.X as CArmor;
+        //        if (armor.Model.Data.ArmorType == EArmorType.Heavy_Armor)
+        //        {
+        //            foreach (var kvp in mods.Y)
+        //            {
+        //                if (kvp.Data.Stat.Equals(ESecondaryStat.Stamina))
+        //                    kvp.Data.Scalar *= this.Val;
+        //            }
+        //        }
+        //    }
+        //    else if (mods.X.GetType() == typeof(CHelm))
+        //    {
+        //        var helm = mods.X as CHelm;
+        //        if (helm.Model.Data.ArmorType == EArmorType.Heavy_Helm)
+        //        {
+        //            foreach (var kvp in mods.Y)
+        //            {
+        //                if (kvp.Data.Stat.Equals(ESecondaryStat.Stamina))
+        //                    kvp.Data.Scalar *= this.Val;
+        //            }
+        //        }
+        //    }
         }
     }
 }

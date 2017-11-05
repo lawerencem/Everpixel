@@ -1,6 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Armors>
   <EArmorType name ="Heavy_Helm">
+    <Armor name="Diabolic Mask">
+      <Tier>One</Tier>
+      <AP_Mod>0.85</AP_Mod>
+      <Block_Mod>0.50</Block_Mod>
+      <Flat_Damage_Ignore>10</Flat_Damage_Ignore>
+      <Damage_Reduction>0.78</Damage_Reduction>
+      <Description>
+
+      </Description>
+      <Dodge_Mod>0.78</Dodge_Mod>
+      <Durability>25</Durability>
+      <Initiative_Mod>0.95</Initiative_Mod>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Sprites>65</Sprites>
+      <Stamina_Mod>0.95</Stamina_Mod>
+      <Value>2200</Value>
+    </Armor>
+    <Armor name="Gork Mask">
+      <Tier>One</Tier>
+      <AP_Mod>0.78</AP_Mod>
+      <Block_Mod>0.68</Block_Mod>
+      <Flat_Damage_Ignore>12</Flat_Damage_Ignore>
+      <Damage_Reduction>0.75</Damage_Reduction>
+      <Description>
+        
+      </Description>
+      <Dodge_Mod>0.73</Dodge_Mod>
+      <Durability>32</Durability>
+      <Initiative_Mod>0.78</Initiative_Mod>
+      <Parry_Mod>0.78</Parry_Mod>
+      <Sprites>66</Sprites>
+      <Stamina_Mod>0.86</Stamina_Mod>
+      <Value>2200</Value>
+    </Armor>
     <Armor name="Great Helm">
       <Tier>Five</Tier>
       <AP_Mod>0.76</AP_Mod>

@@ -11,18 +11,22 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>1.0,Orcish Plate Mail,Four</Armor>
+          <Armor>0.80,Orcish Plate Mail,Four</Armor>
+          <Armor>0.20,Orcish Plate Mail,Three</Armor>
         </Armors>
         <Helms name="One">
           <Helm>0.80,Orc Mask,Four</Helm>
+          <Helm>0.20,Orc Mask,Three</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>1,Choppa,Four</RWeapon>
+          <RWeapon>0.80,Choppa,Four</RWeapon>
+          <RWeapon>0.20,Choppa,Three</RWeapon>
         </RWeapons>
         <LWeapons name="One">
-          <LWeapon>1,Orc Slab,Four</LWeapon>
+          <LWeapon>0.80,Orc Slab,Four</LWeapon>
+          <LWeapon>0.20,Orc Slab,Three</LWeapon>
         </LWeapons>
       </PotentialWeapons>
       <Stats>
@@ -44,18 +48,22 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>1.0,Orcish Plate Mail,Two</Armor>
+          <Armor>0.80,Orcish Plate Mail,Two</Armor>
+          <Armor>0.20,Gorkish Plate Mail,One</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>1.0,Orc Mask,Two</Helm>
+          <Helm>0.80,Orc Mask,Two</Helm>
+          <Helm>0.20,Gorkish Mask,One</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>1,Choppa,Two</RWeapon>
+          <RWeapon>0.80,Choppa,Two</RWeapon>
+          <RWeapon>0.20,Gork-Laced Choppa,Two</RWeapon>
         </RWeapons>
         <LWeapons name="One">
-          <LWeapon>1,Orc Slab,Two</LWeapon>
+          <LWeapon>0.80,Orc Slab,Two</LWeapon>
+          <LWeapon>0.80,Orc Bladewall,One</LWeapon>
         </LWeapons>
       </PotentialWeapons>
       <Stats>
@@ -65,26 +73,6 @@
         <Might>600</Might>
         <Perception>350</Perception>
         <Resolve>350</Resolve>
-      </Stats>
-    </Character>
-    <Character name ="Cannoneer">
-      <Class>Warrior,10</Class>
-      <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Orc</ERace>
-      <Perks>
-      </Perks>
-      <PotentialWeapons>
-        <RWeapons name="One">
-          <RWeapon>1,Weenbow,Three</RWeapon>
-        </RWeapons>
-      </PotentialWeapons>
-      <Stats>
-        <Agility>420</Agility>
-        <Constitution>350</Constitution>
-        <Intelligence>120</Intelligence>
-        <Might>420</Might>
-        <Perception>550</Perception>
-        <Resolve>480</Resolve>
       </Stats>
     </Character>
     <Character name ="Dire_Ween">
@@ -122,8 +110,8 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.50,Orcish Plate Mail,Three</Armor>
-          <Armor>0.50,Orcish Plate Mail,Two</Armor>
+          <Armor>0.80,Orcish Plate Mail,Three</Armor>
+          <Armor>0.20,Orcish Plate Mail,Two</Armor>
         </Armors>
         <Helms name="One">
           <Helm>0.80,Orc Mask,Three</Helm>
@@ -145,6 +133,26 @@
         <Resolve>420</Resolve>
       </Stats>
     </Character>
+    <Character name ="Dire Weenslinger">
+      <Class>Warrior,22</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Orc</ERace>
+      <Perks>
+      </Perks>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Weengun,One</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>350</Constitution>
+        <Intelligence>120</Intelligence>
+        <Might>420</Might>
+        <Perception>550</Perception>
+        <Resolve>480</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Elite Shock Troopa">
       <Class>Warrior,12</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -158,8 +166,8 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.50,Orcish Plate Mail,Three</Armor>
-          <Armor>0.50,Orcish Plate Mail,Two</Armor>
+          <Armor>0.80,Orcish Plate Mail,Three</Armor>
+          <Armor>0.20,Orcish Plate Mail,Two</Armor>
         </Armors>
         <Helms name="One">
           <Helm>0.80,Orc Mask,Three</Helm>
@@ -168,7 +176,8 @@
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>1,Great Axe Choppa,Three</RWeapon>
+          <RWeapon>0.80,Great Axe Choppa,Three</RWeapon>
+          <RWeapon>0.20,Great Axe Choppa,Two</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
@@ -337,15 +346,19 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>1.0,Orcish Plate Mail,Two</Armor>
+          <Armor>0.80,Orcish Plate Mail,Two</Armor>
+          <Armor>0.80,Gorkish Plate Mail,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>1.0,Orc Mask,Two</Helm>
+          <Helm>0.80,Orc Mask,Two</Helm>
+          <Helm>0.20,Gorkish Mask,Two</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>1,Rainmaker,One</RWeapon>
+          <RWeapon>0.50,Great Axe Choppa,Two</RWeapon>
+          <RWeapon>0.30,Rainmaker,One</RWeapon>
+          <RWeapon>0.20,Gork-Approved Choppa,One</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
@@ -586,7 +599,8 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>1.0,Orcish Plate Mail,Five</Armor>
+          <Armor>0.80,Orcish Plate Mail,Five</Armor>
+          <Armor>0.20,Orcish Plate Mail,Four</Armor>
         </Armors>
         <Helms name="One">
           <Helm>0.80,Orc Mask,Five</Helm>
@@ -595,7 +609,8 @@
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>1,Great Axe Choppa,Five</RWeapon>
+          <RWeapon>0.80,Great Axe Choppa,Five</RWeapon>
+          <RWeapon>0.20,Great Axe Choppa,Four</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
@@ -617,18 +632,22 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>1.0,Orcish Plate Mail,Three</Armor>
+          <Armor>0.80,Orcish Plate Mail,Three</Armor>
+          <Armor>0.20,Orcish Plate Mail,Two</Armor>
         </Armors>
         <Helms name="One">
           <Helm>0.80,Orc Mask,Three</Helm>
+          <Helm>0.20,Orc Mask,Two</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>1,Choppa,Three</RWeapon>
+          <RWeapon>0.80,Choppa,Three</RWeapon>
+          <RWeapon>0.80,Choppa,Two</RWeapon>
         </RWeapons>
         <LWeapons name="One">
-          <LWeapon>1,Orc Slab,Three</LWeapon>
+          <LWeapon>0.80,Orc Slab,Three</LWeapon>
+          <LWeapon>0.20,Orc Slab,Two</LWeapon>
         </LWeapons>
       </PotentialWeapons>
       <Stats>
@@ -653,8 +672,8 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.50,Orcish Plate Mail,Four</Armor>
-          <Armor>0.50,Orcish Plate Mail,Three</Armor>
+          <Armor>0.80,Orcish Plate Mail,Four</Armor>
+          <Armor>0.20,Orcish Plate Mail,Three</Armor>
         </Armors>
         <Helms name="One">
           <Helm>0.80,Orc Mask,Four</Helm>
@@ -663,7 +682,8 @@
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>1,Great Axe Choppa,Four</RWeapon>
+          <RWeapon>0.80,Great Axe Choppa,Four</RWeapon>
+          <RWeapon>0.20,Great Axe Choppa,Three</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
@@ -793,16 +813,18 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>1.0,Orcish Plate Mail,Two</Armor>
+          <Armor>0.50,Orcish Plate Mail,Two</Armor>
+          <Armor>0.50,Gorkish Plate Mail,One</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>1.0,Orc Mask,Two</Helm>
+          <Helm>0.50,Orc Mask,Two</Helm>
+          <Helm>0.50,Gork Mask,One</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.75,Choppa,Two</RWeapon>
-          <RWeapon>0.25,Chainsaw Blade,One</RWeapon>
+          <RWeapon>0.50,Choppa,Two</RWeapon>
+          <RWeapon>0.50,Chainsaw Blade,One</RWeapon>
         </RWeapons>
         <LWeapons name="One">
           <LWeapon>0.75,Orc Slab,Two</LWeapon>
@@ -876,6 +898,26 @@
       <PotentialWeapons>
         <RWeapons name="One">
           <RWeapon>1,Weenbow,Four</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>420</Agility>
+        <Constitution>350</Constitution>
+        <Intelligence>120</Intelligence>
+        <Might>420</Might>
+        <Perception>550</Perception>
+        <Resolve>480</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Weenbower">
+      <Class>Warrior,10</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Orc</ERace>
+      <Perks>
+      </Perks>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1,Weenbow,Three</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>

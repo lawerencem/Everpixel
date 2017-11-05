@@ -105,6 +105,32 @@
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
+    <Weapon name="Gork-Approved Choppa">
+      <Tier>One</Tier>
+      <Accuracy_Mod>0.82</Accuracy_Mod>
+      <AP_Mod>0.82</AP_Mod>
+      <Armor_Ignore>0.25</Armor_Ignore>
+      <Armor_Pierce>0.80</Armor_Pierce>
+      <Block_Ignore>0.11</Block_Ignore>
+      <Damage>155</Damage>
+      <Description>
+        Gork approves of this message.
+      </Description>
+      <Fatigue_Mod>1.35</Fatigue_Mod>
+      <Initiative_Mod>0.75</Initiative_Mod>
+      <Max_Durability>350</Max_Durability>
+      <Parry_Mod>1.06</Parry_Mod>
+      <Shield_Damage_Percent>0.75</Shield_Damage_Percent>
+      <Sprites>65</Sprites>
+      <Stamina_Mod>0.65</Stamina_Mod>
+      <Value>2500</Value>
+      <EAbility>Chop</EAbility>
+      <EAbility>Break_Shield</EAbility>
+      <EAbility>Maim</EAbility>
+      <EAbility>Scatter</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
     <Weapon name="Great Axe Choppa">
       <Tier>Five</Tier>
       <Accuracy_Mod>0.75</Accuracy_Mod>

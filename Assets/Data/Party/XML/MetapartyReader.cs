@@ -26,6 +26,7 @@ namespace Assets.Data.Party.XML
         {
             this._paths.Add("Assets/Data/Party/XML/Metaparty/GoblinMetaparties.xml");
             this._paths.Add("Assets/Data/Party/XML/Metaparty/JomonMetaparties.xml");
+            this._paths.Add("Assets/Data/Party/XML/Metaparty/OrcMetaparties.xml");
         }
 
         public override void ReadFromFile()

@@ -1,61 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <SubParties>
-  <SubParty Name ="Orc Berserkers">
+  <SubParty Name ="Orc Bards">
     <Difficulty>4</Difficulty>
-    <Character>1,Wimpy Orc Berserker,One</Character>
-    <Character>1,Wimpy Orc Berserker,One</Character>
-    <Character>1,Orc Battlesinger,Three</Character>
+    <Character>1,Orc Battlesinger,Two</Character>
   </SubParty>
-  <SubParty Name ="Orc Berserkers">
+  <SubParty Name ="Orc Bards">
     <Difficulty>7</Difficulty>
-    <Character>1,Orc Berserker,One</Character>
-    <Character>1,Orc Berserker,One</Character>
-    <Character>1,Orc Battlesinger,One</Character>
+    <Character>1,Orc Rhapsodist,Two</Character>
   </SubParty>
-  <SubParty Name ="Orc Berserkers">
-    <Difficulty>11</Difficulty>
-    <Character>1,Orc Fury,One</Character>
-    <Character>1,Orc Fury,One</Character>
-    <Character>1,Orc Warsinger,Three</Character>
+  <SubParty Name ="Orc Bards">
+    <Difficulty>10</Difficulty>
+    <Character>1,Orc Rhapsodist,Two</Character>
   </SubParty>
-  <SubParty Name ="Orc Berserkers">
+  <SubParty Name ="Orc Bards">
     <Difficulty>14</Difficulty>
+    <Character>1,Orc Poet,Two</Character>
+  </SubParty>
+  <SubParty Name ="Orc Berserkers">
+    <Difficulty>3</Difficulty>
+    <Character>1,Wimpy Orc Berserker,One</Character>
+  </SubParty>
+  <SubParty Name ="Orc Berserkers">
+    <Difficulty>5</Difficulty>
+    <Character>1,Orc Berserker,One</Character>
+  </SubParty>
+  <SubParty Name ="Orc Berserkers">
+    <Difficulty>8</Difficulty>
+    <Character>1,Orc Fury,One</Character>
+  </SubParty>
+  <SubParty Name ="Orc Berserkers">
+    <Difficulty>10</Difficulty>
     <Character>1,Orc Rampager,One</Character>
-    <Character>1,Orc Rampager,One</Character>
-    <Character>1,Orc Warsinger,Three</Character>
   </SubParty>
   <SubParty Name ="Orc Warriors">
-    <Difficulty>4</Difficulty>
+    <Difficulty>5</Difficulty>
     <Character>1,Wimpy Armer Boy,One</Character>
     <Character>1,Wimpy Armer Boy,One</Character>
-    <Character>1,Orc Battlesinger,Three</Character>
   </SubParty>
   <SubParty Name ="Orc Warriors">
     <Difficulty>8</Difficulty>
     <Character>1,Armer Boy,One</Character>
     <Character>1,Armer Boy,One</Character>
-    <Character>1,Orc Warsinger,Three</Character>
   </SubParty>
   <SubParty Name ="Orc Warriors">
-    <Difficulty>11</Difficulty>
+    <Difficulty>10</Difficulty>
     <Character>1,Stout Armer Boy,One</Character>
     <Character>1,Stout Armer Boy,One</Character>
-    <Character>1,Orc Rhapsodist,Three</Character>
   </SubParty>
   <SubParty Name ="Orc Warriors">
-    <Difficulty>16</Difficulty>
+    <Difficulty>14</Difficulty>
     <Character>1,Armer Wall,One</Character>
     <Character>1,Armer Wall,One</Character>
-    <Character>1,Orc Poet,Three</Character>
   </SubParty>
   <SubParty Name ="Orc Wereweens">
-    <Difficulty>5</Difficulty>
-    <Character>1,Orc Wereween,Three</Character>
+    <Difficulty>3</Difficulty>
     <Character>1,Orc Wereween,Three</Character>
   </SubParty>
   <SubParty Name ="Orc Wereweens">
-    <Difficulty>9</Difficulty>
-    <Character>1,Greater Orc Wereween,Three</Character>
+    <Difficulty>7</Difficulty>
     <Character>1,Greater Orc Wereween,Three</Character>
   </SubParty>
   <SubParty Name ="Orc Lord">
@@ -72,38 +74,27 @@
     <Character>1,Orc Scavenger,One</Character>
   </SubParty>
   <SubParty Name ="Shock Troopas">
-    <Difficulty>5</Difficulty>
+    <Difficulty>4</Difficulty>
     <Character>1,Shock Troopa,Two</Character>
-    <Character>1,Shock Troopa,Two</Character>
-    <Character>1,Orc Battlesinger,Three</Character>
+  </SubParty>
+  <SubParty Name ="Shock Troopas">
+    <Difficulty>6</Difficulty>
+    <Character>1,Veteran Shock Troopa,Two</Character>
   </SubParty>
   <SubParty Name ="Shock Troopas">
     <Difficulty>9</Difficulty>
-    <Character>1,Veteran Shock Troopa,Two</Character>
-    <Character>1,Veteran Shock Troopa,Two</Character>
-    <Character>1,Orc Battlesinger,Three</Character>
+    <Character>1,Elite Shock Troopa,Two</Character>
   </SubParty>
-  <SubParty Name ="Shock Troopas">
-    <Difficulty>15</Difficulty>
-    <Character>1,Elite Shock Troopa,Two</Character>
-    <Character>1,Elite Shock Troopa,Two</Character>
-    <Character>1,Orc Warsinger,Three</Character>
+  <SubParty Name ="Shock Troopa Calvary">
+    <Difficulty>4</Difficulty>
+    <Character>1,Ween Rider,Two</Character>
   </SubParty>
   <SubParty Name ="Shock Troopa Calvary">
     <Difficulty>6</Difficulty>
-    <Character>1,Ween Rider,Two</Character>
-    <Character>1,Ween Rider,Two</Character>
     <Character>1,War Ween Rider,Two</Character>
   </SubParty>
   <SubParty Name ="Shock Troopa Calvary">
-    <Difficulty>9</Difficulty>
-    <Character>1,War Ween Rider,Two</Character>
-    <Character>1,War Ween Rider,Two</Character>
-    <Character>1,War Ween Rider,Two</Character>
-  </SubParty>
-  <SubParty Name ="Shock Troopa Calvary">
-    <Difficulty>13</Difficulty>
-    <Character>1,Dire Ween Rider,Two</Character>
+    <Difficulty>11</Difficulty>
     <Character>1,Dire Ween Rider,Two</Character>
   </SubParty>
   <SubParty Name ="Weens">
@@ -112,14 +103,7 @@
     <Character>1,Ween,One</Character>
   </SubParty>
   <SubParty Name ="Weens">
-    <Difficulty>7</Difficulty>
-    <Character>1,Dire_Ween,One</Character>
-    <Character>1,Ween,One</Character>
-    <Character>1,Ween,One</Character>
-  </SubParty>
-  <SubParty Name ="Weens">
-    <Difficulty>9</Difficulty>
-    <Character>1,Dire_Ween,One</Character>
+    <Difficulty>3</Difficulty>
     <Character>1,Dire_Ween,One</Character>
   </SubParty>
   <SubParty Name ="Ween Dragon">
@@ -145,5 +129,9 @@
     <Difficulty>14</Difficulty>
     <Character>1,Weenslinger,Three</Character>
     <Character>1,Weenslinger,Three</Character>
+  </SubParty>
+  <SubParty Name ="Ween Tamers">
+    <Difficulty>15</Difficulty>
+    <Character>1,Dire Weenslinger,Three</Character>
   </SubParty>
 </SubParties>

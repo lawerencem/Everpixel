@@ -26,6 +26,7 @@ namespace Assets.Data.Party.XML
         {
             this._paths.Add("Assets/Data/Party/XML/Army/GoblinArmies.xml");
             this._paths.Add("Assets/Data/Party/XML/Army/JomonArmies.xml");
+            this._paths.Add("Assets/Data/Party/XML/Army/OrcArmies.xml");
         }
 
         public override void ReadFromFile()

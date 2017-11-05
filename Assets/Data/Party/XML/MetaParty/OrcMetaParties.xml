@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Culture name="Orcish">
+  <Metaparty Name ="Archers">
+    <Party>Orc Archers, 0.70</Party>
+    <Party>Orc Support, 0.30</Party>
+  </Metaparty>
+  <Metaparty Name ="Commanders">
+    <Party>Orc Commanders, 0.80</Party>
+    <Party>Orc Monsters, 0.20</Party>
+  </Metaparty>
+  <Metaparty Name ="Defenders">
+    <Party>Orc Armor, 0.80</Party>
+    <Party>Orc Scavengers, 0.20</Party>
+  </Metaparty>
+  <Metaparty Name ="Heavy Calvary">
+    <Party>Orc Heavy Calvary, 0.80</Party>
+    <Party>Orc Calvary, 0.20</Party>
+  </Metaparty>
+  <Metaparty Name ="Infantry">
+    <Party>Orc Heavy Infantry, 0.50</Party>
+    <Party>Orc Armor, 0.50</Party>
+  </Metaparty>
+  <Metaparty Name ="Militia">
+    <Party>Orc Militia, 1.0</Party>
+  </Metaparty>
+  <Metaparty Name ="Monsters">
+    <Party>Orc Monsters, 0.60</Party>
+    <Party>Orc Archers, 0.40</Party>
+  </Metaparty>
+  <Metaparty Name ="Shock Troops">
+    <Party>Orc Shock Troops, 1.0</Party>
+  </Metaparty>
+  <Metaparty Name ="Support">
+    <Party>Orc Support, 0.90</Party>
+    <Party>Orc Monsters, 0.10</Party>
+  </Metaparty>
+</Culture>
+  

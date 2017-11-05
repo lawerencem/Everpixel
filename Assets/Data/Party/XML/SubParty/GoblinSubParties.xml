@@ -59,11 +59,6 @@
     <Character>1,Voidweaver,Three</Character>
   </SubParty>
   <SubParty Name ="Voidweavers">
-    <Difficulty>6</Difficulty>
-    <Character>1,Voidweaver,Three</Character>
-    <Character>1,Voidweaver,Three</Character>
-  </SubParty>
-  <SubParty Name ="Voidweavers">
     <Difficulty>9</Difficulty>
     <Character>1,Expert Voidweaver,Three</Character>
     <Character>1,Expert Voidweaver,Three</Character>
