@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Biome name="Grassland">
+  <Decos>
+    <Deco name="Shrub">
+      <Chance>0.15</Chance>
+    </Deco>
+    <Deco name="Eye_Hill">
+      <Chance>0.10</Chance>
+    </Deco>
+    <Deco name="Tiny_Tree">
+      <Chance>0.05</Chance>
+    </Deco>
+  </Decos>
+  <Landmarks>
+    <Landmark name="Hill">
+    </Landmark>
+  </Landmarks>
+</Biome>
