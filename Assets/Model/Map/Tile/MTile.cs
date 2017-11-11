@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Model.Map
+namespace Assets.Model.Map.Tile
 {
     public class MTile : IHex<MTile>
     {

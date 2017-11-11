@@ -1,5 +1,5 @@
 ﻿using Assets.Controller.Map.Tile;
-using Assets.Model.Map;
+using Assets.Model.Map.Tile;
 using Assets.Template.Util;
 using Assets.View;
 using Assets.View.Map;
@@ -20,17 +20,17 @@ namespace Assets.Controller.Map.Combat.Loader
             }
             for(int itr = 0; itr < info.DecoCount; itr++)
             {
-                var sprites = MapBridge.Instance.GetBackgroundDecoSprites(info.Biome);
-                var sprite = sprites[Random.Range(0, sprites.Length)];
-                var random = ListUtil<CTile>.GetRandomElement(empty);
-                empty.Remove(random);
-                var Deco = new GameObject("Tile Deco");
-                var render = Deco.AddComponent<SpriteRenderer>();
-                Deco.transform.position = random.Handle.transform.position;
-                Deco.transform.SetParent(random.Handle.transform);
-                render.sprite = sprite;
-                render.sortingLayerName = Layers.TILE_DECO;
-                random.SetCurrent(new MTileDeco());
+                //var sprites = MapBridge.Instance.GetBackgroundDecoSprites(info.Biome);
+                //var sprite = sprites[Random.Range(0, sprites.Length)];
+                //var random = ListUtil<CTile>.GetRandomElement(empty);
+                //empty.Remove(random);
+                //var Deco = new GameObject("Tile Deco");
+                //var render = Deco.AddComponent<SpriteRenderer>();
+                //Deco.transform.position = random.Handle.transform.position;
+                //Deco.transform.SetParent(random.Handle.transform);
+                //render.sprite = sprite;
+                //render.sortingLayerName = Layers.TILE_DECO;
+                //random.SetCurrent(new MTileDeco());
             }
         }
 

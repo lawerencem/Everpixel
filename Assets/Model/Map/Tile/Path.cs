@@ -1,7 +1,7 @@
 ﻿using Assets.Controller.Map.Tile;
 using System.Collections.Generic;
 
-namespace Assets.Model.Map
+namespace Assets.Model.Map.Tile
 {
     public class Path
     {

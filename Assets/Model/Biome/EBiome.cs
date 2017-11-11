@@ -1,7 +1,8 @@
-﻿namespace Assets.Model.Biome.Enum
+﻿namespace Assets.Model.Biome
 {
     public enum EBiome
     {
+        None,
         Grassland,
     }
 }

@@ -1,4 +1,4 @@
-﻿using Assets.Model.Biome.Enum;
+﻿using Assets.Model.Biome;
 using Assets.Template.Other;
 using UnityEngine;
 

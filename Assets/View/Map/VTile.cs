@@ -1,4 +1,4 @@
-﻿using Assets.Model.Map;
+﻿using Assets.Model.Map.Tile;
 using UnityEngine;
 
 namespace Assets.View.Map

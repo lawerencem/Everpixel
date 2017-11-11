@@ -132,6 +132,10 @@
     <Compile Include="Assets\Data\Equipment\XML\WeaponReader.cs" />
     <Compile Include="Assets\Data\Injury\Table\InjuryTable.cs" />
     <Compile Include="Assets\Data\Injury\XML\InjuryReader.cs" />
+    <Compile Include="Assets\Data\Map\Biome\Table\BiomeReader.cs" />
+    <Compile Include="Assets\Data\Map\Biome\Table\BiomeTable.cs" />
+    <Compile Include="Assets\Data\Map\Deco\Table\DecoTable.cs" />
+    <Compile Include="Assets\Data\Map\Deco\XML\TileDecoReader.cs" />
     <Compile Include="Assets\Data\Mount\Table\MountTable.cs" />
     <Compile Include="Assets\Data\Mount\XML\MountsReader.cs" />
     <Compile Include="Assets\Data\Party\Table\ArmyTable.cs" />
@@ -223,7 +227,8 @@
     <Compile Include="Assets\Model\Action\AAction.cs" />
     <Compile Include="Assets\Model\Action\ActionData.cs" />
     <Compile Include="Assets\Model\Action\MAction.cs" />
-    <Compile Include="Assets\Model\Biome\Enum\EBiome.cs" />
+    <Compile Include="Assets\Model\Biome\BiomeParam.cs" />
+    <Compile Include="Assets\Model\Biome\EBiome.cs" />
     <Compile Include="Assets\Model\Character\AChar.cs" />
     <Compile Include="Assets\Model\Character\Builder\CharBuilder.cs" />
     <Compile Include="Assets\Model\Character\Builder\CharacterParamBuilder.cs" />
@@ -322,9 +327,10 @@
     <Compile Include="Assets\Model\Injury\MInjury.cs" />
     <Compile Include="Assets\Model\Injury\MInjuryParam.cs" />
     <Compile Include="Assets\Model\Map\MMap.cs" />
-    <Compile Include="Assets\Model\Map\MTile.cs" />
-    <Compile Include="Assets\Model\Map\MTileDeco.cs" />
-    <Compile Include="Assets\Model\Map\Path.cs" />
+    <Compile Include="Assets\Model\Map\Tile\ETileDeco.cs" />
+    <Compile Include="Assets\Model\Map\Tile\MTile.cs" />
+    <Compile Include="Assets\Model\Map\Tile\TileDecoParam.cs" />
+    <Compile Include="Assets\Model\Map\Tile\Path.cs" />
     <Compile Include="Assets\Model\Mount\EMount.cs" />
     <Compile Include="Assets\Model\Mount\MMount.cs" />
     <Compile Include="Assets\Model\Mount\MountBuilder.cs" />
@@ -474,6 +480,7 @@
     <Compile Include="Assets\View\GUI\GUISpriteLoader.cs" />
     <Compile Include="Assets\View\GUI\HoverModal.cs" />
     <Compile Include="Assets\View\Layers.cs" />
+    <Compile Include="Assets\View\Map\Tile\Deco\VTileDeco.cs" />
     <Compile Include="Assets\View\Map\MapBridge.cs" />
     <Compile Include="Assets\View\Map\MapSpriteLoader.cs" />
     <Compile Include="Assets\View\Map\VTile.cs" />
@@ -531,11 +538,15 @@
     <None Include="Assets\Data\Equipment\XML\Weapon\Staff.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\Sword.xml" />
     <None Include="Assets\Data\Injury\XML\Injuries.xml" />
+    <None Include="Assets\Data\Map\Biome\XML\Grassland.xml" />
+    <None Include="Assets\Data\Map\Deco\XML\TileDeco.xml" />
     <None Include="Assets\Data\Mount\XML\Mounts.xml" />
-    <None Include="Assets\Data\Party\XML\Army\JomonArmies.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Party\XML\Army\GoblinArmies.xml" />
+    <None Include="Assets\Data\Party\XML\Army\JomonArmies.xml" />
+    <None Include="Assets\Data\Party\XML\Army\OrcArmies.xml" />
+    <None Include="Assets\Data\Party\XML\MetaParty\GoblinMetaparties.xml" />
     <None Include="Assets\Data\Party\XML\MetaParty\JomonMetaparties.xml" />
+    <None Include="Assets\Data\Party\XML\MetaParty\OrcMetaParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\AmazonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\BretonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\GoblinParties.xml" />
@@ -561,22 +572,7 @@
     <None Include="Assets\Data\Zone\XML\Zones.xml" />
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Party\XML\MetaParty\GoblinMetaparties.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Party\XML\Army\GoblinArmies.xml">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Party\XML\MetaParty\OrcMetaParties.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\Party\XML\Army\OrcArmies.xml">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>
