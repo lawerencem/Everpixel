@@ -3,6 +3,8 @@
 - Resist Calculators
   -- Particles added on non-resist
 
+- Tidy up pixels on samurai armor and helms
+
 Allow perks to have "flat" modifiers and code them into mods
 Embed injuries a level down on abilities.xml files
 Stamina / AP / HP (current points) aren't "getting" from proper source 
@@ -23,8 +25,6 @@ Spear wall
 Bonuses to Hit when surrounding
 Bonuses to Dmg when surrounding
 Clean up injuries in bow.xml files, plus remove custom bullet boolean.
-
-Jomonese and turtles
 
 Shields
 Stealth

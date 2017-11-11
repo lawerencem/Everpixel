@@ -99,7 +99,16 @@ namespace Assets.Controller.Map.Combat
             var renderer = tView.AddComponent<SpriteRenderer>();
             renderer.sprite = sprite;
             renderer.transform.position = t.View.Center;
-            renderer.sortingLayerName = Layers.MAP_GUI_LAYER;
+            var tgt = t.Handle.GetComponent<SpriteRenderer>();
+            if (tgt != null)
+            {
+                renderer.sortingLayerName = tgt.sortingLayerName;
+                renderer.sortingOrder = tgt.sortingOrder + 1;
+            } 
+            else
+            {
+                renderer.sortingLayerName = Layers.TILE_DECO;
+            }
             tView.name = "Tile Deco";
             var color = renderer.color;
             color.a = alpha;

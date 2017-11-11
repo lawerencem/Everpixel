@@ -8,7 +8,6 @@ namespace Assets.Controller.GUI.Combat
         public static readonly float DEFAULT_OFFSET = 0.15f;
 
         public static readonly string EFFECTS_PATH = "Effects/";
-        public static readonly string MAP_GUI_LAYER = "BackgroundTileGUI";
         public static readonly string PARTICLES_EXTENSION = "Particles";
         public static readonly string PARTICLES_LAYER = "Particles";
         public static readonly string UI_LAYER = "UI";

@@ -34,8 +34,6 @@
 
         public static readonly string EMBED = "LCharEmbed";
 
-        public static readonly string MAP_GUI_LAYER = "BackgroundTileGUI";
-
         public static readonly string PARTICLES = "Particles";
 
         public static readonly string TILE = "Tile";
