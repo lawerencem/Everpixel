@@ -1,12 +1,12 @@
 ﻿using Assets.Controller.Map.Tile;
-using Assets.Model.Map.Tile;
+using Assets.Model.Map.Combat.Tile;
 using Assets.Model.Party.Enum;
 using Assets.Template.Hex;
 using Assets.Template.Other;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Assets.Model.Map
+namespace Assets.Model.Map.Combat
 {
     public class MMap
     {

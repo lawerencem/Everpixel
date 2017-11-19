@@ -7,7 +7,7 @@ using Assets.Model.Character.Param;
 using Assets.Model.Characters.Params;
 using Assets.Model.Class;
 using Assets.Model.Class.Enum;
-using Assets.Model.Map.Tile;
+using Assets.Model.Map.Combat.Tile;
 using Assets.Model.Party;
 using System.Collections.Generic;
 

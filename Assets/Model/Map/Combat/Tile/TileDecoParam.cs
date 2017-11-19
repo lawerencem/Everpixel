@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Assets.Model.Map.Tile
+namespace Assets.Model.Map.Combat.Tile
 {
     public class TileDecoParam
     {

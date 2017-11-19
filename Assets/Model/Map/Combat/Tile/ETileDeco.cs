@@ -1,4 +1,4 @@
-﻿namespace Assets.Model.Map.Tile
+﻿namespace Assets.Model.Map.Combat.Tile
 {
     public enum ETileDeco
     {

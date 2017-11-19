@@ -1,4 +1,4 @@
-﻿using Assets.Model.Map;
+﻿using Assets.Model.Map.Combat;
 using Assets.Template.Hex;
 using Assets.View;
 using UnityEngine;

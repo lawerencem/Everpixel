@@ -1,6 +1,6 @@
 ﻿using Assets.Data.Map.Deco.Table;
 using Assets.Model.Biome;
-using Assets.Model.Map.Tile;
+using Assets.Model.Map.Combat.Tile;
 using Assets.Template.Util;
 using Assets.Template.XML;
 using System.Xml.Linq;
@@ -38,7 +38,10 @@ namespace Assets.Data.Map.Deco.XML
                 {
                     if (EnumUtil<EBiome>.TryGetEnumValue(att.Value, ref type))
                     {
-                        foreach(var el in doc.Elements())
+                        if (!this.table.Table.ContainsKey(type))
+                            this.table.Table.Add(type, new BiomeParam(type));
+
+                        foreach (var el in doc.Elements())
                         {
                             foreach(var ele in el.Elements())
                             {

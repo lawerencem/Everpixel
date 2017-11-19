@@ -136,6 +136,8 @@
     <Compile Include="Assets\Data\Map\Biome\Table\BiomeTable.cs" />
     <Compile Include="Assets\Data\Map\Deco\Table\DecoTable.cs" />
     <Compile Include="Assets\Data\Map\Deco\XML\TileDecoReader.cs" />
+    <Compile Include="Assets\Data\Map\Landmark\Table\LandmarkTable.cs" />
+    <Compile Include="Assets\Data\Map\Landmark\XML\LandmarkReader.cs" />
     <Compile Include="Assets\Data\Mount\Table\MountTable.cs" />
     <Compile Include="Assets\Data\Mount\XML\MountsReader.cs" />
     <Compile Include="Assets\Data\Party\Table\ArmyTable.cs" />
@@ -326,11 +328,14 @@
     <Compile Include="Assets\Model\Injury\EInjury.cs" />
     <Compile Include="Assets\Model\Injury\MInjury.cs" />
     <Compile Include="Assets\Model\Injury\MInjuryParam.cs" />
-    <Compile Include="Assets\Model\Map\MMap.cs" />
-    <Compile Include="Assets\Model\Map\Tile\ETileDeco.cs" />
-    <Compile Include="Assets\Model\Map\Tile\MTile.cs" />
-    <Compile Include="Assets\Model\Map\Tile\TileDecoParam.cs" />
-    <Compile Include="Assets\Model\Map\Tile\Path.cs" />
+    <Compile Include="Assets\Model\Map\Combat\Landmark\ELandmark.cs" />
+    <Compile Include="Assets\Model\Map\Combat\Landmark\LandmarkParams.cs" />
+    <Compile Include="Assets\Model\Map\Combat\Landmark\MLandmark.cs" />
+    <Compile Include="Assets\Model\Map\Combat\MMap.cs" />
+    <Compile Include="Assets\Model\Map\Combat\Tile\ETileDeco.cs" />
+    <Compile Include="Assets\Model\Map\Combat\Tile\MTile.cs" />
+    <Compile Include="Assets\Model\Map\Combat\Tile\Path.cs" />
+    <Compile Include="Assets\Model\Map\Combat\Tile\TileDecoParam.cs" />
     <Compile Include="Assets\Model\Mount\EMount.cs" />
     <Compile Include="Assets\Model\Mount\MMount.cs" />
     <Compile Include="Assets\Model\Mount\MountBuilder.cs" />
@@ -480,9 +485,9 @@
     <Compile Include="Assets\View\GUI\GUISpriteLoader.cs" />
     <Compile Include="Assets\View\GUI\HoverModal.cs" />
     <Compile Include="Assets\View\Layers.cs" />
-    <Compile Include="Assets\View\Map\Tile\Deco\VTileDeco.cs" />
     <Compile Include="Assets\View\Map\MapBridge.cs" />
     <Compile Include="Assets\View\Map\MapSpriteLoader.cs" />
+    <Compile Include="Assets\View\Map\Tile\Deco\VTileDeco.cs" />
     <Compile Include="Assets\View\Map\VTile.cs" />
     <Compile Include="Assets\View\Mount\MountBridge.cs" />
     <Compile Include="Assets\View\Mount\VMount.cs" />
@@ -540,6 +545,7 @@
     <None Include="Assets\Data\Injury\XML\Injuries.xml" />
     <None Include="Assets\Data\Map\Biome\XML\Grassland.xml" />
     <None Include="Assets\Data\Map\Deco\XML\TileDeco.xml" />
+    <None Include="Assets\Data\Map\Landmark\XML\Landmarks.xml" />
     <None Include="Assets\Data\Mount\XML\Mounts.xml" />
     <None Include="Assets\Data\Party\XML\Army\GoblinArmies.xml" />
     <None Include="Assets\Data\Party\XML\Army\JomonArmies.xml" />

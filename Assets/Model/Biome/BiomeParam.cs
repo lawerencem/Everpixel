@@ -1,4 +1,4 @@
-﻿using Assets.Model.Map.Tile;
+﻿using Assets.Model.Map.Combat.Tile;
 using System.Collections.Generic;
 
 namespace Assets.Model.Biome

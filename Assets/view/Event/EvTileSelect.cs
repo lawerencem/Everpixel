@@ -1,7 +1,7 @@
 ﻿using Assets.Controller.Manager.Combat;
 using Assets.Controller.Map.Combat;
 using Assets.Controller.Map.Tile;
-using Assets.Model.Map;
+using Assets.Model.Map.Combat;
 
 namespace Assets.View.Event
 {

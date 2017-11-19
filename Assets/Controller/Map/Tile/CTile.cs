@@ -1,5 +1,5 @@
 ﻿using Assets.Controller.Character;
-using Assets.Model.Map.Tile;
+using Assets.Model.Map.Combat.Tile;
 using Assets.Model.Zone;
 using Assets.View;
 using Assets.View.Map;

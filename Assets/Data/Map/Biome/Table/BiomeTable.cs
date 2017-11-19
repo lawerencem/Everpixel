@@ -9,7 +9,7 @@ namespace Assets.Data.Map.Deco.Table
         public Dictionary<EBiome, BiomeParam> Table;
         public BiomeTable()
         {
-
+            this.Table = new Dictionary<EBiome, BiomeParam>();
         }
     }
 }

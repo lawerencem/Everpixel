@@ -1,6 +1,4 @@
 ﻿using Assets.Controller.Map.Tile;
-using Assets.Model.Map.Tile;
-using Assets.Template.Util;
 using Assets.View;
 using Assets.View.Map;
 using System.Collections.Generic;

@@ -1,7 +1,4 @@
-﻿using Assets.Model.Character.Enum;
-using Assets.Model.Character.Param;
-using Assets.Model.Equipment.Armor;
-using Assets.Model.Equipment.Enum;
+﻿using Assets.Model.Character.Param;
 using Assets.Template.Other;
 using System.Collections.Generic;
 

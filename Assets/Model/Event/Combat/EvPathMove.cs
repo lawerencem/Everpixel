@@ -3,7 +3,7 @@ using Assets.Controller.Manager.Combat;
 using Assets.Controller.Manager.GUI;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Character.Enum;
-using Assets.Model.Map.Tile;
+using Assets.Model.Map.Combat.Tile;
 using Assets.Template.Script;
 using Assets.View;
 
