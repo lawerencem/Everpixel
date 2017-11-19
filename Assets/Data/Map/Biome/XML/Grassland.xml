@@ -12,7 +12,11 @@
     </Deco>
   </Decos>
   <Landmarks>
-    <Landmark name="Hill">
+    <Landmark name="Flat_Hill">
+      <Chance>0.20</Chance>
+    </Landmark>
+    <Landmark name="Ridge">
+      <Chance>0.05</Chance>
     </Landmark>
   </Landmarks>
 </Biome>

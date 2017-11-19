@@ -1,5 +1,6 @@
 ﻿using Assets.Data.Map.Deco.Table;
 using Assets.Model.Biome;
+using Assets.Model.Map.Combat.Landmark;
 using Assets.Model.Map.Combat.Tile;
 using Assets.Template.Util;
 using Assets.Template.XML;
@@ -84,7 +85,27 @@ namespace Assets.Data.Map.Deco.XML
 
         private void HandleLandmarks(XElement el, EBiome type)
         {
-
+            foreach (var ele in el.Elements())
+            {
+                foreach (var name in ele.Attributes())
+                {
+                    var landmark = ELandmark.None;
+                    if (EnumUtil<ELandmark>.TryGetEnumValue(name.Value, ref landmark))
+                    {
+                        foreach (var elem in ele.Elements())
+                        {
+                            if (elem.Name == "Chance")
+                            {
+                                double chance = 0;
+                                if (double.TryParse(elem.Value, out chance))
+                                {
+                                    this.table.Table[type].LandmarkDict.Add(landmark, chance);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
