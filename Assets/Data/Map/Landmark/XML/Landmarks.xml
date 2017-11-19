@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Landmarks>
+  <Landmark name="Flat_Hill">
+    <RadiusMax>3</RadiusMax>
+    <RadiusMin>1</RadiusMin>
+  </Landmark>
+  <Landmark name="Ridge">
+    <LengthMax>5</LengthMax>
+    <LengthMin>1</LengthMin>
+  </Landmark>
+</Landmarks>
