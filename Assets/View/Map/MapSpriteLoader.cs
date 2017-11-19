@@ -39,6 +39,13 @@ namespace Assets.View.Map
             return GetBackgroundSprites(path);
         }
 
+        public Sprite GetHeightBottomOne()
+        {
+            var path = StringUtil.PathBuilder(PATH, "Height_Bottom");
+            var stuff = Resources.LoadAll(path);
+            return stuff[2] as Sprite;
+        }
+
         public Sprite GetHostileHoverSprite()
         {
             var path = StringUtil.PathBuilder(PATH, "Base", TILE_EXTENSION);

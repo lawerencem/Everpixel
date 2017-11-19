@@ -5,6 +5,8 @@
 
 - Tidy up pixels on samurai armor and helms
 
+- Consolidate the 10,000 sprite loaders
+
 Allow perks to have "flat" modifiers and code them into mods
 Embed injuries a level down on abilities.xml files
 Stamina / AP / HP (current points) aren't "getting" from proper source 

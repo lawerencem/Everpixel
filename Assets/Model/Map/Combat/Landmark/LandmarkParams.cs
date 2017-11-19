@@ -4,8 +4,11 @@
     {
         private ELandmark _type;
 
-        public int Radius { get; set; }
-        public int Length { get; set; }
+        public int Height { get; set; }
+        public int RadiusMax { get; set; }
+        public int RadiusMin { get; set; }
+        public int LengthMax { get; set; }
+        public int LengthMin { get; set; }
 
         public LandmarkParams(ELandmark type)
         {

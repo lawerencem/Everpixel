@@ -24,6 +24,7 @@ namespace Assets.Model.Map.Combat.Tile
         public MTile(HexTile tile)
         {
             this._adjacent = new List<MTile>();
+            this._height = 1;
             this._tile = tile;
             this._tile.SetParentContainer(this);
         }
@@ -31,6 +32,7 @@ namespace Assets.Model.Map.Combat.Tile
         public List<MTile> GetAdjacent() { return this._adjacent; }
         public HexTile GetTile() { return this._tile; }
 
+        public void SetCenter(Vector3 c) { this._tile.SetCenter(c); }
         public void SetController(CTile c) { this._controller = c; }
         public void SetHeight(int h) { this._height = h; }
         public void SetMap(MMap m) { this._map = m; }
@@ -200,7 +202,9 @@ namespace Assets.Model.Map.Combat.Tile
 
         private MTile Convert(HexTile tile)
         {
-            if (tile.ParentContainer != null && tile.ParentContainer.GetType().Equals(this.GetType()))
+            if (tile == null)
+                return null;
+            else if (tile.ParentContainer != null && tile.ParentContainer.GetType().Equals(this.GetType()))
                 return tile.ParentContainer as MTile;
             else
                 return null;

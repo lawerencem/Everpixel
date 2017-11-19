@@ -1,4 +1,7 @@
 ﻿using Assets.Controller.Map.Tile;
+using Assets.Data.Map.Deco.Table;
+using Assets.Model.Map.Combat.Landmark.Builder;
+using Assets.Template.Util;
 using Assets.View;
 using Assets.View.Map;
 using System.Collections.Generic;
@@ -8,6 +11,12 @@ namespace Assets.Controller.Map.Combat.Loader
 {
     public class TileLoader
     {
+        public void RenderHeights(MMapController controller)
+        {
+            this.RenderHeightOffsets(controller);
+            this.RenderHeightDeltas(controller);
+        }
+
         public void InitMapDeco(MMapController controller, MapInitInfo info)
         {
             var empty = new List<CTile>();
@@ -32,6 +41,23 @@ namespace Assets.Controller.Map.Combat.Loader
             }
         }
 
+        public void InitLandmarks(MMapController controller, MapInitInfo info)
+        {
+            var biomeParams = BiomeTable.Instance.Table[info.Biome];
+            foreach(var tile in controller.GetMap().GetTiles())
+            {
+                foreach(var kvp in biomeParams.LandmarkDict)
+                {
+                    var roll = RNG.Instance.NextDouble();
+                    if (roll < kvp.Value)
+                    {
+                        var factory = new LandmarkFactory();
+                        factory.BuildLandmark(kvp.Key, tile);
+                    }
+                }
+            }
+        }
+
         public void InitTiles(MMapController controller, MapInitInfo info, Transform tileHolder)
         {
             var sprites = MapBridge.Instance.GetBackgroundSprites(info.Biome);
@@ -47,6 +73,48 @@ namespace Assets.Controller.Map.Combat.Loader
                 tile.Handle.name = Layers.TILE + "( " + tile.Model.Col + " / " + tile.Model.Row + " )";
             }
             controller.GetMap().InitControllerAdjacent();
+        }
+
+        private void RenderHeightDeltas(MMapController controller)
+        {
+            foreach(var tile in controller.GetMap().GetTiles())
+            {
+                if (tile.Model.GetS() == null)
+                    this.AttachHeightBottom(tile);
+                else if (tile.Model.GetS().Height < tile.Model.Height)
+                    this.AttachHeightBottom(tile);
+            }
+        }
+
+        private void RenderHeightOffsets(MMapController controller)
+        {
+            foreach(var tile in controller.GetMap().GetTiles())
+            {
+                if (tile.Model.Height > 1)
+                {
+                    var delta = (tile.Model.Height - 1) * ViewParams.HEIGHT_OFFSET;
+                    var center = tile.Model.Center;
+                    var y = center.y + delta;
+                    center.y = y;
+                    tile.Model.SetCenter(center);
+                    var render = tile.Handle.GetComponent<SpriteRenderer>();
+                    render.transform.position = center;
+                }
+            }
+        }
+
+        private void AttachHeightBottom(CTile tile)
+        {
+            var sprite = MapSpriteLoader.Instance.GetHeightBottomOne();
+            var handle = new GameObject();
+            var renderer = handle.AddComponent<SpriteRenderer>();
+            renderer.sprite = sprite;
+            renderer.transform.parent = tile.Handle.transform;
+            var handleRenderer = tile.Handle.GetComponent<SpriteRenderer>();
+            renderer.sortingLayerName = handleRenderer.sortingLayerName;
+            var center = tile.Model.Center;
+            center.y -= ViewParams.HEIGHT_BOTTOM_OFFSET;
+            renderer.transform.position = center;
         }
     }
 }

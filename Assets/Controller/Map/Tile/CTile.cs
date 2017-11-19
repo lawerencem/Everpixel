@@ -11,7 +11,7 @@ namespace Assets.Controller.Map.Tile
     public class CTile
     {
         private object _current;
-        private FCTile _flags;
+        private FTile _flags;
         private GameObject _handle;
         private MTile _model;
         private List<CChar> _nonCurrent;
@@ -19,7 +19,7 @@ namespace Assets.Controller.Map.Tile
         private List<AZone> _zones;
 
         public object Current { get { return this._current; } }
-        public FCTile Flags { get { return this._flags; } }
+        public FTile Flags { get { return this._flags; } }
         public GameObject Handle { get { return this._handle; } }
         public MTile Model { get { return this._model; } }
         public VTile View { get { return this._view; } }
@@ -44,7 +44,7 @@ namespace Assets.Controller.Map.Tile
 
         public CTile(MTile tile)
         {
-            this._flags = new FCTile();
+            this._flags = new FTile();
             this._handle = new GameObject(Layers.TILE);
             this._handle.transform.position = tile.Center;
             this._nonCurrent = new List<CChar>();

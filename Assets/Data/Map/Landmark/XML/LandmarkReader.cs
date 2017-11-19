@@ -50,8 +50,11 @@ namespace Assets.Data.Map.Landmark.XML
 
                 switch (param)
                 {
-                    case ("Radius"): { this.table.Table[type].Radius = int.Parse(value); } break;
-                    case ("Length"): { this.table.Table[type].Length = int.Parse(value); } break;
+                    case ("Height"): { this.table.Table[type].Height = int.Parse(value); } break;
+                    case ("RadiusMax"): { this.table.Table[type].RadiusMax = int.Parse(value); } break;
+                    case ("RadiusMin"): { this.table.Table[type].RadiusMin = int.Parse(value); } break;
+                    case ("LengthMax"): { this.table.Table[type].LengthMax = int.Parse(value); } break;
+                    case ("LengthMin"): { this.table.Table[type].LengthMin = int.Parse(value); } break;
                 }
             }
         }
