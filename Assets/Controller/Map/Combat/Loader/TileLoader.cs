@@ -80,9 +80,19 @@ namespace Assets.Controller.Map.Combat.Loader
             foreach(var tile in controller.GetMap().GetTiles())
             {
                 if (tile.Model.GetS() == null)
-                    this.AttachHeightBottom(tile);
+                    this.AttachHeightBottom(tile, 1);
                 else if (tile.Model.GetS().Height < tile.Model.Height)
-                    this.AttachHeightBottom(tile);
+                    this.AttachHeightBottom(tile, tile.Model.Height - tile.Model.GetS().Height);
+
+                if (tile.Model.GetSW() == null)
+                    this.AttachHeightLeft(tile, 1);
+                else if (tile.Model.GetSW().Height < tile.Model.Height)
+                    this.AttachHeightLeft(tile, tile.Model.Height - tile.Model.GetSW().Height);
+
+                if (tile.Model.GetSE() == null)
+                    this.AttachHeightRight(tile, 1);
+                else if (tile.Model.GetSE().Height < tile.Model.Height)
+                    this.AttachHeightRight(tile, tile.Model.Height - tile.Model.GetSE().Height);
             }
         }
 
@@ -99,22 +109,43 @@ namespace Assets.Controller.Map.Combat.Loader
                     tile.Model.SetCenter(center);
                     var render = tile.Handle.GetComponent<SpriteRenderer>();
                     render.transform.position = center;
+                    render.sortingOrder = tile.Model.Height;
                 }
             }
         }
 
-        private void AttachHeightBottom(CTile tile)
+        private void AttachHeightBottom(CTile tile, int delta)
         {
-            var sprite = MapSpriteLoader.Instance.GetHeightBottomOne();
-            var handle = new GameObject();
-            var renderer = handle.AddComponent<SpriteRenderer>();
-            renderer.sprite = sprite;
-            renderer.transform.parent = tile.Handle.transform;
-            var handleRenderer = tile.Handle.GetComponent<SpriteRenderer>();
-            renderer.sortingLayerName = handleRenderer.sortingLayerName;
-            var center = tile.Model.Center;
-            center.y -= ViewParams.HEIGHT_BOTTOM_OFFSET;
-            renderer.transform.position = center;
+            var bottom = MapSpriteLoader.Instance.GetHeightBottom();
+            this.AttachHeightHelper(tile, delta, bottom);
+        }
+
+        private void AttachHeightLeft(CTile tile, int delta)
+        {
+            var left = MapSpriteLoader.Instance.GetHeightLeft();
+            this.AttachHeightHelper(tile, delta, left);
+        }
+
+        private void AttachHeightRight(CTile tile, int delta)
+        {
+            var right = MapSpriteLoader.Instance.GetHeightRight();
+            this.AttachHeightHelper(tile, delta, right);
+        }
+
+        private void AttachHeightHelper(CTile tile, int delta, Sprite bottom)
+        {
+            for(int i = 1; i < delta + 1; i++)
+            {
+                var bottomHandle = new GameObject();
+                var bottomRenderer = bottomHandle.AddComponent<SpriteRenderer>();
+                bottomRenderer.sprite = bottom;
+                bottomRenderer.transform.parent = tile.Handle.transform;
+                var handleRenderer = tile.Handle.GetComponent<SpriteRenderer>();
+                bottomRenderer.sortingLayerName = handleRenderer.sortingLayerName;
+                var center = tile.Model.Center;
+                center.y -= ViewParams.HEIGHT_BOTTOM_OFFSET * i;
+                bottomRenderer.transform.position = center;
+            }
         }
     }
 }

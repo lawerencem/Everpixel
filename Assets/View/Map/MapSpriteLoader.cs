@@ -20,6 +20,8 @@ namespace Assets.View.Map
         private readonly List<int> LEVEL_FOUR_BLOOD_SPATTER = new List<int>() { 25, 26, 27, 28, 29, 30, 31, 32};
         private readonly List<int> LEVEL_FIVE_BLOOD_SPATTER = new List<int>() { 33, 34, 35};
 
+        private readonly List<int> TILE_BOTTOMS = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8 };
+
         private const string PATH = "Sprites/CombatMap/";
         private const string DECO_EXTENSION = "_Deco";
         private const string TILE_EXTENSION = "_Tiles";
@@ -39,11 +41,25 @@ namespace Assets.View.Map
             return GetBackgroundSprites(path);
         }
 
-        public Sprite GetHeightBottomOne()
+        public Sprite GetHeightBottom()
         {
             var path = StringUtil.PathBuilder(PATH, "Height_Bottom");
             var stuff = Resources.LoadAll(path);
-            return stuff[2] as Sprite;
+            return stuff[ListUtil<int>.GetRandomElement(this.TILE_BOTTOMS)] as Sprite;
+        }
+
+        public Sprite GetHeightLeft()
+        {
+            var path = StringUtil.PathBuilder(PATH, "Height_Left");
+            var stuff = Resources.LoadAll(path);
+            return stuff[ListUtil<int>.GetRandomElement(this.TILE_BOTTOMS)] as Sprite;
+        }
+
+        public Sprite GetHeightRight()
+        {
+            var path = StringUtil.PathBuilder(PATH, "Height_Right");
+            var stuff = Resources.LoadAll(path);
+            return stuff[ListUtil<int>.GetRandomElement(this.TILE_BOTTOMS)] as Sprite;
         }
 
         public Sprite GetHostileHoverSprite()

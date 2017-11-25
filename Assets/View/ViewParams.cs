@@ -18,8 +18,8 @@ namespace Assets.View
         public static readonly float WEAPON_OFFSET = 0.09f;
 
         // Map Params
-        public static readonly float HEIGHT_BOTTOM_OFFSET = 0.205f;
-        public static readonly float HEIGHT_OFFSET = 0.055f;
+        public static readonly float HEIGHT_BOTTOM_OFFSET = 0.245f;
+        public static readonly float HEIGHT_OFFSET = 0.075f;
         public static readonly Vector3 MAP_CENTER = new Vector3(-8, 5, 0);
         public static readonly float OFFSET = 0.63f;
 
