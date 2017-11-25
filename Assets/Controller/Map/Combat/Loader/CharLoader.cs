@@ -53,7 +53,7 @@ namespace Assets.Controller.Map.Combat.Loader
         {
             var sprite = c.View.Sprites[c.View.Torso];
             var render = c.Handle.AddComponent<SpriteRenderer>();
-            c.Handle.transform.position = t.View.Center;
+            c.Handle.transform.position = t.Handle.transform.position;
             c.Handle.transform.SetParent(this._container);
             c.Handle.name = c.View.Type.ToString() + " " + c.View.Race.ToString();
             render.sprite = sprite;
@@ -166,7 +166,7 @@ namespace Assets.Controller.Map.Combat.Loader
                 var sprite = c.View.Mount.Sprites[0];
                 var spriteHandler = new GameObject();
                 var render = spriteHandler.AddComponent<SpriteRenderer>();
-                var position = tile.View.Center;
+                var position = tile.Handle.transform.position;
                 position.x += ViewParams.MOUNT_X_OFFSET;
                 position.y -= ViewParams.MOUNT_Y_OFFSET;
                 spriteHandler.transform.position = position;

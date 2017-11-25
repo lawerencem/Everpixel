@@ -136,15 +136,15 @@ namespace Assets.Controller.Map.Combat.Loader
         {
             for(int i = 1; i < delta + 1; i++)
             {
-                var bottomHandle = new GameObject();
-                var bottomRenderer = bottomHandle.AddComponent<SpriteRenderer>();
-                bottomRenderer.sprite = bottom;
-                bottomRenderer.transform.parent = tile.Handle.transform;
+                var handle = new GameObject();
+                var renderer = handle.AddComponent<SpriteRenderer>();
+                renderer.sprite = bottom;
+                renderer.transform.parent = tile.Handle.transform;
                 var handleRenderer = tile.Handle.GetComponent<SpriteRenderer>();
-                bottomRenderer.sortingLayerName = handleRenderer.sortingLayerName;
+                renderer.sortingLayerName = handleRenderer.sortingLayerName;
                 var center = tile.Model.Center;
                 center.y -= ViewParams.HEIGHT_BOTTOM_OFFSET * i;
-                bottomRenderer.transform.position = center;
+                renderer.transform.position = center;
             }
         }
     }

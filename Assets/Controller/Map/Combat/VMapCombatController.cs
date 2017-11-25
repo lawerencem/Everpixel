@@ -98,7 +98,7 @@ namespace Assets.Controller.Map.Combat
             var tView = new GameObject();
             var renderer = tView.AddComponent<SpriteRenderer>();
             renderer.sprite = sprite;
-            renderer.transform.position = t.View.Center;
+            renderer.transform.position = t.Handle.transform.position;
             var tgt = t.Handle.GetComponent<SpriteRenderer>();
             if (tgt != null)
             {
