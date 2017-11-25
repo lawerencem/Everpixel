@@ -134,7 +134,7 @@ namespace Assets.Controller.Map.Combat.Loader
                 renderer.transform.parent = tile.Handle.transform;
                 var handleRenderer = tile.Handle.GetComponent<SpriteRenderer>();
                 renderer.sortingLayerName = handleRenderer.sortingLayerName;
-                renderer.sortingOrder = -1;
+                renderer.sortingOrder = tile.Model.Height - 1;
                 var center = tile.Model.Center;
                 center.y -= ViewParams.HEIGHT_BOTTOM_OFFSET * i;
                 renderer.transform.position = center;
