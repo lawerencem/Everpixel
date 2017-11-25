@@ -6,14 +6,15 @@ namespace Assets.View.Map
 {
     public class MapBridge : ASingleton<MapBridge>
     {
-        public Sprite[] GetBackgroundDecoSprites(EBiome b)
-        {
-            return MapSpriteLoader.Instance.GetBiomeBackgroundDeco(b);
-        }
 
         public Sprite[] GetBackgroundSprites(EBiome b)
         {
             return MapSpriteLoader.Instance.GetBiomeBackground(b);
+        }
+
+        public Sprite[] GetDecoSprites()
+        {
+            return MapSpriteLoader.Instance.GetDecoSprites();
         }
 
         public Sprite GetHostileHoverSprite()

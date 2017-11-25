@@ -49,7 +49,6 @@ namespace Assets.Controller.Managers
             initInfo.LArmies.Add(new Pair<ECulture, string>(ECulture.Jomonese, "Defensive Battle Party"));
             initInfo.RArmies.Add(new Pair<ECulture, string>(ECulture.Orcish, "Aggressive Battle Party"));
             initInfo.Cols = 14;
-            initInfo.DecoCount = 5;
             initInfo.Rows = 14;
             var map = this._mapLoader.GetCombatMap(initInfo);
             CombatManager.Instance.Init(map);

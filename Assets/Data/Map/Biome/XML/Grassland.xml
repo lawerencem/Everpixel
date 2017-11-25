@@ -2,13 +2,13 @@
 <Biome name="Grassland">
   <Decos>
     <Deco name="Shrub">
-      <Chance>0.15</Chance>
+      <Chance>0.015</Chance>
     </Deco>
     <Deco name="Eye_Hill">
-      <Chance>0.10</Chance>
+      <Chance>0.06</Chance>
     </Deco>
     <Deco name="Tiny_Tree">
-      <Chance>0.05</Chance>
+      <Chance>0.015</Chance>
     </Deco>
   </Decos>
   <Landmarks>

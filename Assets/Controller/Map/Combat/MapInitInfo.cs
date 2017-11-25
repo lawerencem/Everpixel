@@ -9,7 +9,6 @@ namespace Assets.Controller.Map.Combat
     {
         public EBiome Biome { get; set; }
         public int Cols { get; set; }
-        public int DecoCount { get; set; }
         public List<Pair<ECulture, string>> LArmies { get; set; }
         public int Rows { get; set; }
         public List<Pair<ECulture, string>> RArmies { get; set; }

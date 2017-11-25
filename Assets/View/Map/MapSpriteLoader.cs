@@ -32,13 +32,13 @@ namespace Assets.View.Map
         public Sprite[] GetBiomeBackground(EBiome b)
         {
             var path = StringUtil.PathBuilder(PATH, b.ToString(), TILE_EXTENSION);
-            return GetBackgroundSprites(path);
+            return GetSprites(path);
         }
 
-        public Sprite[] GetBiomeBackgroundDeco(EBiome b)
+        public Sprite[] GetDecoSprites()
         {
-            var path = StringUtil.PathBuilder(PATH, b.ToString(), DECO_EXTENSION);
-            return GetBackgroundSprites(path);
+            var path = StringUtil.PathBuilder(PATH, "Deco");
+            return this.GetSprites(path);
         }
 
         public Sprite GetHeightBottom()
@@ -131,25 +131,7 @@ namespace Assets.View.Map
             return stuff[index] as Sprite;
         }
 
-        private Sprite[] GetBackgroundDecoSprites(string path)
-        {
-            var stuff = Resources.LoadAll(path);
-            if (stuff.Length > 1)
-            {
-                var sprites = new Sprite[8];
-                //var sprites = new Sprite[stuff.Length - 1];
-                //for (int itr = 1; itr < stuff.Length; itr++)  // TODO
-                for (int itr = 1; itr < 9; itr++)
-                {
-                    sprites[itr - 1] = stuff.GetValue(itr) as Sprite;
-                }
-                return sprites;
-            }
-            else
-                return null;
-        }
-
-        private Sprite[] GetBackgroundSprites(string path)
+        private Sprite[] GetSprites(string path)
         {
             var stuff = Resources.LoadAll(path);
             if (stuff.Length > 1)

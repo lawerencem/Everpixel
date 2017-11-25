@@ -100,6 +100,7 @@
     <Compile Include="Assets\Controller\Manager\GameManager.cs" />
     <Compile Include="Assets\Controller\Manager\LoaderManager.cs" />
     <Compile Include="Assets\Controller\Map\Combat\Loader\CharLoader.cs" />
+    <Compile Include="Assets\Controller\Map\Combat\Loader\DecoLoader.cs" />
     <Compile Include="Assets\Controller\Map\Combat\Loader\MapLoader.cs" />
     <Compile Include="Assets\Controller\Map\Combat\Loader\PartyLoader.cs" />
     <Compile Include="Assets\Controller\Map\Combat\Loader\TileLoader.cs" />
@@ -328,6 +329,7 @@
     <Compile Include="Assets\Model\Injury\EInjury.cs" />
     <Compile Include="Assets\Model\Injury\MInjury.cs" />
     <Compile Include="Assets\Model\Injury\MInjuryParam.cs" />
+    <Compile Include="Assets\Model\Map\Combat\Deco\MDeco.cs" />
     <Compile Include="Assets\Model\Map\Combat\Landmark\Builder\FlatHillBuilder.cs" />
     <Compile Include="Assets\Model\Map\Combat\Landmark\Builder\ALandmarkBuilder.cs" />
     <Compile Include="Assets\Model\Map\Combat\Landmark\ELandmark.cs" />

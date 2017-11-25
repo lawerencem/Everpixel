@@ -4,7 +4,6 @@ using Assets.Model.Map.Combat.Landmark.Builder;
 using Assets.Template.Util;
 using Assets.View;
 using Assets.View.Map;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Controller.Map.Combat.Loader
@@ -19,25 +18,18 @@ namespace Assets.Controller.Map.Combat.Loader
 
         public void InitMapDeco(MMapController controller, MapInitInfo info)
         {
-            var empty = new List<CTile>();
-            foreach(var tile in controller.GetMap().GetTiles())
+            var decoLoader = new DecoLoader();
+            var biomeParams = BiomeTable.Instance.Table[info.Biome];
+            foreach(var decoKVP in biomeParams.DecoDict)
             {
-                if (tile.Current == null)
-                    empty.Add(tile);
-            }
-            for(int itr = 0; itr < info.DecoCount; itr++)
-            {
-                //var sprites = MapBridge.Instance.GetBackgroundDecoSprites(info.Biome);
-                //var sprite = sprites[Random.Range(0, sprites.Length)];
-                //var random = ListUtil<CTile>.GetRandomElement(empty);
-                //empty.Remove(random);
-                //var Deco = new GameObject("Tile Deco");
-                //var render = Deco.AddComponent<SpriteRenderer>();
-                //Deco.transform.position = random.Handle.transform.position;
-                //Deco.transform.SetParent(random.Handle.transform);
-                //render.sprite = sprite;
-                //render.sortingLayerName = Layers.TILE_DECO;
-                //random.SetCurrent(new MTileDeco());
+                foreach(var tile in controller.GetMap().GetTiles())
+                {
+                    var roll = RNG.Instance.NextDouble();
+                    if (roll < decoKVP.Value)
+                    {
+                        decoLoader.AttachDeco(tile, decoKVP.Key);
+                    }
+                }
             }
         }
 
@@ -142,6 +134,7 @@ namespace Assets.Controller.Map.Combat.Loader
                 renderer.transform.parent = tile.Handle.transform;
                 var handleRenderer = tile.Handle.GetComponent<SpriteRenderer>();
                 renderer.sortingLayerName = handleRenderer.sortingLayerName;
+                renderer.sortingOrder = -1;
                 var center = tile.Model.Center;
                 center.y -= ViewParams.HEIGHT_BOTTOM_OFFSET * i;
                 renderer.transform.position = center;
