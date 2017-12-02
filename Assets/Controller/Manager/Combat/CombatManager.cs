@@ -65,14 +65,7 @@ namespace Assets.Controller.Manager.Combat
                     .CompareTo(x.Proxy.GetStat(ESecondaryStat.Initiative)));
             }
             foreach (var character in this._combatData.Characters)
-            {
                 this._combatData.InitiativeOrder.Add(character);
-                character.Proxy.SetPointsToMax(ESecondaryStat.AP);
-                character.Proxy.SetPointsToMax(ESecondaryStat.HP);
-                character.Proxy.SetPointsToMax(ESecondaryStat.Morale);
-                character.Proxy.SetPointsToMax(ESecondaryStat.Stamina);
-            }
-                
             this.ProcessTakingAction();
         }
 

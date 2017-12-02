@@ -34,12 +34,22 @@ namespace Assets.Model.Character
             this.GetEffects().AddEffect(e);
         }
 
+        public void AddBuff(StatMod buff)
+        {
+            this._model.GetStatMods().AddBuff(buff);
+            this._model.GetCurStats().ResetCurStats(this._model.GetStatMods(), this._model.GetBaseStats());
+        }
+
+        public void AddDebuff(StatMod debuff)
+        {
+            this._model.GetStatMods().AddBuff(debuff);
+            this._model.GetCurStats().ResetCurStats(this._model.GetStatMods(), this._model.GetBaseStats());
+        }
+
         public void AddInjury(MInjury i)
         {
             this._model.GetStatMods().AddInjury(i);
-            this._model.GetCurStats().Reset(
-                this._model.GetBaseStats(),
-                this._model.GetStatMods());
+            this._model.GetCurStats().ResetCurStats(this._model.GetStatMods(), this._model.GetBaseStats());
         }
 
         public void AddPoints(ESecondaryStat s, double v)

@@ -61,6 +61,7 @@ namespace Assets.Model.Character.Builder
             character.GetBaseStats().SetSecondaryStats(secondary);
             this.BuildClassSecondaryStats(character);
             this.BuildCurStats(character);
+            this.BuildCurPoints(character);
             character.SetType(c.Type);
             character.SetParams(c);
             
@@ -126,6 +127,11 @@ namespace Assets.Model.Character.Builder
         private void BuildCurStats(MChar c)
         {
             c.GetCurStats().Init(c.GetBaseStats());
+        }
+
+        private void BuildCurPoints(MChar c)
+        {
+            c.GetPoints().Init(c.GetCurStats());
         }
 
         private void BuildWeaponHelper(MChar c, PreCharParams p)

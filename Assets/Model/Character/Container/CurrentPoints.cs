@@ -48,6 +48,14 @@ namespace Assets.Model.Character.Container
             }
         }
 
+        public void Init(CharStats current)
+        {
+            this.SetValue(ESecondaryStat.AP, current.GetStatValue(ESecondaryStat.AP));
+            this.SetValue(ESecondaryStat.HP, current.GetStatValue(ESecondaryStat.HP));
+            this.SetValue(ESecondaryStat.Morale, current.GetStatValue(ESecondaryStat.Morale));
+            this.SetValue(ESecondaryStat.Stamina, current.GetStatValue(ESecondaryStat.Stamina));
+        }
+
         public void SetValue(ESecondaryStat type, double v)
         {
             switch (type)

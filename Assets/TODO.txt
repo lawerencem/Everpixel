@@ -1,18 +1,12 @@
 ﻿TODO
-		
-Finish Map Height Rendering
-  - Add left/right bottoms
-  - Chars aren't centering on new tile centers...
-  - Add deco again once done
-  - Touch up and generify my "sprite loader" in height rendering.
-
-- Consolidate the 10,000 sprite loaders
 
 - Resist Calculators
   -- Particles added on non-resist
 
-- Tidy up pixels on samurai armor and helms
+- blocks
+- Remove buffs/debuffs
 
+- Tidy up pixels on samurai armor and helms
 
 Allow perks to have "flat" modifiers and code them into mods
 Embed injuries a level down on abilities.xml files

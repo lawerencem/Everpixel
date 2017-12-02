@@ -11,9 +11,9 @@ namespace Assets.Model.Character.Container
             this.SetSecondaryStats(new SStats(this.GetPrimaryStats()));
         }
 
-        public void Reset(BaseStats baseStats, CharStatMods mods)
+        public void ResetCurStats(CharStatMods mods, BaseStats baseStats)
         {
-            this.SetPrimaryStats(baseStats.GetPrimaryStats());
+            this.SetPrimaryStats(baseStats.GetPrimaryStats().Clone());
             this.ResetPrimaryHelper(mods);
             this.SetSecondaryStats(new SStats(this.GetPrimaryStats()));
             this.ResetSecondaryHelper(mods);
