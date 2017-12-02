@@ -11,7 +11,7 @@ namespace Assets.Model.Character.Container
         public PStats GetPrimaryStats() { return this._primaryStats; }
         public SStats GetSecondaryStats() { return this._secondaryStats; }
 
-        public void SetPrimaryStats(PStats p) { this._primaryStats = p; }
+        public void SetPrimaryStats(PStats p) { this._primaryStats = p.Clone(); }
         public void SetSecondaryStats(SStats s) { this._secondaryStats = s; }
 
         public BaseStats Clone()
@@ -20,6 +20,19 @@ namespace Assets.Model.Character.Container
             clone.SetPrimaryStats(this.GetPrimaryStats().Clone());
             clone.SetSecondaryStats(new SStats(clone.GetPrimaryStats()));
             return clone;
+        }
+
+        public void AddStat(EPrimaryStat s, int v)
+        {
+            switch (s)
+            {
+                case (EPrimaryStat.Agility): { this._primaryStats.Agility += v; } break;
+                case (EPrimaryStat.Constitution): { this._primaryStats.Constitution += v; } break;
+                case (EPrimaryStat.Intelligence): { this._primaryStats.Intelligence += v; } break;
+                case (EPrimaryStat.Might): { this._primaryStats.Might += v; } break;
+                case (EPrimaryStat.Perception): { this._primaryStats.Perception += v; } break;
+                case (EPrimaryStat.Resolve): { this._primaryStats.Resolve += v; } break;
+            }
         }
 
         public void AddStat(ESecondaryStat s, int v)

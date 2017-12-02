@@ -46,8 +46,8 @@ namespace Assets.Controller.Managers
             gui.InitCombatGUI();
             var initInfo = new MapInitInfo();
             initInfo.Biome = EBiome.Grassland;
-            initInfo.LArmies.Add(new Pair<ECulture, string>(ECulture.Jomonese, "Defensive Battle Party"));
-            initInfo.RArmies.Add(new Pair<ECulture, string>(ECulture.Orcish, "Aggressive Battle Party"));
+            initInfo.LArmies.Add(new Pair<ECulture, string>(ECulture.Goblin, "Raiders"));
+            initInfo.RArmies.Add(new Pair<ECulture, string>(ECulture.Orcish, "Raiders"));
             initInfo.Cols = 14;
             initInfo.Rows = 14;
             var map = this._mapLoader.GetCombatMap(initInfo);

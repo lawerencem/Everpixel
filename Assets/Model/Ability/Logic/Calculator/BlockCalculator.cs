@@ -11,32 +11,35 @@ namespace Assets.Model.Ability.Logic.Calculator
     {
         public override void Predict(MHit hit)
         {
-            var melee = hit.Data.Source.Proxy.GetStat(ESecondaryStat.Melee);
+            var acc = hit.Data.Source.Proxy.GetStat(ESecondaryStat.Melee);
             var tgt = hit.Data.Target.Current as CChar;
             var block = tgt.Proxy.GetStat(ESecondaryStat.Block);
-            melee *= hit.Data.Ability.Data.AccMod;
+            var blockChance = LogicParams.BASE_BLOCK_CHANCE;
+
+            acc *= hit.Data.Ability.Data.AccMod;
 
             bool hasShield = false;
 
             if (tgt.Proxy.GetArmor() != null)
-                hit.Data.Chances.Block *= tgt.Proxy.GetArmor().GetStat(EArmorStat.Block_Mod);
+                blockChance *= tgt.Proxy.GetArmor().GetStat(EArmorStat.Block_Mod);
             if (tgt.Proxy.GetHelm() != null)
-                hit.Data.Chances.Block *= tgt.Proxy.GetHelm().GetStat(EArmorStat.Block_Mod);
+                blockChance *= tgt.Proxy.GetHelm().GetStat(EArmorStat.Block_Mod);
             if (tgt.Proxy.GetLWeapon() != null && tgt.Proxy.GetLWeapon().IsTypeOfShield())
             {
-                hit.Data.Chances.Block *= (tgt.Proxy.GetLWeapon().GetStat(EWeaponStat.Melee_Block_Chance) / LogicParams.BASE_SCALAR);
+                blockChance *= (tgt.Proxy.GetLWeapon().GetStat(EWeaponStat.Melee_Block_Chance));
                 hasShield = true;
             }
             if (tgt.Proxy.GetRWeapon() != null && tgt.Proxy.GetRWeapon().IsTypeOfShield())
             {
-                hit.Data.Chances.Block *= (tgt.Proxy.GetRWeapon().GetStat(EWeaponStat.Melee_Block_Chance) / LogicParams.BASE_SCALAR);
+                blockChance *= (tgt.Proxy.GetRWeapon().GetStat(EWeaponStat.Melee_Block_Chance));
                 hasShield = true;
             }
-            hit.Data.Chances.Block = this.GetAttackVSDefenseSkillChance(melee, block, hit.Data.Chances.Block);
             if (hit.Data.Chances.Block > 1)
                 hit.Data.Chances.Block = 1;
             if (hit.Data.Chances.Block < 0)
                 hit.Data.Chances.Block = 0;
+
+            hit.Data.Chances.Block = this.GetAttackVSDefenseSkillChance(acc, block, blockChance);
 
             if (!hasShield) { hit.Data.Chances.Block = 0; }
         }

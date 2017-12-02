@@ -110,7 +110,7 @@ namespace Assets.Model.Character.Builder
             {
                 var classStats = kvp.Value.GetParams();
                 foreach (var stat in classStats.PrimaryStats)
-                    c.GetBaseStats().SetStat(stat.Key, stat.Value);
+                    c.GetBaseStats().AddStat(stat.Key, stat.Value);
             }
         }
 

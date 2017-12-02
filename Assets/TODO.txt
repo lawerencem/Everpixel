@@ -4,9 +4,11 @@
   -- Particles added on non-resist
 
 - blocks
-- Remove buffs/debuffs
 
 - Tidy up pixels on samurai armor and helms
+
+Bugs
+- injury pstat scalar
 
 Allow perks to have "flat" modifiers and code them into mods
 Embed injuries a level down on abilities.xml files

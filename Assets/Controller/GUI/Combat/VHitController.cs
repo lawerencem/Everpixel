@@ -115,6 +115,29 @@ namespace Assets.Controller.GUI.Combat
             this._callbacks = new List<Callback>() { callback };
         }
 
+        private void DisplayBlock(CChar target, MHit hit)
+        {
+            var data = new HitDisplayData();
+            data.Color = CombatGUIParams.WHITE;
+            data.Hit = hit;
+            data.Priority = ViewParams.PARRY_PRIORITY;
+            data.Target = target.Handle;
+            data.Text = "Block";
+            data.YOffset = CombatGUIParams.FLOAT_OFFSET;
+            data.Hit.AddDataDisplay(data);
+
+            if (target.Proxy.GetRWeapon() != null && target.Proxy.GetRWeapon().IsTypeOfShield())
+            {
+                var wpn = target.SubComponents[Layers.CHAR_R_WEAPON];
+                this.DisplayParryAndBlockHelper(target, hit, wpn);
+            }
+            else if (target.Proxy.GetLWeapon() != null && target.Proxy.GetLWeapon().IsTypeOfShield())
+            {
+                var wpn = target.SubComponents[Layers.CHAR_L_WEAPON];
+                this.DisplayParryAndBlockHelper(target, hit, wpn);
+            }
+        }
+
         private void DisplayDodge(CChar target, MHit hit)
         {
             var dodge = target.Handle.AddComponent<SBoomerang>();
@@ -177,16 +200,16 @@ namespace Assets.Controller.GUI.Combat
             if (target.Proxy.GetRWeapon() != null && !target.Proxy.GetRWeapon().IsTypeOfShield())
             {
                 var wpn = target.SubComponents[Layers.CHAR_R_WEAPON];
-                this.DisplayParryHelper(target, hit, wpn);
+                this.DisplayParryAndBlockHelper(target, hit, wpn);
             }
             else if (target.Proxy.GetLWeapon() != null && !target.Proxy.GetLWeapon().IsTypeOfShield())
             {
                 var wpn = target.SubComponents[Layers.CHAR_L_WEAPON];
-                this.DisplayParryHelper(target, hit, wpn);
+                this.DisplayParryAndBlockHelper(target, hit, wpn);
             }
         }
 
-        private void DisplayParryHelper(CChar target, MHit hit, GameObject wpn)
+        private void DisplayParryAndBlockHelper(CChar target, MHit hit, GameObject wpn)
         {
             var pos = wpn.transform.position;
             if (target.Proxy.LParty)
