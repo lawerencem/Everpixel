@@ -324,6 +324,8 @@ namespace Assets.Controller.GUI.Combat
         {
             if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge))
                 this.DisplayDodge(target, hit);
+            else if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Block))
+                this.DisplayBlock(target, hit);
             else if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))
                 this.DisplayParry(target, hit);
             else

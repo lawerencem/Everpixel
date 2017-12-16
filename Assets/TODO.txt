@@ -3,19 +3,14 @@
 - Resist Calculators
   -- Particles added on non-resist
 
-- blocks
-
 - Tidy up pixels on samurai armor and helms
 
 Bugs
 - injury pstat scalar
 
-Allow perks to have "flat" modifiers and code them into mods
 Embed injuries a level down on abilities.xml files
-Stamina / AP / HP (current points) aren't "getting" from proper source 
 Charge ability
 bulldoze ability
-Why are trolls showing 1 morale
 Fix Keynotfound in main gui
 Display Blocks
 Orc Wereween
