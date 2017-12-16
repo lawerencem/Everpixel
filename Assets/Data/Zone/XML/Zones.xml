@@ -3,6 +3,7 @@
   <Zone name="Slime_Zone">
     <EEffect name="Slime">
       <Duration>3</Duration>
+      <Resist>Fortitude</Resist>
       <X>0.85</X>
       <Y>0.85</Y>
       <Z>0.80</Z>

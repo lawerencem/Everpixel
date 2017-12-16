@@ -20,11 +20,12 @@ namespace Assets.Model.Effect
         public EAbility AbilityCondition { get; set; }
         public ECastType CastCondition { get; set; }
         public int Duration { get; set; }
+        public string ParticlePath { get; set; }
+        public EResistType Resist { get; set; }
         public List<int> SpriteIndexes { get; set; }
         public int SpritesMax { get; set; }
         public int SpritesMin { get; set; }
         public string SpritesPath { get; set; }
-        public string ParticlePath { get; set; }
         public string SummonKey { get; set; }
         public string WeaponCondition { get; set; }
         public EEffect Type { get; set; }

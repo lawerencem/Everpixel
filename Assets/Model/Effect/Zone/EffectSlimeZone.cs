@@ -1,4 +1,5 @@
-﻿using Assets.Model.Combat.Hit;
+﻿using Assets.Model.Character.Enum;
+using Assets.Model.Combat.Hit;
 using Assets.Model.Effect.Fortitude;
 using Assets.Model.Zone.Duration;
 
@@ -18,6 +19,8 @@ namespace Assets.Model.Effect.Zone
                     var zoneData = base.GetDurationZoneData(hit);
                     zoneData.Dur = (int)this.Data.X;
                     zoneData.Effect = this.GetSlimeEffect();
+                    zoneData.Resist = this.Data.Resist;
+                    zoneData.ResistBase = hit.Data.Source.Proxy.GetStat(ESecondaryStat.Spell_Penetration);
                     var zone = new ZoneSlime();
                     zone.SetData(zoneData);
                     if (!prediction)

@@ -1,8 +1,12 @@
-﻿namespace Assets.Model.Zone.Duration
+﻿using Assets.Model.Ability.Enum;
+
+namespace Assets.Model.Zone.Duration
 {
     public class DurationZoneData : ZoneData
     {
         public int Dur { get; set; }
+        public EResistType Resist { get; set; }
+        public double ResistBase { get; set; }
     }
 
     public abstract class ADurationZone : AZone

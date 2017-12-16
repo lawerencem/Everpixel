@@ -15,7 +15,7 @@ namespace Assets.Model.Zone.Duration
         {
             base.ProcessEnterZone(target);
             var resist = new ResistCalculator();
-            if (!resist.DidResist(target, this._data.Effect))
+            if (!resist.DidResist(target, this._data.Effect, this._data.ResistBase))
             {
                 var slime = this.GetSlimeEffect();
                 this._data.Effect.ApplyEffectFx(target, slime);

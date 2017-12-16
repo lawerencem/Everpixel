@@ -38,6 +38,7 @@ namespace Assets.Model.Effect
                 case ("SpritesMin"): { data.SpritesMin = int.Parse(value); } break;
                 case ("SpritesPath"): { data.SpritesPath = value; } break;
                 case ("ParticlePath"): { data.ParticlePath = value; } break;
+                case ("Resist"): { this.HandleResistType(data, key, value); } break;
                 case ("SummonKey"): { data.SummonKey = value; } break;
                 case ("WeaponCondition"): { data.WeaponCondition = value; } break;
                 case ("X"): { data.X = double.Parse(value); } break;
@@ -61,6 +62,15 @@ namespace Assets.Model.Effect
             if (EnumUtil<ECastType>.TryGetEnumValue(value, ref type))
             {
                 data.CastCondition = type;
+            }
+        }
+
+        private void HandleResistType(MEffectData data, string key, string value)
+        {
+            var type = EResistType.None;
+            if (EnumUtil<EResistType>.TryGetEnumValue(value, ref type))
+            {
+                data.Resist = type;
             }
         }
 

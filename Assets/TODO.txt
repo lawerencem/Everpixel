@@ -1,18 +1,11 @@
 ﻿TODO
 
-- Resist Calculators
-  -- Particles added on non-resist
-
 - Tidy up pixels on samurai armor and helms
-
-Bugs
-- injury pstat scalar
 
 Embed injuries a level down on abilities.xml files
 Charge ability
 bulldoze ability
 Fix Keynotfound in main gui
-Display Blocks
 Orc Wereween
 Orc Metal
 Haste Song

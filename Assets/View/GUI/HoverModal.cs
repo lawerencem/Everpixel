@@ -28,6 +28,7 @@ namespace Assets.View.GUI
         private const string MODAL_DAMAGE_TEXT = "DmgTextTag";
         private const string MODAL_DODGE_TEXT = "DodgeTextTag";
         private const string MODAL_PARRY_TEXT = "ParryTextTag";
+        private const string RESIST_PARRY_TEXT = "ResistTextTag";
 
         private GameObject _dmgPredictionModal;
         private GameObject _modal;
@@ -45,6 +46,7 @@ namespace Assets.View.GUI
         private Text _dmgText;
         private Text _dodgeText;
         private Text _parryText;
+        private Text _resistText;
 
         public void Init()
         {
@@ -58,12 +60,13 @@ namespace Assets.View.GUI
             var morale = GameObject.FindGameObjectWithTag(MODAL_MORALE_SLIDER);
             var rWeapon = GameObject.FindGameObjectWithTag(MODAL_R_WEAPON_SLIDER);
             var stam = GameObject.FindGameObjectWithTag(MODAL_STAM_SLIDER);
-
+            
             var blockText = GameObject.FindGameObjectWithTag(MODAL_BLOCK_TEXT);
             var critText = GameObject.FindGameObjectWithTag(MODAL_CRIT_TEXT);
             var dmgText = GameObject.FindGameObjectWithTag(MODAL_DAMAGE_TEXT);
             var dodgeText = GameObject.FindGameObjectWithTag(MODAL_DODGE_TEXT);
             var parryText = GameObject.FindGameObjectWithTag(MODAL_PARRY_TEXT);
+            var resistText = GameObject.FindGameObjectWithTag(RESIST_PARRY_TEXT);
 
             this._armorSlider = armor.GetComponent<Slider>();
             this._helmSlider = helm.GetComponent<Slider>();
@@ -78,6 +81,7 @@ namespace Assets.View.GUI
             this._dmgText = dmgText.GetComponent<Text>();
             this._dodgeText = dodgeText.GetComponent<Text>();
             this._parryText = parryText.GetComponent<Text>();
+            this._resistText = parryText.GetComponent<Text>();
         }
 
         public void SetModalActive()
