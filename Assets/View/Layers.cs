@@ -35,6 +35,7 @@
         public static readonly string EMBED = "LCharEmbed";
 
         public static readonly string PARTICLES = "Particles";
+        public static readonly string PLUS = "Plus";
 
         public static readonly string TILE = "Tile";
         public static readonly string TILE_DECO = "BackgroundTileDeco";

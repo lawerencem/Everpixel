@@ -40,6 +40,26 @@ namespace Assets.View.Character
             }
         }
 
+        public void AssignPlusLayer(CChar c)
+        {
+            foreach (var subcomponent in c.SubComponents)
+            {
+                var sub = subcomponent.Value;
+                var renderer = sub.GetComponent<SpriteRenderer>();
+                var layer = renderer.sortingLayerName;
+                renderer.sortingLayerName = layer.Replace(Layers.CHAR, Layers.PLUS);
+            }
+            foreach (var embed in c.Embedded)
+            {
+                var renderer = embed.GetComponent<SpriteRenderer>();
+                if (renderer != null)
+                {
+                    var layer = renderer.sortingLayerName;
+                    renderer.sortingLayerName = layer.Replace(Layers.CHAR, Layers.PLUS);
+                }
+            }
+        }
+
         public void AssignDeadWeapons(CChar c)
         {
             if (c.Proxy.GetLWeapon() != null)
@@ -79,6 +99,26 @@ namespace Assets.View.Character
             this.AssignDeadLayer(c);
             this.RandomTranslateRotateOnDeath(c);
             this.AssignDeathSplatter(c);
+        }
+
+        public void UnassignPlusLayer(CChar c)
+        {
+            foreach (var subcomponent in c.SubComponents)
+            {
+                var sub = subcomponent.Value;
+                var renderer = sub.GetComponent<SpriteRenderer>();
+                var layer = renderer.sortingLayerName;
+                renderer.sortingLayerName = layer.Replace(Layers.PLUS, Layers.CHAR);
+            }
+            foreach (var embed in c.Embedded)
+            {
+                var renderer = embed.GetComponent<SpriteRenderer>();
+                if (renderer != null)
+                {
+                    var layer = renderer.sortingLayerName;
+                    renderer.sortingLayerName = layer.Replace(Layers.PLUS, Layers.CHAR);
+                }
+            }
         }
     }
 }
