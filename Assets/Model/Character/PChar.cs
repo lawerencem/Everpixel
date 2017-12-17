@@ -31,7 +31,11 @@ namespace Assets.Model.Character
 
         public void AddEffect(MEffect e)
         {
-            this.GetEffects().AddEffect(e);
+            var exist = this.GetEffects().GetEffects().Find(x => x.Type == e.Type);
+            if (exist == null)
+            {
+                this.GetEffects().AddEffect(e);
+            }
         }
 
         public void AddBuff(StatMod buff)

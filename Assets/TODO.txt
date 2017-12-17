@@ -2,9 +2,9 @@
 
 - Tidy up pixels on samurai armor and helms
 
-Embed injuries a level down on abilities.xml files
 Charge ability
-bulldoze ability
+  -- Stun Status
+  --- Stun Particles
 Fix Keynotfound in main gui
 Orc Wereween
 Orc Metal
@@ -16,7 +16,6 @@ Add FX
   - Bleed
 Spear wall
 Bonuses to Hit when surrounding
-Bonuses to Dmg when surrounding
 Clean up injuries in bow.xml files, plus remove custom bullet boolean.
 
 Shields
@@ -27,12 +26,10 @@ Mounts
   - Have mounts give abilities
   - Perks
   - Effects
-Zones
 Armor and Weapon durability
 Critter eyes on kill
 Missiles missing (hit other targets)
 Deco blocking missiles
-Height on tiles
 
 1) - Dual-Wield
 3) - Critter classes / abilities during level up on the xml
