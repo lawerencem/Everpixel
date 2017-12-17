@@ -35,7 +35,7 @@ namespace Assets.Controller.Map.Combat.Loader
             renderer.transform.position = tile.Handle.transform.position;
             var tileRenderer = tile.Handle.GetComponent<SpriteRenderer>();
             renderer.sortingLayerName = tileRenderer.sortingLayerName;
-            renderer.sortingOrder = tileRenderer.sortingOrder;
+            renderer.sortingOrder = tileRenderer.sortingOrder + 1;
         }
     }
 }

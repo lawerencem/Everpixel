@@ -5,6 +5,9 @@
       <Class>Soldier,5</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
+      <Abilities>
+        <Ability name ="Bulldoze"></Ability>
+      </Abilities>
       <Perks>
         <Perk>Hulk</Perk>
         <Perk>Colossus</Perk>
@@ -42,6 +45,9 @@
       <Class>Soldier,14</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
+      <Abilities>
+        <Ability name ="Bulldoze"></Ability>
+      </Abilities>
       <Perks>
         <Perk>Hulk</Perk>
         <Perk>Colossus</Perk>
@@ -626,6 +632,9 @@
       <Class>Soldier,9</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
+      <Abilities>
+        <Ability name ="Bulldoze"></Ability>
+      </Abilities>
       <Perks>
         <Perk>Hulk</Perk>
         <Perk>Colossus</Perk>
@@ -801,6 +810,9 @@
     <Character name ="Ween Lord">
       <Class>Berserker,18</Class>
       <Class>Warrior,8</Class>
+      <Abilities>
+        <Ability name ="Bulldoze"></Ability>
+      </Abilities>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
       <Mount>Ween_Dragon</Mount>

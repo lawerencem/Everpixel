@@ -41,6 +41,7 @@ namespace Assets.Controller.GUI.Combat
             switch(a.ActiveAbility.Data.CastType)
             {
                 case (ECastType.Bullet): { VHitController.Instance.ProcessBulletFX(a); } break;
+                case (ECastType.Custom): { VHitController.Instance.ProcessCustomFX(a); } break;
                 case (ECastType.Melee): { VHitController.Instance.ProcessMeleeHitFX(a); } break;
                 case (ECastType.Single): { VHitController.Instance.ProcessSingleHitFX(a); } break;
                 case (ECastType.Song): { VHitController.Instance.ProcessSongFX(a); } break;

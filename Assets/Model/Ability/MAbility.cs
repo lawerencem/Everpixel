@@ -1,6 +1,7 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Enum;
+using Assets.Model.Action;
 using Assets.Model.Combat.Hit;
 using System.Collections.Generic;
 
@@ -15,6 +16,11 @@ namespace Assets.Model.Ability
             var ability = new MAbility(this._type);
             ability.SetData(this.Data.Copy());
             return ability;
+        }
+
+        public virtual void DisplayFX(MAction a)
+        {
+
         }
 
         public virtual List<CTile> GetAoETiles(AbilityArgs arg)

@@ -47,7 +47,7 @@ namespace Assets.Controller.Managers
             var initInfo = new MapInitInfo();
             initInfo.Biome = EBiome.Grassland;
             initInfo.LArmies.Add(new Pair<ECulture, string>(ECulture.Goblin, "Aggressive Battle Party"));
-            initInfo.RArmies.Add(new Pair<ECulture, string>(ECulture.Orcish, "Aggressive Battle Party"));
+            initInfo.RArmies.Add(new Pair<ECulture, string>(ECulture.Orcish, "Defenders"));
             initInfo.Cols = 14;
             initInfo.Rows = 14;
             var map = this._mapLoader.GetCombatMap(initInfo);

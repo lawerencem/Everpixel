@@ -200,6 +200,7 @@
     <Compile Include="Assets\Model\Ability\Music\MSong.cs" />
     <Compile Include="Assets\Model\Ability\Music\OrcMetal.cs" />
     <Compile Include="Assets\Model\Ability\Music\WeenlightSonata.cs" />
+    <Compile Include="Assets\Model\Ability\Physical\Bulldoze.cs" />
     <Compile Include="Assets\Model\Ability\Shapeshift\Shapeshift.cs" />
     <Compile Include="Assets\Model\Ability\Shapeshift\ShapeshiftInfo.cs" />
     <Compile Include="Assets\Model\Ability\Shapeshift\Wereween.cs" />

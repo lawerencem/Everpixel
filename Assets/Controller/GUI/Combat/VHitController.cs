@@ -60,6 +60,12 @@ namespace Assets.Controller.GUI.Combat
                 this.ProcessBulletFXNonFatality(a);
         }
 
+        public void ProcessCustomFX(MAction a)
+        {
+            VCombatController.Instance.DisplayActionEventName(a);
+            a.ActiveAbility.DisplayFX(a);
+        }
+
         public void ProcessDefenderHit(MHit hit)
         {
             if (hit.Data.Target.Current != null &&

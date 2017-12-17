@@ -22,8 +22,6 @@ Clean up injuries in bow.xml files, plus remove custom bullet boolean.
 Shields
 Stealth
 Refactor Dmg Calculations
-Block calculations
-  - Block FX
 Crit Calculations
 Mounts
   - Have mounts give abilities
@@ -43,7 +41,6 @@ Height on tiles
 
 
 bugs
-   parry locks gui
    Wpn icons show from previous character on critters
    various deco (lizardmen) is still attached on fatalities.
 

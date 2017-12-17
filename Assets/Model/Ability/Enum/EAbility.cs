@@ -15,6 +15,9 @@
         // Poison,
         Slime_Rain,
 
+        // Physical
+        Bulldoze,
+
         // Psychic
         Cerebral_Nova,
         Feeblemind,

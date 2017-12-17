@@ -7,6 +7,7 @@ using Assets.Model.Ability.Magic.Poison;
 using Assets.Model.Ability.Magic.Psychic;
 using Assets.Model.Ability.Magic.Water;
 using Assets.Model.Ability.Music;
+using Assets.Model.Ability.Physical;
 using Assets.Model.Ability.Shapeshift;
 using Assets.Model.Effect;
 using Assets.Model.Injury;
@@ -212,6 +213,7 @@ namespace Assets.Data.Ability.XML
             {
                 case (EAbility.Aim): { table.Add(type, new Aim()); } break;
                 case (EAbility.Bite): { table.Add(type, new Bite()); } break;
+                case (EAbility.Bulldoze): { table.Add(type, new Bulldoze()); } break;
                 case (EAbility.Break_Armor): { table.Add(type, new BreakArmor()); } break;
                 case (EAbility.Break_Shield): { table.Add(type, new BreakShield()); } break;
                 case (EAbility.Cerebral_Nova): { table.Add(type, new CerebralNova()); } break;

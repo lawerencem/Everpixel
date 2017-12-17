@@ -21,6 +21,7 @@ namespace Assets.Model.Event.Combat
         public EvTileMove(EvTileMoveData d) : base(ECombatEv.TileMove) { this._data = d; }
 
         public void SetData(EvTileMoveData d) { this._data = d; }
+        public EvTileMoveData GetData() { return this._data; }
 
         public override void TryProcess()
         {
