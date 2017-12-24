@@ -7,7 +7,9 @@
         Chop,
         Crush,
         Fighting,
+        Pierce,
         Slash,
+        Slime_Crush,
         Weenbow,
         Weenburster,
     }

@@ -15,7 +15,7 @@
 
         public MOTE()
         {
-
+            this._data = new MOTEData();
         }
 
         public virtual void ProcessTurn()

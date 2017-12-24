@@ -402,6 +402,7 @@
       <Armor_Ignore>0.98</Armor_Ignore>
       <Armor_Pierce>0.68</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
+      <Custom_Fatality>Slime_Crush</Custom_Fatality>
       <Damage>32</Damage>
       <Description>
         Giving the gift of glop.
@@ -873,6 +874,7 @@
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.78</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
+      <Custom_Fatality>Slime_Crush</Custom_Fatality>
       <Damage>18</Damage>
       <Description>
         A blade covered in disgusting slime.  It's fairly obvious the pointy nature of the blade is meant to poison enemies with the slime.
@@ -898,6 +900,7 @@
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.77</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
+      <Custom_Fatality>Slime_Crush</Custom_Fatality>
       <Damage>20</Damage>
       <Description>
         A blade covered in disgusting slime.  It's fairly obvious the pointy nature of the blade is meant to poison enemies with the slime.
@@ -923,6 +926,7 @@
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.76</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
+      <Custom_Fatality>Slime_Crush</Custom_Fatality>
       <Damage>23</Damage>
       <Description>
         This blade is covered in living, breathing slime...
@@ -948,6 +952,7 @@
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.72</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
+      <Custom_Fatality>Slime_Crush</Custom_Fatality>
       <Damage>28</Damage>
       <Description>
         This blade is covered in living, breathing slime...

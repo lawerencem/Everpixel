@@ -122,7 +122,7 @@
     <EPrimaryStat>Constitution, 0.75</EPrimaryStat>
     <EPrimaryStat>Intelligence, 0.90</EPrimaryStat>
   </Injury>
-  <Injury Name ="Cut_Abdomine">
+  <Injury Name ="Lacerated_Abdomine">
     <EPrimaryStat>Constitution, 0.70</EPrimaryStat>
   </Injury>
   <Injury Name ="Lacerated_Arm">

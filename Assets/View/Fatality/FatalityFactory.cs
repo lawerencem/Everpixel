@@ -63,8 +63,9 @@ namespace Assets.View.Fatality
         {
             switch(type)
             {
+                case (EFatality.Slime_Crush): { return new SlimeCrushFatality(data); }
                 case (EFatality.Weenbow): { return new WeenbowFatality(data); }
-                case (EFatality.Weenburster): { return new WeenBurster(data); }
+                case (EFatality.Weenburster): { return new WeenBursterFatality(data); }
                 default: return null;
             }
         }

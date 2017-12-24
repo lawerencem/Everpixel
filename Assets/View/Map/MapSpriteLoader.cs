@@ -116,6 +116,22 @@ namespace Assets.View.Map
             return stuff[index] as Sprite;
         }
 
+        public Sprite GetSlimeSplatter(int level)
+        {
+            var path = StringUtil.PathBuilder(PATH, "Slime_Zone");
+            var stuff = Resources.LoadAll(path);
+            int index = 1;
+            switch(level)
+            {
+                case (1): { index = ListUtil<int>.GetRandomElement(this.LEVEL_ONE_BLOOD_SPATTER); } break;
+                case (2): { index = ListUtil<int>.GetRandomElement(this.LEVEL_TWO_BLOOD_SPATTER); } break;
+                case (3): { index = ListUtil<int>.GetRandomElement(this.LEVEL_THREE_BLOOD_SPATTER); } break;
+                case (4): { index = ListUtil<int>.GetRandomElement(this.LEVEL_FOUR_BLOOD_SPATTER); } break;
+                case (5): { index = ListUtil<int>.GetRandomElement(this.LEVEL_FIVE_BLOOD_SPATTER); } break;
+            }
+            return stuff[index] as Sprite;
+        }
+
         public Sprite GetTileHighlightSprite()
         {
             var path = StringUtil.PathBuilder(PATH, "Base", TILE_EXTENSION);

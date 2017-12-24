@@ -33,6 +33,13 @@ namespace Assets.Model.Equipment.Armor
             parry.Scalar = this.Data.ParryMod;
             stam.Scalar = this.Data.StaminaMod;
 
+            ap.Stat = ESecondaryStat.AP;
+            block.Stat = ESecondaryStat.Block;
+            dodge.Stat = ESecondaryStat.Dodge;
+            init.Stat = ESecondaryStat.Initiative;
+            parry.Stat = ESecondaryStat.Parry;
+            stam.Stat = ESecondaryStat.Stamina;
+
             toReturn.Add(new StatMod(ap));
             toReturn.Add(new StatMod(block));
             toReturn.Add(new StatMod(dodge));

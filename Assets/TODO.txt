@@ -1,6 +1,21 @@
 ﻿TODO
 
+- Weekend Duties
+  -- Fire Fatality
+  -- Charge Ability
+    --- Stun
+	--- Stun FX
+  -- Orc Perks
+
 - Tidy up pixels on samurai armor and helms
+
+- Next Weekend
+  -- Refactor party/army system
+   --- Cultures define individual units
+   --- Subparty defines clusters (e.g., infantry slimers)
+     ---- Difficulty needs to scale better (i.e., dont' start at 1 - start at 6?)
+   --- Parties comprised of subparties with difficulty ratios
+     ---- Allows feeding a number to a party that it scales well
 
 Charge ability
   -- Stun Status

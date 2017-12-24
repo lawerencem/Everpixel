@@ -10,6 +10,10 @@
     <Metaparty>Shock Monsters,5</Metaparty>
     <Metaparty>Militia,4</Metaparty>
   </Army>
+  <Army id="Infantry">
+    <Name>Test</Name>
+    <Metaparty>Infantry, 20</Metaparty>
+  </Army>
   <Army id="Forward Scouting Party">
     <Name>Forward Scouting Party</Name>
     <Metaparty>Scouts,3</Metaparty>

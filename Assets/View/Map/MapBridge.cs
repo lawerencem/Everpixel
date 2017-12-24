@@ -32,7 +32,7 @@ namespace Assets.View.Map
             return MapSpriteLoader.Instance.GetPotentialAttackLocSprite();
         }
 
-        public Sprite GetSplatterSprites(int lvl)
+        public Sprite GetBloodSplatterSprite(int lvl)
         {
             switch(lvl)
             {
@@ -43,6 +43,11 @@ namespace Assets.View.Map
                 case (5): return MapSpriteLoader.Instance.GetBloodSpatterLevelFive();
                 default: return MapSpriteLoader.Instance.GetBloodSpatterLevelOne();
             }
+        }
+
+        public Sprite GetSlimeSplatterSprite(int level)
+        {
+            return MapSpriteLoader.Instance.GetSlimeSplatter(level);
         }
     }
 }

@@ -11,15 +11,15 @@ using UnityEngine;
 
 namespace Assets.View.Fatality.Weapon.Ability
 {
-    public class WeenBurster : MFatality
+    public class WeenBursterFatality : MFatality
     {
         private const string BURSTER = "Burster";
         private const string WEEN_BURSTER = "Ween_Burster";
         
 
-        public WeenBurster(FatalityData data) : base(EFatality.Weenburster, data)
+        public WeenBursterFatality(FatalityData data) : base(EFatality.Weenburster, data)
         {
-
+            this._data.CustomPreFatalityBarks.Add("That's it, man. Game over, man. Game over!");
         }
 
         public override void Init()

@@ -50,7 +50,7 @@ namespace Assets.View.Event
             var lvl = this.ConvertDmgToSplatterLvl();
             if (lvl > 0)
             {
-                var sprite = MapBridge.Instance.GetSplatterSprites(lvl);
+                var sprite = MapBridge.Instance.GetBloodSplatterSprite(lvl);
                 var splatter = new GameObject("Splatter");
                 splatter.transform.SetParent(this._data.Target.transform);
                 var renderer = splatter.AddComponent<SpriteRenderer>();
