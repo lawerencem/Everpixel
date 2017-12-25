@@ -17,6 +17,7 @@
 
         // Physical
         Bulldoze,
+        Charge,
 
         // Psychic
         Cerebral_Nova,

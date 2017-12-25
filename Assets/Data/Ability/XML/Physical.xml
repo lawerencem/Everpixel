@@ -20,6 +20,27 @@
       <ShieldDamageMod>0</ShieldDamageMod>
       <StaminaCost>55</StaminaCost>
     </ActiveAbility>
+    <ActiveAbility name="Charge">
+      <AccMod>1</AccMod>
+      <AoE>0</AoE>
+      <APCost>9</APCost>
+      <ArmorIgnoreMod>0</ArmorIgnoreMod>
+      <ArmorPierceMod>0</ArmorPierceMod>
+      <BlockIgnoreMod>0</BlockIgnoreMod>
+      <ECastType>Custom</ECastType>
+      <DmgPerPower>0.00</DmgPerPower>
+      <DodgeMod>0</DodgeMod>
+      <EEffect name="Stun">
+        <OffensiveResist>Fortitude</OffensiveResist>
+        <ParticlePath>Stun</ParticlePath>
+        <Resist>Fortitude</Resist>
+        <X>1</X>
+      </EEffect>
+      <Range>3</Range>
+      <RangeBlockMod>0</RangeBlockMod>
+      <EResistType>Fortitude</EResistType>
+      <StaminaCost>35</StaminaCost>
+    </ActiveAbility>
     <ActiveAbility name="Bite">
       <AccMod>1</AccMod>
       <APCost>3</APCost>

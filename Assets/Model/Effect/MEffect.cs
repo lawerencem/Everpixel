@@ -1,6 +1,7 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.GUI.Combat;
 using Assets.Model.Ability.Enum;
+using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
 using Assets.Model.Zone;
 using Assets.Model.Zone.Duration;
@@ -21,6 +22,7 @@ namespace Assets.Model.Effect
         public ECastType CastCondition { get; set; }
         public int Duration { get; set; }
         public string ParticlePath { get; set; }
+        public ESecondaryStat OffensiveResist { get; set; }
         public EResistType Resist { get; set; }
         public List<int> SpriteIndexes { get; set; }
         public int SpritesMax { get; set; }

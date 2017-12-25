@@ -10,7 +10,7 @@
     <Metaparty>Militia,2</Metaparty>
   </Army>
   <Army id="Defenders">
-    <Metaparty>Defenders,20</Metaparty>
+    <Metaparty>Monsters,20</Metaparty>
   </Army>
   <Army id="Forward Scouting Party">
     <Name>Forward Scouting Party</Name>

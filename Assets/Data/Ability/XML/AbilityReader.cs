@@ -216,6 +216,7 @@ namespace Assets.Data.Ability.XML
                 case (EAbility.Bulldoze): { table.Add(type, new Bulldoze()); } break;
                 case (EAbility.Break_Armor): { table.Add(type, new BreakArmor()); } break;
                 case (EAbility.Break_Shield): { table.Add(type, new BreakShield()); } break;
+                case (EAbility.Charge): { table.Add(type, new Charge()); } break;
                 case (EAbility.Cerebral_Nova): { table.Add(type, new CerebralNova()); } break;
                 case (EAbility.Chop): { table.Add(type, new Chop()); } break;
                 case (EAbility.Crush): { table.Add(type, new Crush()); } break;

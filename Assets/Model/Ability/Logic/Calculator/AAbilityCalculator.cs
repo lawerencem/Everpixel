@@ -18,7 +18,7 @@ namespace Assets.Model.Ability.Logic.Calculator
             else
                 scalar = (1 + ((diff *= -1) / LogicParams.BASE_SCALAR));
 
-            return (baseDefenseChance * scalar);
+            return (baseDefenseChance / scalar);
         }
     }
 }

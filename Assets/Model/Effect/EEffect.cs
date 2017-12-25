@@ -8,6 +8,7 @@
         HoT,
         Megabite,
         Slime,
+        Stun,
         Summon_On_Hit,
         Zone_Slime,
     }

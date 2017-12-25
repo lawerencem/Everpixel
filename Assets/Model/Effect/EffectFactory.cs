@@ -18,6 +18,7 @@ namespace Assets.Model.Effect
                 case (EEffect.Megabite): { return new Megabite(); }
                 case (EEffect.Horror): { return new Horror(); }
                 case (EEffect.Slime): { return new EffectSlime(); }
+                case (EEffect.Stun): { return new EffectStun(); }
                 case (EEffect.Summon_On_Hit): { return new EffectSummonOnHit(); }
                 case (EEffect.Zone_Slime): { return new EffectSlimeZone(); }
                 default: { return null; }

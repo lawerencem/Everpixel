@@ -87,6 +87,7 @@
         <Ability name ="Bite">
           <EEffect></EEffect>
         </Ability>
+        <Ability name ="Charge"></Ability>
       </Abilities>
       <ECharacterType>Critter</ECharacterType>
       <Description>
@@ -201,6 +202,9 @@
       <Class>Lycanthrope,10</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
+      <Abilities>
+        <Ability name ="Charge"></Ability>
+      </Abilities>
       <Perks>
       </Perks>
       <PotentialWeapons>
@@ -578,6 +582,9 @@
       <Class>Lycanthrope,5</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
+      <Abilities>
+        <Ability name ="Charge"></Ability>
+      </Abilities>
       <Perks>
       </Perks>
       <PotentialWeapons>

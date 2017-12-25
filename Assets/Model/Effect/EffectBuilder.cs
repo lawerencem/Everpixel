@@ -1,4 +1,5 @@
 ﻿using Assets.Model.Ability.Enum;
+using Assets.Model.Character.Enum;
 using Assets.Template.Other;
 using Assets.Template.Util;
 using System.Xml.Linq;
@@ -33,6 +34,7 @@ namespace Assets.Model.Effect
                 case ("AbilityCondition"): { this.HandleAbilityCondition(data, key, value); } break;
                 case ("CastCondition"): { this.HandleCastCondition(data, key, value); } break;
                 case ("Duration"): { data.Duration = int.Parse(value); } break;
+                case ("OffensiveResist"): { this.HandleOffensiveResistType(data, key, value); } break;
                 case ("SpritesIndexes"): { this.HandleSpriteIndexes(data, value); } break;
                 case ("SpritesMax"): { data.SpritesMax = int.Parse(value); } break;
                 case ("SpritesMin"): { data.SpritesMin = int.Parse(value); } break;
@@ -62,6 +64,15 @@ namespace Assets.Model.Effect
             if (EnumUtil<ECastType>.TryGetEnumValue(value, ref type))
             {
                 data.CastCondition = type;
+            }
+        }
+
+        private void HandleOffensiveResistType(MEffectData data, string key, string value)
+        {
+            var type = ESecondaryStat.None;
+            if (EnumUtil<ESecondaryStat>.TryGetEnumValue(value, ref type))
+            {
+                data.OffensiveResist = type;
             }
         }
 

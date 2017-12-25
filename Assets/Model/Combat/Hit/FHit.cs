@@ -17,6 +17,7 @@ namespace Assets.Model.Combat.Hit
             Fatality = 64,
             Shapeshift = 128,
             Resist = 256,
+            Stun = 512,
         }
 
         public Flags CurFlags { get; set; }
@@ -33,6 +34,7 @@ namespace Assets.Model.Combat.Hit
         public static void SetHeadFalse(FHit f) { f.CurFlags &= ~Flags.Head; }
         public static void SetShapeshiftFalse(FHit f) { f.CurFlags &= ~Flags.Shapeshift; }
         public static void SetSummonFalse(FHit f) { f.CurFlags &= ~Flags.Summon; }
+        public static void SetStunFalse(FHit f) { f.CurFlags &= ~Flags.Stun; }
         public static void SetFatalityFalse(FHit f) { f.CurFlags &= ~Flags.Fatality; }
         public static void SetResistFalse(FHit f) { f.CurFlags &= ~Flags.Resist; }
 
@@ -43,6 +45,7 @@ namespace Assets.Model.Combat.Hit
         public static void SetHeadTrue(FHit f) { f.CurFlags |= Flags.Head; }
         public static void SetShapeshiftTrue(FHit f) { f.CurFlags |= Flags.Shapeshift; }
         public static void SetSummonTrue(FHit f) { f.CurFlags |= Flags.Summon; }
+        public static void SetStunTrue(FHit f) { f.CurFlags |= Flags.Stun; }
         public static void SetFatalityTrue(FHit f) { f.CurFlags |= Flags.Fatality; }
         public static void SetResistTrue(FHit f) { f.CurFlags |= Flags.Resist; }
 

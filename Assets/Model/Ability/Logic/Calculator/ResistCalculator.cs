@@ -20,7 +20,25 @@ namespace Assets.Model.Ability.Logic.Calculator
             else if (effect.Data.Resist == EResistType.Will)
                 resist = target.Proxy.GetStat(ESecondaryStat.Will);
 
-            var chance = this.GetAttackVSDefenseSkillChance(resistBase, resistBase, LogicParams.BASE_RESIST);
+            var chance = this.GetAttackVSDefenseSkillChance(resistBase, resist, LogicParams.BASE_RESIST);
+            var roll = RNG.Instance.NextDouble();
+            if (roll < chance)
+                return true;
+            else
+                return false;
+        }
+
+        public bool DidResist(CChar target, EResistType resist, double resistBase)
+        {
+            double resistValue = 0;
+            if (resist == EResistType.Fortitude)
+                resistValue = target.Proxy.GetStat(ESecondaryStat.Fortitude);
+            else if (resist == EResistType.Reflex)
+                resistValue = target.Proxy.GetStat(ESecondaryStat.Reflex);
+            else if (resist == EResistType.Will)
+                resistValue = target.Proxy.GetStat(ESecondaryStat.Will);
+
+            var chance = this.GetAttackVSDefenseSkillChance(resistBase, resistValue, LogicParams.BASE_RESIST);
             var roll = RNG.Instance.NextDouble();
             if (roll < chance)
                 return true;

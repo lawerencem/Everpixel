@@ -126,6 +126,8 @@ namespace Assets.Controller.Map.Combat.Loader
             if (e != null)
             {
                 var spriteHandler = new GameObject();
+                if (e.SpriteIndex > e.Sprites.Length)
+                    throw new System.Exception();
                 var sprite = e.Sprites[e.SpriteIndex];
                 var render = spriteHandler.AddComponent<SpriteRenderer>();
                 var position = c.Handle.transform.position;
