@@ -11,6 +11,13 @@ namespace Assets.Model.Perk.EquipmentSStat
 
         }
 
+        public override void AddToParent(CharPerks parentContainer)
+        {
+            var exists = parentContainer.GetEquipmentSStatPerks().Find(x => x.Type == this.Type);
+            if (exists == null)
+                parentContainer.GetEquipmentSStatPerks().Add(this);
+        }
+
         public virtual void TryModEquipmentMod(Pair<object, List<StatMod>> mods)
         {
 

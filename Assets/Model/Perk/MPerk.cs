@@ -2,6 +2,7 @@
 using Assets.Data.Perk.Table;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Character;
+using Assets.Model.Character.Param;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,10 +19,14 @@ namespace Assets.Model.Perk
         public MPerk(EPerk type)
         {
             this._type = type;
-            this.Init();
         }
 
-        private void Init()
+        public virtual void AddToParent(CharPerks parentContainer)
+        {
+            
+        }
+
+        public void Init()
         {
             try
             {

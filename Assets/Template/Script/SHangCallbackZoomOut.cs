@@ -68,7 +68,7 @@ namespace Assets.Template.Script
         private void HandleZoomOut()
         {
             var fov = Camera.main.fieldOfView;
-            fov += (this._speed * Time.deltaTime / 13);
+            fov += (this._speed * Time.deltaTime / 3);
             if (fov > this._originalFoV)
             {
                 Destroy(this);

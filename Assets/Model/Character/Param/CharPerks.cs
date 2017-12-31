@@ -45,17 +45,7 @@ namespace Assets.Model.Character.Param
 
         public void AddPerk(MPerk perk)
         {
-            switch(perk.ArcheType)
-            {
-                case (EPerkArcheType.AbilityMod): { this._abilityModPerks.Add(perk as MAbilityModPerk); } break;
-                case (EPerkArcheType.EquipmentModPerk): { this._equipmentSStatPerks.Add(perk as MEquipmentSStatPerk); } break;
-                case (EPerkArcheType.EquipmentPerk): { this._equipmentPerks.Add(perk as MEquipmentPerk); } break;
-                case (EPerkArcheType.OnActionPerk): { this._onActionPerks.Add(perk as MOnActionPerk); } break;
-                case (EPerkArcheType.PostHitPerk): { this._postHitPerks.Add(perk as MPostHitPerk); } break;
-                case (EPerkArcheType.PreHitPerk): { this._preHitPerks.Add(perk as MPreHitPerk); } break;
-                case (EPerkArcheType.SStadModPerk): { this._sStatModPerks.Add(perk as MSStatModPerk); } break;
-                case (EPerkArcheType.WhenHitPerk): { this._whenHitPerks.Add(perk as MWhenHitPerk); } break;
-            }
+            perk.AddToParent(this);
         }
     }
 }
