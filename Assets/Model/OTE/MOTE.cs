@@ -4,6 +4,7 @@
     {
         public int Dmg { get; set; }
         public int Dur { get; set; }
+        public bool HasDur { get; set; }
     }
 
     public class MOTE
@@ -13,17 +14,14 @@
         public int Dmg { get { return this._data.Dmg; } }
         public int Dur { get { return this._data.Dur; } }
 
-        public MOTE()
+        public MOTE(MOTEData data)
         {
-            this._data = new MOTEData();
+            this._data = data;
         }
 
         public virtual void ProcessTurn()
         {
             this._data.Dur--;
         }
-
-        public void SetDmg(int dmg) { this._data.Dmg = dmg; }
-        public void SetDur(int dur) { this._data.Dur = dur; }
     }
 }

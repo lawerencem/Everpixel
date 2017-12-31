@@ -2,7 +2,7 @@
 {
     public class MHoT : MOTE
     {
-        public MHoT() : base()
+        public MHoT(MOTEData d) : base(d)
         {
 
         }

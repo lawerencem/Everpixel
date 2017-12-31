@@ -12,6 +12,7 @@ using Assets.Model.Class.Enum;
 using Assets.Model.Effect;
 using Assets.Model.Equipment.Armor;
 using Assets.Model.Injury;
+using Assets.Model.OTE.HoT;
 using Assets.Model.Party;
 using Assets.Model.Party.Enum;
 using System.Collections.Generic;
@@ -44,6 +45,11 @@ namespace Assets.Model.Character
         {
             this._model.GetStatMods().AddBuff(debuff);
             this._model.GetCurStats().ResetCurStats(this._model.GetStatMods(), this._model.GetBaseStats());
+        }
+
+        public void AddHoT(MHoT hot)
+        {
+            this._model.GetEffects().AddHoT(hot);
         }
 
         public void AddInjury(MInjury i)

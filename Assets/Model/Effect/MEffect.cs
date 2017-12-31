@@ -57,15 +57,15 @@ namespace Assets.Model.Effect
             this._type = type;
         }
 
-        public void ApplyEffectFx(CChar tgt, MEffect effect)
+        public void ApplyEffectFx(CChar tgt)
         {
-            var exists = tgt.Proxy.GetEffects().GetEffects().Find(x => x.Type == effect.Type);
+            var exists = tgt.Proxy.GetEffects().GetEffects().Find(x => x.Type == this.Type);
             if (exists == null)
             {
-                var particles = ParticleController.Instance.CreateParticle(effect.Data.ParticlePath);
+                var particles = ParticleController.Instance.CreateParticle(this.Data.ParticlePath);
                 if (particles != null)
                     DecoUtil.AttachParticles(particles, tgt.Handle);
-                VCombatController.Instance.DisplayText(effect.Type.ToString().Replace("_", " "), tgt);
+                VCombatController.Instance.DisplayText(this.Type.ToString().Replace("_", " "), tgt);
             }
         }
 

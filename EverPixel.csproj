@@ -353,7 +353,6 @@
     <Compile Include="Assets\Model\OTE\EOTE.cs" />
     <Compile Include="Assets\Model\OTE\HoT\MHoT.cs" />
     <Compile Include="Assets\Model\OTE\MOTE.cs" />
-    <Compile Include="Assets\Model\OTE\OTEParams.cs" />
     <Compile Include="Assets\Model\Party\Builder\PartyBuilder.cs" />
     <Compile Include="Assets\Model\Party\Builder\SubPartyBuilder.cs" />
     <Compile Include="Assets\Model\Party\Enum\EStartCol.cs" />

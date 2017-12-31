@@ -1,5 +1,6 @@
 ﻿using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
+using Assets.Model.OTE;
 using Assets.Model.OTE.DoT;
 using Assets.Template.Other;
 using System.Collections.Generic;
@@ -28,8 +29,9 @@ namespace Assets.Model.Injury
             var injury = new MInjury(this._type);
             if (this.DoT.X != EDoT.None)
             {
-                injury.DoT = new MDoT(this.DoT.X);
-                injury.DoT.SetDur(this.DoT.Y);
+                var data = new MOTEData();
+                data.Dur = this.DoT.Y;
+                injury.DoT = new MDoT(this.DoT.X, data);
             }
             foreach (var stat in this.PStatMods)
             {
