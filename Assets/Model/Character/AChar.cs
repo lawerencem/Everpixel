@@ -9,6 +9,7 @@ using Assets.Model.Class;
 using Assets.Model.Class.Enum;
 using Assets.Model.Map.Combat.Tile;
 using Assets.Model.Party;
+using Assets.Model.Perk;
 using System.Collections.Generic;
 
 namespace Assets.Model.Character
@@ -38,6 +39,8 @@ namespace Assets.Model.Character
         public CMount Mount { get { return this._mount; } }
         public bool LParty { get { return this._lParty; } }
         public T Type { get { return this._type; } }
+
+        public void AddPerk(MPerk perk) { this._perks.AddPerk(perk); }
 
         public CharAbilities<T> GetAbilities() { return this._abilities; }
         public Dictionary<EClass, MClass> GetBaseClasses() { return this._baseClasses; }

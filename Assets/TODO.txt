@@ -21,7 +21,6 @@
 - Combat logic
 	- Bonuses to Hit when surrounding
 	- Height bonuses / penalties
-	- 
 	
 
 Fix Keynotfound in main gui

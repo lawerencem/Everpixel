@@ -365,6 +365,7 @@
     <Compile Include="Assets\Model\Perk\APerk.cs" />
     <Compile Include="Assets\Model\Perk\AbilityMod\MAbilityModPerk.cs" />
     <Compile Include="Assets\Model\Perk\EPerk.cs" />
+    <Compile Include="Assets\Model\Perk\EPerkType.cs" />
     <Compile Include="Assets\Model\Perk\Equipment\MEquipmentPerk.cs" />
     <Compile Include="Assets\Model\Perk\Equipment\TwoHandedExpert.cs" />
     <Compile Include="Assets\Model\Perk\EquipmentSStat\Colossus.cs" />

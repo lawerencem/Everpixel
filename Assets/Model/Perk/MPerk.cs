@@ -11,7 +11,6 @@ namespace Assets.Model.Perk
     {
         public double AoE { get; set; }
         public double Dur { get; set; }
-        public MChar Parent { get; set; }
         public EResistType Resist { get; set; }
         public double Val { get; set; }
         public double ValPerPower { get; set; }
@@ -19,16 +18,16 @@ namespace Assets.Model.Perk
         public MPerk(EPerk type)
         {
             this._type = type;
+            this.Init();
         }
 
-        public virtual void Init(MChar parent)
+        private void Init()
         {
             try
             {
                 var proto = PerkTable.Instance.Table[this.Type];
                 this.AoE = proto.AoE;
                 this.Dur = proto.Dur;
-                this.Parent = parent;
                 this.Resist = EResistType.None;
                 this.Val = proto.Val;
                 this.ValPerPower = proto.ValPerPower;
@@ -37,7 +36,6 @@ namespace Assets.Model.Perk
             {
                 Debug.LogError(e);
             }
-            
         }
     }
 }
