@@ -6,7 +6,7 @@ namespace Assets.Model.Weapon.Abilities
 {
     public class WideSlash : MAbility
     {
-        public WideSlash() : base(EAbility.Wide_Slash) { }
+        public WideSlash() : base(EAbility.Wide_Slash) { this._wpnAbility = true; }
 
         public override void Predict(MHit hit)
         {

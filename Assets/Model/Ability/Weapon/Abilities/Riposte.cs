@@ -6,7 +6,7 @@ namespace Assets.Model.Weapon.Abilities
 {
     public class Riposte : MAbility
     {
-        public Riposte() : base(EAbility.Riposte) { }
+        public Riposte() : base(EAbility.Riposte) { this._wpnAbility = true; }
 
         public override void Predict(MHit hit)
         {

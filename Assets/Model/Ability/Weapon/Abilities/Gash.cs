@@ -6,7 +6,7 @@ namespace Assets.Model.Weapon.Abilities
 {
     public class Gash : MAbility
     {
-        public Gash() : base(EAbility.Gash) { }
+        public Gash() : base(EAbility.Gash) { this._wpnAbility = true; }
 
         public override void Predict(MHit hit)
         {

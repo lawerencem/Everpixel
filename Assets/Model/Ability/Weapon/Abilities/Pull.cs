@@ -6,7 +6,7 @@ namespace Assets.Model.Weapon.Abilities
 {
     public class Pull : MAbility
     {
-        public Pull() : base(EAbility.Pull) { }
+        public Pull() : base(EAbility.Pull) { this._wpnAbility = true; }
 
         public override void Predict(MHit hit)
         {

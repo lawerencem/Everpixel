@@ -16,7 +16,7 @@ namespace Assets.Model.Character
         public MChar(ERace race)
         {
             this._race = race;
-            this._abilities = new CharAbilities<ECharType>();
+            this._abilities = new CharAbilities();
             this._baseClasses = new Dictionary<EClass, MClass>();
             this._baseStats = new BaseStats();
             this._curStats = new CharStats();

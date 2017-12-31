@@ -6,7 +6,7 @@ namespace Assets.Model.Weapon.Abilities
 {
     public class BreakArmor : MAbility
     {
-        public BreakArmor() : base(EAbility.Break_Armor) { }
+        public BreakArmor() : base(EAbility.Break_Armor) { this._wpnAbility = true; }
 
         public override void Predict(MHit hit)
         {

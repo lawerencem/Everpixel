@@ -6,7 +6,7 @@ namespace Assets.Model.Weapon.Abilities
 {
     public class Shove : MAbility
     {
-        public Shove() : base(EAbility.Shove) { }
+        public Shove() : base(EAbility.Shove) { this._wpnAbility = true; }
 
         public override void Predict(MHit hit)
         {

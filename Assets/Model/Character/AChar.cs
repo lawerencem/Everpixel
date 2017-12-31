@@ -18,7 +18,7 @@ namespace Assets.Model.Character
     {
         private CChar _controller;
 
-        protected CharAbilities<T> _abilities;
+        protected CharAbilities _abilities;
         protected Dictionary<EClass, MClass> _baseClasses;
         protected BaseStats _baseStats;
         protected CharStats _curStats;
@@ -42,7 +42,7 @@ namespace Assets.Model.Character
 
         public void AddPerk(MPerk perk) { this._perks.AddPerk(perk); }
 
-        public CharAbilities<T> GetAbilities() { return this._abilities; }
+        public CharAbilities GetAbilities() { return this._abilities; }
         public Dictionary<EClass, MClass> GetBaseClasses() { return this._baseClasses; }
         public BaseStats GetBaseStats() { return this._baseStats; }
         public CharStats GetCurStats() { return this._curStats; }

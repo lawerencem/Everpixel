@@ -7,9 +7,11 @@ namespace Assets.Model.Ability
     {
         protected AbilityData _data;
         protected AbilityLogic _logic;
+        protected bool _wpnAbility;
 
         protected EAbility _type;
         public EAbility Type { get { return this._type; } }
+        public bool WpnAbility { get { return this._wpnAbility; } }
 
         public AbilityData Data { get { return this._data; } }
 

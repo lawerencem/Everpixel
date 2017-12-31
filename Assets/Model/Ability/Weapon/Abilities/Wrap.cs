@@ -6,7 +6,7 @@ namespace Assets.Model.Weapon.Abilities
 {
     public class Wrap : MAbility
     {
-        public Wrap() : base(EAbility.Wrap) { }
+        public Wrap() : base(EAbility.Wrap) { this._wpnAbility = true; }
 
         public override void Predict(MHit hit)
         {

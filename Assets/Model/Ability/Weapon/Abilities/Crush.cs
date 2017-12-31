@@ -6,7 +6,7 @@ namespace Assets.Model.Weapon.Abilities
 {
     public class Crush : MAbility
     {
-        public Crush() : base(EAbility.Crush) { }
+        public Crush() : base(EAbility.Crush) { this._wpnAbility = true; }
 
         public override void Predict(MHit hit)
         {

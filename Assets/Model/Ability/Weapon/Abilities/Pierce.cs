@@ -6,7 +6,7 @@ namespace Assets.Model.Weapon.Abilities
 {
     public class Pierce : MAbility
     {
-        public Pierce() : base(EAbility.Pierce) { }
+        public Pierce() : base(EAbility.Pierce) { this._wpnAbility = true; }
 
         public override void Predict(MHit hit)
         {

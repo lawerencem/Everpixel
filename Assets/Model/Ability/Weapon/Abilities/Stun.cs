@@ -6,7 +6,7 @@ namespace Assets.Model.Weapon.Abilities
 {
     public class Stun : MAbility
     {
-        public Stun() : base(EAbility.Stun) { }
+        public Stun() : base(EAbility.Stun) { this._wpnAbility = true; }
 
         public override void Predict(MHit hit)
         {

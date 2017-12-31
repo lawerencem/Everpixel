@@ -6,7 +6,7 @@ namespace Assets.Model.Weapon.Abilities
 {
     public class Scatter : MAbility
     {
-        public Scatter() : base(EAbility.Scatter) { }
+        public Scatter() : base(EAbility.Scatter) { this._wpnAbility = true; }
 
         public override void Predict(MHit hit)
         {

@@ -6,7 +6,7 @@ namespace Assets.Model.Weapon.Abilities
 {
     public class GreatStrike : MAbility
     {
-        public GreatStrike() : base(EAbility.Great_Strike) { }
+        public GreatStrike() : base(EAbility.Great_Strike) { this._wpnAbility = true; }
 
         public override void Predict(MHit hit)
         {

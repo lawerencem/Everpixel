@@ -6,7 +6,7 @@ namespace Assets.Model.Weapon.Abilities
 {
     public class Maim : MAbility
     {
-        public Maim() : base(EAbility.Maim) { }
+        public Maim() : base(EAbility.Maim) { this._wpnAbility = true; }
 
         public override void Predict(MHit hit)
         {
