@@ -86,7 +86,7 @@ namespace Assets.View.Character
             return GetSprites(path);
         }
 
-        public Sprite[] GetLycanthropeSprites(string typeStr)
+        public Sprite[] GetShapeshiftSprites(string typeStr)
         {
             var path = StringUtil.PathBuilder(LYCANTHROPE_PATH, typeStr, EXTENSION);
             return GetSprites(path);

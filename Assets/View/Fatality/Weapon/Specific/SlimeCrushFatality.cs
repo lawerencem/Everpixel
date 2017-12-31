@@ -6,6 +6,7 @@ using Assets.Template.Script;
 using Assets.Template.Util;
 using Assets.Template.Utility;
 using Assets.View.Character;
+using Assets.View.Event;
 using Assets.View.Map;
 using Assets.View.Script.FX;
 using Template.Script;
@@ -106,7 +107,13 @@ namespace Assets.View.Fatality.Weapon.Ability
                 this.LayFatalityDecoRandomPosition(sprite, tgt);
             }
 
-            
+            var data = new EvSplatterData();
+            data.DmgPercent = 1.0;
+            data.Fatality = true;
+            data.Target = tgt.Handle;
+            var e = new EvSplatter(data);
+            e.TryProcess();
+
             VCharUtil.Instance.ProcessDeadChar(this._data.Target.Current as CChar);
         }
     }

@@ -116,6 +116,12 @@ namespace Assets.Controller.GUI.Combat
                 hit.CallbackHandler(this);
         }
 
+        public void ProcessShapeshiftFX(MAction a)
+        {
+            VCombatController.Instance.DisplayActionEventName(a);
+            a.ActiveAbility.DisplayFX(a);
+        }
+
         public void SetCallback(Callback callback)
         {
             this._callbacks = new List<Callback>() { callback };

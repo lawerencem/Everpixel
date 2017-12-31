@@ -3,6 +3,11 @@
 - Weekend Duties
   -- Fire Fatality
   -- Complete more abilities
+	--- Wereween
+	--- Howl
+	--- LEap
+  -- Change AP to base 10
+  -- Dead eyes on critters
 
 - Tidy up pixels on samurai armor and helms
 - Next Weekend

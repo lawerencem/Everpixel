@@ -24,16 +24,16 @@ namespace Assets.Model.Ability.Shapeshift
             this.OldSpriteHandlerSprites = new Dictionary<string, Sprite>();
         }
 
-        public ShapeshiftInfo Copy()
+        public ShapeshiftInfo Clone()
         {
-            var copy = new ShapeshiftInfo();
-            copy.CharAttackHead = this.CharAttackHead;
-            copy.CharAttackTorso = this.CharAttackTorso;
-            copy.CharHead = this.CharHead;
-            copy.CharHeadDead = this.CharHeadDead;
-            copy.CharHeadFlinch = this.CharHeadFlinch;
-            copy.CharTorso = this.CharTorso;
-            return copy;
+            var clone = new ShapeshiftInfo();
+            clone.CharAttackHead = this.CharAttackHead;
+            clone.CharAttackTorso = this.CharAttackTorso;
+            clone.CharHead = this.CharHead;
+            clone.CharHeadDead = this.CharHeadDead;
+            clone.CharHeadFlinch = this.CharHeadFlinch;
+            clone.CharTorso = this.CharTorso;
+            return clone;
         }
     }
 }

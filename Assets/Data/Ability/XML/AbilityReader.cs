@@ -30,6 +30,7 @@ namespace Assets.Data.Ability.XML
             this._paths.Add("Assets/Data/Ability/XML/Fighting.xml");
             this._paths.Add("Assets/Data/Ability/XML/Poison.xml");
             this._paths.Add("Assets/Data/Ability/XML/Physical.xml");
+            this._paths.Add("Assets/Data/Ability/XML/Shapeshift.xml");
             this._paths.Add("Assets/Data/Ability/XML/Songs.xml");
             this._paths.Add("Assets/Data/Ability/XML/WeaponAbilities.xml");
 
@@ -252,7 +253,7 @@ namespace Assets.Data.Ability.XML
                 case (EAbility.Stun): { table.Add(type, new Stun()); } break;
                 case (EAbility.Summon_Shoggoth): { table.Add(type, new SummonShoggoth()); } break;
                 case (EAbility.Weenlight_Sonata): { table.Add(type, new WeenlightSonata()); } break;
-                case (EAbility.Were_Ween): { table.Add(type, new Wereween()); } break;
+                case (EAbility.Wereween): { table.Add(type, new Wereween()); } break;
                 case (EAbility.Wide_Slash): { table.Add(type, new WideSlash()); } break;
                 case (EAbility.Wrap): { table.Add(type, new Wrap()); } break;
             }

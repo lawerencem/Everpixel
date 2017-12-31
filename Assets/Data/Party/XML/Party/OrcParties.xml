@@ -38,9 +38,8 @@
     <SubParty>Orc Scavengers,1</SubParty>
   </Party>
   <Party Name ="Orc Monsters">
-    <SubParty>Weens,1</SubParty>
-    <SubParty>Weens,3</SubParty>
-    <SubParty>Ween Dragon,14</SubParty>
+    <SubParty>Orc Wereweens,3</SubParty>
+    <SubParty>Orc Wereweens,7</SubParty>
   </Party>
   <Party Name ="Orc Shock Troops">
     <SubParty>Orc Berserkers,3</SubParty>

@@ -59,10 +59,14 @@ namespace Assets.Model.Effect
 
         public void ApplyEffectFx(CChar tgt, MEffect effect)
         {
-            var particles = ParticleController.Instance.CreateParticle(effect.Data.ParticlePath);
-            if (particles != null)
-                DecoUtil.AttachParticles(particles, tgt.Handle);
-            VCombatController.Instance.DisplayText(effect.Type.ToString().Replace("_", " "), tgt);
+            var exists = tgt.Proxy.GetEffects().GetEffects().Find(x => x.Type == effect.Type);
+            if (exists == null)
+            {
+                var particles = ParticleController.Instance.CreateParticle(effect.Data.ParticlePath);
+                if (particles != null)
+                    DecoUtil.AttachParticles(particles, tgt.Handle);
+                VCombatController.Instance.DisplayText(effect.Type.ToString().Replace("_", " "), tgt);
+            }
         }
 
         public virtual bool CheckConditions(MHit hit)

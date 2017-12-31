@@ -333,10 +333,10 @@
     <Compile Include="Assets\Model\Injury\MInjury.cs" />
     <Compile Include="Assets\Model\Injury\MInjuryParam.cs" />
     <Compile Include="Assets\Model\Map\Combat\Deco\MDeco.cs" />
-    <Compile Include="Assets\Model\Map\Combat\Landmark\Builder\FlatHillBuilder.cs" />
     <Compile Include="Assets\Model\Map\Combat\Landmark\Builder\ALandmarkBuilder.cs" />
-    <Compile Include="Assets\Model\Map\Combat\Landmark\ELandmark.cs" />
+    <Compile Include="Assets\Model\Map\Combat\Landmark\Builder\FlatHillBuilder.cs" />
     <Compile Include="Assets\Model\Map\Combat\Landmark\Builder\LandmarkFactory.cs" />
+    <Compile Include="Assets\Model\Map\Combat\Landmark\ELandmark.cs" />
     <Compile Include="Assets\Model\Map\Combat\Landmark\LandmarkParams.cs" />
     <Compile Include="Assets\Model\Map\Combat\Landmark\MLandmark.cs" />
     <Compile Include="Assets\Model\Map\Combat\MMap.cs" />
@@ -501,10 +501,10 @@
     <Compile Include="Assets\View\Mount\MountBridge.cs" />
     <Compile Include="Assets\View\Mount\VMount.cs" />
     <Compile Include="Assets\View\Particle\ParticleController.cs" />
-    <Compile Include="Assets\View\Script\FX\LycanthropeScript.cs" />
     <Compile Include="Assets\View\Script\FX\SAttackerJolt.cs" />
     <Compile Include="Assets\View\Script\FX\SBulletThenDelete.cs" />
     <Compile Include="Assets\View\Script\FX\SBulletThenEmbed.cs" />
+    <Compile Include="Assets\View\Script\FX\SDisplayShapeshift.cs" />
     <Compile Include="Assets\View\Script\FX\SFightFatalityExplosionMove.cs" />
     <Compile Include="Assets\View\Script\FX\SFlinch.cs" />
     <Compile Include="Assets\View\Script\GUI\SAbilityBtn.cs" />
@@ -519,6 +519,9 @@
     <None Include="Assets\Data\Ability\XML\Fighting.xml" />
     <None Include="Assets\Data\Ability\XML\Physical.xml" />
     <None Include="Assets\Data\Ability\XML\Poison.xml" />
+    <None Include="Assets\Data\Ability\XML\Shapeshift.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Data\Ability\XML\Songs.xml" />
     <None Include="Assets\Data\Ability\XML\WeaponAbilities.xml" />
     <None Include="Assets\Data\Bark\XML\Barks.xml" />
@@ -527,7 +530,9 @@
     <None Include="Assets\Data\Character\XML\Culture\Goblin.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Jomonese.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Norse.xml" />
-    <None Include="Assets\Data\Character\XML\Culture\Orcish.xml" />
+    <None Include="Assets\Data\Character\XML\Culture\Orcish.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Data\Character\XML\Culture\Roman.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Trollish.xml" />
     <None Include="Assets\Data\Character\XML\RaceParams.xml" />
@@ -587,7 +592,6 @@
     <None Include="Assets\Data\Zone\XML\Zones.xml" />
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

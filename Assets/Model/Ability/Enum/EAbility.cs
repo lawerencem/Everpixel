@@ -32,7 +32,7 @@
         Sever,
 
         // Shapeshift
-        Were_Ween,
+        Wereween,
 
         // Songs
         Haste_Song,

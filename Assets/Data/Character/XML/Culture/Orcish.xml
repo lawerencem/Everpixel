@@ -197,13 +197,13 @@
       </Stats>
     </Character>
     <Character name ="Greater Orc Wereween">
-      <Ability>Were_Ween</Ability>
       <Class>Warrior,5</Class>
       <Class>Lycanthrope,10</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
       <Abilities>
         <Ability name ="Charge"></Ability>
+        <Ability name ="Wereween"></Ability>
       </Abilities>
       <Perks>
       </Perks>
@@ -577,13 +577,13 @@
       </Stats>
     </Character>
     <Character name ="Orc Wereween">
-      <Ability>Were_Ween</Ability>
       <Class>Warrior,3</Class>
       <Class>Lycanthrope,5</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
       <Abilities>
         <Ability name ="Charge"></Ability>
+        <Ability name ="Wereween"></Ability>
       </Abilities>
       <Perks>
       </Perks>

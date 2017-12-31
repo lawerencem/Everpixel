@@ -22,20 +22,27 @@ namespace Assets.Model.Effect.Fortitude
                 var tgt = hit.Data.Target.Current as CChar;
                 var offense = hit.Data.Source.Proxy.GetStat(this.Data.OffensiveResist);
                 if (!calc.DidResist(tgt, this.Data.Resist, offense))
+                {
                     FHit.SetStunTrue(hit.Data.Flags);
+                    tgt.Proxy.AddEffect(this);
+                }
             }
         }
 
         public static void ProcessStunFX(CChar c)
         {
-            var path = StringUtil.PathBuilder(
-                CombatGUIParams.EFFECTS_PATH,
-                "Stun",
-                CombatGUIParams.PARTICLES_EXTENSION);
-            var particles = ParticleController.Instance.CreateParticle(path);
-            if (particles != null)
-                DecoUtil.AttachParticles(particles, c.Handle);
-            VCombatController.Instance.DisplayText("Stunned", c);
+            var stun = c.Proxy.GetEffects().GetEffects().Find(x => x.Type == EEffect.Stun);
+            if (stun == null)
+            {
+                var path = StringUtil.PathBuilder(
+                    CombatGUIParams.EFFECTS_PATH,
+                    "Stun",
+                    CombatGUIParams.PARTICLES_EXTENSION);
+                var particles = ParticleController.Instance.CreateParticle(path);
+                if (particles != null)
+                    DecoUtil.AttachParticles(particles, c.Handle);
+                VCombatController.Instance.DisplayText("Stunned", c);
+            }
         }
     }
 }

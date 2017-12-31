@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ActiveAbilities>
+  <MagicType name="Physical">
+    <ActiveAbility name="Wereween">
+      <AccMod>1</AccMod>
+      <AoE>0</AoE>
+      <APCost>7</APCost>
+      <ArmorIgnoreMod>0</ArmorIgnoreMod>
+      <ArmorPierceMod>0</ArmorPierceMod>
+      <BlockIgnoreMod>0</BlockIgnoreMod>
+      <ECastType>Shapeshift</ECastType>
+      <DmgPerPower>0.0</DmgPerPower>
+      <DodgeMod>0.0</DodgeMod>
+      <FlatDamage>0</FlatDamage>
+      <Hostile>False</Hostile>
+      <MeleeBlockChanceMod>0</MeleeBlockChanceMod>
+      <ParryModMod>0.0</ParryModMod>
+      <Range>0</Range>
+      <RangeBlockMod>0.0</RangeBlockMod>
+      <RechargeTime>0</RechargeTime>
+      <ShieldDamageMod>0</ShieldDamageMod>
+      <StaminaCost>55</StaminaCost>
+    </ActiveAbility>
+  </MagicType>
+</ActiveAbilities>
