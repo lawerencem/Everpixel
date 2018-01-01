@@ -1,13 +1,11 @@
 ﻿using Assets.Model.Party.Enum;
-using System.Collections.Generic;
 
 namespace Assets.Model.Party.Param
 {
-    public class SubPartyParams
+    public class SubPartyParam
     {
-        public double Chance { get; set; }
-        public int Difficulty { get; set; }
-        public string Name { get; set; }
+        public double Difficulty { get; set; }
         public EStartCol Row { get; set; }
+        public string Name { get; set; }
     }
 }

@@ -6,8 +6,8 @@ namespace Assets.Data.Party.Table
 {
     public class SubpartyTable : ASingleton<SubpartyTable>
     {
-        public Dictionary<string, List<SubPartyParams>> Table;
+        public Dictionary<string, List<SubPartyParam>> Table;
 
-        public SubpartyTable() { Table = new Dictionary<string, List<SubPartyParams>>(); }
+        public SubpartyTable() { Table = new Dictionary<string, List<SubPartyParam>>(); }
     }
 }

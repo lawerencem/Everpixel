@@ -6,8 +6,8 @@ namespace Assets.Data.Party.Table
 {
     public class PartyTable : ASingleton<PartyTable>
     {
-        public Dictionary<string, PartyParams> Table;
+        public Dictionary<string, List<Pair<string, double>>> Table;
 
-        public PartyTable() { Table = new Dictionary<string, PartyParams>(); }
+        public PartyTable() { Table = new Dictionary<string, List<Pair<string, double>>>(); }
     }
 }

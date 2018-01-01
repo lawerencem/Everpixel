@@ -5,6 +5,7 @@ using Assets.Controller.Map.Combat;
 using Assets.Controller.Map.Combat.Loader;
 using Assets.Model.Biome;
 using Assets.Model.Culture;
+using Assets.Model.Party.Param;
 using Assets.Template.Other;
 using UnityEngine;
 
@@ -46,8 +47,19 @@ namespace Assets.Controller.Managers
             gui.InitCombatGUI();
             var initInfo = new MapInitInfo();
             initInfo.Biome = EBiome.Grassland;
-            initInfo.LArmies.Add(new Pair<ECulture, string>(ECulture.Goblin, "Infantry"));
-            initInfo.RArmies.Add(new Pair<ECulture, string>(ECulture.Orcish, "Defenders"));
+            var lParty = new PartyBuildParams();
+            var rParty = new PartyBuildParams();
+
+            lParty.Culture = ECulture.Goblin;
+            lParty.Difficulty = 300;
+            lParty.Name = "Goblin Battle Squad";
+
+            rParty.Culture = ECulture.Goblin;
+            rParty.Difficulty = 300;
+            rParty.Name = "Goblin Battle Squad";
+
+            initInfo.LParties.Add(lParty);
+            initInfo.RParties.Add(rParty);
             initInfo.Cols = 14;
             initInfo.Rows = 14;
             var map = this._mapLoader.GetCombatMap(initInfo);

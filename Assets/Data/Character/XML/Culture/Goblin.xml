@@ -946,7 +946,7 @@
       </Stats>
     </Character>
     <Character name ="Veteran Spider Rider Archer">
-      <Class>SoldierS,6</Class>
+      <Class>Soldier,6</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Goblin</ERace>
       <Mount>Octolegs</Mount>

@@ -24,14 +24,14 @@ namespace Assets.Data.Party.XML
 
         public SubPartyReader() : base()
         {
-            this._paths.Add("Assets/Data/Party/XML/SubParty/AmazonSubParties.xml");
-            this._paths.Add("Assets/Data/Party/XML/SubParty/BretonSubParties.xml");
+            //this._paths.Add("Assets/Data/Party/XML/SubParty/AmazonSubParties.xml");
+            //this._paths.Add("Assets/Data/Party/XML/SubParty/BretonSubParties.xml");
             this._paths.Add("Assets/Data/Party/XML/SubParty/GoblinSubParties.xml");
-            this._paths.Add("Assets/Data/Party/XML/SubParty/JomonSubParties.xml");
-            this._paths.Add("Assets/Data/Party/XML/SubParty/NordSubParties.xml");
-            this._paths.Add("Assets/Data/Party/XML/SubParty/OrcSubParties.xml");
-            this._paths.Add("Assets/Data/Party/XML/SubParty/RomeSubParties.xml");
-            this._paths.Add("Assets/Data/Party/XML/SubParty/TrollSubParties.xml");
+            //this._paths.Add("Assets/Data/Party/XML/SubParty/JomonSubParties.xml");
+            //this._paths.Add("Assets/Data/Party/XML/SubParty/NordSubParties.xml");
+            //this._paths.Add("Assets/Data/Party/XML/SubParty/OrcSubParties.xml");
+            //this._paths.Add("Assets/Data/Party/XML/SubParty/RomeSubParties.xml");
+            //this._paths.Add("Assets/Data/Party/XML/SubParty/TrollSubParties.xml");
         }
 
         public override void ReadFromFile()
@@ -39,7 +39,6 @@ namespace Assets.Data.Party.XML
             foreach(var path in this._paths)
             {
                 string name = "";
-                int difficulty = 0;
 
                 var doc = XDocument.Load(path);
 
@@ -55,12 +54,10 @@ namespace Assets.Data.Party.XML
                     {
                         foreach (var ele in el.Elements())
                         {
-                            if (ele.Name == "Difficulty")
-                                difficulty = int.Parse(ele.Value);
-                            else if (ele.Name == "Character")
+                            if (ele.Name == "Character")
                             {
-                                if (!SubpartyTable.Instance.Table.ContainsKey(name + "_" + difficulty))
-                                    SubpartyTable.Instance.Table.Add((name + "_" + difficulty), new List<SubPartyParams>());
+                                if (!SubpartyTable.Instance.Table.ContainsKey(name))
+                                    SubpartyTable.Instance.Table.Add((name), new List<SubPartyParam>());
 
                                 var csv = ele.Value.Split(',');
                                 var values = new List<string>();
@@ -68,16 +65,17 @@ namespace Assets.Data.Party.XML
                                     values.Add(csv[i]);
                                 if (values.Count > 2)
                                 {
-                                    double chance = 0;
+                                    var param = new SubPartyParam();
+
+                                    double difficulty = 0;
                                     EStartCol row = EStartCol.None;
 
-                                    var param = new SubPartyParams();
-                                    if (double.TryParse(values[SubPartiesXMLIndexes.CHANCE], out chance))
-                                        param.Chance = chance;
+                                    if (double.TryParse(values[SubPartiesXMLIndexes.DIFFICULTY], out difficulty))
+                                        param.Difficulty = difficulty;
                                     param.Name = values[SubPartiesXMLIndexes.NAME];
                                     if (EnumUtil<EStartCol>.TryGetEnumValue(values[SubPartiesXMLIndexes.ROW], ref row))
                                         param.Row = row;
-                                    SubpartyTable.Instance.Table[name + "_" + difficulty].Add(param);
+                                    SubpartyTable.Instance.Table[name].Add(param);
                                 }
                             }
                         }

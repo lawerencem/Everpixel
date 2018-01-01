@@ -2,6 +2,7 @@
 using Assets.Model.Party.Param;
 using Assets.Template.Other;
 using Assets.Template.XML;
+using System.Collections.Generic;
 using System.Xml.Linq;
 
 namespace Assets.Data.Party.XML
@@ -21,13 +22,13 @@ namespace Assets.Data.Party.XML
 
         public PartyReader() : base()
         {
-            this._paths.Add("Assets/Data/Party/XML/Party/AmazonParties.xml");
-            this._paths.Add("Assets/Data/Party/XML/Party/BretonParties.xml");
+            //this._paths.Add("Assets/Data/Party/XML/Party/AmazonParties.xml");
+            //this._paths.Add("Assets/Data/Party/XML/Party/BretonParties.xml");
             this._paths.Add("Assets/Data/Party/XML/Party/GoblinParties.xml");
-            this._paths.Add("Assets/Data/Party/XML/Party/JomonParties.xml");
-            this._paths.Add("Assets/Data/Party/XML/Party/NordParties.xml");
-            this._paths.Add("Assets/Data/Party/XML/Party/OrcParties.xml");
-            this._paths.Add("Assets/Data/Party/XML/Party/TrollParties.xml");
+            //this._paths.Add("Assets/Data/Party/XML/Party/JomonParties.xml");
+            //this._paths.Add("Assets/Data/Party/XML/Party/NordParties.xml");
+            //this._paths.Add("Assets/Data/Party/XML/Party/OrcParties.xml");
+            //this._paths.Add("Assets/Data/Party/XML/Party/TrollParties.xml");
         }
 
         public override void ReadFromFile()
@@ -46,7 +47,7 @@ namespace Assets.Data.Party.XML
                             name = att.Value.ToString();
 
                         if (!PartyTable.Instance.Table.ContainsKey(name))
-                            PartyTable.Instance.Table.Add(name, new PartyParams());
+                            PartyTable.Instance.Table.Add(name, new List<Pair<string, double>>());
                     }
 
                     foreach (var att in el.Attributes())
@@ -58,8 +59,8 @@ namespace Assets.Data.Party.XML
                                 var csv = ele.Value.Split(',');
                                 if (csv.Length > 1)
                                 {
-                                    var subParty = new Pair<string, int>(csv[0], int.Parse(csv[1]));
-                                    PartyTable.Instance.Table[name].SubParties.Add(subParty);
+                                    var subParty = new Pair<string, double>(csv[0], double.Parse(csv[1]));
+                                    PartyTable.Instance.Table[name].Add(subParty);
                                 }
                             }
                         }

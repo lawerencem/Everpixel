@@ -141,12 +141,8 @@
     <Compile Include="Assets\Data\Map\Landmark\XML\LandmarkReader.cs" />
     <Compile Include="Assets\Data\Mount\Table\MountTable.cs" />
     <Compile Include="Assets\Data\Mount\XML\MountsReader.cs" />
-    <Compile Include="Assets\Data\Party\Table\ArmyTable.cs" />
-    <Compile Include="Assets\Data\Party\Table\MetapartyTable.cs" />
     <Compile Include="Assets\Data\Party\Table\PartyTable.cs" />
     <Compile Include="Assets\Data\Party\Table\SubpartyTable.cs" />
-    <Compile Include="Assets\Data\Party\XML\ArmyReader.cs" />
-    <Compile Include="Assets\Data\Party\XML\MetapartyReader.cs" />
     <Compile Include="Assets\Data\Party\XML\PartyReader.cs" />
     <Compile Include="Assets\Data\Party\XML\SubPartiesXMLIndexes.cs" />
     <Compile Include="Assets\Data\Party\XML\SubpartyReader.cs" />
@@ -357,9 +353,8 @@
     <Compile Include="Assets\Model\Party\Builder\SubPartyBuilder.cs" />
     <Compile Include="Assets\Model\Party\Enum\EStartCol.cs" />
     <Compile Include="Assets\Model\Party\MParty.cs" />
-    <Compile Include="Assets\Model\Party\Param\ArmyParams.cs" />
-    <Compile Include="Assets\Model\Party\Param\MetapartyParams.cs" />
-    <Compile Include="Assets\Model\Party\Param\PartyParams.cs" />
+    <Compile Include="Assets\Model\Party\Param\PartyBuildParams.cs" />
+    <Compile Include="Assets\Model\Party\Param\SubPartyBuildParams.cs" />
     <Compile Include="Assets\Model\Party\Param\SubPartyParams.cs" />
     <Compile Include="Assets\Model\Perk\APerk.cs" />
     <Compile Include="Assets\Model\Perk\AbilityMod\MAbilityModPerk.cs" />
@@ -561,12 +556,6 @@
     <None Include="Assets\Data\Map\Deco\XML\TileDeco.xml" />
     <None Include="Assets\Data\Map\Landmark\XML\Landmarks.xml" />
     <None Include="Assets\Data\Mount\XML\Mounts.xml" />
-    <None Include="Assets\Data\Party\XML\Army\GoblinArmies.xml" />
-    <None Include="Assets\Data\Party\XML\Army\JomonArmies.xml" />
-    <None Include="Assets\Data\Party\XML\Army\OrcArmies.xml" />
-    <None Include="Assets\Data\Party\XML\MetaParty\GoblinMetaparties.xml" />
-    <None Include="Assets\Data\Party\XML\MetaParty\JomonMetaparties.xml" />
-    <None Include="Assets\Data\Party\XML\MetaParty\OrcMetaParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\AmazonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\BretonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\GoblinParties.xml" />

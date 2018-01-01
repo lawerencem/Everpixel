@@ -1,176 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <SubParties>
-  <SubParty Name ="Spider Rider Archers">
-    <Difficulty>3</Difficulty>
-    <Character>1,Spider Rider Archer,Three</Character>
+  <SubParty Name ="Assassins">
+    <Character>12,Rookie Slimer,Two</Character>
+    <Character>16,Slimer,Two</Character>
+    <Character>22,Pro Slimer,Two</Character>
+    <Character>25,Licensed Slimer,Two</Character>
   </SubParty>
-  <SubParty Name ="Spider Rider Archers">
-    <Difficulty>5</Difficulty>
-    <Character>1,Veteran Spider Rider Archer,Three</Character>
+  <SubParty Name ="Calvary Archers">
+    <Character>18,Spider Rider Archer,Three</Character>
+    <Character>22,Veteran Spider Rider Archer,Three</Character>
   </SubParty>
-  <SubParty Name ="Spider Riders">
-    <Difficulty>2</Difficulty>
-    <Character>1,Spider Rider,Two</Character>
+  <SubParty Name ="Commanders">
+    <Character>25,Gromp Boss,Two</Character>
+    <Character>25,Spider Boss,Three</Character>
+    <Character>32,Warboss,Two</Character>
   </SubParty>
-  <SubParty Name ="Spider Riders">
-    <Difficulty>4</Difficulty>
-    <Character>1,Veteran Spider Rider,Two</Character>
+  <SubParty Name ="Shock Calvary">
+    <Character>15,Gromp Hopper,Two</Character>
+    <Character>18,Crazed Gromp Hopper,Two</Character>
+    <Character>22,Lunatic Gromp Hopper,Two</Character>
   </SubParty>
-  <SubParty Name ="Fodder">
-    <Difficulty>1</Difficulty>
-    <Character>1,Fodder,One</Character>
-    <Character>1,Fodder,One</Character>
+  <SubParty Name ="Slime Mages">
+    <Character>13,Fledgling Slime Lord,Three</Character>
+    <Character>20,Slime Lord,Three</Character>
   </SubParty>
-  <SubParty Name ="Fodder">
-    <Difficulty>2</Difficulty>
-    <Character>1,Fodder Archer,Two</Character>
-    <Character>1,Fodder Archer,Two</Character>
+  <SubParty Name ="Light Calvary">
+    <Character>16,Spider Rider,Two</Character>
+    <Character>20,Veteran Spider Rider,Two</Character>
   </SubParty>
-  <SubParty Name ="Fodder">
-    <Difficulty>3</Difficulty>
-    <Character>1,Grizzled Fodder,One</Character>
-    <Character>1,Grizzled Fodder,One</Character>
+  <SubParty Name ="Militia">
+    <Character>7,Fodder,One</Character>
+    <Character>10,Fodder Archer,One</Character>
+    <Character>11,Grizzled Fodder,One</Character>
+    <Character>14,Expert Fodder,One</Character>
+    <Character>16,Fodder Hero,One</Character>
   </SubParty>
-  <SubParty Name ="Fodder">
-    <Difficulty>6</Difficulty>
-    <Character>1,Fodder Hero,One</Character>
-    <Character>1,Fodder Hero,One</Character>
-    <Character>1,Fodder Hero,One</Character>
+  <SubParty Name ="Void Mages">
+    <Character>12,Voidweaver,Three</Character>
+    <Character>18,Expert Voidweaver,Three</Character>
+    <Character>25,Master Voidweaver,Three</Character>
   </SubParty>
-  <SubParty Name ="Goblin Boss">
-    <Difficulty>6</Difficulty>
-    <Character>1,Boss,Two</Character>
-  </SubParty>
-  <SubParty Name ="Goblin Boss">
-    <Difficulty>8</Difficulty>
-    <Character>1,Warboss,Two</Character>
-  </SubParty>
-  <SubParty Name ="Goblin Boss">
-    <Difficulty>9</Difficulty>
-    <Character>1,Spider Boss,Three</Character>
-  </SubParty>
-  <SubParty Name ="Goblin Boss">
-    <Difficulty>13</Difficulty>
-    <Character>1,Gromp Boss,Two</Character>
-  </SubParty>
-  <SubParty Name ="Voidweavers">
-    <Difficulty>6</Difficulty>
-    <Character>1,Voidweaver,Three</Character>
-    <Character>1,Voidweaver,Three</Character>
-  </SubParty>
-  <SubParty Name ="Voidweavers">
-    <Difficulty>9</Difficulty>
-    <Character>1,Expert Voidweaver,Three</Character>
-    <Character>1,Expert Voidweaver,Three</Character>
-  </SubParty>
-  <SubParty Name ="Voidweavers">
-    <Difficulty>14</Difficulty>
-    <Character>1,Master Voidweaver,Three</Character>
-    <Character>1,Master Voidweaver,Three</Character>
-  </SubParty>
-  <SubParty Name ="Gromp Hoppers">
-    <Difficulty>4</Difficulty>
-    <Character>1,Gromp Hopper,Two</Character>
-    <Character>1,Gromp Hopper,Two</Character>
-  </SubParty>
-  <SubParty Name ="Gromp Hoppers">
-    <Difficulty>6</Difficulty>
-    <Character>1,Crazed Gromp Hopper,Two</Character>
-    <Character>1,Crazed Gromp Hopper,Two</Character>
-  </SubParty>
-  <SubParty Name ="Gromp Hoppers">
-    <Difficulty>8</Difficulty>
-    <Character>1,Lunatic Gromp Hopper,Two</Character>
-    <Character>1,Lunatic Gromp Hopper,Two</Character>
-  </SubParty>
-  <SubParty Name ="Mindslugs">
-    <Difficulty>4</Difficulty>
-    <Character>1,Psycargot,Three</Character>
-    <Character>1,Psycargot,Three</Character>
-  </SubParty>
-  <SubParty Name ="Mindslugs">
-    <Difficulty>5</Difficulty>
-    <Character>1,Psylug,Three</Character>
-  </SubParty>
-  <SubParty Name ="Mindslugs">
-    <Difficulty>8</Difficulty>
-    <Character>1,Psycargot,Three</Character>
-    <Character>1,Psycargot,Three</Character>
-    <Character>1,Psylug,Three</Character>
-  </SubParty>
-  <SubParty Name ="Razorbacks">
-    <Difficulty>6</Difficulty>
-    <Character>1,Razorback,One</Character>
-    <Character>1,Razorback,One</Character>
-  </SubParty>
-  <SubParty Name ="Shoggoths">
-    <Difficulty>3</Difficulty>
-    <Character>1,Sluggoth,One</Character>
-    <Character>1,Sluggoth,One</Character>
-    <Character>1,Sluggoth,One</Character>
-  </SubParty>
-  <SubParty Name ="Shoggoths">
-    <Difficulty>6</Difficulty>
-    <Character>1,Shoggoth,One</Character>
-    <Character>1,Sluggoth,One</Character>
-    <Character>1,Sluggoth,One</Character>
-  </SubParty>
-  <SubParty Name ="Shoggoths">
-    <Difficulty>7</Difficulty>
-    <Character>1,Shoggoth,One</Character>
-    <Character>1,Shoggoth,One</Character>
-  </SubParty>
-  <SubParty Name ="Slime Lords">
-    <Difficulty>4</Difficulty>
-    <Character>1,Fledgling Slime Lord,Three</Character>
-    <Character>1,Sluggish,One</Character>
-  </SubParty>
-  <SubParty Name ="Slime Lords">
-    <Difficulty>5</Difficulty>
-    <Character>1,Slime Lord,Three</Character>
-    <Character>1,Sluggish,One</Character>
-  </SubParty>
-  <SubParty Name ="Slime Lords">
-    <Difficulty>7</Difficulty>
-    <Character>1,Slime Lord,Three</Character>
-    <Character>1,Sluggemoth,One</Character>
-  </SubParty>
-  <SubParty Name ="Slimers">
-    <Difficulty>2</Difficulty>
-    <Character>1,Rookie Slimer,One</Character>
-  </SubParty>
-  <SubParty Name ="Slimers">
-    <Difficulty>3</Difficulty>
-    <Character>1,Slimer,One</Character>
-  </SubParty>
-  <SubParty Name ="Slimers">
-    <Difficulty>4</Difficulty>
-    <Character>1,Pro Slimer,One</Character>
-  </SubParty>
-  <SubParty Name ="Slimers">
-    <Difficulty>6</Difficulty>
-    <Character>1,Licensed Slimer,One</Character>
-  </SubParty>
-  <SubParty Name ="Slug Horde">
-    <Difficulty>3</Difficulty>
-    <Character>1,Sluggish,One</Character>
-    <Character>1,Sluggish,One</Character>
-    <Character>1,Sluggish,One</Character>
-  </SubParty>
-  <SubParty Name ="Slug Horde">
-    <Difficulty>5</Difficulty>
-    <Character>1,Sluggemoth,One</Character>
-    <Character>1,Sluggish,One</Character>
-    <Character>1,Sluggish,One</Character>
-  </SubParty>
-  <SubParty Name ="Slug Horde">
-    <Difficulty>7</Difficulty>
-    <Character>1,Sluggemoth,One</Character>
-    <Character>1,Sluggemoth,One</Character>
-    <Character>1,Sluggish,One</Character>
-  </SubParty>
-  <SubParty Name ="Slugzilla">
-    <Difficulty>15</Difficulty>
-    <Character>1,Slugzilla,One</Character>
+  <SubParty Name ="Warslugs">
+    <Character>5,Sluggish,One</Character>
+    <Character>9,Sluggoth,One</Character>
+    <Character>13,Sluggemoth,One</Character>
+    <Character>14,Razorback,One</Character>
+    <Character>18,Shoggoth,One</Character>
+    <Character>35,Slugzilla,One</Character>
   </SubParty>
 </SubParties>
