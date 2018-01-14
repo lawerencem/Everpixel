@@ -53,9 +53,9 @@ namespace Assets.Controller.Managers
             lParty.Difficulty = 220;
             lParty.Name = "Orc Battle Squad";
 
-            rParty.Culture = ECulture.Goblin;
+            rParty.Culture = ECulture.Norse;
             rParty.Difficulty = 220;
-            rParty.Name = "Goblin Battle Squad";
+            rParty.Name = "Norse Infantry";
 
             initInfo.LParties.Add(lParty);
             initInfo.RParties.Add(rParty);

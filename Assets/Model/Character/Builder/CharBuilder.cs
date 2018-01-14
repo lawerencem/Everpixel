@@ -18,6 +18,7 @@ using Assets.Template.Other;
 using Assets.Template.Util;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Assets.Model.Character.Builder
 {
@@ -181,10 +182,19 @@ namespace Assets.Model.Character.Builder
                 csv = GetEquipmentCSV(arg.Armors[SINGULAR]);
             if (csv != null && csv.Count >= 3)
             {
-                var key = csv[PredefinedEquipmentXMLIndexes.NAME] + "_" + csv[PredefinedEquipmentXMLIndexes.TIER];
-                var armor = ArmorParamTable.Instance.Table[key];
-                armor.Sprites = EquipmentSpritesTable.Instance.Table[key];
-                return armor;
+                try
+                {
+                    var key = csv[PredefinedEquipmentXMLIndexes.NAME] + "_" + csv[PredefinedEquipmentXMLIndexes.TIER];
+                    var armor = ArmorParamTable.Instance.Table[key];
+                    armor.Sprites = EquipmentSpritesTable.Instance.Table[key];
+                    return armor;
+                }
+                catch(KeyNotFoundException e)
+                {
+                    var key = csv[PredefinedEquipmentXMLIndexes.NAME] + "_" + csv[PredefinedEquipmentXMLIndexes.TIER];
+                    Debug.Log(key + " was not found");
+                    return null;
+                }
             }
             else
                 return null;
@@ -210,10 +220,19 @@ namespace Assets.Model.Character.Builder
                 csv = GetEquipmentCSV(arg.Helms[SINGULAR]);
             if (csv != null && csv.Count >= 3)
             {
-                var key = csv[PredefinedEquipmentXMLIndexes.NAME] + "_" + csv[PredefinedEquipmentXMLIndexes.TIER];
-                var helm = ArmorParamTable.Instance.Table[key];
-                helm.Sprites = EquipmentSpritesTable.Instance.Table[key];
-                return helm;
+                try
+                {
+                    var key = csv[PredefinedEquipmentXMLIndexes.NAME] + "_" + csv[PredefinedEquipmentXMLIndexes.TIER];
+                    var helm = ArmorParamTable.Instance.Table[key];
+                    helm.Sprites = EquipmentSpritesTable.Instance.Table[key];
+                    return helm;
+                }
+                catch(KeyNotFoundException e)
+                {
+                    var key = csv[PredefinedEquipmentXMLIndexes.NAME] + "_" + csv[PredefinedEquipmentXMLIndexes.TIER];
+                    Debug.Log(key + " was not found");
+                    return null;
+                }
             }
             else
                 return null;

@@ -1,6 +1,8 @@
 ﻿using Assets.Data.Party.Table;
+using Assets.Model.Culture;
 using Assets.Model.Party.Param;
 using Assets.Template.Other;
+using Assets.Template.Util;
 using Assets.Template.XML;
 using System.Collections.Generic;
 using System.Xml.Linq;
@@ -26,7 +28,7 @@ namespace Assets.Data.Party.XML
             //this._paths.Add("Assets/Data/Party/XML/Party/BretonParties.xml");
             this._paths.Add("Assets/Data/Party/XML/Party/GoblinParties.xml");
             //this._paths.Add("Assets/Data/Party/XML/Party/JomonParties.xml");
-            //this._paths.Add("Assets/Data/Party/XML/Party/NordParties.xml");
+            this._paths.Add("Assets/Data/Party/XML/Party/NordParties.xml");
             this._paths.Add("Assets/Data/Party/XML/Party/OrcParties.xml");
             //this._paths.Add("Assets/Data/Party/XML/Party/TrollParties.xml");
         }
@@ -35,34 +37,50 @@ namespace Assets.Data.Party.XML
         {
             foreach (var path in this._paths)
             {
-                string name = "";
-
                 var doc = XDocument.Load(path);
 
                 foreach (var el in doc.Root.Elements())
                 {
-                    if (el.Name == "Party")
-                    {
-                        foreach (var att in el.Attributes())
-                            name = att.Value.ToString();
-
-                        if (!PartyTable.Instance.Table.ContainsKey(name))
-                            PartyTable.Instance.Table.Add(name, new List<Pair<string, double>>());
-                    }
-
+                    ECulture culture = ECulture.None;
                     foreach (var att in el.Attributes())
                     {
-                        foreach (var ele in el.Elements())
+                        if (EnumUtil<ECulture>.TryGetEnumValue(att.Value.ToString(), ref culture))
                         {
-                            if (ele.Name == "SubParty")
-                            {
-                                var csv = ele.Value.Split(',');
-                                if (csv.Length > 1)
-                                {
-                                    var subParty = new Pair<string, double>(csv[0], double.Parse(csv[1]));
-                                    PartyTable.Instance.Table[name].Add(subParty);
-                                }
-                            }
+                            var dict = new Dictionary<string, List<Pair<string, double>>>();
+                            PartyTable.Instance.Table.Add(culture, dict);
+
+                            foreach (var ele in el.Elements())
+                                this.HandleParty(ele, culture);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void HandleParty(XElement el, ECulture culture)
+        {
+            string name = "";
+
+            if (el.Name == "Party")
+            {
+                foreach (var att in el.Attributes())
+                    name = att.Value.ToString();
+
+                if (!PartyTable.Instance.Table[culture].ContainsKey(name))
+                    PartyTable.Instance.Table[culture].Add(name, new List<Pair<string, double>>());
+            }
+
+            foreach (var att in el.Attributes())
+            {
+                foreach (var ele in el.Elements())
+                {
+                    if (ele.Name == "SubParty")
+                    {
+                        var csv = ele.Value.Split(',');
+                        if (csv.Length > 1)
+                        {
+                            var subParty = new Pair<string, double>(csv[0], double.Parse(csv[1]));
+                            PartyTable.Instance.Table[culture][name].Add(subParty);
                         }
                     }
                 }

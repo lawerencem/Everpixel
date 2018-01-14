@@ -2,7 +2,6 @@
 using Assets.Model.Culture;
 using Assets.Model.Party.Enum;
 using Assets.Model.Party.Param;
-using Assets.Template.Other;
 using Assets.Template.Util;
 using Assets.Template.XML;
 using System.Collections.Generic;
@@ -29,7 +28,7 @@ namespace Assets.Data.Party.XML
             //this._paths.Add("Assets/Data/Party/XML/SubParty/BretonSubParties.xml");
             this._paths.Add("Assets/Data/Party/XML/SubParty/GoblinSubParties.xml");
             //this._paths.Add("Assets/Data/Party/XML/SubParty/JomonSubParties.xml");
-            //this._paths.Add("Assets/Data/Party/XML/SubParty/NordSubParties.xml");
+            this._paths.Add("Assets/Data/Party/XML/SubParty/NordSubParties.xml");
             this._paths.Add("Assets/Data/Party/XML/SubParty/OrcSubParties.xml");
             //this._paths.Add("Assets/Data/Party/XML/SubParty/RomeSubParties.xml");
             //this._paths.Add("Assets/Data/Party/XML/SubParty/TrollSubParties.xml");

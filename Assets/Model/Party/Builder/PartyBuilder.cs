@@ -25,41 +25,34 @@ namespace Assets.Model.Party.Builder
 
         public override MParty Build(PartyBuildParams arg)
         {
-            try
+            if (PartyTable.Instance.Table[arg.Culture].ContainsKey(arg.Name))
             {
-                if (PartyTable.Instance.Table.ContainsKey(arg.Name))
+                var party = new MParty();
+                var subParties = PartyTable.Instance.Table[arg.Culture][arg.Name];
+                foreach (var subParty in subParties)
                 {
-                    var party = new MParty();
-                    var subParties = PartyTable.Instance.Table[arg.Name];
-                    foreach (var subParty in subParties)
+                    var subPartyParams = new SubPartyBuildParams();
+                    subPartyParams.culture = arg.Culture;
+                    subPartyParams.Name = subParty.X;
+                    subPartyParams.Remaining = (subParty.Y * arg.Difficulty);
+                    var subPartyCharacters = this._subPartyBuilder.Build(subPartyParams);
+                    if (subPartyCharacters != null)
                     {
-                        var subPartyParams = new SubPartyBuildParams();
-                        subPartyParams.culture = arg.Culture;
-                        subPartyParams.Name = subParty.X;
-                        subPartyParams.Remaining = (subParty.Y * arg.Difficulty);
-                        var subPartyCharacters = this._subPartyBuilder.Build(subPartyParams);
-                        if (subPartyCharacters != null)
+                        foreach (var character in subPartyCharacters)
                         {
-                            foreach (var character in subPartyCharacters)
-                            {
-                                var model = CharacterFactory.Instance.CreateNewObject(character.X);
-                                var controller = new CChar();
-                                var proxy = new PChar(model);
-                                proxy.StartCol = character.Y;
-                                controller.SetProxy(proxy);
-                                party.AddChar(controller);
-                            }
+                            var model = CharacterFactory.Instance.CreateNewObject(character.X);
+                            var controller = new CChar();
+                            var proxy = new PChar(model);
+                            proxy.StartCol = character.Y;
+                            controller.SetProxy(proxy);
+                            party.AddChar(controller);
                         }
                     }
-                    return party;
                 }
-                else
-                    return null;
+                return party;
             }
-            catch (KeyNotFoundException e)
-            {
+            else
                 return null;
-            }
         }
     }
 }
