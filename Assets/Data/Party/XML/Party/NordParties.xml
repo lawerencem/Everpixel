@@ -7,5 +7,9 @@
       <SubParty>Vikings,0.3</SubParty>
       <SubParty>Shock Troops,0.1</SubParty>
     </Party>
+    <Party Name ="Raiding Party">
+      <SubParty>Vikings,0.7</SubParty>
+      <SubParty>Light Calvary,0.3</SubParty>
+    </Party>
   </Culture>
 </Parties>

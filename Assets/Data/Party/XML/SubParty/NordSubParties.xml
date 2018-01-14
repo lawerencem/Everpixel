@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <SubParties>
   <Culture name="Norse">
+    <SubParty Name ="Light Calvary">
+      <Character>14,Snow Ween Rider,Two</Character>
+    </SubParty>
     <SubParty Name ="Pikemen">
       <Character>15,Wimpy Longaxer,Two</Character>
     </SubParty>

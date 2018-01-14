@@ -132,6 +132,42 @@
         <Resolve>380</Resolve>
       </Stats>
     </Character>
+    <Character name ="Snow Ween Rider">
+      <Class>Warrior,6</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Penguin</ERace>
+      <Mount>Snow_Ween</Mount>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Byrnie,Four</Armor>
+          <Armor>0.20,Byrnie,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Viking Casque,Four</Helm>
+          <Helm>0.20,Viking Casque,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.80,Hammen,Four</RWeapon>
+          <RWeapon>0.20,Hammen,Three</RWeapon>
+        </RWeapons>
+        <LWeapons name="One">
+          <LWeapon>0.80,Skjoldr,Four</LWeapon>
+          <LWeapon>0.20,Skjoldr,Three</LWeapon>
+        </LWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>620</Agility>
+        <Constitution>370</Constitution>
+        <Intelligence>280</Intelligence>
+        <Might>600</Might>
+        <Perception>560</Perception>
+        <Resolve>350</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Viking">
       <Class>Warrior,6</Class>
       <ECharacterType>Humanoid</ECharacterType>

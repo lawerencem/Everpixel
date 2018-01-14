@@ -55,7 +55,7 @@ namespace Assets.Controller.Managers
 
             rParty.Culture = ECulture.Norse;
             rParty.Difficulty = 220;
-            rParty.Name = "Norse Infantry";
+            rParty.Name = "Raiding Party";
 
             initInfo.LParties.Add(lParty);
             initInfo.RParties.Add(rParty);

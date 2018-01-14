@@ -9,6 +9,7 @@
         Gromp,
         Octolegs,
         Raptard,
+        Snow_Ween,
         War_Ween,
         Ween,
         Ween_Dragon,

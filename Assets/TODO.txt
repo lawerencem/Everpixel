@@ -1,11 +1,8 @@
 ﻿TODO
 
-FIX BUGS IN PARTY LOADER (culture isnt a key - only party name...)
-
 - Weekend Duties
   -- Fire Fatality
   -- Complete more abilities
-	--- Wereween
 	--- Howl
 	--- LEap
   -- Change AP to base 10
