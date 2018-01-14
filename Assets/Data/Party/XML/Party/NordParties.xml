@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Parties>
-  <Party Name ="Vikings">
-    <SubParty>Nordic Shock Troops,6</SubParty>
-    <SubParty>Nordic Spearmen,5</SubParty>
-    <SubParty>Nordic Spearmen,9</SubParty>
-    <SubParty>Longaxers,1</SubParty>
-    <SubParty>Raiders,5</SubParty>
-    <SubParty>Vikings,3</SubParty>
-  </Party>
+  <Culture name="Norse">
+    <Party Name ="Norse Infantry">
+      <SubParty>Spearmen,0.3</SubParty>
+      <SubParty>Pikemen,0.3</SubParty>
+      <SubParty>Vikings,0.3</SubParty>
+      <SubParty>Shock Troops,0.1</SubParty>
+    </Party>
+  </Culture>
 </Parties>
