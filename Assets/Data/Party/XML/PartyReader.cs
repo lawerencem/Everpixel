@@ -27,7 +27,7 @@ namespace Assets.Data.Party.XML
             this._paths.Add("Assets/Data/Party/XML/Party/GoblinParties.xml");
             //this._paths.Add("Assets/Data/Party/XML/Party/JomonParties.xml");
             //this._paths.Add("Assets/Data/Party/XML/Party/NordParties.xml");
-            //this._paths.Add("Assets/Data/Party/XML/Party/OrcParties.xml");
+            this._paths.Add("Assets/Data/Party/XML/Party/OrcParties.xml");
             //this._paths.Add("Assets/Data/Party/XML/Party/TrollParties.xml");
         }
 

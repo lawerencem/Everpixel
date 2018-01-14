@@ -34,6 +34,7 @@ namespace Assets.Model.Party.Builder
                     foreach (var subParty in subParties)
                     {
                         var subPartyParams = new SubPartyBuildParams();
+                        subPartyParams.culture = arg.Culture;
                         subPartyParams.Name = subParty.X;
                         subPartyParams.Remaining = (subParty.Y * arg.Difficulty);
                         var subPartyCharacters = this._subPartyBuilder.Build(subPartyParams);

@@ -105,7 +105,7 @@
         <Resolve>300</Resolve>
       </Stats>
     </Character>
-    <Character name ="Dire Ween Rider">
+    <Character name ="Direween Rider">
       <Class>Warrior,5</Class>
       <Class>Berserker,8</Class>
       <ECharacterType>Humanoid</ECharacterType>

@@ -1,6 +1,7 @@
 ﻿using Assets.Model.Map.Combat;
 using Assets.Template.Hex;
 using Assets.View;
+using System;
 using UnityEngine;
 
 namespace Assets.Controller.Map.Combat.Loader
@@ -40,7 +41,14 @@ namespace Assets.Controller.Map.Combat.Loader
 
         private void InitChars(MapInitInfo info)
         {
-            CharLoader.Instance.Init(this.MapHolder, this._map, info);
+            try
+            {
+                CharLoader.Instance.Init(this.MapHolder, this._map, info);
+            }
+            catch (Exception e)
+            {
+
+            }
         }
 
         private void InitTiles(MapInitInfo info)

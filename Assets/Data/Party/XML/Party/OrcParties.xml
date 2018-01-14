@@ -1,56 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Parties>
-  <Party Name ="Orc Archers">
-    <SubParty>Ween Tamers,4</SubParty>
-    <SubParty>Ween Tamers,6</SubParty>
-    <SubParty>Ween Tamers,9</SubParty>
-    <SubParty>Ween Tamers,14</SubParty>
-    <SubParty>Ween Tamers,15</SubParty>
-  </Party>
-  <Party Name ="Orc Armor">
-    <SubParty>Orc Warriors,5</SubParty>
-    <SubParty>Orc Warriors,8</SubParty>
-    <SubParty>Orc Warriors,10</SubParty>
-    <SubParty>Orc Warriors,14</SubParty>
-  </Party>
-  <Party Name ="Orc Calvary">
-    <SubParty>Orc Wereweens,3</SubParty>
-    <SubParty>Orc Wereweens,7</SubParty>
-  </Party>
-  <Party Name ="Orc Commanders">
-    <SubParty>Orc Berserkers,10</SubParty>
-    <SubParty>Orc Lord,11</SubParty>
-    <SubParty>Orc Bards,14</SubParty>
-    <SubParty>Ween Tamers,15</SubParty>
-    <SubParty>Orc Lord,16</SubParty>
-  </Party>
-  <Party Name ="Orc Heavy Calvary">
-    <SubParty>Shock Troopa Calvary,4</SubParty>
-    <SubParty>Shock Troopa Calvary,6</SubParty>
-    <SubParty>Shock Troopa Calvary,11</SubParty>
-  </Party>
-  <Party Name ="Orc Heavy Infantry">
-    <SubParty>Shock Troopas,4</SubParty>
-    <SubParty>Shock Troopas,6</SubParty>
-    <SubParty>Shock Troopas,9</SubParty>
-  </Party>
-  <Party Name ="Orc Militia">
-    <SubParty>Orc Scavengers,1</SubParty>
-  </Party>
-  <Party Name ="Orc Monsters">
-    <SubParty>Orc Wereweens,3</SubParty>
-    <SubParty>Orc Wereweens,7</SubParty>
-  </Party>
-  <Party Name ="Orc Shock Troops">
-    <SubParty>Orc Berserkers,3</SubParty>
-    <SubParty>Orc Berserkers,5</SubParty>
-    <SubParty>Orc Berserkers,8</SubParty>
-    <SubParty>Orc Berserkers,10</SubParty>
-  </Party>
-  <Party Name ="Orc Support">
-    <SubParty>Orc Bards,4</SubParty>
-    <SubParty>Orc Bards,7</SubParty>
-    <SubParty>Orc Bards,10</SubParty>
-    <SubParty>Orc Bards,14</SubParty>
+  <Party Name ="Orc Battle Squad">
+    <SubParty>Commanders,0.4</SubParty>
+    <SubParty>Wereweens,0.3</SubParty>
+    <SubParty>Heavy Infantry,0.2</SubParty>
+    <SubParty>Archers,0.1</SubParty>
   </Party>
 </Parties>

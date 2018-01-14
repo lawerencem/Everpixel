@@ -1,5 +1,7 @@
 ﻿TODO
 
+FIX BUGS IN PARTY LOADER (culture isnt a key - only party name...)
+
 - Weekend Duties
   -- Fire Fatality
   -- Complete more abilities

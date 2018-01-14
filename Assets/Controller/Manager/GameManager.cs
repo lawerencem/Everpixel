@@ -6,7 +6,6 @@ using Assets.Controller.Map.Combat.Loader;
 using Assets.Model.Biome;
 using Assets.Model.Culture;
 using Assets.Model.Party.Param;
-using Assets.Template.Other;
 using UnityEngine;
 
 namespace Assets.Controller.Managers
@@ -50,12 +49,12 @@ namespace Assets.Controller.Managers
             var lParty = new PartyBuildParams();
             var rParty = new PartyBuildParams();
 
-            lParty.Culture = ECulture.Goblin;
-            lParty.Difficulty = 300;
-            lParty.Name = "Goblin Battle Squad";
+            lParty.Culture = ECulture.Orcish;
+            lParty.Difficulty = 220;
+            lParty.Name = "Orc Battle Squad";
 
             rParty.Culture = ECulture.Goblin;
-            rParty.Difficulty = 300;
+            rParty.Difficulty = 220;
             rParty.Name = "Goblin Battle Squad";
 
             initInfo.LParties.Add(lParty);

@@ -10,9 +10,20 @@ namespace Assets.Controller.Map.Combat
         private MMap _map;
         private List<MParty> _rParties;
 
-        public List<MParty> GetLParties() { return this._lParties; }
-        public MMap GetMap() { return this._map; }
-        public List<MParty> GetRParties() { return this._rParties; }
+        public List<MParty> GetLParties()
+        {
+            return this._lParties;
+        }
+
+        public MMap GetMap()
+        {
+            return this._map;
+        }
+
+        public List<MParty> GetRParties()
+        {
+            return this._rParties;
+        }
 
         public void SetMap(MMap m) { this._map = m; }
 

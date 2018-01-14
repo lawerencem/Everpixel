@@ -7,7 +7,10 @@ namespace Assets.Model.Party
     {
         private List<CChar> _chars;
 
-        public List<CChar> GetChars() { return this._chars; }
+        public List<CChar> GetChars()
+        {
+            return this._chars;
+        }
 
         public MParty()
         {
