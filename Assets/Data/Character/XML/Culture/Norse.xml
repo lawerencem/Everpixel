@@ -32,6 +32,30 @@
         <Resolve>410</Resolve>
       </Stats>
     </Character>
+    <Character name ="Gwin">
+      <AttackSpriteIndex>2</AttackSpriteIndex>
+      <Abilities>
+        <Ability name ="Bite">
+          <EEffect name="Megabite">
+            <AbilityCondition>Bite</AbilityCondition>
+            <X>1.2</X>
+            <Y>2.5</Y>
+          </EEffect>
+        </Ability>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>1</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>250</Agility>
+        <Constitution>250</Constitution>
+        <Intelligence>220</Intelligence>
+        <Might>380</Might>
+        <Perception>350</Perception>
+        <Resolve>720</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Iceburgh">
       <AttackSpriteIndex>8</AttackSpriteIndex>
       <Abilities>

@@ -152,13 +152,9 @@ namespace Assets.View.Map
             var stuff = Resources.LoadAll(path);
             if (stuff.Length > 1)
             {
-                var sprites = new Sprite[8];
-                //var sprites = new Sprite[stuff.Length - 1];
-                //for (int itr = 1; itr < stuff.Length; itr++)  // TODO
-                for (int itr = 1; itr < 9; itr++)
-                {
-                    sprites[itr - 1] = stuff.GetValue(itr) as Sprite;
-                }
+                var sprites = new Sprite[stuff.Length - 1];
+                for (int i = 1; i < stuff.Length; i++)
+                    sprites[i - 1] = stuff.GetValue(i) as Sprite;
                 return sprites;
             }
             else

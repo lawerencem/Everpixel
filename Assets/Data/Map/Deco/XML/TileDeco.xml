@@ -3,6 +3,9 @@
   <Deco name="Eye_Hill">
     <Sprites>2,3,4</Sprites>
   </Deco>
+  <Deco name="Ice_Eye_Hill">
+    <Sprites>8,9,10</Sprites>
+  </Deco>
   <Deco name="Shrub">
     <Sprites>0,1</Sprites>
   </Deco>

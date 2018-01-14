@@ -45,7 +45,7 @@ namespace Assets.Controller.Managers
             var gui = new GUILoader();
             gui.InitCombatGUI();
             var initInfo = new MapInitInfo();
-            initInfo.Biome = EBiome.Grassland;
+            initInfo.Biome = EBiome.Snow;
             var lParty = new PartyBuildParams();
             var rParty = new PartyBuildParams();
 

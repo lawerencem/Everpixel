@@ -26,6 +26,7 @@ namespace Assets.Data.Map.Deco.XML
         public BiomeReader() : base()
         {
             this._paths.Add("Assets/Data/Map/Biome/XML/Grassland.xml");
+            this._paths.Add("Assets/Data/Map/Biome/XML/Snow.xml");
         }
 
         public override void ReadFromFile()

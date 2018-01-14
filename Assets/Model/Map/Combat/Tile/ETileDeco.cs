@@ -4,6 +4,7 @@
     {
         None,
         Eye_Hill,
+        Ice_Eye_Hill,
         Shrub,
         Tiny_Tree,
     }
