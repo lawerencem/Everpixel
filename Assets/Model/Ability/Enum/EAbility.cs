@@ -18,6 +18,7 @@
         // Physical
         Bulldoze,
         Charge,
+        Howl,
 
         // Psychic
         Cerebral_Nova,
