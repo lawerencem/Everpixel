@@ -7,6 +7,7 @@ namespace Assets.Model.Character.Builder
         private static readonly double ActionPoints_Agi = 0.6;
         private static readonly double ActionPoints_Int = 0.4;
         private static readonly double BaseHPAndStamina = 50;
+        private static readonly double Base_AP = 5;
         private static readonly double Block_Agi = 0.4;
         private static readonly double Block_Might = 0.4;
         private static readonly double Block_Per = 0.2;
@@ -51,7 +52,7 @@ namespace Assets.Model.Character.Builder
         private static readonly double Will_Int = 0.2;
         private static readonly double Will_Res = 0.8;
 
-        public static int DetermineActionPoints(PStats p) { return (int)(((ActionPoints_Agi * p.Agility) + (ActionPoints_Int * p.Intelligence)) / 200) + 12; }
+        public static int DetermineActionPoints(PStats p) { return (int)((((ActionPoints_Agi * p.Agility) + (ActionPoints_Int * p.Intelligence)) / 100) + Base_AP); }
         public static int DetermineBlock(PStats p) { return (int) ((Block_Agi * p.Agility) + (Block_Might * p.Might) + (Block_Per * p.Perception) / 2); }
         public static int DetermineConcentration(PStats p) { return (int) ((Concentration_Con * p.Constitution) + (Concentration_Res * p.Resolve) / 2); }
         public static int DetermineCriticalChance(PStats p) { return (int) ((CriticalChance_Agi * p.Agility) + (CriticalChance_Might * p.Might) / 2); }
