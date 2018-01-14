@@ -59,13 +59,13 @@
         </Armors>
         <Helms name="One">
           <Helm>0.80,Orc Mask,Two</Helm>
-          <Helm>0.20,Gorkish Mask,One</Helm>
+          <Helm>0.20,Gork Mask,One</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
           <RWeapon>0.80,Choppa,Two</RWeapon>
-          <RWeapon>0.20,Gork-Laced Choppa,Two</RWeapon>
+          <RWeapon>0.20,Gork-Laced Choppa,One</RWeapon>
         </RWeapons>
         <LWeapons name="One">
           <LWeapon>0.80,Orc Slab,Two</LWeapon>
@@ -357,11 +357,11 @@
       <PotentialArmors>
         <Armors name="One">
           <Armor>0.80,Orcish Plate Mail,Two</Armor>
-          <Armor>0.80,Gorkish Plate Mail,Two</Armor>
+          <Armor>0.80,Gorkish Plate Mail,One</Armor>
         </Armors>
         <Helms name="One">
           <Helm>0.80,Orc Mask,Two</Helm>
-          <Helm>0.20,Gorkish Mask,Two</Helm>
+          <Helm>0.20,Gork Mask,One</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
