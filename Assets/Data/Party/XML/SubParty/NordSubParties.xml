@@ -4,6 +4,10 @@
     <SubParty Name ="Light Calvary">
       <Character>14,Snow Ween Rider,Two</Character>
     </SubParty>
+    <SubParty Name ="Monsters">
+      <Character>18,Iceburgh,One</Character>
+      <Character>15,Wursa,One</Character>
+    </SubParty>
     <SubParty Name ="Pikemen">
       <Character>15,Wimpy Longaxer,Two</Character>
     </SubParty>

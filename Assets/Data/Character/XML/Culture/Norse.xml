@@ -32,6 +32,30 @@
         <Resolve>410</Resolve>
       </Stats>
     </Character>
+    <Character name ="Iceburgh">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <Abilities>
+        <Ability name ="Bite">
+          <EEffect name="Megabite">
+            <AbilityCondition>Bite</AbilityCondition>
+            <X>2</X>
+            <Y>2</Y>
+          </EEffect>
+        </Ability>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>320</Agility>
+        <Constitution>650</Constitution>
+        <Intelligence>220</Intelligence>
+        <Might>450</Might>
+        <Perception>360</Perception>
+        <Resolve>700</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Raider">
       <Class>Warrior,5</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -226,6 +250,30 @@
         <Intelligence>320</Intelligence>
         <Might>550</Might>
         <Perception>480</Perception>
+        <Resolve>380</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Wursa">
+      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <Abilities>
+        <Ability name ="Bite">
+          <EEffect name="Megabite">
+            <AbilityCondition>Bite</AbilityCondition>
+            <X>2</X>
+            <Y>2</Y>
+          </EEffect>
+        </Ability>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>550</Agility>
+        <Constitution>700</Constitution>
+        <Intelligence>180</Intelligence>
+        <Might>650</Might>
+        <Perception>550</Perception>
         <Resolve>380</Resolve>
       </Stats>
     </Character>

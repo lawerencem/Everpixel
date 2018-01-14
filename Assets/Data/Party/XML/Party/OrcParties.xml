@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Parties>
   <Culture name="Orcish">
-    <Party Name ="Orc Battle Squad">
+    <Party Name ="Battle Squad">
       <SubParty>Commanders,0.4</SubParty>
       <SubParty>Wereweens,0.3</SubParty>
       <SubParty>Heavy Infantry,0.2</SubParty>

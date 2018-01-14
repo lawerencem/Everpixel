@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Parties>
   <Culture name="Goblin">
-    <Party Name ="Goblin Battle Squad">
+    <Party Name ="Battle Squad">
       <SubParty>Calvary Archers,0.2</SubParty>
       <SubParty>Assassins,0.2</SubParty>
       <SubParty>Commanders,0.2</SubParty>
@@ -9,14 +9,14 @@
       <SubParty>Militia,0.1</SubParty>
       <SubParty>Warslugs,0.1</SubParty>
     </Party>
-    <Party Name ="Goblin Raiders">
+    <Party Name ="Raiders">
       <SubParty>Militia,0.3</SubParty>
       <SubParty>Calvary Archers,0.2</SubParty>
       <SubParty>Light Calvary,0.2</SubParty>
       <SubParty>Commanders,0.2</SubParty>
       <SubParty>Assassins,0.1</SubParty>
     </Party>
-    <Party Name ="Goblin Scouts">
+    <Party Name ="Scouts">
       <SubParty>Assassins,0.5</SubParty>
       <SubParty>Militia,0.5</SubParty>
     </Party>

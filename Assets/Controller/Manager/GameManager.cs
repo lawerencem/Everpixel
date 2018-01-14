@@ -51,11 +51,11 @@ namespace Assets.Controller.Managers
 
             lParty.Culture = ECulture.Orcish;
             lParty.Difficulty = 220;
-            lParty.Name = "Orc Battle Squad";
+            lParty.Name = "Battle Squad";
 
             rParty.Culture = ECulture.Norse;
             rParty.Difficulty = 220;
-            rParty.Name = "Raiding Party";
+            rParty.Name = "Battle Squad";
 
             initInfo.LParties.Add(lParty);
             initInfo.RParties.Add(rParty);
