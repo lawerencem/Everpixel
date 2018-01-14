@@ -1,156 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <SubParties>
-  <SubParty Name ="Healing Kappas">
-    <Difficulty>4</Difficulty>
-    <Character>1,Tortard,Three</Character>
-  </SubParty>
-  <SubParty Name ="Healing Kappas">
-    <Difficulty>6</Difficulty>
-    <Character>1,Tortugaia,Three</Character>
-  </SubParty>
-  <SubParty Name ="Katana Calvary">
-    <Difficulty>5</Difficulty>
-    <Character>1,Katana Calvary,Two</Character>
-  </SubParty>
-  <SubParty Name ="Katana Calvary">
-    <Difficulty>7</Difficulty>
-    <Character>1,Elite Katana Calvary,Two</Character>
-  </SubParty>
-  <SubParty Name ="Katana Calvary">
-    <Difficulty>9</Difficulty>
-    <Character>1,Katana Calvary Kensai,Two</Character>
-  </SubParty>
-  <SubParty Name ="Katana Samurai">
-    <Difficulty>4</Difficulty>
-    <Character>1,Katana Samurai,Two</Character>
-  </SubParty>
-  <SubParty Name ="Katana Samurai">
-    <Difficulty>6</Difficulty>
-    <Character>1,Elite Katana Samurai,Two</Character>
-  </SubParty>
-  <SubParty Name ="Katana Samurai">
-    <Difficulty>8</Difficulty>
-    <Character>1,Katana Kensai,Two</Character>
-  </SubParty>
-  <SubParty Name ="Naginata Samurai">
-    <Difficulty>4</Difficulty>
-    <Character>1,Naginata Samurai,Two</Character>
-  </SubParty>
-  <SubParty Name ="Naginata Samurai">
-    <Difficulty>6</Difficulty>
-    <Character>1,Elite Naginata Samurai,Two</Character>
-  </SubParty>
-  <SubParty Name ="Naginata Samurai">
-    <Difficulty>8</Difficulty>
-    <Character>1,Naginata Kensai,Two</Character>
-  </SubParty>
-  <SubParty Name ="Ninjas">
-    <Difficulty>2</Difficulty>
-    <Character>1,Ninja Trainee,Three</Character>
-  </SubParty>
-  <SubParty Name ="Ninjas">
-    <Difficulty>3</Difficulty>
-    <Character>1,Ninja,Three</Character>
-  </SubParty>
-  <SubParty Name ="Ninjas">
-    <Difficulty>5</Difficulty>
-    <Character>1,Elite Ninja,Three</Character>
-  </SubParty>
-  <SubParty Name ="Ninjas">
-    <Difficulty>7</Difficulty>
-    <Character>1,Ninja Kensai,Three</Character>
-  </SubParty>
-  <SubParty Name ="Nodachi Samurai">
-    <Difficulty>4</Difficulty>
-    <Character>1,Nodachi Samurai,Two</Character>
-  </SubParty>
-  <SubParty Name ="Nodachi Samurai">
-    <Difficulty>6</Difficulty>
-    <Character>1,Elite Nodachi Samurai,Two</Character>
-  </SubParty>
-  <SubParty Name ="Nodachi Samurai">
-    <Difficulty>8</Difficulty>
-    <Character>1,Nodachi Kensai,Two</Character>
-  </SubParty>
-  <SubParty Name ="Spell Kappas">
-    <Difficulty>6</Difficulty>
-    <Character>1,Terrorpin,Two</Character>
-  </SubParty>
-  <SubParty Name ="Spell Kappas">
-    <Difficulty>7</Difficulty>
-    <Character>1,Horrorpin,Two</Character>
-  </SubParty>
-  <SubParty Name ="Spell Kappas">
-    <Difficulty>9</Difficulty>
-    <Character>1,Tortugaia,Two</Character>
-  </SubParty>
-  <SubParty Name ="War Kappas">
-    <Difficulty>4</Difficulty>
-    <Character>1,Armoise,One</Character>
-    <Character>1,Armoise,One</Character>
-  </SubParty>
-  <SubParty Name ="War Kappas">
-    <Difficulty>5</Difficulty>
-    <Character>1,Tortard,One</Character>
-  </SubParty>
-  <SubParty Name ="War Kappas">
-    <Difficulty>12</Difficulty>
-    <Character>1,Dreadnot,One</Character>
-  </SubParty>
-  <SubParty Name ="Yari Ashigaru">
-    <Difficulty>1</Difficulty>
-    <Character>1,Yari Ashigaru,One</Character>
-    <Character>1,Yari Ashigaru,One</Character>
-  </SubParty>
-  <SubParty Name ="Yari Ashigaru">
-    <Difficulty>2</Difficulty>
-    <Character>1,Veteran Yari Ashigaru,One</Character>
-    <Character>1,Veteran Yari Ashigaru,One</Character>
-  </SubParty>
-  <SubParty Name ="Yari Ashigaru">
-    <Difficulty>3</Difficulty>
-    <Character>1,Grizzled Yari Ashigaru,One</Character>
-    <Character>1,Grizzled Yari Ashigaru,One</Character>
-    <Character>1,Grizzled Yari Ashigaru,One</Character>
-  </SubParty>
-  <SubParty Name ="Yari Samurai">
-    <Difficulty>4</Difficulty>
-    <Character>1,Yari Samurai,One</Character>
-  </SubParty>
-  <SubParty Name ="Yari Samurai">
-    <Difficulty>6</Difficulty>
-    <Character>1,Elite Yari Samurai,One</Character>
-  </SubParty>
-  <SubParty Name ="Yari Samurai">
-    <Difficulty>8</Difficulty>
-    <Character>1,Yari Kensai,One</Character>
-  </SubParty>
-  <SubParty Name ="Yumi Ashigaru">
-    <Difficulty>1</Difficulty>
-    <Character>1,Yumi Ashigaru,Three</Character>
-    <Character>1,Yumi Ashigaru,Three</Character>
-  </SubParty>
-  <SubParty Name ="Yumi Ashigaru">
-    <Difficulty>2</Difficulty>
-    <Character>1,Veteran Yumi Ashigaru,Three</Character>
-    <Character>1,Veteran Yumi Ashigaru,Three</Character>
-  </SubParty>
-  <SubParty Name ="Yumi Ashigaru">
-    <Difficulty>3</Difficulty>
-    <Character>1,Grizzled Yumi Ashigaru,Three</Character>
-    <Character>1,Grizzled Yumi Ashigaru,Three</Character>
-    <Character>1,Grizzled Yumi Ashigaru,Three</Character>
-  </SubParty>
-  <SubParty Name ="Yumi Samurai">
-    <Difficulty>4</Difficulty>
-    <Character>1,Yumi Samurai,Three</Character>
-  </SubParty>
-  <SubParty Name ="Yumi Samurai">
-    <Difficulty>6</Difficulty>
-    <Character>1,Elite Yumi Samurai,Three</Character>
-  </SubParty>
-  <SubParty Name ="Yumi Samurai">
-    <Difficulty>8</Difficulty>
-    <Character>1,Yumi Kensai,Three</Character>
-  </SubParty>
+  <Culture name="Jomonese">
+    <SubParty Name ="Calvary">
+      <Character>15,Katana Calvary,Two</Character>
+      <Character>22,Elite Katana Calvary,Two</Character>
+      <Character>25,Katana Calvary Kensai,Two</Character>
+    </SubParty>
+    <SubParty Name ="Commanders">
+      <Character>25,Katana Kensai,Two</Character>
+      <Character>25,Katana Calvary Kensai,Two</Character>
+      <Character>25,Naginata Kensai,Two</Character>
+      <Character>28,Ninja Kesnai,Two</Character>
+      <Character>25,Nodachi Kensai,Two</Character>
+      <Character>25,Yari Kensai,Two</Character>
+      <Character>25,Yumi Kensai,Three</Character>
+    </SubParty>
+    <SubParty Name ="Heavy Spearmen">
+      <Character>16,Yari Samurai,One</Character>
+      <Character>20,Elite Yari Samurai,One</Character>
+      <Character>25,Yari Kensai,One</Character>
+    </SubParty>
+    <SubParty Name ="Heavy Archers">
+      <Character>16,Yumi Samurai,Three</Character>
+      <Character>20,Elite Yumi Samurai,Three</Character>
+      <Character>25,Yumi Kensai,Three</Character>
+    </SubParty>
+    <SubParty Name ="Light Archers">
+      <Character>6,Yumi Ashigaru,Three</Character>
+      <Character>8,Veteran Yumi Ashigaru,Three</Character>
+      <Character>10,Grizzled Yumi Ashigaru,Three</Character>
+    </SubParty>
+    <SubParty Name ="Light Spearmen">
+      <Character>6,Yari Ashigaru,One</Character>
+      <Character>8,Veteran Yari Ashigaru,One</Character>
+      <Character>10,Grizzled Yari Ashigaru,One</Character>
+    </SubParty>
+    <SubParty Name ="Ninjas">
+      <Character>13,Ninja Trainee,Two</Character>
+      <Character>18,Ninja,Two</Character>
+      <Character>24,Elite Ninja,Two</Character>
+      <Character>28,Ninja Kensai,Two</Character>
+    </SubParty>
+    <SubParty Name ="Pikemen">
+      <Character>16,Naginata Samurai,Two</Character>
+      <Character>20,Elite Naginata Samurai,Two</Character>
+      <Character>25,Naginata Kensai,Two</Character>
+    </SubParty>
+    <SubParty Name ="Spell Kappas">
+      <Character>15,Horrorpin,Three</Character>
+      <Character>18,Terrorpin,Three</Character>
+      <Character>21,Tortugaia,Three</Character>
+    </SubParty>
+    <SubParty Name ="War Kappas">
+      <Character>11,Armoise,One</Character>
+      <Character>14,Tortard,Two</Character>
+      <Character>33,Dreadnot,Two</Character>
+    </SubParty>
+  </Culture>
 </SubParties>

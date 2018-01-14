@@ -396,7 +396,7 @@
       </Stats>
     </Character>
     <Character name ="Katana Calvary Kensai">
-      <Class>Samurai,14</Class>
+      <Class>Samurai,18</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Human</ERace>
       <Mount>Armoise</Mount>

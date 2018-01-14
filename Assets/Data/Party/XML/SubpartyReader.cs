@@ -27,7 +27,7 @@ namespace Assets.Data.Party.XML
             //this._paths.Add("Assets/Data/Party/XML/SubParty/AmazonSubParties.xml");
             //this._paths.Add("Assets/Data/Party/XML/SubParty/BretonSubParties.xml");
             this._paths.Add("Assets/Data/Party/XML/SubParty/GoblinSubParties.xml");
-            //this._paths.Add("Assets/Data/Party/XML/SubParty/JomonSubParties.xml");
+            this._paths.Add("Assets/Data/Party/XML/SubParty/JomonSubParties.xml");
             this._paths.Add("Assets/Data/Party/XML/SubParty/NordSubParties.xml");
             this._paths.Add("Assets/Data/Party/XML/SubParty/OrcSubParties.xml");
             //this._paths.Add("Assets/Data/Party/XML/SubParty/RomeSubParties.xml");

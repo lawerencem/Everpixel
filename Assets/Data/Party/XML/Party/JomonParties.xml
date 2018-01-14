@@ -1,61 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Parties>
-  <Party Name ="Jomonese Archers">
-    <SubParty>Yumi Ashigaru,1</SubParty>
-    <SubParty>Yumi Ashigaru,2</SubParty>
-    <SubParty>Yumi Ashigaru,3</SubParty>
-    <SubParty>Yumi Samurai,4</SubParty>
-    <SubParty>Yumi Samurai,6</SubParty>
-    <SubParty>Yumi Samurai,8</SubParty>
-  </Party>
-  <Party Name ="Jomonese Assassins">
-    <SubParty>Ninjas,2</SubParty>
-    <SubParty>Ninjas,3</SubParty>
-    <SubParty>Ninjas,5</SubParty>
-    <SubParty>Ninjas,7</SubParty>
-  </Party>
-  <Party Name ="Jomonese Calvary">
-    <SubParty>Katana Calvary,5</SubParty>
-    <SubParty>Elite Katana Calvary,7</SubParty>
-    <SubParty>Katana Calvary Kensai,9</SubParty>
-  </Party>
-  <Party Name ="Jomonese Commanders">
-    <SubParty>Katana Samurai, 8</SubParty>
-    <SubParty>Katana Calvary Kensai,9</SubParty>
-  </Party>
-  <Party Name ="Jomonese Heavy Infantry">
-    <SubParty>Katana Samurai,4</SubParty>
-    <SubParty>Katana Samurai,6</SubParty>
-    <SubParty>Katana Samurai,8</SubParty>
-  </Party>
-  <Party Name ="Jomonese Heavy Spearmen">
-    <SubParty>Yari Samurai,4</SubParty>
-    <SubParty>Yari Samurai,6</SubParty>
-    <SubParty>Yari Samurai,8</SubParty>
-  </Party>
-  <Party Name ="Jomonese Light Infantry">
-    <SubParty>Yari Ashigaru,1</SubParty>
-    <SubParty>Yari Ashigaru,2</SubParty>
-    <SubParty>Yari Ashigaru,3</SubParty>
-  </Party>
-  <Party Name ="Jomonese Polearms">
-    <SubParty>Naginata Samurai,4</SubParty>
-    <SubParty>Naginata Samurai,6</SubParty>
-    <SubParty>Naginata Samurai,8</SubParty>
-  </Party>
-  <Party Name ="Jomonese Shock Troops">
-    <SubParty>Nodachi Samurai,4</SubParty>
-    <SubParty>Nodachi Samurai,6</SubParty>
-    <SubParty>Nodachi Samurai,8</SubParty>
-  </Party>
-  <Party Name ="Jomonese Spell Kappas">
-    <SubParty>Spell Kappas,6</SubParty>
-    <SubParty>Spell Kappas,7</SubParty>
-    <SubParty>Spell Kappas,9</SubParty>
-  </Party>
-  <Party Name ="Jomonese War Kappas">
-    <SubParty>War Kappas,4</SubParty>
-    <SubParty>War Kappas,5</SubParty>
-    <SubParty>War Kappas,12</SubParty>
-  </Party>
+  <Culture name="Jomonese">
+    <Party Name ="Raiding Party">
+      <SubParty>Light Spearmen,0.3</SubParty>
+      <SubParty>Light Archers,0.2</SubParty>
+      <SubParty>Calvary,0.2</SubParty>
+      <SubParty>Commanders,0.2</SubParty>
+      <SubParty>Ninjas,0.1</SubParty>
+    </Party>
+  </Culture>
 </Parties>

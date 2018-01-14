@@ -43,27 +43,20 @@ namespace Assets.Model.Injury.Calculator
 
         private void ProcessNewInjury(CChar tgt, MHit hit)
         {
-            try
+            var injuries = new List<EInjury>();
+            injuries.AddRange(hit.Data.Ability.Data.Injuries);
+            injuries.AddRange(hit.Data.Ability.Data.ParentWeapon.Data.Injuries);
+            var random = ListUtil<EInjury>.GetRandomElement(injuries);
+            if (random != EInjury.None)
             {
-                var injuries = new List<EInjury>();
-                injuries.AddRange(hit.Data.Ability.Data.Injuries);
-                injuries.AddRange(hit.Data.Ability.Data.ParentWeapon.Data.Injuries);
-                var random = ListUtil<EInjury>.GetRandomElement(injuries);
-                if (random != EInjury.None)
-                {
-                    var injuryParams = InjuryTable.Instance.Table[random];
-                    var injury = injuryParams.GetInjury();
-                    var data = new EvInjuryData();
-                    data.Hit = hit;
-                    data.Injury = injury;
-                    data.Target = tgt;
-                    var e = new EvInjury(data);
-                    e.TryProcess();
-                }
-            }
-            catch (Exception e)
-            {
-                Debug.LogError(e);
+                var injuryParams = InjuryTable.Instance.Table[random];
+                var injury = injuryParams.GetInjury();
+                var data = new EvInjuryData();
+                data.Hit = hit;
+                data.Injury = injury;
+                data.Target = tgt;
+                var e = new EvInjury(data);
+                e.TryProcess();
             }
         }
     }
