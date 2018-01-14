@@ -66,7 +66,7 @@ namespace Assets.Model.Ability.Physical
         private void ProcessMove(MAction a)
         {
             var tgt = a.Data.Target.Current as CChar;
-            var tile = tgt.Tile.GetRandomNearbyTile(1);
+            var tile = tgt.Tile.GetRandomNearbyEmptyTile(1);
             if (tile == null)
                 tile = tgt.Tile.GetNearestEmptyTile();
             var data = new EvTileMoveData();
