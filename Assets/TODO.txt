@@ -1,13 +1,11 @@
 ﻿TODO
 
 - Weekend Duties
-  -- Fire Fatality
   -- Complete more abilities
 	--- Howl
 	--- LEap
   -- Dead eyes on critters
-
-- Tidy up pixels on samurai armor and helms
+  -- Fix Bugs
 
 - Combat logic
 	- Bonuses to Hit when surrounding
@@ -27,7 +25,6 @@ Clean up injuries in bow.xml files, plus remove custom bullet boolean.
 
 Shields
 Stealth
-Refactor Dmg Calculations
 Crit Calculations
 Mounts
   - Have mounts give abilities
