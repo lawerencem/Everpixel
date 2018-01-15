@@ -45,7 +45,8 @@ namespace Assets.Model.Injury.Calculator
         {
             var injuries = new List<EInjury>();
             injuries.AddRange(hit.Data.Ability.Data.Injuries);
-            injuries.AddRange(hit.Data.Ability.Data.ParentWeapon.Data.Injuries);
+            if (hit.Data.Ability.Data.ParentWeapon != null)
+                injuries.AddRange(hit.Data.Ability.Data.ParentWeapon.Data.Injuries);
             var random = ListUtil<EInjury>.GetRandomElement(injuries);
             if (random != EInjury.None)
             {
