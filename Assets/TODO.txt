@@ -1,4 +1,9 @@
 ﻿TODO
+ 
+- Add pond / lake
+  -- add ability for landmark to freeze
+  -- thawing out 
+  -- drowning
 
 - Weekend Duties
   -- Complete more abilities
