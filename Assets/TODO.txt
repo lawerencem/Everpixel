@@ -7,6 +7,10 @@
   -- Dead eyes on critters
   -- Stamina reduction when moving, AP reduction, give pathing to models to determine costs
 
+- Biome
+  -- Add rock deco
+  -- Corruption biome
+
 - Combat logic
 	- Bonuses to Hit when surrounding
 	- Height bonuses / penalties
