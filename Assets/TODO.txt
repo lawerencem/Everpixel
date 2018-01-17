@@ -5,7 +5,7 @@
 	--- Howl
 	--- LEap
   -- Dead eyes on critters
-  -- Fix Bugs
+  -- Stamina reduction when moving, AP reduction, give pathing to models to determine costs
 
 - Combat logic
 	- Bonuses to Hit when surrounding
