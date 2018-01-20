@@ -44,17 +44,11 @@ namespace Assets.Model.Event.Combat
             }
         }
 
-        private bool ProcessMove()
-        {
-            this.TryProcessNextTile();
-            return true;
-        }
-
         private bool TryProcessPathMove()
         {
             if (this.VerifyAndPopulateData())
             {
-                this.TryProcessNextTile();
+                this.TryProcessFirstTile();
                 return true;
             }
             else
@@ -66,17 +60,38 @@ namespace Assets.Model.Event.Combat
 
         private void TileMoveDone(object o)
         {
-            if (o.GetType().Equals(typeof(EvTileMove)))
+            this._current = this._next;
+            this.TryProcessNextTile(this._current);
+        }
+
+        private void TryProcessFirstTile()
+        {
+            if (this._data.Source != null)
             {
-                this._current = this._next;
-                this.TryProcessNextTile();
+                this._data.Source.SetCurrent(null);
+                var ap = this._data.Char.Proxy.GetStat(ESecondaryStat.AP);
+                this._next = this._data.TargetPath.GetFirstTile();
+                var cost = this._data.Char.Proxy.GetTileTraversalAPCost(this._next);
+                if (cost <= ap)
+                {
+                    var data = new EvTileMoveData();
+                    data.Cost = cost;
+                    data.Char = this._data.Char;
+                    data.Source = this._current;
+                    data.Target = this._next;
+                    var e = new EvTileMove(data);
+                    e.AddCallback(this.TileMoveDone);
+                    e.TryProcess();
+                }
+                else
+                    this.DoCallbacks();
             }
         }
 
-        private void TryProcessNextTile()
+        private void TryProcessNextTile(CTile tile)
         {
             var ap = this._data.Char.Proxy.GetStat(ESecondaryStat.AP);
-            this._next = this._data.TargetPath.GetNextTile(this._current);
+            this._next = this._data.TargetPath.GetNextTile(tile);
             if (this._next != null)
             {
                 var cost = this._data.Char.Proxy.GetTileTraversalAPCost(this._next);
@@ -115,10 +130,14 @@ namespace Assets.Model.Event.Combat
             if (this._data.Source == null)
                 this._data.Source = this._data.Char.Tile;
 
-            this._current = this._data.Source;
             var s = this._data.Source.Model;
             var t = this._data.Target.Model;
             this._data.TargetPath = this._data.Target.Model.Map.GetPath(s, t);
+            if (this._data.TargetPath == null)
+                throw new System.Exception("Path First tile was null");
+            this._current = this._data.TargetPath.GetFirstTile();
+            if (this._current == null)
+                throw new System.Exception("Path First tile was null");
             return true;
         }
     }

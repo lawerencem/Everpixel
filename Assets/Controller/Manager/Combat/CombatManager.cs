@@ -143,7 +143,9 @@ namespace Assets.Controller.Manager.Combat
 
         private bool TryProcessTileWithChar(CTile t)
         {
-            if (t.Current != null && t.Current.GetType().Equals(typeof(CChar)))
+            if (t.Current != null && 
+                t.Current.GetType().Equals(typeof(CChar)) &&
+                this._currActingData.Ability != EAbility.None)
             {
                 var ability = AbilityTable.Instance.Table[this._currActingData.Ability];
                 var target = t.Current as CChar;

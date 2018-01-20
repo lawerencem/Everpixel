@@ -32,6 +32,14 @@ namespace Assets.Model.Map.Combat.Tile
             return null;
         }
 
+        public CTile GetFirstTile()
+        {
+            if (this._tiles.Count > 0)
+                return this._tiles[0].Controller;
+            else
+                return null;
+        }
+
         public void AddTile(MTile t)
         {
             if (this._tiles.Count > 0)

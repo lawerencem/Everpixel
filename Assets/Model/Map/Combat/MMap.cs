@@ -104,6 +104,10 @@ namespace Assets.Model.Map.Combat
 
         public Path GetPath(MTile s, MTile g)
         {
+            var quickPath = this.GetPathViaSourceAdjacentToGoal(s, g);
+            if (quickPath != null)
+                return quickPath;
+
             var goalOpenSet = new List<MTile>() { g };
             var goalClosedSet = new List<Pair<int, int>>();
             var goalInitPath = new Path();
@@ -205,10 +209,49 @@ namespace Assets.Model.Map.Combat
                 if (validPaths.Count > 0)
                 {
                     var bestPath = validPaths.OrderBy(x => x.Score).ToList()[0];
-                    return bestPath;
+                    return this.TrimRedundantPathing(bestPath, g);
                 }
             }
             return null;
+        }
+
+        private Path TrimRedundantPathing(Path path, MTile g)
+        {
+            var validPaths = new List<Path>();
+            var openSet = path.GetTiles();
+            var initPath = new Path();
+            var pathDict = new Dictionary<Pair<int, int>, Path>();
+            var firstTile = path.GetTiles()[0];
+            initPath.AddTile(firstTile);
+            pathDict.Add(new Pair<int, int>(firstTile.Col, firstTile.Row), initPath);
+            while (openSet.Count > 0)
+            {
+                var tile = openSet.ElementAt(0);
+                foreach (var neighbor in tile.GetAdjacent())
+                {
+                    if (openSet.Contains(neighbor))
+                    {
+                        var pathKey = new Pair<int, int>(tile.Col, tile.Row);
+                        var previousPath = pathDict[pathKey];
+                        var newPath = previousPath.DeepCopy();
+                        newPath.AddTile(neighbor);
+                        var newKey = new Pair<int, int>(neighbor.Col, neighbor.Row);
+                        if (!pathDict.ContainsKey(newKey))
+                            pathDict.Add(newKey, newPath);
+                        else
+                        {
+                            if (newPath.Score < pathDict[newKey].Score)
+                                pathDict[newKey] = newPath;
+                        }
+
+                        if (neighbor == g)
+                            validPaths.Add(newPath);
+                    }
+                }
+                openSet.Remove(tile);
+            }
+            var bestPath = validPaths.OrderBy(x => x.Score).ToList()[0];
+            return bestPath;
         }
 
         public CTile GetTileForRow(bool lParty, EStartCol col)
@@ -255,6 +298,20 @@ namespace Assets.Model.Map.Combat
                 key = new Pair<int, int>(colInd, rowInd + counter);
             }
             return this._tileDict[key];
+        }
+
+        private Path GetPathViaSourceAdjacentToGoal(MTile s, MTile g)
+        {
+            foreach (var neighbor in s.GetAdjacent())
+            {
+                if (neighbor.Equals(g))
+                {
+                    var trimmed = new Path();
+                    trimmed.AddTile(g);
+                    return trimmed;
+                }
+            }
+            return null;
         }
     }
 }
