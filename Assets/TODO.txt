@@ -1,11 +1,20 @@
 ﻿TODO
+ 
+- Add pond / lake
+  -- add ability for landmark to freeze
+  -- thawing out 
+  -- drowning
 
 - Weekend Duties
   -- Complete more abilities
 	--- Howl
 	--- LEap
   -- Dead eyes on critters
-  -- Fix Bugs
+  -- Stamina reduction when moving, AP reduction, give pathing to models to determine costs
+
+- Biome
+  -- Add rock deco
+  -- Corruption biome
 
 - Combat logic
 	- Bonuses to Hit when surrounding
