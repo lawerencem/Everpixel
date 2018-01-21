@@ -17,9 +17,9 @@ namespace Assets.Template.Hex
 
             foreach (var t in tiles)
             {
-                if (!this._colRowDictionary.ContainsKey(t.Col))
-                    this._colRowDictionary.Add(t.Col, new Dictionary<int, HexTile>());
-                this._colRowDictionary[t.Col].Add(t.Row, t);
+                if (!this._colRowDictionary.ContainsKey(t.GetCol()))
+                    this._colRowDictionary.Add(t.GetCol(), new Dictionary<int, HexTile>());
+                this._colRowDictionary[t.GetCol()].Add(t.GetRow(), t);
 
                 this.Tiles.Add(t);
             }
@@ -66,15 +66,15 @@ namespace Assets.Template.Hex
             int col = -1;
             int row = -1;
 
-            if (t.Col % 2 == 0)
+            if (t.GetCol() % 2 == 0)
             {
-                col = t.Col + 1;
-                row = t.Row - 1;
+                col = t.GetCol() + 1;
+                row = t.GetRow() - 1;
             }
             else
             {
-                col = t.Col + 1;
-                row = t.Row;
+                col = t.GetCol() + 1;
+                row = t.GetRow();
             }
             return GetDirectionalTile(col, row);
         }
@@ -84,22 +84,22 @@ namespace Assets.Template.Hex
             int col = -1;
             int row = -1;
 
-            if (t.Col % 2 == 0)
+            if (t.GetCol() % 2 == 0)
             {
-                col = t.Col + 1;
-                row = t.Row;
+                col = t.GetCol() + 1;
+                row = t.GetRow();
             }
             else
             {
-                col = t.Col + 1;
-                row = t.Row + 1;
+                col = t.GetCol() + 1;
+                row = t.GetRow() + 1;
             }
             return GetDirectionalTile(col, row);
         }
 
         public HexTile GetS(HexTile t)
         {
-            return GetDirectionalTile(t.Col, t.Row + 1);
+            return GetDirectionalTile(t.GetCol(), t.GetRow() + 1);
         }
 
         public HexTile GetSW(HexTile t)
@@ -107,15 +107,15 @@ namespace Assets.Template.Hex
             int col = -1;
             int row = -1;
 
-            if (t.Col % 2 == 0)
+            if (t.GetCol() % 2 == 0)
             {
-                col = t.Col - 1;
-                row = t.Row;
+                col = t.GetCol() - 1;
+                row = t.GetRow();
             }
             else
             {
-                col = t.Col - 1;
-                row = t.Row + 1;
+                col = t.GetCol() - 1;
+                row = t.GetRow() + 1;
             }
             return GetDirectionalTile(col, row);
         }
@@ -125,22 +125,22 @@ namespace Assets.Template.Hex
             int col = -1;
             int row = -1;
 
-            if (t.Col % 2 == 0)
+            if (t.GetCol() % 2 == 0)
             {
-                col = t.Col - 1;
-                row = t.Row - 1;
+                col = t.GetCol() - 1;
+                row = t.GetRow() - 1;
             }
             else
             {
-                col = t.Col - 1;
-                row = t.Row;
+                col = t.GetCol() - 1;
+                row = t.GetRow();
             }
             return GetDirectionalTile(col, row);
         }
 
         public HexTile GetN(HexTile t)
         {
-            return GetDirectionalTile(t.Col, t.Row - 1);
+            return GetDirectionalTile(t.GetCol(), t.GetRow() - 1);
         }
 
         public bool IsTileN(HexTile s, HexTile t)

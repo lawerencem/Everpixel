@@ -340,6 +340,7 @@
     <Compile Include="Assets\Model\Map\Combat\Tile\MTile.cs" />
     <Compile Include="Assets\Model\Map\Combat\Tile\Path.cs" />
     <Compile Include="Assets\Model\Map\Combat\Tile\TileDecoParam.cs" />
+    <Compile Include="Assets\Model\Map\Pathing\PathSearch.cs" />
     <Compile Include="Assets\Model\Mount\EMount.cs" />
     <Compile Include="Assets\Model\Mount\MMount.cs" />
     <Compile Include="Assets\Model\Mount\MountBuilder.cs" />
@@ -417,6 +418,8 @@
     <Compile Include="Assets\Template\Hex\IHex.cs" />
     <Compile Include="Assets\Template\Other\AbstractSingleton.cs" />
     <Compile Include="Assets\Template\Other\Pair.cs" />
+    <Compile Include="Assets\Template\Pathing\Path.cs" />
+    <Compile Include="Assets\Template\Pathing\PathSearch.cs" />
     <Compile Include="Assets\Template\Script\AScript.cs" />
     <Compile Include="Assets\Template\Script\SBob.cs" />
     <Compile Include="Assets\Template\Script\SBoomerang.cs" />
@@ -584,6 +587,7 @@
   <ItemGroup>
     <None Include="Assets\Data\Map\Biome\XML\Snow.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

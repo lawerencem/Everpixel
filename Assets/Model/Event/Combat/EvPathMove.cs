@@ -4,6 +4,7 @@ using Assets.Controller.Manager.GUI;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Character.Enum;
 using Assets.Model.Map.Combat.Tile;
+using Assets.Template.Pathing;
 using Assets.Template.Script;
 using Assets.View;
 
@@ -70,7 +71,8 @@ namespace Assets.Model.Event.Combat
             {
                 this._data.Source.SetCurrent(null);
                 var ap = this._data.Char.Proxy.GetStat(ESecondaryStat.AP);
-                this._next = this._data.TargetPath.GetFirstTile();
+                var tile = this._data.TargetPath.GetFirstTile() as MTile;
+                this._next = tile.Controller;
                 var cost = this._data.Char.Proxy.GetTileTraversalAPCost(this._next);
                 if (cost <= ap)
                 {
@@ -91,7 +93,8 @@ namespace Assets.Model.Event.Combat
         private void TryProcessNextTile(CTile tile)
         {
             var ap = this._data.Char.Proxy.GetStat(ESecondaryStat.AP);
-            this._next = this._data.TargetPath.GetNextTile(tile);
+            var model = this._data.TargetPath.GetFirstTile() as MTile;
+            this._next = model.Controller;
             if (this._next != null)
             {
                 var cost = this._data.Char.Proxy.GetTileTraversalAPCost(this._next);
@@ -132,10 +135,12 @@ namespace Assets.Model.Event.Combat
 
             var s = this._data.Source.Model;
             var t = this._data.Target.Model;
-            this._data.TargetPath = this._data.Target.Model.Map.GetPath(s, t);
+            var pathSearch = new PathSearch();
+            this._data.TargetPath = pathSearch.GetPath(s, t);
             if (this._data.TargetPath == null)
                 throw new System.Exception("Path First tile was null");
-            this._current = this._data.TargetPath.GetFirstTile();
+            var model = this._data.TargetPath.GetFirstTile() as MTile;
+            this._current = model.Controller;
             if (this._current == null)
                 throw new System.Exception("Path First tile was null");
             return true;

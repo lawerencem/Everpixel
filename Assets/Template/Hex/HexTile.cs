@@ -1,79 +1,95 @@
 ﻿using Assets.Template.Util;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace Assets.Template.Hex
 {
-    public class HexTile : IHex<HexTile> 
+    public class HexTile : IHex
     {
-        private HexTile _n;
-        private HexTile _ne;
-        private HexTile _se;
-        private HexTile _s;
-        private HexTile _sw;
-        private HexTile _nw;
+        protected HexTile _n;
+        protected HexTile _ne;
+        protected HexTile _se;
+        protected HexTile _s;
+        protected HexTile _sw;
+        protected HexTile _nw;
 
-        private List<HexTile> _adjacent;
-        private Vector3 _center;
-        private int _col;
-        private int _cost;
-        private object _parentContainer;
-        private HexMap _parentMap;
-        private int _row;
+        protected List<IHex> _adjacent;
+        protected Vector3 _center;
+        protected int _col;
+        protected int _cost;
+        protected HexMap _parentMap;
+        protected int _row;
         
         public Vector3 Center { get { return this._center; } }
-        public int Col { get { return this._col; } }
-        public int Cost { get { return this._cost; } }
-        public object ParentContainer { get { return this._parentContainer; } }
-        public int Row { get { return this._row; } }
 
         public HexTile()
         {
-            this._adjacent = new List<HexTile>();
+            this._adjacent = new List<IHex>();
             this._cost = 0;
         }
 
-        public void AddN(HexTile t) { this._adjacent.Add(t); this._n = t; }
-        public void AddNE(HexTile t) { this._adjacent.Add(t); this._ne = t; }
-        public void AddSE(HexTile t) { this._adjacent.Add(t); this._se = t; }
-        public void AddS(HexTile t) { this._adjacent.Add(t); this._s = t; }
-        public void AddSW(HexTile t) { this._adjacent.Add(t); this._sw = t; }
-        public void AddNW(HexTile t) { this._adjacent.Add(t); this._nw = t; }
+        public void SetN(HexTile t) { this._adjacent.Add(t); this._n = t; }
+        public void SetNE(HexTile t) { this._adjacent.Add(t); this._ne = t; }
+        public void SetSE(HexTile t) { this._adjacent.Add(t); this._se = t; }
+        public void SetS(HexTile t) { this._adjacent.Add(t); this._s = t; }
+        public void SetSW(HexTile t) { this._adjacent.Add(t); this._sw = t; }
+        public void SetNW(HexTile t) { this._adjacent.Add(t); this._nw = t; }
 
-        public List<HexTile> GetAdjacent() { return this._adjacent; }
-        public HexTile GetN() { return this._n; }
-        public HexTile GetNE() { return this._ne; }
-        public HexTile GetSE() { return this._se; }
-        public HexTile GetS() { return this._s; }
-        public HexTile GetSW() { return this._sw; }
-        public HexTile GetNW() { return this._nw; }
+        public List<IHex> GetAdjacent() { return this._adjacent; }
 
-        public void SetAdjacent(List<HexTile> a) { this._adjacent = a; }
+        public IHex GetN() { return this._n; }
+        public IHex GetNE() { return this._ne; }
+        public IHex GetSE() { return this._se; }
+        public IHex GetS() { return this._s; }
+        public IHex GetSW() { return this._sw; }
+        public IHex GetNW() { return this._nw; }
+
+        public void SetAdjacent(List<IHex> a) { this._adjacent = a; }
         public void SetCenter(Vector3 c) { this._center = c; }
         public void SetCol(int col) { this._col = col; }
         public void SetCost(int cost) { this._cost = cost; }
-        public void SetParentContainer(object o) { this._parentContainer = o; }
         public void SetParentMap(HexMap map) { this._parentMap = map; }
         public void SetRow(int row) { this._row = row; }
 
-        public HexTile GetRandomNearbyTile(int probes)
+        public int GetCost()
+        {
+            return this._cost;
+        }
+
+        public int GetCol()
+        {
+            return this._col;
+        }
+
+        public object GetCurrentObject()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int GetRow()
+        {
+            return this._row;
+        }
+
+        public IHex GetRandomNearbyTile(int probes)
         {
             var currNeighbors = this._adjacent;
             for(int i = 0; i < probes; i++)
             {
-                var tile = ListUtil<HexTile>.GetRandomElement(currNeighbors);
-                currNeighbors = tile._adjacent;
+                var tile = ListUtil<IHex>.GetRandomElement(currNeighbors);
+                currNeighbors = tile.GetAdjacent();
             }
-            return ListUtil<HexTile>.GetRandomElement(currNeighbors); 
+            return ListUtil<IHex>.GetRandomElement(currNeighbors); 
         }
 
-        public List<HexTile> GetAoETiles(int dist)
+        public List<IHex> GetAoETiles(int dist)
         {
-            var tiles = new List<HexTile>() { this };
+            var tiles = new List<IHex>() { this };
 
-            var closedSet = new List<HexTile>();
-            var probeSet = new List<HexTile>() { this };
-            var waitingSet = new List<HexTile>() { };
+            var closedSet = new List<IHex>();
+            var probeSet = new List<IHex>() { this };
+            var waitingSet = new List<IHex>() { };
 
             for (int i = dist; i > 0; i--)
             {
@@ -81,7 +97,8 @@ namespace Assets.Template.Hex
                 {
                     foreach (var neighbor in tile.GetAdjacent())
                     {
-                        var found = closedSet.Find(x => x.Col == neighbor.Col && x.Row == neighbor.Row);
+                        var found = closedSet.Find(
+                            x => x.GetCol() == neighbor.GetCol() && x.GetRow() == neighbor.GetRow());
                         if (found == null)
                         {
                             waitingSet.Add(neighbor);
@@ -97,9 +114,9 @@ namespace Assets.Template.Hex
             return tiles;
         }
 
-        public List<HexTile> GetRaycastTiles(HexTile t, int dist)
+        public List<IHex> GetRaycastTiles(IHex t, int dist)
         {
-            var list = new List<HexTile>();
+            var list = new List<IHex>();
 
             if (this.IsTileN(t, dist))
                 list = this.GetRayTilesViaDistN(t, dist);
@@ -117,9 +134,9 @@ namespace Assets.Template.Hex
             return list;
         }
 
-        public bool IsTileN(HexTile target, int dist)
+        public bool IsTileN(IHex target, int dist)
         {
-            var cur = this;
+            var cur = this as IHex;
             for (int i = 0; i < dist; i++)
             {
                 var next = cur.GetN();
@@ -133,9 +150,9 @@ namespace Assets.Template.Hex
             return false;
         }
 
-        public bool IsTileNE(HexTile target, int dist)
+        public bool IsTileNE(IHex target, int dist)
         {
-            var cur = this;
+            var cur = this as IHex;
             for (int i = 0; i < dist; i++)
             {
                 var next = cur.GetNE();
@@ -149,9 +166,9 @@ namespace Assets.Template.Hex
             return false;
         }
 
-        public bool IsTileSE(HexTile target, int dist)
+        public bool IsTileSE(IHex target, int dist)
         {
-            var cur = this;
+            var cur = this as IHex;
             for (int i = 0; i < dist; i++)
             {
                 var next = cur.GetSE();
@@ -165,9 +182,9 @@ namespace Assets.Template.Hex
             return false;
         }
 
-        public bool IsTileS(HexTile target, int dist)
+        public bool IsTileS(IHex target, int dist)
         {
-            var cur = this;
+            var cur = this as IHex;
             for (int i = 0; i < dist; i++)
             {
                 var next = cur.GetS();
@@ -181,9 +198,9 @@ namespace Assets.Template.Hex
             return false;
         }
 
-        public bool IsTileSW(HexTile target, int dist)
+        public bool IsTileSW(IHex target, int dist)
         {
-            var cur = this;
+            var cur = this as IHex;
             for (int i = 0; i < dist; i++)
             {
                 var next = cur.GetSW();
@@ -197,9 +214,9 @@ namespace Assets.Template.Hex
             return false;
         }
 
-        public bool IsTileNW(HexTile target, int dist)
+        public bool IsTileNW(IHex target, int dist)
         {
-            var cur = this;
+            var cur = this as IHex;
             for (int i = 0; i < dist; i++)
             {
                 var next = cur.GetNW();
@@ -214,9 +231,9 @@ namespace Assets.Template.Hex
         }
 
 
-        public List<HexTile> GetRayTilesViaDistN(HexTile t, int dist)
+        public List<IHex> GetRayTilesViaDistN(IHex t, int dist)
         {
-            var list = new List<HexTile>();
+            var list = new List<IHex>();
             var cur = t;
             for (int i = 0; i < dist; i++)
             {
@@ -230,9 +247,9 @@ namespace Assets.Template.Hex
             return list;
         }
 
-        public List<HexTile> GetRayTilesViaDistNE(HexTile t, int dist)
+        public List<IHex> GetRayTilesViaDistNE(IHex t, int dist)
         {
-            var list = new List<HexTile>();
+            var list = new List<IHex>();
             var cur = t;
             for (int i = 0; i < dist; i++)
             {
@@ -246,9 +263,9 @@ namespace Assets.Template.Hex
             return list;
         }
 
-        public List<HexTile> GetRayTilesViaDistSE(HexTile t, int dist)
+        public List<IHex> GetRayTilesViaDistSE(IHex t, int dist)
         {
-            var list = new List<HexTile>();
+            var list = new List<IHex>();
             var cur = t;
             for (int i = 0; i < dist; i++)
             {
@@ -262,9 +279,9 @@ namespace Assets.Template.Hex
             return list;
         }
 
-        public List<HexTile> GetRayTilesViaDistS(HexTile t, int dist)
+        public List<IHex> GetRayTilesViaDistS(IHex t, int dist)
         {
-            var list = new List<HexTile>();
+            var list = new List<IHex>();
             var cur = t;
             for (int i = 0; i < dist; i++)
             {
@@ -278,9 +295,9 @@ namespace Assets.Template.Hex
             return list;
         }
 
-        public List<HexTile> GetRayTilesViaDistSW(HexTile t, int dist)
+        public List<IHex> GetRayTilesViaDistSW(IHex t, int dist)
         {
-            var list = new List<HexTile>();
+            var list = new List<IHex>();
             var cur = t;
             for (int i = 0; i < dist; i++)
             {
@@ -294,9 +311,9 @@ namespace Assets.Template.Hex
             return list;
         }
 
-        public List<HexTile> GetRayTilesViaDistNW(HexTile t, int dist)
+        public List<IHex> GetRayTilesViaDistNW(IHex t, int dist)
         {
-            var list = new List<HexTile>();
+            var list = new List<IHex>();
             var cur = t;
             for (int i = 0; i < dist; i++)
             {

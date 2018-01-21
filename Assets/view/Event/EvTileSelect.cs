@@ -2,6 +2,7 @@
 using Assets.Controller.Map.Combat;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Map.Combat;
+using Assets.Template.Pathing;
 
 namespace Assets.View.Event
 {
@@ -38,7 +39,8 @@ namespace Assets.View.Event
             {
                 var s = this._data.Source.Model;
                 var t = this._data.Target.Model;
-                var path = this._data.Map.GetPath(s, t);
+                var pathSearch = new PathSearch();
+                var path = pathSearch.GetPath(s, t);
                 if (path != null)
                 {
                     VMapCombatController.Instance.DecoratePath(path);

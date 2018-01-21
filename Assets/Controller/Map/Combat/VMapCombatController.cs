@@ -3,6 +3,7 @@ using Assets.Controller.Map.Tile;
 using Assets.Model.Ability;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Map.Combat.Tile;
+using Assets.Template.Pathing;
 using Assets.View;
 using Assets.View.Map;
 using System.Collections.Generic;
@@ -68,9 +69,10 @@ namespace Assets.Controller.Map.Combat
             if (p != null)
             {
                 var sprite = MapBridge.Instance.GetTileHighlightSprite();
-                foreach (var t in p.GetTiles())
+                foreach (var tile in p.GetTiles())
                 {
-                    DecorateTileFamily(t.Controller, sprite);
+                    var model = tile as MTile;
+                    DecorateTileFamily(model.Controller, sprite);
                 }
             }
         }

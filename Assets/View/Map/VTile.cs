@@ -16,8 +16,8 @@ namespace Assets.View.Map
         public VTile(MTile h)
         {
             this._center = h.Center;
-            this._col = h.Col;
-            this._row = h.Row; 
+            this._col = h.GetCol();
+            this._row = h.GetRow(); 
         }
 
         public Sprite Sprite { get; set; }

@@ -62,7 +62,7 @@ namespace Assets.Controller.Map.Combat.Loader
                 render.sprite = sprite;
                 render.sortingLayerName = Layers.TILE_LAYER;
                 tile.Handle.transform.SetParent(tileHolder);
-                tile.Handle.name = Layers.TILE + "( " + tile.Model.Col + " / " + tile.Model.Row + " )";
+                tile.Handle.name = Layers.TILE + "( " + tile.Model.GetCol() + " / " + tile.Model.GetRow() + " )";
             }
             controller.GetMap().InitControllerAdjacent();
         }

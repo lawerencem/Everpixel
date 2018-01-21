@@ -1,5 +1,7 @@
 ﻿TODO
  
+- Remove HexTile class.  Implement IHex only in mapbuilder.
+
 - Add pond / lake
   -- add ability for landmark to freeze
   -- thawing out 

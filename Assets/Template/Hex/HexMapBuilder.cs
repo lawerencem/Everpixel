@@ -55,12 +55,12 @@ namespace Assets.Template.Hex
                 var SW = map.GetSW(tile);
                 var NW = map.GetNW(tile);
 
-                if (N != null) { tile.AddN(N); }
-                if (NE != null) { tile.AddNE(NE); }
-                if (SE != null) { tile.AddSE(SE); }
-                if (S != null) { tile.AddS(S); }
-                if (SW != null) { tile.AddSW(SW); }
-                if (NW != null) { tile.AddNW(NW); }
+                if (N != null) { tile.SetN(N); }
+                if (NE != null) { tile.SetNE(NE); }
+                if (SE != null) { tile.SetSE(SE); }
+                if (S != null) { tile.SetS(S); }
+                if (SW != null) { tile.SetSW(SW); }
+                if (NW != null) { tile.SetNW(NW); }
             }
         }
 
