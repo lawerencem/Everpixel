@@ -13,11 +13,11 @@ namespace Assets.Model.Map.Combat.Landmark.Builder
             var mTiles = tile.Model.GetAoETiles(radius - 1);
             foreach(var mTile in mTiles)
             {
-                if (!FTile.HasFlag(mTile.Controller.Flags.CurFlags, FTile.Flags.Landmark))
+                if (!FTile.HasFlag(mTile.Controller.GetFlags().CurFlags, FTile.Flags.Landmark))
                 {
                     mTile.SetHeight(lmParams.Height);
                     var controller = mTile.Controller;
-                    FTile.SetLandmarkFlagTrue(tile.Flags);
+                    FTile.SetLandmarkFlagTrue(tile.GetFlags());
                 }
             }
         }

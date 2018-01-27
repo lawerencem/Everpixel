@@ -33,6 +33,8 @@ namespace Assets.Controller.Map.Tile
                 adjacent.Add(tile.Controller);
             return adjacent;
         }
+
+        public FTile GetFlags() { return this._model.GetFlags(); }
         public List<CChar> GetNonCurrent() { return this._nonCurrent; }
         public List<AZone> GetZones() { return this._zones; }
 
@@ -42,7 +44,6 @@ namespace Assets.Controller.Map.Tile
 
         public CTile(MTile tile)
         {
-            this._flags = new FTile();
             this._handle = new GameObject(Layers.TILE);
             this._handle.transform.position = tile.Center;
             this._nonCurrent = new List<CChar>();

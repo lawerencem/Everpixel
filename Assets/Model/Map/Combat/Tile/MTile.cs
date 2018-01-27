@@ -8,12 +8,12 @@ namespace Assets.Model.Map.Combat.Tile
 {
     public class MTile : IHex
     {
-        protected MTile _n;
-        protected MTile _ne;
-        protected MTile _se;
-        protected MTile _s;
-        protected MTile _sw;
-        protected MTile _nw;
+        private MTile _n;
+        private MTile _ne;
+        private MTile _se;
+        private MTile _s;
+        private MTile _sw;
+        private MTile _nw;
 
         private List<MTile> _adjacent;
         private Vector3 _center;
@@ -21,6 +21,7 @@ namespace Assets.Model.Map.Combat.Tile
         private int _cost;
         private CTile _controller;
         private object _currentOccupant;
+        private FTile _flags;
         private int _height;
         private HexTileLogic _logic;
         private MMap _map;
@@ -34,6 +35,7 @@ namespace Assets.Model.Map.Combat.Tile
         public MTile()
         {
             this._adjacent = new List<MTile>();
+            this._flags = new FTile();
             this._height = 1;
             this._logic = new HexTileLogic();
         }
@@ -59,6 +61,8 @@ namespace Assets.Model.Map.Combat.Tile
         public MTile GetS() { return this._s; }
         public MTile GetSW() { return this._sw; }
         public MTile GetNW() { return this._nw; }
+
+        public FTile GetFlags() { return this._flags; }
 
         public List<MTile> GetAoETiles(int dist)
         {

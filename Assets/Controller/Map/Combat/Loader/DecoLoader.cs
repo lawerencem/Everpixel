@@ -25,7 +25,7 @@ namespace Assets.Controller.Map.Combat.Loader
         {
             var decoParam = DecoTable.Instance.Table[deco];
             var sprite = this._sprites[ListUtil<int>.GetRandomElement(decoParam.Sprites)];
-            FTile.SetDecoFlagTrue(tile.Flags);
+            FTile.SetDecoFlagTrue(tile.GetFlags());
             var model = new MDeco(deco);
             tile.SetCurrent(model);
             var view = new GameObject();
