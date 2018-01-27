@@ -11,9 +11,9 @@ namespace Assets.View.Map.Tile.Deco
     public class VTileDeco
     {
         private VTileDecoData _data;
-        private ETileDeco _type;
+        private EEnvironment _type;
 
-        public VTileDeco(VTileDecoData data, ETileDeco type)
+        public VTileDeco(VTileDecoData data, EEnvironment type)
         {
             this._data = data;
             this._type = type;

@@ -1,6 +1,6 @@
 ﻿namespace Assets.Model.Map.Combat.Tile
 {
-    public enum ETileDeco
+    public enum EEnvironment
     {
         None,
         Eye_Hill,

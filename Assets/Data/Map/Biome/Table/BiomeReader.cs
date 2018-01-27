@@ -65,8 +65,8 @@ namespace Assets.Data.Map.Deco.XML
             {
                 foreach(var name in ele.Attributes())
                 {
-                    var deco = ETileDeco.None;
-                    if (EnumUtil<ETileDeco>.TryGetEnumValue(name.Value, ref deco))
+                    var deco = EEnvironment.None;
+                    if (EnumUtil<EEnvironment>.TryGetEnumValue(name.Value, ref deco))
                     {
                         foreach(var elem in ele.Elements())
                         {

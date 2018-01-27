@@ -9,10 +9,10 @@ namespace Assets.Model.Map.Combat.Deco
 
     public class MDeco
     {
-        private ETileDeco _type;
+        private EEnvironment _type;
         private MDecoData _data;
 
-        public MDeco(ETileDeco type)
+        public MDeco(EEnvironment type)
         {
             this._type = type;
         }

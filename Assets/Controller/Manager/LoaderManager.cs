@@ -4,6 +4,7 @@ using Assets.Data.Class.XML;
 using Assets.Data.Equipment.XML;
 using Assets.Data.Injury.XML;
 using Assets.Data.Map.Deco.XML;
+using Assets.Data.Map.Environment;
 using Assets.Data.Map.Landmark.XML;
 using Assets.Data.Mount.XML;
 using Assets.Data.Party.XML;
@@ -35,7 +36,7 @@ namespace Assets.Controller.Manager
             this._readers.Add(PerkReader.Instance);
             this._readers.Add(RaceReader.Instance);
             this._readers.Add(SubPartyReader.Instance);
-            this._readers.Add(TileDecoReader.Instance);
+            this._readers.Add(EnvironmentReader.Instance);
             this._readers.Add(WeaponReader.Instance);
             this._readers.Add(ZoneReader.Instance);
 

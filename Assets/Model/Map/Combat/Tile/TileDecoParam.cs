@@ -2,13 +2,13 @@
 
 namespace Assets.Model.Map.Combat.Tile
 {
-    public class TileDecoParam
+    public class EnvironmentParam
     {
-        private ETileDeco _type;
+        private EEnvironment _type;
 
         public List<int> Sprites { get; set; }
         
-        public TileDecoParam(ETileDeco type)
+        public EnvironmentParam(EEnvironment type)
         {
             this._type = type;
             this.Sprites = new List<int>();

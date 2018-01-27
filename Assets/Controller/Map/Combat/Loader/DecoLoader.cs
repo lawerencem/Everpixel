@@ -1,5 +1,5 @@
 ﻿using Assets.Controller.Map.Tile;
-using Assets.Data.Map.Deco.Table;
+using Assets.Data.Map.Environment;
 using Assets.Model.Map.Combat.Deco;
 using Assets.Model.Map.Combat.Tile;
 using Assets.Template.Util;
@@ -21,9 +21,9 @@ namespace Assets.Controller.Map.Combat.Loader
                 this._sprites.Add(sprite);
         }
 
-        public void AttachDeco(CTile tile, ETileDeco deco)
+        public void AttachDeco(CTile tile, EEnvironment deco)
         {
-            var decoParam = DecoTable.Instance.Table[deco];
+            var decoParam = EnvironmentTable.Instance.Table[deco];
             var sprite = this._sprites[ListUtil<int>.GetRandomElement(decoParam.Sprites)];
             FTile.SetDecoFlagTrue(tile.GetFlags());
             var model = new MDeco(deco);

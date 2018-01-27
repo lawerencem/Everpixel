@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Environments>
+  <Environment name="Eye_Hill">
+    <Sprites>2,3,4</Sprites>
+  </Environment>
+  <Environment name="Ice_Eye_Hill">
+    <Sprites>8,9,10</Sprites>
+  </Environment>
+  <Environment name="Shrub">
+    <Sprites>0,1</Sprites>
+  </Environment>
+  <Environment name="Tiny_Tree">
+    <Sprites>5,6,7</Sprites>
+  </Environment>
+</Environments>

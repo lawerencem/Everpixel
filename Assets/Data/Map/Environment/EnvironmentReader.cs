@@ -4,26 +4,26 @@ using Assets.Template.Util;
 using Assets.Template.XML;
 using System.Xml.Linq;
 
-namespace Assets.Data.Map.Deco.XML
+namespace Assets.Data.Map.Environment
 {
-    public class TileDecoReader : XMLReader
+    public class EnvironmentReader : XMLReader
     {
-        private DecoTable table = DecoTable.Instance;
+        private EnvironmentTable table = EnvironmentTable.Instance;
 
-        private static TileDecoReader _instance;
-        public static TileDecoReader Instance
+        private static EnvironmentReader _instance;
+        public static EnvironmentReader Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new TileDecoReader();
+                    _instance = new EnvironmentReader();
                 return _instance;
             }
         }
 
-        public TileDecoReader() : base()
+        public EnvironmentReader() : base()
         {
-            this._paths.Add("Assets/Data/Map/Deco/XML/TileDeco.xml");
+            this._paths.Add("Assets/Data/Map/Environment/Environments.xml");
         }
 
         public override void ReadFromFile()
@@ -31,7 +31,7 @@ namespace Assets.Data.Map.Deco.XML
             foreach(var path in this._paths)
             {
                 var doc = XDocument.Load(path);
-                var type = ETileDeco.None;
+                var type = EEnvironment.None;
 
                 foreach (var el in doc.Root.Elements())
                     foreach (var att in el.Attributes())
@@ -40,12 +40,12 @@ namespace Assets.Data.Map.Deco.XML
             }
         }
 
-        private void HandleIndex(string name, string param, string value, ref ETileDeco type)
+        private void HandleIndex(string name, string param, string value, ref EEnvironment type)
         {
-            if (EnumUtil<ETileDeco>.TryGetEnumValue(name, ref type))
+            if (EnumUtil<EEnvironment>.TryGetEnumValue(name, ref type))
             {
                 if (!this.table.Table.ContainsKey(type))
-                    this.table.Table.Add(type, new TileDecoParam(type));
+                    this.table.Table.Add(type, new EnvironmentParam(type));
 
                 switch(param)
                 {
@@ -54,7 +54,7 @@ namespace Assets.Data.Map.Deco.XML
             }
         }
 
-        private void HandleSprites(string value, ref ETileDeco type)
+        private void HandleSprites(string value, ref EEnvironment type)
         {
             var values = value.Split(',');
             foreach(var v in values)

@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.3.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -337,8 +339,8 @@
     <Compile Include="Assets\Data\Injury\XML\InjuryReader.cs" />
     <Compile Include="Assets\Data\Map\Biome\Table\BiomeReader.cs" />
     <Compile Include="Assets\Data\Map\Biome\Table\BiomeTable.cs" />
-    <Compile Include="Assets\Data\Map\Deco\Table\DecoTable.cs" />
-    <Compile Include="Assets\Data\Map\Deco\XML\TileDecoReader.cs" />
+    <Compile Include="Assets\Data\Map\Environment\EnvironmentTable.cs" />
+    <Compile Include="Assets\Data\Map\Environment\EnvironmentReader.cs" />
     <Compile Include="Assets\Data\Map\Landmark\Table\LandmarkTable.cs" />
     <Compile Include="Assets\Data\Map\Landmark\XML\LandmarkReader.cs" />
     <Compile Include="Assets\Data\Mount\Table\MountTable.cs" />
@@ -755,8 +757,11 @@
     <None Include="Assets\Data\Injury\XML\Injuries.xml" />
     <None Include="Assets\Data\Map\Biome\XML\Grassland.xml" />
     <None Include="Assets\Data\Map\Biome\XML\Snow.xml" />
-    <None Include="Assets\Data\Map\Deco\XML\TileDeco.xml" />
+    <None Include="Assets\Data\Map\Environment\Environments.xml" />
     <None Include="Assets\Data\Map\Landmark\XML\Landmarks.xml" />
+    <None Include="Assets\Data\Map\Tile\Tile.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Data\Mount\XML\Mounts.xml" />
     <None Include="Assets\Data\Party\XML\Party\AmazonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\BretonParties.xml" />
@@ -783,6 +788,7 @@
     <None Include="Assets\Data\Zone\XML\Zones.xml" />
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

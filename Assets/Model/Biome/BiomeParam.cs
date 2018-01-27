@@ -8,14 +8,14 @@ namespace Assets.Model.Biome
     {
         private EBiome _type;
 
-        public Dictionary<ETileDeco, double> DecoDict;
+        public Dictionary<EEnvironment, double> DecoDict;
         public Dictionary<ELandmark, double> LandmarkDict;
 
         public BiomeParam(EBiome type)
         {
             this._type = type;
 
-            this.DecoDict = new Dictionary<ETileDeco, double>();
+            this.DecoDict = new Dictionary<EEnvironment, double>();
             this.LandmarkDict = new Dictionary<ELandmark, double>();
         }
     }
