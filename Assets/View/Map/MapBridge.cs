@@ -1,4 +1,4 @@
-﻿using Assets.Model.Biome;
+﻿using Assets.Model.Map.Tile;
 using Assets.Template.Other;
 using UnityEngine;
 
@@ -7,9 +7,9 @@ namespace Assets.View.Map
     public class MapBridge : ASingleton<MapBridge>
     {
 
-        public Sprite[] GetBackgroundSprites(EBiome b)
+        public Sprite[] GetTileSprites(ETile t)
         {
-            return MapSpriteLoader.Instance.GetBiomeBackground(b);
+            return MapSpriteLoader.Instance.GetTileSprites(t);
         }
 
         public Sprite[] GetDecoSprites()

@@ -1,4 +1,5 @@
 ﻿using Assets.Model.Biome;
+using Assets.Model.Map.Tile;
 using Assets.Model.Zone;
 using Assets.Template.Other;
 using Assets.Template.Util;
@@ -29,9 +30,9 @@ namespace Assets.View.Map
 
         public MapSpriteLoader() { }
 
-        public Sprite[] GetBiomeBackground(EBiome b)
+        public Sprite[] GetTileSprites(ETile tile)
         {
-            var path = StringUtil.PathBuilder(PATH, b.ToString(), TILE_EXTENSION);
+            var path = StringUtil.PathBuilder(PATH, tile.ToString(), TILE_EXTENSION);
             return GetSprites(path);
         }
 

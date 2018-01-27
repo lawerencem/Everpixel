@@ -28,6 +28,7 @@ namespace Assets.Controller.Manager
             this._readers.Add(BarkReader.Instance);
             this._readers.Add(BiomeReader.Instance);
             this._readers.Add(ClassReader.Instance);
+            this._readers.Add(EnvironmentReader.Instance);
             this._readers.Add(InjuryReader.Instance);
             this._readers.Add(PartyReader.Instance);
             this._readers.Add(PredefinedCharReader.Instance);
@@ -36,7 +37,7 @@ namespace Assets.Controller.Manager
             this._readers.Add(PerkReader.Instance);
             this._readers.Add(RaceReader.Instance);
             this._readers.Add(SubPartyReader.Instance);
-            this._readers.Add(EnvironmentReader.Instance);
+            this._readers.Add(TileReader.Instance);
             this._readers.Add(WeaponReader.Instance);
             this._readers.Add(ZoneReader.Instance);
 

@@ -51,6 +51,7 @@ namespace Assets.Data.Map.Deco.XML
                                 {
                                     case ("Decos"): { this.HandleDecos(ele, type); } break;
                                     case ("Landmarks"): { this.HandleLandmarks(ele, type); } break;
+                                    case ("Tiles"): { this.HandleTiles(ele, type); } break;
                                 }
                             }
                         }
@@ -101,6 +102,31 @@ namespace Assets.Data.Map.Deco.XML
                                 if (double.TryParse(elem.Value, out chance))
                                 {
                                     this.table.Table[type].LandmarkDict.Add(landmark, chance);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void HandleTiles(XElement el, EBiome type)
+        {
+            foreach (var ele in el.Elements())
+            {
+                foreach (var name in ele.Attributes())
+                {
+                    var tileType = ETile.None;
+                    if (EnumUtil<ETile>.TryGetEnumValue(name.Value, ref tileType))
+                    {
+                        foreach (var elem in ele.Elements())
+                        {
+                            if (elem.Name == "Chance")
+                            {
+                                double chance = 0;
+                                if (double.TryParse(elem.Value, out chance))
+                                {
+                                    this.table.Table[type].TileDict.Add(tileType, chance);
                                 }
                             }
                         }

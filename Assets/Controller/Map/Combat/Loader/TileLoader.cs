@@ -1,15 +1,26 @@
 ﻿using Assets.Controller.Map.Tile;
 using Assets.Data.Map.Deco.Table;
+using Assets.Data.Map.Landmark.Table;
 using Assets.Model.Map.Landmark.Builder;
+using Assets.Model.Map.Tile;
 using Assets.Template.Util;
 using Assets.View;
 using Assets.View.Map;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Controller.Map.Combat.Loader
 {
     public class TileLoader
     {
+        private Dictionary<ETile, List<Sprite>> _spriteDict;
+
+        public TileLoader()
+        {
+            this._spriteDict = new Dictionary<ETile, List<Sprite>>();
+        }
+
         public void RenderHeights(MMapController controller)
         {
             this.RenderHeightOffsets(controller);
@@ -52,12 +63,14 @@ namespace Assets.Controller.Map.Combat.Loader
 
         public void InitTiles(MMapController controller, MapInitInfo info, Transform tileHolder)
         {
-            var sprites = MapBridge.Instance.GetBackgroundSprites(info.Biome);
+            this.InitTileSprites();
             foreach (var tile in controller.GetMap().GetTiles())
             {
+                this.InitTileType(tile, info);
                 var script = tile.Handle.AddComponent<STile>();
                 script.InitTile(tile);
-                var sprite = sprites[Random.Range(0, sprites.Length)];
+                var sprites = this._spriteDict[tile.Model.Type];
+                var sprite = ListUtil<Sprite>.GetRandomElement(sprites);
                 var render = tile.Handle.AddComponent<SpriteRenderer>();
                 render.sprite = sprite;
                 render.sortingLayerName = Layers.TILE_LAYER;
@@ -138,6 +151,40 @@ namespace Assets.Controller.Map.Combat.Loader
                 var center = tile.Model.Center;
                 center.y -= ViewParams.HEIGHT_BOTTOM_OFFSET * i;
                 renderer.transform.position = center;
+            }
+        }
+
+        private void InitTileType(CTile tile, MapInitInfo info)
+        {
+            var mapParams = BiomeTable.Instance.Table[info.Biome];
+            double roll = RNG.Instance.NextDouble();
+            double tally = 1.0;
+            foreach(var kvp in mapParams.TileDict)
+            {
+                if (kvp.Value <= tally)
+                {
+                    tile.Model.SetType(kvp.Key);
+                    break;
+                }
+                else
+                {
+                    tally -= kvp.Value;
+                }
+            }
+        }
+
+        private void InitTileSprites()
+        {
+            foreach(ETile tile in Enum.GetValues(typeof(ETile)))
+            {
+                if (tile != ETile.None)
+                {
+                    this._spriteDict.Add(tile, new List<Sprite>());
+                    var indexes = TileTable.Instance.Table[tile].Sprites;
+                    var sprites = MapBridge.Instance.GetTileSprites(tile);
+                    for (int i = 0; i < indexes.Count; i++)
+                        this._spriteDict[tile].Add(sprites[i]);
+                }
             }
         }
     }

@@ -26,11 +26,13 @@ namespace Assets.Model.Map.Tile
         private HexTileLogic _logic;
         private MMap _map;
         private int _row;
+        private ETile _type;
 
         public CTile Controller { get { return this._controller; } }
         public Vector3 Center { get { return this._center; } }
         public int Height { get { return this._height; } }
         public MMap Map { get { return this._map; } }
+        public ETile Type { get { return this._type; } }
 
         public MTile()
         {
@@ -54,6 +56,7 @@ namespace Assets.Model.Map.Tile
         public void SetHeight(int h) { this._height = h; }
         public void SetMap(MMap m) { this._map = m; }
         public void SetRow(int row) { this._row = row; }
+        public void SetType(ETile type) { this._type = type; }
 
         public MTile GetN() { return this._n; }
         public MTile GetNE() { return this._ne; }
