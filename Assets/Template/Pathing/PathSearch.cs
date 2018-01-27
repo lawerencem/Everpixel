@@ -17,7 +17,7 @@ namespace Assets.Template.Pathing
 
     public class PathSearch
     {
-        public Path GetBruteForcePathViaFiniteSet(List<IHex> set, IHex s, IHex g)
+        public Path GetBruteForcePathViaFiniteSet(List<IHex> set, IHex s, IHex g, IPathable navigator)
         {
             var validPaths = new List<Path>();
             var openSet = new List<IHex>() { s };
@@ -28,7 +28,7 @@ namespace Assets.Template.Pathing
             var pathDict = new Dictionary<Pair<int, int>, Path>();
             var closedSet = new List<Pair<int, int>>();
             var initPath = new Path();
-            initPath.AddTile(s);
+            initPath.AddTile(s, navigator);
             pathDict.Add(new Pair<int, int>(s.GetCol(), s.GetRow()), initPath);
 
             while (openSet.Count > 0 && !found)
@@ -42,7 +42,7 @@ namespace Assets.Template.Pathing
                         var innerKey = new Pair<int, int>(tile.GetCol(), tile.GetRow());
                         var previousPath = pathDict[innerKey];
                         var newPath = previousPath.DeepCopy();
-                        newPath.AddTile(neighbor);
+                        newPath.AddTile(neighbor, navigator);
                         var newKey = new Pair<int, int>(neighbor.GetCol(), neighbor.GetRow());
                         if (!pathDict.ContainsKey(newKey))
                             pathDict.Add(newKey, newPath);
@@ -73,7 +73,7 @@ namespace Assets.Template.Pathing
                 return initPath;
         }
 
-        public Path GetBruteForcePathUnknownSet(IHex s, IHex g)
+        public Path GetBruteForcePathUnknownSet(IHex s, IHex g, IPathable navigator)
         {
             var validPaths = new List<Path>();
             bool found = false;
@@ -81,7 +81,7 @@ namespace Assets.Template.Pathing
             var openSet = new List<IHex>() { s };
             var closedSet = new List<Pair<int, int>>();
             var initPath = new Path();
-            initPath.AddTile(s);
+            initPath.AddTile(s, navigator);
             pathDict.Add(new Pair<int, int>(s.GetCol(), s.GetRow()), initPath);
 
             while (openSet.Count > 0 && !found)
@@ -97,7 +97,7 @@ namespace Assets.Template.Pathing
                         var innerKey = new Pair<int, int>(tile.GetCol(), tile.GetRow());
                         var previousPath = pathDict[innerKey];
                         var newPath = previousPath.DeepCopy();
-                        newPath.AddTile(neighbor);
+                        newPath.AddTile(neighbor, navigator);
                         var newKey = new Pair<int, int>(neighbor.GetCol(), neighbor.GetRow());
                         if (!pathDict.ContainsKey(newKey))
                             pathDict.Add(newKey, newPath);
@@ -140,7 +140,7 @@ namespace Assets.Template.Pathing
             return data;
         }
 
-        private void GetPathHelperIterateData(GetPathDataClass data)
+        private void GetPathHelperIterateData(GetPathDataClass data, IPathable navigator)
         {
             var tile = data.OpenSet.ElementAt(0);
             foreach (var neighbor in tile.GetAdjacent())
@@ -153,7 +153,7 @@ namespace Assets.Template.Pathing
                     var pathKey = new Pair<int, int>(tile.GetCol(), tile.GetRow());
                     var previousPath = data.PathsToGoalDict[pathKey];
                     var newPath = previousPath.DeepCopy();
-                    newPath.AddTile(neighbor);
+                    newPath.AddTile(neighbor, navigator);
                     var newKey = new Pair<int, int>(neighbor.GetCol(), neighbor.GetRow());
                     if (!data.PathsToGoalDict.ContainsKey(newKey))
                         data.PathsToGoalDict.Add(newKey, newPath);
@@ -171,9 +171,9 @@ namespace Assets.Template.Pathing
             data.OpenSet.Remove(tile);
         }
 
-        public Path GetPath(IHex s, IHex g)
+        public Path GetPath(IHex s, IHex g, IPathable navigator)
         {
-            var quickPath = this.GetPathViaSourceAdjacentToGoal(s, g);
+            var quickPath = this.GetPathViaSourceAdjacentToGoal(s, g, navigator);
             if (quickPath != null)
                 return quickPath;
 
@@ -183,8 +183,8 @@ namespace Assets.Template.Pathing
 
             while (sourceData.OpenSet.Count > 0 && goalData.OpenSet.Count > 0)
             {
-                this.GetPathHelperIterateData(sourceData);
-                this.GetPathHelperIterateData(goalData);
+                this.GetPathHelperIterateData(sourceData, navigator);
+                this.GetPathHelperIterateData(goalData, navigator);
                 if (sourceData.PathsToGoal.Count > 0 && goalData.PathsToGoal.Count > 0)
                 {
                     foreach (var sourcePath in sourceData.PathsToGoal)
@@ -195,11 +195,11 @@ namespace Assets.Template.Pathing
                             {
                                 var valid = new Path();
                                 foreach (var tile in sourcePath.GetTiles())
-                                    valid.AddTile(tile);
+                                    valid.AddTile(tile, navigator);
                                 goalPath.GetTiles().Reverse();
                                 for (int i = 1; i < goalPath.GetTiles().Count; i++)
-                                    valid.AddTile(goalPath.GetTiles()[i]);
-                                valid.AddTile(g);
+                                    valid.AddTile(goalPath.GetTiles()[i], navigator);
+                                valid.AddTile(g, navigator);
                                 validPaths.Add(valid);
                             }
                         }
@@ -214,28 +214,28 @@ namespace Assets.Template.Pathing
             return null;
         }
 
-        private Path GetPathViaSourceAdjacentToGoal(IHex s, IHex g)
+        private Path GetPathViaSourceAdjacentToGoal(IHex s, IHex g, IPathable navigator)
         {
             foreach (var neighbor in s.GetAdjacent())
             {
                 if (neighbor.Equals(g))
                 {
                     var trimmed = new Path();
-                    trimmed.AddTile(g);
+                    trimmed.AddTile(g, navigator);
                     return trimmed;
                 }
             }
             return null;
         }
 
-        private Path TrimRedundantPathing(Path path, IHex g)
+        private Path TrimRedundantPathing(Path path, IHex g, IPathable navigator)
         {
             var validPaths = new List<Path>();
             var openSet = path.GetTiles();
             var initPath = new Path();
             var pathDict = new Dictionary<Pair<int, int>, Path>();
             var firstTile = path.GetTiles()[0];
-            initPath.AddTile(firstTile);
+            initPath.AddTile(firstTile, navigator);
             pathDict.Add(new Pair<int, int>(firstTile.GetCol(), firstTile.GetRow()), initPath);
             while (openSet.Count > 0)
             {
@@ -247,7 +247,7 @@ namespace Assets.Template.Pathing
                         var pathKey = new Pair<int, int>(tile.GetCol(), tile.GetRow());
                         var previousPath = pathDict[pathKey];
                         var newPath = previousPath.DeepCopy();
-                        newPath.AddTile(neighbor);
+                        newPath.AddTile(neighbor, navigator);
                         var newKey = new Pair<int, int>(neighbor.GetCol(), neighbor.GetRow());
                         if (!pathDict.ContainsKey(newKey))
                             pathDict.Add(newKey, newPath);

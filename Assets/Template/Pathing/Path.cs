@@ -32,9 +32,12 @@ namespace Assets.Template.Pathing
             return null;
         }
 
-        public void AddTile(IHex t)
+        public void AddTile(IHex t, IPathable navigator)
         {
-            this._score += t.GetCost();
+            if (this._tiles.Count == 0)
+                this._score += navigator.GetTileTraversalCost(navigator.GetCurrentTile(), t);
+            else
+                this._score += navigator.GetTileTraversalCost(this._tiles[this._tiles.Count - 1], t);
             this._tiles.Add(t);
         }
 
