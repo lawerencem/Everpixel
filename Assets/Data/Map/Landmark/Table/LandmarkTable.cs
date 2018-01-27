@@ -1,4 +1,4 @@
-﻿using Assets.Model.Map.Combat.Landmark;
+﻿using Assets.Model.Map.Landmark;
 using Assets.Template.Other;
 using System.Collections.Generic;
 

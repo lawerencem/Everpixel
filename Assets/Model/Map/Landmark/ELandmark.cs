@@ -1,4 +1,4 @@
-﻿namespace Assets.Model.Map.Combat.Landmark
+﻿namespace Assets.Model.Map.Landmark
 {
     public enum ELandmark
     {

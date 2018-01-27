@@ -5,7 +5,7 @@ using Assets.Template.Hex;
 using Assets.Template.Other;
 using System.Collections.Generic;
 
-namespace Assets.Model.Map.Combat
+namespace Assets.Model.Map
 {
     public class MMap
     {

@@ -1,6 +1,6 @@
 ﻿using Assets.Model.Map.Tile;
 
-namespace Assets.Model.Map.Combat.Deco
+namespace Assets.Model.Map.Deco
 {
     public class MDecoData
     {

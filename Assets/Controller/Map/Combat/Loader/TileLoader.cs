@@ -1,6 +1,6 @@
 ﻿using Assets.Controller.Map.Tile;
 using Assets.Data.Map.Deco.Table;
-using Assets.Model.Map.Combat.Landmark.Builder;
+using Assets.Model.Map.Landmark.Builder;
 using Assets.Template.Util;
 using Assets.View;
 using Assets.View.Map;

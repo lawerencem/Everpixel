@@ -1,6 +1,6 @@
 ﻿using Assets.Data.Map.Deco.Table;
 using Assets.Model.Biome;
-using Assets.Model.Map.Combat.Landmark;
+using Assets.Model.Map.Landmark;
 using Assets.Model.Map.Tile;
 using Assets.Template.Util;
 using Assets.Template.XML;

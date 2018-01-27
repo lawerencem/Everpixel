@@ -2,7 +2,7 @@
 using Assets.Data.Map.Landmark.Table;
 using Assets.Template.Util;
 
-namespace Assets.Model.Map.Combat.Landmark.Builder
+namespace Assets.Model.Map.Landmark.Builder
 {
     public class FlatHillBuilder : ALandmarkBuilder
     {

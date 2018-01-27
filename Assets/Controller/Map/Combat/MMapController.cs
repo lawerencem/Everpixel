@@ -1,4 +1,4 @@
-﻿using Assets.Model.Map.Combat;
+﻿using Assets.Model.Map;
 using Assets.Model.Party;
 using System.Collections.Generic;
 

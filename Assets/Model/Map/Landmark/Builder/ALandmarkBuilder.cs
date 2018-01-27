@@ -1,6 +1,6 @@
 ﻿using Assets.Controller.Map.Tile;
 
-namespace Assets.Model.Map.Combat.Landmark.Builder
+namespace Assets.Model.Map.Landmark.Builder
 {
     public abstract class ALandmarkBuilder
     {

@@ -1,5 +1,4 @@
 ﻿using Assets.Controller.Map.Tile;
-using Assets.Model.Map.Combat;
 using Assets.Template.Hex;
 using System;
 using System.Collections.Generic;
@@ -148,32 +147,32 @@ namespace Assets.Model.Map.Tile
 
         IHex IHex.GetN()
         {
-            throw new NotImplementedException();
+            return this.GetN();
         }
 
         IHex IHex.GetNE()
         {
-            throw new NotImplementedException();
+            return this.GetNE();
         }
 
         IHex IHex.GetSE()
         {
-            throw new NotImplementedException();
+            return this.GetSE();
         }
 
         IHex IHex.GetS()
         {
-            throw new NotImplementedException();
+            return this.GetS();
         }
 
         IHex IHex.GetSW()
         {
-            throw new NotImplementedException();
+            return this.GetSW();
         }
 
         IHex IHex.GetNW()
         {
-            throw new NotImplementedException();
+            return this.GetNW();
         }
 
         public bool IsTileN(IHex target, int dist)

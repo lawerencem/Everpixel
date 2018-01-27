@@ -1,6 +1,6 @@
 ﻿using Assets.Controller.Map.Tile;
 using Assets.Data.Map.Environment;
-using Assets.Model.Map.Combat.Deco;
+using Assets.Model.Map.Deco;
 using Assets.Model.Map.Tile;
 using Assets.Template.Util;
 using Assets.View.Map;
