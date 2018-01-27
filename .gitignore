@@ -1,8 +1,3 @@
-Everpixel.csproj
-Everpixel.sln
-*.csproj
-*.sln
-.vs/**
 $tf/
 Library/
 Temp/

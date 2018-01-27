@@ -10,7 +10,6 @@ namespace Assets.Controller.Map.Tile
 {
     public class CTile
     {
-        private FTile _flags;
         private GameObject _handle;
         private MTile _model;
         private List<CChar> _nonCurrent;
@@ -19,7 +18,6 @@ namespace Assets.Controller.Map.Tile
 
         public object Current { get { return this._model.GetCurrentOccupant(); } }
         public Vector3 Center { get { return this._model.Center; } }
-        public FTile Flags { get { return this._flags; } }
         public GameObject Handle { get { return this._handle; } }
         public MTile Model { get { return this._model; } }
         public VTile View { get { return this._view; } }

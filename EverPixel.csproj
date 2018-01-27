@@ -542,6 +542,7 @@
     <Compile Include="Assets\Model\Map\Combat\Tile\MTile.cs" />
     <Compile Include="Assets\Model\Map\Combat\Tile\Path.cs" />
     <Compile Include="Assets\Model\Map\Combat\Tile\TileDecoParam.cs" />
+    <Compile Include="Assets\Model\Map\MapBuilder.cs" />
     <Compile Include="Assets\Model\Map\Pathing\PathSearch.cs" />
     <Compile Include="Assets\Model\Mount\EMount.cs" />
     <Compile Include="Assets\Model\Mount\MMount.cs" />
@@ -615,8 +616,7 @@
     <Compile Include="Assets\Template\Event\AEventManager.cs" />
     <Compile Include="Assets\Template\Factory\GFactory.cs" />
     <Compile Include="Assets\Template\Hex\HexMap.cs" />
-    <Compile Include="Assets\Template\Hex\HexMapBuilder.cs" />
-    <Compile Include="Assets\Template\Hex\HexTile.cs" />
+    <Compile Include="Assets\Template\Hex\HexTileLogic.cs" />
     <Compile Include="Assets\Template\Hex\IHex.cs" />
     <Compile Include="Assets\Template\Other\AbstractSingleton.cs" />
     <Compile Include="Assets\Template\Other\Pair.cs" />
