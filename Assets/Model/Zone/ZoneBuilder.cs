@@ -7,7 +7,7 @@ namespace Assets.Model.Zone
 {
     public class ZoneBuilder
     {
-        private const string ZONE_PATH = "Sprites/CombatMap/";
+        private const string ZONE_PATH = "Sprites/Map/";
 
         public AZone Build(AZone zone)
         {

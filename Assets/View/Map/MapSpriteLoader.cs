@@ -22,7 +22,7 @@ namespace Assets.View.Map
 
         private readonly List<int> TILE_BOTTOMS = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8 };
 
-        private const string PATH = "Sprites/CombatMap/";
+        private const string PATH = "Sprites/Map/";
         private const string DECO_EXTENSION = "_Deco";
         private const string TILE_EXTENSION = "_Tiles";
         private const string ZONE_EXTENSION = "_Zone";
