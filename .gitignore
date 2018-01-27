@@ -2,7 +2,7 @@ Everpixel.csproj
 Everpixel.sln
 *.csproj
 *.sln
-.vs/*
+.vs/**
 $tf/
 Library/
 Temp/

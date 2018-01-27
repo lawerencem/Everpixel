@@ -93,10 +93,10 @@ namespace Assets.Model.Event.Combat
         private void TryProcessNextTile(CTile tile)
         {
             var ap = this._data.Char.Proxy.GetStat(ESecondaryStat.AP);
-            var model = this._data.TargetPath.GetFirstTile() as MTile;
-            this._next = model.Controller;
-            if (this._next != null)
+            var model = (MTile) this._data.TargetPath.GetNextTile(tile.Model);
+            if (model != null)
             {
+                this._next = model.Controller;
                 var cost = this._data.Char.Proxy.GetTileTraversalAPCost(this._next);
                 if (cost <= ap)
                 {
