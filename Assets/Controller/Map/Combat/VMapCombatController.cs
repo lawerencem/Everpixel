@@ -2,7 +2,7 @@
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability;
 using Assets.Model.Ability.Enum;
-using Assets.Model.Map.Combat.Tile;
+using Assets.Model.Map.Tile;
 using Assets.Template.Pathing;
 using Assets.View;
 using Assets.View.Map;

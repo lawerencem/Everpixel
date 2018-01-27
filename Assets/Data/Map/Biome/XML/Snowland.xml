@@ -13,4 +13,9 @@
       <Chance>0.085</Chance>
     </Landmark>
   </Landmarks>
+  <Tiles>
+    <Tile name="Snow">
+      <Chance>1.0</Chance>
+    </Tile>
+  </Tiles>
 </Biome>

@@ -1,5 +1,5 @@
 ﻿using Assets.Controller.Map.Tile;
-using Assets.Model.Map.Combat.Tile;
+using Assets.Model.Map.Tile;
 using Assets.Model.Party.Enum;
 using Assets.Template.Hex;
 using Assets.Template.Other;

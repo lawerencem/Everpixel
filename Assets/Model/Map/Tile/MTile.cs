@@ -1,10 +1,11 @@
 ﻿using Assets.Controller.Map.Tile;
+using Assets.Model.Map.Combat;
 using Assets.Template.Hex;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Model.Map.Combat.Tile
+namespace Assets.Model.Map.Tile
 {
     public class MTile : IHex
     {

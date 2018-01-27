@@ -1,4 +1,4 @@
-﻿using Assets.Model.Map.Combat.Tile;
+﻿using Assets.Model.Map.Tile;
 using Assets.Template.Hex;
 using System.Collections.Generic;
 using UnityEngine;

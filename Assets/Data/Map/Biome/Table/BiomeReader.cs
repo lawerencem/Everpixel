@@ -1,7 +1,7 @@
 ﻿using Assets.Data.Map.Deco.Table;
 using Assets.Model.Biome;
 using Assets.Model.Map.Combat.Landmark;
-using Assets.Model.Map.Combat.Tile;
+using Assets.Model.Map.Tile;
 using Assets.Template.Util;
 using Assets.Template.XML;
 using System.Xml.Linq;
@@ -26,7 +26,7 @@ namespace Assets.Data.Map.Deco.XML
         public BiomeReader() : base()
         {
             this._paths.Add("Assets/Data/Map/Biome/XML/Grassland.xml");
-            this._paths.Add("Assets/Data/Map/Biome/XML/Snow.xml");
+            this._paths.Add("Assets/Data/Map/Biome/XML/Snowland.xml");
         }
 
         public override void ReadFromFile()

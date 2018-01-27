@@ -1,4 +1,4 @@
-﻿using Assets.Model.Map.Combat.Tile;
+﻿using Assets.Model.Map.Tile;
 
 namespace Assets.Model.Map.Combat.Deco
 {

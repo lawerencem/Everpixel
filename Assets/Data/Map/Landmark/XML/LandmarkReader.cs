@@ -1,6 +1,5 @@
 ﻿using Assets.Data.Map.Landmark.Table;
 using Assets.Model.Map.Combat.Landmark;
-using Assets.Model.Map.Combat.Tile;
 using Assets.Template.Util;
 using Assets.Template.XML;
 using System.Xml.Linq;

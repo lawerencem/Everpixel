@@ -1,4 +1,4 @@
-﻿namespace Assets.Model.Map.Combat.Tile
+﻿namespace Assets.Model.Map.Tile
 {
     public enum EEnvironment
     {

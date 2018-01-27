@@ -540,10 +540,9 @@
     <Compile Include="Assets\Model\Map\Combat\Landmark\LandmarkParams.cs" />
     <Compile Include="Assets\Model\Map\Combat\Landmark\MLandmark.cs" />
     <Compile Include="Assets\Model\Map\Combat\MMap.cs" />
-    <Compile Include="Assets\Model\Map\Combat\Tile\ETileDeco.cs" />
-    <Compile Include="Assets\Model\Map\Combat\Tile\MTile.cs" />
-    <Compile Include="Assets\Model\Map\Combat\Tile\Path.cs" />
-    <Compile Include="Assets\Model\Map\Combat\Tile\TileDecoParam.cs" />
+    <Compile Include="Assets\Model\Map\Tile\EEnvironment.cs" />
+    <Compile Include="Assets\Model\Map\Tile\MTile.cs" />
+    <Compile Include="Assets\Model\Map\Tile\TileDecoParam.cs" />
     <Compile Include="Assets\Model\Map\MapBuilder.cs" />
     <Compile Include="Assets\Model\Map\Pathing\PathSearch.cs" />
     <Compile Include="Assets\Model\Mount\EMount.cs" />
@@ -756,7 +755,7 @@
     <None Include="Assets\Data\Equipment\XML\Weapon\Sword.xml" />
     <None Include="Assets\Data\Injury\XML\Injuries.xml" />
     <None Include="Assets\Data\Map\Biome\XML\Grassland.xml" />
-    <None Include="Assets\Data\Map\Biome\XML\Snow.xml" />
+    <None Include="Assets\Data\Map\Biome\XML\Snowland.xml" />
     <None Include="Assets\Data\Map\Environment\Environments.xml" />
     <None Include="Assets\Data\Map\Landmark\XML\Landmarks.xml" />
     <None Include="Assets\Data\Map\Tile\Tile.xml">

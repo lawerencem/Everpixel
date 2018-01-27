@@ -19,4 +19,9 @@
       <Chance>0.025</Chance>
     </Landmark>
   </Landmarks>
+  <Tiles>
+    <Tile name="Grass">
+      <Chance>1.0</Chance>
+    </Tile>
+  </Tiles>
 </Biome>

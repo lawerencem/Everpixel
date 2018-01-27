@@ -1,73 +1,20 @@
 fileFormatVersion: 2
-guid: 5966fdfa92a7ed54bbab5787db1143be
-timeCreated: 1515961602
+guid: ce9a0266d1d68f84684ddf563853bcd6
+timeCreated: 1517083608
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Grassland_Tiles_0
-    21300002: Grassland_Tiles_1
-    21300004: Grassland_Tiles_2
-    21300006: Grassland_Tiles_3
-    21300008: Grassland_Tiles_4
-    21300010: Grassland_Tiles_5
-    21300012: Grassland_Tiles_6
-    21300014: Grassland_Tiles_7
-    21300016: Grassland_Tiles_8
-    21300018: Grassland_Tiles_9
-    21300020: Grassland_Tiles_10
-    21300022: Grassland_Tiles_11
-    21300024: Grassland_Tiles_12
-    21300026: Grassland_Tiles_13
-    21300028: Grassland_Tiles_14
-    21300030: Grassland_Tiles_15
-    21300032: Grassland_Tiles_16
-    21300034: Grassland_Tiles_17
-    21300036: Grassland_Tiles_18
-    21300038: Grassland_Tiles_19
-    21300040: Grassland_Tiles_20
-    21300042: Grassland_Tiles_21
-    21300044: Grassland_Tiles_22
-    21300046: Grassland_Tiles_23
-    21300048: Grassland_Tiles_24
-    21300050: Grassland_Tiles_25
-    21300052: Grassland_Tiles_26
-    21300054: Grassland_Tiles_27
-    21300056: Grassland_Tiles_28
-    21300058: Grassland_Tiles_29
-    21300060: Grassland_Tiles_30
-    21300062: Grassland_Tiles_31
-    21300064: Grassland_Tiles_32
-    21300066: Grassland_Tiles_33
-    21300068: Grassland_Tiles_34
-    21300070: Grassland_Tiles_35
-    21300072: Grassland_Tiles_36
-    21300074: Grassland_Tiles_37
-    21300076: Grassland_Tiles_38
-    21300078: Grassland_Tiles_39
-    21300080: Grassland_Tiles_40
-    21300082: Grassland_Tiles_41
-    21300084: Grassland_Tiles_42
-    21300086: Grassland_Tiles_43
-    21300088: Grassland_Tiles_44
-    21300090: Grassland_Tiles_45
-    21300092: Grassland_Tiles_46
-    21300094: Grassland_Tiles_47
-    21300096: Grassland_Tiles_48
-    21300098: Grassland_Tiles_49
-    21300100: Grassland_Tiles_50
-    21300102: Grassland_Tiles_51
-    21300104: Grassland_Tiles_52
-    21300106: Grassland_Tiles_53
-    21300108: Grassland_Tiles_54
-    21300110: Grassland_Tiles_55
-    21300112: Grassland_Tiles_56
-    21300114: Grassland_Tiles_57
-    21300116: Grassland_Tiles_58
-    21300118: Grassland_Tiles_59
-    21300120: Grassland_Tiles_60
-    21300122: Grassland_Tiles_61
-    21300124: Grassland_Tiles_62
-    21300126: Grassland_Tiles_63
+    21300000: Grass_Tiles_0
+    21300002: Grass_Tiles_1
+    21300004: Grass_Tiles_2
+    21300006: Grass_Tiles_3
+    21300008: Grass_Tiles_4
+    21300010: Grass_Tiles_5
+    21300012: Grass_Tiles_6
+    21300014: Grass_Tiles_7
+    21300016: Grass_Tiles_8
+    21300018: Grass_Tiles_9
+  externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -76,6 +23,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -91,10 +40,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: 0
     aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -116,25 +68,29 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
   - buildTarget: Standalone
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grassland_Tiles_0
+      name: Grass_Tiles_0
       rect:
         serializedVersion: 2
         x: 0
@@ -145,9 +101,10 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Grassland_Tiles_1
+      name: Grass_Tiles_1
       rect:
         serializedVersion: 2
         x: 64
@@ -158,9 +115,10 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Grassland_Tiles_2
+      name: Grass_Tiles_2
       rect:
         serializedVersion: 2
         x: 128
@@ -171,9 +129,10 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Grassland_Tiles_3
+      name: Grass_Tiles_3
       rect:
         serializedVersion: 2
         x: 192
@@ -184,9 +143,10 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Grassland_Tiles_4
+      name: Grass_Tiles_4
       rect:
         serializedVersion: 2
         x: 256
@@ -197,9 +157,10 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Grassland_Tiles_5
+      name: Grass_Tiles_5
       rect:
         serializedVersion: 2
         x: 320
@@ -210,9 +171,10 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Grassland_Tiles_6
+      name: Grass_Tiles_6
       rect:
         serializedVersion: 2
         x: 384
@@ -223,9 +185,10 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Grassland_Tiles_7
+      name: Grass_Tiles_7
       rect:
         serializedVersion: 2
         x: 448
@@ -236,8 +199,38 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Grass_Tiles_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Grass_Tiles_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
     outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

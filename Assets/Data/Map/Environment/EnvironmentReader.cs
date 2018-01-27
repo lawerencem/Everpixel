@@ -1,5 +1,4 @@
-﻿using Assets.Data.Map.Deco.Table;
-using Assets.Model.Map.Combat.Tile;
+﻿using Assets.Model.Map.Tile;
 using Assets.Template.Util;
 using Assets.Template.XML;
 using System.Xml.Linq;
