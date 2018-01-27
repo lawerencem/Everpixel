@@ -10,7 +10,7 @@ namespace Assets.Template.Hex
         int GetCost();
         int GetCol();
         int GetRow();
-        object GetCurrentObject();
+        object GetCurrentOccupant();
         List<IHex> GetRaycastTiles(IHex target, int dist);
         List<IHex> GetRayTilesViaDistN(IHex target, int dist);
         List<IHex> GetRayTilesViaDistNE(IHex target, int dist);

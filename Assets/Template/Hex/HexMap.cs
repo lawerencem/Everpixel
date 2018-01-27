@@ -4,21 +4,21 @@ namespace Assets.Template.Hex
 {
     public class HexMap
     {
-        protected Dictionary<int, Dictionary<int, HexTile>> _colRowDictionary;
+        protected Dictionary<int, Dictionary<int, IHex>> _colRowDictionary;
         protected int _cols;
         protected int _rows;
 
-        public List<HexTile> Tiles { get; set; }
+        public List<IHex> Tiles { get; set; }
 
-        public HexMap(List<HexTile> tiles, int rows, int cols)
+        public HexMap(List<IHex> tiles, int rows, int cols)
         {
-            this.Tiles = new List<HexTile>();
-            this._colRowDictionary = new Dictionary<int, Dictionary<int, HexTile>>();
+            this.Tiles = new List<IHex>();
+            this._colRowDictionary = new Dictionary<int, Dictionary<int, IHex>>();
 
             foreach (var t in tiles)
             {
                 if (!this._colRowDictionary.ContainsKey(t.GetCol()))
-                    this._colRowDictionary.Add(t.GetCol(), new Dictionary<int, HexTile>());
+                    this._colRowDictionary.Add(t.GetCol(), new Dictionary<int, IHex>());
                 this._colRowDictionary[t.GetCol()].Add(t.GetRow(), t);
 
                 this.Tiles.Add(t);
@@ -35,7 +35,7 @@ namespace Assets.Template.Hex
         public int GetLastCol() { return this._cols; }
         public int GetLastRow() { return this._rows; }
 
-        public HexTile GetOppositeTile(HexTile source, HexTile target)
+        public IHex GetOppositeTile(IHex source, IHex target)
         {
             if (this.GetN(source).Equals(target))
                 return this.GetN(target);
@@ -53,7 +53,7 @@ namespace Assets.Template.Hex
                 return null;
         }
 
-        public HexTile GetTileViaColRowPair(int col, int row)
+        public IHex GetTileViaColRowPair(int col, int row)
         {
             if (this._colRowDictionary.ContainsKey(col))
                 if (this._colRowDictionary[col].ContainsKey(row))
@@ -61,7 +61,7 @@ namespace Assets.Template.Hex
             return null;
         }
 
-        public HexTile GetNE(HexTile t)
+        public IHex GetNE(IHex t)
         {
             int col = -1;
             int row = -1;
@@ -79,7 +79,7 @@ namespace Assets.Template.Hex
             return GetDirectionalTile(col, row);
         }
 
-        public HexTile GetSE(HexTile t)
+        public IHex GetSE(IHex t)
         {
             int col = -1;
             int row = -1;
@@ -97,12 +97,12 @@ namespace Assets.Template.Hex
             return GetDirectionalTile(col, row);
         }
 
-        public HexTile GetS(HexTile t)
+        public IHex GetS(IHex t)
         {
             return GetDirectionalTile(t.GetCol(), t.GetRow() + 1);
         }
 
-        public HexTile GetSW(HexTile t)
+        public IHex GetSW(IHex t)
         {
             int col = -1;
             int row = -1;
@@ -120,7 +120,7 @@ namespace Assets.Template.Hex
             return GetDirectionalTile(col, row);
         }
 
-        public HexTile GetNW(HexTile t)
+        public IHex GetNW(IHex t)
         {
             int col = -1;
             int row = -1;
@@ -138,12 +138,12 @@ namespace Assets.Template.Hex
             return GetDirectionalTile(col, row);
         }
 
-        public HexTile GetN(HexTile t)
+        public IHex GetN(IHex t)
         {
             return GetDirectionalTile(t.GetCol(), t.GetRow() - 1);
         }
 
-        public bool IsTileN(HexTile s, HexTile t)
+        public bool IsTileN(IHex s, IHex t)
         {
             if (this.GetN(s).Equals(t))
                 return true;
@@ -151,7 +151,7 @@ namespace Assets.Template.Hex
                 return false;
         }
 
-        public bool IsTileNE(HexTile s, HexTile t)
+        public bool IsTileNE(IHex s, IHex t)
         {
             if (this.GetNE(s).Equals(t))
                 return true;
@@ -159,7 +159,7 @@ namespace Assets.Template.Hex
                 return false;
         }
 
-        public bool IsTileSE(HexTile s, HexTile t)
+        public bool IsTileSE(IHex s, IHex t)
         {
             if (this.GetSE(s).Equals(t))
                 return true;
@@ -167,7 +167,7 @@ namespace Assets.Template.Hex
                 return false;
         }
 
-        public bool IsTileS(HexTile s, HexTile t)
+        public bool IsTileS(IHex s, IHex t)
         {
             if (this.GetS(s).Equals(t))
                 return true;
@@ -175,7 +175,7 @@ namespace Assets.Template.Hex
                 return false;
         }
 
-        public bool IsTileSW(HexTile s, HexTile t)
+        public bool IsTileSW(IHex s, IHex t)
         {
             if (this.GetSW(s).Equals(t))
                 return true;
@@ -183,7 +183,7 @@ namespace Assets.Template.Hex
                 return false;
         }
 
-        public bool IsTileNW(HexTile s, HexTile t)
+        public bool IsTileNW(IHex s, IHex t)
         {
             if (this.GetNW(s).Equals(t))
                 return true;
@@ -191,7 +191,7 @@ namespace Assets.Template.Hex
                 return false;
         }
 
-        private HexTile GetDirectionalTile(int c, int r)
+        private IHex GetDirectionalTile(int c, int r)
         {
             if (this._colRowDictionary.ContainsKey(c))
                 if (this._colRowDictionary[c].ContainsKey(r))

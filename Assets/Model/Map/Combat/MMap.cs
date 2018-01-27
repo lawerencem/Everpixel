@@ -4,7 +4,6 @@ using Assets.Model.Party.Enum;
 using Assets.Template.Hex;
 using Assets.Template.Other;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Assets.Model.Map.Combat
 {
@@ -23,14 +22,9 @@ namespace Assets.Model.Map.Combat
             this._tiles = new List<CTile>();
             this._map = map;
             var mTiles = new List<MTile>();
-            foreach(var t in this._map.Tiles)
+            foreach(MTile tile in this._map.Tiles)
             {
-                var tile = new MTile(t);
                 tile.SetMap(this);
-                mTiles.Add(tile);
-            }
-            foreach (var tile in mTiles)
-            {
                 var controller = new CTile(tile);
                 this._tiles.Add(controller);
                 this._tileDict.Add(new Pair<int, int>(tile.GetCol(), tile.GetRow()), controller);

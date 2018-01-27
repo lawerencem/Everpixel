@@ -1,20 +1,22 @@
-﻿using System.Collections.Generic;
+﻿using Assets.Model.Map.Combat.Tile;
+using Assets.Template.Hex;
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Template.Hex
+namespace Assets.Model.Map
 {
-    public class HexMapBuilder
+    public class MapBuilder
     {
-        public static HexMap GetMap(int rows, int cols, float e, Vector3 seed)
+        public HexMap GetMap(int rows, int cols, float e, Vector3 seed)
         {
-            var tiles = new List<HexTile>();
+            var tiles = new List<IHex>();
 
             for (int i = 0; i < cols; i += 2)
             {
                 for (int j = 1; j < rows; j++)
                 {
                     var xOffset = e * 0.75f;
-                    var tile = new HexTile();
+                    var tile = new MTile();
                     tile.SetCol(i);
                     tile.SetRow(j);
                     tile.SetCenter(new Vector3((seed.x + (xOffset * i)), (seed.y - (e * j)), seed.z));
@@ -30,7 +32,7 @@ namespace Assets.Template.Hex
                 for (int j = 1; j < rows; j++)
                 {
                     var xOffset = e * 0.75f;
-                    var tile = new HexTile();
+                    var tile = new MTile();
                     tile.SetCol(i);
                     tile.SetRow(j);
                     tile.SetCenter(new Vector3((seed.x + (xOffset * i)), (ySeed.y - (e * j)), seed.z));
@@ -39,21 +41,20 @@ namespace Assets.Template.Hex
             }
 
             var map = new HexMap(tiles, rows, cols);
-            PopulateAdjacentTiles(map);
-            SetTilesParentMap(map);
+            this.PopulateAdjacentTiles(map);
             return map;
         }
 
-        private static void PopulateAdjacentTiles(HexMap map)
+        private void PopulateAdjacentTiles(HexMap map)
         {
-            foreach(var tile in map.Tiles)
+            foreach(MTile tile in map.Tiles)
             {
-                var N = map.GetN(tile);
-                var NE = map.GetNE(tile);
-                var SE = map.GetSE(tile);
-                var S = map.GetS(tile);
-                var SW = map.GetSW(tile);
-                var NW = map.GetNW(tile);
+                var N = (MTile) map.GetN(tile);
+                var NE = (MTile) map.GetNE(tile);
+                var SE = (MTile) map.GetSE(tile);
+                var S = (MTile) map.GetS(tile);
+                var SW = (MTile) map.GetSW(tile);
+                var NW = (MTile) map.GetNW(tile);
 
                 if (N != null) { tile.SetN(N); }
                 if (NE != null) { tile.SetNE(NE); }
@@ -62,12 +63,6 @@ namespace Assets.Template.Hex
                 if (SW != null) { tile.SetSW(SW); }
                 if (NW != null) { tile.SetNW(NW); }
             }
-        }
-
-        private static void SetTilesParentMap(HexMap map)
-        {
-            foreach(var tile in map.Tiles)
-                tile.SetParentMap(map);
         }
     }
 }

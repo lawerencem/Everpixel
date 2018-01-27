@@ -1,4 +1,5 @@
-﻿using Assets.Model.Map.Combat;
+﻿using Assets.Model.Map;
+using Assets.Model.Map.Combat;
 using Assets.Template.Hex;
 using Assets.View;
 using System;
@@ -24,7 +25,8 @@ namespace Assets.Controller.Map.Combat.Loader
 
         public MMapController GetCombatMap(MapInitInfo info)
         {
-            var hexMap = HexMapBuilder.GetMap(info.Rows, info.Cols, ViewParams.OFFSET, ViewParams.MAP_CENTER);
+            var builder = new MapBuilder();
+            var hexMap = builder.GetMap(info.Rows, info.Cols, ViewParams.OFFSET, ViewParams.MAP_CENTER);
             var map = new MMap(hexMap);
             this._map.SetMap(map);
             this.InitTiles(info);

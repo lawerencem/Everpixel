@@ -1,5 +1,6 @@
 ﻿using Assets.Template.Hex;
 using Assets.Template.Other;
+using Assets.Template.Util;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -19,9 +20,10 @@ namespace Assets.Template.Pathing
         public Path GetBruteForcePathViaFiniteSet(List<IHex> set, IHex s, IHex g)
         {
             var validPaths = new List<Path>();
-            var openSet = new List<IHex>();
+            var openSet = new List<IHex>() { s };
             foreach (var tile in set)
-                openSet.Add(tile);
+                if (!tile.Equals(s))
+                    openSet.Add(tile);
             bool found = false;
             var pathDict = new Dictionary<Pair<int, int>, Path>();
             var closedSet = new List<Pair<int, int>>();
@@ -35,7 +37,7 @@ namespace Assets.Template.Pathing
                 foreach (var neighbor in tile.GetAdjacent())
                 {
                     var neighborKey = new Pair<int, int>(neighbor.GetCol(), neighbor.GetRow());
-                    if (neighbor.GetCurrentObject() == null)
+                    if (neighbor.GetCurrentOccupant() == null)
                     {
                         var innerKey = new Pair<int, int>(tile.GetCol(), tile.GetRow());
                         var previousPath = pathDict[innerKey];
@@ -88,7 +90,7 @@ namespace Assets.Template.Pathing
                 foreach (var neighbor in tile.GetAdjacent())
                 {
                     var neighborKey = new Pair<int, int>(neighbor.GetCol(), neighbor.GetRow());
-                    if (neighbor.GetCurrentObject() == null)
+                    if (neighbor.GetCurrentOccupant() == null)
                     {
                         if (!closedSet.Contains(neighborKey))
                             openSet.Add(neighbor);
@@ -144,7 +146,7 @@ namespace Assets.Template.Pathing
             foreach (var neighbor in tile.GetAdjacent())
             {
                 var neighborKey = new Pair<int, int>(neighbor.GetCol(), neighbor.GetRow());
-                if (neighbor.GetCurrentObject() == null)
+                if (neighbor.GetCurrentOccupant() == null)
                 {
                     if (!data.ClosedSet.Contains(neighborKey))
                         data.OpenSet.Add(neighbor);
@@ -267,9 +269,8 @@ namespace Assets.Template.Pathing
 
         private Path TryOptimizePath(Path p, IHex s, IHex g)
         {
-            var openSet = p.GetTiles();
-            var extendedSet = p.GetTiles();
-            foreach (var tile in openSet)
+            var extendedSet = ListUtil<IHex>.ShallowClone(p.GetTiles());
+            foreach (var tile in p.GetTiles())
             {
                 foreach (var neighbor in tile.GetAdjacent())
                 {

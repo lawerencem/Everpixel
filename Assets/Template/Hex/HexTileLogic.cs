@@ -1,101 +1,39 @@
 ﻿using Assets.Template.Util;
 using System.Collections.Generic;
-using UnityEngine;
-using System;
 
 namespace Assets.Template.Hex
 {
-    public class HexTile : IHex
+    public class HexTileLogic
     {
-        protected HexTile _n;
-        protected HexTile _ne;
-        protected HexTile _se;
-        protected HexTile _s;
-        protected HexTile _sw;
-        protected HexTile _nw;
-
-        protected List<IHex> _adjacent;
-        protected Vector3 _center;
-        protected int _col;
-        protected int _cost;
-        protected HexMap _parentMap;
-        protected int _row;
-        
-        public Vector3 Center { get { return this._center; } }
-
-        public HexTile()
+        public HexTileLogic()
         {
-            this._adjacent = new List<IHex>();
-            this._cost = 0;
+
         }
 
-        public void SetN(HexTile t) { this._adjacent.Add(t); this._n = t; }
-        public void SetNE(HexTile t) { this._adjacent.Add(t); this._ne = t; }
-        public void SetSE(HexTile t) { this._adjacent.Add(t); this._se = t; }
-        public void SetS(HexTile t) { this._adjacent.Add(t); this._s = t; }
-        public void SetSW(HexTile t) { this._adjacent.Add(t); this._sw = t; }
-        public void SetNW(HexTile t) { this._adjacent.Add(t); this._nw = t; }
-
-        public List<IHex> GetAdjacent() { return this._adjacent; }
-
-        public IHex GetN() { return this._n; }
-        public IHex GetNE() { return this._ne; }
-        public IHex GetSE() { return this._se; }
-        public IHex GetS() { return this._s; }
-        public IHex GetSW() { return this._sw; }
-        public IHex GetNW() { return this._nw; }
-
-        public void SetAdjacent(List<IHex> a) { this._adjacent = a; }
-        public void SetCenter(Vector3 c) { this._center = c; }
-        public void SetCol(int col) { this._col = col; }
-        public void SetCost(int cost) { this._cost = cost; }
-        public void SetParentMap(HexMap map) { this._parentMap = map; }
-        public void SetRow(int row) { this._row = row; }
-
-        public int GetCost()
+        public IHex GetRandomNearbyTile(int probes, IHex tile)
         {
-            return this._cost;
-        }
-
-        public int GetCol()
-        {
-            return this._col;
-        }
-
-        public object GetCurrentObject()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int GetRow()
-        {
-            return this._row;
-        }
-
-        public IHex GetRandomNearbyTile(int probes)
-        {
-            var currNeighbors = this._adjacent;
+            var currNeighbors = tile.GetAdjacent();
             for(int i = 0; i < probes; i++)
             {
-                var tile = ListUtil<IHex>.GetRandomElement(currNeighbors);
-                currNeighbors = tile.GetAdjacent();
+                var random = ListUtil<IHex>.GetRandomElement(currNeighbors);
+                currNeighbors = random.GetAdjacent();
             }
             return ListUtil<IHex>.GetRandomElement(currNeighbors); 
         }
 
-        public List<IHex> GetAoETiles(int dist)
+        public List<IHex> GetAoETiles(int dist, IHex tile)
         {
-            var tiles = new List<IHex>() { this };
+            var tiles = new List<IHex>() { tile };
 
             var closedSet = new List<IHex>();
-            var probeSet = new List<IHex>() { this };
+            var probeSet = new List<IHex>() { tile };
             var waitingSet = new List<IHex>() { };
 
             for (int i = dist; i > 0; i--)
             {
-                foreach (var tile in probeSet)
+                foreach (var probe in probeSet)
                 {
-                    foreach (var neighbor in tile.GetAdjacent())
+                    foreach (var neighbor in probe.GetAdjacent())
                     {
                         var found = closedSet.Find(
                             x => x.GetCol() == neighbor.GetCol() && x.GetRow() == neighbor.GetRow());
@@ -108,7 +46,7 @@ namespace Assets.Template.Hex
                     }
                 }
                 probeSet.Clear();
-                foreach (var tile in waitingSet) { probeSet.Add(tile); }
+                foreach (var wait in waitingSet) { probeSet.Add(wait); }
                 waitingSet.Clear();
             }
             return tiles;

@@ -10,7 +10,6 @@ namespace Assets.Controller.Map.Tile
 {
     public class CTile
     {
-        private object _current;
         private FTile _flags;
         private GameObject _handle;
         private MTile _model;
@@ -18,7 +17,8 @@ namespace Assets.Controller.Map.Tile
         private VTile _view;
         private List<AZone> _zones;
 
-        public object Current { get { return this._current; } }
+        public object Current { get { return this._model.GetCurrentOccupant(); } }
+        public Vector3 Center { get { return this._model.Center; } }
         public FTile Flags { get { return this._flags; } }
         public GameObject Handle { get { return this._handle; } }
         public MTile Model { get { return this._model; } }
@@ -30,7 +30,7 @@ namespace Assets.Controller.Map.Tile
         public List<CTile> GetAdjacent()
         {
             var adjacent = new List<CTile>();
-            var tiles = this._model.GetAdjacent();
+            var tiles = this._model.GetAdjacentMTiles();
             foreach (var tile in tiles)
                 adjacent.Add(tile.Controller);
             return adjacent;
@@ -40,7 +40,7 @@ namespace Assets.Controller.Map.Tile
 
         public void RemoveZone(AZone zone) { this._zones.Remove(zone); }
 
-        public void SetCurrent(object o) { this._current = o; }
+        public void SetCurrent(object o) { this.Model.SetCurrentOccupant(o); }
 
         public CTile(MTile tile)
         {
@@ -84,7 +84,7 @@ namespace Assets.Controller.Map.Tile
         {
             for(int i = 0; i < 5; i++)
             {
-                var tile = this._model.GetRandomNearbyTile(probes);
+                var tile = (MTile) this._model.GetRandomNearbyTile(probes);
                 if (tile.Controller.Current == null)
                     return tile.Controller;
             }
@@ -94,7 +94,7 @@ namespace Assets.Controller.Map.Tile
 
         public CTile GetRandomNearbyTile(int probes)
         {
-            var tile = this._model.GetRandomNearbyTile(probes);
+            var tile = (MTile) this._model.GetRandomNearbyTile(probes);
             return tile.Controller;
         }
 

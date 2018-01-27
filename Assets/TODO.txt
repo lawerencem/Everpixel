@@ -1,6 +1,6 @@
 ﻿TODO
  
-- Remove HexTile class.  Implement IHex only in mapbuilder.
+- Implement interfaces for objects that can be in tiles
 
 - Add pond / lake
   -- add ability for landmark to freeze

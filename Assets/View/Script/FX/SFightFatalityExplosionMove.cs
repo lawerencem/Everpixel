@@ -16,7 +16,7 @@ namespace Assets.View.Script.FX
         {
             this._handle = source;
             var sourceTile = character.Tile;
-            var landTile = character.Tile.Model.GetRandomNearbyTile(5);
+            var landTile = character.Tile.GetRandomNearbyTile(5);
             var pos = RandomPositionOffset.RandomOffset(landTile.Center, CombatGUIParams.DEFAULT_OFFSET);
             var data = new SRaycastMoveData();
             data.Epsilon = FatalityParams.DEFAULT_EPSILON;
@@ -28,7 +28,7 @@ namespace Assets.View.Script.FX
             move.AddCallback(this.SetDeadLayer);
             move.Init(data);
             var renderer = source.GetComponent<SpriteRenderer>();
-            source.transform.SetParent(landTile.Controller.Handle.transform);
+            source.transform.SetParent(landTile.Handle.transform);
         }
 
         private void SetDeadLayer(object o)
