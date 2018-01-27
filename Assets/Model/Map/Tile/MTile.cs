@@ -52,6 +52,7 @@ namespace Assets.Model.Map.Tile
         public void SetCenter(Vector3 center) { this._center = center; }
         public void SetCol(int col) { this._col = col; }
         public void SetController(CTile c) { this._controller = c; }
+        public void SetCost(int cost) { this._cost = cost; }
         public void SetCurrentOccupant(object o) { this._currentOccupant = o; }
         public void SetHeight(int h) { this._height = h; }
         public void SetMap(MMap m) { this._map = m; }

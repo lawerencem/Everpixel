@@ -1,10 +1,9 @@
-﻿using System;
-
-namespace Assets.Model.Map.Tile
+﻿namespace Assets.Model.Map.Tile
 {
     public enum ETile
     {
         None,
+        Ice,
         Grass,
         Snow,
     }

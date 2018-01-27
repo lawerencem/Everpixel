@@ -15,7 +15,10 @@
   </Landmarks>
   <Tiles>
     <Tile name="Snow">
-      <Chance>1.0</Chance>
+      <Chance>0.90</Chance>
+    </Tile>
+    <Tile name="Ice">
+      <Chance>0.10</Chance>
     </Tile>
   </Tiles>
 </Biome>

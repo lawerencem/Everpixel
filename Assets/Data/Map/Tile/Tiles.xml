@@ -1,9 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Tiles>
   <Tile name="Grass">
+    <Cost>2</Cost>
+    <Sprites>0,1,2,3,4,5,6,7</Sprites>
+  </Tile>
+  <Tile name="Ice">
+    <Cost>3</Cost>
     <Sprites>0,1,2,3,4,5,6,7</Sprites>
   </Tile>
   <Tile name="Snow">
+    <Cost>4</Cost>
     <Sprites>0,1,2,3,4,5,6,7</Sprites>
   </Tile>
 </Tiles>

@@ -50,6 +50,7 @@ namespace Assets.Data.Map.Landmark.XML
 
                 switch (param)
                 {
+                    case ("Cost"): { this.table.Table[type].Cost = int.Parse(value); } break;
                     case ("Sprites"): { this.HandleSprites(type, value); } break;
                 }
             }

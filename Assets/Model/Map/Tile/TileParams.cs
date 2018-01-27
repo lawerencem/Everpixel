@@ -6,6 +6,7 @@ namespace Assets.Model.Map.Tile
     {
         private ETile _type;
 
+        public int Cost { get; set; }
         public List<int> Sprites { get; set; }
         public ETile Type { get { return this._type; } }
 

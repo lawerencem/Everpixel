@@ -161,14 +161,12 @@ namespace Assets.Controller.Map.Combat.Loader
             double tally = 1.0;
             foreach(var kvp in mapParams.TileDict)
             {
-                if (kvp.Value <= tally)
+                tally -= kvp.Value;
+                if (roll >= tally)
                 {
                     tile.Model.SetType(kvp.Key);
+                    tile.Model.SetCost(TileTable.Instance.Table[kvp.Key].Cost);
                     break;
-                }
-                else
-                {
-                    tally -= kvp.Value;
                 }
             }
         }
