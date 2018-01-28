@@ -1,4 +1,6 @@
 .vs/**
 $tf/
+Everpixel.csproj
+Everpixel.sln
 Library/
 Temp/
