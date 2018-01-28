@@ -73,7 +73,7 @@ namespace Assets.Model.Event.Combat
                 var ap = this._data.Char.Proxy.GetStat(ESecondaryStat.AP);
                 var tile = this._data.TargetPath.GetFirstTile() as MTile;
                 this._next = tile.Controller;
-                var cost = this._data.Char.Proxy.GetTileTraversalAPCost(this._next);
+                var cost = this._next.Model.GetCost();
                 if (cost <= ap)
                 {
                     var data = new EvTileMoveData();
@@ -97,7 +97,7 @@ namespace Assets.Model.Event.Combat
             if (model != null)
             {
                 this._next = model.Controller;
-                var cost = this._data.Char.Proxy.GetTileTraversalAPCost(this._next);
+                var cost = this._next.Model.GetCost();
                 if (cost <= ap)
                 {
                     var data = new EvTileMoveData();
@@ -136,7 +136,7 @@ namespace Assets.Model.Event.Combat
             var s = this._data.Source.Model;
             var t = this._data.Target.Model;
             var pathSearch = new PathSearch();
-            this._data.TargetPath = pathSearch.GetPath(s, t);
+            this._data.TargetPath = pathSearch.GetPath(s, t, this._data.Char.Proxy.GetModel());
             if (this._data.TargetPath == null)
                 throw new System.Exception("Path First tile was null");
             var model = this._data.TargetPath.GetFirstTile() as MTile;

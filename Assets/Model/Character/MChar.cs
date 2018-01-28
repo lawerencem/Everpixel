@@ -4,11 +4,12 @@ using Assets.Model.Character.Param;
 using Assets.Model.Class;
 using Assets.Model.Class.Enum;
 using Assets.Model.Event.Combat;
+using Assets.Template.Hex;
 using System.Collections.Generic;
 
 namespace Assets.Model.Character
 {
-    public class MChar : AChar<ECharType>
+    public class MChar : AChar<ECharType>, IPathable
     {
         private ERace _race;
         public ERace Race { get { return this._race; } }
@@ -61,6 +62,16 @@ namespace Assets.Model.Character
                     e.TryProcess();
                 }
             }
+        }
+
+        public IHex GetCurrentTile()
+        {
+            return this._tile;
+        }
+
+        public int GetTileTraversalCost(IHex source, IHex goal)
+        {
+            return goal.GetCost(); // TODO:
         }
     }
 }

@@ -208,7 +208,7 @@ namespace Assets.Template.Pathing
                 if (validPaths.Count > 0)
                 {
                     var bestPath = validPaths.OrderBy(x => x.Score).ToList()[0];
-                    return this.TryOptimizePath(bestPath, s, g);
+                    return this.TryOptimizePath(bestPath, s, g, navigator);
                 }
             }
             return null;
@@ -267,7 +267,7 @@ namespace Assets.Template.Pathing
             return bestPath;
         }
 
-        private Path TryOptimizePath(Path p, IHex s, IHex g)
+        private Path TryOptimizePath(Path p, IHex s, IHex g, IPathable navigator)
         {
             var extendedSet = ListUtil<IHex>.ShallowClone(p.GetTiles());
             foreach (var tile in p.GetTiles())
@@ -278,7 +278,7 @@ namespace Assets.Template.Pathing
                         extendedSet.Add(neighbor);
                 }
             }
-            return this.GetBruteForcePathViaFiniteSet(extendedSet, s, g);
+            return this.GetBruteForcePathViaFiniteSet(extendedSet, s, g, navigator);
         }
     }
 }

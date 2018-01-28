@@ -39,8 +39,9 @@ namespace Assets.View.Event
             {
                 var s = this._data.Source.Model;
                 var t = this._data.Target.Model;
+                var current = CombatManager.Instance.GetCurrentlyActing();
                 var pathSearch = new PathSearch();
-                var path = pathSearch.GetPath(s, t);
+                var path = pathSearch.GetPath(s, t, current.Proxy.GetModel());
                 if (path != null)
                 {
                     VMapCombatController.Instance.DecoratePath(path);

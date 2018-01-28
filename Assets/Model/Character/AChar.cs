@@ -32,6 +32,7 @@ namespace Assets.Model.Character
         protected CharPerks _perks;
         protected CurrentPoints<T> _points;
         protected CharStatMods _statMods;
+        protected MTile _tile;
 
         protected T _type;
 
@@ -54,6 +55,7 @@ namespace Assets.Model.Character
         public CharPerks GetPerks() { return this._perks; }
         public CurrentPoints<T> GetPoints() { return this._points; }
         public CharStatMods GetStatMods() { return this._statMods; }
+        public MTile GetTile() { return this._tile; }
 
         public void SetController(CChar c) { this._controller = c; }
         public void SetLParty(bool lParty) { this._lParty = lParty; }
@@ -61,12 +63,7 @@ namespace Assets.Model.Character
         public void SetParams(PreCharParams p) { this._params = p; }
         public void SetParentParty(MParty p) { this._parentParty = p; }
         public void SetType(T t) { this._type = t; }
-
-        public int GetTileTraversalAPCost(CTile t)
-        {
-            // TODO: Work on this for height and various talents
-            return t.Model.GetCost();
-        }
+        public void SetTile(MTile t) { this._tile = t; }
 
         public int GetTileTraversalStaminaCost(MTile tile)
         {

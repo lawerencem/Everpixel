@@ -1,6 +1,5 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Equipment.Weapon;
-using Assets.Controller.Map.Tile;
 using Assets.Controller.Mount;
 using Assets.Model.Ability;
 using Assets.Model.Character.Container;
@@ -108,6 +107,11 @@ namespace Assets.Model.Character
             return this._model.GetPoints().GetCurrValue(s);
         }
 
+        public MChar GetModel()
+        {
+            return this._model;
+        }
+
         public CharStatMods GetMods()
         {
             return this._model.GetStatMods();
@@ -146,11 +150,6 @@ namespace Assets.Model.Character
         public double GetStat(EPrimaryStat s)
         {
             return this._model.GetCurStats().GetStatValue(s);
-        }
-
-        public int GetTileTraversalAPCost(CTile t)
-        {
-            return this._model.GetTileTraversalAPCost(t);
         }
 
         public void ModifyPoints(ESecondaryStat s, int v, bool isHeal)
