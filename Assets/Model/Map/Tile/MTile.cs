@@ -1,4 +1,5 @@
-﻿using Assets.Controller.Map.Tile;
+﻿using Assets.Controller.Character;
+using Assets.Controller.Map.Tile;
 using Assets.Template.Hex;
 using System;
 using System.Collections.Generic;
@@ -226,6 +227,12 @@ namespace Assets.Model.Map.Tile
         List<IHex> IHex.GetAoETiles(int dist)
         {
             throw new NotImplementedException();
+        }
+
+        public void ProcessEnterTile(CChar c)
+        {
+            var logic = new TileLogic();
+            logic.ProcessEnterTile(c, this);
         }
 
         private List<MTile> ConvertIHexToMTile(List<IHex> hexes)

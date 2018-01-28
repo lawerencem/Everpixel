@@ -1,5 +1,8 @@
 ﻿TODO
 
+- Clean up layering on liquids...
+- Add concept of deep vs shallow liquid
+
 - Add pond / lake
   -- add ability for landmark to freeze
   -- thawing out 

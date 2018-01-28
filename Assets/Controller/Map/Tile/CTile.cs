@@ -112,9 +112,8 @@ namespace Assets.Controller.Map.Tile
         public void ProcessEnterTile(CChar c)
         {
             foreach(var zone in this._zones)
-            {
                 zone.ProcessEnterZone(c);
-            }
+            this.Model.ProcessEnterTile(c);
         }
 
         public void ProcessExitTile(CChar c)
