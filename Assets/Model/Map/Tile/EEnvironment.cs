@@ -5,6 +5,7 @@
         None,
         Eye_Hill,
         Ice_Eye_Hill,
+        Rock,
         Shrub,
         Tiny_Tree,
     }

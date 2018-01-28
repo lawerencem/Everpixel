@@ -36,7 +36,7 @@ namespace Assets.Controller.Map.Combat.Loader
                 foreach(var tile in controller.GetMap().GetTiles())
                 {
                     var roll = RNG.Instance.NextDouble();
-                    if (roll < decoKVP.Value)
+                    if (roll < decoKVP.Value && !FTile.HasFlag(tile.GetFlags().CurFlags, FTile.Flags.Deco))
                     {
                         decoLoader.AttachDeco(tile, decoKVP.Key);
                     }
