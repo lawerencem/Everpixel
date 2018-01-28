@@ -1,6 +1,4 @@
 ﻿TODO
- 
-- Implement interfaces for objects that can be in tiles
 
 - Add pond / lake
   -- add ability for landmark to freeze
