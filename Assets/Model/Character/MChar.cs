@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Assets.Model.Character
 {
-    public class MChar : AChar<ECharType>, IPathable
+    public class MChar : AChar, IPathable
     {
         private ERace _race;
         public ERace Race { get { return this._race; } }
@@ -22,11 +22,11 @@ namespace Assets.Model.Character
             this._baseStats = new BaseStats();
             this._curStats = new CharStats();
             this._effects = new CharEffects();
-            this._equipment = new ACharEquipment<ECharType>(this);
+            this._equipment = new ACharEquipment(this);
             this._flags = new FCharacterStatus();
             this._statMods = new CharStatMods();
             this._perks = new CharPerks();
-            this._points = new CurrentPoints<ECharType>(this);
+            this._points = new CurrentPoints(this);
         }
 
         public void ModifyPoints(ESecondaryStat type, int value, bool isHeal)

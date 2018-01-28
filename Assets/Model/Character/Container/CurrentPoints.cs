@@ -2,16 +2,16 @@
 
 namespace Assets.Model.Character.Container
 {
-    public class CurrentPoints<T>
+    public class CurrentPoints
     {
-        private AChar<T> _parent;
+        private AChar _parent;
 
         private int _ap;
         private int _hp;
         private int _morale;
         private int _stamina;
 
-        public CurrentPoints(AChar<T> parent)
+        public CurrentPoints(AChar parent)
         {
             this._parent = parent;
         }

@@ -14,7 +14,7 @@ using System.Collections.Generic;
 
 namespace Assets.Model.Character
 {
-    abstract public class AChar<T>
+    abstract public class AChar
     {
         private CChar _controller;
 
@@ -23,23 +23,23 @@ namespace Assets.Model.Character
         protected BaseStats _baseStats;
         protected CharStats _curStats;
         protected CharEffects _effects;
-        protected ACharEquipment<T> _equipment;
+        protected ACharEquipment _equipment;
         protected FCharacterStatus _flags;
         protected bool _lParty;
         protected CMount _mount; 
         protected PreCharParams _params;
         protected MParty _parentParty;
         protected CharPerks _perks;
-        protected CurrentPoints<T> _points;
+        protected CurrentPoints _points;
         protected CharStatMods _statMods;
         protected MTile _tile;
 
-        protected T _type;
+        protected ECharType _type;
 
         public CChar Controller { get { return this._controller; } }
         public CMount Mount { get { return this._mount; } }
         public bool LParty { get { return this._lParty; } }
-        public T Type { get { return this._type; } }
+        public ECharType Type { get { return this._type; } }
 
         public void AddPerk(MPerk perk) { this._perks.AddPerk(perk); }
 
@@ -48,12 +48,12 @@ namespace Assets.Model.Character
         public BaseStats GetBaseStats() { return this._baseStats; }
         public CharStats GetCurStats() { return this._curStats; }
         public CharEffects GetEffects() { return this._effects; }
-        public ACharEquipment<T> GetEquipment() { return this._equipment; }
+        public ACharEquipment GetEquipment() { return this._equipment; }
         public FCharacterStatus GetFlags() { return this._flags; }
         public PreCharParams GetParams() { return this._params; }
         public MParty GetParentParty() { return this._parentParty; }
         public CharPerks GetPerks() { return this._perks; }
-        public CurrentPoints<T> GetPoints() { return this._points; }
+        public CurrentPoints GetPoints() { return this._points; }
         public CharStatMods GetStatMods() { return this._statMods; }
         public MTile GetTile() { return this._tile; }
 
@@ -62,7 +62,7 @@ namespace Assets.Model.Character
         public void SetMount(CMount m) { this._mount = m; }
         public void SetParams(PreCharParams p) { this._params = p; }
         public void SetParentParty(MParty p) { this._parentParty = p; }
-        public void SetType(T t) { this._type = t; }
+        public void SetType(ECharType t) { this._type = t; }
         public void SetTile(MTile t) { this._tile = t; }
 
         public int GetTileTraversalStaminaCost(MTile tile)

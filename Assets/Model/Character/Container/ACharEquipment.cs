@@ -6,9 +6,9 @@ using System.Collections.Generic;
 
 namespace Assets.Model.Character.Container
 {
-    public class ACharEquipment<T>
+    public class ACharEquipment
     {
-        private AChar<T> _parent;
+        private AChar _parent;
         private CArmor _armor;
         private CHelm _helm;
         private CWeapon _lWeapon;
@@ -19,7 +19,7 @@ namespace Assets.Model.Character.Container
         public CWeapon GetLWeapon() { return this._lWeapon; }
         public CWeapon GetRWeapon() { return this._rWeapon; }
 
-        public ACharEquipment(AChar<T> parent)
+        public ACharEquipment(AChar parent)
         {
             this._parent = parent;
         }
