@@ -8,13 +8,11 @@ namespace Assets.Model.Ability.Logic
     public class AbilityLogic
     {
         private AoELogic _aoeLogic;
-        private TileLogic _tileLogic;
         private TypeLogic _typeLogic;
 
         public AbilityLogic()
         {
             this._aoeLogic = new AoELogic();
-            this._tileLogic = new TileLogic();
             this._typeLogic = new TypeLogic();
         }
 
@@ -22,9 +20,6 @@ namespace Assets.Model.Ability.Logic
         public List<CTile> GetAoETiles(AbilityArgs arg, int aoe) {return this._aoeLogic.GetAoETiles(arg, aoe);}
         public List<CTile> GetRaycastTiles(AbilityArgs arg) { return this._aoeLogic.GetRaycastTiles(arg);}
         public List<CTile> GetPotentialTargets(AbilityArgs arg) { return this._aoeLogic.GetPotentialTargets(arg);}
-
-        public bool IsValidEmptyTile(AbilityArgs arg) { return this._tileLogic.IsValidEmptyTile(arg); }
-        public bool IsValidEnemyTarget(AbilityArgs arg) { return this._tileLogic.IsValidEnemyTarget(arg); }
 
         public void PredictBullet(MHit hit) { this._typeLogic.PredictBullet(hit); }
         public void PredictMelee(MHit hit) { this._typeLogic.PredictMelee(hit); }

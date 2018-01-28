@@ -31,8 +31,8 @@ namespace Assets.View
         public static readonly int HEAL_PRIORITY = 12;
 
         // Script Params
-        public static readonly float BOB_PER_FRAME = 0.0025f;
-        public static readonly float BOB_PER_FRAME_DIST = 0.075f;
+        public static readonly float BOB_PER_FRAME = 0.0010f;
+        public static readonly float BOB_PER_FRAME_DIST = 0.035f;
         public static readonly float MOVE_SPEED = 8f;
         public static readonly float MOVE_EPSILON = 0.02f;
 

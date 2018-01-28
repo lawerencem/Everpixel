@@ -4,6 +4,7 @@ using Assets.Controller.Manager.Combat;
 using Assets.Controller.Manager.GUI;
 using Assets.Template.Script;
 using Assets.View;
+using Assets.View.Character;
 using Assets.View.Event;
 using Assets.View.GUI;
 using Assets.View.Script.GUI;
@@ -46,7 +47,10 @@ namespace Assets.Model.Event.Combat
         
         private bool ProcessTakingAction()
         {
+            if (CombatManager.Instance.GetCurrentlyActing() != null)
+                VCharUtil.Instance.UnassignPlusLayer(CombatManager.Instance.GetCurrentlyActing());
             CombatManager.Instance.SetCurrentlyActing(this._data.Target);
+            VCharUtil.Instance.AssignPlusLayer(this._data.Target);
             GUIManager.Instance.SetActingBoxToController(this._data.Target);
             var bob = this._data.Target.Handle.AddComponent<SBob>();
             bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Target.Handle);

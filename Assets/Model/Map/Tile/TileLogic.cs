@@ -12,11 +12,11 @@ namespace Assets.Model.Map.Tile
         {
             switch(t.Type)
             {
-                case (ETile.Water): { this.CreateWaterParticles(c); } break;
+                case (ETile.Water): { this.CreateWaterParticles(c, t); } break;
             }
         }
 
-        private void CreateWaterParticles(CChar c)
+        private void CreateWaterParticles(CChar c, MTile t)
         {
             var path = StringUtil.PathBuilder(
                 CombatGUIParams.EFFECTS_PATH,
@@ -24,7 +24,7 @@ namespace Assets.Model.Map.Tile
                 CombatGUIParams.PARTICLES_EXTENSION);
             var particles = ParticleController.Instance.CreateParticle(path);
             if (particles != null)
-                DecoUtil.AttachParticles(particles, c.Handle);
+                DecoUtil.AttachParticles(particles, t.Controller.Handle);
             var script = particles.AddComponent<SDestroyByLifetime>();
             script.Init(particles, 5f);
         }

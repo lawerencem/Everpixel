@@ -377,7 +377,6 @@
     <Compile Include="Assets\Model\Ability\Logic\Calculator\ParryCalculator.cs" />
     <Compile Include="Assets\Model\Ability\Logic\Calculator\ResistCalculator.cs" />
     <Compile Include="Assets\Model\Ability\Logic\LogicParams.cs" />
-    <Compile Include="Assets\Model\Ability\Logic\TileLogic.cs" />
     <Compile Include="Assets\Model\Ability\Logic\TypeLogic.cs" />
     <Compile Include="Assets\Model\Ability\MAbility.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Astral\EldritchChomp.cs" />
