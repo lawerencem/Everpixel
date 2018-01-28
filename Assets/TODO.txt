@@ -1,6 +1,8 @@
 ﻿TODO
 
-- Clean up layering on liquids...
+- Finalize combat math
+  -- Armor ignore will be flat ignore, crush counters armor ignore
+  -- Dmg reduction will be % based, pierce counters dmg reduction
 - Add concept of deep vs shallow liquid
 
 - Add pond / lake
