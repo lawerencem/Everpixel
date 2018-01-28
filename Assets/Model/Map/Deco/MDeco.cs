@@ -1,4 +1,5 @@
 ﻿using Assets.Model.Map.Tile;
+using Assets.Template.Hex;
 
 namespace Assets.Model.Map.Deco
 {
@@ -7,7 +8,7 @@ namespace Assets.Model.Map.Deco
 
     }
 
-    public class MDeco
+    public class MDeco : IHexOccupant
     {
         private EEnvironment _type;
         private MDecoData _data;

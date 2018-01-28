@@ -1,6 +1,7 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Map.Tile;
 using Assets.Model.Zone;
+using Assets.Template.Hex;
 using Assets.View;
 using Assets.View.Map;
 using System.Collections.Generic;
@@ -40,7 +41,7 @@ namespace Assets.Controller.Map.Tile
 
         public void RemoveZone(AZone zone) { this._zones.Remove(zone); }
 
-        public void SetCurrent(object o) { this.Model.SetCurrentOccupant(o); }
+        public void SetCurrent(IHexOccupant o) { this.Model.SetCurrentOccupant(o); }
 
         public CTile(MTile tile)
         {

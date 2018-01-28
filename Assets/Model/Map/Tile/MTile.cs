@@ -20,7 +20,7 @@ namespace Assets.Model.Map.Tile
         private int _col;
         private int _cost;
         private CTile _controller;
-        private object _currentOccupant;
+        private IHexOccupant _currentOccupant;
         private FTile _flags;
         private int _height;
         private HexTileLogic _logic;
@@ -53,7 +53,7 @@ namespace Assets.Model.Map.Tile
         public void SetCol(int col) { this._col = col; }
         public void SetController(CTile c) { this._controller = c; }
         public void SetCost(int cost) { this._cost = cost; }
-        public void SetCurrentOccupant(object o) { this._currentOccupant = o; }
+        public void SetCurrentOccupant(IHexOccupant o) { this._currentOccupant = o; }
         public void SetHeight(int h) { this._height = h; }
         public void SetMap(MMap m) { this._map = m; }
         public void SetRow(int row) { this._row = row; }
@@ -109,7 +109,7 @@ namespace Assets.Model.Map.Tile
             return this._row;
         }
 
-        public object GetCurrentOccupant()
+        public IHexOccupant GetCurrentOccupant()
         {
             return this._currentOccupant;
         }

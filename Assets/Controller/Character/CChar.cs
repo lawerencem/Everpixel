@@ -1,12 +1,13 @@
 ﻿using Assets.Controller.Map.Tile;
 using Assets.Model.Character;
+using Assets.Template.Hex;
 using Assets.View.Character;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Controller.Character
 {
-    public class CChar
+    public class CChar : IHexOccupant
     {
         private GameObject _handle;
         private PChar _proxy;
