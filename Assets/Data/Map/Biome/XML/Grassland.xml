@@ -18,6 +18,9 @@
     <Landmark name="Flat_Hill">
       <Chance>0.10</Chance>
     </Landmark>
+    <Landmark name="Pond">
+      <Chance>0.02</Chance>
+    </Landmark>
     <Landmark name="Ridge">
       <Chance>0.025</Chance>
     </Landmark>

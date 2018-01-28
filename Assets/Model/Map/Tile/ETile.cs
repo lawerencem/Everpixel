@@ -6,5 +6,6 @@
         Ice,
         Grass,
         Snow,
+        Water,
     }
 }

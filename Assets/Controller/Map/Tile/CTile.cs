@@ -12,6 +12,7 @@ namespace Assets.Controller.Map.Tile
     public class CTile
     {
         private GameObject _handle;
+        private GameObject _liquidHandle;
         private MTile _model;
         private List<CChar> _nonCurrent;
         private VTile _view;
@@ -42,6 +43,16 @@ namespace Assets.Controller.Map.Tile
         public void RemoveZone(AZone zone) { this._zones.Remove(zone); }
 
         public void SetCurrent(IHexOccupant o) { this.Model.SetCurrentOccupant(o); }
+
+        public GameObject LiquidHandle
+        {
+            get
+            {
+                if (this._liquidHandle == null)
+                    this._liquidHandle = new GameObject(Layers.TILE_LIQUID);
+                return this._liquidHandle;
+            }
+        }
 
         public CTile(MTile tile)
         {

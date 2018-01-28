@@ -12,4 +12,9 @@
     <Cost>4</Cost>
     <Sprites>0,1,2,3,4,5,6,7</Sprites>
   </Tile>
+  <Tile name="Water">
+    <Cost>6</Cost>
+    <Liquid>True</Liquid>
+    <Sprites>0,1,2,3,4,5,6,7</Sprites>
+  </Tile>
 </Tiles>

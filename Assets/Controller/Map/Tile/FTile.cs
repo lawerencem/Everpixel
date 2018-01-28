@@ -8,7 +8,7 @@ namespace Assets.Controller.Map.Tile
         public enum Flags
         {
             None = 0,
-            Deco = 1,
+            Environment = 1,
             Landmark = 2,
         }
 
@@ -25,10 +25,10 @@ namespace Assets.Controller.Map.Tile
                 f.CurFlags &= ~(Flags)flag;
         }
 
-        public static void SetDecoFlagFalse(FTile f) { f.CurFlags &= ~Flags.Deco; }
+        public static void SetEnvironmentFlagFalse(FTile f) { f.CurFlags &= ~Flags.Environment; }
         public static void SetLandmarkFlagFalse(FTile f) { f.CurFlags &= ~Flags.Landmark; }
 
-        public static void SetDecoFlagTrue(FTile f) { f.CurFlags |= Flags.Deco; }
+        public static void SetEnvironmentFlagTrue(FTile f) { f.CurFlags |= Flags.Environment; }
         public static void SetLandmarkFlagTrue(FTile f) { f.CurFlags |= Flags.Landmark; }
 
         public static bool HasFlag(Flags a, Flags b) { return (a & b) == b; }

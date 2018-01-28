@@ -5,6 +5,10 @@
     <RadiusMax>3</RadiusMax>
     <RadiusMin>1</RadiusMin>
   </Landmark>
+  <Landmark name="Pond">
+    <RadiusMax>3</RadiusMax>
+    <RadiusMin>2</RadiusMin>
+  </Landmark>
   <Landmark name="Ridge">
     <Height>2</Height>
     <LengthMax>5</LengthMax>

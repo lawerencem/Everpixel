@@ -27,18 +27,18 @@ namespace Assets.Controller.Map.Combat.Loader
             this.RenderHeightDeltas(controller);
         }
 
-        public void InitMapDeco(MMapController controller, MapInitInfo info)
+        public void InitMapEnvironment(MMapController controller, MapInitInfo info)
         {
-            var decoLoader = new DecoLoader();
+            var decoLoader = new EnvironmentLoader();
             var biomeParams = BiomeTable.Instance.Table[info.Biome];
             foreach(var decoKVP in biomeParams.DecoDict)
             {
                 foreach(var tile in controller.GetMap().GetTiles())
                 {
                     var roll = RNG.Instance.NextDouble();
-                    if (roll < decoKVP.Value && !FTile.HasFlag(tile.GetFlags().CurFlags, FTile.Flags.Deco))
+                    if (roll < decoKVP.Value && !FTile.HasFlag(tile.GetFlags().CurFlags, FTile.Flags.Environment))
                     {
-                        decoLoader.AttachDeco(tile, decoKVP.Key);
+                        decoLoader.AttachEnvironment(tile, decoKVP.Key);
                     }
                 }
             }
@@ -67,15 +67,10 @@ namespace Assets.Controller.Map.Combat.Loader
             foreach (var tile in controller.GetMap().GetTiles())
             {
                 this.InitTileType(tile, info);
-                var script = tile.Handle.AddComponent<STile>();
-                script.InitTile(tile);
-                var sprites = this._spriteDict[tile.Model.Type];
-                var sprite = ListUtil<Sprite>.GetRandomElement(sprites);
-                var render = tile.Handle.AddComponent<SpriteRenderer>();
-                render.sprite = sprite;
-                render.sortingLayerName = Layers.TILE_LAYER;
-                tile.Handle.transform.SetParent(tileHolder);
-                tile.Handle.name = Layers.TILE + "( " + tile.Model.GetCol() + " / " + tile.Model.GetRow() + " )";
+                if (tile.Model.Liquid)
+                    this.InitLiquidTile(tile, tileHolder);
+                else
+                    this.InitNonLiquidTile(tile, tileHolder);
             }
             controller.GetMap().InitControllerAdjacent();
         }
@@ -156,19 +151,59 @@ namespace Assets.Controller.Map.Combat.Loader
 
         private void InitTileType(CTile tile, MapInitInfo info)
         {
-            var mapParams = BiomeTable.Instance.Table[info.Biome];
-            double roll = RNG.Instance.NextDouble();
-            double tally = 1.0;
-            foreach(var kvp in mapParams.TileDict)
+            if (tile.Model.Type == ETile.None)
             {
-                tally -= kvp.Value;
-                if (roll >= tally)
+                var mapParams = BiomeTable.Instance.Table[info.Biome];
+                double roll = RNG.Instance.NextDouble();
+                double tally = 1.0;
+                foreach (var kvp in mapParams.TileDict)
                 {
-                    tile.Model.SetType(kvp.Key);
-                    tile.Model.SetCost(TileTable.Instance.Table[kvp.Key].Cost);
-                    break;
+                    tally -= kvp.Value;
+                    if (roll >= tally)
+                    {
+                        tile.Model.SetType(kvp.Key);
+                        tile.Model.SetCost(TileTable.Instance.Table[kvp.Key].Cost);
+                        if (TileTable.Instance.Table[kvp.Key].Liquid)
+                            tile.Model.SetLiquid(true);
+                        break;
+                    }
                 }
             }
+        }
+
+        private void InitLiquidTile(CTile tile, Transform tileHolder)
+        {
+            var script = tile.Handle.AddComponent<STile>();
+            script.InitTile(tile);
+            var sprites = this._spriteDict[tile.Model.Type];
+            var roll = RNG.Instance.Next(0, sprites.Count - 1);
+            var sprite = sprites[roll];
+            var render = tile.Handle.AddComponent<SpriteRenderer>();
+            render.sprite = sprite;
+            render.sortingLayerName = Layers.TILE_LAYER;
+            tile.Handle.transform.SetParent(tileHolder);
+            tile.Handle.name = Layers.TILE + "( " + tile.Model.GetCol() + " / " + tile.Model.GetRow() + " )";
+
+            tile.LiquidHandle.transform.position = tile.Model.Center;
+            var liquidRenderer = tile.LiquidHandle.AddComponent<SpriteRenderer>();
+            var liquidSprites = MapBridge.Instance.GetTileSprites(ETile.Water);
+            liquidRenderer.sprite = liquidSprites[roll + 8];
+            liquidRenderer.sortingLayerName = Layers.TILE_LIQUID;
+            tile.LiquidHandle.transform.SetParent(tileHolder);
+            tile.LiquidHandle.name = Layers.TILE + "( " + tile.Model.GetCol() + " / " + tile.Model.GetRow() + " )";
+        }
+
+        private void InitNonLiquidTile(CTile tile, Transform tileHolder)
+        {
+            var script = tile.Handle.AddComponent<STile>();
+            script.InitTile(tile);
+            var sprites = this._spriteDict[tile.Model.Type];
+            var sprite = ListUtil<Sprite>.GetRandomElement(sprites);
+            var render = tile.Handle.AddComponent<SpriteRenderer>();
+            render.sprite = sprite;
+            render.sortingLayerName = Layers.TILE_LAYER;
+            tile.Handle.transform.SetParent(tileHolder);
+            tile.Handle.name = Layers.TILE + "( " + tile.Model.GetCol() + " / " + tile.Model.GetRow() + " )";
         }
 
         private void InitTileSprites()

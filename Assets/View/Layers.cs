@@ -40,5 +40,6 @@
         public static readonly string TILE = "Tile";
         public static readonly string TILE_DECO = "BackgroundTileDeco";
         public static readonly string TILE_LAYER = "BackgroundTile";
+        public static readonly string TILE_LIQUID = "BackgroundTileLiquid";
     }
 }

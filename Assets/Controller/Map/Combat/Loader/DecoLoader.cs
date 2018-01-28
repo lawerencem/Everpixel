@@ -9,11 +9,11 @@ using UnityEngine;
 
 namespace Assets.Controller.Map.Combat.Loader
 {
-    public class DecoLoader
+    public class EnvironmentLoader
     {
         private List<Sprite> _sprites;
 
-        public DecoLoader()
+        public EnvironmentLoader()
         {
             this._sprites = new List<Sprite>();
             var sprites = MapBridge.Instance.GetDecoSprites();
@@ -21,11 +21,11 @@ namespace Assets.Controller.Map.Combat.Loader
                 this._sprites.Add(sprite);
         }
 
-        public void AttachDeco(CTile tile, EEnvironment deco)
+        public void AttachEnvironment(CTile tile, EEnvironment deco)
         {
-            var decoParam = EnvironmentTable.Instance.Table[deco];
-            var sprite = this._sprites[ListUtil<int>.GetRandomElement(decoParam.Sprites)];
-            FTile.SetDecoFlagTrue(tile.GetFlags());
+            var environmentParam = EnvironmentTable.Instance.Table[deco];
+            var sprite = this._sprites[ListUtil<int>.GetRandomElement(environmentParam.Sprites)];
+            FTile.SetEnvironmentFlagTrue(tile.GetFlags());
             var model = new MDeco(deco);
             tile.SetCurrent(model);
             var view = new GameObject();

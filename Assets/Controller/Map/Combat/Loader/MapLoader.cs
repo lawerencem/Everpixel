@@ -54,10 +54,10 @@ namespace Assets.Controller.Map.Combat.Loader
         private void InitTiles(MapInitInfo info)
         {
             var loader = new TileLoader();
-            loader.InitTiles(this._map, info, BackgroundTiles);
             loader.InitLandmarks(this._map, info);
+            loader.InitTiles(this._map, info, BackgroundTiles);
             loader.RenderHeights(this._map);
-            loader.InitMapDeco(this._map, info);
+            loader.InitMapEnvironment(this._map, info);
         }
     }
 }

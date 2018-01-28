@@ -312,7 +312,7 @@
     <Compile Include="Assets\Controller\Map\Combat\MMapController.cs" />
     <Compile Include="Assets\Controller\Map\Combat\VMapCombatController.cs" />
     <Compile Include="Assets\Controller\Map\Tile\CTile.cs" />
-    <Compile Include="Assets\Controller\Map\Tile\FCTile.cs" />
+    <Compile Include="Assets\Controller\Map\Tile\FTile.cs" />
     <Compile Include="Assets\Controller\Map\Tile\STile.cs" />
     <Compile Include="Assets\Controller\Mount\CMount.cs" />
     <Compile Include="Assets\Data\Ability\XML\AbilityReader.cs" />
@@ -538,6 +538,7 @@
     <Compile Include="Assets\Model\Map\Landmark\Builder\ALandmarkBuilder.cs" />
     <Compile Include="Assets\Model\Map\Landmark\Builder\FlatHillBuilder.cs" />
     <Compile Include="Assets\Model\Map\Landmark\Builder\LandmarkFactory.cs" />
+    <Compile Include="Assets\Model\Map\Landmark\Builder\PondBuilder.cs" />
     <Compile Include="Assets\Model\Map\Landmark\Builder\RidgeBuilder.cs" />
     <Compile Include="Assets\Model\Map\Landmark\ELandmark.cs" />
     <Compile Include="Assets\Model\Map\Landmark\LandmarkParams.cs" />

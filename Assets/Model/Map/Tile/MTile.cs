@@ -24,6 +24,7 @@ namespace Assets.Model.Map.Tile
         private FTile _flags;
         private int _height;
         private HexTileLogic _logic;
+        private bool _liquid;
         private MMap _map;
         private int _row;
         private ETile _type;
@@ -31,6 +32,7 @@ namespace Assets.Model.Map.Tile
         public CTile Controller { get { return this._controller; } }
         public Vector3 Center { get { return this._center; } }
         public int Height { get { return this._height; } }
+        public bool Liquid { get { return this._liquid; } }
         public MMap Map { get { return this._map; } }
         public ETile Type { get { return this._type; } }
 
@@ -40,6 +42,7 @@ namespace Assets.Model.Map.Tile
             this._flags = new FTile();
             this._height = 1;
             this._logic = new HexTileLogic();
+            this._liquid = false;
         }
 
         public void SetN(MTile t) { this._adjacent.Add(t); this._n = t; }
@@ -55,6 +58,7 @@ namespace Assets.Model.Map.Tile
         public void SetCost(int cost) { this._cost = cost; }
         public void SetCurrentOccupant(IHexOccupant o) { this._currentOccupant = o; }
         public void SetHeight(int h) { this._height = h; }
+        public void SetLiquid(bool liquid) { this._liquid = liquid; }
         public void SetMap(MMap m) { this._map = m; }
         public void SetRow(int row) { this._row = row; }
         public void SetType(ETile type) { this._type = type; }

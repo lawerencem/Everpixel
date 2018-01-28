@@ -4,6 +4,7 @@
     {
         None,
         Flat_Hill,
+        Pond,
         Ridge,
     }
 }
