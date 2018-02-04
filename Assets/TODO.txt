@@ -27,13 +27,7 @@ Fix Keynotfound in main gui
 Orc Wereween
 Orc Metal
 Haste Song
-Pierce fatality
-Add FX
-  - HoT
-  - DoT
-  - Bleed
 Spear wall
-Clean up injuries in bow.xml files, plus remove custom bullet boolean.
 
 Shields
 Stealth

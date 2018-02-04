@@ -54,7 +54,7 @@ namespace Assets.Controller.Map.Combat
             if (tile != null)
             {
                 var sprite = MapBridge.Instance.GetHostileHoverSprite();
-                this._hoverTileDeco = this.DecorateTile(t, sprite);
+                this._hoverTileDeco = this.DecorateTileHandle(t.Handle, sprite);
                 this.TryHandleAoEHover(t);
             }
         }
@@ -95,13 +95,13 @@ namespace Assets.Controller.Map.Combat
             }
         }
 
-        private GameObject DecorateTile(CTile t, Sprite sprite, float alpha = DEFAULT_ALPHA)
+        private GameObject DecorateTileHandle(GameObject handle, Sprite sprite, float alpha = DEFAULT_ALPHA)
         {
             var tView = new GameObject();
             var renderer = tView.AddComponent<SpriteRenderer>();
             renderer.sprite = sprite;
-            renderer.transform.position = t.Handle.transform.position;
-            var tgt = t.Handle.GetComponent<SpriteRenderer>();
+            renderer.transform.position = handle.transform.position;
+            var tgt = handle.GetComponent<SpriteRenderer>();
             if (tgt != null)
             {
                 renderer.sortingLayerName = tgt.sortingLayerName;
@@ -115,13 +115,15 @@ namespace Assets.Controller.Map.Combat
             var color = renderer.color;
             color.a = alpha;
             renderer.color = color;
+
             return tView;
         }
 
         private void DecorateTileFamily(CTile tile, Sprite deco)
         {
-            var tView = this.DecorateTile(tile, deco, ViewParams.TILE_DECO_ALPHA);
-            this._familyTileDeco.Add(tView);
+            this._familyTileDeco.Add(this.DecorateTileHandle(tile.Handle, deco, ViewParams.TILE_DECO_ALPHA));
+            if (tile.LiquidHandle != null)
+                this._familyTileDeco.Add(this.DecorateTileHandle(tile.Handle, deco, ViewParams.TILE_DECO_ALPHA));
         }
 
         private void TryHandleAoEHover(CTile t)
@@ -141,7 +143,11 @@ namespace Assets.Controller.Map.Combat
                     var sprite = MapBridge.Instance.GetTileHighlightSprite();
                     var tiles = t.Model.GetAoETiles((int)(active.Data.AoE));
                     foreach (var tile in tiles)
-                        this._aoeTiles.Add(this.DecorateTile(tile.Controller, sprite));
+                    {
+                        if (tile.Liquid)
+                            this._aoeTiles.Add(this.DecorateTileHandle(tile.Controller.LiquidHandle, sprite));
+                        this._aoeTiles.Add(this.DecorateTileHandle(tile.Controller.Handle, sprite));
+                    }
                 }
             }
         }

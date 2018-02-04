@@ -184,6 +184,7 @@ namespace Assets.Controller.Map.Combat.Loader
             tile.Handle.transform.SetParent(tileHolder);
             tile.Handle.name = Layers.TILE + "( " + tile.Model.GetCol() + " / " + tile.Model.GetRow() + " )";
 
+            tile.InitLiquidTile();
             tile.LiquidHandle.transform.position = tile.Model.Center;
             var liquidRenderer = tile.LiquidHandle.AddComponent<SpriteRenderer>();
             var liquidSprites = MapBridge.Instance.GetTileSprites(ETile.Water);

@@ -20,6 +20,7 @@ namespace Assets.Controller.Map.Tile
 
         public object Current { get { return this._model.GetCurrentOccupant(); } }
         public Vector3 Center { get { return this._model.Center; } }
+        public GameObject LiquidHandle { get { return this._liquidHandle; } }
         public GameObject Handle { get { return this._handle; } }
         public MTile Model { get { return this._model; } }
         public VTile View { get { return this._view; } }
@@ -43,16 +44,6 @@ namespace Assets.Controller.Map.Tile
         public void RemoveZone(AZone zone) { this._zones.Remove(zone); }
 
         public void SetCurrent(IHexOccupant o) { this.Model.SetCurrentOccupant(o); }
-
-        public GameObject LiquidHandle
-        {
-            get
-            {
-                if (this._liquidHandle == null)
-                    this._liquidHandle = new GameObject(Layers.TILE_LIQUID);
-                return this._liquidHandle;
-            }
-        }
 
         public CTile(MTile tile)
         {
@@ -107,6 +98,12 @@ namespace Assets.Controller.Map.Tile
         {
             var tile = (MTile) this._model.GetRandomNearbyTile(probes);
             return tile.Controller;
+        }
+
+        public void InitLiquidTile()
+        {
+            if (this._liquidHandle == null)
+                this._liquidHandle = new GameObject(Layers.TILE_LIQUID);
         }
 
         public void ProcessEnterTile(CChar c)

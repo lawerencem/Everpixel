@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.3.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -254,6 +252,9 @@
     </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>Library\UnityAssemblies\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Android.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>Library\UnityAssemblies\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
@@ -546,10 +547,9 @@
     <Compile Include="Assets\Model\Map\MMap.cs" />
     <Compile Include="Assets\Model\Map\Tile\EEnvironment.cs" />
     <Compile Include="Assets\Model\Map\Tile\ETile.cs" />
-    <Compile Include="Assets\Model\Map\Tile\TileLogic.cs" />
-    <Compile Include="Assets\Template\Hex\IHexOccupant.cs" />
     <Compile Include="Assets\Model\Map\Tile\MTile.cs" />
     <Compile Include="Assets\Model\Map\Tile\TileDecoParam.cs" />
+    <Compile Include="Assets\Model\Map\Tile\TileLogic.cs" />
     <Compile Include="Assets\Model\Map\Tile\TileParams.cs" />
     <Compile Include="Assets\Model\Mount\EMount.cs" />
     <Compile Include="Assets\Model\Mount\MMount.cs" />
@@ -627,7 +627,12 @@
     <Compile Include="Assets\Template\Hex\HexMap.cs" />
     <Compile Include="Assets\Template\Hex\HexTileLogic.cs" />
     <Compile Include="Assets\Template\Hex\IHex.cs" />
+    <Compile Include="Assets\Template\Hex\IHexOccupant.cs" />
     <Compile Include="Assets\Template\Hex\IPathable.cs" />
+    <Compile Include="Assets\Template\Math\DistributionMath.cs" />
+    <Compile Include="Assets\Template\Math\DoubleNormal.cs" />
+    <Compile Include="Assets\Template\Math\IntNormal.cs" />
+    <Compile Include="Assets\Template\Math\Normal.cs" />
     <Compile Include="Assets\Template\Other\AbstractSingleton.cs" />
     <Compile Include="Assets\Template\Other\Pair.cs" />
     <Compile Include="Assets\Template\Pathing\Path.cs" />
