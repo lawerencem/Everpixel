@@ -4,8 +4,6 @@ namespace Assets.Model.Equipment
 {
     abstract public class AEquipment
     {
-        public int Durability { get; set; }
-        public int MaxDurability { get; set; }
         public EEquipmentTier Tier { get; set; }
         public EEquipmentType Type { get; set; }
     }

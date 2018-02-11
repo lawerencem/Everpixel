@@ -19,6 +19,8 @@ namespace Assets.Model.Combat.Hit
         protected HitPrediction Prediction { get; set; }
         public bool IsFatality { get; set; }
         public bool IsHeal { get; set; }
+        public bool IsLWeapon { get; set; }
+        public bool IsWeapon { get; set; }
         public int Dmg { get; set; }
         public CChar Source { get; set; }
         public CTile Target { get; set; }

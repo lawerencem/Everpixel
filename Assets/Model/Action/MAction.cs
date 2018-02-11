@@ -64,6 +64,7 @@ namespace Assets.Model.Action
             args.Range = this.ActiveAbility.Data.Range;
             args.Source = this._data.Source;
             args.Target = this._data.Target;
+            args.WpnAbility = this._data.WpnAbility;
             this._data.Hits = this.ActiveAbility.GetHits(args);
             foreach (var hit in this._data.Hits)
             {
@@ -79,6 +80,7 @@ namespace Assets.Model.Action
             args.Range = this.ActiveAbility.Data.Range;
             args.Source = this._data.Source;
             args.Target = this._data.Target;
+            args.WpnAbility = this._data.WpnAbility;
             this._data.Hits = this.ActiveAbility.GetHits(args);
             foreach(var hit in this._data.Hits)
             {

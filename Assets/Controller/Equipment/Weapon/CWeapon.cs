@@ -48,7 +48,12 @@ namespace Assets.Controller.Equipment.Weapon
                 case (EWeaponStat.Value): { return this._model.Data.Value; }
                 default: return -1;
             }
-        }         
+        }
+
+        public double GetDurabilityPercentage()
+        {
+            return this.Model.Data.Durability / this.Model.Data.MaxDurability;
+        }
 
         public bool IsTypeOfShield() { return this._model.IsTypeOfShield(); }
     }

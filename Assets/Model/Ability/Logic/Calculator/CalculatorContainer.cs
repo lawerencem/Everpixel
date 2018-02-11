@@ -1,6 +1,6 @@
 ﻿namespace Assets.Model.Ability.Logic.Calculator
 {
-    public class CalculatorContainer
+    public class AbilityCalcContainer
     {
         public BlockCalculator BlockCalc { get; set; }
         public CritCalculator CritCalc { get; set; }
@@ -10,7 +10,7 @@
         public ParryCalculator ParryCalc { get; set; }
         public ResistCalculator ResistCalc { get; set; }
 
-        public CalculatorContainer()
+        public AbilityCalcContainer()
         {
             this.BlockCalc = new BlockCalculator();
             this.CritCalc = new CritCalculator();

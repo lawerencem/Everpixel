@@ -3,13 +3,13 @@ using Assets.Model.Combat.Hit;
 
 namespace Assets.Model.Ability.Logic
 {
-    public class TypeLogic
+    public class AbilityCalcLogic
     {
-        private CalculatorContainer _calcContainer;
+        private AbilityCalcContainer _calcContainer;
         
-        public TypeLogic()
+        public AbilityCalcLogic()
         {
-            this._calcContainer = new CalculatorContainer();
+            this._calcContainer = new AbilityCalcContainer();
         }
 
         public void PredictBullet(MHit hit)

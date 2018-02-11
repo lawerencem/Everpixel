@@ -35,5 +35,10 @@ namespace Assets.Model.Equipment.Armor
                 default: return -1;
             }
         }
+
+        public double GetDurabilityPercentage()
+        {
+            return this.Model.Data.Durability / this.Model.Data.MaxDurability;
+        }
     }
 }

@@ -130,35 +130,30 @@ namespace Assets.Model.Ability
 
         protected virtual void PredictBullet(MHit hit)
         {
-            this.ProcessEffects(hit, true);
-            this.ProcessPerks(hit);
+            this.PreProcessHit(hit, true);
             this._logic.PredictBullet(hit);
         }
 
         protected virtual void PredictMelee(MHit hit)
         {
-            this.ProcessEffects(hit, true);
-            this.ProcessPerks(hit);
+            this.PreProcessHit(hit, true);
             this._logic.PredictMelee(hit);
         }
 
         protected virtual void PredictSingle(MHit hit)
         {
-            this.ProcessEffects(hit, true);
-            this.ProcessPerks(hit);
+            this.PreProcessHit(hit, true);
             this._logic.PredictSingle(hit);
         }
 
         protected void PredictTile(MHit hit)
         {
-            this.ProcessEffects(hit, true);
-            this.ProcessPerks(hit);
+            this.PreProcessHit(hit, true);
         }
 
         protected void ProcessHitBullet(MHit hit)
         {
-            this.ProcessEffects(hit, false);
-            this.ProcessPerks(hit);
+            this.PreProcessHit(hit, true);
             this._logic.ProcessBullet(hit);
         }
 
@@ -179,22 +174,19 @@ namespace Assets.Model.Ability
 
         protected void ProcessHitMelee(MHit hit)
         {
-            this.ProcessEffects(hit, false);
-            this.ProcessPerks(hit);
+            this.PreProcessHit(hit, false);
             this._logic.ProcessMelee(hit);
         }
 
         protected void ProcessSingle(MHit hit)
         {
-            this.ProcessEffects(hit, false);
-            this.ProcessPerks(hit);
+            this.PreProcessHit(hit, false);
             this._logic.ProcessSingle(hit);
         }
 
         protected void ProcessTile(MHit hit)
         {
-            this.ProcessEffects(hit, false);
-            this.ProcessPerks(hit);
+            this.PreProcessHit(hit, false);
         }
 
         private void PopulateHitData(MHit hit, CTile tile, AbilityArgs args)
@@ -204,6 +196,18 @@ namespace Assets.Model.Ability
             hit.Data.IsHeal = this.Data.IsHeal;
             hit.Data.Source = args.Source;
             hit.Data.Target = tile;
+            if (args.WpnAbility)
+            {
+                hit.Data.IsWeapon = true;
+                if (args.LWeapon)
+                    hit.Data.IsLWeapon = true;
+            }
+        }
+
+        private void PreProcessHit(MHit hit, bool prediction)
+        {
+            this.ProcessEffects(hit, prediction);
+            this.ProcessPerks(hit);
         }
 
         private void ProcessEffects(MHit hit, bool prediction)
