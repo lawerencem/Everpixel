@@ -62,9 +62,7 @@ namespace Assets.Controller.Map.Combat
         public void DecoratePath(Path p)
         {
             foreach (var old in this._familyTileDeco)
-            {
                 GameObject.Destroy(old);
-            }
 
             if (p != null)
             {
@@ -121,8 +119,9 @@ namespace Assets.Controller.Map.Combat
 
         private void DecorateTileFamily(CTile tile, Sprite deco)
         {
-            this._familyTileDeco.Add(this.DecorateTileHandle(tile.Handle, deco, ViewParams.TILE_DECO_ALPHA));
             if (tile.LiquidHandle != null)
+                this._familyTileDeco.Add(this.DecorateTileHandle(tile.LiquidHandle, deco, ViewParams.TILE_DECO_ALPHA));
+            else
                 this._familyTileDeco.Add(this.DecorateTileHandle(tile.Handle, deco, ViewParams.TILE_DECO_ALPHA));
         }
 
