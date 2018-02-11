@@ -368,6 +368,7 @@
     <Compile Include="Assets\Model\Ability\Enum\EAbility.cs" />
     <Compile Include="Assets\Model\Ability\Enum\ECastType.cs" />
     <Compile Include="Assets\Model\Ability\Enum\EResistType.cs" />
+    <Compile Include="Assets\Model\Ability\Logic\AbilityCalcLogic.cs" />
     <Compile Include="Assets\Model\Ability\Logic\AbilityLogic.cs" />
     <Compile Include="Assets\Model\Ability\Logic\AoELogic.cs" />
     <Compile Include="Assets\Model\Ability\Logic\Calculator\AAbilityCalculator.cs" />
@@ -380,7 +381,6 @@
     <Compile Include="Assets\Model\Ability\Logic\Calculator\ParryCalculator.cs" />
     <Compile Include="Assets\Model\Ability\Logic\Calculator\ResistCalculator.cs" />
     <Compile Include="Assets\Model\Ability\Logic\LogicParams.cs" />
-    <Compile Include="Assets\Model\Ability\Logic\AbilityCalcLogic.cs" />
     <Compile Include="Assets\Model\Ability\MAbility.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Astral\EldritchChomp.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Astral\SummonShoggoth.cs" />
@@ -768,7 +768,9 @@
     <None Include="Assets\Data\Equipment\XML\Weapon\SmallShield.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\Spear.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\Staff.xml" />
-    <None Include="Assets\Data\Equipment\XML\Weapon\Sword.xml" />
+    <None Include="Assets\Data\Equipment\XML\Weapon\Sword.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Data\Injury\XML\Injuries.xml" />
     <None Include="Assets\Data\Map\Biome\XML\Grassland.xml" />
     <None Include="Assets\Data\Map\Biome\XML\Snowland.xml" />

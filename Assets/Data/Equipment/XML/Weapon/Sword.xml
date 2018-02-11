@@ -60,7 +60,6 @@
       <Description>
         A well-rounded weapon.  It's heavier than comparative swords, thus less effective as a defensive weapon.
       </Description>
-      <Fatigue_Mod>1.05</Fatigue_Mod>
       <Initiative_Mod>0.97</Initiative_Mod>
       <Max_Durability>30</Max_Durability>
       <Parry_Mod>0.90</Parry_Mod>
@@ -85,7 +84,6 @@
       <Description>
         A well-rounded weapon.  It's heavier than comparative swords, thus less effective as a defensive weapon.
       </Description>
-      <Fatigue_Mod>1.05</Fatigue_Mod>
       <Initiative_Mod>0.97</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>0.90</Parry_Mod>
@@ -334,7 +332,7 @@
         can easily pierce armor.
       </Description>
       <Initiative_Mod>0.95</Initiative_Mod>
-      <Max_Durability>60</Max_Durability>
+      <Max_Durability>30</Max_Durability>
       <Parry_Mod>1.05</Parry_Mod>
       <Shield_Damage_Percent>0.07</Shield_Damage_Percent>
       <Sprites>112</Sprites>
@@ -383,12 +381,12 @@
       </Description>
       <Fatigue_Mod>1.07</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>70</Max_Durability>
-      <Parry_Mod>1.15</Parry_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Max_Durability>30</Max_Durability>
+      <Parry_Mod>0.95</Parry_Mod>
+      <Shield_Damage_Percent>0</Shield_Damage_Percent>
       <Sprites>36</Sprites>
       <Stamina_Mod>0.95</Stamina_Mod>
-      <Value>800</Value>
+      <Value>250</Value>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
       <EAbility>Riposte</EAbility>
@@ -408,7 +406,7 @@
         Giving the gift of glop.
       </Description>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>15</Max_Durability>
+      <Max_Durability>20</Max_Durability>
       <Parry_Mod>0.84</Parry_Mod>
       <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>140</Sprites>
@@ -884,7 +882,7 @@
       <Parry_Mod>0.78</Parry_Mod>
       <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>20</Sprites>
-      <Stamina_Mod>1</Stamina_Mod>
+      <Stamina_Mod>0.95</Stamina_Mod>
       <Value>80</Value>
       <EAbility>Slash</EAbility>
       <EAbility>Stab</EAbility>
@@ -1100,7 +1098,7 @@
       <Accuracy_Mod>0.76</Accuracy_Mod>
       <AP_Mod>1.34</AP_Mod>
       <Armor_Ignore>0.57</Armor_Ignore>
-      <Armor_Pierce>0.64</Armor_Pierce>
+      <Armor_Pierce>0.94</Armor_Pierce>
       <Block_Ignore>0.69</Block_Ignore>
       <Damage>70</Damage>
       <Description>

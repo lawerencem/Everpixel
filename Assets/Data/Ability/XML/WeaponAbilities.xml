@@ -70,8 +70,8 @@
     <WeaponAbility name="Chop">
       <AccMod>1</AccMod>
       <APCost>3</APCost>
-      <ArmorIgnoreMod>1</ArmorIgnoreMod>
-      <ArmorPierceMod>1</ArmorPierceMod>
+      <ArmorIgnoreMod>1.15</ArmorIgnoreMod>
+      <ArmorPierceMod>1.15</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
       <ECastType>Melee</ECastType>
       <DamageMod>1</DamageMod>
@@ -95,17 +95,17 @@
       <Injury>Split_Nose</Injury>
       <Injury>Split_Shoulder</Injury>
       <Injury>Torrential_Bleeding</Injury>
-      <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
-      <ParryModMod>1.10</ParryModMod>
+      <MeleeBlockChanceMod>1.25</MeleeBlockChanceMod>
+      <ParryModMod>0.75</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
-      <ShieldDamageMod>1</ShieldDamageMod>
+      <ShieldDamageMod>1.25</ShieldDamageMod>
       <StaminaCost>25</StaminaCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Crush">
       <AccMod>1</AccMod>
       <APCost>3</APCost>
-      <ArmorIgnoreMod>1.15</ArmorIgnoreMod>
+      <ArmorIgnoreMod>1.35</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
       <ECastType>Melee</ECastType>
@@ -167,7 +167,7 @@
       <ArmorPierceMod>1.20</ArmorPierceMod>
       <BlockIgnoreMod>0.15</BlockIgnoreMod>
       <ECastType>Melee</ECastType>
-      <DamageMod>1.75</DamageMod>
+      <DamageMod>2.0</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>7</IconSprite>
       <Injury>Massive_Bleeding</Injury>
@@ -371,7 +371,7 @@
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
       <ECastType>Melee</ECastType>
-      <DamageMod>1</DamageMod>
+      <DamageMod>1.25</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>11</IconSprite>
       <Injury>Cut_Abdomine</Injury>
@@ -395,8 +395,8 @@
       <Injury>Minor_Bleeding</Injury>
       <Injury>Split_Hand</Injury>
       <Injury>Split_Nose</Injury>
-      <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
-      <ParryModMod>1.15</ParryModMod>
+      <MeleeBlockChanceMod>1.5</MeleeBlockChanceMod>
+      <ParryModMod>1.50</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
       <StaminaCost>25</StaminaCost>
@@ -405,11 +405,11 @@
     <WeaponAbility name="Stab">
       <AccMod>1</AccMod>
       <APCost>3</APCost>
-      <ArmorIgnoreMod>1</ArmorIgnoreMod>
+      <ArmorIgnoreMod>0.85</ArmorIgnoreMod>
       <ArmorPierceMod>1.50</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
       <ECastType>Melee</ECastType>
-      <DamageMod>0.85</DamageMod>
+      <DamageMod>1.25</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>14</IconSprite>
       <Injury>Minor_Bleeding</Injury>

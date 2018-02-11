@@ -1,6 +1,11 @@
 ﻿TODO
 
-
+- Add Fatigue costs to weapons
+- Add Lash + Flail to flail weapons
+- Add Whirlwind weapon ability
+- Add Grey as UI info of durability
+- Add orange as UI info of negative stamina
+- Add blue as UI info of positive stamina
 - Add block math in damage calculator
 - Add concept of deep vs shallow liquid
 

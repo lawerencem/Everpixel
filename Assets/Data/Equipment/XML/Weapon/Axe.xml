@@ -142,7 +142,6 @@
       <Description>
         Basically a giant slab of metal tied to a big stick.  It's sharp though - and it can assuredly do some damage when swung.
       </Description>
-      <Fatigue_Mod>1.40</Fatigue_Mod>
       <Initiative_Mod>0.70</Initiative_Mod>
       <Max_Durability>80</Max_Durability>
       <Parry_Mod>1.04</Parry_Mod>
@@ -452,7 +451,6 @@
       <Description>
         The sharp edges of this weapon help "make it rain".  
       </Description>
-      <Fatigue_Mod>0.85</Fatigue_Mod>
       <Initiative_Mod>0.90</Initiative_Mod>
       <Max_Durability>100</Max_Durability>
       <Parry_Mod>0.65</Parry_Mod>
