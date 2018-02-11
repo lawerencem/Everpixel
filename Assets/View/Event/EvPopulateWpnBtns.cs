@@ -16,9 +16,9 @@ namespace Assets.View.Event
         {
             base.TryProcess();
             var curr = CombatManager.Instance.GetCurrentlyActing();
+            var abilities = new List<Pair<MAbility, bool>>();
             if (curr.Proxy.Type == ECharType.Humanoid)
             {
-                var abilities = new List<Pair<MAbility, bool>>();
                 var left = curr.Proxy.GetLWeapon();
                 var right = curr.Proxy.GetRWeapon();
 
@@ -28,9 +28,8 @@ namespace Assets.View.Event
                 if (right != null)
                     foreach (var ability in right.Model.Data.Abilities)
                         abilities.Add(new Pair<MAbility, bool>(ability, true));
-
-                this.ProcessAbilities(abilities);
             }
+            this.ProcessAbilities(abilities);
         }
 
         private void ProcessAbilities(List<Pair<MAbility, bool>> abilities)
