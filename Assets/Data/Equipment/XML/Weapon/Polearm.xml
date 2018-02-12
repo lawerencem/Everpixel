@@ -4,7 +4,7 @@
     <Weapon name="Naginata">
       <Tier>Five</Tier>
       <Accuracy_Mod>0.82</Accuracy_Mod>
-      <AP_Mod>0.94</AP_Mod>
+      <AP_Mod>0.96</AP_Mod>
       <Armor_Ignore>0.98</Armor_Ignore>
       <Armor_Pierce>0.88</Armor_Pierce>
       <Block_Ignore>0.0</Block_Ignore>
@@ -91,7 +91,7 @@
       <AP_Mod>0.95</AP_Mod>
       <Armor_Ignore>0.95</Armor_Ignore>
       <Armor_Pierce>0.85</Armor_Pierce>
-      <Block_Ignore>0.08</Block_Ignore>
+      <Block_Ignore>0.0</Block_Ignore>
       <Damage>56</Damage>
       <Description>
         This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.

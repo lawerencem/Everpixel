@@ -3,22 +3,21 @@
   <EWeaponSkill name ="Flail">
     <Weapon name="Megaflail">
       <Tier>Five</Tier>
-      <Accuracy_Mod>0.51</Accuracy_Mod>
-      <AP_Mod>0.51</AP_Mod>
+      <Accuracy_Mod>0.7</Accuracy_Mod>
+      <AP_Mod>1.38</AP_Mod>
       <Armor_Ignore>0.18</Armor_Ignore>
-      <Armor_Pierce>0.87</Armor_Pierce>
+      <Armor_Pierce>0.58</Armor_Pierce>
       <Block_Ignore>0.85</Block_Ignore>
       <Damage>92</Damage>
       <Description>
         
       </Description>
-      <Fatigue_Mod>1.48</Fatigue_Mod>
       <Initiative_Mod>0.62</Initiative_Mod>
-      <Max_Durability>120</Max_Durability>
+      <Max_Durability>85</Max_Durability>
       <Parry_Mod>0</Parry_Mod>
-      <Shield_Damage_Percent>1.82</Shield_Damage_Percent>
+      <Shield_Damage_Percent>0.88</Shield_Damage_Percent>
       <Sprites>0</Sprites>
-      <Stamina_Mod>0.32</Stamina_Mod>
+      <Stamina_Mod>0.70</Stamina_Mod>
       <Value>300</Value>
       <EAbility>Crush</EAbility>
       <EAbility>Scatter</EAbility>
@@ -27,23 +26,22 @@
     </Weapon>
     <Weapon name="Megaflail">
       <Tier>Four</Tier>
-      <Accuracy_Mod>0.53</Accuracy_Mod>
-      <AP_Mod>0.53</AP_Mod>
-      <Armor_Ignore>0.16</Armor_Ignore>
-      <Armor_Pierce>0.86</Armor_Pierce>
-      <Block_Ignore>0.86</Block_Ignore>
-      <Damage>102</Damage>
+      <Accuracy_Mod>0.70</Accuracy_Mod>
+      <AP_Mod>1.37</AP_Mod>
+      <Armor_Ignore>0.17</Armor_Ignore>
+      <Armor_Pierce>0.57</Armor_Pierce>
+      <Block_Ignore>0.85</Block_Ignore>
+      <Damage>95</Damage>
       <Description>
         This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
         it will certainly cause utter devastation on the battlefield.
       </Description>
-      <Fatigue_Mod>1.47</Fatigue_Mod>
       <Initiative_Mod>0.63</Initiative_Mod>
-      <Max_Durability>135</Max_Durability>
+      <Max_Durability>88</Max_Durability>
       <Parry_Mod>0</Parry_Mod>
-      <Shield_Damage_Percent>1.84</Shield_Damage_Percent>
+      <Shield_Damage_Percent>0.9</Shield_Damage_Percent>
       <Sprites>1</Sprites>
-      <Stamina_Mod>0.34</Stamina_Mod>
+      <Stamina_Mod>0.71</Stamina_Mod>
       <Value>650</Value>
       <EAbility>Crush</EAbility>
       <EAbility>Scatter</EAbility>
@@ -52,23 +50,22 @@
     </Weapon>
     <Weapon name="Megaflail">
       <Tier>Three</Tier>
-      <Accuracy_Mod>0.54</Accuracy_Mod>
-      <AP_Mod>0.54</AP_Mod>
-      <Armor_Ignore>0.15</Armor_Ignore>
-      <Armor_Pierce>0.85</Armor_Pierce>
-      <Block_Ignore>0.87</Block_Ignore>
-      <Damage>110</Damage>
+      <Accuracy_Mod>0.70</Accuracy_Mod>
+      <AP_Mod>1.36</AP_Mod>
+      <Armor_Ignore>0.16</Armor_Ignore>
+      <Armor_Pierce>0.56</Armor_Pierce>
+      <Block_Ignore>0.85</Block_Ignore>
+      <Damage>98</Damage>
       <Description>
         This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
         it will certainly cause utter devastation on the battlefield.
       </Description>
-      <Fatigue_Mod>1.45</Fatigue_Mod>
       <Initiative_Mod>0.64</Initiative_Mod>
-      <Max_Durability>155</Max_Durability>
+      <Max_Durability>92</Max_Durability>
       <Parry_Mod>0</Parry_Mod>
-      <Shield_Damage_Percent>1.88</Shield_Damage_Percent>
+      <Shield_Damage_Percent>0.92</Shield_Damage_Percent>
       <Sprites>2</Sprites>
-      <Stamina_Mod>0.35</Stamina_Mod>
+      <Stamina_Mod>0.72</Stamina_Mod>
       <Value>1100</Value>
       <EAbility>Crush</EAbility>
       <EAbility>Scatter</EAbility>
@@ -77,23 +74,22 @@
     </Weapon>
     <Weapon name="Megaflail">
       <Tier>Two</Tier>
-      <Accuracy_Mod>0.55</Accuracy_Mod>
-      <AP_Mod>0.55</AP_Mod>
-      <Armor_Ignore>0.13</Armor_Ignore>
-      <Armor_Pierce>0.84</Armor_Pierce>
-      <Block_Ignore>0.88</Block_Ignore>
-      <Damage>120</Damage>
+      <Accuracy_Mod>0.7</Accuracy_Mod>
+      <AP_Mod>1.35</AP_Mod>
+      <Armor_Ignore>0.15</Armor_Ignore>
+      <Armor_Pierce>0.55</Armor_Pierce>
+      <Block_Ignore>0.85</Block_Ignore>
+      <Damage>102</Damage>
       <Description>
         This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
         it will certainly cause utter devastation on the battlefield.
       </Description>
-      <Fatigue_Mod>1.45</Fatigue_Mod>
       <Initiative_Mod>0.65</Initiative_Mod>
-      <Max_Durability>180</Max_Durability>
+      <Max_Durability>95</Max_Durability>
       <Parry_Mod>0</Parry_Mod>
-      <Shield_Damage_Percent>2.00</Shield_Damage_Percent>
+      <Shield_Damage_Percent>0.94</Shield_Damage_Percent>
       <Sprites>3</Sprites>
-      <Stamina_Mod>0.35</Stamina_Mod>
+      <Stamina_Mod>0.74</Stamina_Mod>
       <Value>1500</Value>
       <EAbility>Crush</EAbility>
       <EAbility>Scatter</EAbility>

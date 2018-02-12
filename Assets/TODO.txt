@@ -9,6 +9,10 @@
 - Add block math in damage calculator
 - Add concept of deep vs shallow liquid
 
+- Quick TODO:
+  -- finish up icons
+  -- Edit yellow values of spreadsheet
+
 - Add pond / lake
   -- add ability for landmark to freeze
   -- thawing out 
@@ -22,7 +26,6 @@
   -- Stamina reduction when moving, AP reduction, give pathing to models to determine costs
 
 - Biome
-  -- Add rock deco
   -- Corruption biome
 
 - Combat logic

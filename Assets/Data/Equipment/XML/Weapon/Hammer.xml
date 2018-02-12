@@ -3,18 +3,18 @@
   <EWeaponSkill name ="Hammer">
     <Weapon name="Dino Warhammer">
       <Tier>Five</Tier>
-      <Accuracy_Mod>0.63</Accuracy_Mod>
-      <AP_Mod>1.28</AP_Mod>
+      <Accuracy_Mod>0.82</Accuracy_Mod>
+      <AP_Mod>1.14</AP_Mod>
       <Armor_Ignore>0.75</Armor_Ignore>
       <Armor_Pierce>0.92</Armor_Pierce>
-      <Block_Ignore>0.20</Block_Ignore>
-      <Damage>45</Damage>
+      <Block_Ignore>0.13</Block_Ignore>
+      <Damage>39</Damage>
       <Description>
         This log has some strangely-heavy bones protruding from the end.
       </Description>
-      <Initiative_Mod>0.85</Initiative_Mod>
+      <Initiative_Mod>0.89</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
-      <Parry_Mod>0.55</Parry_Mod>
+      <Parry_Mod>0.2</Parry_Mod>
       <Shield_Damage_Percent>0.22</Shield_Damage_Percent>
       <Sprites>0</Sprites>
       <Stamina_Mod>0.84</Stamina_Mod>
@@ -28,18 +28,18 @@
     </Weapon>
     <Weapon name="Dino Warhammer">
       <Tier>Four</Tier>
-      <Accuracy_Mod>0.65</Accuracy_Mod>
-      <AP_Mod>1.27</AP_Mod>
-      <Armor_Ignore>0.73</Armor_Ignore>
+      <Accuracy_Mod>0.83</Accuracy_Mod>
+      <AP_Mod>1.13</AP_Mod>
+      <Armor_Ignore>0.74</Armor_Ignore>
       <Armor_Pierce>0.91</Armor_Pierce>
-      <Block_Ignore>0.21</Block_Ignore>
-      <Damage>52</Damage>
+      <Block_Ignore>0.14</Block_Ignore>
+      <Damage>42</Damage>
       <Description>
         This log has some strangely-heavy bones protruding from the end.
       </Description>
-      <Initiative_Mod>0.83</Initiative_Mod>
-      <Max_Durability>50</Max_Durability>
-      <Parry_Mod>0.58</Parry_Mod>
+      <Initiative_Mod>0.90</Initiative_Mod>
+      <Max_Durability>38</Max_Durability>
+      <Parry_Mod>0.22</Parry_Mod>
       <Shield_Damage_Percent>0.25</Shield_Damage_Percent>
       <Sprites>15</Sprites>
       <Stamina_Mod>0.85</Stamina_Mod>
@@ -53,19 +53,19 @@
     </Weapon>
     <Weapon name="Dino Warhammer">
       <Tier>Three</Tier>
-      <Accuracy_Mod>0.68</Accuracy_Mod>
-      <AP_Mod>1.26</AP_Mod>
-      <Armor_Ignore>0.70</Armor_Ignore>
+      <Accuracy_Mod>0.84</Accuracy_Mod>
+      <AP_Mod>1.12</AP_Mod>
+      <Armor_Ignore>0.73</Armor_Ignore>
       <Armor_Pierce>0.90</Armor_Pierce>
-      <Block_Ignore>0.22</Block_Ignore>
-      <Damage>60</Damage>
+      <Block_Ignore>0.15</Block_Ignore>
+      <Damage>46</Damage>
       <Description>
         This log has some strangely-heavy bones protruding from the end.
       </Description>
-      <Initiative_Mod>0.85</Initiative_Mod>
-      <Max_Durability>85</Max_Durability>
-      <Parry_Mod>0.60</Parry_Mod>
-      <Shield_Damage_Percent>0.26</Shield_Damage_Percent>
+      <Initiative_Mod>0.91</Initiative_Mod>
+      <Max_Durability>42</Max_Durability>
+      <Parry_Mod>0.24</Parry_Mod>
+      <Shield_Damage_Percent>0.3</Shield_Damage_Percent>
       <Sprites>30</Sprites>
       <Stamina_Mod>0.85</Stamina_Mod>
       <Value>350</Value>
@@ -78,20 +78,20 @@
     </Weapon>
     <Weapon name="Dino Warhammer">
       <Tier>Two</Tier>
-      <Accuracy_Mod>0.70</Accuracy_Mod>
-      <AP_Mod>1.25</AP_Mod>
-      <Armor_Ignore>0.68</Armor_Ignore>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>1.11</AP_Mod>
+      <Armor_Ignore>0.72</Armor_Ignore>
       <Armor_Pierce>0.89</Armor_Pierce>
-      <Block_Ignore>0.23</Block_Ignore>
-      <Damage>72</Damage>
+      <Block_Ignore>0.16</Block_Ignore>
+      <Damage>50</Damage>
       <Description>
         This log has some strangely-heavy bones protruding from the end.
       </Description>
       <Fatigue_Mod>1.20</Fatigue_Mod>
-      <Initiative_Mod>0.85</Initiative_Mod>
-      <Max_Durability>115</Max_Durability>
-      <Parry_Mod>0.60</Parry_Mod>
-      <Shield_Damage_Percent>0.27</Shield_Damage_Percent>
+      <Initiative_Mod>0.92</Initiative_Mod>
+      <Max_Durability>45</Max_Durability>
+      <Parry_Mod>0.26</Parry_Mod>
+      <Shield_Damage_Percent>0.35</Shield_Damage_Percent>
       <Sprites>45</Sprites>
       <Stamina_Mod>0.85</Stamina_Mod>
       <Value>700</Value>
@@ -104,16 +104,16 @@
     </Weapon>
     <Weapon name="Shroom Hammer">
       <Tier>Five</Tier>
-      <Accuracy_Mod>0.76</Accuracy_Mod>
+      <Accuracy_Mod>0.9</Accuracy_Mod>
       <AP_Mod>0.95</AP_Mod>
       <Armor_Ignore>0.81</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0.13</Block_Ignore>
-      <Damage>39</Damage>
+      <Damage>54</Damage>
       <Description>
         A mushroom grown into a hammer-like shape. It's...suprisingly effective.
       </Description>
-      <Initiative_Mod>0.89</Initiative_Mod>
+      <Initiative_Mod>0.93</Initiative_Mod>
       <Max_Durability>30</Max_Durability>
       <Parry_Mod>0.20</Parry_Mod>
       <Shield_Damage_Percent>0.13</Shield_Damage_Percent>
@@ -128,7 +128,7 @@
     </Weapon>
     <Weapon name="Shroom Hammer">
       <Tier>Four</Tier>
-      <Accuracy_Mod>0.77</Accuracy_Mod>
+      <Accuracy_Mod>0.91</Accuracy_Mod>
       <AP_Mod>0.94</AP_Mod>
       <Armor_Ignore>0.80</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
@@ -139,10 +139,10 @@
       </Description>
       <Initiative_Mod>0.90</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
-      <Parry_Mod>0.20</Parry_Mod>
+      <Parry_Mod>0.22</Parry_Mod>
       <Shield_Damage_Percent>0.15</Shield_Damage_Percent>
       <Sprites>16</Sprites>
-      <Stamina_Mod>0.92</Stamina_Mod>
+      <Stamina_Mod>0.91</Stamina_Mod>
       <Value>400</Value>
       <EAbility>Crush</EAbility>
       <EAbility>Scatter</EAbility>
@@ -152,7 +152,7 @@
     </Weapon>
     <Weapon name="Shroom Hammer">
       <Tier>Three</Tier>
-      <Accuracy_Mod>0.78</Accuracy_Mod>
+      <Accuracy_Mod>0.92</Accuracy_Mod>
       <AP_Mod>0.93</AP_Mod>
       <Armor_Ignore>0.79</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
@@ -163,10 +163,10 @@
       </Description>
       <Initiative_Mod>0.90</Initiative_Mod>
       <Max_Durability>40</Max_Durability>
-      <Parry_Mod>0.20</Parry_Mod>
+      <Parry_Mod>0.24</Parry_Mod>
       <Shield_Damage_Percent>0.15</Shield_Damage_Percent>
       <Sprites>31</Sprites>
-      <Stamina_Mod>0.93</Stamina_Mod>
+      <Stamina_Mod>0.92</Stamina_Mod>
       <Value>550</Value>
       <EAbility>Crush</EAbility>
       <EAbility>Scatter</EAbility>
@@ -176,7 +176,7 @@
     </Weapon>
     <Weapon name="Shroom Hammer">
       <Tier>Two</Tier>
-      <Accuracy_Mod>0.80</Accuracy_Mod>
+      <Accuracy_Mod>0.93</Accuracy_Mod>
       <AP_Mod>0.92</AP_Mod>
       <Armor_Ignore>0.78</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
@@ -187,10 +187,10 @@
       </Description>
       <Initiative_Mod>0.90</Initiative_Mod>
       <Max_Durability>50</Max_Durability>
-      <Parry_Mod>0.20</Parry_Mod>
+      <Parry_Mod>0.26</Parry_Mod>
       <Shield_Damage_Percent>0.15</Shield_Damage_Percent>
       <Sprites>46</Sprites>
-      <Stamina_Mod>0.95</Stamina_Mod>
+      <Stamina_Mod>0.93</Stamina_Mod>
       <Value>650</Value>
       <EAbility>Crush</EAbility>
       <EAbility>Scatter</EAbility>
@@ -200,7 +200,7 @@
     </Weapon>
     <Weapon name="Goomhammer">
       <Tier>One</Tier>
-      <Accuracy_Mod>0.80</Accuracy_Mod>
+      <Accuracy_Mod>0.95</Accuracy_Mod>
       <AP_Mod>0.92</AP_Mod>
       <Armor_Ignore>0.72</Armor_Ignore>
       <Armor_Pierce>0.95</Armor_Pierce>
@@ -211,10 +211,10 @@
       </Description>
       <Initiative_Mod>0.90</Initiative_Mod>
       <Max_Durability>80</Max_Durability>
-      <Parry_Mod>0.20</Parry_Mod>
+      <Parry_Mod>0.28</Parry_Mod>
       <Shield_Damage_Percent>0.15</Shield_Damage_Percent>
       <Sprites>61</Sprites>
-      <Stamina_Mod>0.95</Stamina_Mod>
+      <Stamina_Mod>0.94</Stamina_Mod>
       <Value>1500</Value>
       <EAbility>Crush</EAbility>
       <EAbility>Scatter</EAbility>

@@ -27,7 +27,7 @@
     <Weapon name="Dino Spear">
       <Tier>Five</Tier>
       <Accuracy_Mod>0.84</Accuracy_Mod>
-      <AP_Mod>0.97</AP_Mod>
+      <AP_Mod>1.03</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.78</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
@@ -51,7 +51,7 @@
     <Weapon name="Dino Spear">
       <Tier>Four</Tier>
       <Accuracy_Mod>0.86</Accuracy_Mod>
-      <AP_Mod>0.98</AP_Mod>
+      <AP_Mod>1.02</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.76</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
@@ -75,7 +75,7 @@
     <Weapon name="Dino Spear">
       <Tier>Three</Tier>
       <Accuracy_Mod>0.88</Accuracy_Mod>
-      <AP_Mod>1</AP_Mod>
+      <AP_Mod>1.01</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>0.74</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
@@ -113,7 +113,7 @@
       <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>37</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
-      <Value>450</Value>
+      <Value>700</Value>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
       <EAbility>Spear Wall</EAbility>
@@ -283,7 +283,7 @@
       <Shield_Damage_Percent>0.0</Shield_Damage_Percent>
       <Sprites>50</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
-      <Value>200</Value>
+      <Value>450</Value>
       <EAbility>Slash</EAbility>
       <EAbility>Stab</EAbility>
       <EAbility>Gash</EAbility>

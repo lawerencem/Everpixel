@@ -10,7 +10,7 @@
       <Block_Ignore>0</Block_Ignore>
       <Damage>55</Damage>
       <Description>
-        Ever seen a psychic jellyfish in an aquarium on a staff? Now you have.
+        Ever seen a psychic jellyfish in an aquarium on a staff? You have now.
       </Description>
       <Fatigue_Mod>1.20</Fatigue_Mod>
       <Initiative_Mod>1.20</Initiative_Mod>
@@ -43,7 +43,7 @@
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>3</Sprites>
-      <Stamina_Mod>0.92</Stamina_Mod>
+      <Stamina_Mod>1</Stamina_Mod>
       <Value>100</Value>
       <EAbility>Crush</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
@@ -67,7 +67,7 @@
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>18</Sprites>
-      <Stamina_Mod>0.94</Stamina_Mod>
+      <Stamina_Mod>1</Stamina_Mod>
       <Value>250</Value>
       <EAbility>Crush</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
@@ -91,7 +91,7 @@
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>33</Sprites>
-      <Stamina_Mod>0.95</Stamina_Mod>
+      <Stamina_Mod>1</Stamina_Mod>
       <Value>355</Value>
       <EAbility>Crush</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
@@ -115,7 +115,7 @@
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>48</Sprites>
-      <Stamina_Mod>0.95</Stamina_Mod>
+      <Stamina_Mod>1</Stamina_Mod>
       <Value>550</Value>
       <EAbility>Crush</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
@@ -137,9 +137,9 @@
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
       <Range_Mod>0</Range_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>0,1</Sprites>
-      <Stamina_Mod>0.88</Stamina_Mod>
+      <Stamina_Mod>1</Stamina_Mod>
       <Value>150</Value>
       <EAbility>Fire</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
@@ -158,7 +158,7 @@
       </Description>
       <Fatigue_Mod>1.11</Fatigue_Mod>
       <Initiative_Mod>0.79</Initiative_Mod>
-      <Max_Durability>25</Max_Durability>
+      <Max_Durability>18</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
@@ -182,7 +182,7 @@
       </Description>
       <Fatigue_Mod>1.10</Fatigue_Mod>
       <Initiative_Mod>0.80</Initiative_Mod>
-      <Max_Durability>35</Max_Durability>
+      <Max_Durability>24</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
       <Range_Mod>0</Range_Mod>
       <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
@@ -193,10 +193,34 @@
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
+    <Weapon name="Slime Staff">
+      <Tier>Two</Tier>
+      <Accuracy_Mod>0.90</Accuracy_Mod>
+      <AP_Mod>0.90</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>15</Damage>
+      <Description>
+        This staff is covered in slime...and it looks like its *gazing* at you...
+      </Description>
+      <Fatigue_Mod>1.10</Fatigue_Mod>
+      <Initiative_Mod>0.80</Initiative_Mod>
+      <Max_Durability>28</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Sprites>45,46</Sprites>
+      <Stamina_Mod>0.90</Stamina_Mod>
+      <Value>850</Value>
+      <EAbility>Fire</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
     <Weapon name="Void Staff">
       <Tier>Five</Tier>
       <Accuracy_Mod>0.80</Accuracy_Mod>
-      <AP_Mod>0.85</AP_Mod>
+      <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
@@ -210,7 +234,7 @@
       <Max_Durability>20</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
       <Range_Mod>0</Range_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>2</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>100</Value>
@@ -221,7 +245,7 @@
     <Weapon name="Void Staff">
       <Tier>Four</Tier>
       <Accuracy_Mod>0.82</Accuracy_Mod>
-      <AP_Mod>0.87</AP_Mod>
+      <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
@@ -232,10 +256,10 @@
       </Description>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>30</Max_Durability>
+      <Max_Durability>25</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
       <Range_Mod>0</Range_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>17</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>200</Value>
@@ -246,7 +270,7 @@
     <Weapon name="Void Staff">
       <Tier>Three</Tier>
       <Accuracy_Mod>0.85</Accuracy_Mod>
-      <AP_Mod>0.90</AP_Mod>
+      <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
@@ -257,10 +281,10 @@
       </Description>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
-      <Max_Durability>20</Max_Durability>
+      <Max_Durability>30</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
       <Range_Mod>0</Range_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Shield_Damage_Percent>0.0</Shield_Damage_Percent>
       <Sprites>32</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>400</Value>
@@ -271,7 +295,7 @@
     <Weapon name="Void Staff">
       <Tier>Two</Tier>
       <Accuracy_Mod>0.92</Accuracy_Mod>
-      <AP_Mod>0.95</AP_Mod>
+      <AP_Mod>1</AP_Mod>
       <Armor_Ignore>1</Armor_Ignore>
       <Armor_Pierce>1</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
@@ -285,7 +309,7 @@
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>1</Parry_Mod>
       <Range_Mod>0</Range_Mod>
-      <Shield_Damage_Percent>0.01</Shield_Damage_Percent>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
       <Sprites>47</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>1000</Value>
