@@ -12,6 +12,7 @@
       <Description>
         This log has some strangely-heavy bones protruding from the end.
       </Description>
+      <Fatigue_Mod>1.08</Fatigue_Mod>
       <Initiative_Mod>0.89</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>0.2</Parry_Mod>
@@ -37,6 +38,7 @@
       <Description>
         This log has some strangely-heavy bones protruding from the end.
       </Description>
+      <Fatigue_Mod>1.07</Fatigue_Mod>
       <Initiative_Mod>0.90</Initiative_Mod>
       <Max_Durability>38</Max_Durability>
       <Parry_Mod>0.22</Parry_Mod>
@@ -62,6 +64,7 @@
       <Description>
         This log has some strangely-heavy bones protruding from the end.
       </Description>
+      <Fatigue_Mod>1.06</Fatigue_Mod>
       <Initiative_Mod>0.91</Initiative_Mod>
       <Max_Durability>42</Max_Durability>
       <Parry_Mod>0.24</Parry_Mod>
@@ -87,6 +90,7 @@
       <Description>
         This log has some strangely-heavy bones protruding from the end.
       </Description>
+      <Fatigue_Mod>1.05</Fatigue_Mod>
       <Fatigue_Mod>1.20</Fatigue_Mod>
       <Initiative_Mod>0.92</Initiative_Mod>
       <Max_Durability>45</Max_Durability>
@@ -113,6 +117,7 @@
       <Description>
         A mushroom grown into a hammer-like shape. It's...suprisingly effective.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>0.93</Initiative_Mod>
       <Max_Durability>30</Max_Durability>
       <Parry_Mod>0.20</Parry_Mod>
@@ -137,6 +142,7 @@
       <Description>
         A mushroom grown into a hammer-like shape. It's...suprisingly effective.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>0.90</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>0.22</Parry_Mod>
@@ -161,6 +167,7 @@
       <Description>
         A mushroom grown into a hammer-like shape. It's...suprisingly effective.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>0.90</Initiative_Mod>
       <Max_Durability>40</Max_Durability>
       <Parry_Mod>0.24</Parry_Mod>
@@ -185,6 +192,7 @@
       <Description>
         A mushroom grown into a hammer-like shape. It's...suprisingly effective.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>0.90</Initiative_Mod>
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>0.26</Parry_Mod>
@@ -209,6 +217,7 @@
       <Description>
         
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>0.90</Initiative_Mod>
       <Max_Durability>80</Max_Durability>
       <Parry_Mod>0.28</Parry_Mod>

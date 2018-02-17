@@ -15,7 +15,7 @@
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1.0</ShieldDamageMod>
-      <StaminaCost>20</StaminaCost>
+      <FatigueCost>20</FatigueCost>
       <Range>6</Range>
     </WeaponAbility>
     <WeaponAbility name="Break_Armor">
@@ -40,7 +40,7 @@
       <ParryModMod>0.80</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>0.75</ShieldDamageMod>
-      <StaminaCost>35</StaminaCost>
+      <FatigueCost>35</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Break_Shield">
@@ -64,7 +64,7 @@
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>2.5</ShieldDamageMod>
-      <StaminaCost>35</StaminaCost>
+      <FatigueCost>35</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Chop">
@@ -99,7 +99,7 @@
       <ParryModMod>0.75</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1.25</ShieldDamageMod>
-      <StaminaCost>25</StaminaCost>
+      <FatigueCost>25</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Crush">
@@ -140,7 +140,7 @@
       <ParryModMod>0.65</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
-      <StaminaCost>25</StaminaCost>
+      <FatigueCost>25</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Fire">
@@ -157,7 +157,7 @@
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1.0</ShieldDamageMod>
-      <StaminaCost>20</StaminaCost>
+      <FatigueCost>20</FatigueCost>
       <Range>5</Range>
     </WeaponAbility>
     <WeaponAbility name="Gash">
@@ -179,7 +179,7 @@
       <ParryModMod>1.15</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
-      <StaminaCost>40</StaminaCost>
+      <FatigueCost>40</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Great_Strike">
@@ -210,7 +210,7 @@
       <ParryModMod>1.25</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
-      <StaminaCost>40</StaminaCost>
+      <FatigueCost>40</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Maim">
@@ -235,7 +235,7 @@
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
-      <StaminaCost>50</StaminaCost>
+      <FatigueCost>50</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Pierce">
@@ -264,7 +264,7 @@
       <ParryModMod>0.75</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>0.55</ShieldDamageMod>
-      <StaminaCost>25</StaminaCost>
+      <FatigueCost>25</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Pull">
@@ -287,7 +287,7 @@
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
-      <StaminaCost>35</StaminaCost>
+      <FatigueCost>35</FatigueCost>
       <Range>2</Range>
     </WeaponAbility>
     <WeaponAbility name="Riposte">
@@ -304,7 +304,7 @@
       <ParryModMod>2.5</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
-      <StaminaCost>35</StaminaCost>
+      <FatigueCost>35</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Scatter">
@@ -327,7 +327,7 @@
       <ParryModMod>0.25</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1.25</ShieldDamageMod>
-      <StaminaCost>60</StaminaCost>
+      <FatigueCost>60</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Shield_Wall">
@@ -344,7 +344,7 @@
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
-      <StaminaCost>35</StaminaCost>
+      <FatigueCost>35</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Shove">
@@ -361,7 +361,7 @@
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
-      <StaminaCost>35</StaminaCost>
+      <FatigueCost>35</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Slash">
@@ -399,7 +399,7 @@
       <ParryModMod>1.50</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
-      <StaminaCost>25</StaminaCost>
+      <FatigueCost>25</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Stab">
@@ -428,7 +428,7 @@
       <ParryModMod>0.50</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
-      <StaminaCost>25</StaminaCost>
+      <FatigueCost>25</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Spear_Wall">
@@ -445,7 +445,7 @@
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
-      <StaminaCost>45</StaminaCost>
+      <FatigueCost>45</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Stun">
@@ -469,7 +469,7 @@
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
-      <StaminaCost>45</StaminaCost>
+      <FatigueCost>45</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Wide_Slash">
@@ -500,7 +500,7 @@
       <ParryModMod>1.20</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
-      <StaminaCost>50</StaminaCost>
+      <FatigueCost>50</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Wrap">
@@ -530,7 +530,7 @@
       <ParryModMod>0.25</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>0.25</ShieldDamageMod>
-      <StaminaCost>35</StaminaCost>
+      <FatigueCost>35</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
   </MagicType>

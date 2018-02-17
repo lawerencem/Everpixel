@@ -2,6 +2,8 @@
 using Assets.Controller.GUI.Combat;
 using Assets.Controller.Manager.GUI;
 using Assets.Model.Ability;
+using Assets.Model.Ability.Logic.Calculator;
+using Assets.Model.Character.Enum;
 using Assets.Model.Event.Combat;
 using Assets.Model.Injury.Calculator;
 
@@ -93,6 +95,9 @@ namespace Assets.Model.Action
         {
             foreach (var hit in this._data.Hits)
                 this._injuryCalc.ProcessHitInjuries(hit);
+            var staminaCalc = new StaminaCalculator();
+            var cost = staminaCalc.Process(this);
+            this.Data.Source.Proxy.ModifyPoints(ESecondaryStat.Stamina, cost, false);
         }
 
         private void DisplayAction()

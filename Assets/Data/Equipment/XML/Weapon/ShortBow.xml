@@ -13,6 +13,7 @@
       <Description>
         A small bow favored by goblins.
       </Description>
+      <Fatigue_Mod>0.95</Fatigue_Mod>
       <Embed>True</Embed>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
@@ -52,6 +53,7 @@
         A small bow favored by goblins.
       </Description>
       <Embed>True</Embed>
+      <Fatigue_Mod>0.95</Fatigue_Mod>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Injury>Pierced_Arm</Injury>
@@ -90,6 +92,7 @@
         A small bow favored by goblins.
       </Description>
       <Embed>True</Embed>
+      <Fatigue_Mod>0.95</Fatigue_Mod>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Injury>Pierced_Arm</Injury>
@@ -128,6 +131,7 @@
         A small bow favored by goblins.
       </Description>
       <Embed>True</Embed>
+      <Fatigue_Mod>0.95</Fatigue_Mod>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Injury>Pierced_Arm</Injury>
@@ -166,6 +170,7 @@
         This bow launches slime?
       </Description>
       <Embed>True</Embed>
+      <Fatigue_Mod>0.95</Fatigue_Mod>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>25</Max_Durability>

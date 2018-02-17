@@ -31,7 +31,7 @@
       <EResistType>Fortitude</EResistType>
       <ShieldDamageMod>1</ShieldDamageMod>
       <Sprites>0,1,2,3,4</Sprites>
-      <StaminaCost>35</StaminaCost>
+      <FatigueCost>35</FatigueCost>
     </ActiveAbility>
   </MagicType>
 </ActiveAbilities>

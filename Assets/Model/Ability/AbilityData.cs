@@ -25,6 +25,7 @@ namespace Assets.Model.Ability
         public double Duration { get; set; }
         public string Description { get; set; }
         public List<MEffect> Effects { get; set; }
+        public int FatigueCost { get; set; }
         public double FlatDamage { get; set; }
         public bool HitsTiles { get; set; }
         public bool Hostile { get; set; }
@@ -45,7 +46,6 @@ namespace Assets.Model.Ability
         public double ShieldDamageMod { get; set; }
         public int SpellLevel { get; set; }
         public List<int> Sprites { get; set; }
-        public int StaminaCost { get; set; }
 
         public AbilityData()
         {
@@ -73,7 +73,7 @@ namespace Assets.Model.Ability
             this.RangeBlockMod = 1;
             this.ShieldDamageMod = 1;
             this.Sprites = new List<int>();
-            this.StaminaCost = 0;
+            this.FatigueCost = 0;
         }
 
         public AbilityData Copy()
@@ -108,7 +108,7 @@ namespace Assets.Model.Ability
             data.SpellLevel = this.SpellLevel;
             foreach (var sprite in this.Sprites)
                 data.Sprites.Add(sprite);
-            data.StaminaCost = this.StaminaCost;
+            data.FatigueCost = this.FatigueCost;
             return data;
         }
     }

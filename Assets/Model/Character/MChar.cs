@@ -35,6 +35,7 @@ namespace Assets.Model.Character
             {
                 case (ESecondaryStat.AP): { this._points.AddValue(type, value); } break;
                 case (ESecondaryStat.HP): { this.ModifyHP(value, isHeal); } break;
+                case (ESecondaryStat.Stamina): { this.ModifyStamina(value, isHeal); } break;
             }
         }
 
@@ -62,6 +63,14 @@ namespace Assets.Model.Character
                     e.TryProcess();
                 }
             }
+        }
+
+        private void ModifyStamina(int value, bool isHeal)
+        {
+            if (isHeal)
+                this._points.AddValue(ESecondaryStat.Stamina, value);
+            else
+                this._points.AddValue(ESecondaryStat.Stamina, -1 * value);
         }
 
         public IHex GetCurrentTile()

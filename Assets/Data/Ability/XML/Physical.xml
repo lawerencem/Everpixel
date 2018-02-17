@@ -18,7 +18,7 @@
       <RangeBlockMod>0.0</RangeBlockMod>
       <RechargeTime>0</RechargeTime>
       <ShieldDamageMod>0</ShieldDamageMod>
-      <StaminaCost>55</StaminaCost>
+      <FatigueCost>55</FatigueCost>
     </ActiveAbility>
     <ActiveAbility name="Charge">
       <AccMod>1</AccMod>
@@ -39,7 +39,7 @@
       <Range>3</Range>
       <RangeBlockMod>0</RangeBlockMod>
       <EResistType>Fortitude</EResistType>
-      <StaminaCost>35</StaminaCost>
+      <FatigueCost>35</FatigueCost>
     </ActiveAbility>
     <ActiveAbility name="Bite">
       <AccMod>1</AccMod>
@@ -64,7 +64,7 @@
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
-      <StaminaCost>35</StaminaCost>
+      <FatigueCost>35</FatigueCost>
       <Range>1</Range>
     </ActiveAbility>
   </MagicType>

@@ -105,6 +105,7 @@ namespace Assets.Data.Ability.XML
                 case ("Duration"): { this._table.Table[type].Data.Duration = double.Parse(value); } break;
                 case ("DodgeMod"): { this._table.Table[type].Data.DodgeMod = v; } break;
                 case ("EEffect"): { this.HandleEffects(ele, value, type); } break;
+                case ("FatigueCost"): { this._table.Table[type].Data.FatigueCost = (int)v; } break;
                 case ("FlatDamage"): { this._table.Table[type].Data.FlatDamage = v; } break;
                 case ("Hostile"): { this.HandleHostile(type, value); } break;
                 case ("HitsTiles"): { this.HandleHitsTiles(type, value); } break;
@@ -122,7 +123,6 @@ namespace Assets.Data.Ability.XML
                 case ("ShieldDamageMod"): { this._table.Table[type].Data.ShieldDamageMod = v; } break;
                 case ("Sprites"): { this.HandleSprites(type, value); } break;
                 case ("SpellLevel"): { this._table.Table[type].Data.SpellLevel = (int)v; } break;
-                case ("StaminaCost"): { this._table.Table[type].Data.StaminaCost = (int)v; } break;
             }
         }
 

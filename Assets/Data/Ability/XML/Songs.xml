@@ -7,7 +7,7 @@
       <Duration>1</Duration>
       <Hostile>False</Hostile>
       <Range>5</Range>
-      <StaminaCost>40</StaminaCost>
+      <FatigueCost>40</FatigueCost>
     </ActiveAbility>
     <ActiveAbility name="Orc_Metal">
       <APCost>5</APCost>
@@ -16,14 +16,14 @@
       <Duration>1</Duration>
       <Hostile>False</Hostile>
       <Range>5</Range>
-      <StaminaCost>50</StaminaCost>
+      <FatigueCost>50</FatigueCost>
     </ActiveAbility>
     <ActiveAbility name="Weenlight_Sonata">
       <APCost>3</APCost>
       <ECastType>Song</ECastType>
       <Hostile>False</Hostile>
       <Range>3</Range>
-      <StaminaCost>60</StaminaCost>
+      <FatigueCost>60</FatigueCost>
     </ActiveAbility>
   </MagicType>
 </ActiveAbilities>

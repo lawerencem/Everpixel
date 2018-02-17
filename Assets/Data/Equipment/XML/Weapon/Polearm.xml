@@ -12,6 +12,7 @@
       <Description>
         This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
       </Description>
+      <Fatigue_Mod>1.15</Fatigue_Mod>
       <Initiative_Mod>0.92</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>0.92</Parry_Mod>
@@ -40,6 +41,7 @@
       <Description>
         This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
       </Description>
+      <Fatigue_Mod>1.14</Fatigue_Mod>
       <Initiative_Mod>0.93</Initiative_Mod>
       <Max_Durability>38</Max_Durability>
       <Parry_Mod>0.93</Parry_Mod>
@@ -68,6 +70,7 @@
       <Description>
         This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
       </Description>
+      <Fatigue_Mod>1.13</Fatigue_Mod>
       <Initiative_Mod>0.94</Initiative_Mod>
       <Max_Durability>42</Max_Durability>
       <Parry_Mod>0.94</Parry_Mod>
@@ -96,6 +99,7 @@
       <Description>
         This elongated spear has a slightly curved blade.  It is a well-rounded weapon and deadly - especially in the hands of a samurai.
       </Description>
+      <Fatigue_Mod>1.12</Fatigue_Mod>
       <Initiative_Mod>0.95</Initiative_Mod>
       <Max_Durability>45</Max_Durability>
       <Parry_Mod>0.95</Parry_Mod>

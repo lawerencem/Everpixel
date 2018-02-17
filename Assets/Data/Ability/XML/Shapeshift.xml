@@ -19,7 +19,7 @@
       <RangeBlockMod>0.0</RangeBlockMod>
       <RechargeTime>0</RechargeTime>
       <ShieldDamageMod>0</ShieldDamageMod>
-      <StaminaCost>55</StaminaCost>
+      <FatigueCost>55</FatigueCost>
     </ActiveAbility>
   </MagicType>
 </ActiveAbilities>

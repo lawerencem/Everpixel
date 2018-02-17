@@ -6,6 +6,7 @@
         public double Crit { get; set; }
         public double Damage { get; set; }
         public double Dodge { get; set; }
+        public double Fatigue { get; set; }
         public double Parry { get; set; }
         public double Resist { get; set; }
 

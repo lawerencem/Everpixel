@@ -380,6 +380,7 @@
     <Compile Include="Assets\Model\Ability\Logic\Calculator\HeadShotCalculator.cs" />
     <Compile Include="Assets\Model\Ability\Logic\Calculator\ParryCalculator.cs" />
     <Compile Include="Assets\Model\Ability\Logic\Calculator\ResistCalculator.cs" />
+    <Compile Include="Assets\Model\Ability\Logic\Calculator\StaminaCalculator.cs" />
     <Compile Include="Assets\Model\Ability\Logic\LogicParams.cs" />
     <Compile Include="Assets\Model\Ability\MAbility.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Astral\EldritchChomp.cs" />
@@ -738,9 +739,7 @@
     <None Include="Assets\Data\Ability\XML\Poison.xml" />
     <None Include="Assets\Data\Ability\XML\Shapeshift.xml" />
     <None Include="Assets\Data\Ability\XML\Songs.xml" />
-    <None Include="Assets\Data\Ability\XML\WeaponAbilities.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Ability\XML\WeaponAbilities.xml" />
     <None Include="Assets\Data\Bark\XML\Barks.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Amazonian.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Bretonnian.xml" />
@@ -759,9 +758,7 @@
     <None Include="Assets\Data\Equipment\XML\Armor\MediumArmor.xml" />
     <None Include="Assets\Data\Equipment\XML\Armor\MediumHelm.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\Axe.xml" />
-    <None Include="Assets\Data\Equipment\XML\Weapon\Flail.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Equipment\XML\Weapon\Flail.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\Hammer.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\LargeShield.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\LightCrossbow.xml" />

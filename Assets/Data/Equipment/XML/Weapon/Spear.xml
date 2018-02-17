@@ -12,6 +12,7 @@
       <Description>
         Dinosaurs fear it - why shouldn't you?
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>28</Max_Durability>
       <Parry_Mod>0.75</Parry_Mod>
@@ -35,6 +36,7 @@
       <Description>
         This spear is used to hunt dinosaurs.  It's not very good at it.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>20</Max_Durability>
       <Parry_Mod>0.73</Parry_Mod>
@@ -59,6 +61,7 @@
       <Description>
         This spear is used to hunt dinosaurs.  It's not very effective...
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>25</Max_Durability>
       <Parry_Mod>0.75</Parry_Mod>
@@ -83,6 +86,7 @@
       <Description>
         This spear is used to hunt dinosaurs.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>30</Max_Durability>
       <Parry_Mod>0.75</Parry_Mod>
@@ -107,6 +111,7 @@
       <Description>
         This spear is used to hunt dinosaurs.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>0.75</Parry_Mod>
@@ -128,6 +133,7 @@
       <Armor_Pierce>0.70</Armor_Pierce>
       <Block_Ignore>0</Block_Ignore>
       <Damage>50</Damage>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>70</Max_Durability>
       <Parry_Mod>0.80</Parry_Mod>
@@ -153,6 +159,7 @@
         This oddly-massive spear is unwieldy, but does outsized damage.
       </Description>
       <Fatigue_Mod>1</Fatigue_Mod>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>65</Max_Durability>
       <Parry_Mod>0.80</Parry_Mod>
@@ -177,6 +184,7 @@
       <Description>
         This doozy causes horrific injuries - and then horribly infects those wounds.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>45</Max_Durability>
       <Parry_Mod>0.50</Parry_Mod>
@@ -202,6 +210,7 @@
       <Description>
         This spear has a wide blade that can cause grisly injuries.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>32</Max_Durability>
       <Parry_Mod>0.60</Parry_Mod>
@@ -227,6 +236,7 @@
       <Description>
         This spear has a wide blade.  Goblins love using these as they can inflict bleeding wounds.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>0.62</Parry_Mod>
@@ -252,6 +262,7 @@
       <Description>
         This spear has a wide blade.  Goblins love using these as they can inflict bleeding wounds.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>38</Max_Durability>
       <Parry_Mod>0.64</Parry_Mod>
@@ -277,6 +288,7 @@
       <Description>
         This spear has a wide blade.  Goblins love using these as they can inflict bleeding wounds.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>42</Max_Durability>
       <Parry_Mod>0.65</Parry_Mod>
@@ -302,6 +314,7 @@
       <Description>
         This spear is simply a sharp rock tied to the end of a stick.  It looks like it could still do some damage, though.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>30</Max_Durability>
       <Parry_Mod>0.85</Parry_Mod>
@@ -326,6 +339,7 @@
       <Description>
         Simple, yet effective.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>32</Max_Durability>
       <Parry_Mod>0.85</Parry_Mod>
@@ -425,6 +439,7 @@
       <Description>
         A low-quality Jomonese spear.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>0.95</Parry_Mod>
@@ -449,6 +464,7 @@
       <Description>
         A Jomonese spear.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>38</Max_Durability>
       <Parry_Mod>0.99</Parry_Mod>
@@ -473,6 +489,7 @@
       <Description>
         A Jomonese spear.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>42</Max_Durability>

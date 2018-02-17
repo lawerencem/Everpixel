@@ -12,6 +12,7 @@
       <Description>
         
       </Description>
+      <Fatigue_Mod>1.33</Fatigue_Mod>
       <Initiative_Mod>0.62</Initiative_Mod>
       <Max_Durability>85</Max_Durability>
       <Parry_Mod>0</Parry_Mod>
@@ -36,6 +37,7 @@
         This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
         it will certainly cause utter devastation on the battlefield.
       </Description>
+      <Fatigue_Mod>1.31</Fatigue_Mod>
       <Initiative_Mod>0.63</Initiative_Mod>
       <Max_Durability>88</Max_Durability>
       <Parry_Mod>0</Parry_Mod>
@@ -60,6 +62,7 @@
         This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
         it will certainly cause utter devastation on the battlefield.
       </Description>
+      <Fatigue_Mod>1.29</Fatigue_Mod>
       <Initiative_Mod>0.64</Initiative_Mod>
       <Max_Durability>92</Max_Durability>
       <Parry_Mod>0</Parry_Mod>
@@ -84,6 +87,7 @@
         This monstrous ball-and-chain can barely be picked up, let alone swung.  In hands strong enough to wield it,
         it will certainly cause utter devastation on the battlefield.
       </Description>
+      <Fatigue_Mod>1.28</Fatigue_Mod>
       <Initiative_Mod>0.65</Initiative_Mod>
       <Max_Durability>95</Max_Durability>
       <Parry_Mod>0</Parry_Mod>

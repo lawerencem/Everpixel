@@ -18,7 +18,7 @@
       <RangeBlockMod>1.25</RangeBlockMod>
       <RechargeTime>0</RechargeTime>
       <ShieldDamageMod>1.5</ShieldDamageMod>
-      <StaminaCost>25</StaminaCost>
+      <FatigueCost>25</FatigueCost>
     </ActiveAbility>
     <ActiveAbility name="Kamehameha">
       <AccMod>1</AccMod>
@@ -37,7 +37,7 @@
       <RangeBlockMod>0.75</RangeBlockMod>
       <RechargeTime>0</RechargeTime>
       <ShieldDamageMod>1</ShieldDamageMod>
-      <StaminaCost>70</StaminaCost>
+      <FatigueCost>70</FatigueCost>
     </ActiveAbility>
   </MagicType>
 </ActiveAbilities>

@@ -12,6 +12,7 @@
       <Description>
         A well-rounded weapon.  It's heavier than comparative swords, thus less effective as a defensive weapon.
       </Description>
+      <Fatigue_Mod>1.08</Fatigue_Mod>
       <Initiative_Mod>0.97</Initiative_Mod>
       <Max_Durability>20</Max_Durability>
       <Parry_Mod>0.88</Parry_Mod>
@@ -36,6 +37,7 @@
       <Description>
         A well-rounded weapon.  It's heavier than comparative swords, thus less effective as a defensive weapon.
       </Description>
+      <Fatigue_Mod>1.07</Fatigue_Mod>
       <Initiative_Mod>0.96</Initiative_Mod>
       <Max_Durability>25</Max_Durability>
       <Parry_Mod>0.89</Parry_Mod>
@@ -60,6 +62,7 @@
       <Description>
         A well-rounded weapon.  It's heavier than comparative swords, thus less effective as a defensive weapon.
       </Description>
+      <Fatigue_Mod>1.06</Fatigue_Mod>
       <Initiative_Mod>0.97</Initiative_Mod>
       <Max_Durability>30</Max_Durability>
       <Parry_Mod>0.90</Parry_Mod>
@@ -84,6 +87,7 @@
       <Description>
         A well-rounded weapon.  It's heavier than comparative swords, thus less effective as a defensive weapon.
       </Description>
+      <Fatigue_Mod>1.05</Fatigue_Mod>
       <Initiative_Mod>0.97</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>0.90</Parry_Mod>
@@ -108,6 +112,7 @@
       <Description>
         Klaatu Varada Nikto!
       </Description>
+      <Fatigue_Mod>1.15</Fatigue_Mod>
       <Fatigue_Mod>1.10</Fatigue_Mod>
       <Initiative_Mod>0.95</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
@@ -134,6 +139,7 @@
         Supposedly, this is some fashion of sword... but it looks as if someone simply tied a sharp rock to a stick.
         Nonetheless, the jagged and heavy nature of the rock could probably cause some grisly injuries.
       </Description>
+      <Fatigue_Mod>1.22</Fatigue_Mod>
       <Initiative_Mod>0.94</Initiative_Mod>
       <Max_Durability>28</Max_Durability>
       <Parry_Mod>0.68</Parry_Mod>
@@ -158,6 +164,7 @@
       <Description>
         Exemplifying typical orcish technology, someone has tied a jagged piece of metal to a stick and now calls it a "choppa".
       </Description>
+      <Fatigue_Mod>1.21</Fatigue_Mod>
       <Initiative_Mod>0.95</Initiative_Mod>
       <Max_Durability>30</Max_Durability>
       <Parry_Mod>0.70</Parry_Mod>
@@ -182,6 +189,7 @@
       <Description>
         Someone has taken the time to sharpen this metal-on-a-stick.  Rather impressive by Orc standards.
       </Description>
+      <Fatigue_Mod>1.2</Fatigue_Mod>
       <Initiative_Mod>0.95</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>0.72</Parry_Mod>
@@ -206,6 +214,7 @@
       <Description>
         Simple yet sturdy, this sword represents the finest Orcish craftmanship.
       </Description>
+      <Fatigue_Mod>1.18</Fatigue_Mod>
       <Initiative_Mod>0.95</Initiative_Mod>
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>0.72</Parry_Mod>
@@ -231,6 +240,7 @@
         This sword represents a good balance beteween size and strength.  It is a potent defensive weapon, capable of parrying
         savage blows.  However, its size still makes it a fearsome offensive weapon.
       </Description>
+      <Fatigue_Mod>1.15</Fatigue_Mod>
       <Initiative_Mod>0.80</Initiative_Mod>
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>0.75</Parry_Mod>
@@ -256,6 +266,8 @@
       <Description>
         This is basically just some heavy bones attached to a wooden club.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Fatigue_Mod>1.08</Fatigue_Mod>
       <Initiative_Mod>0.92</Initiative_Mod>
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>0.78</Parry_Mod>
@@ -281,6 +293,7 @@
         Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
         can easily pierce armor.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>0.93</Initiative_Mod>
       <Max_Durability>20</Max_Durability>
       <Parry_Mod>0.81</Parry_Mod>
@@ -306,6 +319,7 @@
         Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
         can easily pierce armor.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>0.94</Initiative_Mod>
       <Max_Durability>25</Max_Durability>
       <Parry_Mod>0.82</Parry_Mod>
@@ -331,6 +345,7 @@
         Lizardmen favor these weapons for their versatile capabilities.  Even when swung like a sword, the teeth attached to the club
         can easily pierce armor.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>0.95</Initiative_Mod>
       <Max_Durability>30</Max_Durability>
       <Parry_Mod>0.83</Parry_Mod>
@@ -355,6 +370,7 @@
       <Description>
         
       </Description>
+      <Fatigue_Mod>0.80</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>22</Max_Durability>
       <Parry_Mod>1.08</Parry_Mod>
@@ -379,6 +395,7 @@
       <Description>
         A short blade meant more for thrusting motions than swinging.  Nonetheless, it can still do damage when swung.
       </Description>
+      <Fatigue_Mod>0.95</Fatigue_Mod>
       <Fatigue_Mod>1.07</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>30</Max_Durability>
@@ -405,6 +422,7 @@
       <Description>
         Giving the gift of glop.
       </Description>
+      <Fatigue_Mod>0.95</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>20</Max_Durability>
       <Parry_Mod>0.84</Parry_Mod>
@@ -430,6 +448,7 @@
       <Description>
         
       </Description>
+      <Fatigue_Mod>1.15</Fatigue_Mod>
       <Initiative_Mod>0.95</Initiative_Mod>
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>0.74</Parry_Mod>
@@ -454,6 +473,7 @@
       <Description>
 
       </Description>
+      <Fatigue_Mod>0.90</Fatigue_Mod>
       <Initiative_Mod>0.90</Initiative_Mod>
       <Max_Durability>20</Max_Durability>
       <Parry_Mod>0.75</Parry_Mod>
@@ -479,6 +499,7 @@
       <Description>
         Normally, katanas are exemplary works of craftmanship.  Normally.
       </Description>
+      <Fatigue_Mod>0.98</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>10</Max_Durability>
       <Parry_Mod>1.0</Parry_Mod>
@@ -504,6 +525,7 @@
       <Description>
         This katana is slightly less majestic than most...
       </Description>
+      <Fatigue_Mod>0.97</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1.02</Parry_Mod>
@@ -529,6 +551,7 @@
       <Description>
         This katana is well-rounded weapon of fine craftmanship.
       </Description>
+      <Fatigue_Mod>0.96</Fatigue_Mod>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>20</Max_Durability>
@@ -555,6 +578,7 @@
       <Description>
         A beautiful, deadly weapon.  
       </Description>
+      <Fatigue_Mod>0.95</Fatigue_Mod>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>24</Max_Durability>
@@ -581,6 +605,7 @@
       <Description>
         A beautiful, deadly weapon.
       </Description>
+      <Fatigue_Mod>0.94</Fatigue_Mod>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>28</Max_Durability>
@@ -606,6 +631,7 @@
       <Description>
         A well-rounded, versatile weapon.  Not the finest quality, but a deadly weapon nonetheless.
       </Description>
+      <Fatigue_Mod>1.01</Fatigue_Mod>
       <Fatigue_Mod>1.16</Fatigue_Mod>
       <Initiative_Mod>0.96</Initiative_Mod>
       <Max_Durability>45</Max_Durability>
@@ -632,6 +658,7 @@
         A well-rounded, versatile weapon.  It isn't fancy, but it is quality-made.  In the right hands, this weapon
         could be deadly.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>0.97</Initiative_Mod>
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>1.15</Parry_Mod>
@@ -656,6 +683,7 @@
       <Description>
         
       </Description>
+      <Fatigue_Mod>0.95</Fatigue_Mod>
       <Initiative_Mod>0.90</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>1.05</Parry_Mod>
@@ -682,6 +710,7 @@
         A heavier version of the traditional katana meant to easily penetrate even the heaviest armor.  This one
         has seen some wear, though...
       </Description>
+      <Fatigue_Mod>1.05</Fatigue_Mod>
       <Initiative_Mod>0.88</Initiative_Mod>
       <Max_Durability>10</Max_Durability>
       <Parry_Mod>1.01</Parry_Mod>
@@ -707,6 +736,7 @@
       <Description>
         A heavier version of the traditional katana meant to easily penetrate even the heaviest armor.
       </Description>
+      <Fatigue_Mod>1.04</Fatigue_Mod>
       <Initiative_Mod>0.89</Initiative_Mod>
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1.02</Parry_Mod>
@@ -732,6 +762,7 @@
       <Description>
         A heavier version of the traditional katana meant to easily penetrate even the heaviest armor.
       </Description>
+      <Fatigue_Mod>1.03</Fatigue_Mod>
       <Initiative_Mod>0.90</Initiative_Mod>
       <Max_Durability>22</Max_Durability>
       <Parry_Mod>1.04</Parry_Mod>
@@ -757,6 +788,7 @@
       <Description>
         A heavier version of the traditional katana meant to easily penetrate even the heaviest armor. It is absolutely lethal in the right hands.
       </Description>
+      <Fatigue_Mod>1.02</Fatigue_Mod>
       <Initiative_Mod>0.90</Initiative_Mod>
       <Max_Durability>25</Max_Durability>
       <Parry_Mod>1.05</Parry_Mod>
@@ -782,6 +814,7 @@
       <Description>
         A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
       </Description>
+      <Fatigue_Mod>0.92</Fatigue_Mod>
       <Initiative_Mod>1.05</Initiative_Mod>
       <Max_Durability>10</Max_Durability>
       <Parry_Mod>1.02</Parry_Mod>
@@ -807,6 +840,7 @@
       <Description>
         A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
       </Description>
+      <Fatigue_Mod>0.91</Fatigue_Mod>
       <Initiative_Mod>1.06</Initiative_Mod>
       <Max_Durability>12</Max_Durability>
       <Parry_Mod>1.03</Parry_Mod>
@@ -832,6 +866,7 @@
       <Description>
         A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
       </Description>
+      <Fatigue_Mod>0.90</Fatigue_Mod>
       <Initiative_Mod>1.07</Initiative_Mod>
       <Max_Durability>15</Max_Durability>
       <Parry_Mod>1.05</Parry_Mod>
@@ -857,6 +892,7 @@
       <Description>
         A short, curved blade favored by Goblins.  Doesn't do much damage, but it can inflict ghastly wounds.
       </Description>
+      <Fatigue_Mod>0.89</Fatigue_Mod>
       <Initiative_Mod>1.08</Initiative_Mod>
       <Max_Durability>22</Max_Durability>
       <Parry_Mod>1.06</Parry_Mod>
@@ -883,6 +919,7 @@
       <Description>
         A blade covered in disgusting slime.  It's fairly obvious the pointy nature of the blade is meant to poison enemies with the slime.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>5</Max_Durability>
       <Parry_Mod>0.78</Parry_Mod>
@@ -909,6 +946,7 @@
       <Description>
         A blade covered in disgusting slime.  It's fairly obvious the pointy nature of the blade is meant to poison enemies with the slime.
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>8</Max_Durability>
       <Parry_Mod>0.79</Parry_Mod>
@@ -935,6 +973,7 @@
       <Description>
         This blade is covered in living, breathing slime...
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>10</Max_Durability>
       <Parry_Mod>0.80</Parry_Mod>
@@ -961,6 +1000,7 @@
       <Description>
         This blade is covered in living, breathing slime...
       </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>13</Max_Durability>
       <Parry_Mod>0.82</Parry_Mod>
@@ -986,6 +1026,7 @@
       <Description>
         
       </Description>
+      <Fatigue_Mod>0.95</Fatigue_Mod>
       <Fatigue_Mod>1</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
@@ -1011,6 +1052,7 @@
       <Description>
         You don't want to meet the creature that produced this tooth...
       </Description>
+      <Fatigue_Mod>1.1</Fatigue_Mod>
       <Initiative_Mod>0.80</Initiative_Mod>
       <Max_Durability>80</Max_Durability>
       <Parry_Mod>0.60</Parry_Mod>
@@ -1036,6 +1078,7 @@
         This massive sword is too heavy to utilize for any defensive purposes.  It is; however, quite capable of
         decimating enemies on the battlefield.
       </Description>
+      <Fatigue_Mod>1.28</Fatigue_Mod>
       <Initiative_Mod>0.62</Initiative_Mod>
       <Max_Durability>25</Max_Durability>
       <Parry_Mod>0.22</Parry_Mod>
@@ -1061,6 +1104,7 @@
         This massive sword is too heavy to utilize for any defensive purposes.  It is; however, quite capable of
         decimating enemies on the battlefield.
       </Description>
+      <Fatigue_Mod>1.27</Fatigue_Mod>
       <Initiative_Mod>0.63</Initiative_Mod>
       <Max_Durability>30</Max_Durability>
       <Parry_Mod>0.24</Parry_Mod>
@@ -1086,6 +1130,7 @@
         This massive sword is too heavy to utilize for any defensive purposes.  It is; however, quite capable of
         decimating enemies on the battlefield.
       </Description>
+      <Fatigue_Mod>1.26</Fatigue_Mod>
       <Initiative_Mod>0.64</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>0.25</Parry_Mod>
@@ -1111,6 +1156,7 @@
         This massive sword is too heavy to utilize for any defensive purposes.  It is; however, quite capable of
         decimating enemies on the battlefield.
       </Description>
+      <Fatigue_Mod>1.25</Fatigue_Mod>
       <Initiative_Mod>0.65</Initiative_Mod>
       <Max_Durability>40</Max_Durability>
       <Parry_Mod>0.26</Parry_Mod>

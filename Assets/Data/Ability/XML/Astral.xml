@@ -23,7 +23,7 @@
       <EResistType>Will</EResistType>
       <ShieldDamageMod>1</ShieldDamageMod>
       <SpellLevel>2</SpellLevel>
-      <StaminaCost>55</StaminaCost>
+      <FatigueCost>55</FatigueCost>
     </ActiveAbility>
     <ActiveAbility name="Summon_Shoggoth">
       <AccMod>1</AccMod>
@@ -43,7 +43,7 @@
       <RangeBlockMod>0</RangeBlockMod>
       <RechargeTime>0</RechargeTime>
       <ShieldDamageMod>0</ShieldDamageMod>
-      <StaminaCost>70</StaminaCost>
+      <FatigueCost>70</FatigueCost>
     </ActiveAbility>
   </MagicType>
 </ActiveAbilities>

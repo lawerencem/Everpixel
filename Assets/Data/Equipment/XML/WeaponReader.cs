@@ -89,6 +89,7 @@ namespace Assets.Data.Equipment.XML
                 case ("Dodge_Mod"): { HandleStatsFromFile(name, EWeaponStat.Dodge_Mod, v, tier); } break;
                 case ("EEffect"): { this.HandleEffects(elem, name, tier); } break;
                 case ("Embed"): { this.HandleEmbed(name, value, tier); } break;
+                case ("Fatigue_Mod"): { this.HandleStatsFromFile(name, EWeaponStat.Fatigue_Mod, v, tier); } break;
                 case ("Initiative_Mod"): { HandleStatsFromFile(name, EWeaponStat.Initiative_Mod, v, tier); } break;
                 case ("Injury"): { this.HandleInjuries(name, value, tier); } break;
                 case ("Max_Durability"): { HandleStatsFromFile(name, EWeaponStat.Max_Durability, v, tier); } break;
@@ -139,6 +140,7 @@ namespace Assets.Data.Equipment.XML
                 case (EWeaponStat.Block_Ignore): { stats.Table[key].BlockIgnore = v; } break;
                 case (EWeaponStat.Damage): { stats.Table[key].Damage = (int)v; } break;
                 case (EWeaponStat.Dodge_Mod): { stats.Table[key].Dodge_Mod = v; } break;
+                case (EWeaponStat.Fatigue_Mod): { stats.Table[key].FatigueMod = v; } break;
                 case (EWeaponStat.Max_Durability): { stats.Table[key].MaxDurability = (int)v; } break;
                 case (EWeaponStat.Initiative_Mod): { stats.Table[key].InitiativeMod = v; } break;
                 case (EWeaponStat.Melee_Block_Chance): { stats.Table[key].MeleeBlockChance = v; } break;

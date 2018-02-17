@@ -14,6 +14,7 @@ namespace Assets.Model.Combat.Hit
         public MAction Action { get; set; }
         public HitPrediction Chances { get; set; }
         public List<MEvCombat> Events { get; set; }
+        public double FatigueCost { get; set; }
         public FHit Flags { get; set; }
         public HitMod ModData { get; set; }
         protected HitPrediction Prediction { get; set; }

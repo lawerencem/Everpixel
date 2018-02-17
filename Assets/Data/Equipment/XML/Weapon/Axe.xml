@@ -12,7 +12,7 @@
       <Description>
         This gigantic log has a few razor-sharp teeth protruding from it.  Lizardman warriors use it like an axe.
       </Description>
-      <Fatigue_Mod>1.24</Fatigue_Mod>
+      <Fatigue_Mod>1.08</Fatigue_Mod>
       <Initiative_Mod>0.82</Initiative_Mod>
       <Max_Durability>20</Max_Durability>
       <Parry_Mod>0.72</Parry_Mod>
@@ -38,7 +38,7 @@
       <Description>
         This log has a very large and very sharp tooth protruding from the end.  What kind of creature has teeth like that?
       </Description>
-      <Fatigue_Mod>1.22</Fatigue_Mod>
+      <Fatigue_Mod>1.07</Fatigue_Mod>
       <Initiative_Mod>0.83</Initiative_Mod>
       <Max_Durability>22</Max_Durability>
       <Parry_Mod>0.74</Parry_Mod>
@@ -64,7 +64,7 @@
       <Description>
         This log has a very large and very sharp tooth protruding from the end.  What kind of creature has teeth like that?
       </Description>
-      <Fatigue_Mod>1.20</Fatigue_Mod>
+      <Fatigue_Mod>1.06</Fatigue_Mod>
       <Initiative_Mod>0.85</Initiative_Mod>
       <Max_Durability>24</Max_Durability>
       <Parry_Mod>0.75</Parry_Mod>
@@ -90,7 +90,7 @@
       <Description>
         This log has a very large and very sharp tooth protruding from the end.  What kind of creature has teeth like that?
       </Description>
-      <Fatigue_Mod>1.20</Fatigue_Mod>
+      <Fatigue_Mod>1.05</Fatigue_Mod>
       <Initiative_Mod>0.85</Initiative_Mod>
       <Max_Durability>28</Max_Durability>
       <Parry_Mod>0.75</Parry_Mod>
@@ -116,7 +116,7 @@
       <Description>
         Gork approves of this message.
       </Description>
-      <Fatigue_Mod>1.35</Fatigue_Mod>
+      <Fatigue_Mod>1.15</Fatigue_Mod>
       <Initiative_Mod>0.75</Initiative_Mod>
       <Max_Durability>350</Max_Durability>
       <Parry_Mod>1.06</Parry_Mod>
@@ -142,6 +142,7 @@
       <Description>
         Basically a giant slab of metal tied to a big stick.  It's sharp though - and it can assuredly do some damage when swung.
       </Description>
+      <Fatigue_Mod>1.22</Fatigue_Mod>
       <Initiative_Mod>0.6</Initiative_Mod>
       <Max_Durability>30</Max_Durability>
       <Parry_Mod>0.15</Parry_Mod>
@@ -167,6 +168,7 @@
       <Description>
         A giant slab of sharpened metal tied to a stick.  Tiresome to wield, but deadly when swung.
       </Description>
+      <Fatigue_Mod>1.21</Fatigue_Mod>
       <Initiative_Mod>0.61</Initiative_Mod>
       <Max_Durability>32</Max_Durability>
       <Parry_Mod>0.16</Parry_Mod>
@@ -192,6 +194,7 @@
       <Description>
         This savagely-heavy "axe" is favored by orc shock troops to decimate enemy front-lines.
       </Description>
+      <Fatigue_Mod>1.2</Fatigue_Mod>
       <Initiative_Mod>0.62</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>0.17</Parry_Mod>
@@ -217,6 +220,7 @@
       <Description>
         This savagely-heavy "axe" is also very, very sharp...
       </Description>
+      <Fatigue_Mod>1.18</Fatigue_Mod>
       <Initiative_Mod>0.63</Initiative_Mod>
       <Max_Durability>38</Max_Durability>
       <Parry_Mod>0.18</Parry_Mod>
@@ -242,7 +246,7 @@
       <Description>
         These small axes are favored by vikings.
       </Description>
-      <Fatigue_Mod>1</Fatigue_Mod>
+      <Fatigue_Mod>0.98</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>25</Max_Durability>
       <Parry_Mod>0.78</Parry_Mod>
@@ -266,7 +270,7 @@
       <Description>
         These small axes are favored by vikings.
       </Description>
-      <Fatigue_Mod>1</Fatigue_Mod>
+      <Fatigue_Mod>0.97</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>30</Max_Durability>
       <Parry_Mod>0.79</Parry_Mod>
@@ -290,7 +294,7 @@
       <Description>
         These small axes are favored by vikings.
       </Description>
-      <Fatigue_Mod>1</Fatigue_Mod>
+      <Fatigue_Mod>0.97</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>40</Max_Durability>
       <Parry_Mod>0.80</Parry_Mod>
@@ -314,7 +318,7 @@
       <Description>
         These small axes are favored by vikings.
       </Description>
-      <Fatigue_Mod>1</Fatigue_Mod>
+      <Fatigue_Mod>0.95</Fatigue_Mod>
       <Initiative_Mod>1</Initiative_Mod>
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>0.80</Parry_Mod>
@@ -339,7 +343,7 @@
         These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
         is useful, it makes them poor defensive weapons.
       </Description>
-      <Fatigue_Mod>1.00</Fatigue_Mod>
+      <Fatigue_Mod>1.08</Fatigue_Mod>
       <Initiative_Mod>0.78</Initiative_Mod>
       <Max_Durability>25</Max_Durability>
       <Parry_Mod>0.58</Parry_Mod>
@@ -366,7 +370,7 @@
         These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
         is useful, it makes them poor defensive weapons.
       </Description>
-      <Fatigue_Mod>1.00</Fatigue_Mod>
+      <Fatigue_Mod>1.07</Fatigue_Mod>
       <Initiative_Mod>0.80</Initiative_Mod>
       <Max_Durability>35</Max_Durability>
       <Parry_Mod>0.60</Parry_Mod>
@@ -393,6 +397,7 @@
         These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
         is useful, it makes them poor defensive weapons.
       </Description>
+      <Fatigue_Mod>1.06</Fatigue_Mod>
       <Fatigue_Mod>1.00</Fatigue_Mod>
       <Initiative_Mod>0.80</Initiative_Mod>
       <Max_Durability>45</Max_Durability>
@@ -420,6 +425,7 @@
         These longaxes are favored by Vikings for their ability to hit enemies from a good distance.  While their length
         is useful, it makes them poor defensive weapons.
       </Description>
+      <Fatigue_Mod>1.05</Fatigue_Mod>
       <Fatigue_Mod>1.00</Fatigue_Mod>
       <Initiative_Mod>0.80</Initiative_Mod>
       <Max_Durability>45</Max_Durability>
@@ -448,6 +454,7 @@
       <Description>
         The sharp edges of this weapon help "make it rain".  
       </Description>
+      <Fatigue_Mod>1.15</Fatigue_Mod>
       <Initiative_Mod>0.80</Initiative_Mod>
       <Max_Durability>50</Max_Durability>
       <Parry_Mod>0.20</Parry_Mod>
