@@ -26,8 +26,8 @@ namespace Assets.Model.Map.Landmark.Builder
             }
 
             foreach (var mTile in set)
-                if (mTile.Height < minHeight)
-                    minHeight = mTile.Height;
+                if (mTile.GetHeight() < minHeight)
+                    minHeight = mTile.GetHeight();
 
             foreach (var mTile in set)
             {

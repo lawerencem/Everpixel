@@ -2,6 +2,6 @@
 {
     public interface IHexOccupant
     {
-
+        void SetCurrentHex(IHex hex);
     }
 }

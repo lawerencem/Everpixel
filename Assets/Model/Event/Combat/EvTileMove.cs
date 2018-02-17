@@ -42,7 +42,7 @@ namespace Assets.Model.Event.Combat
                 this._data.Char.SetTile(this._data.Target);
             this._data.Source.ProcessExitTile(this._data.Char);
             this._data.Source.SetCurrent(null);
-            this._data.Target.SetCurrent(this._data.Char);
+            this._data.Target.SetCurrent(this._data.Char.Proxy.GetModel());
             this._data.Target.ProcessEnterTile(this._data.Char);
             this.DoCallbacks();
         }

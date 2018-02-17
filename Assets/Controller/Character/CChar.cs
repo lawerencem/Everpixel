@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Assets.Controller.Character
 {
-    public class CChar : IHexOccupant
+    public class CChar
     {
         private GameObject _handle;
         private PChar _proxy;

@@ -80,7 +80,17 @@ namespace Assets.Model.Character
 
         public int GetTileTraversalCost(IHex source, IHex goal)
         {
-            return goal.GetCost(); // TODO:
+            double baseCost = this.GetTileTraversalCostHelper(source, goal);
+            if (goal.GetHeight() > source.GetHeight())
+                return (int)(baseCost * (goal.GetHeight() - source.GetHeight()));
+            else
+                return (int)baseCost;
+        }
+
+        private double GetTileTraversalCostHelper(IHex source, IHex goal)
+        {
+            // TODO: Add loop checking for move perks
+            return goal.GetCost();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Assets.Model.Map.Tile;
+﻿using System;
+using Assets.Model.Map.Tile;
 using Assets.Template.Hex;
 
 namespace Assets.Model.Map.Deco
@@ -16,6 +17,11 @@ namespace Assets.Model.Map.Deco
         public MDeco(EEnvironment type)
         {
             this._type = type;
+        }
+
+        public void SetCurrentHex(IHex hex)
+        {
+            // TODO
         }
 
         public void SetData(MDecoData data) { this._data = data; }

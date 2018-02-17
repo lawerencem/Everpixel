@@ -1,6 +1,5 @@
 ﻿TODO
 
-- Add Fatigue costs to weapons
 - Add Lash + Flail to flail weapons
 - Add Whirlwind weapon ability
 - Add Grey as UI info of durability

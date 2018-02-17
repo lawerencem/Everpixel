@@ -220,19 +220,10 @@ namespace Assets.Model.Character.Builder
                 csv = GetEquipmentCSV(arg.Helms[SINGULAR]);
             if (csv != null && csv.Count >= 3)
             {
-                try
-                {
-                    var key = csv[PredefinedEquipmentXMLIndexes.NAME] + "_" + csv[PredefinedEquipmentXMLIndexes.TIER];
-                    var helm = ArmorParamTable.Instance.Table[key];
-                    helm.Sprites = EquipmentSpritesTable.Instance.Table[key];
-                    return helm;
-                }
-                catch(KeyNotFoundException e)
-                {
-                    var key = csv[PredefinedEquipmentXMLIndexes.NAME] + "_" + csv[PredefinedEquipmentXMLIndexes.TIER];
-                    Debug.Log(key + " was not found");
-                    return null;
-                }
+                var key = csv[PredefinedEquipmentXMLIndexes.NAME] + "_" + csv[PredefinedEquipmentXMLIndexes.TIER];
+                var helm = ArmorParamTable.Instance.Table[key];
+                helm.Sprites = EquipmentSpritesTable.Instance.Table[key];
+                return helm;
             }
             else
                 return null;

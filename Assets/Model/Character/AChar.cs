@@ -10,11 +10,12 @@ using Assets.Model.Class.Enum;
 using Assets.Model.Map.Tile;
 using Assets.Model.Party;
 using Assets.Model.Perk;
+using Assets.Template.Hex;
 using System.Collections.Generic;
 
 namespace Assets.Model.Character
 {
-    abstract public class AChar
+    abstract public class AChar : IHexOccupant
     {
         private CChar _controller;
 
@@ -58,12 +59,12 @@ namespace Assets.Model.Character
         public MTile GetTile() { return this._tile; }
 
         public void SetController(CChar c) { this._controller = c; }
+        public void SetCurrentHex(IHex hex) { this._tile = hex as MTile; }
         public void SetLParty(bool lParty) { this._lParty = lParty; }
         public void SetMount(CMount m) { this._mount = m; }
         public void SetParams(PreCharParams p) { this._params = p; }
         public void SetParentParty(MParty p) { this._parentParty = p; }
         public void SetType(ECharType t) { this._type = t; }
-        public void SetTile(MTile t) { this._tile = t; }
 
         public int GetTileTraversalStaminaCost(MTile tile)
         {

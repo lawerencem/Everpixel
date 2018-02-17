@@ -32,7 +32,6 @@ namespace Assets.Model.Map.Tile
 
         public CTile Controller { get { return this._controller; } }
         public Vector3 Center { get { return this._center; } }
-        public int Height { get { return this._height; } }
         public bool Liquid { get { return this._liquid; } }
         public MMap Map { get { return this._map; } }
         public ETile Type { get { return this._type; } }
@@ -72,6 +71,7 @@ namespace Assets.Model.Map.Tile
         public MTile GetNW() { return this._nw; }
 
         public FTile GetFlags() { return this._flags; }
+        public int GetHeight() { return this._height; }
 
         public List<MTile> GetAoETiles(int dist)
         {
@@ -89,7 +89,7 @@ namespace Assets.Model.Map.Tile
             if (adjacent != null)
             {
                 double cost = tile.GetCost();
-                int heightDiff = Math.Abs(this._height - tile.Height);
+                int heightDiff = Math.Abs(this._height - tile.GetHeight());
                 if (heightDiff > 0)
                     cost *= (heightDiff + 0.5);
                 return (int)Math.Ceiling(cost);

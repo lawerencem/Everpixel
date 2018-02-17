@@ -43,7 +43,12 @@ namespace Assets.Controller.Map.Tile
 
         public void RemoveZone(AZone zone) { this._zones.Remove(zone); }
 
-        public void SetCurrent(IHexOccupant o) { this.Model.SetCurrentOccupant(o); }
+        public void SetCurrent(IHexOccupant o)
+        {
+            this.Model.SetCurrentOccupant(o);
+            if (o != null)
+                o.SetCurrentHex(this.Model);
+        }
 
         public CTile(MTile tile)
         {

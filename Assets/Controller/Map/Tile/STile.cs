@@ -4,6 +4,7 @@ using Assets.Controller.Manager.GUI;
 using Assets.Controller.Map.Combat;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
+using Assets.Model.Character;
 using Assets.View;
 using Assets.View.Event;
 using System;
@@ -69,17 +70,17 @@ namespace Assets.Controller.Map.Tile
 
         private void HandleHoverTargetStats()
         {
-            if (this._tile.Current != null && this._tile.Current.GetType().Equals(typeof(CChar)))
+            if (this._tile.Current != null && this._tile.Current.GetType().Equals(typeof(MChar)))
             {
                 var fov = Camera.main.fieldOfView;
-                var character = this._tile.Current as CChar;
-                var position = character.Handle.transform.position;
+                var model = this._tile.Current as MChar;
+                var charController = model.Controller;
+                var position = charController.Handle.transform.position;
                 position.x += (float)(fov * 0.025);
                 position.y += (float)(fov * 0.025);
-                GUIManager.Instance.SetHoverModalHeaderText(character.View.Name.Replace("_", " "));
+                GUIManager.Instance.SetHoverModalHeaderText(charController.View.Name.Replace("_", " "));
                 GUIManager.Instance.SetHoverModalLocation(position);
-                var target = this._tile.Current as CChar;
-                GUIManager.Instance.SetHoverModalStatValues(target.Proxy);
+                GUIManager.Instance.SetHoverModalStatValues(charController.Proxy);
             }
         }
 

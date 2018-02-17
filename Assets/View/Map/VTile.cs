@@ -21,7 +21,7 @@ namespace Assets.View.Map
         {
             this._center = h.Center;
             this._col = h.GetCol();
-            this._height = h.Height;
+            this._height = h.GetHeight();
             this._row = h.GetRow();
             this._type = h.Type;
         }

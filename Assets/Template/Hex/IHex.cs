@@ -9,6 +9,7 @@ namespace Assets.Template.Hex
         IHex GetRandomNearbyTile(int probes);
         int GetCost();
         int GetCol();
+        int GetHeight();
         int GetRow();
         IHexOccupant GetCurrentOccupant();
         List<IHex> GetRaycastTiles(IHex target, int dist);

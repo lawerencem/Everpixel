@@ -81,18 +81,18 @@ namespace Assets.Controller.Map.Combat.Loader
             {
                 if (tile.Model.GetS() == null)
                     this.AttachHeightBottom(tile, 1);
-                else if (tile.Model.GetS().Height < tile.Model.Height)
-                    this.AttachHeightBottom(tile, tile.Model.Height - tile.Model.GetS().Height);
+                else if (tile.Model.GetS().GetHeight() < tile.Model.GetHeight())
+                    this.AttachHeightBottom(tile, tile.Model.GetHeight() - tile.Model.GetS().GetHeight());
 
                 if (tile.Model.GetSW() == null)
                     this.AttachHeightLeft(tile, 1);
-                else if (tile.Model.GetSW().Height < tile.Model.Height)
-                    this.AttachHeightLeft(tile, tile.Model.Height - tile.Model.GetSW().Height);
+                else if (tile.Model.GetSW().GetHeight() < tile.Model.GetHeight())
+                    this.AttachHeightLeft(tile, tile.Model.GetHeight() - tile.Model.GetSW().GetHeight());
 
                 if (tile.Model.GetSE() == null)
                     this.AttachHeightRight(tile, 1);
-                else if (tile.Model.GetSE().Height < tile.Model.Height)
-                    this.AttachHeightRight(tile, tile.Model.Height - tile.Model.GetSE().Height);
+                else if (tile.Model.GetSE().GetHeight() < tile.Model.GetHeight())
+                    this.AttachHeightRight(tile, tile.Model.GetHeight() - tile.Model.GetSE().GetHeight());
             }
         }
 
@@ -100,16 +100,16 @@ namespace Assets.Controller.Map.Combat.Loader
         {
             foreach(var tile in controller.GetMap().GetTiles())
             {
-                if (tile.Model.Height > 1)
+                if (tile.Model.GetHeight() > 1)
                 {
-                    var delta = (tile.Model.Height - 1) * ViewParams.HEIGHT_OFFSET;
+                    var delta = (tile.Model.GetHeight() - 1) * ViewParams.HEIGHT_OFFSET;
                     var center = tile.Model.Center;
                     var y = center.y + delta;
                     center.y = y;
                     tile.Model.SetCenter(center);
                     var render = tile.Handle.GetComponent<SpriteRenderer>();
                     render.transform.position = center;
-                    render.sortingOrder = tile.Model.Height;
+                    render.sortingOrder = tile.Model.GetHeight();
                 }
             }
         }
@@ -142,7 +142,7 @@ namespace Assets.Controller.Map.Combat.Loader
                 renderer.transform.parent = tile.Handle.transform;
                 var handleRenderer = tile.Handle.GetComponent<SpriteRenderer>();
                 renderer.sortingLayerName = handleRenderer.sortingLayerName;
-                renderer.sortingOrder = tile.Model.Height - 1;
+                renderer.sortingOrder = tile.Model.GetHeight() - 1;
                 var center = tile.Model.Center;
                 center.y -= ViewParams.HEIGHT_BOTTOM_OFFSET * i;
                 renderer.transform.position = center;
