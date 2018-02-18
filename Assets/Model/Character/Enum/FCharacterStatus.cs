@@ -11,6 +11,11 @@ namespace Assets.Model.Character.Enum
             Casting = 1,
             Dead = 2,
             Shapeshifted = 4,
+            Undead = 8,
+            Vampire = 16,
+            Demon = 32,
+            Eldritch = 64,
+            Lycanthrope = 128,
         }
 
         public Flags CurFlags { get; set; }
