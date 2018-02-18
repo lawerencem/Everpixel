@@ -2,11 +2,11 @@
 <Parties>
   <Culture name="Norse">
     <Party Name ="Battle Squad">
-      <SubParty>Spearmen,0.3</SubParty>
+      <SubParty>Commanders,0.2</SubParty>
+      <SubParty>Spearmen,0.2</SubParty>
       <SubParty>Monsters,0.2</SubParty>
       <SubParty>Pikemen,0.2</SubParty>
       <SubParty>Vikings,0.2</SubParty>
-      <SubParty>Shock Troops,0.1</SubParty>
     </Party>
     <Party Name ="Raiding Party">
       <SubParty>Vikings,0.5</SubParty>

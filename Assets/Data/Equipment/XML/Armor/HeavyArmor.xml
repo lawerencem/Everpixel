@@ -1,6 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Armors>
   <EArmorType name ="Heavy_Armor">
+    <Armor name="Death Plate">
+      <Tier>Five</Tier>
+      <AP_Mod>1.32</AP_Mod>
+      <Block_Mod>0.70</Block_Mod>
+      <Flat_Damage_Ignore>19</Flat_Damage_Ignore>
+      <Damage_Reduction>0.70</Damage_Reduction>
+      <Description>
+        
+      </Description>
+      <Dodge_Mod>0.28</Dodge_Mod>
+      <Durability>35</Durability>
+      <Initiative_Mod>0.70</Initiative_Mod>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Sprites>6</Sprites>
+      <Stamina_Mod>0.78</Stamina_Mod>
+      <Value>450</Value>
+    </Armor>
+    <Armor name="Death Plate">
+      <Tier>Four</Tier>
+      <AP_Mod>1.31</AP_Mod>
+      <Block_Mod>0.71</Block_Mod>
+      <Flat_Damage_Ignore>20</Flat_Damage_Ignore>
+      <Damage_Reduction>0.69</Damage_Reduction>
+      <Description>
+
+      </Description>
+      <Dodge_Mod>0.9</Dodge_Mod>
+      <Durability>40</Durability>
+      <Initiative_Mod>0.70</Initiative_Mod>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Sprites>21</Sprites>
+      <Stamina_Mod>0.78</Stamina_Mod>
+      <Value>700</Value>
+    </Armor>
+    <Armor name="Death Plate">
+      <Tier>Three</Tier>
+      <AP_Mod>1.30</AP_Mod>
+      <Block_Mod>0.72</Block_Mod>
+      <Flat_Damage_Ignore>20</Flat_Damage_Ignore>
+      <Damage_Reduction>0.67</Damage_Reduction>
+      <Description>
+
+      </Description>
+      <Dodge_Mod>0.9</Dodge_Mod>
+      <Durability>44</Durability>
+      <Initiative_Mod>0.70</Initiative_Mod>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Sprites>36</Sprites>
+      <Stamina_Mod>0.78</Stamina_Mod>
+      <Value>1100</Value>
+    </Armor>
+    <Armor name="Death Plate">
+      <Tier>Two</Tier>
+      <AP_Mod>1.29</AP_Mod>
+      <Block_Mod>0.72</Block_Mod>
+      <Flat_Damage_Ignore>21</Flat_Damage_Ignore>
+      <Damage_Reduction>0.65</Damage_Reduction>
+      <Description>
+
+      </Description>
+      <Dodge_Mod>0.9</Dodge_Mod>
+      <Durability>50</Durability>
+      <Initiative_Mod>0.70</Initiative_Mod>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Sprites>51</Sprites>
+      <Stamina_Mod>0.78</Stamina_Mod>
+      <Value>1500</Value>
+    </Armor>
     <Armor name="Dou">
       <Tier>Five</Tier>
       <AP_Mod>1.22</AP_Mod>

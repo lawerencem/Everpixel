@@ -28,6 +28,13 @@
     <SecondaryStatsEnum>Power,4</SecondaryStatsEnum>
     <SecondaryStatsEnum>Spell_Duration,8</SecondaryStatsEnum>
   </Class>
+  <Class name="Death_Knight">
+    <EPrimaryStat>Constitution,6</EPrimaryStat>
+    <EPrimaryStat>Resolve,2</EPrimaryStat>
+    <SecondaryStatsEnum>Block,3</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Parry,3</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Power,10</SecondaryStatsEnum>
+  </Class>
   <Class name="Dino_Knight">
     <EPrimaryStat>Constitution,3</EPrimaryStat>
     <EPrimaryStat>Might,4</EPrimaryStat>
@@ -80,6 +87,13 @@
     <SecondaryStatsEnum>Power,2</SecondaryStatsEnum>
     <SecondaryStatsEnum>Spell_Duration,4</SecondaryStatsEnum>
     <SecondaryStatsEnum>Spell_Penetration,4</SecondaryStatsEnum>
+  </Class>
+  <Class name="Necromancer">
+    <EPrimaryStat>Intelligence,5</EPrimaryStat>
+    <EPrimaryStat>Might,2</EPrimaryStat>
+    <SecondaryStatsEnum>Power,5</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Spell_Duration,5</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Spell_Penetration,2</SecondaryStatsEnum>
   </Class>
   <Class name="Ninja">
     <EPrimaryStat>Agility,3</EPrimaryStat>

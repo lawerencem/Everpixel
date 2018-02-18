@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <SubParties>
   <Culture name="Norse">
+    <SubParty Name ="Commanders">
+      <Character>6,Death Knight Trainee,Two</Character>
+      <Character>9,Death Knight Acolyte,Two</Character>
+      <Character>15,Death Knight,Two</Character>
+    </SubParty>
     <SubParty Name ="Light Calvary">
       <Character>14,Snow Ween Rider,Two</Character>
     </SubParty>

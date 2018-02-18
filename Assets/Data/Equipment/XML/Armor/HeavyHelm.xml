@@ -1,6 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Armors>
   <EArmorType name ="Heavy_Helm">
+    <Armor name="Death Helm">
+      <Tier>Five</Tier>
+      <AP_Mod>1.12</AP_Mod>
+      <Block_Mod>0.40</Block_Mod>
+      <Flat_Damage_Ignore>12</Flat_Damage_Ignore>
+      <Damage_Reduction>0.82</Damage_Reduction>
+      <Description>
+        
+      </Description>
+      <Dodge_Mod>0.28</Dodge_Mod>
+      <Durability>35</Durability>
+      <Initiative_Mod>0.70</Initiative_Mod>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Sprites>10</Sprites>
+      <Stamina_Mod>0.78</Stamina_Mod>
+      <Value>250</Value>
+    </Armor>
+    <Armor name="Death Helm">
+      <Tier>Four</Tier>
+      <AP_Mod>1.11</AP_Mod>
+      <Block_Mod>0.40</Block_Mod>
+      <Flat_Damage_Ignore>12</Flat_Damage_Ignore>
+      <Damage_Reduction>0.81</Damage_Reduction>
+      <Description>
+
+      </Description>
+      <Dodge_Mod>0.28</Dodge_Mod>
+      <Durability>38</Durability>
+      <Initiative_Mod>0.70</Initiative_Mod>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Sprites>25</Sprites>
+      <Stamina_Mod>0.78</Stamina_Mod>
+      <Value>450</Value>
+    </Armor>
+    <Armor name="Death Helm">
+      <Tier>Three</Tier>
+      <AP_Mod>1.10</AP_Mod>
+      <Block_Mod>0.40</Block_Mod>
+      <Flat_Damage_Ignore>13</Flat_Damage_Ignore>
+      <Damage_Reduction>0.80</Damage_Reduction>
+      <Description>
+
+      </Description>
+      <Dodge_Mod>0.28</Dodge_Mod>
+      <Durability>44</Durability>
+      <Initiative_Mod>0.70</Initiative_Mod>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Sprites>40</Sprites>
+      <Stamina_Mod>0.78</Stamina_Mod>
+      <Value>650</Value>
+    </Armor>
+    <Armor name="Death Helm">
+      <Tier>Two</Tier>
+      <AP_Mod>1.09</AP_Mod>
+      <Block_Mod>0.40</Block_Mod>
+      <Flat_Damage_Ignore>13</Flat_Damage_Ignore>
+      <Damage_Reduction>0.78</Damage_Reduction>
+      <Description>
+
+      </Description>
+      <Dodge_Mod>0.28</Dodge_Mod>
+      <Durability>50</Durability>
+      <Initiative_Mod>0.70</Initiative_Mod>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Sprites>55</Sprites>
+      <Stamina_Mod>0.78</Stamina_Mod>
+      <Value>650</Value>
+    </Armor>
     <Armor name="Diabolic Mask">
       <Tier>One</Tier>
       <AP_Mod>0.85</AP_Mod>

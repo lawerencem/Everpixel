@@ -10,6 +10,7 @@
 
 - Quick TODO:
   -- finish up icons
+  -- Tidy up death plate armor and helm
   -- Fix jomonese bug on load
 
 - Add pond / lake

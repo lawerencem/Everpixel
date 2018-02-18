@@ -1,6 +1,104 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Cultures>
   <Culture name ="Norse">
+    <Character name ="Death Knight">
+      <Class>Death_Knight,7</Class>
+      <Class>Knight,2</Class>
+      <Class>Mage,1</Class>
+      <Class>Necromancer,3</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Penguin</ERace>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Death Plate,Three</Armor>
+          <Armor>0.80,Death Plate,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Death Helm,Three</Helm>
+          <Helm>0.20,Death Helm,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1.0,Claymore,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>280</Agility>
+        <Constitution>700</Constitution>
+        <Intelligence>550</Intelligence>
+        <Might>550</Might>
+        <Perception>380</Perception>
+        <Resolve>380</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Death Knight Acolyte">
+      <Class>Death_Knight,4</Class>
+      <Class>Knight,2</Class>
+      <Class>Mage,1</Class>
+      <Class>Necromancer,1</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Penguin</ERace>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Death Plate,Four</Armor>
+          <Armor>0.80,Death Plate,Three</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Death Helm,Four</Helm>
+          <Helm>0.20,Death Helm,Three</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1.0,Claymore,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>280</Agility>
+        <Constitution>700</Constitution>
+        <Intelligence>550</Intelligence>
+        <Might>550</Might>
+        <Perception>380</Perception>
+        <Resolve>380</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Death Knight Trainee">
+      <Class>Knight,2</Class>
+      <Class>Mage,1</Class>
+      <Class>Necromancer,1</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Penguin</ERace>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Death Plate,Five</Armor>
+          <Armor>0.80,Death Plate,Four</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Death Helm,Five</Helm>
+          <Helm>0.20,Death Helm,Four</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>1.0,Claymore,Three</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>280</Agility>
+        <Constitution>700</Constitution>
+        <Intelligence>550</Intelligence>
+        <Might>550</Might>
+        <Perception>380</Perception>
+        <Resolve>380</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Gotland Footman">
       <Class>Soldier,4</Class>
       <ECharacterType>Humanoid</ECharacterType>

@@ -51,7 +51,7 @@ namespace Assets.Controller.Managers
 
             lParty.Culture = ECulture.Norse;
             lParty.Difficulty = 220;
-            lParty.Name = "Raiding Party";
+            lParty.Name = "Battle Squad";
 
             rParty.Culture = ECulture.Jomonese;
             rParty.Difficulty = 220;
