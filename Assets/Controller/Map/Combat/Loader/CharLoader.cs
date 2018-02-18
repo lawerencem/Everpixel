@@ -169,7 +169,6 @@ namespace Assets.Controller.Map.Combat.Loader
                 var spriteHandler = new GameObject();
                 var render = spriteHandler.AddComponent<SpriteRenderer>();
                 var position = tile.Handle.transform.position;
-                position.x += ViewParams.MOUNT_X_OFFSET;
                 position.y -= ViewParams.MOUNT_Y_OFFSET;
                 spriteHandler.transform.position = position;
                 spriteHandler.transform.SetParent(c.Handle.transform);
@@ -178,7 +177,6 @@ namespace Assets.Controller.Map.Combat.Loader
                 render.sortingLayerName = Layers.CHAR_MOUNT;
                 c.SubComponents.Add(Layers.CHAR_MOUNT, spriteHandler);
                 var mountOffsetPos = c.Handle.transform.position;
-                mountOffsetPos.y += ViewParams.MOUNT_Y_OFFSET;
                 c.Handle.transform.position = mountOffsetPos;
             }
         }
