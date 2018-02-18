@@ -198,7 +198,8 @@
     </Character>
     <Character name ="Greater Orc Wereween">
       <Class>Warrior,5</Class>
-      <Class>Lycanthrope,10</Class>
+      <Class>Werween,9</Class>
+      <Class>Lycanthrope,1</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
       <Abilities>
@@ -578,7 +579,8 @@
     </Character>
     <Character name ="Orc Wereween">
       <Class>Warrior,3</Class>
-      <Class>Lycanthrope,5</Class>
+      <Class>Werween,4</Class>
+      <Class>Lycanthrope,1</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
       <Abilities>

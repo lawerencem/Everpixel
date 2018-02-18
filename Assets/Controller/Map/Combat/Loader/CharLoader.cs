@@ -69,7 +69,7 @@ namespace Assets.Controller.Map.Combat.Loader
                 c.Handle.transform.localRotation = Quaternion.Euler(0, 180, 0);
 
             // TODO: This really should be elsewhere, but it works for now.
-            t.SetCurrent(c.Proxy.GetModel());
+            t.SetCurrent(c);
             c.SetTile(t);
         }
 

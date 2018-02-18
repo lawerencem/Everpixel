@@ -80,6 +80,7 @@
         Vanguard,
         War_Priest,
         Warlock,
+        Wereween,
         Witch_Doctor,
     }
 }

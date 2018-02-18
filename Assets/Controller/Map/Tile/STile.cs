@@ -4,7 +4,6 @@ using Assets.Controller.Manager.GUI;
 using Assets.Controller.Map.Combat;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
-using Assets.Model.Character;
 using Assets.View;
 using Assets.View.Event;
 using System;
@@ -70,11 +69,10 @@ namespace Assets.Controller.Map.Tile
 
         private void HandleHoverTargetStats()
         {
-            if (this._tile.Current != null && this._tile.Current.GetType().Equals(typeof(MChar)))
+            if (this._tile.Current != null && this._tile.Current.GetType().Equals(typeof(CChar)))
             {
                 var fov = Camera.main.fieldOfView;
-                var model = this._tile.Current as MChar;
-                var charController = model.Controller;
+                var charController = this._tile.Current as CChar;
                 var position = charController.Handle.transform.position;
                 position.x += (float)(fov * 0.025);
                 position.y += (float)(fov * 0.025);

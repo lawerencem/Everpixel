@@ -157,4 +157,11 @@
     <SecondaryStatsEnum>Parry,2</SecondaryStatsEnum>
     <SecondaryStatsEnum>Ranged,3</SecondaryStatsEnum>
   </Class>
+  <Class name="Wereween">
+    <EPrimaryStat>Constitution,2</EPrimaryStat>
+    <EPrimaryStat>Might,4</EPrimaryStat>
+    <EPrimaryStat>Resolve,2</EPrimaryStat>
+    <SecondaryStatsEnum>Iniative,12</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Stamina,2</SecondaryStatsEnum>
+  </Class>
 </Classes>

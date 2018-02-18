@@ -11,7 +11,10 @@ namespace Assets.Model.Ability.Logic.Calculator
                 var hit = a.Data.Hits[0];
                 var ability = hit.Data.Ability;
                 var action = hit.Data.Action;
-                return (int)(ability.Data.FatigueCost * action.Data.ParentWeapon.Model.Data.FatigueMod);
+                if (action.Data.ParentWeapon != null)
+                    return (int)(ability.Data.FatigueCost * action.Data.ParentWeapon.Model.Data.FatigueMod);
+                else
+                    return (int)(ability.Data.FatigueCost);
             }
             else
                 return 0;

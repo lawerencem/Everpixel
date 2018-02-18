@@ -2,6 +2,7 @@
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Music;
 using Assets.Model.Action;
+using Assets.Model.Character;
 using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
 using Assets.Template.CB;

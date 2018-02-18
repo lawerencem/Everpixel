@@ -2,6 +2,7 @@
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
+using Assets.Model.Character;
 using Assets.Model.Combat.Hit;
 using System.Collections.Generic;
 

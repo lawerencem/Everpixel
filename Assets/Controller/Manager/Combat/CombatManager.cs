@@ -4,6 +4,7 @@ using Assets.Controller.Map.Combat;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability;
 using Assets.Model.Ability.Enum;
+using Assets.Model.Character;
 using Assets.Model.Character.Enum;
 using Assets.Model.Event.Combat;
 using System.Collections.Generic;

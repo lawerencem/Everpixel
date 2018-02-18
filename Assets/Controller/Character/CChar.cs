@@ -4,10 +4,11 @@ using Assets.Template.Hex;
 using Assets.View.Character;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace Assets.Controller.Character
 {
-    public class CChar
+    public class CChar : IHexOccupant
     {
         private GameObject _handle;
         private PChar _proxy;
@@ -22,6 +23,11 @@ namespace Assets.Controller.Character
         public void SetProxy(PChar p) { this._proxy = p; p.SetController(this); }
         public void SetView(VChar v) { this._view = v; }
         public void SetTile(CTile t) { this._tile = t; }
+
+        public void SetCurrentHex(IHex hex)
+        {
+            this._proxy.GetModel().SetCurrentHex(hex);
+        }
 
         public List<GameObject> Embedded = new List<GameObject>();
         public List<GameObject> Particles { get; set; }

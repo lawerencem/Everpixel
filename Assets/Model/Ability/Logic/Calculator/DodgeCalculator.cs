@@ -9,7 +9,7 @@ namespace Assets.Model.Ability.Logic.Calculator
 {
     public class DodgeCalculator : AAbilityCalculator
     {
-        public override  void Predict(MHit hit)
+        public override void Predict(MHit hit)
         {
             var target = hit.Data.Target.Current as CChar;
 
