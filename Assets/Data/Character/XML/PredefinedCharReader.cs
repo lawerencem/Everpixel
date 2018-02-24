@@ -78,6 +78,7 @@ namespace Assets.Data.Character.XML
                                             case (PredefinedReaderParams.ABILITIES): { HandleAbilities(elem, key); } break;
                                             case (PredefinedReaderParams.ATTACK_SPRITE_INDEX): { HandleCritterAttackSpriteIndex(key, elem.Value.ToString()); } break;
                                             case (PredefinedReaderParams.CLASS): { HandleClassType(key, elem.Value.ToString(), ref baseClass); } break;
+                                            case (PredefinedReaderParams.DEAD_SPRITE_INDEX): { HandleCritterDeadSpriteIndex(key, elem.Value.ToString()); } break;
                                             case (PredefinedReaderParams.FLINCH_SPRITE_INDEX): { HandleCritterFlinchSpriteIndex(key, elem.Value.ToString()); } break;
                                             case (PredefinedReaderParams.MOUNT): { HandleMount(key, elem.Value); } break;
                                             case (PredefinedReaderParams.PERKS): { HandlePerks(elem, key); } break;
@@ -129,6 +130,13 @@ namespace Assets.Data.Character.XML
             int v = 0;
             if (int.TryParse(value, out v))
                 CritterFlinchSpriteTable.Instance.Table.Add(rootkey, v);
+        }
+
+        private void HandleCritterDeadSpriteIndex(string rootkey, string value)
+        {
+            int v = 0;
+            if (int.TryParse(value, out v))
+                CritterDeadSpriteTable.Instance.Table.Add(rootkey, v);
         }
 
         private void HandleEquipment(XElement el, string rootKey)

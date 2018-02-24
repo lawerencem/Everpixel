@@ -18,6 +18,12 @@ namespace Assets.View.Character
                 var renderer = eyes.GetComponent<SpriteRenderer>();
                 renderer.sprite = sprite;
             }
+            else if (c.Proxy.Type == ECharType.Critter)
+            {
+                var sprite = CharSpriteLoader.Instance.GetCritterDeadSprite(c);
+                var renderer = c.Handle.GetComponent<SpriteRenderer>();
+                renderer.sprite = sprite;
+            }
         }
 
         public void AssignDeadLayer(CChar c)

@@ -145,6 +145,7 @@
         </Ability>
       </Abilities>
       <ECharacterType>Critter</ECharacterType>
+      <DeadSpriteIndex>3</DeadSpriteIndex>
       <FlinchSpriteIndex>1</FlinchSpriteIndex>
       <Perks>
       </Perks>
@@ -169,6 +170,7 @@
         </Ability>
       </Abilities>
       <ECharacterType>Critter</ECharacterType>
+      <DeadSpriteIndex>0</DeadSpriteIndex>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Perks>
       </Perks>

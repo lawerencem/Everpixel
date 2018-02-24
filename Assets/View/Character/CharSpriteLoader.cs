@@ -1,4 +1,5 @@
-﻿using Assets.Data.Character.Table;
+﻿using Assets.Controller.Character;
+using Assets.Data.Character.Table;
 using Assets.Model.Character.Enum;
 using Assets.Model.Characters.Params;
 using Assets.Model.Equipment.Armor;
@@ -6,6 +7,7 @@ using Assets.Model.Equipment.Weapon;
 using Assets.Model.Mount;
 using Assets.Template.Other;
 using Assets.Template.Util;
+using Assets.View.Character.Table;
 using UnityEngine;
 
 namespace Assets.View.Character
@@ -42,6 +44,14 @@ namespace Assets.View.Character
         {
             var path = StringUtil.PathBuilder(CRITTER_PATH, c, EXTENSION);
             return GetSprites(path);
+        }
+
+        public Sprite GetCritterDeadSprite(CChar c)
+        {
+            var path = StringUtil.PathBuilder(CRITTER_PATH, c.View.Name, EXTENSION);
+            var sprites = this.GetSprites(path);
+            int index = CritterDeadSpriteTable.Instance.Table[c.View.Name];
+            return sprites[index];
         }
 
         public Sprite[] GetCharacterSprites(PreCharParams c)

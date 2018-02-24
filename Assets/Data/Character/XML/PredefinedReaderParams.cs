@@ -7,6 +7,7 @@
         public const string ATTACK_SPRITE_INDEX = "AttackSpriteIndex";
         public const string CLASS = "Class";
         public const string CULTURE = "ECulture";
+        public const string DEAD_SPRITE_INDEX = "DeadSpriteIndex";
         public const string DEFAULT_WPN_ABILITES = "WeaponAbility";
         public const string FLINCH_SPRITE_INDEX = "FlinchSpriteIndex";
         public const string HELMS = "Helms";
