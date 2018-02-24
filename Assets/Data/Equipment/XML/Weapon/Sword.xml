@@ -229,6 +229,60 @@
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
     <Weapon name="Claymore">
+      <Tier>Five</Tier>
+      <Accuracy_Mod>0.93</Accuracy_Mod>
+      <AP_Mod>1.17</AP_Mod>
+      <Armor_Ignore>0.77</Armor_Ignore>
+      <Armor_Pierce>0.92</Armor_Pierce>
+      <Block_Ignore>0.23</Block_Ignore>
+      <Damage>50</Damage>
+      <Description>
+        This sword represents a good balance beteween size and strength.  It is a potent defensive weapon, capable of parrying
+        savage blows.  However, its size still makes it a fearsome offensive weapon.
+      </Description>
+      <Fatigue_Mod>1.20</Fatigue_Mod>
+      <Initiative_Mod>0.78</Initiative_Mod>
+      <Max_Durability>40</Max_Durability>
+      <Parry_Mod>0.70</Parry_Mod>
+      <Shield_Damage_Percent>0.08</Shield_Damage_Percent>
+      <Sprites>0,1,2</Sprites>
+      <Stamina_Mod>0.9</Stamina_Mod>
+      <Value>200</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Great_Strike</EAbility>
+      <EAbility>Riposte</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Claymore">
+      <Tier>Four</Tier>
+      <Accuracy_Mod>0.94</Accuracy_Mod>
+      <AP_Mod>1.16</AP_Mod>
+      <Armor_Ignore>0.76</Armor_Ignore>
+      <Armor_Pierce>0.91</Armor_Pierce>
+      <Block_Ignore>0.24</Block_Ignore>
+      <Damage>55</Damage>
+      <Description>
+        This sword represents a good balance beteween size and strength.  It is a potent defensive weapon, capable of parrying
+        savage blows.  However, its size still makes it a fearsome offensive weapon.
+      </Description>
+      <Fatigue_Mod>1.18</Fatigue_Mod>
+      <Initiative_Mod>0.79</Initiative_Mod>
+      <Max_Durability>45</Max_Durability>
+      <Parry_Mod>0.73</Parry_Mod>
+      <Shield_Damage_Percent>0.09</Shield_Damage_Percent>
+      <Sprites>15,16,17</Sprites>
+      <Stamina_Mod>0.9</Stamina_Mod>
+      <Value>300</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Great_Strike</EAbility>
+      <EAbility>Riposte</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Claymore">
       <Tier>Three</Tier>
       <Accuracy_Mod>0.95</Accuracy_Mod>
       <AP_Mod>1.15</AP_Mod>
@@ -248,6 +302,33 @@
       <Sprites>30,31,32</Sprites>
       <Stamina_Mod>0.9</Stamina_Mod>
       <Value>400</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Great_Strike</EAbility>
+      <EAbility>Riposte</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Claymore">
+      <Tier>Two</Tier>
+      <Accuracy_Mod>0.95</Accuracy_Mod>
+      <AP_Mod>1.15</AP_Mod>
+      <Armor_Ignore>0.73</Armor_Ignore>
+      <Armor_Pierce>0.89</Armor_Pierce>
+      <Block_Ignore>0.26</Block_Ignore>
+      <Damage>70</Damage>
+      <Description>
+        This sword represents a good balance beteween size and strength.  It is a potent defensive weapon, capable of parrying
+        savage blows.  However, its size still makes it a fearsome offensive weapon.
+      </Description>
+      <Fatigue_Mod>1.15</Fatigue_Mod>
+      <Initiative_Mod>0.80</Initiative_Mod>
+      <Max_Durability>58</Max_Durability>
+      <Parry_Mod>0.75</Parry_Mod>
+      <Shield_Damage_Percent>0.10</Shield_Damage_Percent>
+      <Sprites>45,46,47</Sprites>
+      <Stamina_Mod>0.9</Stamina_Mod>
+      <Value>650</Value>
       <EAbility>Slash</EAbility>
       <EAbility>Stab</EAbility>
       <EAbility>Great_Strike</EAbility>
