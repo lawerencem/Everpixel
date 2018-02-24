@@ -354,7 +354,6 @@
       <Value>100</Value>
       <EAbility>Chop</EAbility>
       <EAbility>Break_Shield</EAbility>
-      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -381,7 +380,6 @@
       <Value>250</Value>
       <EAbility>Chop</EAbility>
       <EAbility>Break_Shield</EAbility>
-      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -409,7 +407,6 @@
       <Value>550</Value>
       <EAbility>Chop</EAbility>
       <EAbility>Break_Shield</EAbility>
-      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -437,7 +434,6 @@
       <Value>800</Value>
       <EAbility>Chop</EAbility>
       <EAbility>Break_Shield</EAbility>
-      <EAbility>Scatter</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>

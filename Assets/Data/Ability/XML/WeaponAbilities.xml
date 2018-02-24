@@ -10,7 +10,7 @@
       <ECastType>Bullet</ECastType>
       <DamageMod>1.30</DamageMod>
       <DodgeMod>1.0</DodgeMod>
-      <IconSprite>1</IconSprite>
+      <IconSprite>19</IconSprite>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -27,7 +27,7 @@
       <ECastType>Melee</ECastType>
       <DamageMod>0.25</DamageMod>
       <DodgeMod>1.0</DodgeMod>
-      <IconSprite>2</IconSprite>
+      <IconSprite>1</IconSprite>
       <Injury>Broken_Foot</Injury>
       <Injury>Broken_Knee</Injury>
       <Injury>Broken_Ribs</Injury>
@@ -52,7 +52,7 @@
       <ECastType>Melee</ECastType>
       <DamageMod>0.25</DamageMod>
       <DodgeMod>1.0</DodgeMod>
-      <IconSprite>3</IconSprite>
+      <IconSprite>2</IconSprite>
       <Injury>Broken_Arm</Injury>
       <Injury>Broken_Hand</Injury>
       <Injury>Crushed_Finger</Injury>
@@ -76,7 +76,7 @@
       <ECastType>Melee</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
-      <IconSprite>4</IconSprite>
+      <IconSprite>3</IconSprite>
       <Injury>Dislocated_Shoulder</Injury>
       <Injury>Fractured_Elbow</Injury>
       <Injury>Fractured_Hand</Injury>
@@ -111,7 +111,7 @@
       <ECastType>Melee</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
-      <IconSprite>0</IconSprite>
+      <IconSprite>4</IconSprite>
       <Injury>Broken_Arm</Injury>
       <Injury>Broken_Foot</Injury>
       <Injury>Broken_Hand</Injury>
@@ -152,13 +152,54 @@
       <ECastType>Bullet</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
-      <IconSprite>6</IconSprite>
+      <IconSprite>5</IconSprite>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1.0</ShieldDamageMod>
       <FatigueCost>20</FatigueCost>
       <Range>5</Range>
+    </WeaponAbility>
+    <WeaponAbility name="Flail">
+      <AccMod>0.80</AccMod>
+      <APCost>4</APCost>
+      <ArmorIgnoreMod>1</ArmorIgnoreMod>
+      <ArmorPierceMod>1</ArmorPierceMod>
+      <BlockIgnoreMod>1.5</BlockIgnoreMod>
+      <ECastType>Melee</ECastType>
+      <DamageMod>1</DamageMod>
+      <DodgeMod>1.25</DodgeMod>
+      <IconSprite>10</IconSprite>
+      <Injury>Broken_Arm</Injury>
+      <Injury>Broken_Foot</Injury>
+      <Injury>Broken_Hand</Injury>
+      <Injury>Broken_Jaw</Injury>
+      <Injury>Broken_Knee</Injury>
+      <Injury>Broken_Leg</Injury>
+      <Injury>Broken_Ribs</Injury>
+      <Injury>Broken_Shoulder</Injury>
+      <Injury>Broken_Wrist</Injury>
+      <Injury>Concussion</Injury>
+      <Injury>Crushed_Finger</Injury>
+      <Injury>Crushed_Hand</Injury>
+      <Injury>Crushed_Windpipe</Injury>
+      <Injury>Crushed_Foot</Injury>
+      <Injury>Dislocated_Shoulder</Injury>
+      <Injury>Fractured_Elbow</Injury>
+      <Injury>Fractured_Hand</Injury>
+      <Injury>Fractured_Ribs</Injury>
+      <Injury>Fractured_Skull</Injury>
+      <Injury>Minor_Concussion</Injury>
+      <Injury>Severe_Concussion</Injury>
+      <Injury>Shattered_Elbow</Injury>
+      <Injury>Shattered_Knee</Injury>
+      <Injury>Shattered_Ribs</Injury>
+      <MeleeBlockChanceMod>0.05</MeleeBlockChanceMod>
+      <ParryModMod>0.5</ParryModMod>
+      <RangeBlockMod>1.0</RangeBlockMod>
+      <ShieldDamageMod>3.5</ShieldDamageMod>
+      <FatigueCost>35</FatigueCost>
+      <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Gash">
       <AccMod>0.75</AccMod>
@@ -169,7 +210,7 @@
       <ECastType>Melee</ECastType>
       <DamageMod>2.0</DamageMod>
       <DodgeMod>1.0</DodgeMod>
-      <IconSprite>7</IconSprite>
+      <IconSprite>6</IconSprite>
       <Injury>Massive_Bleeding</Injury>
       <Injury>Profuse_Bleeding</Injury>
       <Injury>Rip</Injury>
@@ -213,6 +254,29 @@
       <FatigueCost>40</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
+    <WeaponAbility name="Lash">
+      <AccMod>0.55</AccMod>
+      <APCost>4</APCost>
+      <ArmorIgnoreMod>1.5</ArmorIgnoreMod>
+      <ArmorPierceMod>1.5</ArmorPierceMod>
+      <BlockIgnoreMod>1</BlockIgnoreMod>
+      <ECastType>Melee</ECastType>
+      <DamageMod>1</DamageMod>
+      <DodgeMod>1.0</DodgeMod>
+      <IconSprite>12</IconSprite>
+      <Injury>Broken_Jaw</Injury>y>
+      <Injury>Concussion</Injury>
+      <Injury>Crushed_Windpipe</Injury>
+      <Injury>Fractured_Skull</Injury>
+      <Injury>Minor_Concussion</Injury>
+      <Injury>Severe_Concussion</Injury>
+      <MeleeBlockChanceMod>0.25</MeleeBlockChanceMod>
+      <ParryModMod>0.25</ParryModMod>
+      <RangeBlockMod>1.0</RangeBlockMod>
+      <ShieldDamageMod>1</ShieldDamageMod>
+      <FatigueCost>55</FatigueCost>
+      <Range>1</Range>
+    </WeaponAbility>
     <WeaponAbility name="Maim">
       <AccMod>0.65</AccMod>
       <APCost>5</APCost>
@@ -222,7 +286,7 @@
       <ECastType>Melee</ECastType>
       <DamageMod>2.25</DamageMod>
       <DodgeMod>1.0</DodgeMod>
-      <IconSprite>9</IconSprite>
+      <IconSprite>8</IconSprite>
       <Injury>Maimed_Arm</Injury>
       <Injury>Maimed_Foot</Injury>
       <Injury>Maimed_Hand</Injury>
@@ -247,7 +311,7 @@
       <ECastType>Melee</ECastType>
       <DamageMod>0.75</DamageMod>
       <DodgeMod>1.0</DodgeMod>
-      <IconSprite>9</IconSprite>
+      <IconSprite>18</IconSprite>
       <Injury>Minor_Bleeding</Injury>
       <Injury>Major_Bleeding</Injury>
       <Injury>Pierced_Arm</Injury>
@@ -299,7 +363,7 @@
       <ECastType>Melee</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
-      <IconSprite>10</IconSprite>
+      <IconSprite>16</IconSprite>
       <MeleeBlockChanceMod>0.85</MeleeBlockChanceMod>
       <ParryModMod>2.5</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -339,7 +403,7 @@
       <ECastType>Melee</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
-      <IconSprite>11</IconSprite>
+      <IconSprite>13</IconSprite>
       <MeleeBlockChanceMod>2.0</MeleeBlockChanceMod>
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -411,7 +475,7 @@
       <ECastType>Melee</ECastType>
       <DamageMod>1.25</DamageMod>
       <DodgeMod>1.0</DodgeMod>
-      <IconSprite>14</IconSprite>
+      <IconSprite>9</IconSprite>
       <Injury>Minor_Bleeding</Injury>
       <Injury>Major_Bleeding</Injury>
       <Injury>Pierced_Arm</Injury>
@@ -440,7 +504,7 @@
       <ECastType>Melee</ECastType>
       <DamageMod>0.75</DamageMod>
       <DodgeMod>1.0</DodgeMod>
-      <IconSprite>13</IconSprite>
+      <IconSprite>17</IconSprite>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.0</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
@@ -503,6 +567,37 @@
       <FatigueCost>50</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
+    <WeaponAbility name="Whirlwind">
+      <AccMod>0.65</AccMod>
+      <APCost>6</APCost>
+      <ArmorIgnoreMod>0.8</ArmorIgnoreMod>
+      <ArmorPierceMod>0.8</ArmorPierceMod>
+      <BlockIgnoreMod>0.8</BlockIgnoreMod>
+      <ECastType>Melee</ECastType>
+      <DamageMod>0.8</DamageMod>
+      <DodgeMod>0.65</DodgeMod>
+      <IconSprite>15</IconSprite>
+      <Injury>Cut_Abdomine</Injury>
+      <Injury>Cut_Arm</Injury>
+      <Injury>Cut_Chest</Injury>
+      <Injury>Cut_Ear</Injury>
+      <Injury>Cut_Face</Injury>
+      <Injury>Cut_Foot</Injury>
+      <Injury>Cut_Hand</Injury>
+      <Injury>Cut_Knee</Injury>
+      <Injury>Cut_Leg</Injury>
+      <Injury>Cut_Nose</Injury>
+      <Injury>Cut_Shoulder</Injury>
+      <Injury>Major_Bleeding</Injury>
+      <Injury>Massive_Bleeding</Injury>
+      <Injury>Minor_Bleeding</Injury>
+      <MeleeBlockChanceMod>1.2</MeleeBlockChanceMod>
+      <ParryModMod>1.20</ParryModMod>
+      <RangeBlockMod>1.0</RangeBlockMod>
+      <ShieldDamageMod>1</ShieldDamageMod>
+      <FatigueCost>50</FatigueCost>
+      <Range>1</Range>
+    </WeaponAbility>
     <WeaponAbility name="Wrap">
       <AccMod>0.55</AccMod>
       <APCost>3</APCost>
@@ -512,7 +607,7 @@
       <ECastType>Melee</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
-      <IconSprite>0</IconSprite>
+      <IconSprite>14</IconSprite>
       <Injury>Broken_Hand</Injury>
       <Injury>Broken_Jaw</Injury>
       <Injury>Broken_Ribs</Injury>

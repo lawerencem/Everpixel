@@ -17,10 +17,10 @@ namespace Assets.View.GUI
         {
             var path = StringUtil.PathBuilder(ICON_PATH, "Icon", EXTENSION);
             var stuff = Resources.LoadAll(path);
-            int index = 0;
+            int index = 1;
             if (AbilityTable.Instance.Table.ContainsKey(ability))
                 index = AbilityTable.Instance.Table[ability].Data.IconSprite;
-            return stuff[index] as Sprite;
+            return stuff[index + 1] as Sprite;
         }
     }
 }

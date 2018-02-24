@@ -1,7 +1,5 @@
 ﻿TODO
 
-- Add Lash + Flail to flail weapons
-- Add Whirlwind weapon ability
 - Add Grey as UI info of durability
 - Add orange as UI info of negative stamina
 - Add blue as UI info of positive stamina
