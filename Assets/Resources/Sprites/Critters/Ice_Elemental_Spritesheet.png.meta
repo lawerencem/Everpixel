@@ -1,19 +1,14 @@
 fileFormatVersion: 2
-guid: a97f94ae25c377e41abbf417bd283287
-timeCreated: 1519482289
+guid: 06d48d47d037bc341a84b2835b224d9e
+timeCreated: 1519482395
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Wursa_Spritesheet_0
-    21300002: Wursa_Spritesheet_1
-    21300004: Wursa_Spritesheet_2
-    21300006: Wursa_Spritesheet_3
-    21300008: Wursa_Spritesheet_4
-    21300010: Wursa_Spritesheet_5
-    21300012: Wursa_Spritesheet_6
-    21300014: Wursa_Spritesheet_7
-    21300016: Wursa_Spritesheet_8
-    21300018: Wursa_Spritesheet_9
+    21300000: Ice_Elemental_Spritesheet_0
+    21300002: Ice_Elemental_Spritesheet_1
+    21300004: Ice_Elemental_Spritesheet_2
+    21300006: Ice_Elemental_Spritesheet_3
+    21300008: Ice_Elemental_Spritesheet_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -86,11 +81,21 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wursa_Spritesheet_0
+      name: Ice_Elemental_Spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -104,63 +109,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wursa_Spritesheet_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Wursa_Spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Wursa_Spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Wursa_Spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Wursa_Spritesheet_5
+      name: Ice_Elemental_Spritesheet_1
       rect:
         serializedVersion: 2
         x: 0
@@ -174,21 +123,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wursa_Spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Wursa_Spritesheet_7
+      name: Ice_Elemental_Spritesheet_2
       rect:
         serializedVersion: 2
         x: 0
@@ -202,7 +137,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wursa_Spritesheet_8
+      name: Ice_Elemental_Spritesheet_3
       rect:
         serializedVersion: 2
         x: 0
@@ -216,7 +151,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wursa_Spritesheet_9
+      name: Ice_Elemental_Spritesheet_4
       rect:
         serializedVersion: 2
         x: 0

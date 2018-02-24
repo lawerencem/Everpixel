@@ -6,9 +6,14 @@
 - Add block math in damage calculator
 - Add concept of deep vs shallow liquid
 
+Sunday
+ - Necroweener
+ - Fire Fatality (Arrows come from sky)
+ - Pavise
+ - Arbalest
+ - Pavise Arabalester (norse)
+
 - Quick TODO:
-  -- finish up icons
-  -- Tidy up death plate armor and helm
   -- Fix jomonese bug on load
 
 - Add pond / lake
@@ -16,99 +21,14 @@
   -- thawing out 
   -- drowning
 
-- Weekend Duties
-  -- Complete more abilities
-	--- Howl
-	--- LEap
-  -- Dead eyes on critters
-  -- Stamina reduction when moving, AP reduction, give pathing to models to determine costs
-
-- Biome
-  -- Corruption biome
 
 - Combat logic
 	- Bonuses to Hit when surrounding
 	- Height bonuses / penalties
 
 Fix Keynotfound in main gui
-Orc Wereween
-Orc Metal
-Haste Song
-Spear wall
-
-Shields
-Stealth
-Crit Calculations
-Mounts
-  - Have mounts give abilities
-  - Perks
-  - Effects
-Armor and Weapon durability
-Critter eyes on kill
-Missiles missing (hit other targets)
 Deco blocking missiles
-
-1) - Dual-Wield
-3) - Critter classes / abilities during level up on the xml
-5) - Calculate "height diff" when going from one height to another in hexes
-6) - Force A* to directional search after so many nodes
 
 
 bugs
-   Wpn icons show from previous character on critters
    various deco (lizardmen) is still attached on fatalities.
-
-Perks
-howl (intstant heal of HoT)
-Athletic: improve AP and Stam
-Bully: +15% dmg each consecutive attack on target
-Bandage: Heal Bleeding (Soldier)
-Hold the Line: AoE Heal morale each turn
-song (shield hotted)
-grit (blocked attacks cause buff)
-bloodlust (gain agility and might when attacking bleeding targets)
-
-Fighting Spells
-Heighten (+ melee, block, parry)
-Decrepify
-Wimpiness 
-Stamina over time
-shield
-
-Abilities
-Taunt
-Group Taunt
-Lockdown (Deal damage to enemy any time enemy does action and is within distance)
-Protect (Take dmg for target as long as adjacent)
-Rallying Cry (+ morale)
-Counter (Hit back)
-
-Dino Priest
-
-   - First:
-     - Slug horde spell
-	 - Poison Zone perk on slug hit
-	 - Berserker perks
-	    - HoT on hit
-		- Restore Stamin on hit
-		- Howl
-		- 
-
-     - Shield perks
-	 - Resists and saves
-	 - Taunt
-	 - Tea Rex refreshing shields
-	 - Thai Rex shield spell
-	 - Healing song
-
-Before pre-alpha
-   - Orcish culture
-   - Goblin
-   - Irish
-   - Hawaiian
-   - Jomonese
-   - Amazonian
-   - Nordic
-
-ideas: 
-	shoggoth ability: eat corpse (makes unit grow like mario)

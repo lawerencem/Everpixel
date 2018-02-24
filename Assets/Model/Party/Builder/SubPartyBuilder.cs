@@ -43,6 +43,7 @@ namespace Assets.Model.Party.Builder
             }
             catch (KeyNotFoundException e)
             {
+                Debug.LogError(e);
                 Debug.LogError("SubParty not found: " + " Name: " + arg.Name + " Culture: " + arg.culture);
                 return null;
             }

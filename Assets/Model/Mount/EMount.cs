@@ -7,6 +7,7 @@
         Dire_Ween,
         Dodo,
         Gromp,
+        Ice_Dragon,
         Octolegs,
         Raptard,
         Snow_Ween,

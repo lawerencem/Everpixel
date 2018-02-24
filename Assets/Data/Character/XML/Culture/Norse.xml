@@ -69,6 +69,41 @@
         <Resolve>380</Resolve>
       </Stats>
     </Character>
+    <Character name ="Death Knight Lord">
+      <Class>Death_Knight,11</Class>
+      <Class>Knight,2</Class>
+      <Class>Mage,1</Class>
+      <Class>Necromancer,7</Class>
+      <ECharacterType>Humanoid</ECharacterType>
+      <ERace>Penguin</ERace>
+      <Mount>Ice_Dragon</Mount>
+      <Perks>
+      </Perks>
+      <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.80,Death Plate,Three</Armor>
+          <Armor>0.80,Death Plate,Two</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.80,Death Helm,Three</Helm>
+          <Helm>0.20,Death Helm,Two</Helm>
+        </Helms>
+      </PotentialArmors>
+      <PotentialWeapons>
+        <RWeapons name="One">
+          <RWeapon>0.8,Claymore,Three</RWeapon>
+          <RWeapon>0.8,Claymore,Two</RWeapon>
+        </RWeapons>
+      </PotentialWeapons>
+      <Stats>
+        <Agility>280</Agility>
+        <Constitution>700</Constitution>
+        <Intelligence>550</Intelligence>
+        <Might>550</Might>
+        <Perception>380</Perception>
+        <Resolve>380</Resolve>
+      </Stats>
+    </Character>
     <Character name ="Death Knight Trainee">
       <Class>Knight,2</Class>
       <Class>Mage,1</Class>
@@ -158,7 +193,57 @@
         <Resolve>720</Resolve>
       </Stats>
     </Character>
-    <Character name ="Iceburgh">
+    <Character name ="Ice_Dragon">
+      <AttackSpriteIndex>3</AttackSpriteIndex>
+      <Abilities>
+        <Ability name ="Bite">
+          <EEffect name="Megabite">
+            <AbilityCondition>Bite</AbilityCondition>
+            <X>2.5</X>
+            <Y>1.8</Y>
+          </EEffect>
+        </Ability>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <DeadSpriteIndex>2</DeadSpriteIndex>
+      <FlinchSpriteIndex>4</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>320</Agility>
+        <Constitution>800</Constitution>
+        <Intelligence>550</Intelligence>
+        <Might>780</Might>
+        <Perception>550</Perception>
+        <Resolve>980</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Ice_Elemental">
+      <AttackSpriteIndex>3</AttackSpriteIndex>
+      <Abilities>
+        <Ability name ="Bite">
+          <EEffect name="Megabite">
+            <AbilityCondition>Bite</AbilityCondition>
+            <X>2</X>
+            <Y>2</Y>
+          </EEffect>
+        </Ability>
+      </Abilities>
+      <ECharacterType>Critter</ECharacterType>
+      <DeadSpriteIndex>4</DeadSpriteIndex>
+      <FlinchSpriteIndex>2</FlinchSpriteIndex>
+      <Perks>
+      </Perks>
+      <Stats>
+        <Agility>680</Agility>
+        <Constitution>250</Constitution>
+        <Intelligence>280</Intelligence>
+        <Might>380</Might>
+        <Perception>400</Perception>
+        <Resolve>750</Resolve>
+      </Stats>
+    </Character>
+    <Character name ="Ice_Golem">
       <AttackSpriteIndex>8</AttackSpriteIndex>
       <Abilities>
         <Ability name ="Bite">
@@ -170,7 +255,7 @@
         </Ability>
       </Abilities>
       <ECharacterType>Critter</ECharacterType>
-      <DeadSpriteIndex>0</DeadSpriteIndex>
+      <DeadSpriteIndex>9</DeadSpriteIndex>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Perks>
       </Perks>
@@ -392,6 +477,7 @@
         </Ability>
       </Abilities>
       <ECharacterType>Critter</ECharacterType>
+      <DeadSpriteIndex>9</DeadSpriteIndex>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Perks>
       </Perks>

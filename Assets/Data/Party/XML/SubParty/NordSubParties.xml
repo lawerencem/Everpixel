@@ -5,6 +5,7 @@
       <Character>6,Death Knight Trainee,Two</Character>
       <Character>9,Death Knight Acolyte,Two</Character>
       <Character>15,Death Knight,Two</Character>
+      <Character>22,Death Knight Lord,Two</Character>
     </SubParty>
     <SubParty Name ="Light Calvary">
       <Character>14,Snow Ween Rider,Two</Character>
@@ -12,7 +13,7 @@
     <SubParty Name ="Monsters">
       <Character>10,Gwin,One</Character>
       <Character>15,Wursa,One</Character>
-      <Character>18,Iceburgh,One</Character>
+      <Character>18,Ice_Golem,One</Character>
     </SubParty>
     <SubParty Name ="Pikemen">
       <Character>15,Wimpy Longaxer,Two</Character>
