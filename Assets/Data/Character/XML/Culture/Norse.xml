@@ -22,7 +22,8 @@
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>1.0,Claymore,Three</RWeapon>
+          <RWeapon>0.8,Claymore,Three</RWeapon>
+          <RWeapon>0.8,Claymore,Two</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
@@ -55,7 +56,8 @@
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>1.0,Claymore,Three</RWeapon>
+          <RWeapon>0.8,Claymore,Four</RWeapon>
+          <RWeapon>0.8,Claymore,Three</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
@@ -87,7 +89,8 @@
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>1.0,Claymore,Three</RWeapon>
+          <RWeapon>0.8,Claymore,Five</RWeapon>
+          <RWeapon>0.8,Claymore,Four</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>
