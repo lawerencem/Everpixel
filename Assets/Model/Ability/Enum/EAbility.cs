@@ -68,6 +68,6 @@
         Triple_Strike,
         Wide_Slash,
         Wrap,
-
+        Whirlwind,
     }
 }

@@ -569,13 +569,15 @@
     </WeaponAbility>
     <WeaponAbility name="Whirlwind">
       <AccMod>0.65</AccMod>
+      <AoE>1</AoE>
       <APCost>6</APCost>
       <ArmorIgnoreMod>0.8</ArmorIgnoreMod>
       <ArmorPierceMod>0.8</ArmorPierceMod>
       <BlockIgnoreMod>0.8</BlockIgnoreMod>
-      <ECastType>Melee</ECastType>
+      <ECastType>RingCast</ECastType>
       <DamageMod>0.8</DamageMod>
       <DodgeMod>0.65</DodgeMod>
+      <Hostile>false</Hostile>
       <IconSprite>15</IconSprite>
       <Injury>Cut_Abdomine</Injury>
       <Injury>Cut_Arm</Injury>
@@ -596,7 +598,7 @@
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
       <FatigueCost>50</FatigueCost>
-      <Range>1</Range>
+      <Range>0</Range>
     </WeaponAbility>
     <WeaponAbility name="Wrap">
       <AccMod>0.55</AccMod>

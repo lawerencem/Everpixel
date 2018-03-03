@@ -9,11 +9,7 @@ namespace Assets.Model.Ability.Logic
     {
         public List<CTile> GetAdjacentTiles(CChar c)
         {
-            //var list = new List<TileController>();
-            //foreach (var neighbor in c.CurrentTile.Adjacent)
-            //    list.Add(neighbor);
-            //return list;
-            return null;
+            return c.Tile.GetAdjacent();
         }
 
         public List<CTile> GetAoETiles(AbilityArgs arg, int aoe)
@@ -49,6 +45,16 @@ namespace Assets.Model.Ability.Logic
             //foreach (var hex in hexes)
             //    list.Add(hex.Parent);
             //return list;
+        }
+
+        public List<CTile> GetRingCastTiles(AbilityArgs arg)
+        {
+            var list = new List<CTile>();
+            var t = arg.Source.Tile;
+            var tiles = t.Model.GetAoETiles(arg.AoE);
+            foreach (var tile in tiles) { list.Add(tile.Controller); }
+            list.Remove(arg.Source.Tile);
+            return list;
         }
 
         public List<CTile> GetPotentialTargets(AbilityArgs arg)

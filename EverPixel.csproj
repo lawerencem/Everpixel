@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.3.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -430,6 +428,7 @@
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\SpearWall.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\Stab.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\Stun.cs" />
+    <Compile Include="Assets\Model\Ability\Weapon\Abilities\Whirlwind.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\WideSlash.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\Wrap.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\WeaponAbilityBuilder.cs" />
@@ -440,7 +439,6 @@
     <Compile Include="Assets\Model\Biome\BiomeParam.cs" />
     <Compile Include="Assets\Model\Biome\EBiome.cs" />
     <Compile Include="Assets\Model\Character\AChar.cs" />
-    <Compile Include="Assets\Model\Character\Builder\CharacterParamBuilder.cs" />
     <Compile Include="Assets\Model\Character\Builder\CharBuilder.cs" />
     <Compile Include="Assets\Model\Character\Builder\SecondaryStatReferee.cs" />
     <Compile Include="Assets\Model\Character\Container\ACharEquipment.cs" />
@@ -512,16 +510,12 @@
     <Compile Include="Assets\Model\Equipment\Weapon\WeaponParams.cs" />
     <Compile Include="Assets\Model\Event\Combat\AEvCombat.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvApMod.cs" />
-    <Compile Include="Assets\Model\Event\Combat\EvBuff.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvCasting.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvCharKilled.cs" />
-    <Compile Include="Assets\Model\Event\Combat\EvDebuff.cs" />
-    <Compile Include="Assets\Model\Event\Combat\EvDot.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvEndTurn.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvHoT.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvInjury.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvModHP.cs" />
-    <Compile Include="Assets\Model\Event\Combat\EvModStam.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvNewRound.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvPathMove.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvPerformAbility.cs" />

@@ -8,6 +8,7 @@
         Melee,
         No_Collision_Bullet,
         Raycast,
+        Ringcast,
         Shapeshift,
         Single,
         Song,

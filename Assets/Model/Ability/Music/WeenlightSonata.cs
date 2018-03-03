@@ -1,6 +1,5 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Ability.Enum;
-using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
 using Assets.Model.Event.Combat;
 using System.Collections.Generic;

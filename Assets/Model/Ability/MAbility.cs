@@ -2,7 +2,6 @@
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
-using Assets.Model.Character;
 using Assets.Model.Combat.Hit;
 using System.Collections.Generic;
 
@@ -37,12 +36,14 @@ namespace Assets.Model.Ability
         public List<CTile> GetTargetedTiles(AbilityArgs arg)
         {
             var list = new List<CTile>();
-            if (this.isSelfCast())
+            if (this.isRingCast())
+                list.AddRange(this._logic.GetRingCastTiles(arg));
+            else if (this.isSelfCast())
                 list.Add(arg.Source.Tile);
             else if (this.isRayCast())
                 list.AddRange(this._logic.GetRaycastTiles(arg));
             else
-                list.AddRange(this._logic.GetAoETiles(arg, arg.AoE));
+                list.AddRange(this._logic.GetPotentialTargets(arg));
             return list;
         }
 
@@ -61,6 +62,14 @@ namespace Assets.Model.Ability
         public bool isRayCast()
         {
             if (this.Data.CastType == ECastType.Raycast)
+                return true;
+            else
+                return false;
+        }
+
+        public bool isRingCast()
+        {
+            if (this.Data.CastType == ECastType.Ringcast)
                 return true;
             else
                 return false;
