@@ -2,55 +2,55 @@
 <SubParties>
   <Culture name="Orcish">    
     <SubParty Name ="Archers">
-      <Character>15,Ween Blaster,Three</Character>
-      <Character>17,Ween Tamer,Three</Character>
-      <Character>19,Weenbower,Three</Character>
-      <Character>21,Weenslinger,Three</Character>
-      <Character>26,Dire Weenslinger,Three</Character>
+      <Character>100,Ween Blaster,Three</Character>
+      <Character>140,Ween Tamer,Three</Character>
+      <Character>190,Weenbower,Three</Character>
+      <Character>250,Weenslinger,Three</Character>
+      <Character>320,Dire Weenslinger,Three</Character>
     </SubParty>
     <SubParty Name ="Bards">
-      <Character>12,Orc Battlesinger,Three</Character>
-      <Character>14,Orc Warsinger,Three</Character>
-      <Character>19,Orc Rhapsodist,Three</Character>
-      <Character>26,Orc Poet,Three</Character>
+      <Character>110,Orc Battlesinger,Three</Character>
+      <Character>180,Orc Warsinger,Three</Character>
+      <Character>220,Orc Rhapsodist,Three</Character>
+      <Character>350,Orc Poet,Three</Character>
     </SubParty>
     <SubParty Name ="Berserkers">
-      <Character>11,Wimpy Orc Berserker,One</Character>
-      <Character>14,Orc Berserker,One</Character>
-      <Character>18,Orc Fury,One</Character>
-      <Character>24,Orc Rampager,One</Character>
+      <Character>105,Wimpy Orc Berserker,One</Character>
+      <Character>155,Orc Berserker,One</Character>
+      <Character>200,Orc Fury,One</Character>
+      <Character>280,Orc Rampager,One</Character>
     </SubParty>
     <SubParty Name ="Commanders">
-      <Character>30,Orc Khan,Two</Character>
-      <Character>45,Ween Lord,Two</Character>
+      <Character>300,Orc Khan,Two</Character>
+      <Character>500,Ween Lord,Two</Character>
     </SubParty>
     <SubParty Name ="Heavy Infantry">
-      <Character>9,Wimpy Armer Boy,One</Character>
-      <Character>14,Armer Boy,One</Character>
-      <Character>17,Stout Armer Boy,One</Character>
-      <Character>21,Armer Wall,One</Character>
+      <Character>90,Wimpy Armer Boy,One</Character>
+      <Character>140,Armer Boy,One</Character>
+      <Character>180,Stout Armer Boy,One</Character>
+      <Character>220,Armer Wall,One</Character>
     </SubParty>
     <SubParty Name ="Militia">
       <Character>7,Orc Scavenger,One</Character>
     </SubParty>
     <SubParty Name ="Shock Calvary">
-      <Character>15,Ween Rider,Two</Character>
-      <Character>18,War Ween Rider,Two</Character>
-      <Character>26,Direween Rider,Two</Character>
+      <Character>150,Ween Rider,Two</Character>
+      <Character>180,War Ween Rider,Two</Character>
+      <Character>280,Direween Rider,Two</Character>
     </SubParty>
     <SubParty Name ="Shock Troops">
-      <Character>14,Shock Troopa,One</Character>
-      <Character>17,Veteran Shock Troopa,One</Character>
-      <Character>21,Elite Shock Troopa,One</Character>
+      <Character>140,Shock Troopa,One</Character>
+      <Character>170,Veteran Shock Troopa,One</Character>
+      <Character>220,Elite Shock Troopa,One</Character>
     </SubParty>
     <SubParty Name ="War Weens">
-      <Character>8,Ween,One</Character>
-      <Character>18,Dire_Ween,One</Character>
-      <Character>35,Ween_Dragon,One</Character>
+      <Character>80,Ween,One</Character>
+      <Character>180,Dire_Ween,One</Character>
+      <Character>400,Ween_Dragon,One</Character>
     </SubParty>
     <SubParty Name ="Wereweens">
-      <Character>15,Orc Wereween,One</Character>
-      <Character>24,Greater Orc Wereween,One</Character>
+      <Character>150,Orc Wereween,One</Character>
+      <Character>240,Greater Orc Wereween,One</Character>
     </SubParty>
   </Culture>
 </SubParties>

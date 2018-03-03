@@ -2,59 +2,59 @@
 <SubParties>
   <Culture name="Jomonese">
     <SubParty Name ="Calvary">
-      <Character>15,Katana Calvary,Two</Character>
-      <Character>22,Elite Katana Calvary,Two</Character>
-      <Character>25,Katana Calvary Kensai,Two</Character>
+      <Character>150,Katana Calvary,Two</Character>
+      <Character>220,Elite Katana Calvary,Two</Character>
+      <Character>250,Katana Calvary Kensai,Two</Character>
     </SubParty>
     <SubParty Name ="Commanders">
-      <Character>25,Katana Kensai,Two</Character>
-      <Character>25,Katana Calvary Kensai,Two</Character>
-      <Character>25,Naginata Kensai,Two</Character>
-      <Character>28,Ninja Kesnai,Two</Character>
-      <Character>25,Nodachi Kensai,Two</Character>
-      <Character>25,Yari Kensai,Two</Character>
-      <Character>25,Yumi Kensai,Three</Character>
+      <Character>250,Katana Kensai,Two</Character>
+      <Character>250,Katana Calvary Kensai,Two</Character>
+      <Character>250,Naginata Kensai,Two</Character>
+      <Character>280,Ninja Kesnai,Two</Character>
+      <Character>250,Nodachi Kensai,Two</Character>
+      <Character>250,Yari Kensai,Two</Character>
+      <Character>250,Yumi Kensai,Three</Character>
     </SubParty>
     <SubParty Name ="Heavy Spearmen">
-      <Character>16,Yari Samurai,One</Character>
-      <Character>20,Elite Yari Samurai,One</Character>
-      <Character>25,Yari Kensai,One</Character>
+      <Character>160,Yari Samurai,One</Character>
+      <Character>200,Elite Yari Samurai,One</Character>
+      <Character>250,Yari Kensai,One</Character>
     </SubParty>
     <SubParty Name ="Heavy Archers">
-      <Character>16,Yumi Samurai,Three</Character>
-      <Character>20,Elite Yumi Samurai,Three</Character>
-      <Character>25,Yumi Kensai,Three</Character>
+      <Character>160,Yumi Samurai,Three</Character>
+      <Character>200,Elite Yumi Samurai,Three</Character>
+      <Character>250,Yumi Kensai,Three</Character>
     </SubParty>
     <SubParty Name ="Light Archers">
-      <Character>6,Yumi Ashigaru,Three</Character>
-      <Character>8,Veteran Yumi Ashigaru,Three</Character>
-      <Character>10,Grizzled Yumi Ashigaru,Three</Character>
+      <Character>60,Yumi Ashigaru,Three</Character>
+      <Character>80,Veteran Yumi Ashigaru,Three</Character>
+      <Character>100,Grizzled Yumi Ashigaru,Three</Character>
     </SubParty>
     <SubParty Name ="Light Spearmen">
-      <Character>6,Yari Ashigaru,One</Character>
-      <Character>8,Veteran Yari Ashigaru,One</Character>
-      <Character>10,Grizzled Yari Ashigaru,One</Character>
+      <Character>60,Yari Ashigaru,One</Character>
+      <Character>80,Veteran Yari Ashigaru,One</Character>
+      <Character>100,Grizzled Yari Ashigaru,One</Character>
     </SubParty>
     <SubParty Name ="Ninjas">
-      <Character>13,Ninja Trainee,Two</Character>
-      <Character>18,Ninja,Two</Character>
-      <Character>24,Elite Ninja,Two</Character>
-      <Character>28,Ninja Kensai,Two</Character>
+      <Character>130,Ninja Trainee,Two</Character>
+      <Character>180,Ninja,Two</Character>
+      <Character>240,Elite Ninja,Two</Character>
+      <Character>280,Ninja Kensai,Two</Character>
     </SubParty>
     <SubParty Name ="Pikemen">
-      <Character>16,Naginata Samurai,Two</Character>
-      <Character>20,Elite Naginata Samurai,Two</Character>
-      <Character>25,Naginata Kensai,Two</Character>
+      <Character>160,Naginata Samurai,Two</Character>
+      <Character>200,Elite Naginata Samurai,Two</Character>
+      <Character>250,Naginata Kensai,Two</Character>
     </SubParty>
     <SubParty Name ="Spell Kappas">
-      <Character>15,Horrorpin,Three</Character>
-      <Character>18,Terrorpin,Three</Character>
-      <Character>21,Tortugaia,Three</Character>
+      <Character>150,Horrorpin,Three</Character>
+      <Character>180,Terrorpin,Three</Character>
+      <Character>210,Tortugaia,Three</Character>
     </SubParty>
     <SubParty Name ="War Kappas">
-      <Character>11,Armoise,One</Character>
-      <Character>14,Tortard,Two</Character>
-      <Character>33,Dreadnot,Two</Character>
+      <Character>110,Armoise,One</Character>
+      <Character>140,Tortard,Two</Character>
+      <Character>330,Dreadnot,Two</Character>
     </SubParty>
   </Culture>
 </SubParties>

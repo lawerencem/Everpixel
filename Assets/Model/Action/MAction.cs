@@ -113,8 +113,9 @@ namespace Assets.Model.Action
                 if (!hit.Done)
                     done = false;
             }
-            if (done)
+            if (done && !this._completed)
             {
+                this._completed = true;
                 GUIManager.Instance.SetGUILocked(false);
                 GUIManager.Instance.SetInteractionLocked(false);
                 this.ProcessHitsData();

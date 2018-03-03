@@ -50,11 +50,11 @@ namespace Assets.Controller.Managers
             var rParty = new PartyBuildParams();
 
             lParty.Culture = ECulture.Orcish;
-            lParty.Difficulty = 220;
+            lParty.Difficulty = 1000;
             lParty.Name = "Battle Squad";
 
             rParty.Culture = ECulture.Jomonese;
-            rParty.Difficulty = 220;
+            rParty.Difficulty = 1000;
             rParty.Name = "Raiding Party";
 
             initInfo.LParties.Add(lParty);

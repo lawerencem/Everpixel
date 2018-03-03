@@ -43,7 +43,7 @@ namespace Assets.Model.Ability
             else if (this.isRayCast())
                 list.AddRange(this._logic.GetRaycastTiles(arg));
             else
-                list.AddRange(this._logic.GetPotentialTargets(arg));
+                list.AddRange(this._logic.GetAoETiles(arg, arg.AoE));
             return list;
         }
 
