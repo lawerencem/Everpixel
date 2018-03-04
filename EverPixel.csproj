@@ -701,6 +701,7 @@
     <Compile Include="Assets\View\Fatality\Weapon\Ability\BiteFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Ability\ChopFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Ability\CrushFatality.cs" />
+    <Compile Include="Assets\View\Fatality\Weapon\Ability\FireFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Ability\SlashFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Specific\SlimeCrushFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Specific\WeenbowFatality.cs" />
@@ -721,6 +722,7 @@
     <Compile Include="Assets\View\Script\FX\SBulletThenEmbed.cs" />
     <Compile Include="Assets\View\Script\FX\SDisplayShapeshift.cs" />
     <Compile Include="Assets\View\Script\FX\SFightFatalityExplosionMove.cs" />
+    <Compile Include="Assets\View\Script\FX\SFireFatality.cs" />
     <Compile Include="Assets\View\Script\FX\SFlinch.cs" />
     <Compile Include="Assets\View\Script\GUI\SAbilityBtn.cs" />
     <Compile Include="Assets\View\Script\GUI\SEndTurnBtn.cs" />

@@ -17,6 +17,10 @@
         // Fighting Fatality
         public static readonly float FIGHTING_SPEED = 3f;
 
+        // Fire Fatality
+        public static readonly float FIRE_INTERVAL = 0.1f;
+        public static readonly float FIRE_SPEED = 8f;
+
         // Slash Fatality
         public static readonly float SLASH_HEAD_OFFSET = 0.5f;
         public static readonly float SLASH_RAYCAST_SPEED = 1.8f;

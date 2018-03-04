@@ -7,6 +7,7 @@
         Chop,
         Crush,
         Fighting,
+        Fire,
         Pierce,
         Slash,
         Slime_Crush,
