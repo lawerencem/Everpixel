@@ -19,6 +19,7 @@ namespace Assets.Data.Equipment.XML
             this._paths.Add("Assets/Data/Equipment/XML/Weapon/Axe.xml");
             this._paths.Add("Assets/Data/Equipment/XML/Weapon/Flail.xml");
             this._paths.Add("Assets/Data/Equipment/XML/Weapon/Hammer.xml");
+            this._paths.Add("Assets/Data/Equipment/XML/Weapon/HeavyCrossbow.xml");
             this._paths.Add("Assets/Data/Equipment/XML/Weapon/LargeShield.xml");
             this._paths.Add("Assets/Data/Equipment/XML/Weapon/LightCrossbow.xml");
             this._paths.Add("Assets/Data/Equipment/XML/Weapon/LongBow.xml");

@@ -1,6 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Armors>
   <EArmorType name = "Light_Helm">
+    <Armor name="Cryomancer Hood">
+      <Tier>Five</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>1.0</Damage_Reduction>
+      <Description>
+        For those who want to be cool.
+      </Description>
+      <Dodge_Mod>1.0</Dodge_Mod>
+      <Durability>2</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>7</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>20</Value>
+    </Armor>
+    <Armor name="Cryomancer Hood">
+      <Tier>Four</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>1.0</Damage_Reduction>
+      <Description>
+        For those who want to be cool.
+      </Description>
+      <Dodge_Mod>1.0</Dodge_Mod>
+      <Durability>3</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>22</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>35</Value>
+    </Armor>
+    <Armor name="Cryomancer Hood">
+      <Tier>Three</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>1.0</Damage_Reduction>
+      <Description>
+        For those who want to be cool.
+      </Description>
+      <Dodge_Mod>1.0</Dodge_Mod>
+      <Durability>5</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>37</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>75</Value>
+    </Armor>
+    <Armor name="Cryomancer Hood">
+      <Tier>Two</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>1.0</Damage_Reduction>
+      <Description>
+        For those who want to be cool.
+      </Description>
+      <Dodge_Mod>1.0</Dodge_Mod>
+      <Durability>10</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>52</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>150</Value>
+    </Armor>
     <Armor name="Dino Headdress">
       <Tier>Five</Tier>
       <AP_Mod>1</AP_Mod>
@@ -144,6 +216,78 @@
       <Sprites>49</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>350</Value>
+    </Armor>
+    <Armor name="Necromancer Hood">
+      <Tier>Five</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>1.0</Damage_Reduction>
+      <Description>
+        A necromancer's hood.
+      </Description>
+      <Dodge_Mod>1.0</Dodge_Mod>
+      <Durability>2</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>6</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>20</Value>
+    </Armor>
+    <Armor name="Necromancer Hood">
+      <Tier>Four</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>1.0</Damage_Reduction>
+      <Description>
+        A necromancer's hood.
+      </Description>
+      <Dodge_Mod>1.0</Dodge_Mod>
+      <Durability>3</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>21</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>35</Value>
+    </Armor>
+    <Armor name="Necromancer Hood">
+      <Tier>Three</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>1.0</Damage_Reduction>
+      <Description>
+        A necromancer's hood.
+      </Description>
+      <Dodge_Mod>1.0</Dodge_Mod>
+      <Durability>5</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>36</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>75</Value>
+    </Armor>
+    <Armor name="Necromancer Hood">
+      <Tier>Two</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>0</Flat_Damage_Ignore>
+      <Damage_Reduction>1.0</Damage_Reduction>
+      <Description>
+        A necromancer's hood.
+      </Description>
+      <Dodge_Mod>1.0</Dodge_Mod>
+      <Durability>10</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>51</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>150</Value>
     </Armor>
     <Armor name="Ninja Hood">
       <Tier>Five</Tier>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Weapons>
+  <EWeaponSkill name="Heavy_Crossbow">
+    <Weapon name="Heavy Crossbow">
+      <Tier>Five</Tier>
+      <Accuracy_Mod>1.1</Accuracy_Mod>
+      <AP_Mod>1.5</AP_Mod>
+      <Armor_Ignore>0.96</Armor_Ignore>
+      <Armor_Pierce>0.35</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Custom_Bullet>True</Custom_Bullet>
+      <Damage>18</Damage>
+      <Description>
+        A crossbow.  Not fancy, but it's able to punch through armor.
+      </Description>
+      <Embed>True</Embed>
+      <Fatigue_Mod>1.40</Fatigue_Mod>
+      <Initiative_Mod>0.45</Initiative_Mod>
+      <Max_Durability>15</Max_Durability>
+      <Parry_Mod>0.05</Parry_Mod>
+      <Range_Mod>-1</Range_Mod>
+      <Shield_Damage_Percent>0</Shield_Damage_Percent>
+      <Sprite_FX_Path>Arrow</Sprite_FX_Path>
+      <Sprites>0</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>350</Value>
+      <EAbility>Fire</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+    <Weapon name="Heavy Crossbow">
+      <Tier>Four</Tier>
+      <Accuracy_Mod>0.94</Accuracy_Mod>
+      <AP_Mod>1.5</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>0.33</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Custom_Bullet>True</Custom_Bullet>
+      <Damage>22</Damage>
+      <Description>
+        A crossbow.  Not fancy, but it's able to punch through armor.
+      </Description>
+      <Embed>True</Embed>
+      <Fatigue_Mod>1.40</Fatigue_Mod>
+      <Initiative_Mod>0.45</Initiative_Mod>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>0.05</Parry_Mod>
+      <Range_Mod>-1</Range_Mod>
+      <Shield_Damage_Percent>0</Shield_Damage_Percent>
+      <Sprite_FX_Path>Arrow</Sprite_FX_Path>
+      <Sprites>1</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>550</Value>
+      <EAbility>Fire</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+    <Weapon name="Heavy Crossbow">
+      <Tier>Three</Tier>
+      <Accuracy_Mod>1.15</Accuracy_Mod>
+      <AP_Mod>1.5</AP_Mod>
+      <Armor_Ignore>0.92</Armor_Ignore>
+      <Armor_Pierce>0.31</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Custom_Bullet>True</Custom_Bullet>
+      <Damage>27</Damage>
+      <Description>
+        A crossbow.  Not fancy, but it's able to punch through armor.
+      </Description>
+      <Embed>True</Embed>
+      <Fatigue_Mod>1.40</Fatigue_Mod>
+      <Initiative_Mod>0.45</Initiative_Mod>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>0.05</Parry_Mod>
+      <Range_Mod>-1</Range_Mod>
+      <Shield_Damage_Percent>0</Shield_Damage_Percent>
+      <Sprite_FX_Path>Arrow</Sprite_FX_Path>
+      <Sprites>2</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>800</Value>
+      <EAbility>Fire</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+    <Weapon name="Heavy Crossbow">
+      <Tier>Two</Tier>
+      <Accuracy_Mod>1.15</Accuracy_Mod>
+      <AP_Mod>1.5</AP_Mod>
+      <Armor_Ignore>0.90</Armor_Ignore>
+      <Armor_Pierce>0.27</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Custom_Bullet>True</Custom_Bullet>
+      <Damage>32</Damage>
+      <Description>
+        A crossbow.  Not fancy, but it's able to punch through armor.
+      </Description>
+      <Embed>True</Embed>
+      <Fatigue_Mod>1.40</Fatigue_Mod>
+      <Initiative_Mod>0.45</Initiative_Mod>
+      <Max_Durability>20</Max_Durability>
+      <Parry_Mod>0.05</Parry_Mod>
+      <Range_Mod>-1</Range_Mod>
+      <Shield_Damage_Percent>0</Shield_Damage_Percent>
+      <Sprite_FX_Path>Arrow</Sprite_FX_Path>
+      <Sprites>3</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>1100</Value>
+      <EAbility>Fire</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Ranged</EWeaponUse>
+    </Weapon>
+  </EWeaponSkill>
+</Weapons>

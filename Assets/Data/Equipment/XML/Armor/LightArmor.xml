@@ -73,6 +73,78 @@
       <Stamina_Mod>1</Stamina_Mod>
       <Value>1000</Value>
     </Armor>
+    <Armor name="Cryomancer Robes">
+      <Tier>Five</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>1</Flat_Damage_Ignore>
+      <Damage_Reduction>0.99</Damage_Reduction>
+      <Description>
+        Frosty!
+      </Description>
+      <Dodge_Mod>1</Dodge_Mod>
+      <Durability>5</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>9</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>50</Value>
+    </Armor>
+    <Armor name="Cryomancer Robes">
+      <Tier>Four</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>1</Flat_Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        Frosty!
+      </Description>
+      <Dodge_Mod>1</Dodge_Mod>
+      <Durability>8</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>24</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>125</Value>
+    </Armor>
+    <Armor name="Cryomancer Robes">
+      <Tier>Three</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>1</Flat_Damage_Ignore>
+      <Damage_Reduction>0.98</Damage_Reduction>
+      <Description>
+        Frosty!
+      </Description>
+      <Dodge_Mod>1</Dodge_Mod>
+      <Durability>12</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>39</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>200</Value>
+    </Armor>
+    <Armor name="Cryomancer Robes">
+      <Tier>Two</Tier>
+      <AP_Mod>1</AP_Mod>
+      <Block_Mod>1</Block_Mod>
+      <Flat_Damage_Ignore>1</Flat_Damage_Ignore>
+      <Damage_Reduction>0.97</Damage_Reduction>
+      <Description>
+        Frosty!
+      </Description>
+      <Dodge_Mod>1</Dodge_Mod>
+      <Durability>15</Durability>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Parry_Mod>1</Parry_Mod>
+      <Sprites>54</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>300</Value>
+    </Armor>
     <Armor name="Dino Regalia">
       <Tier>Five</Tier>
       <AP_Mod>1</AP_Mod>
@@ -144,78 +216,6 @@
       <Sprites>35</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>250</Value>
-    </Armor>
-    <Armor name="Cryomancer Robes">
-      <Tier>Five</Tier>
-      <AP_Mod>1</AP_Mod>
-      <Block_Mod>1</Block_Mod>
-      <Flat_Damage_Ignore>1</Flat_Damage_Ignore>
-      <Damage_Reduction>0.99</Damage_Reduction>
-      <Description>
-        A stereotypical robe worn by cryomancers.
-      </Description>
-      <Dodge_Mod>1</Dodge_Mod>
-      <Durability>5</Durability>
-      <Fatigue_Mod>1</Fatigue_Mod>
-      <Initiative_Mod>1</Initiative_Mod>
-      <Parry_Mod>1</Parry_Mod>
-      <Sprites>9</Sprites>
-      <Stamina_Mod>1</Stamina_Mod>
-      <Value>50</Value>
-    </Armor>
-    <Armor name="Cryomancer Robes">
-      <Tier>Four</Tier>
-      <AP_Mod>1</AP_Mod>
-      <Block_Mod>1</Block_Mod>
-      <Flat_Damage_Ignore>1</Flat_Damage_Ignore>
-      <Damage_Reduction>0.98</Damage_Reduction>
-      <Description>
-        A stereotypical robe worn by cryomancers.
-      </Description>
-      <Dodge_Mod>1</Dodge_Mod>
-      <Durability>8</Durability>
-      <Fatigue_Mod>1</Fatigue_Mod>
-      <Initiative_Mod>1</Initiative_Mod>
-      <Parry_Mod>1</Parry_Mod>
-      <Sprites>24</Sprites>
-      <Stamina_Mod>1</Stamina_Mod>
-      <Value>125</Value>
-    </Armor>
-    <Armor name="Cryomancer Robes">
-      <Tier>Three</Tier>
-      <AP_Mod>1</AP_Mod>
-      <Block_Mod>1</Block_Mod>
-      <Flat_Damage_Ignore>1</Flat_Damage_Ignore>
-      <Damage_Reduction>0.98</Damage_Reduction>
-      <Description>
-        A stereotypical robe worn by cryomancers.
-      </Description>
-      <Dodge_Mod>1</Dodge_Mod>
-      <Durability>12</Durability>
-      <Fatigue_Mod>1</Fatigue_Mod>
-      <Initiative_Mod>1</Initiative_Mod>
-      <Parry_Mod>1</Parry_Mod>
-      <Sprites>39</Sprites>
-      <Stamina_Mod>1</Stamina_Mod>
-      <Value>200</Value>
-    </Armor>
-    <Armor name="Cryomancer Robes">
-      <Tier>Two</Tier>
-      <AP_Mod>1</AP_Mod>
-      <Block_Mod>1</Block_Mod>
-      <Flat_Damage_Ignore>1</Flat_Damage_Ignore>
-      <Damage_Reduction>0.98</Damage_Reduction>
-      <Description>
-        A stereotypical robe worn by cryomancers.
-      </Description>
-      <Dodge_Mod>1</Dodge_Mod>
-      <Durability>12</Durability>
-      <Fatigue_Mod>1</Fatigue_Mod>
-      <Initiative_Mod>1</Initiative_Mod>
-      <Parry_Mod>1</Parry_Mod>
-      <Sprites>54</Sprites>
-      <Stamina_Mod>1</Stamina_Mod>
-      <Value>200</Value>
     </Armor>
     <Armor name="Mushroom Hauberk">
       <Tier>Five</Tier>

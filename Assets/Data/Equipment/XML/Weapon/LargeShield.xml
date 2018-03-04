@@ -1,6 +1,82 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Weapons>
   <EWeaponSkill name ="Large_Shield">
+    <Weapon name="Pavise">
+      <Tier>Five</Tier>
+      <AP_Mod>1.35</AP_Mod>
+      <Description>
+        A huge shield that isn't practical for hand-to-hand combat.  It is good, however, at blocking 
+        missile fire.
+      </Description>
+      <Fatigue_Mod>1.35</Fatigue_Mod>
+      <Initiative_Mod>0.70</Initiative_Mod>
+      <Max_Durability>20</Max_Durability>
+      <Melee_Block_Chance>1.15</Melee_Block_Chance>
+      <Parry_Mod>0.30</Parry_Mod>
+      <Ranged_Block_Chance>1.55</Ranged_Block_Chance>
+      <Sprites>2</Sprites>
+      <Stamina_Mod>0.84</Stamina_Mod>
+      <Value>150</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Pavise">
+      <Tier>Four</Tier>
+      <AP_Mod>1.35</AP_Mod>
+      <Description>
+        A huge shield that isn't practical for hand-to-hand combat.  It is good, however, at blocking
+        missile fire.
+      </Description>
+      <Fatigue_Mod>1.34</Fatigue_Mod>
+      <Initiative_Mod>0.70</Initiative_Mod>
+      <Max_Durability>25</Max_Durability>
+      <Melee_Block_Chance>1.15</Melee_Block_Chance>
+      <Parry_Mod>0.31</Parry_Mod>
+      <Ranged_Block_Chance>1.57</Ranged_Block_Chance>
+      <Sprites>17</Sprites>
+      <Stamina_Mod>0.85</Stamina_Mod>
+      <Value>250</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Pavise">
+      <Tier>Three</Tier>
+      <AP_Mod>1.35</AP_Mod>
+      <Description>
+        A huge shield that isn't practical for hand-to-hand combat.  It is good, however, at blocking
+        missile fire.
+      </Description>
+      <Fatigue_Mod>1.33</Fatigue_Mod>
+      <Initiative_Mod>0.70</Initiative_Mod>
+      <Max_Durability>32</Max_Durability>
+      <Melee_Block_Chance>1.15</Melee_Block_Chance>
+      <Parry_Mod>0.32</Parry_Mod>
+      <Ranged_Block_Chance>1.58</Ranged_Block_Chance>
+      <Sprites>32</Sprites>
+      <Stamina_Mod>0.85</Stamina_Mod>
+      <Value>450</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
+    <Weapon name="Pavise">
+      <Tier>Two</Tier>
+      <AP_Mod>1.35</AP_Mod>
+      <Description>
+        A huge shield that isn't practical for hand-to-hand combat.  It is good, however, at blocking
+        missile fire.
+      </Description>
+      <Fatigue_Mod>1.32</Fatigue_Mod>
+      <Initiative_Mod>0.70</Initiative_Mod>
+      <Max_Durability>35</Max_Durability>
+      <Melee_Block_Chance>1.15</Melee_Block_Chance>
+      <Parry_Mod>0.33</Parry_Mod>
+      <Ranged_Block_Chance>1.60</Ranged_Block_Chance>
+      <Sprites>47</Sprites>
+      <Stamina_Mod>0.85</Stamina_Mod>
+      <Value>550</Value>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Shield</EWeaponUse>
+    </Weapon>
     <Weapon name="Scutum">
       <Tier>Four</Tier>
       <AP_Mod>0.79</AP_Mod>

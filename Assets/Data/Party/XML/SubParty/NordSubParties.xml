@@ -1,33 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <SubParties>
   <Culture name="Norse">
-    <SubParty Name ="Commanders">
-      <Character>6,Death Knight Trainee,Two</Character>
-      <Character>9,Death Knight Acolyte,Two</Character>
-      <Character>15,Death Knight,Two</Character>
-      <Character>22,Death Knight Lord,Two</Character>
+    <SubParty Name ="Archers">
+      <Character>100,Pavise Crossbowmen Trainee,Two</Character>
+      <Character>140,Pavise Crossbowmen,Two</Character>
+      <Character>180,Veteran Pavise Crossbowmen,Two</Character>
+      <Character>240,Elite Pavise Crossbowmen,Two</Character>
+    </SubParty>
+    <SubParty Name ="Death Knights">
+      <Character>160,Death Knight Trainee,Two</Character>
+      <Character>220,Death Knight Acolyte,Two</Character>
+      <Character>260,Death Knight,Two</Character>
+      <Character>380,Death Knight Lord,Two</Character>
+    </SubParty>
+    <SubParty Name ="Cryomancers">
+      <Character>130,Cryomancer Trainee,Three</Character>
+      <Character>180,Cryomancer,Three</Character>
+      <Character>250,Master Cryomancer,Three</Character>
+      <Character>400,Cryomancer Lord,Three</Character>
     </SubParty>
     <SubParty Name ="Light Calvary">
-      <Character>14,Snow Ween Rider,Two</Character>
+      <Character>140,Snow Ween Rider,Two</Character>
     </SubParty>
     <SubParty Name ="Monsters">
-      <Character>10,Gwin,One</Character>
-      <Character>15,Wursa,One</Character>
-      <Character>18,Ice_Golem,One</Character>
+      <Character>100,Gwin,One</Character>
+      <Character>150,Wursa,One</Character>
+      <Character>180,Ice_Golem,One</Character>
+    </SubParty>
+    <SubParty Name ="Necromancers">
+      <Character>110,Necromancer Trainee,Three</Character>
+      <Character>220,Necromancer,Three</Character>
+      <Character>310,Master Necromancer,Three</Character>
+      <Character>450,Necromancer Lord,Three</Character>
     </SubParty>
     <SubParty Name ="Pikemen">
-      <Character>15,Wimpy Longaxer,Two</Character>
-    </SubParty>
-    <SubParty Name ="Shock Troops">
-      <Character>14,Gotland Footman,One</Character>
+      <Character>150,Wimpy Longaxer,Two</Character>
     </SubParty>
     <SubParty Name ="Spearmen">
-      <Character>12,Nordic Spearman,One</Character>
-      <Character>16,Nordic Sergeant,One</Character>
+      <Character>120,Nordic Spearman,One</Character>
+      <Character>160,Nordic Sergeant,One</Character>
     </SubParty>
     <SubParty Name ="Vikings">
-      <Character>14,Raider,One</Character>
-      <Character>16,Viking,One</Character>
+      <Character>140,Raider,One</Character>
+      <Character>160,Viking,One</Character>
     </SubParty>
   </Culture>
 </SubParties>
