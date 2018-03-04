@@ -401,8 +401,8 @@
       </Stats>
     </Character>
     <Character name ="Gromp Boss">
-      <Class>Warrior,13</Class>
-      <Class>Berserker,12</Class>
+      <Class>Warrior,15</Class>
+      <Class>Berserker,10</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Goblin</ERace>
       <Mount>Gromp</Mount>

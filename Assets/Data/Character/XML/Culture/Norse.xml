@@ -70,8 +70,8 @@
       </Stats>
     </Character>
     <Character name ="Death Knight Lord">
-      <Class>Death_Knight,11</Class>
-      <Class>Knight,2</Class>
+      <Class>Death_Knight,10</Class>
+      <Class>Knight,3</Class>
       <Class>Mage,1</Class>
       <Class>Necromancer,7</Class>
       <ECharacterType>Humanoid</ECharacterType>

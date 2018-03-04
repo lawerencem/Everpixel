@@ -198,7 +198,7 @@
     </Character>
     <Character name ="Greater Orc Wereween">
       <Class>Warrior,5</Class>
-      <Class>Werween,9</Class>
+      <Class>Wereween,9</Class>
       <Class>Lycanthrope,1</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
@@ -579,7 +579,7 @@
     </Character>
     <Character name ="Orc Wereween">
       <Class>Warrior,3</Class>
-      <Class>Werween,4</Class>
+      <Class>Wereween,4</Class>
       <Class>Lycanthrope,1</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
@@ -817,8 +817,8 @@
       </Stats>
     </Character>
     <Character name ="Ween Lord">
-      <Class>Berserker,18</Class>
-      <Class>Warrior,8</Class>
+      <Class>Berserker,10</Class>
+      <Class>Warrior,16</Class>
       <Abilities>
         <Ability name ="Bulldoze"></Ability>
       </Abilities>
