@@ -28,6 +28,12 @@
     <SecondaryStatsEnum>Power,4</SecondaryStatsEnum>
     <SecondaryStatsEnum>Spell_Duration,8</SecondaryStatsEnum>
   </Class>
+  <Class name="Cryomancer">
+    <EPrimaryStat>Intelligence,4</EPrimaryStat>
+    <EPrimaryStat>Resolve,4</EPrimaryStat>
+    <SecondaryStatsEnum>Morale,2</SecondaryStatsEnum>
+    <SecondaryStatsEnum>Spell_Duration,14</SecondaryStatsEnum>
+  </Class>
   <Class name="Death_Knight">
     <EPrimaryStat>Constitution,6</EPrimaryStat>
     <EPrimaryStat>Resolve,2</EPrimaryStat>

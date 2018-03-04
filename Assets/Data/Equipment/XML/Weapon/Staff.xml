@@ -121,6 +121,198 @@
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
+    <Weapon name="Ice Staff">
+      <Tier>Five</Tier>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>0.95</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>5</Damage>
+      <Description>
+        It's a chunk of ice on a stick.
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>0.75</Initiative_Mod>
+      <Max_Durability>5</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>4</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>50</Value>
+      <EAbility>Crush</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Ice Staff">
+      <Tier>Four</Tier>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>0.95</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>5</Damage>
+      <Description>
+        It's a chunk of ice on a stick.
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>0.75</Initiative_Mod>
+      <Max_Durability>8</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>19</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>50</Value>
+      <EAbility>Crush</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Ice Staff">
+      <Tier>Three</Tier>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>0.95</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>5</Damage>
+      <Description>
+        It's a chunk of ice on a stick.
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>0.75</Initiative_Mod>
+      <Max_Durability>12</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>34</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>50</Value>
+      <EAbility>Crush</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Ice Staff">
+      <Tier>Two</Tier>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>0.95</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>5</Damage>
+      <Description>
+        It's a chunk of ice on a stick.
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>0.75</Initiative_Mod>
+      <Max_Durability>18</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>49</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>50</Value>
+      <EAbility>Crush</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Skull Staff">
+      <Tier>Five</Tier>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>0.95</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>5</Damage>
+      <Description>
+        It's a skull on a stick.
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>0.75</Initiative_Mod>
+      <Max_Durability>5</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>5</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>50</Value>
+      <EAbility>Crush</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Skull Staff">
+      <Tier>Four</Tier>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>0.95</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>5</Damage>
+      <Description>
+        It's a skull on a stick.
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>0.75</Initiative_Mod>
+      <Max_Durability>5</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>20</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>50</Value>
+      <EAbility>Crush</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Skull Staff">
+      <Tier>Three</Tier>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>0.95</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>5</Damage>
+      <Description>
+        It's a skull on a stick.
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>0.75</Initiative_Mod>
+      <Max_Durability>5</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>35</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>50</Value>
+      <EAbility>Crush</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
+    <Weapon name="Skull Staff">
+      <Tier>Two</Tier>
+      <Accuracy_Mod>0.85</Accuracy_Mod>
+      <AP_Mod>0.95</AP_Mod>
+      <Armor_Ignore>1</Armor_Ignore>
+      <Armor_Pierce>1</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>5</Damage>
+      <Description>
+        It's a skull on a stick.
+      </Description>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>0.75</Initiative_Mod>
+      <Max_Durability>5</Max_Durability>
+      <Parry_Mod>1</Parry_Mod>
+      <Range_Mod>0</Range_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>50</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>50</Value>
+      <EAbility>Crush</EAbility>
+      <EWeaponType>Two_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
     <Weapon name="Slime Staff">
       <Tier>Five</Tier>
       <Accuracy_Mod>0.85</Accuracy_Mod>

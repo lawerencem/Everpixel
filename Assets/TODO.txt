@@ -1,34 +1,5 @@
 ﻿TODO
 
-- Add Grey as UI info of durability
-- Add orange as UI info of negative stamina
-- Add blue as UI info of positive stamina
-- Add block math in damage calculator
-- Add concept of deep vs shallow liquid
-
-Sunday
- - Necroweener
- - Fire Fatality (Arrows come from sky)
- - Pavise
- - Arbalest
- - Pavise Arabalester (norse)
-
-- Quick TODO:
-  -- Fix jomonese bug on load
-
-- Add pond / lake
-  -- add ability for landmark to freeze
-  -- thawing out 
-  -- drowning
-
-
-- Combat logic
-	- Bonuses to Hit when surrounding
-	- Height bonuses / penalties
-
-Fix Keynotfound in main gui
-Deco blocking missiles
-
-
-bugs
-   various deco (lizardmen) is still attached on fatalities.
+ -- Finish pavise crossbowmen
+ -- Finish cryomancer/necromancer
+ -- 
