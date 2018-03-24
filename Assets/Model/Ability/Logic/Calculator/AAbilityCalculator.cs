@@ -27,36 +27,42 @@ namespace Assets.Model.Ability.Logic.Calculator
         public double GetHeightDeltaMod(MHit hit)
         {
             double mod = 1;
-            var tgt = hit.Data.Target.Current as CChar;
-            double delta = tgt.Tile.Model.GetHeight() - hit.Data.Source.Tile.Model.GetHeight();
-            if (delta > 0)
-                mod += (delta * DELTA_BONUS);
-            else if (delta < 0)
-                mod -= (delta * DELTA_BONUS);
+            if (hit.Data.Ability.Data.CastType == Enum.ECastType.Melee)
+            {
+                var tgt = hit.Data.Target.Current as CChar;
+                double delta = tgt.Tile.Model.GetHeight() - hit.Data.Source.Tile.Model.GetHeight();
+                if (delta > 0)
+                    mod += (delta * DELTA_BONUS);
+                else if (delta < 0)
+                    mod -= (delta * DELTA_BONUS);
+            }
             return mod;
         }
 
         public double GetSurroundedDeltaMod(MHit hit)
         {
             double mod = 1;
-            int count = 0;
-            bool attackerTeam = hit.Data.Source.Proxy.LParty;
-            var tgt = hit.Data.Target.Current as CChar;
-            bool defenderTeam = tgt.Proxy.LParty;
-            if (attackerTeam != defenderTeam)
+            if (hit.Data.Ability.Data.CastType == Enum.ECastType.Melee)
             {
-                foreach (var tile in hit.Data.Target.GetAdjacent())
+                int count = 0;
+                bool attackerTeam = hit.Data.Source.Proxy.LParty;
+                var tgt = hit.Data.Target.Current as CChar;
+                bool defenderTeam = tgt.Proxy.LParty;
+                if (attackerTeam != defenderTeam)
                 {
-                    if (tile.Current != null && tile.Current.GetType().Equals(typeof(CChar)))
+                    foreach (var tile in hit.Data.Target.GetAdjacent())
                     {
-                        var tileChar = tile.Current as CChar;
-                        if (tileChar.Proxy.LParty == attackerTeam)
-                            count++;
+                        if (tile.Current != null && tile.Current.GetType().Equals(typeof(CChar)))
+                        {
+                            var tileChar = tile.Current as CChar;
+                            if (tileChar.Proxy.LParty == attackerTeam)
+                                count++;
+                        }
                     }
                 }
+                if (count > 1)
+                    mod -= (count * DELTA_BONUS);
             }
-            if (count > 1)
-                mod -= (count * DELTA_BONUS);
             return mod;
         }
     }
