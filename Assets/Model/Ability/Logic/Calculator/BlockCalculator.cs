@@ -15,7 +15,8 @@ namespace Assets.Model.Ability.Logic.Calculator
             var tgt = hit.Data.Target.Current as CChar;
             var block = tgt.Proxy.GetStat(ESecondaryStat.Block);
             var blockChance = LogicParams.BASE_BLOCK_CHANCE;
-
+            blockChance *= this.GetHeightDeltaMod(hit);
+            blockChance *= this.GetSurroundedDeltaMod(hit);
             acc *= hit.Data.Ability.Data.AccMod;
 
             bool hasShield = false;

@@ -16,6 +16,8 @@ namespace Assets.Model.Ability.Logic.Calculator
             var acc = target.Proxy.GetStat(ESecondaryStat.Melee);
             var dodge = target.Proxy.GetStat(ESecondaryStat.Dodge);
             var dodgeChance = LogicParams.BASE_DODGE_CHANCE / hit.Data.Ability.Data.AccMod;
+            dodgeChance *= this.GetHeightDeltaMod(hit);
+            dodgeChance *= this.GetSurroundedDeltaMod(hit);
 
             if (target.Proxy.GetArmor() != null)
                 dodgeChance *= target.Proxy.GetArmor().GetStat(EArmorStat.Dodge_Mod);

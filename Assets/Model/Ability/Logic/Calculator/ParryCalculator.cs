@@ -14,6 +14,8 @@ namespace Assets.Model.Ability.Logic.Calculator
             var acc = hit.Data.Source.Proxy.GetStat(ESecondaryStat.Melee);
             var parry = hit.Data.Source.Proxy.GetStat(ESecondaryStat.Parry);
             var parryChance = LogicParams.BASE_PARRY_CHANCE / hit.Data.Ability.Data.AccMod;
+            parryChance *= this.GetHeightDeltaMod(hit);
+            parryChance *= this.GetSurroundedDeltaMod(hit);
 
             var tgt = hit.Data.Target.Current as CChar;
 
