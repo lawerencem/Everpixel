@@ -20,6 +20,7 @@
         PerformAbility,
         Shapeshift,
         Shield,
+        StaminaMod,
         Summon,
         TakingAction,
         TileMove,

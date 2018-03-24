@@ -9,6 +9,7 @@ namespace Assets.Model.Map.Tile
         public int Cost { get; set; }
         public bool Liquid { get; set; }
         public List<int> Sprites { get; set; }
+        public int StaminaCost { get; set; }
         public ETile Type { get { return this._type; } }
 
         public TileParams(ETile type)

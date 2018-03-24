@@ -2,18 +2,22 @@
 <Tiles>
   <Tile name="Grass">
     <Cost>2</Cost>
+    <StamCost>3</StamCost>
     <Sprites>0,1,2,3,4,5,6,7</Sprites>
   </Tile>
   <Tile name="Ice">
     <Cost>3</Cost>
+    <StamCost>5</StamCost>
     <Sprites>0,1,2,3,4,5,6,7</Sprites>
   </Tile>
   <Tile name="Snow">
     <Cost>4</Cost>
+    <StamCost>7</StamCost>
     <Sprites>0,1,2,3,4,5,6,7</Sprites>
   </Tile>
   <Tile name="Water">
     <Cost>6</Cost>
+    <StamCost>10</StamCost>
     <Liquid>True</Liquid>
     <Sprites>0,1,2,3,4,5,6,7</Sprites>
   </Tile>

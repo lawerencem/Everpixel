@@ -28,6 +28,7 @@ namespace Assets.Model.Map.Tile
         private bool _liquid;
         private MMap _map;
         private int _row;
+        private int _staminaCost;
         private ETile _type;
 
         public CTile Controller { get { return this._controller; } }
@@ -61,6 +62,7 @@ namespace Assets.Model.Map.Tile
         public void SetLiquid(bool liquid) { this._liquid = liquid; }
         public void SetMap(MMap m) { this._map = m; }
         public void SetRow(int row) { this._row = row; }
+        public void SetStaminaCost(int cost) { this._cost = cost; }
         public void SetType(ETile type) { this._type = type; }
 
         public MTile GetN() { return this._n; }
@@ -98,6 +100,10 @@ namespace Assets.Model.Map.Tile
                 return int.MaxValue; // Sentinel value
         }
 
+        public int GetStaminaCost()
+        {
+            return this._staminaCost;
+        }
 
         public IHex GetRandomNearbyTile(int probes)
         {

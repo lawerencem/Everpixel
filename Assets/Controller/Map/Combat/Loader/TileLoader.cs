@@ -163,6 +163,7 @@ namespace Assets.Controller.Map.Combat.Loader
                     {
                         tile.Model.SetType(kvp.Key);
                         tile.Model.SetCost(TileTable.Instance.Table[kvp.Key].Cost);
+                        tile.Model.SetStaminaCost(TileTable.Instance.Table[kvp.Key].StaminaCost);
                         if (TileTable.Instance.Table[kvp.Key].Liquid)
                             tile.Model.SetLiquid(true);
                         break;

@@ -71,13 +71,15 @@ namespace Assets.Model.Event.Combat
             {
                 this._data.Source.SetCurrent(null);
                 var ap = this._data.Char.Proxy.GetStat(ESecondaryStat.AP);
+                var stamina = this._data.Char.Proxy.GetStat(ESecondaryStat.Stamina);
                 var tile = this._data.TargetPath.GetFirstTile() as MTile;
                 this._next = tile.Controller;
-                var cost = this._next.Model.GetCost();
-                if (cost <= ap)
+                var apCost = this._next.Model.GetCost();
+                var stamCost = this._next.Model.GetStaminaCost();
+                if (apCost <= ap && stamCost <= stamina)
                 {
                     var data = new EvTileMoveData();
-                    data.Cost = cost;
+                    data.Cost = apCost;
                     data.Char = this._data.Char;
                     data.Source = this._current;
                     data.Target = this._next;
@@ -104,6 +106,7 @@ namespace Assets.Model.Event.Combat
                     data.Cost = cost;
                     data.Char = this._data.Char;
                     data.Source = this._current;
+                    data.StamCost = this._data.Target.Model.GetStaminaCost();
                     data.Target = this._next;
                     var e = new EvTileMove(data);
                     e.AddCallback(this.TileMoveDone);

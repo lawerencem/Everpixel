@@ -10,6 +10,7 @@ namespace Assets.Model.Event.Combat
         public CChar Char { get; set; }
         public int Cost { get; set; }
         public CTile Source { get; set; }
+        public int StamCost { get; set; }
         public CTile Target { get; set; }
     }
 
@@ -31,13 +32,20 @@ namespace Assets.Model.Event.Combat
 
         private void MoveDone(object o)
         {
-            var data = new EvAPModData();
-            data.Char = this._data.Char;
-            data.IsHeal = false;
-            data.Qty = this._data.Cost;
-            data.ToDisplay = false;
-            var e = new EvAPMod(data);
-            e.TryProcess();
+            var apData = new EvAPModData();
+            apData.Char = this._data.Char;
+            apData.IsHeal = false;
+            apData.Qty = this._data.Cost;
+            apData.ToDisplay = false;
+            var apEvent = new EvAPMod(apData);
+            apEvent.TryProcess();
+            var staminaData = new EvStaminaModData();
+            staminaData.Char = this._data.Char;
+            staminaData.IsHeal = false;
+            staminaData.Qty = this._data.Cost;
+            staminaData.ToDisplay = false;
+            var staminaEvent = new EvStaminaMod(staminaData);
+            staminaEvent.TryProcess();
             if (this._data.Char != null)
                 this._data.Char.SetTile(this._data.Target);
             this._data.Source.ProcessExitTile(this._data.Char);

@@ -521,8 +521,8 @@
     <Compile Include="Assets\Model\Event\Combat\EvNewRound.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvPathMove.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvPerformAbility.cs" />
-    <Compile Include="Assets\Model\Event\Combat\EvShapeshift.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvShield.cs" />
+    <Compile Include="Assets\Model\Event\Combat\EvStaminaMod.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvSummon.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvTakingAction.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvTileMove.cs" />
@@ -744,9 +744,7 @@
     <None Include="Assets\Data\Character\XML\Culture\Bretonnian.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Goblin.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Jomonese.xml" />
-    <None Include="Assets\Data\Character\XML\Culture\Norse.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Character\XML\Culture\Norse.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Orcish.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Roman.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Trollish.xml" />
@@ -758,22 +756,18 @@
     <None Include="Assets\Data\Equipment\XML\Armor\LightHelm.xml" />
     <None Include="Assets\Data\Equipment\XML\Armor\MediumArmor.xml" />
     <None Include="Assets\Data\Equipment\XML\Armor\MediumHelm.xml" />
-    <None Include="Assets\Data\Equipment\XML\Weapon\Axe.xml" />
-    <None Include="Assets\Data\Equipment\XML\Weapon\Flail.xml" />
-    <None Include="Assets\Data\Equipment\XML\Weapon\Hammer.xml" />
-    <None Include="Assets\Data\Equipment\XML\Weapon\HeavyCrossbow.xml">
+    <None Include="Assets\Data\Equipment\XML\Weapon\Axe.xml">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Assets\Data\Equipment\XML\Weapon\Flail.xml" />
+    <None Include="Assets\Data\Equipment\XML\Weapon\Hammer.xml" />
+    <None Include="Assets\Data\Equipment\XML\Weapon\HeavyCrossbow.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\LargeShield.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\LightCrossbow.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\LongBow.xml" />
-    <None Include="Assets\Data\Equipment\XML\Weapon\MediumShield.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Equipment\XML\Weapon\MediumShield.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\Polearm.xml" />
-    <None Include="Assets\Data\Equipment\XML\Weapon\ShortBow.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Equipment\XML\Weapon\ShortBow.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\SmallShield.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\Spear.xml" />
     <None Include="Assets\Data\Equipment\XML\Weapon\Staff.xml" />
@@ -789,9 +783,7 @@
     <None Include="Assets\Data\Party\XML\Party\BretonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\GoblinParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\JomonParties.xml" />
-    <None Include="Assets\Data\Party\XML\Party\NordParties.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Party\XML\Party\NordParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\OrcParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\TrollParties.xml" />
     <None Include="Assets\Data\Party\XML\SubParty\AmazonSubParties.xml" />

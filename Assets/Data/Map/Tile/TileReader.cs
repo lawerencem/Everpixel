@@ -53,6 +53,7 @@ namespace Assets.Data.Map.Landmark.XML
                     case ("Cost"): { this.table.Table[type].Cost = int.Parse(value); } break;
                     case ("Liquid"): { this.table.Table[type].Liquid = bool.Parse(value); } break;
                     case ("Sprites"): { this.HandleSprites(type, value); } break;
+                    case ("StamCost"): { this.table.Table[type].StaminaCost = int.Parse(value); } break;
                 }
             }
         }
