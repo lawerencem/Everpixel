@@ -27,15 +27,12 @@ namespace Assets.Model.Ability.Logic.Calculator
         public double GetHeightDeltaMod(MHit hit)
         {
             double mod = 1;
-            if (hit.Data.Ability.Data.CastType == Enum.ECastType.Melee)
-            {
-                var tgt = hit.Data.Target.Current as CChar;
-                double delta = tgt.Tile.Model.GetHeight() - hit.Data.Source.Tile.Model.GetHeight();
-                if (delta > 0)
-                    mod += (delta * DELTA_BONUS);
-                else if (delta < 0)
-                    mod -= (delta * DELTA_BONUS);
-            }
+            var tgt = hit.Data.Target.Current as CChar;
+            double delta = tgt.Tile.Model.GetHeight() - hit.Data.Source.Tile.Model.GetHeight();
+            if (delta > 0)
+                mod += (delta * DELTA_BONUS);
+            else if (delta < 0)
+                mod -= (delta * DELTA_BONUS);
             return mod;
         }
 
