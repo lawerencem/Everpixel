@@ -46,7 +46,7 @@ namespace Assets.Model.Character
             else
             {
                 int dmg = value;
-                foreach (var shield in this.GetEffects().GetShields())
+                foreach (var shield in this.GetEffectsContainer().GetShields())
                     shield.ProcessShieldDmg(ref dmg);
                 //this.Shields.RemoveAll(x => x.CurHP <= 0); // TODO:
 

@@ -96,12 +96,12 @@ namespace Assets.Model.Character.Builder
             {
                 var ability = AbilityFactory.Instance.CreateNewObject(kvp.Key);
                 ability.Data.Effects.AddRange(kvp.Value);
-                c.GetAbilities().AddAbility(ability);
+                c.GetAbilitiesContainer().AddAbility(ability);
             }
             var wpnAbs = WeaponAbilityFactory.Instance.CreateNewObject(p.WpnAbilities);
             foreach (var v in wpnAbs)
             {
-                c.GetAbilities().AddAbility(v);
+                c.GetAbilitiesContainer().AddAbility(v);
             }
         }
 

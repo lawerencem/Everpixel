@@ -14,6 +14,7 @@ using Assets.Model.Injury;
 using Assets.Model.OTE.HoT;
 using Assets.Model.Party;
 using Assets.Model.Party.Enum;
+using Assets.Model.Shield;
 using System.Collections.Generic;
 
 namespace Assets.Model.Character
@@ -48,7 +49,7 @@ namespace Assets.Model.Character
 
         public void AddHoT(MHoT hot)
         {
-            this._model.GetEffects().AddHoT(hot);
+            this._model.GetEffectsContainer().AddHoT(hot);
         }
 
         public void AddInjury(MInjury i)
@@ -62,9 +63,14 @@ namespace Assets.Model.Character
             this._model.GetPoints().AddValue(s, v);
         }
 
+        public void AddShield(MShield shield)
+        {
+            this._model.GetEffectsContainer().AddShield(shield);
+        }
+
         public List<MAbility> GetActiveAbilities()
         {
-            return this._model.GetAbilities().GetNonWpnAbilities();
+            return this._model.GetAbilitiesContainer().GetNonWpnAbilities();
         }
 
         public CArmor GetArmor()
@@ -79,12 +85,12 @@ namespace Assets.Model.Character
 
         public List<MAbility> GetDefaultAbilities()
         {
-            return this._model.GetAbilities().GetWpnAbilities();
+            return this._model.GetAbilitiesContainer().GetWpnAbilities();
         }
 
         public CharEffects GetEffects()
         {
-            return this._model.GetEffects();
+            return this._model.GetEffectsContainer();
         }    
         
         public FCharacterStatus GetFlags()
