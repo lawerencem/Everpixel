@@ -21,6 +21,11 @@ namespace Assets.Model.Ability.Logic
             return this._aoeLogic.GetAdjacentTiles(c);
         }
 
+        public List<CTile> GetArcCastTiles(AbilityArgs arg)
+        {
+            return this._aoeLogic.GetArcCastTiles(arg);
+        }
+
         public List<CTile> GetAoETiles(AbilityArgs arg, int aoe)
         {
             return this._aoeLogic.GetAoETiles(arg, aoe);

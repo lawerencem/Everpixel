@@ -9,6 +9,63 @@ namespace Assets.Template.Hex
         {
 
         }
+    
+        public List<IHex> GetArcTiles(IHex source, IHex target)
+        {
+            List<IHex> tiles = new List<IHex>();
+            if (source != null && target != null)
+            {
+                if (source.IsTileN(target, 1))
+                {
+                    if (source.GetNE() != null)
+                        tiles.Add(source.GetNE());
+                    if (source.GetNW() != null)
+                        tiles.Add(source.GetNW());
+                    tiles.Add(target);
+                }
+                else if (source.IsTileNE(target, 1))
+                {
+                    if (source.GetN() != null)
+                        tiles.Add(source.GetN());
+                    if (source.GetSE() != null)
+                        tiles.Add(source.GetSE());
+                    tiles.Add(target);
+                }
+                else if (source.IsTileSE(target, 1))
+                {
+                    if (source.GetNE() != null)
+                        tiles.Add(source.GetNE());
+                    if (source.GetS() != null)
+                        tiles.Add(source.GetS());
+                    tiles.Add(target);
+                }
+                else if (source.IsTileS(target, 1))
+                {
+                    if (source.GetSE() != null)
+                        tiles.Add(source.GetNE());
+                    if (source.GetSW() != null)
+                        tiles.Add(source.GetSW());
+                    tiles.Add(target);
+                }
+                else if (source.IsTileSW(target, 1))
+                {
+                    if (source.GetS() != null)
+                        tiles.Add(source.GetS());
+                    if (source.GetNW() != null)
+                        tiles.Add(source.GetNW());
+                    tiles.Add(target);
+                }
+                else if (source.IsTileNW(target, 1))
+                {
+                    if (source.GetSW() != null)
+                        tiles.Add(source.GetSW());
+                    if (source.GetN() != null)
+                        tiles.Add(source.GetN());
+                    tiles.Add(target);
+                }
+            }
+            return tiles;
+        }
 
         public IHex GetRandomNearbyTile(int probes, IHex tile)
         {
@@ -52,29 +109,29 @@ namespace Assets.Template.Hex
             return tiles;
         }
 
-        public List<IHex> GetRaycastTiles(IHex t, int dist)
+        public List<IHex> GetRaycastTiles(IHex source, IHex target, int dist)
         {
             var list = new List<IHex>();
 
-            if (this.IsTileN(t, dist))
-                list = this.GetRayTilesViaDistN(t, dist);
-            else if (this.IsTileNE(t, dist))
-                list = this.GetRayTilesViaDistNE(t, dist);
-            else if (this.IsTileSE(t, dist))
-                list = this.GetRayTilesViaDistSE(t, dist);
-            else if (this.IsTileS(t, dist))
-                list = this.GetRayTilesViaDistS(t, dist);
-            else if (this.IsTileSW(t, dist))
-                list = this.GetRayTilesViaDistSW(t, dist);
-            else if (this.IsTileNW(t, dist))
-                list = this.GetRayTilesViaDistNW(t, dist);
+            if (this.IsTileN(source, target, dist))
+                list = this.GetRayTilesViaDistN(target, dist);
+            else if (this.IsTileNE(source, target, dist))
+                list = this.GetRayTilesViaDistNE(target, dist);
+            else if (this.IsTileSE(source, target, dist))
+                list = this.GetRayTilesViaDistSE(target, dist);
+            else if (this.IsTileS(source, target, dist))
+                list = this.GetRayTilesViaDistS(target, dist);
+            else if (this.IsTileSW(source, target, dist))
+                list = this.GetRayTilesViaDistSW(target, dist);
+            else if (this.IsTileNW(source, target, dist))
+                list = this.GetRayTilesViaDistNW(target, dist);
 
             return list;
         }
 
-        public bool IsTileN(IHex target, int dist)
+        public bool IsTileN(IHex source, IHex target, int dist)
         {
-            var cur = this as IHex;
+            var cur = source;
             for (int i = 0; i < dist; i++)
             {
                 var next = cur.GetN();
@@ -88,9 +145,9 @@ namespace Assets.Template.Hex
             return false;
         }
 
-        public bool IsTileNE(IHex target, int dist)
+        public bool IsTileNE(IHex source, IHex target, int dist)
         {
-            var cur = this as IHex;
+            var cur = source;
             for (int i = 0; i < dist; i++)
             {
                 var next = cur.GetNE();
@@ -104,9 +161,9 @@ namespace Assets.Template.Hex
             return false;
         }
 
-        public bool IsTileSE(IHex target, int dist)
+        public bool IsTileSE(IHex source, IHex target, int dist)
         {
-            var cur = this as IHex;
+            var cur = source;
             for (int i = 0; i < dist; i++)
             {
                 var next = cur.GetSE();
@@ -120,9 +177,9 @@ namespace Assets.Template.Hex
             return false;
         }
 
-        public bool IsTileS(IHex target, int dist)
+        public bool IsTileS(IHex source, IHex target, int dist)
         {
-            var cur = this as IHex;
+            var cur = source;
             for (int i = 0; i < dist; i++)
             {
                 var next = cur.GetS();
@@ -136,9 +193,9 @@ namespace Assets.Template.Hex
             return false;
         }
 
-        public bool IsTileSW(IHex target, int dist)
+        public bool IsTileSW(IHex source, IHex target, int dist)
         {
-            var cur = this as IHex;
+            var cur = source;
             for (int i = 0; i < dist; i++)
             {
                 var next = cur.GetSW();
@@ -152,9 +209,9 @@ namespace Assets.Template.Hex
             return false;
         }
 
-        public bool IsTileNW(IHex target, int dist)
+        public bool IsTileNW(IHex source, IHex target, int dist)
         {
-            var cur = this as IHex;
+            var cur = source;
             for (int i = 0; i < dist; i++)
             {
                 var next = cur.GetNW();
@@ -167,7 +224,6 @@ namespace Assets.Template.Hex
             }
             return false;
         }
-
 
         public List<IHex> GetRayTilesViaDistN(IHex t, int dist)
         {

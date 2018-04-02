@@ -12,11 +12,21 @@ namespace Assets.Model.Ability.Logic
             return c.Tile.GetAdjacent();
         }
 
+        public  List<CTile> GetArcCastTiles(AbilityArgs arg)
+        {
+            var list = new List<CTile>();
+            var tile = arg.Source.Tile.Model;
+            var hexes = tile.GetArcTiles(arg.Target.Model);
+            foreach (var hex in hexes)
+                list.Add(hex.Controller);
+            return list;
+        }
+
         public List<CTile> GetAoETiles(AbilityArgs arg, int aoe)
         {
             var list = new List<CTile>();
-            var t = arg.Target.Model;
-            var hexes = t.GetAoETiles(aoe);
+            var tile = arg.Target.Model;
+            var hexes = tile.GetAoETiles(aoe);
             foreach (var hex in hexes) { list.Add(hex.Controller); }
             return list;
         }

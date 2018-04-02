@@ -32,10 +32,11 @@ namespace Assets.Controller.Manager.GUI
         {
             this._guiComponents = new Dictionary<string, GameObject>();
 
-            //this._abilityModal = new AbilitiesModal();
-            this._hoverModal = new HoverModal();
+            // TODO: Find a better way to do this.
+            var handle = new GameObject();
+            //this._hoverModal = new HoverModal();
+            this._hoverModal = handle.AddComponent<HoverModal>();
 
-            //this._abilityModal.Init();
             this._hoverModal.Init();
 
             this.Init();

@@ -565,7 +565,7 @@
       <EAbility>Slash</EAbility>
       <EAbility>Great_Strike</EAbility>
       <EAbility>Riposte</EAbility>
-      <EAbility>Wide_Slash</EAbility>
+      <EAbility>Wide_Strike</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -591,7 +591,7 @@
       <EAbility>Slash</EAbility>
       <EAbility>Stab</EAbility>
       <EAbility>Riposte</EAbility>
-      <EAbility>Wide_Slash</EAbility>
+      <EAbility>Wide_Strike</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -617,7 +617,7 @@
       <EAbility>Slash</EAbility>
       <EAbility>Stab</EAbility>
       <EAbility>Riposte</EAbility>
-      <EAbility>Wide_Slash</EAbility>
+      <EAbility>Wide_Strike</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -644,7 +644,7 @@
       <EAbility>Slash</EAbility>
       <EAbility>Stab</EAbility>
       <EAbility>Riposte</EAbility>
-      <EAbility>Wide_Slash</EAbility>
+      <EAbility>Wide_Strike</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -671,7 +671,7 @@
       <EAbility>Slash</EAbility>
       <EAbility>Stab</EAbility>
       <EAbility>Riposte</EAbility>
-      <EAbility>Wide_Slash</EAbility>
+      <EAbility>Wide_Strike</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -775,7 +775,7 @@
       <EAbility>Slash</EAbility>
       <EAbility>Great_Strike</EAbility>
       <EAbility>Riposte</EAbility>
-      <EAbility>Wide_Slash</EAbility>
+      <EAbility>Wide_Strike</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -802,7 +802,7 @@
       <EAbility>Slash</EAbility>
       <EAbility>Great_Strike</EAbility>
       <EAbility>Riposte</EAbility>
-      <EAbility>Wide_Slash</EAbility>
+      <EAbility>Wide_Strike</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -828,7 +828,7 @@
       <EAbility>Slash</EAbility>
       <EAbility>Great_Strike</EAbility>
       <EAbility>Riposte</EAbility>
-      <EAbility>Wide_Slash</EAbility>
+      <EAbility>Wide_Strike</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -854,7 +854,7 @@
       <EAbility>Slash</EAbility>
       <EAbility>Great_Strike</EAbility>
       <EAbility>Riposte</EAbility>
-      <EAbility>Wide_Slash</EAbility>
+      <EAbility>Wide_Strike</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -880,7 +880,7 @@
       <EAbility>Slash</EAbility>
       <EAbility>Great_Strike</EAbility>
       <EAbility>Riposte</EAbility>
-      <EAbility>Wide_Slash</EAbility>
+      <EAbility>Wide_Strike</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>

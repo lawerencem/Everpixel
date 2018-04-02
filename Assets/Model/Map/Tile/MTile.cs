@@ -24,7 +24,6 @@ namespace Assets.Model.Map.Tile
         private IHexOccupant _currentOccupant;
         private FTile _flags;
         private int _height;
-        private HexTileLogic _logic;
         private bool _liquid;
         private MMap _map;
         private int _row;
@@ -42,7 +41,6 @@ namespace Assets.Model.Map.Tile
             this._adjacent = new List<MTile>();
             this._flags = new FTile();
             this._height = 1;
-            this._logic = new HexTileLogic();
             this._liquid = false;
         }
 
@@ -75,9 +73,16 @@ namespace Assets.Model.Map.Tile
         public FTile GetFlags() { return this._flags; }
         public int GetHeight() { return this._height; }
 
+        public List<MTile> GetArcTiles(MTile target)
+        {
+            var logic = new HexTileLogic();
+            return this.ConvertIHexToMTile(logic.GetArcTiles(this, target));
+        }
+
         public List<MTile> GetAoETiles(int dist)
         {
-            return this.ConvertIHexToMTile(this._logic.GetAoETiles(dist, this));
+            var logic = new HexTileLogic();
+            return this.ConvertIHexToMTile(logic.GetAoETiles(dist, this));
         }
 
         public int GetCost()
@@ -107,7 +112,8 @@ namespace Assets.Model.Map.Tile
 
         public IHex GetRandomNearbyTile(int probes)
         {
-            return this._logic.GetRandomNearbyTile(probes, this);
+            var logic = new HexTileLogic();
+            return logic.GetRandomNearbyTile(probes, this);
         }
 
         public int GetCol()
@@ -192,32 +198,38 @@ namespace Assets.Model.Map.Tile
 
         public bool IsTileN(IHex target, int dist)
         {
-            throw new NotImplementedException();
+            var logic = new HexTileLogic();
+            return logic.IsTileN(this, target, dist);
         }
 
         public bool IsTileNE(IHex target, int dist)
         {
-            throw new NotImplementedException();
+            var logic = new HexTileLogic();
+            return logic.IsTileNE(this, target, dist);
         }
 
         public bool IsTileSE(IHex target, int dist)
         {
-            throw new NotImplementedException();
+            var logic = new HexTileLogic();
+            return logic.IsTileSE(this, target, dist);
         }
 
         public bool IsTileS(IHex target, int dist)
         {
-            throw new NotImplementedException();
+            var logic = new HexTileLogic();
+            return logic.IsTileS(this, target, dist);
         }
 
         public bool IsTileSW(IHex target, int dist)
         {
-            throw new NotImplementedException();
+            var logic = new HexTileLogic();
+            return logic.IsTileSW(this, target, dist);
         }
 
         public bool IsTileNW(IHex target, int dist)
         {
-            throw new NotImplementedException();
+            var logic = new HexTileLogic();
+            return logic.IsTileNW(this, target, dist);
         }
 
         public List<IHex> GetAdjacent()

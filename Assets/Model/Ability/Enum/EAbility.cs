@@ -65,8 +65,7 @@
         Spear_Wall,
         Stab,
         Stun,
-        Triple_Strike,
-        Wide_Slash,
+        Wide_Strike,
         Wrap,
         Whirlwind,
     }

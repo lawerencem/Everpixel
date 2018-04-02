@@ -3,6 +3,7 @@
     public enum ECastType
     {
         None,
+        Arc,
         Bullet,
         Custom,
         Melee,

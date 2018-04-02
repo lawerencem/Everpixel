@@ -254,7 +254,7 @@ namespace Assets.Data.Ability.XML
                 case (EAbility.Summon_Shoggoth): { table.Add(type, new SummonShoggoth()); } break;
                 case (EAbility.Weenlight_Sonata): { table.Add(type, new WeenlightSonata()); } break;
                 case (EAbility.Wereween): { table.Add(type, new Wereween()); } break;
-                case (EAbility.Wide_Slash): { table.Add(type, new WideSlash()); } break;
+                case (EAbility.Wide_Strike): { table.Add(type, new WideStrike()); } break;
                 case (EAbility.Whirlwind): { table.Add(type, new Whirlwind()); } break;
                 case (EAbility.Wrap): { table.Add(type, new Wrap()); } break;
             }

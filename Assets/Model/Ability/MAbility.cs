@@ -36,12 +36,14 @@ namespace Assets.Model.Ability
         public List<CTile> GetTargetedTiles(AbilityArgs arg)
         {
             var list = new List<CTile>();
-            if (this.isRingCast())
+            if (this.IsRingCast())
                 list.AddRange(this._logic.GetRingCastTiles(arg));
-            else if (this.isSelfCast())
+            else if (this.IsSelfCast())
                 list.Add(arg.Source.Tile);
             else if (this.isRayCast())
                 list.AddRange(this._logic.GetRaycastTiles(arg));
+            else if (this.IsArcCast())
+                list.AddRange(this._logic.GetArcCastTiles(arg));
             else
                 list.AddRange(this._logic.GetAoETiles(arg, arg.AoE));
             return list;
@@ -50,7 +52,7 @@ namespace Assets.Model.Ability
         public List<CTile> GetTargetableTiles(AbilityArgs arg)
         {
             var list = new List<CTile>();
-            if (this.isSelfCast())
+            if (this.IsSelfCast())
                 list.Add(arg.Source.Tile);
             else if (this.isRayCast())
                 list.AddRange(this._logic.GetRaycastTiles(arg));
@@ -67,7 +69,15 @@ namespace Assets.Model.Ability
                 return false;
         }
 
-        public bool isRingCast()
+        public bool IsArcCast()
+        {
+            if (this.Data.CastType == ECastType.Arc)
+                return true;
+            else
+                return false;
+        }
+
+        public bool IsRingCast()
         {
             if (this.Data.CastType == ECastType.Ringcast)
                 return true;
@@ -75,7 +85,7 @@ namespace Assets.Model.Ability
                 return false;
         }
 
-        public bool isSelfCast()
+        public bool IsSelfCast()
         {
             if (this.Data.Range == 0)
                 return true;

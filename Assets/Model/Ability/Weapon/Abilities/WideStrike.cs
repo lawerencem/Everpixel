@@ -4,9 +4,9 @@ using Assets.Model.Combat.Hit;
 
 namespace Assets.Model.Weapon.Abilities
 {
-    public class WideSlash : MAbility
+    public class WideStrike : MAbility
     {
-        public WideSlash() : base(EAbility.Wide_Slash) { this._wpnAbility = true; }
+        public WideStrike() : base(EAbility.Wide_Strike) { this._wpnAbility = true; }
 
         public override void Predict(MHit hit)
         {
