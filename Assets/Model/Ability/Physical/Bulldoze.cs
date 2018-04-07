@@ -59,6 +59,7 @@ namespace Assets.Model.Ability.Physical
             data.Target = a.Data.Source.Tile;
             var e = new EvTileMove(data);
             VCharUtil.Instance.AssignPlusLayer(tgt);
+            e.AddCallback(this.TargetCallback);
             e.TryProcess();
         }
 

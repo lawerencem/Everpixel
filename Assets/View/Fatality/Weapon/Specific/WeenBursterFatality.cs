@@ -88,7 +88,7 @@ namespace Assets.View.Fatality.Weapon.Ability
                 if (tgt.Proxy.LParty)
                     particles.transform.Rotate(0, 90, 0);
                 else
-                    particles.transform.Rotate(0, 270, 0);
+                    particles.transform.Rotate(0, -90, 0);
                 var bloodLifetime = particles.AddComponent<SDestroyByLifetime>();
                 bloodLifetime.AddObjectToList(tgt);
                 bloodLifetime.AddObjectToList(ween);

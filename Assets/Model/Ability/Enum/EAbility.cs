@@ -59,6 +59,7 @@
         Pull,
         Riposte,
         Scatter,
+        Shield_Bash,
         Shield_Wall,
         Shove,
         Slash,

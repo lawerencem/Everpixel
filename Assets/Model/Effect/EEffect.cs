@@ -7,6 +7,7 @@
         Horror,
         HoT,
         Megabite,
+        Push,
         Slime,
         Stun,
         Summon_On_Hit,

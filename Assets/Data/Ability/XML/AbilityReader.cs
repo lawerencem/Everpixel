@@ -244,6 +244,7 @@ namespace Assets.Data.Ability.XML
                 case (EAbility.Scatter): { table.Add(type, new Scatter()); } break;
                 case (EAbility.Sever): { table.Add(type, new Sever()); } break;
                 case (EAbility.Soothing_Mist): { table.Add(type, new SoothingMist()); } break;
+                case (EAbility.Shield_Bash): { table.Add(type, new ShieldBash()); } break;
                 case (EAbility.Shield_Wall): { table.Add(type, new ShieldWall()); } break;
                 case (EAbility.Shove): { table.Add(type, new Shove()); } break;
                 case (EAbility.Slash): { table.Add(type, new Slash()); } break;

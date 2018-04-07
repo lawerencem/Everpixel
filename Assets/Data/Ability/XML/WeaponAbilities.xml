@@ -394,6 +394,28 @@
       <FatigueCost>60</FatigueCost>
       <Range>1</Range>
     </WeaponAbility>
+    <WeaponAbility name="Shield_Bash">
+      <AccMod>0.85</AccMod>
+      <APCost>5</APCost>
+      <ArmorIgnoreMod>0.15</ArmorIgnoreMod>
+      <ArmorPierceMod>0.15</ArmorPierceMod>
+      <BlockIgnoreMod>0.15</BlockIgnoreMod>
+      <ECastType>Custom</ECastType>
+      <EEffect name="Push">
+        <OffensiveResist>Fortitude</OffensiveResist>
+        <Resist>Fortitude</Resist>
+        <X>1</X>
+      </EEffect>
+      <DamageMod>0.15</DamageMod>
+      <DodgeMod>1.0</DodgeMod>
+      <IconSprite>21</IconSprite>
+      <MeleeBlockChanceMod>0.75</MeleeBlockChanceMod>
+      <ParryModMod>0.75</ParryModMod>
+      <RangeBlockMod>1.0</RangeBlockMod>
+      <ShieldDamageMod>1</ShieldDamageMod>
+      <FatigueCost>45</FatigueCost>
+      <Range>1</Range>
+    </WeaponAbility>
     <WeaponAbility name="Shield_Wall">
       <AccMod>1</AccMod>
       <APCost>3</APCost>
@@ -545,7 +567,7 @@
       <ECastType>Arc</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>0.75</DodgeMod>
-      <IconSprite>0</IconSprite>
+      <IconSprite>20</IconSprite>
       <Injury>Cut_Abdomine</Injury>
       <Injury>Cut_Arm</Injury>
       <Injury>Cut_Chest</Injury>

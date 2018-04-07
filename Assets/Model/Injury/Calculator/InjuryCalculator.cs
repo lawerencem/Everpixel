@@ -25,15 +25,6 @@ namespace Assets.Model.Injury.Calculator
                     var numerator = hit.Data.Dmg;
                     var denominator = tgt.Proxy.GetPoints(ESecondaryStat.HP);
                     var chance = (numerator / denominator) * CHANCE_SCALAR;
-
-                    int certainInjuries = 0;
-                    while(chance >= 1)
-                    {
-                        certainInjuries++;
-                        chance--;
-                    }
-                    for (int i = 0; i < certainInjuries; i++)
-                        this.ProcessNewInjury(tgt, hit);
                     var roll = RNG.Instance.NextDouble();
                     if (roll <= chance)
                         this.ProcessNewInjury(tgt, hit);

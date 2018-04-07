@@ -90,6 +90,12 @@ namespace Assets.Model.Map.Tile
             return this._cost;
         }
 
+        public MTile GetPushTile(MTile target)
+        {
+            var logic = new HexTileLogic();
+            return this.ConvertIHexToMTile(logic.GetPushTile(this, target));
+        }
+
         public int GetTravelCost(MTile tile)
         {
             var adjacent = this.GetAdjacent().Find(x => x.Equals(tile));
@@ -251,6 +257,11 @@ namespace Assets.Model.Map.Tile
         {
             var logic = new TileLogic();
             logic.ProcessEnterTile(c, this);
+        }
+
+        private MTile ConvertIHexToMTile(IHex hex)
+        {
+            return hex as MTile;
         }
 
         private List<MTile> ConvertIHexToMTile(List<IHex> hexes)

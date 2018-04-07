@@ -67,6 +67,26 @@ namespace Assets.Template.Hex
             return tiles;
         }
 
+        public IHex GetPushTile(IHex source, IHex target)
+        {
+            if (source != null && target != null)
+            {
+                if (source.IsTileN(target, 1))
+                    return target.GetN();
+                else if (source.IsTileNE(target, 1))
+                    return target.GetNE();
+                else if (source.IsTileSE(target, 1))
+                    return target.GetSE();
+                else if (source.IsTileS(target, 1))
+                    return target.GetS();
+                else if (source.IsTileSW(target, 1))
+                    return target.GetSW();
+                else if (source.IsTileNW(target, 1))
+                    return target.GetNW();
+            }
+            return null;
+        }
+
         public IHex GetRandomNearbyTile(int probes, IHex tile)
         {
             var currNeighbors = tile.GetAdjacent();

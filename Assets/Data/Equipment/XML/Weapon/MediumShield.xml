@@ -254,6 +254,8 @@
       <Sprites>1,2</Sprites>
       <Stamina_Mod>1.04</Stamina_Mod>
       <Value>100</Value>
+      <EAbility>Shield_Bash</EAbility>
+      <EAbility>Shield_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Shield</EWeaponUse>
     </Weapon>
@@ -272,6 +274,8 @@
       <Sprites>16,17</Sprites>
       <Stamina_Mod>1.03</Stamina_Mod>
       <Value>250</Value>
+      <EAbility>Shield_Bash</EAbility>
+      <EAbility>Shield_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Shield</EWeaponUse>
     </Weapon>
@@ -290,6 +294,8 @@
       <Sprites>31,32</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>550</Value>
+      <EAbility>Shield_Bash</EAbility>
+      <EAbility>Shield_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Shield</EWeaponUse>
     </Weapon>
@@ -308,6 +314,8 @@
       <Sprites>46,47</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>800</Value>
+      <EAbility>Shield_Bash</EAbility>
+      <EAbility>Shield_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Shield</EWeaponUse>
     </Weapon>

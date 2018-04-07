@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.3.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -422,6 +424,7 @@
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\Pull.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\Riposte.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\Scatter.cs" />
+    <Compile Include="Assets\Model\Ability\Weapon\Abilities\ShieldBash.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\ShieldWall.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\Shove.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\Slash.cs" />
@@ -481,6 +484,7 @@
     <Compile Include="Assets\Model\Effect\EffectBuilder.cs" />
     <Compile Include="Assets\Model\Effect\EffectFactory.cs" />
     <Compile Include="Assets\Model\Effect\EffectTable.cs" />
+    <Compile Include="Assets\Model\Effect\Fortitude\EffectPush.cs" />
     <Compile Include="Assets\Model\Effect\Fortitude\EffectSlime.cs" />
     <Compile Include="Assets\Model\Effect\Fortitude\EffectStun.cs" />
     <Compile Include="Assets\Model\Effect\MEffect.cs" />

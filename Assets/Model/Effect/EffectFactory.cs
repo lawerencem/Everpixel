@@ -16,6 +16,7 @@ namespace Assets.Model.Effect
             switch(effect)
             {
                 case (EEffect.Megabite): { return new Megabite(); }
+                case (EEffect.Push): { return new EffectPush(); }
                 case (EEffect.Horror): { return new Horror(); }
                 case (EEffect.Slime): { return new EffectSlime(); }
                 case (EEffect.Stun): { return new EffectStun(); }
