@@ -40,6 +40,7 @@ namespace Assets.Controller.GUI.Combat
             this._callbacks.Clear();
             switch(a.ActiveAbility.Data.CastType)
             {
+                case (ECastType.Arc): { VHitController.Instance.ProcessCustomFX(a); } break;
                 case (ECastType.Bullet): { VHitController.Instance.ProcessBulletFX(a); } break;
                 case (ECastType.Custom): { VHitController.Instance.ProcessCustomFX(a); } break;
                 case (ECastType.Melee): { VHitController.Instance.ProcessMeleeHitFX(a); } break;

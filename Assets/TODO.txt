@@ -2,7 +2,6 @@
 
  -- Finish pavise crossbowmen
  -- Finish cryomancer/necromancer
- -- Arc cast melee in VCombatController.
 
  BUGS
  - ween burster doesn't flip 180 on RTEAM
