@@ -1,6 +1,8 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Equipment.Enum;
+using Assets.Model.Map.Tile;
+using Assets.Template.Hex;
 using System.Collections.Generic;
 
 namespace Assets.Model.Ability.Logic
@@ -31,30 +33,49 @@ namespace Assets.Model.Ability.Logic
             return list;
         }
 
-        public List<CTile> GetRaycastTiles(AbilityArgs arg)
+        public List<CTile> GetTargetableRaycastTiles(AbilityArgs arg)
         {
-            return null;
-            //var list = new List<TileController>();
-            //MTile initTile;
-            //var s = arg.Source.CurrentTile.Model;
-            //var t = arg.Target.Model;
-            //var range = arg.Range;
-            //if (s.IsHexN(t, range))
-            //    initTile = s.GetN();
-            //else if (s.IsHexNE(t, range))
-            //    initTile = s.GetNE();
-            //else if (s.IsHexSE(t, range))
-            //    initTile = s.GetSE();
-            //else if (s.IsHexS(t, range))
-            //    initTile = s.GetS();
-            //else if (s.IsHexSW(t, range))
-            //    initTile = s.GetSW();
-            //else
-            //    initTile = s.GetNW();
-            //var hexes = initTile.GetRaycastTiles(t, range);
-            //foreach (var hex in hexes)
-            //    list.Add(hex.Parent);
-            //return list;
+            var list = new List<CTile>();
+            var hexes = new List<IHex>();
+            var source = arg.Source.Tile.Model;
+            hexes.AddRange(source.GetRayTilesViaDistN(arg.Range));
+            hexes.AddRange(source.GetRayTilesViaDistNE(arg.Range));
+            hexes.AddRange(source.GetRayTilesViaDistSE(arg.Range));
+            hexes.AddRange(source.GetRayTilesViaDistS(arg.Range));
+            hexes.AddRange(source.GetRayTilesViaDistSW(arg.Range));
+            hexes.AddRange(source.GetRayTilesViaDistNW(arg.Range));
+            foreach (var hex in hexes)
+            {
+                var tile = hex as MTile;
+                list.Add(tile.Controller);
+            }
+            return list;
+        }
+
+        public List<CTile> GetRaycastTilesViaSourceAndTarget(AbilityArgs arg)
+        {
+            var list = new List<CTile>();
+            var hexes = new List<IHex>();
+            var s = arg.Source.Tile.Model;
+            var tgt = arg.Target.Model;
+            if (s.IsTileN(tgt, arg.Range))
+                hexes = s.GetRayTilesViaDistN(arg.Range);
+            else if (s.IsTileNE(tgt, arg.Range))
+                hexes = s.GetRayTilesViaDistNE(arg.Range);
+            else if (s.IsTileSE(tgt, arg.Range))
+                hexes = s.GetRayTilesViaDistSE(arg.Range);
+            else if (s.IsTileS(tgt, arg.Range))
+                hexes = s.GetRayTilesViaDistS(arg.Range);
+            else if (s.IsTileSW(tgt, arg.Range))
+                hexes = s.GetRayTilesViaDistSW(arg.Range);
+            else if (s.IsTileNW(tgt, arg.Range))
+                hexes = s.GetRayTilesViaDistNW(arg.Range);
+            foreach (var hex in hexes)
+            {
+                var tile = hex as MTile;
+                list.Add(tile.Controller);
+            }
+            return list;
         }
 
         public List<CTile> GetRingCastTiles(AbilityArgs arg)

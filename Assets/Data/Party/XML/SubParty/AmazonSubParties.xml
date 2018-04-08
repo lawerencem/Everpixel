@@ -1,96 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <SubParties>
-  <SubParty Name ="Dino Calvary">
-    <Difficulty>2</Difficulty>
-    <Character>1,Raptard Rider,One</Character>
-  </SubParty>
-  <SubParty Name ="Dino Healers">
-    <Difficulty>2</Difficulty>
-    <Character>1,Curizard,Three</Character>
-  </SubParty>
-  <SubParty Name ="Dino Healers">
-    <Difficulty>3</Difficulty>
-    <Character>1,Curizard,Three</Character>
-    <Character>1,Beardedino,Three</Character>
-  </SubParty>
-  <SubParty Name ="Dino Infantry">
-    <Difficulty>5</Difficulty>
-    <Character>1,Dino Scaleman,One</Character>
-    <Character>1,Dino Scaleman,One</Character>
-  </SubParty>
-  <SubParty Name ="Dino Knights">
-    <Difficulty>3</Difficulty>
-    <Character>1,Dino Squire,One</Character>
-    <Character>1,Dino Squire,One</Character>
-  </SubParty>
-  <SubParty Name ="Dino Knights">
-    <Difficulty>5</Difficulty>
-    <Character>1,Dino Knight,One</Character>
-    <Character>1,Dino Knight,One</Character>
-  </SubParty>
-  <SubParty Name ="Dino Knights">
-    <Difficulty>6</Difficulty>
-    <Character>1,Dino Knight,One</Character>
-    <Character>1,Veteran Dino Knight,One</Character>
-  </SubParty>
-  <SubParty Name ="Dino Mages">
-    <Difficulty>4</Difficulty>
-    <Character>1,Solizard,Two</Character>
-    <Character>1,Rawrasaur,Two</Character>
-  </SubParty>
-  <SubParty Name ="Dino Priest">
-    <Difficulty>4</Difficulty>
-    <Character>1,Dino Priest,Three</Character>
-  </SubParty>
-  <SubParty Name ="Dino Priest">
-    <Difficulty>6</Difficulty>
-    <Character>1,Divine Dino Priest,Three</Character>
-  </SubParty>
-  <SubParty Name ="Dino Priest">
-    <Difficulty>8</Difficulty>
-    <Character>1,Dino Seraph,Three</Character>
-  </SubParty>
-  <SubParty Name ="Dino Priest">
-    <Difficulty>13</Difficulty>
-    <Character>1,Dino Archmind,Three</Character>
-  </SubParty>
-  <SubParty Name ="Lizardman Fodder">
-    <Difficulty>1</Difficulty>
-    <Character>1,Lizardman Militia,One</Character>
-    <Character>1,Lizardman Militia,One</Character>
-  </SubParty>
-  <SubParty Name ="Raptors">
-    <Difficulty>3</Difficulty>
-    <Character>1,Raptard,One</Character>
-    <Character>1,Raptard,One</Character>
-  </SubParty>
-  <SubParty Name ="Raptors">
-    <Difficulty>5</Difficulty>
-    <Character>1,Raptard,One</Character>
-    <Character>1,Raptard,One</Character>
-    <Character>1,Denture,One</Character>
-  </SubParty>
-  <SubParty Name ="Rexes">
-    <Difficulty>3</Difficulty>
-    <Character>1,Tearex,Three</Character>
-    <Character>1,Thairex,Two</Character>
-  </SubParty>
-  <SubParty Name ="Rexes">
-    <Difficulty>4</Difficulty>
-    <Character>1,Arms,Two</Character>
-    <Character>1,Arms,Two</Character>
-  </SubParty>
-  <SubParty Name ="Rexes">
-    <Difficulty>7</Difficulty>
-    <Character>1,Tyrantaur,One</Character>
-    <Character>1,Tearex,Three</Character>
-    <Character>1,Thairex,Two</Character>
-  </SubParty>
-  <SubParty Name ="Rexes">
-    <Difficulty>9</Difficulty>
-    <Character>1,Arms,Two</Character>
-    <Character>1,Tyrantaur,One</Character>
-    <Character>1,Tearex,Three</Character>
-    <Character>1,Thairex,Two</Character>
-  </SubParty>
+  <Culture name="Amazonian">
+    <SubParty Name ="Artillery">
+      <Character>140,Thairex,Two</Character>
+    </SubParty>
+    <SubParty Name ="Calvary">
+      <Character>100,Raptard Rider,One</Character>
+    </SubParty>
+    <SubParty Name ="Commanders">
+      <Character>150,Dino Knight,One</Character>
+      <Character>180,Dino Priest,Three</Character>
+      <Character>190,Veteran Dino Knight,One</Character>
+      <Character>220,Divine Dino Priest,Three</Character>
+      <Character>250,Dino Seraph,Three</Character>
+      <Character>290,Dino Archmind,Three</Character>
+    </SubParty>
+    <SubParty Name ="Healers">
+      <Character>110,Tearex,Three</Character>
+      <Character>140,Curizard,Three</Character>
+      <Character>190,Beardedino,Three</Character>
+    </SubParty>
+    <SubParty Name ="Infantry">
+      <Character>110,Dino Scaleman,One</Character>
+    </SubParty>
+    <SubParty Name ="Knights">
+      <Character>110,Dino Squire,One</Character>
+      <Character>150,Dino Knight,One</Character>
+      <Character>190,Veteran Dino Knight,One</Character>
+    </SubParty>
+    <SubParty Name ="Magess">
+      <Difficulty>4</Difficulty>
+      <Character>150,Solizard,Two</Character>
+      <Character>200,Rawrasaur,Two</Character>
+    </SubParty>
+    <SubParty Name ="Militia">
+      <Character>90,Lizardman Militia,One</Character>
+    </SubParty>
+    <SubParty Name ="Priests">
+      <Difficulty>4</Difficulty>
+      <Character>180,Dino Priest,Three</Character>
+      <Character>220,Divine Dino Priest,Three</Character>
+      <Character>250,Dino Seraph,Three</Character>
+      <Character>290,Dino Archmind,Three</Character>
+    </SubParty>
+    <SubParty Name ="Monsters">
+      <Character>90,Raptard,One</Character>
+      <Character>120,Denture,One</Character>
+      <Character>150,Arms,Two</Character>
+      <Character>320,Tyrantaur,One</Character>
+    </SubParty>
+  </Culture>
 </SubParties>

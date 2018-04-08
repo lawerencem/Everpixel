@@ -31,9 +31,14 @@ namespace Assets.Model.Ability.Logic
             return this._aoeLogic.GetAoETiles(arg, aoe);
         }
 
-        public List<CTile> GetRaycastTiles(AbilityArgs arg)
+        public List<CTile> GetTargetableRaycastTiles(AbilityArgs arg)
         {
-            return this._aoeLogic.GetRaycastTiles(arg);
+            return this._aoeLogic.GetTargetableRaycastTiles(arg);
+        }
+
+        public List<CTile> GetTargetedRaycastTiles(AbilityArgs arg)
+        {
+            return this._aoeLogic.GetRaycastTilesViaSourceAndTarget(arg);
         }
 
         public List<CTile> GetRingCastTiles(AbilityArgs arg)

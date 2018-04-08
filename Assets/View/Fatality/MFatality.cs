@@ -190,6 +190,11 @@ namespace Assets.View.Fatality
                     VHitController.Instance.ProcessDefenderHit(hit);
                 }
             }
+            foreach (var hit in this._data.NonFatalHits)
+            {
+                hit.CallbackHandler(this);
+                this.CallbackHandler(null);
+            }
         }
 
         protected void ProcessNoBloodDeath(CChar tgt)

@@ -24,7 +24,7 @@ namespace Assets.Data.Party.XML
 
         public SubPartyReader() : base()
         {
-            //this._paths.Add("Assets/Data/Party/XML/SubParty/AmazonSubParties.xml");
+            this._paths.Add("Assets/Data/Party/XML/SubParty/AmazonSubParties.xml");
             //this._paths.Add("Assets/Data/Party/XML/SubParty/BretonSubParties.xml");
             this._paths.Add("Assets/Data/Party/XML/SubParty/GoblinSubParties.xml");
             this._paths.Add("Assets/Data/Party/XML/SubParty/JomonSubParties.xml");

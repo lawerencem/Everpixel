@@ -13,12 +13,12 @@ namespace Assets.Template.Hex
         int GetRow();
         IHexOccupant GetCurrentOccupant();
         List<IHex> GetRaycastTiles(IHex target, int dist);
-        List<IHex> GetRayTilesViaDistN(IHex target, int dist);
-        List<IHex> GetRayTilesViaDistNE(IHex target, int dist);
-        List<IHex> GetRayTilesViaDistSE(IHex target, int dist);
-        List<IHex> GetRayTilesViaDistS(IHex target, int dist);
-        List<IHex> GetRayTilesViaDistSW(IHex target, int dist);
-        List<IHex> GetRayTilesViaDistNW(IHex target, int dist);
+        List<IHex> GetRayTilesViaDistN(int dist);
+        List<IHex> GetRayTilesViaDistNE(int dist);
+        List<IHex> GetRayTilesViaDistSE(int dist);
+        List<IHex> GetRayTilesViaDistS(int dist);
+        List<IHex> GetRayTilesViaDistSW(int dist);
+        List<IHex> GetRayTilesViaDistNW(int dist);
         IHex GetN();
         IHex GetNE();
         IHex GetSE();

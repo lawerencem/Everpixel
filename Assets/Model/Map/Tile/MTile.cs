@@ -139,37 +139,50 @@ namespace Assets.Model.Map.Tile
 
         public List<IHex> GetRaycastTiles(IHex target, int dist)
         {
-            throw new NotImplementedException();
+            var logic = new HexTileLogic();
+            return logic.GetRaycastTiles(this, target, dist);
         }
 
-        public List<IHex> GetRayTilesViaDistN(IHex target, int dist)
+        public List<MTile> GetConvertedRaycastTiles(IHex target, int dist)
         {
-            throw new NotImplementedException();
+            var logic = new HexTileLogic();
+            return this.ConvertIHexToMTile(logic.GetRaycastTiles(this, target, dist));
         }
 
-        public List<IHex> GetRayTilesViaDistNE(IHex target, int dist)
+        public List<IHex> GetRayTilesViaDistN(int dist)
         {
-            throw new NotImplementedException();
+            var logic = new HexTileLogic();
+            return logic.GetRayTilesViaDistN(this, dist);
         }
 
-        public List<IHex> GetRayTilesViaDistSE(IHex target, int dist)
+        public List<IHex> GetRayTilesViaDistNE(int dist)
         {
-            throw new NotImplementedException();
+            var logic = new HexTileLogic();
+            return logic.GetRayTilesViaDistNE(this, dist);
         }
 
-        public List<IHex> GetRayTilesViaDistS(IHex target, int dist)
+        public List<IHex> GetRayTilesViaDistSE(int dist)
         {
-            throw new NotImplementedException();
+            var logic = new HexTileLogic();
+            return logic.GetRayTilesViaDistSE(this, dist);
         }
 
-        public List<IHex> GetRayTilesViaDistSW(IHex target, int dist)
+        public List<IHex> GetRayTilesViaDistS(int dist)
         {
-            throw new NotImplementedException();
+            var logic = new HexTileLogic();
+            return logic.GetRayTilesViaDistS(this, dist);
         }
 
-        public List<IHex> GetRayTilesViaDistNW(IHex target, int dist)
+        public List<IHex> GetRayTilesViaDistSW(int dist)
         {
-            throw new NotImplementedException();
+            var logic = new HexTileLogic();
+            return logic.GetRayTilesViaDistSW(this, dist);
+        }
+
+        public List<IHex> GetRayTilesViaDistNW(int dist)
+        {
+            var logic = new HexTileLogic();
+            return logic.GetRayTilesViaDistNW(this, dist);
         }
 
         IHex IHex.GetN()

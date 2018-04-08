@@ -41,7 +41,7 @@ namespace Assets.Model.Ability
             else if (this.IsSelfCast())
                 list.Add(arg.Source.Tile);
             else if (this.isRayCast())
-                list.AddRange(this._logic.GetRaycastTiles(arg));
+                list.AddRange(this._logic.GetTargetedRaycastTiles(arg));
             else if (this.IsArcCast())
                 list.AddRange(this._logic.GetArcCastTiles(arg));
             else
@@ -55,7 +55,7 @@ namespace Assets.Model.Ability
             if (this.IsSelfCast())
                 list.Add(arg.Source.Tile);
             else if (this.isRayCast())
-                list.AddRange(this._logic.GetRaycastTiles(arg));
+                list.AddRange(this._logic.GetTargetableRaycastTiles(arg));
             else
                 list.AddRange(this._logic.GetPotentialTargets(arg));
             return list;
@@ -134,9 +134,14 @@ namespace Assets.Model.Ability
             return hits;
         }
 
-        protected List<CTile> GetRaycastTiles(AbilityArgs arg)
+        protected List<CTile> GetTargetedRaycastTiles(AbilityArgs arg)
         {
-            return this._logic.GetRaycastTiles(arg);
+            return this._logic.GetTargetedRaycastTiles(arg);
+        }
+
+        protected List<CTile> GetTargetableRaycastTiles(AbilityArgs arg)
+        {
+            return this._logic.GetTargetableRaycastTiles(arg);
         }
 
         protected List<CTile> GetSelfCenteredTiles(MHit hit)
@@ -160,6 +165,12 @@ namespace Assets.Model.Ability
             this._logic.PredictMelee(hit);
         }
 
+        protected virtual void PredictRay(MHit hit)
+        {
+            this.PreProcessHit(hit, true);
+            this._logic.PredictRay(hit);
+        }
+
         protected virtual void PredictSingle(MHit hit)
         {
             this.PreProcessHit(hit, true);
@@ -177,19 +188,10 @@ namespace Assets.Model.Ability
             this._logic.ProcessBullet(hit);
         }
 
-        protected void ProcessHitLoS(MHit hit)
+        protected void ProcessRay(MHit hit)
         {
-            //if (hit.Target != null)
-            //{
-            //    if (!FCharacterStatus.HasFlag(hit.Target.Model.StatusFlags.CurFlags, FCharacterStatus.Flags.Dead))
-            //    {
-            //        foreach (var perk in hit.Source.Model.Perks.AbilityModPerks)
-            //            perk.TryModAbility(hit);
-            //        this._logic.ProcessRay(hit);
-            //    }
-            //}
-            //else
-            //    hit.Done();
+            this.PreProcessHit(hit, true);
+            this._logic.ProcessRay(hit);
         }
 
         protected void ProcessHitMelee(MHit hit)

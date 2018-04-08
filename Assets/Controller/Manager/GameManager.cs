@@ -45,17 +45,17 @@ namespace Assets.Controller.Managers
             var gui = new GUILoader();
             gui.InitCombatGUI();
             var initInfo = new MapInitInfo();
-            initInfo.Biome = EBiome.Snow;
+            initInfo.Biome = EBiome.Grassland;
             var lParty = new PartyBuildParams();
             var rParty = new PartyBuildParams();
 
-            lParty.Culture = ECulture.Norse;
+            lParty.Culture = ECulture.Amazonian;
             lParty.Difficulty = 1000;
-            lParty.Name = "Corpse Collectors";
+            lParty.Name = "Battle Squad";
 
-            rParty.Culture = ECulture.Jomonese;
+            rParty.Culture = ECulture.Orcish;
             rParty.Difficulty = 1000;
-            rParty.Name = "Raiding Party";
+            rParty.Name = "Battle Squad";
 
             initInfo.LParties.Add(lParty);
             initInfo.RParties.Add(rParty);

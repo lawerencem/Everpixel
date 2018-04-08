@@ -1,21 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Parties>
-  <Party Name ="Lizardman War Party">
-    <SubParty>Dino Calvary,2</SubParty>
-    <SubParty>Dino Infantry,5</SubParty>
-    <SubParty>Dino Knights,3</SubParty>
-    <SubParty>Dino Knights,5</SubParty>
-    <SubParty>Dino Knights,6</SubParty>
-    <SubParty>Dino Priest,4</SubParty>
-    <SubParty>Dino Priest,6</SubParty>
-    <SubParty>Dino Priest,8</SubParty>
-    <SubParty>Dino Priest,13</SubParty>
-    <SubParty>Lizardman Fodder,1</SubParty>
-    <SubParty>Raptors,3</SubParty>
-    <SubParty>Raptors,5</SubParty>
-    <SubParty>Rexes,3</SubParty>
-    <SubParty>Rexes,4</SubParty>
-    <SubParty>Rexes,7</SubParty>
-    <SubParty>Rexes,9</SubParty>
-  </Party>
+  <Culture name="Amazonian">
+    <Party Name ="Battle Squad">
+      <SubParty>Commanders,0.4</SubParty>
+      <SubParty>Infantry,0.2</SubParty>
+      <SubParty>Healers,0.2</SubParty>
+      <SubParty>Artillery,0.1</SubParty>
+      <SubParty>Militia,0.1</SubParty>
+    </Party>
+  </Culture>
 </Parties>

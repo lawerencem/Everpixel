@@ -127,27 +127,58 @@ namespace Assets.Controller.Map.Combat
 
         private void TryHandleAoEHover(CTile t)
         {
-            // TODO: Handle Raycast and other AoEs not strictly being a radius-based AOE
             foreach (var tile in this._aoeTiles)
                 GameObject.Destroy(tile);
             this._aoeTiles.Clear();
             var eAbility = CombatManager.Instance.GetCurrentAbility();
 
-            // TODO: Figure out why this is coming in none here - it shouldnt be.
             if (eAbility != EAbility.None)
             {
                 var active = AbilityTable.Instance.Table[eAbility];
                 if (active.Data.AoE >= 1)
-                {
-                    var sprite = MapBridge.Instance.GetTileHighlightSprite();
-                    var tiles = t.Model.GetAoETiles((int)(active.Data.AoE));
-                    foreach (var tile in tiles)
-                    {
-                        if (tile.Liquid)
-                            this._aoeTiles.Add(this.DecorateTileHandle(tile.Controller.LiquidHandle, sprite));
-                        this._aoeTiles.Add(this.DecorateTileHandle(tile.Controller.Handle, sprite));
-                    }
-                }
+                    this.HandleAoEHover(t, active);
+                else if (active.Data.CastType == ECastType.Raycast)
+                    this.HandleRaycastHover(t, active);
+            }
+        }
+
+        private void HandleAoEHover(CTile t, MAbility active)
+        {
+            var sprite = MapBridge.Instance.GetTileHighlightSprite();
+            var tiles = t.Model.GetAoETiles((int)(active.Data.AoE));
+            foreach (var tile in tiles)
+            {
+                if (tile.Liquid)
+                    this._aoeTiles.Add(this.DecorateTileHandle(tile.Controller.LiquidHandle, sprite));
+                this._aoeTiles.Add(this.DecorateTileHandle(tile.Controller.Handle, sprite));
+            }
+        }
+
+        private void HandleRaycastHover(CTile t, MAbility active)
+        {
+            var sprite = MapBridge.Instance.GetTileHighlightSprite();
+            var source = CombatManager.Instance.GetCurrentlyActing().Tile;
+            MTile initTile = null;
+            if (source.Model.IsTileN(t.Model, active.Data.Range))
+                initTile = source.Model.GetN();
+            else if (source.Model.IsTileNE(t.Model, active.Data.Range))
+                initTile = source.Model.GetNE();
+            else if (source.Model.IsTileNE(t.Model, active.Data.Range))
+                initTile = source.Model.GetNE();
+            else if (source.Model.IsTileSE(t.Model, active.Data.Range))
+                initTile = source.Model.GetSE();
+            else if (source.Model.IsTileS(t.Model, active.Data.Range))
+                initTile = source.Model.GetS();
+            else if (source.Model.IsTileSW(t.Model, active.Data.Range))
+                initTile = source.Model.GetSW();
+            else if (source.Model.IsTileNW(t.Model, active.Data.Range))
+                initTile = source.Model.GetNW();
+            var tiles = source.Model.GetConvertedRaycastTiles(initTile, active.Data.Range);
+            foreach (var tile in tiles)
+            {
+                if (tile.Liquid)
+                    this._aoeTiles.Add(this.DecorateTileHandle(tile.Controller.LiquidHandle, sprite));
+                this._aoeTiles.Add(this.DecorateTileHandle(tile.Controller.Handle, sprite));
             }
         }
     }

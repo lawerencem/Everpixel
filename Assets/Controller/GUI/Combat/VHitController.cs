@@ -5,6 +5,7 @@ using Assets.Model.Action;
 using Assets.Model.Character;
 using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
+using Assets.Model.Map.Tile;
 using Assets.Template.CB;
 using Assets.Template.Script;
 using Assets.Template.Util;
@@ -87,6 +88,18 @@ namespace Assets.Controller.GUI.Combat
             }
             else
                 this.ProcessMeleeFXNonFatality(a);
+        }
+
+        public void ProcessRaycastFX(MAction a)
+        {
+            VCombatController.Instance.DisplayActionEventName(a);
+            if (VFatalityController.Instance.IsFatality(a))
+            {
+                if (!VFatalityController.Instance.FatalitySuccessful(a))
+                    this.ProcessRaycastFXNonFatality(a);
+            }
+            else
+                this.ProcessRaycastFXNonFatality(a);
         }
 
         public void ProcessSingleHitFX(MAction a)
@@ -352,6 +365,23 @@ namespace Assets.Controller.GUI.Combat
             attack.Action = a;
             attack.AddCallback(this.ProcessDefenderHits);
             attack.Init(a.Data.Source, position, CombatGUIParams.ATTACK_SPEED);
+        }
+
+
+        private void ProcessRaycastFXNonFatality(MAction a)
+        {
+            var attack = a.Data.Source.Handle.AddComponent<SAttackerJolt>();
+            var position = Vector3.Lerp(a.Data.Target.Model.Center, a.Data.Source.Tile.Model.Center, CombatGUIParams.ATTACK_LERP);
+            attack.Action = a;
+            attack.Init(a.Data.Source, position, CombatGUIParams.ATTACK_SPEED);
+            var tgt = a.Data.Source.Tile.Model.GetRaycastTiles(a.Data.Target.Model, a.ActiveAbility.Data.Range);
+            if (tgt.Count > 0)
+            {
+                var finalTile = tgt[tgt.Count - 1] as MTile;
+                AttackSpriteLoader.Instance.GetRaycast(a, finalTile.Controller, this.ProcessBulletHit, CombatGUIParams.BULLET_SPEED);
+            }
+            else
+                throw new System.Exception("Attempting raycast FX with empty target");
         }
 
         private void ProcessSingleFXNonFatality(MAction a)

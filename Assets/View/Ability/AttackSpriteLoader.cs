@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.GUI.Combat;
+using Assets.Controller.Map.Tile;
 using Assets.Model.Ability;
 using Assets.Model.Action;
 using Assets.Model.Character.Enum;
@@ -63,6 +64,25 @@ namespace Assets.View.Ability
                 return this.GetDeleteBullet(hit, callback, bullet, speed);
         }
 
+        public GameObject GetRaycast(MAction action, CTile tgt, Callback callback, float speed)
+        {
+            var sprite = this.GetBulletSprite(action);
+            var bullet = new GameObject();
+            bullet.transform.position = action.Data.Source.Handle.transform.position;
+            var renderer = bullet.AddComponent<SpriteRenderer>();
+            renderer.sprite = sprite;
+            renderer.sortingLayerName = Layers.PARTICLES;
+            var tgtPosition = tgt.Handle.transform.position;
+            var angle = Vector3.Angle(tgtPosition, bullet.transform.position);
+            if (tgtPosition.y < bullet.transform.position.y)
+                angle = -angle;
+            if (action.Data.Source.Proxy.LParty)
+                bullet.transform.Rotate(0, 0, angle);
+            else
+                bullet.transform.localRotation = Quaternion.Euler(0, 180, angle);
+            return this.GetDeleteRay(action, tgtPosition, callback, bullet, speed);
+        }
+
         public void GetSingleFX(MHit hit)
         {
             var ability = hit.Data.Ability.Data.ParentAction.ActiveAbility;
@@ -93,6 +113,20 @@ namespace Assets.View.Ability
             data.Target = hit.Data.Target.Handle.transform.position;
             var script = bullet.AddComponent<SBulletThenDelete>();
             script.Action = hit.Data.Action;
+            script.Init(data);
+            script.AddCallback(callback);
+            return bullet;
+        }
+
+        private GameObject GetDeleteRay(MAction a, Vector3 tgt, Callback callback, GameObject bullet, float speed)
+        {
+            var data = new SRaycastMoveData();
+            data.Epsilon = CombatGUIParams.DEFAULT_EPSILON;
+            data.Handle = bullet;
+            data.Speed = speed;
+            data.Target = tgt;
+            var script = bullet.AddComponent<SBulletThenDelete>();
+            script.Action = a;
             script.Init(data);
             script.AddCallback(callback);
             return bullet;

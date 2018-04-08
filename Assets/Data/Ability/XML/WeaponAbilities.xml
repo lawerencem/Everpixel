@@ -541,6 +541,11 @@
       <ArmorPierceMod>0.75</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
       <ECastType>Melee</ECastType>
+      <EEffect name="Stun">
+        <OffensiveResist>Fortitude</OffensiveResist>
+        <Resist>Fortitude</Resist>
+        <X>1</X>
+      </EEffect>
       <DamageMod>0.35</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>0</IconSprite>

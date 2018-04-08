@@ -134,17 +134,17 @@ namespace Assets.Template.Hex
             var list = new List<IHex>();
 
             if (this.IsTileN(source, target, dist))
-                list = this.GetRayTilesViaDistN(target, dist);
+                list = this.GetRayTilesViaDistN(source, dist);
             else if (this.IsTileNE(source, target, dist))
-                list = this.GetRayTilesViaDistNE(target, dist);
+                list = this.GetRayTilesViaDistNE(source, dist);
             else if (this.IsTileSE(source, target, dist))
-                list = this.GetRayTilesViaDistSE(target, dist);
+                list = this.GetRayTilesViaDistSE(source, dist);
             else if (this.IsTileS(source, target, dist))
-                list = this.GetRayTilesViaDistS(target, dist);
+                list = this.GetRayTilesViaDistS(source, dist);
             else if (this.IsTileSW(source, target, dist))
-                list = this.GetRayTilesViaDistSW(target, dist);
+                list = this.GetRayTilesViaDistSW(source, dist);
             else if (this.IsTileNW(source, target, dist))
-                list = this.GetRayTilesViaDistNW(target, dist);
+                list = this.GetRayTilesViaDistNW(source, dist);
 
             return list;
         }
@@ -245,10 +245,10 @@ namespace Assets.Template.Hex
             return false;
         }
 
-        public List<IHex> GetRayTilesViaDistN(IHex t, int dist)
+        public List<IHex> GetRayTilesViaDistN(IHex s, int dist)
         {
             var list = new List<IHex>();
-            var cur = t;
+            var cur = s;
             for (int i = 0; i < dist; i++)
             {
                 var next = cur.GetN();
@@ -261,10 +261,10 @@ namespace Assets.Template.Hex
             return list;
         }
 
-        public List<IHex> GetRayTilesViaDistNE(IHex t, int dist)
+        public List<IHex> GetRayTilesViaDistNE(IHex s, int dist)
         {
             var list = new List<IHex>();
-            var cur = t;
+            var cur = s;
             for (int i = 0; i < dist; i++)
             {
                 var next = cur.GetNE();
@@ -277,10 +277,10 @@ namespace Assets.Template.Hex
             return list;
         }
 
-        public List<IHex> GetRayTilesViaDistSE(IHex t, int dist)
+        public List<IHex> GetRayTilesViaDistSE(IHex s, int dist)
         {
             var list = new List<IHex>();
-            var cur = t;
+            var cur = s;
             for (int i = 0; i < dist; i++)
             {
                 var next = cur.GetSE();
@@ -293,10 +293,10 @@ namespace Assets.Template.Hex
             return list;
         }
 
-        public List<IHex> GetRayTilesViaDistS(IHex t, int dist)
+        public List<IHex> GetRayTilesViaDistS(IHex s, int dist)
         {
             var list = new List<IHex>();
-            var cur = t;
+            var cur = s;
             for (int i = 0; i < dist; i++)
             {
                 var next = cur.GetS();
@@ -309,10 +309,10 @@ namespace Assets.Template.Hex
             return list;
         }
 
-        public List<IHex> GetRayTilesViaDistSW(IHex t, int dist)
+        public List<IHex> GetRayTilesViaDistSW(IHex s, int dist)
         {
             var list = new List<IHex>();
-            var cur = t;
+            var cur = s;
             for (int i = 0; i < dist; i++)
             {
                 var next = cur.GetSW();
@@ -325,10 +325,10 @@ namespace Assets.Template.Hex
             return list;
         }
 
-        public List<IHex> GetRayTilesViaDistNW(IHex t, int dist)
+        public List<IHex> GetRayTilesViaDistNW(IHex s, int dist)
         {
             var list = new List<IHex>();
-            var cur = t;
+            var cur = s;
             for (int i = 0; i < dist; i++)
             {
                 var next = cur.GetNW();

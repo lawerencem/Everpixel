@@ -11,17 +11,17 @@ namespace Assets.Model.Ability.Magic.Fighting
 
         public override List<CTile> GetAoETiles(AbilityArgs arg)
         {
-            return base.GetRaycastTiles(arg);
+            return base.GetTargetableRaycastTiles(arg);
         }
 
         public override void Predict(MHit hit)
         {
-            base.PredictBullet(hit);
+            base.ProcessRay(hit);
         }
 
         public override void Process(MHit hit)
         {
-            base.ProcessHitBullet(hit);
+            base.ProcessRay(hit);
         }
     }
 }
