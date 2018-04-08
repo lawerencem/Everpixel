@@ -60,7 +60,6 @@ namespace Assets.Model.Ability.Physical
             var shake = tgt.Handle.AddComponent<SXAxisShake>();
             shake.Init(data);
             this.ProcessMove(action);
-            this.ProcessStun(action);
         }
 
         private void ProcessMove(MAction a)
@@ -79,16 +78,6 @@ namespace Assets.Model.Ability.Physical
             foreach (var hit in a.Data.Hits)
                 e.AddCallback(hit.CallbackHandler);
             e.TryProcess();
-        }
-
-        private void ProcessStun(MAction a)
-        {
-            foreach (var hit in a.Data.Hits)
-            {
-                var tgt = hit.Data.Target.Current as CChar;
-                if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Stun))
-                    EffectStun.ProcessStunFX(tgt);
-            }
         }
 
         private void SourceCallback(object o)

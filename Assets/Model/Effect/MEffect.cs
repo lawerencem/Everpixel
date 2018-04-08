@@ -1,10 +1,12 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.GUI.Combat;
+using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
 using Assets.Model.Zone;
 using Assets.Model.Zone.Duration;
+using Assets.Template.CB;
 using Assets.Template.Util;
 using Assets.Template.Utility;
 using Assets.View;
@@ -13,6 +15,8 @@ using Assets.View.Particle;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using System;
+using Assets.Template.Script;
 
 namespace Assets.Model.Effect
 {
@@ -40,10 +44,16 @@ namespace Assets.Model.Effect
             this.SpriteIndexes = new List<int>();
             this.WeaponCondition = "None";
         }
+
+        public void CallbackHandler(object o)
+        {
+            throw new NotImplementedException();
+        }
     }
 
-    public class MEffect
+    public class MEffect : ICallback, ICallbackHandler
     {
+        private List<Callback> _callbacks;
         private MEffectData _data;
         private EEffect _type;
 
@@ -54,19 +64,46 @@ namespace Assets.Model.Effect
         
         public MEffect(EEffect type)
         {
+            this._callbacks = new List<Callback>();
             this._type = type;
         }
 
-        public void ApplyEffectFx(CChar tgt)
+        public void AddCallback(Callback callback)
         {
-            var exists = tgt.Proxy.GetEffects().GetEffects().Find(x => x.Type == this.Type);
-            if (exists == null)
+            this._callbacks.Add(callback);
+        }
+
+        public void ApplyEffectFx(CTile tile)
+        {
+            if (tile.Model.GetCurrentOccupant() != null)
             {
-                var particles = ParticleController.Instance.CreateParticle(this.Data.ParticlePath);
-                if (particles != null)
-                    DecoUtil.AttachParticles(particles, tgt.Handle);
-                VCombatController.Instance.DisplayText(this.Type.ToString().Replace("_", " "), tgt);
+                if (tile.Model.GetCurrentOccupant().GetType() == typeof(CChar))
+                {
+                    var tgt = tile.Model.GetCurrentOccupant() as CChar;
+                    var exists = tgt.Proxy.GetEffects().GetEffects().Find(x => x.Type == this.Type);
+                    if (exists == null)
+                    {
+                        var particles = ParticleController.Instance.CreateParticle(this.Data.ParticlePath);
+                        if (particles != null)
+                            DecoUtil.AttachParticles(particles, tgt.Handle);
+                        VCombatController.Instance.DisplayText(this.Type.ToString().Replace("_", " "), tgt);
+                    }
+                }
             }
+            var placeHolder = new GameObject();
+            var script = placeHolder.AddComponent<SDestroyByLifetime>();
+            script.AddCallback(this.CallbackHandler);
+            script.Init(placeHolder, 0.2f);
+        }
+
+        public void CallbackHandler(object o)
+        {
+            this.DoCallbacks();
+        }
+
+        public void SetCallback(Callback callback)
+        {
+            throw new NotImplementedException();
         }
 
         public virtual bool CheckConditions(MHit hit)
@@ -104,6 +141,12 @@ namespace Assets.Model.Effect
             data.Y = this.Data.Y;
             data.Z = this.Data.Z;
             return data;
+        }
+
+        public void DoCallbacks()
+        {
+            foreach (var callback in this._callbacks)
+                callback(this);
         }
 
         public virtual void TryProcessHit(MHit hit, bool prediction) { }

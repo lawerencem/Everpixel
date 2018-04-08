@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.GUI.Combat;
+using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Logic.Calculator;
 using Assets.Model.Combat.Hit;
 using Assets.Template.Util;
@@ -13,18 +14,6 @@ namespace Assets.Model.Effect.Fortitude
 
         public EffectStun() : base(EEffect.Stun) { }
 
-        public static void ProcessStunFX(CChar c)
-        {
-            var path = StringUtil.PathBuilder(
-                CombatGUIParams.EFFECTS_PATH,
-                "Stun",
-                CombatGUIParams.PARTICLES_EXTENSION);
-            var particles = ParticleController.Instance.CreateParticle(path);
-            if (particles != null)
-                DecoUtil.AttachParticles(particles, c.Handle);
-            VCombatController.Instance.DisplayText("Stunned", c);
-        }
-
         public override void TryProcessHit(MHit hit, bool prediction)
         {
             base.TryProcessHit(hit, prediction);
@@ -36,6 +25,7 @@ namespace Assets.Model.Effect.Fortitude
                 if (!prediction && !calc.DidResist(tgt, this.Data.Resist, offense))
                 {
                     FHit.SetStunTrue(hit.Data.Flags);
+                    hit.AddEffect(this);
                     tgt.Proxy.AddEffect(this);
                 }
             }

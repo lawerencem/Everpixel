@@ -1,7 +1,6 @@
 ﻿TODO
 
- -- Finish pavise crossbowmen
- -- Finish cryomancer/necromancer
+ -- Finish application of FX and their particles
 
  BUGS
  - ween burster doesn't flip 180 on RTEAM

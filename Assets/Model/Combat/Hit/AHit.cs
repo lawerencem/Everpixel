@@ -1,7 +1,5 @@
-﻿using Assets.Controller.Character;
-using Assets.Model.Character.Enum;
+﻿using Assets.Model.Effect;
 using Assets.Template.CB;
-using Assets.View;
 using System.Collections.Generic;
 
 namespace Assets.Model.Combat.Hit
@@ -12,6 +10,7 @@ namespace Assets.Model.Combat.Hit
         protected List<Callback> _callbacks;
         protected HitData _data;
         protected List<HitDisplayData> _displays;
+        protected List<MEffect> _efffects;
 
         public HitData Data { get { return this._data; } }
         public bool Done { get { return this._done; } }
@@ -21,11 +20,17 @@ namespace Assets.Model.Combat.Hit
             this._callbacks = new List<Callback>();
             this._data = d;
             this._displays = new List<HitDisplayData>();
+            this._efffects = new List<MEffect>();
         }
 
         public void AddCallback(Callback callback)
         {
             this._callbacks.Add(callback);
+        }
+
+        public void AddEffect(MEffect effect)
+        {
+            this._efffects.Add(effect);
         }
 
         public void AddDataDisplay(HitDisplayData d)
@@ -64,6 +69,13 @@ namespace Assets.Model.Combat.Hit
                 this._displays[index].AddCallback(this.DisplayData);
                 this._displays[index].Display();
                 this._displays.RemoveAt(index);
+            }
+            else if (this._efffects.Count > 0)
+            {
+                int index = this._efffects.Count - 1;
+                this._efffects[index].AddCallback(this.DisplayData);
+                this._efffects[index].ApplyEffectFx(this._data.Target);
+                this._efffects.RemoveAt(index);
             }
             else
                 this.DoCallbacks();

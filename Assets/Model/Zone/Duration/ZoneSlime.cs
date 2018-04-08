@@ -18,7 +18,7 @@ namespace Assets.Model.Zone.Duration
             if (!resist.DidResist(target, this._data.Effect, this._data.ResistBase))
             {
                 var slime = this.GetSlimeEffect();
-                this._data.Effect.ApplyEffectFx(target);
+                this._data.Effect.ApplyEffectFx(target.Tile);
                 target.Proxy.AddEffect(slime);
             }
         }

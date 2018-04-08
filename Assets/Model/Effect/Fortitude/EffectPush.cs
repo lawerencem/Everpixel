@@ -9,11 +9,6 @@ namespace Assets.Model.Effect.Fortitude
     {
         public EffectPush() : base(EEffect.Push) { }
 
-        public static void ProcessPush(MHit hit)
-        {
-            
-        }
-
         public override void TryProcessHit(MHit hit, bool prediction)
         {
             base.TryProcessHit(hit, prediction);

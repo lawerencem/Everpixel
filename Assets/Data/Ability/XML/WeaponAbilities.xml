@@ -548,7 +548,7 @@
       </EEffect>
       <DamageMod>0.35</DamageMod>
       <DodgeMod>1.0</DodgeMod>
-      <IconSprite>0</IconSprite>
+      <IconSprite>22</IconSprite>
       <Injury>Broken_Jaw</Injury>
       <Injury>Broken_Nose</Injury>
       <Injury>Concussion</Injury>
