@@ -119,6 +119,7 @@ namespace Assets.Model.Action
                 GUIManager.Instance.SetGUILocked(false);
                 GUIManager.Instance.SetInteractionLocked(false);
                 this.ProcessHitsData();
+                this.DoCallbacks();
             }
         }
 

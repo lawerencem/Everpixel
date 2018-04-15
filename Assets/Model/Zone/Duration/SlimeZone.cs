@@ -3,6 +3,7 @@ using Assets.Controller.GUI.Combat;
 using Assets.Model.Ability.Logic.Calculator;
 using Assets.Model.Effect;
 using Assets.Model.Effect.Fortitude;
+using Assets.Template.CB;
 using Assets.Template.Util;
 
 namespace Assets.Model.Zone.Duration
@@ -11,9 +12,9 @@ namespace Assets.Model.Zone.Duration
     {
         public SlimeZone() : base(EZone.Slime_Zone) { }
 
-        public override void ProcessEnterZone(CChar target)
+        public override void ProcessEnterZone(CChar target, Callback cb)
         {
-            base.ProcessEnterZone(target);
+            base.ProcessEnterZone(target, cb);
             var resist = new ResistCalculator();
             if (!resist.DidResist(target, this._data.Effect, this._data.ResistBase))
             {

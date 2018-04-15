@@ -4,7 +4,6 @@ namespace Assets.View.Equipment
 {
     public class VWeapon : VEquipment
     {
-        public EWeaponSkill Skill { get; set; }
-        public EWeaponUse Use { get; set; }
+        public bool SpearWalling { get; set; }
     }
 }

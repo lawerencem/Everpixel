@@ -61,8 +61,12 @@ namespace Assets.Model.Event.Combat
 
         private void TileMoveDone(object o)
         {
+            var e = o as EvTileMove;
             this._current = this._next;
-            this.TryProcessNextTile(this._current);
+            if (e.GetPathInterrupted())
+                this.DoCallbacks();
+            else
+                this.TryProcessNextTile(this._current);
         }
 
         private void TryProcessFirstTile()

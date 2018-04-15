@@ -17,12 +17,19 @@ namespace Assets.Model.Event.Combat
     public class EvTileMove : MEvCombat
     {
         private EvTileMoveData _data;
+        private bool _pathInterrupted;
 
         public EvTileMove() : base(ECombatEv.TileMove) { }
-        public EvTileMove(EvTileMoveData d) : base(ECombatEv.TileMove) { this._data = d; }
+        public EvTileMove(EvTileMoveData d) : base(ECombatEv.TileMove)
+        {
+            this._data = d;
+            this._pathInterrupted = false;
+        }
 
-        public void SetData(EvTileMoveData d) { this._data = d; }
         public EvTileMoveData GetData() { return this._data; }
+        public bool GetPathInterrupted() { return this._pathInterrupted; }
+        public void SetData(EvTileMoveData d) { this._data = d; }
+        public void SetPathInterrupted(object o) { this._pathInterrupted = true; }
 
         public override void TryProcess()
         {
@@ -48,11 +55,16 @@ namespace Assets.Model.Event.Combat
             staminaEvent.TryProcess();
             if (this._data.Char != null)
                 this._data.Char.SetTile(this._data.Target);
-            this._data.Source.ProcessExitTile(this._data.Char);
-            this._data.Source.SetCurrent(null);
-            this._data.Target.SetCurrent(this._data.Char);
-            this._data.Target.ProcessEnterTile(this._data.Char);
-            this.DoCallbacks();
+            this._data.Source.ProcessExitTile(this._data.Char, this.SetPathInterrupted);
+            if (this._pathInterrupted)
+                this.DoCallbacks();
+            else
+            {
+                this._data.Source.SetCurrent(null);
+                this._data.Target.SetCurrent(this._data.Char);
+                this._data.Target.ProcessEnterTile(this._data.Char, this.SetPathInterrupted);
+                this.DoCallbacks();
+            }
         }
 
         private bool VerifyData()

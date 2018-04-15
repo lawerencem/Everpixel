@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Effect;
+using Assets.Template.CB;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,8 +29,8 @@ namespace Assets.Model.Zone
         public EZone Type { get { return this._type; } }
 
         public AZone(EZone type) { this._type = type; }
-        public virtual void ProcessEnterZone(CChar target) { }
-        public virtual void ProcessExitZone(CChar target) { }
-        public virtual void ProcessTurnInZone(CChar target) { }
+        public virtual void ProcessEnterZone(CChar target, Callback cb) { }
+        public virtual void ProcessExitZone(CChar target, Callback cb) { }
+        public virtual void ProcessTurnInZone(CChar target, Callback cb) { }
     }
 }

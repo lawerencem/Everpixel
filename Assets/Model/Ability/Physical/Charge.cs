@@ -2,7 +2,6 @@
 using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
 using Assets.Model.Combat.Hit;
-using Assets.Model.Effect.Fortitude;
 using Assets.Model.Event.Combat;
 using Assets.Template.Script;
 using Assets.View;

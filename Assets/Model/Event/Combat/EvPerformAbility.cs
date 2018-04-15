@@ -23,6 +23,7 @@ namespace Assets.Model.Event.Combat
         public EvPerformAbility() : base(ECombatEv.PerformAbility) { }
         public EvPerformAbility(EvPerformAbilityData d) : base(ECombatEv.PerformAbility) { this._data = d; }
 
+        public EvPerformAbilityData GetData() { return this._data; }
         public void SetData(EvPerformAbilityData d) { this._data = d; }
 
         public override void TryProcess()
@@ -36,6 +37,8 @@ namespace Assets.Model.Event.Combat
             data.Target = this._data.Target;
             data.WpnAbility = this._data.WpnAbility;
             var action = new MAction(data);
+            foreach (var callback in this._callbacks)
+                action.AddCallback(callback);
             action.TryProcess();
         }
     }

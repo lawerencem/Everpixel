@@ -28,9 +28,7 @@ namespace Assets.View.Equipment
             var sprites = CharSpriteLoader.Instance.GetWeaponSprites(w);
             random.Name = w.Name;
             random.SpriteIndex = w.Sprites[RNG.Instance.Next(0, w.Sprites.Count)];
-            random.Skill = w.Skill;
             random.Sprites = sprites;
-            random.Use = w.Use;
             return random;
         }
 

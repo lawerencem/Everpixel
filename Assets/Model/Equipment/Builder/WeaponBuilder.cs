@@ -4,6 +4,7 @@ using Assets.Model.Equipment.Table;
 using Assets.Model.Equipment.Weapon;
 using Assets.Model.Weapon;
 using Assets.Template.Builder;
+using Assets.View.Equipment;
 
 namespace Assets.Model.Equipment.Builder
 {
@@ -52,6 +53,7 @@ namespace Assets.Model.Equipment.Builder
             weapon.Model.Data.Tier = wStats.Tier;
             weapon.Model.Data.WpnType = wStats.Type;
             weapon.SetParams(wStats);
+            weapon.SetView(new VWeapon());
             return weapon;
         }
     }

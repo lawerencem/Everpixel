@@ -559,9 +559,9 @@
     <Compile Include="Assets\Model\Shield\MShield.cs" />
     <Compile Include="Assets\Model\Zone\AZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\ADurationZone.cs" />
+    <Compile Include="Assets\Model\Zone\Duration\SlimeZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\SoothingMistZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\SpearWallZone.cs" />
-    <Compile Include="Assets\Model\Zone\Duration\SlimeZone.cs" />
     <Compile Include="Assets\Model\Zone\EZone.cs" />
     <Compile Include="Assets\Model\Zone\ZoneBuilder.cs" />
     <Compile Include="Assets\Model\Zone\ZoneFactory.cs" />
@@ -635,6 +635,7 @@
     <Compile Include="Assets\View\Equipment\VArmor.cs" />
     <Compile Include="Assets\View\Equipment\VEquipment.cs" />
     <Compile Include="Assets\View\Equipment\VWeapon.cs" />
+    <Compile Include="Assets\View\Equipment\VWeaponUtil.cs" />
     <Compile Include="Assets\View\Event\AGuiEv.cs" />
     <Compile Include="Assets\View\Event\EGuiEv.cs" />
     <Compile Include="Assets\View\Event\EvAbilitySelected.cs" />

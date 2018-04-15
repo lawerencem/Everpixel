@@ -1,11 +1,13 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Map.Tile;
 using Assets.Model.Zone;
+using Assets.Template.CB;
 using Assets.Template.Hex;
 using Assets.View;
 using Assets.View.Map;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace Assets.Controller.Map.Tile
 {
@@ -28,6 +30,15 @@ namespace Assets.Controller.Map.Tile
         public void AddNonCurrent(CChar c) { this._nonCurrent.Add(c); }
         public void AddZone(AZone zone) { this._zones.Add(zone); }
 
+        public CTile(MTile tile)
+        {
+            this._handle = new GameObject(Layers.TILE);
+            this._handle.transform.position = tile.Center;
+            this._nonCurrent = new List<CChar>();
+            this._zones = new List<AZone>();
+            this.SetModel(tile);
+        }
+
         public List<CTile> GetAdjacent()
         {
             var adjacent = new List<CTile>();
@@ -37,26 +48,19 @@ namespace Assets.Controller.Map.Tile
             return adjacent;
         }
 
-        public FTile GetFlags() { return this._model.GetFlags(); }
-        public List<CChar> GetNonCurrent() { return this._nonCurrent; }
-        public List<AZone> GetZones() { return this._zones; }
-
-        public void RemoveZone(AZone zone) { this._zones.Remove(zone); }
-
-        public void SetCurrent(IHexOccupant o)
+        public FTile GetFlags()
         {
-            this.Model.SetCurrentOccupant(o);
-            if (o != null)
-                o.SetCurrentHex(this.Model);
+            return this._model.GetFlags();
         }
 
-        public CTile(MTile tile)
+        public List<CChar> GetNonCurrent()
         {
-            this._handle = new GameObject(Layers.TILE);
-            this._handle.transform.position = tile.Center;
-            this._nonCurrent = new List<CChar>();
-            this._zones = new List<AZone>();
-            this.SetModel(tile);
+            return this._nonCurrent;
+        }
+
+        public List<AZone> GetZones()
+        {
+            return this._zones;
         }
 
         public CTile GetNearestEmptyTile()
@@ -111,27 +115,34 @@ namespace Assets.Controller.Map.Tile
                 this._liquidHandle = new GameObject(Layers.TILE_LIQUID);
         }
 
-        public void ProcessEnterTile(CChar c)
+        public void ProcessEnterTile(CChar c, Callback cb)
         {
             foreach(var zone in this._zones)
-                zone.ProcessEnterZone(c);
+                zone.ProcessEnterZone(c, cb);
             this.Model.ProcessEnterTile(c);
         }
 
-        public void ProcessExitTile(CChar c)
+        public void ProcessExitTile(CChar c, Callback cb)
         {
             foreach (var zone in this._zones)
             {
-                zone.ProcessExitZone(c);
+                zone.ProcessExitZone(c, cb);
             }
         }
 
-        public void ProcessTurnInTile(CChar c)
+        public void ProcessTurnInTile(CChar c, Callback cb)
         {
             foreach (var zone in this._zones)
             {
-                zone.ProcessTurnInZone(c);
+                zone.ProcessTurnInZone(c, cb);
             }
+        }
+
+        public void SetCurrent(IHexOccupant o)
+        {
+            this.Model.SetCurrentOccupant(o);
+            if (o != null)
+                o.SetCurrentHex(this.Model);
         }
 
         public void SetModel(MTile t)
@@ -144,6 +155,11 @@ namespace Assets.Controller.Map.Tile
         public void SetView(VTile v)
         {
             this._view = v;
+        }
+
+        public void RemoveZone(AZone zone)
+        {
+            this._zones.Remove(zone);
         }
     }
 }
