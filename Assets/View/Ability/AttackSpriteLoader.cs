@@ -45,7 +45,7 @@ namespace Assets.View.Ability
         {
             var sprite = this.GetBulletSprite(hit.Data.Ability.Data.ParentAction);
             var bullet = new GameObject();
-            bullet.transform.position = hit.Data.Source.Handle.transform.position;
+            bullet.transform.position = hit.Data.Source.GameHandle.transform.position;
             var renderer = bullet.AddComponent<SpriteRenderer>();
             renderer.sprite = sprite;
             renderer.sortingLayerName = Layers.PARTICLES;
@@ -68,7 +68,7 @@ namespace Assets.View.Ability
         {
             var sprite = this.GetBulletSprite(action);
             var bullet = new GameObject();
-            bullet.transform.position = action.Data.Source.Handle.transform.position;
+            bullet.transform.position = action.Data.Source.GameHandle.transform.position;
             var renderer = bullet.AddComponent<SpriteRenderer>();
             renderer.sprite = sprite;
             renderer.sortingLayerName = Layers.PARTICLES;
@@ -142,7 +142,7 @@ namespace Assets.View.Ability
             data.Handle = bullet;
             data.Speed = speed;
             var pos = hit.Data.Target.Handle.transform.position;
-            if (hit.Data.Source.Handle.transform.position.x > pos.x)
+            if (hit.Data.Source.GameHandle.transform.position.x > pos.x)
                 pos.x += CombatGUIParams.X_CORRECTION;
             else
                 pos.x -= CombatGUIParams.X_CORRECTION;

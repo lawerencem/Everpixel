@@ -125,7 +125,7 @@ namespace Assets.Controller.GUI.Combat
             var particles = ParticleController.Instance.CreateParticle(path);
             var script = particles.AddComponent<SDestroyByLifetime>();
             script.Init(particles, 5f);
-            ParticleController.Instance.AttachParticle(a.Data.Source.Handle, particles);
+            ParticleController.Instance.AttachParticle(a.Data.Source.GameHandle, particles);
             foreach (var hit in a.Data.Hits)
                 hit.CallbackHandler(this);
         }
@@ -147,7 +147,7 @@ namespace Assets.Controller.GUI.Combat
             data.Color = CombatGUIParams.WHITE;
             data.Hit = hit;
             data.Priority = ViewParams.PARRY_PRIORITY;
-            data.Target = target.Handle;
+            data.Target = target.GameHandle;
             data.Text = "Block";
             data.YOffset = CombatGUIParams.FLOAT_OFFSET;
             data.Hit.AddDataDisplay(data);
@@ -166,18 +166,18 @@ namespace Assets.Controller.GUI.Combat
 
         private void DisplayDodge(CChar target, MHit hit)
         {
-            var dodge = target.Handle.AddComponent<SBoomerang>();
+            var dodge = target.GameHandle.AddComponent<SBoomerang>();
             var dodgeTgt = ListUtil<CTile>.GetRandomElement(target.Tile.GetAdjacent());
-            var position = Vector3.Lerp(target.Handle.transform.position, dodgeTgt.Model.Center, CombatGUIParams.DODGE_LERP);
+            var position = Vector3.Lerp(target.GameHandle.transform.position, dodgeTgt.Model.Center, CombatGUIParams.DODGE_LERP);
             position = RandomPositionOffset.RandomOffset(position, CombatGUIParams.DEFAULT_OFFSET);
             dodge.AddCallback(hit.CallbackHandler);
-            dodge.Init(target.Handle, position, CombatGUIParams.DODGE_SPEED);
+            dodge.Init(target.GameHandle, position, CombatGUIParams.DODGE_SPEED);
             var data = new HitDisplayData();
             data.Color = CombatGUIParams.WHITE;
             data.Hit = hit;
             data.Priority = ViewParams.DODGE_PRIORITY;
             data.Text = "Dodge";
-            data.Target = target.Handle;
+            data.Target = target.GameHandle;
             data.YOffset = CombatGUIParams.FLOAT_OFFSET;
             data.Hit.AddDataDisplay(data);
         }
@@ -189,14 +189,14 @@ namespace Assets.Controller.GUI.Combat
             dmgData.Hit = hit;
             dmgData.Priority = ViewParams.DMG_PRIORITY;
             dmgData.Text = hit.Data.Dmg.ToString();
-            dmgData.Target = target.Handle;
+            dmgData.Target = target.GameHandle;
             dmgData.YOffset = CombatGUIParams.FLOAT_OFFSET;
             dmgData.Hit.AddDataDisplay(dmgData);
 
             if (hit.Data.Dmg < target.Proxy.GetPoints(ESecondaryStat.HP)) 
             {
-                var flinch = target.Handle.AddComponent<SFlinch>();
-                var flinchPos = target.Handle.transform.position;
+                var flinch = target.GameHandle.AddComponent<SFlinch>();
+                var flinchPos = target.GameHandle.transform.position;
                 flinchPos.y -= CombatGUIParams.FLINCH_DIST;
                 flinch.AddCallback(hit.CallbackHandler);
                 flinch.Init(target, flinchPos, CombatGUIParams.FLINCH_SPEED);
@@ -218,7 +218,7 @@ namespace Assets.Controller.GUI.Combat
             data.Color = CombatGUIParams.WHITE;
             data.Hit = hit;
             data.Priority = ViewParams.PARRY_PRIORITY;
-            data.Target = target.Handle;
+            data.Target = target.GameHandle;
             data.Text = "Parry";
             data.YOffset = CombatGUIParams.FLOAT_OFFSET;
             data.Hit.AddDataDisplay(data);
@@ -268,7 +268,7 @@ namespace Assets.Controller.GUI.Combat
 
         private void ProcessBulletFXNonFatality(MAction a)
         {
-            var attack = a.Data.Source.Handle.AddComponent<SAttackerJolt>();
+            var attack = a.Data.Source.GameHandle.AddComponent<SAttackerJolt>();
             var position = Vector3.Lerp(a.Data.Target.Model.Center, a.Data.Source.Tile.Model.Center, CombatGUIParams.ATTACK_LERP);
             attack.Action = a;
             attack.Init(a.Data.Source, position, CombatGUIParams.ATTACK_SPEED);
@@ -360,7 +360,7 @@ namespace Assets.Controller.GUI.Combat
 
         private void ProcessMeleeFXNonFatality(MAction a)
         {
-            var attack = a.Data.Source.Handle.AddComponent<SAttackerJolt>();
+            var attack = a.Data.Source.GameHandle.AddComponent<SAttackerJolt>();
             var position = Vector3.Lerp(a.Data.Target.Model.Center, a.Data.Source.Tile.Model.Center, CombatGUIParams.ATTACK_LERP);
             attack.Action = a;
             attack.AddCallback(this.ProcessDefenderHits);
@@ -370,7 +370,7 @@ namespace Assets.Controller.GUI.Combat
 
         private void ProcessRaycastFXNonFatality(MAction a)
         {
-            var attack = a.Data.Source.Handle.AddComponent<SAttackerJolt>();
+            var attack = a.Data.Source.GameHandle.AddComponent<SAttackerJolt>();
             var position = Vector3.Lerp(a.Data.Target.Model.Center, a.Data.Source.Tile.Model.Center, CombatGUIParams.ATTACK_LERP);
             attack.Action = a;
             attack.Init(a.Data.Source, position, CombatGUIParams.ATTACK_SPEED);
@@ -386,7 +386,7 @@ namespace Assets.Controller.GUI.Combat
 
         private void ProcessSingleFXNonFatality(MAction a)
         {
-            var attack = a.Data.Source.Handle.AddComponent<SAttackerJolt>();
+            var attack = a.Data.Source.GameHandle.AddComponent<SAttackerJolt>();
             var position = Vector3.Lerp(a.Data.Target.Model.Center, a.Data.Source.Tile.Model.Center, CombatGUIParams.ATTACK_LERP);
             attack.Action = a;
             attack.Init(a.Data.Source, position, CombatGUIParams.ATTACK_SPEED);

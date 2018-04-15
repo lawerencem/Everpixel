@@ -88,7 +88,7 @@ namespace Assets.Model.Event.Combat
                 var particles = ParticleController.Instance.CreateParticle(path);
                 var script = particles.AddComponent<SDestroyByLifetime>();
                 script.Init(particles, CombatGUIParams.PARTICLE_DUR);
-                ParticleController.Instance.AttachParticle(c.Handle, particles);
+                ParticleController.Instance.AttachParticle(c.GameHandle, particles);
             }
         }
     }

@@ -39,7 +39,7 @@ namespace Assets.Model.Event.Combat
                 data.Color = CombatGUIParams.RED;
                 data.Hit = this._data.Hit;
                 data.Priority = ViewParams.INJURY_PRIORITY;
-                data.Target = this._data.Target.Handle;
+                data.Target = this._data.Target.GameHandle;
                 data.Text = this._data.Injury.Type.ToString().Replace("_", " ");
                 data.YOffset = CombatGUIParams.FLOAT_OFFSET;
                 data.Hit.AddDataDisplay(data);

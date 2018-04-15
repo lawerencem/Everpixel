@@ -27,10 +27,10 @@ namespace Assets.View.Fatality.Weapon.Ability
         private void ProcessFirstShot(object o)
         {
             var pos = Vector3.Lerp(
-                this._data.Source.Handle.transform.position,
+                this._data.Source.GameHandle.transform.position,
                 this._data.Target.Handle.transform.position,
                 FatalityParams.FATALITY_BULLET_LERP);
-            var attack = this._data.Source.Handle.AddComponent<SAttackerJolt>();
+            var attack = this._data.Source.GameHandle.AddComponent<SAttackerJolt>();
             attack.Action = this._data.Action;
             foreach (var hit in this._data.FatalHits)
             {
@@ -52,8 +52,8 @@ namespace Assets.View.Fatality.Weapon.Ability
                     shakeData.Duration = FatalityParams.DEFAULT_DUR;
                     shakeData.MaxDistance = FatalityParams.DEFAULT_X_SHAKE_DIST;
                     shakeData.Speed = FatalityParams.DEFAULT_X_SHAKE_SPEED;
-                    shakeData.Target = tgt.Handle;
-                    var shake = tgt.Handle.AddComponent<SXAxisShake>();
+                    shakeData.Target = tgt.GameHandle;
+                    var shake = tgt.GameHandle.AddComponent<SXAxisShake>();
                     shake.Init(shakeData);
 
                     var data = new SFireFatalityData();
@@ -63,8 +63,8 @@ namespace Assets.View.Fatality.Weapon.Ability
                     data.Interval = FatalityParams.FIRE_INTERVAL;
                     data.Speed = FatalityParams.FIRE_SPEED;
                     data.Sprite = sprite;
-                    data.Target = tgt.Handle.transform.position;
-                    var script = tgt.Handle.AddComponent<SFireFatality>();
+                    data.Target = tgt.GameHandle.transform.position;
+                    var script = tgt.GameHandle.AddComponent<SFireFatality>();
                     script.Init(data);
                     script.SetCallback(this.ProcessArrowed);
                 }

@@ -24,7 +24,7 @@ namespace Assets.Model.Map.Tile
                 CombatGUIParams.PARTICLES_EXTENSION);
             var particles = ParticleController.Instance.CreateParticle(path);
             if (particles != null)
-                DecoUtil.AttachParticles(particles, t.Controller.Handle);
+                ParticleController.Instance.AttachParticle(t.Controller.Handle, particles);
             var script = particles.AddComponent<SDestroyByLifetime>();
             script.Init(particles, 5f);
         }

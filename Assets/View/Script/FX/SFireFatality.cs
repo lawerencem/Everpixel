@@ -37,7 +37,7 @@ namespace Assets.View.Script.FX
         {
             this._data = data;
             var character = this._data.Hit.Data.Target.Current as CChar;
-            this._targetHandle = character.Handle;
+            this._targetHandle = character.GameHandle;
         }
 
         public void Update()
@@ -68,7 +68,7 @@ namespace Assets.View.Script.FX
                 CombatGUIParams.PARTICLES_EXTENSION);
             var particles = ParticleController.Instance.CreateParticle(path);
             if (particles != null)
-                DecoUtil.AttachParticles(particles, this._targetHandle);
+                ParticleController.Instance.AttachParticle(particles, this._targetHandle);
             var script = particles.AddComponent<SDestroyByLifetime>();
             script.Init(particles, 1f);
         }

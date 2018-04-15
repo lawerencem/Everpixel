@@ -14,7 +14,7 @@ namespace Assets.Model.Event.Combat
             var character = CombatManager.Instance.GetCurrentlyActing();
             if (character != null)
             {
-                var bob = character.Handle.GetComponent<SBob>();
+                var bob = character.GameHandle.GetComponent<SBob>();
                 if (bob != null)
                 {
                     bob.Reset();

@@ -19,11 +19,11 @@ namespace Assets.View.Script.FX
 
         public void Init(CChar source, Vector3 target, float speed)
         {
-            base.Init(source.Handle, target, speed);
-            var bob = source.Handle.GetComponent<SBob>();
+            base.Init(source.GameHandle, target, speed);
+            var bob = source.GameHandle.GetComponent<SBob>();
             if (bob != null)
                 bob.Reset();
-            this._renderer = source.Handle.GetComponent<SpriteRenderer>();
+            this._renderer = source.GameHandle.GetComponent<SpriteRenderer>();
             this._source = source;
             this._oldSprite = this._renderer.sprite;
             if (source.Proxy.Type == ECharType.Critter)
@@ -38,9 +38,9 @@ namespace Assets.View.Script.FX
         {
             base.Done(o);
             this._renderer.sprite = this._oldSprite;
-            this._source.Handle.transform.position = this._source.Tile.Model.Center;
-            var bob = this._source.Handle.AddComponent<SBob>();
-            bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._source.Handle);
+            this._source.GameHandle.transform.position = this._source.Tile.Model.Center;
+            var bob = this._source.GameHandle.AddComponent<SBob>();
+            bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._source.GameHandle);
         }
     }
 }

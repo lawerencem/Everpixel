@@ -69,10 +69,10 @@ namespace Assets.View.Fatality.Weapon.Ability
         private void ProcessJolt(object o)
         {
             var pos = Vector3.Lerp(
-                this._data.Source.Handle.transform.position,
+                this._data.Source.GameHandle.transform.position,
                 this._data.Target.Handle.transform.position,
                 FatalityParams.FATALITY_MELEE_LERP);
-            var attack = this._data.Source.Handle.AddComponent<SAttackerJolt>();
+            var attack = this._data.Source.GameHandle.AddComponent<SAttackerJolt>();
             attack.Action = this._data.Action;
             attack.AddCallback(this.ProcessHead);
             attack.Init(this._data.Source, pos, FatalityParams.FATALITY_ATTACK_SPEED);
@@ -119,7 +119,7 @@ namespace Assets.View.Fatality.Weapon.Ability
                         raycastData.Speed = FatalityParams.SLASH_RAYCAST_SPEED;
                         raycastData.Target = tgtPos;
                         var raycast = head.AddComponent<SRaycastMove>();
-                        this.AttachBlood(head, tgt.Handle);
+                        this.AttachBlood(head, tgt.GameHandle);
                         
                         raycast.AddCallback(this.AddBloodPool);
                         raycast.AddCallback(spin.Done);

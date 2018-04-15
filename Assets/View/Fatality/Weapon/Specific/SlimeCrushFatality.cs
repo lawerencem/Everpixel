@@ -33,10 +33,10 @@ namespace Assets.View.Fatality.Weapon.Ability
         private void ProcessJolt(object o)
         {
             var pos = Vector3.Lerp(
-                this._data.Source.Handle.transform.position,
+                this._data.Source.GameHandle.transform.position,
                 this._data.Target.Handle.transform.position,
                 FatalityParams.FATALITY_MELEE_LERP);
-            var attack = this._data.Source.Handle.AddComponent<SAttackerJolt>();
+            var attack = this._data.Source.GameHandle.AddComponent<SAttackerJolt>();
             attack.Action = this._data.Action;
             attack.AddCallback(this.ProcessSlime);
             attack.Init(this._data.Source, pos, FatalityParams.FATALITY_ATTACK_SPEED);
@@ -69,7 +69,7 @@ namespace Assets.View.Fatality.Weapon.Ability
         private void ProcessEnd(object o)
         {
             var tgt = this._data.Target.Current as CChar;
-            var position = tgt.Handle.transform.position;
+            var position = tgt.GameHandle.transform.position;
             var move = o as SRaycastMoveThenDelete;
             var jolt = move.GetObjectList()[0] as SAttackerJolt;
 
@@ -110,7 +110,7 @@ namespace Assets.View.Fatality.Weapon.Ability
             var data = new EvSplatterData();
             data.DmgPercent = 1.0;
             data.Fatality = true;
-            data.Target = tgt.Handle;
+            data.Target = tgt.GameHandle;
             var e = new EvSplatter(data);
             e.TryProcess();
 

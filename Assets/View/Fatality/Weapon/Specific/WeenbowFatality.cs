@@ -29,10 +29,10 @@ namespace Assets.View.Fatality.Weapon.Ability
         private void ProcessFirstShot(object o)
         {
             var pos = Vector3.Lerp(
-                this._data.Source.Handle.transform.position,
+                this._data.Source.GameHandle.transform.position,
                 this._data.Target.Handle.transform.position,
                 FatalityParams.FATALITY_BULLET_LERP);
-            var attack = this._data.Source.Handle.AddComponent<SAttackerJolt>();
+            var attack = this._data.Source.GameHandle.AddComponent<SAttackerJolt>();
             attack.Action = this._data.Action;
             foreach(var hit in this._data.FatalHits)
             {
@@ -54,8 +54,8 @@ namespace Assets.View.Fatality.Weapon.Ability
                     shakeData.Duration = FatalityParams.DEFAULT_DUR;
                     shakeData.MaxDistance = FatalityParams.DEFAULT_X_SHAKE_DIST;
                     shakeData.Speed = FatalityParams.DEFAULT_X_SHAKE_SPEED;
-                    shakeData.Target = tgt.Handle;
-                    var shake = tgt.Handle.AddComponent<SXAxisShake>();
+                    shakeData.Target = tgt.GameHandle;
+                    var shake = tgt.GameHandle.AddComponent<SXAxisShake>();
                     shake.Init(shakeData);
                     var swarmData = new SSwarmOnTargetData();
                     swarmData.Dur = FatalityParams.DEFAULT_DUR;
@@ -63,8 +63,8 @@ namespace Assets.View.Fatality.Weapon.Ability
                     swarmData.MaxOffset = FatalityParams.WEEN_OFFSET;
                     swarmData.Speed = FatalityParams.WEEN_SPEED;
                     swarmData.Sprite = sprite;
-                    swarmData.Target = tgt.Handle.transform.position;
-                    var weenSwarm = tgt.Handle.AddComponent<SSwarmOnTarget>();
+                    swarmData.Target = tgt.GameHandle.transform.position;
+                    var weenSwarm = tgt.GameHandle.AddComponent<SSwarmOnTarget>();
                     weenSwarm.AddCallback(this.ProcessSwarm);
                     weenSwarm.Init(swarmData);
                 }

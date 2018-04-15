@@ -17,8 +17,8 @@ namespace Assets.View.Script.FX
 
         public void Init(CChar source, Vector3 target, float speed)
         {
-            base.Init(source.Handle, target, speed);
-            this._torsoRenderer = source.Handle.GetComponent<SpriteRenderer>();
+            base.Init(source.GameHandle, target, speed);
+            this._torsoRenderer = source.GameHandle.GetComponent<SpriteRenderer>();
             this._oldSprite = this._torsoRenderer.sprite;
 
             if (source.Proxy.Type == ECharType.Critter)

@@ -15,7 +15,7 @@ namespace Assets.Controller.Character
         private VChar _view;
         private CTile _tile;
 
-        public GameObject Handle { get { return this._handle; } }
+        public GameObject GameHandle { get { return this._handle; } }
         public PChar Proxy { get { return this._proxy; } }
         public VChar View { get { return this._view; } }
         public CTile Tile { get { return this._tile; } }

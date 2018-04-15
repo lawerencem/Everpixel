@@ -40,8 +40,8 @@ namespace Assets.Model.Event.Combat
         {
             if (this._data.Char != null)
             {
-                var bob = this._data.Char.Handle.AddComponent<SBob>();
-                bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Char.Handle);
+                var bob = this._data.Char.GameHandle.AddComponent<SBob>();
+                bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Char.GameHandle);
             }
         }
 
@@ -126,7 +126,7 @@ namespace Assets.Model.Event.Combat
             if (this._data.Char == null)
                 this._data.Char = CombatManager.Instance.GetCurrentlyActing();
 
-            var bob = this._data.Char.Handle.GetComponent<SBob>();
+            var bob = this._data.Char.GameHandle.GetComponent<SBob>();
             if (bob != null)
                 bob.Reset();
             this._callbacks.Add(this.AddBob);

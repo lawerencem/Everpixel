@@ -31,7 +31,7 @@ namespace Assets.View.Fatality.Weapon.Ability
                         CombatGUIParams.EFFECTS_PATH,
                         CombatGUIParams.CRUSH_FATALITY,
                         CombatGUIParams.PARTICLES_EXTENSION);
-                    var position = tgt.Handle.transform.position;
+                    var position = tgt.GameHandle.transform.position;
                     var prefab = Resources.Load(path);
                     var particles = GameObject.Instantiate(prefab) as GameObject;
                     particles.transform.position = position;
@@ -52,10 +52,10 @@ namespace Assets.View.Fatality.Weapon.Ability
         private void ProcessJolt(object o)
         {
             var pos = Vector3.Lerp(
-                this._data.Source.Handle.transform.position,
+                this._data.Source.GameHandle.transform.position,
                 this._data.Target.Handle.transform.position,
                 FatalityParams.FATALITY_MELEE_LERP);
-            var attack = this._data.Source.Handle.AddComponent<SAttackerJolt>();
+            var attack = this._data.Source.GameHandle.AddComponent<SAttackerJolt>();
             attack.Action = this._data.Action;
             attack.AddCallback(this.ProcessCrush);
             attack.Init(this._data.Source, pos, FatalityParams.FATALITY_ATTACK_SPEED);

@@ -1,15 +1,24 @@
-﻿using UnityEngine;
+﻿using Assets.Controller.Character;
+using Assets.Controller.GUI.Combat;
+using Assets.Model.Effect;
+using UnityEngine;
 
 namespace Assets.Template.Util
 {
     public class DecoUtil
     {
-        public static void AttachParticles(GameObject deco, GameObject tgt)
+        public void AttachEffectParticlesToChar(CChar tgt, GameObject particles, EEffect effect)
         {
-            if (deco != null && tgt != null)
+            if (tgt != null && particles != null)
             {
-                deco.transform.SetParent(tgt.transform);
-                deco.transform.position = tgt.transform.position;
+                var view = tgt.View;
+                if (!view.EffectParticlesDict.ContainsKey(effect))
+                {
+                    view.EffectParticlesDict.Add(effect, particles);
+                    particles.transform.SetParent(tgt.GameHandle.transform);
+                    particles.transform.position = tgt.GameHandle.transform.position;
+                    VCombatController.Instance.DisplayText(effect.ToString().Replace("_", " "), tgt);
+                }
             }
         }
     }

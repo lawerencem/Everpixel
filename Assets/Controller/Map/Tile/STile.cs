@@ -73,7 +73,7 @@ namespace Assets.Controller.Map.Tile
             {
                 var fov = Camera.main.fieldOfView;
                 var charController = this._tile.Current as CChar;
-                var position = charController.Handle.transform.position;
+                var position = charController.GameHandle.transform.position;
                 position.x += (float)(fov * 0.025);
                 position.y += (float)(fov * 0.025);
                 GUIManager.Instance.SetHoverModalHeaderText(charController.View.Name.Replace("_", " "));

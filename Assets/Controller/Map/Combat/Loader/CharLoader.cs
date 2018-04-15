@@ -52,21 +52,21 @@ namespace Assets.Controller.Map.Combat.Loader
         private void RenderChar(CChar c, CTile t)
         {
             var sprite = c.View.Sprites[c.View.Torso];
-            var render = c.Handle.AddComponent<SpriteRenderer>();
-            c.Handle.transform.position = t.Handle.transform.position;
-            c.Handle.transform.SetParent(this._container);
-            c.Handle.name = c.View.Type.ToString() + " " + c.View.Race.ToString();
+            var render = c.GameHandle.AddComponent<SpriteRenderer>();
+            c.GameHandle.transform.position = t.Handle.transform.position;
+            c.GameHandle.transform.SetParent(this._container);
+            c.GameHandle.name = c.View.Type.ToString() + " " + c.View.Race.ToString();
             render.sprite = sprite;
             render.sortingLayerName = Layers.CHAR_TORSO;
             this.TryAttachHead(c, Layers.CHAR_HEAD, c.View.Head, t);
             this.TryAttachDeco(c, t);
             this.TryAttachEquipment(c, t);
             this.TryAttachMount(c, t);
-            c.SubComponents.Add(Layers.CHAR_TORSO, c.Handle);
-            c.SubComponents.Add(Layers.CHAR_MAIN, c.Handle);
+            c.SubComponents.Add(Layers.CHAR_TORSO, c.GameHandle);
+            c.SubComponents.Add(Layers.CHAR_MAIN, c.GameHandle);
 
             if (!c.Proxy.LParty)
-                c.Handle.transform.localRotation = Quaternion.Euler(0, 180, 0);
+                c.GameHandle.transform.localRotation = Quaternion.Euler(0, 180, 0);
 
             // TODO: This really should be elsewhere, but it works for now.
             t.SetCurrent(c);
@@ -89,7 +89,7 @@ namespace Assets.Controller.Map.Combat.Loader
                 var spriteHandler = new GameObject();
                 var sprite = c.View.Sprites[spriteIndex];
                 var render = spriteHandler.AddComponent<SpriteRenderer>();
-                spriteHandler.transform.position = c.Handle.transform.position;
+                spriteHandler.transform.position = c.GameHandle.transform.position;
 
                 if (sort == Layers.CHAR_FACE ||
                     sort == Layers.CHAR_HEAD_DECO_1 ||
@@ -99,7 +99,7 @@ namespace Assets.Controller.Map.Combat.Loader
                 }
                 else
                 {
-                    spriteHandler.transform.SetParent(c.Handle.transform);
+                    spriteHandler.transform.SetParent(c.GameHandle.transform);
                 }
 
                 spriteHandler.name = sort;
@@ -130,14 +130,14 @@ namespace Assets.Controller.Map.Combat.Loader
                     throw new System.Exception();
                 var sprite = e.Sprites[e.SpriteIndex];
                 var render = spriteHandler.AddComponent<SpriteRenderer>();
-                var position = c.Handle.transform.position;
+                var position = c.GameHandle.transform.position;
                 position.x += xOffset;
                 position.y += yOffset;
                 spriteHandler.transform.position = position;
                 if (sort == Layers.CHAR_HELM)
                     spriteHandler.transform.SetParent(c.SubComponents[Layers.CHAR_HEAD].transform);
                 else
-                    spriteHandler.transform.SetParent(c.Handle.transform);
+                    spriteHandler.transform.SetParent(c.GameHandle.transform);
                 spriteHandler.name = e.Name;
                 render.sprite = sprite;
                 render.sortingLayerName = sort;
@@ -152,8 +152,8 @@ namespace Assets.Controller.Map.Combat.Loader
                 var sprite = c.View.Sprites[spriteIndex];
                 var spriteHandler = new GameObject();
                 var render = spriteHandler.AddComponent<SpriteRenderer>();
-                spriteHandler.transform.position = c.Handle.transform.position;
-                spriteHandler.transform.SetParent(c.Handle.transform);
+                spriteHandler.transform.position = c.GameHandle.transform.position;
+                spriteHandler.transform.SetParent(c.GameHandle.transform);
                 spriteHandler.name = "Character Head";
                 render.sprite = sprite;
                 render.sortingLayerName = sort;
@@ -171,13 +171,13 @@ namespace Assets.Controller.Map.Combat.Loader
                 var position = tile.Handle.transform.position;
                 position.y -= ViewParams.MOUNT_Y_OFFSET;
                 spriteHandler.transform.position = position;
-                spriteHandler.transform.SetParent(c.Handle.transform);
+                spriteHandler.transform.SetParent(c.GameHandle.transform);
                 spriteHandler.name = c.View.Name + " " + c.View.Mount.Name + " Mount";
                 render.sprite = sprite;
                 render.sortingLayerName = Layers.CHAR_MOUNT;
                 c.SubComponents.Add(Layers.CHAR_MOUNT, spriteHandler);
-                var mountOffsetPos = c.Handle.transform.position;
-                c.Handle.transform.position = mountOffsetPos;
+                var mountOffsetPos = c.GameHandle.transform.position;
+                c.GameHandle.transform.position = mountOffsetPos;
             }
         }
     }

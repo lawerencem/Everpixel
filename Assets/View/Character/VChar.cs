@@ -1,14 +1,22 @@
 ﻿using Assets.Model.Character.Enum;
+using Assets.Model.Effect;
 using Assets.View.Equipment;
 using Assets.View.Mount;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.View.Character
 {
     public class VChar
     {
+        public VChar()
+        {
+            this.EffectParticlesDict = new Dictionary<EEffect, GameObject>();
+        }
+
         public VArmor Armor {get;set;}
         public int AttackSpriteIndex { get; set; }
+        public Dictionary<EEffect, GameObject> EffectParticlesDict { get; set; }
         public int Face { get; set; }
         public int Head { get; set; }
         public int HeadDeco1 { get; set; }

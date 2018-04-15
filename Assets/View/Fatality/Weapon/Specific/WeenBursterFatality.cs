@@ -31,10 +31,10 @@ namespace Assets.View.Fatality.Weapon.Ability
         private void ProcessJolt(object o)
         {
             var pos = Vector3.Lerp(
-                this._data.Source.Handle.transform.position,
+                this._data.Source.GameHandle.transform.position,
                 this._data.Target.Handle.transform.position,
                 FatalityParams.FATALITY_MELEE_LERP);
-            var attack = this._data.Source.Handle.AddComponent<SAttackerJolt>();
+            var attack = this._data.Source.GameHandle.AddComponent<SAttackerJolt>();
             attack.Action = this._data.Action;
             attack.AddCallback(this.ProcessShake);
             attack.Init(this._data.Source, pos, FatalityParams.FATALITY_ATTACK_SPEED);
@@ -52,10 +52,10 @@ namespace Assets.View.Fatality.Weapon.Ability
                     data.Dur = 4f;
                     data.Speed = 22f;
                     data.TimeInterval = 0.18f;
-                    data.ToJolt = tgt.Handle;
+                    data.ToJolt = tgt.GameHandle;
                     data.X = 0.1f;
                     data.Y = 0.025f;
-                    var jolt = tgt.Handle.AddComponent<SIntervalJoltScript>();
+                    var jolt = tgt.GameHandle.AddComponent<SIntervalJoltScript>();
                     jolt.AddCallback(this.HandleWeen);
                     jolt.AddObjectToList(hit);
                     this._fatalityMap.Add(jolt.ID, jolt);
@@ -78,12 +78,12 @@ namespace Assets.View.Fatality.Weapon.Ability
                 var tgt = hit.Data.Target.Current as CChar;
                 var sprite = CharSpriteLoader.Instance.GetFatalitySprite(WEEN_BURSTER);
                 var ween = this.LayFatalityDeco(sprite, tgt, Layers.PARTICLES);
-                ween.transform.SetParent(tgt.Handle.transform);
+                ween.transform.SetParent(tgt.GameHandle.transform);
 
                 VCharUtil.Instance.AssignDeadEyes(tgt);
                 var bloodPrefab = Resources.Load(bloodPath);
                 var particles = GameObject.Instantiate(bloodPrefab) as GameObject;
-                particles.transform.position = tgt.Handle.transform.position;
+                particles.transform.position = tgt.GameHandle.transform.position;
                 particles.name = "Ween Burster Blood Particles";
                 if (tgt.Proxy.LParty)
                     particles.transform.Rotate(0, 90, 0);

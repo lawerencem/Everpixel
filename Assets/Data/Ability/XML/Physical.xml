@@ -32,7 +32,7 @@
       <DodgeMod>0</DodgeMod>
       <EEffect name="Stun">
         <OffensiveResist>Fortitude</OffensiveResist>
-        <ParticlePath>Stun</ParticlePath>
+        <ParticlePath>Effects/StunParticles</ParticlePath>
         <Resist>Fortitude</Resist>
         <X>1</X>
       </EEffect>

@@ -1,17 +1,11 @@
 ﻿using Assets.Controller.Character;
-using Assets.Controller.GUI.Combat;
-using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Logic.Calculator;
 using Assets.Model.Combat.Hit;
-using Assets.Template.Util;
-using Assets.View.Particle;
 
 namespace Assets.Model.Effect.Fortitude
 {
     public class EffectStun : MEffect
     {
-        private const string STUN = "Stun";
-
         public EffectStun() : base(EEffect.Stun) { }
 
         public override void TryProcessHit(MHit hit, bool prediction)

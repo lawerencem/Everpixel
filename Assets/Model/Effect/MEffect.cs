@@ -1,5 +1,4 @@
 ﻿using Assets.Controller.Character;
-using Assets.Controller.GUI.Combat;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Character.Enum;
@@ -7,16 +6,16 @@ using Assets.Model.Combat.Hit;
 using Assets.Model.Zone;
 using Assets.Model.Zone.Duration;
 using Assets.Template.CB;
+using Assets.Template.Script;
 using Assets.Template.Util;
 using Assets.Template.Utility;
 using Assets.View;
 using Assets.View.Map;
 using Assets.View.Particle;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using System;
-using Assets.Template.Script;
 
 namespace Assets.Model.Effect
 {
@@ -79,15 +78,10 @@ namespace Assets.Model.Effect
             {
                 if (tile.Model.GetCurrentOccupant().GetType() == typeof(CChar))
                 {
+                    var util = new DecoUtil();
+                    var particles = ParticleController.Instance.CreateParticle(this.Data.ParticlePath);
                     var tgt = tile.Model.GetCurrentOccupant() as CChar;
-                    var exists = tgt.Proxy.GetEffects().GetEffects().Find(x => x.Type == this.Type);
-                    if (exists == null)
-                    {
-                        var particles = ParticleController.Instance.CreateParticle(this.Data.ParticlePath);
-                        if (particles != null)
-                            DecoUtil.AttachParticles(particles, tgt.Handle);
-                        VCombatController.Instance.DisplayText(this.Type.ToString().Replace("_", " "), tgt);
-                    }
+                    util.AttachEffectParticlesToChar(tgt, particles, this.Type);
                 }
             }
             var placeHolder = new GameObject();

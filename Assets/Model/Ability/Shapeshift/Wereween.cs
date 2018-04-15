@@ -2,6 +2,8 @@
 using Assets.Model.Action;
 using Assets.Model.Combat.Hit;
 using Assets.Model.Event.Combat;
+using Assets.Model.OTE;
+using Assets.Model.OTE.HoT;
 using Assets.View.Script.FX;
 
 namespace Assets.Model.Ability.Shapeshift
@@ -15,17 +17,12 @@ namespace Assets.Model.Ability.Shapeshift
 
         public override void Predict(MHit hit)
         {
-            
+            base.PredictSingle(hit);
         }
 
         public override void Process(MHit hit)
         {
-            var data = new EvHoTData();
-            data.Dmg = 5;   // TODO
-            data.HasDur = false;
-            data.Tgt = hit.Data.Source;
-            var e = new EvHoT(data);
-            e.TryProcess();
+            base.ProcessSingle(hit);
         }
 
         public override void DisplayFX(MAction a)
@@ -33,7 +30,7 @@ namespace Assets.Model.Ability.Shapeshift
             base.DisplayFX(a);
             foreach(var hit in a.Data.Hits)
             {
-                var script = hit.Data.Source.Handle.AddComponent<SDisplayShapeshift>();
+                var script = hit.Data.Source.GameHandle.AddComponent<SDisplayShapeshift>();
                 script.Init(hit);
             }
         }

@@ -40,16 +40,16 @@ namespace Assets.View.Fatality
 
         public virtual void Init()
         {
-            var bob = this._data.Source.Handle.GetComponent<SBob>();
+            var bob = this._data.Source.GameHandle.GetComponent<SBob>();
             if (bob != null)
                 bob.Reset();
         }
 
         public void Start(Callback callback)
         {
-            var position = this._data.Source.Handle.transform.position;
+            var position = this._data.Source.GameHandle.transform.position;
             position.y -= FatalityParams.ZOOM_Y_OFFSET;
-            var zoom = this._data.Source.Handle.AddComponent<SHangCallbackZoomOut>();
+            var zoom = this._data.Source.GameHandle.AddComponent<SHangCallbackZoomOut>();
             if (BarkManager.Instance.IsPreFatalityBark())
             {
                 this._postZoomCallback = callback;
@@ -87,11 +87,11 @@ namespace Assets.View.Fatality
 
         protected void AddBob(object o)
         {
-            var existingBob = this._data.Source.Handle.GetComponent<SBob>();
+            var existingBob = this._data.Source.GameHandle.GetComponent<SBob>();
             if (existingBob == null)
             {
-                var bob = this._data.Source.Handle.AddComponent<SBob>();
-                bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Source.Handle);
+                var bob = this._data.Source.GameHandle.AddComponent<SBob>();
+                bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Source.GameHandle);
             }
         }
 
@@ -101,7 +101,7 @@ namespace Assets.View.Fatality
                         CombatGUIParams.EFFECTS_PATH,
                         CombatGUIParams.FIGHTING_FATALITY,
                         CombatGUIParams.PARTICLES_EXTENSION);
-            var position = tgt.Handle.transform.position;
+            var position = tgt.GameHandle.transform.position;
             var boom = Resources.Load(path);
             var particles = GameObject.Instantiate(boom) as GameObject;
             particles.transform.position = position;
@@ -130,7 +130,7 @@ namespace Assets.View.Fatality
         protected GameObject LayFatalityDeco(Sprite sprite, CChar c, string layer)
         {
             var deco = new GameObject();
-            deco.transform.position = c.Handle.transform.position;
+            deco.transform.position = c.GameHandle.transform.position;
             var renderer = deco.AddComponent<SpriteRenderer>();
             renderer.sprite = sprite;
             renderer.sortingLayerName = layer;
@@ -155,7 +155,7 @@ namespace Assets.View.Fatality
             var data = new EvSplatterData();
             data.DmgPercent = percent;
             data.Fatality = fatality;
-            data.Target = target.Handle;
+            data.Target = target.GameHandle;
             var e = new EvSplatter(data);
             e.TryProcess();
         }
@@ -174,7 +174,7 @@ namespace Assets.View.Fatality
                         "FightingFatalityExplosion",
                         CombatGUIParams.PARTICLES_EXTENSION);
                     var explosion = GameObject.Instantiate(Resources.Load(explosionPath)) as GameObject;
-                    explosion.transform.position = tgt.Handle.transform.position;
+                    explosion.transform.position = tgt.GameHandle.transform.position;
                     explosion.name = "BOOM";
                     var scriptOne = geyser.AddComponent<SDestroyByLifetime>();
                     var scriptTwo = explosion.AddComponent<SDestroyByLifetime>();

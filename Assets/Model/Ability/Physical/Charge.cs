@@ -33,15 +33,15 @@ namespace Assets.Model.Ability.Physical
         private void InitCharge(MAction a)
         {
             VCharUtil.Instance.AssignPlusLayer(a.Data.Source);
-            var bob = a.Data.Source.Handle.GetComponent<SBob>();
+            var bob = a.Data.Source.GameHandle.GetComponent<SBob>();
             if (bob != null)
                 GameObject.Destroy(bob);
             var data = new SRaycastMoveData();
             data.Epsilon = 0.15f;
-            data.Handle = a.Data.Source.Handle;
+            data.Handle = a.Data.Source.GameHandle;
             data.Speed = 3f;
             data.Target = a.Data.Target.Handle.transform.position;
-            var script = a.Data.Source.Handle.AddComponent<SRaycastMove>();
+            var script = a.Data.Source.GameHandle.AddComponent<SRaycastMove>();
             script.Init(data);
             script.AddObjectToList(a);
             script.AddCallback(this.ChargeDone);
@@ -56,8 +56,8 @@ namespace Assets.Model.Ability.Physical
             data.Duration = 1.5f;
             data.MaxDistance = 0.03f;
             data.Speed = 0.75f;
-            data.Target = tgt.Handle;
-            var shake = tgt.Handle.AddComponent<SXAxisShake>();
+            data.Target = tgt.GameHandle;
+            var shake = tgt.GameHandle.AddComponent<SXAxisShake>();
             shake.Init(data);
             this.ProcessMove(action);
         }
@@ -83,8 +83,8 @@ namespace Assets.Model.Ability.Physical
         private void SourceCallback(object o)
         {
             var e = o as EvTileMove;
-            var bob = e.GetData().Char.Handle.AddComponent<SBob>();
-            bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, e.GetData().Char.Handle);
+            var bob = e.GetData().Char.GameHandle.AddComponent<SBob>();
+            bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, e.GetData().Char.GameHandle);
         }
     }
 }

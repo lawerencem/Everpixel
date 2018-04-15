@@ -42,7 +42,7 @@ namespace Assets.Model.Ability.Physical
             foreach (var hit in a.Data.Hits)
                 e.AddCallback(hit.CallbackHandler);
             e.TryProcess();
-            var bob = a.Data.Source.Handle.GetComponent<SBob>();
+            var bob = a.Data.Source.GameHandle.GetComponent<SBob>();
             if (bob != null)
             {
                 GameObject.Destroy(bob);
@@ -66,8 +66,8 @@ namespace Assets.Model.Ability.Physical
         private void SourceCallback(object o)
         {
             var e = o as EvTileMove;
-            var bob = e.GetData().Char.Handle.AddComponent<SBob>();
-            bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, e.GetData().Char.Handle);
+            var bob = e.GetData().Char.GameHandle.AddComponent<SBob>();
+            bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, e.GetData().Char.GameHandle);
         }
 
         private void TargetCallback(object o)

@@ -25,7 +25,7 @@ namespace Assets.View.Fatality.Weapon.Ability
                     hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
                 {
                     var tgt = this._data.Target.Current as CChar;
-                    var position = tgt.Handle.transform.position;
+                    var position = tgt.GameHandle.transform.position;
 
                     var bonePath = StringUtil.PathBuilder(
                         CombatGUIParams.EFFECTS_PATH,
@@ -56,8 +56,8 @@ namespace Assets.View.Fatality.Weapon.Ability
                     data.Duration = FatalityParams.DEFAULT_DUR;
                     data.MaxDistance = FatalityParams.DEFAULT_X_SHAKE_DIST;
                     data.Speed = FatalityParams.DEFAULT_X_SHAKE_SPEED;
-                    data.Target = tgt.Handle;
-                    var shake = tgt.Handle.AddComponent<SXAxisShake>();
+                    data.Target = tgt.GameHandle;
+                    var shake = tgt.GameHandle.AddComponent<SXAxisShake>();
                     shake.AddCallback(this.ProcessExplosion);
                     shake.Init(data);
                 }
@@ -71,10 +71,10 @@ namespace Assets.View.Fatality.Weapon.Ability
         private void ProcessJolt(object o)
         {
             var pos = Vector3.Lerp(
-                this._data.Source.Handle.transform.position,
+                this._data.Source.GameHandle.transform.position,
                 this._data.Target.Handle.transform.position,
                 FatalityParams.FATALITY_MELEE_LERP);
-            var attack = this._data.Source.Handle.AddComponent<SAttackerJolt>();
+            var attack = this._data.Source.GameHandle.AddComponent<SAttackerJolt>();
             attack.Action = this._data.Action;
             attack.AddCallback(this.ProcessChop);
             attack.Init(this._data.Source, pos, FatalityParams.FATALITY_ATTACK_SPEED);

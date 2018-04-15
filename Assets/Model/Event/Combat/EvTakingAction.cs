@@ -52,10 +52,10 @@ namespace Assets.Model.Event.Combat
             CombatManager.Instance.SetCurrentlyActing(this._data.Target);
             VCharUtil.Instance.AssignPlusLayer(this._data.Target);
             GUIManager.Instance.SetActingBoxToController(this._data.Target);
-            var bob = this._data.Target.Handle.AddComponent<SBob>();
-            bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Target.Handle);
+            var bob = this._data.Target.GameHandle.AddComponent<SBob>();
+            bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Target.GameHandle);
             if (CameraManager.Instance != null)
-                CameraManager.Instance.InitScrollTo(this._data.Target.Handle.transform.position);
+                CameraManager.Instance.InitScrollTo(this._data.Target.GameHandle.transform.position);
             if (AbilityModalManager.Instance != null)
                 AbilityModalManager.Instance.ProcessNewModalValues();
             var e = new EvPopulateWpnBtns();

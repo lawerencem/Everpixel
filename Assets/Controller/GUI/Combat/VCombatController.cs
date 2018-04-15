@@ -57,7 +57,7 @@ namespace Assets.Controller.GUI.Combat
             var data = new HitDisplayData();
             data.Color = CombatGUIParams.WHITE;
             data.Hit = null;
-            data.Target = a.Data.Source.Handle;
+            data.Target = a.Data.Source.GameHandle;
             data.Text = a.ActiveAbility.Type.ToString().Replace("_", " ");
             data.YOffset = CombatGUIParams.FLOAT_OFFSET;
             data.Display();
@@ -68,7 +68,7 @@ namespace Assets.Controller.GUI.Combat
             var data = new HitDisplayData();
             data.Color = CombatGUIParams.WHITE;
             data.Hit = null;
-            data.Target = tgt.Handle;
+            data.Target = tgt.GameHandle;
             data.Text = text;
             data.YOffset = CombatGUIParams.FLOAT_OFFSET;
             data.Display();
@@ -78,6 +78,7 @@ namespace Assets.Controller.GUI.Combat
         {
             var parent = GameObject.FindGameObjectWithTag("WorldSpaceCanvas");
             var display = new GameObject();
+            display.transform.position = (data.Target.transform.position);
             var text = display.AddComponent<Text>();
             var position = data.Target.transform.position;
             position.y += data.YOffset;
@@ -97,6 +98,8 @@ namespace Assets.Controller.GUI.Combat
             script.Init(display, data.Dur);
             var floating = display.AddComponent<SFloatingText>();
             floating.Init(display, 0.0015f, data.Delay);
+
+
         }
 
         public void DoCallbacks()

@@ -72,10 +72,10 @@ namespace Assets.Model.Event.Combat
         {
             if (this.VerifyData())
             {
-                var script = this._data.Char.Handle.AddComponent<SObjectMove>();
+                var script = this._data.Char.GameHandle.AddComponent<SObjectMove>();
                 var data = new SObjectMoveData();
                 data.Epsilon = ViewParams.MOVE_EPSILON;
-                data.Object = this._data.Char.Handle;
+                data.Object = this._data.Char.GameHandle;
                 data.Source = this._data.Source.Handle.transform.position;
                 data.Speed = ViewParams.MOVE_SPEED;
                 data.Target = this._data.Target.Handle.transform.position;

@@ -30,19 +30,19 @@ namespace Assets.View.Fatality.Weapon.Ability
 
         private void ProcessSource(object o)
         {
-            this._origin = this._data.Source.Handle.transform.position;
+            this._origin = this._data.Source.GameHandle.transform.position;
             var pos = Vector3.Lerp(
-                this._data.Source.Handle.transform.position,
+                this._data.Source.GameHandle.transform.position,
                 this._data.Target.Handle.transform.position,
                 FatalityParams.FATALITY_MELEE_LERP);
-            var attack = this._data.Source.Handle.AddComponent<SJolt>();
-            attack.Init(this.Data.Source.Handle, pos, FatalityParams.FATALITY_ATTACK_SPEED);
+            var attack = this._data.Source.GameHandle.AddComponent<SJolt>();
+            attack.Init(this.Data.Source.GameHandle, pos, FatalityParams.FATALITY_ATTACK_SPEED);
 
             if (this._data.Source.Proxy.Type == Model.Character.Enum.ECharType.Critter)
             {
                 this._sprites = CharSpriteLoader.Instance.GetCritterSprites(this._data.Source.View.Name);
                 int index = CritterAttackSpriteTable.Instance.Table[this._data.Source.View.Name];
-                this._renderer = this._data.Source.Handle.GetComponent<SpriteRenderer>();
+                this._renderer = this._data.Source.GameHandle.GetComponent<SpriteRenderer>();
                 this._oldSprite = this._renderer.sprite;
                 this._renderer.sprite = this._sprites[index];
             }
@@ -59,8 +59,8 @@ namespace Assets.View.Fatality.Weapon.Ability
 
                     var scaleData = new SScaleData();
                     scaleData.ScalePerFrame = 0.99f;
-                    scaleData.Target = tgt.Handle;
-                    var scale = tgt.Handle.AddComponent<SScale>();
+                    scaleData.Target = tgt.GameHandle;
+                    var scale = tgt.GameHandle.AddComponent<SScale>();
                     scale.Init(scaleData);
 
                     var rotateData = new SRotationData();
@@ -70,19 +70,19 @@ namespace Assets.View.Fatality.Weapon.Ability
                     else
                         rotateData.SpinRight = false;
                     rotateData.Speed = Mathf.Abs(RNG.Instance.GetRandomBetweenRange(12f));
-                    rotateData.Target = tgt.Handle;
-                    var rotate = tgt.Handle.AddComponent<SRotation>();
+                    rotateData.Target = tgt.GameHandle;
+                    var rotate = tgt.GameHandle.AddComponent<SRotation>();
                     rotate.Init(rotateData);
 
                     var trackData = new STrackMoveData();
                     trackData.Epsilon = FatalityParams.DEFAULT_EPSILON;
-                    trackData.Handle = tgt.Handle;
+                    trackData.Handle = tgt.GameHandle;
                     trackData.Speed = 1.2f;
-                    trackData.Target = this._data.Source.Handle;
-                    var track = tgt.Handle.AddComponent<STrackMoveThenDelete>();
+                    trackData.Target = this._data.Source.GameHandle;
+                    var track = tgt.GameHandle.AddComponent<STrackMoveThenDelete>();
                     track.Init(trackData);
 
-                    var callbackDelay = tgt.Handle.AddComponent<SDelayCallback>();
+                    var callbackDelay = tgt.GameHandle.AddComponent<SDelayCallback>();
                     callbackDelay.AddCallback(this.ProcessPostFatality);
                     callbackDelay.AddCallback(hit.CallbackHandler);
                     callbackDelay.AddCallback(rotate.Done);
@@ -102,13 +102,13 @@ namespace Assets.View.Fatality.Weapon.Ability
                 var tgt = script.gameObject;
                 GameObject.Destroy(tgt);
             }
-            var joltback = this._data.Source.Handle.GetComponent<SJolt>();
+            var joltback = this._data.Source.GameHandle.GetComponent<SJolt>();
             if (joltback == null)
             {
-                joltback = this.Data.Source.Handle.AddComponent<SJolt>();
+                joltback = this.Data.Source.GameHandle.AddComponent<SJolt>();
                 joltback.AddCallback(this.CallbackHandler);
                 joltback.Init(
-                    this._data.Source.Handle, 
+                    this._data.Source.GameHandle, 
                     this._origin, 
                     FatalityParams.FATALITY_ATTACK_SPEED);
             }

@@ -20,8 +20,8 @@ namespace Assets.View.Script.FX
             this._hit = hit;
             this._target = this._hit.Data.Source;
             this._hit = hit;
-            var dramaticZoom = this._target.Handle.AddComponent<SHangCallbackZoomOut>();
-            var position = this._hit.Data.Source.Handle.transform.position;
+            var dramaticZoom = this._target.GameHandle.AddComponent<SHangCallbackZoomOut>();
+            var position = this._hit.Data.Source.GameHandle.transform.position;
             position.y -= 0.3f;
             dramaticZoom.AddCallback(this.ZoomDone);
             dramaticZoom.Init(position, 50f, 18f, 1f);
@@ -29,13 +29,13 @@ namespace Assets.View.Script.FX
 
         private void ZoomDone(object o)
         {
-            var shake = this._target.Handle.AddComponent<SXAxisShake>();
+            var shake = this._target.GameHandle.AddComponent<SXAxisShake>();
             shake.AddCallback(this.ShakeDone);
             var data = new SXAxisShakeData();
             data.Duration = 3f;
             data.MaxDistance = 0.02f;
             data.Speed = 1f;
-            data.Target = this._target.Handle;
+            data.Target = this._target.GameHandle;
             shake.Init(data);
         }
 
@@ -70,7 +70,7 @@ namespace Assets.View.Script.FX
             }
             if (ability.Info.CharAttackHead != SENTINEL && ability.Info.CharHead != SENTINEL)
             {
-                var script = this._target.Handle.AddComponent<SpriteFlipCallback>();
+                var script = this._target.GameHandle.AddComponent<SpriteFlipCallback>();
                 var defaultHead = sprites[ability.Info.CharHead];
                 var attackHead = sprites[ability.Info.CharAttackHead];
                 var head = this._target.SubComponents[Layers.CHAR_HEAD];

@@ -55,7 +55,6 @@ namespace Assets.View.Script.GUI
             var protoImg = this._proto.GetComponent<Image>();
             var protoTxtContainer = GameObject.FindGameObjectWithTag("ProtoAbilityBtnTextTag");
             var protoTxt = protoTxtContainer.GetComponent<Text>();
-            //var protoRect = protoTxtContainer.GetComponent<RectTransform>();
             var content = GameObject.FindGameObjectWithTag("ActiveModalContent");
 
             var clone = new GameObject();
@@ -86,8 +85,6 @@ namespace Assets.View.Script.GUI
 
             var txtRect = cloneTxtContainer.GetComponent<RectTransform>();
             txtRect.localPosition = new Vector2(0, 0);
-            // TODO: Would really love a better way to do this, but it works for now.
-            txtRect.sizeDelta = new Vector2(300, 60);
 
             var data = new SAbilityBtnData();
             data.Ability = ability.Type;

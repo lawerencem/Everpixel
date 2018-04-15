@@ -21,7 +21,7 @@ namespace Assets.View.Character
             else if (c.Proxy.Type == ECharType.Critter)
             {
                 var sprite = CharSpriteLoader.Instance.GetCritterDeadSprite(c);
-                var renderer = c.Handle.GetComponent<SpriteRenderer>();
+                var renderer = c.GameHandle.GetComponent<SpriteRenderer>();
                 renderer.sprite = sprite;
             }
         }
@@ -86,7 +86,7 @@ namespace Assets.View.Character
         {
             var data = new EvSplatterData();
             data.DmgPercent = 0.50;
-            data.Target = c.Handle;
+            data.Target = c.GameHandle;
             var e = new EvSplatter(data);
             e.TryProcess();
         }
@@ -94,7 +94,7 @@ namespace Assets.View.Character
         public void RandomTranslateRotateOnDeath(CChar c)
         {
             RotateTranslateUtil.Instance.RandomRotateAndTranslate(
-                c.Handle,
+                c.GameHandle,
                 ViewParams.SPLATTER_VARIANCE);
         }
 

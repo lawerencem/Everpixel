@@ -543,6 +543,7 @@
       <ECastType>Melee</ECastType>
       <EEffect name="Stun">
         <OffensiveResist>Fortitude</OffensiveResist>
+        <ParticlePath>Effects/StunParticles</ParticlePath>
         <Resist>Fortitude</Resist>
         <X>1</X>
       </EEffect>
