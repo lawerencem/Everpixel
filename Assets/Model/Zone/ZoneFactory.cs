@@ -10,7 +10,8 @@ namespace Assets.Model.Zone
             var zoneBuilder = new ZoneBuilder();
             switch(type)
             {
-                case (EZone.Zone_Slime): { return zoneBuilder.Build(new ZoneSlime()); }
+                case (EZone.Spear_Wall_Zone): { return zoneBuilder.Build(new SpearWallZone()); }
+                case (EZone.Slime_Zone): { return zoneBuilder.Build(new SlimeZone()); }
                 default: return null;
             }
         }

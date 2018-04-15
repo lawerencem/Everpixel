@@ -9,8 +9,10 @@
         Megabite,
         Push,
         Slime,
+        Slime_Zone,
+        Spear_Wall,
+        Spear_Wall_Zone,
         Stun,
         Summon_On_Hit,
-        Zone_Slime,
     }
 }

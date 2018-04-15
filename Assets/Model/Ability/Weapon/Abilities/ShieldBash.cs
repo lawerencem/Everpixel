@@ -43,6 +43,8 @@ namespace Assets.Model.Weapon.Abilities
                         e.TryProcess();
                     }
                 }
+                else
+                    hit.CallbackHandler(null);
             }
         }
     }

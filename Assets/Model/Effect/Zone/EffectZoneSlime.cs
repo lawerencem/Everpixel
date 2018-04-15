@@ -7,9 +7,9 @@ namespace Assets.Model.Effect.Zone
 {
     namespace Assets.Model.Effect.Zone
     {
-        public class EffectSlimeZone : MEffect
+        public class EffectZoneSlime : MEffect
         {
-            public EffectSlimeZone() : base(EEffect.Zone_Slime) { }
+            public EffectZoneSlime() : base(EEffect.Slime_Zone) { }
 
             public override void TryProcessHit(MHit hit, bool prediction)
             {
@@ -21,7 +21,7 @@ namespace Assets.Model.Effect.Zone
                     zoneData.Effect = this.GetSlimeEffect();
                     zoneData.Resist = this.Data.Resist;
                     zoneData.ResistBase = hit.Data.Source.Proxy.GetStat(ESecondaryStat.Spell_Penetration);
-                    var zone = new ZoneSlime();
+                    var zone = new SlimeZone();
                     zone.SetData(zoneData);
                     if (!prediction)
                     {

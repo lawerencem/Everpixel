@@ -16,6 +16,7 @@ namespace Assets.Model.Map.Tile
             }
         }
 
+        // TODO: Move particle creation to load from .xml files
         private void CreateWaterParticles(CChar c, MTile t)
         {
             var path = StringUtil.PathBuilder(

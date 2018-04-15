@@ -1,5 +1,4 @@
 ﻿using Assets.Controller.Character;
-using Assets.Controller.Map.Tile;
 using Assets.Controller.Mount;
 using Assets.Model.Character.Container;
 using Assets.Model.Character.Enum;
@@ -76,12 +75,6 @@ namespace Assets.Model.Character
             //this.RestoreStamina();
             //this.ProcessBuffDurations();
             //this.ProcessShields();
-        }
-
-        public void TryAddMod(StatMod mod)
-        {
-            //this._statMods.AddMod(mod);
-            //this._points.SetValue(mod.Type, mod.FlatMod);
         }
     }
 }

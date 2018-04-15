@@ -21,7 +21,7 @@
       <Stamina_Mod>1</Stamina_Mod>
       <Value>3000</Value>
       <EAbility>Stab</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -46,7 +46,7 @@
       <Value>100</Value>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -71,7 +71,7 @@
       <Value>250</Value>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -96,7 +96,7 @@
       <Value>450</Value>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -121,7 +121,7 @@
       <Value>700</Value>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -143,7 +143,7 @@
       <Value>2500</Value>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -169,7 +169,7 @@
       <Value>2250</Value>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -195,7 +195,7 @@
       <EAbility>Slash</EAbility>
       <EAbility>Stab</EAbility>
       <EAbility>Gash</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -221,7 +221,7 @@
       <EAbility>Slash</EAbility>
       <EAbility>Stab</EAbility>
       <EAbility>Gash</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -247,7 +247,7 @@
       <EAbility>Slash</EAbility>
       <EAbility>Stab</EAbility>
       <EAbility>Gash</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -273,7 +273,7 @@
       <EAbility>Slash</EAbility>
       <EAbility>Stab</EAbility>
       <EAbility>Gash</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -299,7 +299,7 @@
       <EAbility>Slash</EAbility>
       <EAbility>Stab</EAbility>
       <EAbility>Gash</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -324,7 +324,7 @@
       <Value>50</Value>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -349,7 +349,7 @@
       <Value>250</Value>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -374,7 +374,7 @@
       <Value>350</Value>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -399,7 +399,7 @@
       <Value>700</Value>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -424,7 +424,7 @@
       <Value>2250</Value>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -449,7 +449,7 @@
       <Value>200</Value>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -474,7 +474,7 @@
       <Value>300</Value>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
@@ -500,7 +500,7 @@
       <Value>550</Value>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>  
@@ -525,7 +525,7 @@
       <Value>700</Value>
       <EAbility>Stab</EAbility>
       <EAbility>Pierce</EAbility>
-      <EAbility>Spear Wall</EAbility>
+      <EAbility>Spear_Wall</EAbility>
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>  

@@ -1,4 +1,5 @@
 ﻿using Assets.Controller.Character;
+using Assets.Controller.Manager.Combat;
 using Assets.Model.Action;
 using Assets.Model.Character.Enum;
 using Assets.Template.Script;
@@ -39,8 +40,11 @@ namespace Assets.View.Script.FX
             base.Done(o);
             this._renderer.sprite = this._oldSprite;
             this._source.GameHandle.transform.position = this._source.Tile.Model.Center;
-            var bob = this._source.GameHandle.AddComponent<SBob>();
-            bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._source.GameHandle);
+            if (this._source == CombatManager.Instance.GetCurrentlyActing())
+            {
+                var bob = this._source.GameHandle.AddComponent<SBob>();
+                bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._source.GameHandle);
+            }
         }
     }
 }

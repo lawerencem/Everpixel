@@ -1,6 +1,10 @@
 ﻿TODO
 
- -- Finish application of FX and their particles
+ - Add Zones traveling with the caster (i.e., a new type) such that spear wall travels with the caster
+ - Finish up Spear wall 
+   -- Ensure hit targets go back a square
+   -- Implement a way to ensure bob doesn't happen.
+ - Ensure Moving into a tile is called back to before moving to next tile (to prevent moving through spear wall zones)
 
  BUGS
  - ween burster doesn't flip 180 on RTEAM

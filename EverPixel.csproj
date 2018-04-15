@@ -440,7 +440,8 @@
     <Compile Include="Assets\Model\Effect\Other\EffectHoT.cs" />
     <Compile Include="Assets\Model\Effect\Other\SummonOnHit.cs" />
     <Compile Include="Assets\Model\Effect\Will\Horror.cs" />
-    <Compile Include="Assets\Model\Effect\Zone\EffectSlimeZone.cs" />
+    <Compile Include="Assets\Model\Effect\Zone\EffectZoneSlime.cs" />
+    <Compile Include="Assets\Model\Effect\Zone\EffectZoneSpearWall.cs" />
     <Compile Include="Assets\Model\Equipment\AEquipment.cs" />
     <Compile Include="Assets\Model\Equipment\Armor\ArmorParams.cs" />
     <Compile Include="Assets\Model\Equipment\Armor\MArmor.cs" />
@@ -559,7 +560,8 @@
     <Compile Include="Assets\Model\Zone\AZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\ADurationZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\SoothingMistZone.cs" />
-    <Compile Include="Assets\Model\Zone\Duration\ZoneSlime.cs" />
+    <Compile Include="Assets\Model\Zone\Duration\SpearWallZone.cs" />
+    <Compile Include="Assets\Model\Zone\Duration\SlimeZone.cs" />
     <Compile Include="Assets\Model\Zone\EZone.cs" />
     <Compile Include="Assets\Model\Zone\ZoneBuilder.cs" />
     <Compile Include="Assets\Model\Zone\ZoneFactory.cs" />

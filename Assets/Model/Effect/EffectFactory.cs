@@ -22,7 +22,8 @@ namespace Assets.Model.Effect
                 case (EEffect.Slime): { return new EffectSlime(); }
                 case (EEffect.Stun): { return new EffectStun(); }
                 case (EEffect.Summon_On_Hit): { return new EffectSummonOnHit(); }
-                case (EEffect.Zone_Slime): { return new EffectSlimeZone(); }
+                case (EEffect.Spear_Wall_Zone): { return new EffectZoneSpearWall(); }
+                case (EEffect.Slime_Zone): { return new EffectZoneSlime(); }
                 default: { return null; }
             }
         }

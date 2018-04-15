@@ -11,7 +11,7 @@
       <ECastType>Single</ECastType>
       <DmgPerPower>0.00</DmgPerPower>
       <DodgeMod>1.0</DodgeMod>
-      <EEffect name="Zone_Slime">
+      <EEffect name="Slime_Zone">
         <Duration>3</Duration>
         <Resist>Fortitude</Resist>
         <SpritesMax>1</SpritesMax>

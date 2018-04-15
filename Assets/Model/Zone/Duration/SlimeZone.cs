@@ -7,9 +7,9 @@ using Assets.Template.Util;
 
 namespace Assets.Model.Zone.Duration
 {
-    public class ZoneSlime : ADurationZone
+    public class SlimeZone : ADurationZone
     {
-        public ZoneSlime() : base(EZone.Zone_Slime) { }
+        public SlimeZone() : base(EZone.Slime_Zone) { }
 
         public override void ProcessEnterZone(CChar target)
         {
