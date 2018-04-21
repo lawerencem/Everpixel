@@ -7,6 +7,5 @@
 
  BUGS
  - ween burster doesn't flip 180 on RTEAM
- - Arbitrate when stepping into two spear wall zones
  - All of the crushed injuries are missing
  - pierced hand not foudn

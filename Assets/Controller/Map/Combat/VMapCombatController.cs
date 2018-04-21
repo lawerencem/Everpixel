@@ -139,6 +139,8 @@ namespace Assets.Controller.Map.Combat
                     this.HandleAoEHover(t, active);
                 else if (active.Data.CastType == ECastType.Raycast)
                     this.HandleRaycastHover(t, active);
+                else if (active.Data.CastType == ECastType.Arc)
+                    this.HandleArcHover(t, active);
             }
         }
 
@@ -151,6 +153,22 @@ namespace Assets.Controller.Map.Combat
                 if (tile.Liquid)
                     this._aoeTiles.Add(this.DecorateTileHandle(tile.Controller.LiquidHandle, sprite));
                 this._aoeTiles.Add(this.DecorateTileHandle(tile.Controller.Handle, sprite));
+            }
+        }
+
+        private void HandleArcHover(CTile t, MAbility active)
+        {
+            var args = new AbilityArgs();
+            args.Source = CombatManager.Instance.GetCurrentlyActing();
+            args.Target = t;
+            var tiles = active.GetTargetedTiles(args);
+            tiles.Remove(t);
+            var sprite = MapBridge.Instance.GetTileHighlightSprite();
+            foreach (var tile in tiles)
+            {
+                if (tile.Model.Liquid)
+                    this._aoeTiles.Add(this.DecorateTileHandle(tile.LiquidHandle, sprite));
+                this._aoeTiles.Add(this.DecorateTileHandle(tile.Handle, sprite));
             }
         }
 
