@@ -584,8 +584,8 @@
       <PotentialWeapons>
         <RWeapons name="One">
           <RWeapon>0.80,Katana,Two</RWeapon>
-          <RWeapon>0.10,Kusanagi,Two</RWeapon>
-          <RWeapon>0.10,Taiyo,Two</RWeapon>
+          <RWeapon>0.10,Kusanagi,One</RWeapon>
+          <RWeapon>0.10,Taiyo,One</RWeapon>
         </RWeapons>
       </PotentialWeapons>
       <Stats>

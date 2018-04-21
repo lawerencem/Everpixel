@@ -1122,6 +1122,32 @@
       <EWeaponType>One_Handed</EWeaponType>
       <EWeaponUse>Melee</EWeaponUse>
     </Weapon>
+    <Weapon name="Taiyo">
+      <Tier>One</Tier>
+      <Accuracy_Mod>1</Accuracy_Mod>
+      <AP_Mod>1</AP_Mod>
+      <Armor_Ignore>0.35</Armor_Ignore>
+      <Armor_Pierce>0.35</Armor_Pierce>
+      <Block_Ignore>0</Block_Ignore>
+      <Damage>48</Damage>
+      <Description>
+        A beautiful, deadly weapon.
+      </Description>
+      <Fatigue_Mod>0.97</Fatigue_Mod>
+      <Fatigue_Mod>1</Fatigue_Mod>
+      <Initiative_Mod>1</Initiative_Mod>
+      <Max_Durability>25</Max_Durability>
+      <Parry_Mod>0.90</Parry_Mod>
+      <Shield_Damage_Percent>0.00</Shield_Damage_Percent>
+      <Sprites>121</Sprites>
+      <Stamina_Mod>1</Stamina_Mod>
+      <Value>3500</Value>
+      <EAbility>Slash</EAbility>
+      <EAbility>Stab</EAbility>
+      <EAbility>Riposte</EAbility>
+      <EWeaponType>One_Handed</EWeaponType>
+      <EWeaponUse>Melee</EWeaponUse>
+    </Weapon>
     <Weapon name="Toof">
       <Tier>One</Tier>
       <Accuracy_Mod>0.80</Accuracy_Mod>

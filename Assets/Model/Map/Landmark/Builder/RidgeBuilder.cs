@@ -18,11 +18,14 @@ namespace Assets.Model.Map.Landmark.Builder
 
             foreach (MTile mTile in tiles)
             {
-                if (!FTile.HasFlag(mTile.Controller.GetFlags().CurFlags, FTile.Flags.Landmark))
+                if (mTile != null)
                 {
-                    mTile.SetHeight(lmParams.Height);
-                    var controller = mTile.Controller;
-                    FTile.SetLandmarkFlagTrue(tile.GetFlags());
+                    if (!FTile.HasFlag(mTile.Controller.GetFlags().CurFlags, FTile.Flags.Landmark))
+                    {
+                        mTile.SetHeight(lmParams.Height);
+                        var controller = mTile.Controller;
+                        FTile.SetLandmarkFlagTrue(tile.GetFlags());
+                    }
                 }
             }
         }
