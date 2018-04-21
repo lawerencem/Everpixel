@@ -29,6 +29,12 @@ namespace Assets.Model.Action
             }
         }
 
+        public void TryProcessPostPredict()
+        {
+            this.ProcessAction();
+            this.DisplayAction();
+        }
+
         public void TryProcess()
         {
             if (this.Data.Initialized())

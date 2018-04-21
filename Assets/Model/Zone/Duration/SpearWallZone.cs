@@ -1,6 +1,7 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Equipment.Weapon;
 using Assets.Controller.Manager.Combat;
+using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
 using Assets.Model.Combat.Hit;
@@ -16,81 +17,52 @@ namespace Assets.Model.Zone.Duration
     {
         public bool LWeapon { get; set; }
         public CWeapon ParentWeapon { get; set; }
+        public CTile ParentTile { get; set; }
     }
 
     public class SpearWallZone : ADurationZone
     {
+        private MAction _action;
         private ZoneSpearWallData _spearWallData;
 
-        public SpearWallZone() : base(EZone.Spear_Wall_Zone) { }
+        public bool FirstSpearWallHit { get; set; }
+        public bool SpearWallHit { get; set; }
 
-        public override void ProcessEnterZone(CChar target, Callback cb)
+        public SpearWallZone() : base(EZone.Spear_Wall_Zone)
         {
-            base.ProcessEnterZone(target, cb);
+            this.FirstSpearWallHit = false;
+            this.SpearWallHit = false;
+        }
+
+        public override void ProcessEnterZone(CChar target, Callback callback)
+        {
+            this.FirstSpearWallHit = false;
+            this.SpearWallHit = false;
+            base.ProcessEnterZone(target, callback);
             if (this._spearWallData.Source != null)
             {
                 if (target.Proxy.LParty != this._spearWallData.Source.Proxy.LParty)
                 {
-                    cb(this);
-                    var data = new EvPerformAbilityData();
+                    callback(this);
+                    var data = new ActionData();
                     data.Ability = EAbility.Pierce;
                     data.LWeapon = this._spearWallData.LWeapon;
                     data.ParentWeapon = this._spearWallData.ParentWeapon;
                     data.Source = this._spearWallData.Source;
                     data.Target = target.Tile;
                     data.WpnAbility = true;
-                    var e = new EvPerformAbility(data);
-                    e.AddCallback(this.HandleSpeared);
-                    e.TryProcess();
-                }
-            }
-        }
-
-        public void HandleSpeared(object o)
-        {
-            var action = o as MAction;
-            foreach (var hit in action.Data.Hits)
-            {
-                if (!FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Block) &&
-                    !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge) &&
-                    !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))
-                {
-                    var tgt = hit.Data.Target.Current as CChar;
-                    var tgtTile = hit.Data.Source.Tile.Model.GetPushTile(tgt.Tile.Model);
-                    if (tgtTile != null)
+                    this._action = new MAction(data);
+                    this._action.TryPredict();
+                    foreach (var hit in this._action.Data.Hits)
                     {
-                        var data = new EvTileMoveData();
-                        data.Char = tgt;
-                        data.Cost = 0;
-                        data.StamCost = 0;
-                        data.Source = tgt.Tile;
-                        data.Target = tgtTile.Controller;
-                        var bob = data.Char.GameHandle.GetComponent<SBob>();
-                        if (bob != null)
-                            bob.Reset();
-                        var e = new EvTileMove(data);
-                        e.AddCallback(this.AddBob);
-                        e.TryProcess();
-                    }
-                    else
-                    {
-                        var random = hit.Data.Source.Tile.Model.GetRandomNearbyTile(1) as MTile;
-                        if (random != null)
+                        if (!FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Block) &&
+                            !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge) &&
+                            !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))
                         {
-                            var data = new EvTileMoveData();
-                            data.Char = tgt;
-                            data.Cost = 0;
-                            data.StamCost = 0;
-                            data.Source = tgt.Tile;
-                            data.Target = random.Controller;
-                            var bob = data.Char.GameHandle.GetComponent<SBob>();
-                            if (bob != null)
-                                bob.Reset();
-                            var e = new EvTileMove(data);
-                            e.AddCallback(this.AddBob);
-                            e.TryProcess();
+                            this.SpearWallHit = true;
                         }
                     }
+                    this.HandleSpeared(null);
                 }
             }
         }
@@ -108,6 +80,76 @@ namespace Assets.Model.Zone.Duration
                 var bob = e.GetData().Char.GameHandle.AddComponent<SBob>();
                 bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, e.GetData().Char.GameHandle);
             }
+        }
+
+        private void DoJolt(bool alreadySpearWalled)
+        {
+            if (!alreadySpearWalled)
+            {
+                foreach (var hit in this._action.Data.Hits)
+                    hit.AddCallback(this.DoSpearWall);
+            }
+            this._action.TryProcessPostPredict();
+        }
+
+        private void DoSpearWall(object o)
+        {
+            var hit = o as MHit;
+            var tgt = hit.Data.Target.Current as CChar;
+            var tgtTile = hit.Data.Source.Tile.Model.GetPushTile(tgt.Tile.Model);
+            if (tgtTile != null && tgtTile.GetCurrentOccupant() == null)
+            {
+                var data = new EvTileMoveData();
+                data.Char = tgt;
+                data.Cost = 0;
+                data.StamCost = 0;
+                data.Source = tgt.Tile;
+                data.Target = tgtTile.Controller;
+                var bob = data.Char.GameHandle.GetComponent<SBob>();
+                if (bob != null)
+                    bob.Reset();
+                var e = new EvTileMove(data);
+                e.AddCallback(this.AddBob);
+                e.TryProcess();
+            }
+            else
+            {
+                var random = hit.Data.Source.Tile.Model.GetRandomNearbyTile(1) as MTile;
+                if (random != null)
+                {
+                    var data = new EvTileMoveData();
+                    data.Char = tgt;
+                    data.Cost = 0;
+                    data.StamCost = 0;
+                    data.Source = tgt.Tile;
+                    data.Target = random.Controller;
+                    var bob = data.Char.GameHandle.GetComponent<SBob>();
+                    if (bob != null)
+                        bob.Reset();
+                    var e = new EvTileMove(data);
+                    e.AddCallback(this.AddBob);
+                    e.TryProcess();
+                }
+            }
+            
+        }
+
+        private void HandleSpeared(object o)
+        {
+            bool alreadySpearwalled = false;
+            foreach (var zone in this._spearWallData.ParentTile.GetZones())
+            {
+                if (zone.GetType().Equals(typeof(SpearWallZone)))
+                {
+                    var spearWallZone = zone as SpearWallZone;
+                    if (spearWallZone.SpearWallHit && spearWallZone.FirstSpearWallHit)
+                        alreadySpearwalled = true;
+                } 
+            }
+            if (!alreadySpearwalled)
+                this.FirstSpearWallHit = true;
+            foreach (var hit in this._action.Data.Hits)
+                this.DoJolt(alreadySpearwalled);
         }
     }
 }

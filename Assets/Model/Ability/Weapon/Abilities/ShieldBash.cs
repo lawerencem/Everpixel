@@ -1,10 +1,13 @@
 ﻿using Assets.Controller.Character;
+using Assets.Controller.GUI.Combat;
 using Assets.Model.Ability;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
 using Assets.Model.Combat.Hit;
 using Assets.Model.Event.Combat;
-using Assets.View.Character;
+using Assets.View.Fatality;
+using Assets.View.Script.FX;
+using UnityEngine;
 
 namespace Assets.Model.Weapon.Abilities
 {
@@ -24,6 +27,21 @@ namespace Assets.Model.Weapon.Abilities
 
         public override void DisplayFX(MAction a)
         {
+            var pos = Vector3.Lerp(
+                a.Data.Source.GameHandle.transform.position,
+                a.Data.Target.Handle.transform.position,
+                FatalityParams.FATALITY_MELEE_LERP);
+            var script = a.Data.Source.GameHandle.AddComponent<SAttackerJolt>();
+            script.Action = a;
+            script.AddCallback(this.DoBash);
+            script.AddObjectToList(a);
+            script.Init(a.Data.Source, pos, CombatGUIParams.ATTACK_SPEED);
+        }
+
+        public void DoBash(object o)
+        {
+            var script = o as SAttackerJolt;
+            var a = script.GetObjectList()[0] as MAction;
             foreach (var hit in a.Data.Hits)
             {
                 var tgt = hit.Data.Target.Current as CChar;

@@ -20,6 +20,12 @@
     <ESecondaryStat>Reflex, 0.75</ESecondaryStat>
     <ESecondaryStat>Initiative, 0.75</ESecondaryStat>
   </Injury>
+  <Injury name ="Broken_Hand">
+    <ESecondaryStat>Block, 0.85</ESecondaryStat>
+    <ESecondaryStat>Melee, 0.65</ESecondaryStat>
+    <ESecondaryStat>Parry, 0.55</ESecondaryStat>
+    <ESecondaryStat>Power, 0.85</ESecondaryStat>
+  </Injury>
   <Injury name ="Broken_Jaw">
     <ESecondaryStat>Concentration, 0.85</ESecondaryStat>
   </Injury>
@@ -32,12 +38,6 @@
   </Injury>
   <Injury name ="Broken_Nose">
     <ESecondaryStat>Constitution, 0.95</ESecondaryStat>
-  </Injury>
-  <Injury name ="Broken_Hand">
-    <ESecondaryStat>Block, 0.85</ESecondaryStat>
-    <ESecondaryStat>Melee, 0.65</ESecondaryStat>
-    <ESecondaryStat>Parry, 0.55</ESecondaryStat>
-    <ESecondaryStat>Power, 0.85</ESecondaryStat>
   </Injury>
   <Injury Name ="Broken_Ribs">
     <EPrimaryStat>Might, 0.85</EPrimaryStat>
@@ -77,6 +77,10 @@
     <EPrimaryStat>Resolve, 0.90</EPrimaryStat>
     <EPrimaryStat>Perception, 0.90</EPrimaryStat>
   </Injury>
+  <Injury Name ="Cut_Foot">
+    <EPrimaryStat>Agility, 0.95</EPrimaryStat>
+    <ESecondaryStat>Dodge, 0.90</ESecondaryStat>
+  </Injury>
   <Injury Name ="Cut_Hand">
     <ESecondaryStat>Melee, 0.85</ESecondaryStat>
     <ESecondaryStat>Ranged, 0.85</ESecondaryStat>
@@ -88,10 +92,6 @@
   <Injury Name ="Cut_Leg">
     <EPrimaryStat>Agility, 0.90</EPrimaryStat>
     <ESecondaryStat>Stamina, 0.85</ESecondaryStat>
-  </Injury>
-  <Injury Name ="Cut_Foot">
-    <EPrimaryStat>Agility, 0.95</EPrimaryStat>
-    <ESecondaryStat>Dodge, 0.90</ESecondaryStat>
   </Injury>
   <Injury Name ="Cut_Nose">
     <EPrimaryStat>Perception, 0.90</EPrimaryStat>

@@ -41,14 +41,21 @@ namespace Assets.Model.Injury.Calculator
             var random = ListUtil<EInjury>.GetRandomElement(injuries);
             if (random != EInjury.None)
             {
-                var injuryParams = InjuryTable.Instance.Table[random];
-                var injury = injuryParams.GetInjury();
-                var data = new EvInjuryData();
-                data.Hit = hit;
-                data.Injury = injury;
-                data.Target = tgt;
-                var e = new EvInjury(data);
-                e.TryProcess();
+                try
+                {
+                    var injuryParams = InjuryTable.Instance.Table[random];
+                    var injury = injuryParams.GetInjury();
+                    var data = new EvInjuryData();
+                    data.Hit = hit;
+                    data.Injury = injury;
+                    data.Target = tgt;
+                    var e = new EvInjury(data);
+                    e.TryProcess();
+                }
+                catch (KeyNotFoundException e)
+                {
+                    Debug.LogError("Injury not found: " + random.ToString());
+                }
             }
         }
     }
