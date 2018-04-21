@@ -11,6 +11,7 @@ using Assets.Model.Event.Combat;
 using Assets.Template.CB;
 using Assets.Template.Script;
 using Assets.View;
+using Assets.View.Equipment;
 
 namespace Assets.Model.Zone.Duration
 {
@@ -55,7 +56,8 @@ namespace Assets.Model.Zone.Duration
                     this._action = new MAction(data);
                     var staminaCalc = new StaminaCalculator();
                     var cost = staminaCalc.Process(this._action);
-                    if (cost <= this._action.Data.Source.Proxy.GetPoints(ESecondaryStat.Stamina))
+                    if (this._action.Data.ParentWeapon.View.SpearWalling &&
+                        cost <= this._action.Data.Source.Proxy.GetPoints(ESecondaryStat.Stamina))
                     {
                         this._action.TryProcessNoDisplay();
                         foreach (var hit in this._action.Data.Hits)
@@ -69,7 +71,6 @@ namespace Assets.Model.Zone.Duration
                         }
                         this.HandleSpeared(null);
                     }
-                    // TODO: Else, unspear wall.
                 }
             }
         }
@@ -94,7 +95,10 @@ namespace Assets.Model.Zone.Duration
             if (!alreadySpearWalled && this.SpearWallHit)
             {
                 foreach (var hit in this._action.Data.Hits)
+                {
                     hit.AddCallback(this.DoSpearWall);
+                    hit.AddCallback(this.TryUndoSpearwall);
+                }
             }
             this._action.DisplayAction();
         }
@@ -160,6 +164,17 @@ namespace Assets.Model.Zone.Duration
                 this.FirstSpearWallHit = true;
             foreach (var hit in this._action.Data.Hits)
                 this.DoJolt(alreadySpearwalled);
+        }
+
+        private void TryUndoSpearwall(object o)
+        {
+            var staminaCalc = new StaminaCalculator();
+            var cost = staminaCalc.Process(this._action);
+            if (cost >= this._action.Data.Source.Proxy.GetPoints(ESecondaryStat.Stamina))
+            {
+                var util = new VWeaponUtil();
+                util.UndoSpearWallFX(this._action);
+            }
         }
     }
 }
