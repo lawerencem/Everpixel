@@ -3,11 +3,11 @@ using Assets.Controller.Equipment.Weapon;
 using Assets.Controller.Manager.Combat;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Enum;
+using Assets.Model.Ability.Logic.Calculator;
 using Assets.Model.Action;
 using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
 using Assets.Model.Event.Combat;
-using Assets.Model.Map.Tile;
 using Assets.Template.CB;
 using Assets.Template.Script;
 using Assets.View;
@@ -53,17 +53,23 @@ namespace Assets.Model.Zone.Duration
                     data.Target = target.Tile;
                     data.WpnAbility = true;
                     this._action = new MAction(data);
-                    this._action.TryProcessNoDisplay();
-                    foreach (var hit in this._action.Data.Hits)
+                    var staminaCalc = new StaminaCalculator();
+                    var cost = staminaCalc.Process(this._action);
+                    if (cost <= this._action.Data.Source.Proxy.GetPoints(ESecondaryStat.Stamina))
                     {
-                        if (!FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Block) &&
-                            !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge) &&
-                            !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))
+                        this._action.TryProcessNoDisplay();
+                        foreach (var hit in this._action.Data.Hits)
                         {
-                            this.SpearWallHit = true;
+                            if (!FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Block) &&
+                                !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge) &&
+                                !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))
+                            {
+                                this.SpearWallHit = true;
+                            }
                         }
+                        this.HandleSpeared(null);
                     }
-                    this.HandleSpeared(null);
+                    // TODO: Else, unspear wall.
                 }
             }
         }

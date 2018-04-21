@@ -30,7 +30,7 @@ namespace Assets.Model.Weapon.Abilities
             var pos = Vector3.Lerp(
                 a.Data.Source.GameHandle.transform.position,
                 a.Data.Target.Handle.transform.position,
-                FatalityParams.FATALITY_MELEE_LERP);
+                CombatGUIParams.ATTACK_LERP);
             var script = a.Data.Source.GameHandle.AddComponent<SAttackerJolt>();
             script.Action = a;
             script.AddCallback(this.DoBash);
@@ -60,6 +60,8 @@ namespace Assets.Model.Weapon.Abilities
                         e.AddCallback(hit.CallbackHandler);
                         e.TryProcess();
                     }
+                    else
+                        hit.CallbackHandler(null);
                 }
                 else
                     hit.CallbackHandler(null);

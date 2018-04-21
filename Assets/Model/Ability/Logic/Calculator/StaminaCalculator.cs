@@ -6,7 +6,14 @@ namespace Assets.Model.Ability.Logic.Calculator
     {
         public int Process(MAction a)
         {
-            if (a.Data.Hits.Count > 0)
+            if (a.ActiveAbility != null)
+            {
+                if (a.ActiveAbility.Data.ParentWeapon != null)
+                    return (int)(a.ActiveAbility.Data.FatigueCost * a.ActiveAbility.Data.ParentWeapon.Data.FatigueMod);
+                else
+                    return (int)(a.ActiveAbility.Data.FatigueCost);
+            }
+            else if (a.Data.Hits.Count > 0)
             {
                 var hit = a.Data.Hits[0];
                 var ability = hit.Data.Ability;

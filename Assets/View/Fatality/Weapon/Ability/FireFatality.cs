@@ -50,7 +50,7 @@ namespace Assets.View.Fatality.Weapon.Ability
                     var tgt = this._data.Target.Current as CChar;
                     var shakeData = new SXAxisShakeData();
                     shakeData.Duration = FatalityParams.DEFAULT_DUR;
-                    shakeData.MaxDistance = FatalityParams.DEFAULT_X_SHAKE_DIST / 2;
+                    shakeData.MaxDistance = FatalityParams.DEFAULT_X_SHAKE_DIST;
                     shakeData.Speed = FatalityParams.DEFAULT_X_SHAKE_SPEED;
                     shakeData.Target = tgt.GameHandle;
                     var shake = tgt.GameHandle.AddComponent<SXAxisShake>();

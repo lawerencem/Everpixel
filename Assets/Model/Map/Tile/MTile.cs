@@ -93,7 +93,11 @@ namespace Assets.Model.Map.Tile
         public MTile GetPushTile(MTile target)
         {
             var logic = new HexTileLogic();
-            return this.ConvertIHexToMTile(logic.GetPushTile(this, target));
+            var tile = logic.GetPushTile(this, target);
+            if (tile.GetCurrentOccupant() == null)
+                return tile as MTile;
+            else
+                return null;
         }
 
         public int GetTravelCost(MTile tile)

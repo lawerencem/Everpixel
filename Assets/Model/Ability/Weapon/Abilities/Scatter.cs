@@ -1,6 +1,12 @@
-﻿using Assets.Model.Ability;
+﻿using Assets.Controller.Character;
+using Assets.Controller.GUI.Combat;
+using Assets.Model.Ability;
 using Assets.Model.Ability.Enum;
+using Assets.Model.Action;
 using Assets.Model.Combat.Hit;
+using Assets.Model.Event.Combat;
+using Assets.View.Script.FX;
+using UnityEngine;
 
 namespace Assets.Model.Weapon.Abilities
 {
@@ -16,6 +22,36 @@ namespace Assets.Model.Weapon.Abilities
         public override void Process(MHit hit)
         {
             base.ProcessHitMelee(hit);
+        }
+
+        public override void DisplayFX(MAction a)
+        {
+            base.DisplayFX(a);
+            foreach (var hit in a.Data.Hits)
+                hit.AddCallback(this.DoScatter);
+            VHitController.Instance.ProcessMeleeHitFX(a);
+        }
+
+        public void DoScatter(object o)
+        {
+            var hit = o as MHit;
+            var tgt = hit.Data.Target.Current as CChar;
+            if (tgt != null && FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Push))
+            {
+                var tgtTile = hit.Data.Source.Tile.Model.GetPushTile(tgt.Tile.Model);
+                if (tgtTile != null)
+                {
+                    var data = new EvTileMoveData();
+                    data.Char = tgt;
+                    data.Cost = 0;
+                    data.StamCost = 0;
+                    data.Source = tgt.Tile;
+                    data.Target = tgtTile.Controller;
+                    var e = new EvTileMove(data);
+                    e.AddCallback(hit.CallbackHandler);
+                    e.TryProcess();
+                }
+            }
         }
     }
 }
