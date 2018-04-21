@@ -4,6 +4,7 @@ using Assets.Controller.Manager.Combat;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
+using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
 using Assets.Model.Event.Combat;
 using Assets.Model.Map.Tile;
@@ -52,7 +53,7 @@ namespace Assets.Model.Zone.Duration
                     data.Target = target.Tile;
                     data.WpnAbility = true;
                     this._action = new MAction(data);
-                    this._action.TryPredict();
+                    this._action.TryProcessNoDisplay();
                     foreach (var hit in this._action.Data.Hits)
                     {
                         if (!FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Block) &&
@@ -84,45 +85,29 @@ namespace Assets.Model.Zone.Duration
 
         private void DoJolt(bool alreadySpearWalled)
         {
-            if (!alreadySpearWalled)
+            if (!alreadySpearWalled && this.SpearWallHit)
             {
                 foreach (var hit in this._action.Data.Hits)
                     hit.AddCallback(this.DoSpearWall);
             }
-            this._action.TryProcessPostPredict();
+            this._action.DisplayAction();
         }
 
         private void DoSpearWall(object o)
         {
             var hit = o as MHit;
             var tgt = hit.Data.Target.Current as CChar;
-            var tgtTile = hit.Data.Source.Tile.Model.GetPushTile(tgt.Tile.Model);
-            if (tgtTile != null && tgtTile.GetCurrentOccupant() == null)
+            if (tgt != null)
             {
-                var data = new EvTileMoveData();
-                data.Char = tgt;
-                data.Cost = 0;
-                data.StamCost = 0;
-                data.Source = tgt.Tile;
-                data.Target = tgtTile.Controller;
-                var bob = data.Char.GameHandle.GetComponent<SBob>();
-                if (bob != null)
-                    bob.Reset();
-                var e = new EvTileMove(data);
-                e.AddCallback(this.AddBob);
-                e.TryProcess();
-            }
-            else
-            {
-                var random = hit.Data.Source.Tile.Model.GetRandomNearbyTile(1) as MTile;
-                if (random != null)
+                var tgtTile = hit.Data.Source.Tile.Model.GetPushTile(tgt.Tile.Model);
+                if (tgtTile != null && tgtTile.GetCurrentOccupant() == null)
                 {
                     var data = new EvTileMoveData();
                     data.Char = tgt;
                     data.Cost = 0;
                     data.StamCost = 0;
                     data.Source = tgt.Tile;
-                    data.Target = random.Controller;
+                    data.Target = tgtTile.Controller;
                     var bob = data.Char.GameHandle.GetComponent<SBob>();
                     if (bob != null)
                         bob.Reset();
@@ -130,8 +115,27 @@ namespace Assets.Model.Zone.Duration
                     e.AddCallback(this.AddBob);
                     e.TryProcess();
                 }
+                else
+                {
+                    var controller = hit.Data.Source.Tile;
+                    var random = controller.GetNearestEmptyTile();
+                    if (random != null)
+                    {
+                        var data = new EvTileMoveData();
+                        data.Char = tgt;
+                        data.Cost = 0;
+                        data.StamCost = 0;
+                        data.Source = tgt.Tile;
+                        data.Target = random;
+                        var bob = data.Char.GameHandle.GetComponent<SBob>();
+                        if (bob != null)
+                            bob.Reset();
+                        var e = new EvTileMove(data);
+                        e.AddCallback(this.AddBob);
+                        e.TryProcess();
+                    }
+                }
             }
-            
         }
 
         private void HandleSpeared(object o)

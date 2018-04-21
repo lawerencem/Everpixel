@@ -189,6 +189,10 @@
     <EPrimaryStat>Constitution, 0.90</EPrimaryStat>
     <ESecondaryStat>Stamina, 0.90</ESecondaryStat>
   </Injury>
+  <Injury Name ="Pierced_Hand">
+    <ESecondaryStat>Melee, 0.85</ESecondaryStat>
+    <ESecondaryStat>Parry, 0.85</ESecondaryStat>
+  </Injury>
   <Injury Name ="Pierced_Foot">
     <EPrimaryStat>Agility, 0.90</EPrimaryStat>
     <ESecondaryStat>AP, 0.90</ESecondaryStat>

@@ -1,4 +1,6 @@
 ﻿using Assets.Controller.Character;
+using Assets.Controller.Manager.Combat;
+using Assets.Template.Script;
 using Assets.View.Character;
 
 namespace Assets.View.Event
@@ -35,6 +37,13 @@ namespace Assets.View.Event
         private void Process()
         {
             VCharUtil.Instance.ProcessDeadChar(this._data.Target);
+            if (this._data.Target.Equals(CombatManager.Instance.GetCurrentlyActing()))
+            {
+                var bob = this._data.Target.GameHandle.GetComponent<SBob>();
+                if (bob != null)
+                    bob.Reset();
+                CombatManager.Instance.ProcessEndTurn();
+            }
             var data = new EvSplatterData();
             data.Target = this._data.Target.Tile.Handle;
             data.DmgPercent = 0.5;

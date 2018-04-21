@@ -17,7 +17,6 @@ namespace Assets.Model.Combat.Hit
         public double FatigueCost { get; set; }
         public FHit Flags { get; set; }
         public HitMod ModData { get; set; }
-        protected HitPrediction Prediction { get; set; }
         public bool IsFatality { get; set; }
         public bool IsHeal { get; set; }
         public bool IsLWeapon { get; set; }

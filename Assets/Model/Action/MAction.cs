@@ -20,6 +20,29 @@ namespace Assets.Model.Action
             this._injuryCalc = new InjuryCalculator();
         }
 
+        public void DisplayAction()
+        {
+            VCombatController.Instance.DisplayNewAction(this);
+        }
+
+        public void TryDone(object o)
+        {
+            bool done = true;
+            foreach (var hit in this._data.Hits)
+            {
+                if (!hit.Done)
+                    done = false;
+            }
+            if (done && !this._completed)
+            {
+                this._completed = true;
+                GUIManager.Instance.SetGUILocked(false);
+                GUIManager.Instance.SetInteractionLocked(false);
+                this.ProcessHitsData();
+                this.DoCallbacks();
+            }
+        }
+
         public void TryPredict()
         {
             if (this.Data.Initialized())
@@ -27,12 +50,6 @@ namespace Assets.Model.Action
                 this.InitPredictAbility();
                 this.InitPredictHits();
             }
-        }
-
-        public void TryProcessPostPredict()
-        {
-            this.ProcessAction();
-            this.DisplayAction();
         }
 
         public void TryProcess()
@@ -44,6 +61,16 @@ namespace Assets.Model.Action
                 this.ProcessAction();
                 this.DisplayAction();
             }   
+        }
+
+        public void TryProcessNoDisplay()
+        {
+            if (this.Data.Initialized())
+            {
+                this.InitProcessAbility();
+                this.InitProcessHits();
+                this.ProcessAction();
+            }
         }
 
         private void InitPredictAbility()
@@ -104,29 +131,6 @@ namespace Assets.Model.Action
             var staminaCalc = new StaminaCalculator();
             var cost = staminaCalc.Process(this);
             this.Data.Source.Proxy.ModifyPoints(ESecondaryStat.Stamina, cost, false);
-        }
-
-        private void DisplayAction()
-        {
-            VCombatController.Instance.DisplayNewAction(this);
-        }
-
-        public void TryDone(object o)
-        {
-            bool done = true;
-            foreach(var hit in this._data.Hits)
-            {
-                if (!hit.Done)
-                    done = false;
-            }
-            if (done && !this._completed)
-            {
-                this._completed = true;
-                GUIManager.Instance.SetGUILocked(false);
-                GUIManager.Instance.SetInteractionLocked(false);
-                this.ProcessHitsData();
-                this.DoCallbacks();
-            }
         }
 
         private void ProcessHitsData()

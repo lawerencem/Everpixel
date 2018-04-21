@@ -377,7 +377,7 @@
       <ArmorIgnoreMod>1.50</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1.50</BlockIgnoreMod>
-      <ECastType>Melee</ECastType>
+      <ECastType>Arc</ECastType>
       <DamageMod>1.50</DamageMod>
       <DodgeMod>0.75</DodgeMod>
       <IconSprite>0</IconSprite>
