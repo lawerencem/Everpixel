@@ -9,6 +9,7 @@ using Assets.Model.Class.Enum;
 using Assets.Model.Map.Tile;
 using Assets.Model.Party;
 using Assets.Model.Perk;
+using Assets.Model.Zone;
 using Assets.Template.Hex;
 using System.Collections.Generic;
 
@@ -33,6 +34,7 @@ namespace Assets.Model.Character
         protected CurrentPoints _points;
         protected CharStatMods _statMods;
         protected MTile _tile;
+        protected List<AZone> _zones;
 
         protected ECharType _type;
 
@@ -42,6 +44,7 @@ namespace Assets.Model.Character
         public ECharType Type { get { return this._type; } }
 
         public void AddPerk(MPerk perk) { this._perks.AddPerk(perk); }
+        public void AddZone(AZone zone) { this._zones.Add(zone); }
 
         public CharAbilities GetAbilitiesContainer() { return this._abilities; }
         public Dictionary<EClass, MClass> GetBaseClasses() { return this._baseClasses; }
@@ -56,6 +59,7 @@ namespace Assets.Model.Character
         public CurrentPoints GetPoints() { return this._points; }
         public CharStatMods GetStatMods() { return this._statMods; }
         public MTile GetTile() { return this._tile; }
+        public List<AZone> GetZones() { return this._zones; }
 
         public void SetController(CChar c) { this._controller = c; }
         public void SetCurrentHex(IHex hex) { this._tile = hex as MTile; }

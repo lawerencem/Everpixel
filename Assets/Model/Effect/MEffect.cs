@@ -146,9 +146,9 @@ namespace Assets.Model.Effect
         public virtual void TryProcessHit(MHit hit, bool prediction) { }
         public virtual void TryProcessTurn(MHit hit) { }
 
-        protected DurationZoneData GetDurationZoneData(MHit hit)
+        protected ZoneData GetZoneData(MHit hit)
         {
-            var data = new DurationZoneData();
+            var data = new ZoneData();
             data.SpriteIndexes = this.Data.SpriteIndexes.ToList();
             data.SpritesPath = this.Data.SpritesPath;
             data.Source = hit.Data.Source;

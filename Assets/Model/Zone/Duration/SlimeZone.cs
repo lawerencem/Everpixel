@@ -8,7 +8,7 @@ using Assets.Template.Util;
 
 namespace Assets.Model.Zone.Duration
 {
-    public class SlimeZone : ADurationZone
+    public class SlimeZone : AZone
     {
         public SlimeZone() : base(EZone.Slime_Zone) { }
 

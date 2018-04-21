@@ -204,9 +204,9 @@ namespace Assets.Controller.GUI.Combat
             }
             else
             {
-                var data = new EvCharDeathData();
+                var data = new EvViewCharDeathData();
                 data.Target = target;
-                var e = new EvCharDeath(data);
+                var e = new EvViewCharDeath(data);
                 e.AddCallback(hit.CallbackHandler);
                 e.TryProcess();
             }

@@ -33,6 +33,7 @@ namespace Assets.Model.Event.Combat
 
         private void Process()
         {
+            this._data.Target.Proxy.HandleCharDeath();
             this._data.Target.Tile.SetCurrent(null);
             this._data.Target.Tile.AddNonCurrent(this._data.Target);
             FCharacterStatus.SetDeadTrue(this._data.Target.Proxy.GetFlags());

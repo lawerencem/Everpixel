@@ -15,14 +15,14 @@ using Assets.View.Equipment;
 
 namespace Assets.Model.Zone.Duration
 {
-    public class ZoneSpearWallData : DurationZoneData
+    public class ZoneSpearWallData : ZoneData
     {
         public bool LWeapon { get; set; }
         public CWeapon ParentWeapon { get; set; }
         public CTile ParentTile { get; set; }
     }
 
-    public class SpearWallZone : ADurationZone
+    public class SpearWallZone : AZone
     {
         private MAction _action;
         private ZoneSpearWallData _spearWallData;
@@ -78,6 +78,9 @@ namespace Assets.Model.Zone.Duration
         public void SetSpearWallZoneData(ZoneSpearWallData data)
         {
             this._spearWallData = data;
+            this._data.DependsOnSourceChar = true;
+            this._data.Source = data.Source;
+            this._data.Source.Proxy.AddZone(this);
         }
 
         private void AddBob(object o)
@@ -174,6 +177,7 @@ namespace Assets.Model.Zone.Duration
             {
                 var util = new VWeaponUtil();
                 util.UndoSpearWallFX(this._action);
+                this._action.Data.Source.Proxy.GetZones().RemoveAll(x => x.Type == EZone.Spear_Wall_Zone);
             }
         }
     }

@@ -27,8 +27,16 @@ namespace Assets.Controller.Map.Tile
         public MTile Model { get { return this._model; } }
         public VTile View { get { return this._view; } }
 
-        public void AddNonCurrent(CChar c) { this._nonCurrent.Add(c); }
-        public void AddZone(AZone zone) { this._zones.Add(zone); }
+        public void AddNonCurrent(CChar c)
+        {
+            this._nonCurrent.Add(c);
+        }
+
+        public void AddZone(AZone zone)
+        {
+            this._zones.Add(zone);
+            zone.SetParent(this);
+        }
 
         public CTile(MTile tile)
         {

@@ -5,19 +5,19 @@ using Assets.View.Character;
 
 namespace Assets.View.Event
 {
-    public class EvCharDeathData
+    public class EvViewCharDeathData
     {
         public CChar Target { get; set; }
     }
 
-    public class EvCharDeath : MGuiEv
+    public class EvViewCharDeath : MGuiEv
     {
-        private EvCharDeathData _data;
+        private EvViewCharDeathData _data;
 
-        public EvCharDeath() : base(EGuiEv.CharDeath) { }
-        public EvCharDeath(EvCharDeathData d) : base(EGuiEv.CharDeath) { this._data = d; }
+        public EvViewCharDeath() : base(EGuiEv.CharDeath) { }
+        public EvViewCharDeath(EvViewCharDeathData d) : base(EGuiEv.CharDeath) { this._data = d; }
 
-        public void SetData(EvCharDeathData data) { this._data = data; }
+        public void SetData(EvViewCharDeathData data) { this._data = data; }
 
         public override void TryProcess()
         {

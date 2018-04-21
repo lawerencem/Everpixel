@@ -16,7 +16,7 @@ namespace Assets.Model.Effect.Zone
                 base.TryProcessHit(hit, prediction);
                 if (base.CheckConditions(hit))
                 {
-                    var zoneData = base.GetDurationZoneData(hit);
+                    var zoneData = base.GetZoneData(hit);
                     zoneData.Dur = (int)this.Data.X;
                     zoneData.Effect = this.GetSlimeEffect();
                     zoneData.Resist = this.Data.Resist;

@@ -15,6 +15,7 @@ using Assets.Model.OTE.HoT;
 using Assets.Model.Party;
 using Assets.Model.Party.Enum;
 using Assets.Model.Shield;
+using Assets.Model.Zone;
 using System.Collections.Generic;
 
 namespace Assets.Model.Character
@@ -66,6 +67,11 @@ namespace Assets.Model.Character
         public void AddShield(MShield shield)
         {
             this._model.GetEffectsContainer().AddShield(shield);
+        }
+
+        public void AddZone(AZone zone)
+        {
+            this._model.AddZone(zone);
         }
 
         public List<MAbility> GetActiveAbilities()
@@ -156,6 +162,17 @@ namespace Assets.Model.Character
         public double GetStat(EPrimaryStat s)
         {
             return this._model.GetCurStats().GetStatValue(s);
+        }
+
+        public List<AZone> GetZones()
+        {
+            return this._model.GetZones();
+        }
+
+        public void HandleCharDeath()
+        {
+            foreach (var zone in this._model.GetZones())
+                zone.HandleSourceDeath();
         }
 
         public void ModifyPoints(ESecondaryStat s, int v, bool isHeal)

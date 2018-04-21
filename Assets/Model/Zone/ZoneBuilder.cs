@@ -21,8 +21,8 @@ namespace Assets.Model.Zone
 
         private ZoneData GetZoneData(AZone zone)
         {
-            if (zone.GetType().Equals(typeof(ADurationZone)))
-                return new DurationZoneData();
+            if (zone.GetType().Equals(typeof(AZone)))
+                return new ZoneData();
             else
                 return null;
         }

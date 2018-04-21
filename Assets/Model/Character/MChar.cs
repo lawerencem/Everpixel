@@ -4,6 +4,7 @@ using Assets.Model.Character.Param;
 using Assets.Model.Class;
 using Assets.Model.Class.Enum;
 using Assets.Model.Event.Combat;
+using Assets.Model.Zone;
 using Assets.Template.Hex;
 using System.Collections.Generic;
 
@@ -27,6 +28,7 @@ namespace Assets.Model.Character
             this._statMods = new CharStatMods();
             this._perks = new CharPerks();
             this._points = new CurrentPoints(this);
+            this._zones = new List<AZone>();
         }
 
         public void ModifyPoints(ESecondaryStat type, int value, bool isHeal)
