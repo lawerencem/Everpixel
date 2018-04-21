@@ -68,7 +68,7 @@ namespace Assets.View.Script.FX
                 CombatGUIParams.PARTICLES_EXTENSION);
             var particles = ParticleController.Instance.CreateParticle(path);
             if (particles != null)
-                ParticleController.Instance.AttachParticle(particles, this._targetHandle);
+                ParticleController.Instance.AttachParticle(this._targetHandle, particles);
             var script = particles.AddComponent<SDestroyByLifetime>();
             script.Init(particles, 1f);
         }

@@ -23,7 +23,7 @@ namespace Assets.Template.Script
         {
             this._data = data;
             this._max = this._data.Target.transform.position.x + this._data.MaxDistance;
-            this._max = this._data.Target.transform.position.x - this._data.MaxDistance;
+            this._min = this._data.Target.transform.position.x - this._data.MaxDistance;
             this._origin = this._data.Target.transform.position;
         }
 

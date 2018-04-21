@@ -41,7 +41,7 @@ namespace Assets.View.Fatality.Weapon.Ability
 
         private void ProcessArrows(object o)
         {
-            var sprite = AttackSpriteLoader.Instance.GetSprite(PATH + this.Data.Action.Data.ParentWeapon.SpriteFXPath);
+            var missile = AttackSpriteLoader.Instance.GetSprite(PATH + this.Data.Action.Data.ParentWeapon.SpriteFXPath);
             foreach (var hit in this._data.FatalHits)
             {
                 if (hit.Data.Target.Current != null &&
@@ -50,7 +50,7 @@ namespace Assets.View.Fatality.Weapon.Ability
                     var tgt = this._data.Target.Current as CChar;
                     var shakeData = new SXAxisShakeData();
                     shakeData.Duration = FatalityParams.DEFAULT_DUR;
-                    shakeData.MaxDistance = FatalityParams.DEFAULT_X_SHAKE_DIST;
+                    shakeData.MaxDistance = FatalityParams.DEFAULT_X_SHAKE_DIST / 2;
                     shakeData.Speed = FatalityParams.DEFAULT_X_SHAKE_SPEED;
                     shakeData.Target = tgt.GameHandle;
                     var shake = tgt.GameHandle.AddComponent<SXAxisShake>();
@@ -62,7 +62,7 @@ namespace Assets.View.Fatality.Weapon.Ability
                     data.Hit = hit;
                     data.Interval = FatalityParams.FIRE_INTERVAL;
                     data.Speed = FatalityParams.FIRE_SPEED;
-                    data.Sprite = sprite;
+                    data.Sprite = missile;
                     data.Target = tgt.GameHandle.transform.position;
                     var script = tgt.GameHandle.AddComponent<SFireFatality>();
                     script.Init(data);
