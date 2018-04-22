@@ -53,7 +53,7 @@ namespace Assets.Model.Ability.Physical
             var tgt = action.Data.Target.Current as CChar;
             var data = new SXAxisShakeData();
             data.Duration = 1.5f;
-            data.MaxDistance = 0.03f;
+            data.MaxDistance = 0.01f;
             data.Speed = 0.75f;
             data.Target = tgt.GameHandle;
             var shake = tgt.GameHandle.AddComponent<SXAxisShake>();

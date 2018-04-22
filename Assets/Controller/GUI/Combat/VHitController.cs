@@ -348,14 +348,25 @@ namespace Assets.Controller.GUI.Combat
 
         private void ProcessDefenderHitsHelper(CChar target, MHit hit)
         {
-            if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge))
-                this.DisplayDodge(target, hit);
-            else if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Block))
-                this.DisplayBlock(target, hit);
-            else if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))
-                this.DisplayParry(target, hit);
-            else
+            if (hit.Data.Action.Data.DisplayDefended)
+            {
+                if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge))
+                    this.DisplayDodge(target, hit);
+                else if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Block))
+                    this.DisplayBlock(target, hit);
+                else if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))
+                    this.DisplayParry(target, hit);
+                else
+                    this.DisplayFlinch(target, hit);
+            }
+            else if (!FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Block) &&
+                     !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge) &&
+                     !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))
+            {
                 this.DisplayFlinch(target, hit);
+            }
+            else
+                hit.CallbackHandler(this);
         }
 
         private void ProcessMeleeFXNonFatality(MAction a)

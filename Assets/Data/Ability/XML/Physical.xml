@@ -1,6 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ActiveAbilities>
   <MagicType name="Physical">
+    <ActiveAbility name="Attack_Of_Opportunity">
+      <AccMod>0.85</AccMod>
+      <AoE>0</AoE>
+      <APCost>0</APCost>
+      <ArmorIgnoreMod>1</ArmorIgnoreMod>
+      <ArmorPierceMod>1</ArmorPierceMod>
+      <BlockIgnoreMod>1</BlockIgnoreMod>
+      <ECastType>Melee</ECastType>
+      <DodgeMod>1</DodgeMod>
+      <HitsCharsSpecific>True</HitsCharsSpecific>
+      <MeleeBlockChanceMod>0.80</MeleeBlockChanceMod>
+      <ParryModMod>0.80</ParryModMod>
+      <Range>1</Range>
+      <RangeBlockMod>0.0</RangeBlockMod>
+      <RechargeTime>0</RechargeTime>
+      <ShieldDamageMod>0</ShieldDamageMod>
+      <FatigueCost>0</FatigueCost>
+    </ActiveAbility>
     <ActiveAbility name="Bulldoze">
       <AccMod>1</AccMod>
       <AoE>0</AoE>

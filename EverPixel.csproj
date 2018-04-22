@@ -354,6 +354,7 @@
     <Compile Include="Assets\Model\Ability\Music\MSong.cs" />
     <Compile Include="Assets\Model\Ability\Music\OrcMetal.cs" />
     <Compile Include="Assets\Model\Ability\Music\WeenlightSonata.cs" />
+    <Compile Include="Assets\Model\Ability\Physical\AttackOfOpportunity.cs" />
     <Compile Include="Assets\Model\Ability\Physical\Bulldoze.cs" />
     <Compile Include="Assets\Model\Ability\Physical\Charge.cs" />
     <Compile Include="Assets\Model\Ability\Shapeshift\Shapeshift.cs" />
@@ -404,6 +405,7 @@
     <Compile Include="Assets\Model\Character\Enum\EPrimaryStat.cs" />
     <Compile Include="Assets\Model\Character\Enum\ERace.cs" />
     <Compile Include="Assets\Model\Character\Enum\ESecondaryStat.cs" />
+    <Compile Include="Assets\Model\Character\Enum\FActionStatus.cs" />
     <Compile Include="Assets\Model\Character\Enum\FCharacterStatus.cs" />
     <Compile Include="Assets\Model\Character\Factory\CharacterFactory.cs" />
     <Compile Include="Assets\Model\Character\MChar.cs" />
@@ -562,6 +564,7 @@
     <Compile Include="Assets\Model\Zone\Duration\SoothingMistZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\SpearWallZone.cs" />
     <Compile Include="Assets\Model\Zone\EZone.cs" />
+    <Compile Include="Assets\Model\Zone\Perpetual\AttackOfOpportunityZone.cs" />
     <Compile Include="Assets\Model\Zone\ZoneBuilder.cs" />
     <Compile Include="Assets\Model\Zone\ZoneFactory.cs" />
     <Compile Include="Assets\Model\Zone\ZoneParams.cs" />
@@ -638,7 +641,7 @@
     <Compile Include="Assets\View\Event\AGuiEv.cs" />
     <Compile Include="Assets\View\Event\EGuiEv.cs" />
     <Compile Include="Assets\View\Event\EvAbilitySelected.cs" />
-    <Compile Include="Assets\View\Event\EvCharDeath.cs" />
+    <Compile Include="Assets\View\Event\EvViewCharDeath.cs" />
     <Compile Include="Assets\View\Event\EvPopulateWpnBtns.cs" />
     <Compile Include="Assets\View\Event\EvSplatter.cs" />
     <Compile Include="Assets\View\Event\EvTileClick.cs" />

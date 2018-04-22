@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Equipment.Weapon;
+using Assets.Controller.Map.Tile;
 using Assets.Controller.Mount;
 using Assets.Model.Ability;
 using Assets.Model.Character.Container;
@@ -71,7 +72,12 @@ namespace Assets.Model.Character
 
         public void AddZone(AZone zone)
         {
-            this._model.AddZone(zone);
+            this._model.AddLinkedZone(zone);
+        }
+
+        public FActionStatus GetActionFlags()
+        {
+            return this._model.GetActionFlags();
         }
 
         public List<MAbility> GetActiveAbilities()
@@ -98,11 +104,6 @@ namespace Assets.Model.Character
         {
             return this._model.GetEffectsContainer();
         }    
-        
-        public FCharacterStatus GetFlags()
-        {
-            return this._model.GetFlags();
-        }
 
         public CHelm GetHelm()
         {
@@ -164,14 +165,22 @@ namespace Assets.Model.Character
             return this._model.GetCurStats().GetStatValue(s);
         }
 
+        public FCharacterStatus GetStatusFlags()
+        {
+            return this._model.GetStatusFlags();
+        }
+
         public List<AZone> GetZones()
         {
-            return this._model.GetZones();
+            return this._model.GetLinkedZones();
         }
 
         public void HandleCharDeath()
         {
-            foreach (var zone in this._model.GetZones())
+            var deleteZones = new List<AZone>();
+            foreach (var zone in this._model.GetLinkedZones())
+                deleteZones.Add(zone);
+            foreach (var zone in deleteZones)
                 zone.HandleSourceDeath();
         }
 
@@ -183,6 +192,11 @@ namespace Assets.Model.Character
         public void ProcessEndOfTurn()
         {
             this._model.ProcessEndOfTurn();
+        }
+
+        public void RemoveZone(AZone zone)
+        {
+            this._model.GetLinkedZones().Remove(zone);
         }
 
         public void SetController(CChar c)

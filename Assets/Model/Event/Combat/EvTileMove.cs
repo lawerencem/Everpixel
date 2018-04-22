@@ -38,24 +38,8 @@ namespace Assets.Model.Event.Combat
         }
 
         private void MoveDone(object o)
-        {
-            var apData = new EvAPModData();
-            apData.Char = this._data.Char;
-            apData.IsHeal = false;
-            apData.Qty = this._data.Cost;
-            apData.ToDisplay = false;
-            var apEvent = new EvAPMod(apData);
-            apEvent.TryProcess();
-            var staminaData = new EvStaminaModData();
-            staminaData.Char = this._data.Char;
-            staminaData.IsHeal = false;
-            staminaData.Qty = this._data.Cost;
-            staminaData.ToDisplay = false;
-            var staminaEvent = new EvStaminaMod(staminaData);
-            staminaEvent.TryProcess();
-            if (this._data.Char != null)
-                this._data.Char.SetTile(this._data.Target);
-            this._data.Source.ProcessExitTile(this._data.Char, this.SetPathInterrupted);
+        {   
+            this._data.Char.ProcessEnterNewTile(this._data.Target);
             if (this._pathInterrupted)
                 this.DoCallbacks();
             else
@@ -84,16 +68,40 @@ namespace Assets.Model.Event.Combat
         {
             if (this.VerifyData())
             {
-                var script = this._data.Char.GameHandle.AddComponent<SObjectMove>();
-                var data = new SObjectMoveData();
-                data.Epsilon = ViewParams.MOVE_EPSILON;
-                data.Object = this._data.Char.GameHandle;
-                data.Source = this._data.Source.Handle.transform.position;
-                data.Speed = ViewParams.MOVE_SPEED;
-                data.Target = this._data.Target.Handle.transform.position;
-                script.Init(data);
-                script.AddCallback(this.MoveDone);
-                return true;
+                var apData = new EvAPModData();
+                apData.Char = this._data.Char;
+                apData.IsHeal = false;
+                apData.Qty = this._data.Cost;
+                apData.ToDisplay = false;
+                var apEvent = new EvAPMod(apData);
+                apEvent.TryProcess();
+                var staminaData = new EvStaminaModData();
+                staminaData.Char = this._data.Char;
+                staminaData.IsHeal = false;
+                staminaData.Qty = this._data.Cost;
+                staminaData.ToDisplay = false;
+                var staminaEvent = new EvStaminaMod(staminaData);
+                staminaEvent.TryProcess();
+
+                this._data.Source.ProcessExitTile(this._data.Char, this._data.Target, this.SetPathInterrupted);
+                if (this._pathInterrupted)
+                {
+                    this.DoCallbacks();
+                    return false;
+                }
+                else
+                {
+                    var script = this._data.Char.GameHandle.AddComponent<SObjectMove>();
+                    var data = new SObjectMoveData();
+                    data.Epsilon = ViewParams.MOVE_EPSILON;
+                    data.Object = this._data.Char.GameHandle;
+                    data.Source = this._data.Source.Handle.transform.position;
+                    data.Speed = ViewParams.MOVE_SPEED;
+                    data.Target = this._data.Target.Handle.transform.position;
+                    script.Init(data);
+                    script.AddCallback(this.MoveDone);
+                    return true;
+                }
             }
             return false;
         }

@@ -154,7 +154,7 @@ namespace Assets.Model.Zone.Duration
         private void HandleSpeared(object o)
         {
             bool alreadySpearwalled = false;
-            foreach (var zone in this._spearWallData.ParentTile.GetZones())
+            foreach (var zone in this._spearWallData.Parent.GetZones())
             {
                 if (zone.GetType().Equals(typeof(SpearWallZone)))
                 {

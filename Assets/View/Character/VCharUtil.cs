@@ -105,6 +105,8 @@ namespace Assets.View.Character
             this.AssignDeadLayer(c);
             this.RandomTranslateRotateOnDeath(c);
             this.AssignDeathSplatter(c);
+            foreach (var kvp in c.View.EffectParticlesDict)
+                GameObject.Destroy(kvp.Value);
         }
 
         public void UnassignPlusLayer(CChar c)

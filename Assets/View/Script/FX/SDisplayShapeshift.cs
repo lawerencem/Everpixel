@@ -33,7 +33,7 @@ namespace Assets.View.Script.FX
             shake.AddCallback(this.ShakeDone);
             var data = new SXAxisShakeData();
             data.Duration = 3f;
-            data.MaxDistance = 0.02f;
+            data.MaxDistance = 0.01f;
             data.Speed = 1f;
             data.Target = this._target.GameHandle;
             shake.Init(data);

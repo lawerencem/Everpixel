@@ -20,12 +20,13 @@ namespace Assets.Model.Character
         private CChar _controller;
 
         protected CharAbilities _abilities;
+        protected FActionStatus _actionFlags;
         protected Dictionary<EClass, MClass> _baseClasses;
         protected BaseStats _baseStats;
         protected CharStats _curStats;
         protected CharEffects _effects;
         protected ACharEquipment _equipment;
-        protected FCharacterStatus _flags;
+        protected List<AZone> _linkedZones;
         protected bool _lParty;
         protected CMount _mount; 
         protected PreCharParams _params;
@@ -33,8 +34,8 @@ namespace Assets.Model.Character
         protected CharPerks _perks;
         protected CurrentPoints _points;
         protected CharStatMods _statMods;
+        protected FCharacterStatus _statusFlags;
         protected MTile _tile;
-        protected List<AZone> _zones;
 
         protected ECharType _type;
 
@@ -44,22 +45,23 @@ namespace Assets.Model.Character
         public ECharType Type { get { return this._type; } }
 
         public void AddPerk(MPerk perk) { this._perks.AddPerk(perk); }
-        public void AddZone(AZone zone) { this._zones.Add(zone); }
+        public void AddLinkedZone(AZone zone) { this._linkedZones.Add(zone); }
 
         public CharAbilities GetAbilitiesContainer() { return this._abilities; }
+        public FActionStatus GetActionFlags() { return this._actionFlags; }
         public Dictionary<EClass, MClass> GetBaseClasses() { return this._baseClasses; }
         public BaseStats GetBaseStats() { return this._baseStats; }
         public CharStats GetCurStats() { return this._curStats; }
         public CharEffects GetEffectsContainer() { return this._effects; }
         public ACharEquipment GetEquipment() { return this._equipment; }
-        public FCharacterStatus GetFlags() { return this._flags; }
+        public List<AZone> GetLinkedZones() { return this._linkedZones; }
         public PreCharParams GetParams() { return this._params; }
         public MParty GetParentParty() { return this._parentParty; }
         public CharPerks GetPerks() { return this._perks; }
         public CurrentPoints GetPoints() { return this._points; }
         public CharStatMods GetStatMods() { return this._statMods; }
+        public FCharacterStatus GetStatusFlags() { return this._statusFlags; }
         public MTile GetTile() { return this._tile; }
-        public List<AZone> GetZones() { return this._zones; }
 
         public void SetController(CChar c) { this._controller = c; }
         public void SetCurrentHex(IHex hex) { this._tile = hex as MTile; }

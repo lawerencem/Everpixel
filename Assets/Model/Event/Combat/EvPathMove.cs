@@ -73,7 +73,6 @@ namespace Assets.Model.Event.Combat
         {
             if (this._data.Source != null)
             {
-                this._data.Source.SetCurrent(null);
                 var ap = this._data.Char.Proxy.GetStat(ESecondaryStat.AP);
                 var stamina = this._data.Char.Proxy.GetStat(ESecondaryStat.Stamina);
                 var tile = this._data.TargetPath.GetFirstTile() as MTile;

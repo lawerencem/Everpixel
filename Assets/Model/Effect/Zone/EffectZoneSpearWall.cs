@@ -22,7 +22,7 @@ namespace Assets.Model.Effect.Zone
                             zoneData.Dur = (int)this.Data.X;
                             zoneData.LWeapon = hit.Data.IsLWeapon;
                             zoneData.ParentWeapon = hit.Data.Action.Data.ParentWeapon;
-                            zoneData.ParentTile = neighbor;
+                            zoneData.Parent = neighbor;
                             zoneData.Source = hit.Data.Source;
                             var zone = new SpearWallZone();
                             zone.SetSpearWallZoneData(zoneData);

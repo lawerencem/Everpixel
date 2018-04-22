@@ -19,16 +19,17 @@ namespace Assets.Model.Character
         {
             this._race = race;
             this._abilities = new CharAbilities();
+            this._actionFlags = new FActionStatus();
             this._baseClasses = new Dictionary<EClass, MClass>();
             this._baseStats = new BaseStats();
             this._curStats = new CharStats();
             this._effects = new CharEffects();
             this._equipment = new ACharEquipment(this);
-            this._flags = new FCharacterStatus();
+            this._statusFlags = new FCharacterStatus();
             this._statMods = new CharStatMods();
             this._perks = new CharPerks();
             this._points = new CurrentPoints(this);
-            this._zones = new List<AZone>();
+            this._linkedZones = new List<AZone>();
         }
 
         public void ModifyPoints(ESecondaryStat type, int value, bool isHeal)

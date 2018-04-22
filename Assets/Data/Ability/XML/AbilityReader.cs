@@ -213,6 +213,7 @@ namespace Assets.Data.Ability.XML
             switch (type)
             {
                 case (EAbility.Aim): { table.Add(type, new Aim()); } break;
+                case (EAbility.Attack_Of_Opportunity): { table.Add(type, new AttackOfOpportunity()); } break;
                 case (EAbility.Bite): { table.Add(type, new Bite()); } break;
                 case (EAbility.Bulldoze): { table.Add(type, new Bulldoze()); } break;
                 case (EAbility.Break_Armor): { table.Add(type, new BreakArmor()); } break;

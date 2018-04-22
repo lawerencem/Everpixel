@@ -48,11 +48,13 @@ namespace Assets.Model.Zone
         public virtual void ProcessExitZone(CChar target, Callback cb) { }
         public virtual void ProcessTurnInZone(CChar target, Callback cb) { }
 
-        public void Delete()
+        public void RemoveFromParentAndSource()
         {
             if (this._data.DependsOnSourceChar)
-                this._data.Parent.GetZones().Remove(this);
-            this._data.Parent.RemoveZone(this);
+            {
+                this._data.Parent.RemoveZone(this);
+                this._data.Source.Proxy.RemoveZone(this);
+            }
         }
 
         public ZoneData GetData()
@@ -63,7 +65,7 @@ namespace Assets.Model.Zone
         public void HandleSourceDeath()
         {
             if (this._data.DependsOnSourceChar)
-                this.Delete();
+                this.RemoveFromParentAndSource();
         }
 
         public void ProcessTurn()
@@ -76,6 +78,8 @@ namespace Assets.Model.Zone
             this._data = data;
             if (this._data.Parent != null)
                 this._data.Parent.AddZone(this);
+            if (this._data.Source != null)
+                this._data.Source.Proxy.AddZone(this);
         }
 
         public void SetParent(CTile tile)

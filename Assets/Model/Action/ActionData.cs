@@ -10,6 +10,7 @@ namespace Assets.Model.Action
     public class ActionData
     {
         public EAbility Ability { get; set; }
+        public bool DisplayDefended { get; set; }
         public List<MHit> Hits { get; set; }
         public bool LWeapon { get; set; }
         public CWeapon ParentWeapon { get; set; }
@@ -19,6 +20,7 @@ namespace Assets.Model.Action
 
         public ActionData()
         {
+            this.DisplayDefended = true;
             this.Hits = new List<MHit>();
         }
 

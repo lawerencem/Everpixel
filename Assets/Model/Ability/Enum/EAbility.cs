@@ -16,6 +16,7 @@
         Slime_Rain,
 
         // Physical
+        Attack_Of_Opportunity,
         Bulldoze,
         Charge,
         Howl,
