@@ -85,7 +85,7 @@ namespace Assets.Model.Event.Combat
                     var data = new EvTileMoveData();
                     data.Cost = apCost;
                     data.Char = this._data.Char;
-                    data.Source = this._current;
+                    data.Source = this._data.Source;
                     data.Target = this._next;
                     var e = new EvTileMove(data);
                     e.AddCallback(this.TileMoveDone);
