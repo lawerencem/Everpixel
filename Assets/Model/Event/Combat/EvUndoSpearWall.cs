@@ -43,7 +43,9 @@ namespace Assets.Model.Event.Combat
                         if (wpn.View.SpearWalling)
                             util.UndoSpearWallFX(this._data.Char, wpn, false);
                     }
-                    this._data.Action.Data.Source.Proxy.GetZones().RemoveAll(x => x.Type == EZone.Spear_Wall_Zone);
+                    var zones = this._data.Char.Proxy.GetZones().FindAll(x => x.Type == EZone.Spear_Wall_Zone);
+                    foreach (var zone in zones)
+                        zone.RemoveFromParentAndSource();
                     FActionStatus.SetSpearwallingFalse(this._data.Char.Proxy.GetActionFlags());
                 }
             }

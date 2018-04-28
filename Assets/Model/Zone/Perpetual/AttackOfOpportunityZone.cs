@@ -2,6 +2,7 @@
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
+using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
 using Assets.Template.CB;
 
@@ -19,7 +20,7 @@ namespace Assets.Model.Zone.Perpetual
         public override void ProcessExitZone(CChar target, Callback cb)
         {
             base.ProcessExitZone(target, cb);
-            if (this._data.Source != null)
+            if (this._data.Source != null && !FActionStatus.HasFlag(this._data.Source.Proxy.GetActionFlags().CurFlags, FActionStatus.Flags.Spearwalling))
             {
                 if (target.Proxy.LParty != this._data.Source.Proxy.LParty)
                 {
