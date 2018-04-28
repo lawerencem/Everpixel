@@ -11,19 +11,19 @@ using Assets.View.Script.GUI;
 
 namespace Assets.Model.Event.Combat
 {
-    public class EvTakingActionData
+    public class EvNewTurnData
     {
         public CChar Target { get; set; }
     }
 
-    public class EvTakingAction : MEvCombat
+    public class EvNewTurn : MEvCombat
     {
-        private EvTakingActionData _data;
+        private EvNewTurnData _data;
 
-        public EvTakingAction() : base(ECombatEv.TakingAction) {}
-        public EvTakingAction(EvTakingActionData d) : base(ECombatEv.TakingAction) { this._data = d; }
+        public EvNewTurn() : base(ECombatEv.NewTurn) {}
+        public EvNewTurn(EvNewTurnData d) : base(ECombatEv.NewTurn) { this._data = d; }
 
-        public void SetData(EvTakingActionData data)
+        public void SetData(EvNewTurnData data)
         {
             this._data = data;
         }
@@ -62,10 +62,19 @@ namespace Assets.Model.Event.Combat
                 CameraManager.Instance.InitScrollTo(this._data.Target.GameHandle.transform.position);
             if (AbilityModalManager.Instance != null)
                 AbilityModalManager.Instance.ProcessNewModalValues();
+            this.TryUndoActionStatuses();
             var e = new EvPopulateWpnBtns();
             e.TryProcess();
             
             return true;
+        }
+
+        private void TryUndoActionStatuses()
+        {
+            var undoSpearWallData = new EvUndoSpearwallData();
+            undoSpearWallData.Char = this._data.Target;
+            var undoSpearWallEvent = new EvUndoSpearwall(undoSpearWallData);
+            undoSpearWallEvent.TryProcess();
         }
     }
 }

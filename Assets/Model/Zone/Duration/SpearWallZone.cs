@@ -98,10 +98,7 @@ namespace Assets.Model.Zone.Duration
             if (!alreadySpearWalled && this.SpearWallHit)
             {
                 foreach (var hit in this._action.Data.Hits)
-                {
                     hit.AddCallback(this.DoSpearWall);
-                    hit.AddCallback(this.TryUndoSpearwall);
-                }
             }
             this._action.DisplayAction();
         }
@@ -127,6 +124,7 @@ namespace Assets.Model.Zone.Duration
                     var e = new EvTileMove(data);
                     e.AddCallback(this.AddBob);
                     e.TryProcess();
+                    this.TryUndoSpearwall(null);
                 }
                 else
                 {
@@ -146,6 +144,7 @@ namespace Assets.Model.Zone.Duration
                         var e = new EvTileMove(data);
                         e.AddCallback(this.AddBob);
                         e.TryProcess();
+                        this.TryUndoSpearwall(null);
                     }
                 }
             }
@@ -175,9 +174,11 @@ namespace Assets.Model.Zone.Duration
             var cost = staminaCalc.Process(this._action);
             if (cost >= this._action.Data.Source.Proxy.GetPoints(ESecondaryStat.Stamina))
             {
-                var util = new VWeaponUtil();
-                util.UndoSpearWallFX(this._action);
-                this._action.Data.Source.Proxy.GetZones().RemoveAll(x => x.Type == EZone.Spear_Wall_Zone);
+                var data = new EvUndoSpearwallData();
+                data.Action = this._action;
+                data.Char = this._action.Data.Source;
+                var e = new EvUndoSpearwall(data);
+                e.TryProcess();
             }
         }
     }

@@ -123,9 +123,9 @@ namespace Assets.Controller.Manager.Combat
         {
             if (this._combatData.InitiativeOrder.Count > 0)
             {
-                var data = new EvTakingActionData();
+                var data = new EvNewTurnData();
                 data.Target = this._combatData.InitiativeOrder[0];
-                var acting = new EvTakingAction(data);
+                var acting = new EvNewTurn(data);
                 acting.TryProcess();
             }
         }

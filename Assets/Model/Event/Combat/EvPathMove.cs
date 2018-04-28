@@ -24,8 +24,8 @@ namespace Assets.Model.Event.Combat
         private EvPathMoveData _data;
         private CTile _next;
 
-        public EvPathMove() : base(ECombatEv.TakingAction) { }
-        public EvPathMove(EvPathMoveData d) : base(ECombatEv.TakingAction) { this._data = d; }
+        public EvPathMove() : base(ECombatEv.NewTurn) { }
+        public EvPathMove(EvPathMoveData d) : base(ECombatEv.NewTurn) { this._data = d; }
 
         public void SetData(EvPathMoveData data) { this._data = data;}
 

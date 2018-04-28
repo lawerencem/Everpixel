@@ -15,6 +15,7 @@
         ModifyHP,
         ModifyStam,
         NewRound,
+        NewTurn,
         PathMove,
         PathTraversed,
         PerformAbility,
@@ -22,7 +23,7 @@
         Shield,
         StaminaMod,
         Summon,
-        TakingAction,
         TileMove,
+        UndoSpearWall,
     }
 }

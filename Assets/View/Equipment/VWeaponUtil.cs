@@ -1,4 +1,6 @@
-﻿using Assets.Model.Action;
+﻿using Assets.Controller.Character;
+using Assets.Controller.Equipment.Weapon;
+using Assets.Model.Action;
 using UnityEngine;
 
 namespace Assets.View.Equipment
@@ -27,6 +29,24 @@ namespace Assets.View.Equipment
                         this.DoSpearWallFXHelper(wpnObject, false);
                 }
                 view.SpearWalling = true;
+            }
+        }
+
+        public void UndoSpearWallFX(CChar source, CWeapon weapon, bool lWeapon)
+        {
+            var view = weapon.View;
+            if (view.SpearWalling)
+            {
+                if (lWeapon)
+                {
+                    var wpnObject = source.SubComponents[Layers.CHAR_L_WEAPON];
+                    this.UndoSpearWallFXHelper(wpnObject, lWeapon);
+                }
+                else
+                {
+                    var wpnObject = source.SubComponents[Layers.CHAR_R_WEAPON];
+                    this.UndoSpearWallFXHelper(wpnObject, lWeapon);
+                }
             }
         }
 

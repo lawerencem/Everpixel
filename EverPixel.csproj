@@ -478,8 +478,9 @@
     <Compile Include="Assets\Model\Event\Combat\EvShield.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvStaminaMod.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvSummon.cs" />
-    <Compile Include="Assets\Model\Event\Combat\EvTakingAction.cs" />
+    <Compile Include="Assets\Model\Event\Combat\EvNewTurn.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvTileMove.cs" />
+    <Compile Include="Assets\Model\Event\Combat\EvUndoSpearWall.cs" />
     <Compile Include="Assets\Model\Event\Combat\MEvCombat.cs" />
     <Compile Include="Assets\Model\Event\Combat\Priorities.cs" />
     <Compile Include="Assets\Model\Event\ECombatEv.cs" />
@@ -641,11 +642,11 @@
     <Compile Include="Assets\View\Event\AGuiEv.cs" />
     <Compile Include="Assets\View\Event\EGuiEv.cs" />
     <Compile Include="Assets\View\Event\EvAbilitySelected.cs" />
-    <Compile Include="Assets\View\Event\EvViewCharDeath.cs" />
     <Compile Include="Assets\View\Event\EvPopulateWpnBtns.cs" />
     <Compile Include="Assets\View\Event\EvSplatter.cs" />
     <Compile Include="Assets\View\Event\EvTileClick.cs" />
     <Compile Include="Assets\View\Event\EvTileSelect.cs" />
+    <Compile Include="Assets\View\Event\EvViewCharDeath.cs" />
     <Compile Include="Assets\View\Event\MGuiEv.cs" />
     <Compile Include="Assets\View\Event\Priorities.cs" />
     <Compile Include="Assets\View\Fatality\EFatality.cs" />
