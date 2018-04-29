@@ -1,4 +1,5 @@
-﻿using Assets.Model.Event.Combat;
+﻿using Assets.Model.Action;
+using Assets.Model.Event.Combat;
 using Assets.Template.Event;
 using System.Collections.Generic;
 

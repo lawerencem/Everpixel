@@ -8,10 +8,8 @@ using Assets.Model.Action;
 using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
 using Assets.Model.Event.Combat;
-using Assets.Template.CB;
 using Assets.Template.Script;
 using Assets.View;
-using Assets.View.Equipment;
 
 namespace Assets.Model.Zone.Duration
 {
@@ -36,22 +34,22 @@ namespace Assets.Model.Zone.Duration
             this.SpearWallHit = false;
         }
 
-        public override void ProcessEnterZone(CChar target, Callback callback)
+        public override void ProcessEnterZone(TileMoveData moveData)
         {
             this.FirstSpearWallHit = false;
             this.SpearWallHit = false;
-            base.ProcessEnterZone(target, callback);
+            base.ProcessEnterZone(moveData);
             if (this._spearWallData.Source != null)
             {
-                if (target.Proxy.LParty != this._spearWallData.Source.Proxy.LParty)
+                if (moveData.Target.Proxy.LParty != this._spearWallData.Source.Proxy.LParty)
                 {
-                    callback(this);
+                    moveData.Callback(this);
                     var data = new ActionData();
                     data.Ability = EAbility.Pierce;
                     data.LWeapon = this._spearWallData.LWeapon;
                     data.ParentWeapon = this._spearWallData.ParentWeapon;
                     data.Source = this._spearWallData.Source;
-                    data.Target = target.Tile;
+                    data.Target = moveData.Target.Tile;
                     data.WpnAbility = true;
                     this._action = new MAction(data);
                     var staminaCalc = new StaminaCalculator();

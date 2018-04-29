@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.GUI.Combat;
+using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Logic.Calculator;
 using Assets.Model.Effect;
 using Assets.Model.Effect.Fortitude;
@@ -12,15 +13,15 @@ namespace Assets.Model.Zone.Duration
     {
         public SlimeZone() : base(EZone.Slime_Zone) { }
 
-        public override void ProcessEnterZone(CChar target, Callback cb)
+        public override void ProcessEnterZone(TileMoveData moveData)
         {
-            base.ProcessEnterZone(target, cb);
+            base.ProcessEnterZone(moveData);
             var resist = new ResistCalculator();
-            if (!resist.DidResist(target, this._data.Effect, this._data.ResistBase))
+            if (!resist.DidResist(moveData.Target, this._data.Effect, this._data.ResistBase))
             {
                 var slime = this.GetSlimeEffect();
-                this._data.Effect.ApplyEffectFx(target.Tile);
-                target.Proxy.AddEffect(slime);
+                this._data.Effect.ApplyEffectFx(moveData.Target.Tile);
+                moveData.Target.Proxy.AddEffect(slime);
             }
         }
 

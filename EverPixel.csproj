@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.4.1f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -266,6 +264,7 @@
     <Compile Include="Assets\Controller\Map\Tile\CTile.cs" />
     <Compile Include="Assets\Controller\Map\Tile\FTile.cs" />
     <Compile Include="Assets\Controller\Map\Tile\STile.cs" />
+    <Compile Include="Assets\Controller\Map\Tile\TileMoveData.cs" />
     <Compile Include="Assets\Controller\Mount\CMount.cs" />
     <Compile Include="Assets\Data\Ability\XML\AbilityReader.cs" />
     <Compile Include="Assets\Data\Bark\Table\BarkTable.cs" />
@@ -384,6 +383,7 @@
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\Whirlwind.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\WideStrike.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\Abilities\Wrap.cs" />
+    <Compile Include="Assets\Model\Ability\Weapon\SuppressArea.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\WeaponAbilityBuilder.cs" />
     <Compile Include="Assets\Model\Ability\Weapon\WeaponAbilityFactory.cs" />
     <Compile Include="Assets\Model\Action\AAction.cs" />
@@ -442,6 +442,7 @@
     <Compile Include="Assets\Model\Effect\Other\EffectHoT.cs" />
     <Compile Include="Assets\Model\Effect\Other\SummonOnHit.cs" />
     <Compile Include="Assets\Model\Effect\Will\Horror.cs" />
+    <Compile Include="Assets\Model\Effect\Zone\EffectSuppressArea.cs" />
     <Compile Include="Assets\Model\Effect\Zone\EffectZoneSlime.cs" />
     <Compile Include="Assets\Model\Effect\Zone\EffectZoneSpearWall.cs" />
     <Compile Include="Assets\Model\Equipment\AEquipment.cs" />
@@ -465,11 +466,9 @@
     <Compile Include="Assets\Model\Equipment\MEquipment.cs" />
     <Compile Include="Assets\Model\Equipment\Weapon\MWeapon.cs" />
     <Compile Include="Assets\Model\Equipment\Weapon\WeaponParams.cs" />
-    <Compile Include="Assets\Model\Event\Combat\AEvCombat.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvApMod.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvCasting.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvCharKilled.cs" />
-    <Compile Include="Assets\Model\Event\Combat\EvUndoShieldWall.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvEndTurn.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvInjury.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvModHP.cs" />
@@ -481,6 +480,7 @@
     <Compile Include="Assets\Model\Event\Combat\EvStaminaMod.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvSummon.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvTileMove.cs" />
+    <Compile Include="Assets\Model\Event\Combat\EvUndoShieldWall.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvUndoSpearWall.cs" />
     <Compile Include="Assets\Model\Event\Combat\MEvCombat.cs" />
     <Compile Include="Assets\Model\Event\Combat\Priorities.cs" />
@@ -565,6 +565,7 @@
     <Compile Include="Assets\Model\Zone\Duration\SlimeZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\SoothingMistZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\SpearWallZone.cs" />
+    <Compile Include="Assets\Model\Zone\Duration\SuppressionZone.cs" />
     <Compile Include="Assets\Model\Zone\EZone.cs" />
     <Compile Include="Assets\Model\Zone\Perpetual\AttackOfOpportunityZone.cs" />
     <Compile Include="Assets\Model\Zone\ZoneBuilder.cs" />
@@ -577,6 +578,8 @@
     <Compile Include="Assets\Template\CB\IQueueCallback.cs" />
     <Compile Include="Assets\Template\Event\AEvent.cs" />
     <Compile Include="Assets\Template\Event\AEventManager.cs" />
+    <Compile Include="Assets\Template\Event\IChildEvent.cs" />
+    <Compile Include="Assets\Template\Event\IParentEvent.cs" />
     <Compile Include="Assets\Template\Factory\GFactory.cs" />
     <Compile Include="Assets\Template\Hex\EDirection.cs" />
     <Compile Include="Assets\Template\Hex\HexGeography.cs" />

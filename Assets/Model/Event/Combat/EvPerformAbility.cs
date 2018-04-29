@@ -1,19 +1,28 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Equipment.Weapon;
+using Assets.Controller.Map.Combat;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
+using Assets.Template.CB;
+using System.Collections.Generic;
 
 namespace Assets.Model.Event.Combat
 {
     public class EvPerformAbilityData
     {
         public EAbility Ability { get; set; }
+        public List<Callback> Callbacks { get; set; }
         public bool LWeapon { get; set; }
         public CWeapon ParentWeapon { get; set; }
         public CChar Source { get; set; }
         public CTile Target { get; set; }
         public bool WpnAbility { get; set; }
+
+        public EvPerformAbilityData()
+        {
+            this.Callbacks = new List<Callback>();
+        }
     }
 
     public class EvPerformAbility : MEvCombat
@@ -29,15 +38,17 @@ namespace Assets.Model.Event.Combat
         public override void TryProcess()
         {
             base.TryProcess();
+            // TODO: Remove old AOE Tiles
             var data = new ActionData();
             data.Ability = this._data.Ability;
             data.LWeapon = this._data.LWeapon;
+            data.ParentEvent = this;
             data.ParentWeapon = this._data.ParentWeapon;
             data.Source = this._data.Source;
             data.Target = this._data.Target;
             data.WpnAbility = this._data.WpnAbility;
             var action = new MAction(data);
-            foreach (var callback in this._callbacks)
+            foreach (var callback in this._data.Callbacks)
                 action.AddCallback(callback);
             action.TryProcess();
         }

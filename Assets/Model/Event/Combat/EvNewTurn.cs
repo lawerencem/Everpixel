@@ -2,6 +2,7 @@
 using Assets.Controller.Manager;
 using Assets.Controller.Manager.Combat;
 using Assets.Controller.Manager.GUI;
+using Assets.Model.Character.Enum;
 using Assets.Template.Script;
 using Assets.View;
 using Assets.View.Character;
@@ -71,15 +72,21 @@ namespace Assets.Model.Event.Combat
 
         private void TryUndoActionStatuses()
         {
-            var undoSpearWallData = new EvUndoSpearwallData();
-            undoSpearWallData.Char = this._data.Target;
-            var undoSpearWallEvent = new EvUndoSpearwall(undoSpearWallData);
-            undoSpearWallEvent.TryProcess();
+            if (FActionStatus.HasFlag(this._data.Target.Proxy.GetActionFlags().CurFlags, FActionStatus.Flags.Spearwalling))
+            {
+                var undoSpearWallData = new EvUndoSpearwallData();
+                undoSpearWallData.Char = this._data.Target;
+                var undoSpearWallEvent = new EvUndoSpearwall(undoSpearWallData);
+                undoSpearWallEvent.TryProcess();
+            }
 
-            var undoShieldWallData = new EvUndoShieldWallData();
-            undoShieldWallData.Char = this._data.Target;
-            var undoShieldWallEvent = new EvUndoShieldWall(undoShieldWallData);
-            undoShieldWallEvent.TryProcess();
+            if (FActionStatus.HasFlag(this._data.Target.Proxy.GetActionFlags().CurFlags, FActionStatus.Flags.ShieldWalling))
+            {
+                var undoShieldWallData = new EvUndoShieldWallData();
+                undoShieldWallData.Char = this._data.Target;
+                var undoShieldWallEvent = new EvUndoShieldWall(undoShieldWallData);
+                undoShieldWallEvent.TryProcess();
+            }
         }
     }
 }

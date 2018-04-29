@@ -260,6 +260,7 @@ namespace Assets.Data.Ability.XML
                 case (EAbility.Spear_Wall): { table.Add(type, new SpearWall()); } break;
                 case (EAbility.Stab): { table.Add(type, new Stab()); } break;
                 case (EAbility.Stun): { table.Add(type, new Stun()); } break;
+                case (EAbility.Suppress_Area): { table.Add(type, new SuppressArea()); } break;
                 case (EAbility.Summon_Shoggoth): { table.Add(type, new SummonShoggoth()); } break;
                 case (EAbility.Weenlight_Sonata): { table.Add(type, new WeenlightSonata()); } break;
                 case (EAbility.Wereween): { table.Add(type, new Wereween()); } break;

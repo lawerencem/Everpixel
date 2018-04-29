@@ -7,7 +7,6 @@ using Assets.View;
 using Assets.View.Map;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 namespace Assets.Controller.Map.Tile
 {
@@ -123,19 +122,17 @@ namespace Assets.Controller.Map.Tile
                 this._liquidHandle = new GameObject(Layers.TILE_LIQUID);
         }
 
-        public void ProcessEnterTile(CChar c, Callback cb)
+        public void ProcessEnterTile(TileMoveData data)
         {
             foreach(var zone in this._zones)
-                zone.ProcessEnterZone(c, cb);
-            this.Model.ProcessEnterTile(c);
+                zone.ProcessEnterZone(data);
+            this.Model.ProcessEnterTile(data.Target);
         }
 
-        public void ProcessExitTile(CChar tgt, bool doAttackOfOpportunity, Callback callback)
+        public void ProcessExitTile(TileMoveData data)
         {
             foreach (var zone in this._zones)
-            {
-                zone.ProcessExitZone(tgt, doAttackOfOpportunity, callback);
-            }
+                zone.ProcessExitZone(data);
         }
 
         public void ProcessTurnInTile(CChar c, Callback cb)

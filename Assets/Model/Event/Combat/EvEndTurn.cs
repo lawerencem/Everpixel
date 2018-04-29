@@ -22,6 +22,7 @@ namespace Assets.Model.Event.Combat
             }
             VMapCombatController.Instance.ClearDecoratedTiles(this);
             CombatManager.Instance.ProcessEndTurn();
+            this.DoCallbacks();
         }
     }
 }

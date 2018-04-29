@@ -6,18 +6,24 @@ using Assets.Model.Ability.Logic.Calculator;
 using Assets.Model.Character.Enum;
 using Assets.Model.Event.Combat;
 using Assets.Model.Injury.Calculator;
+using Assets.Template.Event;
 
 namespace Assets.Model.Action
 {
-    public class MAction : AAction
+    public class MAction : AAction, IChildEvent
     {
         private InjuryCalculator _injuryCalc;
 
         public MAbility ActiveAbility;
 
-        public MAction(ActionData d) : base(d)
+        public MAction(ActionData data) : base(data)
         {
             this._injuryCalc = new InjuryCalculator();
+            if (data.ParentEvent != null)
+            {
+                data.ParentEvent.AddCallback(data.ParentEvent.TryDone);
+                data.ParentEvent.AddChildAction(this);
+            }
         }
 
         public void DisplayAction()
@@ -35,11 +41,8 @@ namespace Assets.Model.Action
             }
             if (done && !this._completed)
             {
-                this._completed = true;
-                GUIManager.Instance.SetGUILocked(false);
-                GUIManager.Instance.SetInteractionLocked(false);
                 this.ProcessHitsData();
-                this.DoCallbacks();
+                this.CallbackHandler(null);
             }
         }
 

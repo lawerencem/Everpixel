@@ -36,6 +36,7 @@
       <Value>180</Value>
       <EAbility>Fire</EAbility>
       <EAbility>Aim</EAbility>
+      <EAbility>Suppress_Area</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -74,6 +75,7 @@
       <Value>200</Value>
       <EAbility>Fire</EAbility>
       <EAbility>Aim</EAbility>
+      <EAbility>Suppress_Area</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -112,6 +114,7 @@
       <Value>250</Value>
       <EAbility>Fire</EAbility>
       <EAbility>Aim</EAbility>
+      <EAbility>Suppress_Area</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -150,6 +153,7 @@
       <Value>350</Value>
       <EAbility>Fire</EAbility>
       <EAbility>Aim</EAbility>
+      <EAbility>Suppress_Area</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>

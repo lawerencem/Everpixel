@@ -44,8 +44,8 @@ namespace Assets.Model.Zone
             this._type = type;
         }
 
-        public virtual void ProcessEnterZone(CChar target, Callback cb) { }
-        public virtual void ProcessExitZone(CChar target, bool doAttackOfOpportunity, Callback cb) { }
+        public virtual void ProcessEnterZone(TileMoveData data) { }
+        public virtual void ProcessExitZone(TileMoveData data) { }
         public virtual void ProcessTurnInZone(CChar target, Callback cb) { }
 
         public void RemoveFromParentAndSource()

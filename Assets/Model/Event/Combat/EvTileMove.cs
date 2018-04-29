@@ -1,7 +1,10 @@
-﻿using Assets.Controller.Character;
+﻿using System;
+using Assets.Controller.Character;
 using Assets.Controller.Map.Tile;
 using Assets.Controller.Script;
+using Assets.Template.Event;
 using Assets.View;
+using Assets.Controller.Manager.GUI;
 
 namespace Assets.Model.Event.Combat
 {
@@ -10,6 +13,7 @@ namespace Assets.Model.Event.Combat
         public CChar Char { get; set; }
         public int Cost { get; set; }
         public bool DoAttackOfOpportunity { get; set; }
+        public EvPathMove ParentMove { get; set; }
         public CTile Source { get; set; }
         public int StamCost { get; set; }
         public CTile Target { get; set; }
@@ -20,8 +24,9 @@ namespace Assets.Model.Event.Combat
         }
     }
 
-    public class EvTileMove : MEvCombat
+    public class EvTileMove : MEvCombat, IChildEvent
     {
+        private bool _completed;
         private EvTileMoveData _data;
         private bool _pathInterrupted;
 
@@ -30,6 +35,8 @@ namespace Assets.Model.Event.Combat
         {
             this._data = d;
             this._pathInterrupted = false;
+            if (this._data.ParentMove != null)
+                this._data.ParentMove.AddChildAction(this);
         }
 
         public EvTileMoveData GetData() { return this._data; }
@@ -43,18 +50,44 @@ namespace Assets.Model.Event.Combat
             this.TryProcessMove();       
         }
 
+        public bool GetCompleted()
+        {
+            return this._completed;
+        }
+
+        public override void TryDone(object o)
+        {
+            bool done = true;
+            foreach (var action in this._childActions)
+            {
+                if (!action.GetCompleted())
+                    done = false;
+            }
+            if (done)
+            {
+                this._completed = true;
+                GUIManager.Instance.SetGUILocked(false);
+                GUIManager.Instance.SetInteractionLocked(false);
+                this.DoCallbacks();
+            }
+        }
+
         private void MoveDone(object o)
         {   
             this._data.Char.ProcessEnterNewTile(this._data.Target);
-            if (this._pathInterrupted)
-                this.DoCallbacks();
-            else
+            if (!this._pathInterrupted)
             {
                 this._data.Source.SetCurrent(null);
                 this._data.Target.SetCurrent(this._data.Char);
-                this._data.Target.ProcessEnterTile(this._data.Char, this.SetPathInterrupted);
-                this.DoCallbacks();
+                var moveData = new TileMoveData();
+                moveData.Callback = this.SetPathInterrupted;
+                moveData.ParentEvent = this;
+                moveData.Target = this._data.Char;
+                this._data.Target.ProcessEnterTile(moveData);
+                this.TryDone(null);
             }
+            else
+                this.TryDone(null);
         }
 
         private bool VerifyData()
@@ -70,7 +103,7 @@ namespace Assets.Model.Event.Combat
             return true;
         }
 
-        private bool TryProcessMove()
+        private void TryProcessMove()
         {
             if (this.VerifyData())
             {
@@ -89,13 +122,14 @@ namespace Assets.Model.Event.Combat
                 var staminaEvent = new EvStaminaMod(staminaData);
                 staminaEvent.TryProcess();
 
-                this._data.Source.ProcessExitTile(this._data.Char, this._data.DoAttackOfOpportunity, this.SetPathInterrupted);
-                if (this._pathInterrupted)
-                {
-                    this.DoCallbacks();
-                    return false;
-                }
-                else
+                var exitData = new TileMoveData();
+                exitData.Callback = this.SetPathInterrupted;
+                exitData.DoAttackOfOpportunity = this._data.DoAttackOfOpportunity;
+                exitData.ParentEvent = this;
+                exitData.Target = this._data.Char;
+                this._data.Source.ProcessExitTile(exitData);
+
+                if (!this._pathInterrupted)
                 {
                     var script = this._data.Char.GameHandle.AddComponent<SObjectMove>();
                     var data = new SObjectMoveData();
@@ -106,10 +140,8 @@ namespace Assets.Model.Event.Combat
                     data.Target = this._data.Target.Handle.transform.position;
                     script.Init(data);
                     script.AddCallback(this.MoveDone);
-                    return true;
                 }
             }
-            return false;
         }
     }
 }

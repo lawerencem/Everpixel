@@ -45,6 +45,11 @@ namespace Assets.Model.Event.Combat
             }
         }
 
+        private void CallbackHandler()
+        {
+            this.DoCallbacks();
+        }
+
         private bool TryProcessPathMove()
         {
             if (this.VerifyAndPopulateData())
@@ -54,7 +59,7 @@ namespace Assets.Model.Event.Combat
             }
             else
             {
-                this.DoCallbacks();
+                this.CallbackHandler();
                 return false;
             }
         }
@@ -64,7 +69,7 @@ namespace Assets.Model.Event.Combat
             var e = o as EvTileMove;
             this._current = this._next;
             if (e.GetPathInterrupted())
-                this.DoCallbacks();
+                this.CallbackHandler();
             else
                 this.TryProcessNextTile(this._current);
         }
@@ -84,6 +89,7 @@ namespace Assets.Model.Event.Combat
                     var data = new EvTileMoveData();
                     data.Cost = apCost;
                     data.Char = this._data.Char;
+                    data.ParentMove = this;
                     data.Source = this._data.Source;
                     data.Target = this._next;
                     var e = new EvTileMove(data);
@@ -91,7 +97,7 @@ namespace Assets.Model.Event.Combat
                     e.TryProcess();
                 }
                 else
-                    this.DoCallbacks();
+                    this.CallbackHandler();
             }
         }
 
@@ -108,6 +114,7 @@ namespace Assets.Model.Event.Combat
                     var data = new EvTileMoveData();
                     data.Cost = cost;
                     data.Char = this._data.Char;
+                    data.ParentMove = this;
                     data.Source = this._current;
                     data.StamCost = this._data.Target.Model.GetStaminaCost();
                     data.Target = this._next;
@@ -116,10 +123,10 @@ namespace Assets.Model.Event.Combat
                     e.TryProcess();
                 }
                 else
-                    this.DoCallbacks();
+                    this.CallbackHandler();
             }
             else
-                this.DoCallbacks();
+                this.CallbackHandler();
         }
 
         private bool VerifyAndPopulateData()

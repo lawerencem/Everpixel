@@ -1,10 +1,7 @@
-﻿using Assets.Controller.Character;
-using Assets.Controller.Map.Tile;
+﻿using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
-using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
-using Assets.Template.CB;
 
 namespace Assets.Model.Zone.Perpetual
 {
@@ -17,18 +14,19 @@ namespace Assets.Model.Zone.Perpetual
             
         }
 
-        public override void ProcessExitZone(CChar target, bool doAttackOfOpportunity, Callback cb)
+        public override void ProcessExitZone(TileMoveData moveData)
         {
-            base.ProcessExitZone(target, doAttackOfOpportunity, cb);
-            if (this._data.Source != null && doAttackOfOpportunity)
+            base.ProcessExitZone(moveData);
+            if (this._data.Source != null && moveData.DoAttackOfOpportunity)
             {
-                if (target.Proxy.LParty != this._data.Source.Proxy.LParty)
+                if (moveData.Target.Proxy.LParty != this._data.Source.Proxy.LParty)
                 {
                     var data = new ActionData();
                     data.Ability = EAbility.Attack_Of_Opportunity;
                     data.DisplayDefended = false;
+                    data.ParentEvent = moveData.ParentEvent;
                     data.Source = this._data.Source;
-                    data.Target = target.Tile;
+                    data.Target = moveData.Target.Tile;
                     data.WpnAbility = false;
                     this._action = new MAction(data);
                     this._action.TryProcessNoDisplay();
@@ -38,7 +36,7 @@ namespace Assets.Model.Zone.Perpetual
                             !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge) &&
                             !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))
                         {
-                            cb(this);
+                            moveData.Callback(this);
                         }
                     }
                     this._action.DisplayAction();

@@ -25,13 +25,19 @@ namespace Assets.Model.Action
 
         public virtual void CallbackHandler(object o)
         {
-
+            this._completed = true;
+            this.DoCallbacks();
         }
 
         public virtual void DoCallbacks()
         {
             foreach (var callback in this._callbacks)
                 callback(this);
+        }
+
+        public bool GetCompleted()
+        {
+            return this._completed;
         }
 
         public void SetCallback(Callback callback)

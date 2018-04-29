@@ -30,6 +30,7 @@ namespace Assets.Model.Event.Combat
                 {
                     // TODO: Display ap mod
                 }
+                this.DoCallbacks();
             }
         }
 

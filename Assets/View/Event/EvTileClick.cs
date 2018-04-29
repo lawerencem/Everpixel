@@ -37,6 +37,8 @@ namespace Assets.View.Event
             {
                 var data = new EvPerformAbilityData();
                 data.Ability = CombatManager.Instance.GetCurrentAbility();
+                data.Callbacks.Add(GUIManager.Instance.CallbackUnlockInteraction);
+                data.Callbacks.Add(GUIManager.Instance.CallbackUnlockGUI);
                 data.LWeapon = CombatManager.Instance.GetLWeapon();
                 data.ParentWeapon = CombatManager.Instance.GetCurrentWeapon();
                 data.Source = CombatManager.Instance.GetCurrentlyActing();

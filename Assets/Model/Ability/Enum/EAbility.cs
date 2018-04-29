@@ -67,6 +67,7 @@
         Spear_Wall,
         Stab,
         Stun,
+        Suppress_Area,
         Wide_Strike,
         Wrap,
         Whirlwind,
