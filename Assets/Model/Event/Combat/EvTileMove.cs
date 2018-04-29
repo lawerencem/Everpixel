@@ -74,9 +74,9 @@ namespace Assets.Model.Event.Combat
 
         private void MoveDone(object o)
         {   
-            this._data.Char.ProcessEnterNewTile(this._data.Target);
             if (!this._pathInterrupted)
             {
+                this._data.Char.ProcessEnterNewTile(this._data.Target);
                 this._data.Source.SetCurrent(null);
                 this._data.Target.SetCurrent(this._data.Char);
                 var moveData = new TileMoveData();
@@ -141,6 +141,8 @@ namespace Assets.Model.Event.Combat
                     script.Init(data);
                     script.AddCallback(this.MoveDone);
                 }
+                else
+                    this.MoveDone(null);
             }
         }
     }

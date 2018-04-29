@@ -24,7 +24,6 @@ namespace Assets.Model.Zone.Perpetual
                     var data = new ActionData();
                     data.Ability = EAbility.Attack_Of_Opportunity;
                     data.DisplayDefended = false;
-                    data.ParentEvent = moveData.ParentEvent;
                     data.Source = this._data.Source;
                     data.Target = moveData.Target.Tile;
                     data.WpnAbility = false;

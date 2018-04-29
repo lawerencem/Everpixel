@@ -21,7 +21,7 @@ namespace Assets.Model.Action
             this._injuryCalc = new InjuryCalculator();
             if (data.ParentEvent != null)
             {
-                data.ParentEvent.AddCallback(data.ParentEvent.TryDone);
+                this.AddCallback(data.ParentEvent.TryDone);
                 data.ParentEvent.AddChildAction(this);
             }
         }

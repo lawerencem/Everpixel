@@ -1,10 +1,7 @@
 ﻿TODO
 
- - Multiple dodge on Area Suppress and Spear Wall is breaking
-   -- IE, when a character has both a hit and dodge from two sources, eventing is jacked
-   -- same with attacks of opportunity
-   -- same with spear wall
-
+ 
+ - Spear wall not undoing if no stamina
  - Add Zones traveling with the caster (i.e., a new type) such that spear wall travels with the caster
  - Updaet main stat box on moves / events
  - Remove chars being in liquid layers
