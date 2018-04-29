@@ -42,13 +42,13 @@ namespace Assets.View.Event
                 var data = new CurrentlyActingData();
                 data.Ability = this._data.Ability;
                 data.CurrentlyActing = CombatManager.Instance.GetCurrentlyActing();
+                data.LWeapon = this._data.LWeapon;
 
-                if (data.LWeapon)
+                if (this._data.LWeapon)
                     data.CurrentWeapon = data.CurrentlyActing.Proxy.GetLWeapon();
                 else
                     data.CurrentWeapon = data.CurrentlyActing.Proxy.GetRWeapon();
 
-                data.LWeapon = this._data.LWeapon;
                 data.IsWpnAbility = this._data.WpnAbility;
                 CombatManager.Instance.SetCurrentData(data);
             }

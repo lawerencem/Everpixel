@@ -75,6 +75,11 @@ namespace Assets.Model.Event.Combat
             undoSpearWallData.Char = this._data.Target;
             var undoSpearWallEvent = new EvUndoSpearwall(undoSpearWallData);
             undoSpearWallEvent.TryProcess();
+
+            var undoShieldWallData = new EvUndoShieldWallData();
+            undoShieldWallData.Char = this._data.Target;
+            var undoShieldWallEvent = new EvUndoShieldWall(undoShieldWallData);
+            undoShieldWallEvent.TryProcess();
         }
     }
 }

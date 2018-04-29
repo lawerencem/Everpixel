@@ -31,7 +31,7 @@ namespace Assets.Controller.Manager.Combat
         public CChar GetCurrentlyActing() { return this._currActingData.CurrentlyActing; }
         public CWeapon GetCurrentWeapon() { return this._currActingData.CurrentWeapon; }
         public CombatManagerData GetData() { return this._combatData; }
-        public bool GetLWeapon() { return this._combatData.LWeapon; }
+        public bool GetLWeapon() { return this._currActingData.LWeapon; }
         public List<CTile> GetPotentialTgtTiles() { return this._combatData.PotentialTgtTiles; }
         public bool GetIsWpnAbility() { return this._currActingData.IsWpnAbility; }
         

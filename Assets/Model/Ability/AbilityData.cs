@@ -29,6 +29,7 @@ namespace Assets.Model.Ability
         public double FlatDamage { get; set; }
         public bool HitsTiles { get; set; }
         public bool Hostile { get; set; }
+        public bool ProcessDamage { get; set; }
         public int IconSprite { get; set; }
         public List<EInjury> Injuries { get; set; }
         public bool IsHeal { get; set; }
@@ -69,6 +70,7 @@ namespace Assets.Model.Ability
             this.MeleeBlockChanceMod = 1;
             this.MinSprites = 0;
             this.ParryModMod = 1;
+            this.ProcessDamage = true;
             this.Range = 0;
             this.RangeBlockMod = 1;
             this.ShieldDamageMod = 1;
@@ -102,6 +104,7 @@ namespace Assets.Model.Ability
             data.MinSprites = this.MinSprites;
             data.ParryModMod = this.ParryModMod;
             data.ParentWeapon = this.ParentWeapon;
+            data.ProcessDamage = this.ProcessDamage;
             data.RangeBlockMod = this.RangeBlockMod;
             data.RechargeTime = this.RechargeTime;
             data.ShieldDamageMod = this.ShieldDamageMod;

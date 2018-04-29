@@ -1,55 +1,51 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Action;
 using Assets.Model.Character.Enum;
-using Assets.Model.Zone;
 using Assets.View.Equipment;
 
 namespace Assets.Model.Event.Combat
 {
-    public class EvUndoSpearwallData
+    public class EvUndoShieldWallData
     {
         public MAction Action { get; set; }
         public CChar Char { get; set; }
     }
 
-    public class EvUndoSpearwall : MEvCombat
+    public class EvUndoShieldWall : MEvCombat
     {
-        private EvUndoSpearwallData _data;
+        private EvUndoShieldWallData _data;
 
-        public EvUndoSpearwall() : base(ECombatEv.UndoSpearWall) { }
-        public EvUndoSpearwall(EvUndoSpearwallData d) : base(ECombatEv.UndoSpearWall) { this._data = d; }
+        public EvUndoShieldWall() : base(ECombatEv.UndoShieldWall) { }
+        public EvUndoShieldWall(EvUndoShieldWallData d) : base(ECombatEv.UndoShieldWall) { this._data = d; }
 
-        public void SetData(EvUndoSpearwallData data) { this._data = data; }
+        public void SetData(EvUndoShieldWallData data) { this._data = data; }
 
         public override void TryProcess()
         {
             base.TryProcess();
             if (this.VerifyAndPopulateData())
             {
-                if (FActionStatus.HasFlag(this._data.Char.Proxy.GetActionFlags().CurFlags, FActionStatus.Flags.Spearwalling))
+                if (FActionStatus.HasFlag(this._data.Char.Proxy.GetActionFlags().CurFlags, FActionStatus.Flags.ShieldWalling))
                 {
                     var util = new VWeaponUtil();
                     if (this._data.Action != null)
                     {
                         var action = this._data.Action;
-                        util.UndoSpearWallFX(action.Data.Source, action.Data.ParentWeapon, action.Data.LWeapon);
+                        util.UndoShieldWallFX(action.Data.Source, action.Data.ParentWeapon, action.Data.LWeapon);
                     }
                     if (this._data.Char.Proxy.GetLWeapon() != null)
                     {
                         var wpn = this._data.Char.Proxy.GetLWeapon();
-                        if (wpn.View.SpearWalling)
-                            util.UndoSpearWallFX(this._data.Char, wpn, true);
+                        if (wpn.View.ShieldWalling)
+                            util.UndoShieldWallFX(this._data.Char, wpn, true);
                     }
                     if (this._data.Char.Proxy.GetRWeapon() != null)
                     {
                         var wpn = this._data.Char.Proxy.GetRWeapon();
-                        if (wpn.View.SpearWalling)
+                        if (wpn.View.ShieldWalling)
                             util.UndoSpearWallFX(this._data.Char, wpn, false);
                     }
-                    var zones = this._data.Char.Proxy.GetZones().FindAll(x => x.Type == EZone.Spear_Wall_Zone);
-                    foreach (var zone in zones)
-                        zone.RemoveFromParentAndSource();
-                    FActionStatus.SetSpearWallingFalse(this._data.Char.Proxy.GetActionFlags());
+                    FActionStatus.SetShieldWallingFalse(this._data.Char.Proxy.GetActionFlags());
                 }
             }
         }

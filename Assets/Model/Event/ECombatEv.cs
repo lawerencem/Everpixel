@@ -24,6 +24,7 @@
         StaminaMod,
         Summon,
         TileMove,
+        UndoShieldWall,
         UndoSpearWall,
     }
 }

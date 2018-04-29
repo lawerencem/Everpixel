@@ -11,26 +11,31 @@ namespace Assets.Model.Ability.Logic.Calculator
     {
         public void CalculateAbilityDmg(MHit hit)
         {
-            var hitData = hit.Data;
-            var abilityData = hitData.Ability.Data;
-            var source = hit.Data.Source.Proxy;
-
-            var dmg = hit.Data.ModData.BaseDamage;
-            dmg += abilityData.FlatDamage;
-            dmg += (abilityData.DmgPerPower * source.GetStat(ESecondaryStat.Power));
-
-            if (source.GetLWeapon() != null && hit.Data.IsWeapon && hit.Data.IsLWeapon)
+            if (hit.Data.Ability.Data.ProcessDamage)
             {
-                dmg += source.GetLWeapon().GetStat(EWeaponStat.Damage);
-                dmg *= source.GetLWeapon().GetDurabilityPercentage();
+                var hitData = hit.Data;
+                var abilityData = hitData.Ability.Data;
+                var source = hit.Data.Source.Proxy;
+
+                var dmg = hit.Data.ModData.BaseDamage;
+                dmg += abilityData.FlatDamage;
+                dmg += (abilityData.DmgPerPower * source.GetStat(ESecondaryStat.Power));
+
+                if (source.GetLWeapon() != null && hit.Data.IsWeapon && hit.Data.IsLWeapon)
+                {
+                    dmg += source.GetLWeapon().GetStat(EWeaponStat.Damage);
+                    dmg *= source.GetLWeapon().GetDurabilityPercentage();
+                }
+                else if (source.GetRWeapon() != null && hit.Data.IsWeapon)
+                {
+                    dmg += source.GetRWeapon().GetStat(EWeaponStat.Damage);
+                    dmg *= source.GetRWeapon().GetDurabilityPercentage();
+                }
+                dmg *= abilityData.DamageMod;
+                hit.Data.Dmg = (int)dmg;
             }
-            else if (source.GetRWeapon() != null && hit.Data.IsWeapon)
-            {
-                dmg += source.GetRWeapon().GetStat(EWeaponStat.Damage);
-                dmg *= source.GetRWeapon().GetDurabilityPercentage();
-            }
-            dmg *= abilityData.DamageMod;
-            hit.Data.Dmg = (int)dmg;
+            else
+                hit.Data.Dmg = 0;
         }
 
         public void ModifyDmgViaDefender(MHit hit)
@@ -58,27 +63,30 @@ namespace Assets.Model.Ability.Logic.Calculator
 
         public override void Process(MHit hit)
         {
-            var src = hit.Data.Source.Proxy;
-            var targetController = hit.Data.Target.Current as CChar;
-            var tgt = targetController.Proxy;
-
-            double dmgToApply = this.GetCritDamage(hit, (double)hit.Data.Dmg);
-            double dmgReduction = tgt.GetStat(ESecondaryStat.Damage_Reduction);
-            double flatDmgNegate = src.GetStat(ESecondaryStat.Damage_Ignore);
-
-            if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Head))
+            if (hit.Data.Ability.Data.ProcessDamage)
             {
-                flatDmgNegate += this.GetArmorNegation(hit, src, tgt, flatDmgNegate, true);
-                dmgReduction = this.GetDmgReduction(hit, src, tgt, dmgReduction, true);
+                var src = hit.Data.Source.Proxy;
+                var targetController = hit.Data.Target.Current as CChar;
+                var tgt = targetController.Proxy;
+
+                double dmgToApply = this.GetCritDamage(hit, (double)hit.Data.Dmg);
+                double dmgReduction = tgt.GetStat(ESecondaryStat.Damage_Reduction);
+                double flatDmgNegate = src.GetStat(ESecondaryStat.Damage_Ignore);
+
+                if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Head))
+                {
+                    flatDmgNegate += this.GetArmorNegation(hit, src, tgt, flatDmgNegate, true);
+                    dmgReduction = this.GetDmgReduction(hit, src, tgt, dmgReduction, true);
+                }
+                else
+                {
+                    flatDmgNegate += this.GetArmorNegation(hit, src, tgt, flatDmgNegate, false);
+                    dmgReduction = this.GetDmgReduction(hit, src, tgt, dmgReduction, false);
+                }
+                dmgToApply -= flatDmgNegate;
+                dmgToApply *= dmgReduction;
+                hit.Data.Dmg = (int)dmgToApply;
             }
-            else
-            {
-                flatDmgNegate += this.GetArmorNegation(hit, src, tgt, flatDmgNegate, false);
-                dmgReduction = this.GetDmgReduction(hit, src, tgt, dmgReduction, false);
-            }
-            dmgToApply -= flatDmgNegate;
-            dmgToApply *= dmgReduction;
-            hit.Data.Dmg = (int)dmgToApply;
         }
 
         private double GetCritDamage(MHit hit, double dmgIn)

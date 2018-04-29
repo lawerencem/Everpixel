@@ -9,6 +9,7 @@ namespace Assets.Model.Character.Enum
         {
             None = 0,
             Spearwalling = 1,
+            ShieldWalling = 2,
         }
 
         public Flags CurFlags { get; set; }
@@ -18,9 +19,11 @@ namespace Assets.Model.Character.Enum
             this.CurFlags = new Flags();
         }
 
-        public static void SetSpearwallingFalse(FActionStatus f) { f.CurFlags &= ~Flags.Spearwalling; }
+        public static void SetShieldWallingFalse(FActionStatus f) { f.CurFlags &= ~Flags.ShieldWalling; }
+        public static void SetSpearWallingFalse(FActionStatus f) { f.CurFlags &= ~Flags.Spearwalling; }
 
-        public static void SetSpearwallingTrue(FActionStatus f) { f.CurFlags |= Flags.Spearwalling; }
+        public static void SetShieldWallingTrue(FActionStatus f) { f.CurFlags |= Flags.ShieldWalling; }
+        public static void SetSpearWallingTrue(FActionStatus f) { f.CurFlags |= Flags.Spearwalling; }
 
         public static bool HasFlag(Flags a, Flags b)
         {

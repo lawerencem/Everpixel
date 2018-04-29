@@ -21,15 +21,15 @@ namespace Assets.Model.Weapon.Abilities
         public override void Process(MHit hit)
         {
             base.ProcessSingle(hit);
-            FActionStatus.SetSpearwallingTrue(hit.Data.Action.Data.Source.Proxy.GetActionFlags());
+            FActionStatus.SetSpearWallingTrue(hit.Data.Action.Data.Source.Proxy.GetActionFlags());
         }
 
-        public override void DisplayFX(MAction a)
+        public override void DisplayFX(MAction action)
         {
             var util = new VWeaponUtil();
-            util.DoSpearWallFX(a);
+            util.DoSpearWallFX(action);
 
-            foreach (var hit in a.Data.Hits)
+            foreach (var hit in action.Data.Hits)
                 hit.CallbackHandler(null);
         }
     }

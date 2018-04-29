@@ -115,6 +115,7 @@ namespace Assets.Data.Ability.XML
                 case ("MeleeBlockChanceMod"): { this._table.Table[type].Data.MeleeBlockChanceMod = v; } break;
                 case ("MinSprites"): { this._table.Table[type].Data.MinSprites = (int)v; } break;
                 case ("ParryModMod"): { this._table.Table[type].Data.ParryModMod = v; } break;
+                case ("ProcessDamage"): { this.HandleProcessDamage(type, value); } break;
                 case ("Range"): { this._table.Table[type].Data.Range = (int)v; } break;
                 case ("RangeBlockMod"): { this._table.Table[type].Data.RangeBlockMod = v; } break;
                 case ("RechargeTime"): { this._table.Table[type].Data.RechargeTime = v; } break;
@@ -157,6 +158,12 @@ namespace Assets.Data.Ability.XML
             var injury = EInjury.None;
             if (EnumUtil<EInjury>.TryGetEnumValue(s, ref injury))
                 AbilityTable.Instance.Table[type].Data.Injuries.Add(injury);
+        }
+
+        private void HandleProcessDamage(EAbility key, string value)
+        {
+            if (value.ToLowerInvariant().Equals("false"))
+                AbilityTable.Instance.Table[key].Data.ProcessDamage = false;
         }
 
         private void HandleHostile(EAbility key, string value)

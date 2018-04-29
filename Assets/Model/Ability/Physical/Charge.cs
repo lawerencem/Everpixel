@@ -61,20 +61,20 @@ namespace Assets.Model.Ability.Physical
             this.ProcessMove(action);
         }
 
-        private void ProcessMove(MAction a)
+        private void ProcessMove(MAction action)
         {
-            var tgt = a.Data.Target.Current as CChar;
+            var tgt = action.Data.Target.Current as CChar;
             var tile = tgt.Tile.GetRandomNearbyEmptyTile(1);
             if (tile == null)
                 tile = tgt.Tile.GetNearestEmptyTile();
             var data = new EvTileMoveData();
-            data.Char = a.Data.Source;
+            data.Char = action.Data.Source;
             data.Cost = 0;
-            data.Source = a.Data.Source.Tile;
+            data.Source = action.Data.Source.Tile;
             data.Target = tile;
             var e = new EvTileMove(data);
             e.AddCallback(this.SourceCallback);
-            foreach (var hit in a.Data.Hits)
+            foreach (var hit in action.Data.Hits)
                 e.AddCallback(hit.CallbackHandler);
             e.TryProcess();
         }
