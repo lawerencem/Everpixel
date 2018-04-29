@@ -17,10 +17,10 @@ namespace Assets.Model.Zone.Perpetual
             
         }
 
-        public override void ProcessExitZone(CChar target, Callback cb)
+        public override void ProcessExitZone(CChar target, bool doAttackOfOpportunity, Callback cb)
         {
-            base.ProcessExitZone(target, cb);
-            if (this._data.Source != null && !FActionStatus.HasFlag(this._data.Source.Proxy.GetActionFlags().CurFlags, FActionStatus.Flags.Spearwalling))
+            base.ProcessExitZone(target, doAttackOfOpportunity, cb);
+            if (this._data.Source != null && doAttackOfOpportunity)
             {
                 if (target.Proxy.LParty != this._data.Source.Proxy.LParty)
                 {

@@ -130,11 +130,11 @@ namespace Assets.Controller.Map.Tile
             this.Model.ProcessEnterTile(c);
         }
 
-        public void ProcessExitTile(CChar tgt, CTile destTile, Callback callback)
+        public void ProcessExitTile(CChar tgt, bool doAttackOfOpportunity, Callback callback)
         {
             foreach (var zone in this._zones)
             {
-                zone.ProcessExitZone(tgt, callback);
+                zone.ProcessExitZone(tgt, doAttackOfOpportunity, callback);
             }
         }
 

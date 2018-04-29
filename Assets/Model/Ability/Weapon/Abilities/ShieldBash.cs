@@ -53,6 +53,7 @@ namespace Assets.Model.Weapon.Abilities
                         var data = new EvTileMoveData();
                         data.Char = tgt;
                         data.Cost = 0;
+                        data.DoAttackOfOpportunity = false;
                         data.StamCost = 0;
                         data.Source = tgt.Tile;
                         data.Target = tgtTile.Controller;

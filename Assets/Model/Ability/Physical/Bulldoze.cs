@@ -35,6 +35,7 @@ namespace Assets.Model.Ability.Physical
             var data = new EvTileMoveData();
             data.Char = a.Data.Source;
             data.Cost = 0;
+            data.DoAttackOfOpportunity = false;
             data.Source = a.Data.Source.Tile;
             data.Target = a.Data.Target;
             var e = new EvTileMove(data);
@@ -55,6 +56,7 @@ namespace Assets.Model.Ability.Physical
             var data = new EvTileMoveData();
             data.Char = tgt;
             data.Cost = 0;
+            data.DoAttackOfOpportunity = false;
             data.Source = tgt.Tile;
             data.Target = a.Data.Source.Tile;
             var e = new EvTileMove(data);

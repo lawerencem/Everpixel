@@ -9,9 +9,15 @@ namespace Assets.Model.Event.Combat
     {
         public CChar Char { get; set; }
         public int Cost { get; set; }
+        public bool DoAttackOfOpportunity { get; set; }
         public CTile Source { get; set; }
         public int StamCost { get; set; }
         public CTile Target { get; set; }
+
+        public EvTileMoveData()
+        {
+            this.DoAttackOfOpportunity = true;
+        }
     }
 
     public class EvTileMove : MEvCombat
@@ -83,7 +89,7 @@ namespace Assets.Model.Event.Combat
                 var staminaEvent = new EvStaminaMod(staminaData);
                 staminaEvent.TryProcess();
 
-                this._data.Source.ProcessExitTile(this._data.Char, this._data.Target, this.SetPathInterrupted);
+                this._data.Source.ProcessExitTile(this._data.Char, this._data.DoAttackOfOpportunity, this.SetPathInterrupted);
                 if (this._pathInterrupted)
                 {
                     this.DoCallbacks();
