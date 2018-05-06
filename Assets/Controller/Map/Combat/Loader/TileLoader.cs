@@ -190,7 +190,7 @@ namespace Assets.Controller.Map.Combat.Loader
             var liquidRenderer = tile.LiquidHandle.AddComponent<SpriteRenderer>();
             var liquidSprites = MapBridge.Instance.GetTileSprites(ETile.Water);
             liquidRenderer.sprite = liquidSprites[roll + 8];
-            liquidRenderer.sortingLayerName = Layers.TILE_LIQUID;
+            liquidRenderer.sortingLayerName = Layers.TILE_LAYER;
             tile.LiquidHandle.transform.SetParent(tileHolder);
             tile.LiquidHandle.name = Layers.TILE + "( " + tile.Model.GetCol() + " / " + tile.Model.GetRow() + " )";
         }
