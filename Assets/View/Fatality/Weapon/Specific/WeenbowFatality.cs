@@ -96,7 +96,7 @@ namespace Assets.View.Fatality.Weapon.Ability
         {
             var tgt = this._data.Target.Current as CChar;
             this.ProcessBlood(tgt);
-            this.SetBodyComponentsNull(tgt);
+            VCharUtil.Instance.SetBodyViewComponentsNull(tgt);
             var ribs = CharSpriteLoader.Instance.GetEffectSprite(RIBS);
             this.LayFatalityDecoRandomPosition(ribs, tgt);
             var random = RNG.Instance.Next(5);

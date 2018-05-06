@@ -78,6 +78,7 @@ namespace Assets.View.Fatality
                 case (EAbility.Chop): { return new ChopFatality(data); }
                 case (EAbility.Crush): { return new CrushFatality(data); }
                 case (EAbility.Fire): { return new FireFatality(data); }
+                case (EAbility.Scatter): { return new ScatterFatality(data); }
                 case (EAbility.Slash): { return new SlashFatality(data); }
                 default: return null;
             }

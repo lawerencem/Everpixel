@@ -47,6 +47,9 @@ namespace Assets.Model.Event.Combat
 
         private void CallbackHandler()
         {
+            GUIManager.Instance.SetGUILocked(false);
+            GUIManager.Instance.SetInteractionLocked(false);
+            CombatManager.Instance.SetCurrentAbilityNone();
             this.DoCallbacks();
         }
 

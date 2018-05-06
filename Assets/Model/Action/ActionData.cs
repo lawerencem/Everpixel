@@ -14,7 +14,6 @@ namespace Assets.Model.Action
         public bool DisplayDefended { get; set; }
         public List<MHit> Hits { get; set; }
         public bool LWeapon { get; set; }
-        public MEvCombat ParentEvent { get; set; }
         public CWeapon ParentWeapon { get; set; }
         public CChar Source { get; set; }
         public CTile Target { get; set; }

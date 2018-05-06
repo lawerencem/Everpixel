@@ -52,10 +52,6 @@ namespace Assets.Controller.Manager.GUI
                 script.Init(component, life);
             }
         }
-        public void CallbackLockGUI(object o) { this._guiLocked = true; }
-        public void CallbackLockInteraction(object o) { this._interactionLocked = true; }
-        public void CallbackUnlockGUI(object o) { this._guiLocked = false; }
-        public void CallbackUnlockInteraction(object o) { this._interactionLocked = false; }
         public GameObject GetComponent(string tag)
         {
             if (this._guiComponents.ContainsKey(tag))

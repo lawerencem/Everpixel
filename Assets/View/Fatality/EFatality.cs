@@ -9,6 +9,7 @@
         Fighting,
         Fire,
         Pierce,
+        Scatter,
         Slash,
         Slime_Crush,
         Weenbow,

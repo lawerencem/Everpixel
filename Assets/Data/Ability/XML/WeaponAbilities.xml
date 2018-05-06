@@ -385,7 +385,7 @@
       </EEffect>
       <DamageMod>1.50</DamageMod>
       <DodgeMod>0.75</DodgeMod>
-      <IconSprite>0</IconSprite>
+      <IconSprite>24</IconSprite>
       <Injury>Broken_Hand</Injury>
       <Injury>Broken_Knee</Injury>
       <Injury>Broken_Leg</Injury>

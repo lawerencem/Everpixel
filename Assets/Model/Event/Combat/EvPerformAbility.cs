@@ -1,6 +1,7 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Equipment.Weapon;
-using Assets.Controller.Map.Combat;
+using Assets.Controller.Manager.Combat;
+using Assets.Controller.Manager.GUI;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
@@ -38,19 +39,34 @@ namespace Assets.Model.Event.Combat
         public override void TryProcess()
         {
             base.TryProcess();
-            // TODO: Remove old AOE Tiles
             var data = new ActionData();
             data.Ability = this._data.Ability;
             data.LWeapon = this._data.LWeapon;
-            data.ParentEvent = this;
             data.ParentWeapon = this._data.ParentWeapon;
             data.Source = this._data.Source;
             data.Target = this._data.Target;
             data.WpnAbility = this._data.WpnAbility;
             var action = new MAction(data);
-            foreach (var callback in this._data.Callbacks)
-                action.AddCallback(callback);
+            this.AddChildAction(action);
+            action.AddCallback(this.TryDone);
             action.TryProcess();
+        }
+
+        public override void TryDone(object o)
+        {
+            bool done = true;
+            foreach (var action in this._childActions)
+            {
+                if (!action.GetCompleted())
+                    done = false;
+            }
+            if (done)
+            {
+                GUIManager.Instance.SetGUILocked(false);
+                GUIManager.Instance.SetInteractionLocked(false);
+                CombatManager.Instance.SetCurrentAbilityNone();
+                this.DoCallbacks();
+            }
         }
     }
 }

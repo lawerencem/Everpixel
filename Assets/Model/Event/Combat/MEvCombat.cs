@@ -42,8 +42,6 @@ namespace Assets.Model.Event.Combat
             }
             if (done)
             {
-                GUIManager.Instance.SetGUILocked(false);
-                GUIManager.Instance.SetInteractionLocked(false);
                 this.DoCallbacks();
             }
         }

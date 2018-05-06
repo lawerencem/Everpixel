@@ -2,11 +2,11 @@
 <Parties>
   <Culture name="Amazonian">
     <Party Name ="Battle Squad">
-      <SubParty>Commanders,0.4</SubParty>
-      <SubParty>Infantry,0.2</SubParty>
-      <SubParty>Healers,0.2</SubParty>
-      <SubParty>Artillery,0.1</SubParty>
-      <SubParty>Militia,0.1</SubParty>
+      <SubParty>Commanders,1</SubParty>
+      <SubParty>Infantry,0</SubParty>
+      <SubParty>Healers,0</SubParty>
+      <SubParty>Artillery,0</SubParty>
+      <SubParty>Militia,0</SubParty>
     </Party>
   </Culture>
 </Parties>

@@ -27,24 +27,29 @@ namespace Assets.View.Event
         public override void TryProcess()
         {
             base.TryProcess();
-            if (this.TryProcessClick())
-                this.DoCallbacks();
+            this.TryProcessClick();
+        }
+
+        private void CallbackHandler(object o)
+        {
+            this.DoCallbacks();
         }
 
         private bool TryProcessAction()
         {
             if (CombatManager.Instance.IsValidActionClick(this._data.Target))
             {
+                VMapCombatController.Instance.ClearDecoratedTiles(null);
                 var data = new EvPerformAbilityData();
                 data.Ability = CombatManager.Instance.GetCurrentAbility();
-                data.Callbacks.Add(GUIManager.Instance.CallbackUnlockInteraction);
-                data.Callbacks.Add(GUIManager.Instance.CallbackUnlockGUI);
+                data.Callbacks.Add(this.CallbackHandler);
                 data.LWeapon = CombatManager.Instance.GetLWeapon();
                 data.ParentWeapon = CombatManager.Instance.GetCurrentWeapon();
                 data.Source = CombatManager.Instance.GetCurrentlyActing();
                 data.Target = this._data.Target;
                 data.WpnAbility = CombatManager.Instance.GetIsWpnAbility();
                 var e = new EvPerformAbility(data);
+                e.AddCallback(this.UpdateActingBox);
                 e.TryProcess();
                 return true;
             }
@@ -85,7 +90,7 @@ namespace Assets.View.Event
                     data.Target = this._data.Target;
                     var e = new EvPathMove(data);
                     e.AddCallback(VMapCombatController.Instance.ClearDecoratedTiles);
-                    e.AddCallback(GUIManager.Instance.CallbackUnlockInteraction);
+                    e.AddCallback(this.UpdateActingBox);
                     e.TryProcess();
                     return true;
                 }
@@ -93,6 +98,10 @@ namespace Assets.View.Event
             return false;
         }
 
-        
+        private void UpdateActingBox(object o)
+        {
+            var current = CombatManager.Instance.GetCurrentlyActing();
+            GUIManager.Instance.SetActingBoxToController(current);
+        }
     }
 }

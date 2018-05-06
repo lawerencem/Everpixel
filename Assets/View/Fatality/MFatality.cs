@@ -1,7 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.GUI.Combat;
 using Assets.Controller.Manager.GUI;
-using Assets.Model.Character.Enum;
 using Assets.Template.CB;
 using Assets.Template.Script;
 using Assets.Template.Util;
@@ -9,7 +8,6 @@ using Assets.Template.Utility;
 using Assets.View.Bark;
 using Assets.View.Character;
 using Assets.View.Event;
-using Assets.View.Script.FX;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -171,7 +169,7 @@ namespace Assets.View.Fatality
                     var geyser = this.AddBloodGeyser(tgt);
                     var explosionPath = StringUtil.PathBuilder(
                         CombatGUIParams.EFFECTS_PATH,
-                        "FightingFatalityExplosion",
+                        CombatGUIParams.FIGHTING_FATALITY_EXPLOSION,
                         CombatGUIParams.PARTICLES_EXTENSION);
                     var explosion = GameObject.Instantiate(Resources.Load(explosionPath)) as GameObject;
                     explosion.transform.position = tgt.GameHandle.transform.position;
@@ -183,7 +181,7 @@ namespace Assets.View.Fatality
                     scriptOne.AddCallback(hit.CallbackHandler);
                     scriptTwo.Init(explosion, 8f);
                     this.ProcessBlood(tgt);
-                    this.ProcessGearExplosion(tgt);
+                    VCharUtil.Instance.ProcessGearExplosion(tgt);
                 }
                 else
                 {
@@ -209,89 +207,6 @@ namespace Assets.View.Fatality
         {
             foreach (var nonFatal in this._data.NonFatalHits)
                 VHitController.Instance.ProcessDefenderHit(nonFatal);
-        }
-
-        protected void ProcessGearExplosion(CChar c)
-        {
-            if (c.Proxy.Type == ECharType.Humanoid)
-            {
-                if (c.SubComponents.ContainsKey(Layers.CHAR_TORSO))
-                {
-                    var renderer = c.SubComponents[Layers.CHAR_TORSO].GetComponent<SpriteRenderer>();
-                    renderer.sprite = null;
-                }
-                if (c.SubComponents.ContainsKey(Layers.CHAR_HEAD))
-                {
-                    var renderer = c.SubComponents[Layers.CHAR_HEAD].GetComponent<SpriteRenderer>();
-                    renderer.sprite = null;
-                }
-                if (c.SubComponents.ContainsKey(Layers.CHAR_HEAD_DECO_1))
-                {
-                    var renderer = c.SubComponents[Layers.CHAR_HEAD_DECO_1].GetComponent<SpriteRenderer>();
-                    renderer.sprite = null;
-                }
-                if (c.SubComponents.ContainsKey(Layers.CHAR_HEAD_DECO_2))
-                {
-                    var renderer = c.SubComponents[Layers.CHAR_HEAD_DECO_2].GetComponent<SpriteRenderer>();
-                    renderer.sprite = null;
-                }
-                if (c.SubComponents.ContainsKey(Layers.CHAR_FACE))
-                {
-                    var renderer = c.SubComponents[Layers.CHAR_FACE].GetComponent<SpriteRenderer>();
-                    renderer.sprite = null;
-                }
-                if (c.Proxy.GetArmor() != null)
-                {
-                    var script = c.SubComponents[Layers.CHAR_ARMOR].AddComponent<SFightFatalityExplosionMove>();
-                    script.Init(c.SubComponents[Layers.CHAR_ARMOR], c);
-                }
-                if (c.Proxy.GetHelm() != null)
-                {
-                    var script = c.SubComponents[Layers.CHAR_HELM].AddComponent<SFightFatalityExplosionMove>();
-                    script.Init(c.SubComponents[Layers.CHAR_HELM], c);
-                }
-                if (c.Proxy.GetLWeapon() != null)
-                {
-                    var script = c.SubComponents[Layers.CHAR_L_WEAPON].AddComponent<SFightFatalityExplosionMove>();
-                    script.Init(c.SubComponents[Layers.CHAR_L_WEAPON], c);
-                }
-                if (c.Proxy.GetRWeapon() != null)
-                {
-                    var script = c.SubComponents[Layers.CHAR_R_WEAPON].AddComponent<SFightFatalityExplosionMove>();
-                    script.Init(c.SubComponents[Layers.CHAR_R_WEAPON], c);
-                }
-                if (c.SubComponents.ContainsKey(Layers.CHAR_TORSO_DECO_1))
-                {
-                    var renderer = c.SubComponents[Layers.CHAR_TORSO_DECO_1].GetComponent<SpriteRenderer>();
-                    renderer.sprite = null;
-                }
-                if (c.SubComponents.ContainsKey(Layers.CHAR_TORSO_DECO_2))
-                {
-                    var renderer = c.SubComponents[Layers.CHAR_TORSO_DECO_2].GetComponent<SpriteRenderer>();
-                    renderer.sprite = null;
-                }
-            }
-            else
-            {
-                var renderer = c.SubComponents[Layers.CHAR_TORSO].GetComponent<SpriteRenderer>();
-                renderer.sprite = null;
-            }
-        }
-
-        protected void SetBodyComponentsNull(CChar c)
-        {
-            foreach (var sub in c.SubComponents)
-            {
-                if (!sub.Key.ToLowerInvariant().Contains("Weapon") &&
-                    !sub.Key.ToLowerInvariant().Contains("Armor"))
-                {
-                    var renderer = sub.Value.GetComponent<SpriteRenderer>();
-                    if (renderer != null)
-                    {
-                        renderer.sprite = null;
-                    }
-                }
-            }
         }
     }
 }

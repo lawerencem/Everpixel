@@ -68,7 +68,7 @@ namespace Assets.View.Fatality.Weapon.Ability
         {
             var bloodPath = StringUtil.PathBuilder(
                 CombatGUIParams.EFFECTS_PATH,
-                "WeenBursterFatality",
+                CombatGUIParams.WEEN_BURSTER_FATALITY,
                 CombatGUIParams.PARTICLES_EXTENSION);
 
             if (o.GetType().Equals(typeof(SIntervalJoltScript)))
@@ -111,16 +111,6 @@ namespace Assets.View.Fatality.Weapon.Ability
                 var burst = CharSpriteLoader.Instance.GetFatalitySprite(BURSTER);
                 var renderer = ween.GetComponent<SpriteRenderer>();
                 renderer.sprite = burst;
-
-                var hit = script.GetObjectList()[2] as MHit;
-                var data = new EvSummonData();
-                data.Duration = 5;
-                data.LParty = hit.Data.Source.Proxy.LParty;
-                data.Party = hit.Data.Source.Proxy.GetParentParty();
-                data.TargetTile = hit.Data.Target;
-                data.ToSummon = "Ween";
-                var e = new EvSummon(data);
-                e.TryProcess();
             }
         }
     }

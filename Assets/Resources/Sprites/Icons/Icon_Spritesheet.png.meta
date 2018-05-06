@@ -28,6 +28,7 @@ TextureImporter:
     21300042: Icon_Spritesheet_21
     21300044: Icon_Spritesheet_22
     21300046: Icon_Spritesheet_23
+    21300048: Icon_Spritesheet_24
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -431,6 +432,20 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Icon_Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 576
         y: 192
         width: 64
         height: 64

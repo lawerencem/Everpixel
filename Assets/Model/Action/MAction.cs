@@ -2,11 +2,13 @@
 using Assets.Controller.GUI.Combat;
 using Assets.Controller.Manager.GUI;
 using Assets.Model.Ability;
+using Assets.Model.Ability.Enum;
 using Assets.Model.Ability.Logic.Calculator;
 using Assets.Model.Character.Enum;
 using Assets.Model.Event.Combat;
 using Assets.Model.Injury.Calculator;
 using Assets.Template.Event;
+using System;
 
 namespace Assets.Model.Action
 {
@@ -18,12 +20,8 @@ namespace Assets.Model.Action
 
         public MAction(ActionData data) : base(data)
         {
+            this.ValidateData();
             this._injuryCalc = new InjuryCalculator();
-            if (data.ParentEvent != null)
-            {
-                this.AddCallback(data.ParentEvent.TryDone);
-                data.ParentEvent.AddChildAction(this);
-            }
         }
 
         public void DisplayAction()
@@ -157,6 +155,14 @@ namespace Assets.Model.Action
                     }
                 }
             }
+        }
+
+        private void ValidateData()
+        {
+            if (this._data.Ability == EAbility.None)
+                throw new Exception("Error: Ability may not be null for new action.");
+            else if (this._data.Source == null)
+                throw new Exception("Error: Source of action may not be null.");
         }
     }
 }

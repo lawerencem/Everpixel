@@ -52,6 +52,8 @@ namespace Assets.Model.Zone.Duration
                     data.Target = moveData.Target.Tile;
                     data.WpnAbility = true;
                     this._action = new MAction(data);
+                    this._action.AddCallback(moveData.ParentEvent.TryDone);
+                    moveData.ParentEvent.AddChildAction(this._action);
                     var staminaCalc = new StaminaCalculator();
                     var cost = staminaCalc.Process(this._action);
                     if (this._action.Data.ParentWeapon.View.SpearWalling &&

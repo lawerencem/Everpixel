@@ -1,7 +1,9 @@
-﻿using Assets.Controller.Map.Tile;
+﻿using Assets.Controller.Manager.GUI;
+using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
 using Assets.Model.Combat.Hit;
+using Assets.Model.Event.Combat;
 
 namespace Assets.Model.Zone.Perpetual
 {
@@ -28,6 +30,7 @@ namespace Assets.Model.Zone.Perpetual
                     data.Target = moveData.Target.Tile;
                     data.WpnAbility = false;
                     this._action = new MAction(data);
+                    moveData.ParentEvent.AddChildAction(this._action);
                     this._action.TryProcessNoDisplay();
                     foreach (var hit in this._action.Data.Hits)
                     {
@@ -36,6 +39,7 @@ namespace Assets.Model.Zone.Perpetual
                             !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))
                         {
                             moveData.Callback(this);
+                            this._action.AddCallback(moveData.ParentEvent.TryDone);
                         }
                     }
                     this._action.DisplayAction();

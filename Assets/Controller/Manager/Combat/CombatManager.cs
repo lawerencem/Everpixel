@@ -35,6 +35,7 @@ namespace Assets.Controller.Manager.Combat
         public List<CTile> GetPotentialTgtTiles() { return this._combatData.PotentialTgtTiles; }
         public bool GetIsWpnAbility() { return this._currActingData.IsWpnAbility; }
         
+        public void SetCurrentAbilityNone() { this._currActingData.Ability = EAbility.None; }
         public void SetCurrentData(CurrentlyActingData d) { this._currActingData = d; }
         public void SetCurrentlyActing(CChar c) { this._currActingData.CurrentlyActing = c; }
         public void SetPotentialTgtTiles(List<CTile> t) { this._combatData.PotentialTgtTiles = t; }

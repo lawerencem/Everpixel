@@ -49,7 +49,7 @@ namespace Assets.Controller.Managers
             var lParty = new PartyBuildParams();
             var rParty = new PartyBuildParams();
 
-            lParty.Culture = ECulture.Orcish;
+            lParty.Culture = ECulture.Amazonian;
             lParty.Difficulty = 1000;
             lParty.Name = "Battle Squad";
 

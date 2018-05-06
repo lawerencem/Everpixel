@@ -3,6 +3,7 @@ using Assets.Model.Character.Enum;
 using Assets.Template.Other;
 using Assets.Template.Utility;
 using Assets.View.Event;
+using Assets.View.Script.FX;
 using UnityEngine;
 
 namespace Assets.View.Character
@@ -91,6 +92,73 @@ namespace Assets.View.Character
             e.TryProcess();
         }
 
+        public void ProcessGearExplosion(CChar c)
+        {
+            if (c.Proxy.Type == ECharType.Humanoid)
+            {
+                if (c.SubComponents.ContainsKey(Layers.CHAR_TORSO))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_TORSO].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
+                if (c.SubComponents.ContainsKey(Layers.CHAR_HEAD))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_HEAD].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
+                if (c.SubComponents.ContainsKey(Layers.CHAR_HEAD_DECO_1))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_HEAD_DECO_1].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
+                if (c.SubComponents.ContainsKey(Layers.CHAR_HEAD_DECO_2))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_HEAD_DECO_2].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
+                if (c.SubComponents.ContainsKey(Layers.CHAR_FACE))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_FACE].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
+                if (c.Proxy.GetArmor() != null)
+                {
+                    var script = c.SubComponents[Layers.CHAR_ARMOR].AddComponent<SFightFatalityExplosionMove>();
+                    script.Init(c.SubComponents[Layers.CHAR_ARMOR], c);
+                }
+                if (c.Proxy.GetHelm() != null)
+                {
+                    var script = c.SubComponents[Layers.CHAR_HELM].AddComponent<SFightFatalityExplosionMove>();
+                    script.Init(c.SubComponents[Layers.CHAR_HELM], c);
+                }
+                if (c.Proxy.GetLWeapon() != null)
+                {
+                    var script = c.SubComponents[Layers.CHAR_L_WEAPON].AddComponent<SFightFatalityExplosionMove>();
+                    script.Init(c.SubComponents[Layers.CHAR_L_WEAPON], c);
+                }
+                if (c.Proxy.GetRWeapon() != null)
+                {
+                    var script = c.SubComponents[Layers.CHAR_R_WEAPON].AddComponent<SFightFatalityExplosionMove>();
+                    script.Init(c.SubComponents[Layers.CHAR_R_WEAPON], c);
+                }
+                if (c.SubComponents.ContainsKey(Layers.CHAR_TORSO_DECO_1))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_TORSO_DECO_1].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
+                if (c.SubComponents.ContainsKey(Layers.CHAR_TORSO_DECO_2))
+                {
+                    var renderer = c.SubComponents[Layers.CHAR_TORSO_DECO_2].GetComponent<SpriteRenderer>();
+                    renderer.sprite = null;
+                }
+            }
+            else
+            {
+                var renderer = c.SubComponents[Layers.CHAR_TORSO].GetComponent<SpriteRenderer>();
+                renderer.sprite = null;
+            }
+        }
+
         public void RandomTranslateRotateOnDeath(CChar c)
         {
             RotateTranslateUtil.Instance.RandomRotateAndTranslate(
@@ -107,6 +175,22 @@ namespace Assets.View.Character
             this.AssignDeathSplatter(c);
             foreach (var kvp in c.View.EffectParticlesDict)
                 GameObject.Destroy(kvp.Value);
+        }
+
+        public void SetBodyViewComponentsNull(CChar c)
+        {
+            foreach (var sub in c.SubComponents)
+            {
+                if (!sub.Key.ToLowerInvariant().Contains("Weapon") &&
+                    !sub.Key.ToLowerInvariant().Contains("Armor"))
+                {
+                    var renderer = sub.Value.GetComponent<SpriteRenderer>();
+                    if (renderer != null)
+                    {
+                        renderer.sprite = null;
+                    }
+                }
+            }
         }
 
         public void UnassignPlusLayer(CChar c)

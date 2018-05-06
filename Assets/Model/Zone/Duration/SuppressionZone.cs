@@ -39,6 +39,8 @@ namespace Assets.Model.Zone.Duration
                     data.Target = moveData.Target.Tile;
                     data.WpnAbility = true;
                     this._action = new MAction(data);
+                    moveData.ParentEvent.AddChildAction(this._action);
+                    this._action.AddCallback(moveData.ParentEvent.TryDone);
                     var staminaCalc = new StaminaCalculator();
                     var cost = staminaCalc.Process(this._action);
                     if (cost <= this._action.Data.Source.Proxy.GetPoints(ESecondaryStat.Stamina))
