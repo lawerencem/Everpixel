@@ -58,6 +58,23 @@
     <EPrimaryStat>Intelligence, 0.80</EPrimaryStat>
     <EPrimaryStat>Perception, 0.95</EPrimaryStat>
   </Injury>
+  <Injury Name ="Crushed_Finger">
+    <ESecondaryStat>Parry, 0.90</ESecondaryStat>
+    <ESecondaryStat>Melee, 0.90</ESecondaryStat>
+    <ESecondaryStat>Ranged, 0.50</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Crushed_Hand">
+    <ESecondaryStat>Block, 0.85</ESecondaryStat>
+    <ESecondaryStat>Melee, 0.85</ESecondaryStat>
+    <ESecondaryStat>Parry, 0.85</ESecondaryStat>
+    <ESecondaryStat>Ranged, 0.50</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Crushed_Windpipe">
+    <ESecondaryStat>Stamina, 0.50</ESecondaryStat>
+  </Injury>
+  <Injury Name ="Crushed_Foot">
+    <EPrimaryStat>Agility, 0.80</EPrimaryStat>
+  </Injury>
   <Injury Name ="Cut_Abdomine">
     <EPrimaryStat>Constitution, 0.80</EPrimaryStat>
   </Injury>

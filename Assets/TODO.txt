@@ -1,19 +1,17 @@
 ﻿TODO
 
+ - Make wpn buttons spawn abilities as well.
  - Add Zones traveling with the caster (i.e., a new type) such that spear wall travels with the caster
- - Updaet main stat box on moves / events
- - Remove chars being in liquid layers
  - add feedback on not enough stamina
  - Implement ammo requirements
  - Ensure attacks of opportunity created on char creation
  - Add some sort of tracking to sprites on fatalities/deaths
- - Remove stats from pre-loaded chars (unless critters)
  - Add leveling to critters
+ - Add some deviation to stats
 
  BUGS
+ - Crits don't display
  - ween burster doesn't flip 180 on RTEAM
- - All of the crushed injuries are missing
  - double hits (like double zone spear wall) cause flinches to remain after hit. 
    -- This is due to SFlinch grabbing current sprite from object rather than a guaranteed default sprite. IE., it can grab a flinch sprite instead of intended sprite.
 - spear wall still causes weird behavior on doubel dodge
-- Change zones on move because they currently break if not

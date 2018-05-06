@@ -95,8 +95,8 @@
       <Tier>Five</Tier>
       <AP_Mod>1</AP_Mod>
       <Block_Mod>1</Block_Mod>
-      <Flat_Damage_Ignore>3</Flat_Damage_Ignore>
-      <Damage_Reduction>0.95</Damage_Reduction>
+      <Flat_Damage_Ignore>18</Flat_Damage_Ignore>
+      <Damage_Reduction>0.75</Damage_Reduction>
       <Description>
         These shoulder pads have been cobbled together using a handful of dinosaur scales.
       </Description>
@@ -113,8 +113,8 @@
       <Tier>Four</Tier>
       <AP_Mod>1</AP_Mod>
       <Block_Mod>1</Block_Mod>
-      <Flat_Damage_Ignore>4</Flat_Damage_Ignore>
-      <Damage_Reduction>0.93</Damage_Reduction>
+      <Flat_Damage_Ignore>19</Flat_Damage_Ignore>
+      <Damage_Reduction>0.74</Damage_Reduction>
       <Description>
         Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
         not very durable...
@@ -132,8 +132,8 @@
       <Tier>Three</Tier>
       <AP_Mod>1</AP_Mod>
       <Block_Mod>1</Block_Mod>
-      <Flat_Damage_Ignore>5</Flat_Damage_Ignore>
-      <Damage_Reduction>0.92</Damage_Reduction>
+      <Flat_Damage_Ignore>20</Flat_Damage_Ignore>
+      <Damage_Reduction>0.73</Damage_Reduction>
       <Description>
         Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
         not very durable...
@@ -151,8 +151,8 @@
       <Tier>Two</Tier>
       <AP_Mod>1</AP_Mod>
       <Block_Mod>1</Block_Mod>
-      <Flat_Damage_Ignore>5</Flat_Damage_Ignore>
-      <Damage_Reduction>0.88</Damage_Reduction>
+      <Flat_Damage_Ignore>21</Flat_Damage_Ignore>
+      <Damage_Reduction>0.72</Damage_Reduction>
       <Description>
         Several dinosaur scales have been sewn together to make this armor.  The scales are light, and very strong.  However, they're
         not very durable...

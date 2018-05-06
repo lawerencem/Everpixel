@@ -5,8 +5,8 @@
       <Tier>Five</Tier>
       <AP_Mod>1.32</AP_Mod>
       <Block_Mod>0.70</Block_Mod>
-      <Flat_Damage_Ignore>19</Flat_Damage_Ignore>
-      <Damage_Reduction>0.70</Damage_Reduction>
+      <Flat_Damage_Ignore>35</Flat_Damage_Ignore>
+      <Damage_Reduction>0.62</Damage_Reduction>
       <Description>
         
       </Description>
@@ -22,8 +22,8 @@
       <Tier>Four</Tier>
       <AP_Mod>1.31</AP_Mod>
       <Block_Mod>0.71</Block_Mod>
-      <Flat_Damage_Ignore>20</Flat_Damage_Ignore>
-      <Damage_Reduction>0.69</Damage_Reduction>
+      <Flat_Damage_Ignore>38</Flat_Damage_Ignore>
+      <Damage_Reduction>0.61</Damage_Reduction>
       <Description>
 
       </Description>
@@ -39,8 +39,8 @@
       <Tier>Three</Tier>
       <AP_Mod>1.30</AP_Mod>
       <Block_Mod>0.72</Block_Mod>
-      <Flat_Damage_Ignore>20</Flat_Damage_Ignore>
-      <Damage_Reduction>0.67</Damage_Reduction>
+      <Flat_Damage_Ignore>40</Flat_Damage_Ignore>
+      <Damage_Reduction>0.59</Damage_Reduction>
       <Description>
 
       </Description>
@@ -56,8 +56,8 @@
       <Tier>Two</Tier>
       <AP_Mod>1.29</AP_Mod>
       <Block_Mod>0.72</Block_Mod>
-      <Flat_Damage_Ignore>21</Flat_Damage_Ignore>
-      <Damage_Reduction>0.65</Damage_Reduction>
+      <Flat_Damage_Ignore>42</Flat_Damage_Ignore>
+      <Damage_Reduction>0.57</Damage_Reduction>
       <Description>
 
       </Description>
@@ -73,8 +73,8 @@
       <Tier>Five</Tier>
       <AP_Mod>1.22</AP_Mod>
       <Block_Mod>0.35</Block_Mod>
-      <Flat_Damage_Ignore>11</Flat_Damage_Ignore>
-      <Damage_Reduction>0.76</Damage_Reduction>
+      <Flat_Damage_Ignore>30</Flat_Damage_Ignore>
+      <Damage_Reduction>0.65</Damage_Reduction>
       <Description>
         The armor preferred by samurai.  This one isn't particularly well-crafted...
       </Description>
@@ -90,8 +90,8 @@
       <Tier>Four</Tier>
       <AP_Mod>1.21</AP_Mod>
       <Block_Mod>0.35</Block_Mod>
-      <Flat_Damage_Ignore>12</Flat_Damage_Ignore>
-      <Damage_Reduction>0.75</Damage_Reduction>
+      <Flat_Damage_Ignore>32</Flat_Damage_Ignore>
+      <Damage_Reduction>0.64</Damage_Reduction>
       <Description>
         The armor preferred by samurai.  The interlocking plates offer great protection while still being quite light.
       </Description>
@@ -107,8 +107,8 @@
       <Tier>Three</Tier>
       <AP_Mod>1.20</AP_Mod>
       <Block_Mod>0.35</Block_Mod>
-      <Flat_Damage_Ignore>12</Flat_Damage_Ignore>
-      <Damage_Reduction>0.74</Damage_Reduction>
+      <Flat_Damage_Ignore>34</Flat_Damage_Ignore>
+      <Damage_Reduction>0.63</Damage_Reduction>
       <Description>
         The armor preferred by samurai.  The interlocking plates offer great protection while still being quite light.
       </Description>
@@ -124,8 +124,8 @@
       <Tier>Two</Tier>
       <AP_Mod>1.19</AP_Mod>
       <Block_Mod>0.35</Block_Mod>
-      <Flat_Damage_Ignore>13</Flat_Damage_Ignore>
-      <Damage_Reduction>0.73</Damage_Reduction>
+      <Flat_Damage_Ignore>36</Flat_Damage_Ignore>
+      <Damage_Reduction>0.62</Damage_Reduction>
       <Description>
         The armor preferred by samurai.  This armor has a cuirass rather than interlocking plates, but is still very light.
       </Description>
@@ -158,8 +158,8 @@
       <Tier>Five</Tier>
       <AP_Mod>1.27</AP_Mod>
       <Block_Mod>0.73</Block_Mod>
-      <Flat_Damage_Ignore>18</Flat_Damage_Ignore>
-      <Damage_Reduction>0.86</Damage_Reduction>
+      <Flat_Damage_Ignore>28</Flat_Damage_Ignore>
+      <Damage_Reduction>0.50</Damage_Reduction>
       <Description>
         This orcish plate consists of a few pieces of heavy metal slabs melted over some chain mail.  It's heavy, and doesn't allow
         for much movement...but offers incredible protection.
@@ -176,8 +176,8 @@
       <Tier>Four</Tier>
       <AP_Mod>1.26</AP_Mod>
       <Block_Mod>0.74</Block_Mod>
-      <Flat_Damage_Ignore>19</Flat_Damage_Ignore>
-      <Damage_Reduction>0.85</Damage_Reduction>
+      <Flat_Damage_Ignore>31</Flat_Damage_Ignore>
+      <Damage_Reduction>0.48</Damage_Reduction>
       <Description>
         This orcish plate consists of a few pieces of heavy metal slabs melted over some chain mail.  It's heavy, and doesn't allow
         for much movement...but offers incredible protection.
@@ -194,8 +194,8 @@
       <Tier>Three</Tier>
       <AP_Mod>1.25</AP_Mod>
       <Block_Mod>0.75</Block_Mod>
-      <Flat_Damage_Ignore>20</Flat_Damage_Ignore>
-      <Damage_Reduction>0.85</Damage_Reduction>
+      <Flat_Damage_Ignore>32</Flat_Damage_Ignore>
+      <Damage_Reduction>0.46</Damage_Reduction>
       <Description>
         This orcish plate consists of a few pieces of heavy metal slabs melted over some chain mail.  It's heavy, and doesn't allow
         for much movement...but offers incredible protection.
@@ -212,8 +212,8 @@
       <Tier>Two</Tier>
       <AP_Mod>1.25</AP_Mod>
       <Block_Mod>0.75</Block_Mod>
-      <Flat_Damage_Ignore>20</Flat_Damage_Ignore>
-      <Damage_Reduction>0.83</Damage_Reduction>
+      <Flat_Damage_Ignore>33</Flat_Damage_Ignore>
+      <Damage_Reduction>0.44</Damage_Reduction>
       <Description>
         This is orcish plate mail favored by the best orcish troops.  It is quality-made, consisting of heavy slabs of metal
         essentially melted together.  It affords excellent protection for those strong enough to wear it.
@@ -230,8 +230,8 @@
       <Tier>One</Tier>
       <AP_Mod>1.28</AP_Mod>
       <Block_Mod>0.72</Block_Mod>
-      <Flat_Damage_Ignore>28</Flat_Damage_Ignore>
-      <Damage_Reduction>0.72</Damage_Reduction>
+      <Flat_Damage_Ignore>34</Flat_Damage_Ignore>
+      <Damage_Reduction>0.42</Damage_Reduction>
       <Description>
         
       </Description>

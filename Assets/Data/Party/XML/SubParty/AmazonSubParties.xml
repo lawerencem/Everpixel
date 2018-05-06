@@ -10,10 +10,7 @@
     <SubParty Name ="Commanders">
       <Character>150,Dino Knight,One</Character>
       <Character>180,Dino Priest,Three</Character>
-      <Character>190,Veteran Dino Knight,One</Character>
-      <Character>220,Divine Dino Priest,Three</Character>
-      <Character>250,Dino Seraph,Three</Character>
-      <Character>290,Dino Archmind,Three</Character>
+      <Character>550,Dino Archmind,Three</Character>
     </SubParty>
     <SubParty Name ="Healers">
       <Character>110,Tearex,Three</Character>
@@ -26,7 +23,6 @@
     <SubParty Name ="Knights">
       <Character>110,Dino Squire,One</Character>
       <Character>150,Dino Knight,One</Character>
-      <Character>190,Veteran Dino Knight,One</Character>
     </SubParty>
     <SubParty Name ="Magess">
       <Difficulty>4</Difficulty>
@@ -39,9 +35,7 @@
     <SubParty Name ="Priests">
       <Difficulty>4</Difficulty>
       <Character>180,Dino Priest,Three</Character>
-      <Character>220,Divine Dino Priest,Three</Character>
-      <Character>250,Dino Seraph,Three</Character>
-      <Character>290,Dino Archmind,Three</Character>
+      <Character>550,Dino Archmind,Three</Character>
     </SubParty>
     <SubParty Name ="Monsters">
       <Character>90,Raptard,One</Character>

@@ -83,30 +83,30 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.75,Dino Scale Armor,Four</Armor>
+          <Armor>0.25,Dino Scale Armor,Five</Armor>
+          <Armor>0.25,Dino Scale Armor,Four</Armor>
           <Armor>0.25,Dino Scale Armor,Three</Armor>
+          <Armor>0.25,Dino Scale Armor,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.35,Dino Scale Helm,Four</Helm>
+          <Helm>0.25,Dino Scale Helm,Five</Helm>
+          <Helm>0.25,Dino Scale Helm,Four</Helm>
           <Helm>0.25,Dino Scale Helm,Three</Helm>
+          <Helm>0.25,Dino Scale Helm,Two</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.375,Dino Greataxe,Four</RWeapon>
+          <RWeapon>0.125,Dino Greataxe,Five</RWeapon>
+          <RWeapon>0.125,Dino Greataxe,Four</RWeapon>
           <RWeapon>0.125,Dino Greataxe,Three</RWeapon>
-          <RWeapon>0.375,Dino Warhammer,Four</RWeapon>
+          <RWeapon>0.125,Dino Greataxe,Two</RWeapon>
+          <RWeapon>0.125,Dino Warhammer,Five</RWeapon>
+          <RWeapon>0.125,Dino Warhammer,Four</RWeapon>
           <RWeapon>0.125,Dino Warhammer,Three</RWeapon>
+          <RWeapon>0.125,Dino Warhammer,Two</RWeapon>
         </RWeapons>
       </PotentialWeapons>
-      <Stats>
-        <Agility>520</Agility>
-        <Constitution>400</Constitution>
-        <Intelligence>540</Intelligence>
-        <Might>480</Might>
-        <Perception>530</Perception>
-        <Resolve>450</Resolve>
-      </Stats>
     </Character>
     <Character name ="Dino Priest">
       <Class>Cleric,2</Class>
@@ -118,28 +118,26 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.75,Dino Regalia,Five</Armor>
+          <Armor>0.25,Dino Regalia,Five</Armor>
           <Armor>0.25,Dino Regalia,Four</Armor>
+          <Armor>0.25,Dino Regalia,Three</Armor>
+          <Armor>0.25,Dino Regalia,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.75,Dino Headdress,Five</Helm>
+          <Helm>0.25,Dino Headdress,Five</Helm>
           <Helm>0.25,Dino Headdress,Four</Helm>
+          <Helm>0.25,Dino Headdress,Three</Helm>
+          <Helm>0.25,Dino Headdress,Two</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.75,Dino Staff,Five</RWeapon>
+          <RWeapon>0.25,Dino Staff,Five</RWeapon>
           <RWeapon>0.25,Dino Staff,Four</RWeapon>
+          <RWeapon>0.25,Dino Staff,Three</RWeapon>
+          <RWeapon>0.25,Dino Staff,Two</RWeapon>
         </RWeapons>
       </PotentialWeapons>
-      <Stats>
-        <Agility>350</Agility>
-        <Constitution>280</Constitution>
-        <Intelligence>780</Intelligence>
-        <Might>450</Might>
-        <Perception>680</Perception>
-        <Resolve>550</Resolve>
-      </Stats>
     </Character>
     <Character name ="Dino Scaleman">
       <Class>Soldier,5</Class>
@@ -156,32 +154,32 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.75,Dino Scale Armor,Four</Armor>
+          <Armor>0.25,Dino Scale Armor,Five</Armor>
+          <Armor>0.25,Dino Scale Armor,Four</Armor>
           <Armor>0.25,Dino Scale Armor,Three</Armor>
+          <Armor>0.25,Dino Scale Armor,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.75,Dino Scale Helm,Four</Helm>
+          <Helm>0.25,Dino Scale Helm,Five</Helm>
+          <Helm>0.25,Dino Scale Helm,Four</Helm>
           <Helm>0.25,Dino Scale Helm,Three</Helm>
+          <Helm>0.25,Dino Scale Helm,Two</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <LWeapons name="One">
-          <LWeapon>0.75,Dino Shield,Four</LWeapon>
+          <LWeapon>0.25,Dino Shield,Five</LWeapon>
+          <LWeapon>0.25,Dino Shield,Four</LWeapon>
           <LWeapon>0.25,Dino Shield,Three</LWeapon>
+          <LWeapon>0.25,Dino Shield,Two</LWeapon>
         </LWeapons>
         <RWeapons name="One">
-          <RWeapon>0.75,Dino Fang Club,Four</RWeapon>
+          <RWeapon>0.25,Dino Fang Club,Five</RWeapon>
+          <RWeapon>0.25,Dino Fang Club,Four</RWeapon>
           <RWeapon>0.25,Dino Fang Club,Three</RWeapon>
+          <RWeapon>0.25,Dino Fang Club,Two</RWeapon>
         </RWeapons>
       </PotentialWeapons>
-      <Stats>
-        <Agility>480</Agility>
-        <Constitution>520</Constitution>
-        <Intelligence>450</Intelligence>
-        <Might>480</Might>
-        <Perception>550</Perception>
-        <Resolve>520</Resolve>
-      </Stats>
     </Character>
     <Character name ="Dino Archmind">
       <Class>Cleric,5</Class>
@@ -205,45 +203,6 @@
           <RWeapon>0.25,Aboleth Prison,One</RWeapon>
         </RWeapons>
       </PotentialWeapons>
-      <Stats>
-        <Agility>350</Agility>
-        <Constitution>280</Constitution>
-        <Intelligence>780</Intelligence>
-        <Might>450</Might>
-        <Perception>680</Perception>
-        <Resolve>550</Resolve>
-      </Stats>
-    </Character>
-    <Character name ="Dino Seraph">
-      <Class>Cleric,4</Class>
-      <Class>Divine_Mind,4</Class>
-      <Class>Psion,4</Class>
-      <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Lizardman</ERace>
-      <Perks>
-      </Perks>
-      <PotentialArmors>
-        <Armors name="One">
-          <Armor>1,Dino Regalia,Three</Armor>
-        </Armors>
-        <Helms name="One">
-          <Helm>1,Dino Headdress,Three</Helm>
-        </Helms>
-      </PotentialArmors>
-      <PotentialWeapons>
-        <RWeapons name="One">
-          <RWeapon>0.75,Dino Staff,Three</RWeapon>
-          <RWeapon>0.25,Aboleth Prison,Two</RWeapon>
-        </RWeapons>
-      </PotentialWeapons>
-      <Stats>
-        <Agility>350</Agility>
-        <Constitution>280</Constitution>
-        <Intelligence>780</Intelligence>
-        <Might>450</Might>
-        <Perception>680</Perception>
-        <Resolve>550</Resolve>
-      </Stats>
     </Character>
     <Character name ="Dino Squire">
       <Class>Knight,3</Class>
@@ -257,63 +216,26 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.75,Dino Scale Armor,Five</Armor>
+          <Armor>0.50,Dino Scale Armor,Five</Armor>
           <Armor>0.25,Dino Scale Armor,Four</Armor>
+          <Armor>0.25,Dino Scale Armor,Three</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.35,Dino Scale Helm,Five</Helm>
+          <Helm>0.50,Dino Scale Helm,Five</Helm>
           <Helm>0.25,Dino Scale Helm,Four</Helm>
+          <Helm>0.25,Dino Scale Helm,Three</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.375,Dino Greataxe,Five</RWeapon>
+          <RWeapon>0.250,Dino Greataxe,Five</RWeapon>
           <RWeapon>0.125,Dino Greataxe,Four</RWeapon>
-          <RWeapon>0.375,Dino Warhammer,Five</RWeapon>
+          <RWeapon>0.125,Dino Greataxe,Three</RWeapon>
+          <RWeapon>0.250,Dino Warhammer,Five</RWeapon>
           <RWeapon>0.125,Dino Warhammer,Four</RWeapon>
+          <RWeapon>0.125,Dino Warhammer,Three</RWeapon>
         </RWeapons>
       </PotentialWeapons>
-      <Stats>
-        <Agility>520</Agility>
-        <Constitution>400</Constitution>
-        <Intelligence>540</Intelligence>
-        <Might>480</Might>
-        <Perception>530</Perception>
-        <Resolve>450</Resolve>
-      </Stats>
-    </Character>
-    <Character name ="Divine Dino Priest">
-      <Class>Cleric,3</Class>
-      <Class>Divine_Mind,3</Class>
-      <Class>Psion,3</Class>
-      <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Lizardman</ERace>
-      <Perks>
-      </Perks>
-      <PotentialArmors>
-        <Armors name="One">
-          <Armor>0.75,Dino Regalia,Four</Armor>
-          <Armor>0.25,Dino Regalia,Three</Armor>
-        </Armors>
-        <Helms name="One">
-          <Helm>0.75,Dino Headdress,Four</Helm>
-          <Helm>0.25,Dino Headdress,Three</Helm>
-        </Helms>
-      </PotentialArmors>
-      <PotentialWeapons>
-        <RWeapons name="One">
-          <RWeapon>0.75,Dino Staff,Four</RWeapon>
-          <RWeapon>0.25,Dino Staff,Three</RWeapon>
-        </RWeapons>
-      </PotentialWeapons>
-      <Stats>
-        <Agility>350</Agility>
-        <Constitution>280</Constitution>
-        <Intelligence>780</Intelligence>
-        <Might>450</Might>
-        <Perception>680</Perception>
-        <Resolve>550</Resolve>
-      </Stats>
     </Character>
     <Character name ="Lizardman Militia">
       <Class>Warrior,1</Class>
@@ -324,25 +246,21 @@
         <Perk>Shield_Happy</Perk>
       </Perks>
       <PotentialArmors>
+        <Armors name="One">
+          <Armor>0.25,Dino Scale Armor,Five</Armor>
+          <Armor>0.25,Dino Scale Armor,Four</Armor>
+        </Armors>
+        <Helms name="One">
+          <Helm>0.25,Dino Scale Helm,Five</Helm>
+          <Helm>0.25,Dino Scale Helm,Four</Helm>
+        </Helms>
       </PotentialArmors>
       <PotentialWeapons>
-        <LWeapons name="One">
-          <LWeapon>0.25,Dino Shield,Five</LWeapon>
-          <LWeapon>0.10,Dino Shield,Four</LWeapon>
-        </LWeapons>
         <RWeapons name="One">
           <RWeapon>0.75,Dino Fang Club,Five</RWeapon>
           <RWeapon>0.25,Dino Fang Club,Four</RWeapon>
         </RWeapons>
       </PotentialWeapons>
-      <Stats>
-        <Agility>450</Agility>
-        <Constitution>550</Constitution>
-        <Intelligence>350</Intelligence>
-        <Might>570</Might>
-        <Perception>420</Perception>
-        <Resolve>380</Resolve>
-      </Stats>
     </Character>
     <Character name ="Raptard">
       <AttackSpriteIndex>2</AttackSpriteIndex>
@@ -489,45 +407,6 @@
         <Might>850</Might>
         <Perception>350</Perception>
         <Resolve>650</Resolve>
-      </Stats>
-    </Character>
-    <Character name ="Veteran Dino Knight">
-      <Class>Knight,5</Class>
-      <Class>Dino_Knight,7</Class>
-      <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Lizardman</ERace>
-      <Perks>
-        <Perk>Bash_Buddy</Perk>
-        <Perk>Hulk</Perk>
-        <Perk>Iron_Hide</Perk>
-        <Perk>Scaly</Perk>
-        <Perk>Two_Handed_Expert</Perk>
-      </Perks>
-      <PotentialArmors>
-        <Armors name="One">
-          <Armor>0.75,Dino Scale Armor,Three</Armor>
-          <Armor>0.25,Dino Scale Armor,Two</Armor>
-        </Armors>
-        <Helms name="One">
-          <Helm>0.55,Dino Scale Helm,Three</Helm>
-          <Helm>0.25,Dino Scale Helm,Two</Helm>
-        </Helms>
-      </PotentialArmors>
-      <PotentialWeapons>
-        <RWeapons name="One">
-          <RWeapon>0.375,Dino Greataxe,Three</RWeapon>
-          <RWeapon>0.125,Dino Greataxe,Two</RWeapon>
-          <RWeapon>0.375,Dino Warhammer,Three</RWeapon>
-          <RWeapon>0.125,Dino Warhammer,Two</RWeapon>
-        </RWeapons>
-      </PotentialWeapons>
-      <Stats>
-        <Agility>520</Agility>
-        <Constitution>400</Constitution>
-        <Intelligence>540</Intelligence>
-        <Might>480</Might>
-        <Perception>530</Perception>
-        <Resolve>450</Resolve>
       </Stats>
     </Character>
   </Culture>

@@ -5,8 +5,8 @@
       <Tier>Five</Tier>
       <AP_Mod>1.12</AP_Mod>
       <Block_Mod>0.40</Block_Mod>
-      <Flat_Damage_Ignore>12</Flat_Damage_Ignore>
-      <Damage_Reduction>0.82</Damage_Reduction>
+      <Flat_Damage_Ignore>25</Flat_Damage_Ignore>
+      <Damage_Reduction>0.72</Damage_Reduction>
       <Description>
         
       </Description>
@@ -22,8 +22,8 @@
       <Tier>Four</Tier>
       <AP_Mod>1.11</AP_Mod>
       <Block_Mod>0.40</Block_Mod>
-      <Flat_Damage_Ignore>12</Flat_Damage_Ignore>
-      <Damage_Reduction>0.81</Damage_Reduction>
+      <Flat_Damage_Ignore>27</Flat_Damage_Ignore>
+      <Damage_Reduction>0.71</Damage_Reduction>
       <Description>
 
       </Description>
@@ -39,8 +39,8 @@
       <Tier>Three</Tier>
       <AP_Mod>1.10</AP_Mod>
       <Block_Mod>0.40</Block_Mod>
-      <Flat_Damage_Ignore>13</Flat_Damage_Ignore>
-      <Damage_Reduction>0.80</Damage_Reduction>
+      <Flat_Damage_Ignore>28</Flat_Damage_Ignore>
+      <Damage_Reduction>0.70</Damage_Reduction>
       <Description>
 
       </Description>
@@ -56,8 +56,8 @@
       <Tier>Two</Tier>
       <AP_Mod>1.09</AP_Mod>
       <Block_Mod>0.40</Block_Mod>
-      <Flat_Damage_Ignore>13</Flat_Damage_Ignore>
-      <Damage_Reduction>0.78</Damage_Reduction>
+      <Flat_Damage_Ignore>30</Flat_Damage_Ignore>
+      <Damage_Reduction>0.69</Damage_Reduction>
       <Description>
 
       </Description>
@@ -90,8 +90,8 @@
       <Tier>One</Tier>
       <AP_Mod>0.78</AP_Mod>
       <Block_Mod>0.68</Block_Mod>
-      <Flat_Damage_Ignore>12</Flat_Damage_Ignore>
-      <Damage_Reduction>0.75</Damage_Reduction>
+      <Flat_Damage_Ignore>25</Flat_Damage_Ignore>
+      <Damage_Reduction>0.50</Damage_Reduction>
       <Description>
         
       </Description>
@@ -182,8 +182,8 @@
       <Tier>Five</Tier>
       <AP_Mod>1.07</AP_Mod>
       <Block_Mod>0.35</Block_Mod>
-      <Flat_Damage_Ignore>7</Flat_Damage_Ignore>
-      <Damage_Reduction>0.83</Damage_Reduction>
+      <Flat_Damage_Ignore>19</Flat_Damage_Ignore>
+      <Damage_Reduction>0.75</Damage_Reduction>
       <Description>
         The helmet preferred by samurai (well, maybe not this one...)
       </Description>
@@ -199,8 +199,8 @@
       <Tier>Four</Tier>
       <AP_Mod>1.06</AP_Mod>
       <Block_Mod>0.36</Block_Mod>
-      <Flat_Damage_Ignore>8</Flat_Damage_Ignore>
-      <Damage_Reduction>0.84</Damage_Reduction>
+      <Flat_Damage_Ignore>20</Flat_Damage_Ignore>
+      <Damage_Reduction>0.74</Damage_Reduction>
       <Description>
         The helmet preferred by samurai.
       </Description>
@@ -216,8 +216,8 @@
       <Tier>Three</Tier>
       <AP_Mod>1.05</AP_Mod>
       <Block_Mod>0.36</Block_Mod>
-      <Flat_Damage_Ignore>8</Flat_Damage_Ignore>
-      <Damage_Reduction>0.85</Damage_Reduction>
+      <Flat_Damage_Ignore>21</Flat_Damage_Ignore>
+      <Damage_Reduction>0.73</Damage_Reduction>
       <Description>
         The helmet preferred by samurai.
       </Description>
@@ -233,8 +233,8 @@
       <Tier>Two</Tier>
       <AP_Mod>1.05</AP_Mod>
       <Block_Mod>0.36</Block_Mod>
-      <Flat_Damage_Ignore>8</Flat_Damage_Ignore>
-      <Damage_Reduction>0.84</Damage_Reduction>
+      <Flat_Damage_Ignore>22</Flat_Damage_Ignore>
+      <Damage_Reduction>0.72</Damage_Reduction>
       <Description>
         The helmet preferred by samurai.
       </Description>
@@ -250,8 +250,8 @@
       <Tier>One</Tier>
       <AP_Mod>1.08</AP_Mod>
       <Block_Mod>0.30</Block_Mod>
-      <Flat_Damage_Ignore>10</Flat_Damage_Ignore>
-      <Damage_Reduction>0.78</Damage_Reduction>
+      <Flat_Damage_Ignore>24</Flat_Damage_Ignore>
+      <Damage_Reduction>0.70</Damage_Reduction>
       <Description>
         Powered by plasma.
       </Description>
@@ -267,8 +267,8 @@
       <Tier>Five</Tier>
       <AP_Mod>1.17</AP_Mod>
       <Block_Mod>0.76</Block_Mod>
-      <Flat_Damage_Ignore>7</Flat_Damage_Ignore>
-      <Damage_Reduction>0.84</Damage_Reduction>
+      <Flat_Damage_Ignore>20</Flat_Damage_Ignore>
+      <Damage_Reduction>0.60</Damage_Reduction>
       <Description>
         Broken and well-used, this mask is still offers effective protection.  For the parts of the head it covers, anyways.
       </Description>
@@ -284,8 +284,8 @@
       <Tier>Four</Tier>
       <AP_Mod>1.16</AP_Mod>
       <Block_Mod>0.75</Block_Mod>
-      <Flat_Damage_Ignore>8</Flat_Damage_Ignore>
-      <Damage_Reduction>0.83</Damage_Reduction>
+      <Flat_Damage_Ignore>21</Flat_Damage_Ignore>
+      <Damage_Reduction>0.58</Damage_Reduction>
       <Description>
         Not pretty, but this mask coves the top-half of the head quite well.  Effective protection against wild overhead swings.
       </Description>
@@ -301,8 +301,8 @@
       <Tier>Three</Tier>
       <AP_Mod>1.15</AP_Mod>
       <Block_Mod>0.75</Block_Mod>
-      <Flat_Damage_Ignore>8</Flat_Damage_Ignore>
-      <Damage_Reduction>0.82</Damage_Reduction>
+      <Flat_Damage_Ignore>22</Flat_Damage_Ignore>
+      <Damage_Reduction>0.56</Damage_Reduction>
       <Description>
         This helmet is extremely heavy.  For those with the stamina to wear it, it offers exceptional protection.
       </Description>
@@ -318,8 +318,8 @@
       <Tier>Two</Tier>
       <AP_Mod>1.15</AP_Mod>
       <Block_Mod>0.75</Block_Mod>
-      <Flat_Damage_Ignore>9</Flat_Damage_Ignore>
-      <Damage_Reduction>0.81</Damage_Reduction>
+      <Flat_Damage_Ignore>23</Flat_Damage_Ignore>
+      <Damage_Reduction>0.54</Damage_Reduction>
       <Description>
         This helmet is ludicrously-heavy.  For anyone strong enough to wear it, it offers peerless protection.
       </Description>
