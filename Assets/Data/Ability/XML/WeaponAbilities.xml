@@ -229,7 +229,7 @@
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <ECastType>Melee</ECastType>
+      <ECastType>Raycast</ECastType>
       <DamageMod>0.85</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>7</IconSprite>
@@ -249,6 +249,7 @@
       <Injury>Severe_Concussion</Injury>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.25</ParryModMod>
+      <Range>2</Range>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
       <FatigueCost>40</FatigueCost>

@@ -12,6 +12,10 @@
     <SubParty Name ="Heavy Archers">
       <Character>160,Yumi Samurai,Three</Character>
     </SubParty>
+    <SubParty Name ="Heavy Infantry">
+      <Character>160,Katana Samurai,Two</Character>
+      <Character>160,Nodachi Samurai,Two</Character>
+    </SubParty>
     <SubParty Name ="Light Archers">
       <Character>60,Yumi Ashigaru,Three</Character>
     </SubParty>

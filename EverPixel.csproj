@@ -743,17 +743,25 @@
     <None Include="Assets\Data\Map\Landmark\XML\Landmarks.xml" />
     <None Include="Assets\Data\Map\Tile\Tiles.xml" />
     <None Include="Assets\Data\Mount\XML\Mounts.xml" />
-    <None Include="Assets\Data\Party\XML\Party\AmazonParties.xml" />
+    <None Include="Assets\Data\Party\XML\Party\AmazonParties.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Data\Party\XML\Party\BretonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\GoblinParties.xml" />
-    <None Include="Assets\Data\Party\XML\Party\JomonParties.xml" />
+    <None Include="Assets\Data\Party\XML\Party\JomonParties.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Data\Party\XML\Party\NordParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\OrcParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\TrollParties.xml" />
-    <None Include="Assets\Data\Party\XML\SubParty\AmazonSubParties.xml" />
+    <None Include="Assets\Data\Party\XML\SubParty\AmazonSubParties.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Data\Party\XML\SubParty\BretonSubParties.xml" />
     <None Include="Assets\Data\Party\XML\SubParty\GoblinSubParties.xml" />
-    <None Include="Assets\Data\Party\XML\SubParty\JomonSubParties.xml" />
+    <None Include="Assets\Data\Party\XML\SubParty\JomonSubParties.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Data\Party\XML\SubParty\NordSubParties.xml" />
     <None Include="Assets\Data\Party\XML\SubParty\OrcSubParties.xml" />
     <None Include="Assets\Data\Party\XML\SubParty\RomeSubParties.xml" />

@@ -5,10 +5,10 @@
       <Character>140,Thairex,Two</Character>
     </SubParty>
     <SubParty Name ="Calvary">
-      <Character>100,Raptard Rider,One</Character>
+      <Character>100,Raptard Rider,Two</Character>
     </SubParty>
     <SubParty Name ="Commanders">
-      <Character>150,Dino Knight,One</Character>
+      <Character>150,Dino Knight,Two</Character>
       <Character>180,Dino Priest,Three</Character>
       <Character>550,Dino Archmind,Three</Character>
     </SubParty>
@@ -21,13 +21,13 @@
       <Character>110,Dino Scaleman,One</Character>
     </SubParty>
     <SubParty Name ="Knights">
-      <Character>110,Dino Squire,One</Character>
-      <Character>150,Dino Knight,One</Character>
+      <Character>110,Dino Squire,Two</Character>
+      <Character>150,Dino Knight,Two</Character>
     </SubParty>
     <SubParty Name ="Magess">
       <Difficulty>4</Difficulty>
-      <Character>150,Solizard,Two</Character>
-      <Character>200,Rawrasaur,Two</Character>
+      <Character>150,Solizard,Three</Character>
+      <Character>200,Rawrasaur,Three</Character>
     </SubParty>
     <SubParty Name ="Militia">
       <Character>90,Lizardman Militia,One</Character>
