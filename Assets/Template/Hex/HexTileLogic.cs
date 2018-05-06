@@ -42,7 +42,7 @@ namespace Assets.Template.Hex
                 else if (source.IsTileS(target, 1))
                 {
                     if (source.GetSE() != null)
-                        tiles.Add(source.GetNE());
+                        tiles.Add(source.GetSE());
                     if (source.GetSW() != null)
                         tiles.Add(source.GetSW());
                     tiles.Add(target);

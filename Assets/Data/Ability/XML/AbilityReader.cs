@@ -100,6 +100,7 @@ namespace Assets.Data.Ability.XML
                 case ("BlockIgnoreMod"): { this._table.Table[type].Data.BlockIgnoreMod = v; } break;
                 case ("ECastType"): { this.HandleCastType(type, value); } break;
                 case ("CustomGraphics"): { this.HandleCustomGraphics(type, value); } break;
+                case ("DamageMod"): { this._table.Table[type].Data.DamageMod = double.Parse(value); } break;
                 case ("Description"): { this._table.Table[type].Data.Description = value; } break;
                 case ("DmgPerPower"): { this._table.Table[type].Data.DmgPerPower = double.Parse(value); } break;
                 case ("Duration"): { this._table.Table[type].Data.Duration = double.Parse(value); } break;

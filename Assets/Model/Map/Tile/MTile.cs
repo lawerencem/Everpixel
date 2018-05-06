@@ -94,7 +94,7 @@ namespace Assets.Model.Map.Tile
         {
             var logic = new HexTileLogic();
             var tile = logic.GetPushTile(this, target);
-            if (tile.GetCurrentOccupant() == null)
+            if (tile != null && tile.GetCurrentOccupant() == null)
                 return tile as MTile;
             else
                 return null;

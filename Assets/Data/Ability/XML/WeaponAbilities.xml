@@ -372,7 +372,7 @@
       <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Scatter">
-      <AccMod>0.65</AccMod>
+      <AccMod>0.35</AccMod>
       <APCost>5</APCost>
       <ArmorIgnoreMod>1.50</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
@@ -383,8 +383,8 @@
         <Resist>Fortitude</Resist>
         <X>1</X>
       </EEffect>
-      <DamageMod>1.50</DamageMod>
-      <DodgeMod>0.75</DodgeMod>
+      <DamageMod>0.50</DamageMod>
+      <DodgeMod>1.75</DodgeMod>
       <IconSprite>24</IconSprite>
       <Injury>Broken_Hand</Injury>
       <Injury>Broken_Knee</Injury>

@@ -661,11 +661,11 @@
     <Compile Include="Assets\View\Fatality\FatalityParams.cs" />
     <Compile Include="Assets\View\Fatality\Magic\FightingFatality.cs" />
     <Compile Include="Assets\View\Fatality\MFatality.cs" />
-    <Compile Include="Assets\View\Fatality\Weapon\Ability\ScatterFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Ability\BiteFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Ability\ChopFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Ability\CrushFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Ability\FireFatality.cs" />
+    <Compile Include="Assets\View\Fatality\Weapon\Ability\ScatterFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Ability\SlashFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Specific\SlimeCrushFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Specific\WeenbowFatality.cs" />
@@ -702,7 +702,9 @@
     <None Include="Assets\Data\Ability\XML\Poison.xml" />
     <None Include="Assets\Data\Ability\XML\Shapeshift.xml" />
     <None Include="Assets\Data\Ability\XML\Songs.xml" />
-    <None Include="Assets\Data\Ability\XML\WeaponAbilities.xml" />
+    <None Include="Assets\Data\Ability\XML\WeaponAbilities.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Data\Bark\XML\Barks.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Amazonian.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Bretonnian.xml" />
