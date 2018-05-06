@@ -33,23 +33,25 @@ namespace Assets.View.Fatality.Weapon.Ability
                 CombatGUIParams.EFFECTS_PATH,
                 CombatGUIParams.SLASH_FATALITY,
                 CombatGUIParams.PARTICLES_EXTENSION);
-            var blood = ParticleController.Instance.CreateParticle(path);
+            var controller = new ParticleController();
+            var blood = controller.CreateParticle(path);
             var script = blood.AddComponent<SDestroyByLifetime>();
             script.Init(blood, 4f);
-            ParticleController.Instance.RotateParticle(blood, 180f);
-            ParticleController.Instance.AttachParticle(body, blood);
+            controller.RotateParticle(blood, 180f);
+            controller.AttachParticle(body, blood);
         }
 
         private void AttachBloodHead(GameObject head)
         {
+            var controller = new ParticleController();
             var path = StringUtil.PathBuilder(
                 CombatGUIParams.EFFECTS_PATH,
                 CombatGUIParams.SLASH_FATALITY,
                 CombatGUIParams.PARTICLES_EXTENSION);
-            var blood = ParticleController.Instance.CreateParticle(path);
+            var blood = controller.CreateParticle(path);
             var script = blood.AddComponent<SDestroyByLifetime>();
             script.Init(blood, 4f);
-            ParticleController.Instance.AttachParticle(head, blood);
+            controller.AttachParticle(head, blood);
         }
 
         private void AddBloodPool(object o)

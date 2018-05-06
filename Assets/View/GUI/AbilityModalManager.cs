@@ -10,7 +10,6 @@ namespace Assets.View.Script.GUI
     public class AbilityModalManager : SGui
     {
         private List<GameObject> _btns = new List<GameObject>();
-        private GameObject _modal;
         private GameObject _proto;
 
         public static AbilityModalManager Instance = null;
@@ -26,7 +25,6 @@ namespace Assets.View.Script.GUI
 
         public void Init()
         {
-            this._modal = GameObject.FindGameObjectWithTag(GameObjectTags.MODAL_HEADER);
             this._proto = GameObject.FindGameObjectWithTag(GameObjectTags.MODAL_BTN_PROTO);
             this._proto.SetActive(false);
         }

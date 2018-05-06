@@ -7,6 +7,8 @@
  - Implement ammo requirements
  - Ensure attacks of opportunity created on char creation
  - Add some sort of tracking to sprites on fatalities/deaths
+ - Remove stats from pre-loaded chars (unless critters)
+ - Add leveling to critters
 
  BUGS
  - ween burster doesn't flip 180 on RTEAM

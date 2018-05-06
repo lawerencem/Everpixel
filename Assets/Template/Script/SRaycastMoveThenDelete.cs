@@ -8,12 +8,10 @@ namespace Assets.Template.Script
         private const float EPSILON = 0.05f;
 
         private SRaycastMoveData _data;
-        private Vector3 _origin;
 
         public void Init(SRaycastMoveData data)
         {
             this._data = data;
-            this._origin = this._data.Handle.transform.position;
         }
 
         public void Update()

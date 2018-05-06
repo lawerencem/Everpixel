@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Assets.View.Particle
 {
-    public class ParticleController : ASingleton<ParticleController>
+    public class ParticleController
     {
         public void AttachParticle(GameObject tgt, GameObject particles)
         {

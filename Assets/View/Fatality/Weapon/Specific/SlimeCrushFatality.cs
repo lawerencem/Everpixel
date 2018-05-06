@@ -45,7 +45,6 @@ namespace Assets.View.Fatality.Weapon.Ability
         private void ProcessSlime(object o)
         {
             var script = o as SAttackerJolt;
-            var tgt = this._data.Target.Current as CChar;
             var slimeSprite = CharSpriteLoader.Instance.GetFatalitySprite(SLIME);
             var slime = new GameObject();
             var renderer = slime.AddComponent<SpriteRenderer>();

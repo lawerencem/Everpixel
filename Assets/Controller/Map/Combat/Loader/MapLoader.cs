@@ -47,7 +47,7 @@ namespace Assets.Controller.Map.Combat.Loader
             }
             catch (Exception e)
             {
-
+                Debug.Log(e.Message);
             }
         }
 

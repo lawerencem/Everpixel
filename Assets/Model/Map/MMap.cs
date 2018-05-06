@@ -21,7 +21,6 @@ namespace Assets.Model.Map
             this._tileDict = new Dictionary<Pair<int, int>, CTile>();
             this._tiles = new List<CTile>();
             this._map = map;
-            var mTiles = new List<MTile>();
             foreach(MTile tile in this._map.Tiles)
             {
                 tile.SetMap(this);

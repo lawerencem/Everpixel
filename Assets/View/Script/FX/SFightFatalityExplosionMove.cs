@@ -27,7 +27,6 @@ namespace Assets.View.Script.FX
             RotateTranslateUtil.Instance.RandomRotate(source);
             move.AddCallback(this.SetDeadLayer);
             move.Init(data);
-            var renderer = source.GetComponent<SpriteRenderer>();
             source.transform.SetParent(landTile.Handle.transform);
         }
 

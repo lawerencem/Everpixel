@@ -25,6 +25,7 @@ namespace Assets.Model.Party.Builder
 
         public override MParty Build(PartyBuildParams arg)
         {
+            var characterFactory = new CharacterFactory();
             if (PartyTable.Instance.Table[arg.Culture].ContainsKey(arg.Name))
             {
                 var party = new MParty();
@@ -40,7 +41,7 @@ namespace Assets.Model.Party.Builder
                     {
                         foreach (var character in subPartyCharacters)
                         {
-                            var model = CharacterFactory.Instance.CreateNewObject(character.X);
+                            var model = characterFactory.CreateNewCharacter(character.X);
                             var controller = new CChar();
                             var proxy = new PChar(model);
                             proxy.StartCol = character.Y;

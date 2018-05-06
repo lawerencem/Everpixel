@@ -62,13 +62,14 @@ namespace Assets.View.Script.FX
 
         private void AttachBloodParticles(object o)
         {
+            var controller = new ParticleController();
             var path = StringUtil.PathBuilder(
                 CombatGUIParams.EFFECTS_PATH,
                 "Bleed",
                 CombatGUIParams.PARTICLES_EXTENSION);
-            var particles = ParticleController.Instance.CreateParticle(path);
+            var particles = controller.CreateParticle(path);
             if (particles != null)
-                ParticleController.Instance.AttachParticle(this._targetHandle, particles);
+                controller.AttachParticle(this._targetHandle, particles);
             var script = particles.AddComponent<SDestroyByLifetime>();
             script.Init(particles, 1f);
         }

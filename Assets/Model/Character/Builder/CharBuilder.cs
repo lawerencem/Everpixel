@@ -14,7 +14,6 @@ using Assets.Model.Equipment.Weapon;
 using Assets.Model.Mount;
 using Assets.Model.Perk;
 using Assets.Model.Weapon;
-using Assets.Template.Other;
 using Assets.Template.Util;
 using System;
 using System.Collections.Generic;
@@ -22,7 +21,7 @@ using UnityEngine;
 
 namespace Assets.Model.Character.Builder
 {
-    public class CharBuilder : ASingleton<CharBuilder>
+    public class CharBuilder
     {
         private const string SINGULAR = "One";
 
@@ -44,37 +43,27 @@ namespace Assets.Model.Character.Builder
             return new SStats(p);
         }
 
-        private MChar BuildHelper(PreCharParams c)
+        private MChar BuildHelper(PreCharParams preCharParams)
         {
-            var character = new MChar(c.Race);
-            if (c.Race != ERace.Critter && c.Race != ERace.None)
+            var character = new MChar(preCharParams.Race);
+            if (preCharParams.Race != ERace.Critter && preCharParams.Race != ERace.None)
             {
-                var racialPerks = RaceParamsTable.Instance.Table[c.Race].DefaultPerks;
+                var racialPerks = RaceParamsTable.Instance.Table[preCharParams.Race].DefaultPerks;
                 PerkMediator.Instance.SetCharacterPerks(character, racialPerks);
             }
-            PerkMediator.Instance.SetCharacterPerks(character, c.Perks);
-            this.BuildBaseClassHelper(c, character);
-            this.BuildAbilities(c, character);
-            var stats = PredefinedCharTable.Instance.Table[c.Name];
-            character.GetBaseStats().SetPrimaryStats(stats.Stats);
+            PerkMediator.Instance.SetCharacterPerks(character, preCharParams.Perks);
+            this.BuildBaseClassHelper(preCharParams, character);
+            this.BuildAbilities(preCharParams, character);
+            this.BuildCharStats(preCharParams, character);
             this.BuildClassPrimaryStats(character);
             var secondary = GetSecondaryStats(character.GetBaseStats().GetPrimaryStats());
             character.GetBaseStats().SetSecondaryStats(secondary);
             this.BuildClassSecondaryStats(character);
             this.BuildCurStats(character);
             this.BuildCurPoints(character);
-            character.SetType(c.Type);
-            character.SetParams(c);
-            
-            if (c.Type == Enum.ECharType.Humanoid)
-            {
-                this.BuildArmorHelper(character, c);
-                this.BuildWeaponHelper(character, c);
-                var mountParams = this.GetMountParams(c);
-                if (mountParams != null)
-                    character.SetMount(MountBuilder.Instance.Build(mountParams));
-            }
-
+            character.SetType(preCharParams.Type);
+            character.SetParams(preCharParams);
+            this.BuildCharMount(preCharParams, character);
             return character;
         }
 
@@ -102,6 +91,33 @@ namespace Assets.Model.Character.Builder
             foreach (var v in wpnAbs)
             {
                 c.GetAbilitiesContainer().AddAbility(v);
+            }
+        }
+
+        private void BuildCharMount(PreCharParams preCharParams, MChar character)
+        {
+            if (preCharParams.Type == Enum.ECharType.Humanoid)
+            {
+                var builder = new MountBuilder();
+                this.BuildArmorHelper(character, preCharParams);
+                this.BuildWeaponHelper(character, preCharParams);
+                var mountParams = this.GetMountParams(preCharParams);
+                if (mountParams != null)
+                    character.SetMount(builder.Build(mountParams));
+            }
+        }
+
+        private void BuildCharStats(PreCharParams preCharParams, MChar character)
+        {
+            var raceStats = this.GetRaceStats(preCharParams);
+            if (raceStats == null)
+            {
+                var specificStats = PredefinedCharTable.Instance.Table[preCharParams.Name];
+                character.GetBaseStats().SetPrimaryStats(specificStats.Stats);
+            }
+            else
+            {
+                character.GetBaseStats().SetPrimaryStats(raceStats);
             }
         }
 
@@ -192,7 +208,8 @@ namespace Assets.Model.Character.Builder
                 catch(KeyNotFoundException e)
                 {
                     var key = csv[PredefinedEquipmentXMLIndexes.NAME] + "_" + csv[PredefinedEquipmentXMLIndexes.TIER];
-                    Debug.Log(key + " was not found");
+                    Debug.LogError(key + " was not found");
+                    Debug.LogError(e.Message);
                     return null;
                 }
             }

@@ -78,8 +78,9 @@ namespace Assets.Model.Effect
             {
                 if (tile.Model.GetCurrentOccupant().GetType() == typeof(CChar))
                 {
+                    var controller = new ParticleController();
                     var util = new DecoUtil();
-                    var particles = ParticleController.Instance.CreateParticle(this.Data.ParticlePath);
+                    var particles = controller.CreateParticle(this.Data.ParticlePath);
                     var tgt = tile.Model.GetCurrentOccupant() as CChar;
                     util.AttachEffectParticlesToChar(tgt, particles, this.Type);
                 }

@@ -1,5 +1,4 @@
-﻿using System;
-using Assets.Model.Map.Tile;
+﻿using Assets.Model.Map.Tile;
 using Assets.Template.Hex;
 
 namespace Assets.Model.Map.Deco

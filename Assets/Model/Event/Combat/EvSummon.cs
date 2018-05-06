@@ -60,7 +60,8 @@ namespace Assets.Model.Event.Combat
             if (PredefinedCharTable.Instance.Table.ContainsKey(this._data.ToSummon))
             {
                 var preCharParams = PredefinedCharTable.Instance.Table[this._data.ToSummon];
-                var summon = CharacterFactory.Instance.CreateNewObject(preCharParams);
+                var factory = new CharacterFactory();
+                var summon = factory.CreateNewCharacter(preCharParams);
                 summon.SetLParty(this._data.LParty);
                 var controller = new CChar();
                 var proxy = new PChar(summon);
@@ -85,10 +86,11 @@ namespace Assets.Model.Event.Combat
                     CombatGUIParams.EFFECTS_PATH,
                     this._data.ParticlePath,
                     CombatGUIParams.PARTICLES_EXTENSION);
-                var particles = ParticleController.Instance.CreateParticle(path);
+                var controller = new ParticleController();
+                var particles = controller.CreateParticle(path);
                 var script = particles.AddComponent<SDestroyByLifetime>();
                 script.Init(particles, CombatGUIParams.PARTICLE_DUR);
-                ParticleController.Instance.AttachParticle(c.GameHandle, particles);
+                controller.AttachParticle(c.GameHandle, particles);
             }
         }
     }

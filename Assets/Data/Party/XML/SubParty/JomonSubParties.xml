@@ -3,48 +3,26 @@
   <Culture name="Jomonese">
     <SubParty Name ="Calvary">
       <Character>150,Katana Calvary,Two</Character>
-      <Character>220,Elite Katana Calvary,Two</Character>
-      <Character>250,Katana Calvary Kensai,Two</Character>
     </SubParty>
     <SubParty Name ="Commanders">
-      <Character>250,Katana Kensai,Two</Character>
-      <Character>250,Katana Calvary Kensai,Two</Character>
-      <Character>250,Naginata Kensai,Two</Character>
-      <Character>280,Ninja Kensai,Two</Character>
-      <Character>250,Nodachi Kensai,Two</Character>
-      <Character>250,Yari Kensai,Two</Character>
-      <Character>250,Yumi Kensai,Three</Character>
     </SubParty>
     <SubParty Name ="Heavy Spearmen">
       <Character>160,Yari Samurai,One</Character>
-      <Character>200,Elite Yari Samurai,One</Character>
-      <Character>250,Yari Kensai,One</Character>
     </SubParty>
     <SubParty Name ="Heavy Archers">
       <Character>160,Yumi Samurai,Three</Character>
-      <Character>200,Elite Yumi Samurai,Three</Character>
-      <Character>250,Yumi Kensai,Three</Character>
     </SubParty>
     <SubParty Name ="Light Archers">
       <Character>60,Yumi Ashigaru,Three</Character>
-      <Character>80,Veteran Yumi Ashigaru,Three</Character>
-      <Character>100,Grizzled Yumi Ashigaru,Three</Character>
     </SubParty>
     <SubParty Name ="Light Spearmen">
       <Character>60,Yari Ashigaru,One</Character>
-      <Character>80,Veteran Yari Ashigaru,One</Character>
-      <Character>100,Grizzled Yari Ashigaru,One</Character>
     </SubParty>
     <SubParty Name ="Ninjas">
-      <Character>130,Ninja Trainee,Two</Character>
       <Character>180,Ninja,Two</Character>
-      <Character>240,Elite Ninja,Two</Character>
-      <Character>280,Ninja Kensai,Two</Character>
     </SubParty>
     <SubParty Name ="Pikemen">
       <Character>160,Naginata Samurai,Two</Character>
-      <Character>200,Elite Naginata Samurai,Two</Character>
-      <Character>250,Naginata Kensai,Two</Character>
     </SubParty>
     <SubParty Name ="Spell Kappas">
       <Character>150,Horrorpin,Three</Character>

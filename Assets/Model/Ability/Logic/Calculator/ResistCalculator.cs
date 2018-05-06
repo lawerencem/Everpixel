@@ -48,11 +48,11 @@ namespace Assets.Model.Ability.Logic.Calculator
 
         public override void Predict(MHit hit)
         {
+            double resist = 0;
             if (hit.Data.Ability.Data.Resist != Enum.EResistType.None)
             {
                 var attack = hit.Data.Source.Proxy.GetStat(ESecondaryStat.Spell_Penetration);
                 var proxy = hit.Data.Target.Current as CChar;
-                double resist = 0;
                 switch (hit.Data.Ability.Data.Resist)
                 {
                     case (EResistType.Fortitude):
@@ -76,10 +76,12 @@ namespace Assets.Model.Ability.Logic.Calculator
                 }
             }
 
-            if (hit.Data.Chances.Resist > 1)
+            if (resist > 1)
                 hit.Data.Chances.Resist = 1;
-            if (hit.Data.Chances.Resist < 0)
+            else if (resist < 0)
                 hit.Data.Chances.Resist = 0;
+            else
+                hit.Data.Chances.Resist = resist;
         }
 
         public override void Process(MHit hit)

@@ -116,16 +116,17 @@ namespace Assets.Controller.GUI.Combat
 
         public void ProcessSongFX(MAction a)
         {
+            var controller = new ParticleController(); 
             var ability = a.ActiveAbility as MSong;
             VCombatController.Instance.DisplayActionEventName(a);
             var path = StringUtil.PathBuilder(
                 CombatGUIParams.EFFECTS_PATH,
                 ability.SongType.ToString().Replace("_", ""),
                 CombatGUIParams.PARTICLES_EXTENSION);
-            var particles = ParticleController.Instance.CreateParticle(path);
+            var particles = controller.CreateParticle(path);
             var script = particles.AddComponent<SDestroyByLifetime>();
             script.Init(particles, 5f);
-            ParticleController.Instance.AttachParticle(a.Data.Source.GameHandle, particles);
+            controller.AttachParticle(a.Data.Source.GameHandle, particles);
             foreach (var hit in a.Data.Hits)
                 hit.CallbackHandler(this);
         }

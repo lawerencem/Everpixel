@@ -55,6 +55,7 @@ namespace Assets.Model.Injury.Calculator
                 catch (KeyNotFoundException e)
                 {
                     Debug.LogError("Injury not found: " + random.ToString());
+                    Debug.LogError(e.Message);
                 }
             }
         }

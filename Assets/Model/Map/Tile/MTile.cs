@@ -51,16 +51,16 @@ namespace Assets.Model.Map.Tile
         public void SetSW(MTile t) { this._adjacent.Add(t); this._sw = t; }
         public void SetNW(MTile t) { this._adjacent.Add(t); this._nw = t; }
 
+        public void SetAPCost(int cost) { this._cost = cost; }
         public void SetCenter(Vector3 center) { this._center = center; }
         public void SetCol(int col) { this._col = col; }
         public void SetController(CTile c) { this._controller = c; }
-        public void SetCost(int cost) { this._cost = cost; }
         public void SetCurrentOccupant(IHexOccupant o) { this._currentOccupant = o; }
         public void SetHeight(int h) { this._height = h; }
         public void SetLiquid(bool liquid) { this._liquid = liquid; }
         public void SetMap(MMap m) { this._map = m; }
         public void SetRow(int row) { this._row = row; }
-        public void SetStaminaCost(int cost) { this._cost = cost; }
+        public void SetStaminaCost(int cost) { this._staminaCost = cost; }
         public void SetType(ETile type) { this._type = type; }
 
         public MTile GetN() { return this._n; }

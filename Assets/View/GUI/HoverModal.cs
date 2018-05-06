@@ -81,7 +81,7 @@ namespace Assets.View.GUI
             this._dmgText = dmgText.GetComponent<Text>();
             this._dodgeText = dodgeText.GetComponent<Text>();
             this._parryText = parryText.GetComponent<Text>();
-            this._resistText = parryText.GetComponent<Text>();
+            this._resistText = resistText.GetComponent<Text>();
         }
 
         public void SetModalActive()
@@ -171,6 +171,7 @@ namespace Assets.View.GUI
             else
                 this._dmgText.text = ((int)(hit.Data.Chances.Damage)).ToString();
             this._parryText.text = ((int)(hit.Data.Chances.Parry * 100)).ToString() + " %";
+            this._resistText.text = ((int)(hit.Data.Chances.Resist * 100)).ToString() + " %";
         }
     }
 }
