@@ -92,14 +92,14 @@ namespace Assets.View.Fatality.Weapon.Ability
                     {
                         VCharUtil.Instance.ProcessDeadChar(tgt);
 
-                        var body = tgt.SubComponents[Layers.CHAR_MAIN];
+                        var body = tgt.SubComponents[SortingLayers.CHAR_MAIN];
                         var data = new EvSplatterData();
                         data.DmgPercent = 1;
                         data.Fatality = true;
                         data.Target = body;
                         new EvSplatter(data);
 
-                        var head = tgt.SubComponents[Layers.CHAR_HEAD];
+                        var head = tgt.SubComponents[SortingLayers.CHAR_HEAD];
                         var tgtTile = tgt.Tile;
                         var tgtPos = RandomPositionOffset.RandomOffset(
                             tgtTile.Handle.transform.position, 

@@ -146,8 +146,6 @@ namespace Assets.Model.Ability.Logic.Calculator
                     modifier *= (src.GetLWeapon().GetStat(EWeaponStat.Armor_Pierce) / src.GetLWeapon().GetDurabilityPercentage());
                 else
                     modifier *= (src.GetRWeapon().GetStat(EWeaponStat.Armor_Pierce) / src.GetRWeapon().GetDurabilityPercentage());
-                if (modifier > 1)
-                    modifier = 1;
                 negation *= modifier;
             }
             negation /= hit.Data.Ability.Data.ArmorPierceMod;
@@ -169,14 +167,10 @@ namespace Assets.Model.Ability.Logic.Calculator
                     modifier *= (src.GetLWeapon().GetStat(EWeaponStat.Armor_Ignore) / src.GetLWeapon().GetDurabilityPercentage());
                 else
                     modifier *= (src.GetRWeapon().GetStat(EWeaponStat.Armor_Ignore) / src.GetRWeapon().GetDurabilityPercentage());
-                if (modifier > 1)
-                    modifier = 1;
                 reduction /= modifier;
             }
             reduction *= hit.Data.Ability.Data.ArmorIgnoreMod;
             reduction *= hit.Data.ModData.SrcArmorIgnoreMod;
-            if (reduction > 1)
-                reduction = 1;
             return reduction;
         }
 
@@ -190,8 +184,6 @@ namespace Assets.Model.Ability.Logic.Calculator
                     modifier *= (src.GetLWeapon().GetStat(EWeaponStat.Armor_Pierce) / src.GetLWeapon().GetDurabilityPercentage());
                 else
                     modifier *= (src.GetRWeapon().GetStat(EWeaponStat.Armor_Pierce) / src.GetRWeapon().GetDurabilityPercentage());
-                if (modifier > 1)
-                    modifier = 1;
                 flatDmgNegate *= modifier;
             }
             return flatDmgNegate;

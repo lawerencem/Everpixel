@@ -53,16 +53,16 @@ namespace Assets.View.Script.FX
             var sprites = CharSpriteLoader.Instance.GetShapeshiftSprites(ability.Type.ToString());
             if (info.CharTorso != SENTINEL)
             {
-                var renderer = this._target.SubComponents[Layers.CHAR_TORSO].GetComponent<SpriteRenderer>();
+                var renderer = this._target.SubComponents[SortingLayers.CHAR_TORSO].GetComponent<SpriteRenderer>();
                 renderer.sprite = sprites[info.CharTorso];
-                renderer = this._target.SubComponents[Layers.CHAR_MAIN].GetComponent<SpriteRenderer>();
+                renderer = this._target.SubComponents[SortingLayers.CHAR_MAIN].GetComponent<SpriteRenderer>();
             }
             if (info.CharHead != SENTINEL)
             {
-                var deco1 = this._target.SubComponents[Layers.CHAR_HEAD_DECO_1].GetComponent<SpriteRenderer>();
-                var deco2 = this._target.SubComponents[Layers.CHAR_HEAD_DECO_2].GetComponent<SpriteRenderer>();
-                var face = this._target.SubComponents[Layers.CHAR_FACE].GetComponent<SpriteRenderer>();
-                var head = this._target.SubComponents[Layers.CHAR_HEAD].GetComponent<SpriteRenderer>();
+                var deco1 = this._target.SubComponents[SortingLayers.CHAR_HEAD_DECO_1].GetComponent<SpriteRenderer>();
+                var deco2 = this._target.SubComponents[SortingLayers.CHAR_HEAD_DECO_2].GetComponent<SpriteRenderer>();
+                var face = this._target.SubComponents[SortingLayers.CHAR_FACE].GetComponent<SpriteRenderer>();
+                var head = this._target.SubComponents[SortingLayers.CHAR_HEAD].GetComponent<SpriteRenderer>();
                 deco1.sprite = null;
                 deco2.sprite = null;
                 face.sprite = null;
@@ -73,7 +73,7 @@ namespace Assets.View.Script.FX
                 var script = this._target.GameHandle.AddComponent<SpriteFlipCallback>();
                 var defaultHead = sprites[ability.Info.CharHead];
                 var attackHead = sprites[ability.Info.CharAttackHead];
-                var head = this._target.SubComponents[Layers.CHAR_HEAD];
+                var head = this._target.SubComponents[SortingLayers.CHAR_HEAD];
                 script.Init(head, defaultHead, attackHead, 1f, this.Done);
             }
             else

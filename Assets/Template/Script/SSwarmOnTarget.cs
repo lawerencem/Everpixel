@@ -48,7 +48,7 @@ namespace Assets.Template.Script
                     swarm.transform.position = RandomPositionOffset.RandomOffset(
                         this._data.Target,
                         this._data.MaxOffset);
-                    renderer.sortingLayerName = Layers.PARTICLES;
+                    renderer.sortingLayerName = SortingLayers.PARTICLES;
                     renderer.sortingOrder--;
                     var raycastData = new SRaycastMoveData();
                     raycastData.Epsilon = 0.05f;

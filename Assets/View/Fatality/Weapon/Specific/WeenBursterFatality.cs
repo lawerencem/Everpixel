@@ -77,7 +77,7 @@ namespace Assets.View.Fatality.Weapon.Ability
                 var hit = script.GetObjectList()[0] as MHit;
                 var tgt = hit.Data.Target.Current as CChar;
                 var sprite = CharSpriteLoader.Instance.GetFatalitySprite(WEEN_BURSTER);
-                var ween = this.LayFatalityDeco(sprite, tgt, Layers.PARTICLES);
+                var ween = this.LayFatalityDeco(sprite, tgt, SortingLayers.PARTICLES);
                 ween.transform.SetParent(tgt.GameHandle.transform);
 
                 VCharUtil.Instance.AssignDeadEyes(tgt);

@@ -61,10 +61,8 @@ namespace Assets.Model.Event.Combat
             }
             if (CameraManager.Instance != null)
                 CameraManager.Instance.InitScrollTo(this._data.Target.GameHandle.transform.position);
-            if (AbilityModalManager.Instance != null)
-                AbilityModalManager.Instance.ProcessNewModalValues();
             this.TryUndoActionStatuses();
-            var e = new EvPopulateWpnBtns();
+            var e = new EvPopulateAbilityBtns();
             e.TryProcess();
             
             return true;

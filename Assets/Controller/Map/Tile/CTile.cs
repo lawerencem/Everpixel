@@ -39,7 +39,7 @@ namespace Assets.Controller.Map.Tile
 
         public CTile(MTile tile)
         {
-            this._handle = new GameObject(Layers.TILE);
+            this._handle = new GameObject(SortingLayers.TILE);
             this._handle.transform.position = tile.Center;
             this._nonCurrent = new List<CChar>();
             this._zones = new List<AZone>();
@@ -119,7 +119,7 @@ namespace Assets.Controller.Map.Tile
         public void InitLiquidTile()
         {
             if (this._liquidHandle == null)
-                this._liquidHandle = new GameObject(Layers.TILE_LIQUID);
+                this._liquidHandle = new GameObject(SortingLayers.TILE_LIQUID);
         }
 
         public void ProcessEnterTile(TileMoveData data)

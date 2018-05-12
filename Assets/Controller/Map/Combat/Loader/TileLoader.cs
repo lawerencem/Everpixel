@@ -181,18 +181,18 @@ namespace Assets.Controller.Map.Combat.Loader
             var sprite = sprites[roll];
             var render = tile.Handle.AddComponent<SpriteRenderer>();
             render.sprite = sprite;
-            render.sortingLayerName = Layers.TILE_LAYER;
+            render.sortingLayerName = SortingLayers.TILE_LAYER;
             tile.Handle.transform.SetParent(tileHolder);
-            tile.Handle.name = Layers.TILE + "( " + tile.Model.GetCol() + " / " + tile.Model.GetRow() + " )";
+            tile.Handle.name = SortingLayers.TILE + "( " + tile.Model.GetCol() + " / " + tile.Model.GetRow() + " )";
 
             tile.InitLiquidTile();
             tile.LiquidHandle.transform.position = tile.Model.Center;
             var liquidRenderer = tile.LiquidHandle.AddComponent<SpriteRenderer>();
             var liquidSprites = MapBridge.Instance.GetTileSprites(ETile.Water);
             liquidRenderer.sprite = liquidSprites[roll + 8];
-            liquidRenderer.sortingLayerName = Layers.TILE_LAYER;
+            liquidRenderer.sortingLayerName = SortingLayers.TILE_LAYER;
             tile.LiquidHandle.transform.SetParent(tileHolder);
-            tile.LiquidHandle.name = Layers.TILE + "( " + tile.Model.GetCol() + " / " + tile.Model.GetRow() + " )";
+            tile.LiquidHandle.name = SortingLayers.TILE + "( " + tile.Model.GetCol() + " / " + tile.Model.GetRow() + " )";
         }
 
         private void InitNonLiquidTile(CTile tile, Transform tileHolder)
@@ -203,9 +203,9 @@ namespace Assets.Controller.Map.Combat.Loader
             var sprite = ListUtil<Sprite>.GetRandomElement(sprites);
             var render = tile.Handle.AddComponent<SpriteRenderer>();
             render.sprite = sprite;
-            render.sortingLayerName = Layers.TILE_LAYER;
+            render.sortingLayerName = SortingLayers.TILE_LAYER;
             tile.Handle.transform.SetParent(tileHolder);
-            tile.Handle.name = Layers.TILE + "( " + tile.Model.GetCol() + " / " + tile.Model.GetRow() + " )";
+            tile.Handle.name = SortingLayers.TILE + "( " + tile.Model.GetCol() + " / " + tile.Model.GetRow() + " )";
         }
 
         private void InitTileSprites()

@@ -11,7 +11,8 @@
       <ECastType>Bullet</ECastType>
       <DmgPerPower>0.018</DmgPerPower>
       <DodgeMod>1.0</DodgeMod>
-      <FlatDamage>4000</FlatDamage>
+      <FlatDamage>12</FlatDamage>
+      <IconSprite>24</IconSprite>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>0.25</ParryModMod>
       <Range>4</Range>
@@ -31,6 +32,7 @@
       <DmgPerPower>0.032</DmgPerPower>
       <DodgeMod>0.8</DodgeMod>
       <FlatDamage>42</FlatDamage>
+      <IconSprite>25</IconSprite>
       <MeleeBlockChanceMod>0.5</MeleeBlockChanceMod>
       <ParryModMod>0.15</ParryModMod>
       <Range>4</Range>

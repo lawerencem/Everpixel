@@ -107,7 +107,7 @@ namespace Assets.Controller.Map.Combat
             } 
             else
             {
-                renderer.sortingLayerName = Layers.TILE_DECO;
+                renderer.sortingLayerName = SortingLayers.TILE_DECO;
             }
             tView.name = "Tile Deco";
             var color = renderer.color;

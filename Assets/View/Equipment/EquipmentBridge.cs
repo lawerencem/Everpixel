@@ -31,7 +31,5 @@ namespace Assets.View.Equipment
             random.Sprites = sprites;
             return random;
         }
-
-        
     }
 }

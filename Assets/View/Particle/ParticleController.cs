@@ -16,7 +16,7 @@ namespace Assets.View.Particle
             var prefab = Resources.Load(path);
             var particles = GameObject.Instantiate(prefab) as GameObject;
             var renderer = particles.GetComponent<Renderer>();
-            renderer.sortingLayerName = Layers.PARTICLES;
+            renderer.sortingLayerName = SortingLayers.PARTICLES;
             return particles;
         }
 

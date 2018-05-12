@@ -49,7 +49,7 @@ namespace Assets.View.Fatality.Weapon.Ability
             var slime = new GameObject();
             var renderer = slime.AddComponent<SpriteRenderer>();
             renderer.sprite = slimeSprite;
-            renderer.sortingLayerName = Layers.PARTICLES;
+            renderer.sortingLayerName = SortingLayers.PARTICLES;
             var position = script.Action.Data.Target.Handle.transform.position;
             position.y += 10;
             slime.transform.position = position;

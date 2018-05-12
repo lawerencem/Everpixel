@@ -21,8 +21,6 @@ namespace Assets.View.Event
         public EvAbilitySelected() : base(EGuiEv.TileClick) { }
         public EvAbilitySelected(EvAbilitySelectedData d) : base(EGuiEv.AbilitySelected) { this._data = d; }
 
-        public void SetData(EvAbilitySelectedData data) { this._data = data; }
-
         public override void TryProcess()
         {
             base.TryProcess();
@@ -42,6 +40,7 @@ namespace Assets.View.Event
                 var data = new CurrentlyActingData();
                 data.Ability = this._data.Ability;
                 data.CurrentlyActing = CombatManager.Instance.GetCurrentlyActing();
+                data.IsWpnAbility = this._data.WpnAbility;
                 data.LWeapon = this._data.LWeapon;
 
                 if (this._data.LWeapon)
@@ -49,7 +48,6 @@ namespace Assets.View.Event
                 else
                     data.CurrentWeapon = data.CurrentlyActing.Proxy.GetRWeapon();
 
-                data.IsWpnAbility = this._data.WpnAbility;
                 CombatManager.Instance.SetCurrentData(data);
             }
         }

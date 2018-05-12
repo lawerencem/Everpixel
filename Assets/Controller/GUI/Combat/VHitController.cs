@@ -155,12 +155,12 @@ namespace Assets.Controller.GUI.Combat
 
             if (target.Proxy.GetRWeapon() != null && target.Proxy.GetRWeapon().IsTypeOfShield())
             {
-                var wpn = target.SubComponents[Layers.CHAR_R_WEAPON];
+                var wpn = target.SubComponents[SortingLayers.CHAR_R_WEAPON];
                 this.DisplayParryAndBlockHelper(target, hit, wpn);
             }
             else if (target.Proxy.GetLWeapon() != null && target.Proxy.GetLWeapon().IsTypeOfShield())
             {
-                var wpn = target.SubComponents[Layers.CHAR_L_WEAPON];
+                var wpn = target.SubComponents[SortingLayers.CHAR_L_WEAPON];
                 this.DisplayParryAndBlockHelper(target, hit, wpn);
             }
         }
@@ -226,12 +226,12 @@ namespace Assets.Controller.GUI.Combat
             
             if (target.Proxy.GetRWeapon() != null && !target.Proxy.GetRWeapon().IsTypeOfShield())
             {
-                var wpn = target.SubComponents[Layers.CHAR_R_WEAPON];
+                var wpn = target.SubComponents[SortingLayers.CHAR_R_WEAPON];
                 this.DisplayParryAndBlockHelper(target, hit, wpn);
             }
             else if (target.Proxy.GetLWeapon() != null && !target.Proxy.GetLWeapon().IsTypeOfShield())
             {
-                var wpn = target.SubComponents[Layers.CHAR_L_WEAPON];
+                var wpn = target.SubComponents[SortingLayers.CHAR_L_WEAPON];
                 this.DisplayParryAndBlockHelper(target, hit, wpn);
             }
         }

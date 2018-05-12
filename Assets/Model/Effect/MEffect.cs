@@ -166,7 +166,7 @@ namespace Assets.Model.Effect
             handle.name = data.SpritesPath;
             var renderer = handle.AddComponent<SpriteRenderer>();
             renderer.sprite = sprite;
-            renderer.sortingLayerName = Layers.TILE_DECO;
+            renderer.sortingLayerName = SortingLayers.TILE_DECO;
             renderer.transform.SetParent(hit.Data.Target.Handle.transform);
             renderer.transform.position = hit.Data.Target.Handle.transform.position;
             RotateTranslateUtil.Instance.RandomRotateAndTranslate(

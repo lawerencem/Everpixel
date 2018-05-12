@@ -12,6 +12,7 @@ namespace Assets.Controller.Manager.GUI
 {
     public class GUIManager
     {
+        private List<GameObject> _abilityBtns;
         private bool _guiLocked = false;
         private HoverModal _hoverModal;
         private bool _interactionLocked = false;
@@ -30,19 +31,35 @@ namespace Assets.Controller.Manager.GUI
 
         public GUIManager()
         {
+            this._abilityBtns = new List<GameObject>();
             this._guiComponents = new Dictionary<string, GameObject>();
 
-            // TODO: Find a better way to do this.
-            var handle = new GameObject();
-            //this._hoverModal = new HoverModal();
+            var mainCanvas = GameObject.FindGameObjectWithTag(GameObjectTags.MAIN_CANVAS);
+            var handle = new GameObject("HoverContainer");
+            handle.transform.SetParent(mainCanvas.transform);
             this._hoverModal = handle.AddComponent<HoverModal>();
-
             this._hoverModal.Init();
-
+            this._hoverModal.transform.SetParent(handle.transform);
             this.Init();
         }
 
-        public void AddComponent(string tag, GameObject o) { this._guiComponents.Add(tag, o); }
+        public void AddAbilityBtn(GameObject btn)
+        {
+            this._abilityBtns.Add(btn);
+        }
+
+        public void AddComponent(string tag, GameObject o)
+        {
+            this._guiComponents.Add(tag, o);
+        }
+
+        public void DestroyAbilityBtns()
+        {
+            foreach (var btn in this._abilityBtns)
+                GameObject.Destroy(btn);
+            this._abilityBtns.Clear();
+        }
+
         public void DeactivateComponentByLifetime(string tag, float life)
         {
             if (this._guiComponents.ContainsKey(tag))
@@ -52,6 +69,7 @@ namespace Assets.Controller.Manager.GUI
                 script.Init(component, life);
             }
         }
+
         public GameObject GetComponent(string tag)
         {
             if (this._guiComponents.ContainsKey(tag))
@@ -59,9 +77,22 @@ namespace Assets.Controller.Manager.GUI
             else
                 return null;
         }
-        public bool GetGUILocked() { return this._guiLocked; }
-        public bool GetInteractionLocked() { return this._interactionLocked; }
-        public void RemoveComponent(string tag) { this._guiComponents.Remove(tag); }
+
+        public bool GetGUILocked()
+        {
+            return this._guiLocked;
+        }
+
+        public bool GetInteractionLocked()
+        {
+            return this._interactionLocked;
+        }
+
+        public void RemoveComponent(string tag)
+        {
+            this._guiComponents.Remove(tag);
+        }
+
         public void SetComponentActive(string tag, bool active)
         {
             if (this._guiComponents.ContainsKey(tag))
@@ -74,15 +105,51 @@ namespace Assets.Controller.Manager.GUI
             var script = this._guiComponents[tag].AddComponent<SDeactivateByLifetime>();
             script.Init(this._guiComponents[tag], time);
         }
-        public void SetGUILocked(bool locked) { this._guiLocked = locked; }
-        public void SetHoverModalActive() { this._hoverModal.SetModalActive(); }
-        public void SetHoverModalDamageActive(bool active) { this._hoverModal.SetDamageModalActive(active); }
-        public void SetHoverModalDamageValues(MAction a) { this._hoverModal.SetModalDamageValues(a); }
-        public void SetHoverModalInactive() { this._hoverModal.SetModalInactive(); }
-        public void SetHoverModalHeaderText(string toSet) { this._hoverModal.SetModalHeaderText(toSet); }
-        public void SetHoverModalLocation(Vector3 pos) { this._hoverModal.SetModalLocation(pos); }
-        public void SetHoverModalStatValues(PChar c) { this._hoverModal.SetModalStatValues(c); }
-        public void SetInteractionLocked(bool locked) { this._interactionLocked = locked; }
+
+        public void SetGUILocked(bool locked)
+        {
+            this._guiLocked = locked;
+        }
+
+        public void SetHoverModalActive()
+        {
+            this._hoverModal.SetModalActive();
+        }
+
+        public void SetHoverModalDamageActive(bool active)
+        {
+            this._hoverModal.SetDamageModalActive(active);
+        }
+
+        public void SetHoverModalDamageValues(MAction a)
+        {
+            this._hoverModal.SetModalDamageValues(a);
+        }
+
+        public void SetHoverModalInactive()
+        {
+            this._hoverModal.SetModalInactive();
+        }
+
+        public void SetHoverModalHeaderText(string toSet)
+        {
+            this._hoverModal.SetModalHeaderText(toSet);
+        }
+
+        public void SetHoverModalLocation(Vector3 pos)
+        {
+            this._hoverModal.SetModalLocation(pos);
+        }
+
+        public void SetHoverModalStatValues(PChar c)
+        {
+            this._hoverModal.SetModalStatValues(c);
+        }
+
+        public void SetInteractionLocked(bool locked)
+        {
+            this._interactionLocked = locked;
+        }
 
         private void Init()
         {

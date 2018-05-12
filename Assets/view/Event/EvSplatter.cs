@@ -59,7 +59,7 @@ namespace Assets.View.Event
                 RotateTranslateUtil.Instance.RandomRotateAndTranslate(
                     splatter, 
                     ViewParams.SPLATTER_VARIANCE);
-                renderer.sortingLayerName = Layers.TILE_DECO;
+                renderer.sortingLayerName = SortingLayers.TILE_DECO;
             }
         }
 

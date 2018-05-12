@@ -48,7 +48,7 @@ namespace Assets.View.Ability
             bullet.transform.position = hit.Data.Source.GameHandle.transform.position;
             var renderer = bullet.AddComponent<SpriteRenderer>();
             renderer.sprite = sprite;
-            renderer.sortingLayerName = Layers.PARTICLES;
+            renderer.sortingLayerName = SortingLayers.PARTICLES;
             var angle = Vector3.Angle(hit.Data.Target.Handle.transform.position, bullet.transform.position);
             if (hit.Data.Target.Handle.transform.position.y < bullet.transform.position.y)
                 angle = -angle;
@@ -71,7 +71,7 @@ namespace Assets.View.Ability
             bullet.transform.position = action.Data.Source.GameHandle.transform.position;
             var renderer = bullet.AddComponent<SpriteRenderer>();
             renderer.sprite = sprite;
-            renderer.sortingLayerName = Layers.PARTICLES;
+            renderer.sortingLayerName = SortingLayers.PARTICLES;
             var tgtPosition = tgt.Handle.transform.position;
             var angle = Vector3.Angle(tgtPosition, bullet.transform.position);
             if (tgtPosition.y < bullet.transform.position.y)
@@ -94,7 +94,7 @@ namespace Assets.View.Ability
                 var renderer = fx.AddComponent<SpriteRenderer>();
                 var index = ListUtil<int>.GetRandomElement(ability.Data.Sprites);
                 renderer.sprite = sprites[index];
-                renderer.sortingLayerName = Layers.PARTICLES;
+                renderer.sortingLayerName = SortingLayers.PARTICLES;
                 fx.transform.position = hit.Data.Target.Model.Center;
                 RotateTranslateUtil.Instance.RandomTranslate(fx, CombatGUIParams.SINGLE_FX_OFFSET);
                 fx.transform.SetParent(hit.Data.Target.Handle.transform);
@@ -189,31 +189,31 @@ namespace Assets.View.Ability
                     if (tgt.Proxy.GetLWeapon() != null &&
                         tgt.Proxy.GetLWeapon().IsTypeOfShield())
                     {
-                        tgts.Add(tgt.SubComponents[Layers.CHAR_L_WEAPON]);
+                        tgts.Add(tgt.SubComponents[SortingLayers.CHAR_L_WEAPON]);
                     }
                     if (tgt.Proxy.GetRWeapon() != null &&
                         tgt.Proxy.GetRWeapon().IsTypeOfShield())
                     {
-                        tgts.Add(tgt.SubComponents[Layers.CHAR_R_WEAPON]);
+                        tgts.Add(tgt.SubComponents[SortingLayers.CHAR_R_WEAPON]);
                     }
                 }
                 else
                 {
                     if (tgt.Proxy.Type != ECharType.Critter)
                     {
-                        if (tgt.SubComponents.ContainsKey(Layers.CHAR_ARMOR))
-                            tgts.Add(tgt.SubComponents[Layers.CHAR_ARMOR]);
+                        if (tgt.SubComponents.ContainsKey(SortingLayers.CHAR_ARMOR))
+                            tgts.Add(tgt.SubComponents[SortingLayers.CHAR_ARMOR]);
                         else
-                            tgts.Add(tgt.SubComponents[Layers.CHAR_TORSO]);
-                        if (tgt.SubComponents.ContainsKey(Layers.CHAR_HELM))
-                            tgts.Add(tgt.SubComponents[Layers.CHAR_HELM]);
+                            tgts.Add(tgt.SubComponents[SortingLayers.CHAR_TORSO]);
+                        if (tgt.SubComponents.ContainsKey(SortingLayers.CHAR_HELM))
+                            tgts.Add(tgt.SubComponents[SortingLayers.CHAR_HELM]);
                         else
-                            tgts.Add(tgt.SubComponents[Layers.CHAR_HEAD]);
-                        if (tgt.SubComponents.ContainsKey(Layers.CHAR_MOUNT))
-                            tgts.Add(tgt.SubComponents[Layers.CHAR_MOUNT]);
+                            tgts.Add(tgt.SubComponents[SortingLayers.CHAR_HEAD]);
+                        if (tgt.SubComponents.ContainsKey(SortingLayers.CHAR_MOUNT))
+                            tgts.Add(tgt.SubComponents[SortingLayers.CHAR_MOUNT]);
                     }
                     else
-                        tgts.Add(tgt.SubComponents[Layers.CHAR_MAIN]);
+                        tgts.Add(tgt.SubComponents[SortingLayers.CHAR_MAIN]);
                 }
             }
             else

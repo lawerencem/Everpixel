@@ -57,13 +57,13 @@ namespace Assets.Controller.Map.Combat.Loader
             c.GameHandle.transform.SetParent(this._container);
             c.GameHandle.name = c.View.Type.ToString() + " " + c.View.Race.ToString();
             render.sprite = sprite;
-            render.sortingLayerName = Layers.CHAR_TORSO;
-            this.TryAttachHead(c, Layers.CHAR_HEAD, c.View.Head, t);
+            render.sortingLayerName = SortingLayers.CHAR_TORSO;
+            this.TryAttachHead(c, SortingLayers.CHAR_HEAD, c.View.Head, t);
             this.TryAttachDeco(c, t);
             this.TryAttachEquipment(c, t);
             this.TryAttachMount(c, t);
-            c.SubComponents.Add(Layers.CHAR_TORSO, c.GameHandle);
-            c.SubComponents.Add(Layers.CHAR_MAIN, c.GameHandle);
+            c.SubComponents.Add(SortingLayers.CHAR_TORSO, c.GameHandle);
+            c.SubComponents.Add(SortingLayers.CHAR_MAIN, c.GameHandle);
 
             if (!c.Proxy.LParty)
                 c.GameHandle.transform.localRotation = Quaternion.Euler(0, 180, 0);
@@ -75,11 +75,11 @@ namespace Assets.Controller.Map.Combat.Loader
 
         private void TryAttachDeco(CChar c, CTile t)
         {
-            this.TryAttachDecoHelper(c, Layers.CHAR_FACE, c.View.Face, t);
-            this.TryAttachDecoHelper(c, Layers.CHAR_HEAD_DECO_1, c.View.HeadDeco1, t);
-            this.TryAttachDecoHelper(c, Layers.CHAR_HEAD_DECO_2, c.View.HeadDeco2, t);
-            this.TryAttachDecoHelper(c, Layers.CHAR_TORSO_DECO_1, c.View.TorsoDeco1, t);
-            this.TryAttachDecoHelper(c, Layers.CHAR_TORSO_DECO_2, c.View.TorsoDeco2, t);
+            this.TryAttachDecoHelper(c, SortingLayers.CHAR_FACE, c.View.Face, t);
+            this.TryAttachDecoHelper(c, SortingLayers.CHAR_HEAD_DECO_1, c.View.HeadDeco1, t);
+            this.TryAttachDecoHelper(c, SortingLayers.CHAR_HEAD_DECO_2, c.View.HeadDeco2, t);
+            this.TryAttachDecoHelper(c, SortingLayers.CHAR_TORSO_DECO_1, c.View.TorsoDeco1, t);
+            this.TryAttachDecoHelper(c, SortingLayers.CHAR_TORSO_DECO_2, c.View.TorsoDeco2, t);
         }
 
         private void TryAttachDecoHelper(CChar c, string sort, int spriteIndex, CTile tile)
@@ -91,11 +91,11 @@ namespace Assets.Controller.Map.Combat.Loader
                 var render = spriteHandler.AddComponent<SpriteRenderer>();
                 spriteHandler.transform.position = c.GameHandle.transform.position;
 
-                if (sort == Layers.CHAR_FACE ||
-                    sort == Layers.CHAR_HEAD_DECO_1 ||
-                    sort == Layers.CHAR_HEAD_DECO_2)
+                if (sort == SortingLayers.CHAR_FACE ||
+                    sort == SortingLayers.CHAR_HEAD_DECO_1 ||
+                    sort == SortingLayers.CHAR_HEAD_DECO_2)
                 {
-                    spriteHandler.transform.SetParent(c.SubComponents[Layers.CHAR_HEAD].transform);
+                    spriteHandler.transform.SetParent(c.SubComponents[SortingLayers.CHAR_HEAD].transform);
                 }
                 else
                 {
@@ -112,13 +112,13 @@ namespace Assets.Controller.Map.Combat.Loader
         private void TryAttachEquipment(CChar c, CTile t)
         {
             if (c.View.Armor != null)
-                TryAttachEquipmentHelper(c, c.View.Armor, Layers.CHAR_ARMOR, t);
+                TryAttachEquipmentHelper(c, c.View.Armor, SortingLayers.CHAR_ARMOR, t);
             if (c.View.Helm != null)
-                TryAttachEquipmentHelper(c, c.View.Helm, Layers.CHAR_HELM, t, 0f, ViewParams.HELM_OFFSET);
+                TryAttachEquipmentHelper(c, c.View.Helm, SortingLayers.CHAR_HELM, t, 0f, ViewParams.HELM_OFFSET);
             if (c.View.LWeapon != null)
-                TryAttachEquipmentHelper(c, c.View.LWeapon, Layers.CHAR_L_WEAPON, t, ViewParams.WEAPON_OFFSET);
+                TryAttachEquipmentHelper(c, c.View.LWeapon, SortingLayers.CHAR_L_WEAPON, t, ViewParams.WEAPON_OFFSET);
             if (c.View.RWeapon != null)
-                TryAttachEquipmentHelper(c, c.View.RWeapon, Layers.CHAR_R_WEAPON, t, -ViewParams.WEAPON_OFFSET);
+                TryAttachEquipmentHelper(c, c.View.RWeapon, SortingLayers.CHAR_R_WEAPON, t, -ViewParams.WEAPON_OFFSET);
         }
 
         private void TryAttachEquipmentHelper(CChar c, VEquipment e, string sort, CTile tile, float xOffset = 0, float yOffset = 0)
@@ -134,8 +134,8 @@ namespace Assets.Controller.Map.Combat.Loader
                 position.x += xOffset;
                 position.y += yOffset;
                 spriteHandler.transform.position = position;
-                if (sort == Layers.CHAR_HELM)
-                    spriteHandler.transform.SetParent(c.SubComponents[Layers.CHAR_HEAD].transform);
+                if (sort == SortingLayers.CHAR_HELM)
+                    spriteHandler.transform.SetParent(c.SubComponents[SortingLayers.CHAR_HEAD].transform);
                 else
                     spriteHandler.transform.SetParent(c.GameHandle.transform);
                 spriteHandler.name = e.Name;
@@ -174,8 +174,8 @@ namespace Assets.Controller.Map.Combat.Loader
                 spriteHandler.transform.SetParent(c.GameHandle.transform);
                 spriteHandler.name = c.View.Name + " " + c.View.Mount.Name + " Mount";
                 render.sprite = sprite;
-                render.sortingLayerName = Layers.CHAR_MOUNT;
-                c.SubComponents.Add(Layers.CHAR_MOUNT, spriteHandler);
+                render.sortingLayerName = SortingLayers.CHAR_MOUNT;
+                c.SubComponents.Add(SortingLayers.CHAR_MOUNT, spriteHandler);
                 var mountOffsetPos = c.GameHandle.transform.position;
                 c.GameHandle.transform.position = mountOffsetPos;
             }

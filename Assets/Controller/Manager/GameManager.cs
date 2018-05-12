@@ -42,8 +42,6 @@ namespace Assets.Controller.Managers
         {
             this._loader = LoaderManager.Instance;
             this._mapLoader = new MapLoader();
-            var gui = new GUILoader();
-            gui.InitCombatGUI();
             var initInfo = new MapInitInfo();
             initInfo.Biome = EBiome.Grassland;
             var lParty = new PartyBuildParams();
@@ -55,7 +53,7 @@ namespace Assets.Controller.Managers
 
             rParty.Culture = ECulture.Jomonese;
             rParty.Difficulty = 2000;
-            rParty.Name = "Vanguard";
+            rParty.Name = "Hit Squad";
 
             initInfo.LParties.Add(lParty);
             initInfo.RParties.Add(rParty);

@@ -246,7 +246,6 @@
     <Compile Include="Assets\Controller\GUI\Combat\VCombatController.cs" />
     <Compile Include="Assets\Controller\GUI\Combat\VFatalityController.cs" />
     <Compile Include="Assets\Controller\GUI\Combat\VHitController.cs" />
-    <Compile Include="Assets\Controller\GUI\GUILoader.cs" />
     <Compile Include="Assets\Controller\Manager\CameraManager.cs" />
     <Compile Include="Assets\Controller\Manager\Combat\CombatEvManager.cs" />
     <Compile Include="Assets\Controller\Manager\Combat\CombatManager.cs" />
@@ -648,7 +647,7 @@
     <Compile Include="Assets\View\Event\AGuiEv.cs" />
     <Compile Include="Assets\View\Event\EGuiEv.cs" />
     <Compile Include="Assets\View\Event\EvAbilitySelected.cs" />
-    <Compile Include="Assets\View\Event\EvPopulateWpnBtns.cs" />
+    <Compile Include="Assets\View\Event\EvPopulateAbilityBtns.cs" />
     <Compile Include="Assets\View\Event\EvSplatter.cs" />
     <Compile Include="Assets\View\Event\EvTileClick.cs" />
     <Compile Include="Assets\View\Event\EvTileSelect.cs" />
@@ -670,10 +669,10 @@
     <Compile Include="Assets\View\Fatality\Weapon\Specific\SlimeCrushFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Specific\WeenbowFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Specific\WeenBursterFatality.cs" />
-    <Compile Include="Assets\View\GUI\AbilityModalManager.cs" />
     <Compile Include="Assets\View\GUI\GUISpriteLoader.cs" />
     <Compile Include="Assets\View\GUI\HoverModal.cs" />
     <Compile Include="Assets\View\Layers.cs" />
+    <Compile Include="Assets\View\SortingLayers.cs" />
     <Compile Include="Assets\View\Map\MapBridge.cs" />
     <Compile Include="Assets\View\Map\MapSpriteLoader.cs" />
     <Compile Include="Assets\View\Map\Tile\Deco\VTileDeco.cs" />
@@ -688,11 +687,10 @@
     <Compile Include="Assets\View\Script\FX\SFightFatalityExplosionMove.cs" />
     <Compile Include="Assets\View\Script\FX\SFireFatality.cs" />
     <Compile Include="Assets\View\Script\FX\SFlinch.cs" />
-    <Compile Include="Assets\View\Script\GUI\SAbilityBtn.cs" />
     <Compile Include="Assets\View\Script\GUI\SEndTurnBtn.cs" />
     <Compile Include="Assets\View\Script\GUI\SGui.cs" />
     <Compile Include="Assets\View\Script\GUI\SGuiButton.cs" />
-    <Compile Include="Assets\View\Script\GUI\SWpnBtn.cs" />
+    <Compile Include="Assets\View\Script\GUI\SAbilityBtn.cs" />
     <Compile Include="Assets\View\ViewParams.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -743,25 +741,17 @@
     <None Include="Assets\Data\Map\Landmark\XML\Landmarks.xml" />
     <None Include="Assets\Data\Map\Tile\Tiles.xml" />
     <None Include="Assets\Data\Mount\XML\Mounts.xml" />
-    <None Include="Assets\Data\Party\XML\Party\AmazonParties.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Party\XML\Party\AmazonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\BretonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\GoblinParties.xml" />
-    <None Include="Assets\Data\Party\XML\Party\JomonParties.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Party\XML\Party\JomonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\NordParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\OrcParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\TrollParties.xml" />
-    <None Include="Assets\Data\Party\XML\SubParty\AmazonSubParties.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Party\XML\SubParty\AmazonSubParties.xml" />
     <None Include="Assets\Data\Party\XML\SubParty\BretonSubParties.xml" />
     <None Include="Assets\Data\Party\XML\SubParty\GoblinSubParties.xml" />
-    <None Include="Assets\Data\Party\XML\SubParty\JomonSubParties.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Party\XML\SubParty\JomonSubParties.xml" />
     <None Include="Assets\Data\Party\XML\SubParty\NordSubParties.xml" />
     <None Include="Assets\Data\Party\XML\SubParty\OrcSubParties.xml" />
     <None Include="Assets\Data\Party\XML\SubParty\RomeSubParties.xml" />

@@ -306,11 +306,11 @@
     <WeaponAbility name="Pierce">
       <AccMod>1</AccMod>
       <APCost>3</APCost>
-      <ArmorIgnoreMod>1</ArmorIgnoreMod>
-      <ArmorPierceMod>2.25</ArmorPierceMod>
-      <BlockIgnoreMod>0.55</BlockIgnoreMod>
+      <ArmorIgnoreMod>1.75</ArmorIgnoreMod>
+      <ArmorPierceMod>3</ArmorPierceMod>
+      <BlockIgnoreMod>0.15</BlockIgnoreMod>
       <ECastType>Melee</ECastType>
-      <DamageMod>0.75</DamageMod>
+      <DamageMod>0.35</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>18</IconSprite>
       <Injury>Minor_Bleeding</Injury>
@@ -386,7 +386,7 @@
       </EEffect>
       <DamageMod>0.50</DamageMod>
       <DodgeMod>1.75</DodgeMod>
-      <IconSprite>24</IconSprite>
+      <IconSprite>26</IconSprite>
       <Injury>Broken_Hand</Injury>
       <Injury>Broken_Knee</Injury>
       <Injury>Broken_Leg</Injury>

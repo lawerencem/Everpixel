@@ -15,7 +15,7 @@ namespace Assets.View.Character
             if (c.Proxy.Type == ECharType.Humanoid)
             {
                 var sprite = CharSpriteLoader.Instance.GetHumanoidDeadEyes(c.Proxy.Race);
-                var eyes = c.SubComponents[Layers.CHAR_FACE];
+                var eyes = c.SubComponents[SortingLayers.CHAR_FACE];
                 var renderer = eyes.GetComponent<SpriteRenderer>();
                 renderer.sprite = sprite;
             }
@@ -34,7 +34,7 @@ namespace Assets.View.Character
                 var sub = subcomponent.Value;
                 var renderer = sub.GetComponent<SpriteRenderer>();
                 var layer = renderer.sortingLayerName;
-                renderer.sortingLayerName = layer.Replace(Layers.CHAR, Layers.DEAD);
+                renderer.sortingLayerName = layer.Replace(SortingLayers.CHAR, SortingLayers.DEAD);
             }
             foreach(var embed in c.Embedded)
             {
@@ -42,7 +42,7 @@ namespace Assets.View.Character
                 if (renderer != null)
                 {
                     var layer = renderer.sortingLayerName;
-                    renderer.sortingLayerName = layer.Replace(Layers.CHAR, Layers.DEAD);
+                    renderer.sortingLayerName = layer.Replace(SortingLayers.CHAR, SortingLayers.DEAD);
                 }
             }
         }
@@ -54,7 +54,7 @@ namespace Assets.View.Character
                 var sub = subcomponent.Value;
                 var renderer = sub.GetComponent<SpriteRenderer>();
                 var layer = renderer.sortingLayerName;
-                renderer.sortingLayerName = layer.Replace(Layers.CHAR, Layers.PLUS);
+                renderer.sortingLayerName = layer.Replace(SortingLayers.CHAR, SortingLayers.PLUS);
             }
             foreach (var embed in c.Embedded)
             {
@@ -62,7 +62,7 @@ namespace Assets.View.Character
                 if (renderer != null)
                 {
                     var layer = renderer.sortingLayerName;
-                    renderer.sortingLayerName = layer.Replace(Layers.CHAR, Layers.PLUS);
+                    renderer.sortingLayerName = layer.Replace(SortingLayers.CHAR, SortingLayers.PLUS);
                 }
             }
         }
@@ -72,13 +72,13 @@ namespace Assets.View.Character
             if (c.Proxy.GetLWeapon() != null)
             {
                 RotateTranslateUtil.Instance.RandomRotateAndTranslate(
-                    c.SubComponents[Layers.CHAR_L_WEAPON],
+                    c.SubComponents[SortingLayers.CHAR_L_WEAPON],
                     ViewParams.SPLATTER_VARIANCE);
             }
             if (c.Proxy.GetRWeapon() != null)
             {
                 RotateTranslateUtil.Instance.RandomRotateAndTranslate(
-                    c.SubComponents[Layers.CHAR_R_WEAPON],
+                    c.SubComponents[SortingLayers.CHAR_R_WEAPON],
                     ViewParams.SPLATTER_VARIANCE);
             }
         }
@@ -96,65 +96,65 @@ namespace Assets.View.Character
         {
             if (c.Proxy.Type == ECharType.Humanoid)
             {
-                if (c.SubComponents.ContainsKey(Layers.CHAR_TORSO))
+                if (c.SubComponents.ContainsKey(SortingLayers.CHAR_TORSO))
                 {
-                    var renderer = c.SubComponents[Layers.CHAR_TORSO].GetComponent<SpriteRenderer>();
+                    var renderer = c.SubComponents[SortingLayers.CHAR_TORSO].GetComponent<SpriteRenderer>();
                     renderer.sprite = null;
                 }
-                if (c.SubComponents.ContainsKey(Layers.CHAR_HEAD))
+                if (c.SubComponents.ContainsKey(SortingLayers.CHAR_HEAD))
                 {
-                    var renderer = c.SubComponents[Layers.CHAR_HEAD].GetComponent<SpriteRenderer>();
+                    var renderer = c.SubComponents[SortingLayers.CHAR_HEAD].GetComponent<SpriteRenderer>();
                     renderer.sprite = null;
                 }
-                if (c.SubComponents.ContainsKey(Layers.CHAR_HEAD_DECO_1))
+                if (c.SubComponents.ContainsKey(SortingLayers.CHAR_HEAD_DECO_1))
                 {
-                    var renderer = c.SubComponents[Layers.CHAR_HEAD_DECO_1].GetComponent<SpriteRenderer>();
+                    var renderer = c.SubComponents[SortingLayers.CHAR_HEAD_DECO_1].GetComponent<SpriteRenderer>();
                     renderer.sprite = null;
                 }
-                if (c.SubComponents.ContainsKey(Layers.CHAR_HEAD_DECO_2))
+                if (c.SubComponents.ContainsKey(SortingLayers.CHAR_HEAD_DECO_2))
                 {
-                    var renderer = c.SubComponents[Layers.CHAR_HEAD_DECO_2].GetComponent<SpriteRenderer>();
+                    var renderer = c.SubComponents[SortingLayers.CHAR_HEAD_DECO_2].GetComponent<SpriteRenderer>();
                     renderer.sprite = null;
                 }
-                if (c.SubComponents.ContainsKey(Layers.CHAR_FACE))
+                if (c.SubComponents.ContainsKey(SortingLayers.CHAR_FACE))
                 {
-                    var renderer = c.SubComponents[Layers.CHAR_FACE].GetComponent<SpriteRenderer>();
+                    var renderer = c.SubComponents[SortingLayers.CHAR_FACE].GetComponent<SpriteRenderer>();
                     renderer.sprite = null;
                 }
                 if (c.Proxy.GetArmor() != null)
                 {
-                    var script = c.SubComponents[Layers.CHAR_ARMOR].AddComponent<SFightFatalityExplosionMove>();
-                    script.Init(c.SubComponents[Layers.CHAR_ARMOR], c);
+                    var script = c.SubComponents[SortingLayers.CHAR_ARMOR].AddComponent<SFightFatalityExplosionMove>();
+                    script.Init(c.SubComponents[SortingLayers.CHAR_ARMOR], c);
                 }
                 if (c.Proxy.GetHelm() != null)
                 {
-                    var script = c.SubComponents[Layers.CHAR_HELM].AddComponent<SFightFatalityExplosionMove>();
-                    script.Init(c.SubComponents[Layers.CHAR_HELM], c);
+                    var script = c.SubComponents[SortingLayers.CHAR_HELM].AddComponent<SFightFatalityExplosionMove>();
+                    script.Init(c.SubComponents[SortingLayers.CHAR_HELM], c);
                 }
                 if (c.Proxy.GetLWeapon() != null)
                 {
-                    var script = c.SubComponents[Layers.CHAR_L_WEAPON].AddComponent<SFightFatalityExplosionMove>();
-                    script.Init(c.SubComponents[Layers.CHAR_L_WEAPON], c);
+                    var script = c.SubComponents[SortingLayers.CHAR_L_WEAPON].AddComponent<SFightFatalityExplosionMove>();
+                    script.Init(c.SubComponents[SortingLayers.CHAR_L_WEAPON], c);
                 }
                 if (c.Proxy.GetRWeapon() != null)
                 {
-                    var script = c.SubComponents[Layers.CHAR_R_WEAPON].AddComponent<SFightFatalityExplosionMove>();
-                    script.Init(c.SubComponents[Layers.CHAR_R_WEAPON], c);
+                    var script = c.SubComponents[SortingLayers.CHAR_R_WEAPON].AddComponent<SFightFatalityExplosionMove>();
+                    script.Init(c.SubComponents[SortingLayers.CHAR_R_WEAPON], c);
                 }
-                if (c.SubComponents.ContainsKey(Layers.CHAR_TORSO_DECO_1))
+                if (c.SubComponents.ContainsKey(SortingLayers.CHAR_TORSO_DECO_1))
                 {
-                    var renderer = c.SubComponents[Layers.CHAR_TORSO_DECO_1].GetComponent<SpriteRenderer>();
+                    var renderer = c.SubComponents[SortingLayers.CHAR_TORSO_DECO_1].GetComponent<SpriteRenderer>();
                     renderer.sprite = null;
                 }
-                if (c.SubComponents.ContainsKey(Layers.CHAR_TORSO_DECO_2))
+                if (c.SubComponents.ContainsKey(SortingLayers.CHAR_TORSO_DECO_2))
                 {
-                    var renderer = c.SubComponents[Layers.CHAR_TORSO_DECO_2].GetComponent<SpriteRenderer>();
+                    var renderer = c.SubComponents[SortingLayers.CHAR_TORSO_DECO_2].GetComponent<SpriteRenderer>();
                     renderer.sprite = null;
                 }
             }
             else
             {
-                var renderer = c.SubComponents[Layers.CHAR_TORSO].GetComponent<SpriteRenderer>();
+                var renderer = c.SubComponents[SortingLayers.CHAR_TORSO].GetComponent<SpriteRenderer>();
                 renderer.sprite = null;
             }
         }
@@ -200,7 +200,7 @@ namespace Assets.View.Character
                 var sub = subcomponent.Value;
                 var renderer = sub.GetComponent<SpriteRenderer>();
                 var layer = renderer.sortingLayerName;
-                renderer.sortingLayerName = layer.Replace(Layers.PLUS, Layers.CHAR);
+                renderer.sortingLayerName = layer.Replace(SortingLayers.PLUS, SortingLayers.CHAR);
             }
             foreach (var embed in c.Embedded)
             {
@@ -208,7 +208,7 @@ namespace Assets.View.Character
                 if (renderer != null)
                 {
                     var layer = renderer.sortingLayerName;
-                    renderer.sortingLayerName = layer.Replace(Layers.PLUS, Layers.CHAR);
+                    renderer.sortingLayerName = layer.Replace(SortingLayers.PLUS, SortingLayers.CHAR);
                 }
             }
         }

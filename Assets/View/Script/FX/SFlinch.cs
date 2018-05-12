@@ -32,7 +32,7 @@ namespace Assets.View.Script.FX
                 //if (!FCharacterStatus.HasFlag(source.Model.StatusFlags.CurFlags, FCharacterStatus.Flags.Shapeshifted))
                 //{
                     var flinchEyes = CharSpriteLoader.Instance.GetHumanoidFlinchEyes(source.Proxy.Race);
-                    this._eyeRenderer = source.SubComponents[Layers.CHAR_FACE].GetComponent<SpriteRenderer>();
+                    this._eyeRenderer = source.SubComponents[SortingLayers.CHAR_FACE].GetComponent<SpriteRenderer>();
                     this._oldEyes = this._eyeRenderer.sprite;
                     this._eyeRenderer.sprite = flinchEyes;
                 //}

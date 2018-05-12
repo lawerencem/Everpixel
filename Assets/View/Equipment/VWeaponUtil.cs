@@ -19,7 +19,7 @@ namespace Assets.View.Equipment
             {
                 if (action.Data.LWeapon)
                 {
-                    var wpnObject = action.Data.Source.SubComponents[Layers.CHAR_L_WEAPON];
+                    var wpnObject = action.Data.Source.SubComponents[SortingLayers.CHAR_L_WEAPON];
                     if (action.Data.Source.Proxy.LParty)
                         this.DoSpearWallFXHelper(wpnObject, true);
                     else
@@ -27,7 +27,7 @@ namespace Assets.View.Equipment
                 }
                 else
                 {
-                    var wpnObject = action.Data.Source.SubComponents[Layers.CHAR_R_WEAPON];
+                    var wpnObject = action.Data.Source.SubComponents[SortingLayers.CHAR_R_WEAPON];
                     if (action.Data.Source.Proxy.LParty)
                         this.DoSpearWallFXHelper(wpnObject, true);
                     else
@@ -44,7 +44,7 @@ namespace Assets.View.Equipment
             {
                 if (action.Data.LWeapon)
                 {
-                    var wpnObject = action.Data.Source.SubComponents[Layers.CHAR_L_WEAPON];
+                    var wpnObject = action.Data.Source.SubComponents[SortingLayers.CHAR_L_WEAPON];
                     if (action.Data.Source.Proxy.LParty)
                         this.DoShieldWallFXHelper(wpnObject, true);
                     else
@@ -52,7 +52,7 @@ namespace Assets.View.Equipment
                 }
                 else
                 {
-                    var wpnObject = action.Data.Source.SubComponents[Layers.CHAR_R_WEAPON];
+                    var wpnObject = action.Data.Source.SubComponents[SortingLayers.CHAR_R_WEAPON];
                     if (action.Data.Source.Proxy.LParty)
                         this.DoShieldWallFXHelper(wpnObject, true);
                     else
@@ -69,12 +69,12 @@ namespace Assets.View.Equipment
             {
                 if (lWeapon)
                 {
-                    var wpnObject = source.SubComponents[Layers.CHAR_L_WEAPON];
+                    var wpnObject = source.SubComponents[SortingLayers.CHAR_L_WEAPON];
                     this.UndoShieldWallFXHelper(wpnObject, lWeapon);
                 }
                 else
                 {
-                    var wpnObject = source.SubComponents[Layers.CHAR_R_WEAPON];
+                    var wpnObject = source.SubComponents[SortingLayers.CHAR_R_WEAPON];
                     this.UndoShieldWallFXHelper(wpnObject, lWeapon);
                 }
                 view.ShieldWalling = false;
@@ -88,12 +88,12 @@ namespace Assets.View.Equipment
             {
                 if (lWeapon)
                 {
-                    var wpnObject = source.SubComponents[Layers.CHAR_L_WEAPON];
+                    var wpnObject = source.SubComponents[SortingLayers.CHAR_L_WEAPON];
                     this.UndoSpearWallFXHelper(wpnObject, lWeapon);
                 }
                 else
                 {
-                    var wpnObject = source.SubComponents[Layers.CHAR_R_WEAPON];
+                    var wpnObject = source.SubComponents[SortingLayers.CHAR_R_WEAPON];
                     this.UndoSpearWallFXHelper(wpnObject, lWeapon);
                 }
                 view.SpearWalling = false;

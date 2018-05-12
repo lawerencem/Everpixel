@@ -120,7 +120,7 @@ namespace Assets.View.Fatality
 
         protected GameObject LayFatalityDecoRandomPosition(Sprite sprite, CChar c)
         {
-            var deco = this.LayFatalityDeco(sprite, c, Layers.DEAD_TORSO);
+            var deco = this.LayFatalityDeco(sprite, c, SortingLayers.DEAD_TORSO);
             RotateTranslateUtil.Instance.RandomRotateAndTranslate(deco, CombatGUIParams.DEFAULT_OFFSET);
             return deco;
         }

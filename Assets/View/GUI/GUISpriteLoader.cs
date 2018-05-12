@@ -13,7 +13,7 @@ namespace Assets.View.GUI
 
         public GUISpriteLoader() { }
 
-        public Sprite GetWpnAbilityBtnImg(EAbility ability)
+        public Sprite GetAbilityBtnImg(EAbility ability)
         {
             var path = StringUtil.PathBuilder(ICON_PATH, "Icon", EXTENSION);
             var stuff = Resources.LoadAll(path);
