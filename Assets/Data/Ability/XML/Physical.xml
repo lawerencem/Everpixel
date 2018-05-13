@@ -68,7 +68,7 @@
       <ECastType>Melee</ECastType>
       <DamageMod>1</DamageMod>
       <DodgeMod>1.0</DodgeMod>
-      <IconSprite>0</IconSprite>
+      <IconSprite>27</IconSprite>
       <Injury>Major_Bleeding</Injury>
       <Injury>Massive_Bleeding</Injury>
       <Injury>Minor_Bleeding</Injury>

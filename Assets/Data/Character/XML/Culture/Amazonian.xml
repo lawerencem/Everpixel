@@ -4,6 +4,7 @@
     <Character name ="Arms">
       <AttackSpriteIndex>8</AttackSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
+      <DeadSpriteIndex>9</DeadSpriteIndex>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Perks>
         <Perk>Scaly</Perk>
@@ -21,6 +22,7 @@
     <Character name ="Beardedino">
       <AttackSpriteIndex>9</AttackSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
+      <DeadSpriteIndex>10</DeadSpriteIndex>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Perks>
         <Perk>Dino_Bite</Perk>
@@ -38,6 +40,7 @@
     <Character name ="Curizard">
       <AttackSpriteIndex>8</AttackSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
+      <DeadSpriteIndex>9</DeadSpriteIndex>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Perks>
         <Perk>Scaly</Perk>
@@ -55,6 +58,7 @@
       <AttackSpriteIndex>8</AttackSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <DeadSpriteIndex>9</DeadSpriteIndex>
       <Perk>Dino_Bite</Perk>
       <Perks>
         <Perk>Dino_Bite</Perk>
@@ -266,6 +270,7 @@
       <AttackSpriteIndex>2</AttackSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
       <FlinchSpriteIndex>1</FlinchSpriteIndex>
+      <DeadSpriteIndex>3</DeadSpriteIndex>
       <Perks>
         <Perk>Dino_Bite</Perk>
         <Perk>Scaly</Perk>
@@ -284,6 +289,7 @@
       <AttackSpriteIndex>8</AttackSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <DeadSpriteIndex>9</DeadSpriteIndex>
       <Perks>
         <Perk>Scaly</Perk>
       </Perks>
@@ -326,9 +332,10 @@
       </Stats>
     </Character>
     <Character name ="Solizard">
-      <AttackSpriteIndex>8</AttackSpriteIndex>
+      <AttackSpriteIndex>9</AttackSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <DeadSpriteIndex>10</DeadSpriteIndex>
       <Perks>
         <Perk>Scaly</Perk>
       </Perks>
@@ -342,9 +349,10 @@
       </Stats>
     </Character>
     <Character name ="Tearex">
-      <AttackSpriteIndex>24</AttackSpriteIndex>
+      <AttackSpriteIndex>8</AttackSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
-      <FlinchSpriteIndex>16</FlinchSpriteIndex>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <DeadSpriteIndex>9</DeadSpriteIndex>
       <Perks>
         <Perk>Scaly</Perk>
       </Perks>
@@ -364,9 +372,10 @@
         <Ability name ="Kamehameha">
         </Ability>
       </Abilities>
-      <AttackSpriteIndex>1</AttackSpriteIndex>
+      <AttackSpriteIndex>3</AttackSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
-      <FlinchSpriteIndex>13</FlinchSpriteIndex>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <DeadSpriteIndex>9</DeadSpriteIndex>
       <Perks>
         <Perk>Scaly</Perk>
       </Perks>
@@ -381,7 +390,7 @@
       <WeaponAbility>Bite</WeaponAbility>
     </Character>
     <Character name="Tyrantaur">
-      <AttackSpriteIndex>24</AttackSpriteIndex>
+      <AttackSpriteIndex>8</AttackSpriteIndex>
       <Abilities>
         <Ability name="Bite">
           <EEffect name="Megabite">
@@ -392,7 +401,8 @@
         </Ability>
       </Abilities>
       <ECharacterType>Critter</ECharacterType>
-      <FlinchSpriteIndex>16</FlinchSpriteIndex>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <DeadSpriteIndex>9</DeadSpriteIndex>
       <Perks>
         <Perk>Gargantuan</Perk>
         <Perk>Iron_Hide</Perk>
