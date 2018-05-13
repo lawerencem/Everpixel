@@ -664,6 +664,7 @@
     <Compile Include="Assets\View\Fatality\Weapon\Ability\ChopFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Ability\CrushFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Ability\FireFatality.cs" />
+    <Compile Include="Assets\View\Fatality\Weapon\Ability\GreatStrikeFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Ability\ScatterFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Ability\SlashFatality.cs" />
     <Compile Include="Assets\View\Fatality\Weapon\Specific\SlimeCrushFatality.cs" />

@@ -23,6 +23,8 @@ namespace Assets.Controller.GUI.Combat
         public static readonly string CRUSH_FATALITY = "CrushFatality";
         public static readonly string FIGHTING_FATALITY = "FightingFatality";
         public static readonly string FIGHTING_FATALITY_EXPLOSION = "FightingFatalityExplosion";
+        public static readonly string GREAT_STRIKE_BONE_FATALITY = "GreatStrikeBoneFatality";
+        public static readonly string GREAT_STRIKE_BLOOD_FATALITY = "GreatStrikeBloodFatality";
         public static readonly string SCATTER_BONE_FATALITY = "ScatterBoneFatality";
         public static readonly string SCATTER_EXPLOSION_FATALITY = "ScatterExplosionFatality";
         public static readonly string SLASH_FATALITY = "SlashFatality";

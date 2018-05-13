@@ -8,6 +8,7 @@
         Crush,
         Fighting,
         Fire,
+        Great_Strike,
         Pierce,
         Scatter,
         Slash,
