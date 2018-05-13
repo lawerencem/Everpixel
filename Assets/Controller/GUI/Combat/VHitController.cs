@@ -379,7 +379,6 @@ namespace Assets.Controller.GUI.Combat
             attack.Init(a.Data.Source, position, CombatGUIParams.ATTACK_SPEED);
         }
 
-
         private void ProcessRaycastFXNonFatality(MAction a)
         {
             var attack = a.Data.Source.GameHandle.AddComponent<SAttackerJolt>();

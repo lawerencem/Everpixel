@@ -11,6 +11,13 @@
     <Party Name ="Hit Squad">
       <SubParty>Ninjas,1</SubParty>
     </Party>
+    <Party Name ="Battle Party">
+      <SubParty>Commanders,0.3</SubParty>
+      <SubParty>Heavy Infantry,0.3</SubParty>
+      <SubParty>War Kappas,0.2</SubParty>
+      <SubParty>Light Archers,0.1</SubParty>
+      <SubParty>Light Spearmen,0.1</SubParty>
+    </Party>
     <Party Name ="Vanguard">
       <SubParty>Commanders,0.4</SubParty>
       <SubParty>Spell Kappas,0.3</SubParty>

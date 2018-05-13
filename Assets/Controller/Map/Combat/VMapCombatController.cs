@@ -137,7 +137,7 @@ namespace Assets.Controller.Map.Combat
                 var active = AbilityTable.Instance.Table[eAbility];
                 if (active.Data.AoE >= 1)
                     this.HandleAoEHover(t, active);
-                else if (active.Data.CastType == ECastType.Raycast)
+                else if (active.Data.CastType == ECastType.Raycast || active.Data.CastType == ECastType.Melee_Raycast)
                     this.HandleRaycastHover(t, active);
                 else if (active.Data.CastType == ECastType.Arc)
                     this.HandleArcHover(t, active);

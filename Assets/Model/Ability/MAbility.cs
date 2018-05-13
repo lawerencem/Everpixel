@@ -63,7 +63,7 @@ namespace Assets.Model.Ability
 
         public bool isRayCast()
         {
-            if (this.Data.CastType == ECastType.Raycast)
+            if (this.Data.CastType == ECastType.Raycast || this.Data.CastType == ECastType.Melee_Raycast)
                 return true;
             else
                 return false;

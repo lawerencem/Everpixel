@@ -7,6 +7,7 @@
         Bullet,
         Custom,
         Melee,
+        Melee_Raycast,
         No_Collision_Bullet,
         Raycast,
         Ringcast,

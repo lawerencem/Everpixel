@@ -229,7 +229,7 @@
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
-      <ECastType>Raycast</ECastType>
+      <ECastType>Melee_Raycast</ECastType>
       <DamageMod>0.85</DamageMod>
       <DodgeMod>1.0</DodgeMod>
       <IconSprite>7</IconSprite>
@@ -253,7 +253,6 @@
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
       <FatigueCost>40</FatigueCost>
-      <Range>1</Range>
     </WeaponAbility>
     <WeaponAbility name="Lash">
       <AccMod>0.55</AccMod>

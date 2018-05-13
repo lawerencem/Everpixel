@@ -672,7 +672,6 @@
     <Compile Include="Assets\View\GUI\GUISpriteLoader.cs" />
     <Compile Include="Assets\View\GUI\HoverModal.cs" />
     <Compile Include="Assets\View\Layers.cs" />
-    <Compile Include="Assets\View\SortingLayers.cs" />
     <Compile Include="Assets\View\Map\MapBridge.cs" />
     <Compile Include="Assets\View\Map\MapSpriteLoader.cs" />
     <Compile Include="Assets\View\Map\Tile\Deco\VTileDeco.cs" />
@@ -687,10 +686,11 @@
     <Compile Include="Assets\View\Script\FX\SFightFatalityExplosionMove.cs" />
     <Compile Include="Assets\View\Script\FX\SFireFatality.cs" />
     <Compile Include="Assets\View\Script\FX\SFlinch.cs" />
+    <Compile Include="Assets\View\Script\GUI\SAbilityBtn.cs" />
     <Compile Include="Assets\View\Script\GUI\SEndTurnBtn.cs" />
     <Compile Include="Assets\View\Script\GUI\SGui.cs" />
     <Compile Include="Assets\View\Script\GUI\SGuiButton.cs" />
-    <Compile Include="Assets\View\Script\GUI\SAbilityBtn.cs" />
+    <Compile Include="Assets\View\SortingLayers.cs" />
     <Compile Include="Assets\View\ViewParams.cs" />
   </ItemGroup>
   <ItemGroup>

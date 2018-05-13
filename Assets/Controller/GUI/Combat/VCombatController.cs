@@ -44,6 +44,7 @@ namespace Assets.Controller.GUI.Combat
                 case (ECastType.Bullet): { VHitController.Instance.ProcessBulletFX(a); } break;
                 case (ECastType.Custom): { VHitController.Instance.ProcessCustomFX(a); } break;
                 case (ECastType.Melee): { VHitController.Instance.ProcessMeleeHitFX(a); } break;
+                case (ECastType.Melee_Raycast): { VHitController.Instance.ProcessMeleeHitFX(a); } break;
                 case (ECastType.Raycast): { VHitController.Instance.ProcessRaycastFX(a); } break;
                 case (ECastType.Ringcast): { VHitController.Instance.ProcessCustomFX(a); } break;
                 case (ECastType.Shapeshift): { VHitController.Instance.ProcessShapeshiftFX(a); } break;

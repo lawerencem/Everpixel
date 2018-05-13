@@ -54,7 +54,7 @@ namespace Assets.View.Event
                         var data = new EvPopulateAbilityBtnData();
                         data.Ability = ability;
                         data.IsWeapon = true;
-                        data.LWeapon = true;
+                        data.LWeapon = false;
                         abilities.Add(data);
                     }
                 }

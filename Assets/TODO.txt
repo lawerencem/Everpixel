@@ -1,6 +1,5 @@
 ﻿TODO
 
- - Make wpn buttons spawn abilities as well.
  - Great strike
   -- Fix its hover, and its aoe logic
   -- Create a fatality

@@ -53,7 +53,7 @@ namespace Assets.Controller.Managers
 
             rParty.Culture = ECulture.Jomonese;
             rParty.Difficulty = 2000;
-            rParty.Name = "Hit Squad";
+            rParty.Name = "Battle Party";
 
             initInfo.LParties.Add(lParty);
             initInfo.RParties.Add(rParty);
