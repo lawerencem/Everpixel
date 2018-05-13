@@ -11,38 +11,42 @@ namespace Assets.Model.Ability.Logic.Calculator
     {
         public override void Predict(MHit hit)
         {
-            var acc = hit.Data.Source.Proxy.GetStat(ESecondaryStat.Melee);
             var tgt = hit.Data.Target.Current as CChar;
-            var block = tgt.Proxy.GetStat(ESecondaryStat.Block);
-            var blockChance = LogicParams.BASE_BLOCK_CHANCE;
-            blockChance *= this.GetHeightDeltaMod(hit);
-            blockChance *= this.GetSurroundedDeltaMod(hit);
-            acc *= hit.Data.Ability.Data.AccMod;
 
-            bool hasShield = false;
-
-            if (tgt.Proxy.GetArmor() != null)
-                blockChance *= tgt.Proxy.GetArmor().GetStat(EArmorStat.Block_Mod);
-            if (tgt.Proxy.GetHelm() != null)
-                blockChance *= tgt.Proxy.GetHelm().GetStat(EArmorStat.Block_Mod);
-            if (tgt.Proxy.GetLWeapon() != null && tgt.Proxy.GetLWeapon().IsTypeOfShield())
+            if (tgt != null)
             {
-                blockChance *= (tgt.Proxy.GetLWeapon().GetStat(EWeaponStat.Melee_Block_Chance));
-                hasShield = true;
-            }
-            if (tgt.Proxy.GetRWeapon() != null && tgt.Proxy.GetRWeapon().IsTypeOfShield())
-            {
-                blockChance *= (tgt.Proxy.GetRWeapon().GetStat(EWeaponStat.Melee_Block_Chance));
-                hasShield = true;
-            }
-            if (hit.Data.Chances.Block > 1)
-                hit.Data.Chances.Block = 1;
-            if (hit.Data.Chances.Block < 0)
-                hit.Data.Chances.Block = 0;
+                var acc = hit.Data.Source.Proxy.GetStat(ESecondaryStat.Melee);
+                var block = tgt.Proxy.GetStat(ESecondaryStat.Block);
+                var blockChance = LogicParams.BASE_BLOCK_CHANCE;
+                blockChance *= this.GetHeightDeltaMod(hit);
+                blockChance *= this.GetSurroundedDeltaMod(hit);
+                acc *= hit.Data.Ability.Data.AccMod;
 
-            hit.Data.Chances.Block = this.GetAttackVSDefenseSkillChance(acc, block, blockChance);
+                bool hasShield = false;
 
-            if (!hasShield) { hit.Data.Chances.Block = 0; }
+                if (tgt.Proxy.GetArmor() != null)
+                    blockChance *= tgt.Proxy.GetArmor().GetStat(EArmorStat.Block_Mod);
+                if (tgt.Proxy.GetHelm() != null)
+                    blockChance *= tgt.Proxy.GetHelm().GetStat(EArmorStat.Block_Mod);
+                if (tgt.Proxy.GetLWeapon() != null && tgt.Proxy.GetLWeapon().IsTypeOfShield())
+                {
+                    blockChance *= (tgt.Proxy.GetLWeapon().GetStat(EWeaponStat.Melee_Block_Chance));
+                    hasShield = true;
+                }
+                if (tgt.Proxy.GetRWeapon() != null && tgt.Proxy.GetRWeapon().IsTypeOfShield())
+                {
+                    blockChance *= (tgt.Proxy.GetRWeapon().GetStat(EWeaponStat.Melee_Block_Chance));
+                    hasShield = true;
+                }
+                if (hit.Data.Chances.Block > 1)
+                    hit.Data.Chances.Block = 1;
+                if (hit.Data.Chances.Block < 0)
+                    hit.Data.Chances.Block = 0;
+
+                hit.Data.Chances.Block = this.GetAttackVSDefenseSkillChance(acc, block, blockChance);
+
+                if (!hasShield) { hit.Data.Chances.Block = 0; }
+            }
         }
 
         public override void Process(MHit hit)

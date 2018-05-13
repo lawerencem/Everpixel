@@ -9,7 +9,7 @@
       <BlockIgnoreMod>1</BlockIgnoreMod>
       <ECastType>Bullet</ECastType>
       <DamageMod>1.30</DamageMod>
-      <DodgeMod>1.0</DodgeMod>
+      <DodgeMod>0</DodgeMod>
       <IconSprite>19</IconSprite>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.0</ParryModMod>
@@ -151,7 +151,7 @@
       <BlockIgnoreMod>1</BlockIgnoreMod>
       <ECastType>Bullet</ECastType>
       <DamageMod>1</DamageMod>
-      <DodgeMod>1.0</DodgeMod>
+      <DodgeMod>0</DodgeMod>
       <IconSprite>5</IconSprite>
       <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
       <ParryModMod>1.0</ParryModMod>

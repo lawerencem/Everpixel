@@ -52,6 +52,15 @@ namespace Assets.Model.Ability.Logic
             this._calcContainer.DmgCalc.ModifyDmgViaDefender(hit);
         }
 
+        public void ProcessBulletStrayPossible(MHit hit)
+        {
+            var logic = new BulletLogic();
+            logic.AttemptToStrayBullet(hit);
+            this.ProcessBulletFlags(hit);
+            this._calcContainer.DmgCalc.CalculateAbilityDmg(hit);
+            this._calcContainer.DmgCalc.ModifyDmgViaDefender(hit);
+        }
+
         public void ProcessSingle(MHit hit)
         {
             this._calcContainer.DmgCalc.CalculateAbilityDmg(hit);

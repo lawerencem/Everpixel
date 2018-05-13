@@ -2,7 +2,6 @@
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability;
 using Assets.Model.Action;
-using Assets.Model.Effect;
 using Assets.Model.Event.Combat;
 using System.Collections.Generic;
 

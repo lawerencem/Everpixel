@@ -7,108 +7,124 @@ namespace Assets.Model.Ability.Logic
 {
     public class AbilityLogic
     {
-        private AoELogic _aoeLogic;
-        private AbilityCalcLogic _calcLogic;
-
-        public AbilityLogic()
-        {
-            this._aoeLogic = new AoELogic();
-            this._calcLogic = new AbilityCalcLogic();
-        }
-
         public List<CTile> GetAdjacentTiles(CChar c)
         {
-            return this._aoeLogic.GetAdjacentTiles(c);
+            var logic = new AoELogic();
+            return logic.GetAdjacentTiles(c);
         }
 
         public List<CTile> GetArcCastTiles(AbilityArgs arg)
         {
-            return this._aoeLogic.GetArcCastTiles(arg);
+            var logic = new AoELogic();
+            return logic.GetArcCastTiles(arg);
         }
 
         public List<CTile> GetAoETiles(AbilityArgs arg, int aoe)
         {
-            return this._aoeLogic.GetAoETiles(arg, aoe);
+            var logic = new AoELogic();
+            return logic.GetAoETiles(arg, aoe);
         }
 
         public List<CTile> GetTargetableRaycastTiles(AbilityArgs arg)
         {
-            return this._aoeLogic.GetTargetableRaycastTiles(arg);
+            var logic = new AoELogic();
+            return logic.GetTargetableRaycastTiles(arg);
         }
 
         public List<CTile> GetTargetedRaycastTiles(AbilityArgs arg)
         {
-            return this._aoeLogic.GetRaycastTilesViaSourceAndTarget(arg);
+            var logic = new AoELogic();
+            return logic.GetRaycastTilesViaSourceAndTarget(arg);
         }
 
         public List<CTile> GetRingCastTiles(AbilityArgs arg)
         {
-            return this._aoeLogic.GetRingCastTiles(arg);
+            var logic = new AoELogic();
+            return logic.GetRingCastTiles(arg);
         }
 
         public List<CTile> GetPotentialTargets(AbilityArgs arg)
         {
-            return this._aoeLogic.GetPotentialTargets(arg);
+            var logic = new AoELogic();
+            return logic.GetPotentialTargets(arg);
         }
 
         public void PredictBullet(MHit hit)
         {
-            this._calcLogic.PredictBullet(hit);
+            var logic = new AbilityCalcLogic();
+            logic.PredictBullet(hit);
         }
 
         public void PredictMelee(MHit hit)
         {
-            this._calcLogic.PredictMelee(hit);
+            var logic = new AbilityCalcLogic();
+            logic.PredictMelee(hit);
         }
 
         public void PredictRay(MHit hit)
         {
-            this._calcLogic.PredictRay(hit);
+            var logic = new AbilityCalcLogic();
+            logic.PredictRay(hit);
         }
 
         public void PredictSingle(MHit hit)
         {
-            this._calcLogic.PredictSingle(hit);
+            var logic = new AbilityCalcLogic();
+            logic.PredictSingle(hit);
         }
 
         public void ProcessBullet(MHit hit)
         {
-            this._calcLogic.ProcessBullet(hit);
+            var logic = new AbilityCalcLogic();
+            logic.ProcessBullet(hit);
+        }
+
+        public void ProcessBulletStrayPossible(MHit hit)
+        {
+            var logic = new AbilityCalcLogic();
+            logic.ProcessBulletStrayPossible(hit);
         }
 
         public void ProcessMelee(MHit hit)
         {
-            this._calcLogic.ProcessMelee(hit);
+            var logic = new AbilityCalcLogic();
+            logic.ProcessMelee(hit);
         }
 
         public void ProcessRay(MHit hit)
         {
-            this._calcLogic.ProcessRay(hit);
+            var logic = new AbilityCalcLogic();
+            logic.ProcessRay(hit);
         }
 
         public void ProcessResist(MHit hit)
         {
-            this._calcLogic.ProcessResist(hit);
+            var logic = new AbilityCalcLogic();
+            logic.ProcessResist(hit);
         }
 
         public void ProcessShapeshift(MHit hit)
         {
-            this._calcLogic.ProcessShapeshift(hit);
+            var logic = new AbilityCalcLogic();
+            logic.ProcessShapeshift(hit);
         }
 
         public void ProcessSingle(MHit hit)
         {
-            this._calcLogic.ProcessSingle(hit);
+            var logic = new AbilityCalcLogic();
+            logic.ProcessSingle(hit);
         }
 
         public void ProcessSong(MHit hit)
         {
-            this._calcLogic.ProcessSong(hit);
+            var logic = new AbilityCalcLogic();
+            logic.ProcessSong(hit);
         }
 
         public void ProcessSummon(MHit hit)
         {
-            this._calcLogic.ProcessSummon(hit);
+            var logic = new AbilityCalcLogic();
+            logic.ProcessSummon(hit);
         }
     }
 }

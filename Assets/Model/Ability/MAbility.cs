@@ -77,6 +77,14 @@ namespace Assets.Model.Ability
                 return false;
         }
 
+        public bool IsBulletCast()
+        {
+            if (this.Data.CastType == ECastType.Bullet)
+                return true;
+            else
+                return false;
+        }
+
         public bool IsRingCast()
         {
             if (this.Data.CastType == ECastType.Ringcast)
@@ -186,6 +194,12 @@ namespace Assets.Model.Ability
         {
             this.PreProcessHit(hit, true);
             this._logic.ProcessBullet(hit);
+        }
+
+        protected void ProcessHitBulletStrayPossible(MHit hit)
+        {
+            this.PreProcessHit(hit, true);
+            this._logic.ProcessBulletStrayPossible(hit);
         }
 
         protected void ProcessRay(MHit hit)

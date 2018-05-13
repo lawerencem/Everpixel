@@ -320,6 +320,7 @@
     <Compile Include="Assets\Model\Ability\Logic\AbilityCalcLogic.cs" />
     <Compile Include="Assets\Model\Ability\Logic\AbilityLogic.cs" />
     <Compile Include="Assets\Model\Ability\Logic\AoELogic.cs" />
+    <Compile Include="Assets\Model\Ability\Logic\BulletLogic.cs" />
     <Compile Include="Assets\Model\Ability\Logic\Calculator\AAbilityCalculator.cs" />
     <Compile Include="Assets\Model\Ability\Logic\Calculator\BlockCalculator.cs" />
     <Compile Include="Assets\Model\Ability\Logic\Calculator\CalculatorContainer.cs" />

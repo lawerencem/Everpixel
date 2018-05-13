@@ -179,7 +179,8 @@ namespace Assets.View.Ability
         {
             var tgts = new List<GameObject>();
 
-            if (hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
+            if (hit.Data.Target.Current != null &&
+                hit.Data.Target.Current.GetType().Equals(typeof(CChar)))
             {
                 var tgt = hit.Data.Target.Current as CChar;
                 if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge))

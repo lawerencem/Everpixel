@@ -12,38 +12,46 @@ namespace Assets.Model.Ability.Logic.Calculator
     {
         public bool DidResist(CChar target, MEffect effect, double resistBase)
         {
-            double resist = 0;
-            if (effect.Data.Resist == EResistType.Fortitude)
-                resist = target.Proxy.GetStat(ESecondaryStat.Fortitude);
-            else if (effect.Data.Resist == EResistType.Reflex)
-                resist = target.Proxy.GetStat(ESecondaryStat.Reflex);
-            else if (effect.Data.Resist == EResistType.Will)
-                resist = target.Proxy.GetStat(ESecondaryStat.Will);
+            if (target != null)
+            {
+                double resist = 0;
+                if (effect.Data.Resist == EResistType.Fortitude)
+                    resist = target.Proxy.GetStat(ESecondaryStat.Fortitude);
+                else if (effect.Data.Resist == EResistType.Reflex)
+                    resist = target.Proxy.GetStat(ESecondaryStat.Reflex);
+                else if (effect.Data.Resist == EResistType.Will)
+                    resist = target.Proxy.GetStat(ESecondaryStat.Will);
 
-            var chance = this.GetAttackVSDefenseSkillChance(resistBase, resist, LogicParams.BASE_RESIST);
-            var roll = RNG.Instance.NextDouble();
-            if (roll < chance)
-                return true;
-            else
-                return false;
+                var chance = this.GetAttackVSDefenseSkillChance(resistBase, resist, LogicParams.BASE_RESIST);
+                var roll = RNG.Instance.NextDouble();
+                if (roll < chance)
+                    return true;
+                else
+                    return false;
+            }
+            return false;
         }
 
         public bool DidResist(CChar target, EResistType resist, double resistBase)
         {
-            double resistValue = 0;
-            if (resist == EResistType.Fortitude)
-                resistValue = target.Proxy.GetStat(ESecondaryStat.Fortitude);
-            else if (resist == EResistType.Reflex)
-                resistValue = target.Proxy.GetStat(ESecondaryStat.Reflex);
-            else if (resist == EResistType.Will)
-                resistValue = target.Proxy.GetStat(ESecondaryStat.Will);
+            if (target != null)
+            {
+                double resistValue = 0;
+                if (resist == EResistType.Fortitude)
+                    resistValue = target.Proxy.GetStat(ESecondaryStat.Fortitude);
+                else if (resist == EResistType.Reflex)
+                    resistValue = target.Proxy.GetStat(ESecondaryStat.Reflex);
+                else if (resist == EResistType.Will)
+                    resistValue = target.Proxy.GetStat(ESecondaryStat.Will);
 
-            var chance = this.GetAttackVSDefenseSkillChance(resistBase, resistValue, LogicParams.BASE_RESIST);
-            var roll = RNG.Instance.NextDouble();
-            if (roll < chance)
-                return true;
-            else
-                return false;
+                var chance = this.GetAttackVSDefenseSkillChance(resistBase, resistValue, LogicParams.BASE_RESIST);
+                var roll = RNG.Instance.NextDouble();
+                if (roll < chance)
+                    return true;
+                else
+                    return false;
+            }
+            return false;
         }
 
         public override void Predict(MHit hit)

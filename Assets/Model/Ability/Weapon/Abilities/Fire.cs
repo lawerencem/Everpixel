@@ -10,12 +10,12 @@ namespace Assets.Model.Weapon.Abilities
 
         public override void Predict(MHit hit)
         {
-            base.PredictMelee(hit);
+            base.PredictBullet(hit);
         }
 
         public override void Process(MHit hit)
         {
-            base.ProcessHitBullet(hit);
+            base.ProcessHitBulletStrayPossible(hit);
         }
     }
 }
