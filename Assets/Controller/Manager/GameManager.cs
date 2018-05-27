@@ -43,15 +43,15 @@ namespace Assets.Controller.Managers
             this._loader = LoaderManager.Instance;
             this._mapLoader = new MapLoader();
             var initInfo = new MapInitInfo();
-            initInfo.Biome = EBiome.Grassland;
+            initInfo.Biome = EBiome.Snow;
             var lParty = new PartyBuildParams();
             var rParty = new PartyBuildParams();
 
-            lParty.Culture = ECulture.Orcish;
+            lParty.Culture = ECulture.Jomonese;
             lParty.Difficulty = 2000;
             lParty.Name = "Battle Party";
 
-            rParty.Culture = ECulture.Jomonese;
+            rParty.Culture = ECulture.Norse;
             rParty.Difficulty = 2000;
             rParty.Name = "Battle Party";
 

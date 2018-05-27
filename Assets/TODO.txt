@@ -4,8 +4,6 @@
   -- Orcish
 
  - Implement new racial parties
-   -- orcs
-   -- norse
    -- trolls
    -- Goblin
  - Implement Spells

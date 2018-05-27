@@ -2,7 +2,7 @@
 <Cultures>
   <Culture name ="Norse">
     <Character name ="Cryomancer">
-      <Class>Mage,5</Class>
+      <Class>Mage,3</Class>
       <Class>Cryomancer,5</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Penguin</ERace>
@@ -10,256 +10,58 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.80,Cryomancer Robes,Four</Armor>
-          <Armor>0.20,Cryomancer Robes,Three</Armor>
+          <Armor>0.25,Cryomancer Robes,Five</Armor>
+          <Armor>0.25,Cryomancer Robes,Four</Armor>
+          <Armor>0.25,Cryomancer Robes,Three</Armor>
+          <Armor>0.25,Cryomancer Robes,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.80,Cryomancer Hood,Four</Helm>
-          <Helm>0.20,Cryomancer Hood,Three</Helm>
+          <Helm>0.25,Cryomancer Hood,Five</Helm>
+          <Helm>0.25,Cryomancer Hood,Four</Helm>
+          <Helm>0.25,Cryomancer Hood,Three</Helm>
+          <Helm>0.25,Cryomancer Hood,Two</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.80,Ice Staff,Three</RWeapon>
-          <RWeapon>0.20,Ice Staff,Two</RWeapon>
+          <RWeapon>0.25,Ice Staff,Five</RWeapon>
+          <RWeapon>0.25,Ice Staff,Four</RWeapon>
+          <RWeapon>0.25,Ice Staff,Three</RWeapon>
+          <RWeapon>0.25,Ice Staff,Two</RWeapon>
         </RWeapons>
       </PotentialWeapons>
-      <Stats>
-        <Agility>280</Agility>
-        <Constitution>550</Constitution>
-        <Intelligence>650</Intelligence>
-        <Might>550</Might>
-        <Perception>380</Perception>
-        <Resolve>600</Resolve>
-      </Stats>
-    </Character>
-    <Character name ="Cryomancer Lord">
-      <Class>Mage,12</Class>
-      <Class>Cryomancer,9</Class>
-      <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Penguin</ERace>
-      <Perks>
-      </Perks>
-      <PotentialArmors>
-        <Armors name="One">
-          <Armor>1.0,Cryomancer Robes,Two</Armor>
-        </Armors>
-        <Helms name="One">
-          <Helm>1.0,Cryomancer Hood,Two</Helm>
-        </Helms>
-      </PotentialArmors>
-      <PotentialWeapons>
-        <RWeapons name="One">
-          <RWeapon>1.0,Ice Staff,Two</RWeapon>
-        </RWeapons>
-      </PotentialWeapons>
-      <Stats>
-        <Agility>280</Agility>
-        <Constitution>550</Constitution>
-        <Intelligence>650</Intelligence>
-        <Might>550</Might>
-        <Perception>380</Perception>
-        <Resolve>600</Resolve>
-      </Stats>
-    </Character>
-    <Character name ="Cryomancer Trainee">
-      <Class>Mage,3</Class>
-      <Class>Cryomancer,2</Class>
-      <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Penguin</ERace>
-      <Perks>
-      </Perks>
-      <PotentialArmors>
-        <Armors name="One">
-          <Armor>0.80,Cryomancer Robes,Five</Armor>
-          <Armor>0.20,Cryomancer Robes,Four</Armor>
-        </Armors>
-        <Helms name="One">
-          <Helm>0.80,Cryomancer Hood,Five</Helm>
-          <Helm>0.20,Cryomancer Hood,Four</Helm>
-        </Helms>
-      </PotentialArmors>
-      <PotentialWeapons>
-        <RWeapons name="One">
-          <RWeapon>0.80,Ice Staff,Five</RWeapon>
-          <RWeapon>0.20,Ice Staff,Four</RWeapon>
-        </RWeapons>
-      </PotentialWeapons>
-      <Stats>
-        <Agility>280</Agility>
-        <Constitution>550</Constitution>
-        <Intelligence>650</Intelligence>
-        <Might>550</Might>
-        <Perception>380</Perception>
-        <Resolve>600</Resolve>
-      </Stats>
     </Character>
     <Character name ="Death Knight">
-      <Class>Death_Knight,7</Class>
-      <Class>Knight,2</Class>
+      <Class>Death_Knight,2</Class>
+      <Class>Knight,1</Class>
       <Class>Mage,1</Class>
-      <Class>Necromancer,3</Class>
+      <Class>Necromancer,2</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Penguin</ERace>
       <Perks>
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.80,Death Plate,Three</Armor>
-          <Armor>0.80,Death Plate,Two</Armor>
+          <Armor>0.25,Death Plate,Five</Armor>
+          <Armor>0.25,Death Plate,Four</Armor>
+          <Armor>0.25,Death Plate,Three</Armor>
+          <Armor>0.25,Death Plate,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.80,Death Helm,Three</Helm>
-          <Helm>0.20,Death Helm,Two</Helm>
+          <Helm>0.25,Death Helm,Five</Helm>
+          <Helm>0.25,Death Helm,Four</Helm>
+          <Helm>0.25,Death Helm,Three</Helm>
+          <Helm>0.25,Death Helm,Two</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.8,Claymore,Three</RWeapon>
-          <RWeapon>0.8,Claymore,Two</RWeapon>
+          <RWeapon>0.25,Claymore,Five</RWeapon>
+          <RWeapon>0.25,Claymore,Four</RWeapon>
+          <RWeapon>0.25,Claymore,Three</RWeapon>
+          <RWeapon>0.25,Claymore,Two</RWeapon>
         </RWeapons>
       </PotentialWeapons>
-      <Stats>
-        <Agility>280</Agility>
-        <Constitution>700</Constitution>
-        <Intelligence>550</Intelligence>
-        <Might>550</Might>
-        <Perception>380</Perception>
-        <Resolve>380</Resolve>
-      </Stats>
-    </Character>
-    <Character name ="Death Knight Acolyte">
-      <Class>Death_Knight,4</Class>
-      <Class>Knight,2</Class>
-      <Class>Mage,1</Class>
-      <Class>Necromancer,1</Class>
-      <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Penguin</ERace>
-      <Perks>
-      </Perks>
-      <PotentialArmors>
-        <Armors name="One">
-          <Armor>0.80,Death Plate,Four</Armor>
-          <Armor>0.80,Death Plate,Three</Armor>
-        </Armors>
-        <Helms name="One">
-          <Helm>0.80,Death Helm,Four</Helm>
-          <Helm>0.20,Death Helm,Three</Helm>
-        </Helms>
-      </PotentialArmors>
-      <PotentialWeapons>
-        <RWeapons name="One">
-          <RWeapon>0.8,Claymore,Four</RWeapon>
-          <RWeapon>0.8,Claymore,Three</RWeapon>
-        </RWeapons>
-      </PotentialWeapons>
-      <Stats>
-        <Agility>280</Agility>
-        <Constitution>700</Constitution>
-        <Intelligence>550</Intelligence>
-        <Might>550</Might>
-        <Perception>380</Perception>
-        <Resolve>380</Resolve>
-      </Stats>
-    </Character>
-    <Character name ="Death Knight Lord">
-      <Class>Death_Knight,10</Class>
-      <Class>Knight,3</Class>
-      <Class>Mage,1</Class>
-      <Class>Necromancer,7</Class>
-      <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Penguin</ERace>
-      <Mount>Ice_Dragon</Mount>
-      <Perks>
-      </Perks>
-      <PotentialArmors>
-        <Armors name="One">
-          <Armor>0.80,Death Plate,Three</Armor>
-          <Armor>0.80,Death Plate,Two</Armor>
-        </Armors>
-        <Helms name="One">
-          <Helm>0.80,Death Helm,Three</Helm>
-          <Helm>0.20,Death Helm,Two</Helm>
-        </Helms>
-      </PotentialArmors>
-      <PotentialWeapons>
-        <RWeapons name="One">
-          <RWeapon>0.8,Claymore,Three</RWeapon>
-          <RWeapon>0.8,Claymore,Two</RWeapon>
-        </RWeapons>
-      </PotentialWeapons>
-      <Stats>
-        <Agility>280</Agility>
-        <Constitution>700</Constitution>
-        <Intelligence>550</Intelligence>
-        <Might>550</Might>
-        <Perception>380</Perception>
-        <Resolve>380</Resolve>
-      </Stats>
-    </Character>
-    <Character name ="Death Knight Trainee">
-      <Class>Knight,2</Class>
-      <Class>Mage,1</Class>
-      <Class>Necromancer,1</Class>
-      <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Penguin</ERace>
-      <Perks>
-      </Perks>
-      <PotentialArmors>
-        <Armors name="One">
-          <Armor>0.80,Death Plate,Five</Armor>
-          <Armor>0.80,Death Plate,Four</Armor>
-        </Armors>
-        <Helms name="One">
-          <Helm>0.80,Death Helm,Five</Helm>
-          <Helm>0.20,Death Helm,Four</Helm>
-        </Helms>
-      </PotentialArmors>
-      <PotentialWeapons>
-        <RWeapons name="One">
-          <RWeapon>0.8,Claymore,Five</RWeapon>
-          <RWeapon>0.8,Claymore,Four</RWeapon>
-        </RWeapons>
-      </PotentialWeapons>
-      <Stats>
-        <Agility>280</Agility>
-        <Constitution>700</Constitution>
-        <Intelligence>550</Intelligence>
-        <Might>550</Might>
-        <Perception>380</Perception>
-        <Resolve>380</Resolve>
-      </Stats>
-    </Character>
-    <Character name ="Elite Pavise Crossbowmen">
-      <Class>Soldier,16</Class>
-      <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Penguin</ERace>
-      <Perks>
-      </Perks>
-      <PotentialArmors>
-        <Armors name="One">
-          <Armor>1,Mail Shirt,Two</Armor>
-        </Armors>
-        <Helms name="One">
-          <Helm>1,Mail Coif,Two</Helm>
-        </Helms>
-      </PotentialArmors>
-      <PotentialWeapons>
-        <RWeapons name="One">
-          <RWeapon>1.0,Heavy Crossbow,Two</RWeapon>
-        </RWeapons>
-        <LWeapons name="One">
-          <LWeapon>1.0,Pavise,Two</LWeapon>
-        </LWeapons>
-      </PotentialWeapons>
-      <Stats>
-        <Agility>550</Agility>
-        <Constitution>550</Constitution>
-        <Intelligence>420</Intelligence>
-        <Might>450</Might>
-        <Perception>550</Perception>
-        <Resolve>350</Resolve>
-      </Stats>
     </Character>
     <Character name ="Gwin">
       <AttackSpriteIndex>2</AttackSpriteIndex>
@@ -361,101 +163,8 @@
         <Resolve>700</Resolve>
       </Stats>
     </Character>
-    <Character name ="Necromancer Lord">
-      <Class>Mage,12</Class>
-      <Class>Necromancer,9</Class>
-      <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Penguin</ERace>
-      <Perks>
-      </Perks>
-      <PotentialArmors>
-        <Armors name="One">
-          <Armor>1.0,Necromancer Robes,Two</Armor>
-        </Armors>
-        <Helms name="One">
-          <Helm>1.0,Necromancer Hood,Two</Helm>
-        </Helms>
-      </PotentialArmors>
-      <PotentialWeapons>
-        <RWeapons name="One">
-          <RWeapon>1.0,Skull Staff,Two</RWeapon>
-        </RWeapons>
-      </PotentialWeapons>
-      <Stats>
-        <Agility>280</Agility>
-        <Constitution>550</Constitution>
-        <Intelligence>650</Intelligence>
-        <Might>550</Might>
-        <Perception>380</Perception>
-        <Resolve>600</Resolve>
-      </Stats>
-    </Character>
-    <Character name ="Master Cryomancer">
-      <Class>Mage,8</Class>
-      <Class>Cryomancer,9</Class>
-      <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Penguin</ERace>
-      <Perks>
-      </Perks>
-      <PotentialArmors>
-        <Armors name="One">
-          <Armor>0.80,Cryomancer Robes,Three</Armor>
-          <Armor>0.20,Cryomancer Robes,Two</Armor>
-        </Armors>
-        <Helms name="One">
-          <Helm>0.80,Cryomancer Hood,Three</Helm>
-          <Helm>0.20,Cryomancer Hood,Two</Helm>
-        </Helms>
-      </PotentialArmors>
-      <PotentialWeapons>
-        <RWeapons name="One">
-          <RWeapon>0.80,Ice Staff,Three</RWeapon>
-          <RWeapon>0.20,Ice Staff,Two</RWeapon>
-        </RWeapons>
-      </PotentialWeapons>
-      <Stats>
-        <Agility>280</Agility>
-        <Constitution>550</Constitution>
-        <Intelligence>650</Intelligence>
-        <Might>550</Might>
-        <Perception>380</Perception>
-        <Resolve>600</Resolve>
-      </Stats>
-    </Character>
-    <Character name ="Master Necromancer">
-      <Class>Mage,8</Class>
-      <Class>Necromancer,9</Class>
-      <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Penguin</ERace>
-      <Perks>
-      </Perks>
-      <PotentialArmors>
-        <Armors name="One">
-          <Armor>0.80,Necromancer Robes,Three</Armor>
-          <Armor>0.20,Necromancer Robes,Two</Armor>
-        </Armors>
-        <Helms name="One">
-          <Helm>0.80,Necromancer Hood,Three</Helm>
-          <Helm>0.20,Necromancer Hood,Two</Helm>
-        </Helms>
-      </PotentialArmors>
-      <PotentialWeapons>
-        <RWeapons name="One">
-          <RWeapon>0.80,Skull Staff,Three</RWeapon>
-          <RWeapon>0.20,Skull Staff,Two</RWeapon>
-        </RWeapons>
-      </PotentialWeapons>
-      <Stats>
-        <Agility>280</Agility>
-        <Constitution>550</Constitution>
-        <Intelligence>650</Intelligence>
-        <Might>550</Might>
-        <Perception>380</Perception>
-        <Resolve>600</Resolve>
-      </Stats>
-    </Character>
     <Character name ="Necromancer">
-      <Class>Mage,5</Class>
+      <Class>Mage,3</Class>
       <Class>Necromancer,5</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Penguin</ERace>
@@ -463,133 +172,64 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.80,Necromancer Robes,Four</Armor>
-          <Armor>0.20,Necromancer Robes,Three</Armor>
+          <Armor>0.25,Necromancer Robes,Five</Armor>
+          <Armor>0.25,Necromancer Robes,Four</Armor>
+          <Armor>0.25,Necromancer Robes,Three</Armor>
+          <Armor>0.25,Necromancer Robes,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.80,Necromancer Hood,Four</Helm>
-          <Helm>0.20,Necromancer Hood,Three</Helm>
+          <Helm>0.25,Necromancer Hood,Five</Helm>
+          <Helm>0.25,Necromancer Hood,Four</Helm>
+          <Helm>0.25,Necromancer Hood,Three</Helm>
+          <Helm>0.25,Necromancer Hood,Two</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.80,Skull Staff,Three</RWeapon>
-          <RWeapon>0.20,Skull Staff,Two</RWeapon>
+          <RWeapon>0.25,Skull Staff,Five</RWeapon>
+          <RWeapon>0.25,Skull Staff,Four</RWeapon>
+          <RWeapon>0.25,Skull Staff,Three</RWeapon>
+          <RWeapon>0.25,Skull Staff,Two</RWeapon>
         </RWeapons>
       </PotentialWeapons>
-      <Stats>
-        <Agility>280</Agility>
-        <Constitution>550</Constitution>
-        <Intelligence>650</Intelligence>
-        <Might>550</Might>
-        <Perception>380</Perception>
-        <Resolve>600</Resolve>
-      </Stats>
-    </Character>
-    <Character name ="Necromancer Trainee">
-      <Class>Mage,3</Class>
-      <Class>Necromancer,2</Class>
-      <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Penguin</ERace>
-      <Perks>
-      </Perks>
-      <PotentialArmors>
-        <Armors name="One">
-          <Armor>0.80,Necromancer Robes,Five</Armor>
-          <Armor>0.20,Necromancer Robes,Four</Armor>
-        </Armors>
-        <Helms name="One">
-          <Helm>0.80,Necromancer Hood,Five</Helm>
-          <Helm>0.20,Necromancer Hood,Four</Helm>
-        </Helms>
-      </PotentialArmors>
-      <PotentialWeapons>
-        <RWeapons name="One">
-          <RWeapon>0.80,Skull Staff,Five</RWeapon>
-          <RWeapon>0.20,Skull Staff,Four</RWeapon>
-        </RWeapons>
-      </PotentialWeapons>
-      <Stats>
-        <Agility>280</Agility>
-        <Constitution>550</Constitution>
-        <Intelligence>650</Intelligence>
-        <Might>550</Might>
-        <Perception>380</Perception>
-        <Resolve>600</Resolve>
-      </Stats>
-    </Character>
-    <Character name ="Pavise Crossbowmen Trainee">
-      <Class>Soldier,2</Class>
-      <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Penguin</ERace>
-      <Perks>
-      </Perks>
-      <PotentialArmors>
-        <Armors name="One">
-          <Armor>0.80,Mail Shirt,Five</Armor>
-          <Armor>0.20,Mail Shirt,Four</Armor>
-        </Armors>
-        <Helms name="One">
-          <Helm>0.80,Mail Coif,Five</Helm>
-          <Helm>0.20,Mail Coif,Four</Helm>
-        </Helms>
-      </PotentialArmors>
-      <PotentialWeapons>
-        <RWeapons name="One">
-          <RWeapon>0.80,Heavy Crossbow,Five</RWeapon>
-          <RWeapon>0.20,Heavy Crossbow,Four</RWeapon>
-        </RWeapons>
-        <LWeapons name="One">
-          <LWeapon>0.80,Pavise,Five</LWeapon>
-          <LWeapon>0.20,Pavise,Four</LWeapon>
-        </LWeapons>
-      </PotentialWeapons>
-      <Stats>
-        <Agility>550</Agility>
-        <Constitution>550</Constitution>
-        <Intelligence>420</Intelligence>
-        <Might>450</Might>
-        <Perception>550</Perception>
-        <Resolve>350</Resolve>
-      </Stats>
     </Character>
     <Character name ="Pavise Crossbowmen">
-      <Class>Soldier,5</Class>
+      <Class>Soldier,3</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Penguin</ERace>
       <Perks>
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.80,Mail Shirt,Four</Armor>
-          <Armor>0.20,Mail Shirt,Three</Armor>
+          <Armor>0.25,Mail Shirt,Five</Armor>
+          <Armor>0.25,Mail Shirt,Four</Armor>
+          <Armor>0.25,Mail Shirt,Three</Armor>
+          <Armor>0.25,Mail Shirt,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.80,Mail Coif,Four</Helm>
-          <Helm>0.20,Mail Coif,Three</Helm>
+          <Helm>0.25,Mail Coif,Five</Helm>
+          <Helm>0.25,Mail Coif,Four</Helm>
+          <Helm>0.25,Mail Coif,Three</Helm>
+          <Helm>0.25,Mail Coif,Two</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.80,Heavy Crossbow,Four</RWeapon>
-          <RWeapon>0.20,Heavy Crossbow,Three</RWeapon>
+          <RWeapon>0.25,Heavy Crossbow,Five</RWeapon>
+          <RWeapon>0.25,Heavy Crossbow,Four</RWeapon>
+          <RWeapon>0.25,Heavy Crossbow,Three</RWeapon>
+          <RWeapon>0.25,Heavy Crossbow,Two</RWeapon>
         </RWeapons>
         <LWeapons name="One">
-          <LWeapon>0.80,Pavise,Four</LWeapon>
-          <LWeapon>0.20,Pavise,Three</LWeapon>
+          <LWeapon>0.25,Pavise,Five</LWeapon>
+          <LWeapon>0.25,Pavise,Four</LWeapon>
+          <LWeapon>0.25,Pavise,Three</LWeapon>
+          <LWeapon>0.25,Pavise,Two</LWeapon>
         </LWeapons>
       </PotentialWeapons>
-      <Stats>
-        <Agility>550</Agility>
-        <Constitution>550</Constitution>
-        <Intelligence>420</Intelligence>
-        <Might>450</Might>
-        <Perception>550</Perception>
-        <Resolve>350</Resolve>
-      </Stats>
     </Character>
     <Character name ="Raider">
-      <Class>Warrior,5</Class>
+      <Class>Warrior,2</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Penguin</ERace>
       <Perks>
@@ -599,59 +239,57 @@
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.40,Broadsword,Five</RWeapon>
-          <RWeapon>0.10,Broadsword,Four</RWeapon>
-          <RWeapon>0.40,Hammen,Four</RWeapon>
-          <RWeapon>0.10,Hammen,Three</RWeapon>
+          <RWeapon>0.125,Broadsword,Five</RWeapon>
+          <RWeapon>0.125,Broadsword,Five</RWeapon>
+          <RWeapon>0.125,Hammen,Four</RWeapon>
+          <RWeapon>0.125,Hammen,Four</RWeapon>
+          <RWeapon>0.125,Hammen,Three</RWeapon>
+          <RWeapon>0.125,Hammen,Three</RWeapon>
+          <RWeapon>0.125,Hammen,Two</RWeapon>
+          <RWeapon>0.125,Hammen,Two</RWeapon>
         </RWeapons>
         <LWeapons name="One">
-          <LWeapon>0.80,Skjoldr,Five</LWeapon>
-          <LWeapon>0.20,Skjoldr,Four</LWeapon>
+          <LWeapon>0.25,Skjoldr,Five</LWeapon>
+          <LWeapon>0.25,Skjoldr,Four</LWeapon>
+          <LWeapon>0.25,Skjoldr,Three</LWeapon>
+          <LWeapon>0.25,Skjoldr,Two</LWeapon>
         </LWeapons>
       </PotentialWeapons>
-      <Stats>
-        <Agility>420</Agility>
-        <Constitution>640</Constitution>
-        <Intelligence>320</Intelligence>
-        <Might>550</Might>
-        <Perception>480</Perception>
-        <Resolve>380</Resolve>
-      </Stats>
     </Character>
     <Character name ="Nordic Sergeant">
-      <Class>Soldier,6</Class>
+      <Class>Soldier,8</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Penguin</ERace>
       <Perks>
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.80,Mail Shirt,Four</Armor>
-          <Armor>0.20,Mail Shirt,Three</Armor>
+          <Armor>0.25,Mail Shirt,Five</Armor>
+          <Armor>0.25,Mail Shirt,Four</Armor>
+          <Armor>0.25,Mail Shirt,Three</Armor>
+          <Armor>0.25,Mail Shirt,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.80,Spangenhelm,Four</Helm>
-          <Helm>0.20,Spangenhelm,Three</Helm>
+          <Helm>0.25,Mail Coif,Five</Helm>
+          <Helm>0.25,Mail Coif,Four</Helm>
+          <Helm>0.25,Mail Coif,Three</Helm>
+          <Helm>0.25,Mail Coif,Two</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.80,Spear,Four</RWeapon>
-          <RWeapon>0.20,Spear,Three</RWeapon>
+          <RWeapon>0.25,Spear,Five</RWeapon>
+          <RWeapon>0.25,Spear,Four</RWeapon>
+          <RWeapon>0.25,Spear,Three</RWeapon>
+          <RWeapon>0.25,Spear,Two</RWeapon>
         </RWeapons>
         <LWeapons name="One">
-          <LWeapon>0.80,Kite Shield,Four</LWeapon>
-          <LWeapon>0.20,Kite Shield,Three</LWeapon>
+          <LWeapon>0.25,Kite Shield,Five</LWeapon>
+          <LWeapon>0.25,Kite Shield,Four</LWeapon>
+          <LWeapon>0.25,Kite Shield,Three</LWeapon>
+          <LWeapon>0.25,Kite Shield,Two</LWeapon>
         </LWeapons>
       </PotentialWeapons>
-      <Stats>
-        <Agility>420</Agility>
-        <Constitution>640</Constitution>
-        <Intelligence>320</Intelligence>
-        <Might>550</Might>
-        <Perception>480</Perception>
-        <Resolve>380</Resolve>
-      </Stats>
     </Character>
     <Character name ="Nordic Spearman">
       <Class>Soldier,3</Class>
@@ -661,35 +299,35 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.80,Mail Shirt,Five</Armor>
-          <Armor>0.20,Mail Shirt,Four</Armor>
+          <Armor>0.25,Mail Shirt,Five</Armor>
+          <Armor>0.25,Mail Shirt,Four</Armor>
+          <Armor>0.25,Mail Shirt,Three</Armor>
+          <Armor>0.25,Mail Shirt,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.80,Spangenhelm,Five</Helm>
-          <Helm>0.20,Spangenhelm,Four</Helm>
+          <Helm>0.25,Mail Coif,Five</Helm>
+          <Helm>0.25,Mail Coif,Four</Helm>
+          <Helm>0.25,Mail Coif,Three</Helm>
+          <Helm>0.25,Mail Coif,Two</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.80,Spear,Five</RWeapon>
-          <RWeapon>0.20,Spear,Four</RWeapon>
+          <RWeapon>0.25,Spear,Five</RWeapon>
+          <RWeapon>0.25,Spear,Four</RWeapon>
+          <RWeapon>0.25,Spear,Three</RWeapon>
+          <RWeapon>0.25,Spear,Two</RWeapon>
         </RWeapons>
         <LWeapons name="One">
-          <LWeapon>0.80,Kite Shield,Five</LWeapon>
-          <LWeapon>0.20,Kite Shield,Four</LWeapon>
+          <LWeapon>0.25,Kite Shield,Five</LWeapon>
+          <LWeapon>0.25,Kite Shield,Four</LWeapon>
+          <LWeapon>0.25,Kite Shield,Three</LWeapon>
+          <LWeapon>0.25,Kite Shield,Two</LWeapon>
         </LWeapons>
       </PotentialWeapons>
-      <Stats>
-        <Agility>420</Agility>
-        <Constitution>640</Constitution>
-        <Intelligence>320</Intelligence>
-        <Might>550</Might>
-        <Perception>480</Perception>
-        <Resolve>380</Resolve>
-      </Stats>
     </Character>
     <Character name ="Snow Ween Rider">
-      <Class>Warrior,6</Class>
+      <Class>Warrior,3</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Penguin</ERace>
       <Mount>Snow_Ween</Mount>
@@ -697,32 +335,32 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.80,Byrnie,Four</Armor>
-          <Armor>0.20,Byrnie,Three</Armor>
+          <Armor>0.25,Byrnie,Five</Armor>
+          <Armor>0.25,Byrnie,Four</Armor>
+          <Armor>0.25,Byrnie,Three</Armor>
+          <Armor>0.25,Byrnie,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.80,Viking Casque,Four</Helm>
-          <Helm>0.20,Viking Casque,Three</Helm>
+          <Helm>0.25,Viking Casque,Five</Helm>
+          <Helm>0.25,Viking Casque,Four</Helm>
+          <Helm>0.25,Viking Casque,Three</Helm>
+          <Helm>0.25,Viking Casque,Two</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.80,Hammen,Four</RWeapon>
-          <RWeapon>0.20,Hammen,Three</RWeapon>
+          <RWeapon>0.25,Hammen,Five</RWeapon>
+          <RWeapon>0.25,Hammen,Four</RWeapon>
+          <RWeapon>0.25,Hammen,Three</RWeapon>
+          <RWeapon>0.25,Hammen,Two</RWeapon>
         </RWeapons>
         <LWeapons name="One">
-          <LWeapon>0.80,Skjoldr,Four</LWeapon>
-          <LWeapon>0.20,Skjoldr,Three</LWeapon>
+          <LWeapon>0.25,Skjoldr,Five</LWeapon>
+          <LWeapon>0.25,Skjoldr,Four</LWeapon>
+          <LWeapon>0.25,Skjoldr,Three</LWeapon>
+          <LWeapon>0.25,Skjoldr,Two</LWeapon>
         </LWeapons>
       </PotentialWeapons>
-      <Stats>
-        <Agility>620</Agility>
-        <Constitution>370</Constitution>
-        <Intelligence>280</Intelligence>
-        <Might>600</Might>
-        <Perception>560</Perception>
-        <Resolve>350</Resolve>
-      </Stats>
     </Character>
     <Character name ="Viking">
       <Class>Warrior,6</Class>
@@ -732,69 +370,34 @@
       </Perks>
       <PotentialArmors>
         <Armors name="One">
-          <Armor>0.80,Byrnie,Four</Armor>
-          <Armor>0.20,Byrnie,Three</Armor>
+          <Armor>0.25,Byrnie,Five</Armor>
+          <Armor>0.25,Byrnie,Four</Armor>
+          <Armor>0.25,Byrnie,Three</Armor>
+          <Armor>0.25,Byrnie,Two</Armor>
         </Armors>
         <Helms name="One">
-          <Helm>0.80,Viking Casque,Four</Helm>
-          <Helm>0.20,Viking Casque,Three</Helm>
+          <Helm>0.25,Viking Casque,Five</Helm>
+          <Helm>0.25,Viking Casque,Four</Helm>
+          <Helm>0.25,Viking Casque,Three</Helm>
+          <Helm>0.25,Viking Casque,Two</Helm>
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>0.80,Hammen,Four</RWeapon>
-          <RWeapon>0.20,Hammen,Three</RWeapon>
+          <RWeapon>0.25,Hammen,Five</RWeapon>
+          <RWeapon>0.25,Hammen,Four</RWeapon>
+          <RWeapon>0.25,Hammen,Three</RWeapon>
+          <RWeapon>0.25,Hammen,Two</RWeapon>
         </RWeapons>
         <LWeapons name="One">
-          <LWeapon>0.80,Skjoldr,Four</LWeapon>
-          <LWeapon>0.20,Skjoldr,Three</LWeapon>
+          <LWeapon>0.25,Skjoldr,Five</LWeapon>
+          <LWeapon>0.25,Skjoldr,Four</LWeapon>
+          <LWeapon>0.25,Skjoldr,Three</LWeapon>
+          <LWeapon>0.25,Skjoldr,Two</LWeapon>
         </LWeapons>
       </PotentialWeapons>
-      <Stats>
-        <Agility>420</Agility>
-        <Constitution>640</Constitution>
-        <Intelligence>320</Intelligence>
-        <Might>550</Might>
-        <Perception>480</Perception>
-        <Resolve>380</Resolve>
-      </Stats>
     </Character>
-    <Character name ="Veteran Pavise Crossbowmen">
-      <Class>Soldier,10</Class>
-      <ECharacterType>Humanoid</ECharacterType>
-      <ERace>Penguin</ERace>
-      <Perks>
-      </Perks>
-      <PotentialArmors>
-        <Armors name="One">
-          <Armor>0.80,Mail Shirt,Three</Armor>
-          <Armor>0.20,Mail Shirt,Two</Armor>
-        </Armors>
-        <Helms name="One">
-          <Helm>0.80,Mail Coif,Three</Helm>
-          <Helm>0.20,Mail Coif,Two</Helm>
-        </Helms>
-      </PotentialArmors>
-      <PotentialWeapons>
-        <RWeapons name="One">
-          <RWeapon>0.80,Heavy Crossbow,Three</RWeapon>
-          <RWeapon>0.20,Heavy Crossbow,Two</RWeapon>
-        </RWeapons>
-        <LWeapons name="One">
-          <LWeapon>0.80,Pavise,Three</LWeapon>
-          <LWeapon>0.20,Pavise,Two</LWeapon>
-        </LWeapons>
-      </PotentialWeapons>
-      <Stats>
-        <Agility>550</Agility>
-        <Constitution>550</Constitution>
-        <Intelligence>420</Intelligence>
-        <Might>450</Might>
-        <Perception>550</Perception>
-        <Resolve>350</Resolve>
-      </Stats>
-    </Character>
-    <Character name ="Wimpy Longaxer">
+    <Character name ="Longaxer">
       <Class>Warrior,3</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Penguin</ERace>
@@ -808,17 +411,12 @@
       </PotentialArmors>
       <PotentialWeapons>
         <RWeapons name="One">
-          <RWeapon>1,Longaxe,Five</RWeapon>
+          <RWeapon>0.25,Longaxe,Five</RWeapon>
+          <RWeapon>0.25,Longaxe,Four</RWeapon>
+          <RWeapon>0.25,Longaxe,Three</RWeapon>
+          <RWeapon>0.25,Longaxe,Two</RWeapon>
         </RWeapons>
       </PotentialWeapons>
-      <Stats>
-        <Agility>420</Agility>
-        <Constitution>640</Constitution>
-        <Intelligence>320</Intelligence>
-        <Might>550</Might>
-        <Perception>480</Perception>
-        <Resolve>380</Resolve>
-      </Stats>
     </Character>
     <Character name ="Wursa">
       <AttackSpriteIndex>8</AttackSpriteIndex>

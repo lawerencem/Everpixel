@@ -1,18 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Parties>
   <Culture name="Norse">
-    <Party Name ="Battle Squad">
-      <SubParty>Death Knights,0.2</SubParty>
+    <Party Name ="Battle Party">
+      <SubParty>Commanders,0.3</SubParty>
+      <SubParty>Monsters,0.3</SubParty>
+      <SubParty>Archers,0.2</SubParty>
       <SubParty>Spearmen,0.2</SubParty>
-      <SubParty>Monsters,0.2</SubParty>
-      <SubParty>Pikemen,0.2</SubParty>
-      <SubParty>Vikings,0.2</SubParty>
     </Party>
     <Party Name ="Corpse Collectors">
       <SubParty>Necromancers,0.3</SubParty>
       <SubParty>Vikings,0.3</SubParty>
       <SubParty>Archers,0.2</SubParty>
-      <SubParty>Death Knights,0.2</SubParty>
     </Party>
     <Party Name ="Raiding Party">
       <SubParty>Vikings,0.5</SubParty>
