@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Parties>
   <Culture name="Orcish">
-    <Party Name ="Battle Squad">
-      <SubParty>Commanders,0.4</SubParty>
-      <SubParty>Wereweens,0.3</SubParty>
-      <SubParty>Heavy Infantry,0.2</SubParty>
+    <Party Name ="Battle Party">
+      <SubParty>Commanders,0.3</SubParty>
+      <SubParty>Heavy Infantry,0.3</SubParty>
+      <SubParty>Shock Calvary,0.2</SubParty>
       <SubParty>Archers,0.1</SubParty>
+      <SubParty>Militia,0.1</SubParty>
     </Party>
   </Culture>
 </Parties>

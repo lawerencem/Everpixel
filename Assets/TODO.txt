@@ -1,6 +1,24 @@
 ﻿TODO
 
- - Add a xml boolean check for stray bullets
+ - Dead Critter Eyes
+  -- Orcish
+
+ - Implement new racial parties
+   -- orcs
+   -- norse
+   -- trolls
+   -- Goblin
+ - Implement Spells
+  -- Taking turns
+  -- Interrupts
+  -- Magic
+   --- Jomon Magic
+   --- Orcish Magic
+   --- Lizardman MAgic
+   --- Norse Magic
+   --- Troll Magic
+   --- Goblin Magic
+ - Implement Perks
  - Pierce Fatality
  - Add Zones traveling with the caster (i.e., a new type) such that spear wall travels with the caster
  - add feedback on not enough stamina
