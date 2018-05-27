@@ -134,6 +134,8 @@ namespace Assets.View.Ability
 
         private GameObject GetEmbedBullet(MHit hit, Callback callback, GameObject bullet, float speed)
         {
+            var renderer = bullet.GetComponent<SpriteRenderer>();
+            renderer.sortingOrder = renderer.sortingOrder + 1;
             var a = hit.Data.Ability.Data.ParentAction;
             var proxy = a.Data.Source.Proxy;
             var data = new SBulletThenEmbedData();

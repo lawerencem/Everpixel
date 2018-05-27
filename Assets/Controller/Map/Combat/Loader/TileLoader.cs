@@ -29,7 +29,7 @@ namespace Assets.Controller.Map.Combat.Loader
 
         public void InitMapEnvironment(MMapController controller, MapInitInfo info)
         {
-            var decoLoader = new EnvironmentLoader();
+            var decoLoader = new DecoLoader();
             var biomeParams = BiomeTable.Instance.Table[info.Biome];
             foreach(var decoKVP in biomeParams.DecoDict)
             {
@@ -38,7 +38,7 @@ namespace Assets.Controller.Map.Combat.Loader
                     var roll = RNG.Instance.NextDouble();
                     if (roll < decoKVP.Value && !FTile.HasFlag(tile.GetFlags().CurFlags, FTile.Flags.Environment))
                     {
-                        decoLoader.AttachEnvironment(tile, decoKVP.Key);
+                        decoLoader.AttachDeco(tile, decoKVP.Key);
                     }
                 }
             }

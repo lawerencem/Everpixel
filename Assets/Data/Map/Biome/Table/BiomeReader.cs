@@ -1,5 +1,6 @@
 ﻿using Assets.Data.Map.Deco.Table;
 using Assets.Model.Biome;
+using Assets.Model.Map.Deco;
 using Assets.Model.Map.Landmark;
 using Assets.Model.Map.Tile;
 using Assets.Template.Util;
@@ -66,8 +67,8 @@ namespace Assets.Data.Map.Deco.XML
             {
                 foreach(var name in ele.Attributes())
                 {
-                    var deco = EEnvironment.None;
-                    if (EnumUtil<EEnvironment>.TryGetEnumValue(name.Value, ref deco))
+                    var deco = EDeco.None;
+                    if (EnumUtil<EDeco>.TryGetEnumValue(name.Value, ref deco))
                     {
                         foreach(var elem in ele.Elements())
                         {

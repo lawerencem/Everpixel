@@ -255,13 +255,14 @@
     <Compile Include="Assets\Controller\Manager\GUI\GUIManager.cs" />
     <Compile Include="Assets\Controller\Manager\LoaderManager.cs" />
     <Compile Include="Assets\Controller\Map\Combat\Loader\CharLoader.cs" />
-    <Compile Include="Assets\Controller\Map\Combat\Loader\DecoLoader.cs" />
+    <Compile Include="Assets\Controller\Map\Combat\Loader\EnvironmentLoader.cs" />
     <Compile Include="Assets\Controller\Map\Combat\Loader\MapLoader.cs" />
     <Compile Include="Assets\Controller\Map\Combat\Loader\PartyLoader.cs" />
     <Compile Include="Assets\Controller\Map\Combat\Loader\TileLoader.cs" />
     <Compile Include="Assets\Controller\Map\Combat\MapInitInfo.cs" />
     <Compile Include="Assets\Controller\Map\Combat\MMapController.cs" />
     <Compile Include="Assets\Controller\Map\Combat\VMapCombatController.cs" />
+    <Compile Include="Assets\Controller\Map\Deco\CDeco.cs" />
     <Compile Include="Assets\Controller\Map\Tile\CTile.cs" />
     <Compile Include="Assets\Controller\Map\Tile\FTile.cs" />
     <Compile Include="Assets\Controller\Map\Tile\STile.cs" />
@@ -291,8 +292,8 @@
     <Compile Include="Assets\Data\Injury\XML\InjuryReader.cs" />
     <Compile Include="Assets\Data\Map\Biome\Table\BiomeReader.cs" />
     <Compile Include="Assets\Data\Map\Biome\Table\BiomeTable.cs" />
-    <Compile Include="Assets\Data\Map\Environment\EnvironmentReader.cs" />
-    <Compile Include="Assets\Data\Map\Environment\EnvironmentTable.cs" />
+    <Compile Include="Assets\Data\Map\Deco\DecoReader.cs" />
+    <Compile Include="Assets\Data\Map\Deco\DecoTable.cs" />
     <Compile Include="Assets\Data\Map\Landmark\Table\LandmarkTable.cs" />
     <Compile Include="Assets\Data\Map\Landmark\XML\LandmarkReader.cs" />
     <Compile Include="Assets\Data\Map\Tile\TileReader.cs" />
@@ -502,10 +503,10 @@
     <Compile Include="Assets\Model\Map\Landmark\MLandmark.cs" />
     <Compile Include="Assets\Model\Map\MapBuilder.cs" />
     <Compile Include="Assets\Model\Map\MMap.cs" />
-    <Compile Include="Assets\Model\Map\Tile\EEnvironment.cs" />
+    <Compile Include="Assets\Model\Map\Deco\EDeco.cs" />
     <Compile Include="Assets\Model\Map\Tile\ETile.cs" />
     <Compile Include="Assets\Model\Map\Tile\MTile.cs" />
-    <Compile Include="Assets\Model\Map\Tile\TileDecoParam.cs" />
+    <Compile Include="Assets\Model\Map\Deco\DecoParam.cs" />
     <Compile Include="Assets\Model\Map\Tile\TileLogic.cs" />
     <Compile Include="Assets\Model\Map\Tile\TileParams.cs" />
     <Compile Include="Assets\Model\Mount\EMount.cs" />
@@ -674,6 +675,7 @@
     <Compile Include="Assets\View\GUI\GUISpriteLoader.cs" />
     <Compile Include="Assets\View\GUI\HoverModal.cs" />
     <Compile Include="Assets\View\Layers.cs" />
+    <Compile Include="Assets\View\Map\Deco\VDeco.cs" />
     <Compile Include="Assets\View\Map\MapBridge.cs" />
     <Compile Include="Assets\View\Map\MapSpriteLoader.cs" />
     <Compile Include="Assets\View\Map\Tile\Deco\VTileDeco.cs" />
@@ -702,9 +704,7 @@
     <None Include="Assets\Data\Ability\XML\Poison.xml" />
     <None Include="Assets\Data\Ability\XML\Shapeshift.xml" />
     <None Include="Assets\Data\Ability\XML\Songs.xml" />
-    <None Include="Assets\Data\Ability\XML\WeaponAbilities.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Ability\XML\WeaponAbilities.xml" />
     <None Include="Assets\Data\Bark\XML\Barks.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Amazonian.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Bretonnian.xml" />
@@ -739,7 +739,7 @@
     <None Include="Assets\Data\Injury\XML\Injuries.xml" />
     <None Include="Assets\Data\Map\Biome\XML\Grassland.xml" />
     <None Include="Assets\Data\Map\Biome\XML\Snowland.xml" />
-    <None Include="Assets\Data\Map\Environment\Environments.xml" />
+    <None Include="Assets\Data\Map\Deco\Deco.xml" />
     <None Include="Assets\Data\Map\Landmark\XML\Landmarks.xml" />
     <None Include="Assets\Data\Map\Tile\Tiles.xml" />
     <None Include="Assets\Data\Mount\XML\Mounts.xml" />
@@ -768,6 +768,7 @@
     <None Include="Assets\Data\Zone\XML\Zones.xml" />
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

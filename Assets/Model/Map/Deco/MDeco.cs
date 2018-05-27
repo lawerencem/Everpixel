@@ -1,21 +1,25 @@
-﻿using Assets.Model.Map.Tile;
-using Assets.Template.Hex;
+﻿using Assets.Template.Hex;
 
 namespace Assets.Model.Map.Deco
 {
     public class MDecoData
     {
-
+        public double BulletObstructionChance { get; set; }
     }
 
     public class MDeco : IHexOccupant
     {
-        private EEnvironment _type;
+        private EDeco _type;
         private MDecoData _data;
 
-        public MDeco(EEnvironment type)
+        public MDeco(EDeco type)
         {
             this._type = type;
+        }
+
+        public double GetBulletObstructionChance()
+        {
+            return this._data.BulletObstructionChance;
         }
 
         public void SetCurrentHex(IHex hex)
@@ -23,6 +27,9 @@ namespace Assets.Model.Map.Deco
             // TODO
         }
 
-        public void SetData(MDecoData data) { this._data = data; }
+        public void SetData(MDecoData data)
+        {
+            this._data = data;
+        }
     }
 }

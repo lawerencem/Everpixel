@@ -1,4 +1,5 @@
 ﻿using Assets.Controller.Character;
+using Assets.Controller.Map.Environment;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
@@ -61,6 +62,44 @@ namespace Assets.Model.Ability.Logic
             }
         }
 
+        private void HandleCharacterOccupant(MTile tile)
+        {
+            var data = new StrayTargetData();
+            data.Tile = tile.Controller;
+            var occupant = tile.GetCurrentOccupant() as CChar;
+            if (occupant.Proxy.Type == ECharType.Humanoid)
+            {
+                if (FActionStatus.HasFlag(occupant.Proxy.GetActionFlags().CurFlags, FActionStatus.Flags.ShieldWalling))
+                    data.Chance = BASE_SHIELDWALL_OBSTRUCTION_CHANCE;
+                else if (occupant.Proxy.GetLWeapon() != null && occupant.Proxy.GetLWeapon().IsTypeOfShield())
+                    data.Chance = BASE_SHIELD_OBSTRUCTION_CHANCE;
+                else if (occupant.Proxy.GetRWeapon() != null && occupant.Proxy.GetRWeapon().IsTypeOfShield())
+                    data.Chance = BASE_SHIELD_OBSTRUCTION_CHANCE;
+                else
+                    data.Chance = BASE_OBSTRUCTION_CHANCE;
+            }
+            else
+                data.Chance = BASE_OBSTRUCTION_CHANCE;
+            var pair = new Pair<double, double>(tile.GetCol(), tile.GetRow());
+            if (this._strayTargets.ContainsKey(pair))
+                this._strayTargets[pair].Chance += data.Chance;
+            else
+                this._strayTargets.Add(pair, data);
+        }
+
+        private void HandleDecoOccupant(MTile tile)
+        {
+            var occupant = tile.GetCurrentOccupant() as CDeco;
+            var data = new StrayTargetData();
+            data.Chance = occupant.Model.GetBulletObstructionChance();
+            data.Tile = tile.Controller;
+            var pair = new Pair<double, double>(tile.GetCol(), tile.GetRow());
+            if (this._strayTargets.ContainsKey(pair))
+                this._strayTargets[pair].Chance += data.Chance;
+            else
+                this._strayTargets.Add(pair, data);
+        }
+
         private void HandleQuadrantOne(MHit hit, CChar tgt)
         {
             var obstructionTiles = new List<MTile>();
@@ -117,31 +156,10 @@ namespace Assets.Model.Ability.Logic
         {
             if (tile.GetCurrentOccupant() != null)
             {
-                // TODO: Grab obstruction chance from deco here
                 if (tile.GetCurrentOccupant().GetType().Equals(typeof(CChar)))
-                {
-                    var data = new StrayTargetData();
-                    data.Tile = tile.Controller;
-                    var occupant = tile.GetCurrentOccupant() as CChar;
-                    if (occupant.Proxy.Type == ECharType.Humanoid)
-                    {
-                        if (FActionStatus.HasFlag(occupant.Proxy.GetActionFlags().CurFlags, FActionStatus.Flags.ShieldWalling))
-                            data.Chance = BASE_SHIELDWALL_OBSTRUCTION_CHANCE;
-                        else if (occupant.Proxy.GetLWeapon() != null && occupant.Proxy.GetLWeapon().IsTypeOfShield())
-                            data.Chance = BASE_SHIELD_OBSTRUCTION_CHANCE;
-                        else if (occupant.Proxy.GetRWeapon() != null && occupant.Proxy.GetRWeapon().IsTypeOfShield())
-                            data.Chance = BASE_SHIELD_OBSTRUCTION_CHANCE;
-                        else
-                            data.Chance = BASE_OBSTRUCTION_CHANCE;
-                    }
-                    else
-                        data.Chance = BASE_OBSTRUCTION_CHANCE;
-                    var pair = new Pair<double, double>(tile.GetCol(), tile.GetRow());
-                    if (this._strayTargets.ContainsKey(pair))
-                        this._strayTargets[pair].Chance += data.Chance;
-                    else
-                        this._strayTargets.Add(new Pair<double, double>(tile.GetCol(), tile.GetRow()), data);
-                }
+                    this.HandleCharacterOccupant(tile);
+                else if (tile.GetCurrentOccupant().GetType().Equals(typeof(CDeco)))
+                    this.HandleDecoOccupant(tile);
             }
         }
 

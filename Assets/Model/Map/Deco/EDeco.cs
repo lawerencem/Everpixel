@@ -1,6 +1,6 @@
-﻿namespace Assets.Model.Map.Tile
+﻿namespace Assets.Model.Map.Deco
 {
-    public enum EEnvironment
+    public enum EDeco
     {
         None,
         Eye_Hill,

@@ -1,4 +1,5 @@
-﻿using Assets.Model.Map.Landmark;
+﻿using Assets.Model.Map.Deco;
+using Assets.Model.Map.Landmark;
 using Assets.Model.Map.Tile;
 using System.Collections.Generic;
 
@@ -8,7 +9,7 @@ namespace Assets.Model.Biome
     {
         private EBiome _type;
 
-        public Dictionary<EEnvironment, double> DecoDict;
+        public Dictionary<EDeco, double> DecoDict;
         public Dictionary<ELandmark, double> LandmarkDict;
         public Dictionary<ETile, double> TileDict;
 
@@ -16,7 +17,7 @@ namespace Assets.Model.Biome
         {
             this._type = type;
 
-            this.DecoDict = new Dictionary<EEnvironment, double>();
+            this.DecoDict = new Dictionary<EDeco, double>();
             this.LandmarkDict = new Dictionary<ELandmark, double>();
             this.TileDict = new Dictionary<ETile, double>();
         }

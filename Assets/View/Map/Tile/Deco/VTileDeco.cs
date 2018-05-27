@@ -1,4 +1,4 @@
-﻿using Assets.Model.Map.Tile;
+﻿using Assets.Model.Map.Deco;
 using UnityEngine;
 
 namespace Assets.View.Map.Tile.Deco
@@ -11,9 +11,9 @@ namespace Assets.View.Map.Tile.Deco
     public class VTileDeco
     {
         private VTileDecoData _data;
-        private EEnvironment _type;
+        private EDeco _type;
 
-        public VTileDeco(VTileDecoData data, EEnvironment type)
+        public VTileDeco(VTileDecoData data, EDeco type)
         {
             this._data = data;
             this._type = type;

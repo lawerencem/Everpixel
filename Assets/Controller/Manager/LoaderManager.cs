@@ -28,7 +28,7 @@ namespace Assets.Controller.Manager
             this._readers.Add(BarkReader.Instance);
             this._readers.Add(BiomeReader.Instance);
             this._readers.Add(ClassReader.Instance);
-            this._readers.Add(EnvironmentReader.Instance);
+            this._readers.Add(DecoReader.Instance);
             this._readers.Add(InjuryReader.Instance);
             this._readers.Add(PartyReader.Instance);
             this._readers.Add(PredefinedCharReader.Instance);
