@@ -12,6 +12,9 @@
         Hadoken,
         Kamehameha,
 
+        // Light
+        Healing_Touch,
+
         // Poison,
         Slime_Rain,
 

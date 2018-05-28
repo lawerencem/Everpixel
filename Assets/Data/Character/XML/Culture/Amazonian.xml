@@ -42,6 +42,9 @@
       <ECharacterType>Critter</ECharacterType>
       <DeadSpriteIndex>9</DeadSpriteIndex>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Abilities>
+        <Ability name="Healing_Touch"></Ability>
+      </Abilities>
       <Perks>
         <Perk>Scaly</Perk>
       </Perks>

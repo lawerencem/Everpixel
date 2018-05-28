@@ -11,16 +11,20 @@ namespace Assets.Model.Ability.Logic.Calculator
     {
         public void CalculateAbilityDmg(MHit hit)
         {
-            if (hit.Data.Ability.Data.ProcessDamage)
+            var hitData = hit.Data;
+            var abilityData = hitData.Ability.Data;
+            var source = hit.Data.Source.Proxy;
+            var dmg = hit.Data.ModData.BaseDamage;
+            dmg += abilityData.FlatDamage;
+            dmg += (abilityData.DmgPerPower * source.GetStat(ESecondaryStat.Power));
+            dmg *= abilityData.DamageMod;
+            if (hit.Data.Ability.Data.IsHeal)
             {
-                var hitData = hit.Data;
-                var abilityData = hitData.Ability.Data;
-                var source = hit.Data.Source.Proxy;
-
-                var dmg = hit.Data.ModData.BaseDamage;
-                dmg += abilityData.FlatDamage;
-                dmg += (abilityData.DmgPerPower * source.GetStat(ESecondaryStat.Power));
-
+                // TODO:
+                hit.Data.Dmg = (int)dmg;
+            }
+            else if (hit.Data.Ability.Data.ProcessDamage)
+            {
                 if (source.GetLWeapon() != null && hit.Data.IsWeapon && hit.Data.IsLWeapon)
                 {
                     dmg += source.GetLWeapon().GetStat(EWeaponStat.Damage);
@@ -31,7 +35,6 @@ namespace Assets.Model.Ability.Logic.Calculator
                     dmg += source.GetRWeapon().GetStat(EWeaponStat.Damage);
                     dmg *= source.GetRWeapon().GetDurabilityPercentage();
                 }
-                dmg *= abilityData.DamageMod;
                 hit.Data.Dmg = (int)dmg;
             }
             else
@@ -40,7 +43,11 @@ namespace Assets.Model.Ability.Logic.Calculator
 
         public void ModifyDmgViaDefender(MHit hit)
         {
-            if (!FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge) &&
+            if (hit.Data.Ability.Data.IsHeal)
+            {
+                // TODO:
+            }
+            else if (!FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge) &&
                 !FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))
             {
                 if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Block))
@@ -63,7 +70,11 @@ namespace Assets.Model.Ability.Logic.Calculator
 
         public override void Process(MHit hit)
         {
-            if (hit.Data.Ability.Data.ProcessDamage)
+            if (hit.Data.Ability.Data.IsHeal)
+            {
+                // TODO:
+            }
+            else if (hit.Data.Ability.Data.ProcessDamage)
             {
                 var src = hit.Data.Source.Proxy;
                 var targetController = hit.Data.Target.Current as CChar;

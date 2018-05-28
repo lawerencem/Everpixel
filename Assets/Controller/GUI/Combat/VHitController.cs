@@ -213,6 +213,19 @@ namespace Assets.Controller.GUI.Combat
             }
         }
 
+        private void DisplayHeal(CChar target, MHit hit)
+        {
+            var dmgData = new HitDisplayData();
+            dmgData.Color = CombatGUIParams.GREEN;
+            dmgData.Hit = hit;
+            dmgData.Priority = ViewParams.HEAL_PRIORITY;
+            dmgData.Text = hit.Data.Dmg.ToString();
+            dmgData.Target = target.GameHandle;
+            dmgData.YOffset = CombatGUIParams.FLOAT_OFFSET;
+            dmgData.Hit.AddDataDisplay(dmgData);
+            hit.CallbackHandler(null);
+        }
+
         private void DisplayParry(CChar target, MHit hit)
         {
             var data = new HitDisplayData();
@@ -353,7 +366,9 @@ namespace Assets.Controller.GUI.Combat
 
         private void ProcessDefenderHitsHelper(CChar target, MHit hit)
         {
-            if (hit.Data.Action.Data.DisplayDefended)
+            if (hit.Data.IsHeal)
+                this.DisplayHeal(target, hit);
+            else if (hit.Data.Action.Data.DisplayDefended)
             {
                 if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge))
                     this.DisplayDodge(target, hit);
@@ -407,7 +422,7 @@ namespace Assets.Controller.GUI.Combat
             attack.Init(a.Data.Source, position, CombatGUIParams.ATTACK_SPEED);
             foreach (var hit in a.Data.Hits)
             {
-                AttackSpriteLoader.Instance.GetSingleFX(hit);
+                AttackSpriteLoader.Instance.DoSingleFX(hit);
             }
         }
     }

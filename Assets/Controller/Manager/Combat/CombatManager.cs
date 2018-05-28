@@ -4,9 +4,10 @@ using Assets.Controller.Map.Combat;
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability;
 using Assets.Model.Ability.Enum;
-using Assets.Model.Character;
+using Assets.Model.Action;
 using Assets.Model.Character.Enum;
 using Assets.Model.Event.Combat;
+using Assets.Template.Other;
 using System.Collections.Generic;
 
 namespace Assets.Controller.Manager.Combat
@@ -14,6 +15,7 @@ namespace Assets.Controller.Manager.Combat
     public class CombatManager
     {
         private CurrentlyActingData _currActingData;
+        private List<Pair<CChar, MAction>> _currentlyCasting;
         private CombatManagerData _combatData;
 
         private static CombatManager _instance;
@@ -27,23 +29,73 @@ namespace Assets.Controller.Manager.Combat
             }
         }
 
-        public EAbility GetCurrentAbility() { return this._currActingData.Ability; }
-        public CChar GetCurrentlyActing() { return this._currActingData.CurrentlyActing; }
-        public CWeapon GetCurrentWeapon() { return this._currActingData.CurrentWeapon; }
-        public CombatManagerData GetData() { return this._combatData; }
-        public bool GetLWeapon() { return this._currActingData.LWeapon; }
-        public List<CTile> GetPotentialTgtTiles() { return this._combatData.PotentialTgtTiles; }
-        public bool GetIsWpnAbility() { return this._currActingData.IsWpnAbility; }
+        public void AddCurrentlyCasting(Pair<CChar, MAction> casting)
+        {
+            var current = this._currentlyCasting.Find(x => x.X.Equals(casting.X));
+            if (current.X == null && current.Y == null)
+                this._currentlyCasting.Add(casting);
+        }
+
+        public EAbility GetCurrentAbility()
+        {
+            return this._currActingData.Ability;
+        }
+
+        public CChar GetCurrentlyActing()
+        {
+            return this._currActingData.CurrentlyActing;
+        }
+
+        public CWeapon GetCurrentWeapon()
+        {
+            return this._currActingData.CurrentWeapon;
+        }
+
+        public CombatManagerData GetData()
+        {
+            return this._combatData;
+        }
+
+        public bool GetLWeapon()
+        {
+            return this._currActingData.LWeapon;
+        }
+
+        public List<CTile> GetPotentialTgtTiles()
+        {
+            return this._combatData.PotentialTgtTiles;
+        }
+
+        public bool GetIsWpnAbility()
+        {
+            return this._currActingData.IsWpnAbility;
+        }
         
-        public void SetCurrentAbilityNone() { this._currActingData.Ability = EAbility.None; }
-        public void SetCurrentData(CurrentlyActingData d) { this._currActingData = d; }
-        public void SetCurrentlyActing(CChar c) { this._currActingData.CurrentlyActing = c; }
-        public void SetPotentialTgtTiles(List<CTile> t) { this._combatData.PotentialTgtTiles = t; }
+        public void SetCurrentAbilityNone()
+        {
+            this._currActingData.Ability = EAbility.None;
+        }
+
+        public void SetCurrentData(CurrentlyActingData d)
+        {
+            this._currActingData = d;
+        }
+
+        public void SetCurrentlyActing(CChar c)
+        {
+            this._currActingData.CurrentlyActing = c;
+        }
+
+        public void SetPotentialTgtTiles(List<CTile> t)
+        {
+            this._combatData.PotentialTgtTiles = t;
+        }
 
         public CombatManager()
         {
             this._combatData = new CombatManagerData();
             this._currActingData = new CurrentlyActingData();
+            this._currentlyCasting = new List<Pair<CChar, MAction>>();
         }
 
         public void Init(MMapController map)
@@ -120,14 +172,40 @@ namespace Assets.Controller.Manager.Combat
             this._combatData.InitiativeOrder.Add(c);
         }
 
+        private void CharCastDone(object o)
+        {
+            var data = new EvNewTurnData();
+            data.Target = this._combatData.InitiativeOrder[0];
+            var acting = new EvNewTurn(data);
+            acting.TryProcess();
+        }
+
         private void ProcessTakingAction()
         {
             if (this._combatData.InitiativeOrder.Count > 0)
             {
-                var data = new EvNewTurnData();
-                data.Target = this._combatData.InitiativeOrder[0];
-                var acting = new EvNewTurn(data);
-                acting.TryProcess();
+                var tgt = this._combatData.InitiativeOrder[0];
+                if (FActionStatus.HasFlag(tgt.Proxy.GetActionFlags().CurFlags, FActionStatus.Flags.Casting))
+                {
+                    var pair = this._currentlyCasting.Find(x => x.X.Equals(tgt));
+                    if (pair.X != null && pair.Y != null)
+                    {
+                        this._currentlyCasting.Remove(pair);
+                        pair.Y.DecrementCastingTurnsRemaining();
+                        if (pair.Y.GetCastingTurnsRemaining() <= 0)
+                            pair.Y.AddCallback(this.CharCastDone);
+                        pair.Y.TryProcess();
+                    }
+                    else
+                        throw new System.Exception("Error: Cannot find casting character, but it is required.");
+                }
+                else
+                {
+                    var data = new EvNewTurnData();
+                    data.Target = this._combatData.InitiativeOrder[0];
+                    var acting = new EvNewTurn(data);
+                    acting.TryProcess();
+                }
             }
         }
 

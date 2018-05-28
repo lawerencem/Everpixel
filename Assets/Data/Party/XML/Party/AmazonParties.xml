@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Parties>
   <Culture name="Amazonian">
-    <Party Name ="Battle Squad">
+    <Party Name ="Battle Party">
       <SubParty>Commanders,0.3</SubParty>
       <SubParty>Infantry,0.2</SubParty>
       <SubParty>Healers,0.2</SubParty>

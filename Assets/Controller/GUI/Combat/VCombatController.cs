@@ -1,4 +1,5 @@
 ﻿using Assets.Controller.Character;
+using Assets.Controller.Manager;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
 using Assets.Model.Combat.Hit;

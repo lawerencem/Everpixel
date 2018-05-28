@@ -18,6 +18,7 @@
       <Character>100,Gwin,Two</Character>
       <Character>150,Wursa,Two</Character>
       <Character>180,Ice_Golem,One</Character>
+      <Character>250,Ice_Dragon,One</Character>
     </SubParty>
     <SubParty Name ="Necromancers">
       <Character>220,Necromancer,Three</Character>

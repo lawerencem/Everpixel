@@ -7,11 +7,17 @@ namespace Template.Script
     public class SIntervalJoltScriptData
     {
         public float Dur { get; set; }
-        public float TimeInterval { get; set; }
-        public GameObject ToJolt { get; set; }
+        public bool Perpetual { get; set; }
         public float Speed { get; set; }
+        public GameObject ToJolt { get; set; }
+        public float TimeInterval { get; set; }
         public float X { get; set; }
         public float Y { get; set; }
+
+        public SIntervalJoltScriptData()
+        {
+            this.Perpetual = false;
+        }
     }
 
     public class SIntervalJoltScript : AScript
@@ -57,7 +63,7 @@ namespace Template.Script
                 }
                 this._timeCounter = 0;
             }
-            if (this._elapsed >= this._data.Dur)
+            if (this._elapsed >= this._data.Dur && !this._data.Perpetual)
                 this.Done();
         }
     }

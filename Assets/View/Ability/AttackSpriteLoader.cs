@@ -83,7 +83,7 @@ namespace Assets.View.Ability
             return this.GetDeleteRay(action, tgtPosition, callback, bullet, speed);
         }
 
-        public void GetSingleFX(MHit hit)
+        public void DoSingleFX(MHit hit)
         {
             var ability = hit.Data.Ability.Data.ParentAction.ActiveAbility;
             var sprites = this.GetSingleFXSprites(ability);

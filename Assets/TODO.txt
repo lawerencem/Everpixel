@@ -10,13 +10,23 @@
   -- Taking turns
   -- Interrupts
   -- Magic
+   --- Amazonian Magic
+     ---- Quick Heal
+	 ---- Quick Shield
+	 ---- Healing Touch
+	 ---- Sunbeam
+	 ---- Moonbeam
+	 ---- Holy Shock
    --- Jomon Magic
+   --- Goblin Magic
    --- Orcish Magic
-   --- Lizardman MAgic
    --- Norse Magic
    --- Troll Magic
-   --- Goblin Magic
  - Implement Perks
+ - Abilities
+  -- Amazonian
+   --- Trample
+ - Perks
  - Pierce Fatality
  - Add Zones traveling with the caster (i.e., a new type) such that spear wall travels with the caster
  - add feedback on not enough stamina

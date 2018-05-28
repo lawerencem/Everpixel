@@ -16,6 +16,7 @@ namespace Assets.Model.Ability
         public double ArmorIgnoreMod { get; set; }
         public double ArmorPierceMod { get; set; }
         public double BlockIgnoreMod { get; set; }
+        public int CastDuration { get; set; }
         public ECastType CastType { get; set; }
         public bool CustomCastCamera { get; set; }
         public bool CustomGraphics { get; set; }
@@ -56,6 +57,7 @@ namespace Assets.Model.Ability
             this.ArmorIgnoreMod = 1;
             this.ArmorPierceMod = 1;
             this.BlockIgnoreMod = 1;
+            this.CastDuration = 0;
             this.CustomCastCamera = false;
             this.Effects = new List<MEffect>();
             this.DamageMod = 1;
@@ -66,6 +68,7 @@ namespace Assets.Model.Ability
             this.Hostile = true;
             this.IconSprite = 0;
             this.Injuries = new List<EInjury>();
+            this.IsHeal = false;
             this.MaxSprites = 0;
             this.MeleeBlockChanceMod = 1;
             this.MinSprites = 0;
@@ -89,6 +92,7 @@ namespace Assets.Model.Ability
             data.ArmorPierceMod = this.ArmorPierceMod;
             data.BlockIgnoreMod = this.BlockIgnoreMod;
             data.CastType = this.CastType;
+            data.CastDuration = this.CastDuration;
             data.DamageMod = this.DamageMod;
             data.Description = this.Description;
             data.DodgeMod = this.DodgeMod;

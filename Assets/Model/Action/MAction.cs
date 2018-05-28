@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.GUI.Combat;
+using Assets.Controller.Manager.Combat;
 using Assets.Controller.Manager.GUI;
 using Assets.Model.Ability;
 using Assets.Model.Ability.Enum;
@@ -8,25 +9,37 @@ using Assets.Model.Character.Enum;
 using Assets.Model.Event.Combat;
 using Assets.Model.Injury.Calculator;
 using Assets.Template.Event;
+using Assets.Template.Other;
 using System;
+using Template.Script;
 
 namespace Assets.Model.Action
 {
     public class MAction : AAction, IChildEvent
     {
-        private InjuryCalculator _injuryCalc;
+        private bool _castingInitialized = false;
+        private int _castingTurnsRemaining = 0;
 
         public MAbility ActiveAbility;
 
         public MAction(ActionData data) : base(data)
         {
             this.ValidateData();
-            this._injuryCalc = new InjuryCalculator();
+        }
+
+        public void DecrementCastingTurnsRemaining()
+        {
+            this._castingTurnsRemaining--;
         }
 
         public void DisplayAction()
         {
             VCombatController.Instance.DisplayNewAction(this);
+        }
+
+        public int GetCastingTurnsRemaining()
+        {
+            return this._castingTurnsRemaining;
         }
 
         public void TryDone(object o)
@@ -40,6 +53,8 @@ namespace Assets.Model.Action
             if (done && !this._completed)
             {
                 this.ProcessHitsData();
+                if (this._castingInitialized)
+                    this.HandleDoneCasting();
                 this.CallbackHandler(null);
             }
         }
@@ -58,9 +73,14 @@ namespace Assets.Model.Action
             if (this.Data.Initialized())
             {
                 this.InitProcessAbility();
-                this.InitProcessHits();
-                this.ProcessAction();
-                this.DisplayAction();
+                if (this._castingTurnsRemaining <= 0)
+                {
+                    this.InitProcessHits();
+                    this.ProcessAction();
+                    this.DisplayAction();
+                }
+                else
+                    this.HandleCasting();
             }   
         }
 
@@ -69,9 +89,52 @@ namespace Assets.Model.Action
             if (this.Data.Initialized())
             {
                 this.InitProcessAbility();
-                this.InitProcessHits();
-                this.ProcessAction();
+                if (this._castingTurnsRemaining <= 0)
+                {
+                    this.InitProcessHits();
+                    this.ProcessAction();
+                }
+                else
+                    this.HandleCasting();
             }
+        }
+
+        private void HandleCasting()
+        {
+            FActionStatus.SetCastingTrue(this.Data.Source.Proxy.GetActionFlags());
+            GUIManager.Instance.SetGUILocked(false);
+            GUIManager.Instance.SetInteractionLocked(false);
+            CombatManager.Instance.SetCurrentAbilityNone();
+            var pair = new Pair<CChar, MAction>(this.Data.Source, this);
+            CombatManager.Instance.AddCurrentlyCasting(pair);
+            this.HandleCastingJolt();
+            var e = new EvEndTurn();
+            e.TryProcess();
+        }
+
+        private void HandleCastingJolt()
+        {
+            var jolt = this.Data.Source.GameHandle.GetComponent<SIntervalJoltScript>();
+            if (jolt == null)
+            {
+                // TODO: Const out
+                var data = new SIntervalJoltScriptData();
+                data.Perpetual = true;
+                data.Speed = 10f;
+                data.TimeInterval = 1f;
+                data.ToJolt = this.Data.Source.GameHandle;
+                data.X = 0.1f;
+                data.Y = 0.1f;
+                jolt = this.Data.Source.GameHandle.AddComponent<SIntervalJoltScript>();
+                jolt.Init(data);
+            }
+        }
+
+        private void HandleDoneCasting()
+        {
+            var jolt = this.Data.Source.GameHandle.GetComponent<SIntervalJoltScript>();
+            jolt.Done();
+            FActionStatus.SetCastingFalse(this.Data.Source.Proxy.GetActionFlags());
         }
 
         private void InitPredictAbility()
@@ -90,6 +153,11 @@ namespace Assets.Model.Action
             this.ActiveAbility.Data.ParentAction = this;
             if (this.Data.ParentWeapon != null)
                 this.ActiveAbility.Data.ParentWeapon = this.Data.ParentWeapon.Model;
+            if (this.ActiveAbility.Data.CastDuration > 0 && this._castingInitialized == false)
+            {
+                this._castingTurnsRemaining = this.ActiveAbility.Data.CastDuration;
+                this._castingInitialized = true;
+            }
         }
 
         private void InitPredictHits()
@@ -127,8 +195,9 @@ namespace Assets.Model.Action
 
         private void ProcessAction()
         {
+            var calc = new InjuryCalculator();
             foreach (var hit in this._data.Hits)
-                this._injuryCalc.ProcessHitInjuries(hit);
+                calc.ProcessHitInjuries(hit);
             var staminaCalc = new StaminaCalculator();
             var cost = staminaCalc.Process(this);
             this.Data.Source.Proxy.ModifyPoints(ESecondaryStat.Stamina, cost, false);

@@ -7,8 +7,6 @@ using Assets.Template.Script;
 using Assets.View;
 using Assets.View.Character;
 using Assets.View.Event;
-using Assets.View.GUI;
-using Assets.View.Script.GUI;
 
 namespace Assets.Model.Event.Combat
 {

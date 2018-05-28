@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using Assets.Template.CB;
+using UnityEngine;
 
 namespace Assets.Controller.Manager
 {
     public class CameraManager : MonoBehaviour
     {
+        private Callback _callback = null;
+
         public static CameraManager Instance = null;
 
         void Awake()
@@ -62,6 +65,7 @@ namespace Assets.Controller.Manager
             {
                 Camera.main.transform.position = this._target;
                 this._scroll = false;
+                this._callback = null;
             }
         }
 
