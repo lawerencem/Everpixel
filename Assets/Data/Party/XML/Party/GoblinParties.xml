@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Parties>
   <Culture name="Goblin">
-    <Party Name ="Battle Squad">
+    <Party Name ="Battle Party">
       <SubParty>Calvary Archers,0.2</SubParty>
       <SubParty>Assassins,0.2</SubParty>
       <SubParty>Commanders,0.2</SubParty>

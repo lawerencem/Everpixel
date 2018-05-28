@@ -5,12 +5,10 @@
 
  - Implement new racial parties
    -- trolls
-   -- Goblin
  - Implement Spells
   -- Interrupts
   -- Magic
    --- Amazonian Magic
-     ---- Quick Heal
 	 ---- Quick Shield
 	 ---- Sunbeam
 	 ---- Moonbeam

@@ -2,44 +2,29 @@
 <SubParties>
   <Culture name="Goblin">
     <SubParty Name ="Assassins">
-      <Character>120,Rookie Slimer,Two</Character>
       <Character>160,Slimer,Two</Character>
-      <Character>220,Pro Slimer,Two</Character>
-      <Character>250,Licensed Slimer,Two</Character>
     </SubParty>
     <SubParty Name ="Calvary Archers">
       <Character>180,Spider Rider Archer,Three</Character>
-      <Character>220,Veteran Spider Rider Archer,Three</Character>
     </SubParty>
     <SubParty Name ="Commanders">
-      <Character>250,Gromp Boss,Two</Character>
-      <Character>250,Spider Boss,Three</Character>
+      <Character>210,Boss,Two</Character>
       <Character>320,Warboss,Two</Character>
     </SubParty>
     <SubParty Name ="Shock Calvary">
       <Character>150,Gromp Hopper,Two</Character>
-      <Character>180,Crazed Gromp Hopper,Two</Character>
-      <Character>220,Lunatic Gromp Hopper,Two</Character>
     </SubParty>
     <SubParty Name ="Slime Mages">
-      <Character>130,Fledgling Slime Lord,Three</Character>
       <Character>200,Slime Lord,Three</Character>
     </SubParty>
     <SubParty Name ="Light Calvary">
       <Character>160,Spider Rider,Two</Character>
-      <Character>200,Veteran Spider Rider,Two</Character>
     </SubParty>
     <SubParty Name ="Militia">
-      <Character>70,Fodder,One</Character>
-      <Character>100,Fodder Archer,One</Character>
-      <Character>110,Grizzled Fodder,One</Character>
-      <Character>140,Expert Fodder,One</Character>
-      <Character>160,Fodder Hero,One</Character>
+      <Character>50,Fodder,One</Character>
     </SubParty>
     <SubParty Name ="Void Mages">
       <Character>120,Voidweaver,Three</Character>
-      <Character>180,Expert Voidweaver,Three</Character>
-      <Character>250,Master Voidweaver,Three</Character>
     </SubParty>
     <SubParty Name ="Warslugs">
       <Character>50,Sluggish,One</Character>
