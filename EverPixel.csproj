@@ -341,6 +341,7 @@
     <Compile Include="Assets\Model\Ability\Magic\Fighting\Hadoken.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Fighting\Kamehameha.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Light\HealingTouch.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Light\QuickHeal.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Poison\SlimeRain.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Psychic\CerebralNova.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Psychic\FeebleMind.cs" />

@@ -51,6 +51,7 @@ namespace Assets.Data.Ability.XML
                 case (EAbility.Pierce): { table.Add(type, new Pierce()); } break;
                 case (EAbility.Psychic_Artillery): { table.Add(type, new PsychicArtillery()); } break;
                 case (EAbility.Pull): { table.Add(type, new Pull()); } break;
+                case (EAbility.Quick_Heal): { table.Add(type, new QuickHeal()); } break;
                 case (EAbility.Riposte): { table.Add(type, new Riposte()); } break;
                 case (EAbility.Scatter): { table.Add(type, new Scatter()); } break;
                 case (EAbility.Sever): { table.Add(type, new Sever()); } break;

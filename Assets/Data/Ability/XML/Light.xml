@@ -2,27 +2,35 @@
 <ActiveAbilities>
   <MagicType name="Light">
     <ActiveAbility name="Healing_Touch">
-      <AccMod>1</AccMod>
       <AoE>0</AoE>
       <APCost>4</APCost>
-      <ArmorIgnoreMod>1</ArmorIgnoreMod>
-      <ArmorPierceMod>1</ArmorPierceMod>
-      <BlockIgnoreMod>1</BlockIgnoreMod>
       <CastDuration>1</CastDuration>
       <ECastType>Melee</ECastType>
-      <DmgPerPower>0.018</DmgPerPower>
-      <DodgeMod>1.0</DodgeMod>
-      <FlatDamage>15</FlatDamage>
+      <DmgPerPower>0.025</DmgPerPower>
+      <FlatDamage>25</FlatDamage>
       <Hostile>False</Hostile>
       <IconSprite>28</IconSprite>
       <IsHeal>True</IsHeal>
-      <MeleeBlockChanceMod>1.0</MeleeBlockChanceMod>
-      <ParryModMod>0.25</ParryModMod>
       <Range>1</Range>
-      <RangeBlockMod>0</RangeBlockMod>
       <RechargeTime>0</RechargeTime>
-      <ShieldDamageMod>1.5</ShieldDamageMod>
       <FatigueCost>15</FatigueCost>
+    </ActiveAbility>
+    <ActiveAbility name="Quick_Heal">
+      <AoE>0</AoE>
+      <APCost>6</APCost>
+      <CastDuration>0</CastDuration>
+      <ECastType>Single</ECastType>
+      <DmgPerPower>0.025</DmgPerPower>
+      <FlatDamage>10</FlatDamage>
+      <Hostile>False</Hostile>
+      <MaxSprites>1</MaxSprites>
+      <MinSprites>1</MinSprites>
+      <IconSprite>29</IconSprite>
+      <IsHeal>True</IsHeal>
+      <Range>2</Range>
+      <RechargeTime>2</RechargeTime>
+      <Sprites>0</Sprites>
+      <FatigueCost>25</FatigueCost>
     </ActiveAbility>
   </MagicType>
 </ActiveAbilities>

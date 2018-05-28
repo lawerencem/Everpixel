@@ -423,6 +423,12 @@ namespace Assets.Controller.GUI.Combat
             foreach (var hit in a.Data.Hits)
             {
                 AttackSpriteLoader.Instance.DoSingleFX(hit);
+                if (hit.Data.IsHeal)
+                {
+                    var tgt = hit.Data.Target.Current as CChar;
+                    if (tgt != null)
+                        this.DisplayHeal(tgt, hit);
+                }
             }
         }
     }

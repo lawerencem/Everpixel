@@ -14,6 +14,7 @@
 
         // Light
         Healing_Touch,
+        Quick_Heal,
 
         // Poison,
         Slime_Rain,
