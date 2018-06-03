@@ -703,9 +703,7 @@
   <ItemGroup>
     <None Include="Assets\Data\Ability\XML\Astral.xml" />
     <None Include="Assets\Data\Ability\XML\Fighting.xml" />
-    <None Include="Assets\Data\Ability\XML\Light.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Ability\XML\Light.xml" />
     <None Include="Assets\Data\Ability\XML\Physical.xml" />
     <None Include="Assets\Data\Ability\XML\Poison.xml" />
     <None Include="Assets\Data\Ability\XML\Shapeshift.xml" />
@@ -751,7 +749,9 @@
     <None Include="Assets\Data\Mount\XML\Mounts.xml" />
     <None Include="Assets\Data\Party\XML\Party\AmazonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\BretonParties.xml" />
-    <None Include="Assets\Data\Party\XML\Party\GoblinParties.xml" />
+    <None Include="Assets\Data\Party\XML\Party\GoblinParties.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Data\Party\XML\Party\JomonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\NordParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\OrcParties.xml" />

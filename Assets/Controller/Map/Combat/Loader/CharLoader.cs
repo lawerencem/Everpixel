@@ -49,28 +49,29 @@ namespace Assets.Controller.Map.Combat.Loader
             }   
         }
 
-        private void RenderChar(CChar c, CTile t)
+        private void RenderChar(CChar character, CTile tile)
         {
-            var sprite = c.View.Sprites[c.View.Torso];
-            var render = c.GameHandle.AddComponent<SpriteRenderer>();
-            c.GameHandle.transform.position = t.Handle.transform.position;
-            c.GameHandle.transform.SetParent(this._container);
-            c.GameHandle.name = c.View.Type.ToString() + " " + c.View.Race.ToString();
+            var sprite = character.View.Sprites[character.View.Torso];
+            var render = character.GameHandle.AddComponent<SpriteRenderer>();
+            character.GameHandle.transform.position = tile.Handle.transform.position;
+            character.GameHandle.transform.SetParent(this._container);
+            character.GameHandle.name = character.View.Type.ToString() + " " + character.View.Race.ToString();
             render.sprite = sprite;
             render.sortingLayerName = SortingLayers.CHAR_TORSO;
-            this.TryAttachHead(c, SortingLayers.CHAR_HEAD, c.View.Head, t);
-            this.TryAttachDeco(c, t);
-            this.TryAttachEquipment(c, t);
-            this.TryAttachMount(c, t);
-            c.SubComponents.Add(SortingLayers.CHAR_TORSO, c.GameHandle);
-            c.SubComponents.Add(SortingLayers.CHAR_MAIN, c.GameHandle);
+            this.TryAttachHead(character, SortingLayers.CHAR_HEAD, character.View.Head, tile);
+            this.TryAttachDeco(character, tile);
+            this.TryAttachEquipment(character, tile);
+            this.TryAttachMount(character, tile);
+            character.SubComponents.Add(SortingLayers.CHAR_TORSO, character.GameHandle);
+            character.SubComponents.Add(SortingLayers.CHAR_MAIN, character.GameHandle);
 
-            if (!c.Proxy.LParty)
-                c.GameHandle.transform.localRotation = Quaternion.Euler(0, 180, 0);
+            if (!character.Proxy.LParty)
+                character.GameHandle.transform.localRotation = Quaternion.Euler(0, 180, 0);
 
             // TODO: This really should be elsewhere, but it works for now.
-            t.SetCurrent(c);
-            c.SetTile(t);
+            tile.SetCurrent(character);
+            character.SetTile(tile);
+            character.ProcessEnterNewTile(tile);
         }
 
         private void TryAttachDeco(CChar c, CTile t)
