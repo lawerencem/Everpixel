@@ -3,9 +3,9 @@ using Assets.Model.Combat.Hit;
 
 namespace Assets.Model.Ability.Magic.Light
 {
-    public class QuickShield : MAbility
+    public class QuickBarrier : MAbility
     {
-        public QuickShield() : base(EAbility.Quick_Shield) { }
+        public QuickBarrier() : base(EAbility.Quick_Barrier) { }
 
         public override void Predict(MHit hit)
         {

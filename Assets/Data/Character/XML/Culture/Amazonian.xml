@@ -44,8 +44,8 @@
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Abilities>
         <Ability name="Healing_Touch"></Ability>
+        <Ability name="Quick_Barrier"></Ability>
         <Ability name="Quick_Heal"></Ability>
-        <Ability name="Quick_Shield"></Ability>
       </Abilities>
       <Perks>
         <Perk>Scaly</Perk>

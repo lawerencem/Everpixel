@@ -15,6 +15,25 @@
       <RechargeTime>0</RechargeTime>
       <FatigueCost>15</FatigueCost>
     </ActiveAbility>
+    <ActiveAbility name="Quick_Barrier">
+      <AoE>0</AoE>
+      <APCost>6</APCost>
+      <CastDuration>0</CastDuration>
+      <ECastType>Single</ECastType>
+      <DmgPerPower>0.045</DmgPerPower>
+      <FlatDamage>0</FlatDamage>
+      <EEffect name="Barrier">
+        <Duration>3</Duration>
+      </EEffect>
+      <Hostile>False</Hostile>
+      <MaxSprites>1</MaxSprites>
+      <MinSprites>1</MinSprites>
+      <IconSprite>30</IconSprite>
+      <Range>2</Range>
+      <RechargeTime>2</RechargeTime>
+      <Sprites>0</Sprites>
+      <FatigueCost>25</FatigueCost>
+    </ActiveAbility>
     <ActiveAbility name="Quick_Heal">
       <AoE>0</AoE>
       <APCost>6</APCost>
@@ -27,25 +46,6 @@
       <MinSprites>1</MinSprites>
       <IconSprite>29</IconSprite>
       <IsHeal>True</IsHeal>
-      <Range>2</Range>
-      <RechargeTime>2</RechargeTime>
-      <Sprites>0</Sprites>
-      <FatigueCost>25</FatigueCost>
-    </ActiveAbility>
-    <ActiveAbility name="Quick_Shield">
-      <AoE>0</AoE>
-      <APCost>6</APCost>
-      <CastDuration>0</CastDuration>
-      <ECastType>Single</ECastType>
-      <DmgPerPower>0.0</DmgPerPower>
-      <FlatDamage>0</FlatDamage>
-      <EEffect name="Barrier">
-        <Duration>3</Duration>
-      </EEffect>
-      <Hostile>False</Hostile>
-      <MaxSprites>1</MaxSprites>
-      <MinSprites>1</MinSprites>
-      <IconSprite>30</IconSprite>
       <Range>2</Range>
       <RechargeTime>2</RechargeTime>
       <Sprites>0</Sprites>

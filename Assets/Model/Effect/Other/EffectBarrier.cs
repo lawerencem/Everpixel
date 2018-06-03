@@ -17,7 +17,7 @@ namespace Assets.Model.Effect.Other
             if (!prediction)
             {
                 var tgt = hit.Data.Target.Current as CChar;
-                var hp = hit.Data.Ability.Data.DmgPerPower * hit.Data.Source.Proxy.GetStat(ESecondaryStat.Power);
+                var hp = this.GetHP(hit);
                 var barrier = new MBarrier((int)this.Data.Duration, (int)hp);
                 var data = new EvBarrierData();
                 data.barrier = barrier;
@@ -25,6 +25,14 @@ namespace Assets.Model.Effect.Other
                 var ev = new EvBarrier(data);
                 VHitController.Instance.DisplayBarrierCreation(tgt, hit, barrier);
             }
+        }
+
+        private int GetHP(MHit hit)
+        {
+            int hp = 0;
+            hp += (int)hit.Data.Ability.Data.FlatDamage;
+            hp += (int)(hit.Data.Ability.Data.DmgPerPower * hit.Data.Source.Proxy.GetStat(ESecondaryStat.Power));
+            return hp;
         }
     }
 }
