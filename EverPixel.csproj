@@ -342,6 +342,7 @@
     <Compile Include="Assets\Model\Ability\Magic\Fighting\Kamehameha.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Light\HealingTouch.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Light\QuickHeal.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Light\QuickShield.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Poison\SlimeRain.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Psychic\CerebralNova.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Psychic\FeebleMind.cs" />
@@ -436,7 +437,7 @@
     <Compile Include="Assets\Model\Combat\Hit\HitMod.cs" />
     <Compile Include="Assets\Model\Combat\Hit\MHit.cs" />
     <Compile Include="Assets\Model\Culture\ECulture.cs" />
-    <Compile Include="Assets\Model\Effect\Ability\Megabite.cs" />
+    <Compile Include="Assets\Model\Effect\Ability\EffectMegabite.cs" />
     <Compile Include="Assets\Model\Effect\EEffect.cs" />
     <Compile Include="Assets\Model\Effect\EffectBuilder.cs" />
     <Compile Include="Assets\Model\Effect\EffectFactory.cs" />
@@ -445,6 +446,7 @@
     <Compile Include="Assets\Model\Effect\Fortitude\EffectSlime.cs" />
     <Compile Include="Assets\Model\Effect\Fortitude\EffectStun.cs" />
     <Compile Include="Assets\Model\Effect\MEffect.cs" />
+    <Compile Include="Assets\Model\Effect\Other\EffectBarrier.cs" />
     <Compile Include="Assets\Model\Effect\Other\EffectHoT.cs" />
     <Compile Include="Assets\Model\Effect\Other\SummonOnHit.cs" />
     <Compile Include="Assets\Model\Effect\Will\Horror.cs" />
@@ -482,7 +484,7 @@
     <Compile Include="Assets\Model\Event\Combat\EvNewTurn.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvPathMove.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvPerformAbility.cs" />
-    <Compile Include="Assets\Model\Event\Combat\EvShield.cs" />
+    <Compile Include="Assets\Model\Event\Combat\EvBarrier.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvStaminaMod.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvSummon.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvTileMove.cs" />
@@ -566,7 +568,7 @@
     <Compile Include="Assets\Model\Perk\WhenHit\MWhenHitPerk.cs" />
     <Compile Include="Assets\Model\Perk\WhenHit\SavageSoul.cs" />
     <Compile Include="Assets\Model\Perk\WhenHit\Squishy.cs" />
-    <Compile Include="Assets\Model\Shield\MShield.cs" />
+    <Compile Include="Assets\Model\Barrier\MBarrier.cs" />
     <Compile Include="Assets\Model\Zone\AZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\SlimeZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\SoothingMistZone.cs" />

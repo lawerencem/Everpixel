@@ -87,19 +87,23 @@ namespace Assets.View.Ability
         {
             var ability = hit.Data.Ability.Data.ParentAction.ActiveAbility;
             var sprites = this.GetSingleFXSprites(ability);
-            var roll = RNG.Instance.Next(ability.Data.MinSprites, ability.Data.MaxSprites);
-            for(int i = 0; i < roll; i++)
+            if (sprites.Count > 0)
             {
-                var fx = new GameObject();
-                var renderer = fx.AddComponent<SpriteRenderer>();
-                var index = ListUtil<int>.GetRandomElement(ability.Data.Sprites);
-                renderer.sprite = sprites[index];
-                renderer.sortingLayerName = SortingLayers.PARTICLES;
-                fx.transform.position = hit.Data.Target.Model.Center;
-                RotateTranslateUtil.Instance.RandomTranslate(fx, CombatGUIParams.SINGLE_FX_OFFSET);
-                fx.transform.SetParent(hit.Data.Target.Handle.transform);
-                var delete = fx.AddComponent<SDestroyByLifetime>();
-                delete.Init(fx, CombatGUIParams.SINGLE_FX_DUR);
+                var roll = RNG.Instance.Next(ability.Data.MinSprites, ability.Data.MaxSprites);
+                for(int i = 0; i < roll; i++)
+                {
+                    var fx = new GameObject();
+                    var renderer = fx.AddComponent<SpriteRenderer>();
+                    var index = ListUtil<int>.GetRandomElement(ability.Data.Sprites);
+                    renderer.sprite = sprites[index];
+                    renderer.sortingLayerName = SortingLayers.PARTICLES;
+                    fx.transform.position = hit.Data.Target.Model.Center;
+                    if (ability.Data.SingleFXRandomTranslate)
+                        RotateTranslateUtil.Instance.RandomTranslate(fx, CombatGUIParams.SINGLE_FX_OFFSET);
+                    fx.transform.SetParent(hit.Data.Target.Handle.transform);
+                    var delete = fx.AddComponent<SDestroyByLifetime>();
+                    delete.Init(fx, CombatGUIParams.SINGLE_FX_DUR);
+                }
             }
             hit.CallbackHandler(null);
         }

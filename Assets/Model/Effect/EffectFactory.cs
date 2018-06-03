@@ -15,10 +15,11 @@ namespace Assets.Model.Effect
         {
             switch(effect)
             {
-                case (EEffect.Megabite): { return new Megabite(); }
-                case (EEffect.Push): { return new EffectPush(); }
+                case (EEffect.Barrier): { return new EffectBarrier(); }
+                case (EEffect.Megabite): { return new EffectMegabite(); }
                 case (EEffect.Horror): { return new Horror(); }
                 case (EEffect.HoT): { return new EffectHoT(); }
+                case (EEffect.Push): { return new EffectPush(); }
                 case (EEffect.Slime): { return new EffectSlime(); }
                 case (EEffect.Slime_Zone): { return new EffectZoneSlime(); }
                 case (EEffect.Spear_Wall_Zone): { return new EffectZoneSpearWall(); }

@@ -14,6 +14,7 @@ namespace Assets.View.Character
 {
     public class CharSpriteLoader : ASingleton<CharSpriteLoader>
     {
+        private const string BARRIER_PATH = "Sprites/Effects/Barrier";
         private const string CHARACTER_PATH = "Sprites/Characters/";
         private const string CRITTER_PATH = "Sprites/Critters/";
         private const int CRITTER_INDEX = 0;
@@ -24,7 +25,6 @@ namespace Assets.View.Character
         private const string EQUIPMENT_PATH = "Sprites/Equipment/";
         private const string EXTENSION = "_Spritesheet";
         private const string LYCANTHROPE_PATH = "Sprites/Characters/Lycanthropes/";
-        private const string SHIELD_PATH = "Sprites/Effects/";
 
         public CharSpriteLoader() { }
 
@@ -102,10 +102,9 @@ namespace Assets.View.Character
             return GetSprites(path);
         }
 
-        public Sprite GetShieldSprite()
+        public Sprite GetBarrierSprite()
         {
-            var path = StringUtil.PathBuilder(SHIELD_PATH, "Shield");
-            var sprites = GetSprites(path);
+            var sprites = GetSprites(BARRIER_PATH);
             return sprites[0];
         }
 

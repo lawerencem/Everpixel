@@ -2,10 +2,10 @@
 using Assets.Controller.Map.Tile;
 using Assets.Model.Ability.Music;
 using Assets.Model.Action;
-using Assets.Model.Character;
 using Assets.Model.Character.Enum;
 using Assets.Model.Combat.Hit;
 using Assets.Model.Map.Tile;
+using Assets.Model.Barrier;
 using Assets.Template.CB;
 using Assets.Template.Script;
 using Assets.Template.Util;
@@ -16,6 +16,7 @@ using Assets.View.Particle;
 using Assets.View.Script.FX;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.View.Character;
 
 namespace Assets.Controller.GUI.Combat
 {
@@ -48,6 +49,31 @@ namespace Assets.Controller.GUI.Combat
         {
             foreach (var callback in this._callbacks)
                 callback(this);
+        }
+
+        public void DisplayBarrier(CChar target, MHit hit)
+        {
+            var fx = new GameObject();
+            var renderer = fx.AddComponent<SpriteRenderer>();
+            renderer.sprite = CharSpriteLoader.Instance.GetBarrierSprite();
+            renderer.sortingLayerName = SortingLayers.PARTICLES;
+            fx.transform.position = target.GameHandle.transform.position;
+            fx.transform.SetParent(target.GameHandle.transform);
+            var delete = fx.AddComponent<SDestroyByLifetime>();
+            delete.Init(fx, CombatGUIParams.SINGLE_FX_DUR);
+        }
+
+        public void DisplayBarrierCreation(CChar target, MHit hit, MBarrier barrier)
+        {
+            var dmgData = new HitDisplayData();
+            dmgData.Color = CombatGUIParams.BLUE;
+            dmgData.Hit = hit;
+            dmgData.Priority = ViewParams.BARRIER_PRIORITY;
+            dmgData.Text = barrier.MaxHP.ToString();
+            dmgData.Target = target.GameHandle;
+            dmgData.YOffset = CombatGUIParams.FLOAT_OFFSET;
+            dmgData.Hit.AddDataDisplay(dmgData);
+            this.DisplayBarrier(target, hit);
         }
 
         public void ProcessBulletFX(MAction a)

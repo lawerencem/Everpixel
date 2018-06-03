@@ -1,30 +1,29 @@
 ﻿using Assets.Controller.Character;
-using Assets.Controller.Manager.Combat;
-using Assets.Model.Shield;
+using Assets.Model.Barrier;
 
 namespace Assets.Model.Event.Combat
 {
-    public class EvShieldData
+    public class EvBarrierData
     {
-        public MShield shield { get; set; }
+        public MBarrier barrier { get; set; }
         public CChar target { get; set; }
     }
 
-    public class EvShield : MEvCombat
+    public class EvBarrier : MEvCombat
     {
-        private EvShieldData _data;
+        private EvBarrierData _data;
 
-        public EvShield() : base(ECombatEv.Shield) { }
-        public EvShield(EvShieldData data): base(ECombatEv.Shield) { this._data = data; }
+        public EvBarrier() : base(ECombatEv.Barrier) { }
+        public EvBarrier(EvBarrierData data): base(ECombatEv.Barrier) { this._data = data; }
 
-        public void SetData(EvShieldData data) { this._data = data; }
+        public void SetData(EvBarrierData data) { this._data = data; }
 
         public override void TryProcess()
         {
             if (this.VerifyData())
             {
                 base.TryProcess();
-                this._data.target.Proxy.AddShield(this._data.shield);
+                this._data.target.Proxy.AddBarrier(this._data.barrier);
             }
         }
 
@@ -32,7 +31,7 @@ namespace Assets.Model.Event.Combat
         {
             if (this._data == null)
                 return false;
-            else if (this._data.shield == null)
+            else if (this._data.barrier == null)
                 return false;
             else if (this._data.target == null)
                 return false;

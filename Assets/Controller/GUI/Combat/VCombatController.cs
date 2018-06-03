@@ -100,8 +100,6 @@ namespace Assets.Controller.GUI.Combat
             script.Init(display, data.Dur);
             var floating = display.AddComponent<SFloatingText>();
             floating.Init(display, 0.0015f, data.Delay);
-
-
         }
 
         public void DoCallbacks()

@@ -15,7 +15,7 @@ using Assets.Model.Injury;
 using Assets.Model.OTE.HoT;
 using Assets.Model.Party;
 using Assets.Model.Party.Enum;
-using Assets.Model.Shield;
+using Assets.Model.Barrier;
 using Assets.Model.Zone;
 using System.Collections.Generic;
 
@@ -65,9 +65,9 @@ namespace Assets.Model.Character
             this._model.GetPoints().AddValue(s, v);
         }
 
-        public void AddShield(MShield shield)
+        public void AddBarrier(MBarrier shield)
         {
-            this._model.GetEffectsContainer().AddShield(shield);
+            this._model.GetEffectsContainer().AddBarrier(shield);
         }
 
         public void AddZone(AZone zone)

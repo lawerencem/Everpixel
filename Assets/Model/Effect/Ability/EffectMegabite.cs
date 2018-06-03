@@ -2,9 +2,9 @@
 
 namespace Assets.Model.Effect.Ability
 {
-    public class Megabite : MEffect
+    public class EffectMegabite : MEffect
     {
-        public Megabite() : base(EEffect.Megabite) { }
+        public EffectMegabite() : base(EEffect.Megabite) { }
 
         public override void TryProcessHit(MHit hit, bool prediction)
         {

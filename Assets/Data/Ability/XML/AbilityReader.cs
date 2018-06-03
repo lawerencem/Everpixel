@@ -120,6 +120,7 @@ namespace Assets.Data.Ability.XML
                 case ("EResistType"): { this.HandleResistType(type, value); } break;
                 case ("ShapeshiftSprites"): { this.HandleShapeshiftSprites(ele, type); } break;
                 case ("ShieldDamageMod"): { this._table.Table[type].Data.ShieldDamageMod = v; } break;
+                case ("SingleFXRandomTranslate"): { this.HandleSingleFXRandomTranslate(type, value); } break;
                 case ("Sprites"): { this.HandleSprites(type, value); } break;
                 case ("SpellLevel"): { this._table.Table[type].Data.SpellLevel = (int)v; } break;
             }
@@ -204,6 +205,12 @@ namespace Assets.Data.Ability.XML
                     case ("CharTorso"): { v.Info.CharTorso = int.Parse(ele.Value); } break;
                 }
             }
+        }
+
+        private void HandleSingleFXRandomTranslate(EAbility key, string value)
+        {
+            if (value.ToLowerInvariant().Equals("true"))
+                AbilityTable.Instance.Table[key].Data.SingleFXRandomTranslate = true;
         }
 
         private void HandleSprites(EAbility key, string value)

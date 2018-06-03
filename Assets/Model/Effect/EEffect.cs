@@ -3,6 +3,7 @@
     public enum EEffect
     {
         None,
+        Barrier,
         DoT,
         Horror,
         HoT,

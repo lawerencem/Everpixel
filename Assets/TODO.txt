@@ -9,7 +9,6 @@
   -- Interrupts
   -- Magic
    --- Amazonian Magic
-	 ---- Quick Shield
 	 ---- Sunbeam
 	 ---- Moonbeam
 	 ---- Holy Shock

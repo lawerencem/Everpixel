@@ -30,6 +30,7 @@
       <RangeBlockMod>1</RangeBlockMod>
       <EResistType>Fortitude</EResistType>
       <ShieldDamageMod>1</ShieldDamageMod>
+      <SingleFXRandomTranslate>True</SingleFXRandomTranslate>
       <Sprites>0,1,2,3,4</Sprites>
       <FatigueCost>35</FatigueCost>
     </ActiveAbility>

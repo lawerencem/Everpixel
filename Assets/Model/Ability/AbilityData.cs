@@ -46,6 +46,7 @@ namespace Assets.Model.Ability
         public double RechargeTime { get; set; }
         public EResistType Resist { get; set; }
         public double ShieldDamageMod { get; set; }
+        public bool SingleFXRandomTranslate { get; set; }
         public int SpellLevel { get; set; }
         public List<int> Sprites { get; set; }
 
@@ -77,6 +78,7 @@ namespace Assets.Model.Ability
             this.Range = 0;
             this.RangeBlockMod = 1;
             this.ShieldDamageMod = 1;
+            this.SingleFXRandomTranslate = false;
             this.Sprites = new List<int>();
             this.FatigueCost = 0;
         }
@@ -112,6 +114,7 @@ namespace Assets.Model.Ability
             data.RangeBlockMod = this.RangeBlockMod;
             data.RechargeTime = this.RechargeTime;
             data.ShieldDamageMod = this.ShieldDamageMod;
+            data.SingleFXRandomTranslate = this.SingleFXRandomTranslate;
             data.SpellLevel = this.SpellLevel;
             foreach (var sprite in this.Sprites)
                 data.Sprites.Add(sprite);

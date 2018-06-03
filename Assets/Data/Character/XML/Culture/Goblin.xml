@@ -134,7 +134,7 @@
           <Armor>0.20,Goblin Pads,Four</Armor>
           <Armor>0.20,Goblin Pads,Three</Armor>
           <Armor>0.20,Goblin Pads,Two</Armor>
-          <Armor>0.20,Astal Mail,One</Armor>
+          <Armor>0.20,Astral Mail,One</Armor>
         </Armors>
         <Helms name="One">
           <Helm>0.20,Goblin Cap,Five</Helm>
@@ -327,14 +327,14 @@
         <Armors name="One">
           <Armor>0.25,Slime Handler Robes,Five</Armor>
           <Armor>0.25,Slime Handler Robes,Four</Armor>
-          <Armor>0.25,Slime Handler Robes,Three</Armor>
-          <Armor>0.25,Slime Handler Robes,Two</Armor>
+          <!--<Armor>0.25,Slime Handler Robes,Three</Armor>
+          <Armor>0.25,Slime Handler Robes,Two</Armor>-->
         </Armors>
         <Helms name="One">
           <Helm>0.25,Slime Handler Cap,Five</Helm>
           <Helm>0.25,Slime Handler Cap,Four</Helm>
-          <Helm>0.25,Slime Handler Cap,Three</Helm>
-          <Helm>0.25,Slime Handler Cap,Two</Helm>
+          <!--<Helm>0.25,Slime Handler Cap,Three</Helm>
+          <Helm>0.25,Slime Handler Cap,Two</Helm>-->
         </Helms>
       </PotentialArmors>
       <PotentialWeapons>

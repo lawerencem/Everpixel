@@ -45,6 +45,7 @@
       <Abilities>
         <Ability name="Healing_Touch"></Ability>
         <Ability name="Quick_Heal"></Ability>
+        <Ability name="Quick_Shield"></Ability>
       </Abilities>
       <Perks>
         <Perk>Scaly</Perk>

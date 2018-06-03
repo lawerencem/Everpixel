@@ -1,8 +1,6 @@
-﻿using Assets.Controller.Character;
-
-namespace Assets.Model.Shield
+﻿namespace Assets.Model.Barrier
 {
-    public class MShield
+    public class MBarrier
     {
         private int _curHP;
         private int _dur;
@@ -12,11 +10,11 @@ namespace Assets.Model.Shield
         public int Dur { get { return this._dur; } }
         public int MaxHP { get { return this._maxHP; } }
 
-        public MShield(int dur, int hp)
+        public MBarrier(int dur, int hp)
         {
             this._curHP = hp;
             this._dur = dur;
-            this._maxHP = hp; ;
+            this._maxHP = hp;
         }
 
         public void ProcessShieldDmg(ref int dmg)

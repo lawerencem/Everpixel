@@ -1,7 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Model.Ability.Logic.Calculator;
 using Assets.Model.Combat.Hit;
-using Assets.Model.Event.Combat;
 
 namespace Assets.Model.Effect.Fortitude
 {
