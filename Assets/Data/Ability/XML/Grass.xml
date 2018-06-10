@@ -12,9 +12,10 @@
         <ParticlePath>Effects/HoTParticles</ParticlePath>
         <X>3</X>
       </EEffect>
+      <DisplayDamage>false</DisplayDamage>
       <DmgPerPower>0.025</DmgPerPower>
       <FlatDamage>8</FlatDamage>
-      <Hostile>False</Hostile>
+      <Hostile>false</Hostile>
       <MaxSprites>1</MaxSprites>
       <MinSprites>1</MinSprites>
       <IconSprite>31</IconSprite>

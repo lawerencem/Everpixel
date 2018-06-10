@@ -35,7 +35,7 @@ namespace Assets.Model.Effect.Zone
             {
                 var data = new MEffectData();
                 data.Duration = (int)this.Data.Z;
-                data.ParticlePath = "Slime";
+                data.ParticlePath = "Effects/SlimeParticles";
                 data.X = this.Data.X;
                 data.Y = this.Data.Y;
                 var slime = new EffectSlime();

@@ -17,11 +17,14 @@ using Assets.View.Script.FX;
 using System.Collections.Generic;
 using UnityEngine;
 using Assets.View.Character;
+using Assets.Model.Effect;
 
 namespace Assets.Controller.GUI.Combat
 {
     public class VHitController : ICallback
     {
+        private const string BARRIER_PARTICLE_PATH = "Effects/BarrierParticles";
+
         private List<Callback> _callbacks;
 
         private static VHitController _instance;
@@ -74,6 +77,10 @@ namespace Assets.Controller.GUI.Combat
             dmgData.YOffset = CombatGUIParams.FLOAT_OFFSET;
             dmgData.Hit.AddDataDisplay(dmgData);
             this.DisplayBarrier(target, hit);
+            var controller = new ParticleController();
+            var util = new DecoUtil();
+            var particles = controller.CreateParticle(BARRIER_PARTICLE_PATH);
+            util.AttachEffectParticlesToChar(target, particles, EEffect.Barrier);
         }
 
         public void ProcessBulletFX(MAction a)

@@ -82,7 +82,6 @@
         <Perception>380</Perception>
         <Resolve>620</Resolve>
       </Stats>
-      <WeaponAbility>Bite</WeaponAbility>
     </Character>
     <Character name ="Dino Knight">
       <Class>Knight,4</Class>

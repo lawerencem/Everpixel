@@ -11,6 +11,8 @@
       <Character>155,Orc Berserker,One</Character>
     </SubParty>
     <SubParty Name ="Commanders">
+      <Character>150,Orc Wereween,Two</Character>
+      <Character>240,Greater Orc Wereween,Two</Character>
       <Character>300,Orc Khan,Two</Character>
       <Character>500,Ween Lord,Two</Character>
     </SubParty>

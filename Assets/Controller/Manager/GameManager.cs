@@ -51,7 +51,7 @@ namespace Assets.Controller.Managers
             lParty.Difficulty = 2000;
             lParty.Name = "Battle Party";
 
-            rParty.Culture = ECulture.Goblin;
+            rParty.Culture = ECulture.Orcish;
             rParty.Difficulty = 2000;
             rParty.Name = "Battle Party";
 
