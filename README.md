@@ -15,8 +15,8 @@
   Ever heard of a wereslug?  Or a warween?  This game has those.  And fatalities.  Welcome to an over-the-top tactical roguelike hex-based RPG. Eclectically inspired by Battle Brothers, Baldur's Gate, Super Mario, Mortal Kombat, 80's action movies, and dinosaurs that wear tutus.  
 
 # Footage
-  [![Watch the video]](https://youtu.be/6aTG_OR-fVg)
-  [![Watch the video]](https://youtu.be/GuxbrI213wQ)
+  [![Watch the video](https://github.com/JeremyACase/Everpixel/Demo/Pics/Thumb.png)](https://youtu.be/6aTG_OR-fVg)
+  [![Watch the video](https://github.com/JeremyACase/Everpixel/Demo/Pics/Thumb.png)](https://youtu.be/GuxbrI213wQ)
   
 Copyright © 2018 Jeremy Case
   
