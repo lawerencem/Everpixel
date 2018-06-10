@@ -1,11 +1,13 @@
 # Everpixel (Code-Name)
 
+![Mascot](https://github.com/JeremyACase/Everpixel/blob/master/Demo/Pics/Ween.png)
 ![Mascot](https://github.com/JeremyACase/Everpixel/blob/master/Demo/Pics/Penguin.png)
 ![Mascot](https://github.com/JeremyACase/Everpixel/blob/master/Demo/Pics/Tearex.png)
 ![Mascot](https://github.com/JeremyACase/Everpixel/blob/master/Demo/Pics/Samurai.png)
 ![Mascot](https://github.com/JeremyACase/Everpixel/blob/master/Demo/Pics/Sharconquer.png)
 ![Mascot](https://github.com/JeremyACase/Everpixel/blob/master/Demo/Pics/Shellrus.png)
 ![Mascot](https://github.com/JeremyACase/Everpixel/blob/master/Demo/Pics/Goblin.png)
+![Mascot](https://github.com/JeremyACase/Everpixel/blob/master/Demo/Pics/Ween_Dragon.png)
 
 # Overview
    This is a game that I have been making during my free time.  Please feel free to peruse the code/images/resources - but please do not use or redistribute the code without my explicit permission.
