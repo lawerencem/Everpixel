@@ -7,9 +7,12 @@
    
 # Motivation
    I like video games, but I am finding it harder and harder to find a game that I enjoy.  I also enjoy programming.  So, I wanted to combine the two and make a game that I enjoy playing.
+
+# Demo
+  If you would like to see demo footage, pelase check out the demo videos available in this project under the Demos folder!
    
 # Contributors
   - Jeremy Case: JeremyACase@gmail.com
   
-Copyright © 2017 Jeremy Case
+Copyright © 2018 Jeremy Case
   
