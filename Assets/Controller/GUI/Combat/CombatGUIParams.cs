@@ -32,7 +32,7 @@ namespace Assets.Controller.GUI.Combat
         public static readonly string WEEN_BURSTER_FATALITY = "WeenBursterFatality";
 
 
-        public static readonly double FATALITY_CHANCE = 0.25;
+        public static readonly double FATALITY_CHANCE = 1.00;
 
         // Attack params
         public static readonly float ATTACK_LERP = 0.85f;
