@@ -51,9 +51,9 @@ namespace Assets.Controller.Managers
             lParty.Difficulty = 2000;
             lParty.Name = "Battle Party";
 
-            rParty.Culture = ECulture.Orcish;
+            rParty.Culture = ECulture.Norse;
             rParty.Difficulty = 2000;
-            rParty.Name = "Battle Party";
+            rParty.Name = "Snow Raiders";
 
             initInfo.LParties.Add(lParty);
             initInfo.RParties.Add(rParty);
