@@ -1,5 +1,4 @@
-﻿using Assets.Template.Other;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.View.Particle
 {

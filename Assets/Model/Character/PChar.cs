@@ -1,8 +1,8 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Equipment.Weapon;
-using Assets.Controller.Map.Tile;
 using Assets.Controller.Mount;
 using Assets.Model.Ability;
+using Assets.Model.Barrier;
 using Assets.Model.Character.Container;
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
@@ -12,10 +12,10 @@ using Assets.Model.Class.Enum;
 using Assets.Model.Effect;
 using Assets.Model.Equipment.Armor;
 using Assets.Model.Injury;
+using Assets.Model.OTE.DoT;
 using Assets.Model.OTE.HoT;
 using Assets.Model.Party;
 using Assets.Model.Party.Enum;
-using Assets.Model.Barrier;
 using Assets.Model.Zone;
 using System.Collections.Generic;
 
@@ -47,6 +47,11 @@ namespace Assets.Model.Character
         {
             this._model.GetStatMods().AddBuff(debuff);
             this._model.GetCurStats().ResetCurStats(this._model.GetStatMods(), this._model.GetBaseStats());
+        }
+
+        public void AddDoT(MDoT dot)
+        {
+            this._model.GetEffectsContainer().AddDoT(dot);
         }
 
         public void AddHoT(MHoT hot)

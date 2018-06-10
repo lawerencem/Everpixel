@@ -4,7 +4,7 @@
     {
         None,
         Barrier,
-        DoT,
+        DoTBurn,
         Horror,
         HoT,
         Megabite,

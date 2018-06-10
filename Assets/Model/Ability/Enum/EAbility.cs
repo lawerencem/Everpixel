@@ -6,7 +6,9 @@
 
         // Astral Spells
         Eldritch_Chomp,
+        Moonbeam,
         Summon_Shoggoth,
+        Sunbeam,
 
         // Fighting
         Hadoken,

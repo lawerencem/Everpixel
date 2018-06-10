@@ -44,6 +44,7 @@ namespace Assets.Data.Ability.XML
                 case (EAbility.Kamehameha): { table.Add(type, new Kamehameha()); } break;
                 case (EAbility.Maim): { table.Add(type, new Maim()); } break;
                 case (EAbility.Mental_Laceration): { table.Add(type, new MentalLaceration()); } break;
+                case (EAbility.Moonbeam): { table.Add(type, new Moonbeam()); } break;
                 case (EAbility.Mind_Blast): { table.Add(type, new MindBlast()); } break;
                 case (EAbility.Mind_Hunt): { table.Add(type, new MindHunt()); } break;
                 case (EAbility.Orc_Metal): { table.Add(type, new OrcMetal()); } break;
@@ -68,6 +69,7 @@ namespace Assets.Data.Ability.XML
                 case (EAbility.Stun): { table.Add(type, new Stun()); } break;
                 case (EAbility.Suppress_Area): { table.Add(type, new SuppressArea()); } break;
                 case (EAbility.Summon_Shoggoth): { table.Add(type, new SummonShoggoth()); } break;
+                case (EAbility.Sunbeam): { table.Add(type, new Sunbeam()); } break;
                 case (EAbility.Weenlight_Sonata): { table.Add(type, new WeenlightSonata()); } break;
                 case (EAbility.Wereween): { table.Add(type, new Wereween()); } break;
                 case (EAbility.Wide_Strike): { table.Add(type, new WideStrike()); } break;

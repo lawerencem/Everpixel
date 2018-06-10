@@ -24,6 +24,10 @@
       <ECharacterType>Critter</ECharacterType>
       <DeadSpriteIndex>10</DeadSpriteIndex>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
+      <Abilities>
+        <Ability name="Moonbeam"></Ability>
+        <Ability name="Sunbeam"></Ability>
+      </Abilities>
       <Perks>
         <Perk>Dino_Bite</Perk>
         <Perk>Scaly</Perk>

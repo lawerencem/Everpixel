@@ -36,6 +36,8 @@ TextureImporter:
     21300058: Icon_Spritesheet_29
     21300060: Icon_Spritesheet_30
     21300062: Icon_Spritesheet_31
+    21300064: Icon_Spritesheet_32
+    21300066: Icon_Spritesheet_33
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -551,6 +553,34 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Icon_Spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Icon_Spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 192
         y: 128
         width: 64
         height: 64

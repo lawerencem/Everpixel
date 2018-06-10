@@ -4,6 +4,7 @@ using Assets.Model.Action;
 using Assets.Model.Effect;
 using Assets.Model.Equipment.Weapon;
 using Assets.Model.Injury;
+using Assets.Model.OTE.DoT;
 using System.Collections.Generic;
 
 namespace Assets.Model.Ability
@@ -25,6 +26,7 @@ namespace Assets.Model.Ability
         public double DodgeMod { get; set; }
         public double Duration { get; set; }
         public string Description { get; set; }
+        public bool DisplayDamage { get; set; }
         public List<MEffect> Effects { get; set; }
         public int FatigueCost { get; set; }
         public double FlatDamage { get; set; }
@@ -62,6 +64,7 @@ namespace Assets.Model.Ability
             this.CustomCastCamera = false;
             this.Effects = new List<MEffect>();
             this.DamageMod = 1;
+            this.DisplayDamage = true;
             this.DmgPerPower = 0.05;
             this.DodgeMod = 1;
             this.Duration = 0;
@@ -97,6 +100,7 @@ namespace Assets.Model.Ability
             data.CastDuration = this.CastDuration;
             data.DamageMod = this.DamageMod;
             data.Description = this.Description;
+            data.DisplayDamage = this.DisplayDamage;
             data.DodgeMod = this.DodgeMod;
             data.Duration = this.Duration;
             data.Effects = this.Effects;

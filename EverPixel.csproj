@@ -336,7 +336,9 @@
     <Compile Include="Assets\Model\Ability\Logic\LogicParams.cs" />
     <Compile Include="Assets\Model\Ability\MAbility.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Astral\EldritchChomp.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Astral\Moonbeam.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Astral\SummonShoggoth.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Astral\Sunbeam.cs" />
     <Compile Include="Assets\Model\Ability\Magic\EMagicType.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Fighting\Hadoken.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Fighting\Kamehameha.cs" />
@@ -449,6 +451,7 @@
     <Compile Include="Assets\Model\Effect\Fortitude\EffectStun.cs" />
     <Compile Include="Assets\Model\Effect\MEffect.cs" />
     <Compile Include="Assets\Model\Effect\Other\EffectBarrier.cs" />
+    <Compile Include="Assets\Model\Effect\Other\EffectDoTBurn.cs" />
     <Compile Include="Assets\Model\Effect\Other\EffectHoT.cs" />
     <Compile Include="Assets\Model\Effect\Other\SummonOnHit.cs" />
     <Compile Include="Assets\Model\Effect\Will\Horror.cs" />

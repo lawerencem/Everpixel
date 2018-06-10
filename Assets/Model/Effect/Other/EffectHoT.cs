@@ -3,7 +3,7 @@ using Assets.Model.Combat.Hit;
 using Assets.Model.OTE;
 using Assets.Model.OTE.HoT;
 
-namespace Assets.Model.Effect.Fortitude
+namespace Assets.Model.Effect.Other
 {
     public class EffectHoT : MEffect
     {

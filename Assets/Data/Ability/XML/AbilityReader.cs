@@ -4,6 +4,7 @@ using Assets.Model.Ability.Magic;
 using Assets.Model.Ability.Shapeshift;
 using Assets.Model.Effect;
 using Assets.Model.Injury;
+using Assets.Model.OTE.DoT;
 using Assets.Template.Util;
 using Assets.Template.XML;
 using System.Xml.Linq;
@@ -99,6 +100,7 @@ namespace Assets.Data.Ability.XML
                 case ("CustomGraphics"): { this.HandleCustomGraphics(type, value); } break;
                 case ("DamageMod"): { this._table.Table[type].Data.DamageMod = double.Parse(value); } break;
                 case ("Description"): { this._table.Table[type].Data.Description = value; } break;
+                case ("DisplayDamage"): { this.HandleDisplayDamage(type, value); } break;
                 case ("DmgPerPower"): { this._table.Table[type].Data.DmgPerPower = double.Parse(value); } break;
                 case ("Duration"): { this._table.Table[type].Data.Duration = double.Parse(value); } break;
                 case ("DodgeMod"): { this._table.Table[type].Data.DodgeMod = v; } break;
@@ -138,6 +140,12 @@ namespace Assets.Data.Ability.XML
         {
             if (value.ToLowerInvariant().Equals("true"))
                 AbilityTable.Instance.Table[key].Data.CustomGraphics = true;
+        }
+
+        private void HandleDisplayDamage(EAbility key, string value)
+        {
+            if (value.ToLowerInvariant().Equals("false"))
+                AbilityTable.Instance.Table[key].Data.DisplayDamage = false;
         }
 
         private void HandleEffects(XElement el, string value, EAbility key)

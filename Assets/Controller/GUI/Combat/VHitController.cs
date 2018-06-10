@@ -191,6 +191,18 @@ namespace Assets.Controller.GUI.Combat
             }
         }
 
+        private void DisplayDamage(CChar target, MHit hit)
+        {
+            var dmgData = new HitDisplayData();
+            dmgData.Color = CombatGUIParams.RED;
+            dmgData.Hit = hit;
+            dmgData.Priority = ViewParams.DMG_PRIORITY;
+            dmgData.Text = hit.Data.Dmg.ToString();
+            dmgData.Target = target.GameHandle;
+            dmgData.YOffset = CombatGUIParams.FLOAT_OFFSET;
+            dmgData.Hit.AddDataDisplay(dmgData);
+        }
+
         private void DisplayDodge(CChar target, MHit hit)
         {
             var dodge = target.GameHandle.AddComponent<SBoomerang>();
@@ -211,15 +223,7 @@ namespace Assets.Controller.GUI.Combat
 
         private void DisplayFlinch(CChar target, MHit hit)
         {
-            var dmgData = new HitDisplayData();
-            dmgData.Color = CombatGUIParams.RED;
-            dmgData.Hit = hit;
-            dmgData.Priority = ViewParams.DMG_PRIORITY;
-            dmgData.Text = hit.Data.Dmg.ToString();
-            dmgData.Target = target.GameHandle;
-            dmgData.YOffset = CombatGUIParams.FLOAT_OFFSET;
-            dmgData.Hit.AddDataDisplay(dmgData);
-
+            this.DisplayDamage(target, hit);
             if (hit.Data.Dmg < target.Proxy.GetPoints(ESecondaryStat.HP)) 
             {
                 var flinch = target.GameHandle.AddComponent<SFlinch>();
@@ -454,6 +458,12 @@ namespace Assets.Controller.GUI.Combat
                     var tgt = hit.Data.Target.Current as CChar;
                     if (tgt != null)
                         this.DisplayHeal(tgt, hit);
+                }
+                else if (hit.Data.Ability.Data.DisplayDamage)
+                {
+                    var tgt = hit.Data.Target.Current as CChar;
+                    if (tgt != null)
+                        this.DisplayDamage(tgt, hit);
                 }
             }
         }

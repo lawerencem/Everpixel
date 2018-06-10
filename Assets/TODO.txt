@@ -11,8 +11,6 @@
   -- Interrupts
   -- Magic
    --- Amazonian Magic
-	 ---- Sunbeam
-	 ---- Moonbeam
 	 ---- Holy Shock
    --- Jomon Magic
    --- Goblin Magic
@@ -32,10 +30,14 @@
  - Add leveling to critters
  - Add some deviation to stats
 
- BUGS
+
+BUGS:
  - % chance to hit are jacked
   -- add ability to see hit chance for bullets
  - Crits don't display
  - ween burster doesn't flip 180 on RTEAM
  - double hits (like double zone spear wall) cause flinches to remain after hit. 
    -- This is due to SFlinch grabbing current sprite from object rather than a guaranteed default sprite. IE., it can grab a flinch sprite instead of intended sprite.
+
+Nice To Have:
+ - Ensure effects and damage displays don't overlap

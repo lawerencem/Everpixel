@@ -16,6 +16,7 @@ namespace Assets.Model.Effect
             switch(effect)
             {
                 case (EEffect.Barrier): { return new EffectBarrier(); }
+                case (EEffect.DoTBurn): { return new EffectDoTBurn(); }
                 case (EEffect.Megabite): { return new EffectMegabite(); }
                 case (EEffect.Horror): { return new Horror(); }
                 case (EEffect.HoT): { return new EffectHoT(); }

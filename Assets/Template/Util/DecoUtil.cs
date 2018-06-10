@@ -9,17 +9,26 @@ namespace Assets.Template.Util
     {
         public void AttachEffectParticlesToChar(CChar tgt, GameObject particles, EEffect effect)
         {
-            if (tgt != null && particles != null)
+            if (tgt != null)
             {
-                var view = tgt.View;
-                if (!view.EffectParticlesDict.ContainsKey(effect))
+                this.DisplayText(tgt, effect);
+                if (particles != null)
                 {
-                    view.EffectParticlesDict.Add(effect, particles);
-                    particles.transform.SetParent(tgt.GameHandle.transform);
-                    particles.transform.position = tgt.GameHandle.transform.position;
-                    VCombatController.Instance.DisplayText(effect.ToString().Replace("_", " "), tgt);
+                    var view = tgt.View;
+                    if (!view.EffectParticlesDict.ContainsKey(effect))
+                    {
+                        view.EffectParticlesDict.Add(effect, particles);
+                        particles.transform.SetParent(tgt.GameHandle.transform);
+                        particles.transform.position = tgt.GameHandle.transform.position;
+                    }
                 }
             }
+        }
+
+        private void DisplayText(CChar tgt, EEffect effect)
+        {
+            var text = effect.ToString().Replace("_", " ").Replace("DoT", "");
+            VCombatController.Instance.DisplayText(text, tgt);
         }
     }
 }
