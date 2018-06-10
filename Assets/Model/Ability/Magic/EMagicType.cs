@@ -4,8 +4,9 @@
     {
         Physical, // Default (none)
         Astral,
-        Light,
         Fighting,
+        Grass,
+        Light,
         Poison,
         Psychic,
         Water,

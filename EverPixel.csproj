@@ -340,6 +340,7 @@
     <Compile Include="Assets\Model\Ability\Magic\EMagicType.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Fighting\Hadoken.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Fighting\Kamehameha.cs" />
+    <Compile Include="Assets\Model\Ability\Magic\Grass\Rejuvenation.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Light\HealingTouch.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Light\QuickHeal.cs" />
     <Compile Include="Assets\Model\Ability\Magic\Light\QuickShield.cs" />
@@ -396,6 +397,7 @@
     <Compile Include="Assets\Model\Action\AAction.cs" />
     <Compile Include="Assets\Model\Action\ActionData.cs" />
     <Compile Include="Assets\Model\Action\MAction.cs" />
+    <Compile Include="Assets\Model\Barrier\MBarrier.cs" />
     <Compile Include="Assets\Model\Biome\BiomeParam.cs" />
     <Compile Include="Assets\Model\Biome\EBiome.cs" />
     <Compile Include="Assets\Model\Character\AChar.cs" />
@@ -475,6 +477,7 @@
     <Compile Include="Assets\Model\Equipment\Weapon\MWeapon.cs" />
     <Compile Include="Assets\Model\Equipment\Weapon\WeaponParams.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvApMod.cs" />
+    <Compile Include="Assets\Model\Event\Combat\EvBarrier.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvCasting.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvCharKilled.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvEndTurn.cs" />
@@ -484,7 +487,6 @@
     <Compile Include="Assets\Model\Event\Combat\EvNewTurn.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvPathMove.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvPerformAbility.cs" />
-    <Compile Include="Assets\Model\Event\Combat\EvBarrier.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvStaminaMod.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvSummon.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvTileMove.cs" />
@@ -568,7 +570,6 @@
     <Compile Include="Assets\Model\Perk\WhenHit\MWhenHitPerk.cs" />
     <Compile Include="Assets\Model\Perk\WhenHit\SavageSoul.cs" />
     <Compile Include="Assets\Model\Perk\WhenHit\Squishy.cs" />
-    <Compile Include="Assets\Model\Barrier\MBarrier.cs" />
     <Compile Include="Assets\Model\Zone\AZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\SlimeZone.cs" />
     <Compile Include="Assets\Model\Zone\Duration\SoothingMistZone.cs" />
@@ -705,10 +706,19 @@
   <ItemGroup>
     <None Include="Assets\Data\Ability\XML\Astral.xml" />
     <None Include="Assets\Data\Ability\XML\Fighting.xml" />
-    <None Include="Assets\Data\Ability\XML\Light.xml" />
-    <None Include="Assets\Data\Ability\XML\Physical.xml" />
+    <None Include="Assets\Data\Ability\XML\Grass.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Assets\Data\Ability\XML\Light.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Assets\Data\Ability\XML\Physical.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Data\Ability\XML\Poison.xml" />
-    <None Include="Assets\Data\Ability\XML\Shapeshift.xml" />
+    <None Include="Assets\Data\Ability\XML\Shapeshift.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Data\Ability\XML\Songs.xml" />
     <None Include="Assets\Data\Ability\XML\WeaponAbilities.xml" />
     <None Include="Assets\Data\Bark\XML\Barks.xml" />
@@ -717,7 +727,9 @@
     <None Include="Assets\Data\Character\XML\Culture\Goblin.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Jomonese.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Norse.xml" />
-    <None Include="Assets\Data\Character\XML\Culture\Orcish.xml" />
+    <None Include="Assets\Data\Character\XML\Culture\Orcish.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Data\Character\XML\Culture\Roman.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Trollish.xml" />
     <None Include="Assets\Data\Character\XML\RaceParams.xml" />
@@ -751,9 +763,7 @@
     <None Include="Assets\Data\Mount\XML\Mounts.xml" />
     <None Include="Assets\Data\Party\XML\Party\AmazonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\BretonParties.xml" />
-    <None Include="Assets\Data\Party\XML\Party\GoblinParties.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Party\XML\Party\GoblinParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\JomonParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\NordParties.xml" />
     <None Include="Assets\Data\Party\XML\Party\OrcParties.xml" />

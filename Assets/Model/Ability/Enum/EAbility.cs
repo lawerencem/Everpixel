@@ -17,6 +17,9 @@
         Quick_Barrier,
         Quick_Heal,
 
+        // Grass
+        Rejuvenation,
+
         // Poison,
         Slime_Rain,
 

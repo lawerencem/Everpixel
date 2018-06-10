@@ -21,7 +21,8 @@
 
         public virtual void ProcessTurn()
         {
-            this._data.Dur--;
+            if (this._data.HasDur)
+                this._data.Dur--;
         }
     }
 }

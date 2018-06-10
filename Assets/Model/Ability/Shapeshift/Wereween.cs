@@ -1,9 +1,6 @@
 ﻿using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
 using Assets.Model.Combat.Hit;
-using Assets.Model.Event.Combat;
-using Assets.Model.OTE;
-using Assets.Model.OTE.HoT;
 using Assets.View.Script.FX;
 
 namespace Assets.Model.Ability.Shapeshift

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ActiveAbilities>
+  <MagicType name="Grass">
+    <ActiveAbility name="Rejuvenation">
+      <AoE>0</AoE>
+      <APCost>3</APCost>
+      <CastDuration>0</CastDuration>
+      <Duration>3</Duration>
+      <ECastType>Single</ECastType>
+      <EEffect name="HoT">
+        <Duration>3</Duration>
+        <ParticlePath>Effects/HoTParticles</ParticlePath>
+        <X>3</X>
+      </EEffect>
+      <DmgPerPower>0.025</DmgPerPower>
+      <FlatDamage>8</FlatDamage>
+      <Hostile>False</Hostile>
+      <MaxSprites>1</MaxSprites>
+      <MinSprites>1</MinSprites>
+      <IconSprite>31</IconSprite>
+      <Range>3</Range>
+      <RechargeTime>2</RechargeTime>
+      <Sprites>0</Sprites>
+      <FatigueCost>35</FatigueCost>
+    </ActiveAbility>
+  </MagicType>
+</ActiveAbilities>

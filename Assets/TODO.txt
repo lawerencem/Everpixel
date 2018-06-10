@@ -1,5 +1,7 @@
 ﻿TODO
 
+ - Riposte
+
  - Dead Critter Eyes
   -- Orcish
 

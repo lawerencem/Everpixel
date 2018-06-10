@@ -21,6 +21,7 @@ namespace Assets.Data.Ability.XML
         {
             this._paths.Add("Assets/Data/Ability/XML/Astral.xml");
             this._paths.Add("Assets/Data/Ability/XML/Fighting.xml");
+            this._paths.Add("Assets/Data/Ability/XML/Grass.xml");
             this._paths.Add("Assets/Data/Ability/XML/Light.xml");
             this._paths.Add("Assets/Data/Ability/XML/Poison.xml");
             this._paths.Add("Assets/Data/Ability/XML/Physical.xml");
