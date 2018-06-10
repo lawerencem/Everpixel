@@ -12,9 +12,6 @@
    
    I intend for this game to be free and available for download when I finish it.
    
-# Motivation
-   I like video games, but I am finding it harder and harder to find a game that I enjoy.  I also enjoy programming.  So, I wanted to combine the two and make a game that I enjoy playing.
-   
 # Contributors
   - Jeremy Case: JeremyACase@gmail.com
 
@@ -25,5 +22,8 @@
   [![Demo Footage](https://github.com/JeremyACase/Everpixel/blob/master/Demo/Pics/Thumb.png)](https://youtu.be/6aTG_OR-fVg)
   [![Demo Footage](https://github.com/JeremyACase/Everpixel/blob/master/Demo/Pics/Thumb.png)](https://youtu.be/GuxbrI213wQ)
   
+# Motivation
+   I love video games - they're what led me to study computer science and learn programming.  This game is my homage to all of the games that I have enjoyed over the years.  It's also an opportunity to sharpen my craft and give (however small) something back.
+
 Copyright © 2018 Jeremy Case
   
