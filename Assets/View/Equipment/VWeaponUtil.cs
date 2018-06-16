@@ -7,10 +7,38 @@ namespace Assets.View.Equipment
 {
     public class VWeaponUtil
     {
+        private readonly float RIPOSTE_X_AXIS = 0.05f;
+        private readonly float RIPOSTE_Y_AXIS = 0.02f;
+        private readonly float RIPOSTE_ROTATION = 45f;
         private readonly float SHIELD_WALL_Y_AXIS = 0.1f;
         private readonly float SPEAR_WALL_X_AXIS = 0.2f;
         private readonly float SPEAR_WALL_Y_AXIS = 0.05f;
         private readonly float SPEAR_WALL_ROTATION = 90f;
+
+        public void DoRiposte(MAction action)
+        {
+            var view = action.Data.ParentWeapon.View;
+            if (!view.Riposting)
+            {
+                if (action.Data.LWeapon)
+                {
+                    var wpnObject = action.Data.Source.SubComponents[SortingLayers.CHAR_L_WEAPON];
+                    if (action.Data.Source.Proxy.LParty)
+                        this.DoRiposteHelper(wpnObject, action.Data.LWeapon);
+                    else
+                        this.DoRiposteHelper(wpnObject, action.Data.LWeapon);
+                }
+                else
+                {
+                    var wpnObject = action.Data.Source.SubComponents[SortingLayers.CHAR_R_WEAPON];
+                    if (action.Data.Source.Proxy.LParty)
+                        this.DoRiposteHelper(wpnObject, action.Data.LWeapon);
+                    else
+                        this.DoRiposteHelper(wpnObject, action.Data.LWeapon);
+                }
+                view.Riposting = true;
+            }
+        }
 
         public void DoSpearWallFX(MAction action)
         {
@@ -62,6 +90,25 @@ namespace Assets.View.Equipment
             }
         }
 
+        public void UndoRiposte(CChar source, CWeapon weapon, bool lWeapon)
+        {
+            var view = weapon.View;
+            if (view.Riposting)
+            {
+                if (lWeapon)
+                {
+                    var wpnObject = source.SubComponents[SortingLayers.CHAR_L_WEAPON];
+                    this.UndoRiposteHelper(wpnObject, lWeapon);
+                }
+                else
+                {
+                    var wpnObject = source.SubComponents[SortingLayers.CHAR_R_WEAPON];
+                    this.UndoRiposteHelper(wpnObject, lWeapon);
+                }
+                view.Riposting = false;
+            }
+        }
+
         public void UndoShieldWallFX(CChar source, CWeapon weapon, bool lWeapon)
         {
             var view = weapon.View;
@@ -100,6 +147,25 @@ namespace Assets.View.Equipment
             }
         }
 
+        private void DoRiposteHelper(GameObject weapon, bool lWeapon)
+        {
+            if (weapon != null)
+            {
+                var translate = new Vector3();
+                var rotate = new Vector3();
+                if (lWeapon)
+                    translate = new Vector3(-RIPOSTE_X_AXIS, RIPOSTE_Y_AXIS, 0f);
+                else
+                    translate = new Vector3(RIPOSTE_X_AXIS, RIPOSTE_Y_AXIS, 0f);
+                if (lWeapon)
+                    rotate = new Vector3(0f, 0f, RIPOSTE_ROTATION);
+                else
+                    rotate = new Vector3(0f, 0f, -RIPOSTE_ROTATION);
+                weapon.transform.Translate(translate);
+                weapon.transform.Rotate(rotate);
+            }
+        }
+
         private void DoShieldWallFXHelper(GameObject weapon, bool lParty)
         {
             if (weapon != null)
@@ -127,6 +193,25 @@ namespace Assets.View.Equipment
                 }
                 weapon.transform.Translate(translate);
                 weapon.transform.Rotate(rotate);
+            }
+        }
+
+        private void UndoRiposteHelper(GameObject weapon, bool lWeapon)
+        {
+            if (weapon != null)
+            {
+                var translate = new Vector3();
+                var rotate = new Vector3();
+                if (lWeapon)
+                    translate = new Vector3(RIPOSTE_X_AXIS, -RIPOSTE_Y_AXIS, 0f);
+                else
+                    translate = new Vector3(-RIPOSTE_X_AXIS, -RIPOSTE_Y_AXIS, 0f);
+                if (lWeapon)
+                    rotate = new Vector3(0f, 0f, -RIPOSTE_ROTATION);
+                else
+                    rotate = new Vector3(0f, 0f, RIPOSTE_ROTATION);
+                weapon.transform.Rotate(rotate);
+                weapon.transform.Translate(translate);
             }
         }
 

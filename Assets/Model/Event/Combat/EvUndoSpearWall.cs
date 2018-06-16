@@ -29,11 +29,6 @@ namespace Assets.Model.Event.Combat
                 if (FActionStatus.HasFlag(this._data.Char.Proxy.GetActionFlags().CurFlags, FActionStatus.Flags.Spearwalling))
                 {
                     var util = new VWeaponUtil();
-                    if (this._data.Action != null)
-                    {
-                        var action = this._data.Action;
-                        util.UndoSpearWallFX(action.Data.Source, action.Data.ParentWeapon, action.Data.LWeapon);
-                    }
                     if (this._data.Char.Proxy.GetLWeapon() != null)
                     {
                         var wpn = this._data.Char.Proxy.GetLWeapon();

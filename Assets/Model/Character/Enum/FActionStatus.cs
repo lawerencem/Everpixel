@@ -12,6 +12,7 @@ namespace Assets.Model.Character.Enum
             ShieldWalling = 2,
             SuppressingArea = 4,
             Casting = 8,
+            Riposting = 16,
         }
 
         public Flags CurFlags { get; set; }
@@ -22,11 +23,13 @@ namespace Assets.Model.Character.Enum
         }
 
         public static void SetCastingFalse(FActionStatus f) { f.CurFlags &= ~Flags.Casting; }
+        public static void SetRipostingFalse(FActionStatus f) { f.CurFlags &= ~Flags.Riposting; }
         public static void SetShieldWallingFalse(FActionStatus f) { f.CurFlags &= ~Flags.ShieldWalling; }
         public static void SetSpearWallingFalse(FActionStatus f) { f.CurFlags &= ~Flags.Spearwalling; }
         public static void SetSuppressingAreaFalse(FActionStatus f) { f.CurFlags &= ~Flags.SuppressingArea; }
 
         public static void SetCastingTrue(FActionStatus f) { f.CurFlags |= Flags.Casting; }
+        public static void SetRipostingTrue(FActionStatus f) { f.CurFlags |= Flags.Riposting; }
         public static void SetShieldWallingTrue(FActionStatus f) { f.CurFlags |= Flags.ShieldWalling; }
         public static void SetSpearWallingTrue(FActionStatus f) { f.CurFlags |= Flags.Spearwalling; }
         public static void SetSuppressingAreaTrue(FActionStatus f) { f.CurFlags |= Flags.SuppressingArea; }

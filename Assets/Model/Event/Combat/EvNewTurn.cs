@@ -86,20 +86,28 @@ namespace Assets.Model.Event.Combat
 
         private void TryUndoActionStatuses()
         {
+            if (FActionStatus.HasFlag(this._data.Target.Proxy.GetActionFlags().CurFlags, FActionStatus.Flags.Riposting))
+            {
+                var data = new EvUndoRiposteData();
+                data.Char = this._data.Target;
+                var e = new EvUndoRiposte(data);
+                e.TryProcess();
+            }
+
             if (FActionStatus.HasFlag(this._data.Target.Proxy.GetActionFlags().CurFlags, FActionStatus.Flags.Spearwalling))
             {
-                var undoSpearWallData = new EvUndoSpearwallData();
-                undoSpearWallData.Char = this._data.Target;
-                var undoSpearWallEvent = new EvUndoSpearwall(undoSpearWallData);
-                undoSpearWallEvent.TryProcess();
+                var data = new EvUndoSpearwallData();
+                data.Char = this._data.Target;
+                var e = new EvUndoSpearwall(data);
+                e.TryProcess();
             }
 
             if (FActionStatus.HasFlag(this._data.Target.Proxy.GetActionFlags().CurFlags, FActionStatus.Flags.ShieldWalling))
             {
-                var undoShieldWallData = new EvUndoShieldWallData();
-                undoShieldWallData.Char = this._data.Target;
-                var undoShieldWallEvent = new EvUndoShieldWall(undoShieldWallData);
-                undoShieldWallEvent.TryProcess();
+                var data = new EvUndoShieldWallData();
+                data.Char = this._data.Target;
+                var e = new EvUndoShieldWall(data);
+                e.TryProcess();
             }
         }
     }

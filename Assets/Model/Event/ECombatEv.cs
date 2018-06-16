@@ -25,6 +25,7 @@
         StunDone,
         Summon,
         TileMove,
+        UndoRiposte,
         UndoShieldWall,
         UndoSpearWall,
     }

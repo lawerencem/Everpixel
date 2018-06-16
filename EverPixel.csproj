@@ -494,6 +494,7 @@
     <Compile Include="Assets\Model\Event\Combat\EvStunDone.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvSummon.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvTileMove.cs" />
+    <Compile Include="Assets\Model\Event\Combat\EvUndoRiposte.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvUndoShieldWall.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvUndoSpearWall.cs" />
     <Compile Include="Assets\Model\Event\Combat\MEvCombat.cs" />

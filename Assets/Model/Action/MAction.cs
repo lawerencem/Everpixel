@@ -6,6 +6,7 @@ using Assets.Model.Ability;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Ability.Logic.Calculator;
 using Assets.Model.Character.Enum;
+using Assets.Model.Combat.Hit;
 using Assets.Model.Event.Combat;
 using Assets.Model.Injury.Calculator;
 using Assets.Template.Event;
@@ -55,6 +56,7 @@ namespace Assets.Model.Action
                 this.ProcessHitsData();
                 if (this._castingInitialized)
                     this.HandleDoneCasting();
+                this.HandleHitCounters();
                 this.CallbackHandler(null);
             }
         }
@@ -135,6 +137,54 @@ namespace Assets.Model.Action
             var jolt = this.Data.Source.GameHandle.GetComponent<SIntervalJoltScript>();
             jolt.Done();
             FActionStatus.SetCastingFalse(this.Data.Source.Proxy.GetActionFlags());
+        }
+
+        private void HandleHitCounters()
+        {
+            foreach (var hit in this._data.Hits)
+            {
+                var target = hit.Data.Target.Current;
+                if (target != null && target.GetType().Equals(typeof(CChar)))
+                {
+                    var tgt = target as CChar;
+                    if (FActionStatus.HasFlag(tgt.Proxy.GetActionFlags().CurFlags, FActionStatus.Flags.Riposting))
+                    {
+                        if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Block) ||
+                            FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Dodge) ||
+                            FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Parry))
+                        {
+                            this.HandleHitCounterHelper(hit, tgt);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void HandleHitCounterHelper(MHit hit, CChar tgt)
+        {
+            var data = new ActionData();
+            data.Ability = EAbility.Attack_Of_Opportunity;
+            bool proceed = false;
+            if (tgt.Proxy.GetLWeapon() != null && !tgt.Proxy.GetLWeapon().IsTypeOfShield())
+            {
+                data.LWeapon = true;
+                data.ParentWeapon = tgt.Proxy.GetLWeapon();
+                proceed = true;
+            }
+            else if (tgt.Proxy.GetRWeapon() != null && !tgt.Proxy.GetRWeapon().IsTypeOfShield())
+            {
+                data.LWeapon = false;
+                data.ParentWeapon = tgt.Proxy.GetRWeapon();
+                proceed = true;
+            }
+            if (proceed)
+            {
+                data.Source = tgt;
+                data.Target = hit.Data.Source.Tile;
+                data.WpnAbility = true;
+                var action = new MAction(data);
+                action.TryProcess();
+            }
         }
 
         private void InitPredictAbility()

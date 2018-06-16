@@ -28,14 +28,14 @@ namespace Assets.Model.Combat.Hit
             this._callbacks.Add(callback);
         }
 
-        public void AddEffect(MEffect effect)
-        {
-            this._efffects.Add(effect);
-        }
-
         public void AddDataDisplay(HitDisplayData d)
         {
             this._displays.Add(d);
+        }
+
+        public void AddEffect(MEffect effect)
+        {
+            this._efffects.Add(effect);
         }
 
         public void CallbackHandler(object o)
