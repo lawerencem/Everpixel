@@ -1,7 +1,6 @@
 ﻿TODO
 
  - Enter button ends turn
- - Riposte
 
  - Dead Critter Eyes
   -- Orcish

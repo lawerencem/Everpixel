@@ -17,6 +17,7 @@ using Assets.Model.OTE.HoT;
 using Assets.Model.Party;
 using Assets.Model.Party.Enum;
 using Assets.Model.Zone;
+using System;
 using System.Collections.Generic;
 
 namespace Assets.Model.Character
@@ -138,6 +139,11 @@ namespace Assets.Model.Character
         public CMount GetMount()
         {
             return this._model.Mount;
+        }
+
+        public Guid GetId()
+        {
+            return this._model.GetId();
         }
 
         public PreCharParams GetParams()

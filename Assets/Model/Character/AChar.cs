@@ -11,6 +11,7 @@ using Assets.Model.Party;
 using Assets.Model.Perk;
 using Assets.Model.Zone;
 using Assets.Template.Hex;
+using System;
 using System.Collections.Generic;
 
 namespace Assets.Model.Character
@@ -18,6 +19,7 @@ namespace Assets.Model.Character
     abstract public class AChar : IHexOccupant
     {
         private CChar _controller;
+        private Guid _id;
 
         protected CharAbilities _abilities;
         protected FActionStatus _actionFlags;
@@ -55,6 +57,7 @@ namespace Assets.Model.Character
         public CharEffects GetEffectsContainer() { return this._effects; }
         public ACharEquipment GetEquipment() { return this._equipment; }
         public List<AZone> GetLinkedZones() { return this._linkedZones; }
+        public Guid GetId() { return this._id; }
         public PreCharParams GetParams() { return this._params; }
         public MParty GetParentParty() { return this._parentParty; }
         public CharPerks GetPerks() { return this._perks; }

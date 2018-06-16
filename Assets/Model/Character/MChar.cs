@@ -6,17 +6,20 @@ using Assets.Model.Class.Enum;
 using Assets.Model.Event.Combat;
 using Assets.Model.Zone;
 using Assets.Template.Hex;
+using System;
 using System.Collections.Generic;
 
 namespace Assets.Model.Character
 {
     public class MChar : AChar, IPathable
     {
+        private Guid _id;
         private ERace _race;
         public ERace Race { get { return this._race; } }
 
         public MChar(ERace race)
         {
+            this._id = Guid.NewGuid();
             this._race = race;
             this._abilities = new CharAbilities();
             this._actionFlags = new FActionStatus();
@@ -51,7 +54,7 @@ namespace Assets.Model.Character
                 int dmg = value;
                 foreach (var shield in this.GetEffectsContainer().GetBarriers())
                     shield.ProcessShieldDmg(ref dmg);
-                //this.Shields.RemoveAll(x => x.CurHP <= 0); // TODO:
+                this.GetEffectsContainer().GetBarriers().RemoveAll(x => x.CurHP <= 0);
 
                 if (dmg >= 0)
                 {
