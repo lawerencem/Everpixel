@@ -47,6 +47,13 @@ namespace Assets.Model.Event.Combat
             this.TryUndoActionStatuses();
             var e = new EvPopulateAbilityBtns();
             e.TryProcess();
+            if (this._data.Target.Proxy.GetParentParty().GetAIControlled())
+                this.DoTurnAI();
+        }
+
+        private void DoTurnAI()
+        {
+            // TODO:
         }
 
         private void HandleStunned()

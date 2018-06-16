@@ -51,6 +51,7 @@ namespace Assets.Controller.Managers
             lParty.Difficulty = 2000;
             lParty.Name = "Ween Herders";
 
+            rParty.AIControlled = true;
             rParty.Culture = ECulture.Goblin;
             rParty.Difficulty = 2000;
             rParty.Name = "Battle Party";

@@ -1,4 +1,5 @@
 ﻿using Assets.Controller.Map.Tile;
+using Assets.Model.AI.Role;
 using Assets.Model.Character;
 using Assets.Model.Character.Enum;
 using Assets.Model.Zone;
@@ -15,13 +16,15 @@ namespace Assets.Controller.Character
     {
         private GameObject _handle;
         private PChar _proxy;
-        private VChar _view;
+        private MRole _role;
         private CTile _tile;
+        private VChar _view;
 
         public GameObject GameHandle { get { return this._handle; } }
         public PChar Proxy { get { return this._proxy; } }
-        public VChar View { get { return this._view; } }
+        public MRole Role { get { return this._role; } }
         public CTile Tile { get { return this._tile; } }
+        public VChar View { get { return this._view; } }
 
         public void SetProxy(PChar p) { this._proxy = p; p.SetController(this); }
         public void SetView(VChar v) { this._view = v; }

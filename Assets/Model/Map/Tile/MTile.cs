@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Tile;
+using Assets.Model.AI.Particle;
 using Assets.Template.Hex;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,7 @@ namespace Assets.Model.Map.Tile
         private MMap _map;
         private int _row;
         private int _staminaCost;
+        private ParticleContainer _swarmPoints;
         private ETile _type;
 
         public CTile Controller { get { return this._controller; } }
@@ -42,6 +44,7 @@ namespace Assets.Model.Map.Tile
             this._flags = new FTile();
             this._height = 1;
             this._liquid = false;
+            this._swarmPoints = new ParticleContainer();
         }
 
         public void SetN(MTile t) { this._adjacent.Add(t); this._n = t; }
@@ -72,6 +75,10 @@ namespace Assets.Model.Map.Tile
 
         public FTile GetFlags() { return this._flags; }
         public int GetHeight() { return this._height; }
+        public ParticleContainer GetParticles()
+        {
+            return this._swarmPoints;
+        }
 
         public List<MTile> GetArcTiles(MTile target)
         {

@@ -356,7 +356,7 @@
     </WeaponAbility>
     <WeaponAbility name="Riposte">
       <AccMod>1</AccMod>
-      <APCost>4</APCost>
+      <APCost>5</APCost>
       <ArmorIgnoreMod>1</ArmorIgnoreMod>
       <ArmorPierceMod>1</ArmorPierceMod>
       <BlockIgnoreMod>1</BlockIgnoreMod>
@@ -369,7 +369,7 @@
       <ParryModMod>2.5</ParryModMod>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
-      <FatigueCost>35</FatigueCost>
+      <FatigueCost>10</FatigueCost>
       <Range>0</Range>
     </WeaponAbility>
     <WeaponAbility name="Scatter">

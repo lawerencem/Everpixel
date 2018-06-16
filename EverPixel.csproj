@@ -399,6 +399,15 @@
     <Compile Include="Assets\Model\Action\AAction.cs" />
     <Compile Include="Assets\Model\Action\ActionData.cs" />
     <Compile Include="Assets\Model\Action\MAction.cs" />
+    <Compile Include="Assets\Model\AI\Role\ERole.cs" />
+    <Compile Include="Assets\Model\AI\Role\MRole.cs" />
+    <Compile Include="Assets\Model\AI\Particle\CharParticlePair.cs" />
+    <Compile Include="Assets\Model\AI\Particle\EThreat.cs" />
+    <Compile Include="Assets\Model\AI\Particle\EVuln.cs" />
+    <Compile Include="Assets\Model\AI\Particle\ParticleBuilder.cs" />
+    <Compile Include="Assets\Model\AI\Particle\ParticleContainer.cs" />
+    <Compile Include="Assets\Model\AI\Particle\ThreatPointBuilder.cs" />
+    <Compile Include="Assets\Model\AI\Particle\VulnPointBuilder.cs" />
     <Compile Include="Assets\Model\Barrier\MBarrier.cs" />
     <Compile Include="Assets\Model\Biome\BiomeParam.cs" />
     <Compile Include="Assets\Model\Biome\EBiome.cs" />
