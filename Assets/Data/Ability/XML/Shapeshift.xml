@@ -17,6 +17,7 @@
       </EEffect>
       <FlatDamage>0</FlatDamage>
       <Hostile>False</Hostile>
+      <IconSprite>35</IconSprite>
       <MeleeBlockChanceMod>0</MeleeBlockChanceMod>
       <ParryModMod>0.0</ParryModMod>
       <Range>0</Range>

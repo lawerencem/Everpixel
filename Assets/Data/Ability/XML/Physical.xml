@@ -54,6 +54,7 @@
         <Resist>Fortitude</Resist>
         <X>1</X>
       </EEffect>
+      <IconSprite>34</IconSprite>
       <Range>3</Range>
       <RangeBlockMod>0</RangeBlockMod>
       <EResistType>Fortitude</EResistType>

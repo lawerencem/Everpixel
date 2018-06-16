@@ -28,7 +28,7 @@ namespace Assets.Template.Util
         private void DisplayText(CChar tgt, EEffect effect)
         {
             var text = effect.ToString().Replace("_", " ").Replace("DoT", "");
-            VCombatController.Instance.DisplayText(text, tgt, CombatGUIParams.RED);
+            VCombatController.Instance.DisplayText(text, tgt, CombatGUIParams.WHITE);
         }
     }
 }
