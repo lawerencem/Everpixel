@@ -491,6 +491,7 @@
     <Compile Include="Assets\Model\Event\Combat\EvPathMove.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvPerformAbility.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvStaminaMod.cs" />
+    <Compile Include="Assets\Model\Event\Combat\EvStunDone.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvSummon.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvTileMove.cs" />
     <Compile Include="Assets\Model\Event\Combat\EvUndoShieldWall.cs" />
@@ -709,19 +710,11 @@
   <ItemGroup>
     <None Include="Assets\Data\Ability\XML\Astral.xml" />
     <None Include="Assets\Data\Ability\XML\Fighting.xml" />
-    <None Include="Assets\Data\Ability\XML\Grass.xml">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Assets\Data\Ability\XML\Light.xml">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Assets\Data\Ability\XML\Physical.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Ability\XML\Grass.xml" />
+    <None Include="Assets\Data\Ability\XML\Light.xml" />
+    <None Include="Assets\Data\Ability\XML\Physical.xml" />
     <None Include="Assets\Data\Ability\XML\Poison.xml" />
-    <None Include="Assets\Data\Ability\XML\Shapeshift.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Ability\XML\Shapeshift.xml" />
     <None Include="Assets\Data\Ability\XML\Songs.xml" />
     <None Include="Assets\Data\Ability\XML\WeaponAbilities.xml" />
     <None Include="Assets\Data\Bark\XML\Barks.xml" />
@@ -730,9 +723,7 @@
     <None Include="Assets\Data\Character\XML\Culture\Goblin.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Jomonese.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Norse.xml" />
-    <None Include="Assets\Data\Character\XML\Culture\Orcish.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\Character\XML\Culture\Orcish.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Roman.xml" />
     <None Include="Assets\Data\Character\XML\Culture\Trollish.xml" />
     <None Include="Assets\Data\Character\XML\RaceParams.xml" />

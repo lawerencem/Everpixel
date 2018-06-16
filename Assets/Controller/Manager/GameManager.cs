@@ -47,9 +47,9 @@ namespace Assets.Controller.Managers
             var lParty = new PartyBuildParams();
             var rParty = new PartyBuildParams();
 
-            lParty.Culture = ECulture.Amazonian;
+            lParty.Culture = ECulture.Orcish;
             lParty.Difficulty = 2000;
-            lParty.Name = "Battle Party";
+            lParty.Name = "Ween Herders";
 
             rParty.Culture = ECulture.Norse;
             rParty.Difficulty = 2000;

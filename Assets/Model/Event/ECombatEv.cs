@@ -22,6 +22,7 @@
         PerformAbility,
         Shapeshift,
         StaminaMod,
+        StunDone,
         Summon,
         TileMove,
         UndoShieldWall,

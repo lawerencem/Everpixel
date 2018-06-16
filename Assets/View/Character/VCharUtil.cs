@@ -174,7 +174,10 @@ namespace Assets.View.Character
             this.RandomTranslateRotateOnDeath(c);
             this.AssignDeathSplatter(c);
             foreach (var kvp in c.View.EffectParticlesDict)
+            {
                 GameObject.Destroy(kvp.Value);
+                c.View.EffectParticlesDict.Remove(kvp.Key);
+            }
         }
 
         public void SetBodyViewComponentsNull(CChar c)

@@ -8,5 +8,12 @@
       <SubParty>Archers,0.1</SubParty>
       <SubParty>Militia,0.1</SubParty>
     </Party>
+    <Party Name ="Ween Herders">
+      <SubParty>Commanders,0.3</SubParty>
+      <SubParty>Shock Calvary,0.2</SubParty>
+      <SubParty>War Weens,0.2</SubParty>
+      <SubParty>Wereweens,0.2</SubParty>
+      <SubParty>Archers,0.1</SubParty>
+    </Party>
   </Culture>
 </Parties>

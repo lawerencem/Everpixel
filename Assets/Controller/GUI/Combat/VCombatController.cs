@@ -65,10 +65,10 @@ namespace Assets.Controller.GUI.Combat
             data.Display();
         }
 
-        public void DisplayText(string text, CChar tgt)
+        public void DisplayText(string text, CChar tgt, Color color)
         {
             var data = new HitDisplayData();
-            data.Color = CombatGUIParams.WHITE;
+            data.Color = color;
             data.Hit = null;
             data.Target = tgt.GameHandle;
             data.Text = text;

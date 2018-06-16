@@ -34,6 +34,31 @@ namespace Assets.Model.Event.Combat
                 this.DoCallbacks();
         }
 
+        private void DoTurn()
+        {
+            var bob = this._data.Target.GameHandle.GetComponent<SBob>();
+            if (bob == null)
+            {
+                bob = this._data.Target.GameHandle.AddComponent<SBob>();
+                bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Target.GameHandle);
+            }
+            if (CameraManager.Instance != null)
+                CameraManager.Instance.InitScrollTo(this._data.Target.GameHandle.transform.position);
+            this.TryUndoActionStatuses();
+            var e = new EvPopulateAbilityBtns();
+            e.TryProcess();
+        }
+
+        private void HandleStunned()
+        {
+            var data = new EvStunDoneData();
+            data.Target = this._data.Target;
+            var e = new EvStunDone(data);
+            e.TryProcess();
+            var done = new EvEndTurn();
+            done.TryProcess();
+        }
+
         private bool TryProcessTakingAction()
         {
             if (this._data == null)
@@ -51,17 +76,10 @@ namespace Assets.Model.Event.Combat
             CombatManager.Instance.SetCurrentlyActing(this._data.Target);
             VCharUtil.Instance.AssignPlusLayer(this._data.Target);
             GUIManager.Instance.SetActingBoxToController(this._data.Target);
-            var bob = this._data.Target.GameHandle.GetComponent<SBob>();
-            if (bob == null)
-            {
-                bob = this._data.Target.GameHandle.AddComponent<SBob>();
-                bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Target.GameHandle);
-            }
-            if (CameraManager.Instance != null)
-                CameraManager.Instance.InitScrollTo(this._data.Target.GameHandle.transform.position);
-            this.TryUndoActionStatuses();
-            var e = new EvPopulateAbilityBtns();
-            e.TryProcess();
+            if (FCharacterStatus.HasFlag(this._data.Target.Proxy.GetStatusFlags().CurFlags, FCharacterStatus.Flags.Stunned))
+                this.HandleStunned();
+            else
+                this.DoTurn();
             
             return true;
         }

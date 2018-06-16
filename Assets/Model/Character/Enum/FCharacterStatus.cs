@@ -15,6 +15,7 @@ namespace Assets.Model.Character.Enum
             Demon = 16,
             Eldritch = 32,
             Lycanthrope = 64,
+            Stunned = 128,
         }
 
         public Flags CurFlags { get; set; }
@@ -26,9 +27,11 @@ namespace Assets.Model.Character.Enum
 
         public static void SetDeadFalse(FCharacterStatus f) { f.CurFlags &= ~Flags.Dead; }
         public static void SetShapeshiftedFalse(FCharacterStatus f) { f.CurFlags &= ~Flags.Shapeshifted; }
+        public static void SetStunnedFalse(FCharacterStatus f) { f.CurFlags &= ~Flags.Stunned; }
 
         public static void SetDeadTrue(FCharacterStatus f) { f.CurFlags |= Flags.Dead; }
-        public static void SetShapeshiftedTrue(FCharacterStatus f) { f.CurFlags &= ~Flags.Shapeshifted; }
+        public static void SetShapeshiftedTrue(FCharacterStatus f) { f.CurFlags |= Flags.Shapeshifted; }
+        public static void SetStunnedTrue(FCharacterStatus f) { f.CurFlags |= Flags.Stunned; }
 
         public static bool HasFlag(Flags a, Flags b)
         {
