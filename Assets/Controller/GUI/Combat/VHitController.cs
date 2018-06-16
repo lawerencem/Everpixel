@@ -208,6 +208,17 @@ namespace Assets.Controller.GUI.Combat
             dmgData.Target = target.GameHandle;
             dmgData.YOffset = CombatGUIParams.FLOAT_OFFSET;
             dmgData.Hit.AddDataDisplay(dmgData);
+            if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Critical))
+            {
+                var critData = new HitDisplayData();
+                critData.Color = CombatGUIParams.RED;
+                critData.Hit = hit;
+                critData.Priority = ViewParams.CRIT_PRIORITY;
+                critData.Text = "CRIT!";
+                critData.Target = target.GameHandle;
+                critData.YOffset = CombatGUIParams.FLOAT_OFFSET;
+                critData.Hit.AddDataDisplay(critData);
+            }
         }
 
         private void DisplayDodge(CChar target, MHit hit)
@@ -261,6 +272,17 @@ namespace Assets.Controller.GUI.Combat
             dmgData.YOffset = CombatGUIParams.FLOAT_OFFSET;
             dmgData.Hit.AddDataDisplay(dmgData);
             hit.CallbackHandler(null);
+            if (FHit.HasFlag(hit.Data.Flags.CurFlags, FHit.Flags.Critical))
+            {
+                var critData = new HitDisplayData();
+                critData.Color = CombatGUIParams.GREEN;
+                critData.Hit = hit;
+                critData.Priority = ViewParams.CRIT_PRIORITY;
+                critData.Text = "CRIT!";
+                critData.Target = target.GameHandle;
+                critData.YOffset = CombatGUIParams.FLOAT_OFFSET;
+                critData.Hit.AddDataDisplay(critData);
+            }
         }
 
         private void DisplayParry(CChar target, MHit hit)
