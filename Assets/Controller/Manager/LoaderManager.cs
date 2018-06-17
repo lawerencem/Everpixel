@@ -1,4 +1,5 @@
 ﻿using Assets.Data.Ability.XML;
+using Assets.Data.AI.Char;
 using Assets.Data.AI.Weapon;
 using Assets.Data.Character.XML;
 using Assets.Data.Class.XML;
@@ -28,6 +29,7 @@ namespace Assets.Controller.Manager
             this._readers.Add(ArmorReader.Instance);
             this._readers.Add(BarkReader.Instance);
             this._readers.Add(BiomeReader.Instance);
+            this._readers.Add(new CharThreatReader());
             this._readers.Add(ClassReader.Instance);
             this._readers.Add(DecoReader.Instance);
             this._readers.Add(InjuryReader.Instance);

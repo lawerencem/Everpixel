@@ -268,6 +268,8 @@
     <Compile Include="Assets\Controller\Mount\CMount.cs" />
     <Compile Include="Assets\Data\Ability\XML\AbilityMediator.cs" />
     <Compile Include="Assets\Data\Ability\XML\AbilityReader.cs" />
+    <Compile Include="Assets\Data\AI\Char\CharStatThreatTable.cs" />
+    <Compile Include="Assets\Data\AI\Char\CharThreatReader.cs" />
     <Compile Include="Assets\Data\AI\Weapon\WeaponThreatReader.cs" />
     <Compile Include="Assets\Data\AI\Weapon\WeaponThreatTable.cs" />
     <Compile Include="Assets\Data\Bark\Table\BarkTable.cs" />
@@ -400,13 +402,13 @@
     <Compile Include="Assets\Model\Action\ActionData.cs" />
     <Compile Include="Assets\Model\Action\MAction.cs" />
     <Compile Include="Assets\Model\AI\Particle\CharParticlePair.cs" />
-    <Compile Include="Assets\Model\AI\Particle\EThreat.cs" />
-    <Compile Include="Assets\Model\AI\Particle\EVuln.cs" />
     <Compile Include="Assets\Model\AI\Particle\ParticleBuilder.cs" />
     <Compile Include="Assets\Model\AI\Particle\ParticleContainer.cs" />
-    <Compile Include="Assets\Model\AI\Particle\ThreatPointBuilder.cs" />
-    <Compile Include="Assets\Model\AI\Particle\VulnPointBuilder.cs" />
-    <Compile Include="Assets\Model\AI\Particle\Weapon\WeaponParticlePointBuilder.cs" />
+    <Compile Include="Assets\Model\AI\Particle\Threat\EThreat.cs" />
+    <Compile Include="Assets\Model\AI\Particle\Threat\ThreatPointBuilder.cs" />
+    <Compile Include="Assets\Model\AI\Particle\Threat\Weapon\WeaponThreatCalculator.cs" />
+    <Compile Include="Assets\Model\AI\Particle\Vuln\EVuln.cs" />
+    <Compile Include="Assets\Model\AI\Particle\Vuln\VulnPointBuilder.cs" />
     <Compile Include="Assets\Model\AI\Role\ERole.cs" />
     <Compile Include="Assets\Model\AI\Role\MRole.cs" />
     <Compile Include="Assets\Model\Barrier\MBarrier.cs" />
@@ -719,6 +721,7 @@
     <Compile Include="Assets\View\ViewParams.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Data\AI\Char\CharStatThreatData.xml" />
     <None Include="Assets\Data\AI\Weapon\WeaponThreatData.xml" />
     <None Include="Assets\Data\Ability\XML\Astral.xml" />
     <None Include="Assets\Data\Ability\XML\Fighting.xml" />

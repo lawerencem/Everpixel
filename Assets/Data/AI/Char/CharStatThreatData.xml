@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CharStatThreatParams>
+  <Melee>
+    <AP>10</AP>
+    <Critical_Chance>6</Critical_Chance>
+    <Critical_Multiplier>6</Critical_Multiplier>
+    <Damage_Ignore>0</Damage_Ignore>
+    <Melee>4</Melee>
+    <Initiative>1</Initiative>
+    <Power>5</Power>
+  </Melee>
+</CharStatThreatParams>

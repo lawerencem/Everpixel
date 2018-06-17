@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Assets.Model.AI.Particle
+namespace Assets.Model.AI.Particle.Vuln
 {
     public class VulnPointBuilder
     {

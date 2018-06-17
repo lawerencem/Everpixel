@@ -1,4 +1,4 @@
-﻿namespace Assets.Model.AI.Particle
+﻿namespace Assets.Model.AI.Particle.Vuln
 {
     public enum EVuln
     {

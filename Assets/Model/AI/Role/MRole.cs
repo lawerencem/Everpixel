@@ -1,4 +1,6 @@
 ﻿using Assets.Model.AI.Particle;
+using Assets.Model.AI.Particle.Threat;
+using Assets.Model.AI.Particle.Vuln;
 using System.Collections.Generic;
 
 namespace Assets.Model.AI.Role

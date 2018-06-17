@@ -34,5 +34,4 @@ namespace Assets.Data.AI.Weapon
                 this._threats.Table.Add(type, double.Parse(value));
         }
     }
-
 }

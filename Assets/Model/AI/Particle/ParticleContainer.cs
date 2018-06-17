@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Assets.Model.AI.Particle.Threat;
+using Assets.Model.AI.Particle.Vuln;
+using System;
 using System.Collections.Generic;
 
 namespace Assets.Model.AI.Particle
@@ -18,12 +20,12 @@ namespace Assets.Model.AI.Particle
                 this._vulnTable.Add(vuln, new List<CharParticlePair>());
         }
 
-        public void AddCharSwarmThreat(EThreat type, CharParticlePair threat)
+        public void AddThreatParticles(EThreat type, CharParticlePair threat)
         {
             this._threatTable[type].Add(threat);
         }
 
-        public void AddCharSwarmVuln(EVuln type, CharParticlePair vuln)
+        public void AddVulnParticles(EVuln type, CharParticlePair vuln)
         {
             this._vulnTable[type].Add(vuln);
         }
