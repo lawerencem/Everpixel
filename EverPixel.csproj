@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.4.1f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -270,6 +268,8 @@
     <Compile Include="Assets\Controller\Mount\CMount.cs" />
     <Compile Include="Assets\Data\Ability\XML\AbilityMediator.cs" />
     <Compile Include="Assets\Data\Ability\XML\AbilityReader.cs" />
+    <Compile Include="Assets\Data\AI\Weapon\WeaponThreatReader.cs" />
+    <Compile Include="Assets\Data\AI\Weapon\WeaponThreatTable.cs" />
     <Compile Include="Assets\Data\Bark\Table\BarkTable.cs" />
     <Compile Include="Assets\Data\Bark\XML\BarkReader.cs" />
     <Compile Include="Assets\Data\Character\Table\PredefinedCharTable.cs" />
@@ -399,8 +399,6 @@
     <Compile Include="Assets\Model\Action\AAction.cs" />
     <Compile Include="Assets\Model\Action\ActionData.cs" />
     <Compile Include="Assets\Model\Action\MAction.cs" />
-    <Compile Include="Assets\Model\AI\Role\ERole.cs" />
-    <Compile Include="Assets\Model\AI\Role\MRole.cs" />
     <Compile Include="Assets\Model\AI\Particle\CharParticlePair.cs" />
     <Compile Include="Assets\Model\AI\Particle\EThreat.cs" />
     <Compile Include="Assets\Model\AI\Particle\EVuln.cs" />
@@ -408,6 +406,9 @@
     <Compile Include="Assets\Model\AI\Particle\ParticleContainer.cs" />
     <Compile Include="Assets\Model\AI\Particle\ThreatPointBuilder.cs" />
     <Compile Include="Assets\Model\AI\Particle\VulnPointBuilder.cs" />
+    <Compile Include="Assets\Model\AI\Particle\Weapon\WeaponParticlePointBuilder.cs" />
+    <Compile Include="Assets\Model\AI\Role\ERole.cs" />
+    <Compile Include="Assets\Model\AI\Role\MRole.cs" />
     <Compile Include="Assets\Model\Barrier\MBarrier.cs" />
     <Compile Include="Assets\Model\Biome\BiomeParam.cs" />
     <Compile Include="Assets\Model\Biome\EBiome.cs" />
@@ -718,6 +719,7 @@
     <Compile Include="Assets\View\ViewParams.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Data\AI\Weapon\WeaponThreatData.xml" />
     <None Include="Assets\Data\Ability\XML\Astral.xml" />
     <None Include="Assets\Data\Ability\XML\Fighting.xml" />
     <None Include="Assets\Data\Ability\XML\Grass.xml" />

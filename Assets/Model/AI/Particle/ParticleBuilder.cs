@@ -11,7 +11,7 @@ namespace Assets.Model.AI.Particle
             var tiles = target.Proxy.GetModel().GetTile().GetAoETiles(3);
             foreach (var tile in tiles)
             {
-                tile.GetParticles().RemoveCharSwarmPoints(target.Proxy.GetId());
+                tile.GetRTeamParticles().RemoveCharSwarmPoints(target.Proxy.GetId());
                 this.GenerateThreatPoints(target, tile, 0);
                 this.GenerateVulnPoints(target, tile, 0);
             }
@@ -23,7 +23,7 @@ namespace Assets.Model.AI.Particle
             var threats = builder.BuildThreats(target);
             // TODO: Modify threats based on distance
             target.Role.ModifyThreatPoints(threats);
-            var points = tile.GetParticles();
+            var points = tile.GetRTeamParticles();
             foreach (var kvp in threats)
                 points.AddCharSwarmThreat(kvp.Key, kvp.Value);
         }
@@ -34,7 +34,7 @@ namespace Assets.Model.AI.Particle
             var vulns = builder.BuildVulns(target);
             // TODO: Modify threats based on distance
             target.Role.ModifyVulnPoints(vulns);
-            var points = tile.GetParticles();
+            var points = tile.GetRTeamParticles();
             foreach (var kvp in vulns)
                 points.AddCharSwarmVuln(kvp.Key, kvp.Value);
         }

@@ -2,9 +2,6 @@
 {
     public enum ERole
     {
-        Assassin,
-        Specialist,
-        Support,
-        Tank,
+        Assassin_Melee,
     }
 }

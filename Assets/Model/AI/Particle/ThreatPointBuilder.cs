@@ -10,11 +10,11 @@ namespace Assets.Model.AI.Particle
         {
             var threats = new Dictionary<EThreat, CharParticlePair>();
             foreach (EThreat threat in Enum.GetValues(typeof(EThreat)))
-                threats.Add(threat, this.GetParticlePoints(threat, target));
+                threats.Add(threat, this.GetThreatPoints(threat, target));
             return threats;
         }
 
-        private CharParticlePair GetParticlePoints(EThreat type, CChar target)
+        private CharParticlePair GetThreatPoints(EThreat type, CChar target)
         {
             var value = 10; // TODO
             return new CharParticlePair(target.Proxy.GetId(), value);

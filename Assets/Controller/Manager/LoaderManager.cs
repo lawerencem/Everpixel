@@ -1,4 +1,5 @@
 ﻿using Assets.Data.Ability.XML;
+using Assets.Data.AI.Weapon;
 using Assets.Data.Character.XML;
 using Assets.Data.Class.XML;
 using Assets.Data.Equipment.XML;
@@ -39,6 +40,7 @@ namespace Assets.Controller.Manager
             this._readers.Add(SubPartyReader.Instance);
             this._readers.Add(TileReader.Instance);
             this._readers.Add(WeaponReader.Instance);
+            this._readers.Add(new WeaponThreatReader());
             this._readers.Add(ZoneReader.Instance);
 
             foreach (var reader in this._readers)

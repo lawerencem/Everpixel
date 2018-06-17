@@ -29,7 +29,8 @@ namespace Assets.Model.Map.Tile
         private MMap _map;
         private int _row;
         private int _staminaCost;
-        private ParticleContainer _swarmPoints;
+        private ParticleContainer _lTeamParticlePoints;
+        private ParticleContainer _rTeamParticlePoints;
         private ETile _type;
 
         public CTile Controller { get { return this._controller; } }
@@ -44,7 +45,8 @@ namespace Assets.Model.Map.Tile
             this._flags = new FTile();
             this._height = 1;
             this._liquid = false;
-            this._swarmPoints = new ParticleContainer();
+            this._lTeamParticlePoints = new ParticleContainer();
+            this._rTeamParticlePoints = new ParticleContainer();
         }
 
         public void SetN(MTile t) { this._adjacent.Add(t); this._n = t; }
@@ -75,9 +77,15 @@ namespace Assets.Model.Map.Tile
 
         public FTile GetFlags() { return this._flags; }
         public int GetHeight() { return this._height; }
-        public ParticleContainer GetParticles()
+
+        public ParticleContainer GetLTeamParticles()
         {
-            return this._swarmPoints;
+            return this._lTeamParticlePoints;
+        }
+
+        public ParticleContainer GetRTeamParticles()
+        {
+            return this._rTeamParticlePoints;
         }
 
         public List<MTile> GetArcTiles(MTile target)
