@@ -3,10 +3,17 @@ using Assets.Model.AI.Particle.Threat;
 using Assets.Model.AI.Particle.Vuln;
 using System.Collections.Generic;
 
-namespace Assets.Model.AI.Role
+namespace Assets.Model.AI.Agent
 {
-    public class MRole
+    public class MAgentRole
     {
+        private EAgentRole _type;
+
+        public MAgentRole(EAgentRole type)
+        {
+            this._type = type;
+        }
+
         public void ModifyThreatPoints(Dictionary<EThreat, CharParticlePair> threats)
         {
             // TODO: Modify threats based on AI roles

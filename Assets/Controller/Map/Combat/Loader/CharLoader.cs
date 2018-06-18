@@ -13,7 +13,7 @@ namespace Assets.Controller.Map.Combat.Loader
     {
         private Transform _container;
 
-        public void Init(Transform container, MMapController map, MapInitInfo info)
+        public void Init(Transform container, CMap map, MapInitInfo info)
         {
             this._container = container;
             this.InitViews(map, info);
@@ -26,7 +26,7 @@ namespace Assets.Controller.Map.Combat.Loader
             this.RenderChar(c, t);
         }
 
-        private void InitViews(MMapController map, MapInitInfo info)
+        private void InitViews(CMap map, MapInitInfo info)
         {
             var builder = new CharViewBuilder();
             foreach (var party in map.GetLParties())

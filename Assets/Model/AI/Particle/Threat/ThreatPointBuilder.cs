@@ -23,11 +23,11 @@ namespace Assets.Model.AI.Particle.Threat
             return this._threats;
         }
 
-        private void SetThreatPoints(EThreat type, CChar target)
+        private void SetThreatPoints(EThreat type, CChar agent)
         {
             switch (type)
             {
-                case (EThreat.Melee): { this.SetWeaponDamageThreat(target); } break;
+                case (EThreat.Melee): { this.SetWeaponDamageThreat(agent); } break;
             }
         }
 
@@ -36,7 +36,7 @@ namespace Assets.Model.AI.Particle.Threat
             double value = 0;
             value += this._wpnThreatCalc.GetWeaponThreatPoints(target.Proxy.GetLWeapon());
             value += this._wpnThreatCalc.GetWeaponThreatPoints(target.Proxy.GetRWeapon());
-            this._threats.Add(EThreat.Melee, new CharParticlePair(target.Proxy.GetId(), value));
+            this._threats.Add(EThreat.Melee, new CharParticlePair(target.Proxy.GetGuid().ToString(), value));
         }
     }
 }

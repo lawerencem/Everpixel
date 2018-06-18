@@ -234,6 +234,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Controller\AI\Particle\Combat\CombatAIParticleController.cs" />
     <Compile Include="Assets\Controller\Character\CChar.cs" />
     <Compile Include="Assets\Controller\Equipment\Armor\CArmor.cs" />
     <Compile Include="Assets\Controller\Equipment\Armor\CHelm.cs" />
@@ -252,13 +253,13 @@
     <Compile Include="Assets\Controller\Manager\GUI\GUIEvManager.cs" />
     <Compile Include="Assets\Controller\Manager\GUI\GUIManager.cs" />
     <Compile Include="Assets\Controller\Manager\LoaderManager.cs" />
+    <Compile Include="Assets\Controller\Map\Combat\CMap.cs" />
     <Compile Include="Assets\Controller\Map\Combat\Loader\CharLoader.cs" />
     <Compile Include="Assets\Controller\Map\Combat\Loader\EnvironmentLoader.cs" />
     <Compile Include="Assets\Controller\Map\Combat\Loader\MapLoader.cs" />
     <Compile Include="Assets\Controller\Map\Combat\Loader\PartyLoader.cs" />
     <Compile Include="Assets\Controller\Map\Combat\Loader\TileLoader.cs" />
     <Compile Include="Assets\Controller\Map\Combat\MapInitInfo.cs" />
-    <Compile Include="Assets\Controller\Map\Combat\MMapController.cs" />
     <Compile Include="Assets\Controller\Map\Combat\VMapCombatController.cs" />
     <Compile Include="Assets\Controller\Map\Deco\CDeco.cs" />
     <Compile Include="Assets\Controller\Map\Tile\CTile.cs" />
@@ -401,6 +402,8 @@
     <Compile Include="Assets\Model\Action\AAction.cs" />
     <Compile Include="Assets\Model\Action\ActionData.cs" />
     <Compile Include="Assets\Model\Action\MAction.cs" />
+    <Compile Include="Assets\Model\AI\Agent\EAgentRole.cs" />
+    <Compile Include="Assets\Model\AI\Agent\MRole.cs" />
     <Compile Include="Assets\Model\AI\Particle\CharParticlePair.cs" />
     <Compile Include="Assets\Model\AI\Particle\ParticleBuilder.cs" />
     <Compile Include="Assets\Model\AI\Particle\ParticleContainer.cs" />
@@ -409,8 +412,6 @@
     <Compile Include="Assets\Model\AI\Particle\Threat\Weapon\WeaponThreatCalculator.cs" />
     <Compile Include="Assets\Model\AI\Particle\Vuln\EVuln.cs" />
     <Compile Include="Assets\Model\AI\Particle\Vuln\VulnPointBuilder.cs" />
-    <Compile Include="Assets\Model\AI\Role\ERole.cs" />
-    <Compile Include="Assets\Model\AI\Role\MRole.cs" />
     <Compile Include="Assets\Model\Barrier\MBarrier.cs" />
     <Compile Include="Assets\Model\Biome\BiomeParam.cs" />
     <Compile Include="Assets\Model\Biome\EBiome.cs" />

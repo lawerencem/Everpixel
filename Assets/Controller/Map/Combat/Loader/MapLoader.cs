@@ -7,21 +7,21 @@ namespace Assets.Controller.Map.Combat.Loader
 {
     public class MapLoader
     {
-        private MMapController _map;
+        private CMap _map;
 
         public Transform MapHolder;
         public Transform BackgroundTiles;
 
         public MapLoader()
         {
-            this.MapHolder = new GameObject("Map").transform;
+            this.MapHolder = new GameObject("BattleMap").transform;
             this.MapHolder.tag = "BattleMap";
             this.BackgroundTiles = new GameObject("BackgroundTiles").transform;
             this.BackgroundTiles.transform.SetParent(this.MapHolder);
-            this._map = new MMapController();
+            this._map = new CMap();
         }
 
-        public MMapController GetCombatMap(MapInitInfo info)
+        public CMap GetCombatMap(MapInitInfo info)
         {
             var builder = new MapBuilder();
             var hexMap = builder.GetMap(info.Rows, info.Cols, ViewParams.OFFSET, ViewParams.MAP_CENTER);

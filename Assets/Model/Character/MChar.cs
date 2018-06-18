@@ -13,13 +13,11 @@ namespace Assets.Model.Character
 {
     public class MChar : AChar, IPathable
     {
-        private Guid _id;
         private ERace _race;
         public ERace Race { get { return this._race; } }
 
-        public MChar(ERace race)
+        public MChar(ERace race) : base()
         {
-            this._id = Guid.NewGuid();
             this._race = race;
             this._abilities = new CharAbilities();
             this._actionFlags = new FActionStatus();

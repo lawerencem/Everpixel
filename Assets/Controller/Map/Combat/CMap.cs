@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Assets.Controller.Map.Combat
 {
-    public class MMapController
+    public class CMap
     {
         private List<MParty> _lParties;
         private MMap _map;
@@ -25,9 +25,12 @@ namespace Assets.Controller.Map.Combat
             return this._rParties;
         }
 
-        public void SetMap(MMap m) { this._map = m; }
+        public void SetMap(MMap m)
+        {
+            this._map = m;
+        }
 
-        public MMapController()
+        public CMap()
         {
             this._lParties = new List<MParty>();
             this._rParties = new List<MParty>();

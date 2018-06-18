@@ -21,13 +21,13 @@ namespace Assets.Controller.Map.Combat.Loader
             this._spriteDict = new Dictionary<ETile, List<Sprite>>();
         }
 
-        public void RenderHeights(MMapController controller)
+        public void RenderHeights(CMap controller)
         {
             this.RenderHeightOffsets(controller);
             this.RenderHeightDeltas(controller);
         }
 
-        public void InitMapEnvironment(MMapController controller, MapInitInfo info)
+        public void InitMapEnvironment(CMap controller, MapInitInfo info)
         {
             var decoLoader = new DecoLoader();
             var biomeParams = BiomeTable.Instance.Table[info.Biome];
@@ -44,7 +44,7 @@ namespace Assets.Controller.Map.Combat.Loader
             }
         }
 
-        public void InitLandmarks(MMapController controller, MapInitInfo info)
+        public void InitLandmarks(CMap controller, MapInitInfo info)
         {
             var biomeParams = BiomeTable.Instance.Table[info.Biome];
             foreach(var tile in controller.GetMap().GetTiles())
@@ -61,7 +61,7 @@ namespace Assets.Controller.Map.Combat.Loader
             }
         }
 
-        public void InitTiles(MMapController controller, MapInitInfo info, Transform tileHolder)
+        public void InitTiles(CMap controller, MapInitInfo info, Transform tileHolder)
         {
             this.InitTileSprites();
             foreach (var tile in controller.GetMap().GetTiles())
@@ -75,7 +75,7 @@ namespace Assets.Controller.Map.Combat.Loader
             controller.GetMap().InitControllerAdjacent();
         }
 
-        private void RenderHeightDeltas(MMapController controller)
+        private void RenderHeightDeltas(CMap controller)
         {
             foreach(var tile in controller.GetMap().GetTiles())
             {
@@ -96,7 +96,7 @@ namespace Assets.Controller.Map.Combat.Loader
             }
         }
 
-        private void RenderHeightOffsets(MMapController controller)
+        private void RenderHeightOffsets(CMap controller)
         {
             foreach(var tile in controller.GetMap().GetTiles())
             {

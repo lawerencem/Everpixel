@@ -29,14 +29,21 @@ namespace Assets.Model.AI.Particle.Threat.Weapon
 
         private double GetArmorIgnoreThreat(CWeapon weapon)
         {
+
             double threat = weapon.GetStat(EWeaponStat.Armor_Ignore);
-            return WeaponThreatTable.Instance.Table[EWeaponStat.Armor_Ignore] / threat;
+            if (threat > 0)
+                return WeaponThreatTable.Instance.Table[EWeaponStat.Armor_Ignore] / threat;
+            else
+                return 0;
         }
 
         private double GetArmorPierceThreat(CWeapon weapon)
         {
             double threat = weapon.GetStat(EWeaponStat.Armor_Pierce);
-            return WeaponThreatTable.Instance.Table[EWeaponStat.Armor_Pierce] / threat;
+            if (threat > 0)
+                return WeaponThreatTable.Instance.Table[EWeaponStat.Armor_Pierce] / threat;
+            else
+                return 0;
         }
 
         private double GetBlockIgnoreThreat(CWeapon weapon)

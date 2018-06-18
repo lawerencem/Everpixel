@@ -1,4 +1,5 @@
-﻿using Assets.Controller.Character;
+﻿using Assets.Controller.AI.Particle.Combat;
+using Assets.Controller.Character;
 using Assets.Controller.Equipment.Weapon;
 using Assets.Controller.Map.Combat;
 using Assets.Controller.Map.Tile;
@@ -14,6 +15,7 @@ namespace Assets.Controller.Manager.Combat
 {
     public class CombatManager
     {
+        private CombatAIParticleController _ai;
         private CurrentlyActingData _currActingData;
         private List<Pair<CChar, MAction>> _currentlyCasting;
         private CombatManagerData _combatData;
@@ -98,19 +100,15 @@ namespace Assets.Controller.Manager.Combat
             this._currentlyCasting = new List<Pair<CChar, MAction>>();
         }
 
-        public void Init(MMapController map)
+        public void Init(CMap map)
         {
             this._combatData.Map = map;
             this._combatData.LParties = map.GetLParties();
             this._combatData.RParties = map.GetRParties();
             foreach(var party in this._combatData.LParties)
-            {
                 this._combatData.Characters.AddRange(party.GetChars());
-            }
             foreach (var party in this._combatData.RParties)
-            {
                 this._combatData.Characters.AddRange(party.GetChars());
-            }
             if (this._combatData.Characters.Count > 0)
             {
                 this._combatData.Characters.Sort(
@@ -120,6 +118,7 @@ namespace Assets.Controller.Manager.Combat
             }
             foreach (var character in this._combatData.Characters)
                 this._combatData.InitiativeOrder.Add(character);
+            this.InitAI(map);
             this.ProcessTakingAction();
         }
 
@@ -140,6 +139,7 @@ namespace Assets.Controller.Manager.Combat
             foreach (var party in this._combatData.RParties)
                 party.GetChars().Remove(c);
             this._combatData.InitiativeOrder.Remove(c);
+            this._ai.RemoveAgentParticles(c, c.Proxy.LParty);
         }
 
         public void ProcessEndTurn()
@@ -147,6 +147,9 @@ namespace Assets.Controller.Manager.Combat
             this._currActingData.CurrentlyActing.Proxy.ProcessEndOfTurn();
             this._combatData.InitiativeOrder.Remove(this._currActingData.CurrentlyActing);
             this._currActingData.Ability = EAbility.None;
+            var agent = this._currActingData.CurrentlyActing;
+            this._ai.RemoveAgentParticles(agent, agent.Proxy.LParty);
+            this._ai.SetAgentParticlePoints(agent, agent.Proxy.LParty);
             if (this._combatData.InitiativeOrder.Count > 0)
             {
                 this.ProcessTakingAction();
@@ -178,6 +181,21 @@ namespace Assets.Controller.Manager.Combat
             data.Target = this._combatData.InitiativeOrder[0];
             var acting = new EvNewTurn(data);
             acting.TryProcess();
+        }
+
+        private void InitAI(CMap map)
+        {
+            this._ai = new CombatAIParticleController(map.GetMap().GetTiles());
+            foreach (var party in this._combatData.LParties)
+            {
+                foreach (var agent in party.GetChars())
+                    this._ai.SetAgentParticlePoints(agent, true);
+            }
+            foreach (var party in this._combatData.RParties)
+            {
+                foreach (var agent in party.GetChars())
+                    this._ai.SetAgentParticlePoints(agent, false);
+            }
         }
 
         private void ProcessTakingAction()

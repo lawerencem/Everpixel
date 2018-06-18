@@ -141,9 +141,9 @@ namespace Assets.Model.Character
             return this._model.Mount;
         }
 
-        public Guid GetId()
+        public Guid GetGuid()
         {
-            return this._model.GetId();
+            return this._model.GetGuid();
         }
 
         public PreCharParams GetParams()

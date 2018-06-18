@@ -20,7 +20,7 @@ namespace Assets.Controller.Manager.Combat
     public class CombatManagerData
     {
         public List<CChar> Characters;
-        public MMapController Map;
+        public CMap Map;
         public List<CChar> InitiativeOrder;
         public List<MParty> LParties;
         public bool LWeapon;

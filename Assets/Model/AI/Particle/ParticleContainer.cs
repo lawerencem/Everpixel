@@ -30,7 +30,7 @@ namespace Assets.Model.AI.Particle
             this._vulnTable[type].Add(vuln);
         }
 
-        public void RemoveCharSwarmPoints(Guid id)
+        public void RemoveAgentParticles(string id)
         {
             foreach (var pair in this._threatTable)
                 pair.Value.RemoveAll(x => x.Id == id);

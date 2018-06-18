@@ -78,7 +78,7 @@ namespace Assets.Data.Equipment.XML
             switch (elem.Name.ToString())
             {
                 case ("Tier"): { HandleTierFromFile(name, value, ref tier); } break;
-                case ("Accuracy"): { HandleStatsFromFile(name, EWeaponStat.Accuracy_Mod, v, tier); } break;
+                case ("Accuracy_Mod"): { HandleStatsFromFile(name, EWeaponStat.Accuracy_Mod, v, tier); } break;
                 case ("AP_Mod"): { HandleStatsFromFile(name, EWeaponStat.AP_Mod, v, tier); } break;
                 case ("Armor_Ignore"): { HandleStatsFromFile(name, EWeaponStat.Armor_Ignore, v, tier); } break;
                 case ("Armor_Pierce"): { HandleStatsFromFile(name, EWeaponStat.Armor_Pierce, v, tier); } break;
@@ -100,7 +100,7 @@ namespace Assets.Data.Equipment.XML
                 case ("Ranged_Block_Chance"): { HandleStatsFromFile(name, EWeaponStat.Ranged_Block_Chance, v, tier); } break;
                 case ("Sprites"): { HandleSpritesFromFile(name, value, tier); } break;
                 case ("Sprite_FX_Path"): { this.HandleSpriteFXPath(name, value, tier); } break;
-                case ("Shield_Damage"): { HandleStatsFromFile(name, EWeaponStat.Shield_Damage_Percent, v, tier); } break;
+                case ("Shield_Damage_Percent"): { HandleStatsFromFile(name, EWeaponStat.Shield_Damage_Percent, v, tier); } break;
                 case ("Stamina_Mod"): { HandleStatsFromFile(name, EWeaponStat.Stamina_Mod, v, tier); } break;
                 case ("Value"): { HandleStatsFromFile(name, EWeaponStat.Value, v, tier); } break;
                 case ("EAbility"): { HandleWeaponAbilitiesFromFile(name, value, tier); } break;
@@ -134,7 +134,7 @@ namespace Assets.Data.Equipment.XML
 
             switch (x)
             {
-                case (EWeaponStat.Accuracy_Mod): { stats.Table[key].ArmorIgnore = v; } break;
+                case (EWeaponStat.Accuracy_Mod): { stats.Table[key].AccuracyMod = v; } break;
                 case (EWeaponStat.Armor_Ignore): { stats.Table[key].ArmorIgnore = v; } break;
                 case (EWeaponStat.Armor_Pierce): { stats.Table[key].ArmorPierce = v; } break;
                 case (EWeaponStat.AP_Mod): { stats.Table[key].APMod = v; } break;

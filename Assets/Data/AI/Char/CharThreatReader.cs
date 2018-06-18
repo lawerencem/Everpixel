@@ -1,6 +1,5 @@
 ﻿using Assets.Model.AI.Particle.Threat;
 using Assets.Model.Character.Enum;
-using Assets.Model.Equipment.Enum;
 using Assets.Template.Util;
 using Assets.Template.XML;
 using System.Collections.Generic;

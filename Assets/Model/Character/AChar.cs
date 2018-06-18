@@ -19,7 +19,7 @@ namespace Assets.Model.Character
     abstract public class AChar : IHexOccupant
     {
         private CChar _controller;
-        private Guid _id;
+        private Guid _guid;
 
         protected CharAbilities _abilities;
         protected FActionStatus _actionFlags;
@@ -57,7 +57,7 @@ namespace Assets.Model.Character
         public CharEffects GetEffectsContainer() { return this._effects; }
         public ACharEquipment GetEquipment() { return this._equipment; }
         public List<AZone> GetLinkedZones() { return this._linkedZones; }
-        public Guid GetId() { return this._id; }
+        public Guid GetGuid() { return this._guid; }
         public PreCharParams GetParams() { return this._params; }
         public MParty GetParentParty() { return this._parentParty; }
         public CharPerks GetPerks() { return this._perks; }
@@ -73,6 +73,11 @@ namespace Assets.Model.Character
         public void SetParams(PreCharParams p) { this._params = p; }
         public void SetParentParty(MParty p) { this._parentParty = p; }
         public void SetType(ECharType t) { this._type = t; }
+
+        public AChar()
+        {
+            this._guid = Guid.NewGuid();
+        }
 
         public int GetTileTraversalStaminaCost(MTile tile)
         {
