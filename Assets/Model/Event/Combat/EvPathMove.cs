@@ -82,7 +82,7 @@ namespace Assets.Model.Event.Combat
             if (this._data.Source != null)
             {
                 var ap = this._data.Char.Proxy.GetPoints(ESecondaryStat.AP);
-                var stamina = this._data.Char.Proxy.GetStat(ESecondaryStat.Stamina);
+                var stamina = this._data.Char.Proxy.GetPoints(ESecondaryStat.Stamina);
                 var tile = this._data.TargetPath.GetFirstTile() as MTile;
                 this._next = tile.Controller;
                 var apCost = this._next.Model.GetCost();
@@ -107,15 +107,17 @@ namespace Assets.Model.Event.Combat
         private void TryProcessNextTile(CTile tile)
         {
             var ap = this._data.Char.Proxy.GetPoints(ESecondaryStat.AP);
+            var stamina = this._data.Char.Proxy.GetPoints(ESecondaryStat.Stamina);
             var model = (MTile) this._data.TargetPath.GetNextTile(tile.Model);
             if (model != null)
             {
                 this._next = model.Controller;
-                var cost = this._next.Model.GetCost();
-                if (cost <= ap)
+                var apCost = this._next.Model.GetCost();
+                var stamCost = this._next.Model.GetStaminaCost();
+                if (apCost <= ap && stamCost <= stamina)
                 {
                     var data = new EvTileMoveData();
-                    data.Cost = cost;
+                    data.Cost = apCost;
                     data.Char = this._data.Char;
                     data.ParentMove = this;
                     data.Source = this._current;
