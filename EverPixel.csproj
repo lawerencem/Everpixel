@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.4.1f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -234,7 +236,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Controller\AI\Particle\Combat\CombatAIParticleController.cs" />
+    <Compile Include="Assets\Controller\AI\Agent\CAgent.cs" />
+    <Compile Include="Assets\Controller\AI\Particle\Combat\CCombatParticle.cs" />
     <Compile Include="Assets\Controller\Character\CChar.cs" />
     <Compile Include="Assets\Controller\Equipment\Armor\CArmor.cs" />
     <Compile Include="Assets\Controller\Equipment\Armor\CHelm.cs" />
@@ -404,6 +407,7 @@
     <Compile Include="Assets\Model\Action\MAction.cs" />
     <Compile Include="Assets\Model\AI\Agent\EAgentRole.cs" />
     <Compile Include="Assets\Model\AI\Agent\MRole.cs" />
+    <Compile Include="Assets\Model\AI\Agent\Turn\Decision\MAgentDecision.cs" />
     <Compile Include="Assets\Model\AI\Particle\CharParticlePair.cs" />
     <Compile Include="Assets\Model\AI\Particle\ParticleBuilder.cs" />
     <Compile Include="Assets\Model\AI\Particle\ParticleContainer.cs" />
@@ -796,6 +800,7 @@
     <None Include="Assets\Data\Zone\XML\Zones.xml" />
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

@@ -15,7 +15,7 @@ namespace Assets.Controller.Manager.Combat
 {
     public class CombatManager
     {
-        private CombatAIParticleController _ai;
+        private CCombatParticle _ai;
         private CurrentlyActingData _currActingData;
         private List<Pair<CChar, MAction>> _currentlyCasting;
         private CombatManagerData _combatData;
@@ -193,7 +193,7 @@ namespace Assets.Controller.Manager.Combat
 
         private void InitAI(CMap map)
         {
-            this._ai = new CombatAIParticleController(map.GetMap().GetTiles());
+            this._ai = new CCombatParticle(map.GetMap().GetTiles());
             foreach (var party in this._combatData.LParties)
             {
                 foreach (var agent in party.GetChars())

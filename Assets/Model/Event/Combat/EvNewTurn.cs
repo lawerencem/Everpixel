@@ -1,4 +1,5 @@
-﻿using Assets.Controller.Character;
+﻿using Assets.Controller.AI.Agent;
+using Assets.Controller.Character;
 using Assets.Controller.Manager;
 using Assets.Controller.Manager.Combat;
 using Assets.Controller.Manager.GUI;
@@ -53,7 +54,8 @@ namespace Assets.Model.Event.Combat
 
         private void DoTurnAI()
         {
-            // TODO:
+            var agent = new CAgent();
+            agent.ProcessTurn(this._data.Target);
         }
 
         private void HandleStunned()

@@ -1,17 +1,15 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Tile;
 using Assets.Model.AI.Particle;
-using Assets.Model.AI.Particle.Threat;
-using Assets.Model.AI.Particle.Vuln;
 using System.Collections.Generic;
 
 namespace Assets.Controller.AI.Particle.Combat
 {
-    public class CombatAIParticleController
+    public class CCombatParticle
     {
         private List<CTile> _mapTiles;
 
-        public CombatAIParticleController(List<CTile> mapTiles)
+        public CCombatParticle(List<CTile> mapTiles)
         {
             this._mapTiles = mapTiles;
         }
