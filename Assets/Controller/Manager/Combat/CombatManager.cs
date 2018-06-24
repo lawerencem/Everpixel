@@ -124,11 +124,19 @@ namespace Assets.Controller.Manager.Combat
 
         public bool IsValidActionClick(CTile t)
         {
-            if (this.TryProcessTileWithChar(t))
+            if (this.IsAITurn())
+                return false;
+            else if (this.TryProcessTileWithChar(t))
                 return true;
-            if (this.TryProcessEmptyTile(t))
+            else if (this.TryProcessEmptyTile(t))
                 return true;
-            return false;
+            else
+                return false;
+        }
+
+        public bool IsAITurn()
+        {
+            return this.GetCurrentlyActing().Proxy.GetParentParty().GetAIControlled();
         }
 
         public void ProcessCharDeath(CChar c)

@@ -72,7 +72,9 @@ namespace Assets.View.Event
 
         private bool TryProcessMove()
         {
-            if (this._data.Target.Current == null && 
+            if (CombatManager.Instance.IsAITurn())
+                return false;
+            else if (this._data.Target.Current == null && 
                 !GUIManager.Instance.GetGUILocked() &&
                 !GUIManager.Instance.GetInteractionLocked())
             {
@@ -95,7 +97,8 @@ namespace Assets.View.Event
                     return true;
                 }
             }
-            return false;
+            else
+                return false;
         }
 
         private void UpdateActingBox(object o)

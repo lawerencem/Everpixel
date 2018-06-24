@@ -1,4 +1,5 @@
-﻿using Assets.Model.Event.Combat;
+﻿using Assets.Controller.Manager.Combat;
+using Assets.Model.Event.Combat;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,8 +11,11 @@ namespace Assets.View.Script.GUI
         {
             if (base.IsValid())
             {
-                var e = new EvEndTurn();
-                e.TryProcess();
+                if (!CombatManager.Instance.IsAITurn())
+                {
+                    var e = new EvEndTurn();
+                    e.TryProcess();
+                }
             }
         }
 
