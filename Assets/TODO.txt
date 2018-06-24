@@ -1,5 +1,10 @@
 ﻿TODO
 
+ - AI
+   -- Fill out remaining threat types
+   -- Ensure critters get threat values
+   -- Ensure threat values diminish by distance
+
  - Enter button ends turn
 
  - Dead Critter Eyes

@@ -81,7 +81,7 @@ namespace Assets.Model.Event.Combat
         {
             if (this._data.Source != null)
             {
-                var ap = this._data.Char.Proxy.GetStat(ESecondaryStat.AP);
+                var ap = this._data.Char.Proxy.GetPoints(ESecondaryStat.AP);
                 var stamina = this._data.Char.Proxy.GetStat(ESecondaryStat.Stamina);
                 var tile = this._data.TargetPath.GetFirstTile() as MTile;
                 this._next = tile.Controller;
@@ -106,7 +106,7 @@ namespace Assets.Model.Event.Combat
 
         private void TryProcessNextTile(CTile tile)
         {
-            var ap = this._data.Char.Proxy.GetStat(ESecondaryStat.AP);
+            var ap = this._data.Char.Proxy.GetPoints(ESecondaryStat.AP);
             var model = (MTile) this._data.TargetPath.GetNextTile(tile.Model);
             if (model != null)
             {

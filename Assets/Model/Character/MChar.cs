@@ -37,10 +37,18 @@ namespace Assets.Model.Character
         {
             switch(type)
             {
-                case (ESecondaryStat.AP): { this._points.AddValue(type, value); } break;
+                case (ESecondaryStat.AP): { this.ModifyAP(value, isHeal); } break;
                 case (ESecondaryStat.HP): { this.ModifyHP(value, isHeal); } break;
                 case (ESecondaryStat.Stamina): { this.ModifyStamina(value, isHeal); } break;
             }
+        }
+
+        private void ModifyAP(int value, bool isHeal)
+        {
+            if (isHeal)
+                this._points.AddValue(ESecondaryStat.AP, value);
+            else
+                this._points.AddValue(ESecondaryStat.AP, -1 * value);
         }
 
         private void ModifyHP(int value, bool isHeal)

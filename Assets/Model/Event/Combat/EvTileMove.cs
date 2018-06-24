@@ -1,10 +1,8 @@
-﻿using System;
-using Assets.Controller.Character;
+﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Tile;
 using Assets.Controller.Script;
 using Assets.Template.Event;
 using Assets.View;
-using Assets.Controller.Manager.GUI;
 
 namespace Assets.Model.Event.Combat
 {

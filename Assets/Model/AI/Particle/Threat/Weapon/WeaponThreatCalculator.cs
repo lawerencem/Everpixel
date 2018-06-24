@@ -29,7 +29,6 @@ namespace Assets.Model.AI.Particle.Threat.Weapon
 
         private double GetArmorIgnoreThreat(CWeapon weapon)
         {
-
             double threat = weapon.GetStat(EWeaponStat.Armor_Ignore);
             if (threat > 0)
                 return WeaponThreatTable.Instance.Table[EWeaponStat.Armor_Ignore] / threat;

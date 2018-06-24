@@ -195,9 +195,9 @@ namespace Assets.Model.Character
                 zone.HandleSourceDeath();
         }
 
-        public void ModifyPoints(ESecondaryStat s, int v, bool isHeal)
+        public void ModifyPoints(ESecondaryStat stat, int value, bool isHeal)
         {
-            this._model.ModifyPoints(s, v, isHeal);
+            this._model.ModifyPoints(stat, value, isHeal);
         }
 
         public void ProcessEndOfTurn()
