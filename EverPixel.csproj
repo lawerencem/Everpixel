@@ -242,6 +242,7 @@
     <Compile Include="Assets\Controller\Equipment\Armor\CArmor.cs" />
     <Compile Include="Assets\Controller\Equipment\Armor\CHelm.cs" />
     <Compile Include="Assets\Controller\Equipment\Weapon\CWeapon.cs" />
+    <Compile Include="Assets\Controller\Event\Combat\EvPathMoveUtil.cs" />
     <Compile Include="Assets\Controller\GUI\CMapGUIControllerParticle.cs" />
     <Compile Include="Assets\Controller\GUI\CMapGUIControllerShapeshift.cs" />
     <Compile Include="Assets\Controller\GUI\Combat\CombatGUIParams.cs" />
@@ -272,10 +273,13 @@
     <Compile Include="Assets\Controller\Mount\CMount.cs" />
     <Compile Include="Assets\Data\Ability\XML\AbilityMediator.cs" />
     <Compile Include="Assets\Data\Ability\XML\AbilityReader.cs" />
+    <Compile Include="Assets\Data\AI\Agent\AgentRoleModReader.cs" />
+    <Compile Include="Assets\Data\AI\Agent\AgentRoleThreatModTable.cs" />
+    <Compile Include="Assets\Data\AI\Agent\AgentRoleVulnModTable.cs" />
     <Compile Include="Assets\Data\AI\Armor\ArmorVulnReader.cs" />
     <Compile Include="Assets\Data\AI\Armor\ArmorVulnTable.cs" />
-    <Compile Include="Assets\Data\AI\Char\CharStatThreatReader.cs" />
-    <Compile Include="Assets\Data\AI\Char\CharStatThreatTable.cs" />
+    <Compile Include="Assets\Data\AI\Threat\ThreatReader.cs" />
+    <Compile Include="Assets\Data\AI\Threat\ThreatTable.cs" />
     <Compile Include="Assets\Data\AI\Vuln\VulnReader.cs" />
     <Compile Include="Assets\Data\AI\Vuln\VulnTable.cs" />
     <Compile Include="Assets\Data\AI\Weapon\WeaponThreatReader.cs" />
@@ -409,9 +413,9 @@
     <Compile Include="Assets\Model\Action\AAction.cs" />
     <Compile Include="Assets\Model\Action\ActionData.cs" />
     <Compile Include="Assets\Model\Action\MAction.cs" />
+    <Compile Include="Assets\Model\AI\Agent\Combat\AgentMoveParticleCalc.cs" />
     <Compile Include="Assets\Model\AI\Agent\EAgentRole.cs" />
     <Compile Include="Assets\Model\AI\Agent\MRole.cs" />
-    <Compile Include="Assets\Model\AI\Agent\Turn\Decision\MAgentDecision.cs" />
     <Compile Include="Assets\Model\AI\Particle\CharParticlePair.cs" />
     <Compile Include="Assets\Model\AI\Particle\ParticleBuilder.cs" />
     <Compile Include="Assets\Model\AI\Particle\ParticleContainer.cs" />
@@ -731,10 +735,10 @@
     <Compile Include="Assets\View\ViewParams.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Data\AI\Char\CharStatThreatData.xml" />
-    <None Include="Assets\Data\AI\Vuln\VulnData.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\AI\Agent\AgentRoleModData.xml" />
+    <None Include="Assets\Data\AI\Armor\ArmorVulnData.xml" />
+    <None Include="Assets\Data\AI\Threat\ThreatData.xml" />
+    <None Include="Assets\Data\AI\Vuln\VulnData.xml" />
     <None Include="Assets\Data\AI\Weapon\WeaponThreatData.xml" />
     <None Include="Assets\Data\Ability\XML\Astral.xml" />
     <None Include="Assets\Data\Ability\XML\Fighting.xml" />
@@ -809,9 +813,6 @@
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <None Include="Assets\Data\AI\Armor\ArmorVulnData.xml" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

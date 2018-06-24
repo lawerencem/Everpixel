@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<EAgentRole>
+<EThreat>
   <Brawler>
     <AP>12</AP>
     <Critical_Chance>4</Critical_Chance>
@@ -71,4 +71,4 @@
     <Spell_Penetration>3</Spell_Penetration>
     <Stamina>2</Stamina>
   </Spell_Support>
-</EAgentRole>
+</EThreat>

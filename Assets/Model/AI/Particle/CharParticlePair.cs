@@ -20,5 +20,10 @@ namespace Assets.Model.AI.Particle
         {
             this._value += value;
         }
+
+        public CharParticlePair Clone()
+        {
+            return new CharParticlePair(this._id, this._value);
+        }
     }
 }

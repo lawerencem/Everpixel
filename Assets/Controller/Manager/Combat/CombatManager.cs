@@ -152,7 +152,6 @@ namespace Assets.Controller.Manager.Combat
 
         public void ProcessEndTurn()
         {
-            this._currActingData.CurrentlyActing.Proxy.ProcessEndOfTurn();
             this._combatData.InitiativeOrder.Remove(this._currActingData.CurrentlyActing);
             this._currActingData.Ability = EAbility.None;
             var agent = this._currActingData.CurrentlyActing;
@@ -211,6 +210,7 @@ namespace Assets.Controller.Manager.Combat
             if (this._combatData.InitiativeOrder.Count > 0)
             {
                 var tgt = this._combatData.InitiativeOrder[0];
+                tgt.Proxy.ProcessNewTurn();
                 if (FActionStatus.HasFlag(tgt.Proxy.GetActionFlags().CurFlags, FActionStatus.Flags.Casting))
                 {
                     var pair = this._currentlyCasting.Find(x => x.X.Equals(tgt));

@@ -64,6 +64,7 @@ namespace Assets.Model.Character.Builder
             character.SetType(preCharParams.Type);
             character.SetParams(preCharParams);
             this.BuildCharMount(preCharParams, character);
+            character.SetAIRole(preCharParams.AIRole);
             return character;
         }
 

@@ -1,4 +1,5 @@
-﻿using Assets.Controller.Manager.Combat;
+﻿using Assets.Controller.Event.Combat;
+using Assets.Controller.Manager.Combat;
 using Assets.Controller.Manager.GUI;
 using Assets.Controller.Map.Combat;
 using Assets.Controller.Map.Tile;
@@ -88,12 +89,11 @@ namespace Assets.View.Event
                 }
                 else
                 {
+                    // TODO: Break this out into a new class (redundant with CAgent)
                     var data = new EvPathMoveData();
                     data.Target = this._data.Target;
-                    var e = new EvPathMove(data);
-                    e.AddCallback(VMapCombatController.Instance.ClearDecoratedTiles);
-                    e.AddCallback(this.UpdateActingBox);
-                    e.TryProcess();
+                    var path = new EvPathMoveUtil().GetPathMove(data);
+                    path.TryProcess();
                     return true;
                 }
             }
@@ -101,6 +101,7 @@ namespace Assets.View.Event
                 return false;
         }
 
+        // TODO: Break this out into a new class (redundant with CAgent)
         private void UpdateActingBox(object o)
         {
             var current = CombatManager.Instance.GetCurrentlyActing();

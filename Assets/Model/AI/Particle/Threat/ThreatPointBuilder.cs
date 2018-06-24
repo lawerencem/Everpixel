@@ -1,5 +1,5 @@
 ﻿using Assets.Controller.Character;
-using Assets.Data.AI.Char;
+using Assets.Data.AI.Threat;
 using Assets.Model.AI.Particle.Threat.Weapon;
 using System;
 using System.Collections.Generic;
@@ -38,7 +38,7 @@ namespace Assets.Model.AI.Particle.Threat
 
         private void SetThreatPoints(EThreat type, CChar agent)
         {
-            var paramValues = CharStatThreatTable.Instance.Table[type];
+            var paramValues = ThreatTable.Instance.Table[type];
             double threat = 0;
             foreach (var kvp in paramValues)
                 threat += agent.Proxy.GetStat(kvp.Key) * kvp.Value;

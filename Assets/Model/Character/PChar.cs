@@ -2,6 +2,7 @@
 using Assets.Controller.Equipment.Weapon;
 using Assets.Controller.Mount;
 using Assets.Model.Ability;
+using Assets.Model.AI.Agent;
 using Assets.Model.Barrier;
 using Assets.Model.Character.Container;
 using Assets.Model.Character.Enum;
@@ -89,6 +90,11 @@ namespace Assets.Model.Character
         public List<MAbility> GetActiveAbilities()
         {
             return this._model.GetAbilitiesContainer().GetNonWpnAbilities();
+        }
+
+        public EAgentRole GetAIRole()
+        {
+            return this._model.GetAIRole();
         }
 
         public CArmor GetArmor()
@@ -200,9 +206,9 @@ namespace Assets.Model.Character
             this._model.ModifyPoints(stat, value, isHeal);
         }
 
-        public void ProcessEndOfTurn()
+        public void ProcessNewTurn()
         {
-            this._model.ProcessEndOfTurn();
+            this._model.ProcessNewTurn();
         }
 
         public void RemoveZone(AZone zone)

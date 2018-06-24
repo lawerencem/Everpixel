@@ -1,6 +1,8 @@
 ﻿using Assets.Data.Ability.XML;
+using Assets.Data.AI.Agent;
 using Assets.Data.AI.Armor;
 using Assets.Data.AI.Char;
+using Assets.Data.AI.Threat;
 using Assets.Data.AI.Weapon;
 using Assets.Data.Character.XML;
 using Assets.Data.Class.XML;
@@ -27,11 +29,12 @@ namespace Assets.Controller.Manager
         public LoaderManager()
         {
             this._readers.Add(AbilityReader.Instance);
+            this._readers.Add(new AgentRoleModReader());
             this._readers.Add(ArmorReader.Instance);
             this._readers.Add(new ArmorVulnReader());
             this._readers.Add(BarkReader.Instance);
             this._readers.Add(BiomeReader.Instance);
-            this._readers.Add(new CharStatThreatReader());
+            this._readers.Add(new ThreatReader());
             this._readers.Add(ClassReader.Instance);
             this._readers.Add(DecoReader.Instance);
             this._readers.Add(InjuryReader.Instance);

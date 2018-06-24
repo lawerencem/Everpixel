@@ -5,16 +5,16 @@ using Assets.Template.XML;
 using System.Collections.Generic;
 using System.Xml.Linq;
 
-namespace Assets.Data.AI.Char
+namespace Assets.Data.AI.Threat
 {
-    public class CharStatThreatReader : XMLReader
+    public class ThreatReader : XMLReader
     {
-        private CharStatThreatTable _threats;
+        private ThreatTable _threats;
 
-        public CharStatThreatReader() : base()
+        public ThreatReader() : base()
         {
-            this._paths.Add("Assets/Data/AI/Char/CharStatThreatData.xml");
-            this._threats = CharStatThreatTable.Instance;
+            this._paths.Add("Assets/Data/AI/Threat/ThreatData.xml");
+            this._threats = ThreatTable.Instance;
         }
 
         public override void ReadFromFile()

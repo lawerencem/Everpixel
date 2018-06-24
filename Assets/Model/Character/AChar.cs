@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Mount;
+using Assets.Model.AI.Agent;
 using Assets.Model.Character.Container;
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
@@ -22,6 +23,7 @@ namespace Assets.Model.Character
         private Guid _guid;
 
         protected CharAbilities _abilities;
+        protected EAgentRole _aiRole;
         protected FActionStatus _actionFlags;
         protected Dictionary<EClass, MClass> _baseClasses;
         protected BaseStats _baseStats;
@@ -51,6 +53,7 @@ namespace Assets.Model.Character
 
         public CharAbilities GetAbilitiesContainer() { return this._abilities; }
         public FActionStatus GetActionFlags() { return this._actionFlags; }
+        public EAgentRole GetAIRole() { return this._aiRole; }
         public Dictionary<EClass, MClass> GetBaseClasses() { return this._baseClasses; }
         public BaseStats GetBaseStats() { return this._baseStats; }
         public CharStats GetCurStats() { return this._curStats; }
@@ -66,6 +69,7 @@ namespace Assets.Model.Character
         public FCharacterStatus GetStatusFlags() { return this._statusFlags; }
         public MTile GetTile() { return this._tile; }
 
+        public void SetAIRole(EAgentRole role) { this._aiRole = role; }
         public void SetController(CChar c) { this._controller = c; }
         public void SetCurrentHex(IHex hex) { this._tile = hex as MTile; }
         public void SetLParty(bool lParty) { this._lParty = lParty; }
@@ -84,9 +88,9 @@ namespace Assets.Model.Character
             return tile.GetCost();
         }
 
-        public void ProcessEndOfTurn()
+        public void ProcessNewTurn()
         {
-            //this.RestoreStamina();
+            this._points.SetValue(ESecondaryStat.AP, this._curStats.GetStatValue(ESecondaryStat.AP));
             //this.ProcessBuffDurations();
             //this.ProcessShields();
         }

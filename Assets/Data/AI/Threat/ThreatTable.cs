@@ -3,12 +3,12 @@ using Assets.Model.Character.Enum;
 using Assets.Template.Other;
 using System.Collections.Generic;
 
-namespace Assets.Data.AI.Char
+namespace Assets.Data.AI.Threat
 {
-    public class CharStatThreatTable : ASingleton<CharStatThreatTable>
+    public class ThreatTable : ASingleton<ThreatTable>
     {
         public Dictionary<EThreat, Dictionary<ESecondaryStat, double>> Table;
-        public CharStatThreatTable()
+        public ThreatTable()
         {
             this.Table = new Dictionary<EThreat, Dictionary<ESecondaryStat, double>>();
         }

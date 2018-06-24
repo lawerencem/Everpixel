@@ -16,9 +16,7 @@ namespace Assets.Model.Event.Combat
             {
                 var bob = character.GameHandle.GetComponent<SBob>();
                 if (bob != null)
-                {
                     bob.Reset();
-                }
             }
             VMapCombatController.Instance.ClearDecoratedTiles(this);
             CombatManager.Instance.ProcessEndTurn();

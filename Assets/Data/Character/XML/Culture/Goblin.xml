@@ -230,6 +230,7 @@
       <Abilities>
         <Ability name="Bite"></Ability>
       </Abilities>
+      <EAgentRole>Assassin_Melee</EAgentRole>
       <ECharacterType>Critter</ECharacterType>
       <FlinchSpriteIndex>16</FlinchSpriteIndex>
       <Stats>
@@ -316,6 +317,7 @@
       </Stats>
     </Character>
     <Character name ="Sluggish">
+      <EAgentRole>Assassin_Melee</EAgentRole>
       <AttackSpriteIndex>24</AttackSpriteIndex>
       <Abilities>
         <Ability name="Bite"></Ability>
