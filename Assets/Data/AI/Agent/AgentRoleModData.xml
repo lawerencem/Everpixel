@@ -34,34 +34,34 @@
   </Assassin_Ranged>
   <Support_Summoner>
     <Threat>
-      <Brawler>0.25</Brawler>
-      <Healer>1.25</Healer>
-      <Melee>0.25</Melee>
-      <Ranged>1.5</Ranged>
-      <Spell_Damage>1.25</Spell_Damage>
-      <Spell_Offense>1.25</Spell_Offense>
-      <Spell_Support>2.25</Spell_Support>
+      <Brawler>1.5</Brawler>
+      <Healer>0.35</Healer>
+      <Melee>2.75</Melee>
+      <Ranged>2</Ranged>
+      <Spell_Damage>0.55</Spell_Damage>
+      <Spell_Offense>0.35</Spell_Offense>
+      <Spell_Support>1</Spell_Support>
     </Threat>
     <Vuln>
-      <Melee>2</Melee>
-      <Ranged>0.75</Ranged>
-      <Status>1</Status>
+      <Melee>0.5</Melee>
+      <Ranged>2.5</Ranged>
+      <Status>1.5</Status>
     </Vuln>
   </Support_Summoner>
   <Tank_Zone>
     <Threat>
       <Brawler>2.25</Brawler>
       <Healer>0.75</Healer>
-      <Melee>1.25</Melee>
+      <Melee>0.75</Melee>
       <Ranged>0.15</Ranged>
       <Spell_Damage>0.15</Spell_Damage>
       <Spell_Offense>0.15</Spell_Offense>
       <Spell_Support>0.55</Spell_Support>
     </Threat>
     <Vuln>
-      <Melee>0.55</Melee>
+      <Melee>1.5</Melee>
       <Ranged>0.55</Ranged>
-      <Status>1.25</Status>
+      <Status>0.25</Status>
     </Vuln>
   </Tank_Zone>
 </EAgentRole>

@@ -33,7 +33,7 @@ namespace Assets.Model.AI.Agent.Combat
 
         private void CalculateParticlePoints(CChar agent)
         {
-            var tiles = agent.Tile.Model.GetAoETiles(5);
+            var tiles = agent.Tile.Model.GetAoETiles(4);
             foreach (var tile in tiles)
                 this.GenerateMovePoints(agent.Proxy.GetAIRole(), tile, agent.Proxy.LParty);
             this._tiles.Sort((x, y) => y.X.CompareTo(x.X));

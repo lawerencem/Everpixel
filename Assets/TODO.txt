@@ -2,8 +2,6 @@
 
  - AI
    -- Ensure threat values diminish by distance
-   -- Have agents move to appropriate tiles
-     --- based on role mods
    -- Have agents attack based on appropriate roles
 
  - Enter button ends turn
