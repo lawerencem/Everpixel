@@ -1,5 +1,6 @@
 ﻿using Assets.Data.Character.Table;
 using Assets.Model.Ability.Enum;
+using Assets.Model.AI.Agent;
 using Assets.Model.Character.Enum;
 using Assets.Model.Characters.Params;
 using Assets.Model.Class.Enum;
@@ -75,18 +76,19 @@ namespace Assets.Data.Character.XML
                                     {
                                         switch (elem.Name.ToString())
                                         {
-                                            case (PredefinedReaderParams.ABILITIES): { HandleAbilities(elem, key); } break;
-                                            case (PredefinedReaderParams.ATTACK_SPRITE_INDEX): { HandleCritterAttackSpriteIndex(key, elem.Value.ToString()); } break;
-                                            case (PredefinedReaderParams.CLASS): { HandleClassType(key, elem.Value.ToString(), ref baseClass); } break;
-                                            case (PredefinedReaderParams.DEAD_SPRITE_INDEX): { HandleCritterDeadSpriteIndex(key, elem.Value.ToString()); } break;
-                                            case (PredefinedReaderParams.FLINCH_SPRITE_INDEX): { HandleCritterFlinchSpriteIndex(key, elem.Value.ToString()); } break;
-                                            case (PredefinedReaderParams.MOUNT): { HandleMount(key, elem.Value); } break;
-                                            case (PredefinedReaderParams.PERKS): { HandlePerks(elem, key); } break;
-                                            case (PredefinedReaderParams.POTENTIAL_ARMORS): { HandleEquipment(elem, key); } break;
-                                            case (PredefinedReaderParams.POTENTIAL_WEAPONS): { HandleEquipment(elem, key); } break;
-                                            case (PredefinedReaderParams.RACE): { HandleRace(key, elem.Value.ToString(), ref race); } break;
-                                            case (PredefinedReaderParams.STATS): { HandleStats(elem, key); } break;
-                                            case (PredefinedReaderParams.TYPE): { HandleCharacterType(key, elem.Value.ToString(), ref type); } break;
+                                            case (PredefinedReaderParams.ABILITIES): { this.HandleAbilities(elem, key); } break;
+                                            case (PredefinedReaderParams.AGENT_ROLE): { this.HandleAgentRole(key, elem.Value); } break;
+                                            case (PredefinedReaderParams.ATTACK_SPRITE_INDEX): { this.HandleCritterAttackSpriteIndex(key, elem.Value.ToString()); } break;
+                                            case (PredefinedReaderParams.CLASS): { this.HandleClassType(key, elem.Value.ToString(), ref baseClass); } break;
+                                            case (PredefinedReaderParams.DEAD_SPRITE_INDEX): { this.HandleCritterDeadSpriteIndex(key, elem.Value.ToString()); } break;
+                                            case (PredefinedReaderParams.FLINCH_SPRITE_INDEX): { this.HandleCritterFlinchSpriteIndex(key, elem.Value.ToString()); } break;
+                                            case (PredefinedReaderParams.MOUNT): { this.HandleMount(key, elem.Value); } break;
+                                            case (PredefinedReaderParams.PERKS): { this.HandlePerks(elem, key); } break;
+                                            case (PredefinedReaderParams.POTENTIAL_ARMORS): { this.HandleEquipment(elem, key); } break;
+                                            case (PredefinedReaderParams.POTENTIAL_WEAPONS): { this.HandleEquipment(elem, key); } break;
+                                            case (PredefinedReaderParams.RACE): { this.HandleRace(key, elem.Value.ToString(), ref race); } break;
+                                            case (PredefinedReaderParams.STATS): { this.HandleStats(elem, key); } break;
+                                            case (PredefinedReaderParams.TYPE): { this.HandleCharacterType(key, elem.Value.ToString(), ref type); } break;
                                         }
                                     }
                                 }
@@ -101,6 +103,14 @@ namespace Assets.Data.Character.XML
         {
             foreach (var ele in el.Elements())
                 AbilityParser.ParseAbility(rootkey, ele);
+        }
+
+        private void HandleAgentRole(string rootKey, string value)
+        {
+            var ai = EAgentRole.None;
+
+            if (EnumUtil<EAgentRole>.TryGetEnumValue(value, ref ai))
+                this.table.Table[rootKey].AIRole = ai;
         }
 
         private void HandleClassType(string rootKey, string value, ref EClass type)

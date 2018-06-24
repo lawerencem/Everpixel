@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EVuln>
+  <Melee>
+    <Block>-0.001</Block>
+    <Damage_Ignore>-0.001</Damage_Ignore>
+    <Damage_Reduction>-0.001</Damage_Reduction>
+    <Dodge>-0.001</Dodge>
+    <Fortitude>-0.01</Fortitude>
+    <HP>0.00001</HP>
+    <Morale>0.001</Morale>
+    <Parry>-0.001</Parry>
+    <Reflex>-0.01</Reflex>
+    <Will>-0.01</Will>
+    <Stamina>0.001</Stamina>
+  </Melee>
+  <Ranged>
+    <Block>-0.001</Block>
+    <Damage_Ignore>-0.001</Damage_Ignore>
+    <Damage_Reduction>-0.001</Damage_Reduction>
+    <Dodge>-0.001</Dodge>
+    <Fortitude>-0.01</Fortitude>
+    <HP>0.00001</HP>
+    <Morale>0.001</Morale>
+    <Parry>-0.001</Parry>
+    <Reflex>-0.01</Reflex>
+    <Will>-0.01</Will>
+    <Stamina>0.001</Stamina>
+  </Ranged>
+  <Status>
+    <Block>-0.001</Block>
+    <Damage_Ignore>-0.001</Damage_Ignore>
+    <Damage_Reduction>-0.001</Damage_Reduction>
+    <Dodge>-0.001</Dodge>
+    <Fortitude>-0.01</Fortitude>
+    <HP>0.00001</HP>
+    <Morale>0.001</Morale>
+    <Parry>-0.001</Parry>
+    <Reflex>-0.01</Reflex>
+    <Will>-0.01</Will>
+    <Stamina>0.001</Stamina>
+  </Status>
+</EVuln>

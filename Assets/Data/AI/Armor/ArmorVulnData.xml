@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EArmorStat>
+  <Flat_Damage_Ignore>-25</Flat_Damage_Ignore>
+  <Damage_Mod>-0.01</Damage_Mod>
+</EArmorStat>

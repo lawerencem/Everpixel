@@ -1,4 +1,5 @@
 ﻿using Assets.Model.Ability.Enum;
+using Assets.Model.AI.Agent;
 using Assets.Model.Character.Enum;
 using Assets.Model.Character.Param;
 using Assets.Model.Class.Enum;
@@ -12,6 +13,7 @@ namespace Assets.Model.Characters.Params
 {
     public class PreCharParams
     {
+        public EAgentRole AIRole { get; set; }
         public Dictionary<string, List<List<string>>> Armors { get; set; }
         public Dictionary<EClass, int> Classes { get; set; }
         public ECulture Culture { get; set; }

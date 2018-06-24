@@ -1,4 +1,5 @@
 ﻿using Assets.Data.Ability.XML;
+using Assets.Data.AI.Armor;
 using Assets.Data.AI.Char;
 using Assets.Data.AI.Weapon;
 using Assets.Data.Character.XML;
@@ -27,9 +28,10 @@ namespace Assets.Controller.Manager
         {
             this._readers.Add(AbilityReader.Instance);
             this._readers.Add(ArmorReader.Instance);
+            this._readers.Add(new ArmorVulnReader());
             this._readers.Add(BarkReader.Instance);
             this._readers.Add(BiomeReader.Instance);
-            this._readers.Add(new CharThreatReader());
+            this._readers.Add(new CharStatThreatReader());
             this._readers.Add(ClassReader.Instance);
             this._readers.Add(DecoReader.Instance);
             this._readers.Add(InjuryReader.Instance);
@@ -41,6 +43,7 @@ namespace Assets.Controller.Manager
             this._readers.Add(RaceReader.Instance);
             this._readers.Add(SubPartyReader.Instance);
             this._readers.Add(TileReader.Instance);
+            this._readers.Add(new VulnReader());
             this._readers.Add(WeaponReader.Instance);
             this._readers.Add(new WeaponThreatReader());
             this._readers.Add(ZoneReader.Instance);

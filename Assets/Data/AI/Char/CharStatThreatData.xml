@@ -1,5 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<CharStatThreatParams>
+<EAgentRole>
+  <Brawler>
+    <AP>12</AP>
+    <Critical_Chance>4</Critical_Chance>
+    <Critical_Multiplier>4</Critical_Multiplier>
+    <Damage_Ignore>1</Damage_Ignore>
+    <Melee>3</Melee>
+    <Initiative>2</Initiative>
+    <Power>3</Power>
+    <Stamina>3</Stamina>
+  </Brawler>
+  <Healer>
+    <AP>5</AP>
+    <Critical_Chance>8</Critical_Chance>
+    <Critical_Multiplier>6</Critical_Multiplier>
+    <Initiative>3</Initiative>
+    <Power>7</Power>
+    <Spell_Duration>5</Spell_Duration>
+    <Spell_Penetration>2</Spell_Penetration>
+    <Stamina>5</Stamina>
+  </Healer>
   <Melee>
     <AP>10</AP>
     <Critical_Chance>6</Critical_Chance>
@@ -8,5 +28,47 @@
     <Melee>4</Melee>
     <Initiative>1</Initiative>
     <Power>5</Power>
+    <Stamina>2</Stamina>
   </Melee>
-</CharStatThreatParams>
+  <None>
+    
+  </None>
+  <Ranged>
+    <AP>15</AP>
+    <Critical_Chance>8</Critical_Chance>
+    <Critical_Multiplier>8</Critical_Multiplier>
+    <Damage_Ignore>1</Damage_Ignore>
+    <Initiative>3</Initiative>
+    <Power>3</Power>
+    <Ranged>10</Ranged>
+    <Stamina>4</Stamina>
+  </Ranged>
+  <Spell_Damage>
+    <AP>3</AP>
+    <Critical_Chance>12</Critical_Chance>
+    <Critical_Multiplier>4</Critical_Multiplier>
+    <Initiative>1</Initiative>
+    <Power>8</Power>
+    <Spell_Duration>3</Spell_Duration>
+    <Spell_Penetration>5</Spell_Penetration>
+    <Stamina>3</Stamina>
+  </Spell_Damage>
+  <Spell_Offense>
+    <AP>4</AP>
+    <Critical_Chance>7</Critical_Chance>
+    <Critical_Multiplier>3</Critical_Multiplier>
+    <Initiative>4</Initiative>
+    <Power>4</Power>
+    <Spell_Duration>7</Spell_Duration>
+    <Spell_Penetration>12</Spell_Penetration>
+    <Stamina>2</Stamina>
+  </Spell_Offense>
+  <Spell_Support>
+    <AP>4</AP>
+    <Initiative>7</Initiative>
+    <Power>1</Power>
+    <Spell_Duration>12</Spell_Duration>
+    <Spell_Penetration>3</Spell_Penetration>
+    <Stamina>2</Stamina>
+  </Spell_Support>
+</EAgentRole>

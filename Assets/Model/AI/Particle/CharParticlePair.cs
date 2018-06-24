@@ -15,5 +15,10 @@ namespace Assets.Model.AI.Particle
             this._id = id;
             this._value = value;
         }
+
+        public void AddValue(double value)
+        {
+            this._value += value;
+        }
     }
 }

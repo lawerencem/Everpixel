@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<WeaponThreatPointParams>
+<EWeaponStat>
   <Accuracy_Mod>50</Accuracy_Mod>
   <Armor_Ignore>100</Armor_Ignore>
   <Armor_Pierce>100</Armor_Pierce>
   <Block_Ignore>1000</Block_Ignore>
   <Damage>10</Damage>
   <Shield_Damage_Percent>250</Shield_Damage_Percent>
-</WeaponThreatPointParams>
+</EWeaponStat>

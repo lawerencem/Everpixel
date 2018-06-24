@@ -272,8 +272,12 @@
     <Compile Include="Assets\Controller\Mount\CMount.cs" />
     <Compile Include="Assets\Data\Ability\XML\AbilityMediator.cs" />
     <Compile Include="Assets\Data\Ability\XML\AbilityReader.cs" />
+    <Compile Include="Assets\Data\AI\Armor\ArmorVulnReader.cs" />
+    <Compile Include="Assets\Data\AI\Armor\ArmorVulnTable.cs" />
+    <Compile Include="Assets\Data\AI\Char\CharStatThreatReader.cs" />
     <Compile Include="Assets\Data\AI\Char\CharStatThreatTable.cs" />
-    <Compile Include="Assets\Data\AI\Char\CharThreatReader.cs" />
+    <Compile Include="Assets\Data\AI\Vuln\VulnReader.cs" />
+    <Compile Include="Assets\Data\AI\Vuln\VulnTable.cs" />
     <Compile Include="Assets\Data\AI\Weapon\WeaponThreatReader.cs" />
     <Compile Include="Assets\Data\AI\Weapon\WeaponThreatTable.cs" />
     <Compile Include="Assets\Data\Bark\Table\BarkTable.cs" />
@@ -414,6 +418,7 @@
     <Compile Include="Assets\Model\AI\Particle\Threat\EThreat.cs" />
     <Compile Include="Assets\Model\AI\Particle\Threat\ThreatPointBuilder.cs" />
     <Compile Include="Assets\Model\AI\Particle\Threat\Weapon\WeaponThreatCalculator.cs" />
+    <Compile Include="Assets\Model\AI\Particle\Vuln\Armor\ArmorVulnCalculator.cs" />
     <Compile Include="Assets\Model\AI\Particle\Vuln\EVuln.cs" />
     <Compile Include="Assets\Model\AI\Particle\Vuln\VulnPointBuilder.cs" />
     <Compile Include="Assets\Model\Barrier\MBarrier.cs" />
@@ -727,6 +732,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Data\AI\Char\CharStatThreatData.xml" />
+    <None Include="Assets\Data\AI\Vuln\VulnData.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Data\AI\Weapon\WeaponThreatData.xml" />
     <None Include="Assets\Data\Ability\XML\Astral.xml" />
     <None Include="Assets\Data\Ability\XML\Fighting.xml" />
@@ -801,6 +809,9 @@
     <None Include="Assets\TODO.txt" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <None Include="Assets\Data\AI\Armor\ArmorVulnData.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

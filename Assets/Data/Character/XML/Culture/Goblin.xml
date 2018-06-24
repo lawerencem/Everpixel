@@ -2,6 +2,7 @@
 <Cultures>
   <Culture name ="Goblin">
     <Character name ="Boss">
+      <EAgentRole>Assassin_Melee</EAgentRole>
       <Class>Warrior,6</Class>
       <Class>Berserker,6</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -36,6 +37,7 @@
       </PotentialWeapons>
     </Character>
     <Character name ="Fodder">
+      <EAgentRole>Tank_Zone</EAgentRole>
       <Class>Soldier,1</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Goblin</ERace>
@@ -124,6 +126,7 @@
       </PotentialWeapons>
     </Character>
     <Character name ="Warboss">
+      <EAgentRole>Assassin_Melee</EAgentRole>
       <Class>Warrior,10</Class>
       <Class>Berserker,10</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -239,6 +242,7 @@
       </Stats>
     </Character>
     <Character name ="Shoggoth">
+      <EAgentRole>Assassin_Melee</EAgentRole>
       <AttackSpriteIndex>8</AttackSpriteIndex>
       <Abilities>
         <Ability name="Bite"></Ability>
@@ -258,6 +262,7 @@
       </Stats>
     </Character>
     <Character name ="Slimer">
+      <EAgentRole>Assassin_Melee</EAgentRole>
       <Class>Ninja,4</Class>
       <Class>Assassin,2</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -294,6 +299,7 @@
       </PotentialWeapons>
     </Character>
     <Character name ="Sluggemoth">
+      <EAgentRole>Assassin_Melee</EAgentRole>
       <AttackSpriteIndex>24</AttackSpriteIndex>
       <Abilities>
         <Ability name="Bite"></Ability>
@@ -326,6 +332,7 @@
       </Stats>
     </Character>
     <Character name ="Slime Lord">
+      <EAgentRole>Support_Summoner</EAgentRole>
       <Abilities>
         <Ability name ="Slime_Rain">
           <EEffect></EEffect>
@@ -359,6 +366,7 @@
       </PotentialWeapons>
     </Character>
     <Character name ="Slugzilla">
+      <EAgentRole>Assassin_Melee</EAgentRole>
       <Abilities>
         <Ability name ="Bite">
           <EEffect name="Megabite">
@@ -381,6 +389,7 @@
       </Stats>
     </Character>
     <Character name ="Sluggoth">
+      <EAgentRole>Assassin_Melee</EAgentRole>
       <AttackSpriteIndex>24</AttackSpriteIndex>
       <Abilities>
         <Ability name="Bite"></Ability>
@@ -397,6 +406,7 @@
       </Stats>
     </Character>
     <Character name ="Spider Rider">
+      <EAgentRole>Assassin_Melee</EAgentRole>
       <Class>Soldier,3</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Goblin</ERace>
@@ -431,6 +441,7 @@
       </PotentialWeapons>
     </Character>
     <Character name ="Spider Rider Archer">
+      <EAgentRole>Assassin_Ranged</EAgentRole>
       <Class>Soldier,3</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Goblin</ERace>
