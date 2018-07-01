@@ -1,5 +1,7 @@
 ﻿using Assets.Controller.Character;
+using Assets.Controller.Map.Environment;
 using Assets.Data.AI.Agent;
+using Assets.Data.Map.Environment;
 using Assets.Model.AI.Particle.Threat;
 using Assets.Model.AI.Particle.Vuln;
 using Assets.Model.Map.Tile;
@@ -44,6 +46,7 @@ namespace Assets.Model.AI.Particle
             for (int i = 0; i < dist; i++)
                 scalar *= degrade;
             scalar *= this.GetHeightScalar(tile);
+            scalar *= this.GetRangedVulnScalar(tile);
             var particles = tile.GetParticles();
             foreach (var kvp in vulns)
             {
@@ -66,6 +69,44 @@ namespace Assets.Model.AI.Particle
                     case (-2): { scalar *= 1.2; } break;
                 }
             }
+            return scalar;
+        }
+
+        private double GetRangedVulnScalar(MTile tile)
+        {
+            double scalar = 1;
+
+            foreach(var neighbor in tile.GetAdjacent())
+            {
+                if (neighbor.GetCurrentOccupant() != null)
+                {
+                    if (neighbor.GetCurrentOccupant().GetType().Equals(typeof(CChar)))
+                        scalar *= this.TryScaleRangedVulnDueToChar(neighbor.GetCurrentOccupant() as CChar);
+                    else if (neighbor.GetCurrentOccupant().GetType().Equals(typeof(CDeco)))
+                        scalar *= this.TryScaleRangedVulnDueToDeco(neighbor.GetCurrentOccupant() as CDeco);
+                }
+            }
+
+            return scalar;
+        }
+
+        private double TryScaleRangedVulnDueToChar(CChar agent)
+        {
+            double scalar = 1;
+            if (agent.Proxy.GetLWeapon() != null && agent.Proxy.GetLWeapon().IsTypeOfShield())
+                scalar *= 0.80;
+            else if (agent.Proxy.GetRWeapon() != null && agent.Proxy.GetRWeapon().IsTypeOfShield())
+                scalar *= 0.80;
+            else
+                scalar *= 0.9;
+            return scalar;
+        }
+
+        private double TryScaleRangedVulnDueToDeco(CDeco deco)
+        {
+            double scalar = 1;
+            double delta = 1 - deco.Model.GetBulletObstructionChance();
+            scalar *= delta;
             return scalar;
         }
     }
