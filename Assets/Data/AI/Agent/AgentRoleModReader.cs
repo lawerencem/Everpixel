@@ -36,27 +36,65 @@ namespace Assets.Data.AI.Agent
         {
             if (EnumUtil<EAgentRole>.TryGetEnumValue(el.Name.ToString(), ref role))
             {
-                this._threats.Table.Add(role, new Dictionary<EThreat, double>());
-                this._vulns.Table.Add(role, new Dictionary<EVuln, double>());
+                this._threats.EnemyThreatTable.Add(role, new Dictionary<EThreat, double>());
+                this._threats.FriendlyThreatTable.Add(role, new Dictionary<EThreat, double>());
+                this._vulns.EnemyVulnTable.Add(role, new Dictionary<EVuln, double>());
+                this._vulns.FriendlyVulnTable.Add(role, new Dictionary<EVuln, double>());
             }
             foreach (var ele in el.Elements())
             {
-                var threat = EThreat.None;
-                var vuln = EVuln.None;
-                if (ele.Name.ToString().Equals("Threat"))
+                if (ele.Name.ToString().Equals("Enemy"))
+                    this.HandleEnemyData(ele, ref role);
+                else if (ele.Name.ToString().Equals("Friendly"))
+                    this.HandleFriendlyData(ele, ref role);
+            }
+        }
+
+        private void HandleEnemyData(XElement e, ref EAgentRole role)
+        {
+            foreach (var el in e.Elements())
+            {
+                if (el.Name.ToString().Equals("Threat"))
                 {
-                    foreach (var elem in ele.Elements())
+                    var threat = EThreat.None;
+                    foreach (var ele in el.Elements())
                     {
-                        if (EnumUtil<EThreat>.TryGetEnumValue(elem.Name.ToString(), ref threat))
-                            this._threats.Table[role][threat] = double.Parse(elem.Value);
+                        if (EnumUtil<EThreat>.TryGetEnumValue(ele.Name.ToString(), ref threat))
+                            this._threats.EnemyThreatTable[role][threat] = double.Parse(ele.Value);
                     }
                 }
-                else if (ele.Name.ToString().Equals("Vuln"))
+                else if (el.Name.ToString().Equals("Vuln"))
                 {
-                    foreach (var elem in ele.Elements())
+                    var vuln = EVuln.None;
+                    foreach (var ele in el.Elements())
                     {
-                        if (EnumUtil<EVuln>.TryGetEnumValue(elem.Name.ToString(), ref vuln))
-                            this._vulns.Table[role][vuln] = double.Parse(elem.Value);
+                        if (EnumUtil<EVuln>.TryGetEnumValue(ele.Name.ToString(), ref vuln))
+                            this._vulns.EnemyVulnTable[role][vuln] = double.Parse(ele.Value);
+                    }
+                }
+            }
+        }
+
+        private void HandleFriendlyData(XElement e, ref EAgentRole role)
+        {
+            foreach (var el in e.Elements())
+            {
+                if (el.Name.ToString().Equals("Threat"))
+                {
+                    var threat = EThreat.None;
+                    foreach (var ele in el.Elements())
+                    {
+                        if (EnumUtil<EThreat>.TryGetEnumValue(ele.Name.ToString(), ref threat))
+                            this._threats.FriendlyThreatTable[role][threat] = double.Parse(ele.Value);
+                    }
+                }
+                else if (el.Name.ToString().Equals("Vuln"))
+                {
+                    var vuln = EVuln.None;
+                    foreach (var ele in el.Elements())
+                    {
+                        if (EnumUtil<EVuln>.TryGetEnumValue(ele.Name.ToString(), ref vuln))
+                            this._vulns.FriendlyVulnTable[role][vuln] = double.Parse(ele.Value);
                     }
                 }
             }

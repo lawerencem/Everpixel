@@ -7,10 +7,12 @@ namespace Assets.Data.AI.Agent
 {
     public class AgentRoleVulnModTable : ASingleton<AgentRoleVulnModTable>
     {
-        public Dictionary<EAgentRole, Dictionary<EVuln, double>> Table;
+        public Dictionary<EAgentRole, Dictionary<EVuln, double>> EnemyVulnTable;
+        public Dictionary<EAgentRole, Dictionary<EVuln, double>> FriendlyVulnTable;
         public AgentRoleVulnModTable()
         {
-            this.Table = new Dictionary<EAgentRole, Dictionary<EVuln, double>>();
+            this.EnemyVulnTable = new Dictionary<EAgentRole, Dictionary<EVuln, double>>();
+            this.FriendlyVulnTable = new Dictionary<EAgentRole, Dictionary<EVuln, double>>();
         }
     }
 }

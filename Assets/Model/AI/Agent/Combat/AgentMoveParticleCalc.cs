@@ -43,12 +43,22 @@ namespace Assets.Model.AI.Agent.Combat
         {
             var particles = tile.GetParticles();
             double movePts = 0;
-            var threats = this._threats.Table[role];
-            var vulns = this._vulns.Table[role];
-            foreach (var kvp in threats)
+
+            var enemyVulns = this._vulns.EnemyVulnTable[role];
+            var enemyThreats = this._threats.EnemyThreatTable[role];
+            var friendlyVulns = this._vulns.FriendlyVulnTable[role];
+            var friendlyThreats = this._threats.FriendlyThreatTable[role];
+
+            foreach (var kvp in enemyThreats)
                 movePts -= (particles.GetThreatValue(kvp.Key, lTeam) * kvp.Value);
-            foreach (var kvp in vulns)
+            foreach (var kvp in enemyVulns)
+                movePts -= (particles.GetVulnValue(kvp.Key, lTeam) * kvp.Value);
+
+            foreach (var kvp in enemyThreats)
+                movePts += (particles.GetThreatValue(kvp.Key, lTeam) * kvp.Value);
+            foreach (var kvp in friendlyVulns)
                 movePts += (particles.GetVulnValue(kvp.Key, lTeam) * kvp.Value);
+
             this._tiles.Add(new Pair<double, MTile>(movePts, tile));
         }
     }
