@@ -44,20 +44,20 @@ namespace Assets.Model.Map
             if (!lParty)
             {
                 if (col == EStartCol.Three)
-                    colInd = this._map.GetLastCol() - 1;
+                    colInd = this._map.GetLastCol() - 4;
                 else if (col == EStartCol.Two)
-                    colInd = this._map.GetLastCol() - 2;
+                    colInd = this._map.GetLastCol() - 5;
                 else
-                    colInd = this._map.GetLastCol() - 3;
+                    colInd = this._map.GetLastCol() - 6;
             }
             else
             {
                 if (col == EStartCol.Three)
-                    colInd = this._map.GetFirstCol();
+                    colInd = this._map.GetFirstCol() + 3;
                 else if (col == EStartCol.Two)
-                    colInd = this._map.GetFirstCol() + 1;
+                    colInd = this._map.GetFirstCol() + 4;
                 else
-                    colInd = this._map.GetFirstCol() + 2;
+                    colInd = this._map.GetFirstCol() + 5;
             }
 
             rowInd = this._map.GetMidRow();

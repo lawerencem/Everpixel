@@ -1,7 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Environment;
 using Assets.Data.AI.Agent;
-using Assets.Data.Map.Environment;
 using Assets.Model.AI.Particle.Threat;
 using Assets.Model.AI.Particle.Vuln;
 using Assets.Model.Map.Tile;
@@ -12,7 +11,7 @@ namespace Assets.Model.AI.Particle
     {
         public void GenerateParticles(CChar agent, bool lTeam)
         {
-            var pairs = agent.Proxy.GetModel().GetTile().GetAoETilesWithDistance(8);
+            var pairs = agent.Proxy.GetModel().GetTile().GetAoETilesWithDistance(10);
             foreach (var pair in pairs)
             {
                 this.GenerateThreatPoints(agent, pair.X, pair.Y, lTeam);

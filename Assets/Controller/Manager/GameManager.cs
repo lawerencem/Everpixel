@@ -59,8 +59,8 @@ namespace Assets.Controller.Managers
 
             initInfo.LParties.Add(lParty);
             initInfo.RParties.Add(rParty);
-            initInfo.Cols = 14;
-            initInfo.Rows = 14;
+            initInfo.Cols = 20;
+            initInfo.Rows = 20;
             var map = this._mapLoader.GetCombatMap(initInfo);
             CombatManager.Instance.Init(map);
         }

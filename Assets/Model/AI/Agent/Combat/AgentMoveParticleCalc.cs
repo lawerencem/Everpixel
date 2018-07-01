@@ -32,7 +32,7 @@ namespace Assets.Model.AI.Agent.Combat
 
         private void CalculateParticlePoints(CChar agent)
         {
-            var tiles = agent.Tile.Model.GetEmptyAoETiles(6);
+            var tiles = agent.Tile.Model.GetEmptyAoETiles(7);
             foreach (var tile in tiles)
                 this.GenerateMovePoints(agent.Proxy.GetAIRole(), tile, agent.Proxy.LParty);
             this._tiles.Sort((x, y) => y.X.CompareTo(x.X));
@@ -66,7 +66,7 @@ namespace Assets.Model.AI.Agent.Combat
             }
             foreach (var kvp in friendlyVulns)
             {
-                movePts -= (particles.GetVulnValue(kvp.Key, lTeam) * kvp.Value);
+                movePts += (particles.GetVulnValue(kvp.Key, lTeam) * kvp.Value);
             }
 
             this._tiles.Add(new Pair<double, MTile>(movePts, tile));
