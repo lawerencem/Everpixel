@@ -1,6 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Environment;
-using Assets.Data.AI.Agent;
+using Assets.Data.AI.Observe.Agent;
 using Assets.Model.AI.Particle.Threat;
 using Assets.Model.AI.Particle.Vuln;
 using Assets.Model.Map.Tile;
@@ -29,9 +29,11 @@ namespace Assets.Model.AI.Particle
             scalar *= this.GetHeightScalar(tile);
             var threats = builder.BuildThreats(agent);
             var particles = tile.GetParticles();
+            var selfThreatMods = AgentRoleSelfModTable.Instance.ThreatTable[agent.Proxy.GetAIRole()];
             foreach (var kvp in threats)
             {
                 kvp.Value.ScaleValue(degrade);
+                kvp.Value.ScaleValue(selfThreatMods[kvp.Key]);
                 particles.AddThreatParticles(kvp.Key, kvp.Value, lTeam);
             }
         }
@@ -47,9 +49,11 @@ namespace Assets.Model.AI.Particle
             scalar *= this.GetHeightScalar(tile);
             scalar *= this.GetRangedVulnScalar(tile);
             var particles = tile.GetParticles();
+            var selfVulnMods = AgentRoleSelfModTable.Instance.VulnTable[agent.Proxy.GetAIRole()];
             foreach (var kvp in vulns)
             {
                 kvp.Value.ScaleValue(scalar);
+                kvp.Value.ScaleValue(selfVulnMods[kvp.Key]);
                 particles.AddVulnParticles(kvp.Key, kvp.Value, lTeam);
             }
         }

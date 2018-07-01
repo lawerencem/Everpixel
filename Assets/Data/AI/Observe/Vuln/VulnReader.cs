@@ -1,12 +1,11 @@
-﻿using Assets.Data.AI.Vuln;
-using Assets.Model.AI.Particle.Vuln;
+﻿using Assets.Model.AI.Particle.Vuln;
 using Assets.Model.Character.Enum;
 using Assets.Template.Util;
 using Assets.Template.XML;
 using System.Collections.Generic;
 using System.Xml.Linq;
 
-namespace Assets.Data.AI.Char
+namespace Assets.Data.AI.Observe.Char
 {
     public class VulnReader : XMLReader
     {
@@ -14,7 +13,7 @@ namespace Assets.Data.AI.Char
 
         public VulnReader() : base()
         {
-            this._paths.Add("Assets/Data/AI/Vuln/VulnData.xml");
+            this._paths.Add("Assets/Data/AI/Observe/Vuln/VulnData.xml");
             this._vulns = VulnTable.Instance;
         }
 

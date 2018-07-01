@@ -71,4 +71,14 @@
     <Spell_Penetration>3</Spell_Penetration>
     <Stamina>2</Stamina>
   </Spell_Support>
+  <Tank>
+    <AP>12</AP>
+    <Critical_Chance>2</Critical_Chance>
+    <Critical_Multiplier>2</Critical_Multiplier>
+    <Damage_Ignore>3</Damage_Ignore>
+    <Melee>4</Melee>
+    <Initiative>1</Initiative>
+    <Power>2</Power>
+    <Stamina>4</Stamina>
+  </Tank>
 </EThreat>

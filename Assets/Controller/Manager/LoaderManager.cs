@@ -1,9 +1,9 @@
 ﻿using Assets.Data.Ability.XML;
-using Assets.Data.AI.Agent;
-using Assets.Data.AI.Armor;
-using Assets.Data.AI.Char;
-using Assets.Data.AI.Threat;
-using Assets.Data.AI.Weapon;
+using Assets.Data.AI.Observe.Agent;
+using Assets.Data.AI.Observe.Armor;
+using Assets.Data.AI.Observe.Char;
+using Assets.Data.AI.Observe.Threat;
+using Assets.Data.AI.Observe.Weapon;
 using Assets.Data.Character.XML;
 using Assets.Data.Class.XML;
 using Assets.Data.Equipment.XML;

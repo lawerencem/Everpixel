@@ -3,7 +3,7 @@ using Assets.Model.Character.Enum;
 using Assets.Template.Other;
 using System.Collections.Generic;
 
-namespace Assets.Data.AI.Threat
+namespace Assets.Data.AI.Observe.Threat
 {
     public class ThreatTable : ASingleton<ThreatTable>
     {

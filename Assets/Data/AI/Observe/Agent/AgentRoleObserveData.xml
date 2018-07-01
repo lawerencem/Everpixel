@@ -10,6 +10,7 @@
         <Spell_Damage>0.25</Spell_Damage>
         <Spell_Offense>0.25</Spell_Offense>
         <Spell_Support>0.25</Spell_Support>
+        <Tank>1.5</Tank>
       </Threat>
       <Vuln>
         <Melee>4</Melee>
@@ -18,7 +19,7 @@
       </Vuln>
     </Enemy>
     <Degradation>
-      <Threat>0.75</Threat>
+      <Threat>0.45</Threat>
       <Vuln>0.80</Vuln>
     </Degradation>
     <Friendly>
@@ -30,6 +31,7 @@
         <Spell_Damage>0.25</Spell_Damage>
         <Spell_Offense>0.25</Spell_Offense>
         <Spell_Support>0.25</Spell_Support>
+        <Tank>1.5</Tank>
       </Threat>
       <Vuln>
         <Melee>0.1</Melee>
@@ -37,17 +39,36 @@
         <Status>0.1</Status>
       </Vuln>  
     </Friendly>
+    <Self>
+      <Threat>
+        <Brawler>1.25</Brawler>
+        <Healer>0.15</Healer>
+        <Melee>2.5</Melee>
+        <None>1</None>
+        <Ranged>0.25</Ranged>
+        <Spell_Damage>0.25</Spell_Damage>
+        <Spell_Offense>0.25</Spell_Offense>
+        <Spell_Support>0.25</Spell_Support>
+        <Tank>0.35</Tank>
+      </Threat>
+      <Vuln>
+        <Melee>1</Melee>
+        <Ranged>1.25</Ranged>
+        <Status>1</Status>
+      </Vuln>
+    </Self>
   </Assassin_Melee>
   <Assassin_Ranged>
     <Enemy>
       <Threat>
         <Brawler>0.35</Brawler>
         <Healer>0.05</Healer>
-        <Melee>0.35</Melee>
+        <Melee>0.45</Melee>
         <Ranged>0.55</Ranged>
         <Spell_Damage>0.55</Spell_Damage>
         <Spell_Offense>0.55</Spell_Offense>
         <Spell_Support>0.50</Spell_Support>
+        <Tank>0.15</Tank>
       </Threat>
       <Vuln>
         <Melee>0.25</Melee>
@@ -56,8 +77,8 @@
       </Vuln>
     </Enemy>
     <Degradation>
-      <Threat>0.98</Threat>
-      <Vuln>0.85</Vuln>
+      <Threat>0.90</Threat>
+      <Vuln>0.55</Vuln>
     </Degradation>
     <Friendly>
       <Threat>
@@ -68,6 +89,7 @@
         <Spell_Damage>1.75</Spell_Damage>
         <Spell_Offense>1</Spell_Offense>
         <Spell_Support>0.50</Spell_Support>
+        <Tank>0.55</Tank>
       </Threat>
       <Vuln>
         <Melee>0.55</Melee>
@@ -75,6 +97,24 @@
         <Status>0.35</Status>
       </Vuln>  
     </Friendly>
+    <Self>
+      <Threat>
+        <Brawler>0.05</Brawler>
+        <Healer>0.15</Healer>
+        <Melee>0.05</Melee>
+        <None>1</None>
+        <Ranged>1.5</Ranged>
+        <Spell_Damage>1.5</Spell_Damage>
+        <Spell_Offense>0.80</Spell_Offense>
+        <Spell_Support>0.25</Spell_Support>
+        <Tank>0.05</Tank>
+      </Threat>
+      <Vuln>
+        <Melee>1.5</Melee>
+        <Ranged>1.25</Ranged>
+        <Status>1</Status>
+      </Vuln>
+    </Self>
   </Assassin_Ranged>
   <Brawler_Initiater>
     <Enemy>
@@ -86,6 +126,7 @@
         <Spell_Damage>0.25</Spell_Damage>
         <Spell_Offense>0.15</Spell_Offense>
         <Spell_Support>0.25</Spell_Support>
+        <Tank>0.75</Tank>
       </Threat>
       <Vuln>
         <Melee>4</Melee>
@@ -94,8 +135,8 @@
       </Vuln>
     </Enemy>
     <Degradation>
-      <Threat>0.75</Threat>
-      <Vuln>0.55</Vuln>
+      <Threat>0.55</Threat>
+      <Vuln>0.35</Vuln>
     </Degradation>
     <Friendly>
       <Threat>
@@ -106,6 +147,7 @@
         <Spell_Damage>0.25</Spell_Damage>
         <Spell_Offense>0.25</Spell_Offense>
         <Spell_Support>0.25</Spell_Support>
+        <Tank>0.25</Tank>
       </Threat>
       <Vuln>
         <Melee>0.75</Melee>
@@ -113,17 +155,36 @@
         <Status>0.25</Status>
       </Vuln>
     </Friendly>
+    <Self>
+      <Threat>
+        <Brawler>2.5</Brawler>
+        <Healer>0.15</Healer>
+        <Melee>2</Melee>
+        <None>1</None>
+        <Ranged>0.25</Ranged>
+        <Spell_Damage>0.25</Spell_Damage>
+        <Spell_Offense>0.25</Spell_Offense>
+        <Spell_Support>0.25</Spell_Support>
+        <Tank>0.55</Tank>
+      </Threat>
+      <Vuln>
+        <Melee>1</Melee>
+        <Ranged>1.15</Ranged>
+        <Status>1.15</Status>
+      </Vuln>
+    </Self>
   </Brawler_Initiater>
   <Support_Summoner>
     <Enemy>
       <Threat>
         <Brawler>1</Brawler>
-        <Healer>0.35</Healer>
-        <Melee>1.25</Melee>
+        <Healer>0.45</Healer>
+        <Melee>1.15</Melee>
         <Ranged>1.5</Ranged>
         <Spell_Damage>0.55</Spell_Damage>
         <Spell_Offense>0.35</Spell_Offense>
         <Spell_Support>1</Spell_Support>
+        <Tank>0.25</Tank>
       </Threat>
       <Vuln>
         <Melee>0.85</Melee>
@@ -144,6 +205,7 @@
         <Spell_Damage>1</Spell_Damage>
         <Spell_Offense>1</Spell_Offense>
         <Spell_Support>1</Spell_Support>
+        <Tank>1</Tank>
       </Threat>
       <Vuln>
         <Melee>0.5</Melee>
@@ -151,6 +213,24 @@
         <Status>1.5</Status>
       </Vuln>  
     </Friendly>
+    <Self>
+      <Threat>
+        <Brawler>0.15</Brawler>
+        <Healer>0.15</Healer>
+        <Melee>0.15</Melee>
+        <None>1</None>
+        <Ranged>0.75</Ranged>
+        <Spell_Damage>1</Spell_Damage>
+        <Spell_Offense>1</Spell_Offense>
+        <Spell_Support>2.5</Spell_Support>
+        <Tank>0.05</Tank>
+      </Threat>
+      <Vuln>
+        <Melee>2</Melee>
+        <Ranged>1.75</Ranged>
+        <Status>0.80</Status>
+      </Vuln>
+    </Self>
   </Support_Summoner>
   <Tank_Zone>
     <Enemy>
@@ -162,6 +242,7 @@
         <Spell_Damage>0.15</Spell_Damage>
         <Spell_Offense>0.15</Spell_Offense>
         <Spell_Support>0.25</Spell_Support>
+        <Tank>0.05</Tank>
       </Threat>
       <Vuln>
         <Melee>0.85</Melee>
@@ -182,6 +263,7 @@
         <Spell_Damage>0.35</Spell_Damage>
         <Spell_Offense>0.35</Spell_Offense>
         <Spell_Support>0.75</Spell_Support>
+        <Tank>0.5</Tank>
       </Threat>
       <Vuln>
         <Melee>2</Melee>
@@ -189,5 +271,23 @@
         <Status>0.25</Status>
       </Vuln>  
     </Friendly>
+    <Self>
+      <Threat>
+        <Brawler>1.5</Brawler>
+        <Healer>0.15</Healer>
+        <Melee>1.25</Melee>
+        <None>1</None>
+        <Ranged>0.05</Ranged>
+        <Spell_Damage>0.05</Spell_Damage>
+        <Spell_Offense>0.05</Spell_Offense>
+        <Spell_Support>0.25</Spell_Support>
+        <Tank>2</Tank>
+      </Threat>
+      <Vuln>
+        <Melee>0.75</Melee>
+        <Ranged>0.25</Ranged>
+        <Status>1</Status>
+      </Vuln>
+    </Self>
   </Tank_Zone>
 </EAgentRole>

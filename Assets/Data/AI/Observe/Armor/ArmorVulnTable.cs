@@ -2,7 +2,7 @@
 using Assets.Template.Other;
 using System.Collections.Generic;
 
-namespace Assets.Data.AI.Armor
+namespace Assets.Data.AI.Observe.Armor
 {
     public class ArmorVulnTable : ASingleton<ArmorVulnTable>
     {

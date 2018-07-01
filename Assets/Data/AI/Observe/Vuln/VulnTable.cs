@@ -3,7 +3,7 @@ using Assets.Model.Character.Enum;
 using Assets.Template.Other;
 using System.Collections.Generic;
 
-namespace Assets.Data.AI.Vuln
+namespace Assets.Data.AI.Observe.Char
 {
     public class VulnTable : ASingleton<VulnTable>
     {

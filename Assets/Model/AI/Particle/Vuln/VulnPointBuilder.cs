@@ -1,5 +1,5 @@
 ﻿using Assets.Controller.Character;
-using Assets.Data.AI.Vuln;
+using Assets.Data.AI.Observe.Char;
 using Assets.Model.AI.Particle.Vuln.Armor;
 using Assets.Model.Character.Enum;
 using System;

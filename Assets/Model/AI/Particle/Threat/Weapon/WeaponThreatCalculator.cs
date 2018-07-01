@@ -1,5 +1,5 @@
 ﻿using Assets.Controller.Equipment.Weapon;
-using Assets.Data.AI.Weapon;
+using Assets.Data.AI.Observe.Weapon;
 using Assets.Model.Equipment.Enum;
 
 namespace Assets.Model.AI.Particle.Threat.Weapon

@@ -2,7 +2,7 @@
 using Assets.Template.Other;
 using System.Collections.Generic;
 
-namespace Assets.Data.AI.Weapon
+namespace Assets.Data.AI.Observe.Weapon
 {
     public class WeaponThreatTable : ASingleton<WeaponThreatTable>
     {

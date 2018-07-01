@@ -5,7 +5,7 @@ using Assets.Template.XML;
 using System.Collections.Generic;
 using System.Xml.Linq;
 
-namespace Assets.Data.AI.Threat
+namespace Assets.Data.AI.Observe.Threat
 {
     public class ThreatReader : XMLReader
     {
@@ -13,7 +13,7 @@ namespace Assets.Data.AI.Threat
 
         public ThreatReader() : base()
         {
-            this._paths.Add("Assets/Data/AI/Threat/ThreatData.xml");
+            this._paths.Add("Assets/Data/AI/Observe/Threat/ThreatData.xml");
             this._threats = ThreatTable.Instance;
         }
 

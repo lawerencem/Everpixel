@@ -1,5 +1,5 @@
 ﻿using Assets.Controller.Character;
-using Assets.Data.AI.Armor;
+using Assets.Data.AI.Observe.Armor;
 using Assets.Model.Character.Enum;
 using Assets.Model.Equipment.Enum;
 using System.Collections.Generic;

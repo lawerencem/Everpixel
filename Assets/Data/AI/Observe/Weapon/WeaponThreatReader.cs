@@ -3,7 +3,7 @@ using Assets.Template.Util;
 using Assets.Template.XML;
 using System.Xml.Linq;
 
-namespace Assets.Data.AI.Weapon
+namespace Assets.Data.AI.Observe.Weapon
 {
     public class WeaponThreatReader : XMLReader
     {
@@ -11,7 +11,7 @@ namespace Assets.Data.AI.Weapon
 
         public WeaponThreatReader() : base()
         {
-            this._paths.Add("Assets/Data/AI/Weapon/WeaponThreatData.xml");
+            this._paths.Add("Assets/Data/AI/Observe/Weapon/WeaponThreatData.xml");
             this._threats = WeaponThreatTable.Instance;
         }
 

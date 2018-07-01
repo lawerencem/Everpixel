@@ -3,7 +3,7 @@ using Assets.Template.Util;
 using Assets.Template.XML;
 using System.Xml.Linq;
 
-namespace Assets.Data.AI.Armor
+namespace Assets.Data.AI.Observe.Armor
 {
     public class ArmorVulnReader : XMLReader
     {
@@ -11,7 +11,7 @@ namespace Assets.Data.AI.Armor
 
         public ArmorVulnReader() : base()
         {
-            this._paths.Add("Assets/Data/AI/Armor/ArmorVulnData.xml");
+            this._paths.Add("Assets/Data/AI/Observe/Armor/ArmorVulnData.xml");
             this._vulns = ArmorVulnTable.Instance;
         }
 

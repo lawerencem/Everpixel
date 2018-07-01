@@ -10,5 +10,6 @@
         Spell_Damage,
         Spell_Offense,
         Spell_Support,
+        Tank,
     }
 }

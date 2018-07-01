@@ -1,6 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Tile;
-using Assets.Data.AI.Agent;
+using Assets.Data.AI.Observe.Agent;
 using Assets.Model.Map.Tile;
 using Assets.Template.Other;
 using System.Collections.Generic;

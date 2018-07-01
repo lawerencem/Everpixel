@@ -1,5 +1,5 @@
 ﻿using Assets.Controller.Character;
-using Assets.Data.AI.Threat;
+using Assets.Data.AI.Observe.Threat;
 using Assets.Model.AI.Particle.Threat.Weapon;
 using System;
 using System.Collections.Generic;
