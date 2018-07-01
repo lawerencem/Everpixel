@@ -11,11 +11,11 @@ namespace Assets.Model.AI.Particle
         public void GenerateParticles(CChar agent, bool lTeam)
         {
             // TODO: Grab a dict of tiles that maintains their distance from center
-            var tiles = agent.Proxy.GetModel().GetTile().GetAoETiles(5);
-            foreach (var tile in tiles)
+            var pairs = agent.Proxy.GetModel().GetTile().GetAoETilesWithDistance(5);
+            foreach (var pair in pairs)
             {
-                this.GenerateThreatPoints(agent, tile, 0, lTeam);
-                this.GenerateVulnPoints(agent, tile, 0, lTeam);
+                this.GenerateThreatPoints(agent, pair.X, pair.Y, lTeam);
+                this.GenerateVulnPoints(agent, pair.X, pair.Y, lTeam);
             }
         }
 

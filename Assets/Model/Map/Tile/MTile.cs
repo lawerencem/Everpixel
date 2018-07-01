@@ -2,6 +2,7 @@
 using Assets.Controller.Map.Tile;
 using Assets.Model.AI.Particle;
 using Assets.Template.Hex;
+using Assets.Template.Other;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -91,6 +92,16 @@ namespace Assets.Model.Map.Tile
         {
             var logic = new HexTileLogic();
             return this.ConvertIHexToMTile(logic.GetAoETiles(dist, this));
+        }
+
+        public List<Pair<MTile, int>> GetAoETilesWithDistance(int dist)
+        {
+            var logic = new HexTileLogic();
+            var pairs = logic.GetAoETilesWithDistance(dist, this);
+            var distTiles = new List<Pair<MTile, int>>();
+            foreach (var kvp in pairs)
+                distTiles.Add(new Pair<MTile, int>(this.ConvertIHexToMTile(kvp.X), kvp.Y));
+            return distTiles;
         }
 
         public int GetCost()

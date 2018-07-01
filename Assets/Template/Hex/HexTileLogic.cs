@@ -1,4 +1,5 @@
-﻿using Assets.Template.Util;
+﻿using Assets.Template.Other;
+using Assets.Template.Util;
 using System.Collections.Generic;
 
 namespace Assets.Template.Hex
@@ -118,6 +119,38 @@ namespace Assets.Template.Hex
                         {
                             waitingSet.Add(neighbor);
                             tiles.Add(neighbor);
+                            closedSet.Add(neighbor);
+                        }
+                    }
+                }
+                probeSet.Clear();
+                foreach (var wait in waitingSet) { probeSet.Add(wait); }
+                waitingSet.Clear();
+            }
+            return tiles;
+        }
+
+        public List<Pair<IHex, int>> GetAoETilesWithDistance(int dist, IHex tile)
+        {
+            var tiles = new List<Pair<IHex, int>>();
+            tiles.Add(new Pair<IHex, int>(tile, 0));
+
+            var closedSet = new List<IHex>();
+            var probeSet = new List<IHex>() { tile };
+            var waitingSet = new List<IHex>() { };
+
+            for (int i = dist; i > 0; i--)
+            {
+                foreach (var probe in probeSet)
+                {
+                    foreach (var neighbor in probe.GetAdjacent())
+                    {
+                        var found = closedSet.Find(
+                            x => x.GetCol() == neighbor.GetCol() && x.GetRow() == neighbor.GetRow());
+                        if (found == null)
+                        {
+                            waitingSet.Add(neighbor);
+                            tiles.Add(new Pair<IHex, int>(neighbor, -1 * (i - dist)));
                             closedSet.Add(neighbor);
                         }
                     }
