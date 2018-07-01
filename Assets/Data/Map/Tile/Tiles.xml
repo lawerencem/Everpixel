@@ -2,23 +2,31 @@
 <Tiles>
   <Tile name="Grass">
     <Cost>2</Cost>
-    <StamCost>3</StamCost>
     <Sprites>0,1,2,3,4,5,6,7</Sprites>
+    <StamCost>3</StamCost>
+    <ThreatMod>1.0</ThreatMod>
+    <VulnMod>1.0</VulnMod>
   </Tile>
   <Tile name="Ice">
     <Cost>3</Cost>
-    <StamCost>5</StamCost>
     <Sprites>0,1,2,3,4,5,6,7</Sprites>
+    <StamCost>5</StamCost>
+    <ThreatMod>1.0</ThreatMod>
+    <VulnMod>1.0</VulnMod>
   </Tile>
   <Tile name="Snow">
     <Cost>4</Cost>
-    <StamCost>7</StamCost>
     <Sprites>0,1,2,3,4,5,6,7</Sprites>
+    <StamCost>7</StamCost>
+    <ThreatMod>1.0</ThreatMod>
+    <VulnMod>1.0</VulnMod>
   </Tile>
   <Tile name="Water">
     <Cost>6</Cost>
-    <StamCost>10</StamCost>
     <Liquid>True</Liquid>
     <Sprites>0,1,2,3,4,5,6,7</Sprites>
+    <StamCost>10</StamCost>
+    <ThreatMod>0.9</ThreatMod>
+    <VulnMod>1.2</VulnMod>
   </Tile>
 </Tiles>

@@ -164,6 +164,8 @@ namespace Assets.Controller.Map.Combat.Loader
                         tile.Model.SetType(kvp.Key);
                         tile.Model.SetAPCost(TileTable.Instance.Table[kvp.Key].Cost);
                         tile.Model.SetStaminaCost(TileTable.Instance.Table[kvp.Key].StaminaCost);
+                        tile.Model.SetThreatMod(TileTable.Instance.Table[kvp.Key].ThreatMod);
+                        tile.Model.SetVulnMod(TileTable.Instance.Table[kvp.Key].VulnMod);
                         if (TileTable.Instance.Table[kvp.Key].Liquid)
                             tile.Model.SetLiquid(true);
                         break;

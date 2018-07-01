@@ -32,7 +32,7 @@ namespace Assets.Model.AI.Agent.Combat
 
         private void CalculateParticlePoints(CChar agent)
         {
-            var tiles = agent.Tile.Model.GetEmptyAoETiles(4);
+            var tiles = agent.Tile.Model.GetEmptyAoETiles(6);
             foreach (var tile in tiles)
                 this.GenerateMovePoints(agent.Proxy.GetAIRole(), tile, agent.Proxy.LParty);
             this._tiles.Sort((x, y) => y.X.CompareTo(x.X));
@@ -49,14 +49,25 @@ namespace Assets.Model.AI.Agent.Combat
             var friendlyThreats = this._threats.FriendlyThreatTable[role];
 
             foreach (var kvp in enemyThreats)
+            {
                 movePts -= (particles.GetThreatValue(kvp.Key, lTeam) * kvp.Value);
+            }
             foreach (var kvp in enemyVulns)
-                movePts += (particles.GetVulnValue(kvp.Key, lTeam) * kvp.Value);
-
-            foreach (var kvp in enemyThreats)
-                movePts += (particles.GetThreatValue(kvp.Key, lTeam) * kvp.Value);
+            {
+                double points = (particles.GetVulnValue(kvp.Key, lTeam) * kvp.Value);
+                points *= tile.GetVulnMod();
+                movePts += points;
+            }
+            foreach (var kvp in friendlyThreats)
+            {
+                double points = (particles.GetThreatValue(kvp.Key, lTeam) * kvp.Value);
+                points *= tile.GetThreatMod();
+                movePts += points;
+            }
             foreach (var kvp in friendlyVulns)
+            {
                 movePts -= (particles.GetVulnValue(kvp.Key, lTeam) * kvp.Value);
+            }
 
             this._tiles.Add(new Pair<double, MTile>(movePts, tile));
         }

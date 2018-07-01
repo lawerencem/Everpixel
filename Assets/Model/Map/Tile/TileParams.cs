@@ -10,7 +10,9 @@ namespace Assets.Model.Map.Tile
         public bool Liquid { get; set; }
         public List<int> Sprites { get; set; }
         public int StaminaCost { get; set; }
+        public double ThreatMod { get; set; }
         public ETile Type { get { return this._type; } }
+        public double VulnMod { get; set; }
 
         public TileParams(ETile type)
         {

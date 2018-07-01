@@ -10,8 +10,7 @@ namespace Assets.Model.AI.Particle
     {
         public void GenerateParticles(CChar agent, bool lTeam)
         {
-            // TODO: Grab a dict of tiles that maintains their distance from center
-            var pairs = agent.Proxy.GetModel().GetTile().GetAoETilesWithDistance(5);
+            var pairs = agent.Proxy.GetModel().GetTile().GetAoETilesWithDistance(8);
             foreach (var pair in pairs)
             {
                 this.GenerateThreatPoints(agent, pair.X, pair.Y, lTeam);
@@ -22,9 +21,11 @@ namespace Assets.Model.AI.Particle
         private void GenerateThreatPoints(CChar agent, MTile tile, int dist, bool lTeam)
         {
             var builder = new ThreatPointBuilder();
+            double scalar = 1;
             double degrade = AgentRoleDegradationTable.Instance.ThreatTable[agent.Proxy.GetAIRole()];
             for (int i = 0; i < dist; i++)
-                degrade *= degrade;
+                scalar *= degrade;
+            scalar *= this.GetHeightScalar(tile);
             var threats = builder.BuildThreats(agent);
             var particles = tile.GetParticles();
             foreach (var kvp in threats)
@@ -37,16 +38,35 @@ namespace Assets.Model.AI.Particle
         private void GenerateVulnPoints(CChar agent, MTile tile, int dist, bool lTeam)
         {
             var builder = new VulnPointBuilder();
+            double scalar = 1;
             double degrade = AgentRoleDegradationTable.Instance.VulnTable[agent.Proxy.GetAIRole()];
             var vulns = builder.BuildVulns(agent);
             for (int i = 0; i < dist; i++)
-                degrade *= degrade;
+                scalar *= degrade;
+            scalar *= this.GetHeightScalar(tile);
             var particles = tile.GetParticles();
             foreach (var kvp in vulns)
             {
-                kvp.Value.ScaleValue(degrade);
+                kvp.Value.ScaleValue(scalar);
                 particles.AddVulnParticles(kvp.Key, kvp.Value, lTeam);
             }
+        }
+
+        private double GetHeightScalar(MTile tile)
+        {
+            double scalar = 1;
+            foreach (var neighbor in tile.GetAdjacent())
+            {
+                int delta = neighbor.GetHeight() - tile.GetHeight();
+                switch(delta)
+                {
+                    case (2): { scalar *= 0.8; } break;
+                    case (1): { scalar *= 0.9; } break;
+                    case (-1): { scalar *= 1.1; } break;
+                    case (-2): { scalar *= 1.2; } break;
+                }
+            }
+            return scalar;
         }
     }
 }

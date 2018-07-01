@@ -1,5 +1,4 @@
 ﻿using Assets.Data.Map.Landmark.Table;
-using Assets.Model.Map.Landmark;
 using Assets.Model.Map.Tile;
 using Assets.Template.Util;
 using Assets.Template.XML;
@@ -54,6 +53,8 @@ namespace Assets.Data.Map.Landmark.XML
                     case ("Liquid"): { this.table.Table[type].Liquid = bool.Parse(value); } break;
                     case ("Sprites"): { this.HandleSprites(type, value); } break;
                     case ("StamCost"): { this.table.Table[type].StaminaCost = int.Parse(value); } break;
+                    case ("ThreatMod"): { this.table.Table[type].ThreatMod = double.Parse(value); } break;
+                    case ("VulnMod"): { this.table.Table[type].VulnMod = double.Parse(value); } break;
                 }
             }
         }

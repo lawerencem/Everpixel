@@ -31,7 +31,9 @@ namespace Assets.Model.Map.Tile
         private ParticleContainer _particles;
         private int _row;
         private int _staminaCost;
+        private double _threatMod;
         private ETile _type;
+        private double _vulnMod;
 
         public CTile Controller { get { return this._controller; } }
         public Vector3 Center { get { return this._center; } }
@@ -65,7 +67,9 @@ namespace Assets.Model.Map.Tile
         public void SetMap(MMap m) { this._map = m; }
         public void SetRow(int row) { this._row = row; }
         public void SetStaminaCost(int cost) { this._staminaCost = cost; }
+        public void SetThreatMod(double mod) { this._threatMod = mod; }
         public void SetType(ETile type) { this._type = type; }
+        public void SetVulnMod(double mod) { this._vulnMod = mod; }
 
         public MTile GetN() { return this._n; }
         public MTile GetNE() { return this._ne; }
@@ -76,6 +80,8 @@ namespace Assets.Model.Map.Tile
 
         public FTile GetFlags() { return this._flags; }
         public int GetHeight() { return this._height; }
+        public double GetThreatMod() { return this._threatMod; }
+        public double GetVulnMod() { return this._vulnMod; }
 
         public ParticleContainer GetParticles()
         {
