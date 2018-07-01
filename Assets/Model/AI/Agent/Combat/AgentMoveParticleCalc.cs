@@ -4,6 +4,7 @@ using Assets.Data.AI.Observe.Agent;
 using Assets.Model.Map.Tile;
 using Assets.Template.Other;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Assets.Model.AI.Agent.Combat
 {
@@ -20,14 +21,14 @@ namespace Assets.Model.AI.Agent.Combat
             this._vulns = AgentRoleVulnModTable.Instance;
         }
 
-        public CTile GetMoveTile(CChar agent)
+        public Pair<CTile, double> GetMoveTile(CChar agent)
         {
             this.CalculateParticlePoints(agent);
             this._tiles.RemoveAll(x => x.Y.Controller.Current != null);
             if (this._tiles.Count > 0)
-                return this._tiles[0].Y.Controller;
+                return new Pair<CTile, double>(this._tiles[0].Y.Controller, this._tiles[0].X);
             else
-                return null;
+                return new Pair<CTile, double>(null, 0);
         }
 
         private void CalculateParticlePoints(CChar agent)

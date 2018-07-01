@@ -10,12 +10,12 @@ namespace Assets.Controller.AI.Agent
         public void ProcessTurn(CChar agent)
         {
             var moveCalc = new AgentMoveParticleCalc();
-            var tile = moveCalc.GetMoveTile(agent);
-            if (tile != null)
+            var tileAndWeight = moveCalc.GetMoveTile(agent);
+            if (tileAndWeight.X != null)
             {
                 var data = new EvPathMoveData();
                 data.Char = agent;
-                data.Target = tile;
+                data.Target = tileAndWeight.X;
                 var path = new EvPathMoveUtil().GetPathMove(data);
                 path.AddCallback(this.EndTurn);
                 path.TryProcess();
