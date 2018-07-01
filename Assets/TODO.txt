@@ -3,6 +3,8 @@
  - AI
    -- Ensure threat values diminish by distance
    -- Have agents attack based on appropriate roles
+   -- Have tiles boost vulns/threats based on heights
+   -- Have tiles boost vulns/threats based on deco
 
  - Enter button ends turn
 

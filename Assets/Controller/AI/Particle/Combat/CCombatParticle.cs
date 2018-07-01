@@ -21,16 +21,16 @@ namespace Assets.Controller.AI.Particle.Combat
             {
                 foreach (var tile in this._mapTiles)
                 {
-                    var particles = tile.Model.GetLTeamParticles();
-                    particles.RemoveAgentParticles(agent.Proxy.GetGuid().ToString());
+                    var particles = tile.Model.GetParticles();
+                    particles.RemoveAgentParticles(agent.Proxy.GetGuid().ToString(), lTeam);
                 }
             }
             else
             {
                 foreach (var tile in this._mapTiles)
                 {
-                    var particles = tile.Model.GetRTeamParticles();
-                    particles.RemoveAgentParticles(agent.Proxy.GetGuid().ToString());
+                    var particles = tile.Model.GetParticles();
+                    particles.RemoveAgentParticles(agent.Proxy.GetGuid().ToString(), lTeam);
                 }
             }
         }

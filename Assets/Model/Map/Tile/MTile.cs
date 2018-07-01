@@ -27,10 +27,9 @@ namespace Assets.Model.Map.Tile
         private int _height;
         private bool _liquid;
         private MMap _map;
+        private ParticleContainer _particles;
         private int _row;
         private int _staminaCost;
-        private ParticleContainer _lTeamParticlePoints;
-        private ParticleContainer _rTeamParticlePoints;
         private ETile _type;
 
         public CTile Controller { get { return this._controller; } }
@@ -45,8 +44,7 @@ namespace Assets.Model.Map.Tile
             this._flags = new FTile();
             this._height = 1;
             this._liquid = false;
-            this._lTeamParticlePoints = new ParticleContainer();
-            this._rTeamParticlePoints = new ParticleContainer();
+            this._particles = new ParticleContainer();
         }
 
         public void SetN(MTile t) { this._adjacent.Add(t); this._n = t; }
@@ -78,14 +76,9 @@ namespace Assets.Model.Map.Tile
         public FTile GetFlags() { return this._flags; }
         public int GetHeight() { return this._height; }
 
-        public ParticleContainer GetLTeamParticles()
+        public ParticleContainer GetParticles()
         {
-            return this._lTeamParticlePoints;
-        }
-
-        public ParticleContainer GetRTeamParticles()
-        {
-            return this._rTeamParticlePoints;
+            return this._particles;
         }
 
         public List<MTile> GetArcTiles(MTile target)
@@ -103,6 +96,12 @@ namespace Assets.Model.Map.Tile
         public int GetCost()
         {
             return this._cost;
+        }
+
+        public List<MTile> GetEmptyAoETiles(int dist)
+        {
+            var logic = new HexTileLogic();
+            return this.ConvertIHexToMTile(logic.GetEmptyAoETiles(dist, this));
         }
 
         public MTile GetPushTile(MTile target)

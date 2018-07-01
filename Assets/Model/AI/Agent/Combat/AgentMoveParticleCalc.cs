@@ -33,7 +33,7 @@ namespace Assets.Model.AI.Agent.Combat
 
         private void CalculateParticlePoints(CChar agent)
         {
-            var tiles = agent.Tile.Model.GetAoETiles(4);
+            var tiles = agent.Tile.Model.GetEmptyAoETiles(4);
             foreach (var tile in tiles)
                 this.GenerateMovePoints(agent.Proxy.GetAIRole(), tile, agent.Proxy.LParty);
             this._tiles.Sort((x, y) => y.X.CompareTo(x.X));
@@ -41,18 +41,14 @@ namespace Assets.Model.AI.Agent.Combat
 
         private void GenerateMovePoints(EAgentRole role, MTile tile, bool lTeam)
         {
-            ParticleContainer particles;
-            if (lTeam)
-                particles = tile.GetLTeamParticles();
-            else
-                particles = tile.GetRTeamParticles();
+            var particles = tile.GetParticles();
             double movePts = 0;
             var threats = this._threats.Table[role];
             var vulns = this._vulns.Table[role];
             foreach (var kvp in threats)
-                movePts -= (particles.GetThreatValue(kvp.Key) * kvp.Value);
+                movePts -= (particles.GetThreatValue(kvp.Key, lTeam) * kvp.Value);
             foreach (var kvp in vulns)
-                movePts += (particles.GetVulnValue(kvp.Key) * kvp.Value);
+                movePts += (particles.GetVulnValue(kvp.Key, lTeam) * kvp.Value);
             this._tiles.Add(new Pair<double, MTile>(movePts, tile));
         }
     }

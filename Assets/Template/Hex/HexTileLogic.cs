@@ -129,6 +129,38 @@ namespace Assets.Template.Hex
             return tiles;
         }
 
+        public List<IHex> GetEmptyAoETiles(int dist, IHex tile)
+        {
+            var tiles = new List<IHex>() { tile };
+
+            var closedSet = new List<IHex>();
+            var probeSet = new List<IHex>() { tile };
+            var waitingSet = new List<IHex>() { };
+
+            for (int i = dist; i > 0; i--)
+            {
+                foreach (var probe in probeSet)
+                {
+                    foreach (var neighbor in probe.GetAdjacent())
+                    {
+                        var found = closedSet.Find(x => 
+                            x.GetCol() == neighbor.GetCol() &&
+                            x.GetRow() == neighbor.GetRow());
+                        if (found == null && neighbor.GetCurrentOccupant() == null)
+                        {
+                            waitingSet.Add(neighbor);
+                            tiles.Add(neighbor);
+                            closedSet.Add(neighbor);
+                        }
+                    }
+                }
+                probeSet.Clear();
+                foreach (var wait in waitingSet) { probeSet.Add(wait); }
+                waitingSet.Clear();
+            }
+            return tiles;
+        }
+
         public List<IHex> GetRaycastTiles(IHex source, IHex target, int dist)
         {
             var list = new List<IHex>();

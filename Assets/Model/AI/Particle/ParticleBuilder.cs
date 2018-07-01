@@ -24,13 +24,9 @@ namespace Assets.Model.AI.Particle
             var threats = builder.BuildThreats(agent);
             // TODO: Modify threats based on distance
             // TODO: agent.Role.ModifyThreatPoints(threats);
-            ParticleContainer points;
-            if (lTeam)
-                points = tile.GetLTeamParticles();
-            else
-                points = tile.GetRTeamParticles();
+            var particles = tile.GetParticles();
             foreach (var kvp in threats)
-                points.AddThreatParticles(kvp.Key, kvp.Value);
+                particles.AddThreatParticles(kvp.Key, kvp.Value, lTeam);
         }
 
         private void GenerateVulnPoints(CChar agent, MTile tile, int dist, bool lTeam)
@@ -39,13 +35,9 @@ namespace Assets.Model.AI.Particle
             var vulns = builder.BuildVulns(agent);
             // TODO: Modify threats based on distance
             // TODO: agent.Role.ModifyVulnPoints(vulns);
-            ParticleContainer points;
-            if (lTeam)
-                points = tile.GetLTeamParticles();
-            else
-                points = tile.GetRTeamParticles();
+            var particles = tile.GetParticles();
             foreach (var kvp in vulns)
-                points.AddVulnParticles(kvp.Key, kvp.Value);
+                particles.AddVulnParticles(kvp.Key, kvp.Value, lTeam);
         }
     }
 }

@@ -7,70 +7,90 @@ namespace Assets.Model.AI.Particle
 {
     public class ParticleContainer
     {
-        private Dictionary<EThreat, List<CharParticlePair>> _threatTable;
-        private Dictionary<EVuln, List<CharParticlePair>> _vulnTable;
+        private Dictionary<EThreat, List<CharParticlePair>> _lTeamThreatTable;
+        private Dictionary<EVuln, List<CharParticlePair>> _lTeamVulnTable;
+        private Dictionary<EThreat, List<CharParticlePair>> _rTeamThreatTable;
+        private Dictionary<EVuln, List<CharParticlePair>> _rTeamVulnTable;
 
         public ParticleContainer()
         {
-            this._threatTable = new Dictionary<EThreat, List<CharParticlePair>>();
-            this._vulnTable = new Dictionary<EVuln, List<CharParticlePair>>();
-            foreach(EThreat threat in Enum.GetValues(typeof(EThreat)))
-                this._threatTable.Add(threat, new List<CharParticlePair>());
-            foreach (EVuln vuln in Enum.GetValues(typeof(EVuln)))
-                this._vulnTable.Add(vuln, new List<CharParticlePair>());
-        }
-
-        public void AddThreatParticles(EThreat type, CharParticlePair threat)
-        {
-            this._threatTable[type].Add(threat);
-        }
-
-        public void AddVulnParticles(EVuln type, CharParticlePair vuln)
-        {
-            this._vulnTable[type].Add(vuln);
-        }
-
-        public void RemoveAgentParticles(string id)
-        {
-            foreach (var pair in this._threatTable)
-                pair.Value.RemoveAll(x => x.Id == id);
-            foreach (var pair in this._vulnTable)
-                pair.Value.RemoveAll(x => x.Id == id);
-        }
-
-        public double GetThreatValue(EThreat type)
-        {
-            double threat = 0;
-            foreach (var pair in this._threatTable[type])
-                threat += pair.Value;
-            return threat;
-        }
-
-        public double GetVulnValue(EVuln type)
-        {
-            double vuln = 0;
-            foreach (var pair in this._vulnTable[type])
-                vuln += pair.Value;
-            return vuln;
-        }
-
-        public double GetTotalThreat()
-        {
-            double threat = 0;
-            foreach (var swarmPair in this._threatTable)
+            this._lTeamThreatTable = new Dictionary<EThreat, List<CharParticlePair>>();
+            this._lTeamVulnTable = new Dictionary<EVuln, List<CharParticlePair>>();
+            this._rTeamThreatTable = new Dictionary<EThreat, List<CharParticlePair>>();
+            this._rTeamVulnTable = new Dictionary<EVuln, List<CharParticlePair>>();
+            foreach (EThreat threat in Enum.GetValues(typeof(EThreat)))
             {
-                foreach (var pair in swarmPair.Value)
+                this._lTeamThreatTable.Add(threat, new List<CharParticlePair>());
+                this._rTeamThreatTable.Add(threat, new List<CharParticlePair>());
+            }
+            foreach (EVuln vuln in Enum.GetValues(typeof(EVuln)))
+            {
+                this._lTeamVulnTable.Add(vuln, new List<CharParticlePair>());
+                this._rTeamVulnTable.Add(vuln, new List<CharParticlePair>());
+            }
+        }
+
+        public void AddThreatParticles(EThreat type, CharParticlePair threat, bool lTeam)
+        {
+            if (lTeam)
+                this._lTeamThreatTable[type].Add(threat);
+            else
+                this._rTeamThreatTable[type].Add(threat);
+        }
+
+        public void AddVulnParticles(EVuln type, CharParticlePair vuln, bool lTeam)
+        {
+            if (lTeam)
+                this._lTeamVulnTable[type].Add(vuln);
+            else
+                this._rTeamVulnTable[type].Add(vuln);
+        }
+
+        public void RemoveAgentParticles(string id, bool lTeam)
+        {
+            if (lTeam)
+            {
+                foreach (var pair in this._lTeamThreatTable)
+                    pair.Value.RemoveAll(x => x.Id == id);
+                foreach (var pair in this._lTeamVulnTable)
+                    pair.Value.RemoveAll(x => x.Id == id);
+            }
+            else
+            {
+                foreach (var pair in this._rTeamThreatTable)
+                    pair.Value.RemoveAll(x => x.Id == id);
+                foreach (var pair in this._rTeamVulnTable)
+                    pair.Value.RemoveAll(x => x.Id == id);
+            }
+        }
+
+        public double GetThreatValue(EThreat type, bool lTeam)
+        {
+            double threat = 0;
+            if (lTeam)
+            {
+                foreach (var pair in this._lTeamThreatTable[type])
+                    threat += pair.Value;
+            }
+            else
+            {
+                foreach (var pair in this._rTeamThreatTable[type])
                     threat += pair.Value;
             }
             return threat;
         }
 
-        public double GetTotalVuln()
+        public double GetVulnValue(EVuln type, bool lTeam)
         {
             double vuln = 0;
-            foreach (var swarmPair in this._vulnTable)
+            if (lTeam)
             {
-                foreach (var pair in swarmPair.Value)
+                foreach (var pair in this._lTeamVulnTable[type])
+                    vuln += pair.Value;
+            }
+            else
+            {
+                foreach (var pair in this._rTeamVulnTable[type])
                     vuln += pair.Value;
             }
             return vuln;
