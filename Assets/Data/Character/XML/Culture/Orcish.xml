@@ -42,6 +42,7 @@
       </PotentialWeapons>
     </Character>
     <Character name ="Dire_Ween">
+      <EAgentRole>Brawler_Initiater</EAgentRole>
       <AttackSpriteIndex>3</AttackSpriteIndex>
       <Abilities>
         <Ability name ="Bite">
@@ -66,6 +67,7 @@
       </Stats>
     </Character>
     <Character name ="Direween Rider">
+      <EAgentRole>Brawler_Initiater</EAgentRole>
       <Class>Warrior,3</Class>
       <Class>Berserker,7</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -99,6 +101,7 @@
       </PotentialWeapons>
     </Character>
     <Character name ="Elite Shock Troopa">
+      <EAgentRole>Assassin_Melee</EAgentRole>
       <Class>Warrior,10</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
@@ -133,6 +136,7 @@
       </PotentialWeapons>
     </Character>
     <Character name ="Greater Orc Wereween">
+      <EAgentRole>Brawler_Initiater</EAgentRole>
       <Class>Warrior,5</Class>
       <Class>Wereween,6</Class>
       <Class>Lycanthrope,1</Class>
@@ -214,6 +218,7 @@
       </PotentialWeapons>
     </Character>
     <Character name ="Orc Berserker">
+      <EAgentRole>Assassin_Melee</EAgentRole>
       <Class>Warrior,1</Class>
       <Class>Berserker,3</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -251,6 +256,7 @@
       </PotentialWeapons>
     </Character>
     <Character name ="Orc Khan">
+      <EAgentRole>Assassin_Melee</EAgentRole>
       <Class>Berserker,7</Class>
       <Class>Warrior,7</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -324,6 +330,7 @@
       </PotentialWeapons>
     </Character>
     <Character name ="Orc Wereween">
+      <EAgentRole>Brawler_Initiater</EAgentRole>
       <Class>Warrior,1</Class>
       <Class>Wereween,2</Class>
       <Class>Lycanthrope,1</Class>
@@ -345,6 +352,7 @@
       </PotentialWeapons>
     </Character>
     <Character name ="Shock Troopa">
+      <EAgentRole>Assassin_Melee</EAgentRole>
       <Class>Warrior,3</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
@@ -376,6 +384,7 @@
       </PotentialWeapons>
     </Character>
     <Character name ="War Ween Rider">
+      <EAgentRole>Brawler_Initiater</EAgentRole>
       <Class>Warrior,4</Class>
       <Class>Berserker,4</Class>
       <ECharacterType>Humanoid</ECharacterType>
@@ -415,6 +424,7 @@
       </PotentialWeapons>
     </Character>
     <Character name ="Ween">
+      <EAgentRole>Brawler_Initiater</EAgentRole>
       <AttackSpriteIndex>18</AttackSpriteIndex>
       <Abilities>
         <Ability name ="Bite">
@@ -435,6 +445,7 @@
       </Stats>
     </Character>
     <Character name ="Weenbower">
+      <EAgentRole>Support_Summoner</EAgentRole>
       <Class>Warrior,3</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
@@ -450,6 +461,7 @@
       </PotentialWeapons>
     </Character>
     <Character name ="Ween_Dragon">
+      <EAgentRole>Assassin_Melee</EAgentRole>
       <AttackSpriteIndex>3</AttackSpriteIndex>
       <Abilities>
         <Ability name ="Bite">
@@ -474,6 +486,7 @@
       </Stats>
     </Character>
     <Character name ="Ween Lord">
+      <EAgentRole>Assassin_Melee</EAgentRole>
       <Class>Berserker,8</Class>
       <Class>Warrior,10</Class>
       <Abilities>
@@ -519,8 +532,10 @@
       </Stats>
     </Character>
     <Character name ="Ween Rider">
+      <EAgentRole>Assassin_Melee</EAgentRole>
       <Class>Warrior,1</Class>
       <Class>Berserker,1</Class>
+      <EAgentRole>Brawler_Initiater</EAgentRole>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
       <Mount>Ween</Mount>

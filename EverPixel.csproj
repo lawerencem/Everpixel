@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.4.1f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -271,6 +273,7 @@
     <Compile Include="Assets\Controller\Mount\CMount.cs" />
     <Compile Include="Assets\Data\Ability\XML\AbilityMediator.cs" />
     <Compile Include="Assets\Data\Ability\XML\AbilityReader.cs" />
+    <Compile Include="Assets\Data\AI\Agent\AgentRoleDegradationTable.cs" />
     <Compile Include="Assets\Data\AI\Agent\AgentRoleModReader.cs" />
     <Compile Include="Assets\Data\AI\Agent\AgentRoleThreatModTable.cs" />
     <Compile Include="Assets\Data\AI\Agent\AgentRoleVulnModTable.cs" />

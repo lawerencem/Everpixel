@@ -1,7 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.Map.Tile;
 using Assets.Data.AI.Agent;
-using Assets.Model.AI.Particle;
 using Assets.Model.Map.Tile;
 using Assets.Template.Other;
 using System.Collections.Generic;
@@ -52,12 +51,12 @@ namespace Assets.Model.AI.Agent.Combat
             foreach (var kvp in enemyThreats)
                 movePts -= (particles.GetThreatValue(kvp.Key, lTeam) * kvp.Value);
             foreach (var kvp in enemyVulns)
-                movePts -= (particles.GetVulnValue(kvp.Key, lTeam) * kvp.Value);
+                movePts += (particles.GetVulnValue(kvp.Key, lTeam) * kvp.Value);
 
             foreach (var kvp in enemyThreats)
                 movePts += (particles.GetThreatValue(kvp.Key, lTeam) * kvp.Value);
             foreach (var kvp in friendlyVulns)
-                movePts += (particles.GetVulnValue(kvp.Key, lTeam) * kvp.Value);
+                movePts -= (particles.GetVulnValue(kvp.Key, lTeam) * kvp.Value);
 
             this._tiles.Add(new Pair<double, MTile>(movePts, tile));
         }

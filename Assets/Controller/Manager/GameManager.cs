@@ -47,6 +47,7 @@ namespace Assets.Controller.Managers
             var lParty = new PartyBuildParams();
             var rParty = new PartyBuildParams();
 
+            lParty.AIControlled = true;
             lParty.Culture = ECulture.Orcish;
             lParty.Difficulty = 2000;
             lParty.Name = "Ween Herders";

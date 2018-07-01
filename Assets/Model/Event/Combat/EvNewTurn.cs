@@ -8,6 +8,7 @@ using Assets.Template.Script;
 using Assets.View;
 using Assets.View.Character;
 using Assets.View.Event;
+using UnityEngine;
 
 namespace Assets.Model.Event.Combat
 {
@@ -44,7 +45,11 @@ namespace Assets.Model.Event.Combat
                 bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Target.GameHandle);
             }
             if (CameraManager.Instance != null)
-                CameraManager.Instance.InitScrollTo(this._data.Target.GameHandle.transform.position);
+            {
+                var position = this._data.Target.GameHandle.transform.position;
+                var scrollTo = new Vector3(position.x, position.y - 1.5f, position.z);
+                CameraManager.Instance.InitScrollTo(scrollTo);
+            }
             this.TryUndoActionStatuses();
             var e = new EvPopulateAbilityBtns();
             e.TryProcess();

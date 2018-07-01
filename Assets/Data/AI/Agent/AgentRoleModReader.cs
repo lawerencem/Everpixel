@@ -10,12 +10,14 @@ namespace Assets.Data.AI.Agent
 {
     public class AgentRoleModReader : XMLReader
     {
+        private AgentRoleDegradationTable _degradation; 
         private AgentRoleThreatModTable _threats;
         private AgentRoleVulnModTable _vulns;
 
         public AgentRoleModReader() : base()
         {
             this._paths.Add("Assets/Data/AI/Agent/AgentRoleModData.xml");
+            this._degradation = AgentRoleDegradationTable.Instance;
             this._threats = AgentRoleThreatModTable.Instance;
             this._vulns = AgentRoleVulnModTable.Instance;
         }
@@ -45,6 +47,8 @@ namespace Assets.Data.AI.Agent
             {
                 if (ele.Name.ToString().Equals("Enemy"))
                     this.HandleEnemyData(ele, ref role);
+                else if (ele.Name.ToString().Equals("Degradation"))
+                    this.HandleDegradationData(ele, ref role);
                 else if (ele.Name.ToString().Equals("Friendly"))
                     this.HandleFriendlyData(ele, ref role);
             }
@@ -72,6 +76,17 @@ namespace Assets.Data.AI.Agent
                             this._vulns.EnemyVulnTable[role][vuln] = double.Parse(ele.Value);
                     }
                 }
+            }
+        }
+
+        private void HandleDegradationData(XElement e, ref EAgentRole role)
+        {
+            foreach (var el in e.Elements())
+            {
+                if (el.Name.ToString().Equals("Threat"))
+                    this._degradation.ThreatTable.Add(role, double.Parse(el.Value));
+                else if (el.Name.ToString().Equals("Vuln"))
+                    this._degradation.VulnTable.Add(role, double.Parse(el.Value));
             }
         }
 

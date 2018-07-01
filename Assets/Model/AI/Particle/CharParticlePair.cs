@@ -21,6 +21,11 @@ namespace Assets.Model.AI.Particle
             this._value += value;
         }
 
+        public void ScaleValue(double scalar)
+        {
+            this._value *= scalar;
+        }
+
         public CharParticlePair Clone()
         {
             return new CharParticlePair(this._id, this._value);
