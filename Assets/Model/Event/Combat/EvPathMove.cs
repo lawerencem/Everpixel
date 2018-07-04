@@ -7,6 +7,7 @@ using Assets.Model.Map.Tile;
 using Assets.Template.Pathing;
 using Assets.Template.Script;
 using Assets.View;
+using UnityEngine;
 
 namespace Assets.Model.Event.Combat
 {
@@ -40,8 +41,12 @@ namespace Assets.Model.Event.Combat
         {
             if (this._data.Char != null && this._data.Char.Equals(CombatManager.Instance.GetCurrentlyActing()))
             {
-                var bob = this._data.Char.GameHandle.AddComponent<SBob>();
-                bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Char.GameHandle);
+                var bob = this._data.Char.GameHandle.GetComponent<SBob>();
+                if (bob == null)
+                {
+                    bob = this._data.Char.GameHandle.AddComponent<SBob>();
+                    bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Char.GameHandle);
+                }
             }
         }
 
@@ -144,7 +149,7 @@ namespace Assets.Model.Event.Combat
             var bob = this._data.Char.GameHandle.GetComponent<SBob>();
             if (bob != null)
                 bob.Reset();
-            this._callbacks.Add(this.AddBob);
+            this.AddCallback(this.AddBob);
 
             if (this._data.Target == null)
                 return false;

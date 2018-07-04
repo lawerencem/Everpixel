@@ -4,7 +4,6 @@ using Assets.Data.AI.Observe.Agent;
 using Assets.Model.Map.Tile;
 using Assets.Template.Other;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace Assets.Model.AI.Agent.Combat
 {
@@ -33,16 +32,18 @@ namespace Assets.Model.AI.Agent.Combat
 
         private void CalculateParticlePoints(CChar agent)
         {
-            var tiles = agent.Tile.Model.GetEmptyAoETiles(7);
+            var tiles = agent.Tile.Model.GetEmptyAoETiles(4);
             foreach (var tile in tiles)
-                this.GenerateMovePoints(agent.Proxy.GetAIRole(), tile, agent.Proxy.LParty);
+                this.GenerateParticlePoints(agent.Proxy.GetAIRole(), tile, agent.Proxy.LParty);
+            var agentRole = new AgentRoleFactory().GetAgentRole(agent.Proxy.GetAIRole());
+            agentRole.ModifyParticleTilePoints(this._tiles);
             this._tiles.Sort((x, y) => y.X.CompareTo(x.X));
         }
 
-        private void GenerateMovePoints(EAgentRole role, MTile tile, bool lTeam)
+        private void GenerateParticlePoints(EAgentRole role, MTile tile, bool lTeam)
         {
             var particles = tile.GetParticles();
-            double movePts = 0;
+            double particlePoints = 0;
 
             var enemyVulns = this._vulns.EnemyVulnTable[role];
             var enemyThreats = this._threats.EnemyThreatTable[role];
@@ -51,26 +52,26 @@ namespace Assets.Model.AI.Agent.Combat
 
             foreach (var kvp in enemyThreats)
             {
-                movePts -= (particles.GetThreatValue(kvp.Key, lTeam) * kvp.Value);
+                particlePoints -= (particles.GetThreatValue(kvp.Key, lTeam) * kvp.Value);
             }
             foreach (var kvp in enemyVulns)
             {
                 double points = (particles.GetVulnValue(kvp.Key, lTeam) * kvp.Value);
                 points *= tile.GetVulnMod();
-                movePts += points;
+                particlePoints += points;
             }
             foreach (var kvp in friendlyThreats)
             {
                 double points = (particles.GetThreatValue(kvp.Key, lTeam) * kvp.Value);
                 points *= tile.GetThreatMod();
-                movePts += points;
+                particlePoints += points;
             }
             foreach (var kvp in friendlyVulns)
             {
-                movePts += (particles.GetVulnValue(kvp.Key, lTeam) * kvp.Value);
+                particlePoints += (particles.GetVulnValue(kvp.Key, lTeam) * kvp.Value);
             }
 
-            this._tiles.Add(new Pair<double, MTile>(movePts, tile));
+            this._tiles.Add(new Pair<double, MTile>(particlePoints, tile));
         }
     }
 }

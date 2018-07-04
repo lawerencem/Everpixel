@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.4.1f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -274,7 +272,7 @@
     <Compile Include="Assets\Data\Ability\XML\AbilityMediator.cs" />
     <Compile Include="Assets\Data\Ability\XML\AbilityReader.cs" />
     <Compile Include="Assets\Data\AI\Observe\Agent\AgentRoleDegradationTable.cs" />
-    <Compile Include="Assets\Data\AI\Observe\Agent\AgentRoleModReader.cs" />
+    <Compile Include="Assets\Data\AI\Observe\Agent\AgentRoleObserveDataReader.cs" />
     <Compile Include="Assets\Data\AI\Observe\Agent\AgentRoleSelfModTable.cs" />
     <Compile Include="Assets\Data\AI\Observe\Agent\AgentRoleThreatModTable.cs" />
     <Compile Include="Assets\Data\AI\Observe\Agent\AgentRoleVulnModTable.cs" />
@@ -286,6 +284,8 @@
     <Compile Include="Assets\Data\AI\Observe\Vuln\VulnTable.cs" />
     <Compile Include="Assets\Data\AI\Observe\Weapon\WeaponThreatReader.cs" />
     <Compile Include="Assets\Data\AI\Observe\Weapon\WeaponThreatTable.cs" />
+    <Compile Include="Assets\Data\AI\Orient\Agent\AgentRoleOrientAbilitiesTable.cs" />
+    <Compile Include="Assets\Data\AI\Orient\Agent\AgentRoleOrientDataReader.cs" />
     <Compile Include="Assets\Data\Bark\Table\BarkTable.cs" />
     <Compile Include="Assets\Data\Bark\XML\BarkReader.cs" />
     <Compile Include="Assets\Data\Character\Table\PredefinedCharTable.cs" />
@@ -415,9 +415,16 @@
     <Compile Include="Assets\Model\Action\AAction.cs" />
     <Compile Include="Assets\Model\Action\ActionData.cs" />
     <Compile Include="Assets\Model\Action\MAction.cs" />
+    <Compile Include="Assets\Model\AI\Agent\AgentRoleFactory.cs" />
+    <Compile Include="Assets\Model\AI\Agent\Combat\AgentAbilityCalc.cs" />
     <Compile Include="Assets\Model\AI\Agent\Combat\AgentMoveParticleCalc.cs" />
     <Compile Include="Assets\Model\AI\Agent\EAgentRole.cs" />
-    <Compile Include="Assets\Model\AI\Agent\MRole.cs" />
+    <Compile Include="Assets\Model\AI\Agent\MAgentRole.cs" />
+    <Compile Include="Assets\Model\AI\Agent\Role\MAssassinMelee.cs" />
+    <Compile Include="Assets\Model\AI\Agent\Role\MAssassinRanged.cs" />
+    <Compile Include="Assets\Model\AI\Agent\Role\MBrawlerInitiater.cs" />
+    <Compile Include="Assets\Model\AI\Agent\Role\MSupportSummoner.cs" />
+    <Compile Include="Assets\Model\AI\Agent\Role\MTankZone.cs" />
     <Compile Include="Assets\Model\AI\Particle\CharParticlePair.cs" />
     <Compile Include="Assets\Model\AI\Particle\ParticleBuilder.cs" />
     <Compile Include="Assets\Model\AI\Particle\ParticleContainer.cs" />
@@ -737,13 +744,12 @@
     <Compile Include="Assets\View\ViewParams.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Data\AI\Observe\Agent\AgentRoleObserveData.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Data\AI\Observe\Agent\AgentRoleObserveData.xml" />
     <None Include="Assets\Data\AI\Observe\Armor\ArmorVulnData.xml" />
     <None Include="Assets\Data\AI\Observe\Threat\ThreatData.xml" />
     <None Include="Assets\Data\AI\Observe\Vuln\VulnData.xml" />
     <None Include="Assets\Data\AI\Observe\Weapon\WeaponThreatData.xml" />
+    <None Include="Assets\Data\AI\Orient\Agent\AgentRoleOrientData.xml" />
     <None Include="Assets\Data\Ability\XML\Astral.xml" />
     <None Include="Assets\Data\Ability\XML\Fighting.xml" />
     <None Include="Assets\Data\Ability\XML\Grass.xml" />
