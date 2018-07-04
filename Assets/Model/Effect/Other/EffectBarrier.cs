@@ -23,6 +23,7 @@ namespace Assets.Model.Effect.Other
                 data.barrier = barrier;
                 data.target = tgt;
                 var ev = new EvBarrier(data);
+                ev.TryProcess();
                 VHitController.Instance.DisplayBarrierCreation(tgt, hit, barrier);
             }
         }

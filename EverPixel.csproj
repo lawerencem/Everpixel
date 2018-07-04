@@ -737,7 +737,9 @@
     <Compile Include="Assets\View\ViewParams.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Data\AI\Observe\Agent\AgentRoleObserveData.xml" />
+    <None Include="Assets\Data\AI\Observe\Agent\AgentRoleObserveData.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Data\AI\Observe\Armor\ArmorVulnData.xml" />
     <None Include="Assets\Data\AI\Observe\Threat\ThreatData.xml" />
     <None Include="Assets\Data\AI\Observe\Vuln\VulnData.xml" />

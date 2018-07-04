@@ -13,12 +13,10 @@ namespace Assets.Template.Script
     public class SRaycastMove : AScript
     {
         private SRaycastMoveData _data;
-        private Vector3 _origin;
 
         public void Init(SRaycastMoveData data)
         {
             this._data = data;
-            this._origin = this._data.Handle.transform.position;
         }
 
         public void Update()

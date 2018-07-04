@@ -50,7 +50,10 @@ namespace Assets.Controller.Manager
             this._readers.Add(WeaponReader.Instance);
             this._readers.Add(new WeaponThreatReader());
             this._readers.Add(ZoneReader.Instance);
+        }
 
+        public void LoadFiles()
+        {
             foreach (var reader in this._readers)
                 reader.ReadFromFile();
         }
