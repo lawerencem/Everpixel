@@ -367,6 +367,7 @@
       <IconSprite>16</IconSprite>
       <MeleeBlockChanceMod>0.85</MeleeBlockChanceMod>
       <ParryModMod>2.5</ParryModMod>
+      <ProcessDamage>false</ProcessDamage>
       <RangeBlockMod>1.0</RangeBlockMod>
       <ShieldDamageMod>1</ShieldDamageMod>
       <FatigueCost>10</FatigueCost>
@@ -640,7 +641,7 @@
       <ECastType>RingCast</ECastType>
       <DamageMod>0.8</DamageMod>
       <DodgeMod>0.65</DodgeMod>
-      <Hostile>false</Hostile>
+      <!--<Hostile>false</Hostile>-->
       <IconSprite>15</IconSprite>
       <Injury>Cut_Abdomine</Injury>
       <Injury>Cut_Arm</Injury>

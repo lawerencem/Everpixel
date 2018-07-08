@@ -13,6 +13,7 @@ namespace Assets.Model.AI.Agent
                 case (EAgentRole.Assassin_Ranged): { agentRole = new MAssassinRanged(EAgentRole.Assassin_Ranged); } break;
                 case (EAgentRole.Brawler_Initiater): { agentRole = new MBrawlerInitiater(EAgentRole.Brawler_Initiater); } break;
                 case (EAgentRole.Support_Summoner): { agentRole = new MSupportSummoner(EAgentRole.Support_Summoner); } break;
+                case (EAgentRole.Support_Weenbower): { agentRole = new MSupportWeenbower(EAgentRole.Support_Weenbower); } break;
                 case (EAgentRole.Tank_Zone): { agentRole = new MTankZone(EAgentRole.Tank_Zone); } break;
                 default: { agentRole = null; } break;
             }

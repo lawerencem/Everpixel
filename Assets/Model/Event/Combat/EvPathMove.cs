@@ -163,9 +163,9 @@ namespace Assets.Model.Event.Combat
             if (this._data.TargetPath == null)
                 return false;
             var model = this._data.TargetPath.GetFirstTile() as MTile;
-            this._current = model.Controller;
-            if (this._current == null)
+            if (model == null)
                 return false;
+            this._current = model.Controller;
             return true;
         }
     }

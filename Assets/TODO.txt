@@ -50,6 +50,7 @@ Wood Elves
 
 
 BUGS:
+ - Spear walling on AI needs to wait for callback
  - Charging when next to an enemy causes weird behavior 
  - Damage values are incorrect
    -- Orc warriors get negative values when hit with sunbeam / moonbeam

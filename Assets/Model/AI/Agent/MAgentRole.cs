@@ -1,15 +1,16 @@
 ﻿using Assets.Controller.Character;
 using Assets.Data.AI.Orient.Agent;
 using Assets.Model.Ability.Enum;
+using Assets.Model.AI.Agent.Combat;
 using Assets.Model.Character.Enum;
-using Assets.Model.Map.Tile;
-using Assets.Template.Other;
 using System.Collections.Generic;
 
 namespace Assets.Model.AI.Agent
 {
     public class MAgentRole
     {
+        private const double ATTACK_OF_OPPORTUNITY_PENALTY = 0.05;
+
         private EAgentRole _type;
 
         public EAgentRole Type { get { return this._type; } }
@@ -19,9 +20,20 @@ namespace Assets.Model.AI.Agent
             this._type = type;
         }
 
-        public virtual void ModifyParticleTilePoints(List<Pair<double, MTile>> tiles)
+        public virtual void ModifyParticleTilePoints(List<AgentMoveTileAndWeight> tileAndWeights, CChar agent)
         {
-
+            foreach (var tile in agent.Tile.GetAdjacent())
+            {
+                if (tile.Model.GetCurrentOccupant() != null && tile.Model.GetCurrentOccupant().GetType().Equals(typeof(CChar)))
+                {
+                    var tgt = tile.Model.GetCurrentOccupant() as CChar;
+                    if (tgt.Proxy.LParty != agent.Proxy.LParty)
+                    {
+                        foreach (var tileAndWeight in tileAndWeights)
+                            tileAndWeight.Weight *= ATTACK_OF_OPPORTUNITY_PENALTY;
+                    }
+                }
+            }
         }
 
         public virtual Dictionary<EAbility, double> GetAbilityWeights(CChar agent)

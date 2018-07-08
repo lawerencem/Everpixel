@@ -56,7 +56,7 @@ namespace Assets.Model.Zone.Duration
                     moveData.ParentEvent.AddChildAction(this._action);
                     var staminaCalc = new StaminaCalculator();
                     var cost = staminaCalc.Process(this._action);
-                    if (this._action.Data.ParentWeapon.View.SpearWalling &&
+                    if (FActionStatus.HasFlag(this._action.Data.Source.Proxy.GetActionFlags().CurFlags, FActionStatus.Flags.Spearwalling) &&
                         cost <= this._action.Data.Source.Proxy.GetPoints(ESecondaryStat.Stamina))
                     {
                         this._action.TryProcessNoDisplay();

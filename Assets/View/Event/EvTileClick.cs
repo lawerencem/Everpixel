@@ -89,7 +89,6 @@ namespace Assets.View.Event
                 }
                 else
                 {
-                    // TODO: Break this out into a new class (redundant with CAgent)
                     var data = new EvPathMoveData();
                     data.Target = this._data.Target;
                     var path = new EvPathMoveUtil().GetPathMove(data);

@@ -418,12 +418,14 @@
     <Compile Include="Assets\Model\AI\Agent\AgentRoleFactory.cs" />
     <Compile Include="Assets\Model\AI\Agent\Combat\AgentAbilityCalc.cs" />
     <Compile Include="Assets\Model\AI\Agent\Combat\AgentMoveParticleCalc.cs" />
+    <Compile Include="Assets\Model\AI\Agent\Combat\AgentTileMoveAndWeight.cs" />
     <Compile Include="Assets\Model\AI\Agent\EAgentRole.cs" />
     <Compile Include="Assets\Model\AI\Agent\MAgentRole.cs" />
     <Compile Include="Assets\Model\AI\Agent\Role\MAssassinMelee.cs" />
     <Compile Include="Assets\Model\AI\Agent\Role\MAssassinRanged.cs" />
     <Compile Include="Assets\Model\AI\Agent\Role\MBrawlerInitiater.cs" />
     <Compile Include="Assets\Model\AI\Agent\Role\MSupportSummoner.cs" />
+    <Compile Include="Assets\Model\AI\Agent\Role\MSupportWeenbower.cs" />
     <Compile Include="Assets\Model\AI\Agent\Role\MTankZone.cs" />
     <Compile Include="Assets\Model\AI\Particle\CharParticlePair.cs" />
     <Compile Include="Assets\Model\AI\Particle\ParticleBuilder.cs" />

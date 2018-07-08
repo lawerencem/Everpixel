@@ -9,13 +9,13 @@ namespace Assets.Model.AI.Agent.Combat
 {
     public class AgentMoveParticleCalc
     {
-        private List<Pair<double, MTile>> _tiles;
+        private List<AgentMoveTileAndWeight> _tiles;
         private AgentRoleThreatModTable _threats;
         private AgentRoleVulnModTable _vulns;
 
         public AgentMoveParticleCalc()
         {
-            this._tiles = new List<Pair<double, MTile>>();
+            this._tiles = new List<AgentMoveTileAndWeight>();
             this._threats = AgentRoleThreatModTable.Instance;
             this._vulns = AgentRoleVulnModTable.Instance;
         }
@@ -23,9 +23,9 @@ namespace Assets.Model.AI.Agent.Combat
         public Pair<CTile, double> GetMoveTile(CChar agent)
         {
             this.CalculateParticlePoints(agent);
-            this._tiles.RemoveAll(x => x.Y.Controller.Current != null);
+            this._tiles.RemoveAll(x => x.Tile.Controller.Current != null);
             if (this._tiles.Count > 0)
-                return new Pair<CTile, double>(this._tiles[0].Y.Controller, this._tiles[0].X);
+                return new Pair<CTile, double>(this._tiles[0].Tile.Controller, this._tiles[0].Weight);
             else
                 return new Pair<CTile, double>(null, 0);
         }
@@ -36,8 +36,8 @@ namespace Assets.Model.AI.Agent.Combat
             foreach (var tile in tiles)
                 this.GenerateParticlePoints(agent.Proxy.GetAIRole(), tile, agent.Proxy.LParty);
             var agentRole = new AgentRoleFactory().GetAgentRole(agent.Proxy.GetAIRole());
-            agentRole.ModifyParticleTilePoints(this._tiles);
-            this._tiles.Sort((x, y) => y.X.CompareTo(x.X));
+            agentRole.ModifyParticleTilePoints(this._tiles, agent);
+            this._tiles.Sort((x, y) => y.Weight.CompareTo(x.Weight));
         }
 
         private void GenerateParticlePoints(EAgentRole role, MTile tile, bool lTeam)
@@ -70,8 +70,10 @@ namespace Assets.Model.AI.Agent.Combat
             {
                 particlePoints += (particles.GetVulnValue(kvp.Key, lTeam) * kvp.Value);
             }
-
-            this._tiles.Add(new Pair<double, MTile>(particlePoints, tile));
+            var tileAndWeight = new AgentMoveTileAndWeight();
+            tileAndWeight.Tile = tile;
+            tileAndWeight.Weight = particlePoints;
+            this._tiles.Add(tileAndWeight);
         }
     }
 }

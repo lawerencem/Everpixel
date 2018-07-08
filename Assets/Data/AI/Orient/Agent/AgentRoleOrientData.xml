@@ -14,7 +14,8 @@
   </Assassin_Melee>
   <Assassin_Ranged>
     <Abilities>
-      
+      <Aim>3</Aim>
+      <Fire>3</Fire>
     </Abilities>
   </Assassin_Ranged>
   <Brawler_Initiater>
@@ -27,9 +28,15 @@
       
     </Abilities>
   </Support_Summoner>
+  <Support_Weenbower>
+    <Abilities>
+      <Fire>3</Fire>
+    </Abilities>
+  </Support_Weenbower>
   <Tank_Zone>
     <Abilities>
-
+      <Shield_Wall>3</Shield_Wall>
+      <Spear_Wall>3</Spear_Wall>
     </Abilities>
   </Tank_Zone>
 </EAgentRole>

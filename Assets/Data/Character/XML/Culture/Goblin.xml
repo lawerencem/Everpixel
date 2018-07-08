@@ -249,6 +249,7 @@
         <Ability name="Bite"></Ability>
       </Abilities>
       <ECharacterType>Critter</ECharacterType>
+      <DeadSpriteIndex>9</DeadSpriteIndex>
       <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Perks>
         <Perk>Squishy</Perk>
@@ -301,12 +302,13 @@
     </Character>
     <Character name ="Sluggemoth">
       <EAgentRole>Assassin_Melee</EAgentRole>
-      <AttackSpriteIndex>24</AttackSpriteIndex>
+      <AttackSpriteIndex>8</AttackSpriteIndex>
       <Abilities>
         <Ability name="Bite"></Ability>
       </Abilities>
+      <DeadSpriteIndex>9</DeadSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
-      <FlinchSpriteIndex>16</FlinchSpriteIndex>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Stats>
         <Agility>300</Agility>
         <Constitution>280</Constitution>
@@ -318,11 +320,12 @@
     </Character>
     <Character name ="Sluggish">
       <EAgentRole>Assassin_Melee</EAgentRole>
-      <AttackSpriteIndex>24</AttackSpriteIndex>
+      <AttackSpriteIndex>8</AttackSpriteIndex>
       <Abilities>
         <Ability name="Bite"></Ability>
       </Abilities>
       <ECharacterType>Critter</ECharacterType>
+      <DeadSpriteIndex>7</DeadSpriteIndex>
       <FlinchSpriteIndex>16</FlinchSpriteIndex>
       <Stats>
         <Agility>250</Agility>
@@ -392,12 +395,13 @@
     </Character>
     <Character name ="Sluggoth">
       <EAgentRole>Assassin_Melee</EAgentRole>
-      <AttackSpriteIndex>24</AttackSpriteIndex>
+      <AttackSpriteIndex>8</AttackSpriteIndex>
       <Abilities>
         <Ability name="Bite"></Ability>
       </Abilities>
+      <DeadSpriteIndex>9</DeadSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
-      <FlinchSpriteIndex>16</FlinchSpriteIndex>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Stats>
         <Agility>280</Agility>
         <Constitution>240</Constitution>

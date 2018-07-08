@@ -333,7 +333,7 @@
       <Sprites>0,1</Sprites>
       <Stamina_Mod>1</Stamina_Mod>
       <Value>150</Value>
-      <EAbility>Fire</EAbility>
+      <EAbility>Crush</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -357,7 +357,7 @@
       <Sprites>15,16</Sprites>
       <Stamina_Mod>0.89</Stamina_Mod>
       <Value>300</Value>
-      <EAbility>Fire</EAbility>
+      <EAbility>Crush</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -381,7 +381,7 @@
       <Sprites>30,31</Sprites>
       <Stamina_Mod>0.90</Stamina_Mod>
       <Value>650</Value>
-      <EAbility>Fire</EAbility>
+      <EAbility>Crush</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>
@@ -405,7 +405,7 @@
       <Sprites>45,46</Sprites>
       <Stamina_Mod>0.90</Stamina_Mod>
       <Value>850</Value>
-      <EAbility>Fire</EAbility>
+      <EAbility>Crush</EAbility>
       <EWeaponType>Two_Handed</EWeaponType>
       <EWeaponUse>Ranged</EWeaponUse>
     </Weapon>

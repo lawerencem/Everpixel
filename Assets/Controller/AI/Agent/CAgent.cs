@@ -10,6 +10,8 @@ namespace Assets.Controller.AI.Agent
     public class CAgent
     {
         private const int CALLBACK_PRIORITY = 10;
+        private const double WEIGHT_TO_ABILITY_SCALAR = 10000;
+
         private CChar _agent;
         private int _loops;
         private List<CTile> _prevTiles;
@@ -33,17 +35,19 @@ namespace Assets.Controller.AI.Agent
 
                 var tileAndWeight = moveCalc.GetMoveTile(this._agent);
                 var abilityAndWeight = abilityCalc.GetAbilityToPerform(this._agent);
+                if (abilityAndWeight != null)
+                    abilityAndWeight.Weight *= WEIGHT_TO_ABILITY_SCALAR;
 
-                if (abilityAndWeight.X == null && tileAndWeight.X == null)
+                if (abilityAndWeight == null && tileAndWeight.X == null)
                     this.EndTurn(null);
-                else if (abilityAndWeight.X == null)
+                else if (abilityAndWeight == null)
                     this.DoMove(tileAndWeight.X);
                 else if (tileAndWeight.X == null)
-                    this.DoAbility(abilityAndWeight.X);
+                    this.DoAbility(abilityAndWeight);
                 else
                 {
-                    if (abilityAndWeight.Y > tileAndWeight.Y)
-                        this.DoAbility(abilityAndWeight.X);
+                    if (abilityAndWeight.Weight > tileAndWeight.Y)
+                        this.DoAbility(abilityAndWeight);
                     else
                         this.DoMove(tileAndWeight.X);
                 }
@@ -52,8 +56,21 @@ namespace Assets.Controller.AI.Agent
 
         private void DoAbility(AgentAbilityData abilityData)
         {
-            // TODO:
-            this.EndTurn(null);
+            if (abilityData.Weight > 0)
+            {
+                var data = new EvPerformAbilityData();
+                data.Ability = abilityData.Ability.Type;
+                data.LWeapon = abilityData.LWeapon;
+                data.ParentWeapon = abilityData.ParentWeapon;
+                data.Source = this._agent;
+                data.Target = abilityData.Target.Tile;
+                data.WpnAbility = abilityData.WpnAbiltiy;
+                var e = new EvPerformAbility(data);
+                e.AddCallback(this.DetermineNextAction, CALLBACK_PRIORITY);
+                e.TryProcess();
+            }
+            else
+                this.EndTurn(null);
         }
 
         private void DoMove(CTile tile)

@@ -3,9 +3,7 @@ using Assets.Controller.Equipment.Weapon;
 using Assets.Model.Ability;
 using Assets.Model.Ability.Enum;
 using Assets.Model.Action;
-using Assets.Model.Combat.Hit;
 using Assets.Model.Map.Tile;
-using Assets.Template.Other;
 using System.Collections.Generic;
 
 namespace Assets.Model.AI.Agent.Combat
@@ -31,25 +29,29 @@ namespace Assets.Model.AI.Agent.Combat
             this._predictions = new List<AgentAbilityData>();
         }
 
-        public Pair<AgentAbilityData, double> GetAbilityToPerform(CChar agent)
+        public AgentAbilityData GetAbilityToPerform(CChar agent)
         {
             this._agent = agent;
             this._abilityWeights = this.GetInitialAbilityWeights();
-            AgentAbilityData data = null;
-            var weight = 0;
             this.PredictAbilities();
+            foreach (var prediction in this._predictions)
+            {
+                if (prediction.Ability.Data.ProcessDamage)
+                {
+                    if (this._abilityWeights.ContainsKey(prediction.Ability.Type))
+                        prediction.Weight *= this._abilityWeights[prediction.Ability.Type];
+                }
+                else
+                {
+                    if (this._abilityWeights.ContainsKey(prediction.Ability.Type))
+                        prediction.Weight = this._abilityWeights[prediction.Ability.Type];
+                }
+            }
             this._predictions.Sort((x, y) => y.Weight.CompareTo(x.Weight));
             if (this._predictions.Count > 0)
-            {
-                data = new AgentAbilityData();
-                data.Ability = this._predictions[0].Ability;
-                data.LWeapon = this._predictions[0].LWeapon;
-                data.ParentWeapon = this._predictions[0].ParentWeapon;
-                data.Weight = this._predictions[0].Weight;
-                data.WpnAbiltiy = this._predictions[0].WpnAbiltiy;
-            }
-
-            return new Pair<AgentAbilityData, double>(data, weight);
+                return this._predictions[0];
+            else
+                return null;
         }
 
         private Dictionary<EAbility, double> GetInitialAbilityWeights()
@@ -66,43 +68,93 @@ namespace Assets.Model.AI.Agent.Combat
                 foreach (var tile in tiles)
                 {
                     if (tile.GetCurrentOccupant() != null && tile.GetCurrentOccupant().GetType().Equals(typeof(CChar)))
+                        this.PredictAbilitiesHelper(tile, ability, false, null, false);
+                }
+            }
+            var leftWpn = this._agent.Proxy.GetLWeapon();
+            var rightWpn = this._agent.Proxy.GetRWeapon();
+            if (leftWpn != null)
+            {
+                foreach (var ability in leftWpn.Model.Data.Abilities)
+                {
+                    var tiles = this._agent.Tile.Model.GetAoETiles(ability.Data.Range);
+                    foreach (var tile in tiles)
                     {
-                        var target = tile.GetCurrentOccupant() as CChar;
-                        this.HandleAbility(ability, tile, target, false, false);
+                        if (tile.GetCurrentOccupant() != null && tile.GetCurrentOccupant().GetType().Equals(typeof(CChar)))
+                            this.PredictAbilitiesHelper(tile, ability, true, leftWpn, true);
+                    }
+                }
+            }
+            if (rightWpn != null)
+            {
+                foreach (var ability in rightWpn.Model.Data.Abilities)
+                {
+                    var tiles = this._agent.Tile.Model.GetAoETiles(ability.Data.Range);
+                    foreach (var tile in tiles)
+                    {
+                        if (tile.GetCurrentOccupant() != null && tile.GetCurrentOccupant().GetType().Equals(typeof(CChar)))
+                            this.PredictAbilitiesHelper(tile, ability, false, rightWpn, true);
                     }
                 }
             }
         }
 
-        private void HandleAbility(MAbility ability, MTile tile, CChar target, bool wpnAbility, bool lWeapon)
+        private void PredictAbilitiesHelper(MTile tile, MAbility ability, bool lWeapon, CWeapon parentWeapon, bool wpnAbility)
         {
-            double weight = 0;
+            var target = tile.GetCurrentOccupant() as CChar;
+            var prediction = new AgentAbilityData();
+            prediction.Ability = ability;
+            prediction.LWeapon = lWeapon;
+            prediction.ParentWeapon = parentWeapon;
+            prediction.Target = target;
+            prediction.Weight = 0;
+            prediction.WpnAbiltiy = wpnAbility;
             if (ability.Data.Hostile)
             {
                 if (target.Proxy.LParty != this._agent.Proxy.LParty)
                 {
-                    var data = new ActionData();
-                    data.Ability = ability.Type;
-                    data.WpnAbility = wpnAbility;
-                    data.LWeapon = lWeapon;
-                    data.ParentWeapon = null;
-                    data.Source = this._agent;
-                    data.Target = target.Tile;
-                    var action = new MAction(data);
-                    action.TryPredict();
-                    foreach (var hit in action.Data.Hits)
-                        weight += this.CalculateHitWeight(hit);
+                    this.HandleAbility(prediction);
+                    this._predictions.Add(prediction);
                 }
             }
             else
             {
-                
+                if (target.Proxy.LParty == this._agent.Proxy.LParty)
+                {
+                    this.HandleAbility(prediction);
+                    this._predictions.Add(prediction);
+                }
             }
         }
 
-        private double CalculateHitWeight(MHit hit)
+        private void HandleAbility(AgentAbilityData prediction)
         {
-            return hit.Data.Dmg;
+            var data = new ActionData();
+            data.Ability = prediction.Ability.Type;
+            data.WpnAbility = prediction.WpnAbiltiy;
+            data.LWeapon = prediction.LWeapon;
+            data.ParentWeapon = null;
+            data.Source = this._agent;
+            data.Target = prediction.Target.Tile;
+            var action = new MAction(data);
+            action.TryPredict();
+            foreach (var hit in action.Data.Hits)
+            {
+                if (prediction.Ability.Data.Hostile)
+                {
+                    if (prediction.Target.Proxy.LParty != this._agent.Proxy.LParty)
+                        prediction.Weight += hit.Data.Dmg;
+                    else
+                        prediction.Weight -= hit.Data.Dmg;
+                }
+                else
+                {
+                    if (prediction.Target.Proxy.LParty != this._agent.Proxy.LParty)
+                        prediction.Weight -= hit.Data.Dmg;
+                    else
+                        prediction.Weight += hit.Data.Dmg;
+                }
+            }       
         }
     }
 }
