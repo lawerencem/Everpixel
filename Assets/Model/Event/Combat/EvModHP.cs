@@ -29,6 +29,7 @@ namespace Assets.Model.Event.Combat
                 if (this._data.Target != null)
                     this._data.Target.Proxy.ModifyPoints(ESecondaryStat.HP, this._data.Dmg, this._data.IsHeal);
             }
+            this.TryDone(null);
         }
 
         private bool IsInitialized()

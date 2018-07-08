@@ -55,6 +55,7 @@ namespace Assets.Model.Event.Combat
             e.TryProcess();
             if (this._data.Target.Proxy.GetParentParty().GetAIControlled())
                 this.DoTurnAI();
+            this.TryDone(null);
         }
 
         private void DoTurnAI()

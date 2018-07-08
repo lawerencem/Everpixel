@@ -325,8 +325,8 @@
         <Ability name="Bite"></Ability>
       </Abilities>
       <ECharacterType>Critter</ECharacterType>
-      <DeadSpriteIndex>7</DeadSpriteIndex>
-      <FlinchSpriteIndex>16</FlinchSpriteIndex>
+      <DeadSpriteIndex>9</DeadSpriteIndex>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Stats>
         <Agility>250</Agility>
         <Constitution>250</Constitution>

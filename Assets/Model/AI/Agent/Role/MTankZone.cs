@@ -26,7 +26,7 @@ namespace Assets.Model.AI.Agent.Role
             if (weights.ContainsKey(EAbility.Shield_Wall))
             {
                 if (FActionStatus.HasFlag(agent.Proxy.GetActionFlags().CurFlags, FActionStatus.Flags.ShieldWalling))
-                    weights[EAbility.Shield_Wall] = SHIELD_WALL_PENALTY;
+                    weights.Remove(EAbility.Shield_Wall);
                 else
                     weights[EAbility.Shield_Wall] = SHIELD_WALL_PREFERENCE;
             }
@@ -34,7 +34,7 @@ namespace Assets.Model.AI.Agent.Role
             if (weights.ContainsKey(EAbility.Spear_Wall))
             {
                 if (FActionStatus.HasFlag(agent.Proxy.GetActionFlags().CurFlags, FActionStatus.Flags.Spearwalling))
-                    weights[EAbility.Spear_Wall] = SPEAR_WALL_PENALTY;
+                    weights.Remove(EAbility.Spear_Wall);
                 else
                     weights[EAbility.Spear_Wall] = SPEAR_WALL_PREFERENCE;
             }

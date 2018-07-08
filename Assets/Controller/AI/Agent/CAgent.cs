@@ -3,7 +3,9 @@ using Assets.Controller.Event.Combat;
 using Assets.Controller.Map.Tile;
 using Assets.Model.AI.Agent.Combat;
 using Assets.Model.Event.Combat;
+using Assets.Template.Script;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Assets.Controller.AI.Agent
 {
@@ -66,7 +68,7 @@ namespace Assets.Controller.AI.Agent
                 data.Target = abilityData.Target.Tile;
                 data.WpnAbility = abilityData.WpnAbiltiy;
                 var e = new EvPerformAbility(data);
-                e.AddCallback(this.DetermineNextAction, CALLBACK_PRIORITY);
+                e.AddCallback(this.InitCallbackToDetermineAction, CALLBACK_PRIORITY);
                 e.TryProcess();
             }
             else
@@ -84,7 +86,7 @@ namespace Assets.Controller.AI.Agent
                 data.Char = this._agent;
                 data.Target = tile;
                 var path = new EvPathMoveUtil().GetPathMove(data);
-                path.AddCallback(this.DetermineNextAction, CALLBACK_PRIORITY);
+                path.AddCallback(this.InitCallbackToDetermineAction, CALLBACK_PRIORITY);
                 path.TryProcess();
             }
         }
@@ -93,6 +95,14 @@ namespace Assets.Controller.AI.Agent
         {
             var e = new EvEndTurn();
             e.TryProcess();
+        }
+
+        private void InitCallbackToDetermineAction(object o)
+        {
+            var placeHolder = new GameObject();
+            var delay = placeHolder.AddComponent<SDelayCallback>();
+            delay.AddCallback(this.DetermineNextAction);
+            delay.Init(1.2f);
         }
     }
 }

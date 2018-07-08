@@ -58,6 +58,20 @@ namespace Assets.Model.Event.Combat
             this.DoCallbacks();
         }
 
+        public override void TryDone(object o)
+        {
+            bool done = true;
+            foreach (var action in this._childActions)
+            {
+                if (!action.GetCompleted())
+                    done = false;
+            }
+            if (done)
+            {
+                this.CallbackHandler();
+            }
+        }
+
         private bool TryProcessPathMove()
         {
             if (this.VerifyAndPopulateData())
@@ -67,7 +81,7 @@ namespace Assets.Model.Event.Combat
             }
             else
             {
-                this.CallbackHandler();
+                this.TryDone(null);
                 return false;
             }
         }
@@ -77,7 +91,7 @@ namespace Assets.Model.Event.Combat
             var e = o as EvTileMove;
             this._current = this._next;
             if (e.GetPathInterrupted())
-                this.CallbackHandler();
+                this.TryDone(null);
             else
                 this.TryProcessNextTile(this._current);
         }
@@ -102,10 +116,11 @@ namespace Assets.Model.Event.Combat
                     data.Target = this._next;
                     var e = new EvTileMove(data);
                     e.AddCallback(this.TileMoveDone);
+                    this.AddChildAction(e);
                     e.TryProcess();
                 }
                 else
-                    this.CallbackHandler();
+                    this.TryDone(null);
             }
         }
 
@@ -133,10 +148,10 @@ namespace Assets.Model.Event.Combat
                     e.TryProcess();
                 }
                 else
-                    this.CallbackHandler();
+                    this.TryDone(null);
             }
             else
-                this.CallbackHandler();
+                this.TryDone(null);
         }
 
         private bool VerifyAndPopulateData()
