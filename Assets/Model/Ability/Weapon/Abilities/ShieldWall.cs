@@ -13,12 +13,11 @@ namespace Assets.Model.Weapon.Abilities
 
         public override void Predict(MHit hit)
         {
-            base.PredictMelee(hit);
+
         }
 
         public override void Process(MHit hit)
         {
-            base.ProcessHitMelee(hit);
             FActionStatus.SetShieldWallingTrue(hit.Data.Action.Data.Source.Proxy.GetActionFlags());
         }
 

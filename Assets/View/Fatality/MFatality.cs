@@ -1,5 +1,6 @@
 ﻿using Assets.Controller.Character;
 using Assets.Controller.GUI.Combat;
+using Assets.Controller.Manager.Combat;
 using Assets.Controller.Manager.GUI;
 using Assets.Template.CB;
 using Assets.Template.Script;
@@ -85,11 +86,14 @@ namespace Assets.View.Fatality
 
         protected void AddBob(object o)
         {
-            var existingBob = this._data.Source.GameHandle.GetComponent<SBob>();
-            if (existingBob == null)
+            if (this._data.Source != null && this._data.Source.Equals(CombatManager.Instance.GetCurrentlyActing()))
             {
-                var bob = this._data.Source.GameHandle.AddComponent<SBob>();
-                bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Source.GameHandle);
+                var bob = this._data.Source.GameHandle.GetComponent<SBob>();
+                if (bob == null)
+                {
+                    bob = this._data.Source.GameHandle.AddComponent<SBob>();
+                    bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Source.GameHandle);
+                }
             }
         }
 

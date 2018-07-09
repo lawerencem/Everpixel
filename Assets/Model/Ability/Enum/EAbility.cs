@@ -61,7 +61,6 @@
         Break_Shield,
         Chop,
         Crush,
-        Double_Strike,
         Fire,
         Gash,
         Great_Strike,

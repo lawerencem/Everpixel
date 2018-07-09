@@ -39,6 +39,7 @@ namespace Assets.Model.Event.Combat
 
         public EvTileMoveData GetData() { return this._data; }
         public bool GetPathInterrupted() { return this._pathInterrupted; }
+        public EvPathMove GetParentMove() { return this._data.ParentMove; }
         public void SetData(EvTileMoveData d) { this._data = d; }
         public void SetPathInterrupted(object o) { this._pathInterrupted = true; }
 

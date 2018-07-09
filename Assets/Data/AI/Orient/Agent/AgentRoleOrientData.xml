@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EAgentRole>
+  <Assassin_Melee>
+    <Abilities>
+      <Chop>1.25</Chop>
+      <Crush>1.25</Crush>
+      <Great_Strike>1.75</Great_Strike>
+      <Pierce>1.25</Pierce>
+      <Slash>1.25</Slash>
+      <Stab>1.25</Stab>
+      <Wide_Strike>1.75</Wide_Strike>
+      <Whirlwind>2</Whirlwind>
+    </Abilities>
+  </Assassin_Melee>
+  <Assassin_Ranged>
+    <Abilities>
+      <Aim>3</Aim>
+      <Fire>3</Fire>
+    </Abilities>
+  </Assassin_Ranged>
+  <Brawler_Initiater>
+    <Abilities>
+
+    </Abilities>
+  </Brawler_Initiater>
+  <Support_Summoner>
+    <Abilities>
+      
+    </Abilities>
+  </Support_Summoner>
+  <Support_Weenbower>
+    <Abilities>
+      <Fire>3</Fire>
+    </Abilities>
+  </Support_Weenbower>
+  <Tank_Zone>
+    <Abilities>
+      <Shield_Wall>3</Shield_Wall>
+      <Spear_Wall>3</Spear_Wall>
+    </Abilities>
+  </Tank_Zone>
+</EAgentRole>

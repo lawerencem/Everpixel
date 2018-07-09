@@ -41,6 +41,7 @@ namespace Assets.Controller.Managers
         private void InitManagers()
         {
             this._loader = LoaderManager.Instance;
+            this._loader.LoadFiles();
             this._mapLoader = new MapLoader();
             var initInfo = new MapInitInfo();
             initInfo.Biome = EBiome.Grassland;

@@ -1,5 +1,20 @@
 ﻿TODO
 
+- Incorporate flying into game
+
+Wood Elves
+ - Light infantry
+   -- Fast
+   -- Dodgey
+   -- Glaives / Spears
+ - Treants
+ - Otyughs
+ - Plants
+ - Elk Riders
+ - Hawk Riders
+ - Archers
+ - Druids
+
  - AI
    -- Ensure vulns are modified by hp %
 
@@ -35,6 +50,7 @@
 
 
 BUGS:
+ - Spear walling on AI needs to wait for callback
  - Charging when next to an enemy causes weird behavior 
  - Damage values are incorrect
    -- Orc warriors get negative values when hit with sunbeam / moonbeam

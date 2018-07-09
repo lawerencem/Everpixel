@@ -7,6 +7,7 @@ using Assets.Model.Map.Tile;
 using Assets.Template.Pathing;
 using Assets.Template.Script;
 using Assets.View;
+using UnityEngine;
 
 namespace Assets.Model.Event.Combat
 {
@@ -40,8 +41,12 @@ namespace Assets.Model.Event.Combat
         {
             if (this._data.Char != null && this._data.Char.Equals(CombatManager.Instance.GetCurrentlyActing()))
             {
-                var bob = this._data.Char.GameHandle.AddComponent<SBob>();
-                bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Char.GameHandle);
+                var bob = this._data.Char.GameHandle.GetComponent<SBob>();
+                if (bob == null)
+                {
+                    bob = this._data.Char.GameHandle.AddComponent<SBob>();
+                    bob.Init(ViewParams.BOB_PER_FRAME, ViewParams.BOB_PER_FRAME_DIST, this._data.Char.GameHandle);
+                }
             }
         }
 
@@ -53,6 +58,20 @@ namespace Assets.Model.Event.Combat
             this.DoCallbacks();
         }
 
+        public override void TryDone(object o)
+        {
+            bool done = true;
+            foreach (var action in this._childActions)
+            {
+                if (!action.GetCompleted())
+                    done = false;
+            }
+            if (done)
+            {
+                this.CallbackHandler();
+            }
+        }
+
         private bool TryProcessPathMove()
         {
             if (this.VerifyAndPopulateData())
@@ -62,7 +81,7 @@ namespace Assets.Model.Event.Combat
             }
             else
             {
-                this.CallbackHandler();
+                this.TryDone(null);
                 return false;
             }
         }
@@ -72,7 +91,7 @@ namespace Assets.Model.Event.Combat
             var e = o as EvTileMove;
             this._current = this._next;
             if (e.GetPathInterrupted())
-                this.CallbackHandler();
+                this.TryDone(null);
             else
                 this.TryProcessNextTile(this._current);
         }
@@ -97,10 +116,11 @@ namespace Assets.Model.Event.Combat
                     data.Target = this._next;
                     var e = new EvTileMove(data);
                     e.AddCallback(this.TileMoveDone);
+                    this.AddChildAction(e);
                     e.TryProcess();
                 }
                 else
-                    this.CallbackHandler();
+                    this.TryDone(null);
             }
         }
 
@@ -128,10 +148,10 @@ namespace Assets.Model.Event.Combat
                     e.TryProcess();
                 }
                 else
-                    this.CallbackHandler();
+                    this.TryDone(null);
             }
             else
-                this.CallbackHandler();
+                this.TryDone(null);
         }
 
         private bool VerifyAndPopulateData()
@@ -144,7 +164,7 @@ namespace Assets.Model.Event.Combat
             var bob = this._data.Char.GameHandle.GetComponent<SBob>();
             if (bob != null)
                 bob.Reset();
-            this._callbacks.Add(this.AddBob);
+            this.AddCallback(this.AddBob);
 
             if (this._data.Target == null)
                 return false;
@@ -158,9 +178,9 @@ namespace Assets.Model.Event.Combat
             if (this._data.TargetPath == null)
                 return false;
             var model = this._data.TargetPath.GetFirstTile() as MTile;
-            this._current = model.Controller;
-            if (this._current == null)
+            if (model == null)
                 return false;
+            this._current = model.Controller;
             return true;
         }
     }

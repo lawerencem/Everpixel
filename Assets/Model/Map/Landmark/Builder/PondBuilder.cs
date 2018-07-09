@@ -39,6 +39,10 @@ namespace Assets.Model.Map.Landmark.Builder
             {
                 var controller = mTile.Controller;
                 FTile.SetEnvironmentFlagTrue(mTile.GetFlags());
+                mTile.SetAPCost(TileTable.Instance.Table[ETile.Water].Cost);
+                mTile.SetStaminaCost(TileTable.Instance.Table[ETile.Water].StaminaCost);
+                mTile.SetThreatMod(TileTable.Instance.Table[ETile.Water].ThreatMod);
+                mTile.SetVulnMod(TileTable.Instance.Table[ETile.Water].VulnMod);
                 mTile.SetLiquid(true);
                 mTile.SetType(ETile.Water);
             }

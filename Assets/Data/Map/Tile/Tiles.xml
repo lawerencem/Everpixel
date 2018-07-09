@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Tiles>
   <Tile name="Grass">
-    <Cost>2</Cost>
+    <Cost>3</Cost>
     <Sprites>0,1,2,3,4,5,6,7</Sprites>
     <StamCost>3</StamCost>
     <ThreatMod>1.0</ThreatMod>
     <VulnMod>1.0</VulnMod>
   </Tile>
   <Tile name="Ice">
-    <Cost>3</Cost>
+    <Cost>5</Cost>
     <Sprites>0,1,2,3,4,5,6,7</Sprites>
-    <StamCost>5</StamCost>
+    <StamCost>8</StamCost>
     <ThreatMod>1.0</ThreatMod>
     <VulnMod>1.0</VulnMod>
   </Tile>
   <Tile name="Snow">
     <Cost>4</Cost>
     <Sprites>0,1,2,3,4,5,6,7</Sprites>
-    <StamCost>7</StamCost>
+    <StamCost>12</StamCost>
     <ThreatMod>1.0</ThreatMod>
     <VulnMod>1.0</VulnMod>
   </Tile>

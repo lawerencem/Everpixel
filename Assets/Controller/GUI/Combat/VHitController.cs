@@ -391,7 +391,9 @@ namespace Assets.Controller.GUI.Combat
                     {
                         var target = hit.Data.Target.Current as CChar;
                         this.ProcessDefenderHitsHelper(target, hit);
-                    }    
+                    }
+                    else
+                        hit.CallbackHandler(null);
                 }
             }
         }

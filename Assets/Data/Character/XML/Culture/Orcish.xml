@@ -43,7 +43,7 @@
     </Character>
     <Character name ="Dire_Ween">
       <EAgentRole>Brawler_Initiater</EAgentRole>
-      <AttackSpriteIndex>3</AttackSpriteIndex>
+      <AttackSpriteIndex>2</AttackSpriteIndex>
       <Abilities>
         <Ability name ="Bite">
           <EEffect></EEffect>
@@ -51,10 +51,11 @@
         <Ability name ="Charge"></Ability>
       </Abilities>
       <ECharacterType>Critter</ECharacterType>
+      <DeadSpriteIndex>3</DeadSpriteIndex>
       <Description>
         Dire weens can often be found in the ocean hunting for sharks.
       </Description>
-      <FlinchSpriteIndex>2</FlinchSpriteIndex>
+      <FlinchSpriteIndex>1</FlinchSpriteIndex>
       <Perks>
       </Perks>
       <Stats>
@@ -425,14 +426,15 @@
     </Character>
     <Character name ="Ween">
       <EAgentRole>Brawler_Initiater</EAgentRole>
-      <AttackSpriteIndex>18</AttackSpriteIndex>
+      <AttackSpriteIndex>8</AttackSpriteIndex>
       <Abilities>
         <Ability name ="Bite">
           <EEffect></EEffect>
         </Ability>
       </Abilities>
+      <DeadSpriteIndex>9</DeadSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
-      <FlinchSpriteIndex>13</FlinchSpriteIndex>
+      <FlinchSpriteIndex>7</FlinchSpriteIndex>
       <Perks>
       </Perks>
       <Stats>
@@ -445,7 +447,7 @@
       </Stats>
     </Character>
     <Character name ="Weenbower">
-      <EAgentRole>Support_Summoner</EAgentRole>
+      <EAgentRole>Support_Weenbower</EAgentRole>
       <Class>Warrior,3</Class>
       <ECharacterType>Humanoid</ECharacterType>
       <ERace>Orc</ERace>
@@ -472,6 +474,7 @@
           </EEffect>
         </Ability>
       </Abilities>
+      <DeadSpriteIndex>5</DeadSpriteIndex>
       <ECharacterType>Critter</ECharacterType>
       <FlinchSpriteIndex>1</FlinchSpriteIndex>
       <Perks>

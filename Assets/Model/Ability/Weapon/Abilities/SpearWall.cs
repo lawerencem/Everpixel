@@ -15,12 +15,12 @@ namespace Assets.Model.Weapon.Abilities
 
         public override void Predict(MHit hit)
         {
-            base.PredictSingle(hit);
+
         }
 
         public override void Process(MHit hit)
         {
-            base.ProcessSingle(hit);
+            base.ProcessHitMelee(hit);
             FActionStatus.SetSpearWallingTrue(hit.Data.Action.Data.Source.Proxy.GetActionFlags());
         }
 

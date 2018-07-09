@@ -115,6 +115,7 @@ namespace Assets.Model.Ability
             data.ParryModMod = this.ParryModMod;
             data.ParentWeapon = this.ParentWeapon;
             data.ProcessDamage = this.ProcessDamage;
+            data.Range = this.Range;
             data.RangeBlockMod = this.RangeBlockMod;
             data.RechargeTime = this.RechargeTime;
             data.ShieldDamageMod = this.ShieldDamageMod;

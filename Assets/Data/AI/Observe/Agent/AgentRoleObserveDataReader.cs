@@ -8,14 +8,14 @@ using System.Xml.Linq;
 
 namespace Assets.Data.AI.Observe.Agent
 {
-    public class AgentRoleModReader : XMLReader
+    public class AgentRoleObserveDataReader : XMLReader
     {
         private AgentRoleSelfModTable _agentSelfMod;
         private AgentRoleDegradationTable _degradation; 
         private AgentRoleThreatModTable _threats;
         private AgentRoleVulnModTable _vulns;
 
-        public AgentRoleModReader() : base()
+        public AgentRoleObserveDataReader() : base()
         {
             this._paths.Add("Assets/Data/AI/Observe/Agent/AgentRoleObserveData.xml");
             this._agentSelfMod = AgentRoleSelfModTable.Instance;

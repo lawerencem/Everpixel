@@ -4,6 +4,7 @@ using Assets.Data.AI.Observe.Armor;
 using Assets.Data.AI.Observe.Char;
 using Assets.Data.AI.Observe.Threat;
 using Assets.Data.AI.Observe.Weapon;
+using Assets.Data.AI.Orient.Agent;
 using Assets.Data.Character.XML;
 using Assets.Data.Class.XML;
 using Assets.Data.Equipment.XML;
@@ -29,7 +30,8 @@ namespace Assets.Controller.Manager
         public LoaderManager()
         {
             this._readers.Add(AbilityReader.Instance);
-            this._readers.Add(new AgentRoleModReader());
+            this._readers.Add(new AgentRoleObserveDataReader());
+            this._readers.Add(new AgentRoleOrientDataReader());
             this._readers.Add(ArmorReader.Instance);
             this._readers.Add(new ArmorVulnReader());
             this._readers.Add(BarkReader.Instance);
@@ -50,7 +52,10 @@ namespace Assets.Controller.Manager
             this._readers.Add(WeaponReader.Instance);
             this._readers.Add(new WeaponThreatReader());
             this._readers.Add(ZoneReader.Instance);
+        }
 
+        public void LoadFiles()
+        {
             foreach (var reader in this._readers)
                 reader.ReadFromFile();
         }

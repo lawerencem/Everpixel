@@ -1,5 +1,4 @@
 ﻿using Assets.Controller.Manager.Combat;
-using Assets.Controller.Manager.GUI;
 using Assets.Template.Event;
 using System.Collections.Generic;
 

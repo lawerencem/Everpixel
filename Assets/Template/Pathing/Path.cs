@@ -54,8 +54,10 @@ namespace Assets.Template.Pathing
 
         public IHex GetFirstTile()
         {
-            if (this._tiles.Count > 0)
+            if (this._tiles.Count == 1)
                 return this._tiles[0];
+            else if (this._tiles.Count > 1)
+                return this._tiles[1];
             else
                 return null;
         }
